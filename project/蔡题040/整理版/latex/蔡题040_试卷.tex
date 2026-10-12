@@ -1,0 +1,197 @@
+\documentclass[12pt,a4paper,UTF8]{ctexart}
+\usepackage[a4paper,top=22mm,bottom=22mm,left=22mm,right=22mm,headheight=15pt]{geometry}
+\usepackage{amsmath,amssymb,mathtools,bm}
+\usepackage{graphicx,xcolor,booktabs,longtable,array,enumitem,fancyhdr,caption,float,microtype,setspace}
+\newcommand{\Needspace}[1]{\par\begingroup\dimen0=#1\relax\dimen2=\pagegoal\advance\dimen2 by-\pagetotal\ifdim\dimen0>\dimen2\newpage\fi\endgroup}
+\newcommand{\needspace}[1]{\par\begingroup\skip0=\lastskip\vskip-\skip0\dimen0=#1\relax\advance\dimen0 by\skip0\vskip\dimen0\penalty-100\vskip-\dimen0\vskip\skip0\penalty9999\endgroup}
+\usepackage[hidelinks,unicode]{hyperref}
+\usepackage[most]{tcolorbox}
+\definecolor{ContestBlue}{HTML}{17365D}
+\hypersetup{pdftitle={第040套},pdfauthor={竞赛物理教研}}
+\setstretch{1.24}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.35em}
+\setlength{\emergencystretch}{2em}
+\setlist{itemsep=0.35em,topsep=0.4em}
+\captionsetup{font=small,labelfont=bf,justification=centering}
+\setcounter{secnumdepth}{0}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small 第040套}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\ctexset{
+  section={format=\Large\bfseries\color{ContestBlue},beforeskip=1.2em,afterskip=0.7em},
+  subsection={format=\large\bfseries\color{ContestBlue},beforeskip=1.0em,afterskip=0.5em},
+  subsubsection={format=\normalsize\bfseries,beforeskip=0.8em,afterskip=0.35em}
+}
+\makeatletter
+\newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\newcommand{\maxwidth}{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\newcommand{\maxheight}{\ifdim\Gin@nat@height>0.72\textheight 0.72\textheight\else\Gin@nat@height\fi}
+\newcommand{\pandocbounded}[1]{\begingroup\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}#1\endgroup}
+\makeatother
+\begin{document}
+\begin{titlepage}
+  \centering
+  \vspace*{58mm}
+  {\Huge\bfseries\color{ContestBlue} 第040套\par}
+  \vfill
+  \vspace*{28mm}
+\end{titlepage}
+\section{第 1 题}\label{ux7b2c-1-ux9898}
+
+边长为 \(l\) 的立方体八个顶点上放置四个电荷 \(+q\) 和四个电荷
+\(-q\)。求立方体中心处电场强度大小的全部可能值，并指出最大值对应的电荷排布。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.65\linewidth,height=\textheight,keepaspectratio,alt={题1　立方体八顶点上的四对异号电荷}]{../figures/question-01.pdf}
+\caption{题1　立方体八顶点上的四对异号电荷}
+\end{figure}
+
+\newpage
+
+\section{第 2 题}\label{ux7b2c-2-ux9898}
+
+一根长为 \(l\)、质量为 \(M\) 的均匀刚性摆臂，一端固定在水平轴 \(O\)
+上，只能在竖直平面内摆动。另一端连接半径为 \(r\)、总质量为 \(m\)
+的均匀圆环座椅，圆环绕摆臂轴线以角速度 \(\omega\) 匀速转动。从 \(O\)
+点观察该转动为顺时针。摆臂最高位置与向下竖直方向夹角为
+\(\theta_0\)；在该处撤去维持摆幅的外力矩，忽略阻力。
+
+（1）求撤去外力矩瞬间，圆环最高点乘员的加速度。
+
+（2）摆臂回到最低点时，求圆环最左侧乘员的加速度。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.689\linewidth,height=\textheight,keepaspectratio,alt={题2　摆臂与绕臂轴自转圆环的复合运动}]{../figures/question-02.pdf}
+\caption{题2　摆臂与绕臂轴自转圆环的复合运动}
+\end{figure}
+
+\newpage
+
+\section{第 3 题}\label{ux7b2c-3-ux9898}
+
+空间磁场关于 \(z\) 轴轴对称，轴线上 \[
+B_z(z)=\left|B_0\frac{z_0}{z}\right|.
+\] 半径为 \(r\)、电流为 \(I\)、质量为 \(m\) 的小电流环，其轴线与 \(z\)
+轴重合；重力沿 \(-z\) 方向。求轴线附近的径向磁场、平衡位置及稳定性。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.318\linewidth,height=\textheight,keepaspectratio,alt={题3　轴对称非均匀磁场中的同轴电流环}]{../figures/question-03.pdf}
+\caption{题3　轴对称非均匀磁场中的同轴电流环}
+\end{figure}
+
+\newpage
+
+\section{第 4 题}\label{ux7b2c-4-ux9898}
+
+肩关节 \(O\) 固定，轻质手臂 \(OA\) 长为 \(l_1\)，宝剑 \(AB\) 长为
+\(l_2\)。\(OA\) 以角速度 \(\omega_1\) 转动，\(AB\) 相对 \(OA\) 以角速度
+\(\omega_2\) 转动；两角速度在所考察时刻保持不变，不计重力。
+
+（1）当 \(OA\) 与 \(AB\) 共线且同向时，求剑尖 \(B\) 的速度。
+
+（2）若 \(AB\) 是质量为 \(m\) 的均匀杆，在两杆夹角为 \(\theta\)
+时，求维持上述匀角速度所需的 \(O\) 点力和力矩、\(A\) 点力和力矩。
+
+（3）在 \(A\) 的另一侧沿剑身反向延长至 \(C\)，\(AC=l_3\)，加配重
+\(M\)。求使 \(A\) 点力矩最小的 \(M\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.654\linewidth,height=\textheight,keepaspectratio,alt={题4　手臂与宝剑的平面复合转动}]{../figures/question-04.pdf}
+\caption{题4　手臂与宝剑的平面复合转动}
+\end{figure}
+
+\newpage
+
+\section{第 5 题}\label{ux7b2c-5-ux9898}
+
+物体 \(S\) 位于数轴原点。第一凸透镜位于 \(x=l\)，焦距为
+\(f_1\)；第二凸透镜位于 \(x=3l\)，焦距为 \(f_2\)；平面镜位于
+\(x=3l+h\)，均垂直于数轴。
+
+（1）求 \(S\) 经第一透镜所成像 \(S_1\) 的坐标。
+
+（2）求 \(S_1\) 经第二透镜所成像 \(S_2\) 的坐标。
+
+（3）求 \(S_2\) 经平面镜所成像 \(S_3\) 的坐标。
+
+（4）调节镜后距离为
+\(h'\)，使反射光依次通过第二、第一透镜后在原点再次成像，求 \(h'\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\linewidth,height=\textheight,keepaspectratio,alt={题5　双透镜与平面镜的往返成像系统}]{../figures/question-05.pdf}
+\caption{题5　双透镜与平面镜的往返成像系统}
+\end{figure}
+
+\newpage
+
+\section{第 6 题}\label{ux7b2c-6-ux9898}
+
+一束 muon 在均匀磁场中作圆周运动，忽略辐射损失。muon 质量为
+\(m=1.88\times10^{-28}\,\mathrm{kg}\)，带电量大小为电子电量
+\(e\)，半衰期为 \(\tau=1.523\,\mu\mathrm s\)。
+
+（1）在非相对论情况下，若每完成一周恰有一半 muon 衰变，求磁感应强度。
+
+（2）在相同磁场中考虑相对论效应，且 muon
+速度接近光速。一周后衰变比例相较第（1）问如何变化？说明理由。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.48\linewidth,height=\textheight,keepaspectratio,alt={题6　均匀磁场中的 muon 圆周运动与寿命延缓}]{../figures/question-06.pdf}
+\caption{题6　均匀磁场中的 muon 圆周运动与寿命延缓}
+\end{figure}
+
+\newpage
+
+\section{第 7 题}\label{ux7b2c-7-ux9898}
+
+房间温度为 \(T\)，环境温度为 \(T_0\)，房间向环境的传导散热功率为 \[
+\frac{dQ}{dt}=K(T-T_0).
+\] 黑体辐射本领为 \(J=\sigma T^4\)。
+
+（1）某灰体对所有频率反射率为
+\(r\)，未反射部分全部吸收。求其热辐射本领。
+
+（2）黑体单位时间单位面积在 \(\nu\sim\nu+d\nu\) 内辐射
+\(f(\nu)d\nu\)；物体反射率为 \(r(\nu)\)，求其光谱辐射本领。
+
+（3）传统屋顶各频率反射率均为 \(r\)。室内视为温度 \(T_1\)
+的黑体，屋顶面积 \(S\)；太阳垂直入射通量为
+\(I_0\)。房间只向屋顶辐射，求平衡温度 \(T_1\)。
+
+（4）新屋顶对低频反射率为 \(r_L\)、对高频太阳光反射率为
+\(r_H\)。室内和屋顶热辐射视为低频，太阳辐射视为高频，求新平衡温度
+\(T_1'\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.584\linewidth,height=\textheight,keepaspectratio,alt={题7　灰体屋顶的短波吸收与长波热辐射平衡}]{../figures/question-07.pdf}
+\caption{题7　灰体屋顶的短波吸收与长波热辐射平衡}
+\end{figure}
+
+\newpage
+
+\section{第 8 题}\label{ux7b2c-8-ux9898}
+
+从地面发射水星探测器，推进火箭只在地球附近和水星附近各作一次瞬时点火。忽略地球和水星自转。地球、水星绕太阳作半径分别为
+\(r_E,r_M\) 的圆轨道。
+
+（1）要求探测器进入绕太阳的椭圆转移轨道，并与水星圆轨道相切。求在地球附近相对地球应获得的速度
+\(v_0\)。
+
+（2）到达水星表面附近后一次点火实现软着陆，求所需速度改变量。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\linewidth,height=\textheight,keepaspectratio,alt={题8　地球到水星的内向霍曼转移与水星捕获}]{../figures/question-08.pdf}
+\caption{题8　地球到水星的内向霍曼转移与水星捕获}
+\end{figure}
+\end{document}
