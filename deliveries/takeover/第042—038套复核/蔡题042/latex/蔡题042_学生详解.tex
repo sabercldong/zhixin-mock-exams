@@ -1,0 +1,2288 @@
+\documentclass[12pt,a4paper,UTF8]{ctexart}
+\usepackage[a4paper,top=22mm,bottom=22mm,left=22mm,right=22mm,headheight=15pt]{geometry}
+\usepackage{amsmath,amssymb,mathtools,bm}
+\usepackage{graphicx,xcolor,booktabs,longtable,array,enumitem,fancyhdr,caption,float,microtype,setspace}
+\newcommand{\Needspace}[1]{\par\begingroup\dimen0=#1\relax\dimen2=\pagegoal\advance\dimen2 by-\pagetotal\ifdim\dimen0>\dimen2\newpage\fi\endgroup}
+\newcommand{\needspace}[1]{\par\begingroup\skip0=\lastskip\vskip-\skip0\dimen0=#1\relax\advance\dimen0 by\skip0\vskip\dimen0\penalty-100\vskip-\dimen0\vskip\skip0\penalty9999\endgroup}
+\usepackage[hidelinks,unicode]{hyperref}
+\usepackage[most]{tcolorbox}
+\definecolor{ContestBlue}{HTML}{17365D}
+\hypersetup{pdftitle={第042套},pdfauthor={竞赛物理教研}}
+\setstretch{1.24}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.35em}
+\setlength{\emergencystretch}{2em}
+\setlist{itemsep=0.35em,topsep=0.4em}
+\captionsetup{font=small,labelfont=bf,justification=centering}
+\setcounter{secnumdepth}{0}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small 第042套}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\ctexset{
+  section={format=\Large\bfseries\color{ContestBlue},beforeskip=1.2em,afterskip=0.7em},
+  subsection={format=\large\bfseries\color{ContestBlue},beforeskip=1.0em,afterskip=0.5em},
+  subsubsection={format=\normalsize\bfseries,beforeskip=0.8em,afterskip=0.35em}
+}
+\makeatletter
+\newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\newcommand{\maxwidth}{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\newcommand{\maxheight}{\ifdim\Gin@nat@height>0.72\textheight 0.72\textheight\else\Gin@nat@height\fi}
+\newcommand{\pandocbounded}[1]{\begingroup\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}#1\endgroup}
+\makeatother
+\begin{document}
+\begin{titlepage}
+  \centering
+  \vspace*{58mm}
+  {\Huge\bfseries\color{ContestBlue} 第042套\par}
+  \vfill
+  \vspace*{28mm}
+\end{titlepage}
+\section{第 1 题}\label{ux7b2c-1-ux9898}
+
+孙鹏的体重超过体重秤量程。他找来两块与秤等高的砖和一块钢板，把三个支承排成等边三角形，站在钢板上标为
+P 的位置，读数为 \(G_1\)；原卷写``轮换体重秤和钢板''，又得到
+\(G_2,G_3\)。判断下列说法中哪些不正确：
+
+A．只有 P 在三角形中心，\(G_1+G_2+G_3\) 才等于人和钢板的总重；
+
+B．只有支点构成等边三角形，三读数之和才等于总重；
+
+C．各读数与对应顶点到 P 的距离成反比；
+
+D．以 P 为原点，三支点位置向量为 \(\boldsymbol r_i\)，有
+\(\sum_iG_i\boldsymbol r_i=0\)。
+
+题面中钢板自重、P
+与合成重心的关系及轮换操作存在歧义，解答分别说明通常的固定载荷模型和字面模型。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={题面模型}]{../figures/question-01.pdf}
+\caption{题面模型}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d}
+
+三点支承的静力学与重心重建。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9}
+
+竖直合力；两独立水平力矩；重心坐标；面积坐标；单边接触和翻倒。
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf}
+
+把三次读数解释为同一固定载荷在三个支点的支持力时，读数之和由竖直力平衡决定，读数分配由载荷重心决定。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3}
+
+通常意图是：三个支点不变，只把秤依次放在各支点，且板与人的载荷分布不变。先把总重
+\(W\) 的合力作用点记为 C，不先认定 C=P。
+
+\[\sum G_i=W,\qquad \sum G_i\boldsymbol R_i=W\boldsymbol C.\]
+
+再检查选项里用 P 代替 C 是否有依据。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790}
+
+\needspace{3\baselineskip}
+\textbf{固定载荷的三条平衡方程}
+
+取三个支点的平面坐标 \(\boldsymbol R_i=(x_i,y_i)\)，合成重心投影为
+\(\boldsymbol C=(x_C,y_C)\)。支持力竖直向上，重力竖直向下。竖直力平衡为
+
+\[G_1+G_2+G_3=W.\]
+
+对两条水平轴取矩，得到
+
+\[G_1x_1+G_2x_2+G_3x_3=Wx_C,\]
+
+\[G_1y_1+G_2y_2+G_3y_3=Wy_C.\]
+
+矢量合写为
+
+\[\boxed{\sum_iG_i(\boldsymbol R_i-\boldsymbol C)=0}.\]
+
+这些等式没有使用等边三角形，也没有使用重心处于三角形中心。只要三点不共线、接触稳定、同一载荷保持静止，都成立。
+
+因此在通常固定载荷模型中，A 和 B
+的``只有''条件均不成立。总和等于总重是竖直力平衡的结论，不是对称性的结论。
+
+\needspace{3\baselineskip}
+\textbf{支持力与面积坐标}
+
+设 \(\lambda_i=G_i/W\)，三个平衡方程为
+
+\[\lambda_1+\lambda_2+\lambda_3=1,\]
+
+\[\lambda_1\boldsymbol R_1+\lambda_2\boldsymbol R_2+\lambda_3\boldsymbol R_3=\boldsymbol C.\]
+
+这是三角形的重心坐标。令总面积为 \(S\)，由 C 和相对边构成的有向面积为
+\(S_i\)，则
+
+\[\lambda_i=\frac{S_i}{S},\]
+
+\[\boxed{G_i=W\frac{S_i}{S}}.\]
+
+对应支点的读数与重心到其对边的有向距离成正比，而不是与到该顶点的距离成反比。
+
+例如取支点 \((0,0),(2,0),(0,2)\)，合力点 \((0.2,0.4)\)，解得
+
+\[\lambda_1=0.7,\quad\lambda_2=0.1,\quad\lambda_3=0.2.\]
+
+三个顶点到合力点的距离为
+
+\[d_1=\sqrt{0.2^2+0.4^2}=\sqrt{0.2},\]
+
+\[d_2=\sqrt{1.8^2+0.4^2}=\sqrt{3.4},\]
+
+\[d_3=\sqrt{0.2^2+1.6^2}=\sqrt{2.6}.\]
+
+若反比说法正确，应有 \(G_1d_1=G_2d_2=G_3d_3\)，但除以 \(W\) 后分别约为
+
+\[0.31305,\quad0.18439,\quad0.32249,\]
+
+并不相等。因此 C 不正确。
+
+\needspace{3\baselineskip}
+\textbf{通常意图下的 D}
+
+若 P 是总载荷的重心投影，或钢板自重可忽略，则
+\(\boldsymbol C=\boldsymbol P\)，因而
+
+\[\sum_iG_i(\boldsymbol R_i-\boldsymbol P)=0.\]
+
+以 P 为原点，这就是选项 D。于是通常的点载荷模型中，应选不正确的
+A、B、C，D 正确。
+
+但人站立的位置不必是钢板与人的合成重心；若钢板有自重，这一前提必须明确。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={重心坐标与支持力}]{../figures/solution-01.pdf}
+\caption{重心坐标与支持力}
+\end{figure}
+
+\needspace{3\baselineskip}
+\textbf{保留钢板自重时的修正}
+
+记人体重量 \(W_h\)、钢板重量 \(W_b\)，人体重心投影取 P，钢板重心投影为
+\(\boldsymbol C_b\)。合成重心满足
+
+\[W\boldsymbol C=W_h\boldsymbol P+W_b\boldsymbol C_b,\qquad W=W_h+W_b.\]
+
+支持力线性叠加：
+
+\[G_i=W_h\lambda_i(\boldsymbol P)+W_b\lambda_i(\boldsymbol C_b).\]
+
+三读数之和仍为 \(W_h+W_b\)，但对 P 的加权矢量变为
+
+\[\boxed{\sum_iG_i(\boldsymbol R_i-\boldsymbol P)
+=W_b(\boldsymbol C_b-\boldsymbol P)}.\]
+
+只有 \(W_b=0\) 或 \(\boldsymbol C_b=\boldsymbol P\)
+时，右侧才为零。若选项 D 使用的是未去皮总读数，而 P 仅指人体位置，则 D
+一般也不成立。
+
+这不是支持力理论出现矛盾，而是选项把人体受力点与合成重心混用了。钢板足够轻是近似，钢板重心恰在
+P 是另一种条件，二者不应默默加入题面。
+
+\needspace{3\baselineskip}
+\textbf{如何通过去皮恢复人体称量关系}
+
+先在同样三个位置称空钢板，读数为 \(B_i\)；再称人和板，读数为 \(G_i\)。令
+
+\[H_i=G_i-B_i.\]
+
+若板和支点位置保持不变，线性静力学给出
+
+\[\sum H_i=W_h,\]
+
+\[\sum H_i(\boldsymbol R_i-\boldsymbol P)=0.\]
+
+因此人体重量以及人体重心投影可以用去皮后的读数恢复。若轮换过程中真的改变钢板位置或朝向，空板支持力也要匹配同一位置，不能直接把不同载荷的三次读数相加。
+
+\needspace{3\baselineskip}
+\textbf{接触稳定和量程约束}
+
+砖与秤通常只能提供向上的支持力，不能向下拉板。因此必须有
+
+\[G_i\ge0.\]
+
+对应面积坐标非负，说明合成重心投影位于支点三角形内部或边界。若计算出某个
+\(G_i<0\)，该支点会失去接触，三点平衡模型失效，实际可能绕一条支边翻倒。
+
+若秤的最大量程为 \(Q\)，要在三个位置都不超量程，需
+
+\[G_i\le Q\quad(i=1,2,3).\]
+
+由总和 \(W\) 可知必要条件是
+
+\[W\le3Q.\]
+
+如果合成重心能够放在三角形的几何重心，三支持力为
+\(W/3\)，这个条件也可实现。但放人体在中心不一定使合成重心在中心，应同时计入钢板位置。
+
+\needspace{3\baselineskip}
+\textbf{测量反推重心的步骤}
+
+有三个有效读数时，先求总重
+
+\[W=G_1+G_2+G_3,\]
+
+再求
+
+\[\boldsymbol C=\frac{G_1\boldsymbol R_1+G_2\boldsymbol R_2+G_3\boldsymbol R_3}{W}.\]
+
+这个公式为实验提供额外检验：若算得 C
+在三角形外，却三次读数均正，可能是轮换时载荷移动或记录有误。测量结果应满足同一几何与载荷模型，不能只关注读数之和。
+
+\needspace{3\baselineskip}
+\textbf{题面歧义的结论}
+
+按通常固定点载荷的意图，答案为 A、B、C 不正确。按保留钢板自重、P
+只代表人体位置的字面条件，D
+还缺少前提；若``轮换钢板''改变载荷分布，连三读数属于同一平衡态也需核实。解答保留这些差别，避免以未注明假设强行给出唯一判断。
+
+\needspace{3\baselineskip}
+\textbf{等边三角形中的显式读数}
+
+为了回到原题的等边几何，设边长为 \(a\)，三个支点取
+\((0,0),(a,0),(a/2,\sqrt3a/2)\)，合成重心为
+\((x,y)\)。三个力矩方程立即给出
+
+\[G_3=\frac{2Wy}{\sqrt3a},\]
+
+\[G_2=W\left(\frac xa-\frac{y}{\sqrt3a}\right),\]
+
+\[G_1=W\left(1-\frac xa-\frac{y}{\sqrt3a}\right).\]
+
+总和恒为 \(W\)。当
+\(x=a/2,y=\sqrt3a/6\)，才有三个读数相等。重心移离中心只改变读数分配，不改变其和。
+
+例如 \(x=a/2,y=\sqrt3a/10\)，读数分数为
+
+\[G_1/W=G_2/W=2/5,\qquad G_3/W=1/5.\]
+
+到下方两个顶点的距离为 \(a\sqrt{7}/5\)，到上方顶点的距离为
+\(2\sqrt3a/5\)。若为反比，乘积应相同；实际为 \(2\sqrt7Wa/25\) 与
+\(2\sqrt3Wa/25\)，不同。C
+在等边三角形内部也有直接反例，而不需要借用非等边三角形。
+
+\needspace{3\baselineskip}
+\textbf{可安全称量的位置区域}
+
+设量程占总重的比例 \(q=Q/W\)。要求三次都不超量程，等价于
+
+\[0\le\lambda_i\le q,\qquad\sum\lambda_i=1.\]
+
+若 \(q<1/3\)，没有任何可行位置；若 \(q=1/3\)，只能让合成重心在中心；若
+\(1/3<q<1/2\)，可行区域为中心附近的小三角形；若
+\(1/2<q<1\)，则为削去三个顶角的六边形。边界由 \(\lambda_i=q\) 和
+\(\lambda_i=0\) 的直线构成，不是三个顶点距离的圆形条件。
+
+若钢板重心固定、人体重心可移动，合成重心位置是仿射变换：
+
+\[\boldsymbol C=\frac{W_h}{W}\boldsymbol P+\frac{W_b}{W}\boldsymbol C_b.\]
+
+反推人体需要站立的位置为
+
+\[\boldsymbol P=\frac{W\boldsymbol C-W_b\boldsymbol C_b}{W_h}.\]
+
+称量范围取决于这个位置是否还落在可站立的板面，不能只在数学上挑一个合成重心。
+
+\needspace{3\baselineskip}
+\textbf{非竖直支承与三次实验}
+
+上述读数等于支持力的竖直分量，假定秤水平、接触支承不会传递额外的自由力偶。若板被夹紧、支点能传力矩，支持力分配会出现更多未知量，三个静力方程不再唯一确定三读数。
+
+若每次称量的 P 改变，三次读数分别为
+
+\[G_1=W\lambda_1(C^{(1)}),\quad G_2=W\lambda_2(C^{(2)}),\quad G_3=W\lambda_3(C^{(3)}).\]
+
+它们的和没有理由仍为
+\(W\)。这项实验一致性检查说明轮换操作是答案的物理前提，而不是文字细节。
+
+\needspace{3\baselineskip}
+\textbf{三秤读数为什么由面积而非距离决定}
+
+把三个支持力都视为平行的竖直力，对支点1列力矩。支点位置\(\boldsymbol R_i=(X_i,Y_i)\)，重心\((x,y)\)，两个独立的力矩分量给
+
+\[G_2(X_2-X_1)+G_3(X_3-X_1)=W(x-X_1),\]
+
+\[G_2(Y_2-Y_1)+G_3(Y_3-Y_1)=W(y-Y_1).\]
+
+与\(G_1+G_2+G_3=W\)合成线性系统；三个支点不共线，位置矩阵行列式非零，才有唯一解。行列式几何上等于三角形面积的两倍，因此用克拉默法则自然得到子三角形面积比。
+
+\[G_i/W=\frac{\text{与顶点i相对的子三角形有向面积}}{\text{支承三角形有向面积}}.\]
+
+在三角形内部，有向面积均正；在边上，对面的支持力为零；在三角形外，至少一个理论支持力负，表示该支点要拉住钢板。这对普通只提供向上力的接触支点不可能，钢板会倾覆。因而``读数非负''与``合成重心在支承三角形内''是同一静力可行条件的两种写法。
+
+若把三支点整体平移\(\boldsymbol a\)，矢量力矩和改变\(\boldsymbol a\sum G_i-\boldsymbol aW=0\)，读数不变。若整体旋转，同一矢量方程随坐标旋转而不改读数。这两种不变性检查也说明读数取决于载荷相对支承的位置，而不是坐标原点的任意选取。
+
+\newpage
+
+\section{第 2 题}\label{ux7b2c-2-ux9898}
+
+双黑洞系统由 \(29M_\odot\) 和 \(36M_\odot\)
+的黑洞组成，\(M_\odot=1.99\times10^{30}\,\mathrm{kg}\)。假设作牛顿圆轨道运动，轨道频率
+\(30\,\mathrm{Hz}\)，引力波频率为轨道频率的两倍，(1)
+求两黑洞中心距离。(2) 按原题给定的半径
+\(r_i=Gm_i/c^2\)，估计两``表面''接触时的轨道频率。取
+\(G=6.67\times10^{-11}\)（SI）、\(c=3.0\times10^8\,\mathrm{m/s}\)。
+
+原卷将 \(Gm/c^2\) 称为史瓦西半径；标准非旋转黑洞史瓦西半径为
+\(2Gm/c^2\)。解答先按题设半径估算，再列出因子 2 修正的结果。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={题面模型}]{../figures/question-02.pdf}
+\caption{题面模型}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-1}
+
+双体圆轨道的数量估算和模型边界。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-1}
+
+质心分配；万有引力；角频率；轨道与引力波频率；紧致度和近似有效性。
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-1}
+
+两黑洞以相同角频率绕共同质心转动。质量较小者距质心较远，线速度较大。越接近所谓接触，牛顿与点质量模型越不可靠。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-1}
+
+令总质量 \(M=m_1+m_2\)、中心间距 \(l\)，轨道角频率 \(\omega=2\pi f\)。
+
+\[m_1l_1=m_2l_2,\qquad l_1+l_2=l.\]
+
+引力提供各自的向心力，消去质心半径后得到相对轨道的开普勒关系。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-1}
+
+\needspace{3\baselineskip}
+\textbf{质心半径与轨道方程}
+
+质心条件给出
+
+\[l_1=\frac{m_2}{M}l,\qquad l_2=\frac{m_1}{M}l.\]
+
+对质量 \(m_1\) 的黑洞写向心力：
+
+\[\frac{Gm_1m_2}{l^2}=m_1\omega^2l_1.\]
+
+代入 \(l_1=m_2l/M\)，约去 \(m_1,m_2\)，得
+
+\[\omega^2=\frac{GM}{l^3}.\]
+
+故
+
+\[\boxed{l=\left[\frac{GM}{(2\pi f)^2}\right]^{1/3}}.\]
+
+这一步使用的是轨道频率 \(30\,\mathrm{Hz}\)。若误把 \(60\,\mathrm{Hz}\)
+的波频率代入，间距会被缩小为正确值的 \(2^{-2/3}\)。
+
+总质量为
+
+\[M=65M_\odot=1.2935\times10^{32}\,\mathrm{kg}.\]
+
+因此
+
+\[\boxed{l\approx6.23874\times10^5\,\mathrm m=623.874\,\mathrm{km}}.\]
+
+\needspace{3\baselineskip}
+\textbf{两个黑洞的速度}
+
+质心半径分别是
+
+\[l_1=\frac{36}{65}l,\qquad l_2=\frac{29}{65}l.\]
+
+各自速度为
+
+\[v_1=2\pi f\frac{36}{65}l,\]
+
+\[v_2=2\pi f\frac{29}{65}l.\]
+
+相对速度的大小为
+
+\[v_{\rm rel}=v_1+v_2=2\pi fl=\sqrt{\frac{GM}{l}}.\]
+
+约有
+
+\[v_{\rm rel}\approx1.1760\times10^8\,\mathrm{m/s}\approx0.3920c,\]
+
+\[v_1\approx0.2171c,\qquad v_2\approx0.1749c.\]
+
+两速度方向在任一时刻相反，但角速度相同。这里的 \(v_1+v_2\)
+是牛顿相对速度表达；若要求严格相对论速度合成，就超出了所用牛顿轨道模型。
+
+\needspace{3\baselineskip}
+\textbf{题设半径下的接触估算}
+
+按题面 \(r_i=Gm_i/c^2\)，接触中心距离为
+
+\[l_c=r_1+r_2=\frac{G(m_1+m_2)}{c^2}=\frac{GM}{c^2}.\]
+
+数值为
+
+\[l_c\approx9.58627\times10^4\,\mathrm m.\]
+
+形式上代入牛顿圆轨道式：
+
+\[f_c=\frac1{2\pi}\sqrt{\frac{GM}{l_c^3}},\]
+
+\[\boxed{f_c=\frac{c^3}{2\pi GM}\approx498.071\,\mathrm{Hz}}.\]
+
+按波频率为两倍的设定，波频率约为 \(996.143\,\mathrm{Hz}\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={质心分配与半径约定}]{../figures/solution-02.pdf}
+\caption{质心分配与半径约定}
+\end{figure}
+
+\needspace{3\baselineskip}
+\textbf{标准半径的因子 2}
+
+若采用标准 \(r_i=2Gm_i/c^2\)，接触中心距离变成 \(2GM/c^2\)，轨道频率为
+
+\[f_{c,\rm standard}=2^{-3/2}f_c,\]
+
+\[\boxed{f_{c,\rm standard}\approx176.095\,\mathrm{Hz}}.\]
+
+标准半径定义可参照
+\href{https://imagine.gsfc.nasa.gov/educators/blackholes/imagine/page22.html}{NASA
+黑洞教学资料}。给出两个结果是为区分原题假设与标准术语。不能悄悄把半径换掉却仍称数值为按原题求出的答案。
+
+\needspace{3\baselineskip}
+\textbf{牛顿模型的自我检查}
+
+定义紧致度
+
+\[\epsilon=\frac{GM}{lc^2}.\]
+
+对于 \(30\,\mathrm{Hz}\)
+的估计，\(\epsilon=(v_{\rm rel}/c)^2\approx0.154\)。它已不很小，牛顿解只能作为估算，精密轨道必须有相对论修正。
+
+按题设接触半径，\(\epsilon=1\)，牛顿公式甚至给出
+\(v_{\rm rel}=c\)；按标准半径接触也有
+\(\epsilon=1/2\)。因此``接触频率''是把简化公式外推得到的形式估计，不是可据此宣称的实际并合频率。
+
+\needspace{3\baselineskip}
+\textbf{轨道能量}
+
+引力势能为
+
+\[U=-\frac{Gm_1m_2}{l}.\]
+
+总动能用约化质量 \(\mu=m_1m_2/M\) 表示：
+
+\[K=\frac12\mu v_{\rm rel}^2=\frac{Gm_1m_2}{2l}.\]
+
+因此圆轨道能量为
+
+\[E_{\rm orb}=-\frac{Gm_1m_2}{2l}.\]
+
+若辐射使能量变得更负，间距缩小，轨道频率升高，符合啁啾信号的频率趋势。不过原题没有给辐射功率定律，单靠这个能量式不能算并合所需时间。
+
+\needspace{3\baselineskip}
+\textbf{角动量与频率的关系}
+
+总轨道角动量为
+
+\[J=\mu lv_{\rm rel}=\mu\sqrt{GMl}.\]
+
+消去 \(l\)，得到
+
+\[E_{\rm orb}=-\frac12\mu(GM)^{2/3}(2\pi f)^{2/3},\]
+
+\[J=\mu(GM)^{2/3}(2\pi f)^{-1/3}.\]
+
+因而频率越高，能量越负，角动量越小。相同总质量下，间距由频率固定，但能量和角动量还依赖质量比中的
+\(\mu\)。
+
+\needspace{3\baselineskip}
+\textbf{数值结果的使用顺序}
+
+实际做题先由给定 \(f\) 算
+\(l\)，再由质心关系算两个速度；最后明确半径系数后估计形式接触频率。先对接触模型作适用性判断，可避免把大约
+\(500\,\mathrm{Hz}\) 当作严格物理结论。
+
+\needspace{3\baselineskip}
+\textbf{轨道频率的反演与误差}
+
+若观测波频率为 \(f_{\rm GW}=2f\)，牛顿间距可直接写为
+
+\[l=\left[\frac{GM}{(\pi f_{\rm GW})^2}\right]^{1/3}.\]
+
+对数微分得
+
+\[\frac{dl}{l}=\frac13\frac{dM}{M}-\frac23\frac{df_{\rm GW}}{f_{\rm GW}}.\]
+
+频率读错两倍对间距的影响不是两倍，而是
+\(2^{-2/3}\)。例如同一质量在轨道频率从30变为60 Hz时，间距变为约393 km。
+
+\needspace{3\baselineskip}
+\textbf{质量比怎样影响动能分配}
+
+两体动能分别为
+
+\[K_1=\frac12m_1\omega^2l_1^2,\qquad K_2=\frac12m_2\omega^2l_2^2.\]
+
+由质心关系可得
+
+\[\frac{K_1}{K_2}=\frac{m_2}{m_1}.\]
+
+较小质量的黑洞速度更大，所占动能也更大。总动能为
+
+\[K=\frac12\mu\omega^2l^2,\]
+
+其中
+
+\[\mu=\frac{m_1m_2}{M}=M\frac{q}{(1+q)^2},\qquad q=m_2/m_1.\]
+
+固定总质量时，\(\mu\le M/4\)，相等质量使总动能、轨道角动量及牛顿束缚能的绝对值最大。中心距离却仍只由总质量和频率控制。
+
+\needspace{3\baselineskip}
+\textbf{圆轨道与径向小扰动}
+
+相对运动的比角动量 \(h_J=l^2\omega\) 固定时，比有效势为
+
+\[U_{\rm eff}(r)=\frac{h_J^2}{2r^2}-\frac{GM}{r}.\]
+
+圆轨道满足 \(U'_{\rm eff}(l)=0\)，即 \(h_J^2=GMl\)。其二阶导数为
+
+\[U''_{\rm eff}(l)=\frac{GM}{l^3}>0.\]
+
+径向小振动频率在这个牛顿模型中等于圆轨道角频率。这一特性解释了小偏心轨道闭合，却不是强引力轨道仍严格闭合的保证。
+
+\needspace{3\baselineskip}
+\textbf{半径模型的尺度联系}
+
+令 \(r_g=GM/c^2\)，则
+
+\[l/r_g=\epsilon^{-1},\qquad f/f_g=\epsilon^{3/2},\qquad f_g=\frac{c^3}{2\pi GM}.\]
+
+\(f_g\) 是由总质量定义的频率尺度；题设接触模型直接把
+\(l=r_g\)，因此形式答案正好等于
+\(f_g\)。若总质量增十倍，这一形式接触频率减为十分之一，接触半径增十倍。
+
+与太阳质量的数字相结合只是估算。黑洞没有物质球壳式的可接触表面，真实双黑洞强场合并也不能由两个孤立半径简单相加来确定。题面明确称玩具模型，作答需保留这一模型性质。
+
+\needspace{3\baselineskip}
+\textbf{接触外推时要分别列出三个速度}
+
+在题设半径下，把 \(l_c=GM/c^2\) 代回牛顿模型，所得 \(v_{\rm rel}=c\)
+是两体速度大小之和，并不意味着其中一个黑洞单独以光速运动。质心分配仍给
+
+\[v_{1c}=\frac{36}{65}c,\qquad v_{2c}=\frac{29}{65}c.\]
+
+对应约 \(0.554c\) 与 \(0.446c\)。若改用标准半径，两者都再乘
+\(1/\sqrt2\)。形式速度虽然分别小于
+\(c\)，却不足以挽救这一牛顿接触外推，因为紧致度仍为 \(1\) 或
+\(1/2\)，弱场条件已经失效。
+
+这也说明不能只凭``每个物体速度小于光速''判断牛顿公式可靠。在较严格的弱场估算中，还要独立要求
+\(GM/(lc^2)\ll1\)。例如把紧致度限定为 \(0.01\)，由
+
+\[\frac{f}{f_g}=\epsilon^{3/2}\]
+
+可得本系统的轨道频率上限约 \(0.498\,\mathrm{Hz}\)，明显低于题给的
+\(30\,\mathrm{Hz}\)。这是一项模型精度检查，并未改变按原题假设得到的两个形式答案。
+
+\newpage
+
+\section{第 3 题}\label{ux7b2c-3-ux9898}
+
+在海水深 \(H=2\,\mathrm{km}\) 处产生一个初始体积 \(V_0=1\,\mathrm L\)
+的气泡，并同时释放一个密封刚性空瓶，瓶中空气的质量和瓶的排水体积分别与初始气泡相同。海面气压
+\(p_0=10^5\,\mathrm{Pa}\)，海面空气密度
+\(\rho_a=1.21\,\mathrm{kg/m^3}\)。气体等温膨胀，忽略黏滞阻力，求：(1)
+到海面时气泡体积；(2) 深度 \(h\) 处气泡和钢瓶各自获得的净能量；(3)
+二者到海面时的速度。
+
+海水密度和 \(g\) 未在题面中给出，符号结果保留 \(\rho,g\)。仅为数值示例取
+\(\rho=1000\,\mathrm{kg/m^3},g=10\,\mathrm{m/s^2}\)。瓶的质量按题设总质量等于气泡质量理解，不另加未给出的瓶壁质量。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={题面模型}]{../figures/question-03.pdf}
+\caption{题面模型}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-2}
+
+变体积浮力的功与气体状态方程。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-2}
+
+静水压；等温理想气体；浮力功积分；附加质量与理想化模型的区别。
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-2}
+
+气泡上升时外压降低，体积增大，浮力增强；刚性瓶的排水体积不变。无黏滞阻力不等于流体惯性消失。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-2}
+
+以海面向下的深度 \(h\) 为变量，释放深度为 \(H\)：
+
+\[p(h)=p_0+\rho gh.\]
+
+令 \(A=p(H)V_0\)。等温模型给出
+\(p(h)V(h)=A\)，随后分别对两物体的净浮力作功。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-2}
+
+\needspace{3\baselineskip}
+\textbf{气泡体积和空气质量}
+
+等温、固定质量的理想气体满足
+
+\[p(h)V(h)=p(H)V_0.\]
+
+因此
+
+\[\boxed{V(h)=V_0\frac{p_0+\rho gH}{p_0+\rho gh}}.\]
+
+到海面的体积为
+
+\[V_s=V_0\left(1+\frac{\rho gH}{p_0}\right).\]
+
+以同温海面空气密度 \(\rho_a\) 求气体质量：
+
+\[\boxed{m=\rho_aV_s=\rho_aV_0\left(1+\frac{\rho gH}{p_0}\right)}.\]
+
+不能用 \(\rho_aV_0\) 直接计算深海初始气泡质量，因为深海空气被高压压缩。
+
+用示例 \(\rho=1000,g=10,H=2000\)，有
+
+\[p(H)=2.01\times10^7\,\mathrm{Pa},\]
+
+\[V_s=0.201\,\mathrm{m^3},\qquad m=0.24321\,\mathrm{kg}.\]
+
+释放时的净浮力是
+\((\rho V_0-m)g\)，在这个示例中为正，两物体初始均向上加速。
+
+\needspace{3\baselineskip}
+\textbf{忽略流体惯性的质点功模型}
+
+先采用竞赛题常用的附加理想化：只计算气体或瓶的平动动能，忽略周围流体的动能和膨胀流动的惯性。这个假设比``忽略黏滞阻力''更强。
+
+深度从 \(H\) 减到 \(h\) 时，气泡的净浮力做功为
+
+\[K_b(h)=\int_h^H[\rho gV(z)-mg]dz.\]
+
+代入 \(V(z)=A/(p_0+\rho gz)\)：
+
+\[K_b(h)=A\int_h^H\frac{\rho g\,dz}{p_0+\rho gz}-mg(H-h),\]
+
+\[\boxed{K_b(h)=A\ln\frac{p(H)}{p(h)}-mg(H-h)}.\]
+
+刚性瓶的体积为常量，故
+
+\[\boxed{K_f(h)=(\rho V_0-m)g(H-h)}.\]
+
+从静止释放时，质点模型给出的速度分别是
+
+\[v_b(h)=\sqrt{\frac{2K_b(h)}m},\]
+
+\[v_f(h)=\sqrt{\frac{2K_f(h)}m}.\]
+
+到海面的条件答案为
+
+\[\boxed{v_b^2(0)=\frac2m\left[p(H)V_0\ln\frac{p(H)}{p_0}-mgH\right]},\]
+
+\[\boxed{v_f^2(0)=2gH\left(\frac{\rho V_0}{m}-1\right)}.\]
+
+\needspace{3\baselineskip}
+\textbf{速度比较无需数值}
+
+对于 \(0\le h<H\)，气泡有 \(V(h)>V_0\)。于是
+
+\[K_b(h)-K_f(h)=\rho g\int_h^H[V(z)-V_0]dz>0.\]
+
+两者质量相等，在这个质点模型中必有
+\(v_b>v_f\)。在释放瞬间两体体积相等、加速度相等；差异随后随膨胀积累。
+
+示例中气泡平动功约为 \(1.0173\times10^5\,\mathrm J\)，瓶的平动功约为
+\(1.5136\times10^4\,\mathrm J\)，因此速度估计分别约为
+\(915\,\mathrm{m/s}\) 和
+\(353\,\mathrm{m/s}\)。这些过大的值本身提示被忽略的流体运动、可压缩性与气泡形变已不能轻视，不能作为真实海上气泡速度。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={气泡膨胀与固定体积瓶}]{../figures/solution-03.pdf}
+\caption{气泡膨胀与固定体积瓶}
+\end{figure}
+
+\needspace{3\baselineskip}
+\textbf{上浮的质量条件}
+
+初始浮力大于重力需
+
+\[\rho V_0>m.\]
+
+代入质量表达，得到
+
+\[\rho>\rho_a\left(1+\frac{\rho gH}{p_0}\right).\]
+
+这也可写为
+
+\[H<\frac{p_0}{\rho g}\left(\frac\rho{\rho_a}-1\right).\]
+
+若不满足，瓶从静止释放不能按上浮轨迹运动，先前积分虽然形式可写，速度平方也可能为负，说明轨迹假设错误。气泡若初始也净浮力向下，不能凭``以后会膨胀''让它自动到达较浅处。
+
+\needspace{3\baselineskip}
+\textbf{等温膨胀中的热量}
+
+理想气体等温膨胀内能不变，气体吸热等于对外膨胀功：
+
+\[Q_{\rm gas}=\int_{V_0}^{V_s}p\,dV=A\ln\frac{V_s}{V_0}.\]
+
+这与气泡平动中的浮力功涉及不同的机械过程。不能在已经对净浮力积分之后，又把整个膨胀吸热当成额外平动能叠加；那会重复或错误归属能量。完整气体---水体系的能量还包括水的势能和动能。
+
+\needspace{3\baselineskip}
+\textbf{为什么字面条件不足以确定真实速度}
+
+理想无黏流体仍需随物体加速。对固定体积、在无限静止不可压流体中平移的球，流体动能常写为
+
+\[K_{\rm water}=\frac12C_a\rho V_0v^2,\]
+
+球形模型有 \(C_a=1/2\)。有效惯性质量不是仅 \(m\)，而是
+
+\[m_{\rm eff}=m+C_a\rho V_0.\]
+
+瓶的形状未给出，不能默认其附加质量系数；膨胀气泡的半径、径向流和形变会使问题更复杂。因而原题只写忽略黏滞，并不能唯一指定真实流体速度。
+
+\needspace{3\baselineskip}
+\textbf{释放初期的局部检查}
+
+设上升距离 \(z=H-h\) 很小。体积展开为
+
+\[V(H-z)=V_0\left[1+\frac{\rho g}{p(H)}z+O(z^2)\right].\]
+
+净浮力功展开为
+
+\[K_b=(\rho V_0-m)gz+
+\frac{\rho^2g^2V_0}{2p(H)}z^2+O(z^3).\]
+
+第一项与刚性瓶相同；第二项严格正，给出二者差异的最早增长。这也检验了对数积分的符号。
+
+\needspace{3\baselineskip}
+\textbf{作答范围}
+
+状态方程中的体积---深度关系在所给等温与静水压模型下明确。速度公式则是增加``忽略流体惯性''的常见质点理想化后得到的条件答案。若要描述真实无黏流体，还需物体几何、流体运动与气泡边界条件，不能只凭题面给出唯一实验速度。
+
+\needspace{3\baselineskip}
+\textbf{无量纲化显示深度依赖}
+
+令 \(\eta=\rho gH/p_0\)、\(\zeta=h/H\)，则
+
+\[V(h)/V_0=\frac{1+\eta}{1+\eta\zeta},\qquad m=\rho_aV_0(1+\eta).\]
+
+气泡的净功可写为
+
+\[K_b=p_0V_0(1+\eta)\ln\frac{1+\eta}{1+\eta\zeta}
+-mgH(1-\zeta).\]
+
+刚性瓶为
+
+\[K_f=(\rho-\rho_a(1+\eta))V_0gH(1-\zeta).\]
+
+初始体积同时乘一个常数时，质量、浮力功、重力功都按同一比例改变；在只计算自身平动的质点模型里，速度因此与
+\(V_0\)
+无关。这是一项可以检查数值代码的缩放性质，但不是现实气泡大小无关的结论，因为流体惯性和形变随尺度变化。
+
+\needspace{3\baselineskip}
+\textbf{浅释放的展开}
+
+当 \(\eta\ll1\)，有
+
+\[(1+\eta)\ln(1+\eta)=\eta+\frac12\eta^2-\frac16\eta^3+\cdots.\]
+
+海面气泡浮力功于是为
+
+\[W_{B,b}=\rho gV_0H\left[1+\frac12\eta-\frac16\eta^2+\cdots\right].\]
+
+刚性瓶浮力功仅为
+\(\rho gV_0H\)。二者的首项相同，膨胀带来的第一项相对修正为
+\(\eta/2\)。深海示例 \(\eta=200\)，远超这条浅水展开的范围。
+
+\needspace{3\baselineskip}
+\textbf{一个指定附加惯性的条件模型}
+
+若另外规定物体的平动附加质量为 \(m_a(z)\)，以上升坐标 \(z=H-h\)
+表示，可设平动动能
+
+\[K_{\rm tr}^*=\frac12[m+m_a(z)]\dot z^2.\]
+
+取净浮力为广义外力 \(F_b(z)\)，一维拉格朗日方程给出
+
+\[[m+m_a(z)]\ddot z+\frac12m_a'(z)\dot z^2=F_b(z).\]
+
+乘 \(\dot z\) 后，左侧是完整有效动能的时间导数，所以
+
+\[\frac12[m+m_a(z)]v^2=\int_0^zF_b(w)dw.\]
+
+它与简单将牛顿方程写成 \([m+m_a(z)]a=F_b\)
+不同，后者在附加质量变化时遗漏一项。这个计算只是对额外指定的有效一维模型求解；真实膨胀气泡还存在径向流动能和形状自由度，不能凭该式把未知流体问题变成唯一答案。
+
+\needspace{3\baselineskip}
+\textbf{刚性瓶质量的解释}
+
+题面给钢瓶与气泡质量相同，因此其 \(m\)
+是包括瓶壁的指定总质量，并非再把同量空气装进去后额外加壁重。若总质量改成
+\(m_f\)，则应单独写
+
+\[K_f=(\rho V_0-m_f)g(H-h),\qquad v_f^2=2K_f/m_f.\]
+
+不同质量时，气泡净功较大不能单独推出它速度较大，比较必须同时除以各自质量。
+
+\newpage
+
+\section{第 4 题}\label{ux7b2c-4-ux9898}
+
+波长为 \(\lambda_0\) 的单色光穿过双折射薄片，两本征线偏振在片内波长为
+\(\lambda_1,\lambda_2\)，折射率为
+\(n_1,n_2\)。求四分之一波片的最小厚度，并用
+\(\lambda_0=589\,\mathrm{nm},n_1=1.875,n_2=1.635\)
+求数值。讨论两分量的相位差和入射偏振方向对出射偏振的影响。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={题面模型}]{../figures/question-04.pdf}
+\caption{题面模型}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-3}
+
+双折射相位延迟与四分之一波片。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-3}
+
+真空波长与介质波长；本征轴分量； Jones 表示；椭圆偏振；厚度误差。
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-3}
+
+两正交本征分量传播同一物理厚度，但相位速度不同。四分之一波片延迟相位四分之一周期；要得到圆偏振，还必须让两本征分量等幅。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-3}
+
+波矢 \(k_i=2\pi n_i/\lambda_0\)，厚度为 \(d\)，两分量相位差为
+
+\[\delta=(k_1-k_2)d=\frac{2\pi(n_1-n_2)d}{\lambda_0}.\]
+
+最小正厚度对应 \(|\delta|=\pi/2\)。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-3}
+
+\needspace{3\baselineskip}
+\textbf{传播相位与厚度公式}
+
+介质内波长为
+
+\[\lambda_i=\frac{\lambda_0}{n_i}.\]
+
+穿过同一厚度 \(d\) 的相位分别为
+
+\[\phi_1=\frac{2\pi d}{\lambda_1},\qquad
+\phi_2=\frac{2\pi d}{\lambda_2}.\]
+
+相位差为
+
+\[\delta=2\pi d\left(\frac1{\lambda_1}-\frac1{\lambda_2}\right).\]
+
+四分之一周期延迟要求 \(|\delta|=\pi/2\)（模 \(2\pi\)）。最小正厚度因此为
+
+\[\boxed{d_{\min}=\frac1{4|1/\lambda_1-1/\lambda_2|}
+=\frac{\lambda_0}{4|n_1-n_2|}}.\]
+
+用较大的本征折射率减去较小者，\(\Delta n=0.240\)。于是
+
+\[d_{\min}=\frac{589}{0.960}\,\mathrm{nm},\]
+
+\[\boxed{d_{\min}=613.542\,\mathrm{nm}\approx0.614\,\mu\mathrm m}.\]
+
+厚度略大于真空波长是正常的：决定相位差的是折射率之差，而不是单个折射率。
+
+\needspace{3\baselineskip}
+\textbf{本征分量和输入方向}
+
+设入射线偏振与本征轴 1 的夹角为 \(\psi\)，振幅为 \(E_0\)。两入射分量为
+
+\[E_{10}=E_0\cos\psi,\qquad E_{20}=E_0\sin\psi.\]
+
+去掉无关的整体相位，出射 Jones 向量可写为
+
+\[\begin{pmatrix}E_1\\E_2\end{pmatrix}
+=E_0\begin{pmatrix}\cos\psi\\e^{-i\delta}\sin\psi\end{pmatrix}.\]
+
+在四分之一波片处，\(\delta=\pi/2\)。实电场分量可选写为
+
+\[E_1(t)=E_0\cos\psi\cos\omega t,\]
+
+\[E_2(t)=E_0\sin\psi\sin\omega t.\]
+
+消去时间得
+
+\[\frac{E_1^2}{E_0^2\cos^2\psi}+
+\frac{E_2^2}{E_0^2\sin^2\psi}=1.\]
+
+通常为椭圆。只有 \(|\cos\psi|=|\sin\psi|\)，也就是输入方向与两轴成
+\(45^\circ\) 的等幅情形，才为圆偏振。
+
+若输入沿任一本征轴，另一个分量为零，出射仍是线偏振；波片不凭空生成另一分量。因而``四分之一波片把线偏振变成圆偏振''还需输入方向条件。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={两本征相位的积累}]{../figures/solution-04.pdf}
+\caption{两本征相位的积累}
+\end{figure}
+
+\needspace{3\baselineskip}
+\textbf{偏振椭圆的一般相位表达}
+
+任意相位差时，令 \(A=E_0\cos\psi\)、\(B=E_0\sin\psi\)，消去时间有
+
+\[\left(\frac{E_1}{A}\right)^2+
+\left(\frac{E_2}{B}\right)^2
+-2\frac{E_1E_2}{AB}\cos\delta=\sin^2\delta.\]
+
+\(\delta=0\) 或 \(\pi\) 时退化为直线；\(\delta=\pi/2\)
+时两本征轴成为椭圆主轴。相位差的符号改变旋转方向，但左右旋的命名还取决于观察方向与时间相位的约定，应先说明再标注。
+
+\needspace{3\baselineskip}
+\textbf{多级厚度}
+
+同一延迟模 \(2\pi\) 的一组厚度为
+
+\[d_j=\frac{(4j+1)\lambda_0}{4\Delta n},\qquad j=0,1,2,\ldots.\]
+
+对应 \(\delta=(4j+1)\pi/2\)。另一组 \(\delta=(4j+3)\pi/2\)
+也有四分之一周期的绝对延迟，但相对于前者的偏振旋转方向相反。
+
+原题问最小厚度，须取
+\(j=0\)；不能额外加一个完整波长周期而仍称``最小''。工程上厚一些的多级片更容易制造，却更敏感于温度、波长和厚度误差。
+
+\needspace{3\baselineskip}
+\textbf{厚度误差如何改变相位}
+
+若厚度误差为 \(\Delta d\)，且折射率不变，
+
+\[\Delta\delta=\frac{2\pi\Delta n}{\lambda_0}\Delta d.\]
+
+对等幅输入，归一化 Stokes 参数中的圆偏振分量大小为
+
+\[|S_3|=|\sin\delta|.\]
+
+若 \(\delta=\pi/2+\varepsilon\)，则
+
+\[|S_3|\approx1-\frac12\varepsilon^2.\]
+
+与圆偏振的偏离在这个分量上为二阶，但另一个线偏振分量随 \(\varepsilon\)
+为一阶。评价波片误差不能只看某一个指标。
+
+\needspace{3\baselineskip}
+\textbf{输入方向误差}
+
+若相位仍准确为 \(\pi/2\)，输入偏角
+\(\psi=\pi/4+\epsilon\)，两椭圆轴的振幅比为
+
+\[\left|\frac{B}{A}\right|=|\tan(\pi/4+\epsilon)|.\]
+
+圆偏振分量为
+
+\[|S_3|=|\sin2\psi|\approx1-2\epsilon^2.\]
+
+波片的厚度正确也不能补偿未知的输入方向误差。两种误差分别来自光程和分量幅度。
+
+\needspace{3\baselineskip}
+\textbf{量纲及限制}
+
+\(\Delta n\) 无量纲，\(\lambda_0/(4\Delta n)\)
+具有长度量纲。推导假定两本征轴正交、无吸收、正入射、界面不改变两分量相对透过率。若存在二向色性、反射差异或明显斜入射，完整出射偏振还需要相应的透射矩阵。
+
+\needspace{3\baselineskip}
+\textbf{反推实验厚度}
+
+若测得一片样品相位差 \(\delta\)，单一波长下只能确定厚度模
+\(\lambda_0/\Delta n\)：
+
+\[d=\frac{\lambda_0}{2\pi\Delta n}(\delta+2j\pi).\]
+
+要判断它是零级还是多级，需有机械厚度信息或多波长测量。这也说明只观察圆偏振不能唯一测出实际厚度。
+
+\needspace{3\baselineskip}
+\textbf{由 Stokes 参数核查椭圆}
+
+令两轴振幅为 \(A,B\)、相位差为 \(\delta\)，定义归一化参数
+
+\[S_0=A^2+B^2,\]
+
+\[s_1=(A^2-B^2)/S_0,\]
+
+\[s_2=2AB\cos\delta/S_0,\]
+
+\[s_3=2AB\sin\delta/S_0.\]
+
+完全偏振光满足
+
+\[s_1^2+s_2^2+s_3^2=1.\]
+
+入射为夹角 \(\psi\) 的线偏振，\(A=E_0\cos\psi,B=E_0\sin\psi\)，故
+
+\[s_1=\cos2\psi,\quad s_2=\sin2\psi\cos\delta,\quad s_3=\sin2\psi\sin\delta.\]
+
+四分之一波片使
+\(s_2=0\)；当输入45°时，\(s_1=0,|s_3|=1\)，得到圆偏振。输入不是45°时仍有
+\(s_1\)，所以只是椭圆。
+
+\needspace{3\baselineskip}
+\textbf{椭圆主轴方向与椭圆率}
+
+一般相位时，椭圆主轴方向角 \(\chi\) 满足
+
+\[\tan2\chi=\frac{s_2}{s_1}.\]
+
+用 \(\operatorname{atan2}\) 选择象限，比直接用反正切稳妥。椭圆率角
+\(\epsilon\) 满足
+
+\[\sin2\epsilon=s_3,\qquad -\pi/4\le\epsilon\le\pi/4.\]
+
+圆偏振对应 \(|\epsilon|=\pi/4\)；线偏振对应
+\(\epsilon=0\)。主轴振幅之比为
+\(|\tan\epsilon|\)，因此相位误差和入射幅度误差可以在同一个指标下比较。
+
+\needspace{3\baselineskip}
+\textbf{三种具体输入检验}
+
+输入沿轴1时
+\(\psi=0\)，\(s_1=1,s_2=s_3=0\)，任何延迟都不改变线偏振。输入45°而延迟为
+\(\pi\)，\(s_2=-1,s_3=0\)，仍是线偏振，只是方向变化。输入30°且延迟
+\(\pi/2\)，两半轴比为 \(\tan30^\circ=1/\sqrt3\)，圆偏振分量
+\(|s_3|=\sqrt3/2\)，不可称为圆偏振。
+
+\needspace{3\baselineskip}
+\textbf{量测是否唯一}
+
+只测得 \(s_3\) 不能区分输入角错误和延迟错误，因为
+\(s_3=\sin2\psi\sin\delta\)。需要同时测 \(s_1,s_2\)
+或已知输入方向，才能确定相位延迟。即便测出延迟，还存在整周期的厚度多值，需要机械或多波长信息去除。
+
+\needspace{3\baselineskip}
+\textbf{单位换算核查}
+
+给定差折射率0.240，厚度0.613542微米，使两分量相对光程差为
+
+\[\Delta n,d=0.14725\,\mu\mathrm m=\lambda_0/4.\]
+
+再除以 \(\lambda_0\) 并乘 \(2\pi\)，恰得
+\(\pi/2\)，对最小厚度数值作第二次核验。
+
+\needspace{3\baselineskip}
+\textbf{直接消去时间得到偏振椭圆}
+
+取本征方向上的分量\(E_x=A\cos\omega t\)、\(E_y=B\cos(\omega t-\delta)\)。用\(E_y/B=(E_x/A)\cos\delta+\sin\omega t\sin\delta\)并平方消去时间，得
+
+\[\frac{E_x^2}{A^2}+\frac{E_y^2}{B^2}-\frac{2E_xE_y\cos\delta}{AB}=\sin^2\delta.\]
+
+当\(\delta=\pi/2\)，交叉项消失；只有A=B才为圆。若输入与快轴夹角30°，A/B=√3，出射椭圆长短轴比为√3，即使厚度精确为四分之一波长也不会变圆。
+
+当\(\delta=0\)或\(\pi\)，右端为零，椭圆退化成直线。半波片把输入方位\(\psi\)变成−\(\psi\)（以其中一本征轴为零），等价于关于轴反射，而不是无条件旋转90°。
+
+相位滞后大小依赖光在介质中的波数，而厚度式使用真空波长：
+
+\[k_j=2\pi n_j/\lambda_0,\quad\delta=(k_1-k_2)d.\]
+
+将介质内波长再除一次折射率会重复计入n。定义最薄的四分之一波片时取\(|\delta|=\pi/2\)；更厚的多级波片\(d_m=(m+1/4)\lambda_0/|\Delta n|\)在中心波长给相同相对相位，但其色散敏感性随m增加。
+
+\newpage
+
+\section{第 5 题}\label{ux7b2c-5-ux9898}
+
+一光滑轨道通过原点，近原点形状为
+\(y=x^2/a\)，质点在重力作用下作小振动，求周期
+\(T_a\)。若要求从任意允许高度由静止释放都有相同周期
+\(T_a\)，求轨道高度与弧长的关系，并给出轨道参数方程。
+
+将质点换为半径 \(r\)
+的均匀圆柱，要求在足够静摩擦下纯滚动且各允许释放幅度的周期仍为
+\(T_a\)，求相应接触轨道的参数方程。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={题面模型}]{../figures/question-05.pdf}
+\caption{题面模型}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-4}
+
+等时曲线与有限尺寸滚动物体的中心轨迹。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-4}
+
+弧长动力学； Abel 反演；摆线；滚动等效质量；法向平行曲线；静摩擦阈值。
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-4}
+
+等时条件控制的是沿质心轨迹的高度---弧长关系。对有限半径圆柱，接触轨道要由所需中心轨迹沿法线偏移得到。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-4}
+
+以最低点为 \(s=0\)，\(s\) 为沿轨道的有号弧长。质点满足
+
+\[\ddot s=-g\frac{dy}{ds}.\]
+
+如果 \(y\) 恰好为 \(s\)
+的二次函数，就得到严格简谐运动。再用等时条件反证这一形式是必要的。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-4}
+
+\needspace{3\baselineskip}
+\textbf{原抛物线的小振动周期}
+
+轨道 \(y=x^2/a\) 有斜率 \(dy/dx=2x/a\)，弧长元
+
+\[ds=\sqrt{1+4x^2/a^2}\,dx.\]
+
+在 \(|x|\ll a\) 时 \(s\approx x\)，所以
+
+\[y\approx\frac{s^2}{a}.\]
+
+沿轨道切向运动方程化为
+
+\[\ddot s+\frac{2g}{a}s=0.\]
+
+小振动角频率和周期为
+
+\[\omega_a=\sqrt{\frac{2g}{a}},\]
+
+\[\boxed{T_a=2\pi\sqrt{\frac{a}{2g}}}.\]
+
+普通抛物线只在小振幅下得到这个周期，有限幅度时弧长不再等于 \(x\)。
+
+\needspace{3\baselineskip}
+\textbf{全幅等时所需的高度---弧长关系}
+
+如果严格要求
+
+\[y(s)=\frac{s^2}{a},\]
+
+则切向方程在整个允许区间内为同一个线性振子方程，周期恰为
+\(T_a\)，与振幅无关。这给出了一个充分条件。
+
+为说明必要性，考虑从高度 \(y_0\) 静止释放到最低点的时间：
+
+\[t_q(y_0)=\frac1{\sqrt{2g}}\int_0^{y_0}\frac{s'(y)}{\sqrt{y_0-y}}\,dy.\]
+
+对称单调支上，完整周期为 \(4t_q\)。要求 \(t_q=T_a/4\) 为常数，定义
+
+\[A(y_0)=\int_0^{y_0}\frac{s'(y)}{\sqrt{y_0-y}}dy
+=\sqrt{2g}\frac{T_a}{4}.\]
+
+再对上式作 Abel 积分：
+
+\[\int_0^y\frac{A(v)}{\sqrt{y-v}}dv
+=\pi\int_0^ys'(u)du=\pi s(y).\]
+
+左侧常量 \(A\) 的积分为 \(2A\sqrt y\)，故
+
+\[s(y)=\frac{2A}{\pi}\sqrt y.\]
+
+代入 \(T_a\)，系数恰为 \(\sqrt a\)，得到
+
+\[\boxed{s^2=ay}.\]
+
+这里假定轨道左右对称、每侧高度随弧长单调，周期由四段相同的下降或上升时间组成。若允许非对称两支，等时条件约束的是两支弧长宽度，不足以分别唯一确定两支。
+
+\needspace{3\baselineskip}
+\textbf{由弧长关系求摆线参数}
+
+有 \(dy/ds=2s/a\)，且 \(|dy/ds|\le1\)，说明每支只能取 \(|s|\le a/2\)。令
+
+\[s=4R\sin(u/2),\qquad R=\frac a8,\]
+
+则
+
+\[y=\frac{s^2}{8R}=R(1-\cos u).\]
+
+又有 \(ds/du=2R\cos(u/2)\)，以及
+
+\[\frac{dx}{ds}=\sqrt{1-(dy/ds)^2}=\cos(u/2).\]
+
+因此
+
+\[\frac{dx}{du}=2R\cos^2(u/2)=R(1+\cos u),\]
+
+积分取最低点 \(x=0\)，得到
+
+\[\boxed{x=R(u+\sin u),\quad y=R(1-\cos u),\quad R=a/8}.\]
+
+允许的光滑开放区间为 \(-\pi<u<\pi\)，两端为摆线尖点；周期为
+\(4\pi\sqrt{R/g}=T_a\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={圆柱中心轨迹与接触轨道}]{../figures/solution-05.pdf}
+\caption{圆柱中心轨迹与接触轨道}
+\end{figure}
+
+\needspace{3\baselineskip}
+\textbf{均匀圆柱的中心等时轨迹}
+
+圆柱转动惯量 \(I=mr^2/2\)，纯滚动动能为
+
+\[K=\frac12mv_c^2+\frac12I(v_c/r)^2
+=\frac12m(1+\beta)v_c^2,\]
+
+其中 \(\beta=I/(mr^2)=1/2\)。以圆柱中心的弧长 \(s_c\) 为坐标，方程为
+
+\[(1+\beta)\ddot s_c=-g\frac{dy_c}{ds_c}.\]
+
+要求频率仍为 \(\omega_a\)，需
+
+\[y_c-r=\frac{1+\beta}{a}s_c^2.\]
+
+因此中心轨迹为更小生成半径的摆线：
+
+\[R_c=\frac{a}{8(1+\beta)}=\frac a{12},\]
+
+\[x_c=R_c(u+\sin u),\qquad
+ y_c=r+R_c(1-\cos u).\]
+
+最低点中心高度为 \(r\)，使接触轨道仍通过原点。
+
+\needspace{3\baselineskip}
+\textbf{有限半径的法向偏移}
+
+中心轨迹的单位切向和向上单位法向为
+
+\[\boldsymbol t=(\cos(u/2),\sin(u/2)),\]
+
+\[\boldsymbol n=(-\sin(u/2),\cos(u/2)).\]
+
+接触点位于中心沿下法向 \(r\) 处：
+
+\[\boldsymbol r_{\rm rail}=\boldsymbol r_c-r\boldsymbol n.\]
+
+故所求轨道为
+
+\[\boxed{x_{\rm rail}=R_c(u+\sin u)+r\sin(u/2)},\]
+
+\[\boxed{y_{\rm rail}=R_c(1-\cos u)+r[1-\cos(u/2)]}.\]
+
+不能直接让圆柱沿 \(R_c=a/12\)
+的摆线接触轨道滚动，因为它的中心会走另一条偏移曲线，周期条件约束错了对象。\(r\to0\)
+时，接触轨道才趋向中心摆线。
+
+\needspace{3\baselineskip}
+\textbf{滚动摩擦和接触条件}
+
+中心轨迹的曲率为
+
+\[\kappa_c=\frac1{4R_c\cos(u/2)}.\]
+
+法向方程给出
+
+\[N=mg\cos(u/2)+mv_c^2\kappa_c.\]
+
+它在光滑开放支上为正，物体保持接触。切向重力与滚动转动方程给出静摩擦的大小
+
+\[|f|=\frac{\beta}{1+\beta}mg|\sin(u/2)|.\]
+
+从静止释放时，\(v_c=0\)，因此
+
+\[\frac{|f|}{N}=\frac{\beta}{1+\beta}|\tan(u/2)|.\]
+
+这个比值在接近尖点 \(|u|\to\pi\)
+时发散。故任何有限静摩擦系数都不能保证从无限接近端点的所有幅度纯滚动。题目``足够摩擦''应理解为对所选的有限释放区间足够，而非包含尖点的无条件全幅。
+
+\needspace{3\baselineskip}
+\textbf{周期的直接能量核查}
+
+释放点中心弧长为 \(s_0\)，能量给出
+
+\[\frac12m(1+\beta)\dot s_c^2
+=mg\frac{1+\beta}{a}(s_0^2-s_c^2).\]
+
+约去 \((1+\beta)m\)：
+
+\[\dot s_c^2=\frac{2g}{a}(s_0^2-s_c^2).\]
+
+四分之一周期积分为
+
+\[t_q=\sqrt{\frac a{2g}}\int_0^{s_0}\frac{ds_c}{\sqrt{s_0^2-s_c^2}}
+=\frac\pi2\sqrt{\frac a{2g}},\]
+
+再次得到 \(T=T_a\)，没有残余振幅因子。
+
+\needspace{3\baselineskip}
+\textbf{摆线等时的完整运动表示}
+
+质点从 \(s_0\) 静止释放，以完整往返振动为周期，弧长随时间为
+
+\[s(t)=s_0\cos(\omega_at),\qquad \omega_a=\sqrt{2g/a}.\]
+
+参数反演为
+
+\[u(t)=2\arcsin\frac{s_0\cos(\omega_at)}{4R},\qquad R=a/8.\]
+
+代入摆线参数即可得到 \(x(t),y(t)\)。高度为
+
+\[y(t)=\frac{s_0^2}{a}\cos^2(\omega_at).\]
+
+它的周期为 \(T_a/2\)，而质点位置的完整周期为
+\(T_a\)。这说明测高度峰值间隔与测完整回到同一侧的时间不同。
+
+质点速度平方为
+
+\[v^2=\omega_a^2(s_0^2-s^2)=2g(y_0-y).\]
+
+在最低点 \(v_{\max}=\omega_as_0\)，能量等于
+\(mgs_0^2/a\)。若从端点尖点释放，弧长方程仍形式有限，但轨道切线和约束的建立需要取内部极限处理。
+
+\needspace{3\baselineskip}
+\textbf{圆柱的运动表示}
+
+圆柱中心同样有 \(s_c(t)=s_{c0}\cos\omega_at\)，只需换
+\(R_c=a/12\)。沿中心轨迹的切向加速度为
+
+\[a_t=-\omega_a^2s_c.\]
+
+转动角速度大小为
+
+\[|\omega_{\rm roll}|=|\dot s_c|/r.\]
+
+由中心路径长度决定圆柱自身转过的角度，一次往返回到初始位置时，净转角为零，但累计绝对转角为
+\(4s_{c0}/r\)。累计角不等于体姿态的净角。
+
+\needspace{3\baselineskip}
+\textbf{偏移轨道的弧长}
+
+中心曲线曲率为 \(\kappa_c\)，下法向偏移轨道的切向长度元满足
+
+\[ds_{\rm rail}=(1+r\kappa_c)ds_c.\]
+
+因此不能让接触轨道弧长 \(s_{\rm rail}\)
+代替中心弧长写等时方程。圆柱相对于轨道局部切线的转角还包含切线方向自身的变化；在惯性系中，接触点速度为零给出
+\(v_c=r\omega_{\rm roll}\)，这个关系对弯曲固定轨道依然成立。
+
+\needspace{3\baselineskip}
+\textbf{非对称等时轨道的自由度}
+
+设左右两支到高度 \(y\) 的弧长为
+\(s_+(y),s_-(y)\)，整个周期由两支时间之和构成。等时条件只固定
+
+\[s_+(y)+s_-(y)=2\sqrt{ay}.\]
+
+任意在允许斜率范围内改变两支的分配，可以得到非对称等时势。原题通常采用图示对称轨道，才能单独写每支
+\(s^2=ay\) 并得到对称摆线。
+
+\newpage
+
+\section{第 6 题}\label{ux7b2c-6-ux9898}
+
+宇宙飞船初始静质量为 \(m_0\)，在实验室中以恒定速率 \(v\)
+运动。用燃料反应后喷出的物质改变运动方向，喷出物相对飞船的速度大小为
+\(u\)，不作 \(u\ll c\) 或 \(v\ll c\) 近似。燃料反应前的微小静质量为
+\(dm_0\)。求最优喷射方向下偏转角 \(d\theta\) 与 \(dm_0\)
+的关系；若保持速率转过角度 \(\theta\)，末静质量为 \(m_1\)，求最小质量比
+\(m_0/m_1\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={题面模型}]{../figures/question-06.pdf}
+\caption{题面模型}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-5}
+
+相对论横向火箭的局部动量与积分。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-5}
+
+瞬时共动系；四动量；横向速度变换；燃料静能；微分质量比；优化方向。
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-5}
+
+保持实验室速率只改变动量方向。最省质量的喷射在瞬时船体系中向所需转向的反方向，并把给定燃料静能全部用于喷出物总能量。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-5}
+
+当前船质量写作 \(m\)，避免把全过程的初始质量 \(m_0\) 与当前质量混用。
+
+\[\gamma_v=\frac1{\sqrt{1-v^2/c^2}}.\]
+
+先把实验室微小转角变到船体系，再按燃料反应前的静能预算计算最大喷射动量。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-5}
+
+\needspace{3\baselineskip}
+\textbf{固定速率的微小动量变化}
+
+实验室里初速度沿局部 \(x\) 轴，转过 \(d\theta\) 后有
+
+\[v_x=v\cos d\theta=v+O(d\theta^2),\]
+
+\[v_y=v\sin d\theta=v\,d\theta+O(d\theta^3).\]
+
+实验室动量大小为 \(\gamma_vmv\)。只看方向变化的一阶横向动量需求为
+
+\[dp_\perp=\gamma_vmv\,d\theta.\]
+
+但质量同时改变，完整纵向能量和动量的变化还需处理；更清晰的方法是在瞬时共动系做反应平衡。
+
+\needspace{3\baselineskip}
+\textbf{微小转向在船体系中的速度}
+
+相对于初始实验室速度 \(v\) 的洛伦兹变换给出
+
+\[v'_y=\frac{v_y}{\gamma_v(1-vv_x/c^2)}.\]
+
+代入小角展开：
+
+\[1-vv_x/c^2=1-v^2/c^2+O(d\theta^2)=\gamma_v^{-2}+O(d\theta^2).\]
+
+所以
+
+\[dv'_\perp=\gamma_vv\,d\theta.\]
+
+纵向速度变化只有二阶。因此在船体系的一阶反冲动量为
+
+\[dp'_{\rm ship}=m\gamma_vv\,d\theta.\]
+
+这个 \(\gamma_v\) 因子是横向转向的相对论成本，不能按非相对论直接写
+\(mv,d\theta\)。
+
+\needspace{3\baselineskip}
+\textbf{喷出物的能量和动量}
+
+喷出物速度相对船为 \(u\)，其船体系能量和动量满足
+
+\[p'_{\rm exhaust}=\frac{u}{c^2}E'_{\rm exhaust}.\]
+
+反应前燃料静质量为 \(dm_0\)，可用总静能
+\(dm_0c^2\)。在最优、无其他损失的一阶模型中，船的反冲动能为二阶，故
+
+\[E'_{\rm exhaust}=dm_0c^2+O(dm_0^2).\]
+
+于是
+
+\[p'_{\rm exhaust}=u\,dm_0+O(dm_0^2).\]
+
+若喷射方向与所需反冲不反向，只有喷射动量的横向投影起作用，给定燃料得到的转角更小。最大转角需纯横向喷射，并让总能量预算全部进入这一喷出物。
+
+动量平衡为
+
+\[m\gamma_vv\,|d\theta|=u\,dm_0.\]
+
+因此
+
+\[\boxed{\frac{|d\theta|}{dm_0}=\frac{u}{m\gamma_vv}}.\]
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={横向反冲与质量消耗}]{../figures/solution-06.pdf}
+\caption{横向反冲与质量消耗}
+\end{figure}
+
+\needspace{3\baselineskip}
+\textbf{为何没有额外乘 \(\gamma_u\)}
+
+若喷出物反应后的静质量为 \(dm_e\)，其动量为 \(\gamma_u u\,dm_e\)、能量为
+\(\gamma_udm_ec^2\)。但题目给的是反应前燃料质量，满足
+
+\[dm_0=\gamma_udm_e.\]
+
+所以 \(\gamma_u u\,dm_e=u\,dm_0\)。若既把 \(dm_0\)
+当反应前质量，又在动量式中乘 \(\gamma_u\)，会把相对论能量收益重复计算。
+
+以喷出物静质量为变量，当然可以写
+
+\[m\gamma_vv\,|d\theta|=\gamma_u u\,dm_e,\]
+
+但此时飞船的质量损失不是 \(dm_e\)，而是 \(\gamma_udm_e\)。两种的约定
+换元后给出同一最终质量比。
+
+\needspace{3\baselineskip}
+\textbf{有限转角的质量比}
+
+最优推进过程中，飞船当前静质量减少
+
+\[dm=-dm_0.\]
+
+保持 \(v,u\) 恒定，把转角取为沿单一转向增长的正量，有
+
+\[\frac{dm}{m}=-\frac{\gamma_vv}{u}d\theta.\]
+
+从 \(m_0\) 积分到 \(m_1\)、从 0 积分到 \(|\theta|\)：
+
+\[\ln\frac{m_1}{m_0}=-\frac{\gamma_vv}{u}|\theta|.\]
+
+因此
+
+\[\boxed{\left(\frac{m_0}{m_1}\right)_{\min}
+=\exp\left(\frac{\gamma_vv}{u}|\theta|\right)}.\]
+
+该最优值还假设燃料可完全实现上述能量转换，没有额外抛弃无用质量或消耗去补偿速率变化。现实发动机效率小于
+1 时需要更多燃料。
+
+\needspace{3\baselineskip}
+\textbf{非相对论与光子极限}
+
+当 \(v\ll c\)，\(\gamma_v\approx1\)，得到
+
+\[m_0/m_1\approx e^{v|\theta|/u}.\]
+
+如果 \(u\to c\)，喷射物趋近光子型排气，给定能量的动量达到 \(E/c\)，得
+
+\[m_0/m_1=e^{\gamma_v(v/c)|\theta|}.\]
+
+对于固定 \(v\) 和转角，\(u\) 越大越省质量；但 \(v\to c\) 时
+\(\gamma_vv\) 发散，维持极高速度转弯的成本急剧增大。
+
+\needspace{3\baselineskip}
+\textbf{实验室能量检查}
+
+喷出物在船体系纯横向运动，因此实验室能量为
+
+\[dE_{\rm exhaust}=\gamma_vdm_0c^2.\]
+
+飞船保持速率，实验室能量减少
+
+\[-dE_{\rm ship}=-d(\gamma_vmc^2)=\gamma_vdm_0c^2.\]
+
+两者相等。喷出物还带有实验室纵向动量
+\(\gamma_vv\,dm_0\)，恰好补偿飞船因静质量减少失去的纵向动量；横向动量对应方向改变。这说明``纯横向''指船体系，并非实验室中没有纵向排气动量。
+
+\needspace{3\baselineskip}
+\textbf{转角路径和最小值的含义}
+
+若先左转再右转，燃料消耗取决于累计方向路径长度
+\(\int|d\theta|\)，不是仅最终有符号角。平面中连接初末速度方向的最短转向应取最小绝对角，若题目指定转过大于
+\(\pi\) 的一段角路程，则按指定累计角计算。
+
+三维中方向位于单位球面，最小转向路径为相应大圆弧；累计弯曲角仍进入指数。任意折返都会增加消耗，而不会因正负角抵消把燃料收回。
+
+\needspace{3\baselineskip}
+\textbf{四动量预算的逐项检查}
+
+在反应前瞬时船体系，初始四动量为 \((mc,\boldsymbol0)\)。喷射后船质量为
+\(m-dm_0\)，横向反冲速率 \(dv'\) 为一阶小量，其能量和动量为
+
+\[E'_{\rm ship}=(m-dm_0)c^2+\frac12m(dv')^2+\cdots,\]
+
+\[\boldsymbol p'_{\rm ship}=m\,d\boldsymbol v'+O(dm_0^2).\]
+
+能量守恒使喷出物能量为 \(dm_0c^2\)
+到一阶；动量守恒要求喷出物动量相反。若喷出物速度为 \(u\)，其静质量为
+
+\[dm_e=dm_0\sqrt{1-u^2/c^2}.\]
+
+剩余的燃料静能变成喷出物动能，不是消失。随着
+\(u\to c\)，喷出物静质量趋零，但能量和可用动量保持有限。
+
+\needspace{3\baselineskip}
+\textbf{耗费的质量分数}
+
+令 \(a_\theta=\gamma_vv/u\)，质量比为
+\(e^{a_\theta|\theta|}\)，耗费的初始质量分数为
+
+\[f_{\rm fuel}=1-\frac{m_1}{m_0}=1-e^{-a_\theta|\theta|}.\]
+
+小转角时
+
+\[f_{\rm fuel}=a_\theta|\theta|-\frac12a_\theta^2\theta^2+\cdots.\]
+
+不能用一阶质量损失 \(m_0a_\theta|\theta|\)
+对大转角外推，因为当前船质量在持续变小。指数关系正是把每一阶段的局部反冲按当前质量累积。
+
+\needspace{3\baselineskip}
+\textbf{转向速率与实验室外力}
+
+若方向变化率为 \(\dot\theta\)，实验室横向合力为
+
+\[F_\perp=\gamma_vmv\dot\theta.\]
+
+在恒定速率下，外力还因排气携走纵向动量而使船的质量变化；这不与洛伦兹力式的``垂直力不做功''直接等价，因为飞船不是固定质量封闭系统。
+
+实验室动量可拆成
+
+\[d\boldsymbol p=\gamma_vv\,dm\,\boldsymbol e_v
++\gamma_vmv\,d\theta\,\boldsymbol e_\perp.\]
+
+第一项由喷出物在实验室的纵向动量平衡，第二项产生转向。只写第二项求推进方向是局部优化，完整守恒仍需两项。
+
+\needspace{3\baselineskip}
+\textbf{最大可转角}
+
+若容许质量比不超过 \(R_m\)，则
+
+\[|\theta|_{max}=\frac{u}{\gamma_vv}\ln R_m.\]
+
+例如质量比10、\(v=0.8c,u=0.6c\)，最大累计角约 \(1.0362\)
+弧度，即59.37°。达到这个角需要最优方向和完全能量利用；若折返或损失，容许角更小。
+
+\needspace{3\baselineskip}
+\textbf{从微分守恒到有限转角的积分区间}
+
+设瞬时剩余静质量为
+\(m(\vartheta)\)。在最优纯横向喷射下，局部方程不是对初始质量 \(m_0\)
+写的，而是
+
+\[-\frac{dm}{m}=\frac{\gamma_vv}{u}\,d\vartheta,\qquad d\vartheta\ge0.\]
+
+从初始方向到指定方向沿最短角路程积分：
+
+\[\int_{m_0}^{m_1}-\frac{dm}{m}
+=\frac{\gamma_vv}{u}\int_0^{|\theta|}d\vartheta.\]
+
+左边为 \(\ln(m_0/m_1)\)，右边为
+\(\gamma_vv|\theta|/u\)。这一步同时说明指数的无量纲性，以及为什么任意分段转向只要没有折返就给出相同质量比。若先消耗一部分质量再完成另一段，两个阶段的质量比相乘；其对数相加，正好等于总累计角。若折返，积分上限应改为实际角路程，总消耗会增加。
+
+\needspace{3\baselineskip}
+\textbf{用剩余质量比例核对指数积分}
+
+取 \(v=0.8c\)、\(u=0.6c\)，则 \(\gamma_vv/u=20/9\)。一次单调转过
+\(30^\circ\) 后，
+
+\[\frac{m_f}{m_i}=\exp\!\left(-\frac{10\pi}{27}\right)\approx0.31237.\]
+
+因此用掉的是初始质量的 \(68.76\%\)，而质量比
+\(m_i/m_f\approx3.2013\)。这两个量不能混用。若连续作三段同向的
+\(30^\circ\) 转弯，第二段从已经减少的质量出发，末质量比例必须相乘：
+
+\[\frac{m_3}{m_0}=
+\left(e^{-10\pi/27}\right)^3
+=e^{-10\pi/9}\approx0.03048.\]
+
+所以转过 \(90^\circ\) 后只剩初始静质量的 \(3.048\%\)，对应质量比约
+\(32.81\)。不能把三段各自消耗的百分比直接相加，否则会算出消耗超过初始质量的错误结果。每段都对当时剩余质量积分，是指数关系的实际含义。
+
+\newpage
+
+\section{第 7 题}\label{ux7b2c-7-ux9898}
+
+质量为 \(m\)、电荷为 \(q\)
+的小球位于水平硬壁上方，均匀电场使其受到恒定向下的力
+\(qE\)，不计重力，与壁的碰撞完全弹性。小球从高度 \(h\)
+静止释放后反复弹跳。电场强度缓慢增大到原来的两倍，求新最高点高度与弹跳周期，并讨论``缓慢''的条件。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={题面模型}]{../figures/question-07.pdf}
+\caption{题面模型}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-6}
+
+硬壁线性势中的绝热不变量。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-6}
+
+作用量积分；周期与能量；慢参数变化；相位平均；骤变与缓变。
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-6}
+
+场强缓慢增大时，每次循环轨道略变，但闭合相空间面积近似不变。机械能不守恒，因为外界正在改变势能参数。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-6}
+
+记向下力大小 \(F=qE>0\)，壁面取 \(z=0\)，势能为 \(U=Fz\)。当前最高点为
+\(h\)，当前能量为 \(\mathcal E=Fh\)。
+
+\[p(z)=\sqrt{2mF(h-z)}.\]
+
+一周期相空间面积为下降和上升两支的动量积分。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-6}
+
+\needspace{3\baselineskip}
+\textbf{固定场中的弹跳周期}
+
+小球从最高点静止落下，恒加速度为 \(F/m\)。落到壁面时间
+
+\[t_\downarrow=\sqrt{\frac{2mh}{F}}.\]
+
+弹性反弹后上升所需时间相同，故
+
+\[\boxed{T=2\sqrt{\frac{2mh}{F}}}.\]
+
+一周期指最高点回到最高点，或同一碰撞后状态回到下一次同向碰撞后状态，不要额外乘两次。
+
+\needspace{3\baselineskip}
+\textbf{作用量的闭合积分}
+
+取不含 \(1/(2\pi)\) 的作用量定义
+
+\[J=\oint p,dz.\]
+
+上升支 \(p>0\)、下降支 \(p<0\)，沿闭合轨道积分均贡献正面积。因此
+
+\[J=2\int_0^h\sqrt{2mF(h-z)}dz.\]
+
+用 \(w=h-z\)，得
+
+\[J=2\sqrt{2mF}\int_0^hw^{1/2}dw,\]
+
+\[\boxed{J=\frac43\sqrt{2mF}\,h^{3/2}}.\]
+
+若采用含 \(1/(2\pi)\) 的作用变量，只改变一个固定系数，不改变比例关系。
+
+\needspace{3\baselineskip}
+\textbf{场加倍时的高度}
+
+慢变化的绝热近似给出 \(J\) 不变，所以
+
+\[\sqrt F\,h^{3/2}=\sqrt{F'}\,h'^{3/2}.\]
+
+平方后
+
+\[Fh^3=F'h'^3.\]
+
+\(F'=2F\) 时
+
+\[\boxed{h'=2^{-1/3}h}.\]
+
+高度减少，但不是减为一半。因为能量不是在变场期间守恒，不能用 \(Fh=F'h'\)
+来算高度。
+
+\needspace{3\baselineskip}
+\textbf{新周期与新能量}
+
+周期比为
+
+\[\frac{T'}T=\sqrt{\frac{h'}h\frac F{F'}}.\]
+
+代入得到
+
+\[\boxed{T'=2^{-2/3}T}.\]
+
+最高点能量 \(\mathcal E=Fh\)，于是
+
+\[\boxed{\mathcal E'=2^{2/3}\mathcal E}.\]
+
+壁面附近最大速度 \(v_{\max}=\sqrt{2\mathcal E/m}\)，故
+
+\[v'_{\max}=2^{1/3}v_{\max}.\]
+
+变强的电场向小球输入能量，同时把运动空间压缩；新高度更低和新速度更大可以同时成立。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={相空间面积与绝热压缩}]{../figures/solution-07.pdf}
+\caption{相空间面积与绝热压缩}
+\end{figure}
+
+\needspace{3\baselineskip}
+\textbf{从相位平均再推能量规律}
+
+哈密顿量为
+
+\[H(z,p;F)=\frac{p^2}{2m}+Fz.\]
+
+参数改变时，能量变化率为
+
+\[\frac{d\mathcal E}{dt}=z\dot F.\]
+
+慢变允许用一个周期的平均高度代替瞬时高度。上升过程中
+
+\[z(t)=v_{\max}t-\frac{F}{2m}t^2,\qquad0\le t\le T.\]
+
+对一个从壁面反弹到下一次反弹的周期积分，得到
+
+\[\langle z\rangle=\frac{2h}{3}.\]
+
+因此平均能量方程为
+
+\[\dot{\mathcal E}\approx\frac{2h}{3}\dot F
+=\frac{2\mathcal E}{3F}\dot F.\]
+
+积分得到
+
+\[\mathcal E\propto F^{2/3},\]
+
+再由 \(h=\mathcal E/F\) 得 \(h\propto F^{-1/3}\)，与作用量法一致。
+
+\needspace{3\baselineskip}
+\textbf{平均动能和势能的核查}
+
+平均势能为
+
+\[\langle U\rangle=F\langle z\rangle=\frac23\mathcal E,\]
+
+平均动能为
+
+\[\langle K\rangle=\mathcal E-\langle U\rangle=\frac13\mathcal E.\]
+
+线性势中的平均势能是平均动能的两倍。硬壁反弹瞬间不改变动能，只反转动量方向；这一点使闭合循环仍可定义作用量。
+
+\needspace{3\baselineskip}
+\textbf{作用量与周期的微分关系}
+
+把 \(h=\mathcal E/F\) 代入作用量：
+
+\[J(\mathcal E,F)=\frac43\sqrt{2m}\frac{\mathcal E^{3/2}}F.\]
+
+对能量求偏导：
+
+\[\frac{\partial J}{\partial\mathcal E}
+=\frac{2\sqrt{2m\mathcal E}}F.\]
+
+而固定场周期为
+
+\[T=2\sqrt{\frac{2m(\mathcal E/F)}F}
+=\frac{2\sqrt{2m\mathcal E}}F.\]
+
+故
+\(\partial J/\partial\mathcal E=T\)，作用量的系数和周期的定义相互一致。
+
+\needspace{3\baselineskip}
+\textbf{缓慢条件与误差范围}
+
+瞬时周期 \(T(F)\) 内场强的相对变化需很小：
+
+\[\epsilon_{\rm ad}=T\left|\frac{\dot F}{F}\right|\ll1.\]
+
+还需变化过程足够平滑、不接近 \(F=0\)
+的失约束情形、硬壁碰撞保持弹性。仅说总变化用了很多秒不能独立判断缓慢，必须和当时的循环周期比较。
+
+若场变化不是无限慢，作用量只有近似守恒，结果会带依赖初始相位和变场曲线的修正。原题所求因子
+\(2^{-1/3}\)、\(2^{-2/3}\) 是绝热极限，不能用于一次突然翻倍的场。
+
+\needspace{3\baselineskip}
+\textbf{场恢复的可逆检查}
+
+先缓慢变到 \(2F\)，再缓慢恢复到
+\(F\)，同样的作用量还原原来高度和周期。在理想完全弹性模型中没有净能量损失。若实际碰撞不完全弹性，这个回程检验会失败，需要另外引入耗散。
+
+\needspace{3\baselineskip}
+\textbf{时间分布与平均高度的积分}
+
+固定场下，小球在高度 \(z\) 附近的速度为
+
+\[|v(z)|=\sqrt{\frac{2F}{m}(h-z)}.\]
+
+一周期上、下各经过一次，所以高度概率密度为
+
+\[P(z)=\frac2{T|v(z)|}=\frac1{2\sqrt h\sqrt{h-z}},\qquad0<z<h.\]
+
+归一化积分为
+
+\[\int_0^hP(z)dz=1.\]
+
+任意高度幂矩可由 Beta 积分求出：
+
+\[\langle z^n\rangle=\frac{h^n}{2}B(n+1,1/2).\]
+
+\(n=1,2\) 时分别为
+
+\[\langle z\rangle=\frac23h,\qquad\langle z^2\rangle=\frac8{15}h^2.\]
+
+高度方差为
+\(4h^2/45\)。小球靠近最高点速度慢，所以时间平均高度不等于几何区间中点
+\(h/2\)。
+
+\needspace{3\baselineskip}
+\textbf{绝热变场的局部功}
+
+在很小场强变化 \(dF\) 中，平均外部做功为
+
+\[d\mathcal E=\langle z\rangle dF=\frac{2h}{3}dF.\]
+
+把 \(h=\mathcal E/F\) 代入，有
+
+\[d\ln\mathcal E=\frac23d\ln F,\]
+
+积分得到能量比例。此方法明确外部输入功的来源，并独立检验作用量。
+
+\needspace{3\baselineskip}
+\textbf{突然翻倍的分布而非仅平均}
+
+若变场时相位随机，骤变能量为 \(\mathcal E'=\mathcal E+Fz\)，其范围
+\([\mathcal E,2\mathcal E]\)。平均为 \(5\mathcal E/3\)，方差为
+
+\[\operatorname{Var}(\mathcal E')=F^2\operatorname{Var}(z)=\frac4{45}\mathcal E^2.\]
+
+因此突然变场的末幅度不仅不同于绝热平均，还在不同相位实验中有分散。绝热极限消除主要相位依赖，但有限速率仍可能有小修正。
+
+\needspace{3\baselineskip}
+\textbf{绝热参数的全过程检查}
+
+\(F\) 增大时 \(T\propto F^{-2/3}\)。若相对变场率 \(\dot F/F\)
+保持常数，绝热参数随场增强减小，初始时最难满足条件。若绝对变场率保持常数，则参数按
+\(F^{-5/3}\) 减小，同样最初最苛刻。
+
+\needspace{3\baselineskip}
+\textbf{慢变过程中能量怎样增加}
+
+电场随时间变化，静电势可选\(U=F(t)z\)。每个周期的能量变化不是零，外界参数改变产生
+
+\[\dot{\mathcal E}=\dot F\,z.\]
+
+绝热平均\(\langle z\rangle=2h/3=2\mathcal E/(3F)\)，所以
+
+\[\frac{d\mathcal E}{\mathcal E}=\frac23\frac{dF}{F}.\]
+
+积分得到\(\mathcal E\propto F^{2/3}\)、\(h=\mathcal E/F\propto F^{-1/3}\)。它与相空间面积守恒独立地给出相同指数。场变强使最高点下降，但总机械能上升；能量来源是改变电场的外部装置。
+
+一个周期中，回弹壁的理想弹性冲量只反转速度，不做净功。场参数变化的功则贯穿整个上、下行过程，不能将它压缩成在壁处的一次碰撞供能。
+
+令F缓慢增加一倍，\(\Delta\mathcal E=(2^{2/3}-1)\mathcal E_0\)，而最高点的重力式位势Fh同样增长\(2^{2/3}\)倍。若瞬间增加一倍，能量增量为\(F_0z\)，依赖改变时的位置；这正是正文慢变结果不能用于突然切换的原因。
+
+\[\left|\frac{\dot h}{h}\right|=\frac13\left|\frac{\dot F}{F}\right|,\qquad
+\left|\frac{\dot T}{T}\right|=\frac23\left|\frac{\dot F}{F}\right|.\]
+
+周期趋短时，同样的缓慢调节速率更易满足绝热条件；若场降到零附近，周期发散，原条件最终失效。
+
+\newpage
+
+\section{第 8 题}\label{ux7b2c-8-ux9898}
+
+一均匀实心球质量为 \(m\)、半径为 \(r\)，球面上有一质量也为 \(m\)
+的点状兔子。初始系统无角动量，球的体坐标轴与实验室坐标轴重合；兔子位于
+\((r\sin\theta,0,r\cos\theta)\)，\(0<\theta<90^\circ\)。
+
+\begin{enumerate}
+\def\labelenumi{(\arabic{enumi})}
+\item
+  球心固定，兔子在实验室中沿高度为 \(r\cos\theta\)
+  的水平圆周跑一圈，哪些 \(\theta\) 使球的体轴 \(z'\) 回到初始方向？
+\item
+  球心可自由运动且系统初始质心静止，兔子仍在实验室沿高度为
+  \(r\cos\theta\) 的圆周跑一圈，同问。
+\item
+  一般 \(\theta\) 下，求前两情形的一圈后 \(z'\) 方向的极角和方位角。
+\item
+  球心固定，兔子改为相对于球体沿固定纬度圆跑一圈，描述实验室中球轴
+  \(z'\) 和兔子的运动。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={题面模型}]{../figures/question-08.pdf}
+\caption{题面模型}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-7}
+
+零角动量约束下的有限三维转动。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-7}
+
+刚体惯量；自由质心的约化质量；旋转矩阵；转动参考系； Rodrigues
+公式；几何回转。
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-7}
+
+瞬时转轴随兔子位置变化，有限转动不能直接把角速度三个分量各积分后相加。转入随兔子方位旋转的坐标系，转轴变成常量。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-7}
+
+球的各向同性惯量 \(I=2mr^2/5\)。兔子相对球心方向记为
+\(\boldsymbol n\)，体轴在实验室的方向由旋转矩阵 \(\mathsf R\) 决定。
+
+\[\boldsymbol z'=\mathsf R\boldsymbol e_z.\]
+
+先研究实验室规定兔子轨迹的情形，再研究体坐标规定轨迹的情形，二者约束不同。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-7}
+
+\needspace{3\baselineskip}
+\textbf{固定球心的角动量方程}
+
+球心约束只提供经过球心的外力，不提供外力矩。兔子的轨道角动量为
+\(mr^2\boldsymbol n\times\dot{\boldsymbol n}\)。初始总角动量为零，故
+
+\[I\boldsymbol\Omega+mr^2\boldsymbol n\times\dot{\boldsymbol n}=0.\]
+
+令 \(\kappa=mr^2/I=5/2\)，得到
+
+\[\boldsymbol\Omega=-\kappa\boldsymbol n\times\dot{\boldsymbol n}.\]
+
+设兔子实验室方位为 \(\phi\)，且
+
+\[\boldsymbol n=\mathsf R_z(\phi)\boldsymbol n_0,\qquad
+\boldsymbol n_0=(s,0,c),\quad s=\sin\theta,\ c=\cos\theta.\]
+
+于是
+
+\[\boldsymbol n\times\frac{d\boldsymbol n}{d\phi}
+=\boldsymbol e_z-c\boldsymbol n.\]
+
+球的姿态方程为
+
+\[\frac{d\mathsf R}{d\phi}
+=[-\kappa(\boldsymbol e_z-c\boldsymbol n)]_\times\mathsf R,\]
+
+其中
+\([\boldsymbol a]_\times\boldsymbol v=\boldsymbol a\times\boldsymbol v\)。
+
+\needspace{3\baselineskip}
+\textbf{转入随方位旋转的坐标}
+
+定义 \(\mathsf S=\mathsf R_z(-\phi)\mathsf R\)，求导得到
+
+\[\frac{d\mathsf S}{d\phi}=[\boldsymbol a]_\times\mathsf S,\]
+
+常向量
+
+\[\boldsymbol a=\kappa c\boldsymbol n_0-(\kappa+1)\boldsymbol e_z,\]
+
+\[\boldsymbol a=(\kappa cs,0,-1-\kappa s^2).\]
+
+其长度为
+
+\[\lambda=|\boldsymbol a|=\sqrt{1+\kappa(\kappa+2)s^2}.\]
+
+由 \(\mathsf S(0)=\mathsf I\)，得到
+
+\[\mathsf R(\phi)=\mathsf R_z(\phi)\operatorname{Rot}(\boldsymbol a,\lambda\phi).\]
+
+记 \(\operatorname{Rot}(\boldsymbol a,\chi)\) 为绕单位轴
+\(\boldsymbol a/|\boldsymbol a|\) 转过 \(\chi\) 的主动旋转。一圈后
+\(\mathsf R_z(2\pi)=\mathsf I\)，故最终姿态就是绕常轴 \(\boldsymbol a\)
+转 \(2\pi\lambda\)。
+
+\needspace{3\baselineskip}
+\textbf{第(1)问的返回角度}
+
+在严格区间 \(0<\theta<\pi/2\)，转轴不平行 \(\boldsymbol e_z\)。要使
+\(z'\) 返回原方向，必须
+
+\[\lambda\in\mathbb Z.\]
+
+\(\kappa=5/2\) 时
+
+\[\lambda^2=1+\frac{45}{4}\sin^2\theta,\qquad1<\lambda<\frac72.\]
+
+只允许整数 \(\lambda=2,3\)。所以
+
+\[\boxed{\sin^2\theta=\frac4{15}\quad\text{或}\quad\frac{32}{45}},\]
+
+\[\boxed{\theta\approx31.0909^\circ\quad\text{或}\quad57.4875^\circ}.\]
+
+区间端点的轴可能退化，不能仅把端点代入整数规则。
+
+\needspace{3\baselineskip}
+\textbf{自由球心的质心与有效惯量}
+
+兔子和球等质量，系统质心 \(\boldsymbol C\) 不动。设球心为
+\(\boldsymbol X\)，兔子位置为 \(\boldsymbol X+r\boldsymbol n\)，则
+
+\[\boldsymbol C=\boldsymbol X+\frac r2\boldsymbol n,\]
+
+\[\boldsymbol X=\boldsymbol C-\frac r2\boldsymbol n,\]
+
+\[\boldsymbol x_{\rm rabbit}=\boldsymbol C+\frac r2\boldsymbol n.\]
+
+初态球心在原点时，\(\boldsymbol C=r\boldsymbol n_0/2\)。要让兔子实验室轨迹位于高度
+\(r c\)，可取 \(n_z=c\)；它实际绕 \(\boldsymbol C\) 的投影以半径
+\(r s/2\) 运动，球心也绕同一投影反向运动。
+
+两者平动的总角动量等价于约化质量 \(\mu=m/2\) 在距离 \(r\)
+的相对轨道上的角动量：
+
+\[I\boldsymbol\Omega+\mu r^2\boldsymbol n\times\dot{\boldsymbol n}=0.\]
+
+因此同一姿态公式只需改
+
+\[\kappa=\frac{\mu r^2}{I}=\frac54.\]
+
+不能在自由球心时仍保留固定球心的兔子轨道惯量 \(mr^2\)。
+
+\needspace{3\baselineskip}
+\textbf{第(2)问的返回角度}
+
+此时
+
+\[\lambda^2=1+\frac{65}{16}\sin^2\theta,\qquad1<\lambda<\frac94.\]
+
+只有整数 \(\lambda=2\)，得到
+
+\[\boxed{\sin^2\theta=\frac{48}{65}},\]
+
+\[\boxed{\theta\approx59.2423^\circ}.\]
+
+球心的初始速度与兔子初始速度须满足系统质心静止；``球心自由''不等于始终静止。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={有限旋转轴与返回条件}]{../figures/solution-08.pdf}
+\caption{有限旋转轴与返回条件}
+\end{figure}
+
+\needspace{3\baselineskip}
+\textbf{第(3)问：一般末轴方向}
+
+记
+
+\[A=\kappa cs,\quad C_a=-1-\kappa s^2,\quad
+\lambda=\sqrt{A^2+C_a^2},\quad\chi=2\pi\lambda.\]
+
+Rodrigues 公式作用于初始轴 \(\boldsymbol e_z\)：
+
+\[\boldsymbol z_f=\boldsymbol e_z\cos\chi+
+\frac{\boldsymbol a\times\boldsymbol e_z}{\lambda}\sin\chi+
+\frac{\boldsymbol a C_a}{\lambda^2}(1-\cos\chi).\]
+
+展开三个分量为
+
+\[z_{fx}=\frac{AC_a}{\lambda^2}(1-\cos\chi),\]
+
+\[z_{fy}=-\frac A\lambda\sin\chi,\]
+
+\[z_{fz}=\frac{C_a^2}{\lambda^2}+\frac{A^2}{\lambda^2}\cos\chi.\]
+
+极角和方位角为
+
+\[\boxed{\theta'=\arccos z_{fz}},\]
+
+\[\boxed{\phi'=\operatorname{atan2}(z_{fy},z_{fx})\pmod{2\pi}}.\]
+
+固定球心取 \(\kappa=5/2\)，自由球心取 \(\kappa=5/4\)。若
+\(\theta'=0\)，末轴就在正 \(z\)
+上，方位角没有定义，不应给出一个看似唯一的 \(\phi'\)。
+
+\needspace{3\baselineskip}
+\textbf{第(4)问：轨迹改在体坐标规定}
+
+现在兔子体坐标方向为
+\(\boldsymbol n_b=\mathsf R_z(\psi)\boldsymbol n_0\)，实验室方向是
+\(\boldsymbol n=\mathsf R\boldsymbol n_b\)。其导数包含球自身旋转：
+
+\[\dot{\boldsymbol n}=\boldsymbol\Omega\times\boldsymbol n+\mathsf R\dot{\boldsymbol n}_b.\]
+
+代入零角动量条件，利用 \(\boldsymbol\Omega\cdot\boldsymbol n=0\)，得
+
+\[\boldsymbol\Omega=-\eta\mathsf R(\boldsymbol n_b\times\dot{\boldsymbol n}_b),\]
+
+\[\eta=\frac{\kappa}{1+\kappa}=\frac57.\]
+
+兔子运动带入球的惯量项，正是 \(\kappa\) 变为 \(\eta\) 的原因。
+
+定义 \(\mathsf Q=\mathsf R\mathsf R_z(\psi)\)，得到常轴方程
+
+\[\frac{d\mathsf Q}{d\psi}=\mathsf Q[\boldsymbol b]_\times,\]
+
+\[\boldsymbol b=(\eta cs,0,1-\eta s^2).\]
+
+其长度为
+
+\[\lambda_b=\sqrt{1-\eta(2-\eta)s^2}
+=\sqrt{1-\frac{45}{49}s^2}.\]
+
+因此
+
+\[\mathsf R(\psi)=\operatorname{Rot}(\boldsymbol b,\lambda_b\psi)\mathsf R_z(-\psi).\]
+
+实验室中的体轴和兔子方向分别为
+
+\[\boldsymbol z'(\psi)=\operatorname{Rot}(\boldsymbol b,\lambda_b\psi)\boldsymbol e_z,\]
+
+\[\boldsymbol n(\psi)=\operatorname{Rot}(\boldsymbol b,\lambda_b\psi)\boldsymbol n_0.\]
+
+二者都绕实验室固定轴 \(\boldsymbol b/\lambda_b\) 进动。如果体坐标方位
+\(\psi\) 匀速，两者进动角速度同为
+\(\lambda_b\dot\psi\)。兔子的实验室轨迹是垂直于该固定轴的圆，一般不是实验室水平圆。
+
+两圆锥半角满足
+
+\[\cos\beta_z=\frac{1-\eta s^2}{\lambda_b},\qquad
+\cos\beta_n=\frac c{\lambda_b}.\]
+
+固定轴处于初始 \(z\)
+与兔子方向之间，\(\beta_z+\beta_n=\theta\)。兔子体坐标跑一圈后，球仍绕这个轴转了
+\(2\pi\lambda_b\)；严格区间内
+\(2/7<\lambda_b<1\)，一般不会使体轴回到初始方向。
+
+\needspace{3\baselineskip}
+\textbf{求解中的一致性检查}
+
+每个旋转矩阵都保持轴向量长度为 1；初态 \(\phi=0\) 或 \(\psi=0\) 均还原
+\(\mathsf I\)。自由球心的模型保持质心位置不变。两种规定轨迹的姿态公式不同，正因为兔子实验室角速度与体坐标角速度不是同一输入，不能互换两问的整数返回条件。
+
+\needspace{3\baselineskip}
+\textbf{数值积分验证有限旋转}
+
+可以不使用常轴解，直接积分实验室姿态方程作为独立检查。以兔子方位为自变量，在固定心模型中
+
+\[\boldsymbol\omega_phi=-\kappa(\boldsymbol e_z-c\boldsymbol n(\phi)),\]
+
+\[\frac{d\mathsf R}{d\phi}=[\boldsymbol\omega_phi]_\times\mathsf R.\]
+
+每一步求矩阵导数，初态为单位矩阵。积分一圈后，数值结果应与 Rodrigues
+公式一致，并满足
+
+\[\mathsf R^{\mathsf T}\mathsf R=\mathsf I,\qquad\det\mathsf R=1.\]
+
+初始导数可直接核查：
+
+\[\frac{d\boldsymbol z'}{d\phi}\bigg|_0
+=\boldsymbol\omega_phi(0)\times\boldsymbol e_z.\]
+
+常轴解必须给同一导数，否则说明旋转乘法顺序或叉积符号取反。
+
+\needspace{3\baselineskip}
+\textbf{60°纬度的实例}
+
+取 \(s^2=3/4,c=1/2\)，固定心有
+
+\[\lambda^2=1+\frac{45}{4}\frac34=\frac{151}{16},\]
+
+\[\lambda=\frac{\sqrt{151}}4.\]
+
+自由心有
+
+\[\lambda^2=1+\frac{65}{16}\frac34=\frac{259}{64},\qquad
+\lambda=\frac{\sqrt{259}}8.\]
+
+二者均非整数，末轴不完全返回。自由心的 \(\lambda\)
+约2.012接近整数2，因此末轴接近原方向，却不等于严格返回。这种近返回不能用肉眼估计替代整数条件。
+
+\needspace{3\baselineskip}
+\textbf{自由球心轨道半径的检查}
+
+兔子和球心相对固定质心的水平半径均为
+\(r\sin\theta/2\)，两者速度大小相同、方向相反。其平动总动能为
+
+\[K_{\rm orb}=\frac12\mu r^2|\dot{\boldsymbol n}|^2,\qquad\mu=m/2.\]
+
+这与角动量中的约化质量一致。固定球心时只有兔子平动，轨道质量变为
+\(m\)，不能把自由心的 \(m/2\) 再用于固定约束模型。
+
+\needspace{3\baselineskip}
+\textbf{体坐标轨迹的角速度检查}
+
+第(4)问中实验室角速度可从姿态表示求出：
+
+\[\boldsymbol\Omega=\dot\psi[\boldsymbol b-\boldsymbol z'(\psi)].\]
+
+在 \(\psi=0\)，它等于
+\(-\eta\dot\psi(\boldsymbol e_z-c\boldsymbol n_0)\)，符合最初的角动量方程。球轴与兔子绕
+\(\boldsymbol b\)
+进动，并不代表球本身只绕同一个固定轴作纯匀速转动；姿态中还有
+\(\mathsf R_z(-\psi)\) 的反向自转因子。
+
+\needspace{3\baselineskip}
+\textbf{角动量检查不等于机械能恒定}
+
+兔子按规定轨迹奔跑，可通过肌肉改变系统动能。无外力矩保证总角动量守恒，却不保证机械能守恒。球心固定的模型中，角动量为
+
+\[\boldsymbol L=I\boldsymbol\Omega+mr^2\boldsymbol n\times\dot{\boldsymbol n}=0.\]
+
+因此球自转动能为\(I\kappa^2|\dot{\boldsymbol n}|^2/2\)，兔子平动动能为\(mr^2|\dot{\boldsymbol n}|^2/2\)，合计
+
+\[K=\tfrac12mr^2(1+\kappa)|\dot{\boldsymbol n}|^2.\]
+
+实验室规定恒定纬度和方位速率时，\(|\dot{\boldsymbol n}|^2=\dot\phi^2\sin^2\theta\)。恒速绕行所需的动力学约束会维持这条轨迹；它不是由初始角动量独自决定的自由运动。
+
+球心自由时，总质心静止，球心与兔子的平动能合并成约化质量项\(\mu r^2|\dot{\boldsymbol n}|^2/2\)，其中\(\mu\)=m/2。总角动量中同样出现\(\mu\)，所以\(\kappa\)同步改为5/4：
+
+\[K_{CM}=\tfrac12\mu r^2(1+\kappa)|\dot{\boldsymbol n}|^2.\]
+
+只修改总动能而不修改角动量，或只移动球心图形而不改变\(\kappa\)，都会使两个模型不相容。
+\end{document}

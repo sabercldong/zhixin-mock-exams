@@ -1,0 +1,302 @@
+\documentclass[multi=tikzpicture,border=7pt]{standalone}
+\usepackage{ctex,amsmath,bm}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc,angles,quotes,decorations.pathmorphing,patterns,positioning}
+\tikzset{axis/.style={->,>=Stealth,thick},force/.style={->,>=Stealth,very thick},
+flow/.style={->,>=Stealth,thick,blue!70!black},dim/.style={<->,>=Stealth,thin},
+body/.style={draw=black,fill=blue!9,thick},point/.style={circle,fill=black,inner sep=1.6pt}}
+\begin{document}
+
+% 01 question-01
+\begin{tikzpicture}[x=.9cm,y=.9cm]
+  \draw[body,fill=gray!8] (-3,-1.7) rectangle (3,1.7);
+  \draw[thick] (-3.5,-2.15)--(3.5,-2.15);
+  \draw[thick] (-2,-1.7) circle(.55);
+  \draw[thick] (2,-1.7) circle(.55);
+  \coordinate (P) at (0,1.7);
+  \coordinate (B) at (-.9,-.75);
+  \coordinate (V) at (0,-.9);
+  \draw[thick] (P)--(B);
+  \fill (P) circle(2pt);
+  \filldraw[fill=orange!30,thick] (B) circle(.18) node[left]{$m$};
+  \draw[dashed] (P)--(0,-.9);
+  \draw pic[draw,->,"$\theta$",angle radius=.6cm,angle eccentricity=1.35]
+    {angle=B--P--V};
+  \draw[force] (3.1,-.2)--(4.6,-.2) node[right]{$a$};
+  \node at (0,-2.9){车内单摆与水平加速的小车};
+\end{tikzpicture}
+
+% 02 solution-01
+\begin{tikzpicture}[x=.85cm,y=.85cm]
+\draw[force](0,0)--(0,-2)node[below]{$g$};\draw[force,red!70!black](0,0)--(-3,0)node[left]{$-a'$};\draw[force,purple!70!black](0,0)--(-3,-2)node[below left]{$g_{\rm eff}$};\draw[dashed](-3,0)--(-3,-2)--(0,-2);\node at(-1.5,-3){$\tan\phi=a'/g$};
+\begin{scope}[shift={(5,0)}]
+\draw[very thick](-3,0)--(1.5,0);\draw[dashed](0,0)--(0,-2.5);\fill(0,0)circle(2pt)node[above]{$O$};
+\draw[blue!70!black,thick,domain=0:90,samples=90]plot({-2.5*sin(\x)},{-2.5*cos(\x)});
+\draw[thick](0,0)--(-2.5,0);\filldraw[fill=orange!25](-2.5,0)circle(.14);
+\draw[force,green!55!black](-2.8,-1)--(-2.8,-.2)node[left]{$v_0$};\draw[force,red!70!black](-2.2,-.2)--(-2.2,-1)node[right]{$ev_0$};
+
+\node at(-.6,-3){碰顶前后仍沿半径 $l$ 的同一圆周};
+\end{scope}\end{tikzpicture}
+
+% 03 question-02
+\begin{tikzpicture}[scale=1.0]
+  \coordinate (O) at (0,0);
+  \coordinate (SA) at ({-101.25}:3);
+  \coordinate (SB) at ({-78.75}:3);
+  \foreach \i in {0,...,15}{\draw[thick] (O)--({-101.25+22.5*\i}:3);}
+  \fill (O) circle(2pt) node[above right]{$O$};
+  \draw[thick] (-4,-2.942355)--(4,-2.942355);
+  \coordinate (A) at (-.585271,-2.942355);
+  \coordinate (B) at (.585271,-2.942355);
+  \fill (A) circle(2pt) node[below]{$A$};
+  \fill (B) circle(2pt) node[below]{$B$};
+  \draw[dim] (O)--({-78.75}:3) node[pos=.73,right,xshift=5pt]{$R$};
+  \draw[force] (O)--(-1.7,0) node[left]{$F$};
+  \draw pic[draw,->,"$2\pi/N$",angle radius=1.05cm,angle eccentricity=1.3]
+    {angle=SA--O--SB};
+  \node at (0,-3.55){由 $N$ 根均匀辐条构成的轮子};
+\end{tikzpicture}
+
+% 04 solution-02
+\begin{tikzpicture}[x=.85cm,y=.85cm]
+  \begin{scope}
+    \draw[thick] (-3,-2.2)--(3,-2.2);
+    \coordinate (A) at (-.65,-2.2);
+    \coordinate (B) at (.65,-2.2);
+    \coordinate (O) at (0,0);
+    \draw[thick] (A)--(O)--(B);
+    \draw[dashed] (O)--(0,-2.2);
+    \draw[force,purple!70!black] (A) ++(140:.8) arc[start angle=140,end angle=70,radius=.8]
+      node[above]{$\omega$};
+    \draw[force,green!50!black] (B) ++(110:.65) arc[start angle=110,end angle=40,radius=.65]
+      node[right]{$\omega'$};
+    \fill (A) circle(2pt) node[below]{$A$};
+    \fill (B) circle(2pt) node[below]{$B$};
+    \fill (O) circle(2pt);
+    \node at (0,-3){接触点由 $A$ 切换为 $B$};
+  \end{scope}
+  \begin{scope}[shift={(7,0)}]
+    \draw[axis] (-.2,0)--(5.8,0) node[right]{$v$};
+    \draw[axis] (0,-.2)--(0,4.5) node[above]{$F_{\rm eq}$};
+    \draw[blue!70!black,very thick,domain=0:5.3,samples=80]
+      plot(\x,{.12*\x*\x});
+    \node at (3.3,3.2){$F_{\rm eq}=\dfrac{\pi m}{NR}v^2$};
+    \node at (3,-.7){碰撞耗散形成二次阻力};
+  \end{scope}
+\end{tikzpicture}
+
+% 05 question-03
+\begin{tikzpicture}[x=.9cm,y=.9cm]
+  \draw[axis] (-1,0)--(12.8,0);
+  \foreach \x/\lab in {0/m,2/{2m},4/m,6/{2m},8/m,10/{2m},12/m}{
+    \draw[body,fill=orange!12] (\x-.45,.15) rectangle (\x+.45,.85);
+    \node at (\x,.5){$\lab$};
+  }
+  \foreach \x in {1,3,5,7,9,11}{\draw[dim] (\x-.8,-.5)--(\x+.8,-.5) node[midway,below]{$l$};}
+  \draw[force] (-1,.5)--(-.05,.5) node[midway,above]{$F$};
+  \node at (6,-1.35){交替质量的一维完全非弹性碰撞链};
+\end{tikzpicture}
+
+% 06 solution-03
+\begin{tikzpicture}[x=1cm,y=1cm]
+\draw[axis](-.5,0)--(9.5,0)node[right]{$x$};\fill(0,0)circle(2pt)node[above]{$0$};\fill(4,0)circle(2pt)node[above]{$nl$};\fill(8,0)circle(2pt)node[below right]{$2nl$};
+\draw[body](7,.3)rectangle(9,1.1);\node at(8,.7){$(3n+1)m$};\draw[force](7.2,1.5)--(8.6,1.5)node[midway,above]{$V_{2n}$};
+\draw[dim](0,-.45)--(8,-.45)node[midway,below]{$2nl$};\draw[dim](4,-1.1)--(8,-1.1)node[midway,below]{$\Delta X_{\rm cm}=nl$};
+\node at(4,-2){初始全体质心在中点；末态黏合于最右质点位置};
+\end{tikzpicture}
+
+% 07 question-04
+\begin{tikzpicture}[x=.9cm,y=.9cm]
+  \begin{scope}
+    \draw[thick] (-2,1.8)--(-2,.8);
+    \draw[thick] (-2,-.8)--(-2,-1.8);
+    \draw[decorate,decoration={coil,segment length=4pt,amplitude=5pt},thick]
+      (-2,.8)--(-2,-.8);
+    \draw[thick] (-1.1,.55)--(-.5,.55);
+    \draw[thick] (-1.1,-.55)--(-.5,-.55);
+    \draw[thick] (-.8,.55)--(-.8,1.8)--(-2,1.8);
+    \draw[thick] (-.8,-.55)--(-.8,-1.8)--(-2,-1.8);
+    \node[left] at (-2,0){$L_1$};
+    \node[right] at (-.45,0){$C_1$};
+  \end{scope}
+  \begin{scope}[shift={(5,0)}]
+    \draw[thick] (-2,1.8)--(-2,.8);
+    \draw[thick] (-2,-.8)--(-2,-1.8);
+    \draw[decorate,decoration={coil,segment length=4pt,amplitude=5pt},thick]
+      (-2,.8)--(-2,-.8);
+    \draw[thick] (-1.1,.55)--(-.5,.55);
+    \draw[thick] (-1.1,-.55)--(-.5,-.55);
+    \draw[thick] (-.8,.55)--(-.8,1.8)--(-2,1.8);
+    \draw[thick] (-.8,-.55)--(-.8,-1.8)--(-2,-1.8);
+    \node[left] at (-2,0){$L_2$};
+    \node[right] at (-.45,0){$C_2$};
+  \end{scope}
+  \draw[thick] (-.8,1.8)--(1.2,1.8);
+  \draw[thick] (2.2,1.8)--(4.2,1.8);
+  \draw[thick] (-.8,-1.8)--(4.2,-1.8);
+  \draw[thick] (1.2,1.8)--(1.9,2.15);
+  \fill (2.2,1.8) circle(2pt);
+  \node at (1.7,2.65){开关};
+  \node at (1.7,-2.55){两个相同的 $LC$ 振荡回路};
+\end{tikzpicture}
+
+% 08 solution-04
+\begin{tikzpicture}[x=.82cm,y=.82cm]
+  \begin{scope}
+    \draw[axis] (-.2,0)--(6,0) node[right]{$t$};
+    \draw[axis] (0,-2.5)--(0,2.7) node[above]{$i$};
+    \draw[blue!70!black,very thick,domain=0:5.7,samples=100]
+      plot(\x,{1.2+1.2*cos(65*\x)});
+    \draw[green!55!black,very thick,domain=0:5.7,samples=100]
+      plot(\x,{-1.2+1.2*cos(65*\x)});
+    \node[blue!70!black] at (4.8,2.2){$i_1$};
+    \node[green!55!black] at (4.8,-2.0){$i_2$};
+    \node at (3,-3.05){零电压接通：$i_1-i_2=I_0$};
+  \end{scope}
+  \begin{scope}[shift={(8,0)}]
+    \draw[axis] (-.2,0)--(6,0) node[right]{$t$};
+    \draw[axis] (0,-2.5)--(0,2.7) node[above]{$u$};
+    \draw[red!70!black,very thick,domain=0:5.7,samples=100]
+      plot(\x,{1.9*cos(65*\x)});
+    \draw[dashed] (0,1.9)--(5.7,1.9);
+    \node at (3,-3.05){最大电压接通：两支路完全同相};
+    \node[red!70!black] at (4.5,2.25){$u_{\max}=U_0/2$};
+  \end{scope}
+\end{tikzpicture}
+
+% 09 question-05
+\begin{tikzpicture}[x=.68cm,y=.68cm]
+  \begin{scope}
+    \draw[body,fill=orange!10] (0,-1.3) rectangle (4,1.3);
+    \draw[force] (-.6,0)--(1.2,0) node[midway,above]{$\bm E_1$};
+    \draw[force,green!55!black] (2,0)--(3.5,0) node[midway,below]{$\bm v$};
+    \node at (2,-1.9){带电圆柱};
+  \end{scope}
+  \begin{scope}[shift={(7,0)}]
+    \draw[very thick] (0,-1.5)--(0,1.5);
+    \draw[very thick] (1,-1.5)--(1,1.5);
+    \draw[force,purple!70!black] (-.5,0)--(.45,0) node[midway,above]{$I_2$};
+    \draw[dim] (0,-2)--(1,-2) node[midway,below]{$d=R$};
+    \node at (.5,-3.15){圆形平行板电容器};
+  \end{scope}
+  \begin{scope}[shift={(12,0)}]
+    \draw[thick] (0,-1.6) rectangle (3.5,1.6);
+    \foreach \x in {.2,.55,...,3.3}{\draw[blue!70!black] (\x,-1.6) arc[start angle=180,end angle=0,x radius=.13,y radius=1.6];}
+    \draw[force,purple!70!black] (-.6,0)--(.5,0) node[midway,above]{$I_3$};
+    \node at (1.75,-2.4){长螺线管};
+  \end{scope}
+\end{tikzpicture}
+
+% 10 solution-05
+\begin{tikzpicture}[x=.8cm,y=.8cm]
+\foreach \j/\lab in {0/1,1/2,2/3}{\begin{scope}[shift={(5.5*\j,0)}]
+\draw[body](0,-1.2)rectangle(4,1.2);\draw[dashed,->](-.6,0)--(4.6,0)node[right]{$z$};
+\foreach \x in {1,2,3}{\draw[force,red!70!black](\x,1.9)--(\x,1.25);\draw[force,red!70!black](\x,-1.9)--(\x,-1.25);}
+\node at(2,-2.6){$S_{\lab}$ 穿过侧壁};\node at(2,2.4){$P_{\lab}=P_{\lab}'$};
+\ifnum\j<2\draw[force](1,1.4)--(2.5,1.4)node[midway,above]{$E_{\lab}$};\node at(3.7,1.7){$B_{\lab}:\odot$};
+\else\draw[force](1,1.4)--(2.5,1.4)node[midway,above]{$B_3$};\node at(3.7,1.7){$E_3:\otimes$};\fi
+\end{scope}}
+\node at(7,-3.5){端面法向沿轴线，红色箭头为径向能流};
+\end{tikzpicture}
+
+% 11 question-06
+\begin{tikzpicture}[x=.9cm,y=.9cm]
+  \path[fill=blue!6] (-3,-2)--(3,-2)--(3,1.5)--(.75,1.5)--(.75,1.55)--(-.75,1.55)--(-.75,1.5)--(-3,1.5)--cycle;
+  \draw[thick] (-3,1.5)--(-3,-2)--(3,-2)--(3,1.5)--(.75,1.5);
+  \draw[thick] (-.75,1.5)--(-3,1.5);
+  \draw[fill=gray!15,thick] (-.85,1.5) rectangle (.85,1.8);
+  \draw[thick] (-.85,1.8)--(-.85,2.2)--(.85,2.2)--(.85,1.8);
+  \node at (0,2.55){$m$};
+  \draw[dim] (-.85,1.1)--(.85,1.1) node[midway,below]{$S$};
+  \node at (0,-.35){$V_0,\ p_0,\ T_0$};
+  \node[right] at (3,0){外界 $p_0$};
+  \node at (0,-2.65){带重物气阀的定容高压锅};
+\end{tikzpicture}
+
+% 12 solution-06
+\begin{tikzpicture}[x=1.6cm,y=1.6cm]
+\draw[axis](-.1,0)--(3.5,0)node[right]{$T/T_0$};\draw[axis](0,-.1)--(0,2.5)node[above]{$p/p_0$};
+\draw[dashed](0,0)--(2,2);\draw[dashed](0,0)--(3,2);
+\draw[flow](1,1)--(2,2);\draw[force,red!70!black](2,2)--(3,2);\draw[force,green!55!black](3,2)--(1,.666667);
+\foreach \x/\y/\lab in {1/1/0,2/2/1,3/2/2,1/.666667/3}{\fill(\x,\y)circle(1.5pt)node[above right]{$\lab$};}
+\draw[dashed](1,0)--(1,1);\draw[dashed](2,0)--(2,2);\draw[dashed](3,0)--(3,2);
+\node[below]at(1,0){$1$};\node[below]at(2,0){$T_1/T_0$};\node[below]at(3,0){$T_2/T_0$};
+\node[align=center]at(1.7,-.85){示例 $p_1=2p_0,T_2=3T_0$\\两段定容直线的延长线都过原点};
+\end{tikzpicture}
+
+% 13 question-07
+\begin{tikzpicture}[x=.85cm,y=.85cm]
+  \draw[axis] (-7,0)--(7,0) node[right]{主光轴};
+  \draw[very thick,blue!70!black] (0,-3)--(0,3);
+  \draw[<->,thick] (-.45,2.5)--(.45,2.5);
+  \fill (-2,0) circle(2pt) node[below]{$F$};
+  \fill (2,0) circle(2pt) node[below]{$F'$};
+  \draw[thick,red!70!black] (-4,0) ellipse[x radius=1.45,y radius=2.25];
+  \draw[thick,green!55!black] (4,0) ellipse[x radius=1.45,y radius=2.25];
+  \node at (-4,-3){物椭圆};
+  \node at (4,-3){全等像椭圆};
+\end{tikzpicture}
+
+% 14 solution-07
+\begin{tikzpicture}[x=1.6cm,y=1.6cm]
+\draw[axis](-3.5,0)--(3.6,0)node[right]{主光轴};\draw[blue!70!black,very thick](0,-1.7)--(0,1.7)node[above]{薄透镜};
+\draw[red!70!black,thick](-2.25,0)ellipse(.75 and 1.1);\draw[green!55!black,thick](2.25,0)ellipse(.75 and 1.1);
+\foreach \x/\lab in {-1/F,1/{F'}}{\fill(\x,0)circle(1pt)node[below]{$\lab$};}
+\draw[flow](-2.25,1.1)--(0,1.1)--(1.8,-.88);\draw[flow](-2.25,1.1)--(1.8,-.88);
+\fill(-2.25,1.1)circle(1.3pt)node[above]{$P$};\fill(1.8,-.88)circle(1.3pt)node[below]{$P'$};
+\draw[dashed,purple!70!black](-3,-.1)--(1.5,-.1);\draw[dashed,purple!70!black](-1.5,.1)--(3,.1);
+\node[below]at(-3,-.15){$x_2=2$};\node[below]at(-1.5,-.15){$x_1=0.5$};\node[above]at(1.5,.15){$x_2'=0.5$};\node[above]at(3,.15){$x_1'=2$};
+\node[align=center]at(0,-2){示例 $f=1,c=1.25,A=0.75$\\蓝线是实际光路，虚线表示轴向顶点映射};
+\end{tikzpicture}
+
+% 15 question-08
+\begin{tikzpicture}[x=.9cm,y=.9cm]
+  \draw[thick] (0,0) circle(3);
+  \draw[thick] (-3,0)--(3,0);
+  \draw[thick] (0,-3)--(0,3);
+  \fill (0,0) circle(2pt) node[above right]{$O$};
+  \foreach \p/\t in {(0,3)/A,(-3,0)/B,(0,-3)/C,(3,0)/D}{
+    \filldraw[fill=purple!30,thick] \p circle(.15) node[above right]{$\t$};}
+  \coordinate (R) at ({-65}:3);
+  \coordinate (C0) at (0,-3);
+  \filldraw[fill=orange!35,thick] (R) circle(.2) node[right]{兔子};
+  \draw[thick,orange!80!black] (0,0)--(R);
+  \draw[dashed] (0,0)--(0,-3);
+  \draw pic[draw,->,"$\theta$",angle radius=.75cm,angle eccentricity=1.35]
+    {angle=C0--O--R};
+  \node at (0,-3.8){固定圆心时的圆环、兔子与四只仓鼠};
+\end{tikzpicture}
+
+% 16 solution-08
+\begin{tikzpicture}[x=.78cm,y=.78cm]
+  \begin{scope}
+    \draw[thick] (0,0) circle(2.8);
+    \draw[thick] (-2.8,0)--(2.8,0);
+    \draw[thick] (0,-2.8)--(0,2.8);
+    \foreach \p in {(0,2.1),(-2.1,0),(0,-2.1),(2.1,0)}
+      {\filldraw[fill=purple!30] \p circle(.14);}
+    \coordinate (R) at ({-50}:2.8);
+    \coordinate (O1) at (0,0);
+    \coordinate (C1) at (0,-2.8);
+    \filldraw[fill=orange!35] (R) circle(.18);
+    \draw[thick,orange!80!black] (0,0)--(R);
+    \draw[dashed] (0,0)--(0,-2.8);
+    \draw pic[draw,->,"$\theta$",angle radius=.7cm,angle eccentricity=1.3]
+      {angle=C1--O1--R};
+    \node at (0,-3.55){固定中心：角动量方程};
+  \end{scope}
+  \begin{scope}[shift={(7.3,0)}]
+    \draw[thick] (0,0) circle(2.8);
+    \draw[thick] (-3.5,-2.8)--(3.5,-2.8);
+    \coordinate (R) at ({-45}:2.8);
+    \filldraw[fill=orange!35] (R) circle(.18);
+    \draw[thick,orange!80!black] (0,0)--(R);
+    \fill (0,0) circle(2pt) node[above left]{$O$};
+    \fill ({-45}:.7) circle(2pt) node[above right]{$G$};
+    \draw[force,green!55!black] (0,-2.8)--(0,-1.2) node[left]{$N$};
+    \draw[force,red!70!black] ({-45}:.7)--++(0,-1.4) node[right]{$4mg$};
+    \node at (0,-3.55){自由平移：质心运动与质心角动量};
+  \end{scope}
+\end{tikzpicture}
+
+\end{document}

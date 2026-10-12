@@ -1,0 +1,358 @@
+{
+  "check_count": 44,
+  "checks": [
+    {
+      "name": "wheel Lagrange equation",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "wheel speed squared",
+      "pass_": true,
+      "detail": {
+        "actual": 0.5874238150917502,
+        "expected": 0.5874238150917502
+      }
+    },
+    {
+      "name": "wheel friction ratio",
+      "pass_": true,
+      "detail": {
+        "actual": 0.28318975836631427,
+        "expected": 0.28318975836631427
+      }
+    },
+    {
+      "name": "initial wheel ratio",
+      "pass_": true,
+      "detail": {
+        "actual": 0.2,
+        "expected": 0.2
+      }
+    },
+    {
+      "name": "wheel slip occurs before candidate angle",
+      "pass_": true,
+      "detail": {
+        "angle": -0.1836609894644007
+      }
+    },
+    {
+      "name": "wheel effective energy 0",
+      "pass_": true,
+      "detail": {
+        "actual": 5.0,
+        "expected": 5.0
+      }
+    },
+    {
+      "name": "wheel effective energy 13",
+      "pass_": true,
+      "detail": {
+        "actual": 4.999999999999942,
+        "expected": 5.0
+      }
+    },
+    {
+      "name": "wheel effective energy 27",
+      "pass_": true,
+      "detail": {
+        "actual": 4.999999999999755,
+        "expected": 5.0
+      }
+    },
+    {
+      "name": "wheel effective energy 41",
+      "pass_": true,
+      "detail": {
+        "actual": 4.999999999999474,
+        "expected": 5.0
+      }
+    },
+    {
+      "name": "wheel effective energy 55",
+      "pass_": true,
+      "detail": {
+        "actual": 4.999999999999184,
+        "expected": 5.0
+      }
+    },
+    {
+      "name": "finite bright disk cubic",
+      "pass_": true,
+      "detail": {
+        "actual": 1.723066134218243e-13,
+        "expected": 0.0
+      }
+    },
+    {
+      "name": "bright area",
+      "pass_": true,
+      "detail": {
+        "actual": 0.7107675827044883,
+        "expected": 0.7107675827043148
+      }
+    },
+    {
+      "name": "source disk map monotone",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "lens imaging 1",
+      "pass_": true,
+      "detail": {
+        "actual": 0.0,
+        "expected": 0.0
+      }
+    },
+    {
+      "name": "lens magnification 1",
+      "pass_": true,
+      "detail": {
+        "actual": 0.499001996007984,
+        "expected": 0.499001996007984
+      }
+    },
+    {
+      "name": "lens determinant 1",
+      "pass_": true,
+      "detail": {
+        "actual": 1.0,
+        "expected": 1.0
+      }
+    },
+    {
+      "name": "lens imaging 1.33",
+      "pass_": true,
+      "detail": {
+        "actual": 0.0,
+        "expected": 0.0
+      }
+    },
+    {
+      "name": "lens magnification 1.33",
+      "pass_": true,
+      "detail": {
+        "actual": 0.5695150985732148,
+        "expected": 0.5695150985732148
+      }
+    },
+    {
+      "name": "lens determinant 1.33",
+      "pass_": true,
+      "detail": {
+        "actual": 1.0,
+        "expected": 1.0
+      }
+    },
+    {
+      "name": "matched load current",
+      "pass_": true,
+      "detail": {
+        "actual": 2.0,
+        "expected": 2.0
+      }
+    },
+    {
+      "name": "matched load output power",
+      "pass_": true,
+      "detail": {
+        "actual": 0.8,
+        "expected": 0.8
+      }
+    },
+    {
+      "name": "inverse inertia",
+      "pass_": true,
+      "detail": {
+        "actual": 1.0,
+        "expected": 1.0
+      }
+    },
+    {
+      "name": "matched load derivative",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "comparison model integrability",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "comparison Cp-Cv",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "paraxial focus",
+      "pass_": true,
+      "detail": {
+        "actual": 1.2167336027920836,
+        "expected": 1.2167336027920836
+      }
+    },
+    {
+      "name": "focus coefficient 0.1",
+      "pass_": true,
+      "detail": {
+        "amplitude": 0.1,
+        "focus": 1.2266373026699084,
+        "coefficient": 0.8139579489790049
+      }
+    },
+    {
+      "name": "focus coefficient 0.05",
+      "pass_": true,
+      "detail": {
+        "amplitude": 0.05,
+        "focus": 1.2192062074035186,
+        "coefficient": 0.8128663844775729
+      }
+    },
+    {
+      "name": "focus coefficient 0.025",
+      "pass_": true,
+      "detail": {
+        "amplitude": 0.025,
+        "focus": 1.217351545026726,
+        "coefficient": 0.8125916578279656
+      }
+    },
+    {
+      "name": "focus coefficient converges",
+      "pass_": true,
+      "detail": null
+    },
+    {
+      "name": "spiral minimum radius",
+      "pass_": true,
+      "detail": {
+        "actual": 0.17888543819998318,
+        "expected": 0.17888543819998318
+      }
+    },
+    {
+      "name": "spiral terminal angle",
+      "pass_": true,
+      "detail": {
+        "actual": 3.4420193761824107,
+        "expected": 3.4420193761824107
+      }
+    },
+    {
+      "name": "spiral time",
+      "pass_": true,
+      "detail": {
+        "actual": 0.918033988749895,
+        "expected": 0.918033988749895
+      }
+    },
+    {
+      "name": "shape principal x",
+      "pass_": true,
+      "detail": {
+        "actual": 0.21775200981598977,
+        "expected": 0.21775200981598977
+      }
+    },
+    {
+      "name": "shape principal y",
+      "pass_": true,
+      "detail": {
+        "actual": 0.15857864376269049,
+        "expected": 0.15857864376269049
+      }
+    },
+    {
+      "name": "perpendicular axis theorem",
+      "pass_": true,
+      "detail": {
+        "actual": 0.37633065357868023,
+        "expected": 0.3763306535786803
+      }
+    },
+    {
+      "name": "light wedge relative acceleration",
+      "pass_": true,
+      "detail": {
+        "actual": 6.666666666666665,
+        "expected": 6.666666666666667
+      }
+    },
+    {
+      "name": "light wedge normal",
+      "pass_": true,
+      "detail": {
+        "actual": 5.773502691896258,
+        "expected": 5.773502691896258
+      }
+    },
+    {
+      "name": "light wedge vertical acceleration",
+      "pass_": true,
+      "detail": {
+        "actual": -3.333333333333332,
+        "expected": -3.3333333333333335
+      }
+    },
+    {
+      "name": "conductivity current 1",
+      "pass_": true,
+      "detail": {
+        "actual": 0.1802836097519744,
+        "expected": 0.18028508756
+      }
+    },
+    {
+      "name": "conductivity voltage 1",
+      "pass_": true,
+      "detail": {
+        "actual": 0.1802836097519744,
+        "expected": 0.18028508756
+      }
+    },
+    {
+      "name": "conductivity current 2",
+      "pass_": true,
+      "detail": {
+        "actual": 0.8197134346188405,
+        "expected": 0.81971491244
+      }
+    },
+    {
+      "name": "conductivity voltage 2",
+      "pass_": true,
+      "detail": {
+        "actual": -0.18028476255205203,
+        "expected": -0.18028508756
+      }
+    },
+    {
+      "name": "square membrane mode energy",
+      "pass_": true,
+      "detail": {
+        "actual": 9.869604401089358,
+        "expected": 9.869604401089358
+      }
+    }
+  ],
+  "focus_quadrature": [
+    {
+      "amplitude": 0.1,
+      "focus": 1.2266373026699084,
+      "coefficient": 0.8139579489790049
+    },
+    {
+      "amplitude": 0.05,
+      "focus": 1.2192062074035186,
+      "coefficient": 0.8128663844775729
+    },
+    {
+      "amplitude": 0.025,
+      "focus": 1.217351545026726,
+      "coefficient": 0.8125916578279656
+    }
+  ]
+}

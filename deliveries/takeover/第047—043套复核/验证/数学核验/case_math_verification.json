@@ -1,0 +1,166 @@
+{
+  "count": 25,
+  "checks": [
+    {
+      "name": "mean field root",
+      "passed": true,
+      "actual": 0.6776583220394602,
+      "expected": 0.6776583220391559
+    },
+    {
+      "name": "probability normalization",
+      "passed": true,
+      "actual": 1.0,
+      "expected": 1.0
+    },
+    {
+      "name": "probability magnetization",
+      "passed": true,
+      "actual": 0.6776583220393466,
+      "expected": 0.6776583220394602
+    },
+    {
+      "name": "free energy difference",
+      "passed": true,
+      "actual": -0.02588998065567888,
+      "expected": -0.025889980655678824
+    },
+    {
+      "name": "infinite line relative error",
+      "passed": true,
+      "actual": 0.004962809790010736,
+      "expected": 0.004962809790010847
+    },
+    {
+      "name": "finite line integral 0.01",
+      "passed": true,
+      "actual": 199.99000074993745,
+      "expected": 199.9900007499375
+    },
+    {
+      "name": "finite line integral 0.1",
+      "passed": true,
+      "actual": 19.900743804199784,
+      "expected": 19.90074380419978
+    },
+    {
+      "name": "finite line integral 10",
+      "passed": true,
+      "actual": 0.019900743804199785,
+      "expected": 0.01990074380419978
+    },
+    {
+      "name": "fuel ratio 1",
+      "passed": true,
+      "actual": 4.874862367888829,
+      "expected": 4.874862367888829
+    },
+    {
+      "name": "fuel ratio 0.5",
+      "passed": true,
+      "actual": 11.258165509623641,
+      "expected": 11.258165509623641
+    },
+    {
+      "name": "fuel ratio 0.1",
+      "passed": true,
+      "actual": 271.523686704784,
+      "expected": 271.523686704784
+    },
+    {
+      "name": "mode orthogonality",
+      "passed": true,
+      "actual": 2.7755575615628914e-17,
+      "expected": 0.0
+    },
+    {
+      "name": "mode initial A",
+      "passed": true,
+      "actual": 0.9999999999999999,
+      "expected": 1.0
+    },
+    {
+      "name": "mode initial B",
+      "passed": true,
+      "actual": 0.0,
+      "expected": 0.0
+    },
+    {
+      "name": "mode energy",
+      "passed": true,
+      "actual": 44.548659481644,
+      "expected": 44.548659481644
+    },
+    {
+      "name": "Floquet determinant",
+      "passed": true,
+      "actual": 0.9999999999997998,
+      "expected": 1.0
+    },
+    {
+      "name": "Floquet stable trace",
+      "passed": true,
+      "actual": true,
+      "expected": null
+    },
+    {
+      "name": "Floquet slow rate",
+      "passed": true,
+      "actual": 0.010002251018348477,
+      "expected": 0.01
+    },
+    {
+      "name": "decay cone probability",
+      "passed": true,
+      "actual": 0.29349414527022843,
+      "expected": 0.29349414527022843
+    },
+    {
+      "name": "decay cone boundary -0.9847338035330787",
+      "passed": true,
+      "actual": 0.316548045843557,
+      "expected": 0.3165480458435575
+    },
+    {
+      "name": "decay cone boundary 0.42827790592646453",
+      "passed": true,
+      "actual": 0.3165480458435575,
+      "expected": 0.3165480458435575
+    },
+    {
+      "name": "decay cone direct angular sample",
+      "passed": true,
+      "actual": 0.2934985325073375,
+      "expected": 0.29349414527022843
+    },
+    {
+      "name": "decay lower energy",
+      "passed": true,
+      "actual": 149.06966522203516,
+      "expected": 149.06966522203516
+    },
+    {
+      "name": "decay upper energy",
+      "passed": true,
+      "actual": 395.01729385841725,
+      "expected": 395.01729385841725
+    },
+    {
+      "name": "uniform energy density normalization",
+      "passed": true,
+      "actual": 0.9999999999999998,
+      "expected": 1.0
+    }
+  ],
+  "Floquet": [
+    [
+      0.998025840246605,
+      6.034580460150507
+    ],
+    [
+      -0.0006536365246694908,
+      0.9980258402466519
+    ]
+  ],
+  "Floquet_slow_rate": 0.010002251018348477
+}

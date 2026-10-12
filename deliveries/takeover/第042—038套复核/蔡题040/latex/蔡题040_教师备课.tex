@@ -1,0 +1,3147 @@
+\documentclass[12pt,a4paper,UTF8]{ctexart}
+\usepackage[a4paper,top=22mm,bottom=22mm,left=22mm,right=22mm,headheight=15pt]{geometry}
+\usepackage{amsmath,amssymb,mathtools,bm}
+\usepackage{graphicx,xcolor,booktabs,longtable,array,enumitem,fancyhdr,caption,float,microtype,setspace}
+\newcommand{\Needspace}[1]{\par\begingroup\dimen0=#1\relax\dimen2=\pagegoal\advance\dimen2 by-\pagetotal\ifdim\dimen0>\dimen2\newpage\fi\endgroup}
+\newcommand{\needspace}[1]{\par\begingroup\skip0=\lastskip\vskip-\skip0\dimen0=#1\relax\advance\dimen0 by\skip0\vskip\dimen0\penalty-100\vskip-\dimen0\vskip\skip0\penalty9999\endgroup}
+\usepackage[hidelinks,unicode]{hyperref}
+\usepackage[most]{tcolorbox}
+\definecolor{ContestBlue}{HTML}{17365D}
+\hypersetup{pdftitle={第040套},pdfauthor={竞赛物理教研}}
+\setstretch{1.24}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.35em}
+\setlength{\emergencystretch}{2em}
+\setlist{itemsep=0.35em,topsep=0.4em}
+\captionsetup{font=small,labelfont=bf,justification=centering}
+\setcounter{secnumdepth}{0}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small 第040套}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\ctexset{
+  section={format=\Large\bfseries\color{ContestBlue},beforeskip=1.2em,afterskip=0.7em},
+  subsection={format=\large\bfseries\color{ContestBlue},beforeskip=1.0em,afterskip=0.5em},
+  subsubsection={format=\normalsize\bfseries,beforeskip=0.8em,afterskip=0.35em}
+}
+\makeatletter
+\newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\newcommand{\maxwidth}{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\newcommand{\maxheight}{\ifdim\Gin@nat@height>0.72\textheight 0.72\textheight\else\Gin@nat@height\fi}
+\newcommand{\pandocbounded}[1]{\begingroup\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}#1\endgroup}
+\makeatother
+\begin{document}
+\begin{titlepage}
+  \centering
+  \vspace*{58mm}
+  {\Huge\bfseries\color{ContestBlue} 第040套\par}
+  \vfill
+  \vspace*{28mm}
+\end{titlepage}
+\section{第 1 题}\label{ux7b2c-1-ux9898}
+
+边长为 \(l\) 的立方体八个顶点上放置四个电荷 \(+q\) 和四个电荷
+\(-q\)。求立方体中心处电场强度大小的全部可能值，并指出最大值对应的电荷排布。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.65\linewidth,height=\textheight,keepaspectratio,alt={题1　立方体八顶点上的四对异号电荷}]{../figures/question-01.pdf}
+\caption{题1　立方体八顶点上的四对异号电荷}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d}
+
+本题是具有离散组合约束的库仑场叠加问题。几何部分高度对称，真正的难点是把``从八个顶点选四个放正电荷''的组合问题转化为三个整数分量的模长分类。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  点电荷电场的矢量叠加；
+\item
+  立方体顶点的符号坐标表示；
+\item
+  电中性条件带来的成对化简；
+\item
+  离散矢量和的分类与极值。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf}
+
+所有顶点到中心距离相等，单个电荷产生的场强大小相同。不同排布只改变八个等长空间矢量的方向与正负，因此可以先提出共同系数，再研究无量纲方向矢量和。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3}
+
+以中心为原点，把顶点写成 \[
+\boldsymbol r_i=\frac l2(\varepsilon_{ix},\varepsilon_{iy},\varepsilon_{iz}),
+\qquad \varepsilon_{i\alpha}=\pm1.
+\] 用 \(s_i=+1\) 表示顶点放 \(+q\)，\(s_i=-1\) 表示放 \(-q\)，并利用
+\(\sum_i s_i=0\)。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790}
+
+中心到任一顶点的距离为 \[
+R=\frac{\sqrt3}{2}l. \tag{1}
+\] 顶点 \(i\) 的电荷为 \(s_iq\)，它在中心产生 \[
+\boldsymbol E_i
+=-\frac{kq}{R^3}s_i\boldsymbol r_i. \tag{2}
+\] 总场为 \[
+\boldsymbol E=-\frac{kq}{R^3}\sum_{i=1}^{8}s_i\boldsymbol r_i. \tag{3}
+\]
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.84\linewidth,height=\textheight,keepaspectratio,alt={图1-2　符号坐标、分量计数与五类合场}]{../figures/solution-01.pdf}
+\caption*{图1-2　符号坐标、分量计数与五类合场}
+\end{figure}
+
+记四个正电荷所在顶点的符号坐标和为 \[
+\boldsymbol U=\sum_{i\in +}
+(\varepsilon_{ix},\varepsilon_{iy},\varepsilon_{iz}). \tag{4}
+\] 八个顶点的符号坐标总和为零，所以 \[
+\sum_i s_i\boldsymbol r_i
+=2\sum_{i\in+}\boldsymbol r_i
+=l\boldsymbol U. \tag{5}
+\] 于是 \[
+E=\frac{kql}{R^3}|\boldsymbol U|
+=\frac{8kq}{3\sqrt3\,l^2}|\boldsymbol U|. \tag{6}
+\]
+
+每个分量是四个 \(\pm1\) 之和，只能取
+\(-4,-2,0,2,4\)。还必须满足四个顶点互不相同。逐类检查可得 \[
+|\boldsymbol U|^2\in\{0,4,8,12,16\}. \tag{7}
+\] 因此中心场强大小的全部可能值是 \[
+\boxed{
+E\in\left\{
+0,
+\frac{16kq}{3\sqrt3\,l^2},
+\frac{16\sqrt2\,kq}{3\sqrt3\,l^2},
+\frac{16kq}{3l^2},
+\frac{32kq}{3\sqrt3\,l^2}
+\right\}}. \tag{8}
+\]
+
+最大值对应
+\(|\boldsymbol U|=4\)。例如四个正电荷放在同一面，四个负电荷放在相对面，此时各电场在垂直于这两面的方向同向叠加：
+\[
+\boxed{E_{\max}=\frac{32kq}{3\sqrt3\,l^2}}. \tag{9}
+\]
+
+\textbf{逐项核对单个顶点的系数。} 取立方体中心为原点，任一顶点写成 \[
+\boldsymbol r_i=\frac l2(s_{ix},s_{iy},s_{iz}),
+\qquad s_{i\alpha}=\pm1.
+\] 中心到顶点的距离不是 \(l\)，而是 \[
+R=\left|\boldsymbol r_i\right|
+=\sqrt{3\left(\frac l2\right)^2}
+=\frac{\sqrt3}{2}l.
+\] 若该点电荷取为 \(\eta_iq\)，其中 \(\eta_i=+1\)
+表示正电荷、\(\eta_i=-1\) 表示负电荷，则它在原点产生的场为 \[
+\begin{aligned}
+\boldsymbol E_i
+&=k\eta_iq\frac{-\boldsymbol r_i}{R^3}\\
+&=-k\eta_iq
+\frac{\frac l2(s_{ix},s_{iy},s_{iz})}
+{\left(\frac{\sqrt3}{2}l\right)^3}\\
+&=-\frac{4kq}{3\sqrt3\,l^2}\eta_i
+(s_{ix},s_{iy},s_{iz}).
+\end{aligned}
+\] 这里的负号来自``场点在电荷位置矢量的反方向''，不能凭图省略。
+
+\textbf{把八个带号矢量化成四个正电荷顶点之和。}
+八个顶点的几何矢量之和为零，即 \[
+\sum_{i=1}^{8}\boldsymbol s_i=\boldsymbol0.
+\] 设正电荷所在四个顶点的符号矢量之和为 \[
+\boldsymbol U=\sum_{i\in +}\boldsymbol s_i,
+\] 则负电荷所在四点之和为 \(-\boldsymbol U\)。于是 \[
+\sum_i\eta_i\boldsymbol s_i
+=\sum_{i\in+}\boldsymbol s_i-
+\sum_{i\in-}\boldsymbol s_i
+=2\boldsymbol U,
+\] 从而再次得到 \[
+\boldsymbol E=-\frac{8kq}{3\sqrt3\,l^2}\boldsymbol U.
+\] 这一步同时解释了式（6）为什么是系数 \(8\) 而不是 \(4\)。
+
+\textbf{离散取值的完备性检查。} 从八个顶点中选出四个放正电荷共有 \[
+\binom84=70
+\] 种选法。逐项组合后，\(|\boldsymbol U|^2\) 的取值及相应选法数为 \[
+\begin{aligned}
+|\boldsymbol U|^2&:\quad 0,\quad4,\quad8,\quad12,\quad16,\\
+\text{选法数}&:\quad 8,\quad24,\quad24,\quad8,\quad6.
+\end{aligned}
+\]
+
+计数满足
+\(8+24+24+8+6=70\)，因此没有漏解。最大情形共有六种，恰好对应三组相对面以及每组两种正、负对调。对调全部电荷只会使
+\(\boldsymbol E\) 反向，不改变场强大小。
+
+\textbf{量纲与极限核对。} 所有答案都含
+\(kq/l^2\)，量纲为电场强度；若把几何尺寸整体放大为 \(\lambda l\)，场强按
+\(\lambda^{-2}\)
+衰减。电荷整体反号时允许值集合不变。这三项检查同时通过。
+
+\textbf{把五类结果分别构造出来。}
+为了确认式（7）中的每个值都确实能够出现，可直接列出正电荷所在四个顶点。用
+\((s_xs_ys_z)\) 表示顶点，其中每个分量为
+\(\pm1\)。以下只列一种代表性排布，其余排布可由旋转、镜像或正负电荷整体互换得到：
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  取 \((+++),(++-),(--+),(---)\)，四个符号矢量之和为
+  \(\boldsymbol U=(0,0,0)\)，故 \(E=0\)；
+\item
+  取 \((+++),(++-),(+-+),(---)\)，得到 \(\boldsymbol U=(2,0,0)\)，故
+  \(|\boldsymbol U|^2=4\)；
+\item
+  取 \((+++),(++-),(+-+),(-+-)\)，得到 \(\boldsymbol U=(2,2,0)\)，故
+  \(|\boldsymbol U|^2=8\)；
+\item
+  取 \((+++),(++-),(+-+),(-++)\)，得到 \(\boldsymbol U=(2,2,2)\)，故
+  \(|\boldsymbol U|^2=12\)；
+\item
+  取 \((+++),(++-),(+-+),(+--)\)，得到 \(\boldsymbol U=(4,0,0)\)，故
+  \(|\boldsymbol U|^2=16\)。
+\end{enumerate}
+
+因此五个场强依次为 \[
+\begin{aligned}
+E_0&=0,\\
+E_1&=\frac{8kq}{3\sqrt3\,l^2}\sqrt4
+=\frac{16kq}{3\sqrt3\,l^2},\\
+E_2&=\frac{8kq}{3\sqrt3\,l^2}\sqrt8
+=\frac{16\sqrt2\,kq}{3\sqrt3\,l^2},\\
+E_3&=\frac{8kq}{3\sqrt3\,l^2}\sqrt{12}
+=\frac{16kq}{3l^2},\\
+E_4&=\frac{8kq}{3\sqrt3\,l^2}\sqrt{16}
+=\frac{32kq}{3\sqrt3\,l^2}.
+\end{aligned}
+\]
+这里特意保留了``系数乘根号''的中间一步，可以直接检查式（8）中每一次根式化简。
+
+\textbf{为什么不会出现 \(|\boldsymbol U|^2=20\) 等其他偶数。}
+设四个正电荷顶点中有 \(n_x\) 个满足 \(s_x=+1\)，则 \[
+U_x=n_x-(4-n_x)=2n_x-4.
+\] 所以 \(U_x\) 只能是 \(-4,-2,0,2,4\)，\(U_y,U_z\)
+同理。但三个分量不能任意组合，因为同一个顶点同时决定三个符号。对四个互不相同的顶点作相容性检查后，只剩
+\[
+(0,0,0),\quad
+(\pm2,0,0),\quad
+(\pm2,\pm2,0),\quad
+(\pm2,\pm2,\pm2),\quad
+(\pm4,0,0)
+\] 及其坐标置换。因此平方和恰好只有
+\(0,4,8,12,16\)。这也说明只看单个分量取值而不检查顶点是否重复，会产生伪解。
+
+\textbf{场强方向如何随排布确定。} 大小由 \(|\boldsymbol U|\)
+决定，而方向由 \[
+\boldsymbol E=-\frac{8kq}{3\sqrt3\,l^2}\boldsymbol U
+\] 决定，即总电场总与四个正电荷顶点矢量和反向。最大情形若正电荷放在
+\(x=+l/2\) 面，则 \(\boldsymbol U=(4,0,0)\)，所以电场沿 \(-x\)
+方向，正好从正电荷面指向负电荷面。若交换两面的正负电荷，场强大小不变，方向反转。这个方向检查可防止在单电荷场公式中误丢负号。
+
+\textbf{计数与物理解的一一对应。} \(\binom84=70\)
+是先选正电荷位置的总数，负电荷位置随之唯一确定。六个最大排布分别对应正电荷占据
+\(x,y,z\)
+三个方向的正面或负面。八个零场排布则满足四个正电荷顶点矢量和为零；这些排布并不要求每一对对角顶点都异号，因此不能只凭``对角配对''猜测零场构型。
+
+\textbf{不用程序也能核对五类构型的数目。} 先按 \(|\boldsymbol U|^2\)
+分类，再利用立方体的坐标置换与符号反演计数。
+
+\begin{itemize}
+\tightlist
+\item
+  当 \(|\boldsymbol U|^2=16\) 时，\(\boldsymbol U\) 必为 \((\pm4,0,0)\)
+  及其坐标置换。先选非零分量所在的坐标轴，有 \(3\)
+  种；再选正、负方向，有 \(2\) 种，共 \(3\times2=6\)
+  种。这正是``同一面上放四个正电荷''的六种选择。
+\item
+  当 \(|\boldsymbol U|^2=12\) 时，三个分量的绝对值都为 \(2\)。形式上有
+  \(2^3=8\) 个带号矢量
+  \((\pm2,\pm2,\pm2)\)。对每一个带号矢量，四个顶点的集合由``沿该体对角线方向偏置的四点''唯一确定，故共有
+  \(8\) 种。
+\item
+  当 \(|\boldsymbol U|^2=8\) 时，分量形式为
+  \((\pm2,\pm2,0)\)。先选哪个坐标分量为零，有 \(3\)
+  种；另两个非零分量各有两种符号，共 \(3\times2^2=12\) 个可能的
+  \(\boldsymbol U\)。对每个
+  \(\boldsymbol U\)，有两组不同的四顶点集合实现它，因此共有
+  \(12\times2=24\) 种。
+\item
+  当 \(|\boldsymbol U|^2=4\) 时，分量形式为
+  \((\pm2,0,0)\)。先选非零坐标轴并选符号，共有 \(3\times2=6\) 个可能的
+  \(\boldsymbol U\)。对每个
+  \(\boldsymbol U\)，其余两个坐标的符号要在四个顶点中各出现两次，同时不能重复选点；满足条件的集合有
+  \(4\) 组，所以共有 \(6\times4=24\) 种。
+\item
+  最后，\(|\boldsymbol U|^2=0\) 的构型数无需重新穷举，可由总数扣除： \[
+  N_0=\binom84-(6+8+24+24)=70-62=8.
+  \]
+\end{itemize}
+
+这样既得到五种场强，又独立复核了各类重数 \[
+8,\quad 24,\quad 24,\quad 8,\quad 6.
+\]
+这里的``重数''不是新的场强答案；同一场强大小可由方向不同或空间排布不同的多种构型产生。题目若只问场强大小，只保留式（8）的五个互异值；题目若追问排布数，才使用上述计数。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf}
+
+不能只按``有几个分量不为零''分类，还要检查这些分量能否由四个互不相同的立方体顶点同时实现。式（7）既可以手工分类，也可从
+\(\binom84=70\) 种正电荷选点中枚举复核。
+
+式（8）中的零场并不要求每一对体对角顶点异号；只要四个正电荷的坐标矢量和为零即可。空间对称排布往往有多种。
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  把顶点到中心的距离误写成 \(l/2\)；
+\item
+  只求最大值，遗漏题目所问的全部可能值；
+\item
+  把四个正电荷的矢量和直接当成八个电荷的总和，漏掉式（5）的因子 \(2\)；
+\item
+  只比较三个坐标分量绝对值之和，不计算欧氏模长；
+\item
+  给出不可能由四个不同顶点实现的分量组合。
+\end{enumerate}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae}
+
+先用二维正方形的``两个正、两个负''作热身，再过渡到符号坐标。把公共库仑系数与离散组合分开处理，可以显著降低空间图形带来的认知负担。
+
+\textbf{用于课堂的统计核验。}
+设所有70种配号等概率，分量对称性给\(\langle U_x^2\rangle=\langle U^2\rangle/3=16/7\)。也可不用枚举：选四个顶点的样本和，有限总体抽样的方差为\(n(N-n)/(N-1)\)乘单点方差，即\(4\cdot4/7=16/7\)。三个分量交叉平均为零，恢复\(\langle U^2\rangle=48/7\)。这从抽样统计独立检查了计数分类。
+
+\[\langle\boldsymbol E\rangle=0,\qquad \langle E_x^2\rangle=\tfrac13\langle E^2\rangle.\]
+
+课堂可先让学生构造最大配置，再计算均方，而不是将``平均为零''理解成``每种场都为零''。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3}
+
+\needspace{3\baselineskip}
+\textbf{变式1：原条件的扩展。}
+
+\textbf{变式.} 立方体八个顶点放六个 \(+q\) 与两个
+\(-3q\)，求中心场强的最大值。
+
+\textbf{解答.} 令顶点符号向量为
+\(\bm s_i=(\pm1,\pm1,\pm1)\)，中心到顶点的距离为
+\(\sqrt3l/2\)。八个顶点都放 \(+q\) 时向量和为零；把其中两个电荷由 \(+q\)
+换成 \(-3q\)，每个顶点的电荷变化为 \(-4q\)。因此 \[
+\bm E=\frac{16k_eq}{3\sqrt3l^2}(\bm s_1+\bm s_2).
+\] 两个不同顶点中，相邻顶点的 \(|\bm s_1+\bm s_2|=2\sqrt2\) 最大，故 \[
+\boxed{E_{\max}=\frac{32\sqrt2\,k_eq}{3\sqrt3\,l^2}}.
+\] 最大值对应两个 \(-3q\) 位于同一条棱的两端。
+
+\textbf{变式2：随机配号的两种概率。}
+八顶点中等概率选四个放正电荷，其余放负电荷，共\(\binom84=70\)种。场为零的配置8种，最大场配置6种，因此
+
+\[P(E=0)=4/35,\qquad P(E=E_{\max})=3/35.\]
+
+最大场的六种是三个互相垂直面及其反面的正负分割；相反配置的场方向相反，但场强大小相同。
+
+\textbf{变式3：均方场强。}
+设正文整数向量为\(\boldsymbol U\)，其模平方0、4、8、12、16的重数分别8、24、24、8、6。因而
+
+\[\langle U^2\rangle=48/7,\quad
+\langle E^2\rangle=\frac{1024}{63}\left(\frac{k_eq}{l^2}\right)^2.\]
+
+这给出所有70个配置的统计检查。平均场矢量为零，均方场却非零；二者不能混同。
+
+\textbf{变式4：场为零是否由电势为零推出？}
+每个顶点距中心相同，任意四正四负配置都使中心电势为零。但电场取决于各电荷方向的加权矢量和，只有8种配置为零。
+
+电势在单点的数值不能决定其空间梯度。以一面四正、对面四负为例，中心电势仍零，却取得最大场强。
+
+\newpage
+
+\section{第 2 题}\label{ux7b2c-2-ux9898}
+
+一根长为 \(l\)、质量为 \(M\) 的均匀刚性摆臂，一端固定在水平轴 \(O\)
+上，只能在竖直平面内摆动。另一端连接半径为 \(r\)、总质量为 \(m\)
+的均匀圆环座椅，圆环绕摆臂轴线以角速度 \(\omega\) 匀速转动。从 \(O\)
+点观察该转动为顺时针。摆臂最高位置与向下竖直方向夹角为
+\(\theta_0\)；在该处撤去维持摆幅的外力矩，忽略阻力。
+
+（1）求撤去外力矩瞬间，圆环最高点乘员的加速度。
+
+（2）摆臂回到最低点时，求圆环最左侧乘员的加速度。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.689\linewidth,height=\textheight,keepaspectratio,alt={题2　摆臂与绕臂轴自转圆环的复合运动}]{../figures/question-02.pdf}
+\caption{题2　摆臂与绕臂轴自转圆环的复合运动}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-1}
+
+本题是三维复合转动的刚体运动学与动力学问题。摆臂绕水平轴变速转动，圆环又绕摆臂轴匀速自转；两问分别对应摆臂角速度为零和摆臂角加速度为零的特殊时刻。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-1}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  刚体定轴转动的转动惯量；
+\item
+  重力矩与机械能守恒；
+\item
+  相对运动加速度合成；
+\item
+  向心、切向和科里奥利加速度；
+\item
+  三维方向与右手定则。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-1}
+
+圆环中心 \(A\) 随摆臂绕 \(O\) 运动；乘员相对 \(A\)
+绕摆臂轴转动。最高位置撤去外力矩时摆臂瞬时静止，故没有摆臂向心项和科里奥利项。最低位置摆臂角速度最大、角加速度为零，科里奥利项是否非零取决于乘员在环上的位置；原题前视图最左点的相对速度平行摆动轴，这一项为零。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-1}
+
+先把圆环随摆臂转动时绕水平轴的转动惯量写全：圆心平动贡献
+\(ml^2\)，圆环绕直径贡献 \(mr^2/2\)。再用统一加速度公式 \[
+\boldsymbol a_P=\boldsymbol a_A+
+\dot{\boldsymbol\Omega}\times\boldsymbol\rho
++\boldsymbol\Omega\times(\boldsymbol\Omega\times\boldsymbol\rho)
++2\boldsymbol\Omega\times\boldsymbol v_{rel}
++\boldsymbol a_{rel}. \tag{1}
+\]
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-1}
+
+\needspace{3\baselineskip}
+\textbf{最低点``最左''的空间定义与主答案}
+
+取\(\boldsymbol e_r\)沿O到圆心，\(\boldsymbol e_k\)沿恢复摆动的轴，\(\boldsymbol e_t=\boldsymbol e_k\times\boldsymbol e_r\)。最低点\(\boldsymbol e_t\)向前视图右方，故前视图最左点为\(\boldsymbol\rho_L=-r\boldsymbol e_t\)。用一般位置
+
+\[\boldsymbol\rho=r(\cos\chi\,\boldsymbol e_k+\sin\chi\,\boldsymbol e_t)\]
+
+可以一次性求出环上任意乘员的结果。最低点\(\dot\Omega=0\)，统一公式含中心向心、框架向心、相对向心和科里奥利项：
+
+\[\boldsymbol a= -\Omega^2l\boldsymbol e_r
++\boldsymbol\Omega\times(\boldsymbol\Omega\times\boldsymbol\rho)
++2\boldsymbol\Omega\times\boldsymbol v_{rel}-\omega^2\boldsymbol\rho.\]
+
+其中\(\boldsymbol\Omega=\Omega\boldsymbol e_k\)、\(\boldsymbol v_{rel}=\omega\boldsymbol e_r\times\boldsymbol\rho\)。逐项叉乘得到
+
+\[\boxed{\boldsymbol a(\chi)=(2\Omega\omega r\cos\chi-\Omega^2l)\boldsymbol e_r
+-\omega^2r\cos\chi\,\boldsymbol e_k
+-(\Omega^2+\omega^2)r\sin\chi\,\boldsymbol e_t}.\]
+
+前视图最左点\(\chi=-\pi/2\)，相对速度沿摆动轴，科里奥利项为零，但框架向心项不为零。因此原题第二问的前视图答案是
+
+\[\boxed{\boldsymbol a_L=-\Omega^2l\boldsymbol e_r+(\Omega^2+\omega^2)r\boldsymbol e_t},\]
+
+\[\boxed{a_L=\sqrt{\Omega^4l^2+(\Omega^2+\omega^2)^2r^2}}.\]
+
+原扫描答案也在这一位置将科里奥利项标为零。若``左侧''另指从O沿摆臂观察且取环半径平行摆动轴的位置，\(\chi=0\)，得到另一轴向特例：
+
+\[\boldsymbol a_K=(2\Omega\omega r-\Omega^2l)\boldsymbol e_r-\omega^2r\boldsymbol e_k.\]
+
+下文的轴向计算用于说明这个条件结果，不能用它替代前视图最左点的主答案。方向约定改变只改变基矢分量的写法，不改变同一物理点的矢量加速度。
+
+摆臂与圆环整体绕 \(O\) 摆动的转动惯量为 \[
+J=\frac13Ml^2+ml^2+\frac12mr^2. \tag{2}
+\] 重力对 \(O\) 的力矩大小为 \[
+\tau_g=\left(\frac12Mgl+mgl\right)\sin\theta. \tag{3}
+\]
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.88\linewidth,height=\textheight,keepaspectratio,alt={图2-2　最高点欧拉项与最低点前视图最左点的分解}]{../figures/solution-02.pdf}
+\caption*{图2-2　最高点欧拉项与最低点前视图最左点的分解}
+\end{figure}
+
+在最高位置，摆臂角速度为零，角加速度大小为 \[
+\alpha_0=
+\frac{(Mgl/2+mgl)\sin\theta_0}{J}. \tag{4}
+\] 方向指向最低位置。圆心切向加速度为 \[
+\boldsymbol a_A=l\boldsymbol\alpha_0\times\boldsymbol e_r. \tag{5}
+\] 设该乘员相对圆心的位置矢量为
+\(\boldsymbol\rho_{top}\)，\(|\boldsymbol\rho_{top}|=r\)。因摆臂瞬时角速度为零，式（1）保留圆心切向项、欧拉项和圆环自转向心项：
+\[
+\boxed{
+\boldsymbol a_{top}
+=l\boldsymbol\alpha_0\times\boldsymbol e_r
++\boldsymbol\alpha_0\times\boldsymbol\rho_{top}
+-\omega^2\boldsymbol\rho_{top}
+}. \tag{6}
+\]
+图2-2给出的方向约定下中心切向项与自转向心项共线，另有沿摆臂的欧拉项时，按图中正方向取代数和；最高点乘员的自转向心项向下指向圆心，与圆心恢复摆动的切向项同向；角速度反号不改变该向心方向。
+
+从最高位置到最低位置，重力势能下降 \[
+\Delta U=\left(\frac12Mgl+mgl\right)(1-\cos\theta_0). \tag{7}
+\]
+圆环自转角速度由电机保持不变，其自转动能不参与摆臂机械能增量。因此最低点摆臂角速度
+\(\Omega\) 满足 \[
+\frac12J\Omega^2=\Delta U, \tag{8}
+\] 即 \[
+\boxed{
+\Omega=\sqrt{
+\frac{2(Mgl/2+mgl)(1-\cos\theta_0)}
+{Ml^2/3+ml^2+mr^2/2}}
+}. \tag{9}
+\]
+
+最低点重力矩为零，所以 \(\dot\Omega=0\)。取摆臂方向单位矢量
+\(\boldsymbol e_r\) 指向圆心，摆臂转轴单位矢量为
+\(\boldsymbol e_k\)。摆动轴方向的乘员的位置可取 \[
+\boldsymbol\rho_K=r\boldsymbol e_k, \tag{10}
+\] 即与摆臂摆动角速度平行。于是摆臂对 \(\boldsymbol\rho_K\)
+的普通向心项为零。圆心加速度为 \[
+\boldsymbol a_A=-\Omega^2l\boldsymbol e_r. \tag{11}
+\] 相对速度和相对加速度为 \[
+\boldsymbol v_{rel}=\omega\boldsymbol e_r\times\boldsymbol\rho_K,
+\qquad
+\boldsymbol a_{rel}=-\omega^2\boldsymbol\rho_K. \tag{12}
+\] 代入式（1）： \[
+\boxed{
+\boldsymbol a_K
+=-\Omega^2l\boldsymbol e_r
++2\Omega\boldsymbol e_k\times\boldsymbol v_{rel}
+-\omega^2\boldsymbol\rho_K
+}. \tag{13}
+\] 若 \(\Omega,\omega\) 均按图示右手正方向取有符号值，则 \[
+\boldsymbol a_K
+=(2\Omega\omega r-\Omega^2l)\boldsymbol e_r
+-\omega^2r\boldsymbol e_k. \tag{14}
+\] 大小为 \[
+\boxed{
+a_K=\sqrt{(\Omega^2l-2\Omega\omega r)^2+\omega^4r^2}
+}. \tag{15}
+\]
+
+\textbf{转动惯量每一项的来由。} 摆臂是绕端点 \(O\) 转动的均匀细杆，因此
+\[
+J_{\text{臂}}=\frac13Ml^2.
+\] 圆环质心位于距 \(O\) 为 \(l\) 的点
+\(A\)。圆环随摆臂摆动时，一方面质心作半径为 \(l\) 的圆周运动，贡献
+\(ml^2\)；另一方面圆环还绕通过质心且平行于摆动轴的直径转动，薄圆环对直径的转动惯量为
+\(mr^2/2\)。由平行轴定理 \[
+J_{\text{环},O}=ml^2+\frac12mr^2.
+\] 故 \[
+J=\frac13Ml^2+ml^2+\frac12mr^2.
+\] 若漏掉最后一项，等于把圆环全部质量集中在圆心；若把它误写成
+\(mr^2\)，则错用了圆环对自身对称轴的转动惯量。
+
+\textbf{最高点撤去外力矩后的角加速度。}
+撤去外力矩的瞬间，摆臂角速度为零，但重力矩并不为零。摆臂重心和圆环质心到
+\(O\) 的力臂分别为 \((l/2)\sin\theta_0\) 与 \(l\sin\theta_0\)，因此 \[
+\tau_g=\left(\frac12Mgl+mgl\right)\sin\theta_0.
+\] 由 \(\tau_g=J\alpha_0\)， \[
+\alpha_0=
+\frac{\left(\frac12Mgl+mgl\right)\sin\theta_0}
+{\frac13Ml^2+ml^2+\frac12mr^2}.
+\] 量纲核对为
+\((\mathrm{kg\,m^2\,s^{-2}})/(\mathrm{kg\,m^2})=\mathrm{s^{-2}}\)。
+
+\textbf{最高点乘员加速度的矢量拆分。} 此时摆臂角速度
+\(\Omega=0\)，所以摆臂引起的普通向心项和科里奥利项都为零；但点 \(A\)
+有切向加速度 \[
+\boldsymbol a_A=l\boldsymbol\alpha_0\times\boldsymbol e_{OA}.
+\] 乘员相对圆心仍以角速度 \(\omega\) 匀速转动，故 \[
+\boldsymbol a_{rel}
+=\boldsymbol\omega\times
+(\boldsymbol\omega\times\boldsymbol\rho_{top})
+=-\omega^2\boldsymbol\rho_{top}.
+\] 于是 \[
+\boldsymbol a_{top}=\boldsymbol a_A+\boldsymbol\alpha_0\times\boldsymbol\rho_{top}-\omega^2\boldsymbol\rho_{top}.
+\]
+只有在已经证明两项互相垂直时，才可以把大小写成平方和；本题保留矢量式更稳妥，因为环面是三维取向。
+
+\textbf{由能量逐行求最低点角速度。} 从最高位置到最低位置，摆臂重心下降
+\[
+\Delta h_M=\frac l2(1-\cos\theta_0),
+\] 圆环质心下降 \[
+\Delta h_m=l(1-\cos\theta_0).
+\] 所以减少的重力势能为 \[
+\Delta U
+=Mg\Delta h_M+mg\Delta h_m
+=\left(\frac12Mgl+mgl\right)(1-\cos\theta_0).
+\] 圆环相对摆臂的自转始终保持角速度
+\(\omega\)，其自转动能前后相同，在能量差中抵消。于是 \[
+\frac12J\Omega^2=\Delta U,
+\] 即 \[
+\Omega=\sqrt{
+\frac{2\left(\frac12Mgl+mgl\right)(1-\cos\theta_0)}
+{\frac13Ml^2+ml^2+\frac12mr^2}}
+.
+\]
+
+\textbf{最低点轴向乘员的三个非零加速度。} 取 \(\boldsymbol e_r\)
+沿摆臂由 \(O\) 指向圆心，\(\boldsymbol e_k\)
+沿摆臂摆动轴，并令轴向乘员相对圆心的位置为 \[
+\boldsymbol\rho_K=r\boldsymbol e_k.
+\] 圆心的向心加速度为 \(-\Omega^2l\boldsymbol e_r\)。相对自转给出 \[
+\boldsymbol a_{rel}=-\omega^2r\boldsymbol e_k.
+\] 又因 \[
+\boldsymbol v_{rel}
+=\omega\boldsymbol e_r\times r\boldsymbol e_k,
+\] 科里奥利项为 \[
+2\boldsymbol\Omega\times\boldsymbol v_{rel}
+=2\Omega\omega r\boldsymbol e_r,
+\] 其正负由 \(\Omega\)、\(\omega\)
+的有符号取值决定。三项相加就得到式（14）。\(\boldsymbol e_r\) 与
+\(\boldsymbol e_k\) 正交，因此大小才可写成式（15）的平方和。
+
+\textbf{特殊情形核对。} 当 \(\omega=0\) 时，式（15）退化为
+\(a_K=\Omega^2l\)；当 \(\Omega=0\) 时，退化为 \(a_K=\omega^2r\)；若
+\(2\Omega\omega r=\Omega^2l\)，摆臂方向分量恰好抵消，但仍保留环自转向心分量
+\(\omega^2r\)，所以总加速度不为零。
+
+\textbf{统一加速度公式的推导。} 对任一在随摆臂转动参考系中表示的矢量
+\(\boldsymbol A\)，惯性系导数与转动系导数满足 \[
+\left(\frac{\mathrm d\boldsymbol A}{\mathrm dt}\right)_{\!I}
+=
+\left(\frac{\mathrm d\boldsymbol A}{\mathrm dt}\right)_{\!R}
++\boldsymbol\Omega\times\boldsymbol A.
+\] 乘员位置为 \[
+\boldsymbol r_P=\boldsymbol r_A+\boldsymbol\rho.
+\] 第一次求导： \[
+\boldsymbol v_P
+=\boldsymbol v_A+\boldsymbol v_{rel}
++\boldsymbol\Omega\times\boldsymbol\rho.
+\] 再求一次导数时，分别处理三项： \[
+\begin{aligned}
+\left(\frac{\mathrm d\boldsymbol v_{rel}}{\mathrm dt}\right)_{\!I}
+&=\boldsymbol a_{rel}
++\boldsymbol\Omega\times\boldsymbol v_{rel},\\
+\frac{\mathrm d}{\mathrm dt}
+(\boldsymbol\Omega\times\boldsymbol\rho)
+&=\dot{\boldsymbol\Omega}\times\boldsymbol\rho
++\boldsymbol\Omega\times
+\left(\boldsymbol v_{rel}
++\boldsymbol\Omega\times\boldsymbol\rho\right).
+\end{aligned}
+\] 合并两个相同的 \(\boldsymbol\Omega\times\boldsymbol v_{rel}\)，便得到
+\[
+\boldsymbol a_P
+=\boldsymbol a_A
++\dot{\boldsymbol\Omega}\times\boldsymbol\rho
++\boldsymbol\Omega\times
+(\boldsymbol\Omega\times\boldsymbol\rho)
++2\boldsymbol\Omega\times\boldsymbol v_{rel}
++\boldsymbol a_{rel}.
+\] 科里奥利项前的因子 \(2\)
+不是记忆规定，而是两次求导各产生一次相同叉积。
+
+\textbf{最高位置逐项删项。} 此时摆臂瞬时角速度为零，故 \[
+\boldsymbol\Omega=\boldsymbol0.
+\] 统一公式中的摆臂向心项和科里奥利项随之消失，但 \[
+\dot{\boldsymbol\Omega}=\boldsymbol\alpha_0\ne\boldsymbol0.
+\] 因此剩下 \[
+\boldsymbol a_{top}
+=\boldsymbol a_A+\boldsymbol\alpha_0\times\boldsymbol\rho_{top}+\boldsymbol a_{rel}
+=l\boldsymbol\alpha_0\times\boldsymbol e_r
++\boldsymbol\alpha_0\times\boldsymbol\rho_{top}
+-\omega^2\boldsymbol\rho_{top}.
+\]
+``瞬时静止''只说明速度为零，不能推出加速度为零；摆到最高位置的普通单摆也具有同样特征。
+
+\textbf{最低位置逐项删项。} 最低点重力作用线通过
+\(O\)，所以摆臂角加速度为零，即
+\(\dot{\boldsymbol\Omega}=0\)。轴向乘员满足
+\(\boldsymbol\rho_K=r\boldsymbol e_k\)，恰与摆臂角速度平行，因此 \[
+\boldsymbol\Omega\times
+(\boldsymbol\Omega\times\boldsymbol\rho_K)=\boldsymbol0.
+\]
+此时非零项只剩圆心向心加速度、科里奥利加速度和圆环自转向心加速度。若令
+\[
+\boldsymbol e_t=\boldsymbol e_k\times\boldsymbol e_r,
+\] 则 \[
+\boldsymbol v_{rel}
+=\omega\boldsymbol e_r\times
+(r\boldsymbol e_k)
+=-\omega r\boldsymbol e_t,
+\] 进而 \[
+2\Omega\boldsymbol e_k\times\boldsymbol v_{rel}
+=2\Omega\omega r\boldsymbol e_r.
+\] 这一步直接确定了科里奥利项与圆心向心项共线，而圆环向心项沿
+\(\boldsymbol e_k\)，所以最后求大小时只有两个互相垂直的合成分量。
+
+\textbf{最终答案所需的代入顺序。} 先由重力矩求
+\(\alpha_0\)，得到最高点矢量加速度；再由能量求 \(\Omega\)，最后代入 \[
+a_K=\sqrt{(\Omega^2l-2\Omega\omega r)^2+\omega^4r^2}.
+\] 若在求得 \(\Omega\) 之前就展开式（15），容易把座椅自转角速度
+\(\omega\) 与摆臂角速度 \(\Omega\) 混为同一物理量。
+
+\textbf{两个角速度的量纲和极限检查。} \(\alpha_0\) 的量纲是
+\(\mathrm{s^{-2}}\)，所以 \(l\alpha_0\)
+是加速度；\(\Omega^2l\)、\(\Omega\omega r\) 和 \(\omega^2r\) 也都具有
+\(\mathrm{m\,s^{-2}}\)。若令
+\(r\to0\)，圆环退化为位于摆臂端点的质点，转动惯量变为 \[
+J\to\frac13Ml^2+ml^2,
+\] 轴向乘员与圆心重合，式（15）退化为 \(a_K=\Omega^2l\)。若令
+\(\theta_0\to0\)，初始位置就是最低点，势能差为零，故
+\(\Omega\to0\)，与能量式一致。
+
+\textbf{最高点答案的空间方向。}
+欧拉项\(\boldsymbol\alpha_0\times\boldsymbol\rho_{top}\)仍非零。圆环最高点的半径沿当地竖直方向在环面上的投影；按下文明确的坐标，它与中心的切向加速度同轴，而欧拉项沿摆臂。完整矢量和必须先求出这两个合成分量，再取模。
+
+\textbf{有符号角速度的代入示例。} 先按右手定则固定 \(\boldsymbol e_k\)
+的正方向，再把实际转向写成 \(\Omega,\omega\)
+的正负号。若两种转动方向同时反转，则 \(\Omega\omega\)
+不变，科里奥利项方向不变，而摆臂和圆环各自的向心项本来就只含平方，也不变；所以总加速度不变。若只反转圆环自转，则
+\[
+\omega\to-\omega,
+\] 科里奥利项 \(2\Omega\omega r\) 反号，但自转向心项
+\(-\omega^2r\boldsymbol e_k\)
+不变。这个检验与``科里奥利加速度对速度方向敏感、向心加速度对转向不敏感''的物理图像一致。
+
+\textbf{最低点结果的展开形式。} 把式（15）平方可得 \[
+\begin{aligned}
+a_L^2
+&=(\Omega^2l-2\Omega\omega r)^2+\omega^4r^2\\
+&=\Omega^4l^2
+-4\Omega^3\omega lr
++4\Omega^2\omega^2r^2
++\omega^4r^2.
+\end{aligned}
+\] 若需要比较不同 \(\omega\)
+对乘员加速度的影响，应从这一完整表达式出发；不能把两个同一直线方向的加速度先取大小再相加，否则会遗漏可能的抵消。
+\needspace{3\baselineskip}
+\textbf{最高点的方向和加速度大小}
+
+为明确``最高点''，取摆臂偏在竖直线右侧，\(\boldsymbol e_r\) 从 O
+指向圆心，\(\boldsymbol e_k\)
+沿恢复摆动的正轴，\(\boldsymbol e_t=\boldsymbol e_k\times\boldsymbol e_r\)。这时
+\(\boldsymbol e_t\) 的竖直分量向下，圆环最高点为
+\(\boldsymbol\rho_{top}=-r\boldsymbol e_t\)。记恢复角加速度大小为
+\(\alpha_0>0\)，则
+
+\[\boldsymbol a_{top}=(l\alpha_0+\omega^2r)\boldsymbol e_t+\alpha_0r\boldsymbol e_r.\]
+
+\[\boxed{a_{top}=\sqrt{(l\alpha_0+\omega^2r)^2+(\alpha_0r)^2}}.\]
+
+若另取有符号 \(\alpha\) 且最高点写作
+\(+r\boldsymbol e_t\)，同一矢量式变为
+\((l\alpha-\omega^2r)\boldsymbol e_t-\alpha r\boldsymbol e_r\)；此时恢复运动的
+\(\alpha\) 为负。不能把后一式中的 \(\alpha\)
+无条件当正大小，从而误写两项抵消。坐标无关的三项矢量式最适合核对符号。
+
+撤去外力矩只令摆臂瞬时角速度为零，并不令 \(\dot{\boldsymbol\Omega}\)
+为零。欧拉项与乘员相对圆心位置有关，正是先前遗漏的一项。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf-1}
+
+第二问先确定乘员位置。前视图最左点的相对速度平行摆动轴，科里奥利项为零；摆动轴方向的另一乘员位置则恰好相反。这两点都可由通用\(\chi\)公式检查。
+
+式（14）必须把 \(\Omega\)、\(\omega\)
+当作有符号角速度。若圆环自转方向反向，科里奥利项换号，而圆环自转向心项不变。
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9-1}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  在式（2）中漏掉圆环绕直径的 \(mr^2/2\)；
+\item
+  把圆环自转动能也加入摆臂下落获得的动能；
+\item
+  最高位置仍写摆臂向心项；
+\item
+  没有按乘员的具体位置检查科里奥利项和框架向心项；
+\item
+  把轴向点误画在摆臂摆动平面内，导致三维关系错误；
+\item
+  只给大小而没有说明两个角速度的方向约定。
+\end{enumerate}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae-1}
+
+先在三个互相垂直的方向上分别标出摆臂轴、摆动轴和圆环半径，再写式（1）。每删除一项都让学生给出几何理由，比直接背最终公式更可靠。
+
+\textbf{用于课堂的三维核验。}
+同一最低瞬间取三个乘员：\(\chi=0,\pi/2,-\pi/2\)。前者有科里奥利项且无框架向心项；后二者无科里奥利项且有框架向心项。
+
+\[\boldsymbol\Omega\times\boldsymbol v_{rel}=0\quad(\chi=\pm\pi/2).\]
+
+这比只要求``背出科里奥利项''更能检验空间理解。要求学生在坐标图上指出乘员位置、相对速度、角速度，再逐项叉乘。若将最左点无说明地改成沿转轴的点，所得公式描述的是另一个乘员，算式正确也不能回答原问题。
+
+\needspace{3\baselineskip}
+\textbf{从三个方向的加速度区分乘员位置}
+
+同一最低瞬间，沿摆动轴的乘员、前视图最左乘员、前视图最右乘员分别取
+\(\chi=0,-\pi/2,+\pi/2\)。三个矢量为
+
+\[\boldsymbol a_K=(2\Omega\omega r-\Omega^2l)\boldsymbol e_r-\omega^2r\boldsymbol e_k,\]
+
+\[\boldsymbol a_L=-\Omega^2l\boldsymbol e_r+(\Omega^2+\omega^2)r\boldsymbol e_t,\]
+
+\[\boldsymbol a_R=-\Omega^2l\boldsymbol e_r-(\Omega^2+\omega^2)r\boldsymbol e_t.\]
+
+后二者大小相同，且与自转的正负方向无关；前者一般随自转反向改变大小。这可以当作课堂的测量判据：若计算出的最左点加速度含线性的
+\(\Omega\omega\) 项，就先检查是否把它放到了另一个空间位置。
+
+最高点的欧拉项则来源于
+\(\dot{\boldsymbol\Omega}\times\boldsymbol\rho\)。瞬时框架不转动只让
+\(\boldsymbol\Omega=0\)，不能使其时间导数为零。用刚体轨迹的二阶导数逐项对照，比把所有角加速度统称为``切向项''更容易避免遗漏有限半径贡献。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3-1}
+
+\needspace{3\baselineskip}
+\textbf{变式1：摆动轴方向乘员的分量抵消。}
+
+\textbf{变式.}
+求圆环自转角速度满足什么条件时，最低点轴向乘员加速度的摆臂方向分量为零。
+
+\textbf{解答.} 正文已得 \[
+\bm a_K=(2\Omega\omega r-\Omega^2l)\bm e_r-\omega^2r\bm e_k.
+\] 令 \(\bm e_r\) 方向系数为零： \[
+2\Omega\omega r-\Omega^2l=0.
+\] 当 \(\Omega\ne0\) 时， \[
+\boxed{\omega=\frac{\Omega l}{2r}}.
+\] 这里 \(\omega\) 与 \(\Omega\)
+必须按同一右手定则取有符号值；异号时科里奥利项与摆臂向心项同向，不可抵消。此时总加速度仍为
+\(-\omega^2r\bm e_k\)，大小不为零。
+
+\textbf{变式2：圆盘退化为质点。}
+令\(r\to0\)但m、l保持不变。最高点和最低点均趋向圆盘中心：
+
+\[a_{\rm top}=l\alpha_0,\qquad a_{\rm bottom}=l\Omega^2.\]
+
+自身旋转项均消失，系统等效为带有杆转动惯量的复摆。它同时核对最高点公式中每一个r项都确属有限尺寸修正。
+
+\textbf{变式3：反转圆盘自转方向。}
+最低点轴向乘员的加速度为\((2\Omega\omega r-\Omega^2l)\boldsymbol e_r-\omega^2r\boldsymbol e_k\)。两种转向的平方之差为
+
+\[a_K^2(+\omega)-a_K^2(-\omega)=-8\Omega^3\omega lr.\]
+
+法向自转向心项不变，科里奥利项反号。若只按两种角速度的大小代入标量和，就会漏掉这一可观测差别。
+
+\textbf{变式4：圆盘没有自身转动。}
+最高位置仍有摆动角加速度，令\(\omega=0\)，
+
+\[\boldsymbol a_H=l\alpha_0\boldsymbol e_t+\alpha_0r\boldsymbol e_r,\]
+
+\[a_H=\alpha_0\sqrt{l^2+r^2}.\]
+
+第二项是偏离圆盘中心的最高点随整个平面转动产生的欧拉加速度。没有自转不等于盘上任意点的加速度都等于中心加速度。
+
+\newpage
+
+\section{第 3 题}\label{ux7b2c-3-ux9898}
+
+空间磁场关于 \(z\) 轴轴对称，轴线上 \[
+B_z(z)=\left|B_0\frac{z_0}{z}\right|.
+\] 半径为 \(r\)、电流为 \(I\)、质量为 \(m\) 的小电流环，其轴线与 \(z\)
+轴重合；重力沿 \(-z\) 方向。求轴线附近的径向磁场、平衡位置及稳定性。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.318\linewidth,height=\textheight,keepaspectratio,alt={题3　轴对称非均匀磁场中的同轴电流环}]{../figures/question-03.pdf}
+\caption{题3　轴对称非均匀磁场中的同轴电流环}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-2}
+
+本题是由 \(\nabla\cdot\boldsymbol B=0\)
+重建轴旁磁场，再求电流环磁力和平衡稳定性的综合题。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-2}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  柱坐标中的磁场散度；
+\item
+  轴对称场的近轴展开；
+\item
+  电流元安培力；
+\item
+  一维平衡点线性稳定性。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-2}
+
+轴向磁场随 \(|z|\)
+减小而增强。磁力线不能有源或汇，因此轴向梯度必然伴随径向分量。上、下半空间的径向分量方向相反，导致两个对称的力平衡点具有不同稳定性。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-2}
+
+在轴附近令 \(B_\rho=C(z)\rho+O(\rho^3)\)，代入柱坐标散度方程确定
+\(C(z)\)。再对整个圆环积分 \(I,d\boldsymbol l\times\boldsymbol B\)。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-2}
+
+轴对称且无自由磁单极时 \[
+\frac1\rho\frac{\partial(\rho B_\rho)}{\partial\rho}
++\frac{\partial B_z}{\partial z}=0. \tag{1}
+\] 设 \(B_\rho=C(z)\rho\)，则 \[
+2C(z)+\frac{dB_z}{dz}=0. \tag{2}
+\] 故近轴径向场为 \[
+\boxed{B_\rho=-\frac\rho2\frac{dB_z}{dz}}. \tag{3}
+\]
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\linewidth,height=\textheight,keepaspectratio,alt={图3-2　上下半空间的径向场、电流方向与稳定性}]{../figures/solution-03.pdf}
+\caption*{图3-2　上下半空间的径向场、电流方向与稳定性}
+\end{figure}
+
+对 \(z>0\)： \[
+B_z=\frac{B_0z_0}{z},
+\qquad
+B_\rho=\frac{B_0z_0}{2z^2}\rho. \tag{4}
+\] 对 \(z<0\)： \[
+B_z=-\frac{B_0z_0}{z},
+\qquad
+B_\rho=-\frac{B_0z_0}{2z^2}\rho. \tag{5}
+\] 合写为 \[
+\boxed{B_\rho=\operatorname{sgn}(z)
+\frac{B_0z_0}{2z^2}\rho}. \tag{6}
+\]
+
+圆环上 \(\rho=r\)。选择电流方向使竖直磁力向上，力的大小为 \[
+\begin{aligned}
+F_z
+&=I\int_0^{2\pi}r\,d\phi\,|B_\rho(r,z)|\\
+&=I(2\pi r)\frac{B_0z_0r}{2z^2}\\
+&=\frac{\pi I B_0z_0r^2}{z^2}.
+\end{aligned} \tag{7}
+\] 平衡条件 \(F_z=mg\) 给出 \[
+\boxed{z=\pm a},
+\qquad
+\boxed{a=\sqrt{\frac{\pi I B_0z_0r^2}{mg}}}. \tag{8}
+\]
+
+上方平衡点
+\(z=+a\)：若环上移，磁力减小，重力占优使其下移；若下移，磁力增大使其上移，因此稳定。
+
+下方平衡点 \(z=-a\)：若环向上移动、\(|z|\)
+变小，向上磁力反而增大，继续向上偏离；若向下移动，向上磁力减小，也继续向下偏离，因此不稳定。结论为
+\[
+\boxed{z=+a\text{ 稳定},\qquad z=-a\text{ 不稳定}}. \tag{9}
+\]
+
+\textbf{近轴展开为什么只保留一次项。}
+轴对称性要求轴线上横向磁场为零，所以在 \(\rho\) 很小时必有 \[
+B_\rho(\rho,z)=b(z)\rho+O(\rho^3).
+\] 无磁单极子条件在柱坐标中为 \[
+\nabla\cdot\boldsymbol B
+=\frac1\rho\frac{\partial(\rho B_\rho)}{\partial\rho}
++\frac{\partial B_z}{\partial z}=0.
+\] 代入 \(B_\rho=b(z)\rho\)，第一项为 \[
+\frac1\rho\frac{\partial[b(z)\rho^2]}{\partial\rho}=2b(z),
+\] 故 \[
+b(z)=-\frac12\frac{\mathrm dB_z}{\mathrm dz},
+\qquad
+B_\rho=-\frac\rho2\frac{\mathrm dB_z}{\mathrm dz}.
+\] 系数 \(1/2\) 正是柱坐标散度中出现 \(\rho B_\rho\) 的结果。
+
+对 \(z>0\)，\(B_z=B_0z_0/z\)，所以 \[
+\frac{\mathrm dB_z}{\mathrm dz}=-\frac{B_0z_0}{z^2},
+\qquad
+B_\rho=\frac{B_0z_0\rho}{2z^2}.
+\] 对 \(z<0\)，\(B_z=-B_0z_0/z\)，所以 \(B_\rho\)
+反号。合并即为题中使用的 \(\operatorname{sgn}(z)\) 形式。
+
+\textbf{环上安培力的积分。} 环上电流元为 \[
+\mathrm d\boldsymbol l=r\,\mathrm d\varphi\,\boldsymbol e_\varphi.
+\] 径向磁场引起的轴向力元为 \[
+\mathrm d\boldsymbol F_z
+=I\,\mathrm d\boldsymbol l\times B_\rho\boldsymbol e_\rho.
+\] 由于 \(B_\rho\)
+在同一小圆周上处处等大，且每个力元的轴向分量同向，积分得 \[
+|F_z|=I\int_0^{2\pi}rB_\rho\,\mathrm d\varphi
+=2\pi rI|B_\rho(r,z)|
+=\frac{\pi I B_0z_0r^2}{z^2}.
+\] 电流方向应选成磁力向上，否则磁力与重力同向，不存在题设平衡。
+
+\textbf{线性稳定性而不只靠口头判断。} 记 \[
+C=\pi I B_0z_0r^2,
+\qquad C=mg a^2.
+\] 在上方平衡点令 \(z=a+\xi\)，其中 \(|\xi|\ll a\)。净力展开为 \[
+\begin{aligned}
+F_{net}
+&=\frac{C}{(a+\xi)^2}-mg\\
+&\approx\frac{C}{a^2}\left(1-\frac{2\xi}{a}\right)-mg\\
+&=-\frac{2mg}{a}\xi.
+\end{aligned}
+\] 故 \[
+m\ddot\xi=-\frac{2mg}{a}\xi,
+\qquad
+\omega_z=\sqrt{\frac{2g}{a}},
+\] 这是稳定小振动。下方取 \(z=-a+\xi\) 时得到 \[
+m\ddot\xi=+\frac{2mg}{a}\xi,
+\] 扰动指数增长，因而不稳定。
+
+\textbf{适用范围检查。} 推导使用了近轴条件 \(r\ll |z|\)。因此形式解
+\(|z|=a\) 还必须满足
+\(r\ll a\)；若不满足，必须知道更高阶的横向场分布，不能仅凭轴上 \(B_z\)
+得出精确平衡位置。
+
+\textbf{磁力方向的逐元判断。} 柱坐标单位矢量满足 \[
+\boldsymbol e_\rho\times\boldsymbol e_\varphi
+=\boldsymbol e_z,
+\qquad
+\boldsymbol e_\varphi\times\boldsymbol e_\rho
+=-\boldsymbol e_z.
+\] 若电流沿 \(+\boldsymbol e_\varphi\)，则 \[
+\mathrm d\boldsymbol F
+=Ir\,\mathrm d\varphi\,
+\boldsymbol e_\varphi\times
+(B_\rho\boldsymbol e_\rho)
+=-IrB_\rho\,\mathrm d\varphi\,\boldsymbol e_z.
+\] 反转电流后，整个轴向磁力反向。要与沿 \(-z\) 的重力平衡，应选择使
+\(F_z>0\) 的电流方向。确定方向以后，再用绝对值计算大小 \[
+F_B=2\pi rI|B_\rho|
+=\frac{\pi I B_0z_0r^2}{z^2}.
+\]
+
+\textbf{用有效势能再次判断稳定性。} 记 \[
+C=\pi I B_0z_0r^2.
+\] 在每个半轴分别选择向上的磁力后，该半轴的局部合力写成 \[
+F(z)=\frac{C}{z^2}-mg.
+\] 由 \(F=-\mathrm dU_{\mathrm{eff}}/\mathrm dz\) 可取 \[
+U_{\mathrm{eff}}(z)=\frac{C}{z}+mgz.
+\] 一阶导数为 \[
+\frac{\mathrm dU_{\mathrm{eff}}}{\mathrm dz}
+=-\frac{C}{z^2}+mg,
+\] 在正、负半轴分别求局部驻点，得到 \(z=+a\) 和
+\(z=-a\)，二者需相反的实验室电流绕向。二阶导数为 \[
+\frac{\mathrm d^2U_{\mathrm{eff}}}{\mathrm dz^2}
+=\frac{2C}{z^3}.
+\] 所以 \[
+\left.U_{\mathrm{eff}}''\right|_{z=a}>0,
+\qquad
+\left.U_{\mathrm{eff}}''\right|_{z=-a}<0.
+\]
+上方平衡点是势能极小值，下方平衡点是势能极大值，这与扰动力分析完全一致。
+
+\textbf{小振动周期的附加检验。} 在 \(z=a\) 附近有 \[
+m\ddot\xi=-\frac{2mg}{a}\xi,
+\] 故 \[
+\omega_{\mathrm{small}}=\sqrt{\frac{2g}{a}},
+\qquad
+T_{\mathrm{small}}=2\pi\sqrt{\frac{a}{2g}}.
+\]
+若把稳定性符号写反，就会得到虚数角频率；因此小振动公式也可作为符号检查。
+
+\textbf{平衡位置的量纲核验。} 式 \[
+a^2=\frac{\pi I B_0z_0r^2}{mg}
+\] 中，\(IB_0r\) 的量纲是力，因此 \(IB_0z_0r^2\)
+的量纲是``力乘长度平方''；除以 \(mg\)
+后得到长度平方，故开方后确为位置。若推导中漏掉圆周积分产生的一个
+\(r\)，量纲会只剩长度而无法与 \(a^2\) 相等。
+
+\textbf{轴上下两侧不能只看 \(|z|\)。} \(B_z\) 的大小关于原点对称，但
+\(\mathrm dB_z/\mathrm dz\) 在两侧符号不同，因而 \(B_\rho\)
+反向。平衡力大小虽然都含 \(1/z^2\)，稳定性却取决于对有符号坐标 \(z\)
+求导后的 \(1/z^3\)。若从一开始把坐标全部改成
+\(|z|\)，就会丢失上下两个平衡点稳定性不同的关键信息。
+\needspace{3\baselineskip}
+\textbf{固定电流方向的限制}
+
+正文的正、负高度是分别选择电流方向使磁力向上时的候选支路。若给定同一个有符号磁矩
+\(\mu_z=\pi r^2I\)，磁力为
+\(F_z=\mu_z\,dB_z/dz\)，正负半轴的导数符号相反。同一电流方向一般只在其中一侧有抗重力的平衡，不能同时把
+\(+a\) 和 \(-a\)
+当成同一装置的两个平衡点。所谓稳定仅指轴向小扰动；横向和倾转稳定还需磁场全空间结构与姿态约束。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf-2}
+
+两个平衡位置在代数上对称，但重力方向不反转，因此稳定性不对称。判断稳定性必须看有符号位移后的合力方向，不能只看
+\(F\propto z^{-2}\)。
+
+也可把小环视为磁偶极子 \(\mu=I\pi r^2\)，使用 \(F_z=\mu,dB_z/dz\)
+复核式（7），但要为上下半空间分别选择磁矩方向。
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9-2}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  从 \(B_z\) 的梯度直接把径向场写成 \(-\rho,dB_z/dz\)，漏掉 \(1/2\)；
+\item
+  忽略绝对值，导致上下半空间符号相同；
+\item
+  环周长写成 \(\pi r\)；
+\item
+  两个平衡点都判为稳定；
+\item
+  未说明电流方向需使磁力向上。
+\end{enumerate}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae-2}
+
+先画磁力线``变密必向外张开''的图像，再推散度公式。稳定性用一上一下两个小位移箭头逐一判断，不宜只背导数正负。
+
+\textbf{用于课堂的有向磁矩检验。}
+上、下侧保持同一有向电流时，\(F_z\)反号。以\(I_s<0\)为例，正侧可平衡，负侧磁力与重力同向而无平衡。将I反号后两侧角色交换，但负侧候选仍轴向不稳定。
+
+\[\frac{dF_z}{dz}\bigg|_{+a}=-2mg/a,\qquad
+\frac{dF_z}{dz}\bigg|_{-a}=+2mg/a\]
+
+两式分别对应不同绕向的装置。有效势的推导也须在各半轴内进行，不能穿过z=0的场奇点。轴线数据只决定近轴一阶横向场，若r并不小，还需更高阶场信息。
+
+\needspace{3\baselineskip}
+\textbf{用势能独立判断两个条件平衡}
+
+令磁矩的有符号大小为
+\(\mathcal M=\pi r^2I_s\)，小环且电流恒定时，外场作用势能为
+
+\[U(z)=mgz-\mathcal M B_z(z),\qquad z\ne0.\]
+
+正半轴若 \(\mathcal M<0\)，有
+
+\[U_+(z)=mgz+\frac{|\mathcal M|B_0z_0}{z}.\]
+
+驻点满足 \(mg=|\mathcal M|B_0z_0/z^2\)，二阶导数为
+\(2|\mathcal M|B_0z_0/z^3>0\)，故轴向稳定。负半轴若 \(\mathcal M>0\)，由
+\(B_z=-B_0z_0/z\) 得
+
+\[U_-(z)=mgz+\frac{\mathcal M B_0z_0}{z}.\]
+
+二阶导数为
+\(2\mathcal M B_0z_0/z^3<0\)，故轴向不稳定。这两个势能使用相反电流；不能把它们拼成同一电流对应的双势阱。
+
+以上仅研究环轴线上的平移。若环可倾斜，其磁矩还受到转矩
+\(\boldsymbol{\mathcal M}\times\boldsymbol B\)。正半轴支撑所需磁矩逆场，方向本身可能不稳定；没有保持同轴的约束时，不能把一维势能极小称为完整三维稳定。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3-2}
+
+\needspace{3\baselineskip}
+\textbf{变式1：原条件的扩展。}
+
+\textbf{变式.} 轴线场改为
+\(B_z=Cz^{-n}\)（\(z>0,n>0\)），求平衡高度和轴向小振动频率。
+
+\textbf{解答.} 轴对称无源条件在轴旁给出 \[
+B_\rho=-\frac{\rho}{2}\frac{dB_z}{dz}
+=\frac{nC\rho}{2z^{n+1}}.
+\] 圆环轴向磁力大小为 \[
+F_z=2\pi rI B_\rho(r,z)
+=\frac{\pi nICr^2}{z^{n+1}}.
+\] 选电流方向使磁力向上，平衡条件 \(F_z(a)=mg\) 给出 \[
+\boxed{a=\left(\frac{\pi nICr^2}{mg}\right)^{1/(n+1)}}.
+\] 令 \(z=a+\xi\)，一阶展开得 \[
+m\ddot\xi=-\frac{(n+1)mg}{a}\xi,
+\] 所以 \[
+\boxed{\omega_s=\sqrt{\frac{(n+1)g}{a}}},
+\qquad
+\boxed{T_s=2\pi\sqrt{\frac{a}{(n+1)g}}}.
+\]
+
+这里的线性化系数必须为负：\(\xi>0\) 时磁力随 \(z\)
+增大而减小，合力向下；\(\xi<0\)
+时磁力增大，合力向上，所以该平衡点确为稳定平衡。量纲上，\(g/a\) 的量纲为
+\(\mathrm{s^{-2}}\)，故 \(\omega_s\) 的量纲为 \(\mathrm{s^{-1}}\)。再令
+\(n=1\)，便回到正文中 \(B_z\propto z^{-1}\)
+的圆环结果，可作为指数和系数的反向核对。
+
+\textbf{变式2：固定电流方向能否有上下两个平衡？}
+原题\(B_z=B_0z_0/|z|\)，不可去掉绝对值。将实验室有向电流记为\(I_s\)，有
+
+\[F_z=-\pi I_s B_0z_0r^2\operatorname{sgn}(z)/z^2.\]
+
+正半轴需\(I_s<0\)才有抗重力平衡，负半轴则需\(I_s>0\)。所以同一固定绕向只在一侧有平衡；正文\(\pm a\)比较的是分别选好绕向的两个装置。正侧稳定、负侧不稳定均只指轴向扰动。
+
+\textbf{变式3：用小振动周期反推电流。}
+正侧稳定平衡给\(\omega_s^2=2g/a\)。若测得周期\(T_s\)，
+
+\[a=\frac{gT_s^2}{2\pi^2},\qquad |I|=\frac{mga^2}{\pi |B_0z_0|r^2}.\]
+
+电流大小由周期确定，电流方向另由磁场梯度及重力方向确定。只测周期不能判断绕向。
+
+\textbf{变式4：非小振幅的两个转折点。}
+在正侧将向上的磁力写成C/z²，C\textgreater0，有效势为\(U(z)=mgz+C/z\)，平衡\(a=\sqrt{C/(mg)}\)。
+
+\[z_\pm=\frac{\mathcal E\pm\sqrt{\mathcal E^2-4mgC}}{2mg},\quad z_+z_-=a^2.\]
+
+有限能量不能越过z=0处的势垒，也不能上升到无穷远；\(\mathcal E\downarrow2mg a\)时两转折点合并，恢复小振动极限。
+
+\newpage
+
+\section{第 4 题}\label{ux7b2c-4-ux9898}
+
+肩关节 \(O\) 固定，轻质手臂 \(OA\) 长为 \(l_1\)，宝剑 \(AB\) 长为
+\(l_2\)。\(OA\) 以角速度 \(\omega_1\) 转动，\(AB\) 相对 \(OA\) 以角速度
+\(\omega_2\) 转动；两角速度在所考察时刻保持不变，不计重力。
+
+（1）当 \(OA\) 与 \(AB\) 共线且同向时，求剑尖 \(B\) 的速度。
+
+（2）若 \(AB\) 是质量为 \(m\) 的均匀杆，在两杆夹角为 \(\theta\)
+时，求维持上述匀角速度所需的 \(O\) 点力和力矩、\(A\) 点力和力矩。
+
+（3）在 \(A\) 的另一侧沿剑身反向延长至 \(C\)，\(AC=l_3\)，加配重
+\(M\)。求使 \(A\) 点力矩最小的 \(M\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.654\linewidth,height=\textheight,keepaspectratio,alt={题4　手臂与宝剑的平面复合转动}]{../figures/question-04.pdf}
+\caption{题4　手臂与宝剑的平面复合转动}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-3}
+
+本题是二连杆平面运动学与刚体逆动力学。第一问求速度合成；第二问从质心加速度和角动量变化反求关节力、关节矩；第三问用配重抵消由支点平动引起的关节矩。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-3}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  相对角速度与绝对角速度；
+\item
+  刚体质心加速度；
+\item
+  质心角动量定理；
+\item
+  对固定点的角动量；
+\item
+  动平衡配重。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-3}
+
+剑的绝对角速度不是 \(\omega_2\)，而是 \[
+\Omega_2=\omega_1+\omega_2.
+\] 即使两角速度恒定，夹角 \(\theta\) 仍以 \(\omega_2\)
+变化，因此系统关于 \(O\) 的角动量一般随时间变化，需要外力矩维持。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-3}
+
+定义 \(\boldsymbol e_1\) 沿 \(OA\)、\(\boldsymbol e_2\) 沿
+\(AB\)，\(\boldsymbol k\) 垂直运动平面，且
+\(\boldsymbol e_1\times\boldsymbol e_2=\sin\theta\,\boldsymbol k\)。所有速度、加速度和力矩都在这组矢量中表达。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-3}
+
+剑尖位置 \[
+\boldsymbol r_B=l_1\boldsymbol e_1+l_2\boldsymbol e_2. \tag{1}
+\] 故速度 \[
+\boldsymbol v_B
+=\omega_1\boldsymbol k\times l_1\boldsymbol e_1
++(\omega_1+\omega_2)\boldsymbol k\times l_2\boldsymbol e_2. \tag{2}
+\] 两杆共线同向时，两项同向： \[
+\boxed{
+v_B=\omega_1l_1+(\omega_1+\omega_2)l_2
+}. \tag{3}
+\]
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.86\linewidth,height=\textheight,keepaspectratio,alt={图4-2　剑质心加速度、关节力矩与反向配重}]{../figures/solution-04.pdf}
+\caption*{图4-2　剑质心加速度、关节力矩与反向配重}
+\end{figure}
+
+剑的质心 \(G\) 位于 \(A\) 外 \(l_2/2\)： \[
+\boldsymbol r_G=l_1\boldsymbol e_1+\frac{l_2}{2}\boldsymbol e_2. \tag{4}
+\] 角速度恒定时 \[
+\boxed{
+\boldsymbol a_G
+=-\omega_1^2l_1\boldsymbol e_1
+-(\omega_1+\omega_2)^2\frac{l_2}{2}\boldsymbol e_2
+}. \tag{5}
+\] 剑只受 \(A\) 点力和偶力，故 \[
+\boxed{\boldsymbol F_A=m\boldsymbol a_G}. \tag{6}
+\]
+
+剑绕质心的角加速度为零，故合力矩为零： \[
+\boldsymbol M_A+
+\left(-\frac{l_2}{2}\boldsymbol e_2\right)
+\times\boldsymbol F_A=0. \tag{7}
+\] 代入式（6），平行于 \(\boldsymbol e_2\) 的加速度项不贡献力矩，得到 \[
+\boxed{
+\boldsymbol M_A
+=\frac12m\omega_1^2l_1l_2\sin\theta\,\boldsymbol k
+}. \tag{8}
+\]
+
+对``轻臂 + 剑''整体，外力只有 \(O\) 点力，因此 \[
+\boxed{\boldsymbol F_O=m\boldsymbol a_G}. \tag{9}
+\] 若分别画轻臂受力图，则轻臂在 \(A\) 处所受力与式（6）反向，而 \(O\)
+处反力使整体合力仍为式（9）。
+
+系统关于固定点 \(O\) 的角动量为 \[
+\begin{aligned}
+L_O
+&=m l_1^2\omega_1
++\frac13m l_2^2(\omega_1+\omega_2)\\
+&\quad+\frac12m l_1l_2(2\omega_1+\omega_2)\cos\theta.
+\end{aligned} \tag{10}
+\] 因 \(\dot\theta=\omega_2\)，维持运动所需的 \(O\) 点外力矩为 \[
+\boxed{
+\boldsymbol M_O
+=-\frac12m l_1l_2(2\omega_1+\omega_2)
+\omega_2\sin\theta\,\boldsymbol k
+}. \tag{11}
+\]
+
+第（3）问中配重位于 \(A\) 的反向延长线上。支点 \(A\)
+的平动加速度在剑法向产生的力矩，均匀剑与配重方向相反。令两者抵消： \[
+m\frac{l_2}{2}=Ml_3. \tag{12}
+\] 所以 \[
+\boxed{M=\frac{ml_2}{2l_3}}. \tag{13}
+\] 在该理想模型中，式（13）使 \(A\) 点所需偶力为零，即达到最小。
+
+\textbf{先把两个角速度的含义彻底分开。} \(\omega_1\)
+是手臂相对地面的角速度，\(\omega_2\)
+是剑相对手臂的角速度，因此剑相对地面的绝对角速度为 \[
+\Omega_2=\omega_1+\omega_2.
+\] 若两者反向，\(\omega_2\)
+应取负值，而不应把公式中的加号改成减号。共线同向时 \[
+\boldsymbol v_A=\omega_1\boldsymbol k\times(l_1\boldsymbol e_1),
+\] 剑尖相对 \(A\) 的速度为 \[
+\boldsymbol v_{B/A}=(\omega_1+\omega_2)
+\boldsymbol k\times(l_2\boldsymbol e_2).
+\] 两杆同向使两速度方向相同，才可由矢量和化为式（3）的标量和。
+
+\textbf{质心加速度式的逐项来源。}
+因两角速度恒定，\(\dot\omega_1=\dot\omega_2=0\)。对任一随角速度
+\(\Omega\) 匀速转动的单位矢量，有 \[
+\dot{\boldsymbol e}=\Omega\boldsymbol k\times\boldsymbol e,
+\qquad
+\ddot{\boldsymbol e}
+=\Omega\boldsymbol k\times
+(\Omega\boldsymbol k\times\boldsymbol e)
+=-\Omega^2\boldsymbol e.
+\] 因此对 \[
+\boldsymbol r_G=l_1\boldsymbol e_1+\frac{l_2}{2}\boldsymbol e_2
+\] 连续求两次时间导数，得到 \[
+\boldsymbol a_G
+=-\omega_1^2l_1\boldsymbol e_1
+-(\omega_1+\omega_2)^2\frac{l_2}{2}\boldsymbol e_2.
+\]
+这里没有切向加速度项，不是因为刚体不需要力矩，而只是因为两个角速度的大小恒定。
+
+\textbf{分别选研究对象，避免把作用力正负混在一起。} 只取剑 \(AB\)
+为研究对象，不计重力时，外作用只有手臂在 \(A\) 对剑的力
+\(\boldsymbol F_A\) 和偶力 \(\boldsymbol M_A\)。质心平动定理直接给出 \[
+\boldsymbol F_A=m\boldsymbol a_G.
+\] 若改取轻臂为研究对象，剑对轻臂的力是
+\(-\boldsymbol F_A\)。若再取``轻臂与剑''整体，\(A\)
+点内力相消，唯一外力是肩关节在 \(O\) 对系统的力 \(\boldsymbol F_O\)，故
+\[
+\boldsymbol F_O=m\boldsymbol a_G.
+\] 两式数值相同并不表示它们是同一对作用力；它们作用在不同研究对象上。
+
+\textbf{用质心矩方程推导 \(A\) 点偶力。}
+剑的绝对角速度恒定，所以绕质心的角动量 \[
+\boldsymbol L_G=I_G(\omega_1+\omega_2)\boldsymbol k
+\] 对时间的导数为零。关于 \(G\) 取矩： \[
+\boldsymbol M_A+\boldsymbol r_{A/G}\times\boldsymbol F_A=0,
+\qquad
+\boldsymbol r_{A/G}=-\frac{l_2}{2}\boldsymbol e_2.
+\] 把 \(\boldsymbol F_A=m\boldsymbol a_G\) 展开，其中沿
+\(\boldsymbol e_2\) 的一项与 \(\boldsymbol r_{A/G}\)
+平行，叉积为零；只剩 \[
+\begin{aligned}
+\boldsymbol M_A
+&=-\left(-\frac{l_2}{2}\boldsymbol e_2\right)
+\times\left(-m\omega_1^2l_1\boldsymbol e_1\right)\\
+&=\frac12m\omega_1^2l_1l_2
+(\boldsymbol e_1\times\boldsymbol e_2)\\
+&=\frac12m\omega_1^2l_1l_2\sin\theta\,\boldsymbol k.
+\end{aligned}
+\]
+
+\textbf{式（10）的角动量从哪里来。} 把剑看成许多质量元，任一点位置为 \[
+\boldsymbol r=l_1\boldsymbol e_1+s\boldsymbol e_2,
+\qquad 0\le s\le l_2,
+\] 速度为 \[
+\boldsymbol v=\omega_1\boldsymbol k\times l_1\boldsymbol e_1
++(\omega_1+\omega_2)\boldsymbol k\times s\boldsymbol e_2.
+\] 以线密度 \(m/l_2\) 积分 \[
+L_O=\int(\boldsymbol r\times\boldsymbol v)\cdot\boldsymbol k\,\mathrm dm.
+\] 分别利用 \[
+\int\mathrm dm=m,
+\qquad
+\int s\,\mathrm dm=\frac{ml_2}{2},
+\qquad
+\int s^2\,\mathrm dm=\frac{ml_2^2}{3},
+\] 便得到式（10）。其中前两项是常量，只有含 \(\cos\theta\)
+的交叉项随时间变化。因 \(\dot\theta=\omega_2\)， \[
+\frac{\mathrm d}{\mathrm dt}\cos\theta
+=-\omega_2\sin\theta,
+\] 所以 \(\boldsymbol M_O=\mathrm d\boldsymbol L_O/\mathrm dt\)
+正好给出式（11）。
+
+\textbf{配重条件的物理含义。} 对 \(A\)
+点所需偶力而言，剑和配重受到同一个 \(A\) 点平动加速度的影响。沿 \(AB\)
+两侧的质量一阶矩分别为 \(m(l_2/2)\) 与
+\(Ml_3\)。使一阶矩为零，相当于把组合体质心移到 \(A\)： \[
+\frac{m(l_2/2)-Ml_3}{m+M}=0.
+\] 因此得到
+\(M=ml_2/(2l_3)\)。这不是让组合体转动惯量最小，也不是让所有关节力都为零；它只消除由支点平动导致的
+\(A\) 点偶力需求。
+
+\textbf{极限核对。} 当 \(\theta=0\) 或 \(\pi\) 时，式（8）和式（11）都因
+\(\sin\theta=0\) 而为零；当 \(\omega_2=0\)
+时，相对夹角不变，式（11）为零；当 \(l_1=0\) 时，\(A\)
+固定，式（8）也为零。这些极限与几何图像一致。
+
+\textbf{把关节力写成可以直接计算的大小。} 令 \[
+A_1=\omega_1^2l_1,
+\qquad
+A_2=(\omega_1+\omega_2)^2\frac{l_2}{2}.
+\] 则 \[
+\boldsymbol F_A
+=-mA_1\boldsymbol e_1-mA_2\boldsymbol e_2.
+\] 由于 \(\boldsymbol e_1\cdot\boldsymbol e_2=\cos\theta\)， \[
+\begin{aligned}
+F_A^2
+&=m^2
+(A_1\boldsymbol e_1+A_2\boldsymbol e_2)^2\\
+&=m^2\left(
+A_1^2+A_2^2+2A_1A_2\cos\theta
+\right).
+\end{aligned}
+\] 所以 \[
+F_A=m\sqrt{
+A_1^2+A_2^2+2A_1A_2\cos\theta
+}.
+\] 整体的 \(O\) 点合力大小相同，但研究对象不同：\(\boldsymbol F_A\)
+是手臂对剑的力，\(\boldsymbol F_O\) 是肩关节对``手臂与剑整体''的力。
+
+\textbf{为什么 \(A\) 点力矩不含 \(\omega_2\)。} 在 \[
+\boldsymbol M_A
+=-\boldsymbol r_{A/G}\times\boldsymbol F_A
+\] 中，\(A_2\) 项沿 \(\boldsymbol e_2\)，与 \[
+\boldsymbol r_{A/G}=-\frac{l_2}{2}\boldsymbol e_2
+\] 平行，所以叉积严格为零。只有由 \(A\) 点绕 \(O\) 运动产生的
+\(-\omega_1^2l_1\boldsymbol e_1\) 分量具有对质心的力臂，因此 \[
+M_A=\frac12m\omega_1^2l_1l_2|\sin\theta|.
+\] 这不是漏掉
+\(\omega_2\)，而是几何上沿剑身方向的惯性力不能对剑质心产生转矩。
+
+\textbf{区分 \(M_A\) 与 \(M_O\) 的来源。} \(M_A\)
+保证剑的转动状态与质心平动相容；\(M_O\)
+则维持整个系统关于固定肩点的角动量变化。即便 \(M_A=0\)，只要 \(\theta\)
+在变化，系统角动量中的 \[
+\frac12ml_1l_2(2\omega_1+\omega_2)\cos\theta
+\] 仍会改变，因此 \(M_O\) 一般不为零。反之，在 \(\omega_2=0\)
+时夹角固定，\(M_O=0\)，但若 \(\sin\theta\ne0\)，\(M_A\) 仍可能非零。
+
+\textbf{共线时速度方向的核验。} 当 \(\theta=0\) 时， \[
+\boldsymbol e_1=\boldsymbol e_2,
+\] 故 \[
+\boldsymbol v_B
+=\boldsymbol k\times\boldsymbol e_1
+\left[
+\omega_1l_1+(\omega_1+\omega_2)l_2
+\right].
+\] 方括号内是带符号速度。若
+\(\omega_2<-\omega_1\)，剑相对地面的绝对转向反转，第二项会抵消第一项；题目若只问速度大小，最后还应取绝对值。
+
+\textbf{力矩量纲逐项检查。} 式（8）中的 \[
+m\omega_1^2l_1l_2
+\] 量纲为 \[
+\mathrm{kg}\cdot\mathrm{s^{-2}}\cdot\mathrm m^2
+=\mathrm{N\,m}.
+\] 式（11）中的 \[
+ml_1l_2(2\omega_1+\omega_2)\omega_2
+\] 也具有同一量纲。配重条件 \(Ml_3=ml_2/2\)
+的两边都是质量一阶矩，而不是转动惯量；这再次说明配重求解不能把距离平方写入。
+
+\textbf{作用与反作用的书写规范。} 若把 \(\boldsymbol F_A\)
+定义为``手臂对剑的力''，则剑对手臂的力必为
+\(-\boldsymbol F_A\)。同理，\(\boldsymbol M_A\)
+是手臂对剑的偶力时，剑对手臂的偶力为 \(-\boldsymbol M_A\)。在整体方程中
+\(A\) 点内力与内力矩同时相消，不能只消去力而保留一项内力矩。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf-3}
+
+恒定角速度不等于零外力矩。相对夹角在变化，式（10）的交叉项随
+\(\cos\theta\) 变化，故仍需式（11）的驱动力矩。
+
+第（3）问是静矩平衡
+\(m(l_2/2)=Ml_3\)，不是转动惯量平衡。因为要抵消的是由 \(A\)
+点平动加速度引起的瞬时力矩。
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9-3}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  把剑的绝对角速度写成 \(\omega_2\)；
+\item
+  共线时漏掉 \(\omega_1l_2\)；
+\item
+  在质心加速度中加入不存在的角加速度项；
+\item
+  用 \(I_A\alpha=0\) 就断言 \(A\) 点力矩为零，忽略移动点取矩修正；
+\item
+  \(O\) 点力和剑在 \(A\) 点所受力的作用对象混淆；
+\item
+  配重条件误写成 \(Ml_3^2=ml_2^2/12\)。
+\end{enumerate}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae-3}
+
+先只处理质点化的剑质心，再补上均匀杆绕质心的转动。强调``先选研究对象，再给力命名''，可以避免
+\(A\) 点作用力的正负混乱。
+
+\textbf{用于课堂的关节功率检验。}
+O电机作用于整套系统，功率\(M_O\omega_1\)；A电机向剑施矩\(M_A\)，也向手臂施反矩，净功率为\(M_A(\Omega_2-\omega_1)=M_A\omega_2\)。
+
+\[P_A=M_A\omega_2,\qquad P_O+P_A=dK/dt.\]
+
+因此把A电机功率写\(M_A\Omega_2\)会重复计算手臂转动。若\(\omega_2=0\)，两杆夹角恒定、总动能不变，A电机虽可能承受偶矩却不做功。这一极限同时核对力矩式和功率式。
+
+\needspace{3\baselineskip}
+\textbf{关节功率与总动能的交叉检查}
+
+系统总动能由剑的质心动能和绕质心转动能相加：
+
+\[K=\frac12ml_1^2\omega_1^2+\frac16ml_2^2(\omega_1+\omega_2)^2
++\frac12ml_1l_2\omega_1(\omega_1+\omega_2)\cos\theta.\]
+
+由于 \(\dot\theta=\omega_2\)，只有交叉项随时间变化：
+
+\[\dot K=-\frac12ml_1l_2\omega_1(\omega_1+\omega_2)\omega_2\sin\theta.\]
+
+肩部电机以绝对角速度 \(\omega_1\) 做功，肘部电机以相对角速度
+\(\omega_2\) 做功。代入正文两力矩有
+
+\[M_O\omega_1+M_A\omega_2=\dot K.\]
+
+肘部不能用剑的绝对角速度计算内部驱动的净功率，因为其反力矩同时作用在手臂上。这个检查能独立发现肩部力矩表达中的角速度系数和符号错误。
+
+加配重使剑与配重合成重心落在 A，消除了由 A
+平动引起的肘部偶力。若角速度不恒定，合成转动惯量仍需相应的角加速度力矩；重心平衡不等于在任意运动中都不用驱动。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3-3}
+
+\needspace{3\baselineskip}
+\textbf{变式1：原条件的扩展。}
+
+\textbf{变式.} 当 \(OA\) 与 \(AB\) 共线同向时，求使剑尖 \(B\)
+瞬时静止所需的相对角速度 \(\omega_2\)。
+
+\textbf{解答.} \(A\) 点速度为
+\(\omega_1l_1\bm e_\perp\)，剑相对地面的绝对角速度为
+\(\omega_1+\omega_2\)，故 \[
+\bm v_B=
+\left[\omega_1l_1+(\omega_1+\omega_2)l_2\right]\bm e_\perp.
+\] 令方括号为零，得 \[
+\boxed{\omega_2=-\omega_1\left(1+\frac{l_1}{l_2}\right)}.
+\] 负号表明剑必须相对手臂反向转动；且
+\(|\omega_2|>|\omega_1|\)，因为它不仅要消去剑自身随转的速度，还要消去
+\(A\) 点的平动速度。
+
+\textbf{变式2：剑的绝对方向保持不变。}
+取\(\omega_2=-\omega_1\)，则\(\Omega_2=0\)。剑随A平移，剑尖速度大小为\(|\omega_1|l_1\)，
+
+\[\boldsymbol F_A=-m\omega_1^2l_1\boldsymbol e_1,\quad
+\boldsymbol M_A=\tfrac12m\omega_1^2l_1l_2\sin\theta\,\boldsymbol k.\]
+
+剑没有角加速度仍可需要非零关节偶矩，因为支点力的作用线不通过质心，必须由偶矩抵消其转矩。
+
+\textbf{变式3：配重消除了什么？}
+\(M=ml_2/(2l_3)\)使剑与配重的质心落在A，因而匀角速度条件下A点平动造成的关节偶矩为零。
+
+但A点力变为\((m+M)\boldsymbol a_A\)，新增配重也增加转动惯量。若改为有角加速度，仍需\(I_A\dot\Omega_2\)；不能由``平衡配重''推出肩关节负载或整套驱动力矩均为零。
+
+\textbf{变式4：用驱动功率检查力矩。} 无配重时
+
+\[K=\tfrac12ml_1^2\omega_1^2+\tfrac16ml_2^2\Omega_2^2
++\tfrac12ml_1l_2\omega_1\Omega_2\cos\theta.\]
+
+\(\dot\theta=\omega_2\)，于是\(\dot K=-\tfrac12ml_1l_2\omega_1\Omega_2\omega_2\sin\theta\)。正文两关节力矩满足
+
+\[M_O\omega_1+M_A\omega_2=\dot K.\]
+
+A电机的功率乘相对角速度\(\omega_2\)，不是剑的绝对角速度；内部作用反作用的功率相加后才出现这个差。
+
+\newpage
+
+\section{第 5 题}\label{ux7b2c-5-ux9898}
+
+物体 \(S\) 位于数轴原点。第一凸透镜位于 \(x=l\)，焦距为
+\(f_1\)；第二凸透镜位于 \(x=3l\)，焦距为 \(f_2\)；平面镜位于
+\(x=3l+h\)，均垂直于数轴。
+
+（1）求 \(S\) 经第一透镜所成像 \(S_1\) 的坐标。
+
+（2）求 \(S_1\) 经第二透镜所成像 \(S_2\) 的坐标。
+
+（3）求 \(S_2\) 经平面镜所成像 \(S_3\) 的坐标。
+
+（4）调节镜后距离为
+\(h'\)，使反射光依次通过第二、第一透镜后在原点再次成像，求 \(h'\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\linewidth,height=\textheight,keepaspectratio,alt={题5　双透镜与平面镜的往返成像系统}]{../figures/question-05.pdf}
+\caption{题5　双透镜与平面镜的往返成像系统}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-4}
+
+本题是多元件傍轴成像与往返光路问题。前三问可逐次使用高斯公式；第四问用``展开平面镜''或光线传输矩阵最稳妥。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-4}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  薄透镜成像公式；
+\item
+  有符号坐标与实、虚物；
+\item
+  平面镜关于镜面的对称成像；
+\item
+  往返光路展开；
+\item
+  ABCD 矩阵的成像条件。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-4}
+
+反射光向左传播后，若继续沿原坐标逐段套公式，物距符号容易混乱。把镜后光路展开为镜面对称的两个透镜，整个问题就变成一直向右传播的四透镜成像链。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-4}
+
+对位于 \(x=a\) 的薄透镜，若物点坐标为 \(x_o\)、像点坐标为
+\(x_i\)，沿向右传播时可写 \[
+\frac1{a-x_o}+\frac1{x_i-a}=\frac1f.
+\]
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-4}
+
+第一透镜物距为 \(l\)，像距 \[
+v_1=\frac{f_1l}{l-f_1}. \tag{1}
+\] 故 \[
+\boxed{x_{S_1}=l+\frac{f_1l}{l-f_1}
+=\frac{l^2}{l-f_1}}. \tag{2}
+\]
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图5-2　逐次像点与镜面展开后的对称光路}]{../figures/solution-05.pdf}
+\caption*{图5-2　逐次像点与镜面展开后的对称光路}
+\end{figure}
+
+第二透镜位于 \(3l\)，其物距为 \[
+u_2=3l-x_{S_1}. \tag{3}
+\] 像距 \[
+v_2=\frac{f_2u_2}{u_2-f_2}. \tag{4}
+\] 所以 \[
+\boxed{x_{S_2}=3l+
+\frac{f_2(3l-x_{S_1})}{3l-x_{S_1}-f_2}}. \tag{5}
+\]
+
+平面镜坐标为 \(x_m=3l+h\)。平面镜像关于镜面对称： \[
+\boxed{x_{S_3}=2x_m-x_{S_2}
+=6l+2h-x_{S_2}}. \tag{6}
+\]
+
+第（4）问将平面镜展开。第二透镜和第一透镜的镜像位置分别是 \[
+x_{2}'=3l+2h',
+\qquad
+x_{1}'=5l+2h'. \tag{7}
+\] 原点的镜像位置为 \[
+x_0'=6l+2h'. \tag{8}
+\] 从原点到 \(x_0'\) 的传输矩阵为 \[
+\mathbf M=P(l)L(f_1)P(2l)L(f_2)P(2h')
+L(f_2)P(2l)L(f_1)P(l), \tag{9}
+\] 其中 \[
+P(d)=\begin{pmatrix}1&d\\0&1\end{pmatrix},
+\qquad
+L(f)=\begin{pmatrix}1&0\\-1/f&1\end{pmatrix}. \tag{10}
+\] 原点成像到原点镜像要求矩阵元 \(M_{12}=0\)。记 \[
+D=f_1f_2-3f_1l-f_2l+2l^2,
+\] 则矩阵乘法给出 \[
+M_{12}=
+\frac{2D}{f_1^2f_2^2}
+\left[
+f_1f_2h'+3f_1f_2l-3f_1h'l-f_2h'l-2f_2l^2+2h'l^2
+\right]. \tag{11}
+\] 在通常的非退化情形 \(D\ne0\) 下，令方括号为零，解得 \[
+\boxed{
+h'=\frac{f_2l(2l-3f_1)}
+{f_1f_2-3f_1l-f_2l+2l^2}
+}. \tag{12}
+\] 若 \(D=0\)，式（11）表明 \(M_{12}\) 对任意 \(h'\)
+都为零；此时系统处于特殊退化参数，不能使用式（12）选出唯一镜距。
+
+\textbf{前三次成像的符号为什么不需要另行分类。}
+采用从左向右为正的全局坐标，薄透镜位于 \(x=a\)，物点和像点分别位于
+\(x_o,x_i\)。近轴成像式写成 \[
+\frac1{a-x_o}+\frac1{x_i-a}=\frac1f.
+\] 其中 \(a-x_o\)、\(x_i-a\) 都保留代数符号。以第一透镜为例， \[
+\frac1l+\frac1{v_1}=\frac1{f_1},
+\] 两边同乘 \(lf_1v_1\)： \[
+f_1v_1+lf_1=lv_1.
+\] 把含 \(v_1\) 的项移到一侧： \[
+v_1(l-f_1)=lf_1,
+\] 故 \[
+v_1=\frac{lf_1}{l-f_1},
+\qquad
+x_{S_1}=l+v_1=\frac{l^2}{l-f_1}.
+\] 若
+\(l<f_1\)，\(v_1<0\)，表示第一像在透镜左侧，是虚像；公式本身仍成立。
+
+第二透镜位于 \(3l\)。它看到的物距是 \[
+u_2=3l-x_{S_1},
+\] 而不是 \(|3l-x_{S_1}|\)。由 \[
+\frac1{u_2}+\frac1{v_2}=\frac1{f_2}
+\] 同样得到 \[
+v_2=\frac{f_2u_2}{u_2-f_2}.
+\] 若
+\(u_2<0\)，这只是说明入射到第二透镜的是会聚光束，对第二透镜而言物点是虚物，并不妨碍继续计算。
+
+\textbf{平面镜一步为何出现因子 \(2\)。} 镜面坐标是 \[
+x_m=3l+h.
+\] 物点 \(S_2\) 与镜像 \(S_3\) 关于镜面对称，所以镜面是二者坐标的中点：
+\[
+\frac{x_{S_2}+x_{S_3}}2=x_m.
+\] 解得 \[
+x_{S_3}=2x_m-x_{S_2}=6l+2h-x_{S_2}.
+\] 把 \(x_m-x_{S_2}\) 直接当作像坐标，实际只算出了物到镜面的距离。
+
+\textbf{镜面展开后的各坐标逐一核对。} 当镜距调为 \(h'\) 时，镜面在 \[
+x_m'=3l+h'.
+\] 关于该平面对称后，返程遇到的 \(f_2\) 透镜等效位置为 \[
+x_2'=2x_m'-3l=3l+2h',
+\] 返程的 \(f_1\) 透镜等效位置为 \[
+x_1'=2x_m'-l=5l+2h',
+\] 最终原点的镜像位置为 \[
+x_0'=2x_m'=6l+2h'.
+\] 相邻传播距离依次为 \[
+l,\quad2l,\quad2h',\quad2l,\quad l,
+\] 这正是式（9）中五个传播矩阵的参数。
+
+\textbf{ABCD 成像条件的来源。} 取近轴光线列向量 \[
+\boldsymbol q=\begin{pmatrix}y\\ \vartheta\end{pmatrix}.
+\] 物点在轴上意味着初始高度 \(y_0=0\)，但出射小角 \(\vartheta_0\)
+可以任意。经过系统后 \[
+\begin{pmatrix}y_f\\ \vartheta_f\end{pmatrix}
+=
+\begin{pmatrix}M_{11}&M_{12}\\M_{21}&M_{22}\end{pmatrix}
+\begin{pmatrix}0\\ \vartheta_0\end{pmatrix},
+\] 因此 \[
+y_f=M_{12}\vartheta_0.
+\] 要让所有从原点发出的近轴光线都在目标轴点会聚，必须且只需
+\(M_{12}=0\)。
+
+\textbf{矩阵乘法的可复核分解。} 把式（9）逐项相乘并提出公因子，可以写成
+\[
+M_{12}=\frac{2}{f_1^2f_2^2}\,D\,N,
+\] 其中 \[
+\begin{aligned}
+D&=f_1f_2-3f_1l-f_2l+2l^2,\\
+N&=h'D+l f_2(3f_1-2l).
+\end{aligned}
+\] 当 \(D\ne0\) 时，\(N=0\) 给出式（12）。把式（12）代回 \(N\)： \[
+N=
+\frac{f_2l(2l-3f_1)}D\,D
++lf_2(3f_1-2l)=0,
+\] 说明代数符号相互抵消。\(h'\)
+的量纲也是长度，因为分子为长度三次、分母为长度二次。
+
+\textbf{退化参数的解释。} 若 \(D=0\)，第一因子直接使
+\(M_{12}=0\)，所以轴上点对任意允许镜距 \(h'>0\)
+都满足位置成像条件。再由完整矩阵可得
+
+\[M_{11}=M_{22}=-1.\]
+
+横向放大率也固定为 \(-1\)，并不随镜距变化；变化的是输出光线的斜率矩阵元
+\(M_{21}\)。两次通过透镜之间的光束在这个特殊参数下准直，改变中间平行传播距离不会改变原点的回像位置。
+
+\textbf{用一条任意近轴光线逐段复算矩阵。}
+从原点发出光线，令初始光线矢量为 \[
+\boldsymbol q_0=
+\begin{pmatrix}0\\ \vartheta_0\end{pmatrix}.
+\] 传播 \(l\) 到第一透镜前： \[
+y_1=l\vartheta_0,
+\qquad
+\vartheta_1=\vartheta_0.
+\] 通过 \(f_1\) 后高度不变、斜率改变： \[
+\vartheta_2
+=\vartheta_1-\frac{y_1}{f_1}
+=\left(1-\frac l{f_1}\right)\vartheta_0.
+\] 再传播 \(2l\) 到第二透镜： \[
+\begin{aligned}
+y_3
+&=y_1+2l\vartheta_2\\
+&=l\left(3-\frac{2l}{f_1}\right)\vartheta_0.
+\end{aligned}
+\] 通过 \(f_2\) 后 \[
+\vartheta_3
+=\vartheta_2-\frac{y_3}{f_2}.
+\] 为缩短后续式子，记 \[
+A=l\left(3-\frac{2l}{f_1}\right),
+\qquad
+B=1-\frac l{f_1}-\frac A{f_2},
+\] 于是第二透镜后 \[
+y_3=A\vartheta_0,
+\qquad
+\vartheta_3=B\vartheta_0.
+\]
+
+展开后两只透镜之间传播距离为 \(2h'\)，所以到镜像第二透镜前 \[
+y_4=(A+2h'B)\vartheta_0,
+\qquad
+\vartheta_4=B\vartheta_0.
+\] 通过镜像 \(f_2\)： \[
+\vartheta_5
+=\left[
+B-\frac{A+2h'B}{f_2}
+\right]\vartheta_0.
+\] 再传播 \(2l\)、通过镜像 \(f_1\)、最后传播
+\(l\)。保持每一步``传播只改高度、透镜只改斜率''，可得最终高度 \[
+y_f=M_{12}\vartheta_0,
+\] 其中 \[
+M_{12}
+=\frac{2DN}{f_1^2f_2^2}.
+\] 这条逐段追迹与整体矩阵完全一致，也说明 \(M_{12}=0\)
+的意义是：无论初始小角 \(\vartheta_0\) 取何值，最终高度都为零。
+
+\textbf{前三问结果的逐次回代。} 第一像坐标已知后，第二透镜物距可展开为
+\[
+\begin{aligned}
+u_2
+&=3l-\frac{l^2}{l-f_1}\\
+&=\frac{3l(l-f_1)-l^2}{l-f_1}\\
+&=\frac{2l^2-3lf_1}{l-f_1}.
+\end{aligned}
+\] 因此 \[
+v_2
+=\frac{f_2(2l^2-3lf_1)}
+{2l^2-3lf_1-f_2(l-f_1)}.
+\] 再写 \[
+x_{S_2}=3l+v_2,
+\qquad
+x_{S_3}=6l+2h-x_{S_2}.
+\]
+这样即使参数给出具体数值，也可沿同一代数链直接计算，不必重新判断实像或虚像。
+
+\textbf{焦点退化情形。} 若
+\(l=f_1\)，第一透镜把原点发出的光变为平行光，式（2）表现为分母为零、\(x_{S_1}\)
+趋于无穷远。此时不能把``无穷远像''当作公式失效，而应直接从光线斜率或
+ABCD 矩阵继续处理。类似地，当 \(u_2=f_2\)
+时，第二透镜后的光也成为平行光。
+
+\textbf{矩阵次序的检查方法。}
+光线列向量从右向左依次受到矩阵作用，因此式（9）最右侧的 \(P(l)\)
+表示最先发生的传播，最左侧的 \(P(l)\)
+表示最后一次传播。由于本题展开光路关于中间段对称，矩阵串外观看似左右对称，容易掩盖乘法次序错误。检验方法是令所有焦距趋于无穷大，此时所有
+\(L(f)\) 都趋于单位矩阵，系统应退化为总距离 \[
+l+2l+2h'+2l+l=6l+2h'
+\] 的自由传播，即 \[
+\boldsymbol M\to P(6l+2h').
+\] 式（9）满足这一极限。
+
+\textbf{成像条件与放大率的区别。} \(M_{12}=0\)
+只保证轴上同一点发出的不同倾角光线重新会聚；最终横向放大率是
+\(M_{11}\)。若物点有小高度 \(y_0\)，则 \[
+y_f=M_{11}y_0
+\] （已使用 \(M_{12}=0\)）。因此题目只要求``在原点再次成像''时无需再令
+\(M_{11}=1\)；若额外要求等大正立像，才需附加 \(M_{11}=1\)。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf-4}
+
+镜面展开不是近似：把反射后的左行光线关于镜面对称，等价于让光线继续向右传播。这样正、反两程的透镜自然成对出现。
+
+前三问中的像可能是虚像，但坐标公式仍然有效。关键是始终使用同一全局坐标，不临时更换正方向。
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9-4}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  把第二透镜坐标误写成 \(2l\)；
+\item
+  把 \(3l-x_{S_1}\) 的正负强行取绝对值；
+\item
+  平面镜像写成 \(x_m-x_{S_2}\)，漏掉镜面对称的因子 \(2\)；
+\item
+  返程透镜仍按原位置而不改变传播方向或不作镜面展开；
+\item
+  只追踪轴上像点却没有检查最终是否对任意小角度光线成像；
+\item
+  忽略式（12）分母为零的特殊情形。
+\end{enumerate}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae-4}
+
+先用一条近轴光线和一条主光线解释镜面展开，再给矩阵。学生若不熟悉矩阵，可逐次使用坐标成像式，但每一步都要在数轴上标出当前物点和像点。
+
+\textbf{用于课堂的折返矩阵检验。}
+采用沿展开光路始终向前的斜率，传播和薄透镜矩阵为
+
+\[P(d)=\begin{pmatrix}1&d\\0&1\end{pmatrix},\quad L(f)=\begin{pmatrix}1&0\\-1/f&1\end{pmatrix}.\]
+
+展开镜面后总矩阵\(P(l)L(f_1)P(2l)L(f_2)P(2h)L(f_2)P(2l)L(f_1)P(l)\)。每个因子行列式为1，所以总矩阵也应为1。自共轭时上右元为零，并有\(M_{11}M_{22}=1\)。这些检查能发现返程透镜符号、镜后传播长度以及矩阵顺序错误。
+
+\needspace{3\baselineskip}
+\textbf{退化焦距的可实现范围}
+
+由 \(D=0\)，
+
+\[\frac{f_2}{l}=\frac{3(f_1/l)-2}{f_1/l-1}.\]
+
+令 \(x=f_1/l>0\)。第二透镜仍为凸透镜要求右侧为正，所以 \(0<x<2/3\) 或
+\(x>1\)；中间区间 \(2/3<x<1\) 不可用两个正焦距实现这个退化条件。端点
+\(x=2/3\) 会使 \(f_2=0\)，不是允许的薄透镜；\(x=1\) 使分母为零，却
+\(D=-l^2\)，也不是退化族的一员。
+
+在非退化情形，唯一代数解还需满足题设镜距 \(h'>0\)。因
+\(f_2l>0\)，它等价于
+
+\[(2l-3f_1)D>0.\]
+
+这条不等式比在每次代入后取绝对值更可靠。对焦距作连续调节时，镜距正支、负支和退化支应分别判断。若中间某次成像在无穷远，先用完整光线矩阵判断全系统；某个中间像距发散并不自动意味着最终回像不存在。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3-4}
+
+\needspace{3\baselineskip}
+\textbf{变式1：原条件的扩展。}
+
+\textbf{变式.} 令两薄透镜焦距相等，即
+\(f_1=f_2=f\)，化简往返成像所需的镜后距离 \(h'\)。
+
+\textbf{解答.} 把 \(f_1=f_2=f\) 代入正文的一般式： \[
+h'=\frac{f_2l(2l-3f_1)}
+{f_1f_2-3f_1l-f_2l+2l^2},
+\] 逐项合并分母，得 \[
+\boxed{h'=\frac{fl(2l-3f)}{f^2-4fl+2l^2}}.
+\] 分母不为零时这是唯一解。若 \(f^2-4fl+2l^2=0\)，必须回到 ABCD 矩阵的
+\(M_{12}\) 检查退化情形，不能把上式强行当作无穷大镜距。
+
+\textbf{变式2：调节公式的分母为零。} 令
+\(D=f_1f_2-3f_1l-f_2l+2l^2=0\)，求此时所有可用镜距和放大率。必须在约去
+\(D\) 前使用完整的 \(M_{12}\)，因为它有整体因子 \(D\)。由式（11）直接得
+
+\[M_{12}=0\qquad(\text{任意 }h'>0).\]
+
+由 \(D=0\) 可解出
+
+\[f_2=\frac{l(3f_1-2l)}{f_1-l}.\]
+
+将它代回完整矩阵，得到
+
+\[M=\begin{pmatrix}-1&0\\ C(h')&-1\end{pmatrix},\]
+
+\[C(h')=\frac{2[f_1^2h'-3f_1^2l+8f_1l^2-4l^3]}{l^2(3f_1-2l)^2}.\]
+
+因此每个正镜距都使原点回像，横向放大率始终为
+\(-1\)；镜距只影响输出斜率。例如 \(f_1=2l,f_2=4l\) 满足退化条件，且
+\(C(h')=h'/(2l^2)\)。这说明分母为零不等于无解；关键是被约去的因子是否已经让原始成像条件恒成立。
+
+\textbf{变式3：第一透镜恰好准直。}
+取\(f_1=l\)，有限像距的逐段表达会出现无穷远像。完整矩阵仍连续：分母\(D=-l^2\)，所以
+
+\[h'=f_2.\]
+
+即平面镜在第二透镜后焦面。第一段的平行光不是系统无解，而是某个中间像位于无穷远；用矩阵或取极限能绕过发散的中间变量。
+
+\textbf{变式4：代数解在透镜另一侧。} 取\(f_1=f_2=0.6l\)，代入得
+
+\[h'=\frac{0.6l^2(2l-1.8l)}{(0.36-2.4+2)l^2}=-3l.\]
+
+题设镜子须在第二透镜后方，h\textgreater0，故这组焦距在规定布置中无可用位置。负值有几何含义，不能取绝对值改成3l，因为那会破坏折返成像条件。
+
+\newpage
+
+\section{第 6 题}\label{ux7b2c-6-ux9898}
+
+一束 muon 在均匀磁场中作圆周运动，忽略辐射损失。muon 质量为
+\(m=1.88\times10^{-28}\,\mathrm{kg}\)，带电量大小为电子电量
+\(e\)，半衰期为 \(\tau=1.523\,\mu\mathrm s\)。
+
+（1）在非相对论情况下，若每完成一周恰有一半 muon 衰变，求磁感应强度。
+
+（2）在相同磁场中考虑相对论效应，且 muon
+速度接近光速。一周后衰变比例相较第（1）问如何变化？说明理由。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.48\linewidth,height=\textheight,keepaspectratio,alt={题6　均匀磁场中的 muon 圆周运动与寿命延缓}]{../figures/question-06.pdf}
+\caption{题6　均匀磁场中的 muon 圆周运动与寿命延缓}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-5}
+
+本题把带电粒子回旋周期与相对论时间膨胀结合。核心是比较``实验室一周所需时间''和``实验室测得的半衰期''是否具有相同的洛伦兹因子。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-5}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  洛伦兹力提供向心力；
+\item
+  非相对论回旋周期；
+\item
+  相对论动量 \(\boldsymbol p=\gamma m\boldsymbol v\)；
+\item
+  不稳定粒子的时间膨胀；
+\item
+  半衰期与平均寿命的区别。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-5}
+
+磁场不做功，粒子速率不变。相对论使横向惯性增大，回旋周期乘上
+\(\gamma\)；同时实验室观察到的半衰期也乘上同一个
+\(\gamma\)，两种效应恰好抵消。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-5}
+
+题给的是半衰期，不是指数衰变的平均寿命。每周剩下一半意味着实验室回旋周期直接等于相应实验室半衰期。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-5}
+
+非相对论洛伦兹力提供向心力： \[
+evB=\frac{mv^2}{R}. \tag{1}
+\] 所以 \[
+R=\frac{mv}{eB}. \tag{2}
+\] 周期 \[
+T=\frac{2\pi R}{v}
+=\frac{2\pi m}{eB}. \tag{3}
+\]
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\linewidth,height=\textheight,keepaspectratio,alt={图6-2　回旋周期与相对论半衰期的同因子伸长}]{../figures/solution-06.pdf}
+\caption*{图6-2　回旋周期与相对论半衰期的同因子伸长}
+\end{figure}
+
+每完成一周剩下一半，故 \[
+T=\tau. \tag{4}
+\] 于是 \[
+B=\frac{2\pi m}{e\tau}. \tag{5}
+\] 代入 \(e=1.602\times10^{-19}\,\mathrm C\)： \[
+\boxed{B\approx4.84\times10^{-3}\,\mathrm T}. \tag{6}
+\] 按题中常数的有效数字取舍可写为约 \(4.9\times10^{-3}\,\mathrm T\)。
+
+相对论情况下 \[
+\boldsymbol p=\gamma m\boldsymbol v. \tag{7}
+\] 横向洛伦兹力只改变动量方向： \[
+evB=\frac{pv}{R}
+=\frac{\gamma mv^2}{R}. \tag{8}
+\] 所以实验室回旋周期为 \[
+T_{lab}=\frac{2\pi\gamma m}{eB}
+=\gamma\tau. \tag{9}
+\] 另一方面，muon 在自身静止系中的半衰期为 \(\tau\)，实验室测得 \[
+\tau_{lab}=\gamma\tau. \tag{10}
+\] 因此一周经历的半衰期数仍为 \[
+\frac{T_{lab}}{\tau_{lab}}=1. \tag{11}
+\] 一周后仍有一半衰变： \[
+\boxed{\text{衰变比例不变}}. \tag{12}
+\]
+
+\textbf{先用衰变律确认``半圈''与``半衰期''的关系。} 若 \(\tau\)
+表示半衰期，则静止系中粒子数满足 \[
+N(t)=N_0\,2^{-t/\tau}.
+\] 一周后剩余一半意味着 \[
+\frac{N(T)}{N_0}=\frac12
+=2^{-T/\tau},
+\] 指数相等给出 \[
+T=\tau.
+\] 若改用平均寿命 \(\tau_{\mathrm{mean}}\)，衰变律才是 \[
+N(t)=N_0e^{-t/\tau_{\mathrm{mean}}},
+\] 并有 \(\tau=\tau_{\mathrm{mean}}\ln2\)。本题已经把 \(\tau\)
+定义为半衰期，不能再额外乘或除 \(\ln2\)。
+
+\textbf{非相对论回旋周期中速度为何消失。} 洛伦兹力大小为
+\(evB\)，圆周运动向心力为 \(mv^2/R\)： \[
+evB=\frac{mv^2}{R}.
+\] 约去一个 \(v\) 后 \[
+\frac vR=\frac{eB}{m}.
+\] 左边正是角速度 \(\omega_c\)，故 \[
+\omega_c=\frac{eB}{m},
+\qquad
+T=\frac{2\pi}{\omega_c}=\frac{2\pi m}{eB}.
+\] 只要处在非相对论区且忽略辐射损失，周期与轨道半径、速率均无关。
+
+\textbf{数值代入不省步。} \[
+\begin{aligned}
+B
+&=\frac{2\pi(1.88\times10^{-28}\,\mathrm{kg})}
+{(1.602\times10^{-19}\,\mathrm C)
+(1.523\times10^{-6}\,\mathrm s)}\\
+&=\frac{1.1812\times10^{-27}}
+{2.4398\times10^{-25}}\,
+\frac{\mathrm{kg}}{\mathrm{C\,s}}\\
+&=4.84\times10^{-3}\,\mathrm T.
+\end{aligned}
+\] 这里使用了 \[
+1\,\mathrm T=1\,\frac{\mathrm{kg}}{\mathrm{C\,s}},
+\] 所以量纲也正确。
+
+\textbf{相对论周期从动量方向变化推出。} 均匀磁场不做功， \[
+\frac{\mathrm d}{\mathrm dt}(\gamma mc^2)
+=q\boldsymbol v\cdot(\boldsymbol v\times\boldsymbol B)=0,
+\] 因此速率和 \(\gamma\) 都保持常量。动量大小 \(p=\gamma mv\)
+不变，只是方向以角速度 \(\omega\) 转动。动量矢量变化率的大小为 \[
+\left|\frac{\mathrm d\boldsymbol p}{\mathrm dt}\right|
+=p\omega.
+\] 与洛伦兹力相等： \[
+p\omega=evB.
+\] 代入 \(p=\gamma mv\) 并约去 \(v\)： \[
+\omega=\frac{eB}{\gamma m},
+\qquad
+T_{\mathrm{lab}}=\frac{2\pi\gamma m}{eB}.
+\] 与非相对论周期相比恰好多出因子 \(\gamma\)。
+
+\textbf{用固有时作第二次独立核验。} 实验室一周所经历的固有时为 \[
+\Delta\tau_{\mathrm{proper}}
+=\frac{T_{\mathrm{lab}}}{\gamma}
+=\frac{2\pi m}{eB}.
+\] 第（1）问选出的磁场满足 \(2\pi m/(eB)=\tau\)，因此无论 \(\gamma\)
+多大，muon 自己的钟在一周中都恰好走过一个固有半衰期： \[
+\frac{N_{\mathrm{after}}}{N_{\mathrm{before}}}
+=2^{-\Delta\tau_{\mathrm{proper}}/\tau}
+=\frac12.
+\]
+所以``衰变比例不变''不是两个近似效应偶然抵消，而是同一固有时关系的必然结果。
+
+\textbf{前提和极限。} 若存在电场或显著辐射损失，\(\gamma\)
+会随时间变化，需要积分 \[
+\Delta\tau_{\mathrm{proper}}
+=\int_0^{T_{\mathrm{lab}}}\frac{\mathrm dt}{\gamma(t)};
+\] 若题目固定的是轨道半径而不是磁场，\(B\) 会随 \(\gamma\)
+改变，结论也需重新判断。本题给定均匀同一磁场且忽略能量损失，才可直接得到一周对应一个固有半衰期。
+
+\textbf{直接在实验室系写出生存比例。} 静止系半衰期为
+\(\tau\)，实验室系半衰期为 \(\gamma\tau\)，所以实验室时间 \(t\) 后 \[
+\frac{N(t)}{N_0}
+=2^{-t/(\gamma\tau)}.
+\] 取一周所需时间 \[
+t=T_{\mathrm{lab}}
+=\frac{2\pi\gamma m}{eB},
+\] 得到 \[
+\frac{N(T_{\mathrm{lab}})}{N_0}
+=2^{-\frac{2\pi m}{eB\tau}}.
+\] 第（1）问的磁场满足 \[
+\frac{2\pi m}{eB\tau}=1,
+\] 故 \[
+\frac{N(T_{\mathrm{lab}})}{N_0}=\frac12.
+\] 这里 \(\gamma\)
+在指数中完全约去，所以结论不仅适用于``接近光速''的某一个速度，而适用于任意保持恒定的
+\(\gamma\)。
+
+\textbf{轨道半径的相对论变化。} 相对论动量关系还给出 \[
+R=\frac{p}{eB}
+=\frac{\gamma mv}{eB}.
+\] 同一磁场中速度越高，轨道半径越大；与此同时 \[
+T_{\mathrm{lab}}=\frac{2\pi R}{v}
+=\frac{2\pi\gamma m}{eB}.
+\]
+因此周期增加不是因为粒子沿同一圆周``简单变慢''，而是由于相对论动量增大使轨道半径扩大。
+
+\textbf{数值数量级检查。} \(B\approx4.84\,\mathrm{mT}\)
+属于毫特斯拉量级。若误把 \(\tau=1.523\,\mu\mathrm s\) 写成
+\(1.523\times10^{-3}\,\mathrm s\)，所得磁场会小 \(10^3\) 倍；若遗漏
+\(2\pi\)，结果会小约 \(6.28\)
+倍。把数量级与公式中的时间单位同时检查，可以及时发现这两类错误。
+
+\textbf{半衰期与衰变比例的语言核对。} ``一半 muon 衰变''表示剩余比例为
+\(1/2\)；``衰变比例''本身也是
+\(1-1/2=1/2\)。本题恰好两者数值相同，但一般经过两个半衰期后剩余
+\(1/4\)、衰变 \(3/4\)，两种表述不再相同。
+
+\textbf{电荷正负号只改变旋转方向。} 回旋周期使用电荷量大小 \(e\)： \[
+T=\frac{2\pi m}{|q|B}.
+\] muon
+若取正、负不同电荷态，洛伦兹力方向和绕行方向相反，但周期大小、半衰期比较以及一周后的存活比例都不变。因此题目给``带电量大小与电子相同''已经足够计算。
+
+\textbf{磁场不做功的显式证明。} \[
+P=\boldsymbol F_B\cdot\boldsymbol v
+=q(\boldsymbol v\times\boldsymbol B)\cdot\boldsymbol v=0.
+\] 所以每一周内 \(v\)、\(\gamma\)
+和半径都保持常量，周期公式可以直接使用。若存在电场，则
+\(q\boldsymbol E\cdot\boldsymbol v\) 可能非零，必须重新处理变化的
+\(\gamma\)。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf-5}
+
+若只考虑寿命延缓，会误以为高速 muon
+一周后衰变更少；但相同磁场下相对论回旋也变慢。两者都是同一固有时与实验室时转换的结果。
+
+本题答案与速度大小无关，前提是磁场均匀、能量损失可忽略、\(\gamma\)
+在一周内保持不变。
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9-5}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  把半衰期 \(\tau\) 当成平均寿命，误写 \(T=\tau\ln2\)；
+\item
+  使用质子或电子质量；
+\item
+  相对论向心力仍写 \(mv^2/R\)；
+\item
+  只给寿命乘 \(\gamma\)，漏掉回旋周期也乘 \(\gamma\)；
+\item
+  认为磁场会改变速率或能量。
+\end{enumerate}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae-5}
+
+先写``每周固有时是多少''，再分别从实验室周期和寿命推导。让学生看到比值不变，比背诵结论更有迁移性。
+
+\textbf{用于课堂的概率检验。}
+半衰期\(\tau\)不是指数衰变的平均寿命，衰变常数\(\lambda_d=\ln2/\tau\)。一圈固有时间恰为\(\tau\)时
+
+\[P_N=e^{-\lambda_dN\tau}=2^{-N}.\]
+
+如果误将\(\tau\)当平均寿命，会得到\(e^{-1}\)而不是1/2。实验室周期与实验室半衰期都乘\(\gamma\)，只在固定圈数比较时消去；固定实验室时间不能消去。可用N=2的1/4存活率检查学生是否在概率上重复平方了速度修正。
+
+\needspace{3\baselineskip}
+\textbf{在固定磁场中比较路径长度与固有寿命}
+
+相对论圆轨道半径为
+
+\[r=\frac{\gamma mv}{|q|B}.\]
+
+一圈实验室路程是 \(2\pi r\)，实验室时间为 \(2\pi\gamma m/(|q|B)\)。除以
+\(\gamma\) 后，一圈固有时间与速率无关：
+
+\[\Delta\tau_{\rm orbit}=\frac{2\pi m}{|q|B}.\]
+
+设固有半衰期为 \(\tau_{1/2}\)，经过 N 圈仍未衰变的比例为
+
+\[P_N=2^{-N\Delta\tau_{\rm orbit}/\tau_{1/2}}.\]
+
+若题给磁场使一圈固有时间等于半衰期，则
+\(P_N=2^{-N}\)。高速粒子一圈路程更长，实验室寿命也更长，二者同时改变。固定圈数与固定实验室时间是不同的比较实验：后一种的存活率为
+\(2^{-t/(\gamma\tau_{1/2})}\)，明确依赖速率。
+
+``半衰期''指数量降为一半的时间，平均寿命为
+\(\tau_{1/2}/\ln2\)。若从连续指数衰变率出发，一定先完成这个换元，避免把一圈后的比例算成
+\(e^{-1}\)。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3-5}
+
+\needspace{3\baselineskip}
+\textbf{变式1：原条件的扩展。}
+
+\textbf{变式.} 在与原题相同的磁场中，求 muon 运动 \(N\)
+周后的存活比例和衰变比例。
+
+\textbf{解答.} 相对论回旋周期为 \[
+T_{\rm lab}=\frac{2\pi\gamma m}{eB},
+\] 而实验室系半衰期同样膨胀为 \(\gamma\tau\)。原题选取的 \(B\) 使 \[
+\frac{T_{\rm lab}}{\gamma\tau}=1.
+\] 经过 \(N\) 周的存活率因而是 \[
+\boxed{P_N=2^{-N}},
+\] 衰变比例为 \[
+\boxed{1-P_N=1-2^{-N}}.
+\] 这一结果与 \(\gamma\)
+无关，原因是实验室周期和实验室半衰期含有相同的时间膨胀因子。
+
+边界检验也很直接：\(N=0\) 时
+\(P_0=1\)，尚未经历任何运动就不应发生统计衰减；\(N=1\) 时
+\(P_1=1/2\)，与题目调节磁场后``一周恰为一个实验室半衰期''的条件一致。这里的
+\(\gamma\)
+消去并不是任意磁场中的普遍结论；若磁场未按原题条件选取，应保留 \[
+P_N=2^{-N T_{\rm lab}/(\gamma\tau)}.
+\] 这样写可以明确相对论效应并未消失，而是同时进入两个时间尺度后相消。
+
+\textbf{变式2：磁场加倍后的衰变比例。}
+一圈的粒子固有时间为\(2\pi m/(eB)\)，B加倍则减半。若原磁场下一圈存活率恰为1/2，新磁场下为
+
+\[P_{\rm one}=2^{-1/2}.\]
+
+相对论时间膨胀因子在实验室周期和粒子固有时间之间抵消；这结论以磁场纯磁、粒子能量在每圈保持不变为前提。
+
+\textbf{变式3：固定圈数与固定实验室时间。}
+固定N圈，固有时间为\(N2\pi m/(eB)\)，与速度无关。固定实验室时间t则固有时间\(t/\gamma\)，存活率为
+
+\[P(t)=e^{-t/(\gamma\tau_0)}.\]
+
+加速粒子能提高固定实验室时长的存活率，却不提高完成相同圈数后的存活率。两个比较的控制量不同。
+
+\textbf{变式4：轨迹有沿磁场的螺距。}
+增加平行速度\(v_\parallel\)，轨迹成为螺线，横向回转周期仍\(2\pi\gamma m/(eB)\)，每圈轴向前进
+
+\[\Delta z=2\pi\gamma m v_\parallel/(eB).\]
+
+每圈固有时间仍\(2\pi m/(eB)\)。此处\(\gamma\)由总速度决定，不可只用横向速度计算。若\(v_\perp=0\)则无可识别的空间圈数，需回到固定时间描述。
+
+\newpage
+
+\section{第 7 题}\label{ux7b2c-7-ux9898}
+
+房间温度为 \(T\)，环境温度为 \(T_0\)，房间向环境的传导散热功率为 \[
+\frac{dQ}{dt}=K(T-T_0).
+\] 黑体辐射本领为 \(J=\sigma T^4\)。
+
+（1）某灰体对所有频率反射率为
+\(r\)，未反射部分全部吸收。求其热辐射本领。
+
+（2）黑体单位时间单位面积在 \(\nu\sim\nu+d\nu\) 内辐射
+\(f(\nu)d\nu\)；物体反射率为 \(r(\nu)\)，求其光谱辐射本领。
+
+（3）传统屋顶各频率反射率均为 \(r\)。室内视为温度 \(T_1\)
+的黑体，屋顶面积 \(S\)；太阳垂直入射通量为
+\(I_0\)。房间只向屋顶辐射，求平衡温度 \(T_1\)。
+
+（4）新屋顶对低频反射率为 \(r_L\)、对高频太阳光反射率为
+\(r_H\)。室内和屋顶热辐射视为低频，太阳辐射视为高频，求新平衡温度
+\(T_1'\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.584\linewidth,height=\textheight,keepaspectratio,alt={题7　灰体屋顶的短波吸收与长波热辐射平衡}]{../figures/question-07.pdf}
+\caption{题7　灰体屋顶的短波吸收与长波热辐射平衡}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-6}
+
+本题是基尔霍夫热辐射定律与两表面稳态能量平衡。第（4）问展示选择性反射材料为何能在高太阳反射率与高红外发射率之间兼得。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-6}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  吸收率、反射率和发射率；
+\item
+  基尔霍夫辐射定律；
+\item
+  斯特藩---玻尔兹曼定律；
+\item
+  屋顶内外双面辐射；
+\item
+  非线性稳态温度方程。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-6}
+
+屋顶吸收太阳短波和室内长波，同时向上、向下两个方向辐射。室内还通过墙体向环境传导散热。必须分别为屋顶和室内写能量平衡，不能把屋顶温度直接等同室温。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-6}
+
+先用热平衡中的``吸收率等于发射率''。传统材料只有一个
+\(r\)；选择性材料对太阳短波使用 \(r_H\)，对热红外使用 \(r_L\)。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-6}
+
+灰体吸收率 \[
+\alpha=1-r. \tag{1}
+\] 由基尔霍夫定律，发射率 \(\varepsilon=\alpha\)，故 \[
+\boxed{J'(r)=(1-r)\sigma T^4}. \tag{2}
+\]
+
+在每个频率区间同样有 \[
+\varepsilon(\nu)=1-r(\nu). \tag{3}
+\] 因此 \[
+\boxed{f_1(\nu)=[1-r(\nu)]f(\nu)}. \tag{4}
+\]
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.88\linewidth,height=\textheight,keepaspectratio,alt={图7-2　传统屋顶与选择性屋顶的双面能量流}]{../figures/solution-07.pdf}
+\caption*{图7-2　传统屋顶与选择性屋顶的双面能量流}
+\end{figure}
+
+设传统屋顶温度为 \(T_R\)，令
+\(\varepsilon=1-r\)。屋顶吸收太阳和室内辐射，并向内、外两面发射： \[
+\varepsilon I_0S+\varepsilon\sigma T_1^4S
+=2\varepsilon\sigma T_R^4S. \tag{5}
+\] 约去 \(\varepsilon S\)： \[
+2\sigma T_R^4=I_0+\sigma T_1^4. \tag{6}
+\]
+
+室内向上发射 \(\sigma T_1^4S\)，接收屋顶向下发射
+\(\varepsilon\sigma T_R^4S\) 与反射回来的
+\(r\sigma T_1^4S\)，同时向环境传导 \(K(T_1-T_0)\)： \[
+\varepsilon\sigma T_R^4S+r\sigma T_1^4S
+=\sigma T_1^4S+K(T_1-T_0). \tag{7}
+\] 消去 \(T_R\)，得到 \[
+\boxed{
+\sigma T_1^4+
+\frac{2K}{S(1-r)}(T_1-T_0)=I_0
+}. \tag{8}
+\] 代入 \[
+T_0=300\,\mathrm K,\quad
+\sigma=5.67\times10^{-8}\,\mathrm{W\,m^{-2}K^{-4}},
+\] \[
+K=3.0\times10^3\,\mathrm{W\,K^{-1}},\quad
+S=1000\,\mathrm{m^2},\quad r=0.8,\quad
+I_0=5.9454\times10^2\,\mathrm{W\,m^{-2}},
+\] 数值求根得 \[
+\boxed{T_1\approx303.7\,\mathrm K}. \tag{9}
+\]
+
+选择性屋顶的短波吸收率为 \(1-r_H\)，长波发射率为
+\(1-r_L\)。同样消去屋顶温度后得到 \[
+\boxed{
+(1-r_L)\sigma T_1'^4+
+\frac{2K}{S}(T_1'-T_0)
+=(1-r_H)I_0
+}. \tag{10}
+\] 代入 \(r_L=0.3,r_H=0.6\)，数值解为 \[
+\boxed{T_1'\approx291.7\,\mathrm K}. \tag{11}
+\] 因此在该模型下，新材料可把平衡室温降到环境温度以下。
+
+\textbf{从基尔霍夫定律到灰体公式。} 对不透射材料，在每一频率处有 \[
+\alpha(\nu)+r(\nu)=1,
+\] 其中 \(\alpha\) 是吸收率。热平衡时基尔霍夫定律给出 \[
+\varepsilon(\nu)=\alpha(\nu).
+\] 若各频率反射率都是同一个常数 \(r\)，则 \[
+\varepsilon=\alpha=1-r.
+\] 黑体在温度 \(T\) 下的总辐射本领是 \(\sigma T^4\)，所以灰体为 \[
+J'=\varepsilon\sigma T^4=(1-r)\sigma T^4.
+\] 两端情形可以快速核对：\(r=0\) 时恢复黑体；\(r=1\)
+时材料既不吸收也不发射。
+
+\textbf{光谱公式不能先积分再乘平均反射率。} 在窄频带
+\(\nu\sim\nu+\mathrm d\nu\) 内，黑体本领为
+\(f(\nu)\mathrm d\nu\)。该频带的发射率是 \[
+\varepsilon(\nu)=1-r(\nu),
+\] 故物体在同一频带内的辐射为 \[
+f_1(\nu)\mathrm d\nu
+=[1-r(\nu)]f(\nu)\mathrm d\nu.
+\] 约去 \(\mathrm d\nu\) 才得到式（4）。总辐射应写成 \[
+J_1=\int_0^\infty[1-r(\nu)]f(\nu)\,\mathrm d\nu,
+\] 只有 \(r(\nu)\) 为常数时，才能把 \(1-r\) 提到积分号外。
+
+\textbf{传统屋顶：先列屋顶控制体。} 设
+\(\varepsilon=1-r\)。单位时间内屋顶吸收太阳能 \[
+P_{\odot,\mathrm{abs}}=\varepsilon I_0S,
+\] 吸收室内长波 \[
+P_{\mathrm{room},\mathrm{abs}}
+=\varepsilon\sigma T_1^4S.
+\] 屋顶上下两面都以温度 \(T_R\) 辐射，每面功率为
+\(\varepsilon\sigma T_R^4S\)，因此稳态条件为 \[
+\varepsilon I_0S+\varepsilon\sigma T_1^4S
+=2\varepsilon\sigma T_R^4S.
+\] 约去 \(\varepsilon S\) 后 \[
+\sigma T_R^4=\frac12\left(I_0+\sigma T_1^4\right).
+\]
+
+\textbf{再列房间控制体。} 房间从屋顶接收的向下发射为 \[
+\varepsilon\sigma T_R^4S,
+\] 原先室内辐射中被屋顶反射回来的部分为 \[
+r\sigma T_1^4S.
+\] 房间支出包括向屋顶的黑体辐射 \(\sigma T_1^4S\) 和向环境的传导
+\(K(T_1-T_0)\)。因此 \[
+\varepsilon\sigma T_R^4S
++r\sigma T_1^4S
+=\sigma T_1^4S+K(T_1-T_0).
+\] 利用 \(1-r=\varepsilon\)，移项得 \[
+\varepsilon S\left(\sigma T_R^4-\sigma T_1^4\right)
+=K(T_1-T_0).
+\] 再代入屋顶温度： \[
+\frac{\varepsilon S}{2}
+\left(I_0-\sigma T_1^4\right)
+=K(T_1-T_0).
+\] 两边乘 \(2/(\varepsilon S)\) 并整理，即得式（8）。
+
+\textbf{传统屋顶的数值求根。} 定义 \[
+F(T)=\sigma T^4+
+\frac{2K}{S(1-r)}(T-T_0)-I_0.
+\] 由于 \[
+F'(T)=4\sigma T^3+\frac{2K}{S(1-r)}>0,
+\] \(F(T)\) 严格单调，物理解唯一。代入数据， \[
+\frac{2K}{S(1-r)}
+=\frac{2(3.0\times10^3)}
+{1000(1-0.8)}
+=30.0\,\mathrm{W\,m^{-2}K^{-1}}.
+\] 取 \(T_1=303.7327\,\mathrm K\) 检验： \[
+\sigma T_1^4=482.558\,\mathrm{W\,m^{-2}},
+\] \[
+30.0(T_1-300)
+=111.981\,\mathrm{W\,m^{-2}}.
+\] 两项之和 \[
+482.558+111.981
+=594.539\,\mathrm{W\,m^{-2}}
+\] 与 \(I_0=594.540\,\mathrm{W\,m^{-2}}\) 在舍入精度内一致。
+
+\textbf{选择性屋顶：短波和长波分开记账。} 令 \[
+\varepsilon_H=1-r_H,\qquad
+\varepsilon_L=1-r_L.
+\] 屋顶控制体的平衡为 \[
+\varepsilon_HI_0S
++\varepsilon_L\sigma T_1'^4S
+=2\varepsilon_L\sigma T_R'^4S.
+\] 房间控制体的平衡为 \[
+\varepsilon_L\sigma T_R'^4S
++r_L\sigma T_1'^4S
+=\sigma T_1'^4S+K(T_1'-T_0).
+\] 第二式利用 \(1-r_L=\varepsilon_L\) 可改写成 \[
+\varepsilon_LS
+\left(\sigma T_R'^4-\sigma T_1'^4\right)
+=K(T_1'-T_0).
+\] 从第一式消去 \(T_R'\)，逐项整理得到 \[
+\varepsilon_L\sigma T_1'^4
++\frac{2K}{S}(T_1'-T_0)
+=\varepsilon_HI_0,
+\] 即式（10）。注意传导项不除以
+\(\varepsilon_L\)，因为这里没有像传统屋顶方程那样把全式再除以同一个发射率。
+
+\textbf{选择性屋顶的数值复核。} 代入
+\(\varepsilon_L=0.7\)、\(\varepsilon_H=0.4\)。取 \[
+T_1'=291.7257\,\mathrm K,
+\] 则 \[
+0.7\sigma T_1'^4
+=287.462\,\mathrm{W\,m^{-2}},
+\] \[
+\frac{2K}{S}(T_1'-T_0)
+=6(291.7257-300)
+=-49.646\,\mathrm{W\,m^{-2}}.
+\] 左边为 \[
+287.462-49.646
+=237.816\,\mathrm{W\,m^{-2}},
+\] 右边为 \[
+(1-r_H)I_0=0.4(594.54)
+=237.816\,\mathrm{W\,m^{-2}}.
+\]
+传导项为负表示此时环境反而向较冷房间传热；这并非符号错误，而是选择性屋顶仍在通过辐射通道带走能量。
+
+\textbf{模型边界。}
+本题没有加入大气长波回辐射、对流、天空视角因子和太阳入射角。\(T_1'<T_0\)
+是在题设理想能量通道下的结果；用于真实建筑时必须把这些额外热流加入同一控制体方程。
+
+\textbf{把屋顶温度也算出来作闭环检查。} 传统屋顶由式（6）得到 \[
+T_R=
+\left[
+\frac{I_0+\sigma T_1^4}{2\sigma}
+\right]^{1/4}.
+\] 代入 \(T_1=303.7327\,\mathrm K\)： \[
+T_R\approx312.18\,\mathrm K.
+\] 屋顶直接吸收太阳辐射，因此比室内更热，方向合理。再把 \(T_R\)
+代回房间平衡式（7），左右两边在舍入精度内相等。
+
+选择性屋顶则有 \[
+T_R'=
+\left[
+\frac{(1-r_H)I_0+(1-r_L)\sigma T_1'^4}
+{2(1-r_L)\sigma}
+\right]^{1/4},
+\] 数值得 \[
+T_R'\approx285.21\,\mathrm K.
+\] 新屋顶因太阳吸收率下降而比环境更冷，并从环境和室内获得净热流；这与
+\(T_1'<T_0\) 的结果相互一致。
+
+\textbf{非线性方程的求根过程。} 对传统屋顶定义 \[
+F(T)=\sigma T^4+30(T-300)-594.54.
+\] 牛顿迭代为 \[
+T_{n+1}
+=T_n-\frac{F(T_n)}{4\sigma T_n^3+30}.
+\] 以 \(T_0^{(0)}=300\,\mathrm K\) 为初值： \[
+F(300)
+=5.67\times10^{-8}(300)^4-594.54
+\approx-135.27\,\mathrm{W\,m^{-2}}.
+\] 第一次迭代得到约 \(303.75\,\mathrm K\)，第二次即稳定到 \[
+T_1\approx303.73\,\mathrm K.
+\] 选择性屋顶也可定义 \[
+G(T)=0.7\sigma T^4+6(T-300)-237.816
+\] 并用 \[
+T_{n+1}=T_n-\frac{G(T_n)}{2.8\sigma T_n^3+6}
+\] 求得 \(291.73\,\mathrm K\)。
+
+\textbf{每一项的单位检查。} \(\sigma T^4\)、\(I_0\)
+都是单位面积功率，单位为 \(\mathrm{W\,m^{-2}}\)。传导项原本是总功率 \[
+K(T-T_0),
+\] 除以屋顶面积以后才成为 \[
+\frac KS(T-T_0),
+\] 单位同样是 \(\mathrm{W\,m^{-2}}\)。若漏除面积 \(S\)，数值会相差
+\(10^3\) 倍。
+
+\textbf{选择性材料的两个极限。} 当 \(r_H\to1\) 时，太阳吸收项趋于零；当
+\(r_L\to1\)
+时，长波发射率也趋于零，屋顶不能有效向外辐射。因此优良材料要求太阳波段
+\(r_H\) 大，而热红外波段 \(r_L\) 小，不能笼统地追求``所有频率高反射''。
+
+\textbf{平衡根唯一性的严格说明。} 传统屋顶方程左边 \[
+L(T)=\sigma T^4+
+\frac{2K}{S(1-r)}(T-T_0)
+\] 在 \(T>0\) 时导数恒正，因此与水平直线 \(I_0\)
+只有一个交点。选择性屋顶左边 \[
+L_1(T)=(1-r_L)\sigma T^4+\frac{2K}{S}(T-T_0)
+\]
+也严格递增。数值方法得到的根不是众多数学根中任选一个，而是唯一的正温度物理解。
+
+\textbf{符号方向的最后检查。} 当 \(T_1>T_0\)
+时，\(K(T_1-T_0)>0\)，表示房间向环境散热；当计算得到 \(T_1'<T_0\)
+时，该项为负，表示环境向房间供热。方程无需改号，因为同一代数表达式已经自动编码热流方向。人为把传导功率取绝对值反而会破坏能量守恒。
+
+\textbf{把传统屋顶的功率逐项闭合。} 传统材料
+\(\varepsilon=0.2\)。太阳被屋顶吸收的功率为 \[
+P_{\odot}=0.2(594.54)(1000)
+=118.908\,\mathrm{kW}.
+\] 室内长波被屋顶吸收的功率为 \[
+P_{\mathrm{in}}
+=0.2(482.558)(1000)
+=96.512\,\mathrm{kW}.
+\] 屋顶总输入为 \[
+P_{\odot}+P_{\mathrm{in}}
+=215.420\,\mathrm{kW}.
+\] 由 \(T_R=312.18\,\mathrm K\) 计算，每一面发射约 \[
+0.2\sigma T_R^4S
+=107.710\,\mathrm{kW},
+\] 两面恰为 \(215.420\,\mathrm{kW}\)。这项总功率核验同时检查了面积
+\(S\)、发射率和``双面辐射''的因子 \(2\)。
+
+\textbf{选择性屋顶的功率闭合。} 太阳吸收功率为 \[
+(1-r_H)I_0S
+=237.816\,\mathrm{kW},
+\] 室内长波吸收功率为 \[
+(1-r_L)\sigma T_1'^4S
+=287.462\,\mathrm{kW}.
+\] 总输入 \(525.278\,\mathrm{kW}\)，故屋顶上下每面应发射
+\(262.639\,\mathrm{kW}\)。用 \(T_R'=285.21\,\mathrm K\) 代入
+\((1-r_L)\sigma T_R'^4S\) 正好得到同一数值。
+
+还可把两面辐射功率相加复核： \[
+2\times262.639\,\mathrm{kW}
+=525.278\,\mathrm{kW}.
+\] 左右两边同时含因子
+\((1-r_L)S\)，所以面积改变只按比例改变各项功率，不改变平衡温度；若只计屋顶上表面，能量方程会少一个因子
+\(2\)，数值便不能闭合。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf-6}
+
+冷却材料的设计目标不是``所有频率都高反射''，而是太阳波段高反射、热红外波段低反射（即高发射）。这正是式（10）中
+\(r_H\) 和 \(r_L\) 分居方程两侧的物理意义。
+
+屋顶有两个辐射面，式（5）的因子 \(2\)
+是数值结果的关键。漏掉它会显著改变室温。
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9-6}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  把发射率写成反射率 \(r\)；
+\item
+  第（2）问对不同频率仍使用常数 \(r\)；
+\item
+  屋顶只计算向外辐射，漏掉向室内一面；
+\item
+  把屋顶温度直接设为室内温度；
+\item
+  传导项的方向写反；
+\item
+  第（4）问把太阳光错误使用 \(r_L\)。
+\end{enumerate}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae-6}
+
+画两个控制体：屋顶和室内。每一支箭头都标``被谁吸收、被谁反射、向哪一面发射''，然后再列方程，学生就不容易丢项。
+
+\textbf{用于课堂的稳态唯一性与灵敏度。}
+选择性屋顶消元后设\(F(T)=K(T-T_0)-S[\varepsilon_HI_0-\varepsilon_L\sigma T^4]/2\)。
+
+\[F'(T)=K+2S\varepsilon_L\sigma T^3>0.\]
+
+正温度解至多一个。对照强度求隐函数导数，得
+
+\[\frac{dT}{dI_0}=\frac{S\varepsilon_H/2}{K+2S\varepsilon_L\sigma T^3}>0.\]
+
+辐射反馈使室温对日照的响应小于只用热传导得到的\(S\varepsilon_H/(2K)\)。传统灰体将两\(\varepsilon\)取相同即可检查两模型衔接。不能因屋顶温度未显式给出，就遗漏其两面辐射的因子2。
+
+\needspace{3\baselineskip}
+\textbf{平衡根的唯一性与两节点稳定性}
+
+对非零内外发射率，消去屋顶温度后，室温满足
+
+\[\mathcal F(T)=K(T-T_0)+\frac{\epsilon_i\epsilon_o}{\epsilon_i+\epsilon_o}
+S\sigma T^4-\frac{\epsilon_i\epsilon_o}{\epsilon_i+\epsilon_o}SI_0=0.\]
+
+在 \(T>0\)，有
+\(\mathcal F'(T)>0\)，所以至多一个正温度平衡根。数值求解宜先给出上下界，再用二分法；一次多项式求根返回的其他复根或负根没有室温意义。
+
+若加入室内与屋顶热容 \(C_i,C_R>0\)，令
+\(a=4\epsilon_iS\sigma T^3\)、\(b=4\epsilon_iS\sigma T_R^3\)、\(d=4(\epsilon_i+\epsilon_o)S\sigma T_R^3\)，线性扰动满足
+
+\[\frac d{dt}\begin{pmatrix}\delta T\\\delta T_R\end{pmatrix}
+=\begin{pmatrix}-(K+a)/C_i&b/C_i\\a/C_R&-d/C_R\end{pmatrix}
+\begin{pmatrix}\delta T\\\delta T_R\end{pmatrix}.\]
+
+矩阵迹为负，行列式为
+\([Kd+a(d-b)]/(C_iC_R)>0\)，两个特征值的实部均为负。因此理想两节点模型的平衡态可恢复稳定。这里没有给出未知热容的数值时间常数；热容影响到达平衡的速度，不改变原题的稳态温度。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3-6}
+
+\textbf{变式1：屋顶两面发射率不同。} 外面发射率为
+\(\varepsilon_o\)、里面为
+\(\varepsilon_i\)，每面吸收率与发射率相同，太阳按外面同灰体吸收。求室温方程。
+
+屋顶和房间的平衡分别为
+
+\[\varepsilon_oI_0+\varepsilon_i\sigma T^4=(\varepsilon_o+\varepsilon_i)\sigma T_R^4,\]
+
+\[K(T-T_0)=\varepsilon_iS\sigma(T_R^4-T^4).\]
+
+消去屋顶温度：
+
+\[\boxed{K(T-T_0)=\frac{\varepsilon_i\varepsilon_o}{\varepsilon_i+\varepsilon_o}S(I_0-\sigma T^4)}.\]
+
+当 \(\varepsilon_i=0,K>0\)
+时，房间与屋顶没有这个辐射耦合，\(T=T_0\)。不透明屋顶吸收的太阳能不能直接作为房间热源添加。内面不发射时，同频吸收也应为零。
+
+\textbf{变式2：选择性屋顶何时低于室外温度？}
+原题忽略外界长波入射，稳态方程右端为\(S(\varepsilon_HI_0-\varepsilon_L\sigma T^4)/2\)，左端为K(T−\(T_0\))。两端差关于T严格递减。
+
+因此\(T<T_0\)的充要条件是
+
+\[\varepsilon_HI_0<\varepsilon_L\sigma T_0^4.\]
+
+阈值是光谱吸收与热辐射的比较。把选择性屋顶简化成一个共同灰体发射率会丢失这个可能性。
+
+\textbf{变式3：长波发射率趋于零。}
+\(\varepsilon_H>0\)且持续吸收阳光。若\(\varepsilon_L\to0^+\)，从屋顶能量平衡可知屋顶温度须增大以维持有限辐射。
+
+在严格\(\varepsilon_L=0\)时，屋顶没有任何辐射出口；房间虽不受辐射加热，屋顶却不存在有限稳态温度。不能把消去屋顶温度后的房间方程孤立地解为T=\(T_0\)，就声称全系统有稳态。
+
+\textbf{变式4：加入外界长波辐射。}
+假设屋顶外侧同时接收\(\varepsilon_L\sigma T_{\rm env}^4\)，则消去屋顶温度后有
+
+\[K(T-T_0)=\frac S2[\varepsilon_HI_0+\varepsilon_L\sigma T_{\rm env}^4-\varepsilon_L\sigma T^4].\]
+
+若\(T_{\rm env}=T_0\)且日照为正，室温必高于\(T_0\)。若有效天空温度更低，仍可满足净制冷阈值。原题是否省略外界辐射会直接影响低于环境温度的判断。
+
+\newpage
+
+\section{第 8 题}\label{ux7b2c-8-ux9898}
+
+从地面发射水星探测器，推进火箭只在地球附近和水星附近各作一次瞬时点火。忽略地球和水星自转。地球、水星绕太阳作半径分别为
+\(r_E,r_M\) 的圆轨道。
+
+（1）要求探测器进入绕太阳的椭圆转移轨道，并与水星圆轨道相切。求在地球附近相对地球应获得的速度
+\(v_0\)。
+
+（2）到达水星表面附近后一次点火实现软着陆，求所需速度改变量。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\linewidth,height=\textheight,keepaspectratio,alt={题8　地球到水星的内向霍曼转移与水星捕获}]{../figures/question-08.pdf}
+\caption{题8　地球到水星的内向霍曼转移与水星捕获}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-7}
+
+本题是太阳中心引力场中的内向霍曼转移，再叠加水星局部双曲接近与表面制动。两个引力阶段必须分开使用机械能守恒。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-7}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  圆轨道速度；
+\item
+  开普勒轨道比机械能；
+\item
+  近拱点、远拱点切向速度；
+\item
+  行星影响球内的双曲余速；
+\item
+  表面逃逸速度与瞬时制动。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-7}
+
+从外轨道转入内轨道，需要在地球处逆着公转方向减速。转移椭圆在水星轨道处速度大于水星圆轨道速度，因此探测器以正的切向余速追上水星；进入水星引力场后还会继续加速。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-7}
+
+转移椭圆半长轴 \[
+a=\frac{r_E+r_M}{2}.
+\] 先用 vis-viva
+公式分别求转移轨道在地球和水星处的速度，再作行星速度差。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-7}
+
+太阳引力参数记为 \[
+\mu_S=GM_S. \tag{1}
+\] 地球圆轨道速度 \[
+v_E=\sqrt{\frac{\mu_S}{r_E}}. \tag{2}
+\] 转移椭圆在远日点 \(r_E\) 的速度 \[
+v_a=\sqrt{\mu_S\left(\frac2{r_E}-\frac1a\right)}. \tag{3}
+\]
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.86\linewidth,height=\textheight,keepaspectratio,alt={图8-2　地球出发余速、内向转移椭圆与水星近场制动}]{../figures/solution-08.pdf}
+\caption*{图8-2　地球出发余速、内向转移椭圆与水星近场制动}
+\end{figure}
+
+因为 \(v_a<v_E\)，在地球影响球外所需的地心双曲余速大小为 \[
+\boxed{u_{\infty,E}=v_E-v_a}. \tag{4}
+\] 代入题给数据： \[
+v_E\approx29.78\,\mathrm{km\,s^{-1}},
+\qquad
+v_a\approx22.25\,\mathrm{km\,s^{-1}}, \tag{5}
+\] 所以 \[
+\boxed{u_{\infty,E}\approx7.53\,\mathrm{km\,s^{-1}}}. \tag{6}
+\]
+
+题目从地面发射，并给出了地球质量 \(M_E\) 和半径
+\(R_E\)，因此还要把地球引力井计入。地球中心参考系中的机械能守恒给出 \[
+\frac12v_0^2-\frac{GM_E}{R_E}
+=\frac12u_{\infty,E}^2. \tag{7}
+\] 故地表点火后应获得的相对地球速度为 \[
+\boxed{
+v_0=\sqrt{u_{\infty,E}^2+\frac{2GM_E}{R_E}}
+\approx13.49\,\mathrm{km\,s^{-1}}
+}. \tag{8}
+\]
+
+转移轨道在近日点 \(r_M\) 的速度 \[
+v_p=\sqrt{\mu_S\left(\frac2{r_M}-\frac1a\right)}. \tag{9}
+\] 水星圆轨道速度 \[
+v_M=\sqrt{\frac{\mu_S}{r_M}}. \tag{10}
+\] 水星影响球外的相对余速 \[
+u_\infty=v_p-v_M. \tag{11}
+\] 数值为 \[
+v_p\approx57.48\,\mathrm{km\,s^{-1}},
+\quad
+v_M\approx47.87\,\mathrm{km\,s^{-1}},
+\quad
+u_\infty\approx9.61\,\mathrm{km\,s^{-1}}. \tag{12}
+\]
+
+进入水星引力场后，在水星中心参考系中机械能守恒： \[
+\frac12u_s^2-\frac{GM_M}{R_M}
+=\frac12u_\infty^2. \tag{13}
+\] 所以表面附近点火前速度 \[
+u_s=\sqrt{u_\infty^2+\frac{2GM_M}{R_M}}. \tag{14}
+\] 一次瞬时点火软着陆需把相对速度降为零，故 \[
+\boxed{\Delta v=u_s\approx10.51\,\mathrm{km\,s^{-1}}}. \tag{15}
+\]
+
+\textbf{由轨道能量推导 vis-viva 公式。} 在太阳引力场中，单位质量机械能为
+\[
+\varepsilon=\frac{v^2}{2}-\frac{\mu_S}{r}.
+\] 半长轴为 \(a\) 的椭圆轨道满足 \[
+\varepsilon=-\frac{\mu_S}{2a}.
+\] 两式相等： \[
+\frac{v^2}{2}-\frac{\mu_S}{r}
+=-\frac{\mu_S}{2a}.
+\] 乘以 \(2\) 并移项： \[
+v^2=\mu_S\left(\frac2r-\frac1a\right),
+\] 所以 \[
+v=\sqrt{\mu_S\left(\frac2r-\frac1a\right)}.
+\] 在地球轨道处 \(r=r_E\) 是转移椭圆远日点；在水星轨道处 \(r=r_M\)
+是近日点，不能把两处名称写反。
+
+\textbf{为什么转移椭圆的半长轴是两轨道半径的平均。}
+霍曼转移椭圆与外圆、内圆分别在远日点和近日点相切，故 \[
+r_a=r_E,\qquad r_p=r_M.
+\] 椭圆几何关系给出 \[
+2a=r_a+r_p,
+\] 于是 \[
+a=\frac{r_E+r_M}{2}.
+\] 由于 \(a<r_E\)，在 \(r_E\) 代入 vis-viva 后必有
+\(v_a<v_E\)，所以出发脉冲必须逆着地球公转方向降低日心速度。
+
+\textbf{日心速度差只是地球双曲余速。}
+在地球轨道切点，地球和探测器速度方向共线。探测器转移速度为
+\(v_a\)，地球圆轨道速度为 \(v_E\)，所以在地球影响球边界处 \[
+u_{\infty,E}=|v_a-v_E|=v_E-v_a.
+\] 这一数值 \(7.53\,\mathrm{km\,s^{-1}}\)
+是相对地球的双曲余速，并不是地表刚点火后的速度。若忽略地球引力或把``地球附近''定义在影响球外，才可以把它直接称为
+\(v_0\)。
+
+\textbf{为什么题给地球质量和半径不能闲置。} 题面明确从地面发射，并给出
+\(M_E,R_E\)。从地表到地球影响球外，在地心参考系中 \[
+\frac12v_0^2-\frac{GM_E}{R_E}
+=\frac12u_{\infty,E}^2.
+\] 代入 \[
+\frac{2GM_E}{R_E}
+=\frac{2(6.674\times10^{-11})(5.972\times10^{24})}
+{6.371\times10^6}
+=1.2512\times10^8\,\mathrm{m^2\,s^{-2}},
+\] 以及 \[
+u_{\infty,E}^2
+=(7.53\times10^3)^2
+=5.67\times10^7\,\mathrm{m^2\,s^{-2}},
+\] 得到 \[
+\begin{aligned}
+v_0
+&=\sqrt{1.2512\times10^8+5.67\times10^7}\\
+&=1.349\times10^4\,\mathrm{m\,s^{-1}}\\
+&=13.49\,\mathrm{km\,s^{-1}}.
+\end{aligned}
+\] 这个速度大于地球逃逸速度 \[
+v_{\mathrm{esc},E}=\sqrt{\frac{2GM_E}{R_E}}
+\approx11.19\,\mathrm{km\,s^{-1}},
+\] 符合还需保留非零双曲余速的物理要求。
+
+\textbf{到达水星时为什么是速度之差。}
+转移轨道在近日点的速度大于同半径圆轨道速度，因为椭圆仍保有足以回到
+\(r_E\) 的能量： \[
+v_p>v_M.
+\] 两者在切点同向，所以水星中心系中的双曲余速为 \[
+u_\infty=v_p-v_M.
+\] 若两速度不共线，就必须作矢量差；本题的相切几何使标量相减成立。
+
+\textbf{水星近场的数值代入。} 水星表面逃逸速度平方为 \[
+\frac{2GM_M}{R_M}
+=\frac{2(6.674\times10^{-11})(3.301\times10^{23})}
+{2.439\times10^6}
+\approx1.807\times10^7\,\mathrm{m^2\,s^{-2}}.
+\] 而 \[
+u_\infty^2
+=(9.61\times10^3)^2
+\approx9.235\times10^7\,\mathrm{m^2\,s^{-2}}.
+\] 所以 \[
+\begin{aligned}
+u_s
+&=\sqrt{9.235\times10^7+1.807\times10^7}\\
+&\approx1.051\times10^4\,\mathrm{m\,s^{-1}}\\
+&\approx10.51\,\mathrm{km\,s^{-1}}.
+\end{aligned}
+\] 一次理想瞬时制动要求末速度为零，故
+\(\Delta v=u_s\)；若只是进入绕水星圆轨道，末速度并非零，所需脉冲会不同。
+
+\textbf{两次能量守恒不能混用中心天体。} 日心转移阶段势能写成
+\(-\mu_S/r\)；地球出发近场写成 \(-GM_E/r\)；水星到达近场写成
+\(-GM_M/r\)。拼接圆锥曲线近似假定行星影响球内太阳的潮汐作用可忽略、影响球外行星引力可忽略。把
+\(v_p\) 直接代入水星表面能量式，会把日心速度误当成水星相对速度。
+
+\textbf{模型未计入的任务代价。} 这里的 \(v_0\)
+是地表瞬时点火后的理想速度，不包含大气阻力、重力损失、有限推力和地球自转收益；水星端也把整个制动集中成一次脉冲。真实任务会采用多级推进、引力辅助或分段捕获，但这些不改变本题两级机械能核算的结构。
+
+\textbf{把日心轨道的四个速度全部代数比较。}
+地球圆轨道与转移远日点速度分别为 \[
+v_E=\sqrt{\frac{\mu_S}{r_E}},
+\qquad
+v_a=\sqrt{\mu_S
+\left(\frac2{r_E}-\frac1a\right)}.
+\] 代入题给常数： \[
+\begin{aligned}
+\mu_S
+&=(6.674\times10^{-11})(1.988\times10^{30})\\
+&\approx1.327\times10^{20}\,\mathrm{m^3\,s^{-2}},
+\\
+a&=\frac{1.496\times10^{11}+5.791\times10^{10}}2\\
+&=1.03755\times10^{11}\,\mathrm m.
+\end{aligned}
+\] 于是 \[
+v_E=29.7807\,\mathrm{km\,s^{-1}},
+\qquad
+v_a=22.2489\,\mathrm{km\,s^{-1}}.
+\] 两者相减为 \[
+u_{\infty,E}=7.5318\,\mathrm{km\,s^{-1}}.
+\]
+
+在水星轨道处同理： \[
+\begin{aligned}
+v_p&=\sqrt{\mu_S
+\left(\frac2{r_M}-\frac1a\right)}
+=57.4759\,\mathrm{km\,s^{-1}},\\
+v_M&=\sqrt{\frac{\mu_S}{r_M}}
+=47.8657\,\mathrm{km\,s^{-1}},\\
+u_{\infty,M}&=v_p-v_M
+=9.6102\,\mathrm{km\,s^{-1}}.
+\end{aligned}
+\] 数值大小满足 \[
+v_a<v_E<v_M<v_p,
+\] 与``外轨道圆速度较小，但转移轨道在近日点速度最大''的图像一致。
+
+\textbf{转移时间的独立几何检查。}
+探测器走过转移椭圆的半周，所需时间为椭圆周期的一半： \[
+t_{\mathrm{tr}}
+=\pi\sqrt{\frac{a^3}{\mu_S}}.
+\] 代入 \(a=1.03755\times10^{11}\,\mathrm m\)： \[
+t_{\mathrm{tr}}
+\approx9.12\times10^6\,\mathrm s
+\approx105.5\,\mathrm d.
+\]
+这说明地球出发和水星到达必须满足相应相位关系；题目没有要求相位角，因此速度计算中不再展开。
+
+\textbf{三个速度层次不能混名。} 第一个是日心转移速度
+\(v_a,v_p\)；第二个是行星影响球边界处的双曲余速
+\(u_{\infty,E},u_{\infty,M}\)；第三个是行星表面附近速度
+\(v_0,u_s\)。它们分别属于太阳中心系、行星中心远场和行星中心近场。正确计算链为
+\[
+\text{日心速度差}
+\longrightarrow u_\infty
+\longrightarrow
+\sqrt{u_\infty^2+v_{\mathrm{esc}}^2}.
+\]
+任何一步把参考系混在一起，都会使地球质量、水星质量或行星半径被错误遗漏。
+
+\textbf{最终答案按题目两问汇总。} \[
+\boxed{
+v_0\approx13.49\,\mathrm{km\,s^{-1}}
+}
+\]
+是忽略地球自转、阻力和有限推力时，地表点火后所需的相对地球速度；若题目只问地球影响球外的余速，则相应数值是
+\[
+\boxed{
+u_{\infty,E}\approx7.53\,\mathrm{km\,s^{-1}}
+}.
+\] 水星表面一次点火软着陆的理想速度改变量为 \[
+\boxed{
+\Delta v\approx10.51\,\mathrm{km\,s^{-1}}
+}.
+\]
+
+\textbf{用逃逸速度形式压缩近场计算。} 定义行星表面逃逸速度 \[
+v_{\mathrm{esc}}=\sqrt{\frac{2GM}{R}},
+\] 则从双曲余速到表面速度的共同公式为 \[
+v_{\mathrm{surface}}
+=\sqrt{u_\infty^2+v_{\mathrm{esc}}^2}.
+\] 地球端 \[
+v_{\mathrm{esc},E}\approx11.19\,\mathrm{km\,s^{-1}},
+\] 所以 \[
+v_0=\sqrt{7.53^2+11.19^2}
+\approx13.49\,\mathrm{km\,s^{-1}}.
+\] 水星端 \[
+v_{\mathrm{esc},M}\approx4.25\,\mathrm{km\,s^{-1}},
+\] 所以 \[
+u_s=\sqrt{9.61^2+4.25^2}
+\approx10.51\,\mathrm{km\,s^{-1}}.
+\]
+同一形式在两端重复出现，是检查两级拼接圆锥曲线计算是否一致的最简方法。
+
+\textbf{一次软着陆脉冲的方向。}
+表面附近点火前速度沿双曲轨迹切向分量占主导。理想瞬时软着陆要求点火后相对水星速度为零，因此速度改变量矢量与点火前速度反向，大小等于
+\(u_s\)。若只减小速率而没有完全抵消切向分量，探测器仍会掠过或进入绕水星轨道，不能称为软着陆。
+
+\textbf{用角动量守恒复核转移轨道两端速度。}
+在太阳中心力场中单位质量角动量守恒。远日点和近日点速度都垂直于半径，因此应满足
+\[
+r_Ev_a=r_Mv_p.
+\] 代入数值： \[
+\begin{aligned}
+r_Ev_a
+&=(1.496\times10^{11})
+(2.22489\times10^4)\\
+&\approx3.328\times10^{15}\,\mathrm{m^2\,s^{-1}},
+\\
+r_Mv_p
+&=(5.791\times10^{10})
+(5.74759\times10^4)\\
+&\approx3.329\times10^{15}\,\mathrm{m^2\,s^{-1}}.
+\end{aligned}
+\] 二者的微小差别只来自显示位数舍入，说明 \(v_a\) 与 \(v_p\) 的 vis-viva
+计算彼此相容。若把地球处、水星处的近日点和远日点公式写反，这个角动量检查会立即失败。
+
+\textbf{已知量使用情况检查。} \(M_S,r_E,r_M\) 用于日心转移；\(M_E,R_E\)
+用于从地表到地球双曲余速；\(M_M,R_M\) 用于水星近场制动；\(G\)
+在三段引力参数中共同出现。题面给出的每一组天体参数都有明确用途，没有被无理由闲置。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf-7}
+
+到内行星的转移在地球影响球外需要减小日心速度，而不是沿公转方向加速。速度
+\[
+7.53\,\mathrm{km\,s^{-1}}
+\] 是地球双曲余速；按``从地面发射''并使用题给 \(M_E,R_E\)，地表速度应为
+\[
+13.49\,\mathrm{km\,s^{-1}}.
+\]
+
+第（2）问不能直接用 \(v_p-v_M\)
+作为着陆制动量，因为水星引力会把余速进一步加速到 \(u_s\)。
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9-7}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  半长轴误写成 \(r_E-r_M\)；
+\item
+  地球处使用近日点公式、水星处使用远日点公式；
+\item
+  认为内转移需要在地球处顺向加速；
+\item
+  把日心速度 \(v_p\) 直接带入水星表面能量方程；
+\item
+  漏掉水星表面引力势能；
+\item
+  把理想瞬时点火结果当成含地球发射损失的真实任务预算。
+\end{enumerate}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae-7}
+
+在同一张图上画出地球圆速度、转移远日点速度、水星圆速度和转移近日点速度四支切向箭头。先判断大小关系，再代数计算，可以提前发现点火方向错误。
+
+\textbf{用于课堂的能量与速率检验。}
+设日心转移端点速率为\(v_a,v_p\)，角动量先给\(r_Ev_a=r_Mv_p\)，能量再给
+
+\[v_p^2-v_a^2=2\mu_\odot(1/r_M-1/r_E).\]
+
+两式独立求两速率，与活力式一致。近行星过渡时使用行星相对无穷远速率，再加当地逃逸速度的平方；不能把两个速率大小直接相加。若日心相对速率为零，近地总发射速度仍为逃逸速度，核对了``地面总速率''和``停泊轨道点火改变量''的不同定义。
+
+\needspace{3\baselineskip}
+\textbf{把地面发射、逃逸余速和停车轨道脉冲分开}
+
+原题从不自转地面出发，初始相对地球速率为零。地面点火必须提供的是
+
+\[v_0=\sqrt{u_{\infty,E}^2+2GM_E/R_E}.\]
+
+若先在半径 \(r_p\) 的圆形停车轨道上待机，则初始速率已经是
+\(\sqrt{GM_E/r_p}\)，同一逃逸余速所需点火量改为
+
+\[\Delta v_p=\sqrt{u_{\infty,E}^2+2GM_E/r_p}-\sqrt{GM_E/r_p}.\]
+
+二者对应不同的起始机械能，不能把停车轨道的差值直接作为原题地面答案。在极限
+\(u_{\infty,E}\to0\)，地面速率趋向逃逸速率，而停车轨道脉冲趋向
+\((\sqrt2-1)\sqrt{GM_E/r_p}\)。
+
+日心转移则是另一层能量账：地球公转速度与转移远日点速度之差决定
+\(u_{\infty,E}\)，地球局部引力再把它换为地面速率。到水星也需先求日心近点速度与水星公转速度之差，再叠加水星引力造成的表面加速。逐层写各参考系，能避免把三个速度都当成同一实验室中的标量相加。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3-7}
+
+\needspace{3\baselineskip}
+\textbf{变式1：原条件的扩展。}
+
+\textbf{变式.} 探测器从半径 \(r_p=R_E+h\)
+的圆形近地轨道出发，仍进入同一条地球至水星转移轨道，求地球附近点火的速度增量。
+
+\textbf{解答.} 设日心转移轨道在地球处的速度为 \(v_a\)，地球公转速度为
+\(v_E\)。向内转移时的地球双曲线余速大小为 \[
+v_\infty=v_E-v_a.
+\] 地球双曲线在 \(r_p\) 处的近地点速度由能量式给出： \[
+v_{p,h}=\sqrt{v_\infty^2+\frac{2GM_E}{r_p}}.
+\] 原先停泊圆轨道速度为 \[
+v_c=\sqrt{\frac{GM_E}{r_p}}.
+\] 切向顺行点火的速度增量因而为 \[
+\boxed{\Delta v_E=
+\sqrt{(v_E-v_a)^2+\frac{2GM_E}{r_p}}
+-\sqrt{\frac{GM_E}{r_p}}}.
+\]
+
+式中根号内每一项都是速度平方，量纲一致。令
+\(h\to0\)、\(r_p\to R_E\)，得到表面半径处从圆轨道点火的表达式；这与正文从静止地面发射的总速度不同。还可把点火后的地心比机械能反代为
+\[
+\frac{v_{p,h}^2}{2}-\frac{GM_E}{r_p}=\frac{v_\infty^2}{2},
+\]
+右端为正，说明点火后的轨道确为双曲线；若反代得到负值，就意味着把逃逸速度项或点火方向写错了。
+
+\textbf{变式2：转移用时与发射相位。}
+日心转移椭圆半长轴\(a=(r_E+r_M)/2\)，半椭圆飞行时间
+
+\[t_H=\pi\sqrt{a^3/\mu_\odot}.\]
+
+令发射时地球日心方位为0，探测器到达水星轨道时为\(\pi\)。水星初始方位须为\(\phi_{M,0}=\pi-n_Mt_H\)模\(2\pi\)，其中\(n_M=\sqrt{\mu_\odot/r_M^3}\)。仅计算两端速率并不能保证相遇。
+
+\textbf{变式3：到水星先进入圆形停泊轨道。}
+轨道半径\(r_p=R_M+h\)，无穷远相对速度为\(u_\infty\)。近水点制动前速度\(\sqrt{u_\infty^2+2\mu_M/r_p}\)，目标圆轨道速度\(\sqrt{\mu_M/r_p}\)，所以
+
+\[\Delta v=\sqrt{u_\infty^2+2\mu_M/r_p}-\sqrt{\mu_M/r_p}.\]
+
+这与软着陆制动到零速度不同。后续降轨及表面制动还需另列，不能算进这一单次捕获冲量。
+
+\textbf{变式4：两行星日心轨道半径相等。}
+令\(r_M\to r_E\)，日心转移退化为同一圆轨道，两端\(u_\infty\)都趋零。
+
+但从地面静止进入日心轨道仍需克服地球引力，理想近地发射总速率趋地球逃逸速度；在水星表面制动的需求也趋水星逃逸速度。这说明日心速度改变量趋零，并不意味着地面起降的总需求趋零。
+\end{document}

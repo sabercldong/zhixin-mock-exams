@@ -1,0 +1,3323 @@
+\documentclass[12pt,a4paper,UTF8]{ctexart}
+\usepackage[a4paper,top=22mm,bottom=22mm,left=22mm,right=22mm,headheight=15pt]{geometry}
+\usepackage{amsmath,amssymb,mathtools,bm}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{booktabs,longtable,array}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{microtype}
+\usepackage{setspace}
+\usepackage[hidelinks,unicode]{hyperref}
+\usepackage[most]{tcolorbox}
+
+\definecolor{ContestBlue}{HTML}{17365D}
+\definecolor{SoftBlue}{HTML}{EEF4FA}
+\definecolor{SoftGray}{HTML}{F5F6F7}
+\hypersetup{pdftitle={第95套},pdfauthor={物理竞赛教学资料}}
+
+\setstretch{1.24}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.35em}
+\setlist{itemsep=0.35em,topsep=0.4em}
+\captionsetup{font=small,labelfont=bf,justification=centering}
+\setcounter{secnumdepth}{0}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small 第95套}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\ctexset{
+  section={format=\Large\bfseries\color{ContestBlue},beforeskip=1.2em,afterskip=0.7em},
+  subsection={format=\large\bfseries\color{ContestBlue},beforeskip=1.0em,afterskip=0.5em},
+  subsubsection={format=\normalsize\bfseries,beforeskip=0.8em,afterskip=0.35em}
+}
+
+\makeatletter
+\newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\newcommand{\maxwidth}{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\newcommand{\maxheight}{\ifdim\Gin@nat@height>0.72\textheight 0.72\textheight\else\Gin@nat@height\fi}
+\newcommand{\pandocbounded}[1]{\begingroup\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}#1\endgroup}
+\makeatother
+
+\begin{document}
+
+\begin{titlepage}
+  \centering
+  \vspace*{58mm}
+  {\Huge\bfseries\color{ContestBlue} 第95套\par}
+  \vfill
+  \vspace*{28mm}
+\end{titlepage}
+
+
+\section{第 1 题}\label{ux7b2c-1-ux9898}
+
+如图，一辆汽车内悬挂一根长度为 \(l\) 的轻绳，绳下系一质量为 \(m\)
+的小球。重力加速度为 \(g\)。初始时汽车和小球均静止。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  汽车向右缓慢增大加速度，直到加速度为 \(a\)，求绳与竖直方向的夹角
+  \(\theta_1\)。
+\item
+  汽车突然获得向右的加速度
+  \(a\)，小球会摆动起来。已知小球不会与车顶发生碰撞，求绳与竖直方向的最大夹角
+  \(\theta_2\)。
+\item
+  若要使小球能与车顶碰撞，求所需的最小加速度 \(a_{\min}\)。
+\item
+  已知加速度 \(a'>a_{\min}\)，求小球第一次碰到车顶前的速率 \(v_0\)。
+\item
+  小球与车顶碰撞后，速率变为碰撞前的
+  \(e=1/2\)，方向反向。求下一次碰撞前，绳与竖直方向的最小夹角
+  \(\theta_{\min}\)。
+\end{enumerate}
+
+\includegraphics[width=0.875\linewidth,height=\textheight,keepaspectratio,alt={图 1-1　车内单摆与水平加速的小车。}]{../figures/question-01.pdf}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d}
+
+车内摆球受到重力和惯性力。缓慢加速求平衡角，突变加速用有效势能求摆幅；碰顶后再用恢复系数给出同一圆周上的新初值。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9}
+
+\begin{itemize}
+\tightlist
+\item
+  随车参考系中惯性力 \(\bm F_{\rm i}=-m\bm a\)。
+\item
+  合成等效重力加速度 \(\bm g_{\rm eff}=\bm g-\bm a\)。
+\item
+  恒定等效力场中的功能关系与等效势能。
+\item
+  车顶所在的几何边界 \(\theta=\pi/2\)。
+\item
+  法向碰撞恢复系数 \(e\) 和碰撞前后速度关系。
+\item
+  三角恒等变形
+  \(g\cos\theta+a'\sin\theta=\sqrt{g^2+a'^2}\cos(\phi-\theta)\)。
+\end{itemize}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf}
+
+在随车参考系中，除真实重力 \(m\bm g\)
+外，还应对小球加一个水平向左的惯性力
+\(m\bm a\)。二者的合力方向就是新的``竖直向下''。缓慢改变加速度时，绳始终指向等效重力方向；突然改变时，小球的初位置与新平衡位置不同，因而发生摆动。
+
+当小球运动到水平绳位置时，小球与悬点等高，恰好到达车顶。碰撞只使沿车顶法线的速度反向并缩小，碰撞之后的摆动仍在同一恒定等效力场中进行。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3}
+
+先固定参考系和角度正方向：在随车系中讨论，以竖直向下为
+\(\theta=0\)，向左偏转为 \(\theta>0\)。对恒定加速度 \(a'\)，小球在角位置
+\(\theta\) 处的等效势能可写成
+
+\[U(\theta)=-ml\bigl(g\cos\theta+a'\sin\theta\bigr).\]
+
+这个式子同时能处理突然加速、碰顶前加速和碰顶后返回运动。各问的区别只在于初态、边界条件和碰撞造成的速率跳变。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790}
+
+图 1-2 左侧把重力 \(\bm g\) 与车内惯性加速度 \(-\bm a\)
+合成为等效重力，并标出
+\(\tan\varphi=a/g\)；右侧画出小球碰顶后速度反向缩小并绕固定点继续运动。第（1）---（3）步使用左图，第（4）---（5）步使用右图。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图 1-2　等效重力的合成以及小球碰顶后的运动。}]{../figures/solution-01.pdf}
+\caption*{图 1-2　等效重力的合成以及小球碰顶后的运动。}
+\end{figure}
+
+\textbf{（1）缓慢加速时的平衡角} 按图 1-2
+左侧，在车厢参考系中摆线最终沿等效重力方向静止，因此平衡角可由直角矢量三角形直接求出。
+
+随车系中，小球受到向下的重力 \(mg\)、向左的惯性力 \(ma\) 以及沿绳的张力
+\(T\)。缓慢改变加速度意味着小球在每一瞬间都近似处于静力平衡。将张力分解为水平和竖直分量：
+
+\[T\sin\theta_1=ma,\]
+
+\[T\cos\theta_1=mg.\]
+
+两式相除，张力 \(T\) 被消去：
+
+\[\tan\theta_1=\frac{T\sin\theta_1}{T\cos\theta_1}=\frac{ma}{mg}=\frac ag.\]
+
+因而
+
+\[\boxed{\theta_1=\arctan\frac ag}.\]
+
+\textbf{（2）突然加速时的最大摆角}
+
+加速度突然从零变为 \(a\) 的瞬间，小球来不及改变位置和速度，所以初态为
+
+\[\theta=0,\qquad \dot\theta=0.\]
+
+在恒定的等效力场中，从初位置到最大摆角 \(\theta_2\)
+处，两端速度都为零，因此等效势能相等：
+
+\[U(0)=U(\theta_2).\]
+
+代入势能表达式：
+
+\[-mgl=-ml\bigl(g\cos\theta_2+a\sin\theta_2\bigr).\]
+
+约去 \(-ml\)：
+
+\[g=g\cos\theta_2+a\sin\theta_2.\]
+
+把三角函数写成半角形式：
+
+\[1-\cos\theta_2=\frac ag\sin\theta_2.\]
+
+利用
+
+\[1-\cos\theta_2=2\sin^2\frac{\theta_2}{2},\qquad
+\sin\theta_2=2\sin\frac{\theta_2}{2}\cos\frac{\theta_2}{2},\]
+
+并取非零转向角，约去 \(2\sin(\theta_2/2)\)，得
+
+\[\sin\frac{\theta_2}{2}=\frac ag\cos\frac{\theta_2}{2}.\]
+
+所以
+
+\[\tan\frac{\theta_2}{2}=\frac ag,\]
+
+\[\boxed{\theta_2=2\arctan\frac ag}.\]
+
+这也可由对称性理解：新平衡方向与竖直方向的夹角为
+\(\phi=\arctan(a/g)\)，小球从新平衡方向的右侧 \(\phi\)
+处由静止释放，因而运动到左侧对称的 \(\phi\) 处，相对竖直方向的总转角为
+\(2\phi\)。
+
+\textbf{（3）碰到车顶的最小加速度}
+
+车顶通过悬点，小球第一次到达车顶的几何条件是绳水平，即
+
+\[\theta=\frac\pi2.\]
+
+临界情形中，小球恰好在车顶位置速度为零，因而令第（2）问的最大摆角等于
+\(\pi/2\)：
+
+\[2\arctan\frac{a_{\min}}g=\frac\pi2.\]
+
+两边除以 \(2\)，再取正切：
+
+\[\frac{a_{\min}}g=\tan\frac\pi4=1.\]
+
+故
+
+\[\boxed{a_{\min}=g}.\]
+
+\textbf{（4）第一次碰顶前的速率} 转看图 1-2
+右侧。第一次碰顶前小球沿蓝色轨迹到达车顶，碰撞只改变法向速度，随后用同一转轴下的有效势能继续判断转向点。
+
+现令加速度为 \(a'>g\)。初态仍为 \(\theta=0,v=0\)，碰顶前瞬间为
+\(\theta=\pi/2,v=v_0\)。使用等效机械能守恒：
+
+\[\frac12mv_0^2+U\left(\frac\pi2\right)=U(0).\]
+
+两个势能分别为
+
+\[U(0)=-mgl,\]
+
+\[U\left(\frac\pi2\right)=-ma'l.\]
+
+代入并移项：
+
+\[\frac12mv_0^2-ma'l=-mgl,\]
+
+\[\frac12mv_0^2=ml(a'-g).\]
+
+约去 \(m\) 后乘以 \(2\)：
+
+\[v_0^2=2l(a'-g).\]
+
+由于 \(a'>g\)，根号内为正，所以
+
+\[\boxed{v_0=\sqrt{2l(a'-g)}}.\]
+
+\textbf{（5）碰撞后的最小夹角}
+
+小球碰顶前在 \(\theta=\pi/2\) 处向上运动，碰撞后速度反向，大小为
+
+\[v_+=ev_0=\frac{v_0}{2}.\]
+
+碰撞过程损失了机械能，但从碰撞后到下一个转向点之间，等效机械能仍然守恒。在最小夹角
+\(\theta_{\min}\) 处速度为零，因此
+
+\[\frac12m e^2v_0^2+U\left(\frac\pi2\right)=U(\theta_{\min}).\]
+
+展开每一项：
+
+\[\frac12m\cdot\frac14v_0^2-ma'l
+=-ml\bigl(g\cos\theta_{\min}+a'\sin\theta_{\min}\bigr).\]
+
+代入 \(v_0^2=2l(a'-g)\)：
+
+\[\frac18m\cdot2l(a'-g)-ma'l
+=-ml\bigl(g\cos\theta_{\min}+a'\sin\theta_{\min}\bigr).\]
+
+左边逐步合并：
+
+\[\begin{aligned}
+\frac14ml(a'-g)-ma'l
+&=ml\left(\frac{a'-g}{4}-a'\right)\\
+&=-\frac{ml}{4}(g+3a').
+\end{aligned}\]
+
+约去 \(-ml\)，得到转向点方程
+
+\[g\cos\theta_{\min}+a'\sin\theta_{\min}
+=\frac{g+3a'}4.\]
+
+为了显式解出角度，定义
+
+\[\phi=\arctan\frac{a'}g.\]
+
+则
+
+\[\cos\phi=\frac g{\sqrt{g^2+a'^2}},\qquad
+\sin\phi=\frac{a'}{\sqrt{g^2+a'^2}}.\]
+
+所以
+
+\[\begin{aligned}
+g\cos\theta+a'\sin\theta
+&=\sqrt{g^2+a'^2}
+\left(\cos\phi\cos\theta+\sin\phi\sin\theta\right)\\
+&=\sqrt{g^2+a'^2}\cos(\phi-\theta).
+\end{aligned}\]
+
+代回转向点方程：
+
+\[\cos(\phi-\theta_{\min})
+=\frac{g+3a'}{4\sqrt{g^2+a'^2}}.\]
+
+第一次碰顶后，小球向下回摆，先到达新平衡方向
+\(\theta=\phi\)，然后继续向较小角度一侧运动。因而物理支满足
+\(0\leq\theta_{\min}<\phi\)，即 \(\phi-\theta_{\min}\geq0\)。最终
+
+\[\boxed{
+\theta_{\min}
+=\phi-\arccos\frac{g+3a'}{4\sqrt{g^2+a'^2}},
+\qquad \phi=\arctan\frac{a'}g
+}.\]
+
+在临界 \(a'=g\) 下，右侧为 \(\pi/4-\pi/4=0\)，与小球临界碰顶时 \(v_0=0\)
+的极限相符。
+
+碰顶前后的绳长均为 \(l\)。在水平绳位，球的切向速度竖直，恢复系数直接给出
+\(v^+=-ev^-\)；张力冲量不改变切向速度。随后仍绕原支点沿同一圆周运动，用碰后的有效势能求低位转向点。
+
+\textbf{碰顶阈值与绳的接触条件}
+
+在车内取向左为
+\(\theta>0\)。图1-2中水平绳位置的速度竖直，碰顶只改变速度，绳长和圆周半径不变。到顶速度满足
+\(v_0^2=2l(a'-g)\)。\(a'=g\)
+时恰好以零速碰到顶板；若要求真正发生有非零冲量的碰撞，则需
+\(a'>g\)，\(g\) 是下确界。
+
+碰前由能量写出 \(v^2=2l[g(\cos\theta-1)+a'\sin\theta]\)，径向方程给出
+
+\[\mathcal T=m\left(\frac{v^2}{l}+g\cos\theta+a'\sin\theta\right)
+=m[3g\cos\theta+3a'\sin\theta-2g].\]
+
+在 \(0\le\theta\le\pi/2\)、\(a'\ge g\)
+时，\(g\cos\theta+a'\sin\theta\ge g\)，故
+\(\mathcal T\ge mg>0\)，绳不会在到顶前松弛。碰后在转向点两项重力投影均为正，接触条件也成立。
+
+设 \(\phi=\arctan(a'/g)\)。任意恢复系数的低位转向角为
+
+\[\theta_{\min}=\phi-\arccos\frac{(1-e^2)a'+e^2g}{\sqrt{g^2+a'^2}}.\]
+
+取 \(e=1/2\) 恢复本题答案。取 \(e=0\) 时，\(\pi/2\)
+是碰后零速的高位起点，球仍会下落；低位转向点是 \(2\phi-\pi/2\)。取
+\(e=1\) 时回到 \(\theta=0\)。这两端可检查反三角函数分支。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf}
+
+加速度突变后，对称中心不是竖直方向，而是等效重力方向。第（2）问的
+\(\theta_2=2\phi\)
+是这一对称的直接结果。第（5）问则破坏了左右等振幅对称，但仍然可以用同一个等效势能函数找到新转向点。
+
+凡是``支点随物体做恒加速运动''的单摆问题，都可以先合成
+\(\bm g_{\rm eff}\)，再把问题还原为恒定均匀场中的普通摆。
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9}
+
+\begin{itemize}
+\tightlist
+\item
+  惯性力的方向与车的加速度相反，不是向右。
+\item
+  ``缓慢增大加速度''与``突然获得加速度''对应不同的初态，不能都用静力平衡。
+\item
+  车顶边界为 \(\theta=\pi/2\)，而不是绳转过 \(\pi\)。
+\item
+  碰撞时机械能不守恒；只能先用 \(v_+=ev_0\)
+  处理瞬时速度变化，再对碰撞后过程用能量守恒。
+\item
+  取反三角函数时必须根据运动过程选物理支，不能只写 \(\pm\arccos\)。
+\end{itemize}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae}
+
+可先画出 \(m\bm g\) 与 \(-m\bm a\)
+的直角三角形，让学生用``新的铅垂线''理解平衡位置。然后把突然加速的初位置和新铅垂线标在同一张图中，先由对称性得到
+\(2\phi\)，再用能量方程验证。
+
+第（5）问讲解时，建议把全过程拆成``碰顶前---碰撞瞬间---碰顶后''三段，每段只写该段成立的规律，并在最后专门说明反三角函数物理支的选择。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  若碰撞恢复系数改为任意
+  \(0\leq e\leq1\)，求第一次碰顶后的转向角方程。结果为
+  \[g\cos\theta+a'\sin\theta
+  =a'-e^2(a'-g).\]
+\item
+  若汽车先以加速度 \(a_1\) 匀加速，等小球稳定后再突然把加速度改为
+  \(a_2\)，求相对新平衡方向的最大摆角。切入点是两个等效重力方向的夹角。
+\end{enumerate}
+
+第1个变式的方程可完整核验如下。碰撞后的速率为
+\(ev_0\)，所以从碰撞点到转向点有
+
+\[\frac12me^2v_0^2-ma'l
+=-ml(g\cos\theta+a'\sin\theta).\]
+
+代入 \(v_0^2=2l(a'-g)\) 并约去 \(ml\)：
+
+\[e^2(a'-g)-a'
+=-g\cos\theta-a'\sin\theta.\]
+
+因而
+
+\[\boxed{g\cos\theta+a'\sin\theta
+=a'-e^2(a'-g)}.\]
+
+当 \(e=0\) 时，碰顶处是高位零速起点，之后低位转向角为
+\(2\phi-\pi/2\)；当 \(e=1\)
+时，碰撞不损失动能，等效势能可回到突然加速时的初值。这两个极限应用于检查物理支的选择。
+
+第2个变式中，定义
+
+\[\phi_1=\arctan\frac{a_1}{g},\qquad
+\phi_2=\arctan\frac{a_2}{g}.\]
+
+突变前小球静止在 \(\theta=\phi_1\)。突变后的等效势能可写成
+
+\[U_2(\theta)=-ml\sqrt{g^2+a_2^2}\cos(\theta-\phi_2).\]
+
+小球从相对新平衡方向的偏角 \(\phi_1-\phi_2\)
+处由静止释放，另一转向点在对称位置，因而相对新平衡方向的最大偏角为
+
+\[\boxed{|\phi_1-\phi_2|},\]
+
+相对竖直方向的另一转向角为
+\(2\phi_2-\phi_1\)。这一表达只描述未遇到车顶或其他几何边界前的运动。
+
+备课时可将五问所用的规律整理为一张状态表：缓慢改变对应瞬时平衡，突然改变对应位置和速度连续，无碰撞运动对应等效机械能守恒，碰撞瞬间对应恢复系数。若学生能在每一问前准确指出所处状态，后续代数错误会减少。
+
+\newpage
+
+\section{第 2 题}\label{ux7b2c-2-ux9898}
+
+一个轮子由 \(N\) 根完全相同、长度为 \(R\) 的均匀辐条构成，总质量为
+\(m\)，且 \(N\gg1\)。相邻两根辐条的夹角为
+\(2\pi/N\)。轮子运动过程中，总有一根或相邻两根辐条与水平地面接触。辐条与地面间的摩擦足以保证纯滚动，辐条和地面之间不存在相对滑动。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  轮子初始静止在地面上，在轮心处施加水平力 \(F\)，轮子恰好开始运动，求
+  \(F\)。
+\item
+  在轮心处施加水平力 \(F\)，使轮子最后以速度 \(v\) 做稳定周期运动，求
+  \(F\)。
+\item
+  不再给轮子加力。某时轮子的速度为 \(v_1\)，求其速度降为 \(v_2\)
+  所需的时间。
+\end{enumerate}
+
+\includegraphics[width=0.619\linewidth,height=\textheight,keepaspectratio,alt={图 2-1　由 N 根均匀辐条构成的轮子。}]{../figures/question-02.pdf}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-1}
+
+辐条轮在接触点切换时损失动能。启动力由静力矩确定，已滚动时的平均阻力由每步耗能确定，减速过程另需总动能的惯量系数。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-1}
+
+\begin{itemize}
+\tightlist
+\item
+  细杆对一端、对质心的转动惯量。
+\item
+  平行轴定理与辐条轮的整体转动惯量。
+\item
+  静力临界时对接触点取矩。
+\item
+  支点瞬时切换时对新支点的角动量守恒。
+\item
+  \(N\gg1\) 下 \(\sin x\approx x\)、\(\cos x\approx1-x^2/2\)
+  的低阶近似。
+\item
+  离散能量损失向连续包络方程的转换。
+\end{itemize}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-1}
+
+轮子的一个运动周期只是转过 \(2\pi/N\)
+的小角。在这一小段内，轮心绕当前接触点 \(A\)
+转动；下一根辐条触地时，新接触点变为 \(B\)。刚触地时，\(B\)
+点的速度不为零，地面的冲量迫使它立刻成为新的瞬时静止点，因而转动角速度发生跳变。
+
+在 \(N\gg1\)
+时，单次跳变很小，但单位时间内发生的跳变次数很多，所以宏观上表现为可计算的等效阻力。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-1}
+
+每根辐条的质量为 \(m/N\)。所有辐条都从轮心延伸到半径
+\(R\)，因此整个轮子对轮心的转动惯量为
+
+\[I_O=N\cdot\frac13\frac mN R^2=\frac13mR^2.\]
+
+对任一接触端点 \(A\)，由平行轴定理
+
+\[I_A=I_O+mR^2=\frac43mR^2.\]
+
+这两个转动惯量将贯穿第（2）、（3）问。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-1}
+
+图 2-2 左侧画出物体由接触点 \(A\) 翻到 \(B\) 时角速度从 \(\omega\)
+跳变到 \(\omega'\)；右侧把每次碰撞耗散折算成随速度平方增长的等效阻力
+\(F_{\rm eq}=\pi m v^2/(NR)\)。第（1）---（2）步使用左图，第（3）---（4）步使用右图。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图 2-2　接触点由 A 切换为 B 以及对应的等效阻力。}]{../figures/solution-02.pdf}
+\caption*{图 2-2　接触点由 \(A\) 切换为 \(B\) 以及对应的等效阻力。}
+\end{figure}
+
+\textbf{（1）恰好开始翻转的水平力} 轮子由相邻两根辐条支承时，沿力 \(F\)
+方向的前侧端点是即将成为转轴的点。记轮心到竖直方向的偏角为
+
+\[\alpha=\frac\pi N.\]
+
+在临界状态对该支点取力矩。水平力 \(F\) 的力臂是轮心高度
+
+\[R\cos\alpha,\]
+
+重力 \(mg\) 的力臂是轮心到支点竖线的水平距离
+
+\[R\sin\alpha.\]
+
+恰好开始翻转时，两力矩大小相等：
+
+\[F R\cos\alpha=mgR\sin\alpha.\]
+
+约去 \(R\cos\alpha\)：
+
+\[F=mg\tan\alpha=mg\tan\frac\pi N.\]
+
+由于 \(N\gg1\)，\(\pi/N\ll1\)，使用 \(\tan x\approx x\)：
+
+\[\boxed{F\approx\frac{\pi mg}{N}}.\]
+
+\textbf{（2）支点切换造成的速度跳变} 按图 2-2
+左侧，支点切换的瞬间应对新支点 \(B\)
+守恒角动量，而不能把角速度连续地照搬过去。
+
+设旧支点为 \(A\)，新支点为 \(B\)，相邻辐条夹角为
+
+\[\delta=\frac{2\pi}{N}.\]
+
+碰地前轮子绕 \(A\) 的角速度为 \(\omega\)，碰地后绕 \(B\) 的角速度为
+\(\omega'\)。在极短的接触冲量过程中，重力与恒定外力的冲量可忽略；地面冲量作用线通过新支点
+\(B\)，对 \(B\) 的冲量矩为零。因此对 \(B\) 的角动量守恒。
+
+碰地前，轮子关于 \(B\) 的角动量不能简单写成
+\(I_B\omega\)，因为此时轮子绕 \(A\)
+转动。将刚体运动分解为质心平动和绕质心转动，对 \(B\) 的角动量为
+
+\[L_B^-=I_O\omega+\bm r_{BO}\times m\bm v_O.\]
+
+质心速度大小为 \(v_O=R\omega\)，其与 \(\bm r_{BO}\) 的有效垂直因子为
+\(\cos\delta\)，所以
+
+\[L_B^-=(I_O+mR^2\cos\delta)\omega.\]
+
+碰地后，轮子绕 \(B\) 做瞬时纯转动：
+
+\[L_B^+=I_B\omega'=(I_O+mR^2)\omega'.\]
+
+令 \(L_B^-=L_B^+\)：
+
+\[(I_O+mR^2\cos\delta)\omega=(I_O+mR^2)\omega'.\]
+
+代入 \(I_O=mR^2/3\)，并约去 \(mR^2\)：
+
+\[\left(\frac13+\cos\delta\right)\omega=\frac43\omega'.\]
+
+因而
+
+\[\frac{\omega'}\omega=\frac{1+3\cos\delta}{4}.\]
+
+对小角 \(\delta=2\pi/N\) 展开：
+
+\[\cos\delta\approx1-\frac{\delta^2}{2}
+=1-\frac{2\pi^2}{N^2}.\]
+
+所以
+
+\[\begin{aligned}
+\frac{\omega'}\omega
+&\approx\frac{1+3\left(1-2\pi^2/N^2\right)}4\\
+&=1-\frac{3\pi^2}{2N^2}.
+\end{aligned}\]
+
+单次角速度减小量为
+
+\[\omega-\omega'\approx\frac{3\pi^2}{2N^2}\omega.\]
+
+\textbf{（3）单次能量损失与稳态力} 图 2-2
+右侧蓝色曲线把离散碰撞的能量损失平均为连续阻力；先求单次损失，再除以一次翻转的路程。
+
+碰地前后分别可用当前接触点作为瞬时转轴，转动动能为
+
+\[K^-\approx\frac12I_A\omega^2,\qquad
+K^+=\frac12I_B\omega'^2.\]
+
+因 \(I_A=I_B=I_c=4mR^2/3\)，单次能量损失为
+
+\[\Delta E=\frac12I_c(\omega^2-\omega'^2).\]
+
+因为 \(\omega-\omega'\) 已是 \(N^{-2}\) 阶小量，在相同精度下可取
+\(\omega+\omega'\approx2\omega\)：
+
+\[\begin{aligned}
+\Delta E
+&=\frac12I_c(\omega-\omega')(\omega+\omega')\\
+&\approx I_c\omega(\omega-\omega')\\
+&=\frac43mR^2\omega\cdot\frac{3\pi^2}{2N^2}\omega\\
+&=\frac{2\pi^2mR^2\omega^2}{N^2}.
+\end{aligned}\]
+
+大 \(N\) 极限下，轮心的宏观速度满足 \(v\approx R\omega\)，因而
+
+\[\Delta E\approx\frac{2\pi^2mv^2}{N^2}.\]
+
+每切换一次支点，轮心向前移动一条弦长：
+
+\[\Delta x=2R\sin\frac\pi N\approx\frac{2\pi R}{N}.\]
+
+轮子达到稳定周期运动时，每一步中外力做功恰好补偿碰地损失：
+
+\[F\Delta x=\Delta E.\]
+
+代入两个近似式：
+
+\[F\cdot\frac{2\pi R}{N}
+=\frac{2\pi^2mv^2}{N^2}.\]
+
+两边同除以 \(2\pi R/N\)：
+
+\[\boxed{F=\frac{\pi mv^2}{NR}}.\]
+
+\textbf{（4）无外力时的速度衰减}
+
+不施加外力后，每次换支点仍损失能量。单步运动时间约为
+
+\[\Delta t=\frac{\Delta x}{v}
+\approx\frac{2\pi R}{Nv}.\]
+
+因而单位时间的平均能量损失率为
+
+\[\begin{aligned}
+P_{\rm loss}
+&=\frac{\Delta E}{\Delta t}\\
+&=\frac{2\pi^2mv^2/N^2}{2\pi R/(Nv)}\\
+&=\frac{\pi mv^3}{NR}.
+\end{aligned}\]
+
+轮子的宏观动能不是单纯的质心平动动能。它绕接触点做瞬时转动，所以
+
+\[K=\frac12I_c\omega^2
+\approx\frac12\cdot\frac43mR^2\cdot\frac{v^2}{R^2}
+=\frac23mv^2.\]
+
+对时间求导：
+
+\[\frac{dK}{dt}=\frac43mv\frac{dv}{dt}.\]
+
+无外力时，轮子能量的减少率等于碰地损失率：
+
+\[\frac{dK}{dt}=-P_{\rm loss}.\]
+
+代入：
+
+\[\frac43mv\frac{dv}{dt}
+=-\frac{\pi mv^3}{NR}.\]
+
+对 \(v>0\) 约去 \(mv\)：
+
+\[\frac43\frac{dv}{dt}=-\frac{\pi v^2}{NR},\]
+
+\[\frac{dv}{dt}=-\frac{3\pi}{4NR}v^2.\]
+
+分离变量：
+
+\[\frac{dv}{v^2}=-\frac{3\pi}{4NR}\,dt.\]
+
+当速度从 \(v_1\) 降到 \(v_2\) 时，时间从 \(0\) 变到 \(t\)：
+
+\[\int_{v_1}^{v_2}\frac{dv}{v^2}
+=-\frac{3\pi}{4NR}\int_0^t dt.\]
+
+左边积分为
+
+\[\left[-\frac1v\right]_{v_1}^{v_2}
+=-\frac1{v_2}+\frac1{v_1}.\]
+
+因此
+
+\[\frac1{v_2}-\frac1{v_1}=\frac{3\pi}{4NR}t,\]
+
+\[\boxed{t=\frac{4NR}{3\pi}
+\left(\frac1{v_2}-\frac1{v_1}\right)}.\]
+
+启动阈值 \(mg\tan(\pi/N)\) 由静力矩给出，碰撞平均阻力 \(\pi mv^2/(NR)\)
+由已滚动的轮子每步耗能给出。两者回答不同问题，不能相互替代。接触切换须绕新接触点守恒角动量，重力冲量在瞬间忽略。
+
+\textbf{平均阻力的速度范围}
+
+图2-2的抛物线表示已滚动状态下的碰撞耗散。启动时轮心的高度增量为
+
+\[\Delta h=R[1-\cos(\pi/N)].\]
+
+而在步内通过最高点时，竖直支持力约为
+\(mg-mv^2/R\)。因此把单步速度视为近似不变、并要求轮子持续接触地面，应有
+
+\[\frac{gR}{N^2}\ll v^2<gR.\]
+
+左端避免重力势垒在一步内造成减速，右端避免轮子离地。\(N\gg1\)
+可使两条件同时满足。原题的 \(F_{\rm eq}\propto v^2\)
+和无驱动减速律均在这一范围使用。
+
+碰撞速度比
+\(\eta=(1+3\cos\delta)/4\)，\(\delta=2\pi/N\)，给出精确单次损失
+
+\[\Delta E=\frac12 I_B(1-\eta^2)(\omega^-)^2,
+\qquad I_B=\frac43mR^2.\]
+
+用 \(v\simeq R\omega\)，再按 \(\delta\ll1\) 展开，得
+\(\Delta E\simeq2\pi^2mv^2/N^2\)。除以每步距离 \(2R\sin(\pi/N)\)
+即得到平均阻力。若把 \(dv/dt=-3\pi v^2/(4NR)\) 外推到
+\(v\to0\)，将忽略势垒导致的停滞或摇摆，不能据此外推真实停止时间。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf-1}
+
+辐条轮即使没有滑动摩擦做功，仍然会因为新辐条端点的非完全弹性落地而损失机械能。这类损失不能用``摩擦力乘路程''计算，必须由支点切换前后的角动量守恒求出。
+
+第（3）问中系数 \(4/3\) 来自整个辐条轮对接触点的转动惯量。若把动能误写为
+\(mv^2/2\)，就会丢失轮子绕质心转动的部分，得到错误的时间系数。
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9-1}
+
+\begin{itemize}
+\tightlist
+\item
+  第（1）问中水平力和重力的力臂分别是 \(R\cos(\pi/N)\) 和
+  \(R\sin(\pi/N)\)。
+\item
+  接触点切换时对新接触点取角动量，不是对轮心取角动量。
+\item
+  对新接触点的碰前角动量不等于
+  \(I_B\omega\)，需用质心平动与绕质心转动分解。
+\item
+  稳定周期运动不意味着速度在每一瞬间都严格不变，而是每一小步的状态重复。
+\item
+  连续化时要保留到能量损失的最低非零阶，过早丢掉 \(N^{-2}\)
+  项会使损失变为零。
+\end{itemize}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae-1}
+
+先用一个只有少量辐条的轮子说明``绕端点翻转''，再让 \(N\)
+增大，建立继而频繁的小碰撞图像。第（2）问的板书可固定为``换支点角动量---单步损失---单步位移---功能平衡''四行，使逻辑链条清晰。
+
+第（3）问先单独计算总动能
+\(K=2mv^2/3\)，再由单步损失转换成功率。这一顺序能避免把等效阻力经验式当成无来由的结论。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3-1}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  若每根辐条的质量都集中在辐条外端，重新求稳态力与速度的关系。此时应使用
+  \(I_O=mR^2\)，不再使用均匀辐条的 \(I_O=mR^2/3\)。
+\item
+  设每次支点切换后的角速度满足 \(\omega'=q\omega\)，且 \(q\)
+  与速度无关，求经过 \(k\) 次切换后的速度。答案是离散几何数列
+  \(v_k=q^k v_0\)，并可与本题的大 \(N\) 连续极限比较。
+\end{enumerate}
+
+第1个变式中，全部质量集中在辐条外端，因而
+
+\[I_O=mR^2,\qquad I_c=I_O+mR^2=2mR^2.\]
+
+支点切换时对新支点的角动量守恒给出
+
+\[\frac{\omega'}{\omega}
+=\frac{I_O+mR^2\cos\delta}{I_O+mR^2}
+=\frac{1+\cos\delta}{2}.\]
+
+对 \(\delta=2\pi/N\) 展开：
+
+\[\frac{\omega'}{\omega}
+\approx1-\frac{\delta^2}{4}
+=1-\frac{\pi^2}{N^2}.\]
+
+所以
+
+\[\omega-\omega'\approx\frac{\pi^2}{N^2}\omega.\]
+
+单次能量损失为
+
+\[\begin{aligned}
+\Delta E
+&\approx I_c\omega(\omega-\omega')\\
+&=2mR^2\omega\cdot\frac{\pi^2}{N^2}\omega\\
+&=\frac{2\pi^2mv^2}{N^2}.
+\end{aligned}\]
+
+它在领先阶近似下恰好与均匀辐条的单次损失相同，因而稳态力仍为
+
+\[F=\frac{\pi mv^2}{NR}.\]
+
+但无外力时的总动能改为
+
+\[K=\frac12I_c\frac{v^2}{R^2}=mv^2,\]
+
+故
+
+\[2mv\frac{dv}{dt}=-\frac{\pi mv^3}{NR},\]
+
+\[\frac{dv}{dt}=-\frac{\pi}{2NR}v^2,\]
+
+\[\boxed{t=\frac{2NR}{\pi}
+\left(\frac1{v_2}-\frac1{v_1}\right)}.\]
+
+这一变式可检查是否分清``单步损失''和``轮子当前总动能''：前者在本近似下未变，后者改变，因而第（2）问结论不变、第（3）问系数改变。
+
+第2个变式的离散解为
+
+\[v_k=q^kv_0.\]
+
+当 \(q=1-\lambda/N^2\) 且每圈经历约 \(N\) 次碰撞时，可用
+
+\[\ln\frac{v_k}{v_0}=k\ln q
+\approx-\frac{k\lambda}{N^2}\]
+
+把离散衰减转成慢变包络。教学中应要求学生先保留离散式，然后再取大 \(N\)
+极限，以免过早连续化掩盖了能量损失的碰撞来源。
+
+\newpage
+
+\section{第 3 题}\label{ux7b2c-3-ux9898}
+
+有很多质量依次为 \(m,2m,m,2m,\ldots\) 的小木块，在光滑水平面上相距 \(l\)
+排列，初始时都静止。用恒定外力 \(F\) 作用于第一个质量为 \(m\)
+的木块。假设各木块间的碰撞均为完全非弹性碰撞，求第 \(2n\)
+次碰撞后粘合木块的速度。
+
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图 3-1　交替质量木块的连锁完全非弹性碰撞。}]{../figures/question-03.pdf}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-2}
+
+恒力驱动交替质量的物块依次黏合。把最终并入的全部物块从初始时刻纳入同一系统，可用质心运动直接求末速度，再以逐碰动量递推检验。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-2}
+
+\begin{itemize}
+\tightlist
+\item
+  完全非弹性碰撞的内力冲量不改变系统总动量。
+\item
+  变质量聚集过程中对``固定成员系统''使用质心运动定理。
+\item
+  质心初位置的加权平均。
+\item
+  恒力作用下从静止出发的运动学关系 \(v^2=2as\)。
+\item
+  等差数列求和与奇偶项质量分组。
+\end{itemize}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-2}
+
+第 \(2n\) 次碰撞后，第 \(1\) 至第 \(2n+1\)
+个木块已经全部粘在一起。这个聚合体刚好位于第 \(2n+1\) 个木块的初位置
+\(x=2nl\)。在这一时刻，每个系统成员的速度都相同，因而聚合体速度就是整个固定成员系统的质心速度。
+
+在中间过程中，碰撞使机械能不断损失，所以不能对木块系统使用机械能守恒。但碰撞力全部是系统内力，质心仍只看到外力
+\(F\)。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-2}
+
+选取``前 \(2n+1\)
+个木块''作为研究系统。它的成员从始至终不变，因而不存在变质量系统的动量流入问题。水平方向的唯一外力为
+\(F\)，故质心做恒加速直线运动。只要求出系统总质量、初质心位置和末质心位置，即可一步求速度。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-2}
+
+图 3-2 把最终会参加碰撞的固定成员作为一个封闭系统，标出其初始质心
+\(X_{\rm cm}(0)=nl\)、第 \(2n\) 次碰撞后的质心 \(X_{\rm cm}=2nl\)
+及整体速度
+\(V_{2n}\)。第（1）步确定成员，第（2）---（4）步直接读取并应用这两个质心位置。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图 3-2　固定成员系统的初质心和第 2n 次碰撞后的质心。}]{../figures/solution-03.pdf}
+\caption*{图 3-2　固定成员系统的初质心和第 \(2n\) 次碰撞后的质心。}
+\end{figure}
+
+\textbf{（1）确定系统的成员和总质量} 图 3-2
+中方框代表最终参与的全部质点；系统一旦选定，后续碰撞都只是内力冲量。
+
+第一次碰撞后，第 \(1,2\) 个木块粘合；第二次碰撞后，第 \(1,2,3\)
+个木块粘合。依此类推，第 \(2n\) 次碰撞后，参与聚合的是前 \(2n+1\)
+个木块。
+
+其中质量为 \(m\) 的木块出现在奇数序号 \(1,3,\ldots,2n+1\)，共 \(n+1\)
+个；质量为 \(2m\) 的木块出现在偶数序号 \(2,4,\ldots,2n\)，共 \(n\)
+个。因而总质量为
+
+\[\begin{aligned}
+M
+&=(n+1)m+n(2m)\\
+&=(3n+1)m.
+\end{aligned}\]
+
+\textbf{（2）计算初始质心位置}
+
+以第一个木块的初位置为 \(x=0\)，则第 \(j\) 个木块的初位置为
+
+\[x_j=(j-1)l.\]
+
+质量为 \(m\) 的奇数序号木块位置为
+
+\[0,2l,4l,\ldots,2nl.\]
+
+它们对质心分子的贡献为
+
+\[\begin{aligned}
+S_m
+&=m(0+2l+4l+\cdots+2nl)\\
+&=2ml(0+1+2+\cdots+n)\\
+&=2ml\cdot\frac{n(n+1)}2\\
+&=mln(n+1).
+\end{aligned}\]
+
+质量为 \(2m\) 的偶数序号木块位置为
+
+\[l,3l,5l,\ldots,(2n-1)l.\]
+
+前 \(n\) 个奇数的和为 \(n^2\)，因此
+
+\[\begin{aligned}
+S_{2m}
+&=2m[l+3l+\cdots+(2n-1)l]\\
+&=2ml[1+3+\cdots+(2n-1)]\\
+&=2mln^2.
+\end{aligned}\]
+
+总的质量一次矩为
+
+\[\begin{aligned}
+S
+&=S_m+S_{2m}\\
+&=mln(n+1)+2mln^2\\
+&=ml(3n^2+n)\\
+&=mn(3n+1)l.
+\end{aligned}\]
+
+所以初始质心位置为
+
+\[X_{\rm cm,0}=\frac{S}{M}
+=\frac{mn(3n+1)l}{(3n+1)m}=nl.\]
+
+\textbf{（3）确定末态质心位置}
+
+第 \(2n\) 次碰撞发生在第 \(2n+1\)
+个木块的初位置。该木块在碰撞前一直静止，所以碰撞位置恰好为
+
+\[X_{\rm cm,f}=2nl.\]
+
+碰撞后前 \(2n+1\)
+个木块都在同一位置，因而该位置也是此时的质心位置。质心总位移为
+
+\[\Delta X_{\rm cm}=X_{\rm cm,f}-X_{\rm cm,0}=2nl-nl=nl.\]
+
+\textbf{（4）质心运动定理} 按图 3-2，质心从 \(nl\) 移到
+\(2nl\)，位移恰为 \(nl\)；恒力 \(F\) 只作用于该固定成员系统。
+
+对选定的固定成员系统，水平外力只有 \(F\)。因而质心加速度为
+
+\[a_{\rm cm}=\frac FM=\frac{F}{(3n+1)m}.\]
+
+系统初始全部静止，所以质心初速度为零。质心做恒加速运动，故
+
+\[V_{\rm cm}^2=2a_{\rm cm}\Delta X_{\rm cm}.\]
+
+代入上述结果：
+
+\[\begin{aligned}
+V_{\rm cm}^2
+&=2\cdot\frac{F}{(3n+1)m}\cdot nl\\
+&=\frac{2nFl}{(3n+1)m}.
+\end{aligned}\]
+
+第 \(2n\) 次碰撞后，所有系统成员粘在一起，其共同速度就是质心速度。因而
+
+\[\boxed{v_{2n}=\sqrt{\frac{2nFl}{(3n+1)m}}}.\]
+
+\textbf{（5）极限检验}
+
+当 \(n=1\) 时，第二次碰撞后质量为 \(m+2m+m=4m\)，公式给出
+
+\[v_2=\sqrt{\frac{Fl}{2m}}.\]
+
+当 \(n\to\infty\) 时，
+
+\[v_{2n}\to\sqrt{\frac{2Fl}{3m}},\]
+
+表明随着聚集质量增大，速度趋近有限值，这与每次碰撞都有能量损失的物理图像一致。
+
+质心法应把最终并入的 \(2n+1\)
+个质点从初始时刻都纳入系统。初态关于中间位置 \(nl\)
+成对等质量，末态各质点重合于 \(2nl\)；全过程只有恒力 \(F\)
+为外力，故质心位移为 \(nl\)，无需把碰撞后的物块拆成左右两侧。
+
+\textbf{用逐次碰撞检验质心解}
+
+图3-2标出的初、末质心分别为 \(nl\) 与 \(2nl\)。再以第 \(j\)
+次碰撞前已黏合的质量 \(M_{j-1}\)、动量 \(P_{j-1}\)
+检查结果：前进一个间距 \(l\) 时，
+
+\[P_j^2=P_{j-1}^2+2FlM_{j-1}.\]
+
+黏合瞬间动量连续，只改变速度。奇、偶两个间隔开始时的质量依次为
+\((3k+1)m\)、\((3k+3)m\)，\(k=0,\ldots,n-1\)；因此
+
+\[\sum_{j=0}^{2n-1}M_j
+=m\sum_{k=0}^{n-1}(6k+4)=n(3n+1)m.\]
+
+得到 \(P_{2n}^2=2Fl\,n(3n+1)m\)，除以末质量平方即
+
+\[V_{2n}^2=\frac{2nFl}{(3n+1)m}.\]
+
+这验证了质心法。外力对受力质点做功为 \(2nFl\)，末动能为
+\(nFl\)，总碰撞损失同样为
+\(nFl\)；质心定理没有把这部分损失错误地当作机械能守恒。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf-2}
+
+``末态聚合体的速度等于固定成员系统的质心速度''是整题的降维关键。它跳过了所有中间碰撞。这种方法不要求碰撞弹性，甚至不需要知道每次碰撞的时间；它只需要外力简单且末态所有成员共速。
+
+选系统时必须从一开始就把尚未被碰到的木块纳入系统。它们当时虽然静止，却是末态聚合体的成员。
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9-2}
+
+\begin{itemize}
+\tightlist
+\item
+  第 \(2n\) 次碰撞后参与聚合的是 \(2n+1\) 个木块，不是 \(2n\) 个。
+\item
+  选取当前已粘连的木块作为系统会使质量不断增加，不能直接套用 \(F=Ma\)
+  的恒质量形式。
+\item
+  碰撞是完全非弹性的，不能对木块的实际机械能写 \(F\Delta x=\Delta K\)。
+\item
+  末态质心位置为 \(2nl\)，但质心位移只是 \(nl\)。
+\item
+  奇数位置和偶数位置对应的质量不同，加权求和时不能漏掉因子 \(2\)。
+\end{itemize}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae-2}
+
+可先以 \(n=1\)
+的三木块情形作图，让学生看到``中间过程很复杂，但整个三木块系统的质心只受
+\(F\)''。然后推广到 \(2n+1\)
+个木块。板书中应把``系统成员''框起来，并明确末态为何有
+\(V_{\rm cm}=v_{2n}\)。
+
+求初质心时不建议一步写出结果，应分开奇数序号的 \(m\) 和偶数序号的
+\(2m\)，让学生看到 \(X_{\rm cm,0}=nl\) 并非凭对称猜出。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3-2}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  若质量排列改为 \(m,km,m,km,\ldots\)，求第 \(2n\)
+  次碰撞后的速度。方法不变，需重新计算总质量和初质心。
+\item
+  若每次碰撞不粘连，但要求第 \(2n\) 次碰撞后所有前 \(2n+1\)
+  个木块恰好共速，上述质心结论仍可用。说明决定结论的是末态共速，而不是中间碰撞细节。
+\end{enumerate}
+
+第1个变式可直接得到一般结果。前 \(2n+1\) 个木块的总质量为
+
+\[M=(n+1)m+nkm=[(k+1)n+1]m.\]
+
+初始质量一次矩分成两组：
+
+\[S_m=mln(n+1),\]
+
+\[S_{km}=kml[1+3+\cdots+(2n-1)]=kmln^2.\]
+
+两者相加：
+
+\[\begin{aligned}
+S
+&=ml[n(n+1)+kn^2]\\
+&=mln[(k+1)n+1].
+\end{aligned}\]
+
+因而
+
+\[X_{\rm cm,0}=\frac SM=nl.\]
+
+可见初质心位置与质量比 \(k\) 无关。第 \(2n\) 次碰撞后质心仍在
+\(2nl\)，故 \(\Delta X_{\rm cm}=nl\)。最终
+
+\[\boxed{
+v_{2n}=\sqrt{
+\frac{2nFl}{[(k+1)n+1]m}
+}
+}.\]
+
+取 \(k=2\) 即回到本题。取 \(k=1\) 时，所有木块等质量，分母变为
+\((2n+1)m\)，与均匀等间质点系的质心直观相符。
+
+第2个变式的需判断末态条件。对于前 \(2n+1\)
+个木块这一固定成员系统，无论中间是弹性、非弹性还是存在复杂内力，质心始终满足
+
+\[M\ddot X_{\rm cm}=F.\]
+
+但只有在末态全体共速时，某一木块的速度才等于
+\(V_{\rm cm}\)。若末态各木块速度不同，质心法仍可求总动量，却不能单独确定每个木块的速度。这一逻辑边界应在备课中明确说明。
+
+\newpage
+
+\section{第 4 题}\label{ux7b2c-4-ux9898}
+
+两个相同的理想 \(LC\)
+振荡回路相距较远。第一个回路中已激发振荡，电容器上的最大电压为
+\(U_0\)。当第一个回路的电容器电压为零时，用导线接通第二个回路，说明接通后电路中的物理过程。若改为在第一个回路的电容器电压取最大值时接通，情况有何变化？
+
+\includegraphics[width=0.711\linewidth,height=\textheight,keepaspectratio,alt={图 4-1　两个参数相同的 LC 振荡回路。}]{../figures/question-04.pdf}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-3}
+
+两个相同LC回路接通后分为共模振荡与差模电流。零电压接通使用电感电流连续；有电压差时还须说明连接线的快过程怎样处理。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-3}
+
+\begin{itemize}
+\tightlist
+\item
+  理想 \(LC\) 回路的固有角频率 \(\omega_0=1/\sqrt{LC}\)。
+\item
+  振荡中电场能和磁场能的周期性交换。
+\item
+  电感电流连续性与电容两端电压的并联约束。
+\item
+  共模电流与差模电流的分解。
+\item
+  两相同电感并联和两相同电容并联的等效参数。
+\item
+  理想电容器电压瞬时重分配中的能量缺失。
+\end{itemize}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-3}
+
+接通后，两电感的上端相连、下端相连，因而它们两端电压始终相同；两电容也并联，具有共同电压。电路允许两类独立状态：一类是两支路完全同相的共模振荡；另一类是两电感中等大反向的差模电流，它不给并联电容充电，在理想模型中可以作为恒定电流保留。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-3}
+
+先由第一回路的初始总能量求电容电压为零时的最大电流。电压最大时，总能量为
+
+\[E_0=\frac12CU_0^2.\]
+
+电压为零时，能量全部是电感磁场能：
+
+\[E_0=\frac12LI_0^2.\]
+
+故
+
+\[I_0=U_0\sqrt{\frac CL}.\]
+
+接通后设两电感电流为 \(i_1,i_2\)，共同电容电压为
+\(u\)。电感电压相同将给出 \(i_1-i_2\) 的不变量，再用 \(i_1+i_2\)
+控制电容的共模振荡。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-3}
+
+图 4-2 左侧画出零电压接通时两支路电流的差模关系
+\(i_1-i_2=I_0\)，右侧画出最大电压接通时两支路完全同相、公共电压幅值为
+\(U_0/2\)。第（2）、（3）步分别使用左右两图。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图 4-2　零电压接通时的共模、差模电流与最大共同电压。}]{../figures/solution-04.pdf}
+\caption*{图 4-2　零电压接通时的共模、差模电流与最大共同电压。}
+\end{figure}
+
+\textbf{（1）固有频率不变} 并联后两个相同电感的等效电感为
+
+\[L_{\rm eq}=\frac L2,\]
+
+两个相同电容的等效电容为
+
+\[C_{\rm eq}=2C.\]
+
+因而共模的固有角频率为
+
+\[\omega=\frac1{\sqrt{L_{\rm eq}C_{\rm eq}}}
+=\frac1{\sqrt{(L/2)(2C)}}
+=\frac1{\sqrt{LC}}=\omega_0.\]
+
+即接通后的共模振荡频率与单个回路相同。
+
+\textbf{（2）电容器电压为零时接通} 按图 4-2
+左侧，接通瞬间电容电压为零，但电感电流不能突变；因此总初始电流表现为两支路的差模。
+
+选定两个支路电流的正方向相同。接通前瞬间
+
+\[i_1(0^-)=I_0,\qquad i_2(0^-)=0,\qquad u(0^-)=0.\]
+
+电感电流不能突变，而此时电容电压本来就相同，所以接通后瞬间
+
+\[i_1(0^+)=I_0,\qquad i_2(0^+)=0,\qquad u(0^+)=0.\]
+
+接通后两电感两端电压相同，因此
+
+\[L\frac{di_1}{dt}=L\frac{di_2}{dt}.\]
+
+约去 \(L\)：
+
+\[\frac d{dt}(i_1-i_2)=0.\]
+
+结合初值得
+
+\[\boxed{i_1-i_2=I_0}.\]
+
+定义共模与差模电流
+
+\[i_c=\frac{i_1+i_2}{2},\qquad
+i_d=\frac{i_1-i_2}{2}.\]
+
+则差模分量恒为
+
+\[i_d=\frac{I_0}{2}.\]
+
+初始共模电流为
+
+\[i_c(0)=\frac{I_0+0}{2}=\frac{I_0}{2}.\]
+
+共模振荡中，两个电感电流相同，共模部分的初始磁场能为
+
+\[\begin{aligned}
+E_c
+&=2\cdot\frac12L\left(\frac{I_0}{2}\right)^2\\
+&=\frac14LI_0^2\\
+&=\frac14CU_0^2.
+\end{aligned}\]
+
+当共模磁场能全部转化为两电容的电场能时，设共同电压最大值为
+\(u_{\max}\)，则
+
+\[2\cdot\frac12C u_{\max}^2=\frac14CU_0^2.\]
+
+左边为 \(Cu_{\max}^2\)，因而
+
+\[u_{\max}^2=\frac{U_0^2}{4},\]
+
+\[\boxed{u_{\max}=\frac{U_0}{2}}.\]
+
+在这一时刻，共模电流为零，但差模电流仍在，所以
+
+\[i_1=\frac{I_0}{2},\qquad i_2=-\frac{I_0}{2}.\]
+
+两个电感中仍保留的能量为
+
+\[2\cdot\frac12L\left(\frac{I_0}{2}\right)^2
+=\frac14LI_0^2
+=\frac12E_0.\]
+
+因此，初始能量的一半在共模中周期性交换，另一半作为理想差模磁场能保留。此过程不需要能量瞬时损失。
+
+\textbf{（3）电容器电压最大时接通} 图 4-2
+右侧的两支路同相，说明此时接通只产生共模，公共电压幅值由两个等效电容共同分担。
+
+此时第一电容带电量
+
+\[Q_0=CU_0,\]
+
+两电感初始电流均为零。接通后，两个相同电容并联。电荷在极短暂过程中重新分配，电荷总量守恒：
+
+\[2C\,u(0^+)=CU_0.\]
+
+所以
+
+\[u(0^+)=\frac{U_0}{2}.\]
+
+由对称性，两个支路电流始终相同，本情形只激发共模，不激发差模恒定电流。以接通后为时间起点，可写成
+
+\[u(t)=\frac{U_0}{2}\cos\omega_0t,\]
+
+\[i_1(t)=i_2(t)=\frac{U_0}{2}\sqrt{\frac CL}\sin\omega_0t,\]
+
+具体电流正负号取决于预先选定的支路正方向。
+
+需特别检查能量。接通前
+
+\[E_-=\frac12CU_0^2.\]
+
+完成电压重分配后
+
+\[\begin{aligned}
+E_+
+&=2\cdot\frac12C\left(\frac{U_0}{2}\right)^2\\
+&=\frac14CU_0^2\\
+&=\frac12E_-.
+\end{aligned}\]
+
+电容器直接并联的理想模型中，这一半能量在无限快的电磁暂态中转化为导线高频电磁模、辐射和任意小的实际电阻内能。不能在忽略这些快自由度的集总参数模型中强行要求低频
+\(LC\) 能量保持不变。
+
+在零电压接通时两个电感电流连续，电路可严格分成共模振荡和恒定差模电流。最大电压接通存在电容电压突变：\(U_0/2\)
+是快过程已衰减后的共同电压。若完全不允许连接线电感、辐射及电阻，又要求两电容立即并联，理想模型的接通瞬间没有一致解，不能声称能量凭空消失。
+
+\textbf{明确电流方向与接通模型}
+
+取图4-1上节点相对下节点电压为 \(u\)，两个电感电流均向下为正，则
+
+\[L\dot i_1=L\dot i_2=u,\qquad2C\dot u+i_1+i_2=0.\]
+
+零电压接通的初值为 \((u,i_1,i_2)=(0,I_0,0)\)。所以
+
+\[u=-\frac{U_0}{2}\sin\omega t,\quad
+i_1=\frac{I_0}{2}(1+\cos\omega t),\quad
+i_2=\frac{I_0}{2}(\cos\omega t-1),\quad\omega=(LC)^{-1/2}.\]
+
+图4-2左图两电流之差恒为
+\(I_0\)，对应静态差模；两者之和随余弦变化，对应共模。总能量仍为
+\(CU_0^2/2\)，其中振荡与静态各占 \(CU_0^2/4\)。
+
+在最大电压接通时，采用题解通常隐含的``连接线快过程经微弱耗散后衰减''近似，电容总电荷给出共同电压
+\(U_0/2\)，低频振荡能量为 \(CU_0^2/4\)。另外 \(CU_0^2/4\)
+在快过程进入热、辐射或其他高频自由度。若连接线仅有电感且完全无耗散，快模不会自动消失；其完整瞬态不能仅由本题理想元件参数确定。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf-3}
+
+零电压接通时，电感电流的不对称被保存为差模；最大电压接通时，电容电压的不对称必须在快暂态中被消除。这个对比的根源是理想电感电流不能突变，而理想并联节点不允许电压长时间不相等。
+
+两种情况的低频振荡电压幅值都是
+\(U_0/2\)，但能量去向不同：前者的另一半以差模磁能留在系统中，后者的另一半在接通暂态中离开低频模。
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9-3}
+
+\begin{itemize}
+\tightlist
+\item
+  电容电压为零时，回路电流恰好最大，不是整个回路``没有电''。
+\item
+  接通后的两电感电流不会立即变成 \(I_0/2\)，它们在 \(t=0^+\) 仍然分别为
+  \(I_0\) 和 \(0\)。
+\item
+  并联等效参数为 \(L/2\) 和 \(2C\)，两者之积仍是 \(LC\)。
+\item
+  电压最大时直接并联不能同时使``电荷守恒''和``低频储能守恒''都成立；应优先使用电荷守恒确定电压。
+\item
+  差模电流的方向相反，电容节点处的净充电电流为零。
+\end{itemize}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae-3}
+
+建议先画两条电流曲线，用``两曲线的平均''和``两曲线的一半差''引入共模、差模。当共模为零时，两支路仍有等大反向电流，这张图能直观解释为何最大电压只有
+\(U_0/2\)。
+
+对最大电压接通，先做两电容并联的电荷计算，然后把接通前后能量并列，专门说明``理想化低频模型并没有描述完全部快暂态''，避免学生误以为能量守恒定律失效。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3-3}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  若第二回路的电容为
+  \(kC\)，电压最大时接通，求接通后的初始共同电压和低频储能。电荷守恒给出
+  \(u=U_0/(1+k)\)。
+\item
+  若电容电压为 \(U_0\cos\alpha\) 、电感电流为 \(I_0\sin\alpha\)
+  的一般时刻接通，分别求共模和差模的初值，并讨论快暂态能量。
+\end{enumerate}
+
+第1个变式中，初始带电电容为 \(C\)，空电容为 \(kC\)。电荷守恒给出
+
+\[CU_0=(C+kC)u_+,\]
+
+所以
+
+\[\boxed{u_+=\frac{U_0}{1+k}}.\]
+
+接通前储能为
+
+\[E_- =\frac12CU_0^2.\]
+
+电压重分配后的低频电场能为
+
+\[\begin{aligned}
+E_+
+&=\frac12(C+kC)u_+^2\\
+&=\frac12(1+k)C\frac{U_0^2}{(1+k)^2}\\
+&=\frac{1}{1+k}E_-.
+\end{aligned}\]
+
+离开低频模的能量为
+
+\[\boxed{E_--E_+=\frac{k}{1+k}E_-}.\]
+
+当 \(k=1\) 时，恰好损失一半；当 \(k\to0\)
+时，新接入的电容很小，电压几乎不变，低频能量损失趋于零。
+
+对第2个变式，接通前瞬间有
+
+\[u_1=U_0\cos\alpha,\qquad
+i_1=I_0\sin\alpha,\]
+
+\[u_2=0,\qquad i_2=0.\]
+
+电容瞬时重分配后，共同电压为
+
+\[u(0^+)=\frac{U_0}{2}\cos\alpha.\]
+
+电感电流连续，因而
+
+\[i_c(0^+)=\frac{i_1+i_2}{2}
+=\frac{I_0}{2}\sin\alpha,\]
+
+\[i_d(0^+)=\frac{i_1-i_2}{2}
+=\frac{I_0}{2}\sin\alpha.\]
+
+差模电流保持不变，共模则以上述电压和电流作为初值做 \(LC\)
+振荡。电压不同造成的快暂态能量为
+
+\[\Delta E_{\rm fast}
+=\frac14CU_0^2\cos^2\alpha.\]
+
+当 \(\alpha=\pi/2\) 时，电容电压为零，快暂态损失消失；当 \(\alpha=0\)
+时，回到最大电压接通，快暂态损失为初始能量的一半。这两个极限可用于检查一般相位结果。
+
+\newpage
+
+\section{第 5 题}\label{ux7b2c-5-ux9898}
+
+电磁波可以传递能量。当电场强度矢量与磁感应强度矢量互相垂直时，单位面积、单位时间内传播的能量可用波印廷矢量
+
+\[\bm S=\frac1{\mu_0}\bm E\times\bm B\]
+
+表示。规定波印廷矢量进入所考察区域的功率为正。真空介电常数为
+\(\varepsilon_0\)，真空磁导率为 \(\mu_0\)。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  一半径为 \(R\) 的无限长圆柱体均匀带电，体电荷密度为
+  \(\rho\)。沿圆柱轴线方向有匀强电场 \(E_1\)，圆柱以速度 \(v\)
+  沿该方向运动。求单位长度圆柱的获功率 \(P_1\)、圆柱外表面的磁感应强度
+  \(B_1\)，并用波印廷矢量计算电磁能流入圆柱的功率 \(P_1'\)，比较 \(P_1\)
+  与 \(P_1'\)。
+\item
+  一圆形平行板电容器的极板半径为 \(R\)，板间距 \(d=R\)。电容器带电量
+  \(Q\)，微小电流 \(I_2\) 正在给电容器充电。求充电功率
+  \(P_2\)、极板边缘附近的磁感应强度
+  \(B_2\)；忽略边缘效应，计算电磁能经电容器圆柱形侧面流入的功率
+  \(P_2'\)，比较 \(P_2\) 与 \(P_2'\)。
+\item
+  一半径为 \(R\) 的密绕长螺线管，每单位长度有 \(N\)
+  匝，通有缓慢增大的电流 \(I_3\)，且
+  \(k=dI_3/dt\)。求单位长度通电螺线管获得能量的功率
+  \(P_3\)、管内表面附近的磁感应强度 \(B_3\) 和电场强度
+  \(E_3\)，再用波印廷矢量计算功率 \(P_3'\)，比较 \(P_3\) 与 \(P_3'\)。
+\end{enumerate}
+
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图 5-1　带电圆柱、平行板电容器和长螺线管的能量传递情景。}]{../figures/question-05.pdf}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-4}
+
+分别用电功、电容储能和磁场储能求三种装置的功率，再对侧壁积分坡印廷矢量。场的方向、侧壁法向和装置轴线必须在图中一致。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-4}
+
+\begin{itemize}
+\tightlist
+\item
+  坡印廷矢量 \(\bm S=(1/\mu_0)\bm E\times\bm B\) 的大小和方向。
+\item
+  线电荷密度、体电荷密度与电流的关系。
+\item
+  安培环路定理及位移电流。
+\item
+  平行板电容 \(C=\varepsilon_0A/d\) 与 \(P=UI\)。
+\item
+  长螺线管 \(B=\mu_0NI\) 和单位长度电感。
+\item
+  法拉第电磁感应定律在环形电场中的应用。
+\item
+  经圆柱侧面的通量计算 \(P=S(2\pi RL)\)。
+\end{itemize}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-4}
+
+在第一情景中，轴向电场与绕轴环向磁场叉乘，能流方向沿半径指向圆柱内部。第二情景中，板间轴向电场与充电位移电流造成的环向磁场叉乘，能流从电容器侧缘流入板间空间。第三情景中，增长的轴向磁场激发环向电场，二者叉乘后的能流同样穿过螺线管侧面进入管内。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-4}
+
+每个小问都执行同一套步骤：
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  用熟悉的电功或储能变化求 \(P\)。
+\item
+  在圆柱侧面上求互相垂直的 \(E\) 和 \(B\)。
+\item
+  用右手定则确定 \(\bm E\times\bm B\) 是向内还是向外。
+\item
+  由 \(P'=S\cdot2\pi R\) 求单位长度功率，或由 \(P'=S\cdot2\pi Rd\)
+  求有限高度电容器的功率。
+\end{enumerate}
+
+不需对空间做复杂积分，因为题设对称性使侧面上的 \(S\) 为常量。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-4}
+
+图 5-2 从左到右依次画出三种装置的能量流入边界：圆柱侧面
+\(S_1\)、电容器边缘柱面 \(S_2\)、螺线管侧壁
+\(S_3\)；红箭头均指向系统内部，并标出
+\(P_i=P_i'\)。第（1）---（3）步逐图核对坡印廷通量与储能变化率。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图 5-2　三种情景中空间电磁能经侧面流入系统。}]{../figures/solution-05.pdf}
+\caption*{图 5-2　三种情景中空间电磁能经侧面流入系统。}
+\end{figure}
+
+\textbf{（1）运动的均匀带电圆柱} 先看图 5-2
+左侧，能量不是从端面随电荷``搬入''，而是由侧面 \(S_1\)
+的坡印廷矢量径向流入。
+
+单位长度圆柱所带电量为
+
+\[\lambda=\rho\pi R^2.\]
+
+这些电荷以速度 \(v\) 沿轴向运动，等效电流为
+
+\[I_1=\lambda v=\rho\pi R^2v.\]
+
+电场对单位长度圆柱中电荷做功的功率可写成
+\(UI\)。对单位长度，轴向电势降大小为 \(E_1\cdot1\)，因而
+
+\[\begin{aligned}
+P_1
+&=(E_1\cdot1)I_1\\
+&=E_1\rho\pi R^2v.
+\end{aligned}\]
+
+即
+
+\[\boxed{P_1=\rho\pi R^2E_1v}.\]
+
+在圆柱外表面取半径 \(R\) 的圆形安培环路。由
+
+\[B_1(2\pi R)=\mu_0I_1,\]
+
+得
+
+\[\begin{aligned}
+B_1
+&=\frac{\mu_0I_1}{2\pi R}\\
+&=\frac{\mu_0\rho\pi R^2v}{2\pi R}\\
+&=\frac12\mu_0\rho vR.
+\end{aligned}\]
+
+因而
+
+\[\boxed{B_1=\frac12\mu_0\rho vR}.\]
+
+圆柱侧面上 \(\bm E_1\) 沿轴向，\(\bm B_1\)
+沿环向。按照右手定则，\(\bm E_1\times\bm B_1\)
+沿半径向内。能流密度大小为
+
+\[S_1=\frac{E_1B_1}{\mu_0}.\]
+
+单位长度圆柱的侧面积为 \(2\pi R\)，因而
+
+\[\begin{aligned}
+P_1'
+&=S_1(2\pi R)\\
+&=\frac{E_1}{\mu_0}\cdot\frac12\mu_0\rho vR\cdot2\pi R\\
+&=\rho\pi R^2E_1v.
+\end{aligned}\]
+
+所以
+
+\[\boxed{P_1'=P_1}.\]
+
+\textbf{（2）正在充电的圆形平行板电容器} 图 5-2 中图只画电容器边缘柱面
+\(S_2\)；电磁能经边缘流入极板间隙。
+
+极板面积为
+
+\[A=\pi R^2.\]
+
+忽略边缘效应，电容为
+
+\[C=\frac{\varepsilon_0A}{d}
+=\frac{\varepsilon_0\pi R^2}{R}
+=\varepsilon_0\pi R.\]
+
+电容器两端电压为
+
+\[U=\frac QC=\frac{Q}{\varepsilon_0\pi R}.\]
+
+因而充电功率为
+
+\[\boxed{P_2=UI_2=\frac{QI_2}{\varepsilon_0\pi R}}.\]
+
+极板之间的电场强度为
+
+\[E_2=\frac U d
+=\frac{Q}{\varepsilon_0\pi R^2}.\]
+
+在极板边缘取半径 \(R\) 的安培环路。环路包围的位移电流等于导线充电电流
+\(I_2\)，因而
+
+\[B_2(2\pi R)=\mu_0I_2,\]
+
+\[\boxed{B_2=\frac{\mu_0I_2}{2\pi R}}.\]
+
+板间电场沿电容器轴向，磁场沿环向，坡印廷矢量沿半径向内。圆柱形板间区域的侧面积为
+
+\[A_s=2\pi Rd=2\pi R^2.\]
+
+所以
+
+\[\begin{aligned}
+P_2'
+&=\frac{E_2B_2}{\mu_0}\,2\pi R^2\\
+&=\frac1{\mu_0}
+\cdot\frac{Q}{\varepsilon_0\pi R^2}
+\cdot\frac{\mu_0I_2}{2\pi R}
+\cdot2\pi R^2\\
+&=\frac{QI_2}{\varepsilon_0\pi R}.
+\end{aligned}\]
+
+因而
+
+\[\boxed{P_2'=P_2}.\]
+
+这表明电容器的电场能从板间区域的侧面流入，并不是沿着导线直接穿过极板进入。
+
+\textbf{（3）电流缓慢增大的长螺线管} 图 5-2 右侧红箭头从管壁 \(S_3\)
+指向内部，对应电场与磁场叉乘后的径向能流。
+
+长螺线管内的磁感应强度为
+
+\[\boxed{B_3=\mu_0NI_3}.\]
+
+单位长度螺线管中的磁场能为
+
+\[\mathcal E_B
+=\frac{B_3^2}{2\mu_0}\pi R^2.\]
+
+代入 \(B_3=\mu_0NI_3\)：
+
+\[\begin{aligned}
+\mathcal E_B
+&=\frac{\mu_0^2N^2I_3^2}{2\mu_0}\pi R^2\\
+&=\frac12\mu_0N^2\pi R^2I_3^2.
+\end{aligned}\]
+
+令 \(k=dI_3/dt\)，对时间求导：
+
+\[\begin{aligned}
+P_3
+&=\frac{d\mathcal E_B}{dt}\\
+&=\frac12\mu_0N^2\pi R^2\cdot2I_3\frac{dI_3}{dt}\\
+&=\mu_0N^2\pi R^2I_3k.
+\end{aligned}\]
+
+即
+
+\[\boxed{P_3=\mu_0N^2\pi R^2I_3k}.\]
+
+也可由单位长度电感 \(L'=\mu_0N^2\pi R^2\) 直接写成 \(P_3=L'I_3k\)。
+
+再求螺线管内表面附近的环向电场。对半径 \(R\)
+的圆形回路使用法拉第定律。磁通量为
+
+\[\Phi=B_3\pi R^2.\]
+
+电场环流的大小满足
+
+\[E_3(2\pi R)=\left|\frac{d\Phi}{dt}\right|.\]
+
+而
+
+\[\frac{dB_3}{dt}=\mu_0N\frac{dI_3}{dt}=\mu_0Nk.\]
+
+因此
+
+\[\begin{aligned}
+E_3(2\pi R)
+&=\pi R^2\mu_0Nk,\\
+E_3
+&=\frac12\mu_0NkR.
+\end{aligned}\]
+
+即
+
+\[\boxed{E_3=\frac12\mu_0NkR}.\]
+
+\(\bm E_3\) 沿环向，\(\bm B_3\)
+沿轴向。由楞次定律，环向电场的方向会驱动一个反对原磁场增大的电流；与轴向磁场叉乘后，能流方向指向螺线管内部。单位长度的侧面积为
+\(2\pi R\)，故
+
+\[\begin{aligned}
+P_3'
+&=\frac{E_3B_3}{\mu_0}\,2\pi R\\
+&=\frac1{\mu_0}
+\cdot\frac12\mu_0NkR
+\cdot\mu_0NI_3
+\cdot2\pi R\\
+&=\mu_0N^2\pi R^2I_3k.
+\end{aligned}\]
+
+所以
+
+\[\boxed{P_3'=P_3}.\]
+
+各区域的坡印廷矢量方向应逐面用右手定则核对。先由电流方向确定环向磁场
+\(\bm B\)，再由电势降落方向确定轴向或径向电场 \(\bm E\)，最后计算
+\(\bm S=(1/\mu_0)\bm E\times\bm B\)。只有指向所考察区域内部的法向分量才贡献输入功率。圆柱侧面积微元为
+\(dA=R\,d\varphi\,dz\)，端面则为
+\(dA=r\,dr\,d\varphi\)；分别积分后得到的功率都应与 \(UI\)
+或焦耳热率相同，符号由所取外法线决定。
+
+\textbf{把图中的端面与侧面分开}
+
+图5-2将三种装置的轴线统一取为水平，红箭头穿过上、下侧壁，不能画成穿过轴向端面。前两种装置在上侧壁的
+\(\bm E\) 向右、\(\bm B\) 指出纸面，所以 \(\bm E\times\bm B\)
+向下；螺线管上侧壁的感生 \(\bm E\) 指入纸面、\(\bm B\)
+向右，叉积也向下。下侧壁则全部向上。
+
+运动带电柱另有径向自电场，与环向磁场形成轴向自场能流。这项在等长柱段的两端通量相抵，不改变外轴向电场输入的
+\(P_1\)。对电容器和螺线管，计算的是场能增加率；对运动带电柱，计算的是电场对运动电荷的做功率。三者相等的是各自的能量收支，不应全称为焦耳热。
+
+电容器题明确要求忽略边缘效应，即便给定
+\(d=R\)，仍按这一理想化模型计算；真实有限圆盘在该板距下的边缘场会改变局部场与电容。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf-4}
+
+三个情景的数学结构完全相同：一个轴向场和一个环向场同时存在，二者的叉积指向半径方向。功率不是``在物体内部凭空产生''，而是由坡印廷矢量穿过边界输运进来。
+
+对长螺线管，使用``刚好在内表面一侧''的磁场 \(B_3=\mu_0NI_3\)
+计算能流。理想长螺线管表面上的磁场有跳变，若随意取表面外侧的零场就会得到错误的零功率。
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9-4}
+
+\begin{itemize}
+\tightlist
+\item
+  坡印廷矢量方向是 \(\bm E\times\bm B\)，不是 \(\bm B\times\bm E\)。
+\item
+  第（1）问的电流为 \(I_1=\rho\pi R^2v\)，不能漏掉截面积。
+\item
+  第（2）问电容器侧面积是 \(2\pi Rd=2\pi R^2\)，不是极板面积
+  \(\pi R^2\)。
+\item
+  板间的磁场由位移电流给出，不能因为空隙中没有导线就认为 \(B=0\)。
+\item
+  法拉第定律给出的 \(E_3\) 是环向非保守电场，不是电势的简单梯度。
+\item
+  题中 \(N\) 是单位长度匝数，不是总匝数。
+\end{itemize}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae-4}
+
+三个小问可统一画成``轴向场---环向场---径向能流''的三元图。每完成一问，都先用熟悉方法求
+\(P\)，再让学生只靠右手定则判断能流方向，最后作面积乘法。
+
+电能并不总是``沿着导线在金属内部跑''。这三个算例用完全相等的功率证明，能量流的局域描述在导体周围的电磁场中。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3-4}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  将第（2）问改为任意 \(d\)，验证
+  \(P_2'=P_2=QdI_2/(\varepsilon_0\pi R^2)\)。
+\item
+  在长螺线管内取半径 \(r<R\)
+  的圆柱面，求该圆柱面上的坡印廷矢量及穿过它的功率，并说明其等于半径
+  \(r\) 内磁场能的增加率。
+\end{enumerate}
+
+第1个变式中，不再令 \(d=R\)。电容为
+
+\[C=\frac{\varepsilon_0\pi R^2}{d},\]
+
+因而
+
+\[U=\frac QC=\frac{Qd}{\varepsilon_0\pi R^2},\]
+
+\[\boxed{P_2=UI_2
+=\frac{QdI_2}{\varepsilon_0\pi R^2}}.\]
+
+板间电场与板距无关：
+
+\[E_2=\frac Ud=\frac{Q}{\varepsilon_0\pi R^2}.\]
+
+边缘磁场仍为
+
+\[B_2=\frac{\mu_0I_2}{2\pi R}.\]
+
+电容器侧面积改为 \(2\pi Rd\)，所以
+
+\[\begin{aligned}
+P_2'
+&=\frac{E_2B_2}{\mu_0}\,2\pi Rd\\
+&=\frac1{\mu_0}
+\frac{Q}{\varepsilon_0\pi R^2}
+\frac{\mu_0I_2}{2\pi R}
+2\pi Rd\\
+&=\frac{QdI_2}{\varepsilon_0\pi R^2}\\
+&=P_2.
+\end{aligned}\]
+
+这一变式说明，板距 \(d\) 不出现在局部能流密度 \(S=E_2B_2/\mu_0\)
+中，却通过可流入能量的侧面高度进入总功率。
+
+第2个变式中，半径 \(r<R\) 的环路内磁场近似均匀，法拉第定律给出
+
+\[E(r)\,2\pi r
+=\pi r^2\frac{dB}{dt}.\]
+
+由 \(dB/dt=\mu_0Nk\)，
+
+\[E(r)=\frac12\mu_0Nkr.\]
+
+而 \(B=\mu_0NI_3\)，故径向向内的坡印廷矢量大小为
+
+\[S(r)=\frac{E(r)B}{\mu_0}
+=\frac12\mu_0N^2I_3kr.\]
+
+穿过半径 \(r\) 、单位长度圆柱侧面的功率为
+
+\[\begin{aligned}
+P(r)
+&=S(r)\,2\pi r\\
+&=\mu_0N^2\pi r^2I_3k.
+\end{aligned}\]
+
+半径 \(r\) 内单位长度的磁场能为
+
+\[E_B(r)=\frac{B^2}{2\mu_0}\pi r^2,\]
+
+对时间求导同样得到
+
+\[\frac{dE_B(r)}{dt}
+=\mu_0N^2\pi r^2I_3k=P(r).\]
+
+可让学生对每个情景都做三次检查：先用右手定则检查能流方向，再用量纲检查
+\(S\)
+是功率面密度，最后用传统储能变化率检查面积积分。三种检查中任一项不一致，都意味着场的方向、边界取值或积分面积至少有一处错误。
+
+\newpage
+
+\section{第 6 题}\label{ux7b2c-6-ux9898}
+
+如图，一个体积为 \(V_0\) 的高压锅内装有初温为 \(T_0\)、压强为 \(p_0\)
+的理想气体。该气体的定体摩尔热容量为 \(C_V=2.5R\)。气阀的截面积为
+\(S\)，气阀上放有质量为 \(m\) 的重物，外界大气压强为
+\(p_0\)，重力加速度为 \(g\)。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  至少把气体加热到什么温度 \(T_1\)，才能将重物顶起？
+\item
+  若加热过程不考虑容器散热，把重物顶起前气体至少需要吸收多少热量
+  \(Q_1\)？
+\item
+  若向高压锅吸收的总热量 \(Q_2>Q_1\)，求加热结束时气体温度 \(T_2\)。
+\item
+  之后把温度降回到 \(T_0\)，且外界气体不会从气阀返回锅内，求此时锅内压强
+  \(p_3\)。
+\end{enumerate}
+
+\includegraphics[width=0.688\linewidth,height=\textheight,keepaspectratio,alt={图 6-1　带重物气阀的定容高压锅。}]{../figures/question-06.pdf}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-5}
+
+刚性锅中的气体先密闭加热，再定压排气，最后密闭冷却。排气阶段物质的量变化，能量账本要计入流出气体携带的焓。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-5}
+
+\begin{itemize}
+\tightlist
+\item
+  气阀刚好开启时的压强平衡。
+\item
+  等体过程 \(p/T=\text{const}\)。
+\item
+  密闭系统的热力学第一定律与开放排气过程的能量账本。
+\item
+  理想气体内能改变 \(\Delta U=nC_V\Delta T\)。
+\item
+  摩尔定压热容 \(C_p=C_V+R=3.5R\)。
+\item
+  恒压、恒容排气时 \(n=p_1V_0/(RT)\)。
+\item
+  排出气体带走的内能与流动功。
+\item
+  气体物质的量 \(n=p_0V_0/(RT_0)\)。
+\end{itemize}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-5}
+
+在 \(p\)-\(T\) 图中，从初态 \(0\) 到开阀临界态 \(1\)
+时，气体的物质的量和体积均不变，因此 \(p/T\) 不变；从 \(1\) 到 \(2\)
+时气阀保持打开，锅内压强为
+\(p_1\)，温度继续上升，气体不断排出；停止加热后，气阀关闭，从 \(2\) 到
+\(3\) 时剩余气体的物质的量和体积不变，再次满足 \(p/T=\text{const}\)。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-5}
+
+先从气阀受力求开启压强 \(p_1\)。对气阀和重物整体，锅内气体向上的压力为
+\(p_1S\)，外界大气向下的压力为 \(p_0S\)，重力为 \(mg\)。临界平衡给出
+
+\[p_1S=p_0S+mg.\]
+
+因而
+
+\[p_1=p_0+\frac{mg}{S}.\]
+
+前两问是密闭定容过程。第三问必须把锅内剩余气体的内能变化和排出气体带走的能量同时列入；利用
+\(p_1V_0=nRT\) 可将 \(n\) 消去，得到对数积分。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-5}
+
+图 6-2 在 \(p\)---\(T\) 平面画出三段路径：蓝色 \(0\to1\)
+为密闭定容升温，红色 \(1\to2\) 为定压排气，绿色 \(2\to3\)
+为再次密闭后的定容降温。第（1）---（4）步依次沿这三段路径读取状态关系。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.575\linewidth,height=\textheight,keepaspectratio,alt={图 6-2　密闭定容升温、定压排气和密闭定容降温的 p-T 路径。}]{../figures/solution-06.pdf}
+\caption*{图 6-2　密闭定容升温、定压排气和密闭定容降温的 \(p\)-\(T\)
+路径。}
+\end{figure}
+
+\textbf{（1）顶起重物的最低温度} 按图 6-2 蓝线
+\(0\to1\)，阀门尚未开启时物质的量和体积不变，压强随温度线性上升到
+\(p_1\)。
+
+在气阀尚未开启时，容器体积为常量
+\(V_0\)，锅内气体的物质的量也不变。初态和临界态满足
+
+\[\frac{p_0}{T_0}=\frac{p_1}{T_1}.\]
+
+所以
+
+\[T_1=\frac{p_1}{p_0}T_0.\]
+
+代入 \(p_1=p_0+mg/S\)：
+
+\[\begin{aligned}
+T_1
+&=\frac{p_0+mg/S}{p_0}T_0\\
+&=\left(1+\frac{mg}{p_0S}\right)T_0.
+\end{aligned}\]
+
+因而
+
+\[\boxed{T_1=\left(1+\frac{mg}{p_0S}\right)T_0}.\]
+
+\textbf{（2）顶起重物前的最小吸热量}
+
+由初态状态方程
+
+\[p_0V_0=nRT_0,\]
+
+得气体物质的量
+
+\[n=\frac{p_0V_0}{RT_0}.\]
+
+气阀开启之前，锅体积不变且没有气体进出，气体对外不做边界功，所以吸收的热量全部用于增加内能：
+
+\[Q_1=nC_V(T_1-T_0).\]
+
+由第（1）问
+
+\[T_1-T_0=\frac{mg}{p_0S}T_0.\]
+
+又 \(C_V=2.5R=5R/2\)，代入：
+
+\[\begin{aligned}
+Q_1
+&=\frac{p_0V_0}{RT_0}
+\cdot\frac52R
+\cdot\frac{mgT_0}{p_0S}\\
+&=\frac52\frac{mgV_0}{S}.
+\end{aligned}\]
+
+所以
+
+\[\boxed{Q_1=\frac{5mgV_0}{2S}}.\]
+
+量纲检验：\(mgV_0/S\) 的量纲为力乘以长度，即能量。
+
+\textbf{（3）继续加热后的温度} 图 6-2 红线 \(1\to2\)
+表示阀门已顶起、容器按题设定压排气；终点温度为 \(T_2\)。
+
+当总吸热量超过 \(Q_1\)
+后，气阀被顶起，部分气体从气阀排出。只要气阀保持开启，锅内压强就保持为
+
+\[p_1=p_0+\frac{mg}{S}.\]
+
+高压锅是刚性容器，体积始终是 \(V_0\)。这一阶段同时具有
+
+\[p=p_1,\qquad V=V_0,\]
+
+因而锅内气体的物质的量 \(n\) 不再是常量。任意中间态满足
+
+\[p_1V_0=nRT.\]
+
+对该式取微分。由于 \(p_1,V_0,R\) 为常量，左边微分为零：
+
+\[d(nRT)=0.\]
+
+展开乘积微分：
+
+\[RT\,dn+nR\,dT=0.\]
+
+移项得
+
+\[-RT\,dn=nR\,dT.\]
+
+加热时 \(dT>0\)，所以 \(dn<0\)，\(-dn\)
+就是在该微小过程中排出的气体摩尔数。
+
+锅内气体的内能为
+
+\[U=nC_VT.\]
+
+对它取微分：
+
+\[dU=nC_V\,dT+C_VT\,dn.\]
+
+排出的 \(-dn\) 摩尔气体温度为 \(T\)。它带走的能量不仅包含内能
+\((-dn)C_VT\)，还包含将气体推出阀口所需的流动功
+\((-dn)RT\)。两者之和为排出气体的焓：
+
+\[dE_{\rm out}=(-dn)(C_V+R)T=(-dn)C_pT.\]
+
+开放系统的微元能量守恒写成
+
+\[dQ=dU+dE_{\rm out}.\]
+
+逐项代入：
+
+\[\begin{aligned}
+dQ
+&=nC_V\,dT+C_VT\,dn+(-dn)C_pT\\
+&=nC_V\,dT-(C_p-C_V)T\,dn\\
+&=nC_V\,dT-RT\,dn.
+\end{aligned}\]
+
+再利用前面由状态方程得到的
+
+\[-RT\,dn=nR\,dT,\]
+
+得
+
+\[\begin{aligned}
+dQ
+&=nC_V\,dT+nR\,dT\\
+&=n(C_V+R)\,dT\\
+&=nC_p\,dT.
+\end{aligned}\]
+
+这一式看起来与密闭气体的等压吸热形式相同，但这里的 \(n\) 会随 \(T\)
+变化，绝对不能直接写成 \(Q=nC_p(T_2-T_1)\)。
+
+气体定压摩尔热容量为
+
+\[C_p=C_V+R=2.5R+R=3.5R=\frac72R.\]
+
+又由 \(p_1V_0=nRT\)，
+
+\[n=\frac{p_1V_0}{RT}.\]
+
+代入 \(dQ=nC_p\,dT\)：
+
+\[dQ=\frac{p_1V_0C_p}{R}\frac{dT}{T}.\]
+
+从开阀态 \((T_1,Q_1)\) 积分到加热结束态 \((T_2,Q_2)\)：
+
+\[\int_{Q_1}^{Q_2}dQ
+=\frac{p_1V_0C_p}{R}
+\int_{T_1}^{T_2}\frac{dT}{T}.\]
+
+左边为 \(Q_2-Q_1\)，右边是对数：
+
+\[Q_2-Q_1
+=\frac{p_1V_0C_p}{R}
+\ln\frac{T_2}{T_1}.\]
+
+代入 \(C_p/R=3.5\)：
+
+\[\ln\frac{T_2}{T_1}
+=\frac{Q_2-Q_1}{3.5p_1V_0}.\]
+
+两边取指数：
+
+\[\boxed{
+T_2=T_1\exp\left[
+\frac{Q_2-Q_1}{3.5p_1V_0}
+\right]
+}.\]
+
+将 \(Q_1=5mgV_0/(2S)\) 和 \(p_1=p_0+mg/S\) 全部代入，也可写成
+
+\[\boxed{
+T_2=\left(1+\frac{mg}{p_0S}\right)T_0
+\exp\left[
+\frac{Q_2-5mgV_0/(2S)}
+{3.5\left(p_0+mg/S\right)V_0}
+\right]
+}.\]
+
+\textbf{（4）停止排气后冷却到初温} 沿图 6-2 绿线
+\(2\to3\)，阀门关闭后物质的量和容积重新固定，冷却到 \(T_0\) 时压强降到
+\(p_3\)。
+
+加热结束时，锅内状态为 \((p_1,V_0,T_2)\)，此时剩余气体的物质的量记为
+\(n_2\)，满足
+
+\[p_1V_0=n_2RT_2.\]
+
+停止加热后，压强一旦低于
+\(p_1\)，气阀就被重物压住。题设又说明外界气体不回流，所以后续冷却中
+\(n_2\) 不变，容器体积仍为 \(V_0\)。末态满足
+
+\[p_3V_0=n_2RT_0.\]
+
+两式相除，\(V_0,n_2,R\) 全部约去：
+
+\[\frac{p_3}{p_1}=\frac{T_0}{T_2}.\]
+
+因此
+
+\[p_3=p_1\frac{T_0}{T_2}.\]
+
+由第（3）问
+
+\[\frac{T_2}{T_1}
+=\exp\left[\frac{Q_2-Q_1}{3.5p_1V_0}\right],\]
+
+而第（1）问给出
+
+\[\frac{T_1}{T_0}=\frac{p_1}{p_0}.\]
+
+因此
+
+\[\begin{aligned}
+p_3
+&=p_1\frac{T_0}{T_2}\\
+&=p_1\frac{T_0}{T_1}\frac{T_1}{T_2}\\
+&=p_0\exp\left[-\frac{Q_2-Q_1}{3.5p_1V_0}\right].
+\end{aligned}\]
+
+最终
+
+\[\boxed{
+p_3=p_0\exp\left[-\frac{Q_2-Q_1}{3.5p_1V_0}\right]
+}.\]
+
+或将 \(Q_1,p_1\) 展开为
+
+\[\boxed{
+p_3=p_0\exp\left[
+-\frac{Q_2-5mgV_0/(2S)}
+{3.5\left(p_0+mg/S\right)V_0}
+\right]
+}.\]
+
+因为 \(Q_2>Q_1\)，指数为负，所以
+\(p_3<p_0\)。物理上，开阀加热期间已有部分气体排出；剩余气体再降回初始温度时，同一定容容器内的压强自然低于初值。
+
+开阀阶段是开口系统，不能写成固定物质的
+\(Q=\Delta U+W\)。取容器内气体为控制体，流出 \(dn<0\) 摩尔气体带走焓
+\(C_pT(-dn)\)；容器定容，边界功为零，因此
+\(dU=\delta Q+C_pT\,dn\)。再展开 \(U=nC_vT\)，并用状态方程 \(pV=nRT\)
+消去
+\(n,T\)，逐项积分可得到放气量与热量的关系。关阀冷却后物质的量固定，故
+\(p/T\) 不变；把终温恢复到初温代入，才得到 \(p_3\) 的指数式。
+
+\textbf{开放阶段的内能为什么不变}
+
+图6-2红色水平线保持 \(p=p_1\)，锅的容积又固定，因此
+
+\[U=nC_VT=\frac{C_V}{R}p_1V_0=\text{常量}.\]
+
+温度上升却不增加锅内总内能，是因为物质的量按 \(1/T\)
+减少。此时全部新增热量都由排出气体的焓带走，\(dQ=-C_pT\,dn\)。积分得
+
+\[\frac{n_2}{n_0}=\frac{T_1}{T_2}
+=\exp\left[-\frac{Q_2-Q_1}{C_pp_1V_0/R}\right].\]
+
+冷却回 \(T_0\)
+后，\(p_3/p_0=n_2/n_0\)，可直接核验最后一问。\(Q_2\downarrow Q_1\)
+时，尚未实质排气，\(T_2\to T_1\)、\(p_3\to p_0\)；大量排气时，\(p_3\to0\)。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf-5}
+
+本题中上升的只是小气阀，不是改变容器体积的大活塞。气阀开启后，``压强不变''是通过排出气体实现的，而不是通过膨胀增大体积实现的。因此第（3）问的系统成员不断减少，必须使用微元能量账本。
+
+积分中出现 \(dT/T\) 是本题最本质的数学特征。因为 \(p_1,V_0\)
+均不变，锅内摩尔数满足
+\(n\propto1/T\)，所以每升高相同的温度，后期需加热的剩余气体更少，最终得到指数形式的
+\(T_2\)。
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9-5}
+
+\begin{itemize}
+\tightlist
+\item
+  气阀下方的临界压强为 \(p_0+mg/S\)，不是单独的 \(mg/S\)。
+\item
+  第（2）问发生在气阀开启之前，是密闭定容过程，应用 \(C_V\)。
+\item
+  第（3）问的 \(Q_2\) 是总吸热量，开阀阶段的热量只是 \(Q_2-Q_1\)。
+\item
+  \(C_p=C_V+R\)，不是 \(C_V-R\)。
+\item
+  开阀阶段虽然定压，但不是密闭定压过程；\(n\) 在变化，不能套用
+  \((Q_2-Q_1)=nC_p(T_2-T_1)\)。
+\item
+  容器体积始终是 \(V_0\)，没有``扩大后的体积''。
+\item
+  第（4）问中气阀已关闭，不能继续令压强等于 \(p_1\)。
+\end{itemize}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae-5}
+
+建议先比较``气阀''与``活塞''：气阀开启只改变锅内气体的摩尔数，容器体积不变。在
+\(p\)-\(T\) 图上标出``密闭定容---定压排气---密闭定容''三段。第二段满足
+
+\[n=\frac{p_1V_0}{RT}.\]
+
+开放系统能量账本应拆成三行：锅内内能变化 \(dU\)、排气带走的焓
+\((-dn)C_pT\)、外界加热 \(dQ\)。然后用 \(-RT\,dn=nR\,dT\) 合并。最后用
+\(Q_2\to Q_1\) 的极限检验：此时 \(T_2\to T_1\)、\(p_3\to p_0\)。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3-5}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  若气体的定体摩尔热容量为任意 \(C_V=cR\)，重新写出 \(Q_1\)、\(T_2\) 和
+  \(p_3\)。开阀阶段的指数分母中 \(3.5\) 应改为 \(c+1\)。
+\item
+  若气阀开启后温度保持为
+  \(T_1\)，而通过外部气泵继续向锅内压入气体，讨论气阀的排气量和外界输入功之间的关系。
+\end{enumerate}
+
+第1个变式可说明系数的来源。当
+
+\[C_V=cR\]
+
+时，开阀前的最小吸热量为
+
+\[\begin{aligned}
+Q_1
+&=n_0cR(T_1-T_0)\\
+&=\frac{p_0V_0}{RT_0}cR
+\frac{mgT_0}{p_0S}\\
+&=\boxed{\frac{cmgV_0}{S}}.
+\end{aligned}\]
+
+开阀后
+
+\[C_p=(c+1)R,\]
+
+微元热量为
+
+\[dQ=nC_p\,dT
+=\frac{(c+1)p_1V_0}{T}\,dT.\]
+
+积分得
+
+\[\boxed{
+T_2=T_1\exp\left[
+\frac{Q_2-Q_1}{(c+1)p_1V_0}
+\right]
+}.\]
+
+冷却后压强为
+
+\[\boxed{
+p_3=p_0\exp\left[
+-\frac{Q_2-Q_1}{(c+1)p_1V_0}
+\right]
+}.\]
+
+取 \(c=2.5\) 就回到本题。取 \(Q_2=Q_1\)
+时，恰好没有任何气体排出，公式给出
+\(T_2=T_1,p_3=p_0\)。这个边界检验比单独检查量纲更能发现正负号错误。
+
+还可由状态方程求开阀期间已排出的摩尔数。开阀初态与加热末态分别有
+
+\[n_1=\frac{p_1V_0}{RT_1},\qquad
+n_2=\frac{p_1V_0}{RT_2}.\]
+
+所以
+
+\[\boxed{
+\Delta n_{\rm out}=n_1-n_2
+=\frac{p_1V_0}{R}
+\left(\frac1{T_1}-\frac1{T_2}\right)
+}.\]
+
+当 \(Q_2\) 增大时，\(T_2\) 指数增大而 \(n_2\)
+指数减小；但排出总摩尔数不会超过
+\(n_1\)。这一补充量也能让学生理解为何后续降回 \(T_0\) 时压强低于
+\(p_0\)。
+
+第2个变式的重点是稳态流动能量账本。若气泵送入的气体与锅内同温、同压，且锅内状态不变，则每送入
+\(dn\) 摩尔就有同样的 \(dn\)
+摩尔从阀口排出。送入和排出焓相等，理想稳态下锅内能不改变；气泵的实际输入功取决于它把气体从何种外界状态压缩到
+\((p_1,T_1)\)，不能只由锅内状态唯一确定。这一点可用于训练``已知条件是否足以定解''的判断。
+
+\newpage
+
+\section{第 7 题}\label{ux7b2c-7-ux9898}
+
+一个焦距为 \(f\)
+的理想薄透镜，将一个中心在主光轴上的椭圆成像，得到一个全等的椭圆。椭圆所在平面包含主光轴，并且椭圆的一条对称轴与主光轴重合。求物椭圆位置应满足的条件。讨论椭圆的长轴平行或垂直于主光轴的情形。
+
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图 7-1　以主光轴为对称轴的椭圆经理想薄透镜成像。}]{../figures/question-07.pdf}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-6}
+
+椭圆上各点的物距不同，应逐点使用薄透镜公式。改用从焦平面量起的Newton坐标，再匹配物像的两条半轴，可求全等成像的位置条件。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-6}
+
+\begin{itemize}
+\tightlist
+\item
+  薄透镜的 Newton 成像公式 \(xx'=f^2\)。
+\item
+  横向放大率 \(\beta=y'/y=-x'/f=-f/x\)，其倒数为 \(y/y'=-f/x'=-x/f\)。
+\item
+  二次曲线在坐标变换下的方程化简。
+\item
+  一般轴对齐椭圆的中心和半轴长。
+\item
+  全等图形的两半轴长匹配。
+\item
+  二次型系数与椭圆存在条件。
+\end{itemize}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-6}
+
+对物椭圆上任一点 \(P(x,y)\)，过薄透镜成像为 \(P'(x',y')\)。轴向坐标按
+Newton
+方式从各自焦平面量起，则物点越接近物方焦平面，像点越远离像方焦平面。轴向是反比映射，横向坐标又随物距缩放。
+
+当物椭圆两个轴向顶点的 Newton 距离之积恰好为 \(f^2\)
+时，这两个顶点在物像映射中互换；适当的横向缩放同时使另一条半轴保持不变，于是得到全等椭圆。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-6}
+
+在物方焦平面和像方焦平面处分别建立 Newton 轴向坐标 \(x\) 和
+\(x'\)。横向坐标分别为 \(y,y'\)。对每一对共轭点，
+
+\[xx'=f^2.\]
+
+薄透镜的横向放大率在 Newton 坐标中为
+
+\[\frac{y'}{y}=-\frac{f}{x}=-\frac{x'}f.\]
+
+因而可用像方坐标表示物方坐标：
+
+\[x=\frac{f^2}{x'},\qquad y=-\frac f{x'}y'.\]
+
+把这两个代换式直接代入物椭圆方程，即可得到像椭圆方程。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-6}
+
+图 7-2 在 Newton 坐标中标出 \(xx'=f^2\)：物椭圆两个轴向顶点 \(x_1,x_2\)
+分别映到像方并交换远近顺序。第（1）步参数化红色物椭圆，第（2）---（5）步用蓝色直线光路和虚线顶点映射判断像椭圆的轴向。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图 7-2　Newton 坐标中 xx\textquotesingle=f\^{}2，物椭圆的两个轴向顶点在像方互换。}]{../figures/solution-07.pdf}
+\caption*{图 7-2　Newton 坐标中
+\(xx'=f^2\)，物椭圆的两个轴向顶点在像方互换。}
+\end{figure}
+
+\textbf{（1）物椭圆的一般方程}
+因为椭圆中心在主光轴上，且一条对称轴与主光轴重合，物椭圆方程可写成
+
+\[ax^2+by^2+dx+h=0.\]
+
+方程中不含 \(xy\) 项和 \(y\) 的一次项。对椭圆，可选整体符号使
+
+\[a>0,\qquad b>0.\]
+
+对 \(x\) 完全平方：
+
+\[\begin{aligned}
+ax^2+dx
+&=a\left(x^2+\frac da x\right)\\
+&=a\left[\left(x+\frac d{2a}\right)^2-\frac{d^2}{4a^2}\right]\\
+&=a\left(x+\frac d{2a}\right)^2-\frac{d^2}{4a}.
+\end{aligned}\]
+
+原方程化为
+
+\[a\left(x+\frac d{2a}\right)^2+by^2
+=\frac{d^2-4ah}{4a}.\]
+
+因此椭圆中心的轴向坐标为
+
+\[x_c=-\frac d{2a}.\]
+
+两条半轴长的平方分别为
+
+\[A_x^2=\frac{d^2-4ah}{4a^2},\]
+
+\[A_y^2=\frac{d^2-4ah}{4ab}.\]
+
+为使椭圆真实存在，还必须有
+
+\[d^2-4ah>0.\]
+
+\textbf{（2）逐点成像后的曲线方程} 按图 7-2，物点到焦点的 Newton 距离
+\(x\) 与像点距离 \(x'\) 满足倒数映射，因此先用 \(x'=f^2/x\)
+消去物点参数。
+
+代入
+
+\[x=\frac{f^2}{x'},\qquad y=-\frac f{x'}y'\]
+
+到物椭圆方程：
+
+\[a\frac{f^4}{x'^2}
++b\frac{f^2y'^2}{x'^2}
++d\frac{f^2}{x'}+h=0.\]
+
+两边乘以 \(x'^2\)：
+
+\[af^4+bf^2y'^2+df^2x'+hx'^2=0.\]
+
+按照二次项到常数项排列：
+
+\[hx'^2+bf^2y'^2+df^2x'+af^4=0.\]
+
+这仍是一个中心在主光轴上、轴方向不变的二次曲线。对 \(x'\) 完全平方：
+
+\[\begin{aligned}
+hx'^2+df^2x'
+&=h\left(x'^2+\frac{df^2}{h}x'\right)\\
+&=h\left(x'+\frac{df^2}{2h}\right)^2
+-\frac{d^2f^4}{4h}.
+\end{aligned}\]
+
+因此
+
+\[h\left(x'+\frac{df^2}{2h}\right)^2+bf^2y'^2
+=\frac{f^4(d^2-4ah)}{4h}.\]
+
+像椭圆中心为
+
+\[x_c'=-\frac{df^2}{2h}.\]
+
+两条像方半轴长平方为
+
+\[B_x^2=\frac{f^4(d^2-4ah)}{4h^2},\]
+
+\[B_y^2=\frac{f^2(d^2-4ah)}{4bh}.\]
+
+\textbf{（3）对应方向的半轴保持相等}
+
+物椭圆与像椭圆全等，且两者的对称轴仍分别平行于主光轴和垂直于主光轴。先考虑轴向半轴对应、横向半轴对应的情形：
+
+\[A_x^2=B_x^2,\qquad A_y^2=B_y^2.\]
+
+第一个等式为
+
+\[\frac{d^2-4ah}{4a^2}
+=\frac{f^4(d^2-4ah)}{4h^2}.\]
+
+由于真实椭圆满足 \(d^2-4ah>0\)，可约去公共因子：
+
+\[\frac1{a^2}=\frac{f^4}{h^2}.\]
+
+对物像都是实椭圆的所需分支，\(a,h\) 同号，因而
+
+\[h=af^2.\]
+
+再检查横向半轴：
+
+\[B_y^2
+=\frac{f^2(d^2-4ah)}{4bh}
+=\frac{f^2(d^2-4ah)}{4baf^2}
+=\frac{d^2-4ah}{4ab}
+=A_y^2.\]
+
+可见 \(h=af^2\) 同时保证两条半轴相等。因此全等条件为
+
+\[\boxed{h=af^2}.\]
+
+代入椭圆存在条件 \(d^2-4ah>0\)：
+
+\[\boxed{d^2>4a^2f^2},\qquad a>0,\quad b>0.\]
+
+若令 \(x\)
+表示从物方焦平面沿远离透镜方向量取的正距离，则物椭圆的两个轴向顶点还必须满足
+\(x_1>0,x_2>0\)。由韦达定理
+
+\[x_1+x_2=-\frac da,\qquad x_1x_2=f^2>0,\]
+
+可知两根为正还要求 \(d<0\)。再与 \(d^2>4a^2f^2\)
+合并，可写成更明确的物理位置条件
+
+\[\boxed{d<-2af}.\]
+
+若使用统一向右的带符号光轴坐标，\(d\)
+的符号会随坐标约定改变；不变的几何表述是两个轴向顶点的 Newton
+距离之积等于 \(f^2\)。
+
+\textbf{（4）条件的几何意义}
+
+物椭圆与主光轴的两个交点就是轴向顶点。令它们的 Newton 坐标为
+\(x_1,x_2\)。在 \(y=0\) 时，方程化为
+
+\[ax^2+dx+h=0.\]
+
+由韦达定理
+
+\[x_1x_2=\frac ha.\]
+
+全等条件 \(h=af^2\) 因而等价于
+
+\[\boxed{x_1x_2=f^2}.\]
+
+而 Newton 成像对每一个轴向点满足 \(xx'=f^2\)。所以当 \(x_1x_2=f^2\)
+时，第一个轴向顶点的像恰好位于第二个顶点所对应的 Newton
+坐标，两顶点在成像中互换。
+
+\textbf{（5）长轴平行或垂直于主光轴} 图 7-2
+的两轴向顶点在像方互换，决定像椭圆长轴究竟沿主光轴还是横向；这里不能只看中心放大率。
+
+物椭圆的轴向半轴和横向半轴分别为 \(A_x,A_y\)。它们的比值为
+
+\[\frac{A_x^2}{A_y^2}=\frac ba.\]
+
+因此：
+
+\begin{itemize}
+\tightlist
+\item
+  若 \(b>a\)，则 \(A_x>A_y\)，长轴平行于主光轴。
+\item
+  若 \(b<a\)，则 \(A_x<A_y\)，长轴垂直于主光轴。
+\item
+  若 \(a=b\)，则图形为圆，不再区分长轴方向。
+\end{itemize}
+
+条件 \(h=af^2\) 与 \(b\)
+无关，所以长轴平行或垂直于主光轴时，全等成像的位置条件相同。
+
+还可尝试让物椭圆的轴向半轴与像椭圆的横向半轴对换。将 \(A_x^2=B_y^2\) 和
+\(A_y^2=B_x^2\) 联立后，可推出
+\(a=b\)，即只剩圆的退化情形。因而对非圆椭圆，没有额外的长、短轴交换分支。
+
+采用牛顿成像公式 \(xx'=f^2\)
+时，先把物面上任一点写成主光轴坐标与横向坐标，再用横向放大率 \(m=-f/x\)
+映射。将映射式代回物椭圆方程并配方，像曲线的轴向、横向二次项系数便分别给出
+\(A_x^2,A_y^2\)。要求全等必须同时匹配两条半轴，不能只比较面积或放大率；联立后
+\(h=af^2\)。若尝试交换长短轴，两个系数方程相乘与相除分别给出尺度和轴比，最终迫使
+\(a=b\)，从而排除非圆的额外分支。
+
+\textbf{用半轴和实际光路检查全等条件}
+
+将物方方程写成 \([(x-c)/A]^2+(y/B)^2=1\)，其中 \(x\)
+从物方焦平面向外量取，则条件 \(h=af^2\) 化为
+
+\[c^2-A^2=f^2,\qquad c>A>0.\]
+
+两个轴向顶点为 \(c\pm A\)，乘积为 \(f^2\)。像椭圆中心也是
+\(c\)、两半轴仍为 \(A,B\)，只是在透镜另一侧。图7-2用
+\(f=1,c=1.25,A=0.75\) 绘图，所以顶点为 \(0.5,2\)，经 \(x'=1/x\) 互换。
+
+图中轴外物点取 \((x,y)=(1.25,1.1)\)，其像为
+\((0.8,-0.88)\)。换回从透镜量起的实际光轴坐标，物点为
+\((-2.25,1.1)\)，像点为
+\((1.8,-0.88)\)；连接两点的光心光线是一条直线。平行入射的另一条光线在透镜后过像方焦点。顶点的倒数映射应画作辅助虚线，不能画成在自由空间连续弯曲的光线。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf-6}
+
+将轴向坐标原点放到焦平面上，薄透镜方程从分数形式变成乘积形式
+\(xx'=f^2\)。这使``全等''的几何本质更清楚：物椭圆的两个轴向顶点在成像中互换。
+
+本题不需要先假定椭圆长轴方向。系数 \(b/a\) 只决定长轴方向，而位置条件
+\(h/a=f^2\) 对两种方向统一成立。
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9-6}
+
+\begin{itemize}
+\tightlist
+\item
+  不能用一个统一横向放大率处理整个椭圆，因为椭圆上各点的物距不同。
+\item
+  Newton 坐标 \(x,x'\) 从焦平面量起，不是从薄透镜光心量起。
+\item
+  横向坐标变换包含负号，但代入 \(y^2\) 后负号消失。
+\item
+  对像椭圆完全平方时，\(x'^2\) 项系数是 \(h\)，不是 \(a\)。
+\item
+  约去 \(d^2-4ah\) 前应先说明它对真实椭圆为正。
+\item
+  全等只要半轴长集合相同，并不要求物椭圆和像椭圆的中心位置相同。
+\end{itemize}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae-6}
+
+先不写一般椭圆方程，而是在图上标出两个轴向顶点 \(x_1,x_2\)，让学生根据
+\(xx'=f^2\) 猜测全等条件
+\(x_1x_2=f^2\)。再用一般二次方程完整证明，可使代数推导有清晰的几何目标。
+
+代数部分要将物椭圆和像椭圆的两条半轴长平方并排，再逐项相等。这样学生能看到条件
+\(h=af^2\) 同时保证轴向与横向尺寸不变。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3-6}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  将物曲线改为与主光轴同轴的圆，求成像后仍为全等圆的条件。可直接在上述结果中取
+  \(a=b\)。
+\item
+  若只要求像椭圆与物椭圆相似，而不要求全等，则应使两条半轴比相等。由
+  \(B_x^2/B_y^2=A_x^2/A_y^2\) 求新的系数条件。
+\end{enumerate}
+
+对第1个变式，取
+\(a=b\)。物曲线的两条半轴相等，但成像后是否仍为圆，需检查
+
+\[B_x^2=B_y^2.\]
+
+代入像方半轴：
+
+\[\frac{f^4D}{4h^2}
+=\frac{f^2D}{4ah},
+\qquad D=d^2-4ah>0.\]
+
+约去 \(f^2D/4h^2\)：
+
+\[f^2=\frac ha.\]
+
+所以
+
+\[h=af^2.\]
+
+在这一条件下，像圆不仅与物圆相似，而且半径完全相同。这是一般全等椭圆条件的退化情形。
+
+对第2个变式，先考虑对应轴方向不交换的相似。物椭圆的半轴比平方为
+
+\[\frac{A_x^2}{A_y^2}=\frac ba.\]
+
+像椭圆的半轴比平方为
+
+\[\frac{B_x^2}{B_y^2}
+=\frac{bf^2}{h}.\]
+
+令两者相等：
+
+\[\frac ba=\frac{bf^2}{h}.\]
+
+约去 \(b>0\)，仍得
+
+\[h=af^2.\]
+
+因而在轴方向不交换时，本问的``相似''条件会自动加强为``全等''。若允许长、短轴互换，则应令
+
+\[\frac{B_x^2}{B_y^2}
+=\frac{A_y^2}{A_x^2}=\frac ab,\]
+
+得到
+
+\[\boxed{h=\frac{b^2}{a}f^2}.\]
+
+这一分支表示像椭圆与物椭圆在允许旋转 \(90^\circ\)
+后相似，但一般不全等。还需与像物都为真实椭圆的系数正性和判别式条件联立。
+
+可用``顶点几何猜测---二次方程证明---半轴比变式''三层结构组织。第一层建立直觉，第二层保证严密，第三层说明为何简单图形条件并不等于只检查两个轴向顶点。
+
+\newpage
+
+\section{第 8 题}\label{ux7b2c-8-ux9898}
+
+一个质量为 \(m\)、半径为 \(a\) 的均质细圆环位于竖直平面内，可绕圆心
+\(O\) 无摩擦转动。圆环上有一只质量为 \(m/2\)
+的兔子，初始位于圆环最低点。有四根长为 \(a\)
+的轻杆端点在圆心处铰接，每根轻杆上各有一只质量为 \(m/2\)
+的小仓鼠，初始分别位于圆环的 \(A,B,C,D\) 四点。兔子以相对圆环不变的速度
+\(v\)
+沿圆环运动；同时，四只小仓鼠沿各自轻杆向圆心运动。当兔子与圆心连线相对竖直向下转过角
+\(\theta\) 时，小仓鼠沿杆向内移动的距离取为
+
+\[x=\frac{a\theta}{\pi}.\]
+
+这等价于 \(x/a=\theta/\pi\)，使得当 \(\theta=\pi\) 时小仓鼠到达圆心。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  求圆环初始角速度。
+\item
+  求 \(\theta\) 与时间 \(t\)
+  满足的微分方程，从兔子和小仓鼠开始运动计时，无需求出显式解。
+\item
+  求当 \(\theta=\pi/2\) 时 \(\dot\theta\) 与 \(\ddot\theta\) 的关系。
+\item
+  去掉圆心转轴，将圆环放在光滑水平面上。此时兔子质量改为
+  \(m\)，圆环质量仍为 \(m\)，半径改记为
+  \(R\)，四只小仓鼠的质量不变。兔子以相对圆环不变的速度 \(u\)
+  运动，小仓鼠的径向位移规律改为
+  \(x=R\theta/\pi\)。求刚开始运动时圆环的角速度。
+\item
+  在第（4）问的情形中，设兔子可以爬到 \(\theta=\pi/4\)
+  处。当此时圆环的角速度大小为 \(\omega_1\) 时，求圆环的角加速度大小。
+\end{enumerate}
+
+\includegraphics[width=0.489\linewidth,height=\textheight,keepaspectratio,alt={图 8-1　固定圆心时的圆环、兔子与四只小仓鼠。}]{../figures/question-08.pdf}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-7}
+
+兔子沿圆环爬行，仓鼠同时向圆心移动。固定中心时对圆心写角动量；自由中心时先求质心位置，再对实际总角动量求导，保留变惯量项。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-7}
+
+\begin{itemize}
+\tightlist
+\item
+  圆环对圆心的转动惯量 \(I=ma^2\)。
+\item
+  相对运动速度与绝对速度的叠加。
+\item
+  内力启动瞬间的系统角动量守恒。
+\item
+  变转动惯量系统 \(d(I\omega)/dt\) 中的 \(\dot I\omega\) 项。
+\item
+  重力对固定圆心的力矩。
+\item
+  无水平外力系统的质心水平速度守恒。
+\item
+  质心运动、关于质心的角动量及绕质心力矩。
+\end{itemize}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-7}
+
+在前三问中，兔子沿圆环向一侧爬，圆环必须向反方向转动以保持初始总角动量为零。四只小仓鼠对称向心移动，它们的重力力矩互相抵消，但它们对圆心的总转动惯量不断减小。兔子的重力是唯一非零外力矩。
+
+在后两问中，圆环不再固定。兔子爬行同时使圆环向反方向平移并转动。因为光滑地面只给系统竖直支持力，水平总动量守恒；但绕任意固定点的角动量未必守恒，应选质心组织方程。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-7}
+
+在固定圆心情形中，选兔子运动方向为角度正方向。设圆环向反方向转动的角速度大小为
+\(\omega\)，则兔子相对地面的角速度为
+
+\[\dot\theta=\frac va-\omega,\]
+
+即
+
+\[\omega=\frac va-\dot\theta.\]
+
+四只小仓鼠到圆心的距离为
+
+\[r=a-x=a\left(1-\frac\theta\pi\right).\]
+
+因它们对称分布，径向运动对总角动量没有贡献，但总转动惯量为
+
+\[I_h=4\cdot\frac m2r^2
+=2ma^2\left(1-\frac\theta\pi\right)^2.\]
+
+这些关系可直接代入对 \(O\) 的角动量。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-7}
+
+图 8-2 左侧画出圆心固定时四个质点及角坐标
+\(\theta\)，右侧画出圆环自由平移时圆心 \(O\)、质心
+\(G\)、地面支持力和总重力。第（1）---（4）步使用左图列绕圆心角动量方程，第（5）---（6）步使用右图把质心平动与绕质心转动耦合。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图 8-2　固定中心时的角动量方程与自由平移时的质心、力矩关系。}]{../figures/solution-08.pdf}
+\caption*{图 8-2　固定中心时的角动量方程与自由平移时的质心、力矩关系。}
+\end{figure}
+
+\textbf{（1）固定圆心时的初始角速度} 先按图 8-2 左侧固定圆心
+\(O\)，四个质点只贡献绕 \(O\) 的转动惯量。
+
+初始时四只小仓鼠都在半径 \(a\) 处。圆环和四只小仓鼠对 \(O\)
+的总转动惯量为
+
+\[\begin{aligned}
+I_{rh}
+&=ma^2+4\cdot\frac m2a^2\\
+&=ma^2+2ma^2\\
+&=3ma^2.
+\end{aligned}\]
+
+设圆环初始向兔子运动反方向转动的角速度大小为
+\(\omega_0\)。兔子相对圆环的线速度为
+\(v\)，而圆环边缘的速度与之反向，因而兔子相对地面的线速度为
+
+\[v_{r0}=v-a\omega_0.\]
+
+刚开始运动的时间极短，重力的外冲量矩可忽略，系统初始总角动量仍为零。取兔子方向为正：
+
+\[\frac m2(v-a\omega_0)a-3ma^2\omega_0=0.\]
+
+两边乘以 \(2/(ma)\)：
+
+\[v-a\omega_0-6a\omega_0=0.\]
+
+合并同类项：
+
+\[v=7a\omega_0.\]
+
+因而
+
+\[\boxed{\omega_0=\frac{v}{7a}}.\]
+
+方向与兔子相对圆环的运动方向相反。
+
+\textbf{（2）固定圆心时的角动量}
+
+任意时刻，兔子的绝对角速度就是 \(\dot\theta\)，其角动量为
+
+\[L_r=\frac m2a^2\dot\theta.\]
+
+圆环向反方向转动，角动量为
+
+\[L_R=-ma^2\omega.\]
+
+四只小仓鼠随杆和圆环同向转动，对应角动量为
+
+\[L_h=-2ma^2\left(1-\frac\theta\pi\right)^2\omega.\]
+
+总角动量为
+
+\[L=\frac m2a^2\dot\theta
+-ma^2\omega
+-2ma^2\left(1-\frac\theta\pi\right)^2\omega.\]
+
+代入 \(\omega=v/a-\dot\theta\)：
+
+\[L=\frac m2a^2\dot\theta
+-ma^2\left[1+2\left(1-\frac\theta\pi\right)^2\right]
+\left(\frac va-\dot\theta\right).\]
+
+四只小仓鼠成对对称，重力对 \(O\) 的力矩相互抵消；圆环的重心在
+\(O\)，重力力矩也为零。只有兔子重力产生外力矩。兔子位于从竖直向下转过
+\(\theta\) 的位置，重力对正方向的力矩为
+
+\[\tau_O=-\frac{mga}{2}\sin\theta.\]
+
+角动量定理为
+
+\[\frac{dL}{dt}=-\frac{mga}{2}\sin\theta.\]
+
+\textbf{（3）展开微分方程}
+
+为了减少书写，记
+
+\[q=1-\frac\theta\pi,\]
+
+\[A(\theta)=1+2q^2.\]
+
+则
+
+\[L=\frac m2a^2\dot\theta-ma^2A
+\left(\frac va-\dot\theta\right).\]
+
+先求 \(A\) 的时间导数。由
+
+\[\dot q=-\frac{\dot\theta}{\pi},\]
+
+得
+
+\[\dot A=4q\dot q
+=-\frac4\pi q\dot\theta.\]
+
+再注意 \(v/a\) 为常量，所以
+
+\[\frac d{dt}\left(\frac va-\dot\theta\right)=-\ddot\theta.\]
+
+对 \(L\) 逐项求导：
+
+\[\begin{aligned}
+\frac{dL}{dt}
+&=\frac m2a^2\ddot\theta
+-ma^2\frac d{dt}
+\left[A\left(\frac va-\dot\theta\right)\right]\\
+&=\frac m2a^2\ddot\theta
+-ma^2\left[
+\dot A\left(\frac va-\dot\theta\right)
+-A\ddot\theta
+\right]\\
+&=ma^2\left[
+\left(\frac12+A\right)\ddot\theta
+-\dot A\left(\frac va-\dot\theta\right)
+\right].
+\end{aligned}\]
+
+代入 \(A=1+2q^2\) 和 \(\dot A=-(4/\pi)q\dot\theta\)：
+
+\[\frac{dL}{dt}=ma^2\left[
+\left(\frac32+2q^2\right)\ddot\theta
++\frac4\pi q\dot\theta
+\left(\frac va-\dot\theta\right)
+\right].\]
+
+令它等于重力矩：
+
+\[ma^2\left[
+\left(\frac32+2q^2\right)\ddot\theta
++\frac4\pi q\dot\theta
+\left(\frac va-\dot\theta\right)
+\right]
+=-\frac{mga}{2}\sin\theta.\]
+
+两边除以 \(ma^2\)，再把右边移到左边，并恢复 \(q=1-\theta/\pi\)：
+
+\[\boxed{
+\left[\frac32+2\left(1-\frac\theta\pi\right)^2\right]\ddot\theta
++\frac4\pi\left(1-\frac\theta\pi\right)\dot\theta
+\left(\frac va-\dot\theta\right)
++\frac g{2a}\sin\theta=0
+}.\]
+
+这是所求微分方程。它中同时包含变转动惯量项、相对运动项和重力力矩项。
+
+\textbf{（4）当 \(\theta=\pi/2\) 时的关系}
+
+令
+
+\[\theta=\frac\pi2,\]
+
+则
+
+\[1-\frac\theta\pi=1-\frac12=\frac12,\]
+
+\[\sin\theta=1.\]
+
+微分方程中 \(\ddot\theta\) 的系数为
+
+\[\frac32+2\left(\frac12\right)^2
+=\frac32+\frac12=2.\]
+
+第二项的系数为
+
+\[\frac4\pi\cdot\frac12=\frac2\pi.\]
+
+因而
+
+\[2\ddot\theta+\frac2\pi\dot\theta
+\left(\frac va-\dot\theta\right)+\frac g{2a}=0.\]
+
+两边除以 \(2\)：
+
+\[\boxed{
+\ddot\theta
+=-\frac g{4a}
+-\frac{\dot\theta}{\pi}
+\left(\frac va-\dot\theta\right)
+}.\]
+
+\textbf{（5）自由圆环的初始平移与转动} 转看图 8-2
+右侧。解除圆心约束后，支持力 \(N\) 同时改变质心平动并对质心 \(G\)
+产生力矩，不能继续套用固定圆心方程。
+
+现在圆环半径为 \(R\)，兔子质量为 \(m\)，圆环质量为
+\(m\)，四只小仓鼠总质量为 \(2m\)。初始时仓鼠均在半径 \(R\) 处。
+
+设圆环圆心向兔子运动的反方向平移，速度大小为
+\(V_0\)；圆环也向反方向转动，角速度大小为
+\(\omega_0\)。选兔子相对圆环的运动方向为水平正方向。兔子初始位于最低点，圆环转动与圆心平移都使该点向反方向运动，所以兔子的绝对速度为
+
+\[q=u-V_0-\omega_0R.\]
+
+刚启动时水平方向没有外冲量，总动量仍为零。圆环和四只仓鼠的总质量为
+\(3m\)，它们与圆心共同平移，因而
+
+\[mq-3mV_0=0.\]
+
+约去 \(m\)：
+
+\[q=3V_0.\]
+
+再对圆心 \(O\) 写启动瞬间的角动量守恒。兔子的角动量为
+\(mqR\)。圆环与四只仓鼠对 \(O\) 的总转动惯量为
+
+\[mR^2+4\cdot\frac m2R^2=3mR^2.\]
+
+因而
+
+\[mqR-3mR^2\omega_0=0.\]
+
+约去 \(mR\)：
+
+\[q=3R\omega_0.\]
+
+与 \(q=3V_0\) 比较，得
+
+\[V_0=R\omega_0.\]
+
+回到兔子速度关系：
+
+\[q=u-V_0-\omega_0R=u-2V_0.\]
+
+又 \(q=3V_0\)，所以
+
+\[3V_0=u-2V_0,\]
+
+\[5V_0=u.\]
+
+故
+
+\[V_0=\frac u5,\]
+
+\[\boxed{\omega_0=\frac{u}{5R}}.\]
+
+方向与兔子相对圆环的运动方向相反。
+
+\textbf{（6）自由圆环在 \(\theta=\pi/4\) 处的角加速度}
+
+以兔子的绝对角位置 \(\theta\) 为广义坐标，圆环反向转动的角速度大小记为
+\(\omega\)。由兔子相对圆环的角速度恒为 \(u/R\)，有
+
+\[\dot\theta+\omega=\frac uR,\]
+
+\[\dot\theta=\frac uR-\omega.\]
+
+对时间求导：
+
+\[\ddot\theta=-\dot\omega.\]
+
+因此圆环角加速度的大小为
+
+\[\beta=|\dot\omega|=-\ddot\theta,\]
+
+这里已预知在所考察位置 \(\ddot\theta<0\)。
+
+下面建立用于求 \(\ddot\theta\)
+的瞬时动力学方程。由对称性，四只仓鼠的质心始终在圆心 \(O\)，圆环质心也在
+\(O\)。圆环和四只仓鼠的合质量为 \(3m\)，兔子质量为 \(m\)。整个系统质心
+\(G\) 位于从 \(O\) 指向兔子的半径上，且
+
+\[OG=\frac{mR}{3m+m}=\frac R4.\]
+
+整个系统的质心高度为
+
+\[y_G=R-\frac R4\cos\theta.\]
+
+一次求导：
+
+\[\dot y_G=\frac R4\sin\theta\,\dot\theta.\]
+
+二次求导，使用乘积求导法则：
+
+\[\ddot y_G=\frac R4
+\left(\cos\theta\,\dot\theta^2+\sin\theta\,\ddot\theta\right).\]
+
+设地面对圆环的支持力为 \(N_s\)。系统总质量为
+\(4m\)，竖直方向的质心运动方程为
+
+\[N_s-4mg=4m\ddot y_G.\]
+
+代入 \(\ddot y_G\)：
+
+\[N_s-4mg
+=mR\left(\cos\theta\,\dot\theta^2+\sin\theta\,\ddot\theta\right).\]
+
+所以
+
+\[N_s=4mg+mR
+\left(\cos\theta\,\dot\theta^2+\sin\theta\,\ddot\theta\right).\]
+
+现对系统质心 \(G\) 写角动量定理。重力合力 \(4mg\) 通过 \(G\)，对 \(G\)
+的力矩为零。外力矩来自地面支持力，其对 \(G\) 的水平力臂大小为
+
+\[\frac R4\sin\theta.\]
+
+不能把全部物体视为同一个角速度的刚体。兔子的角速度为
+\(\dot\theta\)，圆环和仓鼠的角速度为 \(-\omega\)，而仓鼠半径还在变化。记
+\(q=1-\theta/\pi\)、\(A=1+2q^2\)，关于系统质心的总角动量为
+
+\[H_G=mR^2\left(\frac34\dot\theta-A\omega\right).\]
+
+其中 \(3/4\) 来自兔子绕质心的轨道角动量；圆环与仓鼠的自转惯量系数为
+\(A\)。径向对称移动本身不给角动量，但使
+\(\dot A=-4q\dot\theta/\pi\)。代入 \(\omega=u/R-\dot\theta\) 后求导：
+
+\[\dot H_G=mR^2\left[
+\left(\frac74+2q^2\right)\ddot\theta
++\frac4\pi q\dot\theta\left(\frac uR-\dot\theta\right)\right].\]
+
+图8-2右图支持力相对 \(G\) 的力臂为 \(-R\sin\theta/4\)，因此
+
+\[\dot H_G=-\frac R4\sin\theta\,N_s.\]
+
+将前述支持力表达式代入，得到
+
+\[\begin{aligned}
+0={}&\left[7+8q^2+\sin^2\theta\right]\ddot\theta\\
+&+\frac{16}\pi q\dot\theta\left(\frac uR-\dot\theta\right)
++\sin\theta\cos\theta\,\dot\theta^2
++\frac{4g}R\sin\theta.
+\end{aligned}\]
+
+第二行首项是仓鼠向心移动导致的变惯量项，不能删去。在 \(\theta=\pi/4\)
+时，\(q=3/4\)，加速度系数为 \(12\)，方程化为
+
+\[12\ddot\theta+\frac{12}\pi\dot\theta\,\omega_1
++\frac12\dot\theta^2+\frac{2\sqrt2g}R=0.\]
+
+在题设所考察的上爬、圆环反向转动阶段，\(\dot\theta=u/R-\omega_1\ge0\)，所以角加速度大小为
+
+\[\boxed{\beta=
+\frac1{24}\left(\frac uR-\omega_1\right)^2
++\frac{\omega_1}\pi\left(\frac uR-\omega_1\right)
++\frac{\sqrt2g}{6R}}.\]
+
+若 \(\omega_1\) 仅给无方向的速率且运动已换向，须先恢复有符号的
+\(\omega\) 再取 \(|\dot\omega|\)。本题采用圆环仍反向转动的分支。
+
+固定中心用 \(dH_O/dt\)，自由中心用 \(dH_G/dt\)。重力合力通过 \(G\)，对
+\(G\)
+的力矩为零，支持力才给非零力矩。兔子与圆环角速度不同，不能把一个合成转动惯量直接乘
+\(\ddot\theta\)；必须先写实际总角动量，再保留仓鼠向心移动产生的
+\(\dot A\omega\) 项。
+
+\textbf{两项额外核验}
+
+图8-2右图的 \(OG=R/4\) 随兔子方向旋转，但系统并不是绕 \(G\)
+刚性转动。用平行轴定理计算几何惯量并不等于已经计算角动量。特别是仓鼠按
+\(r=Rq\) 收缩，\(d(r^2\omega)/dt\) 中始终含 \(2r\dot r\omega\)。
+
+水平动量守恒还给出圆心速度 \(\dot X_O=-R\cos\theta\dot\theta/4\)；在
+\(\theta=0\)，\(\dot\theta=4u/(5R)\)，所以
+\(\dot X_O=-u/5\)，与启动解一致。竖直支持力
+
+\[N_s=4mg+mR(\cos\theta\dot\theta^2+\sin\theta\ddot\theta)\]
+
+应保持非负；若给定 \(u\)
+极大导致负值，圆环已离开地面，后续接触模型就不适用。题设的``可以爬到该处''应包括这项接触条件。
+
+\textbf{质心角动量的逐项计算}
+
+把圆心记为 \(O\)、兔子记为 \(P\)，令
+\(\bm e=(\sin\theta,-\cos\theta)\)。各对称部分的相对质心在 \(O\)，兔子在
+\(R\bm e\)，故系统质心相对圆心为 \(\bm R_G=R\bm e/4\)。
+
+先对移动的 \(O\) 计算使用相对速度的角动量：兔子贡献
+\(mR^2\dot\theta\)；圆环贡献 \(-mR^2\omega\)；四只仓鼠贡献
+\(-2mR^2q^2\omega\)。仓鼠的径向速度与位置共线，所以其直接叉积为0，不能据此把半径变化也忽略。相对
+\(O\) 的总角动量为
+
+\[H_{O,\mathrm{rel}}=mR^2(\dot\theta-A\omega).\]
+
+转换到系统质心应减去质心相对 \(O\) 运动的轨道项，
+
+\[4m\bm R_G\times\dot{\bm R}_G
+=\frac14mR^2\dot\theta.\]
+
+于是
+
+\[H_G=H_{O,\mathrm{rel}}-4m\bm R_G\times\dot{\bm R}_G
+=mR^2\left(\frac34\dot\theta-A\omega\right).\]
+
+这也解释了为什么系数是
+\(3/4\)，而不能直接使用所有物体几何惯量的和。圆心平移速度在转换中相消；质心角动量定理可以直接用外力关于
+\(G\) 的力矩。
+
+再检查变惯量项：\(A=1+2q^2\)、\(\dot q=-\dot\theta/\pi\)，因此
+
+\[\frac{d(-A\omega)}{dt}
+=-A\dot\omega+\frac4\pi q\dot\theta\omega.\]
+
+在 \(\theta=\pi/4\)，后一项给出
+\(3\dot\theta\omega_1/\pi\)；转动方程乘4并除以加速度系数12后，恰好留下
+\(\dot\theta\omega_1/\pi\)。它和重力项、速度平方项的量纲均为
+\(\mathrm{s}^{-2}\)。若仓鼠不向心移动，则 \(\dot A=0\)，此项才消失。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf-7}
+
+固定圆心时，小仓鼠对称向心移动不产生净径向角动量，但它们使转动惯量随时间变化。因而对
+\(I(\theta)\omega\) 求导时，\(\dot I\omega\) 与 \(I\dot\omega\)
+同样重要。
+
+圆心自由后，不能把前三问的固定轴方程原样搬过来。此时系统同时有质心平移和绕质心转动，地面支持力还会通过变动力臂对质心产生外力矩。完整方程必须把这些耦合放在一起。
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9-7}
+
+\begin{itemize}
+\tightlist
+\item
+  题设径向位移应写成 \(x=a\theta/\pi\) 或
+  \(x/a=\theta/\pi\)，否则量纲不一致。
+\item
+  兔子的 \(v\) 或 \(u\) 是相对圆环的速度，不是相对地面的速度。
+\item
+  圆环与小仓鼠的转动方向与兔子相对运动方向相反，写角动量时必须保持符号一致。
+\item
+  对变转动惯量求导时不能把 \(d(I\omega)/dt\) 写成 \(I\dot\omega\)。
+\item
+  四只仓鼠的总质量是 \(2m\)，初始总转动惯量也是 \(2ma^2\)。
+\item
+  自由圆环情形中，圆心的平移速度不能忽略；否则第（4）问会误得与第（1）问相同的系数。
+\item
+  第（5）问求的是圆环角加速度的大小，而 \(\ddot\theta\)
+  是兔子绝对角加速度，两者满足 \(\beta=-\ddot\theta\)。
+\end{itemize}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae-7}
+
+前三问先把所有角速度用同一个正方向表示，再写一条粗线强调
+
+\[\omega=\frac va-\dot\theta.\]
+
+然后把四只仓鼠的半径和转动惯量分两行写出，让学生先清楚每一项来源，再对总角动量求导。
+
+后两问应先完成第（4）问的瞬时动量与角动量方程，建立``圆环不只转，还要平移''的图像。第（5）问的一般方程不应只给结果，要至少讲清质心位置、支持力和关于质心的力矩三个来源，再在
+\(\theta=\pi/4\) 代数化简。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3-7}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  若四只小仓鼠保持在圆环边缘不向心移动，重新写出固定圆心时的微分方程。原式中的变惯量项将消失。
+\item
+  若兔子相对圆环的速度不是常量，而是已知函数 \(v(\theta)\)，则关系式改为
+  \(\omega=v(\theta)/a-\dot\theta\)。对时间求导时将额外产生
+  \(v'(\theta)\dot\theta/a\) 项。
+\end{enumerate}
+
+第1个变式中，四只仓鼠恒在半径 \(a\) 处，因而圆环与仓鼠对 \(O\)
+的总转动惯量为常量
+
+\[I_{Rh}=ma^2+2ma^2=3ma^2.\]
+
+总角动量为
+
+\[L=\frac m2a^2\dot\theta
+-3ma^2\left(\frac va-\dot\theta\right).\]
+
+对时间求导：
+
+\[\frac{dL}{dt}
+=\left(\frac12+3\right)ma^2\ddot\theta
+=\frac72ma^2\ddot\theta.\]
+
+重力力矩仍为
+
+\[\tau=-\frac{mga}{2}\sin\theta.\]
+
+因而
+
+\[\frac72ma^2\ddot\theta
+=-\frac{mga}{2}\sin\theta,\]
+
+\[\boxed{\ddot\theta=-\frac g{7a}\sin\theta}.\]
+
+与本题原方程比较，可见与 \(\dot\theta(v/a-\dot\theta)\)
+有关的项完全来自仓鼠向心移动导致的转动惯量变化。
+
+第2个变式中，设兔子相对圆环的速度为 \(v(\theta)\)。速度关系为
+
+\[\omega=\frac{v(\theta)}a-\dot\theta.\]
+
+对时间求导：
+
+\[\dot\omega
+=\frac1a\frac{dv}{d\theta}\dot\theta-\ddot\theta.\]
+
+因而圆环角加速度不再简单等于 \(-\ddot\theta\)，而是
+
+\[\boxed{
+\dot\omega=\frac{v'(\theta)}a\dot\theta-\ddot\theta
+}.\]
+
+固定圆心时的总角动量仍可写成
+
+\[L=\frac m2a^2\dot\theta
+-ma^2\left[1+2\left(1-\frac\theta\pi\right)^2\right]
+\left(\frac{v(\theta)}a-\dot\theta\right),\]
+
+但对最后一个因子求导时必须保留
+\(v'(\theta)\dot\theta/a\)。这一变式的教学重点不是把最终微分方程化到最简，而是训练学生分清``显式含时''与``通过
+\(\theta(t)\) 间接含时''的链式求导。
+
+核验时，可对第（2）问的每一项做构造来源标注：\(3/2\)
+来自兔子与圆环的固定惯量，\(2(1-\theta/\pi)^2\)
+来自四只仓鼠的变惯量，\(4(1-\theta/\pi)/\pi\)
+来自对变惯量求导，\(g\sin\theta/(2a)\)
+来自兔子重力力矩。学生若能逐项说清来源，才算真正理解了方程。
+
+\end{document}

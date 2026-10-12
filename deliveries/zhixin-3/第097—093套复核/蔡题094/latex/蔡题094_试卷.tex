@@ -1,0 +1,297 @@
+\documentclass[12pt,a4paper,UTF8]{ctexart}
+\usepackage[a4paper,top=22mm,bottom=22mm,left=22mm,right=22mm,headheight=15pt]{geometry}
+\usepackage{amsmath,amssymb,mathtools,bm}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{booktabs,longtable,array}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{microtype}
+\usepackage{setspace}
+\usepackage[hidelinks,unicode]{hyperref}
+\usepackage[most]{tcolorbox}
+
+\definecolor{ContestBlue}{HTML}{17365D}
+\definecolor{SoftBlue}{HTML}{EEF4FA}
+\definecolor{SoftGray}{HTML}{F5F6F7}
+\hypersetup{pdftitle={第94套},pdfauthor={物理竞赛教学资料}}
+
+\setstretch{1.24}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.35em}
+\setlist{itemsep=0.35em,topsep=0.4em}
+\captionsetup{font=small,labelfont=bf,justification=centering}
+\setcounter{secnumdepth}{0}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small 第94套}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\ctexset{
+  section={format=\Large\bfseries\color{ContestBlue},beforeskip=1.2em,afterskip=0.7em},
+  subsection={format=\large\bfseries\color{ContestBlue},beforeskip=1.0em,afterskip=0.5em},
+  subsubsection={format=\normalsize\bfseries,beforeskip=0.8em,afterskip=0.35em}
+}
+
+\makeatletter
+\newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\newcommand{\maxwidth}{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\newcommand{\maxheight}{\ifdim\Gin@nat@height>0.72\textheight 0.72\textheight\else\Gin@nat@height\fi}
+\newcommand{\pandocbounded}[1]{\begingroup\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}#1\endgroup}
+\makeatother
+
+\begin{document}
+
+\begin{titlepage}
+  \centering
+  \vspace*{58mm}
+  {\Huge\bfseries\color{ContestBlue} 第94套\par}
+  \vfill
+  \vspace*{28mm}
+\end{titlepage}
+
+
+\section{第 1 题}\label{ux7b2c-1-ux9898}
+
+质量为 \(m\) 的质点在 \(x-y\)
+平面内运动，受到指向原点的各向同性线性回复力
+
+\[\bm F=-kx\bm e_x-ky\bm e_y.\]
+
+初始时质点位于 \((l,0)\)，初速度大小为 \(v_0\)，初速度方向与 \(x\)
+轴正方向的夹角为 \(\theta\)。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  求振动周期，并写出 \(x(t)\)、\(y(t)\)。
+\item
+  消去时间，写出固定 \(\theta\) 时的轨迹方程。
+\item
+  保持 \(l\)、\(v_0\) 不变而让 \(\theta\)
+  任意变化，求质点所有可能到达区域的边界。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.731\linewidth,height=\textheight,keepaspectratio,alt={图 1-1　二维各向同性简谐振子的初始位置、初速度与椭圆轨道。}]{../figures/question-01.pdf}
+\caption*{图 1-1　二维各向同性简谐振子的初始位置、初速度与椭圆轨道。}
+\end{figure}
+
+\newpage
+
+\section{第 2 题}\label{ux7b2c-2-ux9898}
+
+一个静止、具有七重旋转对称性的花瓣形曲线固定在平面内，中心为
+\(O\)。边长为 \(l\) 的正三角形在曲线外侧无滑动滚动；三角形中心 \(A\)
+的轨迹恰为以 \(O\) 为圆心、半径为 \(R\) 的圆。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  当 \(A\) 绕 \(O\) 公转一周时，正三角形自转多少圈？
+\item
+  在图示位置，公转角速度为 \(\Omega\)。用 \(R,l,\Omega\) 表示外侧顶点
+  \(P\) 的速度和三角形角速度大小。
+\item
+  以 \(O\) 为极点、图示 \(OA\) 方向为极轴，用 \(R,l\) 和极径 \(\rho\)
+  写出第一瓣曲线的极坐标方程 \(\theta(\rho)\)。
+\item
+  要求公转一周后三角形恰好恢复初始取向，求 \(R/l\)
+  满足的方程；允许保留一个无量纲定积分。这里``恢复''按正三角形轮廓的
+  \(120^\circ\) 旋转对称等价理解。
+\end{enumerate}
+
+计算中可使用
+
+\[\int\frac{\mathrm{d}x}{x\sqrt{(a-x)^2-b^2}}
+=-\frac{1}{\sqrt{a^2-b^2}}\ln\left(
+\frac{a^2-b^2}{x}-a+
+\frac{\sqrt{a^2-b^2}\sqrt{(a-x)^2-b^2}}{x}
+\right)+C.\]
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.624\linewidth,height=\textheight,keepaspectratio,alt={图 2-1　七重对称曲线外侧的正三角形纯滚动。}]{../figures/question-02.pdf}
+\caption*{图 2-1　七重对称曲线外侧的正三角形纯滚动。}
+\end{figure}
+
+\newpage
+
+\section{第 3 题}\label{ux7b2c-3-ux9898}
+
+半径为 \(r\)、质量为 \(m\) 的均匀实心球体均匀带电，总电量为 \(q\)。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  球体以角速度 \(\omega_0\) 转动，求角动量大小 \(L_0\)。
+\item
+  求相应磁矩大小 \(\mu_0\)。
+\item
+  空间存在
+  \(\bm B=B\bm e_z\)。小球自由运动，只受洛伦兹力，不计电磁感应。初态为
+
+  \[\bm v(0)=(v_0,0,0),\qquad \bm\omega(0)=(0,v_0/r,0).\]
+
+  求质心速度与角速度随时间的变化。
+\item
+  小球在水平 \(x-y\) 平面上做无滑动滚动，重力沿
+  \(-z\)，摩擦足够大。磁场仍为 \(\bm B=B\bm e_z\)，初态同上。求
+  \(\bm v(t)\) 与 \(\bm\omega(t)\)。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图 3-1　均匀带电实心球的自旋以及垂直磁场中的质心运动。}]{../figures/question-03.pdf}
+\caption*{图 3-1　均匀带电实心球的自旋以及垂直磁场中的质心运动。}
+\end{figure}
+
+\newpage
+
+\section{第 4 题}\label{ux7b2c-4-ux9898}
+
+电量为 \(q\)、质量为 \(m\) 的点电荷以速度 \(v_0\)
+从远处沿金属球球心方向入射。金属球半径为 \(r\)、总电量为
+\(Q=2q\)、质量也为
+\(m\)，可自由平动。忽略感应电荷运动产生的电流、热效应和磁效应。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  当点电荷与球心距离为 \(l\) 时，求点电荷所受静电力的大小和方向。
+\item
+  要使点电荷与金属球发生碰撞，求最小初速度。用
+
+  \[\lambda=\frac{mv_0^2r}{Kq^2}\]
+
+  表示结果。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图 4-1　点电荷沿球心方向接近自由带电金属球。}]{../figures/question-04.pdf}
+\caption*{图 4-1　点电荷沿球心方向接近自由带电金属球。}
+\end{figure}
+
+\newpage
+
+\section{第 5 题}\label{ux7b2c-5-ux9898}
+
+把气球皮视为厚度为 \(h_0\) 的薄橡胶球壳，其中
+\(h_0\ll r_0\)。初始气球半径为 \(r_0\)，外界大气压强为
+\(p_a\)，气球内外压强差为 \(p_0\)。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  橡胶皮在单位长度上的张力为 \(\sigma_0\)，求 \(\sigma_0\)。
+\item
+  假设 \(\sigma_0\) 保持不变，温度保持为 \(T_0\)，用气泵缓慢地把定容热容
+  \(C_V=3R/2\) 的理想气体从气球外输送到气球内，使半径从 \(r_0\) 增大到
+  \(2r_0\)。定义一小段时间内气泵做功为``当前气球内压强乘以流入气体在该压强下的体积''，求最少做功。
+\item
+  进一步吹气时，橡胶体积有小的相对增加量
+  \(\gamma=\Delta V/V_0\)，半径相对增加量为 \(\alpha=\Delta r/r_0\)，且
+  \(\alpha,\gamma\ll1\)。求橡胶皮相对厚度增加量 \(\beta=\Delta h/h_0\)。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.792\linewidth,height=\textheight,keepaspectratio,alt={图 5-1　薄橡胶球壳、内外压强与缓慢充气过程。}]{../figures/question-05.pdf}
+\caption*{图 5-1　薄橡胶球壳、内外压强与缓慢充气过程。}
+\end{figure}
+
+\newpage
+
+\section{第 6 题}\label{ux7b2c-6-ux9898}
+
+建立直角坐标系 \(x-y-z\)。在 \(x-y\) 平面放置光心在原点、焦距为 \(f_1\)
+的足够大理想薄凸透镜 \(A\)；在 \(y-z\) 平面放置焦距为 \(f_2\) 的透镜
+\(B\)；在 \(z-x\) 平面放置焦距为 \(f_3\) 的透镜
+\(C\)。三透镜相互正交并共用光心。第一卦限有点光源
+
+\[S(x_0,y_0,z_0).\]
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  求光线按 \(A\to B\to C\) 的顺序依次通过三个透镜后所得像的位置。
+\item
+  求光线穿过三个透镜各一次时所得像的位置，并说明通过顺序是否影响结果。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.609\linewidth,height=\textheight,keepaspectratio,alt={图 6-1　三个共光心、相互正交的理想薄透镜。}]{../figures/question-06.pdf}
+\caption*{图 6-1　三个共光心、相互正交的理想薄透镜。}
+\end{figure}
+
+\newpage
+
+\section{第 7 题}\label{ux7b2c-7-ux9898}
+
+半径为 \(r\)、质量为
+\(M\)、内壁光滑的半球形碗放在粗糙水平地面上。一根质量为 \(m\)、长度也为
+\(r\)
+的均匀筷子静止靠在碗内，两端均与内壁接触，其中一端恰在碗口。释放后，筷子在竖直平面内往复运动；地面摩擦足够大，碗始终不滑动。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  筷子质心最低时，碗面对筷子任一端点的作用力多大？
+\item
+  求保证碗不滑动所需的最小地面摩擦系数。
+\item
+  筷子质心最低时，筷子中点截面上传递的内力大小。
+\item
+  整个运动中，筷子中点截面承受的最大弯矩。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图 7-1　半球碗内两端受光滑约束的均匀筷子。}]{../figures/question-07.pdf}
+\caption*{图 7-1　半球碗内两端受光滑约束的均匀筷子。}
+\end{figure}
+
+\newpage
+
+\section{第 8 题}\label{ux7b2c-8-ux9898}
+
+一个夹子由两根质量均为 \(m\)、长度均为 \(L\)
+的相同刚性细杆组成，两杆一端铰接。若两杆总夹角为
+\(\Delta\theta\)，铰链产生大小为
+
+\[M=k\Delta\theta\]
+
+的回复力矩，使两杆趋向重合。夹子放在无摩擦水平地面上，只能在图示竖直平面内运动。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  对各种参数关系，求两杆均与地面接触时可能的平衡夹角，并判断稳定性。
+\item
+  取
+
+  \[k=4\ \mathrm{kg\,m^2/s^2},\quad g=10\ \mathrm{m/s^2},\quad m=1\ \mathrm{kg},\quad L=1\ \mathrm m.\]
+
+  把两杆压至总夹角 \(\pi\)
+  后由静止释放。判断回合过程中是否会离开地面；若会，求离地时的两杆夹角。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.705\linewidth,height=\textheight,keepaspectratio,alt={图 8-1　对称夹子、半角定义以及两端与地面的接触。}]{../figures/question-08.pdf}
+\caption*{图 8-1　对称夹子、半角定义以及两端与地面的接触。}
+\end{figure}
+
+\end{document}

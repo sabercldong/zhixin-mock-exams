@@ -1,0 +1,36 @@
+{
+  "result": "pass",
+  "checks": 408,
+  "scripts": [
+    {
+      "script": "verify_batch.py",
+      "exit_code": 0,
+      "output": "PASS 92 checks across 32 questions",
+      "errors": ""
+    },
+    {
+      "script": "verify43.py",
+      "exit_code": 0,
+      "output": "PASS 237 checks; alpha= 2.3344803696249174e-18",
+      "errors": ""
+    },
+    {
+      "script": "verify_additions.py",
+      "exit_code": 0,
+      "output": "44 independent checks passed",
+      "errors": ""
+    },
+    {
+      "script": "verify_cases.py",
+      "exit_code": 0,
+      "output": "25 case checks passed; Floquet trace 1.9960516804932569",
+      "errors": ""
+    },
+    {
+      "script": "verify_final_cases.py",
+      "exit_code": 0,
+      "output": "10 final model checks passed",
+      "errors": ""
+    }
+  ]
+}

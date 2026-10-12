@@ -1,0 +1,118 @@
+[
+  {
+    "set": 44,
+    "question": 1,
+    "check": "parametric trajectory vx",
+    "symbolic": "pass"
+  },
+  {
+    "set": 44,
+    "question": 1,
+    "check": "parametric trajectory vy",
+    "symbolic": "pass"
+  },
+  {
+    "set": 44,
+    "question": 2,
+    "check": "log spiral curvature",
+    "max_error": 5.551115123125783e-17,
+    "tolerance": 1e-08
+  },
+  {
+    "set": 44,
+    "question": 2,
+    "check": "log spiral curvature",
+    "max_error": 0.0,
+    "tolerance": 1e-08
+  },
+  {
+    "set": 44,
+    "question": 2,
+    "check": "log spiral curvature",
+    "max_error": 0.0,
+    "tolerance": 1e-08
+  },
+  {
+    "set": 44,
+    "question": 3,
+    "check": "monopole damping integral",
+    "max_error": 2.220446049250313e-16,
+    "tolerance": 1e-08
+  },
+  {
+    "set": 44,
+    "question": 3,
+    "check": "finite damping primitive",
+    "symbolic": "pass"
+  },
+  {
+    "set": 44,
+    "question": 4,
+    "check": "temperature weighted centre",
+    "max_error": 2.6645352591003757e-15,
+    "tolerance": 1e-10
+  },
+  {
+    "set": 44,
+    "question": 5,
+    "check": "cap area independent integral",
+    "max_error": 8.881784197001252e-16,
+    "tolerance": 1e-08
+  },
+  {
+    "set": 44,
+    "question": 6,
+    "check": "moving rolling slope quantitative values",
+    "max_error": 3.4646222751844036e-07,
+    "tolerance": 1e-06
+  },
+  {
+    "set": 44,
+    "question": 7,
+    "check": "photon thresholds",
+    "max_error": 1.9499441350490088e-07,
+    "tolerance": 1e-06
+  },
+  {
+    "set": 44,
+    "question": 7,
+    "check": "decay Lorentz invariant",
+    "max_error": 7.275957614183426e-12,
+    "tolerance": 1e-08
+  },
+  {
+    "set": 44,
+    "question": 7,
+    "check": "decay Lorentz invariant",
+    "max_error": 0.0,
+    "tolerance": 1e-08
+  },
+  {
+    "set": 44,
+    "question": 7,
+    "check": "decay Lorentz invariant",
+    "max_error": 2.1827872842550278e-11,
+    "tolerance": 1e-08
+  },
+  {
+    "set": 44,
+    "question": 7,
+    "check": "decay Lorentz invariant",
+    "max_error": 5.820766091346741e-11,
+    "tolerance": 1e-08
+  },
+  {
+    "set": 44,
+    "question": 8,
+    "check": "spherical resistance integrations",
+    "max_error": 3.7557953191935667e-07,
+    "tolerance": 1e-06
+  },
+  {
+    "set": 44,
+    "question": 8,
+    "check": "free plus bound interface charge",
+    "max_error": 0.0,
+    "tolerance": 1e-22
+  }
+]

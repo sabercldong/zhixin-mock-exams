@@ -1,0 +1,211 @@
+[
+  {
+    "set": 47,
+    "question": 1,
+    "check": "rod equal lengths and fixed span",
+    "max_error": 0.0,
+    "tolerance": 1e-08
+  },
+  {
+    "set": 47,
+    "question": 1,
+    "check": "height from original 1.6-m span",
+    "max_error": 1.162403506782539e-13,
+    "tolerance": 1e-08
+  },
+  {
+    "set": 47,
+    "question": 2,
+    "check": "ballistic intersection",
+    "max_error": 2.1599873001321157e-07,
+    "tolerance": 1e-06
+  },
+  {
+    "set": 47,
+    "question": 2,
+    "check": "energy independent of roof intercept",
+    "max_error": 2.2737367544323206e-13,
+    "tolerance": 1e-08
+  },
+  {
+    "set": 47,
+    "question": 3,
+    "check": "virtual focus ray intercept",
+    "max_error": 0.0,
+    "tolerance": 1e-08
+  },
+  {
+    "set": 47,
+    "question": 3,
+    "check": "virtual focus ray intercept",
+    "max_error": 6.938893903907228e-18,
+    "tolerance": 1e-08
+  },
+  {
+    "set": 47,
+    "question": 3,
+    "check": "virtual focus ray intercept",
+    "max_error": 2.7755575615628914e-17,
+    "tolerance": 1e-08
+  },
+  {
+    "set": 47,
+    "question": 4,
+    "check": "finite disk and current-ring integration",
+    "max_error": 3.1086244689504383e-15,
+    "tolerance": 1e-08
+  },
+  {
+    "set": 47,
+    "question": 4,
+    "check": "microscopic centre field difference",
+    "max_error": 3.1086244689504383e-15,
+    "tolerance": 1e-08
+  },
+  {
+    "set": 47,
+    "question": 4,
+    "check": "finite disk and current-ring integration",
+    "max_error": 1.1102230246251565e-16,
+    "tolerance": 1e-08
+  },
+  {
+    "set": 47,
+    "question": 4,
+    "check": "microscopic centre field difference",
+    "max_error": 0.0,
+    "tolerance": 1e-08
+  },
+  {
+    "set": 47,
+    "question": 4,
+    "check": "finite disk and current-ring integration",
+    "max_error": 2.220446049250313e-16,
+    "tolerance": 1e-08
+  },
+  {
+    "set": 47,
+    "question": 4,
+    "check": "microscopic centre field difference",
+    "max_error": 2.220446049250313e-16,
+    "tolerance": 1e-08
+  },
+  {
+    "set": 47,
+    "question": 5,
+    "check": "one-K differential phase calculation",
+    "max_error": 1.5916157281026244e-12,
+    "tolerance": 1e-08
+  },
+  {
+    "set": 47,
+    "question": 6,
+    "check": "spin-1 log partition expansion",
+    "symbolic": "pass"
+  },
+  {
+    "set": 47,
+    "question": 7,
+    "check": "support quadratic minimum",
+    "max_error": 3.33333360913457e-11,
+    "tolerance": 1e-09
+  },
+  {
+    "set": 47,
+    "question": 7,
+    "check": "support quadratic minimum",
+    "max_error": 2.5000002068509275e-11,
+    "tolerance": 1e-09
+  },
+  {
+    "set": 47,
+    "question": 7,
+    "check": "support quadratic minimum",
+    "max_error": 1.666666804567285e-11,
+    "tolerance": 1e-09
+  },
+  {
+    "set": 47,
+    "question": 8,
+    "check": "physical nonzero relative-rest root",
+    "max_error": 0.0,
+    "tolerance": 1e-08
+  },
+  {
+    "set": 47,
+    "question": 8,
+    "check": "physical nonzero relative-rest root",
+    "max_error": 8.881784197001252e-16,
+    "tolerance": 1e-08
+  },
+  {
+    "set": 47,
+    "question": 8,
+    "check": "physical nonzero relative-rest root",
+    "max_error": 1.7763568394002505e-15,
+    "tolerance": 1e-08
+  },
+  {
+    "set": 47,
+    "question": 8,
+    "check": "physical nonzero relative-rest root",
+    "max_error": 1.7763568394002505e-15,
+    "tolerance": 1e-08
+  },
+  {
+    "set": 47,
+    "question": 8,
+    "check": "paired ring energy and magnetic impulse",
+    "max_error": 0.0,
+    "tolerance": 1e-08
+  },
+  {
+    "set": 47,
+    "question": 8,
+    "check": "paired ring energy and magnetic impulse",
+    "max_error": 1.734723475976807e-18,
+    "tolerance": 1e-08
+  },
+  {
+    "set": 47,
+    "question": 8,
+    "check": "paired ring energy and magnetic impulse",
+    "max_error": 0.0,
+    "tolerance": 1e-08
+  },
+  {
+    "set": 47,
+    "question": 8,
+    "check": "paired ring energy and magnetic impulse",
+    "max_error": 5.551115123125783e-17,
+    "tolerance": 1e-08
+  },
+  {
+    "set": 47,
+    "question": 8,
+    "check": "paired ring energy and magnetic impulse",
+    "max_error": 8.881784197001252e-16,
+    "tolerance": 1e-08
+  },
+  {
+    "set": 47,
+    "question": 8,
+    "check": "paired ring energy and magnetic impulse",
+    "max_error": 8.881784197001252e-16,
+    "tolerance": 1e-08
+  },
+  {
+    "set": 47,
+    "question": 8,
+    "check": "paired ring energy and magnetic impulse",
+    "max_error": 0.0,
+    "tolerance": 1e-08
+  },
+  {
+    "set": 47,
+    "question": 8,
+    "check": "paired ring energy and magnetic impulse",
+    "max_error": 0.0,
+    "tolerance": 1e-08
+  }
+]

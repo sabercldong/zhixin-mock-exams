@@ -1,0 +1,226 @@
+\documentclass[12pt,a4paper,UTF8]{ctexart}
+\usepackage[a4paper,top=22mm,bottom=22mm,left=22mm,right=22mm,headheight=15pt]{geometry}
+\usepackage{amsmath,amssymb,mathtools,bm}
+\usepackage{graphicx,xcolor,booktabs,longtable,array,enumitem,fancyhdr,caption,float,microtype,setspace}
+\newcommand{\Needspace}[1]{\par\begingroup\dimen0=#1\relax\dimen2=\pagegoal\advance\dimen2 by-\pagetotal\ifdim\dimen0>\dimen2\newpage\fi\endgroup}
+\newcommand{\needspace}[1]{\par\begingroup\skip0=\lastskip\vskip-\skip0\dimen0=#1\relax\advance\dimen0 by\skip0\vskip\dimen0\penalty-100\vskip-\dimen0\vskip\skip0\penalty9999\endgroup}
+\usepackage[hidelinks,unicode]{hyperref}
+\usepackage[most]{tcolorbox}
+\definecolor{ContestBlue}{HTML}{17365D}
+\hypersetup{pdftitle={第 047 套},pdfauthor={}}
+\setstretch{1.24}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.35em}
+\setlength{\emergencystretch}{2em}
+\setlist{itemsep=0.35em,topsep=0.4em}
+\captionsetup{font=small,labelfont=bf,justification=centering}
+\setcounter{secnumdepth}{0}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small 第 047 套}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\ctexset{
+  section={format=\Large\bfseries\color{ContestBlue},beforeskip=1.2em,afterskip=0.7em},
+  subsection={format=\large\bfseries\color{ContestBlue},beforeskip=1.0em,afterskip=0.5em},
+  subsubsection={format=\normalsize\bfseries,beforeskip=0.8em,afterskip=0.35em}
+}
+\makeatletter
+\newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\newcommand{\maxwidth}{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\newcommand{\maxheight}{\ifdim\Gin@nat@height>0.72\textheight 0.72\textheight\else\Gin@nat@height\fi}
+\newcommand{\pandocbounded}[1]{\begingroup\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}#1\endgroup}
+\makeatother
+\begin{document}
+\begin{titlepage}
+  \centering
+  \vspace*{58mm}
+  {\Huge\bfseries\color{ContestBlue} 第 047 套\par}
+  \vfill
+  \vspace*{28mm}
+\end{titlepage}
+\section{第 1 题}\label{ux7b2c-1-ux9898}
+
+四根完全相同的均匀细杆首尾以光滑铰链连接，每根长度
+\(l=0.5\,\mathrm m\)、质量 \(m=0.1\,\mathrm{kg}\)。双手分别抓住两端
+\(A,E\)，保持两手等高且水平距离为
+\(L=1.6\,\mathrm m\)。系统静止时，最低铰点 \(C\) 与双手的高度差为多少？
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\linewidth,height=\textheight,keepaspectratio,alt={图1-1　四节折叠尺的对称平衡构型}]{../figures/question-01.pdf}
+\caption*{图1-1　四节折叠尺的对称平衡构型}
+\end{figure}
+
+\newpage
+
+\section{第 2 题}\label{ux7b2c-2-ux9898}
+
+阁楼顶棚为直线斜面，最高点正下方地面为发射点；最高点高度
+\(h=15\,\mathrm m\)，顶棚与水平面夹角 \(\alpha=30^\circ\)。从地面以
+\(v_0=40\,\mathrm{m/s}\) 发射小物块，取 \(g=10\,\mathrm{m/s^2}\)。
+
+（1）出射角 \(\theta=35^\circ\) 时，求首次击中顶棚的位置与速度；
+
+（2）若 \(\theta\) 可调，求飞至顶棚时间最短的出射角。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.792\linewidth,height=\textheight,keepaspectratio,alt={图2-1　抛体轨迹与倾斜顶棚}]{../figures/question-02.pdf}
+\caption*{图2-1　抛体轨迹与倾斜顶棚}
+\end{figure}
+
+\newpage
+
+\section{第 3 题}\label{ux7b2c-3-ux9898}
+
+一副近视游泳眼镜使用平凹薄透镜，折射率为
+\(n\)，朝向水的一面为平面，另一面曲率半径为有符号量 \(R\)。
+
+（1）求眼镜度数与 \(R\) 的关系；
+
+（2）若佩戴者在水下看远处物体清楚，回到空气中继续佩戴时，远处物体是否仍清楚？
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\linewidth,height=\textheight,keepaspectratio,alt={图3-1　平凹镜片的平面入射面与曲面出射面}]{../figures/question-03.pdf}
+\caption*{图3-1　平凹镜片的平面入射面与曲面出射面}
+\end{figure}
+
+\newpage
+
+\section{第 4 题}\label{ux7b2c-4-ux9898}
+
+（1）Gilbert 模型由相距 \(d\) 的磁荷 \(\pm q_m\) 构成，磁偶极矩
+\(p_m=q_md\)。求轴线上 \(z\gg d\) 的场。 （2）Ampere 模型为半径
+\(r\)、电流 \(I\) 的圆环，\(p_m=I\pi r^2\)。求轴线上 \(z\gg r\) 的场。
+（3）半径 \(R\)、长度 \(L\) 的圆柱中，单位体积有 \(n\) 个沿 \(+z\)
+的同向偶极子，满足
+\(R\gg d,L\gg d\)。分别求两种微观模型在圆柱中心的场。原题未给
+\(L\gg R\)，不可擅加长螺线管条件。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.86\linewidth,height=\textheight,keepaspectratio,alt={题4　题设与符号}]{../figures/question-04.pdf}
+\caption{题4　题设与符号}
+\end{figure}
+
+\newpage
+
+\section{第 5 题}\label{ux7b2c-5-ux9898}
+
+如图所示，刚性密闭容器内有 \(1\,\mathrm{mol}\) 液态水和
+\(1\,\mathrm{mol}\)
+水蒸气，两相处于平衡状态。容器内装有电热丝，器壁绝热。初态温度为
+\(T_0=100^\circ\mathrm C\)。已知水的摩尔汽化热
+\(L=40.8\,\mathrm{kJ\,mol^{-1}}\)，液态水的摩尔热容
+\(C=75.8\,\mathrm{J\,K^{-1}\,mol^{-1}}\)，水蒸气的定容摩尔热容
+\(C_v=3R\)，普适气体常量
+\(R=8.31\,\mathrm{J\,K^{-1}\,mol^{-1}}\)。现用电热丝加热，使系统温度升高
+\(1^\circ\mathrm C\)。假定 \(L\)
+的变化、液态水体积均可忽略，水蒸气可视为理想气体。以下结果保留三位有效数字。
+
+（1）已知饱和蒸气压满足 \(dp/dT=L/(TV_m)\)，其中 \(V_m\)
+为水蒸气的摩尔体积，求加热后水蒸气摩尔数的增量 \(\Delta n\)。
+
+（2）求电热丝提供的热量 \(Q\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.462\linewidth,height=\textheight,keepaspectratio,alt={题5　刚性容器中的液---汽平衡系统}]{../figures/question-05.pdf}
+\caption{题5　刚性容器中的液---汽平衡系统}
+\end{figure}
+
+\newpage
+
+\section{第 6 题}\label{ux7b2c-6-ux9898}
+
+在三维空间中给定一个含 \(N\) 个格点（\(N\gg1\)）的自旋为 \(1\)
+的体系，每个格点有 \(q\) 个最近邻。格点自旋的 \(z\) 分量 \(S_z\) 可取
+\(1,0,-1\)，相应概率分别为 \(P_+,P_0,P_-\)。沿 \(z\) 轴加外磁场 \(h\)
+后，系统能量写为 \[
+\langle H\rangle=-J\sum_{\langle i,j\rangle}\langle S_iS_j\rangle-h\sum_i\langle S_i\rangle.
+\] Bragg--Williams 近似认为不同格点的自旋统计独立，即
+\(\langle S_iS_j\rangle=\langle S_i\rangle\langle S_j\rangle\)。设体系均匀磁化，磁化强度定义为
+\(m=\langle S_z\rangle=P_+-P_-\)。低温时体系具有非零磁化；温度升高后发生铁磁---顺磁相变，在高于相变温度且
+\(h=0\) 时仅有 \(m=0\) 解。
+
+（1）用 \(N,q,J,m,h\) 表示系统的平均内能。
+
+（2）把三种格点数视为概率期望值，利用 \(S=k\ln\Omega\) 求系统熵，其中
+\(\Omega\) 为微观状态数。可用 \(\ln(N!)\simeq N(\ln N-1)\)。
+
+（3）在 \(h=0\) 时，利用自由能 \(F=\langle H\rangle-TS\)
+取极小值的条件，求 \(P_+,P_0,P_-\) 应满足的方程。
+
+（4）求相变温度 \(T_c\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.719\linewidth,height=\textheight,keepaspectratio,alt={题6　三态自旋格点体系}]{../figures/question-06.pdf}
+\caption{题6　三态自旋格点体系}
+\end{figure}
+
+\newpage
+
+\section{第 7 题}\label{ux7b2c-7-ux9898}
+
+一根质量分布未知的细杆初始竖直立在地面上，接触点为 \(O\)，质量为
+\(m\)，质心到 \(O\) 点的距离为 \(r_c\)，杆绕 \(O\) 点的转动惯量为
+\(\lambda mr_c^2\)。受微扰后杆开始倒下，重力加速度为 \(g\)。
+
+（1）对均匀杆求 \(\lambda\)。
+
+（2）对任意形状的杆求 \(\lambda\) 的最小值 \(\lambda_{\min}\)。
+
+（3）杆转过角度 \(\theta\)，且 \(O\)
+点既未离开地面也未滑动，求此时角速度 \(\dot\theta\)。
+
+（4）若 \(O\) 点铰接，求重力沿杆分量恰好等于质心绕 \(O\)
+转动所需向心力时的角度 \(\theta_1\)。
+
+（5）若 \(O\) 点铰接，求质心竖直加速度为零时的角度 \(\theta_2\)。
+
+（6）若 \(O\) 点铰接，求质心水平加速度为零时的角度 \(\theta_3\)。
+
+（7）若 \(O\)
+点没有铰接，杆只放在水平地面上，地面支持力保持竖直。存在临界值
+\(\lambda_c\)，当 \(\lambda>\lambda_c\) 且摩擦系数足够大时，\(O\)
+点一定不会在杆倒地前离开地面，求 \(\lambda_c\)。
+
+（8）在第（7）问情形下取
+\(\lambda=1\)，求杆在落地前始终不滑动所需的最小摩擦系数 \(\mu_1\)。
+
+（9）在第（7）问情形下取
+\(\lambda=2\)，求杆在落地前始终不滑动所需的最小摩擦系数 \(\mu_2\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\linewidth,height=\textheight,keepaspectratio,alt={题7　非均匀细杆由竖直位置倒下}]{../figures/question-07.pdf}
+\caption{题7　非均匀细杆由竖直位置倒下}
+\end{figure}
+
+\newpage
+
+\section{第 8 题}\label{ux7b2c-8-ux9898}
+
+质量均为 \(m\)
+的绝缘均匀圆环与光滑带电珠，在足够粗糙的水平地面上运动。环半径
+\(r\)，珠电量 \(q\)，磁场 \(B\) 垂直纸面向里。\(\beta\)
+为圆心到珠的半径与向下竖直方向的有向夹角。初态按原图取珠在左侧点
+\(\beta_0=\pi/2\)，两者静止，环始终纯滚动并不离地。定义
+\(\lambda=q^2B^2r/(m^2g)\)。
+
+（1）求再次相对静止的非零位置开始出现的
+\(\lambda_c\)。（2）\(\lambda>\lambda_c\) 时求 \(\cos\beta_c\)。
+（3）（4）珠经过 \(\beta_1\)
+时求相对圆环角速度的较小、较大大小。（5）（6）求相应圆心速度的两个大小。后四问取
+\(qB/m=1\,\mathrm{s^{-1}},r=1\,\mathrm m,g=10\,\mathrm{m\,s^{-2}}\)；原题未给
+\(\beta_1\) 数值，答案保留该参数。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.86\linewidth,height=\textheight,keepaspectratio,alt={题8　题设与符号}]{../figures/question-08.pdf}
+\caption{题8　题设与符号}
+\end{figure}
+\end{document}

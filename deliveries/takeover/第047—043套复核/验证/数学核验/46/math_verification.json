@@ -1,0 +1,171 @@
+[
+  {
+    "set": 46,
+    "question": 1,
+    "check": "two-body relative acceleration",
+    "max_error": 8.239936510889834e-18,
+    "tolerance": 1e-08
+  },
+  {
+    "set": 46,
+    "question": 2,
+    "check": "left detached initial rolling equations",
+    "max_error": 8.881784197001252e-16,
+    "tolerance": 1e-08
+  },
+  {
+    "set": 46,
+    "question": 2,
+    "check": "left detached initial rolling equations",
+    "max_error": 0.0,
+    "tolerance": 1e-08
+  },
+  {
+    "set": 46,
+    "question": 2,
+    "check": "left detached initial rolling equations",
+    "max_error": 2.220446049250313e-16,
+    "tolerance": 1e-08
+  },
+  {
+    "set": 46,
+    "question": 3,
+    "check": "small-electrode boundary voltage ratio",
+    "max_error": 0.0,
+    "tolerance": 1e-08
+  },
+  {
+    "set": 46,
+    "question": 3,
+    "check": "same-sign image insulated boundary",
+    "max_error": 1.6653345369377348e-11,
+    "tolerance": 2e-08
+  },
+  {
+    "set": 46,
+    "question": 3,
+    "check": "same-sign image insulated boundary",
+    "max_error": 1.942890293094024e-11,
+    "tolerance": 2e-08
+  },
+  {
+    "set": 46,
+    "question": 3,
+    "check": "same-sign image insulated boundary",
+    "max_error": 2.498001805406602e-11,
+    "tolerance": 2e-08
+  },
+  {
+    "set": 46,
+    "question": 3,
+    "check": "same-sign image insulated boundary",
+    "max_error": 8.881784197001251e-11,
+    "tolerance": 2e-08
+  },
+  {
+    "set": 46,
+    "question": 3,
+    "check": "same-sign image insulated boundary",
+    "max_error": 1.6653345369377348e-11,
+    "tolerance": 2e-08
+  },
+  {
+    "set": 46,
+    "question": 3,
+    "check": "same-sign image insulated boundary",
+    "max_error": 1.6653345369377348e-11,
+    "tolerance": 2e-08
+  },
+  {
+    "set": 46,
+    "question": 3,
+    "check": "same-sign image insulated boundary",
+    "max_error": 1.9984014443252815e-10,
+    "tolerance": 2e-08
+  },
+  {
+    "set": 46,
+    "question": 3,
+    "check": "same-sign image insulated boundary",
+    "max_error": 6.661338147750939e-11,
+    "tolerance": 2e-08
+  },
+  {
+    "set": 46,
+    "question": 3,
+    "check": "same-sign image insulated boundary",
+    "max_error": 6.106226635438361e-11,
+    "tolerance": 2e-08
+  },
+  {
+    "set": 46,
+    "question": 4,
+    "check": "rotating free tube extra stiffness",
+    "symbolic": "pass"
+  },
+  {
+    "set": 46,
+    "question": 5,
+    "check": "parabolic area derivative",
+    "symbolic": "pass"
+  },
+  {
+    "set": 46,
+    "question": 6,
+    "check": "radiance angular Jacobian",
+    "max_error": 4.440892098500626e-16,
+    "tolerance": 1e-08
+  },
+  {
+    "set": 46,
+    "question": 6,
+    "check": "radiance angular Jacobian",
+    "max_error": 0.0,
+    "tolerance": 1e-08
+  },
+  {
+    "set": 46,
+    "question": 6,
+    "check": "radiance angular Jacobian",
+    "max_error": 0.0,
+    "tolerance": 1e-08
+  },
+  {
+    "set": 46,
+    "question": 7,
+    "check": "rainbow stationary derivative",
+    "max_error": 0.0,
+    "tolerance": 1e-08
+  },
+  {
+    "set": 46,
+    "question": 7,
+    "check": "rainbow stationary derivative",
+    "max_error": 8.881784197001252e-16,
+    "tolerance": 1e-08
+  },
+  {
+    "set": 46,
+    "question": 7,
+    "check": "rainbow stationary derivative",
+    "max_error": 2.220446049250313e-16,
+    "tolerance": 1e-08
+  },
+  {
+    "set": 46,
+    "question": 8,
+    "check": "reaction invariant helium momentum",
+    "max_error": 0.0,
+    "tolerance": 1e-28
+  },
+  {
+    "set": 46,
+    "question": 8,
+    "check": "consistent exhaust energy bookkeeping",
+    "u_he": 34333789.891678594,
+    "u_eff": 34324440.50860524,
+    "F": 34324.44050860524,
+    "fuel_ratio": 4.874862367888709,
+    "S_ly": 4.009293508344561
+  }
+]

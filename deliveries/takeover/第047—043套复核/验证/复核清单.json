@@ -1,0 +1,5855 @@
+{
+  "documents": 15,
+  "questions": 40,
+  "figures": 80,
+  "math_checks": 408,
+  "rendered_pages": 694,
+  "sets": [
+    {
+      "set": 47,
+      "documents": [
+        {
+          "version": "试卷",
+          "pages": 9,
+          "body_pages": 8,
+          "sha256": "3fec8bb6466e2060acd4249f80b024a744c29ac51909f280a9a2e775602d1be4",
+          "warnings": [],
+          "sparse_pages": [],
+          "figure_pages": [
+            2,
+            3,
+            4,
+            5,
+            7,
+            8,
+            9
+          ],
+          "per_page_nonspace": [
+            5,
+            127,
+            155,
+            142,
+            220,
+            336,
+            447,
+            430,
+            289
+          ]
+        },
+        {
+          "version": "学生详解",
+          "pages": 57,
+          "body_pages": 56,
+          "sha256": "1175e97791dc32ce160bd9f9c8bf3c6b5ee404f6c1dedddb55d3209bef5dee68",
+          "warnings": [],
+          "sparse_pages": [],
+          "figure_pages": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            14,
+            15,
+            16,
+            17,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            27,
+            28,
+            30,
+            31,
+            32,
+            33,
+            35,
+            36,
+            37,
+            38,
+            39,
+            40,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48,
+            49,
+            50,
+            52,
+            53,
+            54,
+            55,
+            56,
+            57
+          ],
+          "per_page_nonspace": [
+            5,
+            378,
+            358,
+            313,
+            638,
+            616,
+            575,
+            354,
+            292,
+            521,
+            663,
+            674,
+            248,
+            365,
+            406,
+            719,
+            616,
+            582,
+            376,
+            520,
+            520,
+            503,
+            677,
+            676,
+            488,
+            531,
+            398,
+            367,
+            615,
+            637,
+            576,
+            623,
+            543,
+            445,
+            346,
+            426,
+            712,
+            602,
+            584,
+            870,
+            110,
+            548,
+            455,
+            399,
+            371,
+            436,
+            543,
+            637,
+            661,
+            540,
+            209,
+            547,
+            578,
+            473,
+            453,
+            607,
+            568
+          ]
+        },
+        {
+          "version": "教师备课",
+          "pages": 74,
+          "body_pages": 73,
+          "sha256": "3c3d8532594da256b52571092d310c495a9dd409e956a4aa56387e94a6a9216d",
+          "warnings": [],
+          "sparse_pages": [],
+          "figure_pages": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            9,
+            11,
+            12,
+            13,
+            14,
+            15,
+            18,
+            19,
+            20,
+            21,
+            22,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            36,
+            37,
+            39,
+            40,
+            41,
+            43,
+            44,
+            46,
+            47,
+            48,
+            49,
+            50,
+            51,
+            53,
+            55,
+            56,
+            57,
+            58,
+            59,
+            60,
+            61,
+            62,
+            63,
+            65,
+            66,
+            67,
+            68,
+            69,
+            70,
+            71,
+            72
+          ],
+          "per_page_nonspace": [
+            5,
+            378,
+            358,
+            313,
+            638,
+            616,
+            575,
+            772,
+            608,
+            225,
+            355,
+            293,
+            522,
+            663,
+            674,
+            576,
+            742,
+            470,
+            365,
+            406,
+            719,
+            616,
+            582,
+            815,
+            928,
+            205,
+            520,
+            520,
+            503,
+            677,
+            676,
+            560,
+            546,
+            215,
+            531,
+            398,
+            367,
+            615,
+            637,
+            576,
+            725,
+            907,
+            505,
+            543,
+            445,
+            346,
+            426,
+            712,
+            602,
+            584,
+            870,
+            723,
+            761,
+            348,
+            548,
+            455,
+            399,
+            371,
+            436,
+            543,
+            637,
+            661,
+            540,
+            797,
+            685,
+            346,
+            547,
+            578,
+            473,
+            453,
+            607,
+            568,
+            525,
+            272
+          ]
+        }
+      ],
+      "qa": [
+        {
+          "version": "试卷",
+          "sha256": "3fec8bb6466e2060acd4249f80b024a744c29ac51909f280a9a2e775602d1be4",
+          "pages": 9,
+          "body_pages": 8,
+          "questions": 8,
+          "manual_breaks": 7,
+          "modules": 0,
+          "qpdf": "pass",
+          "page_boundaries": "pass",
+          "rendered_pages": 9,
+          "page_records": [
+            {
+              "page": 1,
+              "nonspace": 5,
+              "figures": 0,
+              "outside_page": []
+            },
+            {
+              "page": 2,
+              "nonspace": 127,
+              "figures": 14,
+              "outside_page": []
+            },
+            {
+              "page": 3,
+              "nonspace": 155,
+              "figures": 12,
+              "outside_page": []
+            },
+            {
+              "page": 4,
+              "nonspace": 142,
+              "figures": 15,
+              "outside_page": []
+            },
+            {
+              "page": 5,
+              "nonspace": 220,
+              "figures": 18,
+              "outside_page": []
+            },
+            {
+              "page": 6,
+              "nonspace": 336,
+              "figures": 5,
+              "outside_page": []
+            },
+            {
+              "page": 7,
+              "nonspace": 447,
+              "figures": 31,
+              "outside_page": []
+            },
+            {
+              "page": 8,
+              "nonspace": 430,
+              "figures": 10,
+              "outside_page": []
+            },
+            {
+              "page": 9,
+              "nonspace": 289,
+              "figures": 12,
+              "outside_page": []
+            }
+          ]
+        },
+        {
+          "version": "学生详解",
+          "sha256": "1175e97791dc32ce160bd9f9c8bf3c6b5ee404f6c1dedddb55d3209bef5dee68",
+          "pages": 57,
+          "body_pages": 56,
+          "questions": 8,
+          "manual_breaks": 7,
+          "modules": 5,
+          "qpdf": "pass",
+          "page_boundaries": "pass",
+          "rendered_pages": 57,
+          "page_records": [
+            {
+              "page": 1,
+              "nonspace": 5,
+              "figures": 0,
+              "outside_page": []
+            },
+            {
+              "page": 2,
+              "nonspace": 378,
+              "figures": 14,
+              "outside_page": []
+            },
+            {
+              "page": 3,
+              "nonspace": 358,
+              "figures": 13,
+              "outside_page": []
+            },
+            {
+              "page": 4,
+              "nonspace": 313,
+              "figures": 38,
+              "outside_page": []
+            },
+            {
+              "page": 5,
+              "nonspace": 638,
+              "figures": 20,
+              "outside_page": []
+            },
+            {
+              "page": 6,
+              "nonspace": 616,
+              "figures": 16,
+              "outside_page": []
+            },
+            {
+              "page": 7,
+              "nonspace": 575,
+              "figures": 17,
+              "outside_page": []
+            },
+            {
+              "page": 8,
+              "nonspace": 354,
+              "figures": 12,
+              "outside_page": []
+            },
+            {
+              "page": 9,
+              "nonspace": 292,
+              "figures": 19,
+              "outside_page": []
+            },
+            {
+              "page": 10,
+              "nonspace": 521,
+              "figures": 16,
+              "outside_page": []
+            },
+            {
+              "page": 11,
+              "nonspace": 663,
+              "figures": 13,
+              "outside_page": []
+            },
+            {
+              "page": 12,
+              "nonspace": 674,
+              "figures": 14,
+              "outside_page": []
+            },
+            {
+              "page": 13,
+              "nonspace": 248,
+              "figures": 5,
+              "outside_page": []
+            },
+            {
+              "page": 14,
+              "nonspace": 365,
+              "figures": 15,
+              "outside_page": []
+            },
+            {
+              "page": 15,
+              "nonspace": 406,
+              "figures": 33,
+              "outside_page": []
+            },
+            {
+              "page": 16,
+              "nonspace": 719,
+              "figures": 9,
+              "outside_page": []
+            },
+            {
+              "page": 17,
+              "nonspace": 616,
+              "figures": 18,
+              "outside_page": []
+            },
+            {
+              "page": 18,
+              "nonspace": 582,
+              "figures": 8,
+              "outside_page": []
+            },
+            {
+              "page": 19,
+              "nonspace": 376,
+              "figures": 5,
+              "outside_page": []
+            },
+            {
+              "page": 20,
+              "nonspace": 520,
+              "figures": 18,
+              "outside_page": []
+            },
+            {
+              "page": 21,
+              "nonspace": 520,
+              "figures": 28,
+              "outside_page": []
+            },
+            {
+              "page": 22,
+              "nonspace": 503,
+              "figures": 46,
+              "outside_page": []
+            },
+            {
+              "page": 23,
+              "nonspace": 677,
+              "figures": 24,
+              "outside_page": []
+            },
+            {
+              "page": 24,
+              "nonspace": 676,
+              "figures": 29,
+              "outside_page": []
+            },
+            {
+              "page": 25,
+              "nonspace": 488,
+              "figures": 18,
+              "outside_page": []
+            },
+            {
+              "page": 26,
+              "nonspace": 531,
+              "figures": 5,
+              "outside_page": []
+            },
+            {
+              "page": 27,
+              "nonspace": 398,
+              "figures": 14,
+              "outside_page": []
+            },
+            {
+              "page": 28,
+              "nonspace": 367,
+              "figures": 33,
+              "outside_page": []
+            },
+            {
+              "page": 29,
+              "nonspace": 615,
+              "figures": 6,
+              "outside_page": []
+            },
+            {
+              "page": 30,
+              "nonspace": 637,
+              "figures": 14,
+              "outside_page": []
+            },
+            {
+              "page": 31,
+              "nonspace": 576,
+              "figures": 14,
+              "outside_page": []
+            },
+            {
+              "page": 32,
+              "nonspace": 623,
+              "figures": 15,
+              "outside_page": []
+            },
+            {
+              "page": 33,
+              "nonspace": 543,
+              "figures": 31,
+              "outside_page": []
+            },
+            {
+              "page": 34,
+              "nonspace": 445,
+              "figures": 7,
+              "outside_page": []
+            },
+            {
+              "page": 35,
+              "nonspace": 346,
+              "figures": 15,
+              "outside_page": []
+            },
+            {
+              "page": 36,
+              "nonspace": 426,
+              "figures": 31,
+              "outside_page": []
+            },
+            {
+              "page": 37,
+              "nonspace": 712,
+              "figures": 16,
+              "outside_page": []
+            },
+            {
+              "page": 38,
+              "nonspace": 602,
+              "figures": 23,
+              "outside_page": []
+            },
+            {
+              "page": 39,
+              "nonspace": 584,
+              "figures": 25,
+              "outside_page": []
+            },
+            {
+              "page": 40,
+              "nonspace": 870,
+              "figures": 13,
+              "outside_page": []
+            },
+            {
+              "page": 41,
+              "nonspace": 110,
+              "figures": 1,
+              "outside_page": []
+            },
+            {
+              "page": 42,
+              "nonspace": 548,
+              "figures": 10,
+              "outside_page": []
+            },
+            {
+              "page": 43,
+              "nonspace": 455,
+              "figures": 11,
+              "outside_page": []
+            },
+            {
+              "page": 44,
+              "nonspace": 399,
+              "figures": 18,
+              "outside_page": []
+            },
+            {
+              "page": 45,
+              "nonspace": 371,
+              "figures": 30,
+              "outside_page": []
+            },
+            {
+              "page": 46,
+              "nonspace": 436,
+              "figures": 18,
+              "outside_page": []
+            },
+            {
+              "page": 47,
+              "nonspace": 543,
+              "figures": 20,
+              "outside_page": []
+            },
+            {
+              "page": 48,
+              "nonspace": 637,
+              "figures": 12,
+              "outside_page": []
+            },
+            {
+              "page": 49,
+              "nonspace": 661,
+              "figures": 12,
+              "outside_page": []
+            },
+            {
+              "page": 50,
+              "nonspace": 540,
+              "figures": 24,
+              "outside_page": []
+            },
+            {
+              "page": 51,
+              "nonspace": 209,
+              "figures": 7,
+              "outside_page": []
+            },
+            {
+              "page": 52,
+              "nonspace": 547,
+              "figures": 12,
+              "outside_page": []
+            },
+            {
+              "page": 53,
+              "nonspace": 578,
+              "figures": 19,
+              "outside_page": []
+            },
+            {
+              "page": 54,
+              "nonspace": 473,
+              "figures": 27,
+              "outside_page": []
+            },
+            {
+              "page": 55,
+              "nonspace": 453,
+              "figures": 21,
+              "outside_page": []
+            },
+            {
+              "page": 56,
+              "nonspace": 607,
+              "figures": 13,
+              "outside_page": []
+            },
+            {
+              "page": 57,
+              "nonspace": 568,
+              "figures": 24,
+              "outside_page": []
+            }
+          ]
+        },
+        {
+          "version": "教师备课",
+          "sha256": "3c3d8532594da256b52571092d310c495a9dd409e956a4aa56387e94a6a9216d",
+          "pages": 74,
+          "body_pages": 73,
+          "questions": 8,
+          "manual_breaks": 7,
+          "modules": 9,
+          "qpdf": "pass",
+          "page_boundaries": "pass",
+          "rendered_pages": 74,
+          "page_records": [
+            {
+              "page": 1,
+              "nonspace": 5,
+              "figures": 0,
+              "outside_page": []
+            },
+            {
+              "page": 2,
+              "nonspace": 378,
+              "figures": 14,
+              "outside_page": []
+            },
+            {
+              "page": 3,
+              "nonspace": 358,
+              "figures": 13,
+              "outside_page": []
+            },
+            {
+              "page": 4,
+              "nonspace": 313,
+              "figures": 38,
+              "outside_page": []
+            },
+            {
+              "page": 5,
+              "nonspace": 638,
+              "figures": 20,
+              "outside_page": []
+            },
+            {
+              "page": 6,
+              "nonspace": 616,
+              "figures": 16,
+              "outside_page": []
+            },
+            {
+              "page": 7,
+              "nonspace": 575,
+              "figures": 17,
+              "outside_page": []
+            },
+            {
+              "page": 8,
+              "nonspace": 772,
+              "figures": 1,
+              "outside_page": []
+            },
+            {
+              "page": 9,
+              "nonspace": 608,
+              "figures": 20,
+              "outside_page": []
+            },
+            {
+              "page": 10,
+              "nonspace": 225,
+              "figures": 2,
+              "outside_page": []
+            },
+            {
+              "page": 11,
+              "nonspace": 355,
+              "figures": 12,
+              "outside_page": []
+            },
+            {
+              "page": 12,
+              "nonspace": 293,
+              "figures": 19,
+              "outside_page": []
+            },
+            {
+              "page": 13,
+              "nonspace": 522,
+              "figures": 16,
+              "outside_page": []
+            },
+            {
+              "page": 14,
+              "nonspace": 663,
+              "figures": 13,
+              "outside_page": []
+            },
+            {
+              "page": 15,
+              "nonspace": 674,
+              "figures": 14,
+              "outside_page": []
+            },
+            {
+              "page": 16,
+              "nonspace": 576,
+              "figures": 6,
+              "outside_page": []
+            },
+            {
+              "page": 17,
+              "nonspace": 742,
+              "figures": 4,
+              "outside_page": []
+            },
+            {
+              "page": 18,
+              "nonspace": 470,
+              "figures": 17,
+              "outside_page": []
+            },
+            {
+              "page": 19,
+              "nonspace": 365,
+              "figures": 15,
+              "outside_page": []
+            },
+            {
+              "page": 20,
+              "nonspace": 406,
+              "figures": 33,
+              "outside_page": []
+            },
+            {
+              "page": 21,
+              "nonspace": 719,
+              "figures": 9,
+              "outside_page": []
+            },
+            {
+              "page": 22,
+              "nonspace": 616,
+              "figures": 18,
+              "outside_page": []
+            },
+            {
+              "page": 23,
+              "nonspace": 582,
+              "figures": 8,
+              "outside_page": []
+            },
+            {
+              "page": 24,
+              "nonspace": 815,
+              "figures": 8,
+              "outside_page": []
+            },
+            {
+              "page": 25,
+              "nonspace": 928,
+              "figures": 7,
+              "outside_page": []
+            },
+            {
+              "page": 26,
+              "nonspace": 205,
+              "figures": 2,
+              "outside_page": []
+            },
+            {
+              "page": 27,
+              "nonspace": 520,
+              "figures": 18,
+              "outside_page": []
+            },
+            {
+              "page": 28,
+              "nonspace": 520,
+              "figures": 28,
+              "outside_page": []
+            },
+            {
+              "page": 29,
+              "nonspace": 503,
+              "figures": 46,
+              "outside_page": []
+            },
+            {
+              "page": 30,
+              "nonspace": 677,
+              "figures": 24,
+              "outside_page": []
+            },
+            {
+              "page": 31,
+              "nonspace": 676,
+              "figures": 29,
+              "outside_page": []
+            },
+            {
+              "page": 32,
+              "nonspace": 560,
+              "figures": 18,
+              "outside_page": []
+            },
+            {
+              "page": 33,
+              "nonspace": 546,
+              "figures": 8,
+              "outside_page": []
+            },
+            {
+              "page": 34,
+              "nonspace": 215,
+              "figures": 4,
+              "outside_page": []
+            },
+            {
+              "page": 35,
+              "nonspace": 531,
+              "figures": 5,
+              "outside_page": []
+            },
+            {
+              "page": 36,
+              "nonspace": 398,
+              "figures": 14,
+              "outside_page": []
+            },
+            {
+              "page": 37,
+              "nonspace": 367,
+              "figures": 33,
+              "outside_page": []
+            },
+            {
+              "page": 38,
+              "nonspace": 615,
+              "figures": 6,
+              "outside_page": []
+            },
+            {
+              "page": 39,
+              "nonspace": 637,
+              "figures": 14,
+              "outside_page": []
+            },
+            {
+              "page": 40,
+              "nonspace": 576,
+              "figures": 14,
+              "outside_page": []
+            },
+            {
+              "page": 41,
+              "nonspace": 725,
+              "figures": 15,
+              "outside_page": []
+            },
+            {
+              "page": 42,
+              "nonspace": 907,
+              "figures": 6,
+              "outside_page": []
+            },
+            {
+              "page": 43,
+              "nonspace": 505,
+              "figures": 23,
+              "outside_page": []
+            },
+            {
+              "page": 44,
+              "nonspace": 543,
+              "figures": 31,
+              "outside_page": []
+            },
+            {
+              "page": 45,
+              "nonspace": 445,
+              "figures": 7,
+              "outside_page": []
+            },
+            {
+              "page": 46,
+              "nonspace": 346,
+              "figures": 15,
+              "outside_page": []
+            },
+            {
+              "page": 47,
+              "nonspace": 426,
+              "figures": 31,
+              "outside_page": []
+            },
+            {
+              "page": 48,
+              "nonspace": 712,
+              "figures": 16,
+              "outside_page": []
+            },
+            {
+              "page": 49,
+              "nonspace": 602,
+              "figures": 23,
+              "outside_page": []
+            },
+            {
+              "page": 50,
+              "nonspace": 584,
+              "figures": 25,
+              "outside_page": []
+            },
+            {
+              "page": 51,
+              "nonspace": 870,
+              "figures": 13,
+              "outside_page": []
+            },
+            {
+              "page": 52,
+              "nonspace": 723,
+              "figures": 5,
+              "outside_page": []
+            },
+            {
+              "page": 53,
+              "nonspace": 761,
+              "figures": 10,
+              "outside_page": []
+            },
+            {
+              "page": 54,
+              "nonspace": 348,
+              "figures": 1,
+              "outside_page": []
+            },
+            {
+              "page": 55,
+              "nonspace": 548,
+              "figures": 10,
+              "outside_page": []
+            },
+            {
+              "page": 56,
+              "nonspace": 455,
+              "figures": 11,
+              "outside_page": []
+            },
+            {
+              "page": 57,
+              "nonspace": 399,
+              "figures": 18,
+              "outside_page": []
+            },
+            {
+              "page": 58,
+              "nonspace": 371,
+              "figures": 30,
+              "outside_page": []
+            },
+            {
+              "page": 59,
+              "nonspace": 436,
+              "figures": 18,
+              "outside_page": []
+            },
+            {
+              "page": 60,
+              "nonspace": 543,
+              "figures": 20,
+              "outside_page": []
+            },
+            {
+              "page": 61,
+              "nonspace": 637,
+              "figures": 12,
+              "outside_page": []
+            },
+            {
+              "page": 62,
+              "nonspace": 661,
+              "figures": 12,
+              "outside_page": []
+            },
+            {
+              "page": 63,
+              "nonspace": 540,
+              "figures": 24,
+              "outside_page": []
+            },
+            {
+              "page": 64,
+              "nonspace": 797,
+              "figures": 7,
+              "outside_page": []
+            },
+            {
+              "page": 65,
+              "nonspace": 685,
+              "figures": 11,
+              "outside_page": []
+            },
+            {
+              "page": 66,
+              "nonspace": 346,
+              "figures": 9,
+              "outside_page": []
+            },
+            {
+              "page": 67,
+              "nonspace": 547,
+              "figures": 12,
+              "outside_page": []
+            },
+            {
+              "page": 68,
+              "nonspace": 578,
+              "figures": 19,
+              "outside_page": []
+            },
+            {
+              "page": 69,
+              "nonspace": 473,
+              "figures": 27,
+              "outside_page": []
+            },
+            {
+              "page": 70,
+              "nonspace": 453,
+              "figures": 21,
+              "outside_page": []
+            },
+            {
+              "page": 71,
+              "nonspace": 607,
+              "figures": 13,
+              "outside_page": []
+            },
+            {
+              "page": 72,
+              "nonspace": 568,
+              "figures": 24,
+              "outside_page": []
+            },
+            {
+              "page": 73,
+              "nonspace": 525,
+              "figures": 4,
+              "outside_page": []
+            },
+            {
+              "page": 74,
+              "nonspace": 272,
+              "figures": 4,
+              "outside_page": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "set": 46,
+      "documents": [
+        {
+          "version": "试卷",
+          "pages": 9,
+          "body_pages": 8,
+          "sha256": "008acdf62e54ce49bca71f0d24c6d8dafced91df3f9f7926b4458f2469c205a7",
+          "warnings": [],
+          "sparse_pages": [],
+          "figure_pages": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "per_page_nonspace": [
+            5,
+            249,
+            226,
+            380,
+            239,
+            225,
+            263,
+            389,
+            473
+          ]
+        },
+        {
+          "version": "学生详解",
+          "pages": 57,
+          "body_pages": 56,
+          "sha256": "ea1bfee8590cc7ab65a16c0ea3f80e0216812e230ee72cc323bd903b6fead2eb",
+          "warnings": [],
+          "sparse_pages": [],
+          "figure_pages": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            36,
+            37,
+            38,
+            39,
+            40,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47,
+            49,
+            50,
+            51,
+            52,
+            53,
+            55,
+            56
+          ],
+          "per_page_nonspace": [
+            5,
+            491,
+            415,
+            341,
+            544,
+            703,
+            621,
+            634,
+            370,
+            514,
+            391,
+            720,
+            848,
+            150,
+            461,
+            475,
+            546,
+            470,
+            651,
+            411,
+            388,
+            538,
+            302,
+            506,
+            664,
+            773,
+            469,
+            631,
+            366,
+            343,
+            372,
+            481,
+            654,
+            608,
+            369,
+            425,
+            638,
+            531,
+            773,
+            611,
+            355,
+            471,
+            474,
+            307,
+            459,
+            696,
+            692,
+            293,
+            610,
+            444,
+            424,
+            519,
+            412,
+            671,
+            672,
+            610,
+            363
+          ]
+        },
+        {
+          "version": "教师备课",
+          "pages": 72,
+          "body_pages": 71,
+          "sha256": "773eb578054e1613ee5d9ee408600e1f9efb1a7fc50303e30d5538f9ee909bd4",
+          "warnings": [],
+          "sparse_pages": [],
+          "figure_pages": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            10,
+            12,
+            13,
+            14,
+            15,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            37,
+            38,
+            39,
+            40,
+            41,
+            42,
+            45,
+            46,
+            47,
+            48,
+            49,
+            50,
+            53,
+            54,
+            55,
+            56,
+            57,
+            58,
+            61,
+            62,
+            63,
+            64,
+            65,
+            66,
+            68,
+            69,
+            70,
+            72
+          ],
+          "per_page_nonspace": [
+            5,
+            491,
+            415,
+            341,
+            544,
+            703,
+            621,
+            714,
+            733,
+            635,
+            454,
+            371,
+            515,
+            391,
+            720,
+            848,
+            694,
+            339,
+            461,
+            475,
+            546,
+            470,
+            651,
+            600,
+            698,
+            388,
+            538,
+            302,
+            506,
+            664,
+            773,
+            469,
+            794,
+            612,
+            711,
+            211,
+            366,
+            343,
+            372,
+            481,
+            654,
+            608,
+            890,
+            666,
+            342,
+            425,
+            638,
+            531,
+            773,
+            611,
+            868,
+            301,
+            471,
+            474,
+            307,
+            459,
+            696,
+            692,
+            780,
+            712,
+            375,
+            610,
+            444,
+            424,
+            519,
+            412,
+            671,
+            672,
+            610,
+            823,
+            730,
+            582
+          ]
+        }
+      ],
+      "qa": [
+        {
+          "version": "试卷",
+          "sha256": "008acdf62e54ce49bca71f0d24c6d8dafced91df3f9f7926b4458f2469c205a7",
+          "pages": 9,
+          "body_pages": 8,
+          "questions": 8,
+          "manual_breaks": 7,
+          "modules": 0,
+          "qpdf": "pass",
+          "page_boundaries": "pass",
+          "rendered_pages": 9,
+          "page_records": [
+            {
+              "page": 1,
+              "nonspace": 5,
+              "figures": 0,
+              "outside_page": []
+            },
+            {
+              "page": 2,
+              "nonspace": 249,
+              "figures": 18,
+              "outside_page": []
+            },
+            {
+              "page": 3,
+              "nonspace": 226,
+              "figures": 14,
+              "outside_page": []
+            },
+            {
+              "page": 4,
+              "nonspace": 380,
+              "figures": 16,
+              "outside_page": []
+            },
+            {
+              "page": 5,
+              "nonspace": 239,
+              "figures": 14,
+              "outside_page": []
+            },
+            {
+              "page": 6,
+              "nonspace": 225,
+              "figures": 14,
+              "outside_page": []
+            },
+            {
+              "page": 7,
+              "nonspace": 263,
+              "figures": 16,
+              "outside_page": []
+            },
+            {
+              "page": 8,
+              "nonspace": 389,
+              "figures": 11,
+              "outside_page": []
+            },
+            {
+              "page": 9,
+              "nonspace": 473,
+              "figures": 10,
+              "outside_page": []
+            }
+          ]
+        },
+        {
+          "version": "学生详解",
+          "sha256": "ea1bfee8590cc7ab65a16c0ea3f80e0216812e230ee72cc323bd903b6fead2eb",
+          "pages": 57,
+          "body_pages": 56,
+          "questions": 8,
+          "manual_breaks": 7,
+          "modules": 5,
+          "qpdf": "pass",
+          "page_boundaries": "pass",
+          "rendered_pages": 57,
+          "page_records": [
+            {
+              "page": 1,
+              "nonspace": 5,
+              "figures": 0,
+              "outside_page": []
+            },
+            {
+              "page": 2,
+              "nonspace": 491,
+              "figures": 18,
+              "outside_page": []
+            },
+            {
+              "page": 3,
+              "nonspace": 415,
+              "figures": 15,
+              "outside_page": []
+            },
+            {
+              "page": 4,
+              "nonspace": 341,
+              "figures": 56,
+              "outside_page": []
+            },
+            {
+              "page": 5,
+              "nonspace": 544,
+              "figures": 19,
+              "outside_page": []
+            },
+            {
+              "page": 6,
+              "nonspace": 703,
+              "figures": 15,
+              "outside_page": []
+            },
+            {
+              "page": 7,
+              "nonspace": 621,
+              "figures": 22,
+              "outside_page": []
+            },
+            {
+              "page": 8,
+              "nonspace": 634,
+              "figures": 12,
+              "outside_page": []
+            },
+            {
+              "page": 9,
+              "nonspace": 370,
+              "figures": 14,
+              "outside_page": []
+            },
+            {
+              "page": 10,
+              "nonspace": 514,
+              "figures": 13,
+              "outside_page": []
+            },
+            {
+              "page": 11,
+              "nonspace": 391,
+              "figures": 30,
+              "outside_page": []
+            },
+            {
+              "page": 12,
+              "nonspace": 720,
+              "figures": 12,
+              "outside_page": []
+            },
+            {
+              "page": 13,
+              "nonspace": 848,
+              "figures": 8,
+              "outside_page": []
+            },
+            {
+              "page": 14,
+              "nonspace": 150,
+              "figures": 3,
+              "outside_page": []
+            },
+            {
+              "page": 15,
+              "nonspace": 461,
+              "figures": 16,
+              "outside_page": []
+            },
+            {
+              "page": 16,
+              "nonspace": 475,
+              "figures": 16,
+              "outside_page": []
+            },
+            {
+              "page": 17,
+              "nonspace": 546,
+              "figures": 17,
+              "outside_page": []
+            },
+            {
+              "page": 18,
+              "nonspace": 470,
+              "figures": 20,
+              "outside_page": []
+            },
+            {
+              "page": 19,
+              "nonspace": 651,
+              "figures": 20,
+              "outside_page": []
+            },
+            {
+              "page": 20,
+              "nonspace": 411,
+              "figures": 13,
+              "outside_page": []
+            },
+            {
+              "page": 21,
+              "nonspace": 388,
+              "figures": 14,
+              "outside_page": []
+            },
+            {
+              "page": 22,
+              "nonspace": 538,
+              "figures": 11,
+              "outside_page": []
+            },
+            {
+              "page": 23,
+              "nonspace": 302,
+              "figures": 32,
+              "outside_page": []
+            },
+            {
+              "page": 24,
+              "nonspace": 506,
+              "figures": 15,
+              "outside_page": []
+            },
+            {
+              "page": 25,
+              "nonspace": 664,
+              "figures": 29,
+              "outside_page": []
+            },
+            {
+              "page": 26,
+              "nonspace": 773,
+              "figures": 10,
+              "outside_page": []
+            },
+            {
+              "page": 27,
+              "nonspace": 469,
+              "figures": 17,
+              "outside_page": []
+            },
+            {
+              "page": 28,
+              "nonspace": 631,
+              "figures": 19,
+              "outside_page": []
+            },
+            {
+              "page": 29,
+              "nonspace": 366,
+              "figures": 14,
+              "outside_page": []
+            },
+            {
+              "page": 30,
+              "nonspace": 343,
+              "figures": 22,
+              "outside_page": []
+            },
+            {
+              "page": 31,
+              "nonspace": 372,
+              "figures": 27,
+              "outside_page": []
+            },
+            {
+              "page": 32,
+              "nonspace": 481,
+              "figures": 24,
+              "outside_page": []
+            },
+            {
+              "page": 33,
+              "nonspace": 654,
+              "figures": 22,
+              "outside_page": []
+            },
+            {
+              "page": 34,
+              "nonspace": 608,
+              "figures": 23,
+              "outside_page": []
+            },
+            {
+              "page": 35,
+              "nonspace": 369,
+              "figures": 4,
+              "outside_page": []
+            },
+            {
+              "page": 36,
+              "nonspace": 425,
+              "figures": 16,
+              "outside_page": []
+            },
+            {
+              "page": 37,
+              "nonspace": 638,
+              "figures": 12,
+              "outside_page": []
+            },
+            {
+              "page": 38,
+              "nonspace": 531,
+              "figures": 21,
+              "outside_page": []
+            },
+            {
+              "page": 39,
+              "nonspace": 773,
+              "figures": 9,
+              "outside_page": []
+            },
+            {
+              "page": 40,
+              "nonspace": 611,
+              "figures": 18,
+              "outside_page": []
+            },
+            {
+              "page": 41,
+              "nonspace": 355,
+              "figures": 4,
+              "outside_page": []
+            },
+            {
+              "page": 42,
+              "nonspace": 471,
+              "figures": 11,
+              "outside_page": []
+            },
+            {
+              "page": 43,
+              "nonspace": 474,
+              "figures": 12,
+              "outside_page": []
+            },
+            {
+              "page": 44,
+              "nonspace": 307,
+              "figures": 18,
+              "outside_page": []
+            },
+            {
+              "page": 45,
+              "nonspace": 459,
+              "figures": 16,
+              "outside_page": []
+            },
+            {
+              "page": 46,
+              "nonspace": 696,
+              "figures": 20,
+              "outside_page": []
+            },
+            {
+              "page": 47,
+              "nonspace": 692,
+              "figures": 16,
+              "outside_page": []
+            },
+            {
+              "page": 48,
+              "nonspace": 293,
+              "figures": 2,
+              "outside_page": []
+            },
+            {
+              "page": 49,
+              "nonspace": 610,
+              "figures": 10,
+              "outside_page": []
+            },
+            {
+              "page": 50,
+              "nonspace": 444,
+              "figures": 10,
+              "outside_page": []
+            },
+            {
+              "page": 51,
+              "nonspace": 424,
+              "figures": 23,
+              "outside_page": []
+            },
+            {
+              "page": 52,
+              "nonspace": 519,
+              "figures": 23,
+              "outside_page": []
+            },
+            {
+              "page": 53,
+              "nonspace": 412,
+              "figures": 15,
+              "outside_page": []
+            },
+            {
+              "page": 54,
+              "nonspace": 671,
+              "figures": 8,
+              "outside_page": []
+            },
+            {
+              "page": 55,
+              "nonspace": 672,
+              "figures": 18,
+              "outside_page": []
+            },
+            {
+              "page": 56,
+              "nonspace": 610,
+              "figures": 20,
+              "outside_page": []
+            },
+            {
+              "page": 57,
+              "nonspace": 363,
+              "figures": 6,
+              "outside_page": []
+            }
+          ]
+        },
+        {
+          "version": "教师备课",
+          "sha256": "773eb578054e1613ee5d9ee408600e1f9efb1a7fc50303e30d5538f9ee909bd4",
+          "pages": 72,
+          "body_pages": 71,
+          "questions": 8,
+          "manual_breaks": 7,
+          "modules": 9,
+          "qpdf": "pass",
+          "page_boundaries": "pass",
+          "rendered_pages": 72,
+          "page_records": [
+            {
+              "page": 1,
+              "nonspace": 5,
+              "figures": 0,
+              "outside_page": []
+            },
+            {
+              "page": 2,
+              "nonspace": 491,
+              "figures": 18,
+              "outside_page": []
+            },
+            {
+              "page": 3,
+              "nonspace": 415,
+              "figures": 15,
+              "outside_page": []
+            },
+            {
+              "page": 4,
+              "nonspace": 341,
+              "figures": 56,
+              "outside_page": []
+            },
+            {
+              "page": 5,
+              "nonspace": 544,
+              "figures": 19,
+              "outside_page": []
+            },
+            {
+              "page": 6,
+              "nonspace": 703,
+              "figures": 15,
+              "outside_page": []
+            },
+            {
+              "page": 7,
+              "nonspace": 621,
+              "figures": 22,
+              "outside_page": []
+            },
+            {
+              "page": 8,
+              "nonspace": 714,
+              "figures": 12,
+              "outside_page": []
+            },
+            {
+              "page": 9,
+              "nonspace": 733,
+              "figures": 6,
+              "outside_page": []
+            },
+            {
+              "page": 10,
+              "nonspace": 635,
+              "figures": 23,
+              "outside_page": []
+            },
+            {
+              "page": 11,
+              "nonspace": 454,
+              "figures": 3,
+              "outside_page": []
+            },
+            {
+              "page": 12,
+              "nonspace": 371,
+              "figures": 14,
+              "outside_page": []
+            },
+            {
+              "page": 13,
+              "nonspace": 515,
+              "figures": 13,
+              "outside_page": []
+            },
+            {
+              "page": 14,
+              "nonspace": 391,
+              "figures": 30,
+              "outside_page": []
+            },
+            {
+              "page": 15,
+              "nonspace": 720,
+              "figures": 12,
+              "outside_page": []
+            },
+            {
+              "page": 16,
+              "nonspace": 848,
+              "figures": 8,
+              "outside_page": []
+            },
+            {
+              "page": 17,
+              "nonspace": 694,
+              "figures": 4,
+              "outside_page": []
+            },
+            {
+              "page": 18,
+              "nonspace": 339,
+              "figures": 2,
+              "outside_page": []
+            },
+            {
+              "page": 19,
+              "nonspace": 461,
+              "figures": 16,
+              "outside_page": []
+            },
+            {
+              "page": 20,
+              "nonspace": 475,
+              "figures": 16,
+              "outside_page": []
+            },
+            {
+              "page": 21,
+              "nonspace": 546,
+              "figures": 17,
+              "outside_page": []
+            },
+            {
+              "page": 22,
+              "nonspace": 470,
+              "figures": 20,
+              "outside_page": []
+            },
+            {
+              "page": 23,
+              "nonspace": 651,
+              "figures": 20,
+              "outside_page": []
+            },
+            {
+              "page": 24,
+              "nonspace": 600,
+              "figures": 13,
+              "outside_page": []
+            },
+            {
+              "page": 25,
+              "nonspace": 698,
+              "figures": 10,
+              "outside_page": []
+            },
+            {
+              "page": 26,
+              "nonspace": 388,
+              "figures": 14,
+              "outside_page": []
+            },
+            {
+              "page": 27,
+              "nonspace": 538,
+              "figures": 11,
+              "outside_page": []
+            },
+            {
+              "page": 28,
+              "nonspace": 302,
+              "figures": 32,
+              "outside_page": []
+            },
+            {
+              "page": 29,
+              "nonspace": 506,
+              "figures": 15,
+              "outside_page": []
+            },
+            {
+              "page": 30,
+              "nonspace": 664,
+              "figures": 29,
+              "outside_page": []
+            },
+            {
+              "page": 31,
+              "nonspace": 773,
+              "figures": 10,
+              "outside_page": []
+            },
+            {
+              "page": 32,
+              "nonspace": 469,
+              "figures": 17,
+              "outside_page": []
+            },
+            {
+              "page": 33,
+              "nonspace": 794,
+              "figures": 21,
+              "outside_page": []
+            },
+            {
+              "page": 34,
+              "nonspace": 612,
+              "figures": 10,
+              "outside_page": []
+            },
+            {
+              "page": 35,
+              "nonspace": 711,
+              "figures": 18,
+              "outside_page": []
+            },
+            {
+              "page": 36,
+              "nonspace": 211,
+              "figures": 3,
+              "outside_page": []
+            },
+            {
+              "page": 37,
+              "nonspace": 366,
+              "figures": 14,
+              "outside_page": []
+            },
+            {
+              "page": 38,
+              "nonspace": 343,
+              "figures": 22,
+              "outside_page": []
+            },
+            {
+              "page": 39,
+              "nonspace": 372,
+              "figures": 27,
+              "outside_page": []
+            },
+            {
+              "page": 40,
+              "nonspace": 481,
+              "figures": 24,
+              "outside_page": []
+            },
+            {
+              "page": 41,
+              "nonspace": 654,
+              "figures": 22,
+              "outside_page": []
+            },
+            {
+              "page": 42,
+              "nonspace": 608,
+              "figures": 23,
+              "outside_page": []
+            },
+            {
+              "page": 43,
+              "nonspace": 890,
+              "figures": 7,
+              "outside_page": []
+            },
+            {
+              "page": 44,
+              "nonspace": 666,
+              "figures": 8,
+              "outside_page": []
+            },
+            {
+              "page": 45,
+              "nonspace": 342,
+              "figures": 18,
+              "outside_page": []
+            },
+            {
+              "page": 46,
+              "nonspace": 425,
+              "figures": 16,
+              "outside_page": []
+            },
+            {
+              "page": 47,
+              "nonspace": 638,
+              "figures": 12,
+              "outside_page": []
+            },
+            {
+              "page": 48,
+              "nonspace": 531,
+              "figures": 21,
+              "outside_page": []
+            },
+            {
+              "page": 49,
+              "nonspace": 773,
+              "figures": 9,
+              "outside_page": []
+            },
+            {
+              "page": 50,
+              "nonspace": 611,
+              "figures": 18,
+              "outside_page": []
+            },
+            {
+              "page": 51,
+              "nonspace": 868,
+              "figures": 5,
+              "outside_page": []
+            },
+            {
+              "page": 52,
+              "nonspace": 301,
+              "figures": 3,
+              "outside_page": []
+            },
+            {
+              "page": 53,
+              "nonspace": 471,
+              "figures": 11,
+              "outside_page": []
+            },
+            {
+              "page": 54,
+              "nonspace": 474,
+              "figures": 12,
+              "outside_page": []
+            },
+            {
+              "page": 55,
+              "nonspace": 307,
+              "figures": 18,
+              "outside_page": []
+            },
+            {
+              "page": 56,
+              "nonspace": 459,
+              "figures": 16,
+              "outside_page": []
+            },
+            {
+              "page": 57,
+              "nonspace": 696,
+              "figures": 20,
+              "outside_page": []
+            },
+            {
+              "page": 58,
+              "nonspace": 692,
+              "figures": 16,
+              "outside_page": []
+            },
+            {
+              "page": 59,
+              "nonspace": 780,
+              "figures": 4,
+              "outside_page": []
+            },
+            {
+              "page": 60,
+              "nonspace": 712,
+              "figures": 1,
+              "outside_page": []
+            },
+            {
+              "page": 61,
+              "nonspace": 375,
+              "figures": 18,
+              "outside_page": []
+            },
+            {
+              "page": 62,
+              "nonspace": 610,
+              "figures": 10,
+              "outside_page": []
+            },
+            {
+              "page": 63,
+              "nonspace": 444,
+              "figures": 10,
+              "outside_page": []
+            },
+            {
+              "page": 64,
+              "nonspace": 424,
+              "figures": 23,
+              "outside_page": []
+            },
+            {
+              "page": 65,
+              "nonspace": 519,
+              "figures": 23,
+              "outside_page": []
+            },
+            {
+              "page": 66,
+              "nonspace": 412,
+              "figures": 15,
+              "outside_page": []
+            },
+            {
+              "page": 67,
+              "nonspace": 671,
+              "figures": 8,
+              "outside_page": []
+            },
+            {
+              "page": 68,
+              "nonspace": 672,
+              "figures": 18,
+              "outside_page": []
+            },
+            {
+              "page": 69,
+              "nonspace": 610,
+              "figures": 20,
+              "outside_page": []
+            },
+            {
+              "page": 70,
+              "nonspace": 823,
+              "figures": 12,
+              "outside_page": []
+            },
+            {
+              "page": 71,
+              "nonspace": 730,
+              "figures": 6,
+              "outside_page": []
+            },
+            {
+              "page": 72,
+              "nonspace": 582,
+              "figures": 16,
+              "outside_page": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "set": 45,
+      "documents": [
+        {
+          "version": "试卷",
+          "pages": 9,
+          "body_pages": 8,
+          "sha256": "98965d469d033ff605cf26c97ef7f1d3fcb8e989ba36e474f6fd427985d41b40",
+          "warnings": [],
+          "sparse_pages": [],
+          "figure_pages": [
+            2,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "per_page_nonspace": [
+            5,
+            214,
+            110,
+            298,
+            414,
+            143,
+            365,
+            252,
+            263
+          ]
+        },
+        {
+          "version": "学生详解",
+          "pages": 58,
+          "body_pages": 57,
+          "sha256": "b758367b3adb7b76e216f2e0cbd78244fd233031a7229ebefc94aa8ff3b67540",
+          "warnings": [],
+          "sparse_pages": [],
+          "figure_pages": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            9,
+            10,
+            11,
+            12,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            24,
+            25,
+            26,
+            27,
+            28,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39,
+            40,
+            42,
+            43,
+            44,
+            45,
+            47,
+            48,
+            49,
+            50,
+            51,
+            52,
+            54,
+            55,
+            56,
+            58
+          ],
+          "per_page_nonspace": [
+            5,
+            416,
+            356,
+            635,
+            682,
+            763,
+            540,
+            315,
+            294,
+            589,
+            771,
+            630,
+            661,
+            256,
+            420,
+            313,
+            417,
+            502,
+            751,
+            718,
+            578,
+            403,
+            254,
+            551,
+            363,
+            378,
+            511,
+            519,
+            712,
+            634,
+            667,
+            229,
+            367,
+            357,
+            510,
+            646,
+            684,
+            499,
+            274,
+            467,
+            293,
+            298,
+            451,
+            836,
+            552,
+            612,
+            494,
+            207,
+            466,
+            580,
+            583,
+            591,
+            199,
+            419,
+            685,
+            611,
+            463,
+            300
+          ]
+        },
+        {
+          "version": "教师备课",
+          "pages": 72,
+          "body_pages": 71,
+          "sha256": "4b42d3d6105c5d3f1b5ce1f9b86e2e97a8a68273a5441bb2cb2bae7a1dbf2471",
+          "warnings": [],
+          "sparse_pages": [],
+          "figure_pages": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            11,
+            12,
+            13,
+            14,
+            16,
+            17,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            28,
+            30,
+            31,
+            32,
+            33,
+            34,
+            36,
+            37,
+            38,
+            39,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48,
+            49,
+            50,
+            52,
+            53,
+            54,
+            55,
+            57,
+            58,
+            59,
+            61,
+            62,
+            63,
+            64,
+            65,
+            66,
+            67,
+            68,
+            69,
+            71,
+            72
+          ],
+          "per_page_nonspace": [
+            5,
+            416,
+            356,
+            635,
+            682,
+            763,
+            540,
+            790,
+            370,
+            315,
+            295,
+            590,
+            771,
+            630,
+            661,
+            770,
+            636,
+            280,
+            420,
+            313,
+            417,
+            502,
+            751,
+            718,
+            578,
+            403,
+            665,
+            670,
+            601,
+            551,
+            363,
+            378,
+            511,
+            519,
+            712,
+            634,
+            667,
+            701,
+            536,
+            435,
+            367,
+            357,
+            510,
+            646,
+            684,
+            499,
+            713,
+            585,
+            422,
+            467,
+            293,
+            298,
+            451,
+            836,
+            552,
+            612,
+            494,
+            638,
+            576,
+            669,
+            466,
+            580,
+            583,
+            591,
+            635,
+            773,
+            419,
+            685,
+            611,
+            463,
+            718,
+            817
+          ]
+        }
+      ],
+      "qa": [
+        {
+          "version": "试卷",
+          "sha256": "98965d469d033ff605cf26c97ef7f1d3fcb8e989ba36e474f6fd427985d41b40",
+          "pages": 9,
+          "body_pages": 8,
+          "questions": 8,
+          "manual_breaks": 7,
+          "modules": 0,
+          "qpdf": "pass",
+          "page_boundaries": "pass",
+          "rendered_pages": 9,
+          "page_records": [
+            {
+              "page": 1,
+              "nonspace": 5,
+              "figures": 0,
+              "outside_page": []
+            },
+            {
+              "page": 2,
+              "nonspace": 214,
+              "figures": 10,
+              "outside_page": []
+            },
+            {
+              "page": 3,
+              "nonspace": 110,
+              "figures": 6,
+              "outside_page": []
+            },
+            {
+              "page": 4,
+              "nonspace": 298,
+              "figures": 17,
+              "outside_page": []
+            },
+            {
+              "page": 5,
+              "nonspace": 414,
+              "figures": 11,
+              "outside_page": []
+            },
+            {
+              "page": 6,
+              "nonspace": 143,
+              "figures": 11,
+              "outside_page": []
+            },
+            {
+              "page": 7,
+              "nonspace": 365,
+              "figures": 14,
+              "outside_page": []
+            },
+            {
+              "page": 8,
+              "nonspace": 252,
+              "figures": 21,
+              "outside_page": []
+            },
+            {
+              "page": 9,
+              "nonspace": 263,
+              "figures": 33,
+              "outside_page": []
+            }
+          ]
+        },
+        {
+          "version": "学生详解",
+          "sha256": "b758367b3adb7b76e216f2e0cbd78244fd233031a7229ebefc94aa8ff3b67540",
+          "pages": 58,
+          "body_pages": 57,
+          "questions": 8,
+          "manual_breaks": 7,
+          "modules": 5,
+          "qpdf": "pass",
+          "page_boundaries": "pass",
+          "rendered_pages": 58,
+          "page_records": [
+            {
+              "page": 1,
+              "nonspace": 5,
+              "figures": 0,
+              "outside_page": []
+            },
+            {
+              "page": 2,
+              "nonspace": 416,
+              "figures": 10,
+              "outside_page": []
+            },
+            {
+              "page": 3,
+              "nonspace": 356,
+              "figures": 19,
+              "outside_page": []
+            },
+            {
+              "page": 4,
+              "nonspace": 635,
+              "figures": 11,
+              "outside_page": []
+            },
+            {
+              "page": 5,
+              "nonspace": 682,
+              "figures": 9,
+              "outside_page": []
+            },
+            {
+              "page": 6,
+              "nonspace": 763,
+              "figures": 13,
+              "outside_page": []
+            },
+            {
+              "page": 7,
+              "nonspace": 540,
+              "figures": 24,
+              "outside_page": []
+            },
+            {
+              "page": 8,
+              "nonspace": 315,
+              "figures": 6,
+              "outside_page": []
+            },
+            {
+              "page": 9,
+              "nonspace": 294,
+              "figures": 20,
+              "outside_page": []
+            },
+            {
+              "page": 10,
+              "nonspace": 589,
+              "figures": 22,
+              "outside_page": []
+            },
+            {
+              "page": 11,
+              "nonspace": 771,
+              "figures": 9,
+              "outside_page": []
+            },
+            {
+              "page": 12,
+              "nonspace": 630,
+              "figures": 17,
+              "outside_page": []
+            },
+            {
+              "page": 13,
+              "nonspace": 661,
+              "figures": 6,
+              "outside_page": []
+            },
+            {
+              "page": 14,
+              "nonspace": 256,
+              "figures": 8,
+              "outside_page": []
+            },
+            {
+              "page": 15,
+              "nonspace": 420,
+              "figures": 17,
+              "outside_page": []
+            },
+            {
+              "page": 16,
+              "nonspace": 313,
+              "figures": 10,
+              "outside_page": []
+            },
+            {
+              "page": 17,
+              "nonspace": 417,
+              "figures": 40,
+              "outside_page": []
+            },
+            {
+              "page": 18,
+              "nonspace": 502,
+              "figures": 21,
+              "outside_page": []
+            },
+            {
+              "page": 19,
+              "nonspace": 751,
+              "figures": 11,
+              "outside_page": []
+            },
+            {
+              "page": 20,
+              "nonspace": 718,
+              "figures": 17,
+              "outside_page": []
+            },
+            {
+              "page": 21,
+              "nonspace": 578,
+              "figures": 16,
+              "outside_page": []
+            },
+            {
+              "page": 22,
+              "nonspace": 403,
+              "figures": 18,
+              "outside_page": []
+            },
+            {
+              "page": 23,
+              "nonspace": 254,
+              "figures": 4,
+              "outside_page": []
+            },
+            {
+              "page": 24,
+              "nonspace": 551,
+              "figures": 11,
+              "outside_page": []
+            },
+            {
+              "page": 25,
+              "nonspace": 363,
+              "figures": 14,
+              "outside_page": []
+            },
+            {
+              "page": 26,
+              "nonspace": 378,
+              "figures": 16,
+              "outside_page": []
+            },
+            {
+              "page": 27,
+              "nonspace": 511,
+              "figures": 27,
+              "outside_page": []
+            },
+            {
+              "page": 28,
+              "nonspace": 519,
+              "figures": 33,
+              "outside_page": []
+            },
+            {
+              "page": 29,
+              "nonspace": 712,
+              "figures": 7,
+              "outside_page": []
+            },
+            {
+              "page": 30,
+              "nonspace": 634,
+              "figures": 13,
+              "outside_page": []
+            },
+            {
+              "page": 31,
+              "nonspace": 667,
+              "figures": 21,
+              "outside_page": []
+            },
+            {
+              "page": 32,
+              "nonspace": 229,
+              "figures": 11,
+              "outside_page": []
+            },
+            {
+              "page": 33,
+              "nonspace": 367,
+              "figures": 11,
+              "outside_page": []
+            },
+            {
+              "page": 34,
+              "nonspace": 357,
+              "figures": 18,
+              "outside_page": []
+            },
+            {
+              "page": 35,
+              "nonspace": 510,
+              "figures": 38,
+              "outside_page": []
+            },
+            {
+              "page": 36,
+              "nonspace": 646,
+              "figures": 20,
+              "outside_page": []
+            },
+            {
+              "page": 37,
+              "nonspace": 684,
+              "figures": 18,
+              "outside_page": []
+            },
+            {
+              "page": 38,
+              "nonspace": 499,
+              "figures": 27,
+              "outside_page": []
+            },
+            {
+              "page": 39,
+              "nonspace": 274,
+              "figures": 11,
+              "outside_page": []
+            },
+            {
+              "page": 40,
+              "nonspace": 467,
+              "figures": 14,
+              "outside_page": []
+            },
+            {
+              "page": 41,
+              "nonspace": 293,
+              "figures": 8,
+              "outside_page": []
+            },
+            {
+              "page": 42,
+              "nonspace": 298,
+              "figures": 34,
+              "outside_page": []
+            },
+            {
+              "page": 43,
+              "nonspace": 451,
+              "figures": 28,
+              "outside_page": []
+            },
+            {
+              "page": 44,
+              "nonspace": 836,
+              "figures": 17,
+              "outside_page": []
+            },
+            {
+              "page": 45,
+              "nonspace": 552,
+              "figures": 11,
+              "outside_page": []
+            },
+            {
+              "page": 46,
+              "nonspace": 612,
+              "figures": 4,
+              "outside_page": []
+            },
+            {
+              "page": 47,
+              "nonspace": 494,
+              "figures": 9,
+              "outside_page": []
+            },
+            {
+              "page": 48,
+              "nonspace": 207,
+              "figures": 9,
+              "outside_page": []
+            },
+            {
+              "page": 49,
+              "nonspace": 466,
+              "figures": 21,
+              "outside_page": []
+            },
+            {
+              "page": 50,
+              "nonspace": 580,
+              "figures": 25,
+              "outside_page": []
+            },
+            {
+              "page": 51,
+              "nonspace": 583,
+              "figures": 29,
+              "outside_page": []
+            },
+            {
+              "page": 52,
+              "nonspace": 591,
+              "figures": 25,
+              "outside_page": []
+            },
+            {
+              "page": 53,
+              "nonspace": 199,
+              "figures": 7,
+              "outside_page": []
+            },
+            {
+              "page": 54,
+              "nonspace": 419,
+              "figures": 33,
+              "outside_page": []
+            },
+            {
+              "page": 55,
+              "nonspace": 685,
+              "figures": 28,
+              "outside_page": []
+            },
+            {
+              "page": 56,
+              "nonspace": 611,
+              "figures": 19,
+              "outside_page": []
+            },
+            {
+              "page": 57,
+              "nonspace": 463,
+              "figures": 8,
+              "outside_page": []
+            },
+            {
+              "page": 58,
+              "nonspace": 300,
+              "figures": 17,
+              "outside_page": []
+            }
+          ]
+        },
+        {
+          "version": "教师备课",
+          "sha256": "4b42d3d6105c5d3f1b5ce1f9b86e2e97a8a68273a5441bb2cb2bae7a1dbf2471",
+          "pages": 72,
+          "body_pages": 71,
+          "questions": 8,
+          "manual_breaks": 7,
+          "modules": 9,
+          "qpdf": "pass",
+          "page_boundaries": "pass",
+          "rendered_pages": 72,
+          "page_records": [
+            {
+              "page": 1,
+              "nonspace": 5,
+              "figures": 0,
+              "outside_page": []
+            },
+            {
+              "page": 2,
+              "nonspace": 416,
+              "figures": 10,
+              "outside_page": []
+            },
+            {
+              "page": 3,
+              "nonspace": 356,
+              "figures": 19,
+              "outside_page": []
+            },
+            {
+              "page": 4,
+              "nonspace": 635,
+              "figures": 11,
+              "outside_page": []
+            },
+            {
+              "page": 5,
+              "nonspace": 682,
+              "figures": 9,
+              "outside_page": []
+            },
+            {
+              "page": 6,
+              "nonspace": 763,
+              "figures": 13,
+              "outside_page": []
+            },
+            {
+              "page": 7,
+              "nonspace": 540,
+              "figures": 24,
+              "outside_page": []
+            },
+            {
+              "page": 8,
+              "nonspace": 790,
+              "figures": 8,
+              "outside_page": []
+            },
+            {
+              "page": 9,
+              "nonspace": 370,
+              "figures": 8,
+              "outside_page": []
+            },
+            {
+              "page": 10,
+              "nonspace": 315,
+              "figures": 6,
+              "outside_page": []
+            },
+            {
+              "page": 11,
+              "nonspace": 295,
+              "figures": 20,
+              "outside_page": []
+            },
+            {
+              "page": 12,
+              "nonspace": 590,
+              "figures": 22,
+              "outside_page": []
+            },
+            {
+              "page": 13,
+              "nonspace": 771,
+              "figures": 9,
+              "outside_page": []
+            },
+            {
+              "page": 14,
+              "nonspace": 630,
+              "figures": 17,
+              "outside_page": []
+            },
+            {
+              "page": 15,
+              "nonspace": 661,
+              "figures": 6,
+              "outside_page": []
+            },
+            {
+              "page": 16,
+              "nonspace": 770,
+              "figures": 10,
+              "outside_page": []
+            },
+            {
+              "page": 17,
+              "nonspace": 636,
+              "figures": 14,
+              "outside_page": []
+            },
+            {
+              "page": 18,
+              "nonspace": 280,
+              "figures": 2,
+              "outside_page": []
+            },
+            {
+              "page": 19,
+              "nonspace": 420,
+              "figures": 17,
+              "outside_page": []
+            },
+            {
+              "page": 20,
+              "nonspace": 313,
+              "figures": 10,
+              "outside_page": []
+            },
+            {
+              "page": 21,
+              "nonspace": 417,
+              "figures": 40,
+              "outside_page": []
+            },
+            {
+              "page": 22,
+              "nonspace": 502,
+              "figures": 21,
+              "outside_page": []
+            },
+            {
+              "page": 23,
+              "nonspace": 751,
+              "figures": 11,
+              "outside_page": []
+            },
+            {
+              "page": 24,
+              "nonspace": 718,
+              "figures": 17,
+              "outside_page": []
+            },
+            {
+              "page": 25,
+              "nonspace": 578,
+              "figures": 16,
+              "outside_page": []
+            },
+            {
+              "page": 26,
+              "nonspace": 403,
+              "figures": 18,
+              "outside_page": []
+            },
+            {
+              "page": 27,
+              "nonspace": 665,
+              "figures": 8,
+              "outside_page": []
+            },
+            {
+              "page": 28,
+              "nonspace": 670,
+              "figures": 24,
+              "outside_page": []
+            },
+            {
+              "page": 29,
+              "nonspace": 601,
+              "figures": 4,
+              "outside_page": []
+            },
+            {
+              "page": 30,
+              "nonspace": 551,
+              "figures": 11,
+              "outside_page": []
+            },
+            {
+              "page": 31,
+              "nonspace": 363,
+              "figures": 14,
+              "outside_page": []
+            },
+            {
+              "page": 32,
+              "nonspace": 378,
+              "figures": 16,
+              "outside_page": []
+            },
+            {
+              "page": 33,
+              "nonspace": 511,
+              "figures": 27,
+              "outside_page": []
+            },
+            {
+              "page": 34,
+              "nonspace": 519,
+              "figures": 33,
+              "outside_page": []
+            },
+            {
+              "page": 35,
+              "nonspace": 712,
+              "figures": 7,
+              "outside_page": []
+            },
+            {
+              "page": 36,
+              "nonspace": 634,
+              "figures": 13,
+              "outside_page": []
+            },
+            {
+              "page": 37,
+              "nonspace": 667,
+              "figures": 21,
+              "outside_page": []
+            },
+            {
+              "page": 38,
+              "nonspace": 701,
+              "figures": 12,
+              "outside_page": []
+            },
+            {
+              "page": 39,
+              "nonspace": 536,
+              "figures": 12,
+              "outside_page": []
+            },
+            {
+              "page": 40,
+              "nonspace": 435,
+              "figures": 1,
+              "outside_page": []
+            },
+            {
+              "page": 41,
+              "nonspace": 367,
+              "figures": 11,
+              "outside_page": []
+            },
+            {
+              "page": 42,
+              "nonspace": 357,
+              "figures": 18,
+              "outside_page": []
+            },
+            {
+              "page": 43,
+              "nonspace": 510,
+              "figures": 38,
+              "outside_page": []
+            },
+            {
+              "page": 44,
+              "nonspace": 646,
+              "figures": 20,
+              "outside_page": []
+            },
+            {
+              "page": 45,
+              "nonspace": 684,
+              "figures": 18,
+              "outside_page": []
+            },
+            {
+              "page": 46,
+              "nonspace": 499,
+              "figures": 27,
+              "outside_page": []
+            },
+            {
+              "page": 47,
+              "nonspace": 713,
+              "figures": 15,
+              "outside_page": []
+            },
+            {
+              "page": 48,
+              "nonspace": 585,
+              "figures": 34,
+              "outside_page": []
+            },
+            {
+              "page": 49,
+              "nonspace": 422,
+              "figures": 9,
+              "outside_page": []
+            },
+            {
+              "page": 50,
+              "nonspace": 467,
+              "figures": 14,
+              "outside_page": []
+            },
+            {
+              "page": 51,
+              "nonspace": 293,
+              "figures": 8,
+              "outside_page": []
+            },
+            {
+              "page": 52,
+              "nonspace": 298,
+              "figures": 34,
+              "outside_page": []
+            },
+            {
+              "page": 53,
+              "nonspace": 451,
+              "figures": 28,
+              "outside_page": []
+            },
+            {
+              "page": 54,
+              "nonspace": 836,
+              "figures": 17,
+              "outside_page": []
+            },
+            {
+              "page": 55,
+              "nonspace": 552,
+              "figures": 11,
+              "outside_page": []
+            },
+            {
+              "page": 56,
+              "nonspace": 612,
+              "figures": 4,
+              "outside_page": []
+            },
+            {
+              "page": 57,
+              "nonspace": 494,
+              "figures": 9,
+              "outside_page": []
+            },
+            {
+              "page": 58,
+              "nonspace": 638,
+              "figures": 10,
+              "outside_page": []
+            },
+            {
+              "page": 59,
+              "nonspace": 576,
+              "figures": 18,
+              "outside_page": []
+            },
+            {
+              "page": 60,
+              "nonspace": 669,
+              "figures": 6,
+              "outside_page": []
+            },
+            {
+              "page": 61,
+              "nonspace": 466,
+              "figures": 21,
+              "outside_page": []
+            },
+            {
+              "page": 62,
+              "nonspace": 580,
+              "figures": 25,
+              "outside_page": []
+            },
+            {
+              "page": 63,
+              "nonspace": 583,
+              "figures": 29,
+              "outside_page": []
+            },
+            {
+              "page": 64,
+              "nonspace": 591,
+              "figures": 25,
+              "outside_page": []
+            },
+            {
+              "page": 65,
+              "nonspace": 635,
+              "figures": 9,
+              "outside_page": []
+            },
+            {
+              "page": 66,
+              "nonspace": 773,
+              "figures": 15,
+              "outside_page": []
+            },
+            {
+              "page": 67,
+              "nonspace": 419,
+              "figures": 33,
+              "outside_page": []
+            },
+            {
+              "page": 68,
+              "nonspace": 685,
+              "figures": 28,
+              "outside_page": []
+            },
+            {
+              "page": 69,
+              "nonspace": 611,
+              "figures": 19,
+              "outside_page": []
+            },
+            {
+              "page": 70,
+              "nonspace": 463,
+              "figures": 8,
+              "outside_page": []
+            },
+            {
+              "page": 71,
+              "nonspace": 718,
+              "figures": 19,
+              "outside_page": []
+            },
+            {
+              "page": 72,
+              "nonspace": 817,
+              "figures": 10,
+              "outside_page": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "set": 44,
+      "documents": [
+        {
+          "version": "试卷",
+          "pages": 9,
+          "body_pages": 8,
+          "sha256": "8ab093bf7685a1f669459a2cb63b4f0a46306a7efdad62bba188fced5b9871aa",
+          "warnings": [],
+          "sparse_pages": [],
+          "figure_pages": [
+            2,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "per_page_nonspace": [
+            5,
+            125,
+            160,
+            288,
+            233,
+            329,
+            253,
+            258,
+            335
+          ]
+        },
+        {
+          "version": "学生详解",
+          "pages": 57,
+          "body_pages": 56,
+          "sha256": "252d24c6af4c5ca4fb02680c61acf9cc6b82b8f337c1f55a253b7efe7e82ea7a",
+          "warnings": [],
+          "sparse_pages": [],
+          "figure_pages": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            10,
+            11,
+            12,
+            13,
+            14,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            37,
+            38,
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            48,
+            49,
+            51,
+            52,
+            53,
+            54,
+            55,
+            56
+          ],
+          "per_page_nonspace": [
+            5,
+            553,
+            376,
+            515,
+            589,
+            566,
+            558,
+            186,
+            445,
+            432,
+            377,
+            594,
+            561,
+            597,
+            310,
+            629,
+            583,
+            493,
+            726,
+            575,
+            560,
+            464,
+            448,
+            470,
+            469,
+            746,
+            626,
+            581,
+            252,
+            446,
+            550,
+            481,
+            937,
+            607,
+            688,
+            282,
+            460,
+            520,
+            437,
+            568,
+            598,
+            575,
+            522,
+            594,
+            660,
+            456,
+            685,
+            562,
+            552,
+            278,
+            594,
+            432,
+            465,
+            774,
+            650,
+            548,
+            473
+          ]
+        },
+        {
+          "version": "教师备课",
+          "pages": 72,
+          "body_pages": 71,
+          "sha256": "61d24b52e8f4d9e1f710dca8f3edfcb3385640ddcce45094e3130e67da75e2f9",
+          "warnings": [],
+          "sparse_pages": [],
+          "figure_pages": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            37,
+            38,
+            39,
+            40,
+            41,
+            42,
+            44,
+            46,
+            47,
+            48,
+            49,
+            50,
+            51,
+            52,
+            55,
+            56,
+            57,
+            59,
+            60,
+            64,
+            65,
+            66,
+            67,
+            68,
+            69,
+            71,
+            72
+          ],
+          "per_page_nonspace": [
+            5,
+            553,
+            376,
+            515,
+            589,
+            566,
+            558,
+            827,
+            485,
+            273,
+            446,
+            433,
+            377,
+            594,
+            561,
+            597,
+            742,
+            698,
+            352,
+            629,
+            583,
+            493,
+            726,
+            575,
+            560,
+            635,
+            722,
+            293,
+            448,
+            470,
+            469,
+            746,
+            626,
+            581,
+            756,
+            612,
+            446,
+            550,
+            481,
+            937,
+            607,
+            688,
+            872,
+            825,
+            105,
+            460,
+            520,
+            437,
+            568,
+            598,
+            575,
+            592,
+            759,
+            627,
+            594,
+            660,
+            456,
+            685,
+            562,
+            552,
+            740,
+            839,
+            333,
+            594,
+            432,
+            465,
+            774,
+            650,
+            548,
+            649,
+            786,
+            667
+          ]
+        }
+      ],
+      "qa": [
+        {
+          "version": "试卷",
+          "sha256": "8ab093bf7685a1f669459a2cb63b4f0a46306a7efdad62bba188fced5b9871aa",
+          "pages": 9,
+          "body_pages": 8,
+          "questions": 8,
+          "manual_breaks": 7,
+          "modules": 0,
+          "qpdf": "pass",
+          "page_boundaries": "pass",
+          "rendered_pages": 9,
+          "page_records": [
+            {
+              "page": 1,
+              "nonspace": 5,
+              "figures": 0,
+              "outside_page": []
+            },
+            {
+              "page": 2,
+              "nonspace": 125,
+              "figures": 11,
+              "outside_page": []
+            },
+            {
+              "page": 3,
+              "nonspace": 160,
+              "figures": 8,
+              "outside_page": []
+            },
+            {
+              "page": 4,
+              "nonspace": 288,
+              "figures": 9,
+              "outside_page": []
+            },
+            {
+              "page": 5,
+              "nonspace": 233,
+              "figures": 9,
+              "outside_page": []
+            },
+            {
+              "page": 6,
+              "nonspace": 329,
+              "figures": 14,
+              "outside_page": []
+            },
+            {
+              "page": 7,
+              "nonspace": 253,
+              "figures": 9,
+              "outside_page": []
+            },
+            {
+              "page": 8,
+              "nonspace": 258,
+              "figures": 14,
+              "outside_page": []
+            },
+            {
+              "page": 9,
+              "nonspace": 335,
+              "figures": 16,
+              "outside_page": []
+            }
+          ]
+        },
+        {
+          "version": "学生详解",
+          "sha256": "252d24c6af4c5ca4fb02680c61acf9cc6b82b8f337c1f55a253b7efe7e82ea7a",
+          "pages": 57,
+          "body_pages": 56,
+          "questions": 8,
+          "manual_breaks": 7,
+          "modules": 5,
+          "qpdf": "pass",
+          "page_boundaries": "pass",
+          "rendered_pages": 57,
+          "page_records": [
+            {
+              "page": 1,
+              "nonspace": 5,
+              "figures": 0,
+              "outside_page": []
+            },
+            {
+              "page": 2,
+              "nonspace": 553,
+              "figures": 14,
+              "outside_page": []
+            },
+            {
+              "page": 3,
+              "nonspace": 376,
+              "figures": 22,
+              "outside_page": []
+            },
+            {
+              "page": 4,
+              "nonspace": 515,
+              "figures": 30,
+              "outside_page": []
+            },
+            {
+              "page": 5,
+              "nonspace": 589,
+              "figures": 12,
+              "outside_page": []
+            },
+            {
+              "page": 6,
+              "nonspace": 566,
+              "figures": 25,
+              "outside_page": []
+            },
+            {
+              "page": 7,
+              "nonspace": 558,
+              "figures": 19,
+              "outside_page": []
+            },
+            {
+              "page": 8,
+              "nonspace": 186,
+              "figures": 8,
+              "outside_page": []
+            },
+            {
+              "page": 9,
+              "nonspace": 445,
+              "figures": 8,
+              "outside_page": []
+            },
+            {
+              "page": 10,
+              "nonspace": 432,
+              "figures": 28,
+              "outside_page": []
+            },
+            {
+              "page": 11,
+              "nonspace": 377,
+              "figures": 33,
+              "outside_page": []
+            },
+            {
+              "page": 12,
+              "nonspace": 594,
+              "figures": 19,
+              "outside_page": []
+            },
+            {
+              "page": 13,
+              "nonspace": 561,
+              "figures": 23,
+              "outside_page": []
+            },
+            {
+              "page": 14,
+              "nonspace": 597,
+              "figures": 23,
+              "outside_page": []
+            },
+            {
+              "page": 15,
+              "nonspace": 310,
+              "figures": 7,
+              "outside_page": []
+            },
+            {
+              "page": 16,
+              "nonspace": 629,
+              "figures": 9,
+              "outside_page": []
+            },
+            {
+              "page": 17,
+              "nonspace": 583,
+              "figures": 22,
+              "outside_page": []
+            },
+            {
+              "page": 18,
+              "nonspace": 493,
+              "figures": 33,
+              "outside_page": []
+            },
+            {
+              "page": 19,
+              "nonspace": 726,
+              "figures": 23,
+              "outside_page": []
+            },
+            {
+              "page": 20,
+              "nonspace": 575,
+              "figures": 13,
+              "outside_page": []
+            },
+            {
+              "page": 21,
+              "nonspace": 560,
+              "figures": 18,
+              "outside_page": []
+            },
+            {
+              "page": 22,
+              "nonspace": 464,
+              "figures": 19,
+              "outside_page": []
+            },
+            {
+              "page": 23,
+              "nonspace": 448,
+              "figures": 9,
+              "outside_page": []
+            },
+            {
+              "page": 24,
+              "nonspace": 470,
+              "figures": 27,
+              "outside_page": []
+            },
+            {
+              "page": 25,
+              "nonspace": 469,
+              "figures": 31,
+              "outside_page": []
+            },
+            {
+              "page": 26,
+              "nonspace": 746,
+              "figures": 13,
+              "outside_page": []
+            },
+            {
+              "page": 27,
+              "nonspace": 626,
+              "figures": 23,
+              "outside_page": []
+            },
+            {
+              "page": 28,
+              "nonspace": 581,
+              "figures": 26,
+              "outside_page": []
+            },
+            {
+              "page": 29,
+              "nonspace": 252,
+              "figures": 13,
+              "outside_page": []
+            },
+            {
+              "page": 30,
+              "nonspace": 446,
+              "figures": 14,
+              "outside_page": []
+            },
+            {
+              "page": 31,
+              "nonspace": 550,
+              "figures": 12,
+              "outside_page": []
+            },
+            {
+              "page": 32,
+              "nonspace": 481,
+              "figures": 34,
+              "outside_page": []
+            },
+            {
+              "page": 33,
+              "nonspace": 937,
+              "figures": 17,
+              "outside_page": []
+            },
+            {
+              "page": 34,
+              "nonspace": 607,
+              "figures": 25,
+              "outside_page": []
+            },
+            {
+              "page": 35,
+              "nonspace": 688,
+              "figures": 28,
+              "outside_page": []
+            },
+            {
+              "page": 36,
+              "nonspace": 282,
+              "figures": 7,
+              "outside_page": []
+            },
+            {
+              "page": 37,
+              "nonspace": 460,
+              "figures": 9,
+              "outside_page": []
+            },
+            {
+              "page": 38,
+              "nonspace": 520,
+              "figures": 26,
+              "outside_page": []
+            },
+            {
+              "page": 39,
+              "nonspace": 437,
+              "figures": 29,
+              "outside_page": []
+            },
+            {
+              "page": 40,
+              "nonspace": 568,
+              "figures": 27,
+              "outside_page": []
+            },
+            {
+              "page": 41,
+              "nonspace": 598,
+              "figures": 15,
+              "outside_page": []
+            },
+            {
+              "page": 42,
+              "nonspace": 575,
+              "figures": 17,
+              "outside_page": []
+            },
+            {
+              "page": 43,
+              "nonspace": 522,
+              "figures": 22,
+              "outside_page": []
+            },
+            {
+              "page": 44,
+              "nonspace": 594,
+              "figures": 14,
+              "outside_page": []
+            },
+            {
+              "page": 45,
+              "nonspace": 660,
+              "figures": 33,
+              "outside_page": []
+            },
+            {
+              "page": 46,
+              "nonspace": 456,
+              "figures": 34,
+              "outside_page": []
+            },
+            {
+              "page": 47,
+              "nonspace": 685,
+              "figures": 8,
+              "outside_page": []
+            },
+            {
+              "page": 48,
+              "nonspace": 562,
+              "figures": 14,
+              "outside_page": []
+            },
+            {
+              "page": 49,
+              "nonspace": 552,
+              "figures": 19,
+              "outside_page": []
+            },
+            {
+              "page": 50,
+              "nonspace": 278,
+              "figures": 5,
+              "outside_page": []
+            },
+            {
+              "page": 51,
+              "nonspace": 594,
+              "figures": 16,
+              "outside_page": []
+            },
+            {
+              "page": 52,
+              "nonspace": 432,
+              "figures": 28,
+              "outside_page": []
+            },
+            {
+              "page": 53,
+              "nonspace": 465,
+              "figures": 39,
+              "outside_page": []
+            },
+            {
+              "page": 54,
+              "nonspace": 774,
+              "figures": 16,
+              "outside_page": []
+            },
+            {
+              "page": 55,
+              "nonspace": 650,
+              "figures": 12,
+              "outside_page": []
+            },
+            {
+              "page": 56,
+              "nonspace": 548,
+              "figures": 30,
+              "outside_page": []
+            },
+            {
+              "page": 57,
+              "nonspace": 473,
+              "figures": 8,
+              "outside_page": []
+            }
+          ]
+        },
+        {
+          "version": "教师备课",
+          "sha256": "61d24b52e8f4d9e1f710dca8f3edfcb3385640ddcce45094e3130e67da75e2f9",
+          "pages": 72,
+          "body_pages": 71,
+          "questions": 8,
+          "manual_breaks": 7,
+          "modules": 9,
+          "qpdf": "pass",
+          "page_boundaries": "pass",
+          "rendered_pages": 72,
+          "page_records": [
+            {
+              "page": 1,
+              "nonspace": 5,
+              "figures": 0,
+              "outside_page": []
+            },
+            {
+              "page": 2,
+              "nonspace": 553,
+              "figures": 14,
+              "outside_page": []
+            },
+            {
+              "page": 3,
+              "nonspace": 376,
+              "figures": 22,
+              "outside_page": []
+            },
+            {
+              "page": 4,
+              "nonspace": 515,
+              "figures": 30,
+              "outside_page": []
+            },
+            {
+              "page": 5,
+              "nonspace": 589,
+              "figures": 12,
+              "outside_page": []
+            },
+            {
+              "page": 6,
+              "nonspace": 566,
+              "figures": 25,
+              "outside_page": []
+            },
+            {
+              "page": 7,
+              "nonspace": 558,
+              "figures": 19,
+              "outside_page": []
+            },
+            {
+              "page": 8,
+              "nonspace": 827,
+              "figures": 10,
+              "outside_page": []
+            },
+            {
+              "page": 9,
+              "nonspace": 485,
+              "figures": 8,
+              "outside_page": []
+            },
+            {
+              "page": 10,
+              "nonspace": 273,
+              "figures": 1,
+              "outside_page": []
+            },
+            {
+              "page": 11,
+              "nonspace": 446,
+              "figures": 8,
+              "outside_page": []
+            },
+            {
+              "page": 12,
+              "nonspace": 433,
+              "figures": 28,
+              "outside_page": []
+            },
+            {
+              "page": 13,
+              "nonspace": 377,
+              "figures": 33,
+              "outside_page": []
+            },
+            {
+              "page": 14,
+              "nonspace": 594,
+              "figures": 19,
+              "outside_page": []
+            },
+            {
+              "page": 15,
+              "nonspace": 561,
+              "figures": 23,
+              "outside_page": []
+            },
+            {
+              "page": 16,
+              "nonspace": 597,
+              "figures": 23,
+              "outside_page": []
+            },
+            {
+              "page": 17,
+              "nonspace": 742,
+              "figures": 10,
+              "outside_page": []
+            },
+            {
+              "page": 18,
+              "nonspace": 698,
+              "figures": 8,
+              "outside_page": []
+            },
+            {
+              "page": 19,
+              "nonspace": 352,
+              "figures": 9,
+              "outside_page": []
+            },
+            {
+              "page": 20,
+              "nonspace": 629,
+              "figures": 9,
+              "outside_page": []
+            },
+            {
+              "page": 21,
+              "nonspace": 583,
+              "figures": 22,
+              "outside_page": []
+            },
+            {
+              "page": 22,
+              "nonspace": 493,
+              "figures": 33,
+              "outside_page": []
+            },
+            {
+              "page": 23,
+              "nonspace": 726,
+              "figures": 23,
+              "outside_page": []
+            },
+            {
+              "page": 24,
+              "nonspace": 575,
+              "figures": 13,
+              "outside_page": []
+            },
+            {
+              "page": 25,
+              "nonspace": 560,
+              "figures": 18,
+              "outside_page": []
+            },
+            {
+              "page": 26,
+              "nonspace": 635,
+              "figures": 19,
+              "outside_page": []
+            },
+            {
+              "page": 27,
+              "nonspace": 722,
+              "figures": 5,
+              "outside_page": []
+            },
+            {
+              "page": 28,
+              "nonspace": 293,
+              "figures": 2,
+              "outside_page": []
+            },
+            {
+              "page": 29,
+              "nonspace": 448,
+              "figures": 9,
+              "outside_page": []
+            },
+            {
+              "page": 30,
+              "nonspace": 470,
+              "figures": 27,
+              "outside_page": []
+            },
+            {
+              "page": 31,
+              "nonspace": 469,
+              "figures": 31,
+              "outside_page": []
+            },
+            {
+              "page": 32,
+              "nonspace": 746,
+              "figures": 13,
+              "outside_page": []
+            },
+            {
+              "page": 33,
+              "nonspace": 626,
+              "figures": 23,
+              "outside_page": []
+            },
+            {
+              "page": 34,
+              "nonspace": 581,
+              "figures": 26,
+              "outside_page": []
+            },
+            {
+              "page": 35,
+              "nonspace": 756,
+              "figures": 14,
+              "outside_page": []
+            },
+            {
+              "page": 36,
+              "nonspace": 612,
+              "figures": 6,
+              "outside_page": []
+            },
+            {
+              "page": 37,
+              "nonspace": 446,
+              "figures": 14,
+              "outside_page": []
+            },
+            {
+              "page": 38,
+              "nonspace": 550,
+              "figures": 12,
+              "outside_page": []
+            },
+            {
+              "page": 39,
+              "nonspace": 481,
+              "figures": 34,
+              "outside_page": []
+            },
+            {
+              "page": 40,
+              "nonspace": 937,
+              "figures": 17,
+              "outside_page": []
+            },
+            {
+              "page": 41,
+              "nonspace": 607,
+              "figures": 25,
+              "outside_page": []
+            },
+            {
+              "page": 42,
+              "nonspace": 688,
+              "figures": 28,
+              "outside_page": []
+            },
+            {
+              "page": 43,
+              "nonspace": 872,
+              "figures": 7,
+              "outside_page": []
+            },
+            {
+              "page": 44,
+              "nonspace": 825,
+              "figures": 21,
+              "outside_page": []
+            },
+            {
+              "page": 45,
+              "nonspace": 105,
+              "figures": 1,
+              "outside_page": []
+            },
+            {
+              "page": 46,
+              "nonspace": 460,
+              "figures": 9,
+              "outside_page": []
+            },
+            {
+              "page": 47,
+              "nonspace": 520,
+              "figures": 26,
+              "outside_page": []
+            },
+            {
+              "page": 48,
+              "nonspace": 437,
+              "figures": 29,
+              "outside_page": []
+            },
+            {
+              "page": 49,
+              "nonspace": 568,
+              "figures": 27,
+              "outside_page": []
+            },
+            {
+              "page": 50,
+              "nonspace": 598,
+              "figures": 15,
+              "outside_page": []
+            },
+            {
+              "page": 51,
+              "nonspace": 575,
+              "figures": 17,
+              "outside_page": []
+            },
+            {
+              "page": 52,
+              "nonspace": 592,
+              "figures": 22,
+              "outside_page": []
+            },
+            {
+              "page": 53,
+              "nonspace": 759,
+              "figures": 8,
+              "outside_page": []
+            },
+            {
+              "page": 54,
+              "nonspace": 627,
+              "figures": 5,
+              "outside_page": []
+            },
+            {
+              "page": 55,
+              "nonspace": 594,
+              "figures": 14,
+              "outside_page": []
+            },
+            {
+              "page": 56,
+              "nonspace": 660,
+              "figures": 33,
+              "outside_page": []
+            },
+            {
+              "page": 57,
+              "nonspace": 456,
+              "figures": 34,
+              "outside_page": []
+            },
+            {
+              "page": 58,
+              "nonspace": 685,
+              "figures": 8,
+              "outside_page": []
+            },
+            {
+              "page": 59,
+              "nonspace": 562,
+              "figures": 14,
+              "outside_page": []
+            },
+            {
+              "page": 60,
+              "nonspace": 552,
+              "figures": 19,
+              "outside_page": []
+            },
+            {
+              "page": 61,
+              "nonspace": 740,
+              "figures": 7,
+              "outside_page": []
+            },
+            {
+              "page": 62,
+              "nonspace": 839,
+              "figures": 7,
+              "outside_page": []
+            },
+            {
+              "page": 63,
+              "nonspace": 333,
+              "figures": 7,
+              "outside_page": []
+            },
+            {
+              "page": 64,
+              "nonspace": 594,
+              "figures": 16,
+              "outside_page": []
+            },
+            {
+              "page": 65,
+              "nonspace": 432,
+              "figures": 28,
+              "outside_page": []
+            },
+            {
+              "page": 66,
+              "nonspace": 465,
+              "figures": 39,
+              "outside_page": []
+            },
+            {
+              "page": 67,
+              "nonspace": 774,
+              "figures": 16,
+              "outside_page": []
+            },
+            {
+              "page": 68,
+              "nonspace": 650,
+              "figures": 12,
+              "outside_page": []
+            },
+            {
+              "page": 69,
+              "nonspace": 548,
+              "figures": 30,
+              "outside_page": []
+            },
+            {
+              "page": 70,
+              "nonspace": 649,
+              "figures": 8,
+              "outside_page": []
+            },
+            {
+              "page": 71,
+              "nonspace": 786,
+              "figures": 11,
+              "outside_page": []
+            },
+            {
+              "page": 72,
+              "nonspace": 667,
+              "figures": 12,
+              "outside_page": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "set": 43,
+      "documents": [
+        {
+          "version": "试卷",
+          "pages": 9,
+          "body_pages": 8,
+          "sha256": "21de97c7154ae0ababe0ce9a9344a274b2d931d1fb074a5bc9de5029430761bf",
+          "warnings": [],
+          "sparse_pages": [],
+          "figure_pages": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "per_page_nonspace": [
+            5,
+            220,
+            222,
+            340,
+            231,
+            239,
+            273,
+            276,
+            283
+          ]
+        },
+        {
+          "version": "学生详解",
+          "pages": 57,
+          "body_pages": 56,
+          "sha256": "dad2a184f97b457d86ccc47acf134c06d421838d0329fec741eb6b18f24471d1",
+          "warnings": [],
+          "sparse_pages": [],
+          "figure_pages": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48,
+            49,
+            50,
+            51,
+            52,
+            53,
+            54,
+            55,
+            56
+          ],
+          "per_page_nonspace": [
+            5,
+            512,
+            420,
+            456,
+            856,
+            690,
+            283,
+            504,
+            495,
+            544,
+            516,
+            576,
+            655,
+            100,
+            573,
+            461,
+            289,
+            485,
+            630,
+            351,
+            297,
+            487,
+            439,
+            391,
+            583,
+            725,
+            533,
+            486,
+            454,
+            449,
+            329,
+            454,
+            897,
+            567,
+            571,
+            401,
+            705,
+            810,
+            730,
+            328,
+            517,
+            531,
+            481,
+            519,
+            574,
+            492,
+            564,
+            402,
+            538,
+            580,
+            381,
+            474,
+            518,
+            677,
+            725,
+            668,
+            331
+          ]
+        },
+        {
+          "version": "教师备课",
+          "pages": 73,
+          "body_pages": 72,
+          "sha256": "a2fffcdd0ccce5c9a228047be4e89f4eb970fd198d6e24187f37097ae1b24d2d",
+          "warnings": [],
+          "sparse_pages": [],
+          "figure_pages": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            8,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            17,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            37,
+            38,
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47,
+            51,
+            53,
+            54,
+            55,
+            56,
+            57,
+            58,
+            59,
+            60,
+            61,
+            63,
+            64,
+            65,
+            66,
+            67,
+            68,
+            69,
+            70
+          ],
+          "per_page_nonspace": [
+            5,
+            512,
+            420,
+            456,
+            856,
+            690,
+            929,
+            734,
+            362,
+            504,
+            496,
+            545,
+            516,
+            576,
+            655,
+            719,
+            745,
+            312,
+            573,
+            461,
+            289,
+            485,
+            630,
+            351,
+            681,
+            687,
+            458,
+            487,
+            439,
+            391,
+            583,
+            725,
+            533,
+            720,
+            754,
+            646,
+            454,
+            449,
+            329,
+            454,
+            897,
+            718,
+            635,
+            650,
+            571,
+            401,
+            705,
+            810,
+            730,
+            849,
+            724,
+            270,
+            517,
+            531,
+            481,
+            519,
+            574,
+            492,
+            564,
+            752,
+            740,
+            310,
+            538,
+            580,
+            381,
+            474,
+            518,
+            677,
+            725,
+            668,
+            907,
+            778,
+            439
+          ]
+        }
+      ],
+      "qa": [
+        {
+          "version": "试卷",
+          "sha256": "21de97c7154ae0ababe0ce9a9344a274b2d931d1fb074a5bc9de5029430761bf",
+          "pages": 9,
+          "body_pages": 8,
+          "questions": 8,
+          "manual_breaks": 7,
+          "modules": 0,
+          "qpdf": "pass",
+          "page_boundaries": "pass",
+          "rendered_pages": 9,
+          "page_records": [
+            {
+              "page": 1,
+              "nonspace": 5,
+              "figures": 0,
+              "outside_page": []
+            },
+            {
+              "page": 2,
+              "nonspace": 220,
+              "figures": 13,
+              "outside_page": []
+            },
+            {
+              "page": 3,
+              "nonspace": 222,
+              "figures": 14,
+              "outside_page": []
+            },
+            {
+              "page": 4,
+              "nonspace": 340,
+              "figures": 11,
+              "outside_page": []
+            },
+            {
+              "page": 5,
+              "nonspace": 231,
+              "figures": 12,
+              "outside_page": []
+            },
+            {
+              "page": 6,
+              "nonspace": 239,
+              "figures": 22,
+              "outside_page": []
+            },
+            {
+              "page": 7,
+              "nonspace": 273,
+              "figures": 17,
+              "outside_page": []
+            },
+            {
+              "page": 8,
+              "nonspace": 276,
+              "figures": 16,
+              "outside_page": []
+            },
+            {
+              "page": 9,
+              "nonspace": 283,
+              "figures": 26,
+              "outside_page": []
+            }
+          ]
+        },
+        {
+          "version": "学生详解",
+          "sha256": "dad2a184f97b457d86ccc47acf134c06d421838d0329fec741eb6b18f24471d1",
+          "pages": 57,
+          "body_pages": 56,
+          "questions": 8,
+          "manual_breaks": 7,
+          "modules": 5,
+          "qpdf": "pass",
+          "page_boundaries": "pass",
+          "rendered_pages": 57,
+          "page_records": [
+            {
+              "page": 1,
+              "nonspace": 5,
+              "figures": 0,
+              "outside_page": []
+            },
+            {
+              "page": 2,
+              "nonspace": 512,
+              "figures": 13,
+              "outside_page": []
+            },
+            {
+              "page": 3,
+              "nonspace": 420,
+              "figures": 19,
+              "outside_page": []
+            },
+            {
+              "page": 4,
+              "nonspace": 456,
+              "figures": 28,
+              "outside_page": []
+            },
+            {
+              "page": 5,
+              "nonspace": 856,
+              "figures": 12,
+              "outside_page": []
+            },
+            {
+              "page": 6,
+              "nonspace": 690,
+              "figures": 16,
+              "outside_page": []
+            },
+            {
+              "page": 7,
+              "nonspace": 283,
+              "figures": 3,
+              "outside_page": []
+            },
+            {
+              "page": 8,
+              "nonspace": 504,
+              "figures": 14,
+              "outside_page": []
+            },
+            {
+              "page": 9,
+              "nonspace": 495,
+              "figures": 35,
+              "outside_page": []
+            },
+            {
+              "page": 10,
+              "nonspace": 544,
+              "figures": 22,
+              "outside_page": []
+            },
+            {
+              "page": 11,
+              "nonspace": 516,
+              "figures": 26,
+              "outside_page": []
+            },
+            {
+              "page": 12,
+              "nonspace": 576,
+              "figures": 16,
+              "outside_page": []
+            },
+            {
+              "page": 13,
+              "nonspace": 655,
+              "figures": 20,
+              "outside_page": []
+            },
+            {
+              "page": 14,
+              "nonspace": 100,
+              "figures": 3,
+              "outside_page": []
+            },
+            {
+              "page": 15,
+              "nonspace": 573,
+              "figures": 11,
+              "outside_page": []
+            },
+            {
+              "page": 16,
+              "nonspace": 461,
+              "figures": 29,
+              "outside_page": []
+            },
+            {
+              "page": 17,
+              "nonspace": 289,
+              "figures": 24,
+              "outside_page": []
+            },
+            {
+              "page": 18,
+              "nonspace": 485,
+              "figures": 42,
+              "outside_page": []
+            },
+            {
+              "page": 19,
+              "nonspace": 630,
+              "figures": 23,
+              "outside_page": []
+            },
+            {
+              "page": 20,
+              "nonspace": 351,
+              "figures": 13,
+              "outside_page": []
+            },
+            {
+              "page": 21,
+              "nonspace": 297,
+              "figures": 9,
+              "outside_page": []
+            },
+            {
+              "page": 22,
+              "nonspace": 487,
+              "figures": 12,
+              "outside_page": []
+            },
+            {
+              "page": 23,
+              "nonspace": 439,
+              "figures": 29,
+              "outside_page": []
+            },
+            {
+              "page": 24,
+              "nonspace": 391,
+              "figures": 30,
+              "outside_page": []
+            },
+            {
+              "page": 25,
+              "nonspace": 583,
+              "figures": 34,
+              "outside_page": []
+            },
+            {
+              "page": 26,
+              "nonspace": 725,
+              "figures": 16,
+              "outside_page": []
+            },
+            {
+              "page": 27,
+              "nonspace": 533,
+              "figures": 15,
+              "outside_page": []
+            },
+            {
+              "page": 28,
+              "nonspace": 486,
+              "figures": 11,
+              "outside_page": []
+            },
+            {
+              "page": 29,
+              "nonspace": 454,
+              "figures": 22,
+              "outside_page": []
+            },
+            {
+              "page": 30,
+              "nonspace": 449,
+              "figures": 17,
+              "outside_page": []
+            },
+            {
+              "page": 31,
+              "nonspace": 329,
+              "figures": 28,
+              "outside_page": []
+            },
+            {
+              "page": 32,
+              "nonspace": 454,
+              "figures": 24,
+              "outside_page": []
+            },
+            {
+              "page": 33,
+              "nonspace": 897,
+              "figures": 15,
+              "outside_page": []
+            },
+            {
+              "page": 34,
+              "nonspace": 567,
+              "figures": 21,
+              "outside_page": []
+            },
+            {
+              "page": 35,
+              "nonspace": 571,
+              "figures": 17,
+              "outside_page": []
+            },
+            {
+              "page": 36,
+              "nonspace": 401,
+              "figures": 22,
+              "outside_page": []
+            },
+            {
+              "page": 37,
+              "nonspace": 705,
+              "figures": 9,
+              "outside_page": []
+            },
+            {
+              "page": 38,
+              "nonspace": 810,
+              "figures": 5,
+              "outside_page": []
+            },
+            {
+              "page": 39,
+              "nonspace": 730,
+              "figures": 3,
+              "outside_page": []
+            },
+            {
+              "page": 40,
+              "nonspace": 328,
+              "figures": 1,
+              "outside_page": []
+            },
+            {
+              "page": 41,
+              "nonspace": 517,
+              "figures": 16,
+              "outside_page": []
+            },
+            {
+              "page": 42,
+              "nonspace": 531,
+              "figures": 20,
+              "outside_page": []
+            },
+            {
+              "page": 43,
+              "nonspace": 481,
+              "figures": 26,
+              "outside_page": []
+            },
+            {
+              "page": 44,
+              "nonspace": 519,
+              "figures": 35,
+              "outside_page": []
+            },
+            {
+              "page": 45,
+              "nonspace": 574,
+              "figures": 20,
+              "outside_page": []
+            },
+            {
+              "page": 46,
+              "nonspace": 492,
+              "figures": 9,
+              "outside_page": []
+            },
+            {
+              "page": 47,
+              "nonspace": 564,
+              "figures": 13,
+              "outside_page": []
+            },
+            {
+              "page": 48,
+              "nonspace": 402,
+              "figures": 9,
+              "outside_page": []
+            },
+            {
+              "page": 49,
+              "nonspace": 538,
+              "figures": 26,
+              "outside_page": []
+            },
+            {
+              "page": 50,
+              "nonspace": 580,
+              "figures": 11,
+              "outside_page": []
+            },
+            {
+              "page": 51,
+              "nonspace": 381,
+              "figures": 61,
+              "outside_page": []
+            },
+            {
+              "page": 52,
+              "nonspace": 474,
+              "figures": 33,
+              "outside_page": []
+            },
+            {
+              "page": 53,
+              "nonspace": 518,
+              "figures": 32,
+              "outside_page": []
+            },
+            {
+              "page": 54,
+              "nonspace": 677,
+              "figures": 29,
+              "outside_page": []
+            },
+            {
+              "page": 55,
+              "nonspace": 725,
+              "figures": 10,
+              "outside_page": []
+            },
+            {
+              "page": 56,
+              "nonspace": 668,
+              "figures": 13,
+              "outside_page": []
+            },
+            {
+              "page": 57,
+              "nonspace": 331,
+              "figures": 2,
+              "outside_page": []
+            }
+          ]
+        },
+        {
+          "version": "教师备课",
+          "sha256": "a2fffcdd0ccce5c9a228047be4e89f4eb970fd198d6e24187f37097ae1b24d2d",
+          "pages": 73,
+          "body_pages": 72,
+          "questions": 8,
+          "manual_breaks": 7,
+          "modules": 9,
+          "qpdf": "pass",
+          "page_boundaries": "pass",
+          "rendered_pages": 73,
+          "page_records": [
+            {
+              "page": 1,
+              "nonspace": 5,
+              "figures": 0,
+              "outside_page": []
+            },
+            {
+              "page": 2,
+              "nonspace": 512,
+              "figures": 13,
+              "outside_page": []
+            },
+            {
+              "page": 3,
+              "nonspace": 420,
+              "figures": 19,
+              "outside_page": []
+            },
+            {
+              "page": 4,
+              "nonspace": 456,
+              "figures": 28,
+              "outside_page": []
+            },
+            {
+              "page": 5,
+              "nonspace": 856,
+              "figures": 12,
+              "outside_page": []
+            },
+            {
+              "page": 6,
+              "nonspace": 690,
+              "figures": 16,
+              "outside_page": []
+            },
+            {
+              "page": 7,
+              "nonspace": 929,
+              "figures": 4,
+              "outside_page": []
+            },
+            {
+              "page": 8,
+              "nonspace": 734,
+              "figures": 24,
+              "outside_page": []
+            },
+            {
+              "page": 9,
+              "nonspace": 362,
+              "figures": 1,
+              "outside_page": []
+            },
+            {
+              "page": 10,
+              "nonspace": 504,
+              "figures": 14,
+              "outside_page": []
+            },
+            {
+              "page": 11,
+              "nonspace": 496,
+              "figures": 35,
+              "outside_page": []
+            },
+            {
+              "page": 12,
+              "nonspace": 545,
+              "figures": 22,
+              "outside_page": []
+            },
+            {
+              "page": 13,
+              "nonspace": 516,
+              "figures": 26,
+              "outside_page": []
+            },
+            {
+              "page": 14,
+              "nonspace": 576,
+              "figures": 16,
+              "outside_page": []
+            },
+            {
+              "page": 15,
+              "nonspace": 655,
+              "figures": 20,
+              "outside_page": []
+            },
+            {
+              "page": 16,
+              "nonspace": 719,
+              "figures": 3,
+              "outside_page": []
+            },
+            {
+              "page": 17,
+              "nonspace": 745,
+              "figures": 20,
+              "outside_page": []
+            },
+            {
+              "page": 18,
+              "nonspace": 312,
+              "figures": 1,
+              "outside_page": []
+            },
+            {
+              "page": 19,
+              "nonspace": 573,
+              "figures": 11,
+              "outside_page": []
+            },
+            {
+              "page": 20,
+              "nonspace": 461,
+              "figures": 29,
+              "outside_page": []
+            },
+            {
+              "page": 21,
+              "nonspace": 289,
+              "figures": 24,
+              "outside_page": []
+            },
+            {
+              "page": 22,
+              "nonspace": 485,
+              "figures": 42,
+              "outside_page": []
+            },
+            {
+              "page": 23,
+              "nonspace": 630,
+              "figures": 23,
+              "outside_page": []
+            },
+            {
+              "page": 24,
+              "nonspace": 351,
+              "figures": 13,
+              "outside_page": []
+            },
+            {
+              "page": 25,
+              "nonspace": 681,
+              "figures": 9,
+              "outside_page": []
+            },
+            {
+              "page": 26,
+              "nonspace": 687,
+              "figures": 39,
+              "outside_page": []
+            },
+            {
+              "page": 27,
+              "nonspace": 458,
+              "figures": 4,
+              "outside_page": []
+            },
+            {
+              "page": 28,
+              "nonspace": 487,
+              "figures": 12,
+              "outside_page": []
+            },
+            {
+              "page": 29,
+              "nonspace": 439,
+              "figures": 29,
+              "outside_page": []
+            },
+            {
+              "page": 30,
+              "nonspace": 391,
+              "figures": 30,
+              "outside_page": []
+            },
+            {
+              "page": 31,
+              "nonspace": 583,
+              "figures": 34,
+              "outside_page": []
+            },
+            {
+              "page": 32,
+              "nonspace": 725,
+              "figures": 16,
+              "outside_page": []
+            },
+            {
+              "page": 33,
+              "nonspace": 533,
+              "figures": 15,
+              "outside_page": []
+            },
+            {
+              "page": 34,
+              "nonspace": 720,
+              "figures": 11,
+              "outside_page": []
+            },
+            {
+              "page": 35,
+              "nonspace": 754,
+              "figures": 21,
+              "outside_page": []
+            },
+            {
+              "page": 36,
+              "nonspace": 646,
+              "figures": 7,
+              "outside_page": []
+            },
+            {
+              "page": 37,
+              "nonspace": 454,
+              "figures": 22,
+              "outside_page": []
+            },
+            {
+              "page": 38,
+              "nonspace": 449,
+              "figures": 17,
+              "outside_page": []
+            },
+            {
+              "page": 39,
+              "nonspace": 329,
+              "figures": 28,
+              "outside_page": []
+            },
+            {
+              "page": 40,
+              "nonspace": 454,
+              "figures": 24,
+              "outside_page": []
+            },
+            {
+              "page": 41,
+              "nonspace": 897,
+              "figures": 15,
+              "outside_page": []
+            },
+            {
+              "page": 42,
+              "nonspace": 718,
+              "figures": 21,
+              "outside_page": []
+            },
+            {
+              "page": 43,
+              "nonspace": 635,
+              "figures": 12,
+              "outside_page": []
+            },
+            {
+              "page": 44,
+              "nonspace": 650,
+              "figures": 11,
+              "outside_page": []
+            },
+            {
+              "page": 45,
+              "nonspace": 571,
+              "figures": 17,
+              "outside_page": []
+            },
+            {
+              "page": 46,
+              "nonspace": 401,
+              "figures": 22,
+              "outside_page": []
+            },
+            {
+              "page": 47,
+              "nonspace": 705,
+              "figures": 9,
+              "outside_page": []
+            },
+            {
+              "page": 48,
+              "nonspace": 810,
+              "figures": 5,
+              "outside_page": []
+            },
+            {
+              "page": 49,
+              "nonspace": 730,
+              "figures": 3,
+              "outside_page": []
+            },
+            {
+              "page": 50,
+              "nonspace": 849,
+              "figures": 3,
+              "outside_page": []
+            },
+            {
+              "page": 51,
+              "nonspace": 724,
+              "figures": 9,
+              "outside_page": []
+            },
+            {
+              "page": 52,
+              "nonspace": 270,
+              "figures": 1,
+              "outside_page": []
+            },
+            {
+              "page": 53,
+              "nonspace": 517,
+              "figures": 16,
+              "outside_page": []
+            },
+            {
+              "page": 54,
+              "nonspace": 531,
+              "figures": 20,
+              "outside_page": []
+            },
+            {
+              "page": 55,
+              "nonspace": 481,
+              "figures": 26,
+              "outside_page": []
+            },
+            {
+              "page": 56,
+              "nonspace": 519,
+              "figures": 35,
+              "outside_page": []
+            },
+            {
+              "page": 57,
+              "nonspace": 574,
+              "figures": 20,
+              "outside_page": []
+            },
+            {
+              "page": 58,
+              "nonspace": 492,
+              "figures": 9,
+              "outside_page": []
+            },
+            {
+              "page": 59,
+              "nonspace": 564,
+              "figures": 13,
+              "outside_page": []
+            },
+            {
+              "page": 60,
+              "nonspace": 752,
+              "figures": 9,
+              "outside_page": []
+            },
+            {
+              "page": 61,
+              "nonspace": 740,
+              "figures": 23,
+              "outside_page": []
+            },
+            {
+              "page": 62,
+              "nonspace": 310,
+              "figures": 1,
+              "outside_page": []
+            },
+            {
+              "page": 63,
+              "nonspace": 538,
+              "figures": 26,
+              "outside_page": []
+            },
+            {
+              "page": 64,
+              "nonspace": 580,
+              "figures": 11,
+              "outside_page": []
+            },
+            {
+              "page": 65,
+              "nonspace": 381,
+              "figures": 61,
+              "outside_page": []
+            },
+            {
+              "page": 66,
+              "nonspace": 474,
+              "figures": 33,
+              "outside_page": []
+            },
+            {
+              "page": 67,
+              "nonspace": 518,
+              "figures": 32,
+              "outside_page": []
+            },
+            {
+              "page": 68,
+              "nonspace": 677,
+              "figures": 29,
+              "outside_page": []
+            },
+            {
+              "page": 69,
+              "nonspace": 725,
+              "figures": 10,
+              "outside_page": []
+            },
+            {
+              "page": 70,
+              "nonspace": 668,
+              "figures": 13,
+              "outside_page": []
+            },
+            {
+              "page": 71,
+              "nonspace": 907,
+              "figures": 3,
+              "outside_page": []
+            },
+            {
+              "page": 72,
+              "nonspace": 778,
+              "figures": 8,
+              "outside_page": []
+            },
+            {
+              "page": 73,
+              "nonspace": 439,
+              "figures": 1,
+              "outside_page": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

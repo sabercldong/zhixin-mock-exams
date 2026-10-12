@@ -1,0 +1,2581 @@
+[
+  {
+    "set": 47,
+    "question": 1,
+    "physical_model": "设外侧杆 $AB,DE$ 相对水平线向下的角为 $\\theta_1$，内侧杆 $BC,CD$ 的角为 $\\theta_2$。左右两半互为镜像。端点水平距离限制两角余弦之和，而总势能由四根杆质心的下降量决定。",
+    "math_checks": [
+      {
+        "set": 47,
+        "question": 1,
+        "check": "rod equal lengths and fixed span",
+        "max_error": 0.0,
+        "tolerance": 1e-08
+      },
+      {
+        "set": 47,
+        "question": 1,
+        "check": "height from original 1.6-m span",
+        "max_error": 1.162403506782539e-13,
+        "tolerance": 1e-08
+      }
+    ]
+  },
+  {
+    "set": 47,
+    "question": 2,
+    "physical_model": "取发射点为原点，$x$ 水平向阁楼低端，$y$ 竖直向上。顶棚方程为 $y=h-x\\tan\\alpha$。抛物线与顶棚一般有两个代数交点，实际首次撞击必须取较小正时间。",
+    "math_checks": [
+      {
+        "set": 47,
+        "question": 2,
+        "check": "ballistic intersection",
+        "max_error": 2.1599873001321157e-07,
+        "tolerance": 1e-06
+      },
+      {
+        "set": 47,
+        "question": 2,
+        "check": "energy independent of roof intercept",
+        "max_error": 2.2737367544323206e-13,
+        "tolerance": 1e-08
+      }
+    ]
+  },
+  {
+    "set": 47,
+    "question": 3,
+    "physical_model": "平行光先从水或空气垂直通过平面表面，仍为平行光；到达凹球面后从折射率 $n$ 的材料射向空气，形成虚焦点，起近视镜所需的发散作用。",
+    "math_checks": [
+      {
+        "set": 47,
+        "question": 3,
+        "check": "virtual focus ray intercept",
+        "max_error": 0.0,
+        "tolerance": 1e-08
+      },
+      {
+        "set": 47,
+        "question": 3,
+        "check": "virtual focus ray intercept",
+        "max_error": 6.938893903907228e-18,
+        "tolerance": 1e-08
+      },
+      {
+        "set": 47,
+        "question": 3,
+        "check": "virtual focus ray intercept",
+        "max_error": 2.7755575615628914e-17,
+        "tolerance": 1e-08
+      }
+    ]
+  },
+  {
+    "set": 47,
+    "question": 4,
+    "physical_model": "图4-1磁矩沿 $+z$。Gilbert 圆柱顶面为正磁荷、底面为负磁荷，中心场从顶向底，沿 $-z$；Ampere 圆柱的侧面环电流给中心沿 $+z$ 的场。图4-2保留同一 $R,L$，没有把端面画成无限大平面。",
+    "math_checks": [
+      {
+        "set": 47,
+        "question": 4,
+        "check": "finite disk and current-ring integration",
+        "max_error": 3.1086244689504383e-15,
+        "tolerance": 1e-08
+      },
+      {
+        "set": 47,
+        "question": 4,
+        "check": "microscopic centre field difference",
+        "max_error": 3.1086244689504383e-15,
+        "tolerance": 1e-08
+      },
+      {
+        "set": 47,
+        "question": 4,
+        "check": "finite disk and current-ring integration",
+        "max_error": 1.1102230246251565e-16,
+        "tolerance": 1e-08
+      },
+      {
+        "set": 47,
+        "question": 4,
+        "check": "microscopic centre field difference",
+        "max_error": 0.0,
+        "tolerance": 1e-08
+      },
+      {
+        "set": 47,
+        "question": 4,
+        "check": "finite disk and current-ring integration",
+        "max_error": 2.220446049250313e-16,
+        "tolerance": 1e-08
+      },
+      {
+        "set": 47,
+        "question": 4,
+        "check": "microscopic centre field difference",
+        "max_error": 2.220446049250313e-16,
+        "tolerance": 1e-08
+      }
+    ]
+  },
+  {
+    "set": 47,
+    "question": 5,
+    "physical_model": "容器中原有 $1\\,\\mathrm{mol}$ 液态水和 $1\\,\\mathrm{mol}$ 饱和水蒸气。电热丝向系统输入能量，容器壁绝热且总体积不变；升温 $1\\,\\mathrm{K}$ 后，饱和蒸气压升高，必须有少量液体汽化才能达到新的相平衡。",
+    "math_checks": [
+      {
+        "set": 47,
+        "question": 5,
+        "check": "one-K differential phase calculation",
+        "max_error": 1.5916157281026244e-12,
+        "tolerance": 1e-08
+      }
+    ]
+  },
+  {
+    "set": 47,
+    "question": 6,
+    "physical_model": "三维晶格中，每个格点有 $q$ 个最近邻。Bragg–Williams 近似把相邻自旋的关联替换为平均值乘积，从而把多体问题化成单格点概率 $P_+,P_0,P_-$ 的问题。",
+    "math_checks": [
+      {
+        "set": 47,
+        "question": 6,
+        "check": "spin-1 log partition expansion",
+        "symbolic": "pass"
+      }
+    ]
+  },
+  {
+    "set": 47,
+    "question": 7,
+    "physical_model": "以初始竖直向上方向为角度零点，杆倒下时与该方向夹角为 $\\theta$。质心 $C$ 到接触点 $O$ 的距离为 $r_c$，绕 $O$ 的转动惯量为\n$$\nI_O=\\lambda mr_c^2.\n$$",
+    "math_checks": [
+      {
+        "set": 47,
+        "question": 7,
+        "check": "support quadratic minimum",
+        "max_error": 3.33333360913457e-11,
+        "tolerance": 1e-09
+      },
+      {
+        "set": 47,
+        "question": 7,
+        "check": "support quadratic minimum",
+        "max_error": 2.5000002068509275e-11,
+        "tolerance": 1e-09
+      },
+      {
+        "set": 47,
+        "question": 7,
+        "check": "support quadratic minimum",
+        "max_error": 1.666666804567285e-11,
+        "tolerance": 1e-09
+      }
+    ]
+  },
+  {
+    "set": 47,
+    "question": 8,
+    "physical_model": "图8-1中磁场向里，$x$ 向右；$\\beta$ 从竖直向下方向转向左侧。初态珠在左侧点，即 $\\beta_0=\\pi/2$。这个初态位置须由原图补充。圆环顺时针角速度为 $u=\\dot x/r$；珠的空间角速度为 $w=\\dot\\beta$，相对环角速度为 $w-u$。",
+    "math_checks": [
+      {
+        "set": 47,
+        "question": 8,
+        "check": "physical nonzero relative-rest root",
+        "max_error": 0.0,
+        "tolerance": 1e-08
+      },
+      {
+        "set": 47,
+        "question": 8,
+        "check": "physical nonzero relative-rest root",
+        "max_error": 8.881784197001252e-16,
+        "tolerance": 1e-08
+      },
+      {
+        "set": 47,
+        "question": 8,
+        "check": "physical nonzero relative-rest root",
+        "max_error": 1.7763568394002505e-15,
+        "tolerance": 1e-08
+      },
+      {
+        "set": 47,
+        "question": 8,
+        "check": "physical nonzero relative-rest root",
+        "max_error": 1.7763568394002505e-15,
+        "tolerance": 1e-08
+      },
+      {
+        "set": 47,
+        "question": 8,
+        "check": "paired ring energy and magnetic impulse",
+        "max_error": 0.0,
+        "tolerance": 1e-08
+      },
+      {
+        "set": 47,
+        "question": 8,
+        "check": "paired ring energy and magnetic impulse",
+        "max_error": 1.734723475976807e-18,
+        "tolerance": 1e-08
+      },
+      {
+        "set": 47,
+        "question": 8,
+        "check": "paired ring energy and magnetic impulse",
+        "max_error": 0.0,
+        "tolerance": 1e-08
+      },
+      {
+        "set": 47,
+        "question": 8,
+        "check": "paired ring energy and magnetic impulse",
+        "max_error": 5.551115123125783e-17,
+        "tolerance": 1e-08
+      },
+      {
+        "set": 47,
+        "question": 8,
+        "check": "paired ring energy and magnetic impulse",
+        "max_error": 8.881784197001252e-16,
+        "tolerance": 1e-08
+      },
+      {
+        "set": 47,
+        "question": 8,
+        "check": "paired ring energy and magnetic impulse",
+        "max_error": 8.881784197001252e-16,
+        "tolerance": 1e-08
+      },
+      {
+        "set": 47,
+        "question": 8,
+        "check": "paired ring energy and magnetic impulse",
+        "max_error": 0.0,
+        "tolerance": 1e-08
+      },
+      {
+        "set": 47,
+        "question": 8,
+        "check": "paired ring energy and magnetic impulse",
+        "max_error": 0.0,
+        "tolerance": 1e-08
+      }
+    ]
+  },
+  {
+    "set": 46,
+    "question": 1,
+    "physical_model": "球形地球外的引力线向球心会聚，球面积随 $r^2$ 增大，故 $g\\propto r^{-2}$。无限圆柱的引力线垂直指向轴线，高斯面侧面积只随 $r$ 增大，故 $g\\propto r^{-1}$。",
+    "math_checks": [
+      {
+        "set": 46,
+        "question": 1,
+        "check": "two-body relative acceleration",
+        "max_error": 8.239936510889834e-18,
+        "tolerance": 1e-08
+      }
+    ]
+  },
+  {
+    "set": 46,
+    "question": 2,
+    "physical_model": "左墙在圆心高度给向右支持力，质心低于圆心 $h$。图2-2分别画向右加速的双接触状态、向左加速后离墙的地面接触状态。",
+    "math_checks": [
+      {
+        "set": 46,
+        "question": 2,
+        "check": "left detached initial rolling equations",
+        "max_error": 8.881784197001252e-16,
+        "tolerance": 1e-08
+      },
+      {
+        "set": 46,
+        "question": 2,
+        "check": "left detached initial rolling equations",
+        "max_error": 0.0,
+        "tolerance": 1e-08
+      },
+      {
+        "set": 46,
+        "question": 2,
+        "check": "left detached initial rolling equations",
+        "max_error": 2.220446049250313e-16,
+        "tolerance": 1e-08
+      }
+    ]
+  },
+  {
+    "set": 46,
+    "question": 3,
+    "physical_model": "异号线电荷之间的场线是通过两个电荷位置的圆弧。把电场换成圆盘内的 $\\boldsymbol j/\\sigma_0$ 后，电极相当于二维源汇；圆周边界没有法向电流，需用圆反演放置同号像源，使圆周成为流线。",
+    "math_checks": [
+      {
+        "set": 46,
+        "question": 3,
+        "check": "small-electrode boundary voltage ratio",
+        "max_error": 0.0,
+        "tolerance": 1e-08
+      },
+      {
+        "set": 46,
+        "question": 3,
+        "check": "same-sign image insulated boundary",
+        "max_error": 1.6653345369377348e-11,
+        "tolerance": 2e-08
+      },
+      {
+        "set": 46,
+        "question": 3,
+        "check": "same-sign image insulated boundary",
+        "max_error": 1.942890293094024e-11,
+        "tolerance": 2e-08
+      },
+      {
+        "set": 46,
+        "question": 3,
+        "check": "same-sign image insulated boundary",
+        "max_error": 2.498001805406602e-11,
+        "tolerance": 2e-08
+      },
+      {
+        "set": 46,
+        "question": 3,
+        "check": "same-sign image insulated boundary",
+        "max_error": 8.881784197001251e-11,
+        "tolerance": 2e-08
+      },
+      {
+        "set": 46,
+        "question": 3,
+        "check": "same-sign image insulated boundary",
+        "max_error": 1.6653345369377348e-11,
+        "tolerance": 2e-08
+      },
+      {
+        "set": 46,
+        "question": 3,
+        "check": "same-sign image insulated boundary",
+        "max_error": 1.6653345369377348e-11,
+        "tolerance": 2e-08
+      },
+      {
+        "set": 46,
+        "question": 3,
+        "check": "same-sign image insulated boundary",
+        "max_error": 1.9984014443252815e-10,
+        "tolerance": 2e-08
+      },
+      {
+        "set": 46,
+        "question": 3,
+        "check": "same-sign image insulated boundary",
+        "max_error": 6.661338147750939e-11,
+        "tolerance": 2e-08
+      },
+      {
+        "set": 46,
+        "question": 3,
+        "check": "same-sign image insulated boundary",
+        "max_error": 6.106226635438361e-11,
+        "tolerance": 2e-08
+      }
+    ]
+  },
+  {
+    "set": 46,
+    "question": 4,
+    "physical_model": "设一侧液面上升 $x$，另一侧下降 $x$，高度差为 $2x$。全管液体以相同速率 $\\dot x$ 流动。转轴到左、右竖直管距离分别为 $l$ 和 $2l$，因此右侧离心势更低，恒转速时右液面升高、左液面下降。",
+    "math_checks": [
+      {
+        "set": 46,
+        "question": 4,
+        "check": "rotating free tube extra stiffness",
+        "symbolic": "pass"
+      }
+    ]
+  },
+  {
+    "set": 46,
+    "question": 5,
+    "physical_model": "时刻 $t$，导体棒位于 $y=vt$。棒的两个端点关于 $y$ 轴对称，横坐标分别为 $-x_t$、$x_t$。随着棒向上移动，棒长 $2x_t$ 增大，动生电动势随 $\\sqrt t$ 增大；棒的电阻也以同样规律增大，所以电流保持不变。",
+    "math_checks": [
+      {
+        "set": 46,
+        "question": 5,
+        "check": "parabolic area derivative",
+        "symbolic": "pass"
+      }
+    ]
+  },
+  {
+    "set": 46,
+    "question": 6,
+    "physical_model": "图6-1中半球上点 $Q$ 的半径是法线。远处观察者在顶点正上方，出射光竖直。反向追迹可确定发光平面上的点 $P$。图6-2的亮度曲线应是常量段。",
+    "math_checks": [
+      {
+        "set": 46,
+        "question": 6,
+        "check": "radiance angular Jacobian",
+        "max_error": 4.440892098500626e-16,
+        "tolerance": 1e-08
+      },
+      {
+        "set": 46,
+        "question": 6,
+        "check": "radiance angular Jacobian",
+        "max_error": 0.0,
+        "tolerance": 1e-08
+      },
+      {
+        "set": 46,
+        "question": 6,
+        "check": "radiance angular Jacobian",
+        "max_error": 0.0,
+        "tolerance": 1e-08
+      }
+    ]
+  },
+  {
+    "set": 46,
+    "question": 7,
+    "physical_model": "光线在每次折射时产生角度改变量，在液滴内部每次反射又贡献一个转角。邻近入射角的光线若在出射方向上发生“拥挤”，数学上就是偏转函数对入射角的一阶导数为零。若驻值条件没有实根，相应级次的虹就不存在。",
+    "math_checks": [
+      {
+        "set": 46,
+        "question": 7,
+        "check": "rainbow stationary derivative",
+        "max_error": 0.0,
+        "tolerance": 1e-08
+      },
+      {
+        "set": 46,
+        "question": 7,
+        "check": "rainbow stationary derivative",
+        "max_error": 8.881784197001252e-16,
+        "tolerance": 1e-08
+      },
+      {
+        "set": 46,
+        "question": 7,
+        "check": "rainbow stationary derivative",
+        "max_error": 2.220446049250313e-16,
+        "tolerance": 1e-08
+      }
+    ]
+  },
+  {
+    "set": 46,
+    "question": 8,
+    "physical_model": "聚变产物向飞船后方喷出，飞船获得等大反向动量。给定可用动能时，质量越大的喷出粒子能够携带越大的动量，所以应选择氦核。长途航行必须把总燃料分给加速和减速两个阶段；若要求到站时相对目标恒星近乎静止，两阶段获得的快速度大小相等。",
+    "math_checks": [
+      {
+        "set": 46,
+        "question": 8,
+        "check": "reaction invariant helium momentum",
+        "max_error": 0.0,
+        "tolerance": 1e-28
+      },
+      {
+        "set": 46,
+        "question": 8,
+        "check": "consistent exhaust energy bookkeeping",
+        "u_he": 34333789.891678594,
+        "u_eff": 34324440.50860524,
+        "F": 34324.44050860524,
+        "fuel_ratio": 4.874862367888709,
+        "S_ly": 4.009293508344561
+      }
+    ]
+  },
+  {
+    "set": 45,
+    "question": 1,
+    "physical_model": "太阳和地球位于共同质心两侧，以相同角速度转动。太阳质量远大于地球质量，因此质心非常接近太阳，太阳轨道半径只有地球轨道半径的约三十三万分之一，但并不严格为零。",
+    "math_checks": [
+      {
+        "set": 45,
+        "question": 1,
+        "check": "barycentric stellar amplitude",
+        "max_error": 1.1496452097803367e-05,
+        "tolerance": 0.0001
+      }
+    ]
+  },
+  {
+    "set": 45,
+    "question": 2,
+    "physical_model": "在斜面系中，重力沿斜面向下的分量为 $Mg\\sin\\theta$；斜面向低端水平加速，惯性力 $Ma_0$ 指向高端，其沿斜面分量为 $Ma_0\\cos\\theta$，会抵消部分重力驱动。",
+    "math_checks": [
+      {
+        "set": 45,
+        "question": 2,
+        "check": "rolling accelerated slope tangential equation",
+        "max_error": 4.440892098500626e-16,
+        "tolerance": 1e-08
+      },
+      {
+        "set": 45,
+        "question": 2,
+        "check": "rolling accelerated slope tangential equation",
+        "max_error": 0.0,
+        "tolerance": 1e-08
+      },
+      {
+        "set": 45,
+        "question": 2,
+        "check": "rolling accelerated slope tangential equation",
+        "max_error": 4.440892098500626e-16,
+        "tolerance": 1e-08
+      }
+    ]
+  },
+  {
+    "set": 45,
+    "question": 3,
+    "physical_model": "两磁矩反向时，轴向磁力向上，可与重力平衡；但反平行取向对应角度势能极大，静态角度方向不稳定。高速自转或高频交变场都能通过动态效应提供等效角度回复作用。",
+    "math_checks": [
+      {
+        "set": 45,
+        "question": 3,
+        "check": "both gyro roots",
+        "max_error": 2.220446049250313e-16,
+        "tolerance": 1e-08
+      },
+      {
+        "set": 45,
+        "question": 3,
+        "check": "both gyro roots",
+        "max_error": 5.551115123125783e-16,
+        "tolerance": 1e-08
+      },
+      {
+        "set": 45,
+        "question": 3,
+        "check": "both gyro roots",
+        "max_error": 3.1086244689504383e-15,
+        "tolerance": 1e-08
+      }
+    ]
+  },
+  {
+    "set": 45,
+    "question": 4,
+    "physical_model": "以 $A,B$ 为焦点时，销钉 $C$ 位于长轴 $2a$、焦距 $2c$ 的椭圆上。反过来固定 $C$，杆转动时系统质心 $H$ 也沿一个仿射变换后的闭合曲线运动。重力平衡要求 $H$ 的轨迹切线水平，稳定性取决于该点是质心高度的极小还是极大。",
+    "math_checks": [
+      {
+        "set": 45,
+        "question": 4,
+        "check": "first vertical stiffness determinant",
+        "max_error": 1.8189894035458565e-12,
+        "tolerance": 1e-09
+      },
+      {
+        "set": 45,
+        "question": 4,
+        "check": "second vertical numeric normal frequencies",
+        "max_error": 2.157242252831537e-06,
+        "tolerance": 0.0002
+      },
+      {
+        "set": 45,
+        "question": 4,
+        "check": "first vertical stiffness determinant",
+        "max_error": 0.0,
+        "tolerance": 1e-09
+      }
+    ]
+  },
+  {
+    "set": 45,
+    "question": 5,
+    "physical_model": "把平面镜像到另一侧后，真实问题等效为两根异号线电荷。真实圆柱并不以线电荷所在点为几何中心；线电荷位置必须使整个圆柱表面到两线的距离比保持常量。",
+    "math_checks": [
+      {
+        "set": 45,
+        "question": 5,
+        "check": "cylinder right-end distance ratio",
+        "max_error": 4.440892098500626e-16,
+        "tolerance": 1e-08
+      },
+      {
+        "set": 45,
+        "question": 5,
+        "check": "entire metal circumference equipotential",
+        "max_error": 4.440892098500626e-16,
+        "tolerance": 1e-12
+      },
+      {
+        "set": 45,
+        "question": 5,
+        "check": "cylinder right-end distance ratio",
+        "max_error": 2.842170943040401e-14,
+        "tolerance": 1e-08
+      },
+      {
+        "set": 45,
+        "question": 5,
+        "check": "entire metal circumference equipotential",
+        "max_error": 1.3322676295501878e-15,
+        "tolerance": 1e-12
+      },
+      {
+        "set": 45,
+        "question": 5,
+        "check": "cylinder right-end distance ratio",
+        "max_error": 0.0,
+        "tolerance": 1e-08
+      },
+      {
+        "set": 45,
+        "question": 5,
+        "check": "entire metal circumference equipotential",
+        "max_error": 1.6653345369377348e-16,
+        "tolerance": 1e-12
+      }
+    ]
+  },
+  {
+    "set": 45,
+    "question": 6,
+    "physical_model": "每解离一个 $A_2$，粒子数由 $1$ 变为 $2$。温度从 $T_0$ 升到 $2T_0$ 时，解离度从 $0$ 线性增至 $1$，总粒子数也随温度线性增加。",
+    "math_checks": [
+      {
+        "set": 45,
+        "question": 6,
+        "check": "thermodynamic consistency failure is p",
+        "symbolic": "pass"
+      }
+    ]
+  },
+  {
+    "set": 45,
+    "question": 7,
+    "physical_model": "图7-1取 $z$ 向上，外圈 $r_1$ 高度零、内圈 $r_2$ 高度 $h_0$。膜重力使其相对无重力插值向下弯。图7-2用局部面元推导两个横向方向的张力合力。",
+    "math_checks": [
+      {
+        "set": 45,
+        "question": 7,
+        "check": "annular membrane static PDE",
+        "symbolic": "pass"
+      },
+      {
+        "set": 45,
+        "question": 7,
+        "check": "outer and inner membrane boundaries",
+        "symbolic": "pass"
+      },
+      {
+        "set": 45,
+        "question": 7,
+        "check": "inner membrane boundary",
+        "symbolic": "pass"
+      }
+    ]
+  },
+  {
+    "set": 45,
+    "question": 8,
+    "physical_model": "第一问的界面随介质运动，因此不能直接假设地面系入射频率与透射频率相同；频率连续条件应在界面静止的介质系中使用。第二问中离轴处介质流得更快，使实验室中的有效折射率降低，波面外侧前进更快，从而形成会聚波面。",
+    "math_checks": [
+      {
+        "set": 45,
+        "question": 8,
+        "check": "moving medium paraxial dispersion order",
+        "symbolic": "pass"
+      }
+    ]
+  },
+  {
+    "set": 44,
+    "question": 1,
+    "physical_model": "图1-1中 $x$ 沿水平等高线，$y$ 沿斜面下坡。初速度为 $(v_0,0)$。重力的切向分量沿 $+y$，支持力垂直斜面。摩擦力在斜面内，与当前速度相反；它起初沿 $-x$，之后同时有 $-x,-y$ 分量。图1-2画的是速度平面的轨迹，不是木块在斜面上的空间轨迹。",
+    "math_checks": [
+      {
+        "set": 44,
+        "question": 1,
+        "check": "parametric trajectory vx",
+        "symbolic": "pass"
+      },
+      {
+        "set": 44,
+        "question": 1,
+        "check": "parametric trajectory vy",
+        "symbolic": "pass"
+      }
+    ]
+  },
+  {
+    "set": 44,
+    "question": 2,
+    "physical_model": "图2-1中 $\\boldsymbol e_r$ 指向远离原点，$\\boldsymbol e_\\theta$ 沿 $\\theta$ 增大方向。粒子沿螺线向内运动时，速度有负径向、正角向分量。轨道作用力在主法线方向，与速度垂直。图2-2标出切向和法向，不能把作用力画成单纯径向力。",
+    "math_checks": [
+      {
+        "set": 44,
+        "question": 2,
+        "check": "log spiral curvature",
+        "max_error": 5.551115123125783e-17,
+        "tolerance": 1e-08
+      },
+      {
+        "set": 44,
+        "question": 2,
+        "check": "log spiral curvature",
+        "max_error": 0.0,
+        "tolerance": 1e-08
+      },
+      {
+        "set": 44,
+        "question": 2,
+        "check": "log spiral curvature",
+        "max_error": 0.0,
+        "tolerance": 1e-08
+      }
+    ]
+  },
+  {
+    "set": 44,
+    "question": 3,
+    "physical_model": "图3-1的 $+x$ 沿底部轨道向右，线圈法向也取 $+x$。单极子从左向右运动时 $v>0$；电流正向按右手规则定义，使其产生的轴线场向 $+x$。图3-2的电磁力总与速度相反，并在 $|x|\\sim b$ 内最明显。穿过线圈圆盘时磁通有跳变，但真实电动势不含由普通法拉第公式误加的冲量。",
+    "math_checks": [
+      {
+        "set": 44,
+        "question": 3,
+        "check": "monopole damping integral",
+        "max_error": 2.220446049250313e-16,
+        "tolerance": 1e-08
+      },
+      {
+        "set": 44,
+        "question": 3,
+        "check": "finite damping primitive",
+        "symbolic": "pass"
+      }
+    ]
+  },
+  {
+    "set": 44,
+    "question": 4,
+    "physical_model": "图4-1以容器左端为内部坐标 $x=0$，右端为 $x=L$。右端热、密度较低，气体质心向左偏；容器为保持整体质心不变向右移。图4-2的温度线是线性函数，密度曲线则是其倒数，不应把密度也画成严格直线。",
+    "math_checks": [
+      {
+        "set": 44,
+        "question": 4,
+        "check": "temperature weighted centre",
+        "max_error": 2.6645352591003757e-15,
+        "tolerance": 1e-10
+      }
+    ]
+  },
+  {
+    "set": 44,
+    "question": 5,
+    "physical_model": "图5-1画出从原扫描读出的折线，横轴为物体转角 $\\theta$，纵轴为有向偏角 $\\alpha$。图5-2的轮廓由左右两段竖直线与上下两段抛物线帽组成，四个连接点为棱角。极角 $\\varphi$ 属于物体固定坐标，不能与实验转角 $\\theta$ 混用。",
+    "math_checks": [
+      {
+        "set": 44,
+        "question": 5,
+        "check": "cap area independent integral",
+        "max_error": 8.881784197001252e-16,
+        "tolerance": 1e-08
+      }
+    ]
+  },
+  {
+    "set": 44,
+    "question": 6,
+    "physical_model": "图6-1的斜面向右降低。圆柱相对斜面沿坡向右下运动，斜面向左加速。图6-2中接触摩擦力沿坡向上，支持力垂直斜面，圆柱质心加速度是斜面水平加速度与相对沿坡加速度的矢量和。",
+    "math_checks": [
+      {
+        "set": 44,
+        "question": 6,
+        "check": "moving rolling slope quantitative values",
+        "max_error": 3.4646222751844036e-07,
+        "tolerance": 1e-06
+      }
+    ]
+  },
+  {
+    "set": 44,
+    "question": 7,
+    "physical_model": "图7-1左侧为光子撞击质子，最低阈值在质心系两产物没有相对动量；右侧为飞行 $\\Lambda$ 衰变。图7-2画实验室动量椭圆：横轴沿母粒子飞行方向，最大夹角由原点到椭圆的切线确定，而最大动量位于前向端点。",
+    "math_checks": [
+      {
+        "set": 44,
+        "question": 7,
+        "check": "photon thresholds",
+        "max_error": 1.9499441350490088e-07,
+        "tolerance": 1e-06
+      },
+      {
+        "set": 44,
+        "question": 7,
+        "check": "decay Lorentz invariant",
+        "max_error": 7.275957614183426e-12,
+        "tolerance": 1e-08
+      },
+      {
+        "set": 44,
+        "question": 7,
+        "check": "decay Lorentz invariant",
+        "max_error": 0.0,
+        "tolerance": 1e-08
+      },
+      {
+        "set": 44,
+        "question": 7,
+        "check": "decay Lorentz invariant",
+        "max_error": 2.1827872842550278e-11,
+        "tolerance": 1e-08
+      },
+      {
+        "set": 44,
+        "question": 7,
+        "check": "decay Lorentz invariant",
+        "max_error": 5.820766091346741e-11,
+        "tolerance": 1e-08
+      }
+    ]
+  },
+  {
+    "set": 44,
+    "question": 8,
+    "physical_model": "图8-1按外、中、内顺序标出三个半径，不把径向厚度当作半径。外电势正、内壳接地，电场和常规电流均径向向内。因此实际电流流入内壳，再经接地导线流走；题目的“流出”应按大小理解。图8-2采用串联漏电电阻与并联电容的等效图，中壳电势在稳态由两个电阻分压决定。",
+    "math_checks": [
+      {
+        "set": 44,
+        "question": 8,
+        "check": "spherical resistance integrations",
+        "max_error": 3.7557953191935667e-07,
+        "tolerance": 1e-06
+      },
+      {
+        "set": 44,
+        "question": 8,
+        "check": "free plus bound interface charge",
+        "max_error": 0.0,
+        "tolerance": 1e-22
+      }
+    ]
+  },
+  {
+    "set": 43,
+    "question": 1,
+    "physical_model": "图1-1把前车尾与后车头分别作为位置标记。车长始终包含在两个标记的初始位置中，后续计算只涉及它们各自的位移。图1-2的两条速度曲线形状相同，后车曲线向右平移；阴影面积就是车距的变化量。",
+    "math_checks": [
+      {
+        "set": 43,
+        "question": 1,
+        "check": "time shifted displacement gives steady gap",
+        "max_error": 2.842170943040401e-14,
+        "tolerance": 1e-08
+      },
+      {
+        "set": 43,
+        "question": 1,
+        "check": "minimum braking gap tau=0.0000",
+        "max_error": 7.105427357601002e-15,
+        "tolerance": 1e-08
+      },
+      {
+        "set": 43,
+        "question": 1,
+        "check": "minimum braking gap tau=1.0000",
+        "max_error": 0.0,
+        "tolerance": 1e-08
+      },
+      {
+        "set": 43,
+        "question": 1,
+        "check": "minimum braking gap tau=2.0000",
+        "max_error": 0.0,
+        "tolerance": 1e-08
+      },
+      {
+        "set": 43,
+        "question": 1,
+        "check": "minimum braking gap tau=3.1623",
+        "max_error": 0.0,
+        "tolerance": 1e-08
+      }
+    ]
+  },
+  {
+    "set": 43,
+    "question": 2,
+    "physical_model": "一维墙间的第 $n$ 个驻波含 $n$ 个半波长。经典碰撞图像中，电子在两墙之间往返，动量在 $+p_n$ 与 $-p_n$ 之间变号。图2-2用矩形表示作用量围成的面积。\n\n圆内的正多边形每一条边都连接相邻反射点，入射角与反射角相等。多边形总周长决定沿一整条周期轨道累积的传播相位；它不是圆盘内所有可能波函数的分类。",
+    "math_checks": [
+      {
+        "set": 43,
+        "question": 2,
+        "check": "wall force from independent finite difference L=1.0",
+        "max_error": 4.4772718865715433e-10,
+        "tolerance": 1e-08
+      },
+      {
+        "set": 43,
+        "question": 2,
+        "check": "wall force from independent finite difference L=2.0",
+        "max_error": 1.7108092720263812e-11,
+        "tolerance": 1e-08
+      },
+      {
+        "set": 43,
+        "question": 2,
+        "check": "wall force from independent finite difference L=3.0",
+        "max_error": 1.9337170753530586e-12,
+        "tolerance": 1e-08
+      },
+      {
+        "set": 43,
+        "question": 2,
+        "check": "polygon length ell=3",
+        "max_error": 0.0,
+        "tolerance": 5e-08
+      },
+      {
+        "set": 43,
+        "question": 2,
+        "check": "polygon length ell=4",
+        "max_error": 3.469446951953614e-18,
+        "tolerance": 5e-08
+      },
+      {
+        "set": 43,
+        "question": 2,
+        "check": "polygon length ell=1000",
+        "max_error": 4.1666748910526574e-08,
+        "tolerance": 5e-08
+      }
+    ]
+  },
+  {
+    "set": 43,
+    "question": 3,
+    "physical_model": "图3-1跟踪同一批物质围成的球，其边界半径是 $r=a r_0$。球内质量不随膨胀改变，体积却按 $a^3$ 增长，所以密度下降。图3-2中 $a$ 持续增大而曲线向下弯，表示膨胀仍在继续，但速度逐渐减小。",
+    "math_checks": [
+      {
+        "set": 43,
+        "question": 3,
+        "check": "dust scale from independent time integration",
+        "max_error": 7.386091738226241e-12,
+        "tolerance": 1e-09
+      },
+      {
+        "set": 43,
+        "question": 3,
+        "check": "SI numerical age and critical density",
+        "H0": 2.3300970873786407e-18,
+        "t0_s": 2.8611111111111107e+17,
+        "rho0": 9.716359948364792e-27
+      }
+    ]
+  },
+  {
+    "set": 43,
+    "question": 4,
+    "physical_model": "图4-1同时画出黑洞视界和模型中的基态半径。增大黑洞质量会使视界半径增大，却使波尔半径减小；两条曲线相交给出形式边界。相交只意味着两个长度相同，并不意味着在那里存在稳定圆轨道。",
+    "math_checks": [
+      {
+        "set": 43,
+        "question": 4,
+        "check": "horizon crossing radius",
+        "max_error": 4.930380657631324e-32,
+        "tolerance": 1e-25
+      },
+      {
+        "set": 43,
+        "question": 4,
+        "check": "formal boundary binding ratio",
+        "max_error": 0.0,
+        "tolerance": 1e-08
+      },
+      {
+        "set": 43,
+        "question": 4,
+        "check": "Hawking scale and validity",
+        "M_limit": 200252689360.22903,
+        "r_limit": 2.97421713102219e-16,
+        "E_J": 3.758194039962814e-11,
+        "T_toy": 499369073741.1908,
+        "kT_over_E": 0.18345338344970696,
+        "approximation": "Newtonian limit fails at v=c/sqrt(2)"
+      }
+    ]
+  },
+  {
+    "set": 43,
+    "question": 5,
+    "physical_model": "辐射气体随膨胀对容器做功，温度下降，单位体积内能按 $T^4$ 下降。总内能还乘以增加的体积，故它的变化不能只从 $u$ 判断。图5-2把 $r,V,T,U$ 分别按各自初值归一化，显示它们的不同指数。",
+    "math_checks": [
+      {
+        "set": 43,
+        "question": 5,
+        "check": "entropy derivatives",
+        "max_error": 1.2612488831109658e-10,
+        "tolerance": 1e-08
+      },
+      {
+        "set": 43,
+        "question": 5,
+        "check": "entropy derivatives",
+        "max_error": 8.473577395307075e-10,
+        "tolerance": 1e-08
+      },
+      {
+        "set": 43,
+        "question": 5,
+        "check": "entropy derivatives",
+        "max_error": 1.7105428185004712e-10,
+        "tolerance": 1e-08
+      },
+      {
+        "set": 43,
+        "question": 5,
+        "check": "use supplied lightyear conversion",
+        "alpha_SI": 2.3344803696249174e-18
+      }
+    ]
+  },
+  {
+    "set": 43,
+    "question": 6,
+    "physical_model": "图6-1以镜面交点 $O$ 为圆心，零度方向为两镜角平分线。$\\theta$ 是像点相对这一基准的方向角，$\\phi$ 是观察者方向。它们都不是观察者眼睛处的视线偏角。\n\n展开光路后，曲折反射路变为观察者到虚像的一条直线。若把同一个周向位置分别记成 $\\theta$ 和 $\\theta-360^\\circ$，便得到沿上镜或下镜展开的两条候选路径；真正可用的是两端绕原点角跨度小于 $180^\\circ$ 的那条。",
+    "math_checks": [
+      {
+        "set": 43,
+        "question": 6,
+        "check": "80 independent straight segment traces with random observer/image radii",
+        "pass_count": 80,
+        "excluded": "antipodal line through mirror vertex"
+      }
+    ]
+  },
+  {
+    "set": 43,
+    "question": 7,
+    "physical_model": "图7-1中，棒向右运动且磁场向里，正电荷受磁力向上，故上导轨电势较高。电容电压记为上轨对下轨 $V$，每根棒中向上的电流记为 $I_i$。图7-2沿用同一电压极性和电流方向；若某棒电动势小于 $V$，它的 $I_i$ 为负，磁力也相应反向。",
+    "math_checks": [
+      {
+        "set": 43,
+        "question": 7,
+        "check": "rods ODE terminal velocities and displacement [1, 1]",
+        "max_error": 1.7990053891026037e-12,
+        "tolerance": 1e-09
+      },
+      {
+        "set": 43,
+        "question": 7,
+        "check": "conserved coupling combination",
+        "max_error": 1.3322676295501878e-15,
+        "tolerance": 1e-10
+      },
+      {
+        "set": 43,
+        "question": 7,
+        "check": "rods ODE terminal velocities and displacement [0.5, 1]",
+        "max_error": 4.632516592550928e-12,
+        "tolerance": 1e-09
+      },
+      {
+        "set": 43,
+        "question": 7,
+        "check": "conserved coupling combination",
+        "max_error": 1.3322676295501878e-15,
+        "tolerance": 1e-10
+      },
+      {
+        "set": 43,
+        "question": 7,
+        "check": "rods ODE terminal velocities and displacement [0.8, 1.2]",
+        "max_error": 4.716671497817515e-12,
+        "tolerance": 1e-09
+      },
+      {
+        "set": 43,
+        "question": 7,
+        "check": "conserved coupling combination",
+        "max_error": 1.3322676295501878e-15,
+        "tolerance": 1e-10
+      }
+    ]
+  },
+  {
+    "set": 43,
+    "question": 8,
+    "physical_model": "图8-1用实心点表示承压桌腿，空心点表示悬空桌腿。一个平面与同一圆周上的等高点相交，正、负高度差各组成连续圆弧，因此承压腿和悬空腿各自成连续的一块，不能任意从 $N$ 条腿中组合选择。\n\n图8-2展示固定一块承压腿时载荷能落入的区域。把它绕圆心依次旋转 $2\\pi/N$，得到全部等价区域；这些区域的内部对应不同的实际接触组合，不重叠。",
+    "math_checks": [
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=4 p=3",
+        "max_error": 0.0,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=5 p=3",
+        "max_error": 1.495914503379936e-12,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=5 p=4",
+        "max_error": 4.0458747463389955e-12,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=6 p=3",
+        "max_error": 1.0516476578459333e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=6 p=4",
+        "max_error": 1.2773448965219814e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=6 p=5",
+        "max_error": 4.279926413275348e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=7 p=3",
+        "max_error": 3.725353359129713e-12,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=7 p=4",
+        "max_error": 1.07224229495273e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=7 p=5",
+        "max_error": 2.196215431737869e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=7 p=6",
+        "max_error": 1.1790790566124087e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=8 p=3",
+        "max_error": 4.492961558355546e-12,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=8 p=4",
+        "max_error": 3.28037597085995e-12,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=8 p=5",
+        "max_error": 2.941924481802971e-12,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=8 p=6",
+        "max_error": 3.094086098442972e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=8 p=7",
+        "max_error": 3.0386804183990535e-12,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=9 p=3",
+        "max_error": 5.4427573559223674e-12,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=9 p=4",
+        "max_error": 1.6523116208588817e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=9 p=5",
+        "max_error": 3.955724636739433e-12,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=9 p=6",
+        "max_error": 6.497857807374885e-12,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=9 p=7",
+        "max_error": 3.1344371542729732e-12,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=9 p=8",
+        "max_error": 2.530292642077825e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=10 p=3",
+        "max_error": 2.8299029786182928e-12,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=10 p=4",
+        "max_error": 2.6128543773040747e-12,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=10 p=5",
+        "max_error": 5.26811927414883e-12,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=10 p=6",
+        "max_error": 1.5905221584233686e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=10 p=7",
+        "max_error": 2.6292690247231576e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=10 p=8",
+        "max_error": 1.310607178339751e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=10 p=9",
+        "max_error": 1.9503176851287662e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=11 p=3",
+        "max_error": 1.0066947275788607e-12,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=11 p=4",
+        "max_error": 9.822309632312454e-12,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=11 p=5",
+        "max_error": 7.723877093468445e-12,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=11 p=6",
+        "max_error": 2.1618873358164592e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=11 p=7",
+        "max_error": 3.1166624836487244e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=11 p=8",
+        "max_error": 4.5793924208226144e-12,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=11 p=9",
+        "max_error": 3.9217296077254105e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=11 p=10",
+        "max_error": 1.2029127693935493e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=12 p=3",
+        "max_error": 6.836198274129401e-14,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=12 p=4",
+        "max_error": 3.4383051961128785e-12,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=12 p=5",
+        "max_error": 3.262501380163485e-12,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=12 p=6",
+        "max_error": 8.097522652406042e-12,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=12 p=7",
+        "max_error": 2.0672019651613027e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=12 p=8",
+        "max_error": 3.03895797415521e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=12 p=9",
+        "max_error": 2.1447343900860005e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=12 p=10",
+        "max_error": 5.336431296854016e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=12 p=11",
+        "max_error": 2.5944080217499277e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=13 p=3",
+        "max_error": 1.4239165402329945e-12,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=13 p=4",
+        "max_error": 5.077327447366997e-12,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=13 p=5",
+        "max_error": 4.176381462883683e-12,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=13 p=6",
+        "max_error": 1.8001100610121057e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=13 p=7",
+        "max_error": 1.1674550215445834e-12,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=13 p=8",
+        "max_error": 1.6202705843681997e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=13 p=9",
+        "max_error": 4.355632521324537e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=13 p=10",
+        "max_error": 1.3756468186798543e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=13 p=11",
+        "max_error": 4.739900139050235e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=13 p=12",
+        "max_error": 1.563330020992737e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=14 p=3",
+        "max_error": 1.877664690397296e-13,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=14 p=4",
+        "max_error": 3.7508052219692445e-12,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=14 p=5",
+        "max_error": 4.761191441104984e-12,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=14 p=6",
+        "max_error": 3.6581293549886595e-12,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=14 p=7",
+        "max_error": 5.059841434729151e-13,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=14 p=8",
+        "max_error": 1.839584040652653e-12,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=14 p=9",
+        "max_error": 3.742234300219138e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=14 p=10",
+        "max_error": 2.225228334928886e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=14 p=11",
+        "max_error": 4.346364934626479e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=14 p=12",
+        "max_error": 6.303069177704401e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=14 p=13",
+        "max_error": 4.2564840541103877e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=15 p=3",
+        "max_error": 7.81236186853107e-13,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=15 p=4",
+        "max_error": 1.2136958105202211e-12,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=15 p=5",
+        "max_error": 3.5381697571779114e-12,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=15 p=6",
+        "max_error": 1.5532380936988943e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=15 p=7",
+        "max_error": 1.579059105694114e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=15 p=8",
+        "max_error": 4.085062843550702e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=15 p=9",
+        "max_error": 7.820688541215759e-12,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=15 p=10",
+        "max_error": 3.617886545903559e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=15 p=11",
+        "max_error": 6.791356366164791e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=15 p=12",
+        "max_error": 4.1235209691237174e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=15 p=13",
+        "max_error": 8.341410895340573e-12,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=15 p=14",
+        "max_error": 2.9104808840774155e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=16 p=3",
+        "max_error": 3.3217872896784684e-13,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=16 p=4",
+        "max_error": 2.6559587862351464e-12,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=16 p=5",
+        "max_error": 4.2876813211023546e-13,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=16 p=6",
+        "max_error": 1.3265305520704374e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=16 p=7",
+        "max_error": 1.2544409955239644e-12,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=16 p=8",
+        "max_error": 2.6180363432715126e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=16 p=9",
+        "max_error": 4.4346026850661246e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=16 p=10",
+        "max_error": 2.301164814255685e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=16 p=11",
+        "max_error": 2.0969448399910107e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=16 p=12",
+        "max_error": 3.38629124740919e-12,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=16 p=13",
+        "max_error": 1.8980900184928373e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=16 p=14",
+        "max_error": 6.304447242033717e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=16 p=15",
+        "max_error": 1.505133517820667e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=17 p=3",
+        "max_error": 3.80709352931774e-13,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=17 p=4",
+        "max_error": 1.0938194794363199e-12,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=17 p=5",
+        "max_error": 5.827005544745134e-12,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=17 p=6",
+        "max_error": 6.098399563114754e-12,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=17 p=7",
+        "max_error": 1.9107770921067413e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=17 p=8",
+        "max_error": 2.639463647646778e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=17 p=9",
+        "max_error": 2.3660379211420945e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=17 p=10",
+        "max_error": 1.403238636399351e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=17 p=11",
+        "max_error": 2.0977886094897258e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=17 p=12",
+        "max_error": 2.8167412846613615e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=17 p=13",
+        "max_error": 5.017450344091401e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=17 p=14",
+        "max_error": 2.7682300896003653e-12,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=17 p=15",
+        "max_error": 2.8850324906848357e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=17 p=16",
+        "max_error": 1.6930387647384748e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=18 p=3",
+        "max_error": 1.4263590308871699e-13,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=18 p=4",
+        "max_error": 1.0512146708663295e-12,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=18 p=5",
+        "max_error": 4.848621504294215e-13,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=18 p=6",
+        "max_error": 9.317380200712932e-12,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=18 p=7",
+        "max_error": 3.745614929329122e-13,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=18 p=8",
+        "max_error": 1.8876372687159915e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=18 p=9",
+        "max_error": 1.2655015924067925e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=18 p=10",
+        "max_error": 1.8294726844558795e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=18 p=11",
+        "max_error": 2.2196383619998983e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=18 p=12",
+        "max_error": 1.0200923439285248e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=18 p=13",
+        "max_error": 3.060718345437863e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=18 p=14",
+        "max_error": 7.204506435876112e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=18 p=15",
+        "max_error": 4.92176299715652e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=18 p=16",
+        "max_error": 4.297273648035116e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=18 p=17",
+        "max_error": 1.3032624979203433e-10,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=19 p=3",
+        "max_error": 2.7031155092061e-13,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=19 p=4",
+        "max_error": 1.5673295994389491e-12,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=19 p=5",
+        "max_error": 4.360845018425152e-12,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=19 p=6",
+        "max_error": 8.481854107955655e-12,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=19 p=7",
+        "max_error": 1.0783207660125527e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=19 p=8",
+        "max_error": 8.010841989758433e-12,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=19 p=9",
+        "max_error": 1.165234575495333e-12,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=19 p=10",
+        "max_error": 2.6364188610017436e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=19 p=11",
+        "max_error": 1.6546986003618258e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=19 p=12",
+        "max_error": 3.3195945992048337e-12,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=19 p=13",
+        "max_error": 4.790615126815112e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=19 p=14",
+        "max_error": 3.6572411765689594e-12,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=19 p=15",
+        "max_error": 3.0245139726048365e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=19 p=16",
+        "max_error": 2.9306834736786413e-12,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=19 p=17",
+        "max_error": 2.8502478155445488e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=19 p=18",
+        "max_error": 1.8781240451737347e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=20 p=3",
+        "max_error": 5.513228762410449e-13,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=20 p=4",
+        "max_error": 1.0996759058912176e-13,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=20 p=5",
+        "max_error": 2.200045701172826e-12,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=20 p=6",
+        "max_error": 3.9932224193961474e-12,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=20 p=7",
+        "max_error": 7.382094935337591e-12,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=20 p=8",
+        "max_error": 1.1757622653263411e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=20 p=9",
+        "max_error": 6.309286426642302e-12,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=20 p=10",
+        "max_error": 1.2223111411913123e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=20 p=11",
+        "max_error": 3.992844943567775e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=20 p=12",
+        "max_error": 1.1885104012065995e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=20 p=13",
+        "max_error": 3.9692443776218056e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=20 p=14",
+        "max_error": 2.200667426066616e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=20 p=15",
+        "max_error": 3.085498523347496e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=20 p=16",
+        "max_error": 7.177089478282994e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=20 p=17",
+        "max_error": 9.424648561573434e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=20 p=18",
+        "max_error": 3.75056652401895e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=20 p=19",
+        "max_error": 4.429129979444113e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=21 p=3",
+        "max_error": 4.816425036580085e-13,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=21 p=4",
+        "max_error": 3.1183389204159084e-14,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=21 p=5",
+        "max_error": 1.8160195569549842e-12,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=21 p=6",
+        "max_error": 2.3567536810986667e-12,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=21 p=7",
+        "max_error": 7.5405237609516e-12,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=21 p=8",
+        "max_error": 1.2981837826941955e-12,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=21 p=9",
+        "max_error": 1.3823109323851668e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=21 p=10",
+        "max_error": 4.0394354527961696e-12,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=21 p=11",
+        "max_error": 4.088712701744157e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=21 p=12",
+        "max_error": 7.830625037286154e-12,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=21 p=13",
+        "max_error": 4.3237358138270565e-12,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=21 p=14",
+        "max_error": 3.948508187079369e-13,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=21 p=15",
+        "max_error": 1.4782314261552187e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=21 p=16",
+        "max_error": 1.1527265253441499e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=21 p=17",
+        "max_error": 4.1674552697656964e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=21 p=18",
+        "max_error": 4.8386419870816155e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=21 p=19",
+        "max_error": 6.222714704628984e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=21 p=20",
+        "max_error": 7.937785845291145e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=22 p=3",
+        "max_error": 1.6724122087197202e-13,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=22 p=4",
+        "max_error": 1.0887679646742754e-12,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=22 p=5",
+        "max_error": 6.841888167130605e-13,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=22 p=6",
+        "max_error": 3.248512570053208e-12,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=22 p=7",
+        "max_error": 6.741829317036263e-14,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=22 p=8",
+        "max_error": 3.660988179277069e-12,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=22 p=9",
+        "max_error": 1.799199678131913e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=22 p=10",
+        "max_error": 2.8349739222832682e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=22 p=11",
+        "max_error": 1.6088436138872453e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=22 p=12",
+        "max_error": 2.9085400754524926e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=22 p=13",
+        "max_error": 1.755157130745033e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=22 p=14",
+        "max_error": 4.480971149689594e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=22 p=15",
+        "max_error": 1.491354262306288e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=22 p=16",
+        "max_error": 1.7769619109486712e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=22 p=17",
+        "max_error": 5.981326545168031e-13,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=22 p=18",
+        "max_error": 4.219347093936676e-12,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=22 p=19",
+        "max_error": 2.1965929075662416e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=22 p=20",
+        "max_error": 1.3260617603982894e-10,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=22 p=21",
+        "max_error": 1.2001073745881996e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=23 p=3",
+        "max_error": 2.602362769721367e-13,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=23 p=4",
+        "max_error": 8.463785228229881e-13,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=23 p=5",
+        "max_error": 2.6990909507418337e-12,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=23 p=6",
+        "max_error": 4.8036991051603195e-12,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=23 p=7",
+        "max_error": 1.7666423879347803e-12,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=23 p=8",
+        "max_error": 6.919853579034907e-12,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=23 p=9",
+        "max_error": 9.630074515598608e-13,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=23 p=10",
+        "max_error": 1.7280898934046718e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=23 p=11",
+        "max_error": 2.2619017769898164e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=23 p=12",
+        "max_error": 3.064512532624519e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=23 p=13",
+        "max_error": 5.021932869553325e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=23 p=14",
+        "max_error": 3.804351278446916e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=23 p=15",
+        "max_error": 7.426981252223186e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=23 p=16",
+        "max_error": 6.079217684806792e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=23 p=17",
+        "max_error": 3.204768395104196e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=23 p=18",
+        "max_error": 8.182006461243674e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=23 p=19",
+        "max_error": 1.7512130634500522e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=23 p=20",
+        "max_error": 6.133826779830542e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=23 p=21",
+        "max_error": 7.790355860404219e-11,
+        "tolerance": 3e-08
+      },
+      {
+        "set": 43,
+        "question": 8,
+        "check": "analytic vs all-leg inequalities N=23 p=22",
+        "max_error": 1.470172941719916e-11,
+        "tolerance": 3e-08
+      }
+    ]
+  }
+]

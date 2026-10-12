@@ -1,0 +1,144 @@
+[
+  {
+    "set": 45,
+    "question": 1,
+    "check": "barycentric stellar amplitude",
+    "max_error": 1.1496452097803367e-05,
+    "tolerance": 0.0001
+  },
+  {
+    "set": 45,
+    "question": 2,
+    "check": "rolling accelerated slope tangential equation",
+    "max_error": 4.440892098500626e-16,
+    "tolerance": 1e-08
+  },
+  {
+    "set": 45,
+    "question": 2,
+    "check": "rolling accelerated slope tangential equation",
+    "max_error": 0.0,
+    "tolerance": 1e-08
+  },
+  {
+    "set": 45,
+    "question": 2,
+    "check": "rolling accelerated slope tangential equation",
+    "max_error": 4.440892098500626e-16,
+    "tolerance": 1e-08
+  },
+  {
+    "set": 45,
+    "question": 3,
+    "check": "both gyro roots",
+    "max_error": 2.220446049250313e-16,
+    "tolerance": 1e-08
+  },
+  {
+    "set": 45,
+    "question": 3,
+    "check": "both gyro roots",
+    "max_error": 5.551115123125783e-16,
+    "tolerance": 1e-08
+  },
+  {
+    "set": 45,
+    "question": 3,
+    "check": "both gyro roots",
+    "max_error": 3.1086244689504383e-15,
+    "tolerance": 1e-08
+  },
+  {
+    "set": 45,
+    "question": 4,
+    "check": "first vertical stiffness determinant",
+    "max_error": 1.8189894035458565e-12,
+    "tolerance": 1e-09
+  },
+  {
+    "set": 45,
+    "question": 4,
+    "check": "second vertical numeric normal frequencies",
+    "max_error": 2.157242252831537e-06,
+    "tolerance": 0.0002
+  },
+  {
+    "set": 45,
+    "question": 4,
+    "check": "first vertical stiffness determinant",
+    "max_error": 0.0,
+    "tolerance": 1e-09
+  },
+  {
+    "set": 45,
+    "question": 5,
+    "check": "cylinder right-end distance ratio",
+    "max_error": 4.440892098500626e-16,
+    "tolerance": 1e-08
+  },
+  {
+    "set": 45,
+    "question": 5,
+    "check": "entire metal circumference equipotential",
+    "max_error": 4.440892098500626e-16,
+    "tolerance": 1e-12
+  },
+  {
+    "set": 45,
+    "question": 5,
+    "check": "cylinder right-end distance ratio",
+    "max_error": 2.842170943040401e-14,
+    "tolerance": 1e-08
+  },
+  {
+    "set": 45,
+    "question": 5,
+    "check": "entire metal circumference equipotential",
+    "max_error": 1.3322676295501878e-15,
+    "tolerance": 1e-12
+  },
+  {
+    "set": 45,
+    "question": 5,
+    "check": "cylinder right-end distance ratio",
+    "max_error": 0.0,
+    "tolerance": 1e-08
+  },
+  {
+    "set": 45,
+    "question": 5,
+    "check": "entire metal circumference equipotential",
+    "max_error": 1.6653345369377348e-16,
+    "tolerance": 1e-12
+  },
+  {
+    "set": 45,
+    "question": 6,
+    "check": "thermodynamic consistency failure is p",
+    "symbolic": "pass"
+  },
+  {
+    "set": 45,
+    "question": 7,
+    "check": "annular membrane static PDE",
+    "symbolic": "pass"
+  },
+  {
+    "set": 45,
+    "question": 7,
+    "check": "outer and inner membrane boundaries",
+    "symbolic": "pass"
+  },
+  {
+    "set": 45,
+    "question": 7,
+    "check": "inner membrane boundary",
+    "symbolic": "pass"
+  },
+  {
+    "set": 45,
+    "question": 8,
+    "check": "moving medium paraxial dispersion order",
+    "symbolic": "pass"
+  }
+]

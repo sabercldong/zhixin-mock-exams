@@ -1,0 +1,2230 @@
+\documentclass[12pt,a4paper,UTF8]{ctexart}
+\usepackage[a4paper,top=22mm,bottom=22mm,left=22mm,right=22mm,headheight=15pt]{geometry}
+\usepackage{amsmath,amssymb,mathtools,bm}
+\usepackage{graphicx,xcolor,booktabs,longtable,array,enumitem,fancyhdr,caption,float,microtype,setspace}
+\newcommand{\Needspace}[1]{\par\begingroup\dimen0=#1\relax\dimen2=\pagegoal\advance\dimen2 by-\pagetotal\ifdim\dimen0>\dimen2\newpage\fi\endgroup}
+\newcommand{\needspace}[1]{\par\begingroup\skip0=\lastskip\vskip-\skip0\dimen0=#1\relax\advance\dimen0 by\skip0\vskip\dimen0\penalty-100\vskip-\dimen0\vskip\skip0\penalty9999\endgroup}
+\usepackage[hidelinks,unicode]{hyperref}
+\usepackage[most]{tcolorbox}
+\definecolor{ContestBlue}{HTML}{17365D}
+\hypersetup{pdftitle={第041套},pdfauthor={竞赛物理教研}}
+\setstretch{1.24}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.35em}
+\setlength{\emergencystretch}{2em}
+\setlist{itemsep=0.35em,topsep=0.4em}
+\captionsetup{font=small,labelfont=bf,justification=centering}
+\setcounter{secnumdepth}{0}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small 第041套}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\ctexset{
+  section={format=\Large\bfseries\color{ContestBlue},beforeskip=1.2em,afterskip=0.7em},
+  subsection={format=\large\bfseries\color{ContestBlue},beforeskip=1.0em,afterskip=0.5em},
+  subsubsection={format=\normalsize\bfseries,beforeskip=0.8em,afterskip=0.35em}
+}
+\makeatletter
+\newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\newcommand{\maxwidth}{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\newcommand{\maxheight}{\ifdim\Gin@nat@height>0.72\textheight 0.72\textheight\else\Gin@nat@height\fi}
+\newcommand{\pandocbounded}[1]{\begingroup\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}#1\endgroup}
+\makeatother
+\begin{document}
+\begin{titlepage}
+  \centering
+  \vspace*{58mm}
+  {\Huge\bfseries\color{ContestBlue} 第041套\par}
+  \vfill
+  \vspace*{28mm}
+\end{titlepage}
+\section{第 1 题}\label{ux7b2c-1-ux9898}
+
+一根长度为 \(l\)、质量为 \(m\) 的均匀木条，水平放在质量可忽略的木块 A、B
+上。A 固定，开始时位于木条左端；B 位于木条右端左侧 \(x_{10}\)
+处，\(0<x_{10}<l/2\)。木条与两个木块的动摩擦因数均为 \(\mu_0\)，B
+与地面无摩擦。木条和 B 最初静止，给 B 施加水平向左的力 \(F(t)\)，使 B
+和木条均作匀加速运动，直至 B 与 A 相遇。求二者的加速度和 \(F(t)\)。
+
+原卷把木条位移 \(x_2(t)\) 写作``向右位移''；以向右为正时，实际运动的
+\(x_2\) 为负。下面另设向左位移
+\(u=-x_2\)，避免把坐标符号误当成运动方向。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={题面模型}]{../figures/question-01.pdf}
+\caption{题面模型}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d}
+
+变动支点的动力学。需要同时满足竖直平衡、对木条的力矩平衡和两个接触处的滑动方向。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9}
+
+刚体平动；动摩擦方向由相对速度决定；无质量物体的瞬时受力平衡；多项式恒等式；功率检验。
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf}
+
+木条向左运动，B 比木条向左运动得更快。A 对木条的摩擦向右，B
+对木条的摩擦向左。支点靠近时，两支持力的比值可以保持不变。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3}
+
+先设向左加速度大小为 \(a_1\)（B）和
+\(a_2\)（木条），再从相对运动检查这个设定。
+
+\[x_1=x_{10}+\frac12a_1t^2,\qquad u=\frac12a_2t^2.\]
+
+用固定的地面坐标写支点和重心位置，比直接追踪木条两端更简洁：
+
+\[x_A=0,\quad x_B=l-x_1,\quad x_C=\frac l2-u.\]
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790}
+
+\needspace{3\baselineskip}
+\textbf{支持力与摩擦力}
+
+记
+\(b=x_B\)、\(c=x_C\)。木条始终水平，竖直方向没有加速度，对重心的合力矩也为零。因此
+
+\[N_A+N_B=mg,\]
+
+\[N_Bb=mgc.\]
+
+后一式也可由对 A 取矩得到；木条虽有水平加速度，但水平惯性力对同一高度的
+A 不产生力矩。于是
+
+\[N_B=mg\frac{l/2-u}{l-x_1},\]
+
+\[N_A=mg\frac{l/2-x_1+u}{l-x_1}.\]
+
+A 不动，木条向左滑，A 的摩擦力大小为 \(\mu_0N_A\)，方向向右。若 B
+向左比木条快，则 B 对木条的摩擦力大小为
+\(\mu_0N_B\)，方向向左。木条的平动方程为
+
+\[ma_2=\mu_0N_B-\mu_0N_A.\]
+
+消去支持力得
+
+\[a_2=\mu_0g\frac{x_1-2u}{l-x_1}.\]
+
+代入两个匀加速位移：
+
+\[a_2\left(l-x_{10}-\frac12a_1t^2\right)
+=\mu_0g\left[x_{10}+\left(\frac12a_1-a_2\right)t^2\right].\]
+
+这不是只在某一时刻成立的等式，而是在整个相遇前区间成立的恒等式。常数项给出
+
+\[a_2(l-x_{10})=\mu_0gx_{10},\]
+
+二次项给出
+
+\[-a_1a_2=\mu_0g(a_1-2a_2).\]
+
+先解常数项，再解二次项：
+
+\[\boxed{a_2=\frac{\mu_0gx_{10}}{l-x_{10}}},\]
+
+\[a_1(\mu_0g+a_2)=2\mu_0ga_2,\]
+
+\[\boxed{a_1=\frac{2\mu_0gx_{10}}l}.\]
+
+若沿用原卷向右的 \(x_2\)，应写 \(\ddot x_2=-a_2\)。
+
+\needspace{3\baselineskip}
+\textbf{无质量木块所需的力}
+
+B 所受木条摩擦向右，大小为 \(\mu_0N_B\)。B
+的质量忽略不计，不宜套用一个有限质量的 \(F=ma_1\)；其水平合力必须为零。
+
+\[F(t)=\mu_0N_B(t).\]
+
+把解代回支持力公式，可以把分子和分母中的共同时间因子约去：
+
+\[N_B=\frac{mgl}{2(l-x_{10})},\]
+
+\[N_A=\frac{mg(l-2x_{10})}{2(l-x_{10})}.\]
+
+因此
+
+\[\boxed{F(t)=\frac{\mu_0mgl}{2(l-x_{10})}}.\]
+
+原题写成 \(F(t)\)
+并不保证答案一定随时间变化。本题要求两个加速度恒定，恰好把支持力也约束为常量。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={支持力与相对运动}]{../figures/solution-01.pdf}
+\caption{支持力与相对运动}
+\end{figure}
+
+\needspace{3\baselineskip}
+\textbf{相对滑动方向是否自洽}
+
+由结果得
+
+\[\frac{a_1}{a_2}=\frac{2(l-x_{10})}{l}.\]
+
+因为 \(0<x_{10}<l/2\)，所以
+
+\[1<\frac{a_1}{a_2}<2.\]
+
+任意 \(t>0\) 有
+
+\[v_B=a_1t>v_{\rm rod}=a_2t>0.\]
+
+B 相对木条向左，故 B 对木条的摩擦向左；木条相对 A 向左，故 A
+对木条的摩擦向右。起始瞬间可理解为外力建立后立即进入滑动的极限。若要研究实际静摩擦启动，还需要原题没有给出的静摩擦系数。
+
+\needspace{3\baselineskip}
+\textbf{相遇时刻与终止条件}
+
+相遇发生在 \(x_B=0\)，即
+
+\[l-x_{10}-\frac12a_1t_*^2=0.\]
+
+因此
+
+\[t_*^2=\frac{l(l-x_{10})}{\mu_0gx_{10}}.\]
+
+木条此时的位移为
+
+\[u_* =\frac12a_2t_*^2=\frac l2.\]
+
+其重心也恰好到达 A 上方：
+
+\[x_C(t_*)=0.\]
+
+相遇之前，\(c/b\) 为有限常量。相遇瞬间，几何力矩方程成为
+\(0=0\)，单独靠它不能分配两个支持力。上面的支持力是从 \(t<t_*\)
+取极限得到的，不能据此继续描述两木块重合后的过程。
+
+\needspace{3\baselineskip}
+\textbf{另一条推导路线}
+
+令支持力分数
+
+\[\nu=\frac{N_B}{mg}=\frac cb.\]
+
+如果两个加速度恒定，则上式必须不随时间变化。比较
+
+\[c=\frac l2-\frac12a_2t^2,\]
+
+\[b=l-x_{10}-\frac12a_1t^2\]
+
+的系数可得
+
+\[\nu=\frac{l}{2(l-x_{10})},\qquad a_2=\nu a_1.\]
+
+动力学又给出
+
+\[a_2=\mu_0g(2\nu-1).\]
+
+这三式直接还原前面的结果。这条路线突出的是支点到重心的几何比例保持不变。
+
+\needspace{3\baselineskip}
+\textbf{功率与热量检查}
+
+输入功率是外力作用点 B 的速度乘外力：
+
+\[P_{\rm in}=F a_1t.\]
+
+两个接触处的摩擦热功率按相对速度计算：
+
+\[P_{\rm heat}=\mu_0N_Aa_2t+\mu_0N_B(a_1-a_2)t.\]
+
+二者之差为
+
+\[P_{\rm in}-P_{\rm heat}
+=\mu_0(N_B-N_A)a_2t=ma_2^2t.\]
+
+木条动能的变化率正是
+
+\[\frac{d}{dt}\left(\frac12m a_2^2t^2\right)=ma_2^2t.\]
+
+这同时检验了摩擦方向、外力的作用点和无质量 B 的能量处理。
+
+\needspace{3\baselineskip}
+\textbf{数值代入与参数边界}
+
+取
+\(l=1\,\mathrm m,m=2\,\mathrm{kg},x_{10}=0.2\,\mathrm m,\mu_0=0.3,g=10\,\mathrm{m/s^2}\)，有
+
+\[a_1=1.2\,\mathrm{m/s^2},\quad a_2=0.75\,\mathrm{m/s^2},\]
+
+\[N_A=7.5\,\mathrm N,\quad N_B=12.5\,\mathrm N,\quad F=3.75\,\mathrm N,\]
+
+\[t_*=\sqrt{\frac43}\,\mathrm s.\]
+
+令 \(\varepsilon=x_{10}/l\)，无量纲结果为
+
+\[\frac{a_1}{\mu_0g}=2\varepsilon,\qquad
+\frac{a_2}{\mu_0g}=\frac{\varepsilon}{1-\varepsilon}.\]
+
+\(\varepsilon\to0\)
+时两个加速度趋零，相遇时间发散；\(\varepsilon\to1/2\) 时
+\(N_A\to0\)、\(a_1\to a_2\)，B
+与木条的相对滑动消失。两个端点都需要另行讨论，不能直接当作原题严格范围内的普通情形。
+
+\needspace{3\baselineskip}
+\textbf{由观测量反推初始几何}
+
+假设实验可测两个加速度比 \(r_a=a_1/a_2\)，初始间隙却未知。原解给出
+
+\[r_a=2(1-\varepsilon),\qquad \varepsilon=x_{10}/l.\]
+
+因此
+
+\[\varepsilon=1-\frac{r_a}{2},\qquad x_{10}=l\left(1-\frac{r_a}{2}\right).\]
+
+再由 B 的加速度得到摩擦因数：
+
+\[\mu_0=\frac{a_1}{2g\varepsilon}.\]
+
+这个反演要求 \(1<r_a<2\)。若测出
+\(r_a>2\)，不能得到负间隙后继续计算，应检查是否违反匀加速或接触假设。
+
+若直接测得外力 \(F\)，则
+
+\[\frac{F}{\mu_0mg}=\frac1{2(1-\varepsilon)}=\frac1{r_a}.\]
+
+支持力也可从加速度求出：
+
+\[N_B=\frac{mg}{r_a},\qquad N_A=mg\left(1-\frac1{r_a}\right).\]
+
+二者不依赖相遇前的当前位置。给定 \(a_1,a_2,F\) 可反推木条质量：
+
+\[m=\frac{Fr_a}{\mu_0g}.\]
+
+另一种观测是相遇时间。由 \(a_1t_*^2/2=l-x_{10}\) 与
+\(a_2t_*^2/2=l/2\)，消去时间即得同一个加速度比。两次独立测量若不相容，可能说明支持块质量或摩擦因数的理想化不够好。
+
+速度和位置的比值分别满足
+
+\[\frac{v_B}{v_{\rm rod}}=r_a,\qquad
+\frac{l-x_B}{u}=r_a+\frac{x_{10}}u.\]
+
+后一式表明总几何坐标差的比并非固定，只有去掉初始偏置的位移比才固定。
+
+\needspace{3\baselineskip}
+\textbf{全过程的外力功与耗散账本}
+
+由正文加速度\(a_1=2\mu_0g\varepsilon\)、\(a_2=\mu_0g\varepsilon/(1-\varepsilon)\)，B从初态到t的位移为\(a_1t^2/2\)，木条向左位移为\(a_2t^2/2\)。B按无质量处理，外力做功为
+
+\[W_F(t)=\tfrac12Fa_1t^2=\frac{\mu_0^2mg^2\varepsilon}{2(1-\varepsilon)}t^2.\]
+
+木条动能是
+
+\[K(t)=\tfrac12ma_2^2t^2=\frac{\mu_0^2mg^2\varepsilon^2}{2(1-\varepsilon)^2}t^2.\]
+
+因此总摩擦热为
+
+\[Q(t)=\frac{\mu_0^2mg^2\varepsilon(1-2\varepsilon)}{2(1-\varepsilon)^2}t^2.\]
+
+非负性要求\(\varepsilon\le1/2\)，与两处支持力及相对滑动条件一致。相遇时将\(t_*^2=l(1-\varepsilon)/(\mu_0g\varepsilon)\)代入，得到
+
+\[Q_* =\frac{\mu_0mgl(1-2\varepsilon)}{2(1-\varepsilon)}.\]
+
+也可直接按接触面的相对滑动距离计算。A处滑动l/2，B处滑动\(l/2-x_{10}\)；相应热量为\(\mu_0N_A l/2\)与\(\mu_0N_B(l/2-x_{10})\)。相加还原同一Q。外力功在相遇时为\(\mu_0mgl/2\)，木条终态动能为\(\mu_0mgl\varepsilon/[2(1-\varepsilon)]\)，二者之差再次给出Q。三种核对区分了地面位移、接触相对位移和动能，不能在三个表达式中交叉替换。
+
+当\(\varepsilon\to1/2\)，A支持力趋零，B与木条趋于同速，滑动耗散趋零；这一极限在物理上是接触模型的边界，并非两摩擦接触仍保持一般状态。
+
+\newpage
+
+\section{第 2 题}\label{ux7b2c-2-ux9898}
+
+两条相互垂直的光滑细管分别沿水平、竖直方向放置，两质量相等的带电小球
+A、B 只能在各自管内运动，电量分别为 \(+q,-q\)。开始 A 静止于距交点 O 为
+\(d\) 处，B 位于 O，速度竖直向下，大小
+\(v_0=\sqrt{kq^2/(3md)}\)。忽略重力，求两球间距离的变化范围，以及 A
+第一次返回初始位置所需时间。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={题面模型}]{../figures/question-02.pdf}
+\caption{题面模型}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-1}
+
+受约束的两体库仑运动。把两个实际的一维坐标组合起来，得到一个可解的平面中心力方程。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-1}
+
+库仑力分量；有效势；开普勒椭圆；偏近点角；返回事件与轨道周期的区别。
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-1}
+
+组合点 \((x,y)\) 的轨道为椭圆，但实际 A、B
+分别只沿各自的直线运动。组合点的面积速度守恒不是两球绕 O
+的真实角动量守恒。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-1}
+
+设 A 的水平坐标为 \(x\)，B 的竖直坐标为 \(y\)，向上为正。
+
+\[x(0)=d,\ y(0)=0,\ \dot x(0)=0,\ \dot y(0)=-v_0.\]
+
+定义
+
+\[\rho=\sqrt{x^2+y^2},\qquad \Gamma=\frac{kq^2}{m}.\]
+
+直接写两个轴向分力，避免把自由两体问题的约化质量套到受管道约束的模型中。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-1}
+
+\needspace{3\baselineskip}
+\textbf{坐标组合与两个积分}
+
+A 所受吸引力沿从 A 指向 B 的方向，在水平管上的分量为
+\(-kq^2x/\rho^3\)；B 的竖直分量为 \(-kq^2y/\rho^3\)。
+
+\[\ddot x=-\frac{\Gamma x}{\rho^3},\qquad
+\ddot y=-\frac{\Gamma y}{\rho^3}.\]
+
+因此组合点 \(\boldsymbol r=(x,y)\) 满足
+
+\[\ddot{\boldsymbol r}=-\frac{\Gamma}{\rho^3}\boldsymbol r.\]
+
+真实总动能与组合点的动能表达一致：
+
+\[K=\frac m2(\dot x^2+\dot y^2).\]
+
+库仑势能为
+
+\[U=-\frac{kq^2}{\rho}.\]
+
+把总能量除以 \(m\)，得到比能量
+
+\[\mathcal E=\frac12(\dot x^2+\dot y^2)-\frac{\Gamma}{\rho}.\]
+
+初态代入给出
+
+\[\mathcal E=\frac12\frac{\Gamma}{3d}-\frac{\Gamma}{d}
+=-\frac{5\Gamma}{6d}.\]
+
+由两个方程相乘相减，有
+
+\[\frac d{dt}(x\dot y-y\dot x)=x\ddot y-y\ddot x=0.\]
+
+记守恒量
+
+\[H=x\dot y-y\dot x=-dv_0,\]
+
+\[H^2=\frac{\Gamma d}{3}.\]
+
+A、B 的实际位置及速度各自在过 O 的同一直线上，故两球关于 O
+的真实机械角动量都为零。这里的 \(H\)
+是组合方程的积分，物理解释不能偷换。
+
+\needspace{3\baselineskip}
+\textbf{径向有效势和距离范围}
+
+在组合平面使用极坐标：
+
+\[\dot x^2+\dot y^2=\dot\rho^2+\rho^2\dot\varphi^2,\]
+
+\[\rho^2\dot\varphi=H.\]
+
+能量写成
+
+\[\frac12\dot\rho^2+\frac{H^2}{2\rho^2}-\frac{\Gamma}{\rho}=\mathcal E.\]
+
+距离极值处 \(\dot\rho=0\)，因此
+
+\[-\frac{5\Gamma}{6d}
+=\frac{\Gamma d}{6\rho^2}-\frac{\Gamma}{\rho}.\]
+
+整理后得到
+
+\[5\rho^2-6d\rho+d^2=0,\]
+
+\[(5\rho-d)(\rho-d)=0.\]
+
+两个转折距离为
+
+\[\rho_{\min}=\frac d5,\qquad \rho_{\max}=d.\]
+
+即
+
+\[\boxed{\frac d5\le AB\le d}.\]
+
+初态径向速度为零，但不能据此断言以后距离不变。径向加速度为
+
+\[\ddot\rho=\frac{H^2}{\rho^3}-\frac{\Gamma}{\rho^2},\]
+
+故初态
+
+\[\ddot\rho(0)=-\frac{2\Gamma}{3d^2}<0.\]
+
+初态是远点，距离随即减小。离心项在小距离处增大得更快，阻止组合点到达原点，所以两球不相撞。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={组合坐标的椭圆与有效势}]{../figures/solution-02.pdf}
+\caption{组合坐标的椭圆与有效势}
+\end{figure}
+
+\needspace{3\baselineskip}
+\textbf{椭圆几何参数}
+
+由远点、近点求半长轴和偏心率：
+
+\[a=\frac{\rho_{\max}+\rho_{\min}}2=\frac{3d}{5},\]
+
+\[e=\frac{\rho_{\max}-\rho_{\min}}{\rho_{\max}+\rho_{\min}}=\frac23.\]
+
+半短轴为
+
+\[b=a\sqrt{1-e^2}=\frac d{\sqrt5}.\]
+
+椭圆中心在 \((2d/5,0)\)，O
+为左焦点，初态在右端。可选从初始远点量起的参数 \(E\)：
+
+\[x=a(e+\cos E),\]
+
+\[y=-b\sin E,\]
+
+\[\rho=a(1+e\cos E).\]
+
+当 \(E=0\) 时，\(x=d,y=0\)；当 \(E=\pi\)
+时，\(x=-d/5,y=0\)。后者是近点，不是 A 的原始位置。
+
+\needspace{3\baselineskip}
+\textbf{由面积速度建立时间关系}
+
+计算组合的叉积得
+
+\[x\frac{dy}{dE}-y\frac{dx}{dE}=-ab(1+e\cos E).\]
+
+因此
+
+\[H=-ab(1+e\cos E)\dot E.\]
+
+结合 \(H^2=\Gamma a(1-e^2)\)，可得
+
+\[\dot E=\frac{n}{1+e\cos E},\qquad n=\sqrt{\frac{\Gamma}{a^3}}.\]
+
+从初态积分到 \(E\)：
+
+\[\boxed{nt=E+e\sin E}.\]
+
+其右边导数 \(1+e\cos E\) 始终至少为 \(1/3\)，故 \(E\)
+随时间严格增长，没有需要另选的时间分支。
+
+A 返回初始位置要求
+
+\[a(e+\cos E)=d=a(e+1),\]
+
+即 \(\cos E=1\)。除去初态，首次发生于 \(E=2\pi\)。于是
+
+\[t_A=\frac{2\pi}{n}=2\pi\sqrt{\frac{a^3}{\Gamma}},\]
+
+\[\boxed{t_A=2\pi\sqrt{\frac{27md^3}{125kq^2}}}.\]
+
+用题设初速度表示为
+
+\[\boxed{t_A=\frac{6\pi d}{5\sqrt5\,v_0}}.\]
+
+半个周期只使 A 从 \(d\) 到 \(-d/5\)，并未返回。虽然 B
+在初态和半周期时都位于 O，也不能用 B 的过 O 事件替代 A 的返回事件。
+
+\needspace{3\baselineskip}
+\textbf{速度检验}
+
+对参数式求导得
+
+\[\dot x=-\frac{an\sin E}{1+e\cos E},\]
+
+\[\dot y=-\frac{bn\cos E}{1+e\cos E}.\]
+
+初态 \(\dot x=0\)，且
+
+\[\dot y(0)=-\frac{bn}{1+e}=-v_0.\]
+
+近点处
+
+\[\dot x(\pi)=0,\qquad \dot y(\pi)=\frac{bn}{1-e}=5v_0.\]
+
+近点的比能量也应为
+
+\[\frac12(5v_0)^2-\frac{5\Gamma}{d}
+=\frac{25\Gamma}{6d}-\frac{5\Gamma}{d}
+=-\frac{5\Gamma}{6d}.\]
+
+同一能量在两端一致，且组合角动量满足 \(\rho_{\min}(5v_0)=dv_0\)。
+
+\needspace{3\baselineskip}
+\textbf{各小球的运动范围}
+
+由参数式可读出
+
+\[-\frac d5\le x\le d,\]
+
+\[-\frac d{\sqrt5}\le y\le\frac d{\sqrt5}.\]
+
+但 \(x,y\) 不能在这个矩形中独立取值，它们还满足椭圆约束：
+
+\[\frac{(x-2d/5)^2}{9d^2/25}+\frac{y^2}{d^2/5}=1.\]
+
+管道可以穿过 O，A 或 B 单独经过 O 不等于两球碰撞。实际碰撞要求
+\(x=y=0\)，而椭圆不经过原点。
+
+\needspace{3\baselineskip}
+\textbf{不先认出椭圆的检查路线}
+
+令 \(z=d/\rho\)，径向能量也可以整理为
+
+\[\dot\rho^2=\frac{\Gamma}{3d}(5-z)(z-1).\]
+
+速度平方非负立即要求 \(1\le z\le5\)，还原距离范围。这个方法只需要能量与
+\(H\)；计算返回时间时再引入椭圆参数，就能避免直接处理端点带根号的时间积分。
+
+\needspace{3\baselineskip}
+\textbf{从轨道微分方程直接得到椭圆}
+
+令 \(w=1/\rho\)，用组合极角 \(\varphi\) 作自变量。由
+\(\dot\varphi=Hw^2\)，径向运动方程变为 Binet 方程：
+
+\[\frac{d^2w}{d\varphi^2}+w=\frac\Gamma{H^2}.\]
+
+故一般轨道可写为
+
+\[w=\frac\Gamma{H^2}[1+e\cos(\varphi-\varphi_p)].\]
+
+本题初态远点在正 \(x\) 轴，近点在负 \(x\) 轴，取 \(\varphi_p=\pi\)，得到
+
+\[\rho=\frac{p}{1-e\cos\varphi},\qquad p=\frac{H^2}{\Gamma}=\frac d3.\]
+
+初态 \(\varphi=0,\rho=d\)，所以
+
+\[1-e=\frac13,\qquad e=\frac23.\]
+
+令 \(\varphi=\pi\)，有
+
+\[\rho_p=\frac{d/3}{1+2/3}=\frac d5.\]
+
+椭圆面积为 \(\pi ab\)，组合面积速度为 \(|H|/2\)，周期还能由面积比得到：
+
+\[T=\frac{\pi ab}{|H|/2}=\frac{2\pi ab}{dv_0}.\]
+
+代入 \(a=3d/5,b=d/\sqrt5\)，还原
+
+\[T=\frac{6\pi d}{5\sqrt5v_0}.\]
+
+这条路线使用轨道方程与面积，不需偏近点角的时间方程；偏近点角路线则更适合求某一给定位置的到达时间。两者对同一周期给出相同系数。
+
+对任何组合极角间隔，时间积分为
+
+\[\Delta t=\frac1{|H|}\int\rho^2,|d\varphi|.\]
+
+轨道在近点附近速度快、在远点附近速度慢，因此不能把极角均匀增长作为近似时间参数。
+
+\needspace{3\baselineskip}
+\textbf{到达管道交点的事件时间}
+
+组合椭圆上的不同``返回''事件不能混同。A第一次到O是\(x=0\)，而不是两球同时相遇。由\(x=a(e+\cos E)\)，有
+
+\[E_O=\arccos(-2/3).\]
+
+时间方程\(nt=E+e\sin E\)给
+
+\[t_O=\frac{\arccos(-2/3)+(2/3)\sqrt5/3}{n}.\]
+
+此时B在下方，\(y=-b\sqrt5/3=-d/3\)，两球距离\(d/3\)；由于H非零，二者永不会同时到O。在近点\(E=\pi\)，B回到O但A位于\(-d/5\)，时间为T/2。A返回\(x=d\)只有\(\cos E=1\)，首次正时间为E=2\(\pi\)，即T。
+
+\[t_O/T=\frac{\arccos(-2/3)+2\sqrt5/9}{2\pi}\simeq0.4452.\]
+
+因此A到交点晚于T/4，却早于近点T/2。若以匀速极角猜T/4，会忽略初态在远点附近运动较慢的事实。
+
+组合轨道的速度还满足活力公式
+
+\[v_{\rm comb}^2=\Gamma(2/\rho-1/a).\]
+
+在\(\rho=d/3\)时\(v_{\rm comb}^2=13\Gamma/(3d)\)，在近点时为\(25v_0^2\)。这里的组合速率平方恰等于两球实际速率平方之和，不等于两球相对速度的模平方：实际相对坐标可写\((x,-y)\)，但相同的平方和仍因正交管道而成立。每个球的轴向速度须另从参数方程求导后读取。
+
+\newpage
+
+\section{第 3 题}\label{ux7b2c-3-ux9898}
+
+一辆平衡车沿倾角 \(0.8^\circ\) 的斜坡下行。车轮可视为质量
+\(2.68\,\mathrm{kg}\)、半径 \(0.174\,\mathrm m\)
+的均匀圆柱，其余部分与载荷的总质量为 \(5.12\times10\,\mathrm{kg}\)，取
+\(g=9.8\,\mathrm{m/s^2}\)。保持车体姿态、车轮纯滚动。求：(1)
+车轮绕自身中轴的转动惯量；(2) 匀速下行时电机的制动力矩；(3) 速度
+\(1.18\times10\,\mathrm{m/s}\)、能量回收效率 \(20\%\) 时的发电功率；(4)
+关闭电机后车的加速度。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={题面模型}]{../figures/question-03.pdf}
+\caption{题面模型}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-2}
+
+带转动惯量的车辆动力学及再生制动。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-2}
+
+质心平动与绕轮心转动；纯滚动约束；静摩擦；制动力矩与功率。
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-2}
+
+下坡时重力沿坡分量向下。匀速滚动需要地面向上的摩擦以及反向电机力矩；关闭电机后，摩擦仍可驱动车轮转动。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-2}
+
+沿斜坡向下为正。记总质量 \(M=m_1+m_2\)、轮半径 \(R\)、轮转动惯量 \(I\)。
+
+\[M=2.68+51.2=53.88\,\mathrm{kg},\]
+
+\[I=\frac12m_1R^2=0.04056984\,\mathrm{kg\,m^2}.\]
+
+设摩擦大小 \(f\) 向上，电机的制动力矩大小为
+\(\tau\)。两个运动方程和一个滚动约束是解题的入口。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-2}
+
+\needspace{3\baselineskip}
+\textbf{建立平动和转动方程}
+
+车轮和载荷作为整体，其沿坡方程为
+
+\[Ma=Mg\sin\theta-f.\]
+
+以沿下坡滚动的角加速度为正，绕轮心方程为
+
+\[I\dot\omega=fR-\tau.\]
+
+纯滚动要求
+
+\[v=R\omega,\qquad a=R\dot\omega.\]
+
+于是
+
+\[\frac{I}{R^2}a=f-\frac{\tau}{R}.\]
+
+将此式代入平动方程：
+
+\[\left(M+\frac I{R^2}\right)a=Mg\sin\theta-\frac\tau R.\]
+
+等效惯性质量因此为
+
+\[M_{\rm eff}=M+\frac I{R^2}=53.88+1.34=55.22\,\mathrm{kg}.\]
+
+轮的转动惯量只增加惯性，并不额外增加重力。坡向重力仍按实际总质量 \(M\)
+计算。
+
+\needspace{3\baselineskip}
+\textbf{匀速下行的制动力矩}
+
+匀速时 \(a=\dot\omega=0\)，故
+
+\[f=Mg\sin\theta,\]
+
+\[\tau=fR=MgR\sin\theta.\]
+
+代入数值：
+
+\[\sin0.8^\circ\approx0.01396218,\]
+
+\[f\approx7.37237\,\mathrm N,\]
+
+\[\boxed{\tau\approx1.28279\,\mathrm{N\,m}}.\]
+
+此处角度必须按角度制的 \(0.8^\circ\) 计算，而不是把 \(0.8\)
+当作弧度。小角近似 \(\sin\theta\approx\theta\pi/180\)
+会给出很接近的结果。
+
+\needspace{3\baselineskip}
+\textbf{回收功率}
+
+电机制动时，机械功率的大小为
+
+\[P_{\rm mech}=\tau\omega=\frac\tau Rv.\]
+
+匀速下坡的重力势能减少率是
+
+\[-\dot U=Mgv\sin\theta.\]
+
+由 \(\tau/R=Mg\sin\theta\) 可知两式相同。回收效率 \(\eta=0.20\)
+是从机械输入到电输出的比例：
+
+\[P_{\rm elec}=\eta\tau\omega=\eta Mgv\sin\theta.\]
+
+题设 \(v=11.8\,\mathrm{m/s}\)，因此
+
+\[P_{\rm mech}\approx86.9939\,\mathrm W,\]
+
+\[\boxed{P_{\rm elec}\approx17.3988\,\mathrm W}.\]
+
+其余约 \(69.5951\,\mathrm W\)
+是制动转换过程中未回收为电能的功率。在这个理想模型中，它不能再算作轮胎滑动耗散，因为轮胎与地面没有滑动。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={车辆平动与车轮转动}]{../figures/solution-03.pdf}
+\caption{车辆平动与车轮转动}
+\end{figure}
+
+\needspace{3\baselineskip}
+\textbf{关闭电机后的加速度}
+
+令 \(\tau=0\)，得到
+
+\[a=\frac{Mg\sin\theta}{M+I/R^2}.\]
+
+均匀圆柱的 \(I/R^2=m_1/2\)，故
+
+\[a=\frac{m_1+m_2}{\tfrac32m_1+m_2}g\sin\theta,\]
+
+\[\boxed{a\approx0.133509\,\mathrm{m/s^2}}.\]
+
+无转动惯量的质点模型给出
+\(g\sin\theta\approx0.136829\,\mathrm{m/s^2}\)，略大于实际纯滚动结果。这一差异来自部分势能转为轮的转动动能。
+
+关闭电机后的静摩擦为
+
+\[f_0=\frac I{R^2}a\approx0.178902\,\mathrm N.\]
+
+它显著小于匀速制动时的
+\(7.37237\,\mathrm N\)。静摩擦不会固定等于某个``最大摩擦力''，而是随运动状态变化。
+
+\needspace{3\baselineskip}
+\textbf{纯滚动是否能实现}
+
+斜坡法向无加速度时
+
+\[N=Mg\cos\theta.\]
+
+一般制动力矩下需要的摩擦为
+
+\[f=\frac I{R^2}a+\frac\tau R.\]
+
+若已知静摩擦系数 \(\mu_s\)，纯滚动必须满足
+
+\[|f|\le\mu_sMg\cos\theta.\]
+
+匀速制动的要求是
+
+\[\mu_s\ge\tan\theta\approx0.0139635.\]
+
+无制动滚动的要求更低：
+
+\[\mu_s\ge\frac{I/R^2}{M+I/R^2}\tan\theta.\]
+
+原题没有给静摩擦系数，故数值答案以纯滚动成立为前提；若超过附着能力，平动和转动需要解除滚动约束分别求解。
+
+\needspace{3\baselineskip}
+\textbf{能量方法再推加速度}
+
+整个车辆的动能为
+
+\[K=\frac12Mv^2+\frac12I\omega^2
+=\frac12\left(M+\frac I{R^2}\right)v^2.\]
+
+关闭电机后下坡距离为 \(s\)，重力做功
+
+\[W_g=Mgs\sin\theta.\]
+
+从静止出发时
+
+\[\frac12M_{\rm eff}v^2=Mgs\sin\theta.\]
+
+再用 \(v^2=2as\)，还原
+
+\[a=\frac{Mg\sin\theta}{M_{\rm eff}}.\]
+
+能量法没有出现摩擦功，是因为静止地面的接触点速度为零。摩擦虽然不向整体输入能量，却在平动和转动之间传递作用。
+
+\needspace{3\baselineskip}
+\textbf{一般制动过程的功率式}
+
+把一般运动方程乘 \(v\)：
+
+\[\frac{dK}{dt}=Mgv\sin\theta-\frac\tau Rv.\]
+
+右侧第二项就是电机吸收的机械功率。若电机保持固定力矩，斜坡角也固定，则加速度为常数；若电机保持固定电输出功率，则
+\(\tau\) 通常需随 \(1/v\) 变化，加速度不再保持常量。
+
+\needspace{3\baselineskip}
+\textbf{姿态模型的边界}
+
+题目让车体保持平衡，可将姿态控制视为理想约束；其余质量随车辆平动。车体重心高度、车轮数量和俯仰控制规律没有给出，不能由此题进一步断定关闭所有控制后真人骑乘一定稳定。第(4)问描述的是电机驱动力矩为零、姿态条件仍保持的平动滚动模型。
+
+\needspace{3\baselineskip}
+\textbf{车轮惯量的积分与加速时间}
+
+为验证均匀圆柱惯量，设轮轴垂直圆面，圆柱厚度为 \(b\)、体密度为
+\(\rho_m\)。半径 \(r'\) 到 \(r'+dr'\) 的薄环质量为
+
+\[dm=2\pi\rho_mbr',dr'.\]
+
+轴向惯量为
+
+\[I=\int_0^Rr'^2,dm
+=2\pi\rho_mb\int_0^Rr'^3dr'
+=\frac12\pi\rho_mbR^4.\]
+
+圆柱质量 \(m_1=\pi\rho_mbR^2\)，所以
+
+\[I=\frac12m_1R^2.\]
+
+自由下坡从初速 \(v_i\) 到 \(v_f\)，加速度恒定，则
+
+\[\Delta t=\frac{v_f-v_i}{a},\qquad
+s=\frac{v_f^2-v_i^2}{2a}.\]
+
+代入 \(a=Mg\sin\theta/M_{\rm eff}\)：
+
+\[Mgs\sin\theta=\frac12M_{\rm eff}(v_f^2-v_i^2).\]
+
+右端可拆为平动和转动两项。其能量份额分别为
+
+\[\frac{K_{\rm trans}}K=\frac M{M_{\rm eff}},\qquad
+\frac{K_{\rm rot}}K=\frac{I/R^2}{M_{\rm eff}}.\]
+
+本题转动能份额约为
+\(1.34/55.22\approx2.43\%\)。因为载荷远大于车轮质量，转动修正较小；对于没有载荷的单个均匀圆柱，该份额则为
+\(1/3\)，加速度为 \(2g\sin\theta/3\)。
+
+若以匀速通过相同坡长 \(s\)，回收电能是
+
+\[E_{\rm elec}=P_{\rm elec}\frac sv=\eta Mgs\sin\theta.\]
+
+速度虽然影响功率，却在固定高度匀速过程的总回收能量中消去。
+
+\needspace{3\baselineskip}
+\textbf{纯滚动条件由静摩擦给出}
+
+``无滑动''需要接触面有足够的静摩擦，而不是把摩擦直接设为零。自由下坡\(\tau=0\)时
+
+\[f=\frac{I}{R^2}a=\frac{I/R^2}{M+I/R^2}Mg\sin\theta.\]
+
+法向力\(N=Mg\cos\theta\)，所以最小静摩擦因数为
+
+\[\mu_{s,\min}=\frac{I/R^2}{M+I/R^2}\tan\theta.\]
+
+本题\(I/R^2=1.34\)kg、\(M=53.88\)kg，得\(\mu_{s,\min}\simeq3.39\times10^{-4}\)。这个很小的数源于坡角小且轮的惯量份额小，不表示所有自行车场景都可以忽略附着。
+
+匀速发电制动时\(a=0\)，支持面沿坡摩擦变为\(f=Mg\sin\theta\)，要求\(\mu_s\ge\tan\theta\simeq0.01396\)。同一坡面上，自由滚动与匀速制动的摩擦需求相差较大。
+
+一般负载力矩下
+
+\[a=\frac{Mg\sin\theta-\tau/R}{M+I/R^2},\]
+
+\[f=\frac{(I/R^2)Mg\sin\theta+M\tau/R}{M+I/R^2}.\]
+
+将\(|f|\le\mu_sMg\cos\theta\)作为附加条件，才可判断规定力矩下纯滚动模型是否可行。若超过上限，应改为同时求平动、自转与滑动摩擦，不能继续使用\(v=R\omega\)。
+
+\newpage
+
+\section{第 4 题}\label{ux7b2c-4-ux9898}
+
+地球半径 \(r=6.37\times10^6\,\mathrm m\)，地面重力加速度
+\(g=9.8\,\mathrm{m/s^2}\)。一根均匀柔链的两端由径向支柱固定，端点距地心
+\(R=1.27\times10^7\,\mathrm m\)，链的最低点距地心
+\(r_1=8.91\times10^6\,\mathrm m\)。端点张力
+\(F_1=1.84\times10^7\,\mathrm N\)，最低点张力
+\(F_2=8.83\times10^6\,\mathrm N\)。求链在端点与支柱的夹角和链的线密度。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={题面模型}]{../figures/question-04.pdf}
+\caption{题面模型}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-3}
+
+中心引力场中的柔链静力学。用分布载荷的力矩性质求方向，用切向平衡求张力随半径的变化。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-3}
+
+连续体微元平衡；中心力力矩为零；张力沿切线；变重力势；曲线弧长参数。
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-3}
+
+链的最低点切线垂直径向，张力沿当地水平。两端较高，需承受更大张力。场强随距地心的平方衰减，不能全程用地面
+\(g\)。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-3}
+
+以弧长 \(s\) 参数化链的一半，位置向量为
+\(\boldsymbol r(s)\)，切向单位向量为 \(\boldsymbol t\)。
+
+\[\boldsymbol T=T\boldsymbol t,\qquad
+\frac{d\boldsymbol T}{ds}=\lambda\frac{gr^2}{u^2}\boldsymbol e_u,\]
+
+其中
+\(u=|\boldsymbol r|\)，右侧与重力方向相反，因为两端张力之差平衡向内重力。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-3}
+
+\needspace{3\baselineskip}
+\textbf{中心力留下的力矩积分}
+
+对地心计算 \(\boldsymbol r\times\boldsymbol T\) 的弧长导数：
+
+\[\frac d{ds}(\boldsymbol r\times\boldsymbol T)
+=\boldsymbol t\times T\boldsymbol t+
+\boldsymbol r\times\frac{d\boldsymbol T}{ds}.\]
+
+第一项为零；分布重力沿径向，第二项也为零。因此
+
+\[\boldsymbol r\times\boldsymbol T=\text{常向量}.\]
+
+平面内记其大小为 \(C\)：
+
+\[Tu\sin\alpha=C.\]
+
+最低点切线与径向垂直，故
+
+\[C=F_2r_1.\]
+
+端点处 \(u=R,T=F_1\)，得到
+
+\[F_1R\sin\alpha=F_2r_1,\]
+
+\[\boxed{\alpha=\arcsin\frac{F_2r_1}{F_1R}}.\]
+
+代入给定数值：
+
+\[\frac{F_2r_1}{F_1R}\approx0.33666,\]
+
+\[\boxed{\alpha\approx19.6747^\circ}.\]
+
+这里取链半支从最低点走向端点时的锐角。若描述端点处作用在支柱上的力，力的方向相反，需要说明所取射线；通常所问链线与支柱的夹角指这一个锐角。
+
+\needspace{3\baselineskip}
+\textbf{切向平衡与张力差}
+
+把微元方程点乘 \(\boldsymbol t\)。因为
+\(\boldsymbol t\cdot d\boldsymbol t/ds=0\)，有
+
+\[\frac{dT}{ds}=\lambda\frac{gr^2}{u^2}\boldsymbol e_u\cdot\boldsymbol t.\]
+
+径向坐标的导数为
+
+\[\frac{du}{ds}=\boldsymbol e_u\cdot\boldsymbol t.\]
+
+因此
+
+\[dT=\lambda\frac{gr^2}{u^2}du.\]
+
+从最低点积分到任意半径 \(u\)：
+
+\[T(u)-F_2=\lambda gr^2\int_{r_1}^{u}\frac{dv}{v^2},\]
+
+\[\boxed{T(u)=F_2+\lambda gr^2\left(\frac1{r_1}-\frac1u\right)}.\]
+
+代入端点 \(T(R)=F_1\)，解得
+
+\[\boxed{\lambda=\frac{F_1-F_2}{gr^2(1/r_1-1/R)}}.\]
+
+给定数值对应
+
+\[gr^2(1/r_1-1/R)\approx1.33194\times10^7\,\mathrm{m^2/s^2},\]
+
+\[\boxed{\lambda\approx0.718537\,\mathrm{kg/m}}.\]
+
+分母是单位质量从最低点到端点的引力势能差。张力差的量纲为牛顿，除以
+\(\mathrm{m^2/s^2}\) 后得到 \(\mathrm{kg/m}\)，与线密度相符。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={张力积分与链形}]{../figures/solution-04.pdf}
+\caption{张力积分与链形}
+\end{figure}
+
+\needspace{3\baselineskip}
+\textbf{用引力势写同一结果}
+
+取地球引力势
+
+\[\Phi(u)=-\frac{gr^2}{u}.\]
+
+则切向平衡可写为
+
+\[dT=\lambda\,d\Phi,\]
+
+\[T-\lambda\Phi=\text{常量}.\]
+
+这说明柔链在保守体力场中的张力随势函数变化，而不直接随弧长线性变化。若将最低点高度差误当作链长，或把地面重力当作恒定，都不能得到正确的张力差。
+
+\needspace{3\baselineskip}
+\textbf{端点方向不需要先求整条链形}
+
+第一问只依赖力矩积分和最低点的切向方向，因此无需计算链长。第二问只依赖两个位置的势差，因此无需知道端点之间的中心角。链形可在这两个积分求出后重建，顺序上更省步骤。
+
+由
+
+\[\sin\alpha(u)=\frac{C}{T(u)u}\]
+
+和 \(du/ds=\cos\alpha\)，得到
+
+\[\frac{ds}{du}=\frac1{\sqrt{1-[C/(T(u)u)]^2}}.\]
+
+极角记为 \(\vartheta\)，则
+
+\[u\frac{d\vartheta}{ds}=\sin\alpha.\]
+
+因此
+
+\[\frac{d\vartheta}{du}
+=\frac{C}{u\sqrt{[T(u)u]^2-C^2}}.\]
+
+两式结合端点条件可计算半链弧长和半中心角：
+
+\[L_{1/2}=\int_{r_1}^R\frac{du}{\sqrt{1-[C/(T(u)u)]^2}},\]
+
+\[\vartheta_{1/2}=\int_{r_1}^R\frac{C\,du}{u\sqrt{[T(u)u]^2-C^2}}.\]
+
+这些积分属于原题答案之后的几何核查，并非求第一、二问的必要步骤。
+
+\needspace{3\baselineskip}
+\textbf{最低点的积分端点}
+
+在 \(u=r_1\)，有
+\(T(u)u=C\)，上面两个被积函数出现可积的平方根奇性。不能把端点上的``无穷大''理解成链长无穷。
+
+令 \(\Delta=u-r_1\)，展开：
+
+\[T(u)=F_2+\frac{\lambda gr^2}{r_1^2}\Delta+O(\Delta^2),\]
+
+\[T(u)u=C+\left(F_2+\frac{\lambda gr^2}{r_1}\right)\Delta+O(\Delta^2).\]
+
+记括号中的正系数为 \(D_1\)，则
+
+\[[T(u)u]^2-C^2=2CD_1\Delta+O(\Delta^2).\]
+
+故被积函数只按 \(\Delta^{-1/2}\) 发散，其积分有限。数值计算可作替换
+
+\[u=r_1+(R-r_1)t^2,\qquad0\le t\le1,\]
+
+用 \(du=2(R-r_1)t\,dt\)
+消去根号端点。这也是检验绘制链形是否闭合、对称的方法。
+
+\needspace{3\baselineskip}
+\textbf{解的物理检查}
+
+因为 \(R>r_1\)、\(F_1>F_2\)，所以 \(\lambda>0\)。整个半支中
+
+\[\frac{dT}{du}=\frac{\lambda gr^2}{u^2}>0.\]
+
+张力单调增大，最低点承受最小张力，与图像一致。又因
+\(r_1>r\)，链不会穿过地球表面。整个过程采用不伸长的柔链、球对称地球场和静止端点；地球自转、链的弹性伸长和支柱稳定性均不在给定模型中。
+
+\needspace{3\baselineskip}
+\textbf{局部近似的尺度判断}
+
+若两个半径相近，设 \(R=r_1+H\) 且 \(H\ll r_1\)，则
+
+\[\frac1{r_1}-\frac1R\approx\frac H{r_1^2}.\]
+
+因此
+
+\[F_1-F_2\approx\lambda g_1H,\qquad g_1=g\frac{r^2}{r_1^2}.\]
+
+这时可以用最低点附近的恒定重力近似。原题 \(H/r_1\) 约为
+\(0.425\)，不属于小高度差，必须保留完整势差。
+
+\needspace{3\baselineskip}
+\textbf{最低点曲率和局部链形}
+
+把微元平衡在最低点沿法向投影。最低点切向水平，法向径向向外，曲率项满足
+
+\[F_2\kappa_1=\frac{\lambda gr^2}{r_1^2}.\]
+
+因此最低点曲率与曲率半径为
+
+\[\kappa_1=\frac{\lambda gr^2}{F_2r_1^2},\qquad
+\mathcal R_1=\frac{F_2r_1^2}{\lambda gr^2}.\]
+
+这里的 \(\kappa_1\)
+是链在真实平面上的曲率，而不是极坐标角的导数。以最低点的当地水平和竖直坐标
+\((X,Y)\) 表示链，局部形状为
+
+\[Y=\frac{X^2}{2\mathcal R_1}+O(X^4).\]
+
+地心距离还要包括地球径向几何的曲率：
+
+\[u=\sqrt{X^2+(r_1+Y)^2},\]
+
+\[u-r_1=Y+\frac{X^2}{2r_1}+O(X^4).\]
+
+故
+
+\[u-r_1=\frac{X^2}{2}\left(\frac1{\mathcal R_1}+\frac1{r_1}\right)+O(X^4).\]
+
+这给出前面端点积分平方根奇性的几何来源：从最低点向两侧，半径增量按水平距离平方变化。
+
+张力在最低点附近的展开为
+
+\[T-F_2=\frac{\lambda gr^2}{r_1^2}(u-r_1)+O[(u-r_1)^2].\]
+
+因此张力相对最低值的增加也是关于水平距离的二次项。最低点左右对称，没有一次项。链形绘图若最低点带尖角或张力随水平距离线性突变，就违背这个局部检查。
+
+\newpage
+
+\section{第 5 题}\label{ux7b2c-5-ux9898}
+
+激光干涉仪的两臂长均为 \(L=4\,\mathrm{km}\)，激光波长
+\(\lambda=10.6\,\mu\mathrm m\)，每臂往返 \(N=200\)
+次。若相位变化可分辨到 \(10^{-8}\)，估计可测相对臂长变化 \(\sigma_0\)
+的数量级。月球质量 \(7.35\times10^{22}\,\mathrm{kg}\)、地月距离
+\(3.84\times10^8\,\mathrm m\)，以 \(\sigma_M\sim GM/(dc^2)\)
+估计月球影响，求对应相位变化的数量级。
+
+设引力波能流密度
+\(j=A\sigma^2G^\alpha c^\beta f^\gamma\)，用量纲法确定指数。某事件中
+\(29\)、\(36\) 个太阳质量的黑洞并合为 \(62\) 个太阳质量，距离
+\(1.3\times10^9\) 光年，释放持续约 \(0.2\,\mathrm s\)，频率约
+\(100\,\mathrm{Hz}\)。取
+\(A=1\)、\(M_\odot=1.99\times10^{30}\,\mathrm{kg}\)、\(G=6.67\times10^{-11}\)（SI）、\(c=3.0\times10^8\,\mathrm{m/s}\)，各向同性平均估计振幅数量级。原题的波长、多次往返和平均辐射模型按所给条件使用。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={题面模型}]{../figures/question-05.pdf}
+\caption{题面模型}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-4}
+
+多次光程相位、量纲分析和辐射通量估算。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-4}
+
+光程差与相位差；数量级四舍五入；能流密度量纲；球面辐射平均；质量能量转换。
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-4}
+
+往返增加相位积累，传播距离通过球面面积减弱能流。题设用一个标量振幅和平均持续时间，给出的是估算模型。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-4}
+
+约定 \(\sigma\) 表示一臂的相对长度变化、另一臂作参考。若两臂分别伸缩
+\(\pm\sigma L\)，相位响应会多一个因子 2，但数量级结论不变。
+
+\[\Delta\ell=2NL\sigma,\qquad \Delta\phi=\frac{2\pi}{\lambda}\Delta\ell.\]
+
+下列计算先保留数值，最后才取十的整数次幂。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-4}
+
+\needspace{3\baselineskip}
+\textbf{臂长变化的相位响应}
+
+一臂变化 \(\Delta L=\sigma L\)，单次往返多走的路程为 \(2\Delta L\)。往返
+\(N\) 次的累积光程变化为
+
+\[\Delta\ell=2N\Delta L=2NL\sigma.\]
+
+对应相位差
+
+\[\Delta\phi=\frac{4\pi NL}{\lambda}\sigma.\]
+
+由可测阈值 \(\Delta\phi_0=10^{-8}\) 得
+
+\[\sigma_0=\frac{\lambda\Delta\phi_0}{4\pi NL}.\]
+
+将单位换成米：
+
+\[\lambda=1.06\times10^{-5}\,\mathrm m,\quad L=4.0\times10^3\,\mathrm m.\]
+
+所以
+
+\[\boxed{\sigma_0\approx1.0544\times10^{-20}}.\]
+
+相应单臂位移阈值为
+
+\[\Delta L_0=L\sigma_0\approx4.2176\times10^{-17}\,\mathrm m.\]
+
+按照十的整数次幂估计，\(\sigma_0\) 的数量级为
+\(10^{-20}\)。如果题目要求把 \(-\log_{10}\sigma_0\) 取最近整数，结果为
+20。
+
+\needspace{3\baselineskip}
+\textbf{题设月球影响的估计}
+
+按给定的势尺度估计
+
+\[\sigma_M\sim\frac{GM_M}{d_Mc^2}.\]
+
+代入数值：
+
+\[GM_M=4.90245\times10^{12}\,\mathrm{m^3/s^2},\]
+
+\[d_Mc^2=3.456\times10^{25}\,\mathrm{m^3/s^2},\]
+
+\[\sigma_M\approx1.41853\times10^{-13}.\]
+
+其相位响应为
+
+\[\Delta\phi_M=\frac{4\pi NL}{\lambda}\sigma_M,\]
+
+\[\boxed{\Delta\phi_M\approx0.134534\,\mathrm{rad}}.\]
+
+因此相位量级约为 \(10^{-1}\)，\(-\log_{10}\Delta\phi_M\) 的最近整数为
+1。这一项是在题设的标量势估计下得到的，不是完整的实际干涉仪潮汐响应。实际差分响应还与两臂方向及空间变化有关，不能把相同的整体长度尺度自动等同于可测差分信号。
+
+\needspace{3\baselineskip}
+\textbf{能流密度的量纲}
+
+能流密度是单位时间通过单位面积的能量：
+
+\[[j]=\frac{ML^2T^{-2}}{TL^2}=MT^{-3}.\]
+
+三个基本常量的量纲分别为
+
+\[[G]=L^3M^{-1}T^{-2},\]
+
+\[[c]=LT^{-1},\qquad[f]=T^{-1}.\]
+
+\(A\) 和振幅 \(\sigma\) 在题设中均无量纲。于是
+
+\[[G^\alpha c^\beta f^\gamma]
+=M^{-\alpha}L^{3\alpha+\beta}T^{-2\alpha-\beta-\gamma}.\]
+
+逐一比较质量、长度、时间指数：
+
+\[-\alpha=1,\]
+
+\[3\alpha+\beta=0,\]
+
+\[-2\alpha-\beta-\gamma=-3.\]
+
+解得
+
+\[\boxed{\alpha=-1,\quad\beta=3,\quad\gamma=2}.\]
+
+因此
+
+\[\boxed{j=A\frac{c^3}{G}\sigma^2f^2}.\]
+
+量纲只能确定幂次，不能确定 \(A\) 或角分布；题设已给 \(A=1\)
+才能继续求数值。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={光程积累与球面能流}]{../figures/solution-05.pdf}
+\caption{光程积累与球面能流}
+\end{figure}
+
+\needspace{3\baselineskip}
+\textbf{辐射总能量和到达能流}
+
+质量减少
+
+\[\Delta M=(29+36-62)M_\odot=3M_\odot.\]
+
+把减少的质量能量全部视为此次辐射能量：
+
+\[E_{\rm rad}=\Delta Mc^2=5.373\times10^{47}\,\mathrm J.\]
+
+为换算光年，取一年 \(365.25\) 天：
+
+\[1\,\mathrm{ly}=365.25\times86400\,c\approx9.46728\times10^{15}\,\mathrm m.\]
+
+传播距离为
+
+\[D\approx1.23075\times10^{25}\,\mathrm m.\]
+
+各向同性且持续时间 \(\Delta t=0.2\,\mathrm s\) 的平均能流为
+
+\[\bar j=\frac{E_{\rm rad}}{4\pi D^2\Delta t}.\]
+
+于是振幅估计
+
+\[\sigma_B=\sqrt{\frac{G\bar j}{Ac^3f^2}},\]
+
+\[\boxed{\sigma_B\approx5.90\times10^{-22}}.\]
+
+若按最近整数取 \(-\log_{10}\sigma_B\)，其值约为 \(21.23\)，取
+21。若只写常见科学记数法，则应保留
+\(5.90\times10^{-22}\)，避免把``尾数乘幂''与``最近十次幂''两个约定混淆。
+
+\needspace{3\baselineskip}
+\textbf{各参数如何影响振幅}
+
+把能量估算直接代入振幅式，得
+
+\[\sigma_B=\frac1{Df}\sqrt{\frac{GE_{\rm rad}}{4\pi Ac^3\Delta t}}.\]
+
+因此相同源能量和频率下
+
+\[\sigma_B\propto D^{-1},\qquad \bar j\propto D^{-2}.\]
+
+持续时间增大使平均能流减小，振幅按 \(\Delta t^{-1/2}\)
+减小。这里使用的是平均辐射功率和单一代表频率，不能由此恢复随时间变化的波形峰值。
+
+\needspace{3\baselineskip}
+\textbf{静态相位公式的时间尺度}
+
+单次往返传播时间为
+
+\[\delta t=\frac{2L}{c}\approx2.6667\times10^{-5}\,\mathrm s.\]
+
+\(N\) 次总时延为
+
+\[N\delta t\approx5.3333\times10^{-3}\,\mathrm s.\]
+
+若扰动频率很低、在总时延内几乎不变，直接乘 \(N\)
+合理。若振幅随时间快速变化，多次光路采样可能互相抵消，因此题中的静态响应用于动态波时还需要传递函数。这个修正影响精确系数，但本题只要求给定简化模型的数量级。
+
+\needspace{3\baselineskip}
+\textbf{数量级表达的完整性}
+
+三个估计分别涉及可测阈值、月球给定尺度和并合平均振幅。把它们放到同一公式中比较时，应明确相位与相对长度的变量不同。
+
+\[\sigma_0\approx1.05\times10^{-20},\]
+
+\[\Delta\phi_M\approx1.35\times10^{-1}\,\mathrm{rad},\]
+
+\[\sigma_B\approx5.90\times10^{-22}.\]
+
+按题设阈值及上述静态一臂约定，平均波振幅小于该模型的分辨阈值；这只是本题参数组合的结论，不可反推实际探测系统不能探测该事件。
+
+\needspace{3\baselineskip}
+\textbf{估算误差如何传到振幅}
+
+由平均能流模型，振幅可写为
+
+\[\sigma=\left(\frac{GE}{4\pi Ac^3D^2\Delta t f^2}\right)^{1/2}.\]
+
+对数微分给出
+
+\[\frac{d\sigma}{\sigma}
+=\frac12\frac{dE}{E}-\frac{dD}{D}
+-\frac12\frac{d\Delta t}{\Delta t}-\frac{df}{f}-\frac12\frac{dA}{A}.\]
+
+距离或频率误差对振幅相对误差有一次权重，能量、持续时间和 \(A\)
+有一半权重。若各误差独立，其方差按权重平方相加，而不是直接把正负误差相减。
+
+相位阈值的反演为
+
+\[\sigma_0=\frac{\lambda\phi_0}{4\pi NL},\]
+
+所以
+
+\[\frac{d\sigma_0}{\sigma_0}
+=\frac{d\lambda}{\lambda}+\frac{d\phi_0}{\phi_0}-\frac{dN}{N}-\frac{dL}{L}.\]
+
+这个式子帮助区分相位噪声改善与光程延长。增加光程只有在相位噪声和动态响应没有同时恶化时才给出相同的灵敏度提升。
+
+若按照两臂反向等幅变化的约定，\(\phi=8\pi NL\sigma/\lambda\)，所以
+
+\[\sigma_{0,\pm}=\frac12\sigma_0.\]
+
+对应 \(-\log_{10}\sigma_0\) 增加
+\(\log_{10}2\approx0.301\)。虽然物理相位公式只差一个系数，若恰接近数量级取整边界，整数答案仍可能受约定影响，故应先写数值再注明取整。
+
+辐射源的平均能量通量积分还满足
+
+\[4\pi D^2\bar j\Delta t=E.\]
+
+这项总能量反代检查可发现把光年误当时间、忘记面积平方或持续时间的错误。
+
+\newpage
+
+\section{第 6 题}\label{ux7b2c-6-ux9898}
+
+长度为 \(l\) 的细狭缝平行于双棱镜的棱，狭缝至棱镜距离为
+\(h\)，棱镜至屏距离为 \(L\)。棱镜折射率为 \(n\)，两半的小折射角均为
+\(\alpha\)。单色光波长为
+\(\lambda\)，狭缝各点非相干发光。求屏上干涉条纹间距和干涉区内的亮条纹数；再把狭缝在自身平面内转过小角
+\(\beta\)，求干涉条纹调制度 \(M\)
+及其第一次降为零的转角。采用近轴、小棱镜角近似。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={题面模型}]{../figures/question-06.pdf}
+\caption{题面模型}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-5}
+
+双棱镜干涉与扩展非相干光源的可见度。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-5}
+
+虚光源间距；两束几何重叠；相位平均； sinc 函数；有限光源照明范围。
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-5}
+
+每个源点都产生一组条纹，源点之间不叠加振幅而叠加强度。狭缝倾斜后，各源点的条纹横向错开，平均使明暗对比降低。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-5}
+
+小角偏折量记为 \(\delta=(n-1)\alpha\)。两个虚光源位于狭缝平面，相距
+
+\[d=2h\delta,\]
+
+到屏的距离为
+
+\[D=h+L.\]
+
+先求单个源点的干涉，再对源坐标积分。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-5}
+
+\needspace{3\baselineskip}
+\textbf{虚光源和条纹间距}
+
+两虚源间距为 \(d=2h(n-1)\alpha\)。屏点横坐标为
+\(X\)，在近轴近似下，光程差随 \(X\) 线性变化：
+
+\[\Delta\ell\approx\frac{dX}{D}.\]
+
+相位差
+
+\[\phi(X)=\frac{2\pi dX}{\lambda D}.\]
+
+相邻亮纹对应相位增加 \(2\pi\)，故
+
+\[\boxed{\Delta X=\frac{\lambda(h+L)}{2h(n-1)\alpha}}.\]
+
+这里的传播距离是从虚源平面到屏的 \(h+L\)，而不是只用棱镜到屏的 \(L\)。
+
+\needspace{3\baselineskip}
+\textbf{几何干涉区及亮纹计数}
+
+中心源点的两束光在屏上重叠于
+
+\[-L\delta<X<L\delta.\]
+
+干涉区宽度为 \(W=2L\delta\)。亮纹中心在
+
+\[X_k=k\Delta X,\qquad k\in\mathbb Z.\]
+
+定义
+
+\[q_* =\frac{L\delta}{\Delta X}
+=\frac{2hL(n-1)^2\alpha^2}{\lambda(h+L)}.\]
+
+严格位于两束重叠内部的亮纹满足 \(|k|<q_*\)。因此
+
+\[\boxed{N_{\rm bright}=2\lceil q_*\rceil-1}.\]
+
+当 \(q_*\) 不是整数时，也可写成
+\(2\lfloor q_*\rfloor+1\)。当恰为整数时，边缘两束中的一束已经终止，是否把边缘算作``亮纹''需说明约定；本解只数真正处于双束重叠内部的中心。
+
+若仅要求近似的条纹数，可以用
+
+\[\frac W{\Delta X}=\frac{4hL(n-1)^2\alpha^2}{\lambda(h+L)}.\]
+
+这个连续比值不是精确整数计数，尤其在条纹很少时不能混用。
+
+\needspace{3\baselineskip}
+\textbf{倾斜狭缝引入源相位}
+
+以狭缝中点为原点，沿狭缝的坐标 \(s\in[-l/2,l/2]\)。转角为 \(\beta\)
+时，源点横坐标为
+
+\[x_s=s\sin\beta.\]
+
+两个虚源对称偏移，单源点的干涉相位近似为
+
+\[\phi(X,s)=\frac{2\pi d}{\lambda D}(X-x_s).\]
+
+令
+
+\[K=\frac{2\pi d}{\lambda D},\]
+
+两束单源强度相等时
+
+\[I_s(X)=2I_0[1+\cos(KX-Ks\sin\beta)].\]
+
+非相干源点的总强度按 \(s\) 积分：
+
+\[I(X)=\frac1l\int_{-l/2}^{l/2}I_s(X)\,ds.\]
+
+奇函数部分消失，余下
+
+\[I(X)=2I_0\left[1+\frac{\sin z}{z}\cos(KX)\right],\]
+
+\[z=\frac{\pi dl\sin\beta}{\lambda D}.\]
+
+因此调制度，即 \((I_{\max}-I_{\min})/(I_{\max}+I_{\min})\)，为
+
+\[\boxed{M=\left|\frac{\sin z}{z}\right|}.\]
+
+\(z=0\) 处按连续极限取 \(M=1\)。 sinc
+的负值表示条纹反相，调制度作为非负对比度必须取绝对值。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={条纹叠加与 sinc 可见度}]{../figures/solution-06.pdf}
+\caption{条纹叠加与 sinc 可见度}
+\end{figure}
+
+\needspace{3\baselineskip}
+\textbf{第一个零点}
+
+未发生几何截光时，首个零点满足 \(|z|=\pi\)：
+
+\[|\sin\beta_0|=\frac{\lambda D}{dl}=\frac{\Delta X}{l}.\]
+
+正转角的首零点为
+
+\[\boxed{\beta_0=\arcsin\frac{\lambda(h+L)}{2h(n-1)\alpha l}}.\]
+
+若小角条件成立，可用
+
+\[\beta_0\approx\frac{\Delta X}{l}.\]
+
+若反正弦的参数超过
+1，则几何上没有该首零点；若参数不够小，还应重新检查近轴和小转角近似。
+
+\needspace{3\baselineskip}
+\textbf{光源全部参加双束干涉的条件}
+
+上述 sinc
+推导隐含屏点能够接收狭缝上所有源点的两束光。这个条件不能由``非相干''自动保证。
+
+源点 \(x_s\) 的几何重叠区中心在 \(-Lx_s/h\)，半宽
+\(L\delta\)。因此屏中心 \(X=0\) 能接收整个狭缝的双束光需
+
+\[|x_s|<h\delta\quad\text{对所有 }s,\]
+
+即
+
+\[l|\sin\beta|<d.\]
+
+把预测首零点代入，得到额外条件
+
+\[\boxed{\lambda D<d^2}.\]
+
+这个条件满足时，首零点的 sinc
+答案可在中央完整照明区直接使用。若不满足，狭缝在到达理论首零点以前已经被几何窗口截断，原题若没有进一步限定观察位置，不能无条件声称首零点仍为上式。
+
+\needspace{3\baselineskip}
+\textbf{截光时的近轴修正}
+
+对给定 \(X\)，参与双束干涉的源点需满足
+
+\[|X+L s\sin\beta/h|<L\delta.\]
+
+所以有效源区间是原狭缝与下列区间的交集：
+
+\[s\in\left[\frac{h(-\delta-X/L)}{\sin\beta},
+\frac{h(\delta-X/L)}{\sin\beta}\right].\]
+
+若 \(\sin\beta<0\)，应交换上下限。设交集长度为 \(l_{\rm eff}\)、中点为
+\(s_c\)，则双束部分的平均给出
+
+\[M_{\rm pair}=\left|\operatorname{sinc}\frac{\pi d l_{\rm eff}\sin\beta}{\lambda D}\right|,\]
+
+条纹相位另有 \(-Ks_c\sin\beta\)
+的偏移。来自仅一束可达的源点还可能增加背景，使整个屏点的实际调制度进一步降低。
+
+在屏中心的充分截光情形，\(l_{\rm eff}=d/|\sin\beta|\)，于是 sinc
+参数固定为
+
+\[|z_{\rm eff}|=\frac{\pi d^2}{\lambda D},\]
+
+它一般不等于
+\(\pi\)。这解释了为什么``延长狭缝必能按同一公式得到零调制度''还需要照明条件。
+
+\needspace{3\baselineskip}
+\textbf{数值示例与尺度检查}
+
+取
+\(h=0.2\,\mathrm m,L=1\,\mathrm m,n=1.5,\alpha=0.01,\lambda=500\,\mathrm{nm},l=1\,\mathrm{cm}\)。得到
+
+\[\delta=0.005,\quad d=2\,\mathrm{mm},\quad D=1.2\,\mathrm m,\]
+
+\[\Delta X=0.3\,\mathrm{mm},\quad W=10\,\mathrm{mm}.\]
+
+\(q_*=16.666\ldots\)，故有 33 个亮纹中心。首零点
+
+\[\beta_0=\arcsin0.03\approx1.719^\circ.\]
+
+照明条件为
+\(\lambda D=6\times10^{-7}\,\mathrm{m^2}<d^2=4\times10^{-6}\,\mathrm{m^2}\)，该示例首零点在截光之前发生。
+
+\needspace{3\baselineskip}
+\textbf{一般亮度分布的可见度公式}
+
+若狭缝亮度分布为非负函数 \(w(s)\)，完整照明时，归一化复相位平均为
+
+\[C(\beta)=\frac{\int w(s)e^{-iKs\sin\beta}ds}{\int w(s)ds}.\]
+
+总强度的干涉项为 \(\operatorname{Re}[e^{iKX}C]\)，故
+
+\[M=|C|.\]
+
+均匀有限狭缝的 Fourier 积分给出 sinc，偶对称亮度使 \(C\)
+为实数；若亮度不对称，\(C\) 一般为复数，同时改变调制度和条纹相位。
+
+令亮度加权平均源坐标为 \(\bar s\)、方差为 \(\sigma_s^2\)。在很小倾角下，
+
+\[C=1-iK\bar s\sin\beta-\frac12K^2\langle s^2\rangle\sin^2\beta+\cdots.\]
+
+取模后，平均偏置项只造成相位变化，调制度下降由方差控制：
+
+\[M=1-\frac12K^2\sigma_s^2\sin^2\beta+O(\beta^4).\]
+
+均匀狭缝有 \(\sigma_s^2=l^2/12\)，所以
+
+\[M=1-\frac{K^2l^2}{24}\sin^2\beta+O(\beta^4).\]
+
+与 sinc 展开 \(1-z^2/6+\cdots\) 一致，因为
+\(z=Kl\sin\beta/2\)。这项二阶核验不依赖直接记忆 sinc 公式。
+
+若
+\(C=0\)，只说明对该空间频率的源相位平均恰好抵消，不代表每个源点停止干涉。在零点以后单源条纹仍存在，只是平均结果可能反相并出现旁瓣。
+
+\newpage
+
+\section{第 7 题}\label{ux7b2c-7-ux9898}
+
+第一部分：考虑 \(dy/dx=y^{3/4}\)，\(y\ge0\)。(1)
+求含一个待定常数的通解并确定定义域；(2)
+给出不能由该正支通解表示的无待定常数特解；(3)
+画通解和特解曲线，讨论零点初值的非唯一性及原题关于混沌的说法。
+
+\begin{enumerate}
+\def\labelenumi{(\arabic{enumi})}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  由质量均为 \(m\)、电荷分别为 \(+q,-q\) 的两小球和长度 \(l\)
+  的轻刚杆组成电偶极子，在垂直平面的均匀磁场 \(B\)
+  中运动。初始质心静止，杆沿 \(x\) 轴，正电荷在正 \(x\) 侧，初始角速度为
+  \(\omega_0>0\)。忽略其他力。建立运动方程，画转角和角动量的相图，确定杆作振动与连续转动的分界，并在振动情形求质心沿初始杆方向的最大位移。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={题面模型}]{../figures/question-07.pdf}
+\caption{题面模型}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-6}
+
+非唯一微分方程与磁场中刚性电偶极子的可积运动。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-6}
+
+非 Lipschitz
+初值；洛伦兹力；质心平动与相对转动；摆方程；相空间分界轨道。
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-6}
+
+洛伦兹力不做功，但可在质心动能与转动动能之间重新分配能量。消去质心速度后，杆角度满足单摆型方程，质心则有横向漂移。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-6}
+
+第(1)问分开处理 \(y>0\) 与 \(y=0\)，分离变量不能在零点直接除以
+\(y^{3/4}\)。
+
+第(2)问记杆方向 \(\boldsymbol n=(\cos\theta,\sin\theta)\)、质心速度
+\(\boldsymbol V\)，以及
+
+\[\omega_B=\frac{qB}{m},\qquad I=\frac{ml^2}{2}.\]
+
+两个电荷的速度分别是质心速度加减绕质心的转动速度。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-6}
+
+\needspace{3\baselineskip}
+\textbf{第(1)问：正支、零支和拼接解}
+
+对 \(y>0\) 分离变量：
+
+\[y^{-3/4}dy=dx,\]
+
+\[4y^{1/4}=x-C.\]
+
+因为左侧非负，这一支的定义域须满足 \(x\ge C\)。于是
+
+\[y(x)=\frac{(x-C)^4}{256},\qquad x\ge C.\]
+
+不能把同一个四次多项式直接延伸到 \(x<C\)：其导数在那里为负，而
+\(y^{3/4}\) 非负。另有恒零解 \(y\equiv0\)。
+
+可在任意 \(C\) 处拼接：
+
+\[y_C(x)=\begin{cases}0,&x\le C,\\(x-C)^4/256,&x\ge C.\end{cases}\]
+
+在接点两侧，函数和一阶导数都连续且满足方程。对于初值 \(y(x_0)=0\)，任意
+\(C\ge x_0\) 都给出一条解，恒零也给出一条解，故初值问题不唯一。
+
+原因是 \(f(y)=y^{3/4}\) 在零点的导数 \(3/(4y^{1/4})\)
+无界，缺少保证局部唯一性的 Lipschitz
+条件。这里出现的是任意等待时间后离开零点的非唯一性，单凭这一事实不能认定存在通常意义上确定动力系统的混沌。
+
+\needspace{3\baselineskip}
+\textbf{第(2)问：两个洛伦兹力相加}
+
+取磁场沿正 \(z\) 方向。两电荷速度为
+
+\[\boldsymbol v_\pm=\boldsymbol V\pm\frac l2\dot\theta\,\boldsymbol e_z\times\boldsymbol n.\]
+
+两洛伦兹力相加时，平动部分因电荷相反而抵消，转动部分相加：
+
+\[2m\dot{\boldsymbol V}=qBl\dot\theta\,\boldsymbol n.\]
+
+逐分量积分，利用初态 \(\boldsymbol V=0,\theta=0\)：
+
+\[V_x=\frac{qBl}{2m}\sin\theta,\]
+
+\[V_y=\frac{qBl}{2m}(1-\cos\theta).\]
+
+记 \(a_B=qBl/(2m)=\omega_Bl/2\)，则
+
+\[\boxed{\boldsymbol V=a_B(\sin\theta,1-\cos\theta)}.\]
+
+即使杆角度往返振动，\(V_y\) 也始终非负，质心可以持续漂移。
+
+\needspace{3\baselineskip}
+\textbf{对质心的力矩}
+
+相对质心位置为 \(\pm(l/2)\boldsymbol n\)，计算两力矩可得
+
+\[I\ddot\theta=-qBl\boldsymbol n\cdot\boldsymbol V.\]
+
+上面的速度积分给出
+
+\[\boldsymbol n\cdot\boldsymbol V
+=a_B[\cos\theta\sin\theta+\sin\theta(1-\cos\theta)]
+=a_B\sin\theta.\]
+
+因此
+
+\[\boxed{\ddot\theta+\omega_B^2\sin\theta=0}.\]
+
+等效摆频率为
+\(\omega_B\)，与杆长无关。长度仍会影响质心位移和真实转动能量的尺度。
+
+\needspace{3\baselineskip}
+\textbf{角度积分与相图}
+
+把摆方程乘 \(\dot\theta\) 后积分：
+
+\[\frac12\dot\theta^2+\omega_B^2(1-\cos\theta)
+=\frac12\omega_0^2.\]
+
+令角动量 \(L_\theta=I\dot\theta\)，相图曲线满足
+
+\[L_\theta^2=I^2[\omega_0^2-2\omega_B^2(1-\cos\theta)].\]
+
+稳定平衡是 \(\theta=2k\pi,L_\theta=0\)；不稳定平衡是
+\(\theta=(2k+1)\pi,L_\theta=0\)。越过不稳定角度所需的最小初始速度由
+
+\[\frac12\omega_0^2=2\omega_B^2\]
+
+给出，即
+
+\[\boxed{\omega_{0,c}=2\omega_B}.\]
+
+\(0<\omega_0<2\omega_B\) 时为有限角度振动；\(\omega_0>2\omega_B\)
+时连续转动；恰等于临界值时沿分界轨道趋近倒立方向，所需时间无穷。
+
+在主区间 \(-\pi\le\theta\le\pi\)，分界线为
+
+\[L_\theta=\pm2I\omega_B\cos(\theta/2).\]
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={磁偶极子的摆相图}]{../figures/solution-07.pdf}
+\caption{磁偶极子的摆相图}
+\end{figure}
+
+\needspace{3\baselineskip}
+\textbf{振幅和横向最大位移}
+
+严格振动时，转折点 \(\dot\theta=0\)，故
+
+\[\cos\theta_{\max}=1-\frac{\omega_0^2}{2\omega_B^2}.\]
+
+用 \(\sin\theta=-\ddot\theta/\omega_B^2\) 消去质心速度：
+
+\[\dot X=a_B\sin\theta=-\frac{a_B}{\omega_B^2}\ddot\theta.\]
+
+由 \(X(0)=0\) 积分得
+
+\[\boxed{X=\frac{l}{2\omega_B}(\omega_0-\dot\theta)}.\]
+
+振动一周内 \(\dot\theta\) 最小值为 \(-\omega_0\)，故
+
+\[\boxed{X_{\max}=\frac{l\omega_0}{\omega_B}}\quad(0<\omega_0<2\omega_B).\]
+
+它发生在杆回过
+\(\theta=0\)、角速度反向时，不发生在杆角度的转折点。角度转折点只有
+\(X=l\omega_0/(2\omega_B)\)。
+
+\needspace{3\baselineskip}
+\textbf{真实能量的独立验证}
+
+两个电荷的总动能为
+
+\[K=mV^2+\frac12I\dot\theta^2.\]
+
+速度积分给出
+
+\[V^2=2a_B^2(1-\cos\theta).\]
+
+因为 \(2ma_B^2=I\omega_B^2\)，所以
+
+\[K=I\left[\frac12\dot\theta^2+\omega_B^2(1-\cos\theta)\right]
+=\frac12I\omega_0^2.\]
+
+上面的摆势是消去平动变量后得到的有效项，实际磁场没有向系统输入势能或做功。洛伦兹力始终垂直各电荷速度。
+
+\needspace{3\baselineskip}
+\textbf{临界轨道不能当作普通振动的极限事件}
+
+临界初态的精确解为
+
+\[\theta(t)=4\arctan e^{\omega_Bt}-\pi,\]
+
+\[\dot\theta(t)=2\omega_B\operatorname{sech}(\omega_Bt).\]
+
+于是
+
+\[X(t)=l[1-\operatorname{sech}(\omega_Bt)]\longrightarrow l.\]
+
+而严格振动的 \(X_{\max}\) 在 \(\omega_0\to2\omega_B^-\) 时趋于
+\(2l\)。两者不矛盾：越接近分界，完成回摆所需时间越长；临界轨道永远不回摆。先取无限时间最大值与先把参数取到临界值并不能交换。
+
+\needspace{3\baselineskip}
+\textbf{周期和小振幅检查}
+
+小振幅时 \(\sin\theta\approx\theta\)，有
+
+\[\theta(t)\approx\frac{\omega_0}{\omega_B}\sin\omega_Bt,\]
+
+\[T_{\rm small}=\frac{2\pi}{\omega_B}.\]
+
+一般振动令 \(k=\omega_0/(2\omega_B)\)，周期为
+
+\[T=\frac4{\omega_B}K(k),\qquad
+K(k)=\int_0^{\pi/2}\frac{d\psi}{\sqrt{1-k^2\sin^2\psi}}.\]
+
+\(k\to1^-\) 时积分发散，与临界轨道的无限回摆时间一致。
+
+\needspace{3\baselineskip}
+\textbf{振动解的函数形式和长期漂移}
+
+严格振动时令 \(k=\omega_0/(2\omega_B)<1\)。可用 Jacobi 椭圆函数写
+
+\[\sin\frac{\theta(t)}2=k\operatorname{sn}(\omega_Bt,k),\]
+
+\[\dot\theta(t)=2k\omega_B\operatorname{cn}(\omega_Bt,k).\]
+
+它们满足初值与能量式，因为
+\(\operatorname{dn}^2=1-k^2\operatorname{sn}^2\)。质心横坐标于是为
+
+\[X(t)=kl[1-\operatorname{cn}(\omega_Bt,k)].\]
+
+纵向速度为
+
+\[\dot Y=2a_Bk^2\operatorname{sn}^2(\omega_Bt,k).\]
+
+设第二类完全椭圆积分为
+
+\[E(k)=\int_0^{\pi/2}\sqrt{1-k^2\sin^2\psi}\,d\psi.\]
+
+一周期的平均有 \(\langle\operatorname{sn}^2\rangle=(K-E)/(k^2K)\)，因此
+
+\[\langle\dot Y\rangle=2a_B\left(1-\frac{E(k)}{K(k)}\right)>0.\]
+
+小幅时 \(K\approx(\pi/2)(1+k^2/4)\)、\(E\approx(\pi/2)(1-k^2/4)\)，故
+
+\[\langle\dot Y\rangle\approx a_Bk^2.\]
+
+角度与 \(X\) 周期往复，\(Y\)
+每周期增加一个正量，系统并不在平面中作闭合轨道。原题指出不能用初等函数完整求运动，但这不妨碍由能量积分求分界和最大位移，也不妨碍用特殊函数给出一个可数值计算的表示。
+
+\newpage
+
+\section{第 8 题}\label{ux7b2c-8-ux9898}
+
+单个质量为 \(m\) 的粒子在势能 \(V(x)=kx^2/2\) 中处于温度 \(T\)
+的经典热平衡，总能量为 \(E=mv^2/2+V(x)\)，相空间概率密度正比于
+\(e^{-E/(k_BT)}\)。求位置概率密度 \(f(x)\) 和
+\(\langle x^2\rangle\)。两个互相独立的同类粒子，求
+\(\langle(x_1-x_2)^2\rangle\)。
+
+再令两粒子之间增加势能 \(k(x_1-x_2)^2/2\)，求粒子 1
+的边缘位置密度与相对坐标的均方值。可使用高斯积分。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={题面模型}]{../figures/question-08.pdf}
+\caption{题面模型}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-7}
+
+经典正则分布中的耦合高斯模型。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-7}
+
+归一化；边缘分布；协方差；配方积分；正交正规模；相对涨落。
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-7}
+
+耦合使两个位置正相关，抑制相对运动。每个粒子的边缘分布仍是高斯，但它既不同于独立粒子，也不同于把另一粒子钉在零点的分布。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-7}
+
+记 \(\Theta=k_BT\)，避免把弹簧常数 \(k\)
+与玻尔兹曼常数混淆。位置与速度因子相乘，边缘位置密度中的速度积分只贡献归一化常数。
+
+\[f(x)\propto e^{-kx^2/(2\Theta)}.\]
+
+耦合问题先写总势能，再配方或对角化；不要先假定独立性。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-7}
+
+\needspace{3\baselineskip}
+\textbf{单粒子的归一化位置分布}
+
+相空间分布为
+
+\[P(x,v)=C\exp\left[-\frac{mv^2+kx^2}{2\Theta}\right].\]
+
+积分消去速度后
+
+\[f(x)=C_xe^{-kx^2/(2\Theta)}.\]
+
+由高斯积分
+
+\[\int_{-\infty}^{\infty}e^{-ax^2}dx=\sqrt{\frac\pi a}\]
+
+可得
+
+\[\boxed{f(x)=\sqrt{\frac{k}{2\pi\Theta}}\exp\left(-\frac{kx^2}{2\Theta}\right)}.\]
+
+分布关于原点对称，因此 \(\langle x\rangle=0\)。对归一化积分关于 \(a\)
+求导，得
+
+\[\int_{-\infty}^{\infty}x^2e^{-ax^2}dx=\frac{\sqrt\pi}{2a^{3/2}}.\]
+
+代入 \(a=k/(2\Theta)\)：
+
+\[\boxed{\langle x^2\rangle=\frac\Theta k}.\]
+
+粒子质量不出现在位置边缘分布中；质量影响速度分布，但在经典平衡下不改变这个位置方差。
+
+\needspace{3\baselineskip}
+\textbf{两个独立粒子的相对涨落}
+
+展开相对坐标平方：
+
+\[\langle(x_1-x_2)^2\rangle
+=\langle x_1^2\rangle+\langle x_2^2\rangle-2\langle x_1x_2\rangle.\]
+
+独立性及各自零均值给出
+
+\[\langle x_1x_2\rangle=\langle x_1\rangle\langle x_2\rangle=0.\]
+
+因此
+
+\[\boxed{\langle(x_1-x_2)^2\rangle_{\rm independent}=\frac{2\Theta}{k}}.\]
+
+若两个变量只具有相同的单体分布却相关，最后一项不能删去。第二部分正是这样的情形。
+
+\needspace{3\baselineskip}
+\textbf{加入耦合后的总势能}
+
+三项势能相加：
+
+\[U=\frac k2x_1^2+\frac k2x_2^2+\frac k2(x_1-x_2)^2,\]
+
+\[U=k(x_1^2+x_2^2-x_1x_2).\]
+
+可写成矩阵形式
+
+\[U=\frac12\boldsymbol x^{\mathsf T}\mathsf K\boldsymbol x,\qquad
+\mathsf K=k\begin{pmatrix}2&-1\\-1&2\end{pmatrix}.\]
+
+矩阵的两个正特征值为 \(k\)、\(3k\)，故位置分布可归一化。
+
+\needspace{3\baselineskip}
+\textbf{配方直接求粒子 1 的密度}
+
+把 \(x_2\) 的相关项配方：
+
+\[x_1^2+x_2^2-x_1x_2
+=\left(x_2-\frac{x_1}{2}\right)^2+\frac34x_1^2.\]
+
+因此
+
+\[f_1(x_1)\propto e^{-3kx_1^2/(4\Theta)}
+\int_{-\infty}^{\infty}e^{-k(x_2-x_1/2)^2/\Theta}dx_2.\]
+
+积分与 \(x_1\) 无关，等于 \(\sqrt{\pi\Theta/k}\)。归一化后
+
+\[\boxed{f_1(x_1)=\sqrt{\frac{3k}{4\pi\Theta}}
+\exp\left(-\frac{3kx_1^2}{4\Theta}\right)}.\]
+
+它的方差为
+
+\[\boxed{\langle x_1^2\rangle=\frac{2\Theta}{3k}}.\]
+
+若把 \(x_2\) 错误固定为零，会得到势能 \(kx_1^2\)、方差
+\(\Theta/(2k)\)，这不是对 \(x_2\) 积分后的边缘分布。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={正规模与相关涨落}]{../figures/solution-08.pdf}
+\caption{正规模与相关涨落}
+\end{figure}
+
+\needspace{3\baselineskip}
+\textbf{正规模求相对坐标方差}
+
+引入正交坐标
+
+\[X=\frac{x_1+x_2}{\sqrt2},\qquad
+Y=\frac{x_1-x_2}{\sqrt2}.\]
+
+坐标变换的雅可比绝对值为 1。总势能为
+
+\[U=\frac k2X^2+\frac{3k}{2}Y^2.\]
+
+两正规模在位置分布中独立，因此
+
+\[\langle X^2\rangle=\frac\Theta k,\qquad
+\langle Y^2\rangle=\frac\Theta{3k}.\]
+
+相对坐标是 \(x_1-x_2=\sqrt2Y\)，故
+
+\[\boxed{\langle(x_1-x_2)^2\rangle=\frac{2\Theta}{3k}}.\]
+
+相较独立粒子的 \(2\Theta/k\)，相对方差缩小到三分之一。
+
+\needspace{3\baselineskip}
+\textbf{协方差与相关系数}
+
+由 \(x_1=(X+Y)/\sqrt2\)、\(x_2=(X-Y)/\sqrt2\) 得
+
+\[\langle x_1x_2\rangle=\frac12(\langle X^2\rangle-\langle Y^2\rangle)
+=\frac\Theta{3k}.\]
+
+两单体方差相等，都为 \(2\Theta/(3k)\)，所以
+
+\[\rho_{12}=\frac{\langle x_1x_2\rangle}{\sqrt{\langle x_1^2\rangle\langle x_2^2\rangle}}=\frac12.\]
+
+再按相对方差展开式计算：
+
+\[\frac{2\Theta}{3k}+\frac{2\Theta}{3k}-2\frac\Theta{3k}
+=\frac{2\Theta}{3k},\]
+
+与正规模结果相同。
+
+\needspace{3\baselineskip}
+\textbf{联合归一化常数}
+
+位置配分积分为
+
+\[Z_x=\int dX\,dY\,
+ e^{-kX^2/(2\Theta)-3kY^2/(2\Theta)},\]
+
+\[Z_x=\sqrt{\frac{2\pi\Theta}{k}}
+\sqrt{\frac{2\pi\Theta}{3k}}
+=\frac{2\pi\Theta}{\sqrt3k}.\]
+
+所以联合位置密度为
+
+\[P(x_1,x_2)=\frac{\sqrt3k}{2\pi\Theta}
+ e^{-k(x_1^2+x_2^2-x_1x_2)/\Theta}.\]
+
+这个常数可直接积分验证 \(f_1\) 的系数，避免只比较指数而遗漏归一化。
+
+\needspace{3\baselineskip}
+\textbf{条件分布与边缘分布的区别}
+
+给定 \(x_1\) 时，\(x_2\) 的条件分布来自配方项：
+
+\[P(x_2\mid x_1)=\sqrt{\frac{k}{\pi\Theta}}
+ e^{-k(x_2-x_1/2)^2/\Theta}.\]
+
+故
+
+\[\mathbb E[x_2\mid x_1]=\frac{x_1}{2},\qquad
+\operatorname{Var}(x_2\mid x_1)=\frac\Theta{2k}.\]
+
+全方差公式给出
+
+\[\operatorname{Var}(x_2)=\frac\Theta{2k}+
+\operatorname{Var}(x_1/2)
+=\frac\Theta{2k}+\frac\Theta{6k}
+=\frac{2\Theta}{3k}.\]
+
+条件涨落与条件均值的热变化共同构成单体边缘涨落。
+
+\needspace{3\baselineskip}
+\textbf{能量均分的检查}
+
+两个正交位置模各贡献平均势能 \(\Theta/2\)，故
+\(\langle U\rangle=\Theta\)。两个速度模各贡献
+\(\Theta/2\)，故总平均能量为
+\(2\Theta\)。耦合改变方差和相关性，却不改变这个稳定经典二次模型中的二次自由度数。量子低温情形不在原题的经典分布假设内。
+
+\needspace{3\baselineskip}
+\textbf{边缘有效刚度与广义力}
+
+把粒子 2 积分出去后，粒子 1 的位置指数相当于有效势
+
+\[U_{\rm eff}(x_1)=\frac12k_{\rm eff}x_1^2+\text{常量},\qquad k_{\rm eff}=\frac{3k}{2}.\]
+
+它是刚度矩阵的 Schur 补：
+
+\[k_{\rm eff}=K_{11}-\frac{K_{12}^2}{K_{22}}
+=2k-\frac{k^2}{2k}.\]
+
+如果给粒子 1 加一个小外力 \(F\)，总势加 \(-Fx_1\)，则
+
+\[\langle x_1\rangle=\frac{F}{k_{\rm eff}}=\frac{2F}{3k}.\]
+
+粒子 2 的平均位置由条件均值跟随为
+
+\[\langle x_2\rangle=\frac F{3k}.\]
+
+线性响应与涨落之间有
+
+\[\frac{\partial\langle x_1\rangle}{\partial F}
+=\frac{\operatorname{Var}(x_1)}\Theta=\frac{2}{3k}.\]
+
+这是本题高斯模型中直接可以验证的涨落---响应关系。相关外力 \(F_1,F_2\)
+的一般解为
+
+\[\begin{pmatrix}\langle x_1\rangle\\\langle x_2\rangle\end{pmatrix}
+=\frac1{3k}\begin{pmatrix}2&1\\1&2\end{pmatrix}
+\begin{pmatrix}F_1\\F_2\end{pmatrix}.\]
+
+外力只平移高斯分布的均值，协方差不变。若两外力相同，整体模受力而相对均值仍为零；若外力相反，相对模的较高刚度使响应更小。
+
+例如 \(F_1=F,F_2=-F\)，有
+
+\[\langle x_1-x_2\rangle=\frac{2F}{3k}.\]
+
+这个结果与相对模的刚度 \(3k\)、相对坐标的归一化因子一致。
+
+\needspace{3\baselineskip}
+\textbf{共同拉力与相反拉力的响应}
+
+给两粒子相同小外力f，势能改为\(U-f(x_1+x_2)\)。均值由K的线性平衡求出：
+
+\[K\langle\boldsymbol x\rangle=f(1,1)^T,\quad
+\langle x_1\rangle=\langle x_2\rangle=f/k.\]
+
+耦合弹簧在共同位移中不伸长，因此共同响应只由原陷阱控制。若给相反外力\((f,-f)\)，
+
+\[\langle x_1\rangle=f/(3k),\quad\langle x_2\rangle=-f/(3k).\]
+
+相反位移会同时拉伸耦合弹簧，响应刚度变3k。配方平移不改变K，所以这两种恒力下的协方差仍是正文矩阵。
+
+涨落响应也可独立给出均值导数：
+
+\[\partial_f\langle x_1\rangle=\frac{\langle x_1^2\rangle+\langle x_1x_2\rangle}{\Theta}=1/k\]
+
+用于共同力；相反力时将加号换减号，得到1/(3k)。同一个协方差同时检验两种实验响应，而不是只检验单粒子的方差。忽略协方差会误得2/(3k)，既不符合共同运动也不符合相反运动。
+\end{document}

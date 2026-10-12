@@ -1,0 +1,291 @@
+\documentclass[12pt,a4paper,UTF8]{ctexart}
+\usepackage[a4paper,top=22mm,bottom=22mm,left=22mm,right=22mm,headheight=15pt]{geometry}
+\usepackage{amsmath,amssymb,mathtools,bm}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{booktabs,longtable,array}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{microtype}
+\usepackage{setspace}
+\usepackage[hidelinks,unicode]{hyperref}
+\usepackage[most]{tcolorbox}
+
+\definecolor{ContestBlue}{HTML}{17365D}
+\definecolor{SoftBlue}{HTML}{EEF4FA}
+\definecolor{SoftGray}{HTML}{F5F6F7}
+\hypersetup{pdftitle={第96套},pdfauthor={物理竞赛教学资料}}
+
+\setstretch{1.24}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.35em}
+\setlist{itemsep=0.35em,topsep=0.4em}
+\captionsetup{font=small,labelfont=bf,justification=centering}
+\setcounter{secnumdepth}{0}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small 第96套}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\ctexset{
+  section={format=\Large\bfseries\color{ContestBlue},beforeskip=1.2em,afterskip=0.7em},
+  subsection={format=\large\bfseries\color{ContestBlue},beforeskip=1.0em,afterskip=0.5em},
+  subsubsection={format=\normalsize\bfseries,beforeskip=0.8em,afterskip=0.35em}
+}
+
+\makeatletter
+\newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\newcommand{\maxwidth}{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\newcommand{\maxheight}{\ifdim\Gin@nat@height>0.72\textheight 0.72\textheight\else\Gin@nat@height\fi}
+\newcommand{\pandocbounded}[1]{\begingroup\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}#1\endgroup}
+\makeatother
+
+\begin{document}
+
+\begin{titlepage}
+  \centering
+  \vspace*{58mm}
+  {\Huge\bfseries\color{ContestBlue} 第96套\par}
+  \vfill
+  \vspace*{28mm}
+\end{titlepage}
+
+
+\section{第 1 题}\label{ux7b2c-1-ux9898}
+
+一颗探测器绕某行星做圆周运动。已知行星半径为 \(R\)，表面重力加速度为
+\(g\)，探测器的轨道半径为 \(\alpha R\)，其中 \(\alpha>1\)。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  求探测器的运行周期 \(T\)。
+\item
+  探测器质量为 \(M\)。在不消耗燃料的条件下，将质量为 \(m=\beta M\)
+  的仪器沿轨道半径方向向行星抛出，其中
+  \(0<\beta<1\)。若仪器恰能到达行星表面，求相对于探测器的最小抛出速度
+  \(u_{\min}\)。
+\item
+  求抛出仪器后探测器所在新轨道的周期 \(T'\)，并说明该周期存在的条件。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\linewidth,height=\textheight,keepaspectratio,alt={图 1-1　探测器在半径为 \textbackslash alpha R 的圆轨道上运行，仪器沿径向向行星抛出。}]{../figures/question-01.pdf}
+\caption*{图 1-1　探测器在半径为 \(\alpha R\)
+的圆轨道上运行，仪器沿径向向行星抛出。}
+\end{figure}
+
+\newpage
+
+\section{第 2 题}\label{ux7b2c-2-ux9898}
+
+质量均为 \(m\) 的小木块 \(A,B\) 放在动摩擦因数为 \(\mu\)
+的水平粗糙平面上，初始间距为 \(l\)，且均静止。对木块 \(A\) 施加指向
+\(B\) 的恒力
+\(F\)，使两木块发生一维正碰。碰撞前后交换动量的方向与相对速度方向一致，恢复系数为
+\(e\)。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  要使 \(A,B\) 能发生第一次碰撞，\(F\) 应满足什么条件？
+\item
+  取 \(e=1\)，并令 \(F=\alpha\mu mg\)、\(\alpha>1\)，求第 \(n\)
+  次碰撞前瞬间木块 \(A\) 的速度。
+\item
+  取
+  \(e=\tfrac12\)、\(F=mg\)、\(\mu=\tfrac58\)。在运动过程中两木块最终会同时出现瞬时静止状态，求在该时刻木块
+  \(A\) 的总位移。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图 2-1　恒力推动木块 A 向木块 B 运动，两块在粗糙水平面上反复碰撞。}]{../figures/question-02.pdf}
+\caption*{图 2-1　恒力推动木块 \(A\) 向木块 \(B\)
+运动，两块在粗糙水平面上反复碰撞。}
+\end{figure}
+
+\newpage
+
+\section{第 3 题}\label{ux7b2c-3-ux9898}
+
+一艘初始静止的飞船在一片稀薄、相对于星空静止的尘埃区域中航行。飞船初始静质量为
+\(m_0\)，横截面积为 \(S\)，受到恒定向前推力
+\(F_0\)。尘埃的静止质量密度为 \(\rho_0\)，尘埃与飞船接触后被完全吸收。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  当飞船前进距离为 \(x\) 时，求``飞船及已吸收尘埃''系统的总能量
+  \(E(x)\)，总能量包括静能和动能。
+\item
+  求飞船前进距离为 \(x\) 时的动量 \(p(x)\) 和速度
+  \(v(x)\)。可使用相对论关系
+\end{enumerate}
+
+\[\beta_c=\frac{\sum_i p_i}{\sum_i E_i/c},\]
+
+以及质心动量定理
+
+\[\sum_i F_i\,dt=d\sum_i p_i.\]
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图 3-1　恒力推动飞船穿过静止尘埃区域，飞船连续吸收所扫过的尘埃。}]{../figures/question-03.pdf}
+\caption*{图
+3-1　恒力推动飞船穿过静止尘埃区域，飞船连续吸收所扫过的尘埃。}
+\end{figure}
+
+\newpage
+
+\section{第 4 题}\label{ux7b2c-4-ux9898}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  半径为 \(R\) 的孤立金属球放在匀强电场 \(\bm E_0\)
+  中，求其感应电荷在球外产生的电场所等效的电偶极矩大小。
+\item
+  同一金属球放在足够大的接地金属平面上并与平面相切，匀强电场 \(\bm E_0\)
+  垂直指向平面，求金属球上的感应电荷量大小 \(q\)。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图 4-1　孤立金属球在匀强电场中的极化，以及与接地平面相切时的几何关系。}]{../figures/question-04.pdf}
+\caption*{图
+4-1　孤立金属球在匀强电场中的极化，以及与接地平面相切时的几何关系。}
+\end{figure}
+
+\newpage
+
+\section{第 5 题}\label{ux7b2c-5-ux9898}
+
+将边长分别为
+
+\[a=0.020\,\mathrm m,\qquad b=0.030\,\mathrm m\]
+
+的矩形金属框浸入肥皂水中，在框上形成肥皂膜。当以入射角
+\(\alpha=30^\circ\) 观察反射光时，薄膜呈绿色，所对应真空波长为
+
+\[\lambda=5.0\times10^{-7}\,\mathrm m.\]
+
+已知肥皂液密度
+
+\[\rho=1.0\times10^3\,\mathrm{kg/m^3},\]
+
+薄膜折射率 \(n=1.33\)。天平的质量分度值为 \(0.1\,\mathrm{mg}\)。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  能否用该天平测出满足上述条件的最薄肥皂膜的质量？
+\item
+  若将光线改为垂直入射，最薄处的反射光在可见光范围内主要呈什么颜色？
+\end{enumerate}
+
+提示：光从折射率较小的介质射向折射率较大的薄膜并在上表面反射时，反射波发生
+\(\pi\) 的相位突变。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.758\linewidth,height=\textheight,keepaspectratio,alt={图 5-1　斜入射光在肥皂膜上下表面反射并发生薄膜干涉。}]{../figures/question-05.pdf}
+\caption*{图 5-1　斜入射光在肥皂膜上下表面反射并发生薄膜干涉。}
+\end{figure}
+
+\newpage
+
+\section{第 6 题}\label{ux7b2c-6-ux9898}
+
+如图所示，电阻网络由一个正六边形的六条边和六条从顶点连到中心 \(O\)
+的辐条构成，每一段电阻的阻值均为 \(1\,\Omega\)。顶点 \(A,B\)
+互为对顶点，\(C\) 与 \(A\) 相邻。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  求 \(A,B\) 之间的等效电阻 \(R_{AB}\)。
+\item
+  求 \(A,C\) 之间的等效电阻 \(R_{AC}\)。
+\item
+  求 \(A,O\) 之间的等效电阻 \(R_{AO}\)。
+\item
+  若从 \(A,B\) 两点分别流入 \(1\,\mathrm A\) 和 \(2\,\mathrm A\)
+  的电流，并从 \(C\) 点流出 \(3\,\mathrm A\) 的电流，求
+\end{enumerate}
+
+\[U_{OA}=V_O-V_A.\]
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.737\linewidth,height=\textheight,keepaspectratio,alt={图 6-1　正六边形轮辐电阻网络，每一条边和每一条辐条的阻值均为 1\textbackslash,\textbackslash Omega。}]{../figures/question-06.pdf}
+\caption*{图 6-1　正六边形轮辐电阻网络，每一条边和每一条辐条的阻值均为
+\(1\,\Omega\)。}
+\end{figure}
+
+\newpage
+
+\section{第 7 题}\label{ux7b2c-7-ux9898}
+
+一根半径为 \(r\) 的细长圆管中流有理想不可压缩液体。液体平均流速为
+\(u_0\)，定压质量比热容为 \(C_p\)，密度为 \(\rho\)。管壁外界温度恒为
+\(T_0\)，管壁单位面积、单位时间的换热量为
+
+\[\frac{dQ}{dt}=k(T-T_0),\]
+
+其中 \(T\) 为该截面液体温度。入口液体温度为
+\(2T_0\)。假设同一横截面上的液体温度均匀，求沿管方向的稳态温度分布
+\(T(x)\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图 7-1　液体以速度 u\_0 流过圆管，并通过侧壁向温度为 T\_0 的环境散热。}]{../figures/question-07.pdf}
+\caption*{图 7-1　液体以速度 \(u_0\) 流过圆管，并通过侧壁向温度为 \(T_0\)
+的环境散热。}
+\end{figure}
+
+\newpage
+
+\section{第 8 题}\label{ux7b2c-8-ux9898}
+
+一台立式喷灌器由高度为 \(H\)、半径为 \(r\) 的圆柱形储水罐组成，其中
+\(r\ll H\)。圆柱侧面均匀开有 \(N\gg1\) 个小孔，每个小孔面积为
+\(S_0\)。当某小孔位于瞬时水面以下深度 \(d\) 时，水相对于小孔以速率
+
+\[v=\sqrt{2gd}\]
+
+沿水平方向流出。初始时储水罐装满水。以地面上水罐底部中心为原点，竖直向上为
+\(z\) 轴。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  地面以上哪些空间位置可能被水淋到？
+\item
+  在开始喷水后一小段时间 \(\Delta t\gg\sqrt{2H/g}\)
+  内，水位尚未显著下降。求地面上距原点水平距离为 \(\rho\)
+  的位置，单位面积、单位时间接收到的水量 \(\varepsilon(\rho)\)。
+\item
+  水位从 \(H\) 降至 \(H/2\) 需要多长时间？
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.545\linewidth,height=\textheight,keepaspectratio,alt={图 8-1　立式喷灌器各高度小孔产生水平射流，水流在重力作用下形成抛物线。}]{../figures/question-08.pdf}
+\caption*{图
+8-1　立式喷灌器各高度小孔产生水平射流，水流在重力作用下形成抛物线。}
+\end{figure}
+
+\end{document}

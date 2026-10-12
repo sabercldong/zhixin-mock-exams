@@ -1,0 +1,273 @@
+\documentclass[12pt,a4paper,UTF8]{ctexart}
+\usepackage[a4paper,top=22mm,bottom=22mm,left=22mm,right=22mm,headheight=15pt]{geometry}
+\usepackage{amsmath,amssymb,mathtools,bm}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{booktabs,longtable,array}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{microtype}
+\usepackage{setspace}
+\usepackage[hidelinks,unicode]{hyperref}
+\usepackage[most]{tcolorbox}
+
+\definecolor{ContestBlue}{HTML}{17365D}
+\definecolor{SoftBlue}{HTML}{EEF4FA}
+\definecolor{SoftGray}{HTML}{F5F6F7}
+\hypersetup{pdftitle={第95套},pdfauthor={物理竞赛教学资料}}
+
+\setstretch{1.24}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.35em}
+\setlist{itemsep=0.35em,topsep=0.4em}
+\captionsetup{font=small,labelfont=bf,justification=centering}
+\setcounter{secnumdepth}{0}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small 第95套}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\ctexset{
+  section={format=\Large\bfseries\color{ContestBlue},beforeskip=1.2em,afterskip=0.7em},
+  subsection={format=\large\bfseries\color{ContestBlue},beforeskip=1.0em,afterskip=0.5em},
+  subsubsection={format=\normalsize\bfseries,beforeskip=0.8em,afterskip=0.35em}
+}
+
+\makeatletter
+\newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\newcommand{\maxwidth}{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\newcommand{\maxheight}{\ifdim\Gin@nat@height>0.72\textheight 0.72\textheight\else\Gin@nat@height\fi}
+\newcommand{\pandocbounded}[1]{\begingroup\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}#1\endgroup}
+\makeatother
+
+\begin{document}
+
+\begin{titlepage}
+  \centering
+  \vspace*{58mm}
+  {\Huge\bfseries\color{ContestBlue} 第95套\par}
+  \vfill
+  \vspace*{28mm}
+\end{titlepage}
+
+
+\section{第 1 题}\label{ux7b2c-1-ux9898}
+
+如图，一辆汽车内悬挂一根长度为 \(l\) 的轻绳，绳下系一质量为 \(m\)
+的小球。重力加速度为 \(g\)。初始时汽车和小球均静止。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  汽车向右缓慢增大加速度，直到加速度为 \(a\)，求绳与竖直方向的夹角
+  \(\theta_1\)。
+\item
+  汽车突然获得向右的加速度
+  \(a\)，小球会摆动起来。已知小球不会与车顶发生碰撞，求绳与竖直方向的最大夹角
+  \(\theta_2\)。
+\item
+  若要使小球能与车顶碰撞，求所需的最小加速度 \(a_{\min}\)。
+\item
+  已知加速度 \(a'>a_{\min}\)，求小球第一次碰到车顶前的速率 \(v_0\)。
+\item
+  小球与车顶碰撞后，速率变为碰撞前的
+  \(e=1/2\)，方向反向。求下一次碰撞前，绳与竖直方向的最小夹角
+  \(\theta_{\min}\)。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.875\linewidth,height=\textheight,keepaspectratio,alt={图 1-1　车内单摆与水平加速的小车。}]{../figures/question-01.pdf}
+\caption*{图 1-1　车内单摆与水平加速的小车。}
+\end{figure}
+
+\newpage
+
+\section{第 2 题}\label{ux7b2c-2-ux9898}
+
+一个轮子由 \(N\) 根完全相同、长度为 \(R\) 的均匀辐条构成，总质量为
+\(m\)，且 \(N\gg1\)。相邻两根辐条的夹角为
+\(2\pi/N\)。轮子运动过程中，总有一根或相邻两根辐条与水平地面接触。辐条与地面间的摩擦足以保证纯滚动，辐条和地面之间不存在相对滑动。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  轮子初始静止在地面上，在轮心处施加水平力 \(F\)，轮子恰好开始运动，求
+  \(F\)。
+\item
+  在轮心处施加水平力 \(F\)，使轮子最后以速度 \(v\) 做稳定周期运动，求
+  \(F\)。
+\item
+  不再给轮子加力。某时轮子的速度为 \(v_1\)，求其速度降为 \(v_2\)
+  所需的时间。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.619\linewidth,height=\textheight,keepaspectratio,alt={图 2-1　由 N 根均匀辐条构成的轮子。}]{../figures/question-02.pdf}
+\caption*{图 2-1　由 \(N\) 根均匀辐条构成的轮子。}
+\end{figure}
+
+\newpage
+
+\section{第 3 题}\label{ux7b2c-3-ux9898}
+
+有很多质量依次为 \(m,2m,m,2m,\ldots\) 的小木块，在光滑水平面上相距 \(l\)
+排列，初始时都静止。用恒定外力 \(F\) 作用于第一个质量为 \(m\)
+的木块。假设各木块间的碰撞均为完全非弹性碰撞，求第 \(2n\)
+次碰撞后粘合木块的速度。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图 3-1　交替质量木块的连锁完全非弹性碰撞。}]{../figures/question-03.pdf}
+\caption*{图 3-1　交替质量木块的连锁完全非弹性碰撞。}
+\end{figure}
+
+\newpage
+
+\section{第 4 题}\label{ux7b2c-4-ux9898}
+
+两个相同的理想 \(LC\)
+振荡回路相距较远。第一个回路中已激发振荡，电容器上的最大电压为
+\(U_0\)。当第一个回路的电容器电压为零时，用导线接通第二个回路，说明接通后电路中的物理过程。若改为在第一个回路的电容器电压取最大值时接通，情况有何变化？
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.711\linewidth,height=\textheight,keepaspectratio,alt={图 4-1　两个参数相同的 LC 振荡回路。}]{../figures/question-04.pdf}
+\caption*{图 4-1　两个参数相同的 \(LC\) 振荡回路。}
+\end{figure}
+
+\newpage
+
+\section{第 5 题}\label{ux7b2c-5-ux9898}
+
+电磁波可以传递能量。当电场强度矢量与磁感应强度矢量互相垂直时，单位面积、单位时间内传播的能量可用波印廷矢量
+
+\[\bm S=\frac1{\mu_0}\bm E\times\bm B\]
+
+表示。规定波印廷矢量进入所考察区域的功率为正。真空介电常数为
+\(\varepsilon_0\)，真空磁导率为 \(\mu_0\)。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  一半径为 \(R\) 的无限长圆柱体均匀带电，体电荷密度为
+  \(\rho\)。沿圆柱轴线方向有匀强电场 \(E_1\)，圆柱以速度 \(v\)
+  沿该方向运动。求单位长度圆柱的获功率 \(P_1\)、圆柱外表面的磁感应强度
+  \(B_1\)，并用波印廷矢量计算电磁能流入圆柱的功率 \(P_1'\)，比较 \(P_1\)
+  与 \(P_1'\)。
+\item
+  一圆形平行板电容器的极板半径为 \(R\)，板间距 \(d=R\)。电容器带电量
+  \(Q\)，微小电流 \(I_2\) 正在给电容器充电。求充电功率
+  \(P_2\)、极板边缘附近的磁感应强度
+  \(B_2\)；忽略边缘效应，计算电磁能经电容器圆柱形侧面流入的功率
+  \(P_2'\)，比较 \(P_2\) 与 \(P_2'\)。
+\item
+  一半径为 \(R\) 的密绕长螺线管，每单位长度有 \(N\)
+  匝，通有缓慢增大的电流 \(I_3\)，且
+  \(k=dI_3/dt\)。求单位长度通电螺线管获得能量的功率
+  \(P_3\)、管内表面附近的磁感应强度 \(B_3\) 和电场强度
+  \(E_3\)，再用波印廷矢量计算功率 \(P_3'\)，比较 \(P_3\) 与 \(P_3'\)。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图 5-1　带电圆柱、平行板电容器和长螺线管的能量传递情景。}]{../figures/question-05.pdf}
+\caption*{图 5-1　带电圆柱、平行板电容器和长螺线管的能量传递情景。}
+\end{figure}
+
+\newpage
+
+\section{第 6 题}\label{ux7b2c-6-ux9898}
+
+如图，一个体积为 \(V_0\) 的高压锅内装有初温为 \(T_0\)、压强为 \(p_0\)
+的理想气体。该气体的定体摩尔热容量为 \(C_V=2.5R\)。气阀的截面积为
+\(S\)，气阀上放有质量为 \(m\) 的重物，外界大气压强为
+\(p_0\)，重力加速度为 \(g\)。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  至少把气体加热到什么温度 \(T_1\)，才能将重物顶起？
+\item
+  若加热过程不考虑容器散热，把重物顶起前气体至少需要吸收多少热量
+  \(Q_1\)？
+\item
+  若向高压锅吸收的总热量 \(Q_2>Q_1\)，求加热结束时气体温度 \(T_2\)。
+\item
+  之后把温度降回到 \(T_0\)，且外界气体不会从气阀返回锅内，求此时锅内压强
+  \(p_3\)。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.688\linewidth,height=\textheight,keepaspectratio,alt={图 6-1　带重物气阀的定容高压锅。}]{../figures/question-06.pdf}
+\caption*{图 6-1　带重物气阀的定容高压锅。}
+\end{figure}
+
+\newpage
+
+\section{第 7 题}\label{ux7b2c-7-ux9898}
+
+一个焦距为 \(f\)
+的理想薄透镜，将一个中心在主光轴上的椭圆成像，得到一个全等的椭圆。椭圆所在平面包含主光轴，并且椭圆的一条对称轴与主光轴重合。求物椭圆位置应满足的条件。讨论椭圆的长轴平行或垂直于主光轴的情形。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图 7-1　以主光轴为对称轴的椭圆经理想薄透镜成像。}]{../figures/question-07.pdf}
+\caption*{图 7-1　以主光轴为对称轴的椭圆经理想薄透镜成像。}
+\end{figure}
+
+\newpage
+
+\section{第 8 题}\label{ux7b2c-8-ux9898}
+
+一个质量为 \(m\)、半径为 \(a\) 的均质细圆环位于竖直平面内，可绕圆心
+\(O\) 无摩擦转动。圆环上有一只质量为 \(m/2\)
+的兔子，初始位于圆环最低点。有四根长为 \(a\)
+的轻杆端点在圆心处铰接，每根轻杆上各有一只质量为 \(m/2\)
+的小仓鼠，初始分别位于圆环的 \(A,B,C,D\) 四点。兔子以相对圆环不变的速度
+\(v\)
+沿圆环运动；同时，四只小仓鼠沿各自轻杆向圆心运动。当兔子与圆心连线相对竖直向下转过角
+\(\theta\) 时，小仓鼠沿杆向内移动的距离取为
+
+\[x=\frac{a\theta}{\pi}.\]
+
+这等价于 \(x/a=\theta/\pi\)，使得当 \(\theta=\pi\) 时小仓鼠到达圆心。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  求圆环初始角速度。
+\item
+  求 \(\theta\) 与时间 \(t\)
+  满足的微分方程，从兔子和小仓鼠开始运动计时，无需求出显式解。
+\item
+  求当 \(\theta=\pi/2\) 时 \(\dot\theta\) 与 \(\ddot\theta\) 的关系。
+\item
+  去掉圆心转轴，将圆环放在光滑水平面上。此时兔子质量改为
+  \(m\)，圆环质量仍为 \(m\)，半径改记为
+  \(R\)，四只小仓鼠的质量不变。兔子以相对圆环不变的速度 \(u\)
+  运动，小仓鼠的径向位移规律改为
+  \(x=R\theta/\pi\)。求刚开始运动时圆环的角速度。
+\item
+  在第（4）问的情形中，设兔子可以爬到 \(\theta=\pi/4\)
+  处。当此时圆环的角速度大小为 \(\omega_1\) 时，求圆环的角加速度大小。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.489\linewidth,height=\textheight,keepaspectratio,alt={图 8-1　固定圆心时的圆环、兔子与四只小仓鼠。}]{../figures/question-08.pdf}
+\caption*{图 8-1　固定圆心时的圆环、兔子与四只小仓鼠。}
+\end{figure}
+
+\end{document}

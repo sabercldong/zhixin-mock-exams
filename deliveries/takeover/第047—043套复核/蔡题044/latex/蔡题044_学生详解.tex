@@ -1,0 +1,2013 @@
+\documentclass[12pt,a4paper,UTF8]{ctexart}
+\usepackage[a4paper,top=22mm,bottom=22mm,left=22mm,right=22mm,headheight=15pt]{geometry}
+\usepackage{amsmath,amssymb,mathtools,bm}
+\usepackage{graphicx,xcolor,booktabs,longtable,array,enumitem,fancyhdr,caption,float,microtype,setspace}
+\newcommand{\Needspace}[1]{\par\begingroup\dimen0=#1\relax\dimen2=\pagegoal\advance\dimen2 by-\pagetotal\ifdim\dimen0>\dimen2\newpage\fi\endgroup}
+\newcommand{\needspace}[1]{\par\begingroup\skip0=\lastskip\vskip-\skip0\dimen0=#1\relax\advance\dimen0 by\skip0\vskip\dimen0\penalty-100\vskip-\dimen0\vskip\skip0\penalty9999\endgroup}
+\usepackage[hidelinks,unicode]{hyperref}
+\usepackage[most]{tcolorbox}
+\definecolor{ContestBlue}{HTML}{17365D}
+\hypersetup{pdftitle={第 044 套},pdfauthor={}}
+\setstretch{1.24}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.35em}
+\setlength{\emergencystretch}{2em}
+\setlist{itemsep=0.35em,topsep=0.4em}
+\captionsetup{font=small,labelfont=bf,justification=centering}
+\setcounter{secnumdepth}{0}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small 第 044 套}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\ctexset{
+  section={format=\Large\bfseries\color{ContestBlue},beforeskip=1.2em,afterskip=0.7em},
+  subsection={format=\large\bfseries\color{ContestBlue},beforeskip=1.0em,afterskip=0.5em},
+  subsubsection={format=\normalsize\bfseries,beforeskip=0.8em,afterskip=0.35em}
+}
+\makeatletter
+\newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\newcommand{\maxwidth}{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\newcommand{\maxheight}{\ifdim\Gin@nat@height>0.72\textheight 0.72\textheight\else\Gin@nat@height\fi}
+\newcommand{\pandocbounded}[1]{\begingroup\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}#1\endgroup}
+\makeatother
+\begin{document}
+\begin{titlepage}
+  \centering
+  \vspace*{58mm}
+  {\Huge\bfseries\color{ContestBlue} 第 044 套\par}
+  \vfill
+  \vspace*{28mm}
+\end{titlepage}
+\section{第 1 题}\label{ux7b2c-1-ux9898}
+
+足够大的斜面倾角为 \(\theta\)，木块与斜面之间的动摩擦系数为
+\(\mu=\tan\theta\)。在斜面内沿水平等高线方向给木块初速度
+\(v_0\)。求木块最终的速度 \(v'\)。取 \(0<\theta<\pi/2\)，忽略空气阻力。
+
+\includegraphics[width=0.86\linewidth,height=\textheight,keepaspectratio,alt={题1　题设与符号}]{../figures/question-01.pdf}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d}
+
+摩擦方向随速度方向改变的二维滑动题。沿坡分量受重力驱动，横坡分量被摩擦削弱。最终速度需从耦合方程的极限求出，不能把初始摩擦力方向固定到全过程。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9}
+
+动摩擦力与瞬时速度反向；斜面内二维分解；速度方向角；微分不变量；速度曲线；渐近极限。
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf}
+
+图1-1中 \(x\) 沿水平等高线，\(y\) 沿斜面下坡。初速度为
+\((v_0,0)\)。重力的切向分量沿
+\(+y\)，支持力垂直斜面。摩擦力在斜面内，与当前速度相反；它起初沿
+\(-x\)，之后同时有 \(-x,-y\)
+分量。图1-2画的是速度平面的轨迹，不是木块在斜面上的空间轨迹。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3}
+
+支持力 \(N=mg\cos\theta\)，所以 \(\mu N=mg\sin\theta\)。令
+\(A=g\sin\theta\)，先写出两个速度分量方程，再计算速率导数。两者相加可消去随方向变化的摩擦项。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790}
+
+\textbf{分量方程。} 设速率 \(v=\sqrt{v_x^2+v_y^2}\)。在滑动期间， \[
+\dot v_x=-A\frac{v_x}{v},\qquad
+\dot v_y=A\left(1-\frac{v_y}{v}\right).
+\] 此处 \(A\) 为加速度，不是力；质量已约去。因为初始
+\(v_x>0\)，第一式使它单调下降而不会在有限时间反向。第二式非负，故沿坡速度从0逐渐增长。
+
+\textbf{寻找不变量。} 对速率求导： \[
+\dot v=\frac{v_x\dot v_x+v_y\dot v_y}{v}
+=A\left(\frac{v_y}{v}-1\right).
+\] 因此 \[
+\frac d{dt}(v+v_y)=0.
+\] 初始 \(v=v_0,v_y=0\)，于是 \[
+\boxed{v+v_y=v_0}.
+\]
+这不是机械能守恒。摩擦不断发热，速率下降；保持不变的是速率与沿坡速度的特定组合。
+
+\textbf{最终极限。} 由 \(v_y\le v\) 与不变量， \[
+0\le v_y\le v_0/2,\qquad v\ge v_0/2.
+\] 横向速度满足 \[
+v_x(t)=v_0\exp\left[-A\int_0^t\frac{ds}{v(s)}\right].
+\] 由于 \(v\le v_0\)，指数随时间趋于负无穷，故 \(v_x\to0\)。再由
+\(v+v_y=v_0\)， \[
+v\to v_y\to v_0/2.
+\] 答案为 \[
+\boxed{v'=v_0/2},
+\] 方向沿斜面下坡。这里``最终''是 \(t\to\infty\)
+的极限，并不是木块先完全停止、再重新下滑。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.86\linewidth,height=\textheight,keepaspectratio,alt={图1-2　速度不变量与渐近轨迹}]{../figures/solution-01.pdf}
+\caption*{图1-2　速度不变量与渐近轨迹}
+\end{figure}
+
+\textbf{速度平面的抛物线。} 将 \(v=v_0-v_y\) 平方， \[
+v_x^2+v_y^2=(v_0-v_y)^2,
+\] 得到 \[
+\boxed{v_x^2=v_0^2-2v_0v_y}.
+\] 物理支路为 \(v_x\ge0,0\le v_y<v_0/2\)。图1-2曲线终点为
+\((0,v_0/2)\)，初点为
+\((v_0,0)\)。该图可检验两种常见错误：若得到末速为零，曲线端点不满足不变量；若得到末速为
+\(v_0\)，则没有体现摩擦导致的速率下降。
+
+\textbf{完整时间参数。} 令速度相对等高线的方向角为 \(\psi\)，则 \[
+v_x=v\cos\psi,\qquad v_y=v\sin\psi.
+\] 不变量给 \[
+v=\frac{v_0}{1+\sin\psi}.
+\] 由横、纵分量方程消去 \(\dot v\)， \[
+v\dot\psi=A\cos\psi.
+\] 再令 \[
+u=\tan\left(\frac\pi4+\frac\psi2\right),\qquad u(0)=1.
+\] 可得简洁的速度表达式 \[
+v_x=\frac{v_0}{u},\qquad
+v_y=\frac{v_0}{2}(1-u^{-2}),\qquad
+v=\frac{v_0}{2}(1+u^{-2}).
+\] 时间与 \(u\) 的关系为 \[
+\frac{dt}{du}=\frac{v_0}{2A}(u^{-1}+u^{-3}),
+\] 故 \[
+\boxed{t=\frac{v_0}{2A}
+\left[\ln u+\frac{1-u^{-2}}2\right]}.
+\] 它在 \(u\to\infty\)
+时发散，证明最终方向与速度只能渐近达到。不能把某个有限的转向角时间当成``滑动停止时刻''。
+
+\textbf{空间轨迹与横向位移。} 设初位置为原点。将 \(dx/du=v_xdt/du\)
+积分， \[
+x(u)=\frac{v_0^2}{2A}
+\left(\frac43-\frac1u-\frac1{3u^3}\right).
+\] 同理， \[
+y(u)=\frac{v_0^2}{4A}
+\left[\ln u+\frac{u^{-4}-1}{4}\right].
+\] 因此横向累计位移有限： \[
+\boxed{x_\infty=\frac{2v_0^2}{3g\sin\theta}}.
+\]
+而下坡位移无限增长。空间轨迹逐渐靠近一条与坡降方向平行的直线；它与图1-2的速度抛物线是两类不同的曲线。
+
+\textbf{近末态的衰减速度。} 对大 \(u\)， \[
+u\simeq \exp\left(\frac{2At}{v_0}-\frac12\right).
+\] 于是 \[
+v_x\simeq v_0e^{1/2}e^{-2At/v_0},
+\] \[
+\frac{v_0}2-v_y\simeq\frac{v_0e}{2}e^{-4At/v_0}.
+\]
+横向速度的衰减率是沿坡末速误差衰减率的一半。若用数值积分检验，应观察这些渐近比例，不能只在某个有限时间把很小的
+\(v_x\) 人为设为零。
+
+\textbf{能量耗散的检查。} 摩擦功率为 \[
+P_{\rm fr}=-mAv.
+\] 重力功率为 \(mAv_y\)，故动能变化率 \[
+\dot K=mA(v_y-v).
+\] 这与 \(mv\dot v\) 一致。在后期
+\(v_y\to v\)，重力功率与摩擦耗散功率趋于相等，动能趋于常量；运动仍持续，摩擦热仍不断产生。末态匀速不意味着摩擦消失。
+
+\textbf{用方向角独立积分。} 写 \(v_x=v\cos\psi,v_y=v\sin\psi\)，\(\psi\)
+从水平向下增大。令 \(A=g\sin\theta\)，本题摩擦减速度同为 \(A\)，于是 \[
+\dot v=A(\sin\psi-1),\qquad
+v\dot\psi=A\cos\psi.
+\] 二式相除： \[
+\frac{d\ln v}{d\psi}=\frac{\sin\psi-1}{\cos\psi}.
+\] 右端积分为 \(-\ln(1+\sin\psi)\)，初态 \(\psi=0,v=v_0\)，所以 \[
+v(1+\sin\psi)=v_0.
+\] 将它与 \(v_y=v\sin\psi\) 联立，就是正文的守恒组合
+\(v+v_y=v_0\)。角速度虽越来越小，方向仍渐近转向坡下；速度却趋近
+\(v_0/2\)。这是临界摩擦系数下残余速度来自初始横向运动的原因。
+
+\textbf{切线半角参数的来历。} 令 \[
+u=\tan(\pi/4+\psi/2),\qquad
+\sin\psi=\frac{u^2-1}{u^2+1},\quad
+\cos\psi=\frac{2u}{u^2+1}.
+\] 因此 \[
+v=\frac{v_0}{2}(1+u^{-2}),\quad
+v_x=\frac{v_0}{u},\quad
+v_y=\frac{v_0}{2}(1-u^{-2}).
+\] 由 \(\dot\psi=A\cos\psi/v\)，以及 \(d\psi/du=2/(1+u^2)\)，得到 \[
+\frac{dt}{du}=\frac{v_0}{2A}(u^{-1}+u^{-3}).
+\] 初态 \(u=1,t=0\)，逐项积分： \[
+t=\frac{v_0}{2A}\left[\ln u+\frac{1-u^{-2}}2\right].
+\] 再分别计算 \[
+\frac{dx}{du}=v_x\frac{dt}{du}
+=\frac{v_0^2}{2A}(u^{-2}+u^{-4}),
+\] \[
+\frac{dy}{du}=v_y\frac{dt}{du}
+=\frac{v_0^2}{4A}(u^{-1}-u^{-5}).
+\] 积分便得正文的 \(x(u),y(u)\)。这样每一项的幂次与常数均可回溯，且
+\(u=1\) 时两坐标都为零。
+
+\textbf{远期位置与时间的不同极限。} 令 \[
+k=2A/v_0.
+\] 由时间式可知 \(u\sim\exp(kt-1/2)\)。所以 \[
+v_x\sim v_0e^{1/2}e^{-kt},
+\] \[
+x_\infty-x
+=\frac{v_0^2}{2A}\left(u^{-1}+\frac1{3u^3}\right),
+\] 而 \[
+y-\frac{v_0t}{2}
+=\frac{v_0^2}{4A}
+\left[-\frac34+\frac{u^{-2}}2+\frac{u^{-4}}4\right].
+\] 因此
+\(y-v_0t/2\to-3v_0^2/(16A)\)。横向位移有限，坡下位移无界；不能因为横向极限存在就说物体最终停止。
+
+\textbf{耗散功的直接检查。} 重力做功 \(mg\sin\theta\,y=mAy\)，摩擦功为
+\(-mA s\)，其中路径长度 \(s=\int v\,dt\)。能量守恒形式为 \[
+\frac12m(v^2-v_0^2)=mA(y-s).
+\] 代入参数积分： \[
+\frac{ds}{du}=
+\frac{v_0^2}{4A}(u^{-1}+2u^{-3}+u^{-5}).
+\] 因此 \[
+s=\frac{v_0^2}{4A}
+\left[\ln u+\frac54-u^{-2}-\frac14u^{-4}\right].
+\] 代回能量，两边完全相同。路径长度不能用 \(\sqrt{x^2+y^2}\)
+代替，因为轨迹弯曲。
+
+\textbf{摩擦系数偏离临界值会怎样。} 定义
+\(\gamma=\mu\cot\theta>0\)，使动摩擦减速度为
+\(B=\gamma A\)，\(A=g\sin\theta\)。初速仍沿等高线。以速度方向角 \(\psi\)
+描述，方程是 \[
+\dot v=A(\sin\psi-\gamma),\qquad
+v\dot\psi=A\cos\psi.
+\] 消去时间： \[
+\frac{d\ln v}{d\psi}=\tan\psi-\gamma\sec\psi.
+\] 积分并用初值 \(v(0)=v_0\)： \[
+v\cos\psi\,(\sec\psi+\tan\psi)^\gamma=v_0.
+\] 令 \(u=\sec\psi+\tan\psi\ge1\)， \[
+v_x=v_0u^{-\gamma},
+\] \[
+v_y=\frac{v_0}{2}(u^{1-\gamma}-u^{-1-\gamma}),\qquad
+v=\frac{v_0}{2}(u^{1-\gamma}+u^{-1-\gamma}).
+\] 原题 \(\gamma=1\) 恰使 \(v+v_y\)
+恒定。若误把这个不变量用于其他摩擦系数，会得到错误的有限末速。
+
+\textbf{三种长期行为。} 由方向方程， \[
+\frac{dt}{du}=\frac{v_0}{2A}
+(u^{-\gamma}+u^{-\gamma-2}).
+\] 对 \(\gamma\ne1\)， \[
+t(u)=\frac{v_0}{2A}\left[
+\frac{u^{1-\gamma}-1}{1-\gamma}
++\frac{1-u^{-\gamma-1}}{\gamma+1}\right].
+\] 当 \(\gamma<1\)，\(u\to\infty\)
+所需时间无穷，速度沿坡无界增大，长期加速度趋于 \(A(1-\gamma)\)。当
+\(\gamma=1\)，速率趋于原题的 \(v_0/2\)。当
+\(\gamma>1\)，速率趋零且滑动结束时间有限： \[
+\boxed{t_{\rm stop}=\frac{v_0\gamma}{A(\gamma^2-1)}}.
+\] 滑动结束后是否停住应由静摩擦条件决定；若
+\(\mu_s\ge\tan\theta\)，可以维持静止。到 \(v=0\)
+时动摩擦方向公式不再适用。
+
+\textbf{横向位移的临界。} 将 \(dx/du=v_xdt/du\) 积分到
+\(u\to\infty\)，只有 \(\gamma>1/2\) 才得到有限极限： \[
+\boxed{x_\infty=
+\frac{2\gamma v_0^2}{A(4\gamma^2-1)}}.
+\] \(\gamma=1\) 回到 \(2v_0^2/(3A)\)。若
+\(0<\gamma\le1/2\)，横向速度虽然趋零，累计横向位移仍可无界；``速度趋零''与``总位移有限''不能互相替代。
+
+\needspace{14\baselineskip}
+
+\textbf{一个有限时刻的精确读数。} 横向速度降为初值的一半时，参数
+\(u=2\)。于是 \[
+t_{1/2}=\frac{v_0}{2A}\left(\ln2+\frac38\right),
+\qquad v_y=\frac38v_0,\qquad v=\frac58v_0.
+\] 横向位移为 \[
+x_{1/2}=\frac{19v_0^2}{48A},
+\] 下坡位移为 \[
+y_{1/2}=\frac{v_0^2}{4A}\left(\ln2-\frac{15}{64}\right).
+\]
+这组量能同时代回时间、速度和空间轨迹公式，适合检查数值积分。此时总速率已经小于初值，但仍大于最终
+\(v_0/2\)；横向速度减半不代表总速率也减半。
+
+\newpage
+
+\section{第 2 题}\label{ux7b2c-2-ux9898}
+
+质量 \(m\) 的粒子以初速大小 \(v_0\) 在光滑平面轨道 \(r=r_0e^{-a\theta}\)
+上运动，\(a>0\)，初始
+\(t=0,\theta=0\)。无其他做功的力。求：（1）速度与向外径向单位向量的夹角
+\(\beta\)；（2）关于原点的角动量变化率；（3）轨道作用力。分别注明沿
+\(\theta\) 增大和减小方向的情况。
+
+\includegraphics[width=0.86\linewidth,height=\textheight,keepaspectratio,alt={题2　题设与符号}]{../figures/question-02.pdf}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-1}
+
+对数螺线上的受约束运动。光滑约束不做功，速率恒定；轨道法线不经过原点，因此关于原点的角动量不守恒。切线、曲率和力矩必须采用同一个极坐标基准。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-1}
+
+极坐标速度与加速度；无功约束；角动量与力矩；曲率半径；对数螺线；有限时间奇点。
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-1}
+
+图2-1中 \(\boldsymbol e_r\) 指向远离原点，\(\boldsymbol e_\theta\) 沿
+\(\theta\)
+增大方向。粒子沿螺线向内运动时，速度有负径向、正角向分量。轨道作用力在主法线方向，与速度垂直。图2-2标出切向和法向，不能把作用力画成单纯径向力。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-1}
+
+从 \(dr/d\theta=-ar\) 得到速度分量比例。用恒速确定
+\(\dot r,r\dot\theta\)，然后计算 \(L_z=mr^2\dot\theta\)
+与其导数。作用力可由极坐标加速度求出，再用曲率作独立检查。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-1}
+
+\textbf{恒速与两个方向。} 轨道约束力垂直瞬时速度，不做功，因此
+\(v=v_0\)。令 \(s=+1\) 表示 \(\theta\) 增大、向内运动，\(s=-1\)
+表示反向： \[
+\boldsymbol v=r\dot\theta(-a\boldsymbol e_r+\boldsymbol e_\theta),
+\] \[
+r\dot\theta=\frac{s v_0}{\sqrt{1+a^2}},\qquad
+\dot r=-\frac{s av_0}{\sqrt{1+a^2}}.
+\] 这里 \(a\) 无量纲，不能把它当成长度或加速度。速度的单位由
+\(r\dot\theta\) 提供。
+
+\textbf{夹角。} 向内支 \(s=+1\) 有 \[
+\cos\beta=-\frac a{\sqrt{1+a^2}},\qquad
+\sin\beta=\frac1{\sqrt{1+a^2}}.
+\] 故 \[
+\boxed{\beta=\frac\pi2+\arctan a}.
+\] 若沿相反方向，速度反向，与向外径向的无向夹角为 \[
+\boxed{\beta=\frac\pi2-\arctan a}.
+\] 若只说切线与径向直线的锐角，则为
+\(\arctan(1/a)\)；它不是向内速度与向外径向单位向量的夹角。题目使用方向向量，必须保留钝角支。
+
+\textbf{角动量及变化率。} 因位置为 \(r\boldsymbol e_r\)， \[
+L_z=mr^2\dot\theta
+=\frac{s mv_0r}{\sqrt{1+a^2}}.
+\] 再求导： \[
+\dot L_z
+=\frac{s mv_0\dot r}{\sqrt{1+a^2}}
+=\boxed{-\frac{amv_0^2}{1+a^2}}.
+\]
+两种运动方向都给负的力矩。向内支的正角动量随半径减小而下降；向外支的负角动量随半径增大而更负。因此``反向运动会使力矩反向''在这条恒速轨道上并不成立。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.86\linewidth,height=\textheight,keepaspectratio,alt={图2-2　切向、主法线与力矩}]{../figures/solution-02.pdf}
+\caption*{图2-2　切向、主法线与力矩}
+\end{figure}
+
+\textbf{由极坐标加速度求力。} \(\dot r\) 是常量，所以
+\(\ddot r=0\)。又有 \[
+\dot\theta=\frac{s v_0}{r\sqrt{1+a^2}},\qquad
+\ddot\theta=-\frac{\dot r}{r}\dot\theta.
+\] 加速度为 \[
+\boldsymbol a_{\rm p}
+=(\ddot r-r\dot\theta^2)\boldsymbol e_r
++(r\ddot\theta+2\dot r\dot\theta)\boldsymbol e_\theta.
+\] 分别计算得 \[
+a_r=-\frac{v_0^2}{r(1+a^2)},\qquad
+a_\theta=-\frac{av_0^2}{r(1+a^2)}.
+\] 因此 \[
+\boxed{\boldsymbol N=
+-\frac{mv_0^2}{r(1+a^2)}
+(\boldsymbol e_r+a\boldsymbol e_\theta)},
+\] 大小为 \[
+\boxed{N=\frac{mv_0^2}{r\sqrt{1+a^2}}}.
+\] 直接点乘速度： \[
+(\boldsymbol e_r+a\boldsymbol e_\theta)
+\cdot(-a\boldsymbol e_r+\boldsymbol e_\theta)=0,
+\] 证明轨道力与速度垂直；叉乘则给
+\(rN_\theta=\dot L_z\)。能量、角动量两个检查分别验证力的不同分量。
+
+\textbf{曲率法复算。} 对极坐标曲线，曲率为 \[
+\kappa=\frac{|r^2+2r'^2-rr''|}
+{(r^2+r'^2)^{3/2}}.
+\] 本题 \(r'=-ar,r''=a^2r\)，所以 \[
+\kappa=\frac1{r\sqrt{1+a^2}},\qquad
+R_c=r\sqrt{1+a^2}.
+\] 恒速运动的法向力 \(mv_0^2/R_c\) 与前式一致。曲率半径是
+\(R_c\)，不是位置半径 \(r\)；两者仅在 \(a\to0\) 的圆轨道极限相同。
+
+\textbf{显式时间解。} 令 \(q=av_0/\sqrt{1+a^2}\)，则 \[
+r(t)=r_0-sqt.
+\] 由轨道方程， \[
+\theta(t)=-\frac1a\ln\frac{r(t)}{r_0}.
+\] 向内支在 \[
+t_c=\frac{r_0\sqrt{1+a^2}}{av_0}
+\] 时趋于原点。此时 \(\theta\to+\infty\)、\(N\to\infty\)，但总路长有限：
+\[
+\ell_{\rm total}=v_0t_c=
+\frac{r_0\sqrt{1+a^2}}a.
+\] 无限绕转并不意味着无限长度。原点是理想轨道的奇点，不能把 \(t=t_c\)
+后的负半径继续当成物理轨迹。
+
+\textbf{极限的次序。} 当 \(a\to0\) 且 \(r_0\) 固定，轨道趋于半径 \(r_0\)
+的圆，力矩趋于零，法向力趋于 \(mv_0^2/r_0\)，到中心时间趋于无穷。当
+\(a\)
+很大，螺线切向接近径向，曲率减小，局部法向力也减小，但靠近原点时仍会发散。
+
+\textbf{一圈中的角动量变化。} 向内运动一圈，半径变为
+\(r_0e^{-2\pi a}\)。所用时间为 \[
+\Delta t=\frac{r_0\sqrt{1+a^2}}{av_0}
+(1-e^{-2\pi a}).
+\] 恒定力矩乘时间给 \[
+\Delta L_z=
+-\frac{mv_0r_0}{\sqrt{1+a^2}}
+(1-e^{-2\pi a}),
+\]
+与直接用首末角动量相减一致。此检验使用整段运动，而不是只检查某一点的力方向。
+
+\textbf{曲率从极坐标求出。} 对 \(r=r_0e^{-a\theta}\)，有
+\(r'=-ar,r''=a^2r\)。极曲线弧长元和曲率为 \[
+ds=\sqrt{r^2+r'^2}\,|d\theta|
+=r\sqrt{1+a^2}\,|d\theta|,
+\] \[
+\kappa=\frac{|r^2+2r'^2-rr''|}
+{(r^2+r'^2)^{3/2}}
+=\frac1{r\sqrt{1+a^2}}.
+\] 无摩擦约束不做功，速率为 \(v_0\)。所需轨道法向力 \[
+N=mv_0^2\kappa=\frac{mv_0^2}{r\sqrt{1+a^2}}.
+\] 轨道法线不是半径方向，因为 \(r\) 同时随角度变化。将切线归一化： \[
+\boldsymbol t=\frac{-a\boldsymbol e_r+\boldsymbol e_\theta}{\sqrt{1+a^2}},
+\qquad
+\boldsymbol n=\frac{-\boldsymbol e_r-a\boldsymbol e_\theta}{\sqrt{1+a^2}},
+\] 得到
+\(N_r=-mv_0^2/[r(1+a^2)]\)、\(N_\theta=-amv_0^2/[r(1+a^2)]\)。图2-2的支持力沿这条斜法线，不能只画成向心力。
+
+\textbf{极坐标运动方程回代。} 向内走取 \(\dot\theta>0\)： \[
+\dot r=-\frac{av_0}{\sqrt{1+a^2}},\qquad
+\dot\theta=\frac{v_0}{r\sqrt{1+a^2}}.
+\] 由于 \(\dot r\) 为常量，\(\ddot r=0\)，故 \[
+a_r=\ddot r-r\dot\theta^2
+=-\frac{v_0^2}{r(1+a^2)}.
+\] 角加速度 \[
+\ddot\theta=-\frac{v_0\dot r}{r^2\sqrt{1+a^2}}
+=\frac{av_0^2}{r^2(1+a^2)}.
+\] 所以 \[
+a_\theta=r\ddot\theta+2\dot r\dot\theta
+=-\frac{av_0^2}{r(1+a^2)}.
+\] 这与曲率法独立一致。虽 \(\ddot\theta>0\)，切向极坐标加速度
+\(a_\theta\) 为负；它包含基矢转动项，不能只看 \(r\ddot\theta\)。
+
+\textbf{有限时间到达奇点。} 从 \(r_0\) 向内： \[
+r(t)=r_0-\frac{av_0}{\sqrt{1+a^2}}t,\qquad
+t_c=\frac{r_0\sqrt{1+a^2}}{av_0}.
+\] 角度为 \[
+\theta(t)=-\frac1a\ln(1-t/t_c).
+\] 当 \(t\to t_c^-\)，角度无界，但走过的长度仅
+\(v_0t_c\)。这是几何螺旋的有限长度端点，所需力却发散，理想轨道在原点没有正常延拓。
+
+若轨道只能承受 \(N_{\max}\)，首先失效的半径满足 \[
+r_{\min}=\frac{mv_0^2}{N_{\max}\sqrt{1+a^2}}.
+\] 若 \(r_{\min}\ge r_0\)，初态就超载；否则到失效的时间 \[
+t_{\rm fail}=\frac{(r_0-r_{\min})\sqrt{1+a^2}}{av_0}.
+\] 无摩擦只意味着约束不做功，不意味着约束能提供无限大力。
+
+\textbf{角动量与力矩。} 角动量
+\(L_z=mr^2\dot\theta=mv_0r/\sqrt{1+a^2}\)，其变化率 \[
+\dot L_z=-\frac{amv_0^2}{1+a^2}.
+\] 轨道力矩 \(rN_\theta\)
+正好等于该常量；角动量不守恒。反向沿轨道走，角动量本身为负，半径随时间增大，但
+\(\dot L_z\) 仍为同一负值。
+
+\textbf{螺线有动摩擦时的速度。} 在原光滑轨道上加入动摩擦系数
+\(\mu\)，法向支持力仍由曲率确定： \[
+N=\frac{mv^2}{r\sqrt{1+a^2}}.
+\] 切向减速度为 \[
+\dot v=-\frac{\mu v^2}{r\sqrt{1+a^2}}.
+\] 仍记 \(s=\pm1\) 为角度运动方向，有
+\(\dot\theta=sv/[r\sqrt{1+a^2}]\)，所以 \[
+\frac{dv}{d\theta}=-s\mu v,\qquad
+\boxed{v(\theta)=v_0e^{-s\mu\theta}}.
+\] 向内支 \(s=+1\) 且 \(r=r_0e^{-a\theta}\)： \[
+v(r)=v_0(r/r_0)^{\mu/a}.
+\] 摩擦使速率下降，却不改变既定几何轨道的切线角。
+
+\textbf{是否仍在有限时间到达中心。} 向内运动所需时间满足 \[
+\frac{dt}{d\theta}=\frac{r_0\sqrt{1+a^2}}{v_0}
+e^{-(a-\mu)\theta}.
+\] 因此 \[
+t_c=
+\frac{r_0\sqrt{1+a^2}}{v_0(a-\mu)}
+\quad\text{仅当 }\mu<a.
+\] 若 \(\mu=a\)，时间与绕转角成正比，中心在无限时间才能趋近；若
+\(\mu>a\)，时间增长更快。对 \(\mu<a\)，虽然
+\(v\to0\)，仍可能在有限时间达到奇异中心。这与无限直线上的恒定摩擦停车是不同的初值问题。
+
+\textbf{法向力的三个极限。} 在向内支， \[
+N(r)=\frac{mv_0^2}{r_0\sqrt{1+a^2}}
+\left(\frac r{r_0}\right)^{2\mu/a-1}.
+\] 若 \(\mu<a/2\)，\(N\) 发散；若 \(\mu=a/2\)，\(N\) 趋有限常量；若
+\(\mu>a/2\)，\(N\to0\)。到中心时间的临界值为 \(\mu=a\)，法向力的临界值为
+\(\mu=a/2\)，两者不能混同。
+
+\textbf{角动量也要加入摩擦力矩。} 两方向均有 \[
+L_z=\frac{smvr}{\sqrt{1+a^2}}.
+\] 求导： \[
+\boxed{\dot L_z=-\frac{mv^2(a+s\mu)}{1+a^2}}.
+\] 向内支中约束与摩擦都给负力矩。向外支中摩擦给正力矩，若
+\(\mu>a\)，它可以超过约束力矩而使
+\(\dot L_z>0\)。原题无摩擦时``两方向力矩同号''的结论在这个变式中不再普遍成立。
+
+\needspace{14\baselineskip}
+
+\textbf{有限路长却有无限累计法向冲量。}
+光滑向内支到中心的路长有限，但法向力随 \(1/r\)
+增大。法向冲量大小的积分为 \[
+\int N\,dt=mv_0\int\kappa\,ds.
+\] 螺线弧长元为 \(ds=r\sqrt{1+a^2}\,d\theta\)，因此 \[
+\int N\,dt=mv_0\int_0^\infty d\theta=\infty.
+\] 而矢量总冲量是 \(\Delta(m\boldsymbol v)\)，其大小始终不超过
+\(2mv_0\)。二者并不矛盾：力的方向不停旋转，绝对值积分发散，矢量积分则不断抵消，并且在奇异终点一般没有唯一极限。理想中心无法承受这样的约束过程，应由有限最小半径截断。
+
+\newpage
+
+\section{第 3 题}\label{ux7b2c-3-ux9898}
+
+假想磁单极子的磁荷为 \(q\)，受力 \(F=qB\)，磁场
+\(B=\mu_0q/(4\pi r^2)\)。它在竖直平面内沿开口向上的光滑U形轨道运动，底部穿过一匝圆线圈中心，局部轨道沿线圈轴线。线圈半径
+\(b\) 远小于U形轨道宽度，导线半径 \(a\ll b\)，电阻率为
+\(\rho\)。单极子质量为 \(m\)，从高于底部 \(H\) 处静止释放，忽略自感。
+
+求：（1）单极子距线圈中心轴向坐标为 \(x\) 时的磁通；（2）轴向速度为
+\(v\)
+时的电动势；（3）一次通过的速度变化；（4）通过多少次才能静止；（5）能量法与动力学法是否一致。可用
+\(\int_{-\infty}^{\infty}(1+u^2)^{-3}du=3\pi/8\)。
+
+\includegraphics[width=0.86\linewidth,height=\textheight,keepaspectratio,alt={题3　题设与符号}]{../figures/question-03.pdf}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-2}
+
+磁单极子引发的电磁阻尼。磁荷穿过积分面时，普通无磁荷法拉第公式必须修正；局部直轨道近似给每次穿过的速度减量，却不能无条件给有限次``最终停车''。本题需区分严格模型与弱阻尼近似。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-2}
+
+磁通积分；带磁流的法拉第定律；欧姆定律；圆电流轴线场；速度随位置的微分；焦耳热；局部近似与渐近停止。
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-2}
+
+图3-1的 \(+x\) 沿底部轨道向右，线圈法向也取 \(+x\)。单极子从左向右运动时
+\(v>0\)；电流正向按右手规则定义，使其产生的轴线场向
+\(+x\)。图3-2的电磁力总与速度相反，并在 \(|x|\sim b\)
+内最明显。穿过线圈圆盘时磁通有跳变，但真实电动势不含由普通法拉第公式误加的冲量。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-2}
+
+先求有向磁通和线圈电阻。用磁流项消去磁通跳变的奇异项，再由感应电流求轴向力。局部忽略重力切向分量时，用
+\(\dot v=v\,dv/dx\) 约去一个 \(v\)。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-2}
+
+\textbf{磁通的有向表达。} 取圆盘位于 \(x=0\)，法向
+\(+x\)，单极子位于坐标 \(x\)。盘上距轴为 \(s\) 的点有法向磁场 \[
+B_n=-\frac{\mu_0qx}{4\pi(x^2+s^2)^{3/2}}.
+\] 积分得 \[
+\Phi(x)=\int_0^bB_n\,2\pi s\,ds
+=\boxed{\frac{\mu_0q}{2}
+\left[\frac{x}{\sqrt{x^2+b^2}}-\operatorname{sgn}x\right]}.
+\] 在 \(x\to0^-\) 与 \(x\to0^+\)，分别趋于 \(+\mu_0q/2\) 与
+\(-\mu_0q/2\)，跳变量为 \(-\mu_0q\)。在
+\(x=0\)，磁荷本身在积分面上，普通面积积分应通过两侧极限或排除小邻域处理。
+
+\textbf{为什么电动势没有无穷大脉冲。} 存在磁荷电流时，有 \[
+\mathcal E=-\frac{d\Phi}{dt}-\mu_0I_m.
+\] 穿过圆盘的磁荷电流为 \(I_m=qv\delta(x)\)。磁通导数含
+\(-\mu_0qv\delta(x)\)，两项正好抵消。剩下平滑电动势 \[
+\boxed{\mathcal E=
+-\frac{\mu_0qb^2v}{2(x^2+b^2)^{3/2}}}.
+\] 磁流项的必要性可参看
+\href{https://www.nevis.columbia.edu/~phypharm/monopole/monopoleReview2006.pdf}{Milton
+的磁单极子综述，第11节}。文献采用的单位制不同，这里按题设SI定义写出
+\(\mu_0\) 系数。
+
+若只在 \(x\ne0\)
+求普通磁通导数，也得到平滑部分，但必须明确穿面处的跳变已经由磁流项处理。把跳变直接除以一个任意短时间会制造没有物理依据的巨大焦耳热。
+
+\textbf{电阻、电流和阻力。} 导线长为 \(2\pi b\)，截面积为 \(\pi a^2\)，
+\[
+R=\frac{2\rho b}{a^2}.
+\] 定义 \(K=\mu_0qb^2/2\)，则 \[
+I=\mathcal E/R=-\frac{Kv}{R(x^2+b^2)^{3/2}}.
+\] 圆线圈轴线磁场为 \(\mu_0Ib^2/[2(x^2+b^2)^{3/2}]\)，故单极子的力 \[
+\boxed{F_x=-\frac{K^2v}{R(x^2+b^2)^3}}.
+\] 无论磁荷正负，阻力均与速度反向，因为系数含
+\(q^2\)。图3-2标出的反向箭头与该式一致。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.88\linewidth,height=\textheight,keepaspectratio,alt={图3-2　局部阻力与一次通过的速度递减}]{../figures/solution-03.pdf}
+\caption*{图3-2　局部阻力与一次通过的速度递减}
+\end{figure}
+
+\textbf{局部直轨道的一次完整通过。} 在电磁作用区忽略重力的切向分量，有
+\[
+mv\frac{dv}{dx}=
+-\frac{K^2v}{R(x^2+b^2)^3}.
+\] 只要途中 \(v>0\)，可以约去 \(v\)： \[
+\frac{dv}{dx}=-\frac{K^2}{mR(x^2+b^2)^3}.
+\] 从 \(-\infty\) 到 \(+\infty\) 的总速率减量为 \[
+\Delta v=
+\frac{K^2}{mR}\frac{3\pi}{8b^5}
+=\boxed{\frac{3\pi\mu_0^2q^2}{32mRb}}.
+\] 代入电阻， \[
+\boxed{\Delta v=
+\frac{3\pi\mu_0^2q^2a^2}{64m\rho b^2}}.
+\] ``与入口速度无关''要求单极子确实完成整段通过。若
+\(v_{\rm in}\le\Delta v\)，公式不能继续给负的出口速度。
+
+\textbf{通过过程的速度函数。} 令 \(u=x/b\)，所需原函数为 \[
+\mathcal F(u)=
+\frac{u}{4(1+u^2)^2}
++\frac{3u}{8(1+u^2)}
++\frac38\arctan u.
+\] 于是 \[
+v(x)=v_{\rm in}
+-\frac{K^2}{mRb^5}
+\left[\mathcal F(x/b)+\frac{3\pi}{16}\right].
+\] 微分可复核 \(\mathcal F'=(1+u^2)^{-3}\)。当
+\(v_{\rm in}<\Delta v\)，速度在某个有限坐标 \(x_*\) 趋于零；时间积分
+\(\int dx/v(x)\) 在该点发散。无重力局部模型中的``停止''仍是渐近停止。
+
+\textbf{完整通过次数与最终静止不能混为一谈。}
+若两次经过线圈之间的U形远段没有能量损失，并把每次底部入口速率近似为前次出口速率，则
+\[
+v_n=v_0-n\Delta v,\qquad v_0\simeq\sqrt{2gH}.
+\]
+首速近似还要求首段感应损失可作为底部局部事件处理，不能在进入线圈前已发生强损失时直接套用。严格完成第
+\(n\) 次完整通过需 \(v_0-n\Delta v>0\)。因此局部模型可给的完整次数为 \[
+\boxed{n_{\rm complete}=
+\left\lceil\frac{v_0}{\Delta v}\right\rceil-1}.
+\]
+如果比值恰为整数，最后一段出口只在无穷远趋于零，不算有限时间的完整通过。常见
+\(v_0/\Delta v\) 是弱阻尼下的尺度估算，不是必为整数的精确停车次数。
+
+\textbf{原U形轨道的最终阶段需要重力与形状。}
+当速度变小，线圈作用区内的重力切向分量不再可忽略。题目只给宽度，未给底部曲率，不能从局部直轨道推出最后振动的完整次数。若底部平滑且有正曲率，附近通常为阻尼小振动，振幅渐近趋于零；是否跨中心无限多次还取决于阻尼与底部曲率。故``有限通过多少次后严格静止''在所给理想模型中没有普遍整数答案。
+
+\textbf{能量法与动力学法完全一致。} 瞬时焦耳热功率为 \[
+P_J=I^2R=
+\frac{K^2v^2}{R(x^2+b^2)^3}=-F_xv.
+\] 用 \(dt=dx/v\)， \[
+Q_J=\int\frac{K^2v(x)}{R(x^2+b^2)^3}dx.
+\] 又因 \(m\,dv/dx=-K^2/[R(x^2+b^2)^3]\)， \[
+Q_J=-m\int_{v_{\rm in}}^{v_{\rm out}}v\,dv
+=\boxed{\frac m2(v_{\rm in}^2-v_{\rm out}^2)}.
+\] 完整通过时 \(v_{\rm out}=v_{\rm in}-\Delta v\)，所以 \[
+\boxed{Q_J=mv_{\rm in}\Delta v-\frac m2(\Delta v)^2}.
+\] 若在能量积分中把全过程速度近似为
+\(v_{\rm in}\)，只能得到第一项。它与严格动力学结果的差不是两种方法矛盾，而是忽略了过程中速度的下降。该近似要求
+\(\Delta v/v_{\rm in}\ll1\)。
+
+\textbf{从场积分重建磁通。} 把单极子放在轴线上
+\(x\)，线圈平面在原点，法向 \(+x\)。面上径向坐标为 \(s\)： \[
+B_x=-\frac{\mu_0q_m x}{4\pi(x^2+s^2)^{3/2}}.
+\] 沿圆盘积分： \[
+\Phi=\int_0^b B_x\,2\pi s\,ds
+=\frac{\mu_0q_m}{2}
+\left[\frac{x}{\sqrt{x^2+b^2}}-\operatorname{sgn}x\right].
+\]
+磁通在穿面事件有跳跃，普通无磁荷法拉第式不足以描述。广义式包含穿面磁荷电流，抵消符号函数的分布导数，留下有限电动势
+\[
+\mathcal E=-\frac{\mu_0q_m b^2}{2(x^2+b^2)^{3/2}}\,v.
+\]
+若一见跳跃就把磁通差除以极短时间，会得到无穷脉冲电流；那是漏掉磁荷项的结果。
+
+\textbf{速度损失不依赖通过速度的条件。} 定义 \[
+K=\mu_0q_m b^2/2,\qquad
+\Gamma(x)=\frac{K^2}{R(x^2+b^2)^3}.
+\] 在忽略自感与通过区重力的直线模型中， \[
+m\dot v=-\Gamma(x)v.
+\] 对严格向前的完整通过，\(\dot v=v\,dv/dx\)，于是 \[
+m\frac{dv}{dx}=-\Gamma(x).
+\] 注意约去 \(v\) 要求 \(v>0\)；停止点不能继续延伸。完整通过的速度损失
+\[
+\Delta v=\frac{K^2}{mR}\int_{-\infty}^{\infty}
+\frac{dx}{(x^2+b^2)^3}
+=\frac{3\pi K^2}{8mRb^5}.
+\] 代入
+\(R=2\rho_{\rm e}b/a^2\)，得到正文的表达式。其速度独立性来自电阻耗散力正比于速度，非普遍碰撞规律。
+
+\textbf{有限区间的误差。} 令 \(u=x/b\)，原函数 \[
+F(u)=\frac{u}{4(1+u^2)^2}
++\frac{3u}{8(1+u^2)}
++\frac38\arctan u.
+\] \(F'=1/(1+u^2)^3\)，从 \(-L\) 到 \(L\) 的损失为 \[
+\Delta v_L=\frac{K^2}{mRb^5}
+[F(L/b)-F(-L/b)].
+\] 若 \(L/b\gg1\)，尾部相对误差领先项 \[
+\frac{\Delta v-\Delta v_L}{\Delta v}
+\sim\frac{16}{15\pi}(b/L)^5.
+\] 因为被积函数在远处按 \(x^{-6}\)
+衰减，通过区可局部化；但是否忽略重力仍需另作时间尺度检查，不能只看空间尾部小。
+
+\textbf{严格通过数与停止的区别。} 完整通过后速度更新
+\(v_{k+1}=v_k-\Delta v\)。第 \(k+1\) 次完整通过必须满足
+\(v_k>\Delta v\)。因此完整次数为 \[
+N_{\rm full}=\max\{0,\lceil v_0/\Delta v\rceil-1\}.
+\]
+若恰为整数比，最后一次以零出射速度到达理想远端，不是严格正速的完整通过。若入速小于
+\(\Delta v\)，它在局部阻尼区内逐渐停下，不能把更新式继续到负速度。
+
+\textbf{焦耳热独立计算。} 由 \(I^2R=\Gamma v^2\)： \[
+Q=\int I^2R\,dt=\int\Gamma v\,dx.
+\] 利用 \(\Gamma dx=-m\,dv\)： \[
+Q=m\int_{v_{\rm out}}^{v_{\rm in}}v\,dv
+=\frac m2(v_{\rm in}^2-v_{\rm out}^2).
+\] 所以
+\(Q=m v_{\rm in}\Delta v-m(\Delta v)^2/2\)。把速度在积分内冻结为入速，会高估后面的二阶项。
+
+\textbf{保留线圈自感的能量方程。} 原题明确忽略自感。增加线圈自感 \(L_c\)
+后，电路不再是瞬时 \(I=\mathcal E/R\)，而是 \[
+L_c\dot I+RI=\mathcal E,\qquad
+\mathcal E=-\frac{Kv}{(x^2+b^2)^{3/2}}.
+\] 单极子所受轴向力为 \[
+F_x=\frac{KI}{(x^2+b^2)^{3/2}}.
+\] 因此 \[
+F_xv=-I\mathcal E.
+\] 将电路式乘以 \(I\)： \[
+\frac d{dt}\left(\frac12L_cI^2\right)+RI^2=I\mathcal E.
+\] 与单极子的机械能变化相加，局部直轨道上有 \[
+\boxed{\frac d{dt}
+\left(\frac12mv^2+\frac12L_cI^2\right)=-RI^2}.
+\] 若同时考虑U形轨道重力，只需再加入
+\(mgy\)。自感将部分损失暂存为磁场能，不能把机械能减少量在每个瞬间都等同焦耳热。
+
+\textbf{超导极限的一次完整穿越。} 令
+\(R=0\)，初始远处电流为零。在全过程确实穿过线圈的条件下， \[
+L_c(I_f-I_i)=\int\mathcal E\,dt
+=-K\int_{-\infty}^{+\infty}\frac{dx}{(x^2+b^2)^{3/2}}
+=-\mu_0q.
+\] 所以 \[
+\boxed{I_f=-\mu_0q/L_c}.
+\]
+粒子远离后电流仍保留，不存在原电阻模型的即时衰减。机械能守恒与最终磁能给
+\[
+\frac12mv_f^2=\frac12mv_i^2-\frac{\mu_0^2q^2}{2L_c},
+\] \[
+\boxed{v_f^2=v_i^2-\frac{\mu_0^2q^2}{mL_c}}.
+\]
+完整通过需足够的初始能量；若右边非正，不能按此式构造负速率或虚速度的出口。
+
+\textbf{何时可以忽略自感。} 磁作用区的穿越时间数量级为
+\(t_b=b/v_i\)，电路时间常量为 \(L_c/R\)。原题瞬时欧姆响应要求 \[
+\epsilon_L=\frac{L_cv_i}{Rb}\ll1.
+\]
+当自感很大或进入速度很高时这个条件失效。磁荷穿面引起的磁流修正仍必须保留；加入自感不等于重新出现磁通跳变造成的无穷大电动势。
+
+\needspace{14\baselineskip}
+
+\textbf{完整通过的焦耳热精确核对。} 在忽略自感和局部重力的原模型中， \[
+-m\,dv=\frac{K^2}{R(x^2+b^2)^3}\,dx.
+\] 焦耳热可写成 \[
+Q_J=\int RI^2dt
+=\frac{K^2}{R}\int\frac{v\,dx}{(x^2+b^2)^3}.
+\] 使用速度微分关系， \[
+\boxed{Q_J=-m\int_{v_i}^{v_f}v\,dv
+=\frac m2(v_i^2-v_f^2)}.
+\] 若 \(v_f=v_i-\Delta v>0\)， \[
+Q_J=mv_i\Delta v-\frac m2(\Delta v)^2.
+\] 把整个通过中的速度近似为入口速度，只得到第一项。该近似高估热量
+\(m(\Delta v)^2/2\)，相对误差在弱阻尼时为高阶；不能把这一差别误解为动力学和能量法不一致。
+
+\newpage
+
+\section{第 4 题}\label{ux7b2c-4-ux9898}
+
+密闭圆柱容器固定在可沿水平面自由移动的车上，空容器、车板、车轮总质量
+\(M=150\,\mathrm{kg}\)，容器长 \(L=10\,\mathrm m\)，内有质量
+\(m=120\,\mathrm{kg}\) 的理想气体。初温 \(T_0=300\,\mathrm K\)，压强
+\(P_0=150\,\mathrm{atm}\)。左端保持 \(300\,\mathrm K\)，右端加热并保持
+\(332\,\mathrm K\)，其他表面绝热。稳态温度沿长度近似线性，无化学反应。求稳态压强和容器自身质心的位移。忽略外部水平作用力及热流携带的净水平动量。
+
+\includegraphics[width=0.821\linewidth,height=\textheight,keepaspectratio,alt={题4　题设与符号}]{../figures/question-04.pdf}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-3}
+
+非均匀温度气体的机械稳态与质心位移。压力均匀不代表密度均匀；必须以
+\(1/T(x)\) 积分求总量和气体质心，再利用整个系统水平质心不变。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-3}
+
+局部理想气体状态方程；机械平衡；线性温度场；对数积分；密度加权质心；封闭系统质心守恒；非平衡稳态。
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-3}
+
+图4-1以容器左端为内部坐标 \(x=0\)，右端为
+\(x=L\)。右端热、密度较低，气体质心向左偏；容器为保持整体质心不变向右移。图4-2的温度线是线性函数，密度曲线则是其倒数，不应把密度也画成严格直线。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-3}
+
+写 \(T(x)=T_l+\Delta T\,x/L\)。由局部气体关系
+\(\rho_g(x)\propto P/T(x)\)，质量守恒决定 \(P\)；同一密度权重求
+\(x_g\)。最后将容器整体位移 \(X\) 与气体相对容器的偏移区分。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-3}
+
+\textbf{机械平衡的压力。}
+稳态无宏观加速，在忽略高度差和沿轴重力时，压强沿容器轴线相同。温度却可不均匀，因此气体数密度
+\[
+n(x)=\frac{P}{k_BT(x)}.
+\] 设容器截面积为 \(S\)，总粒子数 \(\mathcal N\) 不变。初态 \[
+\mathcal N=\frac{P_0SL}{k_BT_0}.
+\] 稳态 \[
+\mathcal N=\frac{PS}{k_B}\int_0^L\frac{dx}{T_l+\Delta T\,x/L}.
+\] 积分为 \[
+\int_0^L\frac{dx}{T(x)}
+=\frac{L}{\Delta T}\ln\frac{T_r}{T_l}.
+\] 于是 \[
+\boxed{P=P_0\frac{\Delta T}{T_0\ln(T_r/T_l)}}.
+\] 本题 \(T_l=T_0=300\,\mathrm K,\Delta T=32\,\mathrm K\)，给出 \[
+\boxed{P\approx157.865\,\mathrm{atm}}.
+\] 直接用算术平均温度 \(316\,\mathrm K\) 会得到
+\(158\,\mathrm{atm}\)；虽然数值接近，但不是该线性温度场的精确积分结果。正确等效温度是对数平均温度
+\(\Delta T/\ln(T_r/T_l)\)。
+
+\textbf{气体相对容器的质心。} 密度权重中的常数抵消： \[
+x_g=
+\frac{\int_0^Lx\,dx/T(x)}
+{\int_0^Ldx/T(x)}.
+\] 令 \(z=T_r/T_l\)，分子积分为 \[
+\int_0^L\frac{x\,dx}{T(x)}
+=\frac{L^2}{\Delta T}
+-\frac{T_lL^2}{(\Delta T)^2}\ln z.
+\] 因此 \[
+\boxed{x_g=L\left(\frac1{\ln z}-\frac1{z-1}\right)}.
+\] 数值为 \[
+x_g=4.915554\,\mathrm m,\qquad
+x_g-L/2=-0.084446\,\mathrm m.
+\] 气体质心向冷端偏移约 \(8.445\,\mathrm{cm}\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.86\linewidth,height=\textheight,keepaspectratio,alt={图4-2　温度、密度与两种质心位移}]{../figures/solution-04.pdf}
+\caption*{图4-2　温度、密度与两种质心位移}
+\end{figure}
+
+\textbf{容器的位移。} 初态取容器左端实验室坐标为0，整个系统质心在
+\(L/2\)。末态容器左端为 \(X\)，容器自身质心在 \(X+L/2\)，气体质心在
+\(X+x_g\)。整体质心不变： \[
+M(X+L/2)+m(X+x_g)=(M+m)L/2.
+\] 得到 \[
+\boxed{X=\frac m{M+m}\left(\frac L2-x_g\right)}.
+\] 代入数值， \[
+\boxed{X=0.0375315\,\mathrm m}
+\] ，即容器向热端移动约
+\(3.753\,\mathrm{cm}\)。气体质心在实验室中的实际位移为 \[
+\Delta x_{g,\rm lab}=X+x_g-L/2
+=-\frac M{M+m}(L/2-x_g),
+\] 约为
+\(-4.691\,\mathrm{cm}\)。一个是相对容器偏移，一个是实验室位移，两者不可混用。
+
+\textbf{弱温差展开。} 令 \(\epsilon=\Delta T/T_l\)。对 \[
+\frac{\epsilon}{\ln(1+\epsilon)}
+=1+\frac\epsilon2-\frac{\epsilon^2}{12}
++\frac{\epsilon^3}{24}+O(\epsilon^4),
+\] 压强的一阶近似是算术平均温度结果，二阶才出现区别。质心展开为 \[
+\frac{x_g}{L}
+=\frac12-\frac{\epsilon}{12}
++\frac{\epsilon^2}{24}
+-\frac{19\epsilon^3}{720}+O(\epsilon^4).
+\] 因此容器的一阶位移 \[
+X\simeq\frac m{M+m}\frac{L\Delta T}{12T_l}.
+\] 它随温差和气体质量比例增长。该展开也说明在 \(\Delta T\to0\)
+时，虽然闭式中有两个发散项相减，物理质心却平稳趋于 \(L/2\)。
+
+\textbf{改变温度分布时的通式。} 对任意正温度函数
+\(T(x)\)，只要仍有机械平衡与局部理想气体关系， \[
+P=P_0\frac{L}{T_0\int_0^L dx/T(x)},
+\] \[
+x_g=\frac{\int_0^Lx\,dx/T(x)}
+{\int_0^Ldx/T(x)}.
+\]
+容器位移仍由同一整体质心式给出。仅给两端温度而不指定内部温度分布，通常不能唯一计算压强和质心。线性温度假设是原题提供的必要条件，不是局部理想气体状态方程自动保证的结果。
+
+\textbf{对``新平衡''的准确表述。}
+两端温度不同且维持不变，内部存在持续热流，严格说是热学非平衡稳态；它可以同时满足机械平衡和局部热平衡。这里计算没有要求整个气体具有一个统一温度，也没有把全过程视为可逆。若求热流或总熵产生，还需导热系数和加热过程信息。
+
+\textbf{质量极限检查。} 当 \(m\ll M\)，容器很重，\(X\) 很小；当
+\(M\ll m\)，容器位移几乎抵消气体相对容器的偏移。交换冷热端时，密度曲线左右翻转，\(x_g\to L-x_g\)，\(X\)
+变号而压力不变。这些检查与图4-2的方向一致。
+
+\textbf{压力为什么不是温度算术平均的结果。} 容器截面积为
+\(S\)，局部粒子数密度
+\(n_{\rm d}=P/(kT)\)。稳态机械平衡使压力处处相同，而热端粒子密度更低。总气体质量固定：
+\[
+m=C_{\rm gas}P S\int_0^L\frac{dx}{T_l+(T_r-T_l)x/L}.
+\] 初态温度为 \(T_0\)、压力为 \(P_0\)，约去同一比例常数： \[
+\frac{P}{P_0}=\frac{L/T_0}{\int_0^L dx/T(x)}.
+\] 温度积分 \[
+\int_0^L\frac{dx}{T(x)}
+=\frac{L}{T_r-T_l}\ln(T_r/T_l)
+\] 给
+\(P/P_0=(T_r-T_l)/[T_0\ln(T_r/T_l)]\)。括号中的平均温度是对数平均温度，位于两端温度之间。
+
+\textbf{质心分子积分。} 记 \(\Delta T=T_r-T_l\)、\(z=T_r/T_l\)： \[
+\int_0^L\frac{x\,dx}{T_l+\Delta T x/L}
+=\frac{L^2}{\Delta T}
+\left[1-\frac{T_l}{\Delta T}\ln z\right].
+\] 除以归一化积分： \[
+\frac{x_g}{L}=\frac1{\ln z}-\frac1{z-1}.
+\]
+因为热端密度低，\(x_g<L/2\)。即使温差很小，方向也能先由密度判断，数值只是大小检查。
+
+\textbf{总质心守恒分解。} 容器质心在其几何中点，容器向热端位移
+\(X\)。初、末总质心分别是 \[
+X_{\rm CM,0}=\frac L2,\qquad
+X_{\rm CM,f}=X+\frac{ML/2+mx_g}{M+m}.
+\] 没有外部水平力，因此 \[
+X=\frac{m}{M+m}(L/2-x_g).
+\] 气体质心在实验室中的位移 \[
+\Delta x_{g,\rm lab}=X+x_g-L/2
+=-\frac{M}{M+m}(L/2-x_g).
+\] 一正一负，并满足
+\(MX+m\Delta x_{g,\rm lab}=0\)。不能把气体相对容器的移动量直接当实验室移动量。
+
+\textbf{小温差展开的稳定计算。} 设
+\(\epsilon=(T_r-T_l)/T_l\)，直接算两个大数 \(1/\ln(1+\epsilon)\) 与
+\(1/\epsilon\) 的差，极小温差时会丢失有效数字。展开得 \[
+\frac{x_g}{L}=\frac12-\frac{\epsilon}{12}
++\frac{\epsilon^2}{24}-\frac{19\epsilon^3}{720}+O(\epsilon^4).
+\] 因此首阶 \[
+X=\frac{mL}{12(M+m)}\,\epsilon+O(\epsilon^2).
+\] 压力展开为 \[
+\frac P{P_0}=\frac{T_l}{T_0}
+\left[1+\frac\epsilon2-\frac{\epsilon^2}{12}
++\frac{\epsilon^3}{24}+O(\epsilon^4)\right].
+\] 若初态
+\(T_0=T_l\)，首阶压力正好与算术平均一致，差别出现在二阶；这解释了错误平均法在小温差算例中为何可能看似准确。
+
+\textbf{任意稳态温度分布。} 只要压力均匀、理想气体且总质量固定， \[
+x_g=\frac{\int_0^L x/T(x)\,dx}{\int_0^L1/T(x)\,dx}.
+\] 若 \(T(x)=T_0[1+\epsilon f(x)]\)，展开归一化权重： \[
+x_g-\frac L2=-\epsilon
+\left[\frac1L\int_0^Lxf(x)\,dx
+-\frac12\int_0^Lf(x)\,dx\right]+O(\epsilon^2).
+\]
+这个式子由热端的相对稀疏决定，不要求温度严格线性。温度场的横向不对称程度直接控制气体质心位移。
+
+\textbf{任意温度分布下的压强和质心。}
+假设气体达到机械平衡，轴向压强均匀；但外界维持非均匀温度
+\(T(x)>0\)。横截面 \(S\) 恒定，总物质的量守恒给 \[
+N=\frac{PS}{R}\int_0^L\frac{dx}{T(x)}.
+\] 若初态为 \(P_0,T_0\)，则 \(N=P_0SL/(RT_0)\)，所以 \[
+\boxed{P=\frac{P_0L/T_0}{\int_0^Ldx/T(x)}}.
+\] 最终压强对应温度的调和平均，而不是算术平均。气体质心为 \[
+\boxed{x_g=
+\frac{\int_0^Lx\,dx/T(x)}
+{\int_0^Ldx/T(x)}}.
+\] 容器位移由总质心守恒给 \[
+X=-\frac{m}{M+m}(x_g-L/2).
+\]
+温度较高的一端密度较低，气体质心通常向低温端偏移，容器向相反方向移动。
+
+\textbf{小温差的通用展开。} 令
+\(u=x/L\)、\(T=T_0[1+\epsilon f(u)]\)，定义区间平均
+\(\langle f\rangle=\int_0^1f(u)\,du\)。使用 \[
+(1+\epsilon f)^{-1}=1-\epsilon f+\epsilon^2f^2+\cdots,
+\] 得到 \[
+\boxed{\frac{P}{P_0}=1+\epsilon\langle f\rangle
+-\epsilon^2[\langle f^2\rangle-\langle f\rangle^2]+O(\epsilon^3)}.
+\]
+二阶项是温度分布的负方差，说明同一平均温度下，温度越不均匀，压力越低。
+
+定义
+\(\operatorname{Cov}(u,f)=\langle uf\rangle-\tfrac12\langle f\rangle\)，质心展开为
+\[
+\frac{x_g}{L}=\frac12-\epsilon\operatorname{Cov}(u,f)
++\epsilon^2\left[
+\operatorname{Cov}(u,f^2)-\langle f\rangle\operatorname{Cov}(u,f)
+\right]+O(\epsilon^3).
+\] 若 \(f=u\)，有
+\(\operatorname{Cov}(u,u)=1/12\)、\(\operatorname{Cov}(u,u^2)=1/12\)，因此
+\[
+\frac{x_g}{L}=\frac12-\frac{\epsilon}{12}
++\frac{\epsilon^2}{24}+O(\epsilon^3),
+\] 与原题线性温度的对数精确式一致。若 \(f\)
+关于中点对称，\(\operatorname{Cov}(u,f)=0\)，实际整个密度分布也对称，质心严格保持
+\(L/2\)。
+
+\needspace{14\baselineskip}
+
+\textbf{相同端温，换一种温度分布。} 若左半段温度恒为 \(T_1\)、右半段恒为
+\(T_2\)，两段之间有窄过渡层，忽略其长度，则 \[
+T_{\rm eff}=\frac{2T_1T_2}{T_1+T_2}.
+\] 两半段质量比例分别为 \(T_2/(T_1+T_2)\) 与 \(T_1/(T_1+T_2)\)，所以 \[
+\boxed{\frac{x_g}{L}=
+\frac{T_2+3T_1}{4(T_1+T_2)}}.
+\] 容器位移为 \[
+\boxed{X=\frac{mL(T_2-T_1)}{4(M+m)(T_1+T_2)}}.
+\] 取原题 \(T_1=300\,\mathrm K,T_2=332\,\mathrm K\)，压强约
+\(157.595\,\mathrm{atm}\)，位移约
+\(0.05626\,\mathrm m\)。它们与线性温度分布的结果不同。原题的温度沿轴线性变化是一项必要条件，不能仅凭两端温度就推出唯一质心位移。
+
+\newpage
+
+\section{第 5 题}\label{ux7b2c-5-ux9898}
+
+柱状物体的横截面表面是非凹镜面，可含平面、凸面和棱角。物体绕内部轴旋转，固定激光束通过转轴入射。记录转角
+\(\theta\) 与有向出射偏角
+\(\alpha\)，原图可整理为以下开区间上的线段（角度单位为度）： \[
+\alpha=
+\begin{cases}
+2\theta,&0<\theta<45,\\
+\theta-90,&45<\theta<135,\\
+2(\theta-180),&135<\theta<225,\\
+\theta-270,&225<\theta<315,\\
+2(\theta-360),&315<\theta<360.
+\end{cases}
+\]
+在45、135、225、315度处有跳变。求：（1）横截面形状；（2）若表面距转轴最远处为
+\(r_0\)，写表面的分段极坐标方程。取 \(\theta\) 为逆时针转角，\(\alpha\)
+相对入射光反向延长的零度方向计量。
+
+\includegraphics[width=0.815\linewidth,height=\textheight,keepaspectratio,alt={题5　题设与符号}]{../figures/question-05.pdf}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-4}
+
+由镜面反射方向反求凸截面。测量曲线决定接触点的法线方向，再通过极坐标切线关系积分得到轮廓。曲线跳变对应棱角，而不是表面半径跳变。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-4}
+
+反射定律；物体坐标与实验室坐标；法线方向；极坐标切线；分段微分方程；边界连续性；尺度归一化；凸性检查。
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-4}
+
+图5-1画出从原扫描读出的折线，横轴为物体转角 \(\theta\)，纵轴为有向偏角
+\(\alpha\)。图5-2的轮廓由左右两段竖直线与上下两段抛物线帽组成，四个连接点为棱角。极角
+\(\varphi\) 属于物体固定坐标，不能与实验转角 \(\theta\) 混用。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-4}
+
+入射光沿实验室 \(-x\) 方向，碰到面法线的实验室角为
+\(\nu_{\rm lab}=\alpha/2\)。物体转过 \(\theta\) 后，接触点物体极角为
+\(\varphi=-\theta\)，法线物体角为 \(\nu=\alpha/2-\theta\)。利用
+\(r'/r=\tan(\varphi-\nu)\) 积分。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-4}
+
+\textbf{反射角与法线角。} 对法线方向 \(\nu_{\rm lab}\)，入射光方向为
+\(\pi\)，镜面反射后 \[
+\alpha=2\nu_{\rm lab}.
+\] 所以 \[
+\nu=\nu_{\rm lab}-\theta=\frac{\alpha}{2}-\theta,
+\qquad\varphi=-\theta.
+\] 将 \(\theta\) 当作极角会把重建轮廓左右镜像或整体转错。图5-2使用的
+\(\varphi=0\) 是物体在 \(\theta=0\) 时面对光源的径向方向。
+
+\textbf{极坐标轮廓与法线。} 位置向量为
+\(\boldsymbol r=r(\varphi)\boldsymbol e_r\)，切线向量为 \[
+\frac{d\boldsymbol r}{d\varphi}
+=r'\boldsymbol e_r+r\boldsymbol e_\varphi.
+\] 外法线可取与 \(r\boldsymbol e_r-r'\boldsymbol e_\varphi\) 平行。因此
+\[
+\tan(\nu-\varphi)=-\frac{r'}r,
+\] 即 \[
+\boxed{\frac{d\ln r}{d\varphi}
+=\tan(\varphi-\nu)
+=-\tan\frac{\alpha}{2}}.
+\] 这里 \(\alpha\) 要先转换成 \(\varphi\)
+的函数；微分式中的角以弧度计算。度数只用于显示分段端点。
+
+\textbf{斜率2的线段对应平面。}
+在零度附近，\(\alpha=2\theta=-2\varphi\)，所以 \[
+\frac{r'}r=\tan\varphi.
+\] 积分得 \[
+r=\frac d{\cos\varphi},\qquad |\varphi|<45^\circ.
+\] 于是 \(x=r\cos\varphi=d\)，为竖直线段。另一段
+\(\theta\in(135^\circ,225^\circ)\) 给出
+\(x=-d\)，因此轮廓左右各有一段平面镜。法线物体方向不变时，旋转引起的反射光角变化是转角的两倍，这与图5-1的斜率2一致。
+
+\textbf{斜率1的线段对应抛物线。} 上半轮廓
+\(\varphi\in(45^\circ,135^\circ)\) 对应
+\(\theta\in(225^\circ,315^\circ)\)，所以 \[
+\alpha=\theta-270^\circ=90^\circ-\varphi
+\pmod{360^\circ}.
+\] 选择与原图一致的有向支路后， \[
+\frac{r'}r=\tan\frac{\varphi-90^\circ}{2}
+=-\frac{\cos\varphi}{1+\sin\varphi}.
+\] 积分得 \[
+r=\frac K{1+\sin\varphi}.
+\] 在直角坐标中 \(r+y=K\)，平方消去根号： \[
+\boxed{y=\frac{K^2-x^2}{2K}}.
+\] 下半轮廓为对称抛物线 \[
+r=\frac K{1-\sin\varphi},\qquad
+y=-\frac{K^2-x^2}{2K}.
+\]
+抛物线的焦点正是转轴原点；但得到轮廓应先依据测量曲线与反射定律，不能仅凭``抛物线有反射性质''猜形状。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.86\linewidth,height=\textheight,keepaspectratio,alt={图5-2　两段平面与两段抛物线构成的截面}]{../figures/solution-05.pdf}
+\caption*{图5-2　两段平面与两段抛物线构成的截面}
+\end{figure}
+
+\textbf{连接条件决定常数比例。} 在 \(\varphi=45^\circ\)，平面段半径为
+\(\sqrt2d\)；上抛物线段半径为 \(K/(1+1/\sqrt2)\)。要求位置连续： \[
+K=(1+\sqrt2)d.
+\] 四个连接点为 \((\pm d,\pm d)\)，半径均为 \(\sqrt2d\)。上下帽顶半径为
+\(K/2\)，约为 \(1.2071d\)，小于角点半径
+\(1.4142d\)。沿各段检查可知最大半径在四角，故 \[
+\boxed{d=r_0/\sqrt2},\qquad
+\boxed{K=(1+1/\sqrt2)r_0}.
+\] 若错误地把帽顶半径当作 \(r_0\)，整套比例都会偏大。
+
+\textbf{完整分段极坐标方程。} 在 \(0\le\varphi<360^\circ\) 中， \[
+\boxed{
+r(\varphi)=
+\begin{cases}
+d/\cos\varphi,&0\le\varphi\le45^\circ,\\
+K/(1+\sin\varphi),&45^\circ\le\varphi\le135^\circ,\\
+-d/\cos\varphi,&135^\circ\le\varphi\le225^\circ,\\
+K/(1-\sin\varphi),&225^\circ\le\varphi\le315^\circ,\\
+d/\cos\varphi,&315^\circ\le\varphi<360^\circ.
+\end{cases}}
+\]
+端点两段给同一半径，位置连续；导数一般不同，形成棱角。也可把两段平面合写成
+\(r=d/|\cos\varphi|\)，但仍需给出适用的角区间。
+
+\textbf{法线跳变的检查。}
+以右上角为例，竖直面外法线方向为0；上帽的外法线由抛物线导数求得 \[
+\tan\nu=1/[-y'(x)]=K/x.
+\] 在 \(x=d\)，\(\tan\nu=1+\sqrt2\)，所以 \(\nu=67.5^\circ\)。法线跃变
+\(67.5^\circ\)，反射光角跃变 \(135^\circ\)。在右下角，法线从平面段的
+\(0^\circ\) 切换为下帽的 \(-67.5^\circ\)；物体转到 \(\theta=45^\circ\)
+时，实验室法线从 \(45^\circ\) 切换为 \(-22.5^\circ\)，反射偏角从
+\(90^\circ\) 切换为 \(-45^\circ\)，正好对应原图。
+
+更直接的核验是对每个开区间选择接触点
+\(\varphi=-\theta\)，从该段轮廓求外法线 \(\nu\)，转回实验室
+\(\nu+\theta\)，再算 \(\alpha=2(\nu+\theta)\)，归入原图采用的
+\([-90^\circ,90^\circ]\)
+显示支路。这样五段逐一回到题给测量折线，不需要在棱角处指定唯一反射方向。
+
+\textbf{非凹性检查。} 上帽二阶导为 \(y''=-1/K<0\)，下帽为
+\(+1/K\)，配合左右竖直段形成凸闭合区域。任意通过原点的入射射线先遇到的点就是所求
+\(r(\varphi)\)，不会被更靠外的凹陷遮挡。若重建得到多值半径或自交曲线，便不符合题设的非凹镜面。
+
+\textbf{测量能确定什么。}
+曲线决定轮廓的法线分布和各段相对尺度，积分常数需要连接条件与一个绝对长度。若不给
+\(r_0\)，只能确定相似形状，整体放大不改变反射角曲线。转轴位置同样重要；若激光不通过轴，接触点角不再等于
+\(-\theta\)，本题的简单反演微分式便需要修改。
+
+\textbf{反射方向如何反推法线。} 入射光沿固定方向，出射方向的有向角为
+\(\alpha\)，镜面法线为入、出射方向的角平分线。因此物体转角 \(\theta\)
+与法线在物体系的角 \(\nu\) 满足 \[
+\nu=\alpha/2-\theta\pmod\pi.
+\] 物体系入射侧的极角为 \(\phi=-\theta\)。对极坐标边界
+\(r(\phi)\)，外法线与半径的夹角满足 \[
+\tan(\nu-\phi)=-\frac{d\ln r}{d\phi}.
+\] 代入 \(\nu-\phi=\alpha/2\)，得到形状微分方程 \[
+\frac{d\ln r}{d\phi}=-\tan(\alpha/2).
+\]
+这一推导须保留有向角；仅用无符号夹角无法判断哪一段为平面、哪一段为曲面。
+
+\textbf{直线段积分。} 原图两段线性反射函数给出固定法线方向，等价于
+\(r\cos\phi=d\) 或 \(r\cos\phi=-d\)： \[
+r=\frac d{|\cos\phi|}.
+\] 其范围对应左右竖直侧面
+\(x=\pm d\)。极坐标半径在接近竖直方向时发散，但这部分不属于直线段的实际角区间，不能把段公式延伸一整圈。
+
+\textbf{上曲面积分。} 对 \(\pi/4<\phi<3\pi/4\)， \[
+\frac{d\ln r}{d\phi}=-\frac{\cos\phi}{1+\sin\phi}.
+\] 所以 \(r=K/(1+\sin\phi)\)。写成笛卡尔式： \[
+r+y=K,\qquad x^2+y^2=(K-y)^2.
+\] 约去 \(y^2\)： \[
+\boxed{y=\frac{K^2-x^2}{2K}}.
+\] 下曲面由中心对称得 \(y=-(K^2-x^2)/(2K)\)。当 \(x=d\)，连接处
+\(y=d\)，于是 \(K^2-2dK-d^2=0\)： \[
+K=(1+\sqrt2)d.
+\] 负根不能选，因为 \(r+y\) 为正。角点半径 \(\sqrt2d=r_0\)，故
+\(d=r_0/\sqrt2\)。
+
+\textbf{角点与法线跳变。} 上曲面导数 \(y'=-x/K\)，外法线方向正比于
+\((x/K,1)\)。右上角 \(x=d\) 的法线角 \[
+\nu_{\rm cap}=\arctan(K/d)=67.5^\circ.
+\] 右侧直线外法线角为零。反射方向变化两倍，因此出射方向跳变
+\(135^\circ\)，与题给分段图的跳跃一致。不能要求角点法线连续，否则会重建出另一种轮廓。
+
+\textbf{面积独立积分。} 物体全宽 \(2d\)，上下对称： \[
+\mathcal A=\int_{-d}^d
+\left[\frac{K^2-x^2}{K}\right]dx
+=2Kd-\frac{2d^3}{3K}.
+\] 利用 \(K/d=1+\sqrt2\) 和 \(d/K=\sqrt2-1\)： \[
+\boxed{\mathcal A=\frac{8+4\sqrt2}{3}d^2
+=\frac{4+2\sqrt2}{3}r_0^2}.
+\] 它大于中心正方形面积 \(4d^2\)，小于外接矩形面积
+\(2dK\)；两个几何界限可防止积分漏掉曲面帽部。
+
+\textbf{轮廓是否凸。} 上边界为凹函数
+\(y_{\rm top}(x)=K/2-x^2/(2K)\)，下边界为凸函数
+\(y_{\rm bot}(x)=-y_{\rm top}(x)\)。它们之间加上两条竖直边形成凸集。反射角跳变来自凸角点，而非内凹轮廓。图5-2应把四个角点、侧面和抛物线帽部一起画出。
+
+\textbf{从已重建轮廓求周长。} 上帽为
+\(f(x)=(K^2-x^2)/(2K)\)、\(-d\le x\le d\)，其导数为
+\(-x/K\)。两侧直段总长为 \(4d\)，上下帽总弧长为 \[
+4\int_0^d\sqrt{1+x^2/K^2}\,dx.
+\] 因此 \[
+\boxed{\mathcal P=
+4d+2d\sqrt{1+d^2/K^2}+2K\operatorname{arsinh}(d/K)}.
+\] 原反射曲线对整体尺度不敏感，但给定 \(r_0\)
+后，周长与面积都能唯一确定。周长正比于 \(r_0\)，面积正比于
+\(r_0^2\)，可用量纲检查积分。
+
+\textbf{均匀薄片的极惯量。} 若把截面区域做成面密度 \(\Sigma\)
+的均匀薄片，其绕原点、垂直截面的惯量为 \[
+I_z=\Sigma\int_\Omega(x^2+y^2)\,dA
+=4\Sigma\int_0^d\left[x^2f(x)+\frac{f(x)^3}{3}\right]dx.
+\] 展开被积函数并积分： \[
+\boxed{\frac{I_z}{\Sigma}
+=\frac{K^3d}{6}+\frac{Kd^3}{2}
+-\frac{3d^5}{10K}-\frac{d^7}{42K^3}}.
+\] 各项均为长度四次方。薄片质量为 \(\Sigma S\)，因此回转半径平方是
+\(I_z/(\Sigma S)\)。这是一项增加的几何应用，原题只问轮廓时无需把该惯量当成已知物性。
+
+\textbf{测角误差怎样累积成轮廓误差。} 轮廓微分式为 \[
+\frac{d\ln r}{d\varphi}=-\tan\frac{\alpha(\varphi)}2.
+\] 若测角有小误差 \(\delta\alpha\)，线性误差满足 \[
+\frac{d\,\delta\ln r}{d\varphi}
+=-\frac12\sec^2\frac{\alpha}{2}\,\delta\alpha.
+\] 从某个已定尺度点 \(\varphi_0\) 积分： \[
+\delta\ln r(\varphi)=
+-\frac12\int_{\varphi_0}^{\varphi}
+\sec^2\frac{\alpha(b)}2\,\delta\alpha(b)\,db.
+\] 系统性的角度偏差会沿轮廓累积，尺度标定本身不能消除它。闭合轮廓要求 \[
+\boxed{\oint\tan[\alpha(\varphi)/2]\,d\varphi=0}.
+\]
+原题各段可以精确满足；实测曲线若不满足，应检查角度支路、旋转零点和测量误差。不能把终点与起点硬接起来，却不解释反演微分式的闭合残差。
+
+\needspace{14\baselineskip}
+
+\textbf{一个无量纲几何核验。} 令 \(r_0=1\)，则
+\(d=1/\sqrt2\)、\(K=1+1/\sqrt2\)。直接积分得到 \[
+S\simeq2.276142,\qquad \mathcal P\simeq5.735771.
+\] 极二次面积矩为 \[
+J_O=\int_\Omega(x^2+y^2)dA\simeq0.856582.
+\] 因此均匀薄片的回转半径平方为 \[
+\boxed{I_z/M=J_O/S\simeq0.376331\,r_0^2}.
+\] 因为整个区域都位于半径 \(r_0\) 的圆内，应有
+\(I_z/M\le r_0^2\)，数值满足此界。恢复尺度时面积矩乘
+\(r_0^4\)；若总质量固定而改变轮廓尺度，惯量则乘
+\(r_0^2\)。两个缩放口径不能混同。
+
+\newpage
+
+\section{第 6 题}\label{ux7b2c-6-ux9898}
+
+质量 \(m=3.18\,\mathrm{kg}\) 的均匀圆柱放在质量
+\(M=6.4\,\mathrm{kg}\)、倾角 \(\theta=40.7^\circ\)
+的斜面上，\(g=9.8\,\mathrm{m/s^2}\)。分别求：
+
+（1）斜面固定、接触光滑时圆柱加速度 \(a_1\)；
+（2）斜面可在光滑水平地面移动、接触光滑时圆柱相对斜面加速度 \(a_2\)；
+（3）斜面固定、圆柱纯滚动的最小摩擦系数 \(\mu_{1m}\)；
+（4）该纯滚动加速度 \(a_3\)；
+（5）斜面可自由移动、圆柱纯滚动的最小摩擦系数 \(\mu_{2m}\)；
+（6）第（5）种情况圆柱的加速度
+\(a_4\)。最后一问分别给出相对斜面及实验室中的加速度，避免参考系歧义。
+
+\includegraphics[width=0.702\linewidth,height=\textheight,keepaspectratio,alt={题6　题设与符号}]{../figures/question-06.pdf}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-5}
+
+圆柱---可动斜面的平动与滚动。六问的区别在于约束和参考系；需要统一坐标，逐步增加自由度。纯滚动的摩擦力由动力学求出，不能预先设为
+\(\mu N\)。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-5}
+
+水平动量守恒；转动惯量；纯滚动约束；可动斜面；非惯性参考系；拉格朗日方程；静摩擦阈值；加速度矢量。
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-5}
+
+图6-1的斜面向右降低。圆柱相对斜面沿坡向右下运动，斜面向左加速。图6-2中接触摩擦力沿坡向上，支持力垂直斜面，圆柱质心加速度是斜面水平加速度与相对沿坡加速度的矢量和。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-5}
+
+用 \(s\) 表示圆柱相对斜面下滑距离，\(X\) 为斜面水平坐标。圆柱质心坐标
+\(x=X+s\cos\theta,y=y_0-s\sin\theta\)。对纯滚动令
+\(\omega=\dot s/R\)，建立包含斜面动能的总动能。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-5}
+
+\textbf{固定光滑斜面。} 圆柱不受使它转动的切向接触力，质心沿坡加速度 \[
+\boxed{a_1=g\sin\theta=6.39056\,\mathrm{m/s^2}}.
+\]
+若初始没有转动，它保持不转动而滑动。不能因物体是圆柱就自动加入转动动能。
+
+\textbf{自由光滑斜面。} 整个系统无外部水平力，故 \[
+(M+m)\ddot X+m\ddot s\cos\theta=0.
+\] 在斜面参考系沿坡，圆柱满足 \[
+\ddot s=g\sin\theta-\ddot X\cos\theta.
+\] 消去 \(\ddot X\) 得 \[
+\boxed{a_2=\ddot s=
+\frac{(M+m)g\sin\theta}{M+m\sin^2\theta}}.
+\] 数值为 \[
+\boxed{a_2=7.89728\,\mathrm{m/s^2}}.
+\] 这是相对斜面的加速度，可能大于
+\(g\sin\theta\)；它并不等于圆柱在实验室中的加速度大小。
+
+\textbf{固定斜面上的纯滚动。} 设圆柱半径为 \(R\)，转动惯量
+\(I=\kappa mR^2\)，均匀圆柱 \(\kappa=1/2\)。沿坡有 \[
+m\ddot s=mg\sin\theta-f.
+\] 绕质心转动并结合无滑动， \[
+fR=I\dot\omega,\qquad \dot\omega=\ddot s/R,
+\] 所以 \(f=\kappa m\ddot s\)。因此 \[
+\ddot s=\frac{g\sin\theta}{1+\kappa},\qquad
+N=mg\cos\theta.
+\] 纯滚动要求 \(f\le\mu_sN\)，最小静摩擦系数 \[
+\boxed{\mu_{1m}=\frac{\kappa}{1+\kappa}\tan\theta
+=\frac13\tan\theta=0.286712}.
+\] 加速度 \[
+\boxed{a_3=\frac23g\sin\theta
+=4.26038\,\mathrm{m/s^2}}.
+\] 达到最小系数时才有 \(f=\mu_sN\)；更大的系数不会改变实际所需的 \(f\)
+或加速度。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.86\linewidth,height=\textheight,keepaspectratio,alt={图6-2　自由斜面纯滚动的受力与加速度合成}]{../figures/solution-06.pdf}
+\caption*{图6-2　自由斜面纯滚动的受力与加速度合成}
+\end{figure}
+
+\textbf{自由斜面纯滚动的总动能。} 圆柱实验室速度为
+\((\dot X+\dot s\cos\theta,-\dot s\sin\theta)\)， \[
+T=\frac12(M+m)\dot X^2
++m\dot X\dot s\cos\theta
++\frac12m(1+\kappa)\dot s^2.
+\] 势能随 \(s\) 减少 \(mg s\sin\theta\)。\(X\)
+为循环坐标，水平动量守恒给 \[
+\ddot X=-\frac{m\cos\theta}{M+m}\ddot s.
+\] \(s\) 方程为 \[
+(1+\kappa)\ddot s+\ddot X\cos\theta=g\sin\theta.
+\] 所以定义 \[
+D=(1+\kappa)M+m(\kappa+\sin^2\theta),
+\] 则 \[
+\boxed{\ddot s=\frac{(M+m)g\sin\theta}{D}}.
+\]
+这一结果也可以从相对斜面受力加上惯性力求出；总动能法避免漏掉水平耦合项。
+
+\textbf{支持力与摩擦阈值。} 在斜面参考系，惯性力为
+\(-m\ddot X\boldsymbol e_x\)。沿法线无相对加速度，因此 \[
+N=m(g\cos\theta+\ddot X\sin\theta).
+\] 注意 \(\ddot X<0\)，自由斜面的支持力小于固定斜面的值。代入
+\(\ddot X\)： \[
+\boxed{N=mg\cos\theta
+\frac{(1+\kappa)M+\kappa m}{D}}.
+\] 转动方程仍给 \(f=\kappa m\ddot s\)，所以 \[
+\boxed{\mu_{2m}=
+\frac{\kappa(M+m)\tan\theta}
+{(1+\kappa)M+\kappa m}}.
+\] 均匀圆柱代入 \(\kappa=1/2\)： \[
+\boxed{\mu_{2m}=
+\frac{(M+m)\tan\theta}{3M+m}
+=0.368190}.
+\]
+自由斜面所需最小系数更大，原因是相对加速较快而支持力较小，两者都应从动力学中算出。
+
+\textbf{第六问的参考系。} 相对斜面沿坡加速度为 \[
+\boxed{a_{4,\rm rel}=4.88123\,\mathrm{m/s^2}}.
+\] 斜面的实验室水平加速度为 \[
+\boxed{\ddot X=-1.22839\,\mathrm{m/s^2}}.
+\] 圆柱实验室分量为 \[
+a_x=\ddot X+\ddot s\cos\theta
+=2.47224\,\mathrm{m/s^2},
+\] \[
+a_y=-\ddot s\sin\theta
+=-3.18305\,\mathrm{m/s^2}.
+\] 所以其大小为 \[
+\boxed{|\boldsymbol a_{4,\rm lab}|=4.03035\,\mathrm{m/s^2}}.
+\]
+方向向右下，与斜面方向不完全相同。图6-2将三个加速度箭头分开，防止把相对加速度大小作为实验室大小。
+
+\textbf{能量复核。} 若系统初始静止，水平动量为零， \[
+\dot X=-\frac{m\cos\theta}{M+m}\dot s.
+\] 代回动能， \[
+T=\frac12m\frac{D}{M+m}\dot s^2.
+\] 重力势能减少 \(mg s\sin\theta\)，所以 \[
+\dot s^2=\frac{2(M+m)g\sin\theta}{D}s.
+\]
+对时间微分回到恒加速度表达式。静摩擦在圆柱与斜面之间传递能量，但系统总接触点的相对滑动为零，系统机械能没有被动摩擦耗散。
+
+\textbf{极限检查。} 当
+\(M\to\infty\)，斜面不动，\(\ddot s\to g\sin\theta/(1+\kappa)\)、\(\mu_{2m}\to\mu_{1m}\)。当
+\(\kappa\to0\)，滚动动力学退化为没有转动负担的光滑滑动，摩擦需求趋于零。若把
+\(\mu_{2m}\) 算成与 \(M\) 无关，就不能同时通过这两个检查。
+
+\textbf{用一般惯量统一四种情况。} 写滚动体的转动惯量
+\(I=\kappa mr^2\)，原题是均匀圆柱，故
+\(\kappa=1/2\)。作为对照，均匀实心球的
+\(\kappa=2/5\)。下列参数式可避免在不同模型之间误用常数。
+
+固定斜面、无滑动时 \[
+ma=mg\sin\theta-f,\qquad
+I\alpha=fr,\qquad a=r\alpha.
+\] 因此 \[
+a=\frac{g\sin\theta}{1+\kappa},\qquad
+f=\frac{\kappa}{1+\kappa}mg\sin\theta.
+\] 支持力 \(N=mg\cos\theta\)，最小摩擦系数 \[
+\mu_{\min}=\frac{\kappa}{1+\kappa}\tan\theta.
+\] 若
+\(\kappa=0\)，不需要驱动自转；若惯量增大，同一坡下力要分更多能量给转动，质心加速度变小。
+
+\textbf{可动斜面的水平动量。} 令 \(X\) 为斜面向右位移，\(s\)
+为物体相对斜面的坡下位移。物体绝对坐标 \[
+x=X+s\cos\theta,\qquad y=y_0-s\sin\theta.
+\] 动能为 \[
+T=\frac12(M+m)\dot X^2
++m\cos\theta\,\dot X\dot s
++\frac12m(1+\kappa)\dot s^2.
+\] 势能 \(U=-mgs\sin\theta\)。\(X\) 为循环坐标： \[
+(M+m)\dot X+m\cos\theta\dot s=0,
+\] 所以 \[
+\ddot X=-\frac{m\cos\theta}{M+m}\ddot s.
+\] 代入 \(s\) 方程： \[
+\boxed{\ddot s=
+\frac{(M+m)g\sin\theta}
+{(1+\kappa)(M+m)-m\cos^2\theta}}.
+\] 分母可写 \(D=(1+\kappa)M+m(\kappa+\sin^2\theta)\)，严格为正。滑面只令
+\(\kappa=0\)，滚动则保留 \(\kappa\)。
+
+\textbf{实验室加速度。} 回代得到 \[
+a_x=\ddot X+\ddot s\cos\theta
+=\frac{M}{M+m}\ddot s\cos\theta,
+\] \[
+a_y=-\ddot s\sin\theta,\qquad
+|\boldsymbol a|=\ddot s
+\sqrt{\frac{M^2\cos^2\theta}{(M+m)^2}+\sin^2\theta}.
+\]
+相对坡面加速度、水平加速度和绝对加速度大小是三个量。原题只问``加速度''时，应明示报告哪一个，再列出其余量供对照，不能拿相对量直接画实验室矢量。
+
+\textbf{支持力的随动修正。} 对斜面法线投影： \[
+N-mg\cos\theta=m\ddot X\sin\theta.
+\] 代入 \(\ddot X\)： \[
+N=mg\cos\theta-\frac{m^2\sin\theta\cos\theta}{M+m}\ddot s
+=mg\cos\theta\frac{(1+\kappa)M+\kappa m}{D}.
+\] 转动方程给 \(f=\kappa m\ddot s\)，因此 \[
+\boxed{\mu_{\min}=
+\frac{\kappa(M+m)\tan\theta}
+{(1+\kappa)M+\kappa m}}.
+\] 斜面很重 \(M\to\infty\)
+时回到固定斜面；斜面较轻时支持力减小，维持滚动需要更大的摩擦系数。
+
+\textbf{能量检验。} 约去 \(X\) 后，等效惯量 \[
+m_{\rm eff}=m(1+\kappa)-\frac{m^2\cos^2\theta}{M+m}.
+\] 从静止下滑相对距离 \(s\)： \[
+\frac12m_{\rm eff}\dot s^2=mgs\sin\theta.
+\] 求导给
+\(m_{\rm eff}\ddot s=mg\sin\theta\)，与拉格朗日式一致。这是无滑动理想接触，摩擦只在两物体间传递能量，不产生总机械能耗散。
+
+\textbf{摩擦不足时改成滑动模型。} 纯滚动阈值以下，不能继续使用
+\(\omega=\dot s/R\)。设圆柱沿坡向下滑，动摩擦系数为
+\(\mu_k\)，滑动接触力沿坡向上。斜面仍自由移动，水平动量给 \[
+\ddot X=-\frac{m\cos\theta}{M+m}\ddot s.
+\] 质心沿坡方程为 \[
+\ddot s+\ddot X\cos\theta=g\sin\theta-f/m.
+\] 支持力与滑动摩擦是 \[
+N=m(g\cos\theta+\ddot X\sin\theta),\qquad f=\mu_kN.
+\] 消去 \(\ddot X,f\)： \[
+\boxed{\ddot s=
+\frac{(M+m)g(\sin\theta-\mu_k\cos\theta)}
+{M+m\sin^2\theta-\mu_km\sin\theta\cos\theta}}.
+\] 该式只适用于确实沿坡向下相对滑动、分母为正、支持力为正的支路。
+
+\textbf{转动与滑动速度。} 设 \(I=\kappa mR^2\)，摩擦矩给 \[
+\dot\omega=\frac{f}{\kappa mR}.
+\] 接触点相对斜面的滑动速度为 \[
+v_{\rm slip}=\dot s-R\omega.
+\] 若从静止释放， \[
+\dot v_{\rm slip}=\ddot s-\frac{f}{\kappa m}.
+\] 把上式中的 \(f,N\) 代入，\(\dot v_{\rm slip}=0\)
+恰好给正文的纯滚动所需系数 \[
+\mu_{\rm req}=
+\frac{\kappa(M+m)\tan\theta}
+{(1+\kappa)M+\kappa m}.
+\] 若
+\(\mu_k<\mu_{\rm req}\)，相对滑动速度持续向下增大；如果另有初始自转，使初始滑动方向相反，应先反转摩擦方向重新列式。不能只在最后给
+\(f\) 加负号而仍保留同一加速度公式。
+
+\textbf{耗散能量的正确速度。}
+总机械能含斜面平动、圆柱平动、圆柱转动和重力势能。滑动摩擦耗散率为 \[
+\boxed{\dot E_{\rm mech}=-f\,v_{\rm slip}}
+\] （按当前 \(v_{\rm slip}>0\) 的支路）。不是
+\(-f\dot s\)，因为摩擦还向圆柱的转动动能输入功率
+\(fR\omega\)。在纯滚动极限 \(v_{\rm slip}=0\)，耗散率为零，虽然 \(f\)
+本身通常不为零。
+
+\needspace{14\baselineskip}
+
+\textbf{从下降高度求纯滚动速度。}
+从静止开始、保持纯滚动，若圆柱相对斜面下降高度为
+\(H=s\sin\theta\)，水平动量使 \[
+\dot X=-\frac{m\cos\theta}{M+m}\dot s.
+\] 消去 \(\dot X\) 后的总动能为 \[
+T=\frac12m\left(1+\kappa-\frac{m\cos^2\theta}{M+m}\right)\dot s^2
+=\frac{mD}{2(M+m)}\dot s^2.
+\] 无滑动耗散，故 \[
+\boxed{\dot s=\sqrt{\frac{2gH(M+m)}D}}.
+\] 斜面位移由位置形式的水平质心守恒给 \[
+\boxed{X-X_0=-\frac{mH\cot\theta}{M+m}}.
+\] 这个位移与 \(\kappa\) 无关，但到达时间和速度依赖
+\(\kappa\)。改变圆柱的转动惯量会改变运动的时间程序，却不会改变同一相对下滑距离对应的水平质心约束。
+
+\newpage
+
+\section{第 7 题}\label{ux7b2c-7-ux9898}
+
+反应 \(\gamma+p\to K^++\Lambda^0\) 中，
+\(M_p=938\,\mathrm{MeV}/c^2\)、\(M_K=494\,\mathrm{MeV}/c^2\)、\(M_\Lambda=1116\,\mathrm{MeV}/c^2\)。
+（1）质子静止时求光子阈能； （2）若靶质子有不超过
+\(p_F=200\,\mathrm{MeV}/c\)
+的费米动量，采用自由在壳质子近似，求最低阈能； （3）\(\Lambda^0\) 以
+\(\beta c\) 飞行并衰变成
+\(p+\pi^-\)，\(\beta=0.773\)、\(M_\pi=140\,\mathrm{MeV}/c^2\)，求
+\(\pi^-\) 最大实验室动量； （4）求 \(\pi^-\) 相对 \(\Lambda^0\)
+飞行方向的最大夹角。核结合能和旁观核反冲在第（2）问未给出，另注明这一近似。
+
+\includegraphics[width=0.86\linewidth,height=\textheight,keepaspectratio,alt={题7　题设与符号}]{../figures/question-07.pdf}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-6}
+
+相对论反应阈值与两体衰变。阈值由不变量质量决定，衰变的角度范围由洛伦兹变换后的动量椭圆决定。两问都不能仅用实验室动能差。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-6}
+
+四动量守恒；不变量
+\(s\)；反应阈值；运动靶；两体衰变静系能量；洛伦兹变换；动量椭圆；角度极值与速度分类。
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-6}
+
+图7-1左侧为光子撞击质子，最低阈值在质心系两产物没有相对动量；右侧为飞行
+\(\Lambda\)
+衰变。图7-2画实验室动量椭圆：横轴沿母粒子飞行方向，最大夹角由原点到椭圆的切线确定，而最大动量位于前向端点。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-6}
+
+先令 \(c=1\)，把质量数值当作静能。对反应使用
+\(s=M_p^2+2E_\gamma(E_p-p_z)\)；对衰变先在母粒子静系求
+\(E_*,p_*\)，再变换 \(p_\parallel,p_\perp\)。结束时恢复 \(\mathrm{MeV}\)
+与 \(\mathrm{MeV}/c\)。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-6}
+
+\textbf{静止靶的反应阈值。} 初态不变量为 \[
+s=(p_\gamma+p_p)^2=M_p^2+2M_pE_\gamma.
+\] 阈值时在质心系 \(K,\Lambda\) 没有相对动量，因此 \[
+s_{\rm th}=(M_K+M_\Lambda)^2.
+\] 得到 \[
+\boxed{E_{\gamma,\rm th}
+=\frac{(M_K+M_\Lambda)^2-M_p^2}{2M_p}}
+=\boxed{912.716\,\mathrm{MeV}}.
+\] 产物静能总和比质子静能多
+\(672\,\mathrm{MeV}\)，但光子带动量，实验室阈值产物还必须整体运动，故阈能大于这个静能差。
+
+\textbf{阈值产物的实验室共同速度。} 总初动量为
+\(E_\gamma/c\)，总初能量为
+\(M_pc^2+E_\gamma\)，阈值时两产物共享质心速度， \[
+\beta_{\rm CM}=
+\frac{E_{\gamma,\rm th}}{M_pc^2+E_{\gamma,\rm th}}
+\approx0.4932.
+\] 每个产物的实验室能量为 \(\gamma_{\rm CM}M_ic^2\)，动量为
+\(\gamma_{\rm CM}M_i\beta_{\rm CM}c\)。把这两个产物动量相加，可复核光子动量；两产物都静止不符合实验室动量守恒。
+
+\textbf{费米动量为何降低阈能。} 靶质子在壳能量为 \[
+E_p=\sqrt{M_p^2+p^2}.
+\] 光子沿 \(+z\)，夹角为 \(\chi\)， \[
+s=M_p^2+2E_\gamma(E_p-p\cos\chi).
+\] 对固定 \(p\)，要最小化所需光子能量，分母应最大，故
+\(\cos\chi=-1\)，靶质子迎面运动。再取允许最大 \(p=p_F\)： \[
+\boxed{E_{\gamma,\min}'=
+\frac{(M_K+M_\Lambda)^2-M_p^2}
+{2(\sqrt{M_p^2+p_F^2}+p_F)}}
+=\boxed{738.624\,\mathrm{MeV}}.
+\]
+若靶质子顺着光子运动，分母减小，阈值反而升高。这里原子核只提供动量范围，未计结合能和核反冲；真实核内离壳质子不能只由
+\(p_F\) 唯一确定能量。
+
+\textbf{衰变静系的能量与动量。} 在 \(\Lambda\) 静系，质子与 \(\pi\)
+反向且动量大小相等。令 \(\pi\) 能量为 \(E_*\)： \[
+M_\Lambda=E_*+\sqrt{M_p^2+p_*^2},
+\qquad E_*^2=M_\pi^2+p_*^2.
+\] 消去质子能量得 \[
+\boxed{E_*=\frac{M_\Lambda^2+M_\pi^2-M_p^2}{2M_\Lambda}}
+=172.586\,\mathrm{MeV},
+\] \[
+\boxed{p_*=\sqrt{E_*^2-M_\pi^2}}
+=100.925\,\mathrm{MeV}/c.
+\] 静系的 \(\pi\) 速度为 \(v_*/c=p_*c/E_*\approx0.5848\)，小于母粒子的
+\(\beta=0.773\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.86\linewidth,height=\textheight,keepaspectratio,alt={图7-2　衰变动量椭圆、最大动量与最大角度}]{../figures/solution-07.pdf}
+\caption*{图7-2　衰变动量椭圆、最大动量与最大角度}
+\end{figure}
+
+\textbf{最大实验室动量。} 设静系出射角为
+\(\chi_*\)，\(\gamma=(1-\beta^2)^{-1/2}\)， \[
+p_\parallel=\gamma(p_*\cos\chi_*+\beta E_*/c),
+\] \[
+p_\perp=p_*\sin\chi_*.
+\] 实验室能量为 \[
+E_{\rm lab}=\gamma(E_*+\beta cp_*\cos\chi_*).
+\] 对给定粒子静质量，动量大小随能量单调增长，因此最大值在
+\(\cos\chi_*=1\)： \[
+\boxed{p_{\max}=\gamma(p_*+\beta E_*/c)}
+=\boxed{369.376\,\mathrm{MeV}/c}.
+\] 后向静系出射在本题中也被母粒子带向实验室前方，因为
+\(\beta E_*/c>p_*\)。
+
+\textbf{最大夹角不是静系横向出射。} 实验室角满足 \[
+\tan\theta=\frac{p_*\sin\chi_*}
+{\gamma(p_*\cos\chi_*+\beta E_*/c)}.
+\] 令 \(z=\cos\chi_*\)，极值条件给 \[
+z_*=-\frac{cp_*}{\beta E_*}.
+\] 它在本题位于
+\((-1,0)\)。所以最大实验室角来自静系略向后的出射，不能直接设
+\(\chi_*=90^\circ\)。
+
+代回可得 \[
+\boxed{\tan\theta_{\max}
+=\frac{cp_*}{\gamma\sqrt{\beta^2E_*^2-c^2p_*^2}}}.
+\] 等价地， \[
+\boxed{\sin\theta_{\max}
+=\frac{p_*}{\gamma\beta M_\pi c}}.
+\] 本题数值 \[
+\boxed{\theta_{\max}=36.2737^\circ}.
+\] 使用两个等价式分别算角度可检查单位与分母根号。
+
+\textbf{动量椭圆的几何证明。} 洛伦兹变换把静系圆 \[
+p_{\parallel,*}^2+p_{\perp,*}^2=p_*^2
+\] 变为 \[
+\frac{(p_\parallel-\gamma\beta E_*/c)^2}{\gamma^2p_*^2}
++\frac{p_\perp^2}{p_*^2}=1.
+\] 椭圆中心在正横轴，且本题整椭圆位于
+\(p_\parallel>0\)。从原点画切线就是最大方向角；前向端点才是最大动量点。图7-2明确区分这两个位置。
+
+\textbf{一般母粒子速度的三类情况。} 若
+\(\beta>v_*/c\)，所有产物都在实验室前半空间，最大夹角由切线给出。若
+\(\beta<v_*/c\)，静系后向产物仍可实验室后向，最大方向角可达
+\(180^\circ\)。在
+\(\beta=v_*/c\)，后向端点动量为零，方向没有定义；邻近出射方向趋于
+\(90^\circ\)。只有本题第一类能无条件使用前面的锐角切线公式。
+
+\textbf{小费米动量展开。} 当 \(p_F\ll M_pc\)， \[
+\sqrt{M_p^2c^4+p_F^2c^2}+p_Fc
+=M_pc^2+p_Fc+\frac{p_F^2}{2M_p}+\cdots.
+\] 阈能降低的一阶比例约为 \(p_F/(M_pc)\)。实际
+\(p_F/(M_pc)\approx0.213\)，不够小到可忽略所有二阶项，因此本题数值应使用根式而非只保留一阶。
+
+\textbf{光子反应阈值的不变量。} 取
+\(c=1\)，入射光子的静质量为零、动量大小等于能量。静止质子与光子总四动量平方
+\[
+s=M_p^2+2M_pE_\gamma.
+\] 阈值时 \(K,\Lambda\) 在质心系没有相对动量，因此 \[
+s_{\rm th}=(M_K+M_\Lambda)^2.
+\] 解得 \[
+E_{\gamma,\rm th}=\frac{(M_K+M_\Lambda)^2-M_p^2}{2M_p}.
+\]
+这里求的是光子总能量，它没有可另行扣除的静能。把入射光子误当成有质量介子，会改变整个阈值问题。
+
+\textbf{靶运动的方向极值。} 令质子自由在壳能量
+\(E_p=\sqrt{M_p^2+p_F^2}\)，它与光子夹角为 \(\chi\)： \[
+s=M_p^2+2E_\gamma(E_p-p_F\cos\chi).
+\] 迎头方向 \(\cos\chi=-1\) 最大化分母，降低阈值： \[
+E'_{\gamma,\min}=\frac{s_{\rm th}-M_p^2}{2(E_p+p_F)}.
+\] 与静止阈值比 \[
+\frac{E'_{\gamma,\min}}{E_{\gamma,\rm th}}=
+\frac{M_p}{\sqrt{M_p^2+p_F^2}+p_F}
+=\exp[-\operatorname{arsinh}(p_F/M_p)].
+\] 这是迎头靶质子的多普勒增益。小 \(p_F/M_p\) 展开为
+\(1-p_F/M_p+p_F^2/(2M_p^2)+\cdots\)，首阶阈值下降正比于靶动量。顺向靶的阈值则按相反的快速度因子升高。真实核内结合与反冲不能仅靠这条自由粒子公式处理。
+
+\textbf{两体衰变的质心系。} 给定母粒子速度 \(\beta\)，在母粒子静止系：
+\[
+E_\pi^*=\frac{M_\Lambda^2+M_\pi^2-M_p^2}{2M_\Lambda},
+\] \[
+p_\pi^*=\sqrt{(E_\pi^*)^2-M_\pi^2}.
+\] 若发射角为 \(\chi^*\)，实验室动量 \[
+p_\parallel=\gamma(p^*\cos\chi^*+\beta E^*),\qquad
+p_\perp=p^*\sin\chi^*.
+\] 向前发射给最大动量 \(p_{\max}=\gamma(p^*+\beta E^*)\)。
+
+\textbf{最大开角的求导。} 当
+\(\beta>p^*/E^*\)，所有子粒子在实验室向前。设 \(z=\cos\chi^*\)： \[
+\tan\theta=\frac{p^*\sqrt{1-z^2}}{\gamma(p^*z+\beta E^*)}.
+\] 对数求导并令零： \[
+-\frac z{1-z^2}-\frac{p^*}{p^*z+\beta E^*}=0,
+\] \[
+z=-\frac{p^*}{\beta E^*}.
+\] 回代给 \[
+\tan\theta_{\max}=\frac{p^*}{\gamma\sqrt{\beta^2(E^*)^2-(p^*)^2}},
+\] 或 \[
+\sin\theta_{\max}=\frac{p^*}{\gamma\beta M_\pi}.
+\] 两式等价，后一式计算更直接。若
+\(\beta\le p^*/E^*\)，动量曲线可达横向或后向，不能套同一个前向锥最大开角式。
+
+\textbf{靶质子方向任意时的光子阈值。} 采用 \(c=1\)
+的能量单位，靶质子能量与动量为 \(E_p,p_p\)，其运动方向与入射光子夹角为
+\(\zeta\)。总不变量是 \[
+s=m_p^2+2E_\gamma(E_p-p_p\cos\zeta).
+\] 产生 \(K^++\Lambda^0\) 的阈值在质心系两产物相对静止，因此 \[
+s_{\rm th}=(m_K+m_\Lambda)^2.
+\] 所以 \[
+\boxed{E_{\gamma,\rm th}=
+\frac{(m_K+m_\Lambda)^2-m_p^2}
+{2(E_p-p_p\cos\zeta)}}.
+\] 同样的靶速度下，迎面碰撞 \(\zeta=\pi\)
+使分母最大、阈值最小；同向靶运动反而提高阈值。静止靶 \(p_p=0\)
+时恢复正文结果。
+
+\textbf{超过阈值后的产物范围。} 质心能量为 \(\sqrt s\)，\(\Lambda\)
+的质心能量和动量为 \[
+E_\Lambda^*=\frac{s+m_\Lambda^2-m_K^2}{2\sqrt s},
+\] \[
+p^*=\frac{\sqrt{[s-(m_K+m_\Lambda)^2]
+[s-(m_K-m_\Lambda)^2]}}{2\sqrt s}.
+\] 若质心系相对实验室的速度为 \(\beta_{\rm cm}\)，则 \[
+E_\Lambda=\gamma_{\rm cm}
+(E_\Lambda^*+\beta_{\rm cm}p^*\cos\chi).
+\] 因此实验室能量位于 \[
+\gamma_{\rm cm}(E_\Lambda^*-\beta_{\rm cm}p^*)
+\le E_\Lambda\le
+\gamma_{\rm cm}(E_\Lambda^*+\beta_{\rm cm}p^*).
+\] 阈值处
+\(p^*=0\)，两个产物在实验室中一般都运动，具有同一速度。不能把``质心系相对静止''误写成``实验室总动量为零''。
+
+\textbf{衰变最大方向角的存在条件。} 设母粒子速度为
+\(\beta c\)，子粒子在母静系速率为 \(u^*=p^*/E^*\)。若
+\(\beta>u^*\)，所有子粒子在实验室的纵向动量都向前，最大角由椭圆切点给出：
+\[
+\cos\chi_{\max}=-\frac{p^*}{\beta E^*},
+\] \[
+\boxed{\tan\theta_{\max}=
+\frac{p^*}{\gamma\sqrt{\beta^2E^{*2}-p^{*2}}}}.
+\] 若
+\(\beta<u^*\)，存在实验室向后的子粒子，不能继续使用只覆盖前向锥的最大角式；最大无向角可到
+\(\pi\)。等号时纵向动量可趋零，是两种几何的边界。原题参数满足前向锥条件，图7-2的原点位于动量椭圆外。
+
+\needspace{14\baselineskip}
+
+\textbf{用反冲粒子质量壳检验衰变。} 母粒子实验室四动量为
+\((E_\Lambda,P_\Lambda)\)，某个 \(\pi\) 介子 的能量、动量大小与方向角为
+\(E_\pi,p_\pi,\theta\)。反冲质子满足 \[
+(P_\Lambda-P_\pi)^2=m_p^2.
+\] 展开： \[
+\boxed{E_\Lambda E_\pi-P_\Lambda p_\pi\cos\theta
+=m_\Lambda E_\pi^*}.
+\] 它与对子粒子作洛伦兹变换等价，但不需要先求静系角度。加上
+\(E_\pi^2-p_\pi^2=m_\pi^2\)，即可在给定方向角时求允许的动量。
+
+在 \(\theta=0\) 且母速度大于静系 \(\pi\) 介子
+速度时，有两个正的前向动量： \[
+p_{\pi,\pm}=\gamma(\beta E_\pi^*\pm p_\pi^*).
+\]
+它们分别来自静系向前和向后发射。图7-2椭圆与正轴的两个交点都对应真实事件；若只保留较大动量根，会遗漏静系反向发射但在实验室仍向前的那一支。
+
+\newpage
+
+\section{第 8 题}\label{ux7b2c-8-ux9898}
+
+三同心金属球壳半径为 \(r_1>r_2>r_3\)。外壳电势为
+\(U\)，内壳经表面绝缘的导线接地，中壳悬浮。外---中层介质参数为
+\(\varepsilon_{r1},\sigma_1\)，中---内层为
+\(\varepsilon_{r2},\sigma_2\)。足够长时间后达到电学稳态。求：（1）内壳电流大小；（2）外壳上的自由电荷与其邻接介质的极化电荷总量
+\(q_1\)；（3）中壳自由电荷 \(q_{f2}\)。
+
+参数：\(\sigma_1=5.08\,\mathrm{S/m},\sigma_2=4.42\,\mathrm{S/m}\)，
+\(\varepsilon_{r1}=2.98,\varepsilon_{r2}=1.16\)，
+\(r_1=0.724\,\mathrm m,r_2=0.491\,\mathrm m,r_3=0.216\,\mathrm m\)，
+\(\varepsilon_0=8.85\times10^{-12}\,\mathrm{F/m},U=6.19\,\mathrm V\)。
+先给出外壳内表面与邻接极化层的电荷；若``外壳总量''包含外表面，另说明外部边界条件。
+
+\includegraphics[width=0.733\linewidth,height=\textheight,keepaspectratio,alt={题8　题设与符号}]{../figures/question-08.pdf}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-7}
+
+有损介质中的稳恒径向导电与界面电荷。电流由电导率决定，自由面电荷由电位移决定，极化电荷由极化强度决定。三者不能用同一个``等效介电常数''混算。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-7}
+
+球对称电流；电阻积分；欧姆定律；电位移与自由面电荷；极化电荷；金属边界；浮置导体；稳态串联电路；外部边界条件。
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-7}
+
+图8-1按外、中、内顺序标出三个半径，不把径向厚度当作半径。外电势正、内壳接地，电场和常规电流均径向向内。因此实际电流流入内壳，再经接地导线流走；题目的``流出''应按大小理解。图8-2采用串联漏电电阻与并联电容的等效图，中壳电势在稳态由两个电阻分压决定。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-7}
+
+令 \(I>0\)
+表示径向向内电流大小，\(E_r=-I/(4\pi\sigma r^2)\)。对两层积分求电压，再由各侧
+\(D_r\) 算自由电荷。外壳内表面极化层的电荷需从介质自身的外法线判断。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-7}
+
+\textbf{球层的电阻。} 球面面积为 \(4\pi r^2\)，故 \[
+J_r=-\frac I{4\pi r^2},\qquad
+E_r=\frac{J_r}{\sigma}.
+\] 从小半径 \(b\) 到大半径 \(a\) 的电势差为 \[
+V(a)-V(b)=\int_b^a\frac I{4\pi\sigma r^2}dr
+=\frac I{4\pi\sigma}\left(\frac1b-\frac1a\right).
+\] 所以 \[
+R_1=\frac1{4\pi\sigma_1}
+\left(\frac1{r_2}-\frac1{r_1}\right),
+\] \[
+R_2=\frac1{4\pi\sigma_2}
+\left(\frac1{r_3}-\frac1{r_2}\right).
+\] 两层稳态电流相同，串联： \[
+\boxed{I=\frac U{R_1+R_2}}.
+\] 数值为 \[
+R_1=0.0102674\,\Omega,\qquad
+R_2=0.0466837\,\Omega,
+\] \[
+\boxed{I=108.690\,\mathrm A}.
+\]
+电流较大来自题给较高电导率及宏观球面截面积，不应把它误改为微安级以迎合一般介质绝缘的印象。
+
+\textbf{中壳稳态电势。} 内壳电势为零，中壳电势 \[
+\boxed{V_2=IR_2=5.07404\,\mathrm V}.
+\] 外层电压为 \(U-V_2=IR_1\)。电流连续而电场在界面处可不连续： \[
+\frac{|E_2(r_2^-)|}{|E_1(r_2^+)|}
+=\frac{\sigma_1}{\sigma_2}.
+\] 稳态分压由电导率决定；初始电容分压与它一般不同。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.86\linewidth,height=\textheight,keepaspectratio,alt={图8-2　球层漏电电路与界面电荷符号}]{../figures/solution-08.pdf}
+\caption*{图8-2　球层漏电电路与界面电荷符号}
+\end{figure}
+
+\textbf{外壳内表面的自由电荷。} 金属内电场为零，外壳朝介质的法线为
+\(-\boldsymbol e_r\)。自由面电荷密度为 \[
+\sigma_{f1}=D_1\cdot(-\boldsymbol e_r)
+=\frac{\varepsilon_0\varepsilon_{r1}I}
+{4\pi\sigma_1r_1^2}.
+\] 积分得到 \[
+\boxed{q_{f1,\rm inner}
+=\frac{\varepsilon_0\varepsilon_{r1}I}{\sigma_1}}
+=5.64266\times10^{-10}\,\mathrm C.
+\] 该面自由电荷为正，与向内电场方向一致。
+
+\textbf{紧贴该面的极化电荷。} 外层介质极化强度 \[
+\boldsymbol P_1=
+\varepsilon_0(\varepsilon_{r1}-1)\boldsymbol E_1.
+\] 介质在外边界的自身外法线为 \(+\boldsymbol e_r\)，故 \[
+\sigma_{b1}=\boldsymbol P_1\cdot\boldsymbol e_r<0.
+\] 总极化面电荷为 \[
+\boxed{q_{b1}=
+-\frac{\varepsilon_0(\varepsilon_{r1}-1)I}{\sigma_1}}
+=-3.74915\times10^{-10}\,\mathrm C.
+\] 自由电荷与邻接极化电荷相加： \[
+\boxed{q_{1,\rm inner}=q_{f1,\rm inner}+q_{b1}
+=\frac{\varepsilon_0I}{\sigma_1}}
+=\boxed{1.89351\times10^{-10}\,\mathrm C}.
+\] 和式中相对介电常数约去，是因为总电荷由 \(\varepsilon_0\boldsymbol E\)
+的高斯通量决定，而自由电荷由 \(\boldsymbol D\)
+决定。不是稳态介质没有极化。
+
+\textbf{中壳的两个表面。} 中壳朝外层的外表面法线为
+\(+\boldsymbol e_r\)， \[
+q_{f2,\rm outer}
+=-\frac{\varepsilon_0\varepsilon_{r1}I}{\sigma_1}.
+\] 朝内层的内表面法线为 \(-\boldsymbol e_r\)， \[
+q_{f2,\rm inner}
+=+\frac{\varepsilon_0\varepsilon_{r2}I}{\sigma_2}.
+\] 两面相加， \[
+\boxed{q_{f2}=\varepsilon_0I
+\left(\frac{\varepsilon_{r2}}{\sigma_2}
+-\frac{\varepsilon_{r1}}{\sigma_1}\right)}
+=\boxed{-3.11821\times10^{-10}\,\mathrm C}.
+\]
+中壳悬浮并不代表永远电中性：介质有电导，中壳可从两侧交换自由电荷，直到两边稳态电流相等。若介质理想绝缘、\(\sigma_i=0\)，则是另一种电容静电问题。
+
+\textbf{体电荷检查。} 每一均匀层的场为常数乘
+\(\boldsymbol e_r/r^2\)，在该层内部 \[
+\nabla\cdot\boldsymbol E=0,\qquad
+\nabla\cdot\boldsymbol D=0.
+\]
+所以没有均匀层内部的体自由电荷或体极化电荷，电荷集中在界面。若电导率随
+\(r\)
+改变，\(E_r\propto1/[\sigma(r)r^2]\)，散度通常不为零，便会出现体电荷；本题的界面计算依赖均匀层参数。
+
+\textbf{整个外壳总量的外部边界。} 上述 \(q_{1,\rm inner}\)
+是内表面自由电荷与邻接极化层之和，是两层介质题通常要计算的内部界面量。外壳的外表面自由电荷还由外部场决定，单靠两层内部参数不能确定它。
+
+若补充外部为无限真空、无其他导体且
+\(V(\infty)=0\)，并忽略接线破坏的球对称，则外部电势为
+\(Ur_1/r\)，外表面电荷为 \[
+q_{\rm ext}=4\pi\varepsilon_0r_1U
+=4.98405\times10^{-10}\,\mathrm C.
+\] 在这项补充下，``整个外壳自由电荷加邻接极化电荷''是 \[
+\boxed{q_{1,\rm whole}=q_{\rm ext}+q_{1,\rm inner}
+=6.87756\times10^{-10}\,\mathrm C}.
+\]
+若外部有接地屏蔽壳，外表面量不同。题面没有外部几何信息时，应把内部界面答案与外表面补充条件并列，不能悄悄把一者当成另一者。
+
+\textbf{功率和稳态维持条件。} 电源功率为 \[
+P_{\rm source}=UI=I^2(R_1+R_2).
+\] 两层分别耗散 \(I^2R_i\)。本题忽略温升对 \(\sigma_i,\varepsilon_{ri}\)
+的影响；若长时间没有散热，电导率可能随温度变化，不会保持题设常参数。这里的``足够长时间''指电荷已达到电学稳态，而不是热状态也已确定。
+
+\textbf{稳恒电流的球面对称。} 沿用正文 \(I>0\)
+表示向内电流大小，球壳内穿任意同心球面的电流大小相同： \[
+J_r(r)=-I/(4\pi r^2),\qquad E_r(r)=-I/(4\pi\sigma r^2).
+\] 积分电势降 \[
+\Delta V=-\int_a^bE_r(r)\,dr
+=\frac I{4\pi\sigma}\left(\frac1a-\frac1b\right).
+\] 因此两个区域可视为串联电阻，但不是平板电阻
+\(\ell/(\sigma S)\)，因为面积随半径变化。
+
+\textbf{自由电荷与极化电荷分开。} 内侧介质的
+\(\boldsymbol D=\varepsilon_0\varepsilon_r\boldsymbol E\)，外导体内面自由电荷为
+\[
+q_f=\varepsilon_0\varepsilon_{r1}I/\sigma_1.
+\] 介质极化
+\(\boldsymbol P=\varepsilon_0(\varepsilon_{r1}-1)\boldsymbol E\)，其外边界外法线指向导体，表面束缚电荷
+\[
+q_b=-\varepsilon_0(\varepsilon_{r1}-1)I/\sigma_1.
+\] 相加得到
+\(q_f+q_b=\varepsilon_0I/\sigma_1\)。介质相对介电常数在总界面电荷中约去，但自由、束缚部分各自依赖它。
+
+\textbf{中间界面的法向条件。} 若取由内向外的法向，法向 \(\boldsymbol D\)
+的跃变给界面自由电荷： \[
+q_{f,2}=\varepsilon_0I
+\left(\frac{\varepsilon_{r2}}{\sigma_2}
+-\frac{\varepsilon_{r1}}{\sigma_1}\right).
+\] 总电荷跃变只由 \(\boldsymbol E\)： \[
+q_{{\rm total},2}=\varepsilon_0I
+\left(\frac1{\sigma_2}-\frac1{\sigma_1}\right).
+\]
+两者差为束缚电荷。若介质对导电率与介电率的比相同，自由界面电荷可为零，但总界面电荷未必为零。
+
+\textbf{导体外表面为何另需条件。}
+串联模型确定壳层内的场和各导体间电压，只能决定朝向介质的表面电荷。最外导体外侧电场取决于外部边界、接地条件、环境和可能的额外总电荷。原题如果只给内外导体的电压差，外表面电荷不唯一。若额外给外界真空、无限远零电势且最外导体对无限远电势为
+\(U\)，则 \[
+q_{\rm ext}=4\pi\varepsilon_0r_1U.
+\] 这是另一个边界问题的结果，不由串联电流本身推出。
+
+\textbf{从瞬态走到稳态。}
+每一区域的径向位移电流与传导电流并行，相当于电阻 \(R_j\) 与电容 \(C_j\)
+并联： \[
+C_1=\frac{4\pi\varepsilon_0\varepsilon_{r1}}
+{1/r_2-1/r_1},\qquad
+C_2=\frac{4\pi\varepsilon_0\varepsilon_{r2}}
+{1/r_3-1/r_2}.
+\] 固定外电压 \(U\)，中间导体电势 \(V(t)\) 满足 \[
+(C_1+C_2)\dot V=\frac{U-V}{R_1}-\frac V{R_2}.
+\] 所以 \[
+V_\infty=\frac{R_2}{R_1+R_2}U,\qquad
+\tau=\frac{C_1+C_2}{1/R_1+1/R_2},
+\] \[
+V(t)=V_\infty+[V(0^+)-V_\infty]e^{-t/\tau}.
+\] 若原来中间导体无净自由电荷，突然加电压后
+\(V(0^+)=C_1U/(C_1+C_2)\)。电容分压与稳态电阻分压一般不同，因此界面电荷会在弛豫中重新分配。
+
+\textbf{电导率随半径变化时会出现体电荷。} 稳态仍有
+\(J_r=-I/(4\pi r^2)\)，但若 \(\sigma=\sigma(r)\)、绝对介电常数为
+\(\varepsilon(r)\)， \[
+E_r=-\frac I{4\pi\sigma(r)r^2},\qquad
+D_r=-\frac{\varepsilon(r)I}{4\pi\sigma(r)r^2}.
+\] 由球对称散度， \[
+\boxed{\rho_f(r)=
+-\frac I{4\pi r^2}\frac d{dr}\left(\frac{\varepsilon}{\sigma}\right)}.
+\] 总电荷密度和束缚电荷密度分别为 \[
+\rho_{\rm total}=
+-\frac{\varepsilon_0 I}{4\pi r^2}\frac d{dr}\left(\frac1\sigma\right),
+\] \[
+\rho_b=\frac I{4\pi r^2}
+\frac d{dr}\left(\frac{\varepsilon-\varepsilon_0}{\sigma}\right).
+\] 逐项相加有
+\(\rho_f+\rho_b=\rho_{\rm total}\)。原题均匀层的三个导数均为零，电荷只在界面；这不是任意有损介质的普遍性质。
+
+\textbf{幂律电导率的具体例子。} 在内半径 \(b\)、外半径 \(a\)
+的球层中，取 \[
+\sigma(r)=\sigma_0(r/a)^k,\qquad \varepsilon=\text{常量}.
+\] 球层电阻为 \[
+R=\frac{a^k}{4\pi\sigma_0}\int_b^a r^{-k-2}\,dr.
+\] 若 \(k\ne-1\)， \[
+\boxed{R=\frac{a^k}{4\pi\sigma_0(k+1)}
+\left(b^{-k-1}-a^{-k-1}\right)}.
+\] 若 \(k=-1\)，正确的连续极限是 \[
+R=\frac1{4\pi\sigma_0a}\ln(a/b).
+\] 自由体电荷为 \[
+\boxed{\rho_f(r)=
+\frac{\varepsilon Ika^k}{4\pi\sigma_0r^{k+3}}}.
+\] \(k>0\) 时为正，\(k<0\) 时为负，体现维持非均匀导电场所需的电荷分布。
+
+\textbf{体电荷与边界通量核对。} 对整个球层积分： \[
+\int_b^a\rho_f\,4\pi r^2dr
+=-I\left[\frac{\varepsilon}{\sigma(a)}
+-\frac{\varepsilon}{\sigma(b)}\right].
+\] 它正等于外球面与内球面的有向 \(D\)
+通量和，检验了负号与法线方向。焦耳功率积分也给 \[
+P=\int_b^a\sigma E_r^2\,4\pi r^2dr=I^2R.
+\]
+在分层界面，平滑体电荷公式之外还应保留介电参数和电导率突变产生的面电荷，不能用一个平均参数同时代替两者。
+
+\needspace{14\baselineskip}
+
+\textbf{中壳初始中性时的电荷积累。} 突然施加恒电压
+\(U\)，假设中壳初始无净自由电荷，电容分压给 \[
+V(0^+)=\frac{C_1}{C_1+C_2}U.
+\] 题给参数有 \[
+C_1=5.05631\times10^{-10}\,\mathrm F,\qquad
+C_2=4.97524\times10^{-11}\,\mathrm F.
+\] 因此初始中壳电势约 \(5.63549\,\mathrm V\)，之后趋于稳态
+\(5.07404\,\mathrm V\)。时间常量为 \[
+\tau=4.67431\times10^{-12}\,\mathrm s.
+\] 中壳自由电荷是 \[
+q_{f2}(t)=C_2V-C_1(U-V)
+=(C_1+C_2)V-C_1U.
+\] 于是 \[
+\boxed{q_{f2}(t)=q_{f2,\infty}(1-e^{-t/\tau})}.
+\]
+初始中性和最终带负电并不冲突。这里的极短时间来自常参数漏电电路近似；在这个时间尺度，实际介质色散与电路传播效应可能使集中参数模型失效，题目``足够长时间''的稳态结果不受这一瞬态近似的细节影响。
+\end{document}

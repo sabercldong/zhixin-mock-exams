@@ -1,0 +1,44 @@
+{
+  "scope": "第095套从交付目录复制到另一目录后，独立重建16幅图及三种PDF。其余四套使用同一脚本，未重复执行此迁移测试。",
+  "documents": [
+    {
+      "file": "蔡题095_试卷.pdf",
+      "pages": 9,
+      "text_identical": true,
+      "render_identical": true
+    },
+    {
+      "file": "蔡题095_学生详解.pdf",
+      "pages": 57,
+      "text_identical": true,
+      "render_identical": true
+    },
+    {
+      "file": "蔡题095_教师备课.pdf",
+      "pages": 72,
+      "text_identical": true,
+      "render_identical": true
+    }
+  ],
+  "figures": [
+    "question-01.pdf",
+    "question-02.pdf",
+    "question-03.pdf",
+    "question-04.pdf",
+    "question-05.pdf",
+    "question-06.pdf",
+    "question-07.pdf",
+    "question-08.pdf",
+    "solution-01.pdf",
+    "solution-02.pdf",
+    "solution-03.pdf",
+    "solution-04.pdf",
+    "solution-05.pdf",
+    "solution-06.pdf",
+    "solution-07.pdf",
+    "solution-08.pdf"
+  ],
+  "warnings": 0,
+  "script_sha256": "bf4606bc75c4a09c81fd009ab1f949ad4ae06ab5672fe6205d5cd217f55d221e",
+  "passed": true
+}

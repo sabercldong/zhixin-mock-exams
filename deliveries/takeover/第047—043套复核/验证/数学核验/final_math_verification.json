@@ -1,0 +1,61 @@
+{
+  "count": 10,
+  "checks": [
+    {
+      "name": "anisotropy cubic coefficient",
+      "passed": true
+    },
+    {
+      "name": "tricritical quintic stabilization",
+      "passed": true
+    },
+    {
+      "name": "anisotropic critical temperature",
+      "actual": 0.6305446632894578,
+      "expected": 0.6305446632894578,
+      "passed": true
+    },
+    {
+      "name": "original Tc limit",
+      "actual": 0.6666666666666666,
+      "expected": 0.6666666666666666,
+      "passed": true
+    },
+    {
+      "name": "tricritical linear condition",
+      "actual": 0.3333333333333333,
+      "expected": 0.3333333333333333,
+      "passed": true
+    },
+    {
+      "name": "first slip angle",
+      "actual": -0.18366098946440101,
+      "expected": -0.18366098946440101,
+      "passed": true
+    },
+    {
+      "name": "first slip time",
+      "actual": 0.45482305716441684,
+      "expected": 0.4548230571645221,
+      "passed": true
+    },
+    {
+      "name": "first slip speed squared",
+      "actual": 0.5032379388448893,
+      "expected": 0.5032379388448904,
+      "passed": true
+    },
+    {
+      "name": "independent slip ODE time",
+      "actual": 0.45482305716370436,
+      "expected": 0.45482305716441684,
+      "passed": true
+    },
+    {
+      "name": "independent slip ODE angle",
+      "actual": -0.18366098946427908,
+      "expected": -0.18366098946440101,
+      "passed": true
+    }
+  ]
+}
