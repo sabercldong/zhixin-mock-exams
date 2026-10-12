@@ -1,0 +1,119 @@
+\documentclass[multi=tikzpicture,border=7pt]{standalone}
+\usepackage{ctex,amsmath,bm}
+\usepackage{tikz,pgfplots}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{arrows.meta,calc,angles,quotes,patterns,positioning,decorations.pathmorphing,3d}
+\tikzset{wire/.style={brown!70!black,very thick},guide/.style={dashed,gray!60},force/.style={->,>=Stealth,thick,red!70!black},velocity/.style={->,>=Stealth,thick,blue!70!black},axis/.style={->,>=Stealth,thick},dim/.style={<->,>=Stealth,thin},body/.style={draw,thick,fill=blue!7},panel/.style={anchor=west,font=\bfseries},hidden/.style={dashed,gray!58,thick},orbit/.style={very thick,blue!70!black}}
+\tikzset{vec/.style={->,>=Stealth,very thick},wall/.style={pattern=north east lines,pattern color=gray},nodept/.style={circle,fill=white,draw,inner sep=1.5pt}}
+\begin{document}
+% 1 question-01
+\begin{tikzpicture}[scale=.95]
+ \fill[gray!12] (-4.4,-.15) rectangle (4.8,.15); \draw[very thick] (-4.4,0)--(4.8,0);
+ \draw[very thick,fill=white] (-2,0) arc (180:0:2);
+ \coordinate (O) at (0,0); \coordinate (P) at (2.83,2.83); \coordinate (H) at (2.83,0);
+ \filldraw[fill=white,draw=blue!75!black,line width=1.1pt] (P) circle(.15)
+   node[above right=2pt]{$Q$};
+ \draw[dashed] (O)--(P) (P)--(H);
+ \draw[dim] (0,-.58)--(2.83,-.58) node[midway,below]{$\sqrt2R$};
+ \draw[dim] (3.25,0)--(3.25,2.83) node[midway,right]{$\sqrt2R$};
+ \draw[dim] (O)--(-1.414,1.414) node[midway,above left]{$R$};
+ \fill (O) circle(2pt) node[below left]{$O$};
+ \node at (0,-1.68){接地无限导体平面};
+\end{tikzpicture}
+
+% 2 solution-01
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+\draw[thick](-3,0)--(3,0);\draw[body,fill=none](0,0)circle(.9);\draw[guide](0,-1.5)--(0,2.4);\fill(1.8,1.8)circle(1.8pt)node[right]{$Q\ (a,a)$};\fill(1.8,-1.8)circle(1.8pt)node[right]{$-Q\ (a,-a)$};\fill(.45,.45)circle(1.8pt)node[above left]{$-Q/2$};\fill(.45,-.45)circle(1.8pt)node[below left]{$+Q/2$};\draw[guide](0,0)--(1.8,1.8);\node[above left]at(-.9,1.25){接地球 $R=a/\sqrt2$};\node at(0,-2.6){球内像点 $(a/4,\pm a/4)$；平面 $z=0$ 上势为零};
+\end{tikzpicture}
+
+% 3 question-02
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+\coordinate(P)at(0,.25);\coordinate(C)at(-.661438,1);\draw[thick](-2.5,0)--(3.6,0);\draw[body](0,0)rectangle(3.4,.25);\draw[body,fill=none](C)circle(1);\fill(C)circle(1.6pt)node[left]{$C$};\fill(P)circle(1.6pt)node[above right]{$P$};\draw[guide](C)--(P);\draw[dim](3.8,0)--(3.8,.25)node[right,midway]{$h$};\draw[velocity](C)--++(1.3,0)node[above]{$v$};\draw[velocity](-.0879,1.8192)arc[start angle=55,end angle=-10,radius=1];\node[right]at(.7,1.65){$v/r$};\node at(.3,-.7){圆环与台阶尖角精确相切；图示 $h=r/4$};
+\end{tikzpicture}
+
+% 4 solution-02
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+\coordinate(P)at(0,.25);\coordinate(C)at(-.661438,1);\draw[thick](-2.5,0)--(3.6,0);\draw[body](0,0)rectangle(3.4,.25);\draw[body,fill=none](C)circle(1);\fill(C)circle(1.6pt)node[left]{$C$};\fill(P)circle(1.6pt)node[above right]{$P$};\draw[guide](C)--(P);\draw[dim](3.8,0)--(3.8,.25)node[right,midway]{$h$};\draw[force](P)--++(-.661,.75)node[above left]{$N$};\draw[force](P)--++(.6,.529)node[right]{$T$};\draw[force](C)--++(0,-1.3)node[left]{$mg$};\draw[velocity](C)--++(.8,.529)node[above]{$\bm v_C$};\draw[velocity](2,.25)--(3,.25)node[above]{$\dot X$};\node at(.4,-.85){台阶自由运动：$C=(X-r\cos\theta,h+r\sin\theta)$};\node at(.4,-1.6){不能用固定尖角模型的 $N=m(g\sin\theta-rw^2)$};
+\end{tikzpicture}
+
+% 5 question-03
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+\fill(0,0)circle(2pt)node[left]{$O$};\draw[wire](0,0)--(.6,0);\draw[wire,decorate,decoration={coil,aspect=.5,segment length=6pt,amplitude=3pt}](.6,0)--(4.8,0);\draw[dim](0,-.9)--(.6,-.9)node[below,midway]{$r_0$};\draw[dim](.6,-.9)--(4.8,-.9)node[below,midway]{$l$};\draw[velocity](1.3,.4)arc[start angle=20,end angle=100,radius=1.3];\node at(1.5,1.4){$\omega$};\node at(2.5,-1.7){均匀有质量弹簧，原长 $l_0$；自由端张力为零};
+\end{tikzpicture}
+
+% 6 solution-03
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+\begin{scope}[shift={(-3,0)}]\draw[body](-.6,-.2)rectangle(.6,.2);\draw[force](-.6,0)--(-1.9,0)node[left]{$-F(x)$};\draw[force](.6,0)--(1.9,0)node[right]{$F(x+dx)$};\draw[velocity](0,.3)--(1.5,.3)node[above]{$\omega^2r\,dm$};\node at(0,-.8){$dm=(m/l_0)dx$，$F=kl_0(r_x-1)$};\node at(0,-1.5){$F_x=-(m/l_0)\omega^2r$};\end{scope}\begin{scope}[shift={(2,0)}]\draw[axis](0,0)--(4.2,0)node[right]{$\beta$};\draw[axis](0,0)--(0,2.3)node[above]{$l/l_0-1$};\draw[orbit]plot[smooth]coordinates{(0.07500,0.00017) (0.10909,0.00035) (0.14318,0.00060) (0.17727,0.00092) (0.21136,0.00131) (0.24545,0.00177) (0.27955,0.00230) (0.31364,0.00290) (0.34773,0.00357) (0.38182,0.00432) (0.41591,0.00513) (0.45000,0.00602) (0.48409,0.00698) (0.51818,0.00801) (0.55227,0.00912) (0.58636,0.01031) (0.62045,0.01158) (0.65455,0.01292) (0.68864,0.01435) (0.72273,0.01585) (0.75682,0.01744) (0.79091,0.01911) (0.82500,0.02087) (0.85909,0.02272) (0.89318,0.02466) (0.92727,0.02669) (0.96136,0.02882) (0.99545,0.03104) (1.02955,0.03336) (1.06364,0.03578) (1.09773,0.03830) (1.13182,0.04094) (1.16591,0.04368) (1.20000,0.04653) (1.23409,0.04951) (1.26818,0.05260) (1.30227,0.05581) (1.33636,0.05916) (1.37045,0.06263) (1.40455,0.06624) (1.43864,0.07000) (1.47273,0.07390) (1.50682,0.07795) (1.54091,0.08216) (1.57500,0.08653) (1.60909,0.09107) (1.64318,0.09579) (1.67727,0.10069) (1.71136,0.10578) (1.74545,0.11108) (1.77955,0.11658) (1.81364,0.12230) (1.84773,0.12824) (1.88182,0.13443) (1.91591,0.14086) (1.95000,0.14756) (1.98409,0.15453) (2.01818,0.16178) (2.05227,0.16935) (2.08636,0.17723) (2.12045,0.18545) (2.15455,0.19402) (2.18864,0.20297) (2.22273,0.21232) (2.25682,0.22209) (2.29091,0.23230) (2.32500,0.24299) (2.35909,0.25418) (2.39318,0.26592) (2.42727,0.27822) (2.46136,0.29114) (2.49545,0.30471) (2.52955,0.31899) (2.56364,0.33402) (2.59773,0.34986) (2.63182,0.36658) (2.66591,0.38425) (2.70000,0.40293) (2.73409,0.42273) (2.76818,0.44374) (2.80227,0.46606) (2.83636,0.48983) (2.87045,0.51517) (2.90455,0.54224) (2.93864,0.57123) (2.97273,0.60234) (3.00682,0.63580) (3.04091,0.67188) (3.07500,0.71089) (3.10909,0.75321) (3.14318,0.79927) (3.17727,0.84956) (3.21136,0.90470) (3.24545,0.96541) (3.27955,1.03257) (3.31364,1.10725) (3.34773,1.19079) (3.38182,1.28483) (3.41591,1.39149) (3.45000,1.51347)};\node[left]at(0,0){$0$};\node at(2,-.9){$r_0=0$ 示例；$\beta\to\pi/2$ 发散};\end{scope}
+\end{tikzpicture}
+
+% 7 question-04
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+\draw[body,fill=none](0,0)circle(2);\fill(0,0)circle(2pt)node[above]{$O$};\draw[wire](-2,0)--(2,0);\fill(1.4142135623730951,1.414213562373095)circle(2pt)node[shift={(0.318,0.318)}]{$ P_1 $};\draw[thick](1.4142135623730951,1.414213562373095)--(1.6263455967290592,1.626345596729059);
+\fill(-1.414213562373095,1.4142135623730951)circle(2pt)node[shift={(-0.318,0.318)}]{$ P_2 $};\draw[thick](-1.414213562373095,1.4142135623730951)--(-1.626345596729059,1.6263455967290592);
+\fill(-1.4142135623730954,-1.414213562373095)circle(2pt)node[shift={(-0.318,-0.318)}]{$ P_3 $};\draw[thick](-1.4142135623730954,-1.414213562373095)--(-1.6263455967290597,-1.626345596729059);
+\fill(1.4142135623730947,-1.4142135623730954)circle(2pt)node[shift={(0.318,-0.318)}]{$ P_4 $};\draw[thick](1.4142135623730947,-1.4142135623730954)--(1.6263455967290588,-1.6263455967290597);
+\node at(0,1.45){$A$ 区};\node at(0,-1.45){$A$ 区};\node at(-1.3,.32){$B$ 区};\node at(1.3,.32){$B$ 区};\node at(.65,.85){$\bm B:\otimes$};\draw[velocity](-2.4,0)arc[start angle=180,end angle=235,radius=2.4];\node at(-2.8,-.8){$\omega>0$};\node at(0,-3){四接地点间隔 $\pi/2$；图取逆时针角为正};
+\end{tikzpicture}
+
+% 8 solution-04
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+\fill(0,1)circle(1.8pt)node[left]{$O$};\draw[wire](0,1)--(2,1)node[midway,fill=white]{$\lambda r$};\fill(2,1)circle(1.8pt)node[above]{棒端};\draw[wire](2,1)--(3,1)--(3,-1)node[midway,fill=white,draw]{$\lambda r(q-\theta)$};\draw[wire](2,1)--(1.7,0)--(1.7,-1)node[midway,fill=white,draw]{$\lambda r(q+\theta)$};\draw[wire](0,1)--(0,-1)--(3,-1);\node at(1.5,2){一侧半棒的等效电路；另一侧相同};\node at(1.5,-1.8){$\mathcal E=B\omega r^2/2$，每侧 $I=\mathcal E/(\lambda r+R_{\rm arc})$};\node at(1.5,-2.6){$q=\pi/4$；每象限 $\Delta\omega=-0.628234\,\mathrm{s^{-1}}$};
+\end{tikzpicture}
+
+% 9 question-05
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+\draw[body,fill=none](0,0)ellipse[x radius=2.5,y radius=1.1];\draw[body,fill=none](0,0)ellipse[x radius=1.7,y radius=.6];\foreach\a in{0,30,...,330}{\draw[wire]({2.1*cos(\a)},{.85*sin(\a)})ellipse[x radius=.3,y radius=.42];}\fill(0,0)circle(1.8pt)node[below]{$O$};\draw[dim](0,0)--(2.1,0)node[above,midway]{$a$};\node at(0,1.9){环形绕组：$N$ 匝，单匝面积 $S$，电流增长率 $dI/dt$};\node at(0,-1.8){中心 $B=0$，但环向偶极的矢势可有轴向分量};
+\end{tikzpicture}
+
+% 10 solution-05
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+\draw[axis](-2,0)--(3,0)node[right]{$x$};\draw[axis](0,-1.6)--(0,2.1)node[above]{$z$};\fill(0,0)circle(1.8pt)node[below left]{$O$};\draw[body](2,0)circle(.25);\node at(2,0){$\otimes$};\node[above right]at(2.4,.35){$\bm m_i$ 沿 $+y$};\draw[velocity](1.6,0)--(.4,0)node[above,midway]{$\bm R_i$};\draw[force](0,0)--(0,1.4)node[left]{$\bm A$};\draw[velocity](0,0)--(0,-1.3)node[right]{$\bm E=-\partial_t\bm A$};\node at(.5,-2.2){$\bm m_i\times\bm R_i$ 向上，增长电流的感生场向下};
+\end{tikzpicture}
+
+% 11 question-06
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+\draw[body,fill=none](-1.7,-1.7)rectangle(1.7,1.7);\foreach\x/\y in{-1.7/-1.7,-1.7/1.7,1.7/1.7,1.7/-1.7}{\fill(\x,\y)circle(2pt);}\draw[velocity](-1.5,-1.4)--(-1.5,1.4)--(1.4,1.4)--(1.4,-1.4)--(-1.4,-1.4);\draw[force](-1.2,-1.1)--(1.1,-1.1)--(1.1,1.1)--(-1.1,1.1)--(-1.1,-1.1);\draw[axis](1.15,2.3)arc[start angle=60,end angle=150,radius=2.6558];\node at(0,3){平台逆时针 $\omega$};\node at(0,-2.5){蓝光顺时针、红光逆时针，均走完整闭路};
+\end{tikzpicture}
+
+% 12 solution-06
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+\draw[body,fill=none](-1.7,-1.7)rectangle(1.7,1.7);\foreach\x/\y in{-1.7/-1.7,-1.7/1.7,1.7/1.7,1.7/-1.7}{\fill(\x,\y)circle(2pt);}\draw[velocity](-1.5,-1.4)--(-1.5,1.4)--(1.4,1.4)--(1.4,-1.4)--(-1.4,-1.4);\draw[force](-1.2,-1.1)--(1.1,-1.1)--(1.1,1.1)--(-1.1,1.1)--(-1.1,-1.1);\draw[velocity](0,1.7)--(-1.1,1.7)node[above]{$v_t$};\node at(0,2.7){顶边向左：两光束相对边界追赶方向不同};\node at(0,-2.5){一阶 $\Delta L=4A\omega/c$；有限转动须另解移动镜面光路};
+\end{tikzpicture}
+
+% 13 question-07
+\begin{tikzpicture}
+ \node[draw,rounded corners,fill=red!8,minimum width=2.2cm,minimum height=1.5cm]
+   (H) at (-3.6,0){室外 $T_H$};
+ \node[draw,very thick,fill=gray!10,minimum width=1.9cm,minimum height=1.4cm]
+   (A) at (0,0){空调};
+ \node[draw,rounded corners,fill=blue!8,minimum width=2.4cm,minimum height=1.8cm]
+   (L) at (3.8,0){室内 $T_L$};
+ \draw[vec,red] (A)--(H) node[midway,above]{$\dot Q_H$};
+ \draw[vec,blue] (L)--(A) node[midway,above]{$\dot Q_L$};
+ \draw[vec] (0,-2.2)--(A) node[midway,right]{$P=\dot W$};
+\end{tikzpicture}
+
+% 14 solution-07
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+\draw[body](-1,-.7)rectangle(1,.7);\node at(0,0){空调};\draw[force](0,2)--(0,.7)node[midway,right]{$P$};\draw[velocity](-3,0)--(-1,0)node[midway,above]{$\dot Q_L$};\draw[force](1,0)--(3,0)node[midway,above]{$\dot Q_H$};\node at(-3,-.6){室内 $T_L$};\node at(3,-.6){室外 $T_H$};\draw[dashed,gray!75!black,->](2.8,-1.4)--(-2.8,-1.4)node[midway,below]{$k(T_H-T_L)$ 漏热};\node at(0,-2.3){稳态 $\dot Q_L=k(T_H-T_L)$，$\dot Q_H=\dot Q_L+P$};
+\end{tikzpicture}
+
+% 15 question-08
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+\draw[body,fill=none](0,0)circle(1.2);\fill(0,0)circle(2pt)node[below left]{$\lambda_2$};\node at(.4,.35){$\odot\ v$};\fill(3,0)circle(1.8pt)node[above]{$P$};\draw[dim](0,-1.6)--(1.2,-1.6)node[below,midway]{$R$};\draw[dim](0,-2.2)--(3,-2.2)node[below,midway]{$d$};\node at(1,1.9){轴向速度出纸面；筒与轴线都无限长};\node at(1,-3){主线采用筒静止系线密度 $\lambda_1$，另一口径在正文列明};
+\end{tikzpicture}
+
+% 16 solution-08
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+\draw[body,fill=none](0,0)circle(1.2);\fill(0,0)circle(2pt)node[below]{$O$};\fill(3,0)circle(1.8pt)node[below]{$P$};\draw[guide](0,0)--(3,0);\draw[force](3,0)--(4.4,0)node[right]{$E_r$};\draw[velocity](3,0)--(3,1.4)node[above]{$B_\phi$};\node at(.4,.4){$\odot\ u,v$};\node at(1.8,-1.9){箭头示例 $a>0,j>0$；速度沿轴，场在横截面};\node at(1.8,-2.7){$E'_r=\gamma_u(E_r-uB_\phi)$，$B'_\phi=\gamma_u(B_\phi-uE_r/c^2)$};
+\end{tikzpicture}
+
+\end{document}

@@ -1,0 +1,314 @@
+\documentclass[12pt,a4paper,UTF8]{ctexart}
+\usepackage[a4paper,top=22mm,bottom=22mm,left=22mm,right=22mm,headheight=15pt]{geometry}
+\newcommand{\Needspace}[1]{\par\begingroup\dimen0=#1\relax\dimen2=\pagegoal\advance\dimen2 by-\pagetotal\ifdim\dimen0>\dimen2\newpage\fi\endgroup}
+\newcommand{\needspace}[1]{\par\begingroup\skip0=\lastskip\vskip-\skip0\dimen0=#1\relax\advance\dimen0 by\skip0\vskip\dimen0\penalty-100\vskip-\dimen0\vskip\skip0\penalty9999\endgroup}
+\usepackage{amsmath,amssymb,mathtools,bm}
+\usepackage{graphicx,xcolor,booktabs,longtable,array,enumitem,fancyhdr,caption,float,microtype,setspace}
+\usepackage[hidelinks,unicode]{hyperref}
+\usepackage[most]{tcolorbox}
+\definecolor{ContestBlue}{HTML}{17365D}
+\hypersetup{pdftitle={第076套},pdfauthor={}}
+\setstretch{1.24}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.35em}
+\setlength{\emergencystretch}{2em}
+\setlist{itemsep=0.35em,topsep=0.4em}
+\captionsetup{font=small,labelfont=bf,justification=centering}
+\setcounter{secnumdepth}{0}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small 第076套}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\ctexset{
+  section={format=\Large\bfseries\color{ContestBlue},beforeskip=1.2em,afterskip=0.7em},
+  subsection={format=\large\bfseries\color{ContestBlue},beforeskip=1.0em,afterskip=0.5em},
+  subsubsection={format=\normalsize\bfseries,beforeskip=0.8em,afterskip=0.35em}
+}
+\usepackage{calc}
+\newcounter{none}
+\let\originalsubsection\subsection
+\renewcommand{\subsection}{\needspace{6\baselineskip}\originalsubsection}
+\makeatletter
+\newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\newcommand{\maxwidth}{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\newcommand{\maxheight}{\ifdim\Gin@nat@height>0.72\textheight 0.72\textheight\else\Gin@nat@height\fi}
+\newcommand{\pandocbounded}[1]{\begingroup\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}#1\endgroup}
+\makeatother
+\begin{document}
+\begin{titlepage}
+  \centering
+  \vspace*{58mm}
+  {\Huge\bfseries\color{ContestBlue} 第076套\par}
+  \vfill
+  \vspace*{28mm}
+\end{titlepage}
+\section{第 1 题}\label{ux7b2c-1-ux9898}
+
+一颗恒星在形成之前，经历半径很大、密度很低的原恒星阶段。由于引力作用，原恒星逐渐收缩，释放的引力势能先转化为物质的内能，随后以辐射形式向外传递。以太阳为例，设太阳及其早期原恒星都可近似看成均匀球体。已知太阳质量
+\(M=2.0\times10^{30}\,\mathrm{kg}\)、半径
+\(R=7.0\times10^8\,\mathrm m\)、表面温度约为
+\(T=6000\,\mathrm K\)。万有引力常量及斯特藩---玻尔兹曼常量为
+
+\[G=6.7\times10^{-11}\,\mathrm{N\,m^2/kg^2},\qquad
+\sigma=5.7\times10^{-8}\,\mathrm{W/(m^2\,K^4)}.\]
+
+（1）太阳由半径趋于无穷大的均匀原恒星收缩为当前半径的均匀球体时，共释放多少引力势能？
+
+（2）按照太阳当前的黑体辐射功率估算，第（1）问所得能量相当于太阳辐射多长时间？
+
+（3）若第（1）问的能量没有被缓慢辐射，而是瞬时全部转化为太阳物质的内能，取平均比热容
+
+\[
+c=1.0\times10^3\ \mathrm{J/(kg\,K)},
+\]
+
+且忽略较低的初温，估算太阳可达到的温度。进一步假设恒星的平均密度和平均比热容都与太阳近似相同，核聚变点火温度为
+
+\[
+T_c=2.0\times10^7\ \mathrm K,
+\]
+
+估算能够达到该温度的恒星质量至少约为太阳质量的百分之几。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.42\linewidth,height=\textheight,keepaspectratio,alt={图1-1　恒星由稀疏状态收缩并向外辐射的物理过程}]{../figures/question-01.pdf}
+\caption*{图1-1　恒星由稀疏状态收缩并向外辐射的物理过程}
+\end{figure}
+
+\newpage
+
+\section{第 2 题}\label{ux7b2c-2-ux9898}
+
+在理想光滑水平面上放置三个相同的点电荷
+\(A\)、\(B\)、\(C\)。每个点电荷的质量为 \(m\)，电荷量为
+\(q\)。\(AB\)、\(AC\) 之间分别用长度为 \(l\)
+的不可伸长柔软绝缘细绳连接。初始时三点构成边长为 \(l\)
+的正三角形，且都由静止释放。
+
+（1）当 \(\angle BAC=2\theta\) 时，求点电荷 \(A\) 的速度大小。
+
+（2）求点电荷 \(A\) 的最大速度。
+
+（3）该系统作周期运动，求运动周期 \(T\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.54\linewidth,height=\textheight,keepaspectratio,alt={图2-1　三点电荷的初始构型与两根等长约束绳}]{../figures/question-02.pdf}
+\caption*{图2-1　三点电荷的初始构型与两根等长约束绳}
+\end{figure}
+
+\newpage
+
+\section{第 3 题}\label{ux7b2c-3-ux9898}
+
+两块相同的薄金属圆盘 \(A\)、\(B\)，直径均为
+\(5.0\ \mathrm{cm}\)。两圆盘用绝缘细线悬挂，彼此平行且间距为 \(d\)，其中
+\(d\) 远小于圆盘直径。每块圆盘带电荷量
+\(q\)，两圆盘之间的静电排斥作用明显。
+
+现将一块不带电的大薄金属圆盘 \(C\) 小心插入 \(A\)、\(B\) 之间。圆盘
+\(C\) 的直径 \(D>5.0\ \mathrm{cm}\)，不接触
+\(A\)、\(B\)；三圆盘互相平行，中心位于同一直线上，且 \(A\)、\(B\) 关于
+\(C\) 对称。求 \(D\) 约为多大，才能使每个圆盘所受静电力的合力均为零。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图3-1　三块同轴平行圆盘的侧视关系与正视投影}]{../figures/question-03.pdf}
+\caption*{图3-1　三块同轴平行圆盘的侧视关系与正视投影}
+\end{figure}
+
+\newpage
+
+\section{第 4 题}\label{ux7b2c-4-ux9898}
+
+\textbf{（a）} 图示电阻网络中每个电阻的阻值均为 \(R\)，求 \(A\)、\(B\)
+两点之间的等效电阻。
+
+\textbf{（b）} 图示带通滤波电路中，输入电压为
+
+\[
+V_{\rm in}=V_0\cos\omega t,
+\]
+
+其中 \(V_0\) 为定值，角频率 \(\omega\) 可调。电源经串联电阻 \(R_s\)
+驱动由电容 \(C\)、电感 \(L\) 和负载电阻 \(R_L\) 组成的并联支路，输出电压
+\(V_{\rm out}\) 取并联支路两端电压。
+
+（1）当 \(\omega\) 为何值时，\(V_{\rm out}\)
+的振幅最大？最大振幅是多少？
+
+（2）当 \(R_L\) 消耗的平均功率等于其最大值的一半时，求对应的两个角频率。
+
+（3）带通滤波器的频宽定义为第（2）问两个频率之差
+
+\[
+\Delta f=\frac{\Delta\omega}{2\pi},
+\]
+
+求 \(\Delta f\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图4-1　对称电阻网络与并联谐振带通电路}]{../figures/question-04.pdf}
+\caption*{图4-1　对称电阻网络与并联谐振带通电路}
+\end{figure}
+
+\newpage
+
+\section{第 5 题}\label{ux7b2c-5-ux9898}
+
+水平地面上放置由两个相同刚体组成的系统，两刚体在 \(O\)
+点用光滑铰链连接。每个刚体都由半径为 \(R\) 的半圆与长为 \(L\)、宽为
+\(2R\) 的矩形拼接而成，\(O\) 为半圆圆心。每个刚体的质量为
+\(m\)，质心在对称轴上，且到 \(O\) 的距离为
+
+\[
+|OC|=\frac L2.
+\]
+
+刚体相对于质心的转动惯量为
+
+\[
+I_C=\frac14mL^2.
+\]
+
+上刚体顶点 \(D\) 与下刚体顶点 \(A\) 之间连接一根轻质弹性绳，弹性绳原长为
+\(L\)、劲度系数为
+\(k\)。绳贴着刚体表面，能在表面无摩擦滑动。开始时下刚体固定，两刚体重合，即夹角
+\(\theta=\pi\)；将上刚体由静止释放。定义
+
+\[
+\alpha=\frac RL,
+\qquad
+\beta=\frac{mg}{kL}.
+\]
+
+（1）已知 \(\beta<2\alpha^2\)，证明上刚体能够到达最高位置 \(\theta=0\)。
+
+（2）在第（1）问条件下，当上刚体到达最高位置时，立即解除下刚体的固定。若要求下刚体在该瞬间仍保持静止，求
+\(\alpha\)、\(\beta\) 以及地面与下刚体间摩擦因数 \(\mu\) 应满足的条件。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.597\linewidth,height=\textheight,keepaspectratio,alt={图5-1　两复合刚体、光滑铰链及贴面弹性绳的几何关系}]{../figures/question-05.pdf}
+\caption*{图5-1　两复合刚体、光滑铰链及贴面弹性绳的几何关系}
+\end{figure}
+
+\newpage
+
+\section{第 6 题}\label{ux7b2c-6-ux9898}
+
+一个圆柱形管道内有可无摩擦移动的活塞，管内封闭 \(2.00\ \mathrm{mol}\)
+空气。初态处于一个标准大气压，体积为 \(V_0\)，温度为
+
+\[
+T_0=298\ \mathrm K.
+\]
+
+气体依次经历下列过程：
+
+\begin{itemize}
+\tightlist
+\item
+  过程 \(A\)：在温度 \(T_0\) 下等温压缩到体积 \(V_0/4\)；
+\item
+  过程 \(B\)：绝热膨胀到体积 \(V_3=15.0\ \mathrm L\)；
+\item
+  过程 \(C\)：在过程 \(B\) 末态温度下等温膨胀到体积 \(V_0\)；
+\item
+  过程 \(D\)：保持体积 \(V_0\) 不变，使气体回到初温 \(T_0\)。
+\end{itemize}
+
+空气视为双原子理想气体，取
+
+\[
+C_p=\frac72R_g,
+\qquad
+C_v=\frac52R_g,
+\qquad
+1\ \mathrm{atm}=1.01\times10^5\ \mathrm{Pa}.
+\]
+
+（1）画出整个循环的 \(P\)---\(V\) 图。
+
+（2）求过程 \(A\) 中外界对气体所做的功。
+
+（3）求过程 \(B\) 末态气体温度。
+
+（4）求整个循环中的最小压强。
+
+（5）若将整个循环反向进行，求反向循环作为热机时的效率。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.78\linewidth,height=\textheight,keepaspectratio,alt={图6-1　活塞气体的四个准静态过程}]{../figures/question-06.pdf}
+\caption*{图6-1　活塞气体的四个准静态过程}
+\end{figure}
+
+\newpage
+
+\section{第 7 题}\label{ux7b2c-7-ux9898}
+
+在测量杨氏模量的实验中，有一根原长为 \(l\)、半径为 \(r\)、密度为
+\(\rho\) 的均匀细绳。细绳与后方的接地金属刻度板平行，二者距离为
+\(d\)，且刻度板足够宽、细绳与刻度板均足够长。现使电荷量 \(q\)
+均匀分布在细绳外表面。实验中使用的负重平均重量为
+\(T\)，按通常方法测得杨氏模量为
+\(Y\)。在最终误差分析中，求静电作用给测量结果带来的修正量 \(\Delta Y\)。
+
+可采用细绳近似，且满足
+
+\[
+r\ll d\ll l.
+\]
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.622\linewidth,height=\textheight,keepaspectratio,alt={图7-1　带电细绳与接地金属刻度板的空间位置}]{../figures/question-07.pdf}
+\caption*{图7-1　带电细绳与接地金属刻度板的空间位置}
+\end{figure}
+
+\newpage
+
+\section{第 8 题}\label{ux7b2c-8-ux9898}
+
+在量子化的一维简谐运动中，粒子的位移形式与经典简谐运动相同。设处于最低能量运动状态时
+
+\[
+x(t)=x_0\cos\omega t,
+\qquad
+\omega=\sqrt{\frac{k}{m}},
+\]
+
+\(x_0\) 为振幅，\(k\) 为力常量，\(m\) 为粒子质量。尖括号
+\(\langle\ \rangle\) 表示一个周期内的时间平均。位移与动量不确定度定义为
+
+\[
+\Delta x=\sqrt{\left\langle(x-\langle x\rangle)^2\right\rangle},
+\qquad
+\Delta p=\sqrt{\left\langle(p-\langle p\rangle)^2\right\rangle}.
+\]
+
+（1）证明
+
+\[
+(\Delta x)^2=\langle x^2\rangle,
+\qquad
+(\Delta p)^2=\langle p^2\rangle.
+\]
+
+（2）利用测不准关系
+\(\Delta x\,\Delta p\geq\hbar/2\)，证明该粒子可能的最小振幅为
+\(x_{0,\min}=\sqrt{\hbar/(m\omega)}\)，并求对应的系统最小总能量。
+
+（3）若粒子带电荷量 \(q\)，并置于沿振动方向的微弱匀强电场中，电场强度为
+\(\mathcal E\)。已知粒子仍保持简谐振动特性，求最低总能量和相应振幅。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.4\linewidth,height=\textheight,keepaspectratio,alt={图8-1　一维简谐运动的位移---时间关系}]{../figures/question-08.pdf}
+\caption*{图8-1　一维简谐运动的位移---时间关系}
+\end{figure}
+\end{document}

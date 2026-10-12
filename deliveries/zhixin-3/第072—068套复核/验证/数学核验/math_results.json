@@ -1,0 +1,505 @@
+{
+  "script_sha256": "ffa9ae9dbeb82aab36d8074a5596cd86387f04f7d8ead59bc3dc9a249543d347",
+  "groups": [
+    {
+      "set": 72,
+      "question": 1,
+      "check": "逐事件实际速度、停止扇区与能量",
+      "result": {
+        "collisions": 314159,
+        "terminal_V": 0.9999999999730119,
+        "terminal_v": 0.7346305493613732,
+        "relative_energy_error": -7.771561172376096e-15
+      },
+      "passed": true
+    },
+    {
+      "set": 72,
+      "question": 2,
+      "check": "有限条带直接积分复算外场",
+      "result": {
+        "finite_Ex": 0.004271301982018858,
+        "finite_Ez": 0.00014981568812749333
+      },
+      "passed": true
+    },
+    {
+      "set": 72,
+      "question": 3,
+      "check": "悬链线高度与实际弧长积分",
+      "result": {
+        "span": 45.404570144623975,
+        "curvature_radius": 11.666666666666666
+      },
+      "passed": true
+    },
+    {
+      "set": 72,
+      "question": 4,
+      "check": "21条弦的实际切线交点",
+      "result": {
+        "polar_x": 7.5,
+        "sample_chords": 21
+      },
+      "passed": true
+    },
+    {
+      "set": 72,
+      "question": 5,
+      "check": "有向边界的磁能二次型",
+      "result": {
+        "mutual": -0.25,
+        "eigenvalues": [
+          0.49999999999999956,
+          1.25,
+          1.25
+        ],
+        "third_inductance": 1.5
+      },
+      "passed": true
+    },
+    {
+      "set": 72,
+      "question": 6,
+      "check": "三种能量与相区独立重算",
+      "result": {
+        "Qheat": 8485.488800000001,
+        "Qmelt": 9098.988800000001,
+        "Qfree": 7360.227272727272,
+        "Tfree": 560.8199884274142,
+        "Sfree": 17.640136252344917,
+        "Ci": 9.546227738725547e-13,
+        "Qcharged": 8742.194023540516,
+        "melt_mass": 0.012552822667017866,
+        "Scharged": 20.006019766267027
+      },
+      "passed": true
+    },
+    {
+      "set": 72,
+      "question": 7,
+      "check": "驻值光程直接代入零级与宽度",
+      "result": {
+        "zero_order": -0.0063750000000000005,
+        "phase_difference": 0.00014960000000000003
+      },
+      "passed": true
+    },
+    {
+      "set": 72,
+      "question": 8,
+      "check": "盒中基态能量体积导数",
+      "result": {
+        "cell_nm": 3.3380976624690755,
+        "hardwall_pressure": 158.11055427524602,
+        "ratio_to_variance_bound": 9.869604401089358
+      },
+      "passed": true
+    },
+    {
+      "set": 71,
+      "question": 1,
+      "check": "广义特征值与两行本征关系",
+      "result": {
+        "frequency_squared": [
+          0.0848326194419549,
+          4.715167380558045
+        ]
+      },
+      "passed": true
+    },
+    {
+      "set": 71,
+      "question": 2,
+      "check": "离散电荷向量逐项求和与总量",
+      "result": {
+        "discrete_limits": [
+          2,
+          3,
+          6,
+          50,
+          1000
+        ],
+        "fixed_total_limit": 0.3183098861837907
+      },
+      "passed": true
+    },
+    {
+      "set": 71,
+      "question": 3,
+      "check": "绳杆广义特征值与频率比",
+      "result": {
+        "low_squared": 0.45861873485089033,
+        "high_squared": 6.541381265149109,
+        "ratio": 3.7766682343058124
+      },
+      "passed": true
+    },
+    {
+      "set": 71,
+      "question": 4,
+      "check": "开放流动终态能量、压力与熵",
+      "result": {
+        "n1": 1.5085440841362907,
+        "n2": 1.4914559158637093,
+        "T1": 1.6572270086699934,
+        "T2": 1.6762144783556931,
+        "entropy_in_n0R": 0.3890511324483714
+      },
+      "passed": true
+    },
+    {
+      "set": 71,
+      "question": 5,
+      "check": "线圈短接电流与磁能",
+      "result": {
+        "shorted_current": [
+          1.3333333333333333,
+          -0.6666666666666666,
+          0.0
+        ],
+        "energy_factor": 1.3333333333333333
+      },
+      "passed": true
+    },
+    {
+      "set": 71,
+      "question": 6,
+      "check": "直角两体动量与母粒子质量壳",
+      "result": {
+        "equal_energy": 193.03885619221847,
+        "beta": 0.7071020372704814,
+        "mass_shell": 74529.00000000001,
+        "angle_extension_stationary_condition": "symbolic derivative verified",
+        "back_to_back_minimum_beta": 0
+      },
+      "passed": true
+    },
+    {
+      "set": 71,
+      "question": 7,
+      "check": "外转折方程、单调性及弱场级数",
+      "result": {
+        "turning_ratio": 1.4125712744448442,
+        "leading_series": "4e+e^3"
+      },
+      "passed": true
+    },
+    {
+      "set": 71,
+      "question": 8,
+      "check": "平方阻力辅助方程与直接积分、周期功率",
+      "result": {
+        "auxiliary_max_error": 1.0658807170216278e-11,
+        "period_power": 1.432748788053932
+      },
+      "passed": true
+    },
+    {
+      "set": 70,
+      "question": 1,
+      "check": "相对射程实际极值与两角次序",
+      "result": {
+        "fixed_angle_deg": 64.26187661462772,
+        "moving_angle_deg": 68.10953723330935,
+        "range_max": 0.8852156672783309
+      },
+      "passed": true
+    },
+    {
+      "set": 70,
+      "question": 2,
+      "check": "圆柱面切向E与法向D连续",
+      "result": {
+        "interior_factor": 0.6666666666666666,
+        "dipole_factor": 0.3333333333333333,
+        "boundaries": 31
+      },
+      "passed": true
+    },
+    {
+      "set": 70,
+      "question": 3,
+      "check": "一般轴向自转的线性行列式",
+      "result": {
+        "characteristic": "w^4−(A+B+qx qy)w^2+AB",
+        "spin_parameter": "required",
+        "gyroscopic_stable_roots": [
+          12.383611936848752,
+          2.636796226416555
+        ]
+      },
+      "passed": true
+    },
+    {
+      "set": 70,
+      "question": 4,
+      "check": "相对运动时间的积分与闭式",
+      "result": {
+        "time": 1.4892564640247479,
+        "handle_speed": 0.6714760178360941
+      },
+      "passed": true
+    },
+    {
+      "set": 70,
+      "question": 5,
+      "check": "四像点逆映射与正方形恢复",
+      "result": {
+        "reconstruction_error": 0.0,
+        "side": 2
+      },
+      "passed": true
+    },
+    {
+      "set": 70,
+      "question": 6,
+      "check": "临界摩擦、法向接触与转角",
+      "result": {
+        "first_slip_deg": 24.29518894536458,
+        "omega_squared_scaled": 5.734313483298443,
+        "normal_scaled": 0.6835783708246107
+      },
+      "passed": true
+    },
+    {
+      "set": 70,
+      "question": 7,
+      "check": "磁制动守恒式与位移解导数",
+      "result": {
+        "limit_position": 1.7654809760864252,
+        "finite_position": 1.2791021906208822
+      },
+      "passed": true
+    },
+    {
+      "set": 70,
+      "question": 8,
+      "check": "活度平衡初值与精确Bateman导数",
+      "result": {
+        "initial_ratio": 190.60860655737704,
+        "N10_per_g": 2.627745587611837e+21,
+        "N20_per_g": 1.378608046652307e+19,
+        "secular_correction": 0.005274022198445893
+      },
+      "passed": true
+    },
+    {
+      "set": 69,
+      "question": 1,
+      "check": "轨道最小化与最近距离公式",
+      "result": {
+        "max_nearest_error": 4.588640578617742e-11,
+        "vertex": 0.7745966692414834
+      },
+      "passed": true
+    },
+    {
+      "set": 69,
+      "question": 2,
+      "check": "球冠法向压力积分与切面力",
+      "result": {
+        "cap_projected_area": 2.356194490192345,
+        "force_coefficient": 0.11190581936148893
+      },
+      "passed": true
+    },
+    {
+      "set": 69,
+      "question": 3,
+      "check": "完整相图覆盖及固定μ1截线",
+      "result": {
+        "grid_points": 1443,
+        "critical_mu2": [
+          0.26666666666666666,
+          0.3333333333333333
+        ],
+        "accelerations_at_04_02": [
+          0.2,
+          0.1,
+          0.1
+        ]
+      },
+      "passed": true
+    },
+    {
+      "set": 69,
+      "question": 4,
+      "check": "受约束质量与气体正劲度的投影",
+      "result": {
+        "mode_stiffnesses": [
+          26,
+          6
+        ],
+        "mode_masses": [
+          6,
+          2
+        ],
+        "frequency_squared_ratio": 1.4444444444444444,
+        "gas_lengths": [
+          0.5,
+          0.5,
+          0.25
+        ],
+        "unequal_stiffness_cases": 4
+      },
+      "passed": true
+    },
+    {
+      "set": 69,
+      "question": 5,
+      "check": "精确TE反射相位与模式数",
+      "result": {
+        "TE_transverse_roots": [
+          2.4339599066602196,
+          4.784641733415717,
+          6.795552927185153
+        ],
+        "TE_angles_deg": [
+          75.03368215213028,
+          59.491495174310465,
+          43.86036898151095
+        ],
+        "exact_modes": 3,
+        "geometric_positive_modes": 2
+      },
+      "passed": true
+    },
+    {
+      "set": 69,
+      "question": 6,
+      "check": "杯口可达性、初速和倾覆力矩单调性",
+      "result": {
+        "critical_speed_squared": 4,
+        "max_tip_moment_scaled": 5.2,
+        "radial_turning_roots": [
+          -0.2324081207560018,
+          0.6180339887498949,
+          1.0,
+          1.3699240762154812
+        ]
+      },
+      "passed": true
+    },
+    {
+      "set": 69,
+      "question": 7,
+      "check": "能谱归一化与工作点支路闭合",
+      "result": {
+        "first_U": 195,
+        "second_U": 351.9230769230769,
+        "second_I": 0.7923076923076924
+      },
+      "passed": true
+    },
+    {
+      "set": 69,
+      "question": 8,
+      "check": "零点能精确平方根与相关涨落",
+      "result": {
+        "pair_energy_change": -5.0006251312795236e-05,
+        "per_atom_change": -2.5003125656397618e-05,
+        "positive_correlation": 0.005001250393884077
+      },
+      "passed": true
+    },
+    {
+      "set": 68,
+      "question": 1,
+      "check": "球底滑动、动能及后续滚动",
+      "result": {
+        "v2": -0.2525641703473033,
+        "omega2": -0.38141042586825813,
+        "post_energy": 0.06098911266381202,
+        "later_rolling_velocity": -0.07142857142857142
+      },
+      "passed": true
+    },
+    {
+      "set": 68,
+      "question": 2,
+      "check": "分域镜像、电荷补偿与去自能",
+      "result": {
+        "field_ratio": 0.19576719576719576,
+        "center_potential": 7.666666666666667,
+        "assembly_energy": -0.046825396825396826
+      },
+      "passed": true
+    },
+    {
+      "set": 68,
+      "question": 3,
+      "check": "圆锥三个惯性量薄片积分",
+      "result": {
+        "hc": 0.7499999999999999,
+        "I3": 0.14699999999999996,
+        "I1": 0.6735
+      },
+      "passed": true
+    },
+    {
+      "set": 68,
+      "question": 4,
+      "check": "电桥阻值、电阻率及逐差统计",
+      "result": {
+        "Rx": 0.8009133028899036,
+        "resistivity": 1.4006730887543858e-07,
+        "uncertainty_example": 4.0824829046386325e-06
+      },
+      "passed": true
+    },
+    {
+      "set": 68,
+      "question": 5,
+      "check": "三维热阻直接求逆与功率",
+      "result": {
+        "powers": [
+          6.092785752416568,
+          14.47036616198935
+        ],
+        "linear_system_residual": 0.0
+      },
+      "passed": true
+    },
+    {
+      "set": 68,
+      "question": 6,
+      "check": "逐点物像映射与同半径必要条件",
+      "result": {
+        "circle_map_max_residual": 2.6645352591003757e-15,
+        "required_radius_ratio": 1,
+        "focal_length": 1,
+        "source_unequal_radius_claim": "fails in meridional model"
+      },
+      "passed": true
+    },
+    {
+      "set": 68,
+      "question": 7,
+      "check": "实际桥路分压极性与片长积分",
+      "result": {
+        "signed_bridge_output": -0.0009999999999998899,
+        "finite_gauge_mean": 0.7999999999999999
+      },
+      "passed": true
+    },
+    {
+      "set": 68,
+      "question": 8,
+      "check": "两末态四动量回代与切线方向",
+      "result": {
+        "beta": 0.5696002496878354,
+        "p_star": 1.5748851253011238,
+        "relative_max_deg": 34.620067085607495,
+        "direction_interval": [
+          -14.064021866024026,
+          55.17611230519096
+        ]
+      },
+      "passed": true
+    }
+  ],
+  "extra": [],
+  "passed": true,
+  "scope": "每题关键结果组作独立代数、积分、事件或数值核验；非穷尽所有假设。完整推导及图示另经审读。"
+}

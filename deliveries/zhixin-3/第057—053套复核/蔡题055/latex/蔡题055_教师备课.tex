@@ -1,0 +1,3656 @@
+\documentclass[12pt,a4paper,UTF8]{ctexart}
+\usepackage[a4paper,top=22mm,bottom=22mm,left=22mm,right=22mm,headheight=15pt]{geometry}
+\newcommand{\Needspace}[1]{\par\begingroup\dimen0=#1\relax\dimen2=\pagegoal\advance\dimen2 by-\pagetotal\ifdim\dimen0>\dimen2\newpage\fi\endgroup}
+\newcommand{\needspace}[1]{\par\begingroup\skip0=\lastskip\vskip-\skip0\dimen0=#1\relax\advance\dimen0 by\skip0\vskip\dimen0\penalty-100\vskip-\dimen0\vskip\skip0\penalty9999\endgroup}
+\usepackage{amsmath,amssymb,mathtools,bm}
+\usepackage{graphicx,xcolor,booktabs,longtable,array,enumitem,fancyhdr,caption,float,microtype,setspace}
+\usepackage[hidelinks,unicode]{hyperref}
+\usepackage[most]{tcolorbox}
+\definecolor{ContestBlue}{HTML}{17365D}
+\hypersetup{pdftitle={第055套},pdfauthor={}}
+\setstretch{1.24}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.35em}
+\setlength{\emergencystretch}{2em}
+\setlist{itemsep=0.35em,topsep=0.4em}
+\captionsetup{font=small,labelfont=bf,justification=centering}
+\setcounter{secnumdepth}{0}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small 第055套}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\ctexset{
+  section={format=\Large\bfseries\color{ContestBlue},beforeskip=1.2em,afterskip=0.7em},
+  subsection={format=\large\bfseries\color{ContestBlue},beforeskip=1.0em,afterskip=0.5em},
+  subsubsection={format=\normalsize\bfseries,beforeskip=0.8em,afterskip=0.35em}
+}
+\usepackage{calc}
+\newcounter{none}
+\let\originalsubsection\subsection
+\renewcommand{\subsection}{\needspace{6\baselineskip}\originalsubsection}
+\makeatletter
+\newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\newcommand{\maxwidth}{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\newcommand{\maxheight}{\ifdim\Gin@nat@height>0.72\textheight 0.72\textheight\else\Gin@nat@height\fi}
+\newcommand{\pandocbounded}[1]{\begingroup\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}#1\endgroup}
+\makeatother
+\begin{document}
+\begin{titlepage}
+  \centering
+  \vspace*{58mm}
+  {\Huge\bfseries\color{ContestBlue} 第055套\par}
+  \vfill
+  \vspace*{28mm}
+\end{titlepage}
+\section{第 1 题}\label{ux7b2c-1-ux9898}
+
+空间中存在匀强磁场 \(\bm B\)，磁场位于 \(x\)-\(z\) 平面内，并与 \(z\)
+轴夹角为 \(\theta\)。质量为 \(m\)、电荷量为 \(q\)
+的点电荷从原点出发，初速度为 \(\bm v_0=v_0\bm e_x\)。求：
+
+（1）粒子的运动轨迹参数方程和长时间平均速度；
+
+（2）粒子回旋运动的磁矩大小；
+
+（3）若磁场方向以角速度 \(\omega\ll |q|B/m\) 缓慢绕 \(z\)
+轴转动，并忽略感生电场，选取满足
+
+\[
+\frac{2\pi m}{|q|B}\ll\tau\ll\frac{2\pi}{\omega}
+\]
+
+的时间窗，求该时间窗内的平均速度；
+
+（4）静态磁场中，粒子是否会在 \(t>0\) 时回到 \(z\) 轴。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.529\linewidth,height=\textheight,keepaspectratio,alt={图1-1　斜磁场方向、初速度与螺旋运动的空间关系}]{../figures/question-01.pdf}
+\caption*{图1-1　斜磁场方向、初速度与螺旋运动的空间关系}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d}
+
+把初速度分成平行与垂直磁场的分量，轨迹由匀速前进和回旋运动叠加。慢变磁场的局部平均还需明确时间窗和忽略感生电场的近似。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  速度对磁场方向的正交分解。
+\item
+  洛伦兹方程 \(m\dot{\bm v}=q\bm v\times\bm B\)。
+\item
+  带符号回旋角频率 \(\Omega=qB/m\)。
+\item
+  回旋磁矩 \(\mu=mv_\perp^2/(2B)\)。
+\item
+  磁矩的绝热不变量与短时平均。
+\item
+  参数方程判断空间曲线与坐标轴的交点。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf}
+
+磁场单位向量为
+
+\[
+\bm b=\frac{\bm B}{B}
+=\sin\theta\,\bm e_x+\cos\theta\,\bm e_z. \tag{1}
+\]
+
+在垂直于 \(\bm b\) 的平面内取
+
+\[
+\bm e_1=\cos\theta\,\bm e_x-\sin\theta\,\bm e_z,
+\qquad \bm e_2=\bm e_y. \tag{2}
+\]
+
+则
+
+\[
+\bm e_1\times\bm b=-\bm e_2. \tag{3}
+\]
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.691\linewidth,height=\textheight,keepaspectratio,alt={图1-2　解析螺旋投影和速度分解}]{../figures/solution-01.pdf}
+\caption*{图1-2　解析螺旋投影和速度分解}
+\end{figure}
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3}
+
+初速度平行分量为
+
+\[
+\bm v_\parallel
+=(\bm v_0\cdot\bm b)\bm b
+=v_0\sin\theta\,\bm b. \tag{4}
+\]
+
+垂直分量为
+
+\[
+\begin{aligned}
+\bm v_\perp(0)
+&=\bm v_0-\bm v_\parallel\\
+&=v_0\cos\theta\,
+(\cos\theta\bm e_x-\sin\theta\bm e_z)\\
+&=v_0\cos\theta\,\bm e_1.
+\end{aligned} \tag{5}
+\]
+
+故
+
+\[
+v_\parallel=v_0\sin\theta\qquad
+v_\perp=v_0\cos\theta. \tag{6}
+\]
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790}
+
+\needspace{3\baselineskip}
+\textbf{（一）速度随时间的变化}
+
+定义带符号角频率
+
+\[
+\Omega=\frac{qB}{m}. \tag{7}
+\]
+
+由于式（3），满足初始条件的垂直速度为
+
+\[
+\bm v_\perp(t)
+=v_0\cos\theta
+\left(\bm e_1\cos\Omega t-\bm e_2\sin\Omega t\right). \tag{8}
+\]
+
+在 \(t=0\) 处，式（8）给出 \(v_0\cos\theta\bm e_1\)；对时间求导：
+
+\[
+\dot{\bm v}_\perp(0)
+=-\Omega v_0\cos\theta\bm e_2, \tag{9}
+\]
+
+而洛伦兹方程右侧为
+
+\[
+\frac qm\bm v_\perp(0)\times\bm B
+=\Omega v_0\cos\theta\,
+\bm e_1\times\bm b
+=-\Omega v_0\cos\theta\bm e_2, \tag{10}
+\]
+
+两者一致。总速度为
+
+\[
+\boxed{
+\bm v(t)=v_0\sin\theta\bm b
++v_0\cos\theta
+(\bm e_1\cos\Omega t-\bm e_2\sin\Omega t)}. \tag{11}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（二）积分得到轨迹参数方程}
+
+由 \(\bm r(0)=\bm0\)，逐项积分：
+
+\[
+\boxed{
+\bm r(t)=v_0\sin\theta\bm b t
++\frac{v_0\cos\theta}{\Omega}
+\left[\bm e_1\sin\Omega t
++\bm e_2(\cos\Omega t-1)\right]}. \tag{12}
+\]
+
+代入式（1）、（2），得到直角坐标形式：
+
+\[
+\boxed{
+\begin{aligned}
+x(t)&=v_0\sin^2\theta\,t
++\frac{v_0\cos^2\theta}{\Omega}\sin\Omega t,\\
+y(t)&=\frac{v_0\cos\theta}{\Omega}(\cos\Omega t-1),\\
+z(t)&=v_0\sin\theta\cos\theta\,t
+-\frac{v_0\sin\theta\cos\theta}{\Omega}\sin\Omega t.
+\end{aligned}} \tag{13}
+\]
+
+周期项在垂直磁场的平面内形成圆，圆心同时沿 \(\bm b\)
+匀速移动，因此轨迹是以 \(\bm B\) 为轴的螺旋线。回旋半径为
+
+\[
+\rho=\frac{v_\perp}{|\Omega|}
+=\frac{mv_0|\cos\theta|}{|q|B}. \tag{14}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（三）长时间平均速度}
+
+对很多个回旋周期平均，\(\sin\Omega t\)、\(\cos\Omega t\)
+的平均值均为零，故
+
+\[
+\boxed{
+\langle\bm v\rangle
+=v_0\sin\theta\bm b
+=v_0\left(\sin^2\theta\bm e_x
++\sin\theta\cos\theta\bm e_z\right)}. \tag{15}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（四）磁矩大小}
+
+回旋电流的磁矩大小可写成
+
+\[
+\mu=I_{\rm loop}A
+=\frac{|q|}{T_c}\pi\rho^2, \tag{16}
+\]
+
+其中 \(T_c=2\pi/|\Omega|\)。代入：
+
+\[
+\begin{aligned}
+\mu
+&=\frac{|q||\Omega|}{2\pi}\pi
+\frac{v_\perp^2}{\Omega^2}\\
+&=\frac{|q|v_\perp^2}{2|\Omega|}\\
+&=\frac{mv_\perp^2}{2B}.
+\end{aligned} \tag{17}
+\]
+
+因此
+
+\[
+\boxed{\mu=\frac{mv_0^2\cos^2\theta}{2B}}. \tag{18}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（五）磁场缓慢绕 \(z\) 轴转动时的短时平均}
+
+设磁场方位角为 \(\varphi(t)=\omega t\)，则
+
+\[
+\bm b(t)=
+\sin\theta\cos\omega t\,\bm e_x
++\sin\theta\sin\omega t\,\bm e_y
++\cos\theta\,\bm e_z. \tag{19}
+\]
+
+磁场不做功，粒子总速率不变；磁矩近似不变又保证 \(v_\perp\)
+近似不变，因此 \(v_\parallel=v_0\sin\theta\)
+也近似不变。在给定时间窗中，回旋项被平均掉，而磁场方向几乎不变，所以
+
+\[
+\boxed{
+\overline{\bm v}(t)
+\simeq v_0\sin\theta\,\bm b(t)}. \tag{20}
+\]
+
+若把平均区间写成 \([t,t+\tau]\)
+并保留磁场缓慢转动的一阶中心时刻，可更精确地写为
+
+\[
+\overline{\bm v}_{[t,t+\tau]}
+\simeq v_0\sin\theta\,
+\bm b\left(t+\frac\tau2\right). \tag{21}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（六）是否回到 \(z\) 轴}
+
+回到 \(z\) 轴要求同时满足 \(x(t)=0\)、\(y(t)=0\)。由式（13）第二行，若
+\(\cos\theta\ne0\)，则
+
+\[
+y(t)=0\quad\Longrightarrow\quad \cos\Omega t=1, \tag{22}
+\]
+
+即
+
+\[
+\Omega t=2\pi n. \tag{23}
+\]
+
+此时 \(\sin\Omega t=0\)，所以
+
+\[
+x(t)=v_0\sin^2\theta\,t. \tag{24}
+\]
+
+对 \(t>0\)，只要 \(\sin\theta\ne0\)，就有 \(x(t)>0\)，不能回到 \(z\)
+轴。故一般斜磁场中不会返回；只有 \(\sin\theta=0\)，即磁场沿 \(z\)
+轴时，粒子在每个回旋周期回到原点。
+
+式（12）可用两个不变量核验。速度模平方为
+
+\[
+v^2=v_\parallel^2+v_\perp^2=v_0^2,
+\]
+
+说明磁场不做功；沿磁场位移为
+
+\[
+\bm r\cdot\bm b=v_0\sin\theta\,t,
+\]
+
+所有回旋项都因与 \(\bm b\) 垂直而消失。一个周期内螺旋线沿轴推进的螺距为
+
+\[
+p=v_\parallel T_c
+=\frac{2\pi mv_0\sin\theta}{|q|B}.
+\]
+
+当 \(\theta=0\) 时，\(p=0\)，退化为 \(x\)-\(y\) 平面内圆周；当
+\(\theta=\pi/2\)
+时，\(v_\perp=0\)，轨迹退化为沿磁场的直线。这两个极限完整覆盖了螺旋线的两种退化。
+
+\needspace{3\baselineskip}
+\textbf{分量方程的反向核验}
+
+还可以不借助螺旋线结论，从洛伦兹方程直接核验参数解。将
+
+\[
+\bm B=B(\sin\theta,0,\cos\theta)
+\]
+
+代入 \(m\dot{\bm v}=q\bm v\times\bm B\)，得到
+
+\[
+\begin{aligned}
+\dot v_x&=\Omega v_y\cos\theta,\\
+\dot v_y&=\Omega(v_z\sin\theta-v_x\cos\theta),\\
+\dot v_z&=-\Omega v_y\sin\theta.
+\end{aligned}
+\]
+
+式（12）对时间求导所得 \(v_x,v_y,v_z\)
+逐项代入，三式左右完全相等，并满足初值
+
+\[
+(v_x,v_y,v_z)_{t=0}=(v_0,0,0).
+\]
+
+再取点积可得
+
+\[
+\frac{\mathrm d}{\mathrm dt}
+(\bm v\cdot\bm b)
+=\dot{\bm v}\cdot\bm b
+=\frac qm(\bm v\times\bm B)\cdot\bm b=0,
+\]
+
+所以平行速度守恒不是平均意义的近似，而是静态匀强磁场中的严格结论。缓慢转场时，只有在一个回旋周期内近似冻结
+\(\bm b\)，才把这一结论作为局域平均使用。
+
+\textbf{慢变与退化角度。}
+第三问忽略感生电场，是题目另给的理想近似。局部平均需同时满足回旋周期远小于时间窗、时间窗远小于磁场方向变化周期；误差来自\(\omega/|\Omega|\)、\(1/(|\Omega|\tau)\)与\(\omega\tau\)。因此以瞬时磁场方向写出的平均速度只取领先阶。静态问题中，\(\theta=\pi/2\)时粒子沿x轴作直线运动，不能在正时间再次回到z轴；\(\theta=0\)时运动为平面圆周，完整回旋周期后返回原点。图中\(\theta\)始终是z轴与B的夹角。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf}
+
+选择随磁场方向构造的正交基后，三维问题立即分解成``一维匀速＋二维圆周''。平均速度只留下平行分量，磁矩只由垂直分量决定，两个问题分别读取同一次分解的不同部分。
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  误把 \(v_\parallel\) 写成 \(v_0\cos\theta\)；\(\theta\) 是磁场与 \(z\)
+  轴夹角，不是与 \(x\) 轴夹角。
+\item
+  使用 \(qB/m\) 时不区分带符号角频率和周期中的绝对值。
+\item
+  轨迹积分中把 \(\int-\sin\Omega t\,dt\) 的常数项漏掉，导致
+  \(y(0)\ne0\)。
+\item
+  磁矩公式中误用总速度而不是 \(v_\perp\)。
+\item
+  判断返回坐标轴时只检查一个坐标。
+\end{enumerate}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae}
+
+先让学生画出 \(\bm b\) 在 \(x\)-\(z\) 平面内的单位向量，再用点积求
+\(v_\parallel\)。轨迹不必一开始展开成三个坐标，先保持式（12）的矢量形式，解释圆周平面、圆心漂移和螺距，再展开分量用于第（4）问。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3}
+
+把初速度改为一般 \(\bm v_0=(v_x,v_y,v_z)\)，要求用投影算符
+
+\[
+\bm v_\parallel=(\bm v_0\cdot\bm b)\bm b,
+\qquad
+\bm v_\perp=\bm v_0-\bm v_\parallel
+\]
+
+写出不依赖特定坐标的轨迹公式，并讨论 \(q<0\)
+时螺旋旋向如何改变而半径、螺距大小不变。
+
+\needspace{3\baselineskip}
+\textbf{一般初速度的矢量解与磁矩方向}
+
+令\(\boldsymbol v_\perp=\boldsymbol v_0-(\boldsymbol v_0\cdot\boldsymbol b)\boldsymbol b\)，静态均匀磁场的解为
+\[\boldsymbol v(t)=(\boldsymbol v_0\cdot\boldsymbol b)\boldsymbol b
++\boldsymbol v_\perp\cos\Omega t
++(\boldsymbol v_\perp\times\boldsymbol b)\sin\Omega t,\]
+\[\boldsymbol r(t)=(\boldsymbol v_0\cdot\boldsymbol b)\boldsymbol b\,t
++\frac{\boldsymbol v_\perp}{\Omega}\sin\Omega t
++\frac{\boldsymbol v_\perp\times\boldsymbol b}{\Omega}(1-\cos\Omega t).\]
+令初速为\(v_0\boldsymbol e_x\)即可恢复正文。\(q\)变号使\(\Omega\)变号，旋向反转而半径不变。
+
+回旋磁矩矢量始终反向于B： \[\boldsymbol\mu_{\rm gyro}
+=-\frac{mv_\perp^2}{2B}\boldsymbol b.\]
+正负电荷的运动旋向相反，电流方向还要再乘电荷符号，二者合起来都产生抗磁方向。题目只求磁矩大小时不带这个负号；若进一步问\(\boldsymbol\mu\cdot\boldsymbol B\)或力矩，就必须恢复方向。
+
+第三问人为忽略感生电场，因此只作为给定磁场下的运动方程近似。若真实空间中B随时间改变，Faraday定律会产生电场，速率不变的推论需重新检查。
+
+\needspace{3\baselineskip}
+\textbf{负电荷怎样改变同一初态的轨迹}
+
+保留初态 \(\boldsymbol v(0)=v_0\boldsymbol e_x\) 和同一
+\(\boldsymbol B\)，将 \(q\) 改为 \(-q\)。有符号频率 \(\Omega=qB/m\)
+反号，周期 \(2\pi/|\Omega|\) 不变。轨迹中的
+\[\frac{\sin\Omega t}{\Omega}\] 为 \(\Omega\) 的偶函数，而
+\((\cos\Omega t-1)/\Omega\)
+为奇函数。因此平行磁场位移和初始垂直速度方向上的位移相同，另一个垂直方向的位移反号，螺旋手性改变。
+轨道磁矩可由一个周期的电流计算：
+\[\boldsymbol\mu_{\rm orb}=\frac q{T_{\rm cyc}}\pi\rho^2\,\hat{\boldsymbol n}_{\rm orbit}.\]
+电荷与轨道旋转法向同时反号，乘积保持不变：
+\[\boldsymbol\mu_{\rm orb}=-\frac{mv_\perp^2}{2B}\boldsymbol b.\]
+所以正、负电荷的回旋方向相反，但轨道磁矩都反向于磁场。若只把公式中 \(q\)
+反号而固定旋转法向，会错误预测顺磁轨道响应。
+
+\newpage
+
+\section{第 2 题}\label{ux7b2c-2-ux9898}
+
+Michelson 干涉仪使用半反射板 \(G_1\)
+将入射光分成互相垂直的两束光，分别经反射镜 \(M_1\)、\(M_2\)
+反射后重新会合，\(G_2\) 为补偿板。\(M_2\) 固定，\(M_1\)
+可沿光束方向移动。求：
+
+（1）使用波长 \(589.3\,\mathrm{nm}\) 的钠光，移动 \(M_1\) 后中心吞吐
+\(20\) 圈条纹，\(M_1\) 移动的距离；
+
+（2）钠黄光由两条相近谱线组成，平均波长
+\(\lambda_0=589.3\,\mathrm{nm}\)。条纹从最模糊到最清晰再到最模糊的一个周期内吞吐
+\(985\) 圈，求双线波长差；
+
+（3）以速度 \(v\) 匀速移动 \(M_1\)，光电信号频率为 \(f\)，求波长
+\(\lambda\)，并对
+\(v=6.0\times10^{-4}\,\mathrm{m/s}\)、\(f=2.54\times10^3\,\mathrm{Hz}\)
+求数值；
+
+（4）按上述速度移动反射镜，求钠黄光双线电信号的拍频。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.546\linewidth,height=\textheight,keepaspectratio,alt={图2-1　Michelson 干涉仪的分束、往返反射和观察方向}]{../figures/question-02.pdf}
+\caption*{图2-1　Michelson 干涉仪的分束、往返反射和观察方向}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-1}
+
+移动反射镜改变两倍镜位移的光程。条纹移动、谱线拍和探测信号分别对应不同的相位变化，计算时要保持这三个量的定义。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-1}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  反射镜位移 \(d\) 引起光程差变化 \(2d\)。
+\item
+  条纹吞吐数 \(N=\Delta\!\Delta/\lambda\)。
+\item
+  双谱线可见度与波数差。
+\item
+  移动镜产生的光电信号频率 \(f=2v/\lambda\)。
+\item
+  拍频 \(|f_1-f_2|\) 与小波长差近似。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-1}
+
+\(M_1\) 移动 \(d\) 时，去程和回程各改变 \(d\)，总光程差改变
+\(2d\)。两条谱线各自产生一个快速信号，其频率略有不同，叠加后出现缓慢包络。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.82\linewidth,height=\textheight,keepaspectratio,alt={图2-2　等强谱线的零拍包络}]{../figures/solution-02.pdf}
+\caption*{图2-2　等强谱线的零拍包络}
+\end{figure}
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-1}
+
+对单色光，相位差为
+
+\[
+\Phi=\frac{2\pi}{\lambda}\Delta. \tag{1}
+\]
+
+镜面移动 \(d\)：
+
+\[
+\delta\Delta=2d. \tag{2}
+\]
+
+每当光程差增加一个波长，中心吞吐一圈：
+
+\[
+N=\frac{2d}{\lambda}. \tag{3}
+\]
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-1}
+
+\needspace{3\baselineskip}
+\textbf{（一）20 圈条纹对应的位移}
+
+由式（3）：
+
+\[
+d=\frac{N\lambda}{2}. \tag{4}
+\]
+
+代入 \(N=20\)、\(\lambda=589.3\,\mathrm{nm}\)：
+
+\[
+\begin{aligned}
+d
+&=10\times589.3\,\mathrm{nm}\\
+&=5893\,\mathrm{nm}\\
+&=5.893\,\mu\mathrm m.
+\end{aligned} \tag{5}
+\]
+
+故
+
+\[
+\boxed{d=5.893\,\mu\mathrm m}. \tag{6}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（二）双线波长差}
+
+设两条谱线波长为 \(\lambda_1\)、\(\lambda_2\)。同一光程差 \(\Delta\)
+下，两谱线相位差之差为
+
+\[
+\delta\Phi
+=2\pi\Delta\left(\frac1{\lambda_1}-\frac1{\lambda_2}\right). \tag{7}
+\]
+
+从一次最模糊到下一次最模糊，\(\delta\Phi\) 改变
+\(2\pi\)，故相应光程差周期为
+
+\[
+\Delta_{\rm vis}
+=\frac1{\left|1/\lambda_1-1/\lambda_2\right|}. \tag{8}
+\]
+
+这段过程中平均条纹吞吐数为
+
+\[
+N\simeq\frac{\Delta_{\rm vis}}{\lambda_0}. \tag{9}
+\]
+
+当 \(\Delta\lambda=|\lambda_2-\lambda_1|\ll\lambda_0\) 时，
+
+\[
+\left|\frac1{\lambda_1}-\frac1{\lambda_2}\right|
+=\frac{\Delta\lambda}{\lambda_1\lambda_2}
+\simeq\frac{\Delta\lambda}{\lambda_0^2}. \tag{10}
+\]
+
+所以
+
+\[
+N\simeq\frac{\lambda_0}{\Delta\lambda}. \tag{11}
+\]
+
+于是
+
+\[
+\begin{aligned}
+\Delta\lambda
+&\simeq\frac{589.3\,\mathrm{nm}}{985}\\
+&=0.5983\,\mathrm{nm}.
+\end{aligned} \tag{12}
+\]
+
+保留两位有效数字：
+
+\[
+\boxed{\Delta\lambda\simeq0.60\,\mathrm{nm}}. \tag{13}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（三）移动镜产生的信号频率}
+
+镜面匀速移动时
+
+\[
+\dot\Delta=2v. \tag{14}
+\]
+
+每增加一个波长，信号完成一个周期，因此
+
+\[
+f=\frac{\dot\Delta}{\lambda}=\frac{2v}{\lambda}. \tag{15}
+\]
+
+故
+
+\[
+\boxed{\lambda=\frac{2v}{f}}. \tag{16}
+\]
+
+数值为
+
+\[
+\begin{aligned}
+\lambda
+&=\frac{2(6.0\times10^{-4})}{2.54\times10^3}\,\mathrm m\\
+&=4.724\times10^{-7}\,\mathrm m\\
+&\simeq472\,\mathrm{nm}.
+\end{aligned} \tag{17}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（四）钠双线的拍频}
+
+两信号频率分别为
+
+\[
+f_1=\frac{2v}{\lambda_1},\qquad
+f_2=\frac{2v}{\lambda_2}. \tag{18}
+\]
+
+拍频为
+
+\[
+\begin{aligned}
+f_{\rm beat}
+&=|f_1-f_2|\\
+&=2v\left|\frac1{\lambda_1}-\frac1{\lambda_2}\right|\\
+&\simeq\frac{2v\Delta\lambda}{\lambda_0^2}.
+\end{aligned} \tag{19}
+\]
+
+代入
+\(v=6.0\times10^{-4}\,\mathrm{m/s}\)、\(\Delta\lambda=0.5983\,\mathrm{nm}\)：
+
+\[
+\boxed{f_{\rm beat}\simeq2.07\,\mathrm{Hz}}. \tag{20}
+\]
+
+也可利用第（2）问的 \(N=985\)：平均载频 \(f_0=2v/\lambda_0\)，故
+\(f_{\rm beat}=f_0/N\)，得到同一数值。
+
+清晰度周期可由两余弦相加直接看出：
+
+\[
+\cos\Phi_1+\cos\Phi_2
+=2\cos\frac{\Phi_1-\Phi_2}{2}
+\cos\frac{\Phi_1+\Phi_2}{2}.
+\]
+
+后一个余弦给出平均波长对应的快速条纹，前一个余弦给出可见度包络。最模糊时包络为零，最清晰时绝对值为一；从最模糊经过最清晰再到最模糊，\(\Phi_1-\Phi_2\)
+恰改变 \(2\pi\)，所以式（8）没有额外的 \(1/2\)。
+
+量纲核验：\(2v/f\) 是长度；\(2v\Delta\lambda/\lambda_0^2\) 是
+\(1/\mathrm s\)。若镜速加倍，条纹吞吐频率和拍频都加倍，但由可见度周期反求的波长差不变。
+
+\textbf{补偿板与拍的零点。}
+原图的补偿板\(G_2\)位于右侧镜臂，目的是使两束光在玻璃中的往返光程相同；题图已补画回程，不可将它搬到另一条光路而不改光程计算。两条近等波长谱线等强时，叠加项可写成
+\[\cos\phi_1+\cos\phi_2
+=2\cos\frac{\phi_1-\phi_2}{2}\cos\frac{\phi_1+\phi_2}{2}.\]
+条纹可见度的包络正比\(|\cos[(\phi_1-\phi_2)/2]|\)，相位差为奇数倍\(\pi\)时应降至零。图2-2的慢包络从这一式绘制；两线强度不等时才出现非零包络下限。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf-1}
+
+条纹数、信号频率和拍频都是同一个相位函数在不同尺度上的读取：光程差的绝对变化决定条纹数，变化率决定载频，两条波数的差决定包络。
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9-1}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  忘记反射镜位移造成双程光程变化，漏掉因子 \(2\)。
+\item
+  把``模糊---清晰---模糊''误当成半个可见度周期。
+\item
+  将 \(\Delta\lambda\) 与 \(\Delta(1/\lambda)\) 直接等同。
+\item
+  用题中 \(2.54\times10^3\,\mathrm{Hz}\)
+  作为钠双线载频；它只对应第（3）问的待测光。
+\item
+  纳米与米换算时漏掉 \(10^{-9}\)。
+\end{enumerate}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae-1}
+
+先用单色光建立 \(N=2d/\lambda\)，再把镜子改为匀速，令 \(N/t\) 自然变成
+\(f=2v/\lambda\)。最后引入第二条波长，让学生把两个频率作差。这样三问是一条连续逻辑，而不是三个独立公式。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3-1}
+
+若反射镜速度不是常量而是 \(v(t)\)，则瞬时频率为
+\(f(t)=2v(t)/\lambda\)。可给定线性加速 \(v(t)=at\)，要求求累计条纹数
+
+\[
+N(t)=\frac2\lambda\int_0^t v(t')\,dt',
+\]
+
+并讨论双线包络在时间上是否仍等间隔。
+
+\needspace{3\baselineskip}
+\textbf{加速移动和不等强谱线}
+
+若镜速\(v(t)=at\)且从静止开始，镜位移为\(at^2/2\)、双程光程差增加\(at^2\)，故
+\[N(t)=\frac{at^2}{\lambda},\qquad
+f(t)=\frac{2at}{\lambda}.\]
+双线包络零点满足波数差乘光程差为半整数。若零点按\(N_b=0,1,2,\ldots\)编号，忽略初始相位时
+\[at_{N_b}^2\left|1/\lambda_1-1/\lambda_2\right|
+=N_b+\tfrac12.\]
+所以\(t_{N_b}\propto\sqrt{N_b+1/2}\)，相邻零点的时间间隔不断缩短。等间隔的是光程差，匀速镜才把它变成等时间间隔。
+
+设两条谱线强度权重为\(A_1,A_2\)，可见度为 \[\mathcal V(\Delta)=
+\frac{\sqrt{A_1^2+A_2^2+2A_1A_2\cos\delta\Phi}}
+{A_1+A_2}.\]
+最低值\(|A_1-A_2|/(A_1+A_2)\)，等强时才为零。这个表达式解释了为什么图2-2取等强模型时包络必须接触零线，不能把非零下限画成所有双线的普遍特征。
+
+\needspace{3\baselineskip}
+\textbf{用精确波长关系估计近似误差}
+
+若两谱线的算术平均波长为 \(\lambda_0\)，差为 \(\Delta\lambda\)，则
+\[\lambda_1=\lambda_0-\frac{\Delta\lambda}{2},\qquad
+\lambda_2=\lambda_0+\frac{\Delta\lambda}{2}.\] 波数差的绝对值为
+\[\Delta\sigma=\frac{\Delta\lambda}{\lambda_0^2-(\Delta\lambda)^2/4}.\]
+若拍周期内的平均条纹数按 \(\lambda_0\) 定义为 \(N\)，则
+\(\Delta\sigma=1/(N\lambda_0)\)，因而
+\[\frac{(\Delta\lambda)^2}{4}+N\lambda_0\Delta\lambda-\lambda_0^2=0.\]
+取正根并有理化，得到
+\[\Delta\lambda=\frac{2\lambda_0}{\sqrt{N^2+1}+N}.\] 与近似
+\(\lambda_0/N\) 相比，相对修正为 \(-1/(4N^2)+O(N^{-4})\)。原题 \(N=985\)
+时只有约
+\(2.58\times10^{-7}\)，远小于输入有效数字精度。这个检查同时说明使用小波长差近似是合理的，而不是凭两谱线``很近''省去误差估计。
+
+\newpage
+
+\section{第 3 题}\label{ux7b2c-3-ux9898}
+
+半径为 \(r\)
+的圆柱被两条不可伸长的绳沿两条切线拉动，两条绳的切线方向夹角为
+\(\alpha\)，从切点到牵引端的直线段长度分别为
+\(l_1\)、\(l_2\)。牵引端沿各自绳方向的速度为 \(v_1\)、\(v_2\)。求：
+
+（1）圆柱不自转时，圆心速度大小 \(v\) 和绳段 \(l_1\) 的转动角速度
+\(\omega_1\)；
+
+（2）圆柱以角速度 \(\omega\) 顺时针转动时，圆心速度大小 \(v_O\) 和绳段
+\(l_1\) 的转动角速度 \(\omega_1'\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.468\linewidth,height=\textheight,keepaspectratio,alt={图3-1　圆柱上的两条切绳、牵引速度和几何夹角}]{../figures/question-03.pdf}
+\caption*{图3-1　圆柱上的两条切绳、牵引速度和几何夹角}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-2}
+
+两条绳给出圆心速度的两个切向投影。先扣除圆柱自转在切点的速度，再重建圆心速度；绳段转角由法向相对运动确定。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-2}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  刚体接触点速度 \(\bm v_P=\bm V_O+\bm\Omega\times\bm r_{P/O}\)。
+\item
+  不可伸长、无滑动绳的切向速度约束。
+\item
+  由两个斜投影重建平面向量。
+\item
+  切线方向单位向量的转动率。
+\item
+  带符号角速度和大小的区分。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-2}
+
+令 \(\bm t_1\)、\(\bm t_2\) 为从切点指向牵引端的单位向量，夹角为
+\(\alpha\)。令
+
+\[
+\bm n_i=\bm e_z\times\bm t_i, \tag{1}
+\]
+
+则 \(r\bm n_i\)
+是从圆心到对应切点的位置矢量。规定绳段逆时针转动为正，圆柱顺时针自转角速度
+\(\omega>0\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.578\linewidth,height=\textheight,keepaspectratio,alt={图3-2　绳方向投影与顺时针自转}]{../figures/solution-03.pdf}
+\caption*{图3-2　绳方向投影与顺时针自转}
+\end{figure}
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-2}
+
+圆柱角速度矢量为
+
+\[
+\bm\Omega=-\omega\bm e_z. \tag{2}
+\]
+
+第 \(i\) 个切点的物质速度为
+
+\[
+\begin{aligned}
+\bm v_{Pi}
+&=\bm V_O+(-\omega\bm e_z)\times(r\bm n_i)\\
+&=\bm V_O+r\omega\bm t_i.
+\end{aligned} \tag{3}
+\]
+
+沿绳投影并使用无滑动条件：
+
+\[
+\boxed{\bm V_O\cdot\bm t_i=v_i-r\omega\equiv u_i}. \tag{4}
+\]
+
+圆柱不转时只需令 \(\omega=0\)，即 \(u_i=v_i\)。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-2}
+
+\needspace{3\baselineskip}
+\textbf{（一）由两个投影求圆心速度}
+
+以 \(\bm t_1\) 和 \(\bm n_1\) 为正交基。按图中 \(\bm t_2\) 相对
+\(\bm t_1\) 顺时针偏转 \(\alpha\)，有
+
+\[
+\bm t_2=\cos\alpha\,\bm t_1
+-\sin\alpha\,\bm n_1. \tag{5}
+\]
+
+由第一条绳约束：
+
+\[
+\bm V_O\cdot\bm t_1=u_1. \tag{6}
+\]
+
+第二条约束为
+
+\[
+u_2=u_1\cos\alpha
+-(\bm V_O\cdot\bm n_1)\sin\alpha. \tag{7}
+\]
+
+所以
+
+\[
+\bm V_O\cdot\bm n_1
+=\frac{u_1\cos\alpha-u_2}{\sin\alpha}. \tag{8}
+\]
+
+速度平方为两个正交分量平方和：
+
+\[
+\begin{aligned}
+V_O^2
+&=u_1^2+
+\left(\frac{u_1\cos\alpha-u_2}{\sin\alpha}\right)^2\\
+&=\frac{u_1^2\sin^2\alpha
++u_1^2\cos^2\alpha-2u_1u_2\cos\alpha+u_2^2}
+{\sin^2\alpha}\\
+&=\frac{u_1^2+u_2^2-2u_1u_2\cos\alpha}{\sin^2\alpha}.
+\end{aligned} \tag{9}
+\]
+
+因此
+
+\[
+\boxed{V_O=
+\frac{\sqrt{u_1^2+u_2^2-2u_1u_2\cos\alpha}}
+{|\sin\alpha|}}. \tag{10}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（二）绳段 \(l_1\) 的转动角速度}
+
+记第 1 个牵引端为 \(P_1\)，切点为 \(T_1\)。几何关系为
+
+\[
+\bm r_{P_1}=\bm r_O+r\bm n_1+l_1\bm t_1. \tag{11}
+\]
+
+若绳段角速度为 \(\omega_1\)，则
+
+\[
+\dot{\bm t}_1=\omega_1\bm n_1,
+\qquad
+\dot{\bm n}_1=-\omega_1\bm t_1. \tag{12}
+\]
+
+对式（11）求导，并在 \(\bm n_1\) 方向投影。牵引端速度沿
+\(\bm t_1\)，其法向分量为零；\(r\dot{\bm n}_1\) 也沿 \(\bm t_1\)，故
+
+\[
+0=\bm V_O\cdot\bm n_1+l_1\omega_1. \tag{13}
+\]
+
+因此
+
+\[
+\boxed{\omega_1=-\frac{\bm V_O\cdot\bm n_1}{l_1}
+=\frac{u_2-u_1\cos\alpha}{l_1\sin\alpha}}. \tag{14}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（三）圆柱不自转}
+
+令 \(u_1=v_1\)、\(u_2=v_2\)，得到
+
+\[
+\boxed{v=
+\frac{\sqrt{v_1^2+v_2^2-2v_1v_2\cos\alpha}}
+{|\sin\alpha|}}, \tag{15}
+\]
+
+\[
+\boxed{\omega_1=
+\frac{v_2-v_1\cos\alpha}{l_1\sin\alpha}}. \tag{16}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（四）圆柱顺时针自转}
+
+由式（4）
+
+\[
+u_1=v_1-r\omega\qquad
+u_2=v_2-r\omega. \tag{17}
+\]
+
+代入式（10）：
+
+\[
+\boxed{
+v_O=
+\frac{\sqrt{(v_1-r\omega)^2+(v_2-r\omega)^2
+-2(v_1-r\omega)(v_2-r\omega)\cos\alpha}}
+{|\sin\alpha|}}. \tag{18}
+\]
+
+绳段角速度为
+
+\[
+\boxed{
+\omega_1'=
+\frac{v_2-v_1\cos\alpha-r\omega(1-\cos\alpha)}
+{l_1\sin\alpha}}. \tag{19}
+\]
+
+式（10）可以看成余弦定理的速度版。若
+\(\alpha=90^\circ\)，两条投影方向正交，立即退化为
+\(V_O=\sqrt{u_1^2+u_2^2}\)。若
+\(\alpha\to0\)，分母趋于零：两条近乎平行的投影无法稳定地唯一确定二维速度，这不是公式发散，而是约束本身退化。
+
+无滑动约束只用了接触点沿绳方向的速度。切点的几何位置并不是圆柱上的固定物质点，因而求绳段转角时必须对切线几何式（11）求导，不能直接把圆柱自转角速度当成绳段转速。
+
+\needspace{3\baselineskip}
+\textbf{投影方程的矩阵解释}
+
+把两条切线方向写成
+
+\[
+\bm t_1=(1,0),\qquad
+\bm t_2=(\cos\alpha,-\sin\alpha).
+\]
+
+圆心速度 \(\bm V_O=(V_x,V_y)\) 满足
+
+\[
+\begin{pmatrix}
+1&0\\
+\cos\alpha&-\sin\alpha
+\end{pmatrix}
+\begin{pmatrix}V_x\\V_y\end{pmatrix}
+=
+\begin{pmatrix}u_1\\u_2\end{pmatrix}.
+\]
+
+系数矩阵行列式为
+\(-\sin\alpha\)。因此只要两绳不平行，两个速度投影就能唯一重建二维速度：
+
+\[
+V_x=u_1,\qquad
+V_y=\frac{u_1\cos\alpha-u_2}{\sin\alpha}.
+\]
+
+平方相加给出正文式（10）。当 \(\sin\alpha\) 很小时，测量或题设中很小的
+\(u_i\) 误差都会被 \(1/\sin\alpha\)
+放大，这说明公式的发散反映的是几何病态，而不是圆柱速度真的必须无穷大。
+
+绳段转角的式（19）还可做平移不变性检查：若两绳速度同时增加同一个量，而
+\(\alpha\ne0\)，圆心速度会改变，连接几何的转角一般也改变；若增加量恰由自转项
+\(r\omega\) 产生，则先定义 \(u_i=v_i-r\omega\)
+后统一扣除，约束结构保持不变。
+
+\textbf{角度和自转方向。}
+两条切线各与切点半径垂直，按本图同一绕向取两条绳的正向，半径之间的小夹角也为\(\alpha\)。圆柱顺时针旋转，两个切点沿绳方向的速度贡献均为\(r\omega\)，故用\(u_i=v_i-r\omega\)求圆心投影。图3-2中的角箭头按顺时针画；绳段自身的转角仍约定逆时针为正，两个符号不应混用。
+
+\needspace{3\baselineskip}
+\textbf{用对称牵引检查转角的符号}
+
+令\(v_1=v_2=v\)，暂取圆柱不转。两个投影相等，圆心速度沿两绳方向的角平分线：
+\[V_O=\frac{v}{\cos(\alpha/2)}.\] 由正文的法向分量，绳段1转角速度为
+\[\omega_1=\frac{v(1-\cos\alpha)}{l_1\sin\alpha}
+=\frac v{l_1}\tan(\alpha/2)>0.\]
+虽然圆柱不自转，切线方向仍会因圆心移动而改变。若再有顺时针自转，两个有效投影都成为\(v-r\omega\)，同样得到
+\[V_O=\frac{|v-r\omega|}{|\cos(\alpha/2)|},\qquad
+\omega_1'=\frac{v-r\omega}{l_1}\tan(\alpha/2).\]
+当\(v=r\omega\)时圆心瞬时静止、绳方向也不转，但绳仍随圆柱表面被牵引。这个极限可区分圆柱自转与绳段转动。
+
+在图3-2取\(\alpha=60^\circ,l_1=1,r\omega=0.2,v_1=1,v_2=0.5\)，有\(u_1=0.8,u_2=0.3\)。于是
+\[\boldsymbol V_O\cdot\boldsymbol n_1
+=\frac{0.8/2-0.3}{\sqrt3/2}
+=0.1154701,\] \[V_O=0.8082904,\qquad \omega_1'=-0.1154701.\]
+负转角表示绳段1顺时针转。速度大小始终非负，转角速度则应保留符号。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf-2}
+
+先把圆柱自转贡献 \(r\omega\)
+从每个牵引速度中扣除，得到圆心在两条切线方向上的投影
+\(u_1,u_2\)；后面的速度重建与``不自转''情形完全相同。
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9-2}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  把圆心速度直接写成 \(v_1\bm t_1+v_2\bm t_2\)。
+\item
+  顺时针自转在两个切点的切向贡献误取异号；按图示两条绳都沿同一绕向离开，贡献均为
+  \(+r\omega\)。
+\item
+  只求速度大小，未求绳段方向变化率。
+\item
+  将切点视为圆柱上的固定标记点。
+\item
+  未声明 \(\omega_1\) 的正方向，使答案相差整体负号。
+\end{enumerate}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae-2}
+
+先让学生写出两个标量投影式，而不是立即画速度平行四边形。解出
+\(\bm V_O\cdot\bm n_1\)
+后，速度大小和绳段角速度都从同一个法向分量得到，可突出两个问题的共同入口。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3-2}
+
+若两条绳分别以相反绕向离开圆柱，则式（4）中的自转项一正一负。可要求学生根据切点半径与绳方向重新计算
+\(\bm\Omega\times\bm r\)，而不是机械替换符号。
+
+\needspace{3\baselineskip}
+\textbf{两条绳反绕时重新列投影}
+
+保留\(\boldsymbol t_1,\boldsymbol t_2\)及\(\boldsymbol n_i=\boldsymbol e_z\times\boldsymbol t_i\)的定义，若第二条绳从另一侧反绕离开，则其切点半径改为\(-r\boldsymbol n_2\)。顺时针自转在两切点沿绳方向的贡献分别为\(r\omega\)、\(-r\omega\)，故
+\[u_1=v_1-r\omega,\qquad u_2=v_2+r\omega.\]
+若两绳方向仍满足\(\boldsymbol t_2=\cos\alpha\boldsymbol t_1-\sin\alpha\boldsymbol n_1\)，速度重建式不变：
+\[V_O^2=\frac{u_1^2+u_2^2-2u_1u_2\cos\alpha}{\sin^2\alpha}.\]
+绳1转角仍为\((u_2-u_1\cos\alpha)/(l_1\sin\alpha)\)。改变的是接触半径和自转投影，而不是随意在最终平方根前添一个负号。
+
+两绳近平行时还要检查相容性。若\(\alpha\to0\)且\(u_1=u_2\)，圆心沿绳方向的投影确定，法向速度却不再由这两个条件唯一确定。若\(u_1\ne u_2\)，完全平行时两约束互相冲突，原假定的无滑动瞬态不存在。
+
+\needspace{3\baselineskip}
+\textbf{投影矩阵接近奇异时的物理含义}
+
+本题两投影条件为 \[V_1=u_1,\qquad V_1\cos\alpha-V_2\sin\alpha=u_2.\] 当
+\(\alpha\to0\)，两条绳方向趋于平行。若 \(u_2-u_1\) 保持非零，
+\[V_2=\frac{u_1\cos\alpha-u_2}{\sin\alpha}
+\sim\frac{u_1-u_2}{\alpha},\]
+理想几何解发散。它表示两条几乎相同的投影被要求具有不同数值，约束输入彼此不相容，不能据此认为真实圆柱可获得无限速度。
+若 \(u_1=u_2=u\)，则 \[V_2=-u\tan(\alpha/2),\qquad
+V=\frac{|u|}{\cos(\alpha/2)}.\] 极限速度有限，趋于 \(|u|\)。但在恰好
+\(\alpha=0\)
+时两个方程重复，垂直分量仍未由约束确定；有限的极限解只是从指定对称输入连续延伸的一支，不是退化几何的一般唯一解。
+
+\newpage
+
+\section{第 4 题}\label{ux7b2c-4-ux9898}
+
+长为 \(l\)、质量为 \(m\)
+的均匀细杆下端与地面铰接，初始竖直静止，受微小扰动后向下倒。当杆与竖直方向夹角为
+\(\theta\) 时，取距铰点为 \(x\) 的截面，求：
+
+（1）该截面内力的径向分量 \(F_{x1}\)，规定拉力为正；
+
+（2）该截面内力的切向分量大小 \(F_{x2}\)；
+
+（3）若结构耐剪切但不耐拉伸，求最容易发生拉断的位置 \(x_0/l\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.58\linewidth,height=\textheight,keepaspectratio,alt={图4-1　倒杆角度、截面位置及内力分量定义}]{../figures/question-04.pdf}
+\caption*{图4-1　倒杆角度、截面位置及内力分量定义}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-3}
+
+先求整杆的角速度与角加速度，再切出截面外侧杆段列平动方程。轴向力的正负区间决定哪里会受拉，最大拉力还须检查实体范围。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-3}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  均匀杆绕端点转动惯量 \(ml^2/3\)。
+\item
+  重力势能转化为转动动能。
+\item
+  角加速度与重力矩。
+\item
+  刚体上距铰点 \(s\) 处的径向、切向加速度。
+\item
+  截面法求内力与轴向拉力极值。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-3}
+
+取 \(\bm e_r\) 沿杆由铰点指向自由端，\(\bm e_t\) 沿 \(\theta\)
+增大的下倒方向。截面外侧杆段长度为 \(l-x\)，质量和质心位置分别为
+
+\[
+M_x=\frac{m(l-x)}l\qquad
+s_x=\frac{x+l}{2}. \tag{1}
+\]
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.74\linewidth,height=\textheight,keepaspectratio,alt={图4-2　截面外侧受力及自由端附近的受拉区域}]{../figures/solution-04.pdf}
+\caption*{图4-2　截面外侧受力及自由端附近的受拉区域}
+\end{figure}
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-3}
+
+杆关于铰点的转动惯量为
+
+\[
+J_O=\frac13ml^2. \tag{2}
+\]
+
+从竖直位置倒到角度 \(\theta\)，质心下降
+
+\[
+\Delta h=\frac l2(1-\cos\theta). \tag{3}
+\]
+
+机械能守恒：
+
+\[
+mg\frac l2(1-\cos\theta)
+=\frac12\frac13ml^2\dot\theta^2. \tag{4}
+\]
+
+所以
+
+\[
+\boxed{\dot\theta^2=\frac{3g}{l}(1-\cos\theta)}. \tag{5}
+\]
+
+重力矩方程为
+
+\[
+mg\frac l2\sin\theta
+=\frac13ml^2\ddot\theta, \tag{6}
+\]
+
+故
+
+\[
+\boxed{\ddot\theta=\frac{3g}{2l}\sin\theta}. \tag{7}
+\]
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-3}
+
+\needspace{3\baselineskip}
+\textbf{（一）截面外侧质心加速度}
+
+径向加速度指向铰点：
+
+\[
+a_r=-s_x\dot\theta^2. \tag{8}
+\]
+
+切向加速度沿下倒方向：
+
+\[
+a_t=s_x\ddot\theta. \tag{9}
+\]
+
+重力在两方向的分量为
+
+\[
+(M_x\bm g)_r=-M_xg\cos\theta\qquad
+(M_x\bm g)_t=M_xg\sin\theta. \tag{10}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（二）径向内力}
+
+规定 \(F_{x1}>0\)
+表示截面内侧对外侧杆段施加朝向铰点的拉力。因此径向方程为
+
+\[
+-M_xs_x\dot\theta^2
+=-F_{x1}-M_xg\cos\theta. \tag{11}
+\]
+
+移项：
+
+\[
+F_{x1}=M_x(s_x\dot\theta^2-g\cos\theta). \tag{12}
+\]
+
+代入式（1）、（5）：
+
+\[
+\boxed{
+F_{x1}=\frac{m(l-x)}l g
+\left[\frac{3(l+x)}{2l}(1-\cos\theta)-\cos\theta\right]}. \tag{13}
+\]
+
+\(F_{x1}<0\) 表示受压，\(F_{x1}>0\) 才表示受拉。初始 \(\theta=0\) 时
+
+\[
+F_{x1}=-\frac{m(l-x)}l g, \tag{14}
+\]
+
+正是截面承受其上方杆段重量的压缩力。
+
+\needspace{3\baselineskip}
+\textbf{（三）切向内力}
+
+设截面对外侧杆段的有向切向力为 \(F_t\)，取 \(\bm e_t\) 为正：
+
+\[
+M_xs_x\ddot\theta=M_xg\sin\theta+F_t. \tag{15}
+\]
+
+所以
+
+\[
+F_t=M_x(s_x\ddot\theta-g\sin\theta). \tag{16}
+\]
+
+代入式（1）、（7）：
+
+\[
+\begin{aligned}
+F_t
+&=M_xg\sin\theta
+\left[\frac{3(l+x)}{4l}-1\right]\\
+&=M_xg\sin\theta\frac{3x-l}{4l}.
+\end{aligned} \tag{17}
+\]
+
+题目求大小，故
+
+\[
+\boxed{
+F_{x2}=\frac{m(l-x)}l g|\sin\theta|
+\frac{|3x-l|}{4l}}. \tag{18}
+\]
+
+在 \(x=l/3\) 处切向内力为零，不代表该处没有径向内力。
+
+\needspace{3\baselineskip}
+\textbf{（四）最大拉力位置}
+
+令
+
+\[
+u=\frac xl\qquad c=\cos\theta. \tag{19}
+\]
+
+把式（13）除以 \(mg\)：
+
+\[
+\frac{F_{x1}}{mg}
+=(1-u)\left[\frac32(1+u)(1-c)-c\right]. \tag{20}
+\]
+
+展开为关于 \(u\) 的二次式：
+
+\[
+\frac{F_{x1}}{mg}
+=\left[\frac32(1-c)-c\right]
++cu-\frac32(1-c)u^2. \tag{21}
+\]
+
+对 \(u\) 求导：
+
+\[
+\frac{1}{mg}\frac{\mathrm dF_{x1}}{\mathrm du}
+=c-3(1-c)u. \tag{22}
+\]
+
+内部极大值满足
+
+\[
+c-3(1-c)u_0=0. \tag{23}
+\]
+
+因此
+
+\[
+\boxed{
+\frac{x_0}{l}=\frac{\cos\theta}{3(1-\cos\theta)}}. \tag{24}
+\]
+
+该位置落在杆内要求 \(0\le u_0\le1\)。在 \(0\le\theta\le\pi/2\)
+内，这要求
+
+\[
+\cos\theta\le\frac34. \tag{25}
+\]
+
+若
+\(\cos\theta>3/4\)，杆内尚没有正的拉力极大点，杆主要受压；随着倒下角度增大，最大拉力位置从自由端附近向根部移动，\(\theta\to\pi/2\)
+时 \(x_0\to0\)。
+
+式（13）可用整体端点检查。\(x=l\)
+时外侧杆段质量为零，所以两种内力都必须为零，公式满足；\(x=0\) 时
+\(F_{01}\)、\(F_{02}\) 就是铰链反力在随杆坐标中的分量。把 \(x=0\)
+代入式（17）得 \(F_t=-mg\sin\theta/4\)，与整体质心切向方程
+
+\[
+m\frac l2\ddot\theta=mg\sin\theta+F_t
+\]
+
+完全一致。
+
+最大拉力是二次函数的顶点问题。二阶导数为 \(-3mg(1-c)<0\)，只要
+\(\theta\ne0\)，内部驻点必为极大值而不是极小值。还要检查驻点是否位于实体区间，这是式（25）不可省略的边界条件。
+
+\needspace{3\baselineskip}
+\textbf{内力符号的阶段判断}
+
+令 \(u=x/l\)、\(c=\cos\theta\)，拉力表达式的零点除自由端 \(u=1\)
+外，还满足
+
+\[
+\frac32(1+u)(1-c)-c=0.
+\]
+
+解得
+
+\[
+u_{\rm zero}
+=\frac{2c}{3(1-c)}-1.
+\]
+
+当 \(c>3/4\) 时，\(u_{\rm zero}>1\)，整根杆内
+\(F_{x1}<0\)，即只有压缩；当 \(c=3/4\)
+时，自由端附近刚开始出现拉伸；当\(3/5<c<3/4\)时，\(0<u<u_{\rm zero}\)仍受压，\(u_{\rm zero}<u<1\)受拉；拉伸首先从自由端附近出现。\(0\le c\le3/5\)时，各非自由端截面均受拉。最大拉力位置仍为式（24）的\(u_0\)。
+
+切向内力也有清楚的符号分区。未取绝对值前，
+
+\[
+F_t=\frac{m(l-x)g\sin\theta}{4l^2}(3x-l).
+\]
+
+所以 \(x=l/3\)
+处切向内力为零，两侧方向相反。这不是杆被切断，而是该截面外侧杆段的重力切向分量恰好提供其质心所需的切向加速度。把符号信息保留到最后，再取
+\(F_{x2}=|F_t|\)，比一开始只处理大小更不容易漏掉物理含义。
+
+\needspace{3\baselineskip}
+\textbf{最大拉力数值与失效判据}
+
+当驻点 \(u_0=c/[3(1-c)]\) 位于杆内时，把它代回式（21）。记
+
+\[
+A=\frac32(1-c)-c,
+\qquad
+B=\frac32(1-c),
+\]
+
+则
+
+\[
+\frac{F_{x1}}{mg}=A+cu-Bu^2.
+\]
+
+利用二次函数顶点公式，最大值为
+
+\[
+\left(\frac{F_{x1}}{mg}\right)_{\max}
+=A+\frac{c^2}{4B}
+=\frac32(1-c)-c+\frac{c^2}{6(1-c)}.
+\]
+
+若材料许用拉力为 \(F_{\rm allow}\)，首次达到失效条件应同时解
+
+\[
+\begin{cases}
+x_0/l=c/[3(1-c)],\\[3pt]
+F_{x1,\max}(c)=F_{\rm allow},
+\end{cases}
+\]
+
+并限制 \(0\le c\le3/4\)。这里 \(c=\cos\theta\) 随倒杆过程单调减小；求得
+\(c\)
+后才能通过能量式确定该时刻角速度。这个扩展说明``最危险截面''和``首次断裂时刻''是两个不同层次的问题。
+
+\textbf{释放与截面符号。}
+严格竖直且静止的杆是平衡解；``倒下''采用微小倾角释放再取极限。在落地前\(0\le\theta\le\pi/2\)，\(F_{x1}\)为带符号轴向力，\(F_{x2}\)为带符号剪力；图中箭头规定代数正向，不能把负值改成另一套公式。受拉失效判据使用\(F_{x1}>0\)的最大值；压缩屈曲是另一个材料模型，本题未给出其判据。
+
+\needspace{3\baselineskip}
+\textbf{拉、压分区与极值不是同一个位置}
+
+取图4-2所用\(c=\cos\theta=0.7\)，令\(u=x/l\)。轴向内力为
+\[\frac{F_{x1}}{mg}
+=(1-u)[0.45(1+u)-0.7].\] 除了自由端\(u=1\)外，零点为
+\[u_{\rm zero}=\frac{2c}{3(1-c)}-1=\frac59.\]
+所以\(0\le u<5/9\)受压，\(5/9<u<1\)受拉。受拉内力的最大点却在
+\[u_{\max}=\frac{c}{3(1-c)}=\frac79,\] 代入得到
+\[\frac{F_{x1,\max}}{mg}=\frac1{45}.\]
+图中的曲线因此在\(5/9\)过零、在\(7/9\)达到一个较小的正峰，最后在自由端归零。不能把过零点当成最大拉力点。
+
+如果\(c>3/4\)，驻点\(u_{\max}>1\)落在杆外，真实杆内轴向内力从负值增加到自由端的零值，全杆没有受拉区。对\(c=3/4\)，驻点恰在自由端，仍不形成正的内部拉力峰。分区必须先检查参数范围，不能只对多项式求一个形式根。
+
+横向剪力的带符号表达式含\((3u-1)\)，在\(u=1/3\)变号。它与轴向内力的零点一般不同；图中两条箭头应分别对应径向和切向分量，不可合成后再称为``拉力''。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf-3}
+
+截面内力不是由静态``上方重量''决定，而是由外侧杆段完成径向、切向加速后所需的合力决定。径向式中向心项随转速增长，最终可把初始压缩转变为拉伸。
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9-3}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  用 \(ml^2/12\) 作为绕端点转动惯量。
+\item
+  势能下降漏掉 \(1-\cos\theta\)。
+\item
+  把外侧杆段质心到铰点距离误写成 \((l-x)/2\)；正确是 \((l+x)/2\)。
+\item
+  径向加速度方向符号错误。
+\item
+  求出驻点后不检查 \(0\le x_0\le l\)。
+\end{enumerate}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae-3}
+
+先完整求整体的 \(\dot\theta^2\) 和 \(\ddot\theta\)，再在图 4-2
+上把截面外侧涂色，明确其质量和质心位置。内力方向先按``拉力为正''画出；若最后结果为负，让负号自动解释压缩，避免在列式前猜实际方向。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3-3}
+
+若杆初始从与竖直夹角 \(\theta_0\) 处静止释放，只需把能量式中的
+\(1-\cos\theta\) 改为
+\(\cos\theta_0-\cos\theta\)。要求学生重新求最大拉力位置，可检验哪些步骤属于动力学通式，哪些依赖初始条件。
+
+\needspace{3\baselineskip}
+\textbf{由整体铰链反力复核两种内力}
+
+对整杆取\(x=0\)，轴向内力为 \[F_{01}=mg[\tfrac32(1-c)-c].\] 带符号剪力为
+\[F_{t,0}=-\frac14mg\sin\theta.\]
+沿杆向外的质心加速度为\(-(l/2)\dot\theta^2\)，切向加速度为\((l/2)\ddot\theta\)。用\(\dot\theta^2=3g(1-c)/l\)、\(\ddot\theta=3g\sin\theta/(2l)\)，整体牛顿方程分别还原这两个分量。
+
+若题目问``最大轴向力大小''，应同时比较最大拉力和最大压缩力，不能只取正文正的拉力峰。对固定c，多项式开口向下，最小值必在端点；自由端为零，铰端为\(mg[\tfrac32(1-c)-c]\)。因此最大压缩力大小是
+\[F_{\rm comp,max}=mg\max(0,\tfrac52c-\tfrac32).\]
+把它与允许范围内的最大拉力比较，才能回答材料强度或屈曲类变式；``最大拉力''与``最大内力绝对值''是不同要求。
+
+\needspace{3\baselineskip}
+\textbf{把截面轴力积分与整杆角动量核对}
+
+取距铰点 \(x\) 以上的杆段，质量 \(M_x=m(1-x/l)\)，其质心距截面
+\(s=(l-x)/2\)。径向加速度为 \(-s\dot\theta^2\)，但它距铰点的半径是
+\((l+x)/2\)；用截面相对运动加速度时，还须包含截面本身的加速度。合并后轴向加速度平均值为
+\[a_r=-\frac{l+x}{2}\dot\theta^2.\] 沿杆向上的重力分量为
+\(-M_xg\cos\theta\)，故轴力的正方向约定给出
+\[F_{x1}=M_x\left[\frac{l+x}{2}\dot\theta^2-g\cos\theta\right].\]
+代入整杆能量 \(\dot\theta^2=3g(1-\cos\theta)/l\)，复现正文公式。
+整杆角动量方程也给出 \[\frac{ml^2}{3}\ddot\theta=mg\frac l2\sin\theta,\]
+即
+\(\ddot\theta=3g\sin\theta/(2l)\)。截面轴力只负责径向受力；横向截面力及重力共同产生切向加速度，不能把轴力乘
+\(x\) 当作整杆的重力转矩。
+
+\newpage
+
+\section{第 5 题}\label{ux7b2c-5-ux9898}
+
+一焦距为 \(f\) 的凸透镜与一焦距为 \(-f\) 的凹透镜共轴放置，两透镜间距为
+\(f\)。轴上物点位于凸透镜左侧，求：
+
+（1）物距为 \(1.5f\) 时，最终像的位置；
+
+（2）物距为 \(2f\) 时，出射光的状态；
+
+（3）若最终像位于凹透镜右侧、且像到凹透镜的距离等于物体到凸透镜的距离，求该距离；
+
+（4）在凹透镜右侧放置一块与透镜垂直的平面镜，使光线沿原路返回。物体放在何处时，返回光束仍在原物位置成像？
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\linewidth,height=\textheight,keepaspectratio,alt={图5-1　共轴正、负透镜组及平面镜的配置}]{../figures/question-05.pdf}
+\caption*{图5-1　共轴正、负透镜组及平面镜的配置}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-4}
+
+第二镜的物由第一镜的像决定，必须保留虚物的负物距。任意镜位的自共轭构造则利用轴上点经透镜组后形成平行光。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-4}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  薄透镜成像公式与正负号约定。
+\item
+  实物、虚物、实像、虚像的判别。
+\item
+  两片薄透镜逐级成像及坐标换算。
+\item
+  出射平行光与物方焦点、像方焦点的对应关系。
+\item
+  平面镜反射和光路可逆性。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-4}
+
+取主光轴向右为正方向，凸透镜中心为 \(O_1\)，坐标 \(x=0\)；凹透镜中心为
+\(O_2\)，坐标 \(x=f\)。对每一片透镜单独使用
+
+\[
+\frac1s+\frac1{s'}=\frac1F, \tag{1}
+\]
+
+其中 \(s>0\) 表示入射光一侧的实物，\(s'<0\)
+表示像在入射光一侧，凹透镜的焦距为 \(F_2=-f\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.542\linewidth,height=\textheight,keepaspectratio,alt={图5-2　虚像光路与轴上点的任意镜距往返}]{../figures/solution-05.pdf}
+\caption*{图5-2　虚像光路与轴上点的任意镜距往返}
+\end{figure}
+
+图 5-2
+中虚线延长线用于判断第二片透镜所见物点的位置。判号时应先观察入射到凹透镜的光束：若它在没有凹透镜时将会聚于凹透镜右侧，该点就是凹透镜的虚物，故
+\(s_2<0\)。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-4}
+
+设物体到凸透镜的距离为 \(x\)。第一片凸透镜的物距、像距分别为
+
+\[
+s_1=x,
+\qquad
+s_1'=\frac{fx}{x-f}. \tag{2}
+\]
+
+第一片透镜的像点坐标就是 \(x_1=s_1'\)。相对于位于 \(x=f\)
+的凹透镜，第二片透镜的物距不能写成简单的绝对距离，而应写成
+
+\[
+s_2=f-x_1=f-s_1'. \tag{3}
+\]
+
+把式（2）代入：
+
+\[
+\begin{aligned}
+s_2
+&=f-\frac{fx}{x-f}\\
+&=\frac{f(x-f)-fx}{x-f}\\
+&=-\frac{f^2}{x-f}. 
+\end{aligned} \tag{4}
+\]
+
+当 \(x>f\) 时，\(s_2<0\)，正好说明中间像位于凹透镜右侧，是虚物。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-4}
+
+\needspace{3\baselineskip}
+\textbf{（一）物距为 \(1.5f\)}
+
+令
+
+\[
+x=\frac32f. \tag{5}
+\]
+
+第一片凸透镜的成像公式给出
+
+\[
+\frac{1}{(3/2)f}+\frac1{s_1'}=\frac1f. \tag{6}
+\]
+
+逐项化简：
+
+\[
+\begin{aligned}
+\frac1{s_1'}
+&=\frac1f-\frac{2}{3f}\\
+&=\frac{1}{3f},
+\end{aligned} \tag{7}
+\]
+
+所以
+
+\[
+s_1'=3f. \tag{8}
+\]
+
+中间像位于凸透镜右侧 \(3f\) 处，即凹透镜右侧 \(2f\)
+处。它对凹透镜是虚物：
+
+\[
+s_2=f-3f=-2f. \tag{9}
+\]
+
+对凹透镜应用式（1）：
+
+\[
+\frac1{-2f}+\frac1{s_2'}=\frac1{-f}. \tag{10}
+\]
+
+移项得到
+
+\[
+\begin{aligned}
+\frac1{s_2'}
+&=-\frac1f+\frac1{2f}\\
+&=-\frac1{2f},
+\end{aligned} \tag{11}
+\]
+
+因而
+
+\[
+s_2'=-2f. \tag{12}
+\]
+
+负号表示最终像在凹透镜左侧 \(2f\) 处。凹透镜坐标为
+\(f\)，故最终像的全局坐标为
+
+\[
+x_{\rm im}=f+s_2'=f-2f=-f. \tag{13}
+\]
+
+即最终像位于凸透镜左侧 \(f\) 处：
+
+\[
+\boxed{x_{\rm im}=-f}. \tag{14}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（二）物距为 \(2f\)}
+
+凸透镜的物距为 \(2f\) 时，由对称成像规律或直接代入成像公式，有
+
+\[
+s_1'=2f. \tag{15}
+\]
+
+因此第二片凹透镜的物距为
+
+\[
+s_2=f-2f=-f. \tag{16}
+\]
+
+代入凹透镜成像公式：
+
+\[
+\frac1{-f}+\frac1{s_2'}=-\frac1f. \tag{17}
+\]
+
+于是
+
+\[
+\frac1{s_2'}=0,
+\qquad
+s_2'=\infty. \tag{18}
+\]
+
+所以凹透镜右侧出射光为平行光：
+
+\[
+\boxed{\text{物体在凸透镜左侧 }2f\text{ 时，透镜组输出平行光。}} \tag{19}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（三）物像等距条件}
+
+设物体到凸透镜的距离为 \(x\)，并引入无量纲变量
+
+\[
+a=\frac xf. \tag{20}
+\]
+
+由式（4），第二片透镜的物距为
+
+\[
+s_2=-\frac{f}{a-1}. \tag{21}
+\]
+
+对凹透镜成像：
+
+\[
+\frac1{s_2}+\frac1{s_2'}=-\frac1f. \tag{22}
+\]
+
+代入式（21）：
+
+\[
+-\frac{a-1}{f}+\frac1{s_2'}=-\frac1f. \tag{23}
+\]
+
+因此
+
+\[
+\begin{aligned}
+\frac1{s_2'}
+&=\frac{a-2}{f},\\
+s_2'&=\frac{f}{a-2}.
+\end{aligned} \tag{24}
+\]
+
+最终像到凹透镜右侧的距离等于 \(x=af\)，即 \(s_2'=af\)。于是
+
+\[
+\frac{f}{a-2}=af. \tag{25}
+\]
+
+约去 \(f\) 并整理：
+
+\[
+\begin{aligned}
+1&=a(a-2),\\
+a^2-2a-1&=0.
+\end{aligned} \tag{26}
+\]
+
+解二次方程：
+
+\[
+a=1\pm\sqrt2. \tag{27}
+\]
+
+距离必须为正，且题设要求最终像在凹透镜右侧，这要求 \(a>2\)，故舍去
+\(1-\sqrt2\)，保留
+
+\[
+\boxed{x=(1+\sqrt2)f}. \tag{28}
+\]
+
+也可用全局坐标直接核验。由式（24），最终像的全局坐标为
+
+\[
+x_{\rm im}=f+s_2'=f+\frac{f}{a-2}
+=f\frac{a-1}{a-2}. \tag{29}
+\]
+
+物点坐标为 \(-af\)，两侧的题设距离分别是 \(af\) 与
+\(x_{\rm im}-f\)，故使用式（25）最直接。若误把``像到凹透镜的距离''理解成像的全局坐标，就会错误列成
+\((a-1)/(a-2)=a\)。这也是本问最常见的几何误读。
+
+\needspace{3\baselineskip}
+\textbf{（四）加入平面镜后的自共轭位置}
+
+平面镜只改变光的传播方向，不改变一束平行光的会聚程度。要让反射光严格沿原光路返回，最清楚的构造是：轴上物点经两片透镜后变成平行于主光轴的光束；平行光垂直入射平面镜后反向返回；由光路可逆性，反向平行光依次通过凹、凸透镜，恰好会聚到原物点。
+
+由第（二）问，输出平行光的条件是
+
+\[
+x=2f. \tag{30}
+\]
+
+故
+
+\[
+\boxed{x_1=2f}. \tag{31}
+\]
+
+平面镜可放在凹透镜右侧任意位置，只要镜面与主光轴垂直、口径足够并且忽略遮挡。其位置不会改变返回像的位置。
+
+可把往返过程拆成四步核验：
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  物点 \(x=-2f\) 经凸透镜后在 \(x=2f\) 形成会聚点；
+\item
+  该点相对于凹透镜是位于其右焦点的虚物，凹透镜把会聚光变成平行光；
+\item
+  平面镜使各条光线的轴向分量反号，形成反向平行光；
+\item
+  反向传播时，整个光学系统的传递关系按可逆路径返回，最终会聚于
+  \(x=-2f\)。
+\end{enumerate}
+
+这里不能把平面镜当成``额外增加一个等于两倍镜距的像距''。平面镜处接收到的是平行光，系统是否自共轭由透镜组的焦点条件决定，而不是由镜面到透镜的距离决定。
+
+\needspace{3\baselineskip}
+\textbf{用傍轴矩阵复核准直条件}
+
+用光线列向量 \((y,\alpha)^{\mathsf T}\)，自由传播距离 \(d\) 与薄透镜焦距
+\(F\) 的矩阵分别为
+
+\[
+P(d)=
+\begin{pmatrix}1&d\\0&1\end{pmatrix},
+\qquad
+L(F)=
+\begin{pmatrix}1&0\\-1/F&1\end{pmatrix}.
+\]
+
+从凸透镜前到凹透镜后的系统矩阵为
+
+\[
+M=L(-f)P(f)L(f).
+\]
+
+逐步相乘：
+
+\[
+\begin{aligned}
+P(f)L(f)
+&=
+\begin{pmatrix}0&f\\-1/f&1\end{pmatrix},\\
+M
+&=
+\begin{pmatrix}0&f\\-1/f&2\end{pmatrix}.
+\end{aligned}
+\]
+
+物点位于凸透镜左侧 \(x\) 处时，从物点传播到系统出口的矩阵为
+\(MP(x)\)。对同一物点发出的任意傍轴光线，输出角度为
+
+\[
+\alpha_{\rm out}
+=-\frac1f y_0+\left(2-\frac xf\right)\alpha_0.
+\]
+
+取物点本身 \(y_0=0\)，要使不同初始倾角 \(\alpha_0\)
+的光线都输出为平行于主轴，必须有
+
+\[
+2-\frac xf=0,
+\]
+
+故
+\(x=2f\)。矩阵法与逐级成像法结论一致，并直接证明准直条件与平面镜位置无关。
+
+\textbf{``任意镜位''的限定。}
+第四问的\(2f\)是对凹透镜右侧任意镜位置都成立的轴上自共轭位置。若只固定某一个镜位置，也可能存在依赖镜距的其他共轭解，不能把任意镜位问题与固定镜位问题等同。离轴物点的准直束带倾角，垂直于主轴的平面镜不使每条光线严格原路返回，因此图5-2的自共轭构造采用轴上点。第一问的离轴箭头则只用于显示虚像侧别和放大率。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf-4}
+
+两片透镜题的计算依据是``前一片的像就是后一片的物''，但物距不是取绝对值。判断第二片物距符号时，应观察到达第二片前的光束是发散还是会聚：会聚光束指向第二片右侧的点，该点是虚物。第（四）问的本质则是把透镜组作为准直器使用，再利用光路可逆性完成原路返回。
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9-4}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  把凹透镜焦距写成 \(+f\)。
+\item
+  把中间像到凹透镜的距离 \(2f\) 直接写成 \(s_2=+2f\)，忽略它是虚物。
+\item
+  得到 \(s_2'<0\) 后仍把最终像画在凹透镜右侧。
+\item
+  第（三）问把像的全局坐标与像到凹透镜的距离混为一谈。
+\item
+  二次方程两个根都保留，不用物理区间筛选。
+\item
+  认为平面镜位置会决定最终像距，忽略平行光和光路可逆性。
+\end{enumerate}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae-4}
+
+先不列公式，让学生用两条近轴光线判断每一级光束的会聚或发散趋势，再在图
+5-2 上标出中间像。随后统一引入 \(O_1\)、\(O_2\) 的全局坐标，把
+\(s_2=f-s_1'\)
+写在图旁。第（四）问可让学生沿一条边缘光线反向描迹，直观看见``返回原物点''不是额外假设，而是可逆性的直接结论。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3-4}
+
+把两透镜间距改为 \(d\)，焦距仍为 \(f\) 和
+\(-f\)。要求求出使系统输出平行光的物距。提示：先求凸透镜像距
+\(s_1'\)，再令该中间像位于凹透镜右焦点，即 \(s_1'=d+f\)。所得物距应在
+\(d=f\) 时还原为 \(2f\)。
+
+\needspace{3\baselineskip}
+\textbf{任意镜间距的平行输出条件}
+
+正、负透镜的间距改为d，第一镜像距仍为\(s_1'=fx/(x-f)\)。要让第二镜输出平行光，其中间像须在凹透镜右焦点，因此
+\[s_1'=d+f.\] 解得
+\[\boxed{x_{\rm parallel}=\frac{f(d+f)}d},\qquad d>0.\]
+在\(d=f\)还原\(2f\)；当\(d\to0^+\)，所需物距趋于无穷，对应两相反光焦度透镜接触后近似无焦度。
+
+传递矩阵独立给出 \[L(-f)P(d)L(f)=
+\begin{pmatrix}1-d/f&d\\-d/f^2&1+d/f\end{pmatrix}.\]
+从轴上物点发出的光，第一镜前有\(y_0=x\alpha_0\)。输出角中\(\alpha_0\)的系数为\(1+d/f-dx/f^2\)，置零得到同一\(x_{\rm parallel}\)。
+
+对于垂直主轴的平面镜，任意孔径光线都沿原路返回要求入射镜面的光束轴向平行。只有一条中心光线恰好返回不够证明物点重新成像，必须检查整个傍轴光束。
+
+\needspace{3\baselineskip}
+\textbf{两镜间距为 \(d\) 时的等效光焦度}
+
+取正透镜焦距 \(f\)、负透镜焦距 \(-f\)，传播矩阵 \(P(d)\)
+与两透镜矩阵相乘： \[L_-P(d)L_+
+=\begin{pmatrix}
+1-d/f&d\\-d/f^2&1+d/f
+\end{pmatrix}.\] 等效光焦度为 \(d/f^2\)，因此系统只有在 \(d=0\)
+才总光焦度为零。要使由轴上物点发出的光最终平行，设物距为
+\(x\)，入射斜率为 \(h/x\)。出射斜率为
+\[\theta_{\rm out}=-\frac d{f^2}h+\left(1+\frac df\right)\frac hx.\]
+令其为零： \[x=\frac{f(d+f)}d.\] 原题 \(d=f\) 给出 \(x=2f\)。若
+\(d\to0\)，平行出射物点远去，符合总光焦度趋于零的极限。镜子放在平行出射区的任意位置，只改变去程、回程的均匀传播段，不改变轴上返回点；离轴物点还需检查镜面法线与光束主光线。
+
+\newpage
+
+\section{第 6 题}\label{ux7b2c-6-ux9898}
+
+半径为 \(R\) 的均匀绝缘球带总电荷
+\(-Q\)。沿一条半径开有很窄的光滑隧道，隧道对原电荷分布的影响忽略不计。一只质量为
+\(m\)、带正电荷 \(q\) 的小物体可在隧道内运动，重力加速度为
+\(g\)，静电力常量为 \(k\)。求：
+
+（1）小物体从球的最低点出发，恰能到达球心且速度为零时的 \(q\)；
+
+（2）在第（1）问条件下，小物体从最低点由静止释放后首次到达球心所需时间；
+
+（3）忽略重力，令小物体的正电荷量为 \(Q\)，从球心正下方距球心 \(2R\)
+处由静止释放，求它到达球心时的速度；
+
+（4）第（3）问中，小物体从 \(2R\) 处运动到球面的时间；
+
+（5）第（3）问中，小物体从球面运动到球心的时间。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.72\linewidth,height=\textheight,keepaspectratio,alt={图6-1　带电绝缘球、径向隧道与小物体的初始位置}]{../figures/question-06.pdf}
+\caption*{图6-1　带电绝缘球、径向隧道与小物体的初始位置}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-5}
+
+均匀带电球内部是线性回复场，外部是反平方场。用连续的分段电势求速度，进入球内与球外的时间分别积分。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-5}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  高斯定理求均匀带电球内外电场。
+\item
+  均匀带电球的电势连续表达式。
+\item
+  电场力做功与电势能变化。
+\item
+  常力作用下简谐振动的平衡位置平移。
+\item
+  平方反比中心力径向下落的时间积分。
+\item
+  分段运动的边界速度与相位衔接。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-5}
+
+取球心为 \(O\)。对半径 \(r<R\) 的高斯球，包围电荷为
+
+\[
+Q_{\rm enc}=-Q\frac{r^3}{R^3}. \tag{1}
+\]
+
+所以球内场强为
+
+\[
+\bm E(r)=-\frac{kQ}{R^3}\bm r. \tag{2}
+\]
+
+正电小物体所受电场力总是指向球心，并与位移大小成正比。球外场等效于球心处的点电荷
+\(-Q\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.762\linewidth,height=\textheight,keepaspectratio,alt={图6-2　连续的球内外电势与释放点}]{../figures/solution-06.pdf}
+\caption*{图6-2　连续的球内外电势与释放点}
+\end{figure}
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-5}
+
+以无穷远为电势零点，带电球的电势为
+
+\[
+\varphi(r)=
+\begin{cases}
+-\dfrac{kQ}{r}, & r\ge R,\\[6pt]
+-\dfrac{kQ}{2R^3}(3R^2-r^2), & 0\le r\le R.
+\end{cases} \tag{3}
+\]
+
+边界检查：在 \(r=R\) 处，两式都给出
+\(-kQ/R\)；对球内式求负梯度，又能还原式（2）。后面能量法用式（3），时间法则直接用运动方程。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-5}
+
+\needspace{3\baselineskip}
+\textbf{（一）恰好从最低点到达球心}
+
+小物体从最低点上升到球心，高度增加 \(R\)，重力势能增加
+
+\[
+\Delta U_g=mgR. \tag{4}
+\]
+
+最低点与球面的半径都为 \(R\)，其电势为
+
+\[
+\varphi(R)=-\frac{kQ}{R}. \tag{5}
+\]
+
+球心电势为
+
+\[
+\varphi(0)=-\frac{3kQ}{2R}. \tag{6}
+\]
+
+正电荷从球面到球心时，电势能变化为
+
+\[
+\begin{aligned}
+\Delta U_e
+&=q[\varphi(0)-\varphi(R)]\\
+&=q\left(-\frac{3kQ}{2R}+\frac{kQ}{R}\right)\\
+&=-\frac{kQq}{2R}.
+\end{aligned} \tag{7}
+\]
+
+初、末速度都为零，机械能守恒要求总势能变化为零：
+
+\[
+mgR-\frac{kQq}{2R}=0. \tag{8}
+\]
+
+解得
+
+\[
+\boxed{q=\frac{2mgR^2}{kQ}}. \tag{9}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（二）从最低点首次到达球心的时间}
+
+取竖直向下为坐标正方向，球心为 \(r=0\)，最低点为
+\(r=R\)。小物体在球内所受重力为 \(+mg\)，电场力由式（2）给出
+
+\[
+F_e=-\frac{kQq}{R^3}r. \tag{10}
+\]
+
+牛顿第二定律为
+
+\[
+m\ddot r=mg-\frac{kQq}{R^3}r. \tag{11}
+\]
+
+定义
+
+\[
+\omega_0^2=\frac{kQq}{mR^3}. \tag{12}
+\]
+
+代入第（1）问的 \(q\)：
+
+\[
+\omega_0^2
+=\frac{kQ}{mR^3}\frac{2mgR^2}{kQ}
+=\frac{2g}{R}. \tag{13}
+\]
+
+式（11）写成
+
+\[
+\ddot r+\omega_0^2r=g. \tag{14}
+\]
+
+其平衡位置为
+
+\[
+r_{\rm e}=\frac{g}{\omega_0^2}=\frac R2. \tag{15}
+\]
+
+令 \(\xi=r-R/2\)，则
+
+\[
+\ddot\xi+\omega_0^2\xi=0. \tag{16}
+\]
+
+初始条件为
+
+\[
+r(0)=R,
+\qquad
+\dot r(0)=0,
+\qquad
+\xi(0)=\frac R2. \tag{17}
+\]
+
+所以
+
+\[
+\xi(t)=\frac R2\cos\omega_0t, \tag{18}
+\]
+
+即
+
+\[
+r(t)=\frac R2[1+\cos(\omega_0t)]. \tag{19}
+\]
+
+首次到达球心要求 \(r(t_1)=0\)：
+
+\[
+1+\cos(\omega_0t_1)=0. \tag{20}
+\]
+
+第一次满足条件的是 \(\omega_0t_1=\pi\)，故
+
+\[
+\boxed{t_1=\frac\pi{\omega_0}=\pi\sqrt{\frac{R}{2g}}}. \tag{21}
+\]
+
+注意这不是简谐振动的四分之一周期。物体围绕 \(r=R/2\) 振动，从右端点
+\(r=R\) 到左端点 \(r=0\)，走过的是半个周期。
+
+\needspace{3\baselineskip}
+\textbf{（三）忽略重力时到达球心的速度}
+
+此后令小物体电荷量为 \(+Q\)。初始点 \(r=2R\) 的电势能为
+
+\[
+U_i=Q\varphi(2R)=-\frac{kQ^2}{2R}. \tag{22}
+\]
+
+球心电势能为
+
+\[
+U_O=Q\varphi(0)=-\frac{3kQ^2}{2R}. \tag{23}
+\]
+
+由静止释放，机械能守恒：
+
+\[
+0+U_i=\frac12mv_O^2+U_O. \tag{24}
+\]
+
+因此
+
+\[
+\begin{aligned}
+\frac12mv_O^2
+&=U_i-U_O\\
+&=-\frac{kQ^2}{2R}+\frac{3kQ^2}{2R}\\
+&=\frac{kQ^2}{R}.
+\end{aligned} \tag{25}
+\]
+
+解得
+
+\[
+\boxed{v_O=\sqrt{\frac{2kQ^2}{mR}}}. \tag{26}
+\]
+
+在球面处的速度也要为第（五）问提供边界条件。由 \(2R\) 到 \(R\)：
+
+\[
+\frac12mv_R^2
+=-\frac{kQ^2}{2R}+\frac{kQ^2}{R}
+=\frac{kQ^2}{2R}, \tag{27}
+\]
+
+所以
+
+\[
+v_R=\sqrt{\frac{kQ^2}{mR}}. \tag{28}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（四）从 \(2R\) 到球面的时间}
+
+在球外，小物体受平方反比吸引力。记
+
+\[
+\mu=\frac{kQ^2}{m}. \tag{29}
+\]
+
+由能量守恒，任意 \(r\in[R,2R]\) 处有
+
+\[
+\frac12m\dot r^2-\frac{kQ^2}{r}
+=-\frac{kQ^2}{2R}. \tag{30}
+\]
+
+小物体向内运动，\(\dot r<0\)，故
+
+\[
+\dot r=-\sqrt{2\mu\left(\frac1r-\frac1{2R}\right)}. \tag{31}
+\]
+
+时间微元为
+
+\[
+\mathrm dt
+=-\frac{\mathrm dr}{\sqrt{2\mu(1/r-1/(2R))}}. \tag{32}
+\]
+
+于是
+
+\[
+t_2=\int_R^{2R}
+\frac{\mathrm dr}{\sqrt{2\mu(1/r-1/(2R))}}. \tag{33}
+\]
+
+【数学技巧：令 \(r=2R\sin^2\phi\)，把根式化为三角函数。】此时
+
+\[
+\mathrm dr=4R\sin\phi\cos\phi\,\mathrm d\phi, \tag{34}
+\]
+
+并且
+
+\[
+\frac1r-\frac1{2R}
+=\frac{\cos^2\phi}{2R\sin^2\phi}. \tag{35}
+\]
+
+积分上下限为
+
+\[
+r=R\Rightarrow\phi=\frac\pi4,
+\qquad
+r=2R\Rightarrow\phi=\frac\pi2. \tag{36}
+\]
+
+代回式（33）：
+
+\[
+\begin{aligned}
+t_2
+&=\int_{\pi/4}^{\pi/2}
+\frac{4R\sin\phi\cos\phi\,\mathrm d\phi}
+{\sqrt{2\mu}\,\cos\phi/(\sqrt{2R}\sin\phi)}\\
+&=4R\sqrt{\frac{R}{\mu}}
+\int_{\pi/4}^{\pi/2}\sin^2\phi\,\mathrm d\phi.
+\end{aligned} \tag{37}
+\]
+
+利用
+
+\[
+\int\sin^2\phi\,\mathrm d\phi
+=\frac\phi2-\frac{\sin2\phi}{4}, \tag{38}
+\]
+
+得到
+
+\[
+\begin{aligned}
+\int_{\pi/4}^{\pi/2}\sin^2\phi\,\mathrm d\phi
+&=\left[\frac\phi2-\frac{\sin2\phi}{4}\right]_{\pi/4}^{\pi/2}\\
+&=\frac\pi4-\left(\frac\pi8-\frac14\right)\\
+&=\frac{\pi+2}{8}.
+\end{aligned} \tag{39}
+\]
+
+故
+
+\[
+\boxed{
+t_2=\frac{\pi+2}{2}
+\sqrt{\frac{mR^3}{kQ^2}}}. \tag{40}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（五）从球面到球心的时间}
+
+球内运动方程为
+
+\[
+m\ddot r=-\frac{kQ^2}{R^3}r. \tag{41}
+\]
+
+令
+
+\[
+\omega=\sqrt{\frac{kQ^2}{mR^3}}, \tag{42}
+\]
+
+则
+
+\[
+\ddot r+\omega^2r=0. \tag{43}
+\]
+
+把进入球面的时刻记为新的 \(t=0\)。若取向外为 \(r\) 的正方向，边界条件为
+
+\[
+r(0)=R,
+\qquad
+\dot r(0)=-v_R=-\omega R, \tag{44}
+\]
+
+其中用到了式（28）与式（42）的关系 \(v_R=\omega R\)。简谐运动通解写成
+
+\[
+r(t)=A\cos\omega t+B\sin\omega t. \tag{45}
+\]
+
+由 \(r(0)=R\) 得 \(A=R\)；由
+
+\[
+\dot r(0)=B\omega=-\omega R \tag{46}
+\]
+
+得 \(B=-R\)。因此
+
+\[
+r(t)=R(\cos\omega t-\sin\omega t). \tag{47}
+\]
+
+首次到达球心满足
+
+\[
+\cos\omega t_3=\sin\omega t_3. \tag{48}
+\]
+
+第一个正根为 \(\omega t_3=\pi/4\)，所以
+
+\[
+\boxed{
+t_3=\frac\pi4
+\sqrt{\frac{mR^3}{kQ^2}}}. \tag{49}
+\]
+
+第（五）问不是从简谐振动振幅端点出发。进入球面时已经具有速度
+\(v_R=\omega R\)，所以初相位同时含余弦项和负正弦项。把式（47）改写为
+
+\[
+r(t)=\sqrt2R\cos\left(\omega t+\frac\pi4\right), \tag{50}
+\]
+
+可见振幅为 \(\sqrt2R\)；实际只考察从 \(r=R\) 到 \(r=0\)
+的一段相位，而不是把球面误认为振幅端点。用式（47）求球心速度为
+\(|\dot r|=\sqrt2\omega R\)，恰好等于式（26），完成分段能量核验。
+
+量纲检查：\(mR^3/(kQ^2)\) 的量纲为时间平方，因为 \(kQ^2/R\)
+是能量；式（40）、式（49）均具有时间量纲。式（9）中 \(mgR^2/(kQ)\)
+的量纲为电荷量。
+
+\needspace{3\baselineskip}
+\textbf{球内电势的积分来源}
+
+为避免死记式（3），可由电势差重新推导。球面电势为
+
+\[
+\varphi(R)=-\frac{kQ}{R}.
+\]
+
+对 \(r<R\)，径向电场分量为 \(E_r=-kQr/R^3\)。根据
+
+\[
+\varphi(r)-\varphi(R)
+=-\int_R^r E_s\,\mathrm ds,
+\]
+
+得到
+
+\[
+\begin{aligned}
+\varphi(r)-\varphi(R)
+&=\frac{kQ}{R^3}\int_R^r s\,\mathrm ds\\
+&=\frac{kQ}{2R^3}(r^2-R^2).
+\end{aligned}
+\]
+
+所以
+
+\[
+\varphi(r)
+=-\frac{kQ}{R}
++\frac{kQ(r^2-R^2)}{2R^3}
+=-\frac{kQ}{2R^3}(3R^2-r^2).
+\]
+
+球心比球面电势低
+\(kQ/(2R)\)，这正是第（1）问电场力可释放的单位正电荷能量。
+
+还可用加速度连续性检查分段：球外表面处
+
+\[
+a_{\rm out}(R)=-\frac{kQ^2}{mR^2},
+\]
+
+球内表面处
+
+\[
+a_{\rm in}(R)=-\omega^2R
+=-\frac{kQ^2}{mR^2}.
+\]
+
+电场、速度和加速度在球面都连续，但加速度对位置的函数形式从 \(1/r^2\)
+切换为 \(r\)，因此不能把同一时间公式跨过球面使用。
+
+\needspace{3\baselineskip}
+\textbf{球外下落时间的一般表达式}
+
+若从任意 \(r_0>R\) 处静止释放，球外能量方程为
+
+\[
+\dot r^2=2\mu\left(\frac1r-\frac1{r_0}\right).
+\]
+
+令
+
+\[
+r=r_0\sin^2\phi,
+\qquad
+\phi_R=\arcsin\sqrt{\frac R{r_0}},
+\]
+
+按正文同样步骤可得从 \(r_0\) 到 \(R\) 的时间
+
+\[
+t(r_0\to R)
+=\sqrt{\frac{r_0^3}{2\mu}}
+\left[
+\arccos\sqrt{\frac R{r_0}}
++\sqrt{\frac R{r_0}\left(1-\frac R{r_0}\right)}
+\right].
+\]
+
+代入 \(r_0=2R\)：
+
+\[
+\arccos\frac1{\sqrt2}=\frac\pi4,
+\qquad
+\sqrt{\frac12\left(1-\frac12\right)}=\frac12,
+\]
+
+并且
+
+\[
+\sqrt{\frac{(2R)^3}{2\mu}}=2\sqrt{\frac{R^3}{\mu}},
+\]
+
+于是
+
+\[
+t(2R\to R)
+=2\sqrt{\frac{R^3}{\mu}}
+\left(\frac\pi4+\frac12\right)
+=\frac{\pi+2}{2}\sqrt{\frac{R^3}{\mu}},
+\]
+
+与式（40）一致。一般式还给出 \(r_0\to R^+\) 时
+\(t\to0\)，说明积分端点的零初速奇性是可积的。
+
+\textbf{分段电势的衔接。}
+图6-2画出球内二次势和球外反平方势：在表面\(r=R\)处，电势与其一阶导数连续。第三、四问忽略重力，原题从球下方释放，径向距离仍从\(2R\)降至0；球对称使速度大小和时间积分不依赖从上方还是下方进入，但题图与题干应保持原来的方向。球内与球外的时间应分别计算，不能把全部路段套成同一个简谐周期。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf-5}
+
+球内与球外必须分段处理：球内电场线性，运动是简谐型；球外电场按反平方衰减，不能继续使用简谐周期。重力存在时只是把球内简谐运动的平衡位置从球心平移到
+\(R/2\)，角频率仍由电场力的线性系数决定。
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9-5}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  把均匀带电球内部当成点电荷场，误写为 \(kQ/r^2\)。
+\item
+  球带负电，却在球内电势公式中漏掉整体负号。
+\item
+  第（2）问把从 \(R\) 到 \(0\) 误认成四分之一周期。
+\item
+  外部下落积分没有选取向内运动的负速度分支。
+\item
+  第（5）问忽略进入球面时已有非零速度，直接写 \(r=R\cos\omega t\)。
+\item
+  分段计算时球面速度前后不连续。
+\end{enumerate}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae-5}
+
+先让学生画出 \(E(r)\)
+随有符号坐标的直线，再由斜率读出回复力系数。第（2）问在图 6-2
+上标出真正平衡点
+\(R/2\)，用``从一个振幅端到另一个振幅端''解释半周期。第（4）问先保留积分式，让学生检验根式在
+\(r=2R\) 处虽然使速度为零，但时间积分仍收敛；随后再完成三角代换。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3-5}
+
+若小物体从球外
+\(r=aR\)（\(a>1\)）由静止释放，忽略重力，要求写出它到达球面的时间积分并化为闭式。进一步比较
+\(a\to1^+\) 与 \(a\gg1\) 的极限，判断时间对初始距离的主导标度。
+
+\needspace{3\baselineskip}
+\textbf{球外初始距离的两个时间极限}
+
+令\(r_0=aR\)，\(\mu=kQ^2/m\)，正文闭式可写为 \[t_{\rm out}=
+\sqrt{\frac{a^3R^3}{2\mu}}
+\left[\arccos(a^{-1/2})+\sqrt{\frac1a(1-\frac1a)}\right].\]
+当\(a=1+\epsilon\)、\(\epsilon\ll1\)时，短距离内加速度近似\(\mu/R^2\)，所以
+\[t_{\rm out}\simeq\sqrt{\frac{2R^3}{\mu}\epsilon}.\]
+这个平方根极限也可由闭式展开得到。它不是随初始高度差线性增加。
+
+当\(a\gg1\)，括号趋于\(\pi/2\)，于是
+\[t_{\rm out}\simeq\frac\pi{2\sqrt2}
+\sqrt{\frac{R^3}{\mu}}a^{3/2}.\]
+外部逆平方场的下落时间随\(r_0^{3/2}\)增长。进入球面速度为
+\[v_R^2=\frac{2\mu}{R}(1-1/a),\] 此后到中心的时间是
+\[t_{\rm in}=\omega^{-1}
+\arctan\!\left(\frac{\omega R}{v_R}\right),\qquad
+\omega=\sqrt{\mu/R^3}.\]
+在\(a=2\)，有\(v_R=\omega R\)，还原\(\pi/(4\omega)\)；在\(a\to1^+\)，则是从球面静止开始的四分之一周期。
+
+\needspace{3\baselineskip}
+\textbf{从球内静止释放的完整运动}
+
+忽略重力，设正试探电荷 \(q\) 在窄孔内距离球心 \(r_i<R\)
+处静止释放。球内场为 \(-kQr/R^3\)，所以运动方程为
+\[\ddot r+\omega_s^2r=0,\qquad
+\omega_s^2=\frac{kQq}{mR^3}.\] 在尚未穿过中心之前，
+\[r(t)=r_i\cos(\omega_st),\qquad
+\dot r=-r_i\omega_s\sin(\omega_st).\] 首次到中心时间为
+\(\pi/(2\omega_s)\)，与释放半径无关；到中心速度为
+\(r_i\omega_s\)，随释放半径线性改变。若孔贯通且无阻力，使用有向孔轴坐标可继续为简谐振动。
+球内电势的常量项不会影响这个方程，但它决定与球外势能的接续。若把外部
+\(-kQq/r\)
+势延伸到球内，会得到中心速度发散，既不符合均匀球的电场，也破坏球面处一阶导数连续。这个变式适用于球内释放；原题
+\(r_i=2R\) 的外部段仍须单独积分。
+
+\needspace{3\baselineskip}
+\textbf{球内重力下的轨迹与临界电荷}
+
+沿竖直孔取向下坐标 \(z\)，球心为零，释放点为下表面
+\(z=R\)。球内运动方程为 \[\ddot z=g-\omega_g^2z,\qquad
+\omega_g^2=\frac{kQq}{mR^3}.\] 平衡点在
+\(z_e=g/\omega_g^2\)，从表面静止释放的解是
+\[z(t)=z_e+(R-z_e)\cos(\omega_gt).\]
+首先要求电吸力大于重力，才能从下表面向球内运动，即 \(z_e<R\)。最小坐标为
+\(2z_e-R\)，能够到达中心的进一步条件为
+\[z_e\le R/2,\qquad q\ge\frac{2mgR^2}{kQ}.\]
+等号时中心恰为转向点，首次到中心的时间为
+\[t_c=\frac{\pi}{\omega_g}=\pi\sqrt{\frac{R}{2g}}.\]
+若电荷大于临界值，中心不再是转向点，首次到中心满足
+\[t_c=\frac1{\omega_g}\arccos\!\left(-\frac{z_e}{R-z_e}\right),\]
+穿越速度平方为 \(v_c^2=\omega_g^2R^2-2gR>0\)。若
+\(R/2<z_e<R\)，物体会在球心下方反向，不能到达中心。能量给出的临界条件与完整轨迹给出的区间条件一致，同时区分了``进入球内''和``到达球心''两个门限。
+
+\newpage
+
+\section{第 7 题}\label{ux7b2c-7-ux9898}
+
+两根完全相同的均匀细杆 \(A\)、\(B\)，质量均为 \(m\)，长度均为
+\(l\)。求：
+
+（1）细杆绕质心及绕端点的转动惯量；
+
+（2）两杆均在竖直平面内由水平位置静止释放。杆 \(A\) 的一端固定铰接，杆
+\(B\)
+的相应端点被约束在同一水平直线上作无摩擦运动。当两杆分别转到与竖直方向夹角
+\(\theta\) 时，求角速度之比 \(\omega_A/\omega_B\)；
+
+（3）两杆在光滑水平面上首尾铰接并处于同一直线，杆 \(A\)
+的左端固定铰接。在杆 \(B\) 上距其右端 \(h\) 处施加垂直于杆的瞬时冲量
+\(I\)。若冲量后两杆仍保持共线转动，求 \(h\)及共同角速度\(\omega\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.86\linewidth,height=\textheight,keepaspectratio,alt={图7-1　单杆转动、滑动端约束和双杆冲量模型}]{../figures/question-07.pdf}
+\caption*{图7-1　单杆转动、滑动端约束和双杆冲量模型}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-6}
+
+下落问题比较两种端点约束下的能量分配。冲量问题将两杆分别列式，用公共铰点速度相容求共同角速度与施力点。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-6}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  转动惯量的定义积分和平行轴定理。
+\item
+  刚体动能的柯尼希分解。
+\item
+  几何约束给出质心速度。
+\item
+  角冲量定理与线冲量定理。
+\item
+  理想铰链在瞬时过程中的速度相容条件。
+\item
+  内冲量消元与总角动量复核。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-6}
+
+第（2）问中，杆 \(A\) 绕固定端作纯转动；杆 \(B\)
+的约束端沿水平线运动，系统无水平外力，因此杆 \(B\)
+的质心水平坐标保持不变。杆 \(B\)
+的动能必须同时计入质心竖直平动和绕质心转动。
+
+第（3）问中，取图 7-2
+所示的冲量方向为正。两杆冲量后仍共线，意味着公共铰点两侧的瞬时速度相同，两杆具有同一角速度
+\(\omega\)。设公共铰点对杆 \(B\) 的竖直冲量为 \(H\)；若求得
+\(H<0\)，表示实际方向与预设正方向相反。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.88\linewidth,height=\textheight,keepaspectratio,alt={图7-2　两杆分列冲量和共同角速度}]{../figures/solution-07.pdf}
+\caption*{图7-2　两杆分列冲量和共同角速度}
+\end{figure}
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-6}
+
+均匀细杆绕质心的转动惯量由定义直接得到。第（2）问分别对两杆使用机械能守恒，但必须先由约束写出杆
+\(B\) 的质心速度。第（3）问则以``共同角速度''为运动学条件，分别对杆
+\(A\) 绕固定铰点、对杆 \(B\) 作平动和绕质心转动，三个方程联立求
+\(\omega\)、\(H\)、\(h\)。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-6}
+
+\needspace{3\baselineskip}
+\textbf{（一）两种转动惯量}
+
+取杆的质心为坐标原点，沿杆方向为 \(x\) 轴。线密度为
+
+\[
+\lambda=\frac ml. \tag{1}
+\]
+
+质量微元为
+\(\mathrm dm=\lambda\,\mathrm dx\)。绕质心且垂直于杆的轴的转动惯量为
+
+\[
+J_C=\int_{-l/2}^{l/2}x^2\,\mathrm dm. \tag{2}
+\]
+
+代入线密度：
+
+\[
+\begin{aligned}
+J_C
+&=\frac ml\int_{-l/2}^{l/2}x^2\,\mathrm dx\\
+&=\frac ml\left[\frac{x^3}{3}\right]_{-l/2}^{l/2}\\
+&=\frac ml\cdot\frac13
+\left[\left(\frac l2\right)^3-\left(-\frac l2\right)^3\right]\\
+&=\frac ml\cdot\frac13\cdot\frac{l^3}{4}\\
+&=\frac{ml^2}{12}.
+\end{aligned} \tag{3}
+\]
+
+绕端点 \(A\) 的轴与质心轴平行，利用平行轴定理：
+
+\[
+\begin{aligned}
+J_A
+&=J_C+m\left(\frac l2\right)^2\\
+&=\frac{ml^2}{12}+\frac{ml^2}{4}\\
+&=\frac{ml^2}{3}.
+\end{aligned} \tag{4}
+\]
+
+故
+
+\[
+\boxed{J_C=\frac{ml^2}{12},\qquad J_A=\frac{ml^2}{3}}. \tag{5}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（二）两种约束下的角速度之比}
+
+两杆都从水平位置由静止释放。当杆与竖直方向夹角为 \(\theta\)
+时，质心相对初始水平位置下降
+
+\[
+\Delta y=\frac l2\cos\theta. \tag{6}
+\]
+
+因此两杆重力势能的减少量都为
+
+\[
+\Delta U=mg\frac l2\cos\theta. \tag{7}
+\]
+
+对于杆 \(A\)，它绕固定端纯转动。机械能守恒给出
+
+\[
+mg\frac l2\cos\theta
+=\frac12J_A\omega_A^2. \tag{8}
+\]
+
+代入 \(J_A=ml^2/3\)：
+
+\[
+mg\frac l2\cos\theta
+=\frac12\cdot\frac{ml^2}{3}\omega_A^2. \tag{9}
+\]
+
+约去 \(ml/2\)：
+
+\[
+g\cos\theta=\frac l3\omega_A^2. \tag{10}
+\]
+
+所以
+
+\[
+\omega_A^2=\frac{3g\cos\theta}{l}. \tag{11}
+\]
+
+下面处理杆 \(B\)。杆 \(B\)
+的受力只有重力和约束端的竖直支持力，水平方向没有外力。它从静止开始，所以质心的水平速度始终为零。
+
+设杆与竖直方向夹角为 \(\theta\)，其质心相对滑动端的水平投影为
+\((l/2)\sin\theta\)。约束端的水平运动正好抵消质心由转动产生的水平分量；质心的竖直坐标相对约束线为
+
+\[
+y_C=-\frac l2\cos\theta. \tag{12}
+\]
+
+对时间求导：
+
+\[
+\begin{aligned}
+v_C
+=|\dot y_C|
+&=\left|\frac l2\sin\theta\,\dot\theta\right|\\
+&=\frac l2\sin\theta\,\omega_B.
+\end{aligned} \tag{13}
+\]
+
+杆 \(B\) 的总动能为质心平动动能与绕质心转动动能之和：
+
+\[
+T_B=\frac12mv_C^2+\frac12J_C\omega_B^2. \tag{14}
+\]
+
+代入式（13）及 \(J_C=ml^2/12\)：
+
+\[
+\begin{aligned}
+T_B
+&=\frac12m\left(\frac l2\sin\theta\,\omega_B\right)^2
++\frac12\frac{ml^2}{12}\omega_B^2\\
+&=\frac{ml^2\omega_B^2}{8}\sin^2\theta
++\frac{ml^2\omega_B^2}{24}\\
+&=\frac{ml^2\omega_B^2}{24}
+(3\sin^2\theta+1).
+\end{aligned} \tag{15}
+\]
+
+机械能守恒：
+
+\[
+mg\frac l2\cos\theta
+=\frac{ml^2\omega_B^2}{24}
+(1+3\sin^2\theta). \tag{16}
+\]
+
+解出
+
+\[
+\omega_B^2
+=\frac{12g\cos\theta}{l(1+3\sin^2\theta)}. \tag{17}
+\]
+
+由式（11）、（17）：
+
+\[
+\begin{aligned}
+\left(\frac{\omega_A}{\omega_B}\right)^2
+&=\frac{3g\cos\theta/l}
+{12g\cos\theta/[l(1+3\sin^2\theta)]}\\
+&=\frac{1+3\sin^2\theta}{4}.
+\end{aligned} \tag{18}
+\]
+
+取角速度大小的正根：
+
+\[
+\boxed{
+\frac{\omega_A}{\omega_B}
+=\frac12\sqrt{1+3\sin^2\theta}}. \tag{19}
+\]
+
+极限检查很有辨识力。刚离开水平位置时 \(\theta=\pi/2\)，式（19）给
+\(\omega_A/\omega_B=1\)；两者角速度都从零开始，进一步比较初始角加速度也能得到一致趋势。当杆接近竖直时
+\(\theta\to0\)，比值趋于 \(1/2\)。此时杆 \(B\)
+的质心瞬时速度趋近于零，但杆仍可绕质心高速转动，不能据此误判杆 \(B\)
+静止。
+
+对杆 \(B\)
+的支持力不做功，因为力作用点只沿水平线运动，而理想约束力竖直。故可以使用机械能守恒；若不先说明这一点，直接写能量守恒会缺少物理依据。
+
+\needspace{3\baselineskip}
+\textbf{（三）使两杆冲量后保持共线的作用点}
+
+两杆初始静止，冲量持续时间极短，可忽略重力冲量。设公共铰点对杆 \(B\)
+的竖直冲量为 \(H\)，向上为正。根据作用与反作用，公共铰点对杆 \(A\)
+的冲量为 \(-H\)。
+
+冲量后两杆仍保持同一直线并绕杆 \(A\) 左端转动。设共同角速度为
+\(\omega\)。公共铰点距固定端为 \(l\)，其速度大小为 \(l\omega\)；杆 \(B\)
+的质心距固定端为 \(3l/2\)，故质心速度为
+
+\[
+V_{CB}=\frac{3l}{2}\omega. \tag{20}
+\]
+
+先对杆 \(A\)
+绕其固定端列角冲量方程。固定端冲量对该点力矩为零，只有公共铰点的冲量
+\(-H\) 贡献角冲量。按图 7-2 的正方向：
+
+\[
+-Hl=J_A\omega. \tag{21}
+\]
+
+代入 \(J_A=ml^2/3\)：
+
+\[
+-Hl=\frac{ml^2}{3}\omega. \tag{22}
+\]
+
+所以
+
+\[
+H=-\frac{ml}{3}\omega. \tag{23}
+\]
+
+负号说明公共铰点对杆 \(B\) 的实际冲量向下。这一方向并不矛盾：外冲量
+\(I\) 向上，铰点用向下冲量调整两杆的速度相容。
+
+再对杆 \(B\) 列竖直方向的线冲量方程：
+
+\[
+I+H=mV_{CB}. \tag{24}
+\]
+
+代入式（20）、（23）：
+
+\[
+I-\frac{ml}{3}\omega
+=m\frac{3l}{2}\omega. \tag{25}
+\]
+
+把含 \(\omega\) 的两项移到同一侧：
+
+\[
+\begin{aligned}
+I
+&=ml\omega\left(\frac32+\frac13\right)\\
+&=ml\omega\left(\frac96+\frac26\right)\\
+&=\frac{11}{6}ml\omega.
+\end{aligned} \tag{26}
+\]
+
+因此
+
+\[
+\omega=\frac{6I}{11ml}. \tag{27}
+\]
+
+最后对杆 \(B\) 的质心列角冲量方程。外冲量 \(I\) 的作用点距杆 \(B\)
+右端为 \(h\)，故它相对质心的有向力臂为
+
+\[
+\frac l2-h. \tag{28}
+\]
+
+铰点位于质心左侧 \(l/2\) 处。按选定正方向，两个角冲量之和为
+
+\[
+I\left(\frac l2-h\right)
+-H\frac l2
+=J_C\omega. \tag{29}
+\]
+
+代入 \(H=-ml\omega/3\) 和 \(J_C=ml^2/12\)：
+
+\[
+I\left(\frac l2-h\right)
++\frac{ml^2}{6}\omega
+=\frac{ml^2}{12}\omega. \tag{30}
+\]
+
+移项得
+
+\[
+I\left(\frac l2-h\right)
+=-\frac{ml^2}{12}\omega. \tag{31}
+\]
+
+代入式（27）：
+
+\[
+\begin{aligned}
+I\left(\frac l2-h\right)
+&=-\frac{ml^2}{12}\cdot\frac{6I}{11ml}\\
+&=-\frac{Il}{22}.
+\end{aligned} \tag{32}
+\]
+
+约去非零冲量 \(I\)：
+
+\[
+\frac l2-h=-\frac l{22}. \tag{33}
+\]
+
+因此
+
+\[
+\begin{aligned}
+h
+&=\frac l2+\frac l{22}\\
+&=\frac{11l+l}{22}\\
+&=\frac{6l}{11}.
+\end{aligned} \tag{34}
+\]
+
+最终结果为
+
+\[
+\boxed{h=\frac{6l}{11}}. \tag{35}
+\]
+
+可对两杆整体绕固定端做独立核验。固定铰链冲量对固定端力矩为零，公共铰点内冲量抵消，故
+
+\[
+I(2l-h)=J_{\rm total}\omega. \tag{36}
+\]
+
+杆 \(A\) 关于固定端的转动惯量为 \(ml^2/3\)；杆 \(B\) 质心距固定端
+\(3l/2\)，故
+
+\[
+\begin{aligned}
+J_{B,O}
+&=J_C+m\left(\frac{3l}{2}\right)^2\\
+&=\frac{ml^2}{12}+\frac{9ml^2}{4}\\
+&=\frac{7ml^2}{3},
+\end{aligned} \tag{37}
+\]
+
+从而 \(J_{\rm total}=8ml^2/3\)。代入 \(h=6l/11\) 和
+\(\omega=6I/(11ml)\)：
+
+\[
+I\left(2l-\frac{6l}{11}\right)
+=\frac{16Il}{11}
+=\frac{8ml^2}{3}\frac{6I}{11ml}, \tag{38}
+\]
+
+左右相等。这个整体方程只能用于复核，单独使用时有 \(h\)、\(\omega\)
+两个未知量，不能完成求解。
+
+瞬时冲量过程通常不守恒机械能。约束冲量可以重新分配动量，外冲量也输入能量，因此第三问不能用冲量后的转动动能等于某个``冲量功''。
+
+\needspace{3\baselineskip}
+\textbf{由速度相容理解共同角速度}
+
+冲量后若两杆仍共线，公共铰点的速度必须同时等于杆 \(A\) 右端速度和杆
+\(B\) 左端速度。杆 \(A\) 左端固定，故公共点速度为
+
+\[
+\bm v_J=\bm\omega_A\times l\bm e_x.
+\]
+
+杆 \(B\) 的两个端点速度差满足刚体公式
+
+\[
+\bm v_R-\bm v_J
+=\bm\omega_B\times l\bm e_x.
+\]
+
+``仍共线转动''要求整条两杆组合在该瞬间等效为绕固定端的刚体，因而
+\(\omega_A=\omega_B=\omega\)。这不是说铰链永久锁死，而是题设对冲量后瞬时状态施加的附加条件。
+
+能量可进一步显示冲量过程不应套守恒。冲量后的总转动动能为
+
+\[
+T^+=\frac12J_{\rm total}\omega^2
+=\frac12\cdot\frac{8ml^2}{3}
+\left(\frac{6I}{11ml}\right)^2
+=\frac{48I^2}{121m}.
+\]
+
+这个数值由外冲量大小与作用位置共同决定。冲量没有有限过程位移，不能简单写成
+\(Ih\) 或 \(I\,\Delta y\) 作为功；正确工具是线冲量和角冲量方程。
+
+\textbf{下落姿态与冲量的验算。}
+图中的两根杆从水平线下落，\(\theta\)以竖直向下为基准；B的约束端仍在原水平线上。第三问同时报告
+\[h=\frac6{11}l,\qquad\omega=\frac{6I}{11ml}.\]
+整体绕固定端的惯量为\(8ml^2/3\)，施力点到固定端为\(2l-h=16l/11\)，故\(I(2l-h)=(8ml^2/3)\omega\)。此式验证结果，但单独只含一个方程，不能同时求h与\(\omega\)。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf-6}
+
+第（2）问的差别来自动能结构：固定端杆只有定轴转动，滑动端杆同时有质心平动和绕质心转动。第（3）问的题眼是``冲量后仍共线''，它把两个刚体的运动约束为同一瞬时角速度；铰链内冲量虽然对整体消失，却是确定作用点位置不可缺少的中间量。
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9-6}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  把绕端点转动惯量误写成 \(ml^2/12\)。
+\item
+  对杆 \(B\) 只写 \(J_C\omega^2/2\)，漏掉质心平动动能。
+\item
+  认为滑动端不受力，而没有说明约束力与速度垂直、因而不做功。
+\item
+  冲量问题中擅自使用机械能守恒。
+\item
+  把 \(h\) 当成距质心的距离；题中 \(h\) 从右端量起。
+\item
+  公共铰点冲量在两根杆上的方向没有取反。
+\item
+  只写整个系统的角冲量方程，导致方程数不足。
+\end{enumerate}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae-6}
+
+第（2）问先让学生在图 7-2 上标出杆 \(B\)
+质心的水平坐标不变，再从几何关系求
+\(v_C\)，不要直接给出动能式。第（3）问建议先把未知量列成
+\(H\)、\(\omega\)、\(h\) 三个，再逐一对应``杆 \(A\) 角冲量、杆 \(B\)
+线冲量、杆 \(B\)
+质心角冲量''三个方程。最后用整体角动量复核，可训练学生区分求解方程和验算方程。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3-6}
+
+若第（3）问的冲量作用点改为距公共铰点
+\(a\)，且不再要求两杆共线，而是要求公共铰点冲量为零，求
+\(a\)。比较两个条件的物理差异：一个规定运动学相容，一个规定内力学响应。
+
+\needspace{3\baselineskip}
+\textbf{零公共铰点冲量变式的相容性}
+
+令公共铰点传给杆B的冲量为H。若要求\(H=0\)，杆A因没有其他非零力矩冲量，仍保持静止，故公共铰点速度为零。杆B受冲量I，质心速度\(I/m\)，角速度为
+\[\omega_B=\frac{I(a-l/2)}{ml^2/12},\]
+其中a从公共铰点量起。公共铰点速度必须满足
+\[0=\frac Im-\omega_B\frac l2.\] 所以\(\omega_B=2I/(ml)\)，进而
+\[a-\frac l2=\frac l6,\qquad \boxed{a=2l/3}.\]
+这是杆B相对瞬时固定端的打击中心条件。杆A不转、杆B转，二者不保持共线共同转动。
+
+原题要求两杆共线转动时，作用点从公共铰点量起是\(a=l-h=5l/11\)，不是\(2l/3\)，且H非零。两个结果差异来自规定的运动条件不同，不能把``铰点无冲量''替换为``铰点无速度''。
+
+\needspace{3\baselineskip}
+\textbf{冲击中心与两根杆获得相同角速度的位置}
+
+一根长 \(l\) 的均匀杆绕端点铰接，在距铰点 \(a\) 处受垂直冲量
+\(I\)。角冲量给出 \[\omega=\frac{Ia}{ml^2/3}=\frac{3Ia}{ml^2}.\]
+重心线动量增量为 \(m(l/2)\omega\)，铰点冲量为
+\[H=m\frac l2\omega-I=I\left(\frac{3a}{2l}-1\right).\] 所以 \(H=0\)
+的位置是 \(a=2l/3\)。这是单根杆的冲击中心。
+原题还要求两种约束的杆获得相同角速度。由两杆各自的角冲量和线冲量条件得到距相应自由端
+\(h=6l/11\)，距铰点为 \(5l/11\)。此时
+\(H=-2I/11\)，并不为零。两种条件回答的是不同问题：一项消除支座冲量，一项匹配两根杆的运动结果。若把
+\(2l/3\) 直接代入原题，会满足前者却破坏后者。
+
+\newpage
+
+\section{第 8 题}\label{ux7b2c-8-ux9898}
+
+在惯性系 \(S\) 中，\(t=0\) 时三个质点的位置分别为
+
+\[
+A(0,0),\qquad B(l,0),\qquad C(l,l),
+\]
+
+其中 \(l=10\ \mathrm{ly}\)。质点 \(A\) 以速度 \(v=0.6c\) 沿 \(+x\)
+方向运动，质点 \(B\) 以相同速率沿 \(-x\) 方向运动，质点 \(C\)
+以相同速率沿 \(-y\) 方向运动。\(t=0\) 时 \(A\) 发出一束光，使其恰好与
+\(C\) 相遇。求：
+
+（1）光在 \(S\) 系中的发射方向；
+
+（2）光与 \(C\) 相遇的时间；
+
+（3）在随 \(A\) 运动的惯性系 \(S'\) 中，光的发射方向及相遇时间；
+
+（4）在 \(S'\) 系中 \(t'=0\) 时，\(A\) 与 \(C\) 的距离。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.524\linewidth,height=\textheight,keepaspectratio,alt={图8-1　三质点初始位置、运动方向与追光几何}]{../figures/question-08.pdf}
+\caption*{图8-1　三质点初始位置、运动方向与追光几何}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-7}
+
+光子在平面内追上竖直移动的目标。先求相遇事件，再变换光传播方向与初始同时截面，最后计算运动观察者测得的时间和距离。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-7}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  运动目标的光学截获条件。
+\item
+  无量纲化二次方程。
+\item
+  光行差公式。
+\item
+  洛伦兹时空坐标变换。
+\item
+  同时性的相对性。
+\item
+  不同参考系中空间距离的定义。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-7}
+
+在 \(S\) 系中，\(C\) 的横坐标始终为 \(l\)，纵坐标为
+\(l-vt\)。从原点发出的光在相遇时必须到达同一个事件，因此它的位移向量为
+
+\[
+\bm r_L=(l,\,l-vt_1). \tag{1}
+\]
+
+其长度满足 \(|\bm r_L|=ct_1\)。质点 \(B\) 的运动不影响光与 \(C\)
+的相遇，但它帮助明确题目的对称初态，不能误把光的目标当成 \(B\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.88\linewidth,height=\textheight,keepaspectratio,alt={图8-2　XY追及几何与新系同时截面}]{../figures/solution-08.pdf}
+\caption*{图8-2　XY追及几何与新系同时截面}
+\end{figure}
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-7}
+
+定义
+
+\[
+\beta=\frac vc=\frac35,
+\qquad
+\gamma=\frac1{\sqrt{1-\beta^2}}=\frac54, \tag{2}
+\]
+
+并把相遇时间无量纲化：
+
+\[
+T=\frac{ct_1}{l}. \tag{3}
+\]
+
+这样追光方程只含 \(T\) 和 \(\beta\)，先求出 \(T\)，再恢复
+\(l=10\ \mathrm{ly}\) 的数值。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-7}
+
+\needspace{3\baselineskip}
+\textbf{（一）实验室系中的发射方向}
+
+光与 \(C\) 相遇时，\(C\) 的坐标为
+
+\[
+x_C=l,
+\qquad
+y_C=l-vt_1. \tag{4}
+\]
+
+光从原点出发，速率为 \(c\)，故
+
+\[
+c^2t_1^2=l^2+(l-vt_1)^2. \tag{5}
+\]
+
+除以 \(l^2\)，并利用 \(T=ct_1/l\)、\(\beta=v/c\)：
+
+\[
+T^2=1+(1-\beta T)^2. \tag{6}
+\]
+
+展开右侧：
+
+\[
+T^2=1+1-2\beta T+\beta^2T^2. \tag{7}
+\]
+
+移项得到
+
+\[
+(1-\beta^2)T^2+2\beta T-2=0. \tag{8}
+\]
+
+代入 \(\beta=3/5\)：
+
+\[
+\frac{16}{25}T^2+\frac65T-2=0. \tag{9}
+\]
+
+两边乘 \(25/2\)：
+
+\[
+8T^2+15T-25=0. \tag{10}
+\]
+
+由求根公式：
+
+\[
+\begin{aligned}
+T
+&=\frac{-15\pm\sqrt{15^2-4\cdot8\cdot(-25)}}{2\cdot8}\\
+&=\frac{-15\pm\sqrt{225+800}}{16}\\
+&=\frac{-15\pm5\sqrt{41}}{16}.
+\end{aligned} \tag{11}
+\]
+
+时间必须为正，故取正根：
+
+\[
+T=\frac{5(\sqrt{41}-3)}{16}. \tag{12}
+\]
+
+设光在 \(S\) 系中的单位方向向量为 \(\bm n=(n_x,n_y)\)。由相遇位移：
+
+\[
+n_x=\frac{l}{ct_1}=\frac1T. \tag{13}
+\]
+
+把式（12）有理化：
+
+\[
+\begin{aligned}
+n_x
+&=\frac{16}{5(\sqrt{41}-3)}\\
+&=\frac{16(\sqrt{41}+3)}{5(41-9)}\\
+&=\frac{\sqrt{41}+3}{10}.
+\end{aligned} \tag{14}
+\]
+
+纵向方向余弦为
+
+\[
+\begin{aligned}
+n_y
+&=\frac{l-vt_1}{ct_1}\\
+&=\frac1T-\beta\\
+&=\frac{\sqrt{41}+3}{10}-\frac6{10}\\
+&=\frac{\sqrt{41}-3}{10}.
+\end{aligned} \tag{15}
+\]
+
+因此
+
+\[
+\boxed{
+\bm n=
+\frac{\sqrt{41}+3}{10}\bm e_x
++\frac{\sqrt{41}-3}{10}\bm e_y}. \tag{16}
+\]
+
+方向角 \(\theta\) 可写成
+
+\[
+\boxed{
+\tan\theta=\frac{n_y}{n_x}
+=\frac{\sqrt{41}-3}{\sqrt{41}+3}}. \tag{17}
+\]
+
+核验单位长度：
+
+\[
+n_x^2+n_y^2
+=\frac{(\sqrt{41}+3)^2+(\sqrt{41}-3)^2}{100}
+=1. \tag{18}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（二）实验室系中的相遇时间}
+
+由式（3）、（12）：
+
+\[
+t_1=\frac lc\frac{5(\sqrt{41}-3)}{16}. \tag{19}
+\]
+
+由于 \(l=10\ \mathrm{ly}\)，而光通过 \(1\ \mathrm{ly}\) 所需时间为
+\(1\ \mathrm{yr}\)，所以 \(l/c=10\ \mathrm{yr}\)。因此
+
+\[
+\begin{aligned}
+t_1
+&=10\times\frac{5(\sqrt{41}-3)}{16}\ \mathrm{yr}\\
+&\approx10.6348\ \mathrm{yr}.
+\end{aligned} \tag{20}
+\]
+
+即
+
+\[
+\boxed{t_1\approx10.635\ \mathrm{yr}}. \tag{21}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（三）随 \(A\) 运动的参考系中的方向和时间}
+
+\(S'\) 相对 \(S\) 以 \(+v\) 沿 \(x\) 方向运动。光的 \(x\) 方向速度分量为
+\(u_x=cn_x\)。速度变换给出
+
+\[
+u_x'=\frac{u_x-v}{1-u_xv/c^2}. \tag{22}
+\]
+
+由于光在任何惯性系中速率仍为 \(c\)，所以
+\(u_x'=cn_x'\)。从而得到光行差公式
+
+\[
+n_x'=\frac{n_x-\beta}{1-\beta n_x}. \tag{23}
+\]
+
+代入 \(n_x=(\sqrt{41}+3)/10\)、\(\beta=3/5\)：
+
+\[
+\begin{aligned}
+n_x'
+&=\frac{(\sqrt{41}+3)/10-6/10}
+{1-(3/5)(\sqrt{41}+3)/10}\\
+&=\frac{(\sqrt{41}-3)/10}
+{(41-3\sqrt{41})/50}\\
+&=\frac{5(\sqrt{41}-3)}{41-3\sqrt{41}}.
+\end{aligned} \tag{24}
+\]
+
+注意 \(41-3\sqrt{41}=\sqrt{41}(\sqrt{41}-3)\)，故约去公共因子：
+
+\[
+\boxed{n_x'=\cos\theta'=\frac5{\sqrt{41}}}. \tag{25}
+\]
+
+横向分量可由 \(n_y'>0\) 及单位长度求得：
+
+\[
+\boxed{n_y'=\sin\theta'=\frac4{\sqrt{41}}}. \tag{26}
+\]
+
+所以
+
+\[
+\boxed{\tan\theta'=\frac45}. \tag{27}
+\]
+
+相遇事件在 \(S\) 中的坐标为 \((ct_1,x_1,y_1)\)，其中
+\(x_1=l\)。洛伦兹时间变换为
+
+\[
+t_1'=\gamma\left(t_1-\frac{vx_1}{c^2}\right). \tag{28}
+\]
+
+代入 \(x_1=l\)，并提取 \(l/c\)：
+
+\[
+t_1'=\frac lc\gamma(T-\beta). \tag{29}
+\]
+
+逐步化简无量纲系数：
+
+\[
+\begin{aligned}
+\gamma(T-\beta)
+&=\frac54\left[
+\frac{5(\sqrt{41}-3)}{16}-\frac35
+\right]\\
+&=\frac54\left[
+\frac{25(\sqrt{41}-3)-48}{80}
+\right]\\
+&=\frac{25\sqrt{41}-123}{64}.
+\end{aligned} \tag{30}
+\]
+
+因此
+
+\[
+\boxed{
+t_1'=\frac lc\frac{25\sqrt{41}-123}{64}}. \tag{31}
+\]
+
+取 \(l/c=10\ \mathrm{yr}\)：
+
+\[
+\boxed{t_1'\approx5.793\ \mathrm{yr}}. \tag{32}
+\]
+
+还可直接用 \(S'\) 中的光程核验。相遇事件在 \(S'\) 中的空间坐标满足
+
+\[
+x_1'=\gamma(l-vt_1),
+\qquad
+y_1'=l-vt_1. \tag{33}
+\]
+
+于是 \(y_1'/x_1'=1/\gamma=4/5\)，正好给出
+\(\tan\theta'=4/5\)。同时由光速不变应有
+
+\[
+\sqrt{x_1'^2+y_1'^2}=ct_1', \tag{34}
+\]
+
+代入式（30）可以验证成立。这个核验把行差公式与事件坐标变换联系起来。
+
+\needspace{3\baselineskip}
+\textbf{（四）\(S'\) 系 \(t'=0\) 时 \(A\)、\(C\) 的距离}
+
+在 \(S'\) 系中，\(A\) 始终位于原点。要求 \(t'=0\) 时 \(A\) 与 \(C\)
+的距离，必须寻找 \(C\) 世界线上满足 \(t'=0\) 的事件，而不能选取 \(S\)
+系的 \(t=0\) 事件。
+
+\(C\) 在 \(S\) 系的世界线为
+
+\[
+x_C=l,
+\qquad
+y_C=l-vt. \tag{35}
+\]
+
+时间变换条件为
+
+\[
+t'=\gamma\left(t-\frac{vx_C}{c^2}\right)=0. \tag{36}
+\]
+
+因为 \(x_C=l\)，所以对应的 \(S\) 系时刻为
+
+\[
+t=\frac{vl}{c^2}=\beta\frac lc. \tag{37}
+\]
+
+此事件的 \(S'\) 横坐标为
+
+\[
+\begin{aligned}
+x_C'
+&=\gamma(x_C-vt)\\
+&=\gamma\left(l-\frac{v^2l}{c^2}\right)\\
+&=\gamma l(1-\beta^2)\\
+&=\frac l\gamma\\
+&=\frac45l.
+\end{aligned} \tag{38}
+\]
+
+洛伦兹变换不改变与运动方向垂直的坐标，所以
+
+\[
+\begin{aligned}
+y_C'
+&=y_C\\
+&=l-v\left(\frac{vl}{c^2}\right)\\
+&=l(1-\beta^2)\\
+&=\frac{16}{25}l.
+\end{aligned} \tag{39}
+\]
+
+故 \(S'\) 中同时测得的距离为
+
+\[
+\begin{aligned}
+L_{AC}'
+&=\sqrt{x_C'^2+y_C'^2}\\
+&=l\sqrt{\left(\frac45\right)^2+
+\left(\frac{16}{25}\right)^2}\\
+&=l\sqrt{\frac{16}{25}+\frac{256}{625}}\\
+&=l\sqrt{\frac{400+256}{625}}\\
+&=\frac{4\sqrt{41}}{25}l.
+\end{aligned} \tag{40}
+\]
+
+代入 \(l=10\ \mathrm{ly}\)：
+
+\[
+\boxed{
+L_{AC}'=\frac{8\sqrt{41}}5\ \mathrm{ly}
+\approx10.245\ \mathrm{ly}}. \tag{41}
+\]
+
+为什么不能把初始直角边简单改为 \(l/\gamma\) 和 \(l\)？因为 \(C\) 还沿
+\(-y\) 方向运动，而 \(S'\) 的 \(t'=0\) 同时面对应到 \(S\) 中
+\(t=vl/c^2\)，这段时间内 \(C\) 的纵坐标已从 \(l\) 降到
+\(l(1-\beta^2)\)。横向出现长度收缩，纵向则因为选取了不同事件而发生位置变化；两种效应来源不同。
+
+闵可夫斯基间隔只能比较两个事件。所谓某一参考系中的``瞬时距离''，是该系同一时刻的两个事件之间的空间间隔，因此第一步永远是建立同时条件。图
+8-2 的 \(t'=0\) 斜截面正是这一条件的几何表示。
+
+\needspace{3\baselineskip}
+\textbf{相遇事件的四维核验}
+
+光从发射事件 \(E_0=(0,0,0)\) 到相遇事件
+\(E_1=(ct_1,l,l-vt_1)\)，二者的时空间隔必须为零：
+
+\[
+\Delta s^2
+=c^2t_1^2-l^2-(l-vt_1)^2=0.
+\]
+
+这就是式（5），说明追光二次方程实际上是光类间隔条件。洛伦兹变换保持
+\(\Delta s^2\) 不变，故在 \(S'\) 中自动有
+
+\[
+c^2t_1'^2=x_1'^2+y_1'^2.
+\]
+
+发射方向可以直接由变换后相遇事件的空间坐标读取：
+
+\[
+\frac{y_1'}{x_1'}
+=\frac{l-vt_1}{\gamma(l-vt_1)}
+=\frac1\gamma
+=\frac45.
+\]
+
+这与光行差公式给出的 \(\tan\theta'=4/5\) 完全一致。
+
+第（4）问则选取另一事件 \(E_C\)：它位于 \(C\) 的世界线上，并与 \(A\)
+的原点事件在 \(S'\) 中同时。条件 \(\Delta t'=0\) 决定 \(E_C\) 在 \(S\)
+中不是
+\(t=0\)。因此``相遇事件变换''和``同时距离测量''对应两组不同事件；即使两问都出现洛伦兹变换，也不能复用相遇时刻的坐标。
+
+\textbf{平面追及与同时截面。}
+图8-2左图的XY三角形直接对应光程\(cT=\sqrt{l^2+(l-vT)^2}\)。右图是同一追及的\(ct\)-\(x\)投影；光束另有y方向运动，所以投影斜率不必是\(45^\circ\)。\(S'\)的\(t'=0\)截面满足\(ct=\beta x\)，与目标世界线\(x=l\)相交的事件给出新系初始目标位置。把实验室的\(t=0\)直接当作新系\(t'=0\)，会把距离与追及时间一起算错。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf-7}
+
+追光问题先求相遇事件，再做参考系变换，逻辑最稳定。光的方向由相遇事件的空间坐标决定；相遇时间是同一事件的时间坐标；瞬时距离则必须重新选取一对在目标参考系中同时的事件。三者不能混用同一套坐标差。
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9-7}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  用光瞄准 \(C\) 的初始位置，而不是运动后的相遇位置。
+\item
+  二次方程保留负时间根。
+\item
+  用普通伽利略速度叠加求 \(S'\) 中光速方向。
+\item
+  只变换相遇时间而漏掉 \(-vx/c^2\) 项。
+\item
+  第（4）问直接对 \(S\) 系 \(t=0\) 时的距离做长度收缩。
+\item
+  忘记 \(C\) 在选取 \(S'\) 同时事件的过程中还发生了纵向位移。
+\item
+  把光年与年混用；只有写明 \(l/c=10\ \mathrm{yr}\) 后才能直接代数值。
+\end{enumerate}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae-7}
+
+先在图 8-2 左侧画出相遇三角形，让学生只用几何和 \(c\) 求 \(T\)。转到
+\(S'\)
+后，把``方向、时间、距离''分别对应到速度变换、事件变换、同时面三个概念。最后一问可让学生先猜简单长度收缩答案，再用
+\(t'=0\) 条件找出其遗漏的纵向位移，以此突出同时性的相对性。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3-7}
+
+保持初始位置不变，把 \(A\) 的速率改为 \(\beta_Ac\)、\(C\) 沿 \(-y\)
+的速率改为 \(\beta_Cc\)。要求先在 \(S\) 中写出一般追光方程，再变换到
+\(A\) 的静止系。讨论在哪些参数范围内一定存在正时间相遇，并检查
+\(\beta_A\to0\)、\(\beta_C\to0\) 的极限。
+
+\needspace{3\baselineskip}
+\textbf{一般横向追光和新系初始距离}
+
+令A沿\(+x\)速率为\(\beta_Ac\)，C沿\(-y\)速率为\(\beta_Cc\)，其中\(|\beta_A|,|\beta_C|<1\)。正相遇时间的无量纲根为
+\[T=\frac{-\beta_C+\sqrt{2-\beta_C^2}}{1-\beta_C^2}
+=\frac2{\sqrt{2-\beta_C^2}+\beta_C}.\]
+第二种形式在\(\beta_C\)接近1时数值更稳定。光方向为\(n_x=1/T,n_y=1/T-\beta_C\)；任意亚光速参数下根均为正。
+
+变到A的静止系，\(\gamma_A=(1-\beta_A^2)^{-1/2}\)，有
+\[t_{\rm hit}'=\frac lc\gamma_A(T-\beta_A),\qquad
+x_{\rm hit}'=\gamma_Al(1-\beta_AT),\quad
+y_{\rm hit}'=l(1-\beta_CT).\]
+新系\(t'=0\)与C世界线相交于旧系\(t=\beta_Al/c\)，因此
+\[D_0'=l\sqrt{\gamma_A^{-2}+(1-\beta_A\beta_C)^2}.\]
+当\(\beta_A\to0\)，初始距离还原\(\sqrt2l\)；当\(\beta_C\to0\)，C不再有横向位置随时间改变，距离变成\(l\sqrt{1+\gamma_A^{-2}}\)。只有后一种情形才可直接对原直角边作横向不变、纵向收缩的处理。
+
+\needspace{3\baselineskip}
+\textbf{由猎人钟直接验证新系时间}
+
+原系激光击中 \(C\) 的事件为 \((cT,l,l-v_CT)\)。\(A\) 以 \(v_A\) 沿 \(x\)
+运动，故该事件的新系时间为 \[t'_E=\gamma_A(T-v_Al/c^2).\] 这不是 \(A\)
+在发射和击中两个事件之间的钟读数，因为击中事件不在 \(A\)
+的世界线上。若要定义钟读数，只能取 \(A\)
+世界线上与击中事件新系同时的事件。它满足 \[t_A-\frac{v_A(v_At_A)}{c^2}
+=T-\frac{v_Al}{c^2},\] 因此 \(t_A=\gamma_A^2(T-v_Al/c^2)\)。\(A\)
+的固有时间为 \(t_A/\gamma_A\)，恰等于 \(t'_E\)。这里相等是因为 \(A\)
+在新系静止，钟读数定义用了该系同时截面；不能将原系的 \(T/\gamma_A\)
+当作答案。 对于原题 \(v_A=v_C=0.6c\)，\(T=10[5(\sqrt{41}-3)/16]\)
+年，得到 \(t'_E=5.793454\) 年，与事件变换一致。
+\end{document}

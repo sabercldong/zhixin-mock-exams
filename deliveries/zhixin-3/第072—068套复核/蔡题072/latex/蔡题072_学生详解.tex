@@ -1,0 +1,3147 @@
+\documentclass[12pt,a4paper,UTF8]{ctexart}
+\usepackage[a4paper,top=22mm,bottom=22mm,left=22mm,right=22mm,headheight=15pt]{geometry}
+\newcommand{\Needspace}[1]{\par\begingroup\dimen0=#1\relax\dimen2=\pagegoal\advance\dimen2 by-\pagetotal\ifdim\dimen0>\dimen2\newpage\fi\endgroup}
+\newcommand{\needspace}[1]{\par\begingroup\skip0=\lastskip\vskip-\skip0\dimen0=#1\relax\advance\dimen0 by\skip0\vskip\dimen0\penalty-100\vskip-\dimen0\vskip\skip0\penalty9999\endgroup}
+\usepackage{amsmath,amssymb,mathtools,bm}
+\usepackage{graphicx,xcolor,booktabs,longtable,array,enumitem,fancyhdr,caption,float,microtype,setspace}
+\usepackage[hidelinks,unicode]{hyperref}
+\usepackage[most]{tcolorbox}
+\definecolor{ContestBlue}{HTML}{17365D}
+\hypersetup{pdftitle={第072套},pdfauthor={}}
+\setstretch{1.24}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.35em}
+\setlength{\emergencystretch}{2em}
+\setlist{itemsep=0.35em,topsep=0.4em}
+\captionsetup{font=small,labelfont=bf,justification=centering}
+\setcounter{secnumdepth}{0}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small 第072套}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\ctexset{
+  section={format=\Large\bfseries\color{ContestBlue},beforeskip=1.2em,afterskip=0.7em},
+  subsection={format=\large\bfseries\color{ContestBlue},beforeskip=1.0em,afterskip=0.5em},
+  subsubsection={format=\normalsize\bfseries,beforeskip=0.8em,afterskip=0.35em}
+}
+\usepackage{calc}
+\newcounter{none}
+\let\originalsubsection\subsection
+\renewcommand{\subsection}{\needspace{6\baselineskip}\originalsubsection}
+\makeatletter
+\newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\newcommand{\maxwidth}{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\newcommand{\maxheight}{\ifdim\Gin@nat@height>0.72\textheight 0.72\textheight\else\Gin@nat@height\fi}
+\newcommand{\pandocbounded}[1]{\begingroup\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}#1\endgroup}
+\makeatother
+\begin{document}
+\begin{titlepage}
+  \centering
+  \vspace*{58mm}
+  {\Huge\bfseries\color{ContestBlue} 第072套\par}
+  \vfill
+  \vspace*{28mm}
+\end{titlepage}
+\section{第 1 题}\label{ux7b2c-1-ux9898}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  光滑长斜面倾角 \(30^\circ\)，同一直线上放置 \(10\)
+  个完全相同的滑块。解除约束时分别给予任意大小、可沿斜面向上或向下的初速度。所有碰撞完全弹性，求滑块之间最多碰撞次数。
+\item
+  光滑水平面左端有墙，质量 \(M=10^5\,\mathrm{kg}\) 的大滑块在右，质量
+  \(m=10^{-5}\,\mathrm{kg}\)
+  的小滑块在墙与大滑块之间。小滑块初静止，大滑块以
+  \(v_0=3\,\mathrm{m\,s^{-1}}\) 向左。所有碰撞完全弹性，求总碰撞次数。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.84\linewidth,height=\textheight,keepaspectratio,alt={图1-1　同质量斜面滑块与墙边双质量碰撞系统}]{../figures/question-01.pdf}
+\caption*{图1-1　同质量斜面滑块与墙边双质量碰撞系统}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d}
+
+同质量滑块碰撞时交换速度，最多碰撞数可由虚拟轨迹的交点数求出。墙边两滑块质量不同，需先用质量平方根缩放速度，再数反射边界。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  相同质量一维弹性碰撞交换速度。
+\item
+  共同匀加速参考系。
+\item
+  两体动量、能量守恒。
+\item
+  质量加权速度圆。
+\item
+  反射角计数。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf}
+
+斜面上所有滑块具有相同加速度，转入沿斜面以 \(g/2\)
+加速的参考系后成为匀速质点；相同质量碰撞只交换身份。第二问中每次与墙碰撞翻转小块速度，每次两块碰撞相当于速度圆上一条固定直线的镜面反射。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3}
+
+第一问把带标签滑块换成可互相穿过的无标签轨迹，碰撞数就是直线两两相交数。第二问定义
+\(X=\sqrt M\,V\)、\(Y=\sqrt m\,v\)，能量守恒成为圆，再把反射``展开''为沿圆周单向前进。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.888\linewidth,height=\textheight,keepaspectratio,alt={图1-2　轨迹交点计数与质量加权速度圆反射展开}]{../figures/solution-01.pdf}
+\caption*{图1-2　轨迹交点计数与质量加权速度圆反射展开}
+\end{figure}
+
+\needspace{3\baselineskip}
+\textbf{（一）十个相同滑块}
+
+沿斜面向下取正，所有滑块加速度相同：
+
+\[
+a=g\sin30^\circ=\frac g2.
+\tag{1}
+\]
+
+转入以加速度 \(a\)
+沿斜面下移的参考系，每个滑块均作匀速直线运动。两个相同质量滑块发生一维弹性碰撞时，速度交换：
+
+\[
+v_1'=v_2,\qquad v_2'=v_1.
+\tag{2}
+\]
+
+在地面参考系中，若第 \(i\) 个滑块初位置为 \(x_{i0}\)、初速度为
+\(u_i\)，忽略碰撞时它的``虚拟轨迹''可写成
+
+\[
+x_i(t)=x_{i0}+u_it+\frac12at^2.
+\]
+
+任意两块 \(i,j\) 的相对位移为
+
+\[
+x_i(t)-x_j(t)
+=(x_{i0}-x_{j0})+(u_i-u_j)t.
+\]
+
+共同的 \(at^2/2\) 完全消去，所以每一对虚拟轨迹要么不交，要么只在
+
+\[
+t_{ij}=-\frac{x_{i0}-x_{j0}}{u_i-u_j}
+\]
+
+相交一次。只要将初位置按 \(x_{1,0}<x_{2,0}<\cdots<x_{10,0}\) 排列，再取
+
+\[
+u_1>u_2>\cdots>u_{10},
+\]
+
+就有
+\(t_{ij}>0\)，每一对轨迹都会在未来相交。还可对初速度作任意小扰动，使不同的
+\(t_{ij}\) 互不相等，从而避免三块同时碰撞的退化情形。
+
+若不追踪身份，效果等价于两条世界线直接穿过。任意一对直线至多相交一次，因此总碰撞数不超过滑块对数
+
+\[
+\binom{10}{2}=\frac{10\cdot9}{2}=45.
+\tag{3}
+\]
+
+按向下坐标排列位置后，选取严格递减且交会时刻不同的一组初速度，使每一对轨迹恰相交一次，所以此上界可达到：
+
+\[
+\boxed{N_{\max}=45}.
+\tag{4}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（二）两滑块与墙}
+
+设大块、小块向右速度分别为 \(V,v\)。定义
+
+\[
+X=\sqrt M\,V,\qquad Y=\sqrt m\,v.
+\tag{5}
+\]
+
+总动能守恒：
+
+\[
+\frac12MV^2+\frac12mv^2
+=\frac12Mv_0^2,
+\tag{6}
+\]
+
+即
+
+\[
+X^2+Y^2=Mv_0^2.
+\tag{7}
+\]
+
+系统状态位于速度圆上。小块撞墙时 \(v\to-v\)，故 \((X,Y)\) 关于 \(X\)
+轴反射。两块相撞时，动量守恒
+
+\[
+\sqrt M\,X+\sqrt m\,Y=\text{常量},
+\tag{8}
+\]
+
+两状态点由该等动量弦相连；反射轴是过原点且垂直于等动量弦的直线。下面先由碰撞矩阵推出两类反射线的夹角。
+
+为了明确这个反射关系，先写一维弹性碰撞公式：
+
+\[
+\begin{aligned}
+V'&=\frac{M-m}{M+m}V+\frac{2m}{M+m}v,\\
+v'&=\frac{2M}{M+m}V+\frac{m-M}{M+m}v.
+\end{aligned}
+\]
+
+换成 \(X,Y\) 后，
+
+\[
+\begin{pmatrix}X'\\Y'\end{pmatrix}
+=
+\begin{pmatrix}
+\dfrac{M-m}{M+m}&\dfrac{2\sqrt{Mm}}{M+m}\\[6pt]
+\dfrac{2\sqrt{Mm}}{M+m}&\dfrac{m-M}{M+m}
+\end{pmatrix}
+\begin{pmatrix}X\\Y\end{pmatrix}.
+\]
+
+这个矩阵保持 \(X^2+Y^2\)，行列式为
+\(-1\)，因而它确是一次镜面反射。若反射轴与 \(X\) 轴夹角为
+\(\alpha\)，反射矩阵应为
+
+\[
+\begin{pmatrix}
+\cos2\alpha&\sin2\alpha\\
+\sin2\alpha&-\cos2\alpha
+\end{pmatrix}.
+\]
+
+对比矩阵元素，有
+
+\[
+\cos2\alpha=\frac{M-m}{M+m},
+\qquad
+\sin2\alpha=\frac{2\sqrt{Mm}}{M+m},
+\]
+
+从而
+
+\[
+\alpha=\arctan\sqrt{\frac mM}.
+\tag{9}
+\]
+
+实际速度状态只在碰撞时离散跳变；连续展开的是位置空间的楔形边界，而非粒子速度沿圆周连续变化。计数如下。
+
+初态为
+\((X,Y)=(-\sqrt Mv_0,0)\)，位于速度圆最左端。小块与墙、小块与大块两类碰撞交替发生，在反射展开图中等价为一条射线连续穿过夹角为
+\(\alpha\) 的扇区边界。从初始方向到无后续碰撞的终态区域，可用总角度为
+\(\pi\) 的扇区计数。
+
+\[
+N=\left\lceil\frac{\pi}{\alpha}\right\rceil-1.
+\tag{10}
+\]
+
+代入
+
+\[
+\sqrt{\frac mM}
+=\sqrt{\frac{10^{-5}}{10^5}}
+=10^{-5},
+\tag{11}
+\]
+
+\[
+\alpha=\arctan(10^{-5})
+\approx9.99999999967\times10^{-6}.
+\tag{12}
+\]
+
+于是
+
+\[
+\frac{\pi}{\alpha}\approx314159.265369,
+\tag{13}
+\]
+
+本题 \(\pi/\alpha\) 不是整数，因而上式与向下取整等价，故
+
+\[
+\boxed{N=314159}.
+\tag{14}
+\]
+
+初速度 \(v_0\) 只决定速度圆半径，不改变反射线夹角，所以不影响碰撞次数。
+
+\needspace{3\baselineskip}
+\textbf{补充推导与适用条件}
+
+第一问的重力并非被``忽略''，而是在相对运动中严格消去。只要所有滑块的质量、受力加速度相同，任意两块的相对加速度就是零。若斜面上存在与速度有关的阻力，或滑块与斜面间摩擦系数不同，这一线性世界线结构就会被破坏。
+
+交换速度给出如下对应：两个不可穿过的同质量粒子，在无标签描述中与两个可以直接穿过的粒子完全等价。物理上的碰撞点就是虚拟世界线的交点，而滑块的``姓名''在每个交点发生交换。这一对应也适用于一维硬杆或硬球气体的轨迹统计。
+
+第二问中，速度圆的半径为 \(\sqrt Mv_0\)，但碰撞数只由两条反射轴的夹角
+\(\alpha\) 决定。因此 \(v_0\)
+不进入最终计数。这与第一问类似：速度大小决定碰撞在何时发生，而几何拓扑结构决定最多能发生多少次。
+
+整数边界是这一类题最容易被忽略的细节。当 \(\pi/\alpha\) 不是整数时，
+
+\[
+\left\lceil\frac\pi\alpha\right\rceil-1
+=\left\lfloor\frac\pi\alpha\right\rfloor.
+\]
+
+但若恰为整数 \(k\)，系统在第 \(k-1\)
+次碰撞后已到达边界终态，不应再多计一次。因而通式必须写为
+\(\lceil\pi/\alpha\rceil-1\)。
+
+第一问还可以用``逆序数''准确描述。按滑块在斜面上的空间次序读出它们携带的速度标签。每当相邻滑块发生追赶碰撞，两个速度标签交换一次，恰好消去一个相邻逆序。若初速度按与位置相反的严格次序排列，初始逆序数达到
+
+\[
+\frac{N(N-1)}2,
+\]
+
+而最终所有可能追赶关系消失时逆序数为零。一次二体碰撞只改变一对相邻标签的次序，因此恰需
+\(\binom N2\)
+次。这与世界线交点法给出同一个上界，但更直接说明``为何每次只能消去一对关系''。
+
+第二问也有一个位置空间版本。设大块距墙坐标为 \(x_M\)，小块距墙坐标为
+\(x_m\)，引入质量加权坐标
+
+\[
+Q_M=\sqrt M\,x_M,\qquad Q_m=\sqrt m\,x_m.
+\]
+
+允许区域由 \(x_m\ge0\) 和 \(x_M\ge x_m\) 限制。在 \((Q_M,Q_m)\)
+平面中，这两个边界是两条夹角为 \(\alpha\) 的射线，其中
+
+\[
+\tan\alpha=\sqrt{\frac mM}.
+\]
+
+自由运动对应平面中的直线，撞墙或两块相撞对应在楔形边界上的镜面反射。把楔形连续镜像展开，折线路径变成直线，而每穿过一条镜像边界就是一次碰撞。这个``位置楔形''与正文的``速度圆反射''互为补充：一个把路径展开，一个把速度状态展开，计数完全相同。
+
+终止条件也应具体写出。碰撞全部结束时，小块必须向右，即
+\(v\ge0\)；大块在右、小块在左，必须有
+\(v\le V\)，否则小块仍会追上大块；若大块向左，它迟早会碰小块，也不能终止。这些不等式在质量加权速度圆上正好划出一个角宽为
+\(\alpha\)
+的终态扇区，说明计数不是任意取整，而是由``进入终态扇区的第一次''决定。
+
+\needspace{3\baselineskip}
+\textbf{反射矩阵、真实碰撞序列与终止条件}
+
+图1-2左侧只画三个速度标签作说明，交点分别代表三次二体碰撞；交点不重合，避免把多体同时碰撞当作一般情形。右侧画的是反射轴与终态扇区，角度为便于辨认作了放大，数值计数仍使用题给质量比。
+
+记墙反射矩阵和块间反射矩阵为
+
+\[
+W=\begin{pmatrix}1&0\\0&-1\end{pmatrix},\qquad
+C=\begin{pmatrix}\cos2\alpha&\sin2\alpha\\
+\sin2\alpha&-\cos2\alpha\end{pmatrix}.
+\]
+
+两次连续事件``块间碰撞、墙碰撞''合起来为
+
+\[
+WC=\begin{pmatrix}\cos2\alpha&\sin2\alpha\\
+-\sin2\alpha&\cos2\alpha\end{pmatrix}.
+\]
+
+这是一转角为 \(-2\alpha\) 的旋转。设初态速度圆半径为
+\(R_v=\sqrt M v_0\)。完成 \(2k\) 次碰撞后，
+
+\[
+(X,Y)=R_v\bigl(\cos(\pi-2k\alpha),\sin(\pi-2k\alpha)\bigr);
+\]
+
+下一次块间反射则给出角度
+
+\[
+\varphi_{2k+1}=2(k+1)\alpha-\pi.
+\]
+
+在最终阶段，停止条件是
+
+\[
+0\le v\le V,\qquad
+0\le Y\le\sqrt{\frac mM}\,X,
+\]
+
+即
+\(0\le\varphi\le\alpha\)。小块在左、大块在右，必须是小块不再追上大块，故这里应为
+\(v\le V\)；不能颠倒两者。原稿的终止速度不等式已据此统一。
+
+本题总数为奇数 \(N=314159\)，于是
+
+\[
+\varphi_N=314160\alpha-\pi
+\approx7.34631\times10^{-6}\ \mathrm{rad},
+\]
+
+确在 \([0,\alpha]\) 中。再分别数事件，可得块间碰撞 \(157080\) 次、撞墙
+\(157079\) 次；两者相差一次，总数与取整式一致。改变 \(v_0\) 只乘上
+\(R_v\)，上述角度及次数均不变。
+
+\newpage
+
+\section{第 2 题}\label{ux7b2c-2-ux9898}
+
+两个相同的大长方形绝缘平板平行，相距 \(d\)。上板面电荷密度为
+\(+\sigma\)，下板为 \(-\sigma\)。点 \(P\) 位于上板一侧长边中点的正上方
+\(h\) 处，且
+
+\[
+d\ll h\ll \text{平板边长}.
+\]
+
+估算 \(P\) 点电场大小和方向。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\linewidth,height=\textheight,keepaspectratio,alt={图2-1　相反带电平行板边缘上方的观察点}]{../figures/question-02.pdf}
+\caption*{图2-1　相反带电平行板边缘上方的观察点}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-1}
+
+求的是两块异号平板在边缘上方留下的外场。先把两板的条带场相加，再对板间距展开，才能保住相消后的一阶项。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-1}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  半无限带电面的条带积分。
+\item
+  无限长线电荷场。
+\item
+  正负板竖直分量抵消。
+\item
+  \(d/h\ll1\) 的一阶展开。
+\item
+  远离角点时的二维近似。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-1}
+
+由于 \(h\)
+远小于边长，沿边方向可看成无限；由于观察点在边中点，另一对边的效应更小。将半无限面切成与边平行的无限长窄条，正负板的竖直分量在完成条带积分后相消，水平分量只因高度差
+\(d\) 留下小残差。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-1}
+
+以边缘为 \(y\) 轴、向板外为 \(+x\)，上板位于 \(z=0\) 且占据
+\(x<0\)，下板位于 \(z=-d\)。把每个宽 \(du\) 的条带看成无限线电荷。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-1}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.88\linewidth,height=\textheight,keepaspectratio,alt={图2-2　半无限条带积分及正负板场分量抵消}]{../figures/solution-02.pdf}
+\caption*{图2-2　半无限条带积分及正负板场分量抵消}
+\end{figure}
+
+取距边缘水平距离为 \(u\) 的窄条，线电荷密度
+
+\[
+d\lambda=\sigma\,du.
+\tag{1}
+\]
+
+窄条沿平板的长边方向无限延伸，因而可当作一根无限长线电荷。线电荷到 \(P\)
+的垂直距离为
+
+\[
+r_+=\sqrt{u^2+h^2},
+\]
+
+其场强大小为
+
+\[
+dE_+=\frac{d\lambda}{2\pi\varepsilon_0r_+}.
+\]
+
+从条带指向 \(P\) 的单位矢量在截面内可写成
+
+\[
+\boldsymbol e_+
+=\frac{u\boldsymbol e_x+h\boldsymbol e_z}{r_+}.
+\]
+
+因而完整的微元场是
+
+\[
+d\boldsymbol E_+
+=\frac{\sigma\,du}{2\pi\varepsilon_0}
+\frac{u\boldsymbol e_x+h\boldsymbol e_z}{u^2+h^2}.
+\]
+
+点 \(P\) 到上板条带的距离平方为
+\(u^2+h^2\)。无限长线电荷场给出其水平分量
+
+\[
+dE_{x,+}
+=\frac{\sigma\,du}{2\pi\varepsilon_0}
+\frac{u}{u^2+h^2}.
+\tag{2}
+\]
+
+下板带负电，点到下条带竖直距离为 \(h+d\)，水平分量方向相反：
+
+\[
+dE_{x,-}
+=-\frac{\sigma\,du}{2\pi\varepsilon_0}
+\frac{u}{u^2+(h+d)^2}.
+\tag{3}
+\]
+
+对下板的负电条带，电场指向条带，所以其完整矢量为
+
+\[
+d\boldsymbol E_-
+=-\frac{\sigma\,du}{2\pi\varepsilon_0}
+\frac{u\boldsymbol e_x+(h+d)\boldsymbol e_z}
+{u^2+(h+d)^2}.
+\]
+
+这里两个负号的来源应分清：面电荷密度的符号决定场是背离还是指向条带；分量的正负则由坐标轴方向决定。
+
+相加并从 \(u=0\) 积到 \(\infty\)：
+
+\[
+\begin{aligned}
+E_x
+&=\frac{\sigma}{2\pi\varepsilon_0}
+\int_0^\infty
+u\left[
+\frac1{u^2+h^2}
+-\frac1{u^2+(h+d)^2}
+\right]du\\
+&=\frac{\sigma}{2\pi\varepsilon_0}
+\ln\frac{h+d}{h}.
+\end{aligned}
+\tag{4}
+\]
+
+因为 \(d\ll h\)，
+
+\[
+\ln\left(1+\frac dh\right)
+=\frac dh+O\!\left(\frac{d^2}{h^2}\right).
+\tag{5}
+\]
+
+所以
+
+\[
+\boxed{
+E\simeq\frac{\sigma d}{2\pi\varepsilon_0h}
+}.
+\tag{6}
+\]
+
+方向沿板面并垂直该边，指向板外。
+
+竖直分量可直接核验：
+
+\[
+E_{z,+}
+=\frac{\sigma}{2\pi\varepsilon_0}
+\int_0^\infty\frac{h\,du}{u^2+h^2}
+=\frac{\sigma}{4\varepsilon_0},
+\tag{7}
+\]
+
+\[
+E_{z,-}
+=-\frac{\sigma}{2\pi\varepsilon_0}
+\int_0^\infty\frac{(h+d)\,du}{u^2+(h+d)^2}
+=-\frac{\sigma}{4\varepsilon_0},
+\tag{8}
+\]
+
+故 \(E_z=0\)。
+
+所以在半无限板近似下，总场严格只有水平分量，而且精确大小为
+
+\[
+\boxed{
+\boldsymbol E
+=\frac{\sigma}{2\pi\varepsilon_0}
+\ln\left(1+\frac dh\right)\boldsymbol e_x
+}.
+\]
+
+当 \(d/h\ll1\) 时再展开对数，才得式（6）。若在式（2）和式（3）中就把
+\(h+d\) 直接改成
+\(h\)，两个大的水平分量会完全抵消，而要求的一阶边缘场也随之被删掉。
+
+其他三条边为何可忽略，也要与尺度条件联系。点 \(P\) 到当前长边的距离为
+\(h\)，而到对面长边及两条短边的水平距离都是平板边长的数量级 \(L\)。由于
+\(h\ll L\)，这些远边给出的场至少比近边小 \(h/L\) 的数量级。点 \(P\)
+又在长边中点正上方，沿边方向的分量由左右对称相消。
+
+\needspace{3\baselineskip}
+\textbf{补充推导与适用条件}
+
+从远处看，正负两板的一对对面电荷可看成面偶极层，其偶极矩面密度为
+\(\sigma d\)。无限偶极层在外部不产生场，但偶极层在边缘突然终止，等效产生了尺度为
+\(\sigma d\) 的边缘源。因而量纲上必有
+
+\[
+E\sim\frac{\sigma d}{\varepsilon_0h}.
+\]
+
+条带积分的作用是确定系数
+\(1/(2\pi)\)，而这个偶极层图像则解释了为什么结果正比于 \(d\) 并反比于
+\(h\)。
+
+竖直分量的抵消比水平分量更强：对任意高度 \(H>0\)，
+
+\[
+\int_0^\infty\frac{H\,du}{u^2+H^2}=\frac\pi2,
+\]
+
+结果与 \(H\) 无关。因此上、下半无限板给出的竖直分量分别是
+\(\pm\sigma/(4\varepsilon_0)\)，即使两板到 \(P\) 的高度不同也精确抵消。
+
+还可在合并后的被积函数上直接做一阶展开，而不是先求精确对数。令
+
+\[
+f(H)=\frac1{u^2+H^2},
+\]
+
+则
+
+\[
+f(h+d)=f(h)+d f'(h)+O(d^2)
+=\frac1{u^2+h^2}
+-\frac{2hd}{(u^2+h^2)^2}+O(d^2).
+\]
+
+所以式（4）的方括号为
+
+\[
+\frac{2hd}{(u^2+h^2)^2}+O(d^2).
+\]
+
+代回积分：
+
+\[
+\begin{aligned}
+E_x
+&\simeq\frac{\sigma}{2\pi\varepsilon_0}
+2hd\int_0^\infty\frac{u\,du}{(u^2+h^2)^2}\\
+&=\frac{\sigma}{2\pi\varepsilon_0}
+2hd\left[\frac1{2h^2}\right]\\
+&=\frac{\sigma d}{2\pi\varepsilon_0h}.
+\end{aligned}
+\]
+
+这种做法的优点是从一开始就只保留``正负板相消后剩余的一阶小量''，每个积分都收敛；它也显示主要贡献来自
+\(u\sim h\) 的近边区域，而不是离边无限远的条带。
+
+方向可用边缘电荷的直觉检查。板内部上下相对的 \(+\sigma\) 与 \(-\sigma\)
+场线大多在板间闭合；接近边缘时，部分场线绕过边缘从上板弯向下板。在上板外侧的
+\(P\)
+点，弯曲场线具有指向板外的水平分量。若计算结果指向板内，就应首先检查下板负电场的水平符号。
+
+有限矩形板的误差有两个小参数。沿当前边方向长度有限造成的相对修正约为
+\(h/L_\parallel\)；对边距离有限造成的修正约为
+\(h/L_\perp\)。因此题设不仅需要 \(d\ll h\) 来建立偶极层近似，还需要
+\(h\ll L_\parallel,L_\perp\)
+才能把一条边局部看成无限直边。这两个近似负责不同的物理步骤，不能合并成一句``板很大''。
+
+\needspace{3\baselineskip}
+\textbf{有限板宽的独立核对}
+
+仍先把沿边方向视作无限，但把垂直边的宽度保留为
+\(W\)。图2-2中的两条板应沿 \(x\) 方向延伸，近边是 \(x=0\)，观察点是
+\((0,h)\)；图中的一对条带在同一 \(x=-u\) 处，分别位于 \(z=0,-d\)。
+
+有限上限积分给出
+
+\[
+E_x(W)=\frac{\sigma}{4\pi\varepsilon_0}
+\ln\frac{(W^2+h^2)(h+d)^2}
+{h^2[W^2+(h+d)^2]},
+\]
+
+\[
+E_z(W)=\frac{\sigma}{2\pi\varepsilon_0}
+\left[\arctan\frac Wh-\arctan\frac W{h+d}\right].
+\]
+
+当 \(W\to\infty\) 时，第一式恢复式（4），第二式趋于零。对
+\(d\ll h\ll W\) 展开，
+
+\[
+E_x(W)\simeq
+\frac{\sigma d}{2\pi\varepsilon_0h}\,
+\frac{W^2}{W^2+h^2},\qquad
+E_z(W)\simeq
+\frac{\sigma d}{2\pi\varepsilon_0}
+\frac{W}{W^2+h^2}.
+\]
+
+\noindent\begin{minipage}{\linewidth}
+
+所以有限板仍有较小的竖直分量，其相对量级约为 $h/W$；水平主项的这一截断修正则约为 $(h/W)^2$。题目要求估算主导场，因而答指向板外的水平场即可，不能把半无限模型中的“严格水平”无条件移用到有限矩形板。
+
+上下微元的竖直分量也不能逐条抵消：它们分别含 $h/(u^2+h^2)$ 与 $(h+d)/[u^2+(h+d)^2]$，一般并不相等。积分后高度无关的 $\pi/2$ 才使半无限结果严格相消。
+
+\end{minipage}
+
+\newpage
+
+\section{第 3 题}\label{ux7b2c-3-ux9898}
+
+两根高 \(50\,\mathrm m\) 的电线杆之间悬挂一根均匀柔软电线，线长
+\(80\,\mathrm m\)，两端等高，最低点离地 \(20\,\mathrm m\)。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  求两杆间距。
+\item
+  求电线最低点的曲率半径。
+\end{enumerate}
+
+并整理 \(\sinh x,\cosh x\) 的恒等式、反函数及导数。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.533\linewidth,height=\textheight,keepaspectratio,alt={图3-1　等高悬点之间的均匀悬链线}]{../figures/question-03.pdf}
+\caption*{图3-1　等高悬点之间的均匀悬链线}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-2}
+
+已知电线弧长和垂度，反求悬链线的水平尺度。半弧长与高度差分别对应双曲正弦和双曲余弦，最低点曲率由同一尺度给出。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-2}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(\cosh^2x-\sinh^2x=1\)。
+\item
+  悬链线 \(y=a\cosh(x/a)\)。
+\item
+  弧长积分。
+\item
+  反双曲余弦。
+\item
+  平面曲线曲率。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-2}
+
+参数 \(a=H/w\)
+是最低点水平张力与单位长度重力之比，同时也是最低点曲率半径。系统关于最低点对称，只需研究半边长度
+\(40\,\mathrm m\)。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-2}
+
+把最低点取为 \(x=0,y=0\)，端点横坐标为 \(x_0\)。写出高度差
+\(30\,\mathrm m\) 与半弧长 \(40\,\mathrm m\) 的两式，再用双曲恒等式消去
+\(x_0/a\)。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-2}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.84\linewidth,height=\textheight,keepaspectratio,alt={图3-2　悬链线参数、半弧长与最低点曲率}]{../figures/solution-03.pdf}
+\caption*{图3-2　悬链线参数、半弧长与最低点曲率}
+\end{figure}
+
+先从受力平衡说明悬链线的来源。设电线单位弧长的重力为
+\(w\)，最低点处的水平张力为 \(H\)。取最低点到横坐标 \(x\)
+处的一段电线，其长度为 \(s(x)\)。该段所受重力为
+\(ws\)，端点张力的水平分量始终为 \(H\)，竖直分量必须平衡这段电线的重力：
+
+\[
+T_x=H,
+\qquad
+T_y=ws.
+\]
+
+曲线切线方向与张力方向一致，所以
+
+\[
+y'=\tan\psi=\frac{T_y}{T_x}=\frac{ws}{H}.
+\]
+
+定义悬链线尺度参数
+
+\[
+a=\frac Hw,
+\]
+
+便有
+
+\[
+y'=\frac sa.
+\]
+
+另一方面，弧长微分满足
+
+\[
+\frac{ds}{dx}=\sqrt{1+y'^2}.
+\]
+
+对 \(y'=s/a\) 求导：
+
+\[
+y''=\frac1a\frac{ds}{dx}
+=\frac1a\sqrt{1+y'^2}.
+\]
+
+分离变量并利用最低点条件 \(y'(0)=0\)：
+
+\[
+\int_0^{y'}\frac{dp}{\sqrt{1+p^2}}
+=\int_0^x\frac{d\xi}{a},
+\]
+
+即
+
+\[
+\operatorname{arsinh}y'=\frac xa.
+\]
+
+所以
+
+\[
+y'=\sinh\frac xa.
+\]
+
+再积分并令最低点 \(y(0)=0\)：
+
+\[
+y=a\left[\cosh\left(\frac xa\right)-1\right].
+\]
+
+这就得到本题使用的悬链线方程，而不是把它作为未经说明的公式直接代入。
+
+定义
+
+\[
+\cosh x=\frac{e^x+e^{-x}}2,\qquad
+\sinh x=\frac{e^x-e^{-x}}2.
+\tag{1}
+\]
+
+直接得
+
+\[
+\cosh^2x-\sinh^2x=1,
+\tag{2}
+\]
+
+\[
+\frac d{dx}\cosh x=\sinh x,\qquad
+\frac d{dx}\sinh x=\cosh x.
+\tag{3}
+\]
+
+反函数
+
+\[
+\operatorname{arcosh}x
+=\ln\left(x+\sqrt{x^2-1}\right),
+\tag{4}
+\]
+
+\[
+\operatorname{arsinh}x
+=\ln\left(x+\sqrt{x^2+1}\right),
+\tag{5}
+\]
+
+其导数分别为
+
+\[
+\frac d{dx}\operatorname{arcosh}x
+=\frac1{\sqrt{x^2-1}},
+\qquad
+\frac d{dx}\operatorname{arsinh}x
+=\frac1{\sqrt{x^2+1}}.
+\tag{6}
+\]
+
+悬链线取
+
+\[
+y=a\left[\cosh\left(\frac xa\right)-1\right].
+\tag{7}
+\]
+
+设
+
+\[
+u=\frac{x_0}{a}.
+\tag{8}
+\]
+
+端点比最低点高 \(30\,\mathrm m\)：
+
+\[
+a(\cosh u-1)=30.
+\tag{9}
+\]
+
+半边弧长
+
+\[
+\begin{aligned}
+s
+&=\int_0^{x_0}\sqrt{1+y'^2}\,dx\\
+&=\int_0^{x_0}\cosh(x/a)\,dx\\
+&=a\sinh u=40.
+\end{aligned}
+\tag{10}
+\]
+
+上式的第二步来自
+
+\[
+y'=\sinh(x/a),
+\]
+
+因此
+
+\[
+\sqrt{1+y'^2}
+=\sqrt{1+\sinh^2(x/a)}
+=\cosh(x/a).
+\]
+
+由于 \(\cosh(x/a)>0\)，开平方后不需要再加绝对值。
+
+所以
+
+\[
+\cosh u=1+\frac{30}{a},
+\qquad
+\sinh u=\frac{40}{a}.
+\tag{11}
+\]
+
+代入式（2）：
+
+\[
+\left(1+\frac{30}{a}\right)^2
+-\left(\frac{40}{a}\right)^2=1.
+\tag{12}
+\]
+
+展开：
+
+\[
+\frac{60}{a}+\frac{900-1600}{a^2}=0,
+\tag{13}
+\]
+
+故
+
+\[
+\boxed{a=\frac{35}{3}\,\mathrm m}.
+\tag{14}
+\]
+
+此时
+
+\[
+\cosh u=1+\frac{90}{35}=\frac{25}{7}.
+\tag{15}
+\]
+
+因为 \(\sqrt{(25/7)^2-1}=24/7\)，
+
+\[
+u=\operatorname{arcosh}\frac{25}{7}
+=\ln\frac{25+24}{7}
+=\ln7.
+\tag{16}
+\]
+
+两杆间距
+
+\[
+\boxed{
+D=2x_0=2au=\frac{70}{3}\ln7
+\approx45.4\,\mathrm m
+}.
+\tag{17}
+\]
+
+曲率半径
+
+\[
+\rho=\frac{(1+y'^2)^{3/2}}{|y''|}.
+\tag{18}
+\]
+
+最低点 \(y'(0)=0\)、\(y''(0)=1/a\)，所以
+
+\[
+\boxed{\rho_{\min}=a=\frac{35}{3}\,\mathrm m}.
+\tag{19}
+\]
+
+一般位置的曲率半径也可写出。由
+
+\[
+y'=\sinh(x/a),
+\qquad
+y''=\frac1a\cosh(x/a),
+\]
+
+有
+
+\[
+\begin{aligned}
+\rho(x)
+&=\frac{[1+\sinh^2(x/a)]^{3/2}}
+{a^{-1}\cosh(x/a)}\\
+&=a\cosh^2(x/a).
+\end{aligned}
+\]
+
+因为 \(\cosh(x/a)\ge1\)，最低点 \(x=0\) 的曲率半径最小，恰为
+\(a\)。这与图 3-2 中最低点弯曲最明显的几何直觉一致。
+
+\needspace{3\baselineskip}
+\textbf{补充推导与适用条件}
+
+对任意``半弧长为 \(s\)、端点比最低点高 \(f\)''的对称悬链线，都有
+
+\[
+s=a\sinh u,
+\qquad
+f=a(\cosh u-1).
+\]
+
+由 \(\cosh u=1+f/a\)，
+
+\[
+\begin{aligned}
+s^2
+&=a^2\sinh^2u\\
+&=a^2(\cosh^2u-1)\\
+&=a^2\left[\left(1+\frac fa\right)^2-1\right]\\
+&=2af+f^2.
+\end{aligned}
+\]
+
+所以尺度参数可以直接写成
+
+\[
+\boxed{a=\frac{s^2-f^2}{2f}}.
+\]
+
+本题代入 \(s=40\,\mathrm m\)、\(f=30\,\mathrm m\)，立即得到
+\(a=35/3\,\mathrm m\)。该式可直接用于其他弧长和垂度。
+
+参数 \(a\) 同时有三重物理意义：
+
+\[
+a=\frac Hw=\rho_{\min}.
+\]
+
+它既是最低点水平张力与单位长度重力之比，也是悬链线的几何尺度，还是最低点曲率半径。悬链线``越平''，最低点水平张力越大，曲率半径也越大。
+
+端点张力可由张力分量求得。端点处 \(u=\ln7\)，故
+
+\[
+T_{\rm end}
+=H\cosh u
+=wa\frac{25}{7}.
+\]
+
+最低点张力为 \(T_0=H=wa\)，所以
+
+\[
+\frac{T_{\rm end}}{T_0}=\frac{25}{7}.
+\]
+
+虽然题目不要求张力，这一比值可用来检查 \(\cosh u\)
+的数值和受力图像是否一致。
+
+本题的双曲函数值可写为有理数。由
+
+\[
+\cosh u=\frac{25}{7},\qquad
+\sinh u=\frac{24}{7},
+\]
+
+可得
+
+\[
+e^u=\cosh u+\sinh u=7,\qquad
+e^{-u}=\cosh u-\sinh u=\frac17,
+\]
+
+所以 \(u=\ln7\)。端点斜率和切线倾角也随之确定：
+
+\[
+y'(x_0)=\sinh u=\frac{24}{7},
+\]
+
+若端点切线与水平夹角为 \(\beta\)，则
+
+\[
+\tan\beta=\frac{24}{7},\qquad
+\sin\beta=\frac{24}{25},\qquad
+\cos\beta=\frac7{25}.
+\]
+
+端点张力的竖直分量为
+
+\[
+T_{\rm end}\sin\beta=40w,
+\]
+
+恰好承受半根电线重量；水平分量为
+
+\[
+T_{\rm end}\cos\beta=\frac{35}{3}w=H.
+\]
+
+这把几何参数、双曲函数和微元受力完整地闭合在一起。
+
+解还应满足基本几何界限。半弧长为
+\(40\,\mathrm m\)，而最低点到端点的直线距离为
+
+\[
+\sqrt{x_0^2+30^2}
+\approx37.61\,\mathrm m<40\,\mathrm m.
+\]
+
+全跨距 \(D\approx45.40\,\mathrm m\) 也小于总线长
+\(80\,\mathrm m\)。两项都符合``弧长大于弦长和水平投影''的几何事实。
+
+抛物线近似在本题并不精确。若误用小挠度关系 \(f\simeq D^2/(8a)\)，会得到
+
+\[
+D_{\rm para}\simeq\sqrt{8af}
+=\sqrt{8\cdot\frac{35}{3}\cdot30}
+\approx52.92\,\mathrm m,
+\]
+
+比精确值约大 \(16.5\%\)。本题垂度 \(30\,\mathrm m\) 与半跨距
+\(22.70\,\mathrm m\) 同量级，因此不满足小斜率条件。
+
+\needspace{3\baselineskip}
+\textbf{端点、曲率圆与反函数定义域}
+
+反双曲余弦取非负分支，故
+
+\[
+\operatorname{arcosh}x\ge0,\quad x\ge1,
+\qquad
+\frac{d}{dx}\operatorname{arcosh}x
+=\frac1{\sqrt{x^2-1}}\quad(x>1).
+\]
+
+反双曲正弦则在整个实轴上定义，且是奇函数。这两个定义域在把端点参数从
+\(\cosh u\) 或 \(\sinh u\) 反求时不同，不能混用。
+
+重画的题图把悬线两端直接接在杆顶，按
+
+\[
+z(x)=20+a[\cosh(x/a)-1],\qquad
+x_0=a\ln7
+\]
+
+生成曲线，因而
+\(z(\pm x_0)=50\,\mathrm m\)、\(z(0)=20\,\mathrm m\)。解析图的纵坐标从最低点计起，端点为
+\((x_0,30\,\mathrm m)\)；两幅图只差一个 \(20\,\mathrm m\) 的平移。
+
+在最低点展开，
+
+\[
+y(x)=\frac{x^2}{2a}+\frac{x^4}{24a^3}+O(x^6/a^5).
+\]
+
+一个与曲线在最低点相切、圆心为 \((0,a)\) 的圆，其下半圆局部为
+
+\[
+y_{\rm circle}=a-\sqrt{a^2-x^2}
+=\frac{x^2}{2a}+\frac{x^4}{8a^3}+O(x^6/a^5).
+\]
+
+两者的二阶项相同，证明该圆是最低点的曲率圆，半径就是
+\(a\)；四阶项不同，说明曲率圆只描述局部弯曲，不能替代整条悬线。图3-2据此只画最低点附近的一小段曲率圆。
+
+\newpage
+
+\section{第 4 题}\label{ux7b2c-4-ux9898}
+
+过椭圆内部固定点 \(P\) 作一条动直线，与椭圆交于 \(A,B\)。在 \(A,B\)
+处分别作椭圆切线，交于 \(Q\)。证明 \(Q\) 的轨迹在一条固定直线上。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.72\linewidth,height=\textheight,keepaspectratio,alt={图4-1　过椭圆内定点的动弦及两端切线交点}]{../figures/question-04.pdf}
+\caption*{图4-1　过椭圆内定点的动弦及两端切线交点}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-3}
+
+动弦两端的切线方程可反过来给出该弦的方程。把固定点代入，便得到切线交点所在的固定直线；中心点与直径弦另作退化处理。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-3}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  椭圆切线方程。
+\item
+  极点与极线。
+\item
+  La Hire 互易定理。
+\item
+  椭圆焦点反射性质。
+\item
+  固定线性方程表示直线轨迹。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-3}
+
+一条非直径弦对应有限极点；所有经过固定非中心内点的弦，其有限极点都落在该点的极线上。椭圆的焦点反射性质不是这条共线关系的证明。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-3}
+
+建立椭圆标准方程，设固定点 \(P=(u,v)\)、切线交点 \(Q=(\xi,\eta)\)。证明
+\(Q\) 恒满足一个与动弦无关的线性方程。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-3}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.84\linewidth,height=\textheight,keepaspectratio,alt={图4-2　动弦的极点与固定点的极线}]{../figures/solution-04.pdf}
+\caption*{图4-2　动弦的极点与固定点的极线}
+\end{figure}
+
+设椭圆
+
+\[
+\frac{x^2}{a^2}+\frac{y^2}{b^2}=1.
+\tag{1}
+\]
+
+先说明切线公式的来源。令
+
+\[
+F(x,y)=\frac{x^2}{a^2}+\frac{y^2}{b^2}-1.
+\]
+
+在椭圆上一点 \(A=(x_1,y_1)\)，梯度
+
+\[
+\nabla F(A)
+=\left(\frac{2x_1}{a^2},\frac{2y_1}{b^2}\right)
+\]
+
+沿椭圆法线方向。切线上任一点 \((x,y)\) 满足
+
+\[
+\nabla F(A)\cdot[(x,y)-(x_1,y_1)]=0.
+\]
+
+展开：
+
+\[
+\frac{x_1(x-x_1)}{a^2}
++\frac{y_1(y-y_1)}{b^2}=0.
+\]
+
+又因 \(A\) 在椭圆上，
+
+\[
+\frac{x_1^2}{a^2}+\frac{y_1^2}{b^2}=1,
+\]
+
+所以切线方程化为式（2）。
+
+若 \(A=(x_1,y_1)\) 在椭圆上，其切线为
+
+\[
+\frac{x_1x}{a^2}+\frac{y_1y}{b^2}=1.
+\tag{2}
+\]
+
+类似地，\(B=(x_2,y_2)\) 处切线为
+
+\[
+\frac{x_2x}{a^2}+\frac{y_2y}{b^2}=1.
+\tag{3}
+\]
+
+两切线交于 \(Q=(\xi,\eta)\)，故
+
+\[
+\frac{\xi x_1}{a^2}+\frac{\eta y_1}{b^2}=1,
+\tag{4}
+\]
+
+\[
+\frac{\xi x_2}{a^2}+\frac{\eta y_2}{b^2}=1.
+\tag{5}
+\]
+
+从而 \(A,B\) 同时位于直线
+
+\[
+\frac{\xi x}{a^2}+\frac{\eta y}{b^2}=1
+\tag{6}
+\]
+
+上。由于 \(A\ne B\)，过两点的直线唯一，式（6）就是弦 \(AB\)
+的方程。这里完成了关键的``变量交换''：最初 \((x_1,y_1)\)、\((x_2,y_2)\)
+是切点坐标，\((\xi,\eta)\) 是切线交点坐标；式（6）却把 \((\xi,\eta)\)
+当成系数，反过来给出切点连线。
+
+固定点 \(P=(u,v)\) 在弦 \(AB\) 上，代入式（6）：
+
+\[
+\boxed{
+\frac{u\xi}{a^2}+\frac{v\eta}{b^2}=1
+}.
+\tag{7}
+\]
+
+对轨迹点 \((\xi,\eta)\) 而言，式（7）是固定直线。故 \(Q\) 始终位于
+
+\[
+\boxed{
+\frac{ux}{a^2}+\frac{vy}{b^2}=1
+}
+\tag{8}
+\]
+
+上，这条线称为点 \(P\) 关于椭圆的极线。
+
+反过来，极线上任一允许点 \(Q\) 引椭圆的两条切线，其切点连线都通过
+\(P\)，因此除退化切线位置外，轨迹覆盖该固定直线上的全部有限点。
+
+若动弦恰为一条直径，则 \(A,B\)
+为对径点，两点切线平行，欧氏平面中没有有限交点
+\(Q\)。当动弦趋近这条直径时，\(Q\)
+沿极线跑向无穷远。因此更准确地说，固定非中心内点的有限交点轨迹是整条极线的全部有限点，并可向无穷远延伸；在射影平面中补上无穷远点后，轨迹才成为完整直线。
+
+还有一个特殊情形：若 \(P\) 是椭圆中心 \((0,0)\)，每一条过 \(P\)
+的弦都是直径，两端切线始终平行。此时式（8）形式上变成
+\(0=1\)，说明极线是射影平面中的无穷远直线。通常题意默认 \(P\)
+不是椭圆中心；若不作此默认，必须单独说明这一退化情形。
+
+\needspace{3\baselineskip}
+\textbf{补充推导与适用条件}
+
+这一互换关系称为极点---极线对偶。对任意点 \(P=(u,v)\)，定义它的极线
+
+\[
+\mathcal L_P:\quad
+\frac{ux}{a^2}+\frac{vy}{b^2}=1.
+\]
+
+若点 \(Q=(\xi,\eta)\) 落在 \(\mathcal L_P\) 上，则
+
+\[
+\frac{u\xi}{a^2}+\frac{v\eta}{b^2}=1.
+\]
+
+由于乘法可交换，同一个式子也表示 \(P\) 落在 \(\mathcal L_Q\) 上。这就是
+La Hire 互易定理：
+
+\[
+Q\in\mathcal L_P
+\quad\Longleftrightarrow\quad
+P\in\mathcal L_Q.
+\]
+
+本题中弦 \(AB\) 正是 \(Q\) 的极线，且它经过 \(P\)；互易定理立即推出
+\(Q\) 位于 \(P\) 的极线上。
+
+极线与椭圆的位置关系也有直观检查。若 \(P\)
+在椭圆内部且不是中心，则由柯西不等式可知，极线不穿过椭圆内部；它位于椭圆外部，正适合作为两条实切线交点
+\(Q\) 的轨迹。随着弦转动到接近直径，两条切线夹角变小，交点沿极线远离。
+
+把坐标作仿射伸缩
+
+\[
+X=\frac xa,\qquad Y=\frac yb,
+\]
+
+椭圆变成单位圆 \(X^2+Y^2=1\)，点 \(P\) 变成
+\((u/a,v/b)\)，极线变成普通圆的极线
+
+\[
+\frac uaX+\frac vbY=1.
+\]
+
+所以该命题也可理解为单位圆上相应命题在仿射变换下的像。仿射变换保持共线与切线关系，因而保持``动弦端点切线交点落在定直线''这一结论。
+
+还可用矩阵把证明压缩成对任意中心二次曲线都适用的形式。令
+
+\[
+\boldsymbol x=
+\begin{pmatrix}x\\y\end{pmatrix},
+\qquad
+C=
+\begin{pmatrix}a^{-2}&0\\0&b^{-2}\end{pmatrix},
+\]
+
+则椭圆写成 \(\boldsymbol x^{\mathsf T}C\boldsymbol x=1\)。椭圆上点
+\(\boldsymbol x_1\) 的切线是
+
+\[
+\boldsymbol x_1^{\mathsf T}C\boldsymbol x=1.
+\]
+
+若两切线交于 \(\boldsymbol q\)，则两个切点都满足
+
+\[
+\boldsymbol q^{\mathsf T}C\boldsymbol x=1,
+\]
+
+所以这就是弦 \(AB\) 的方程。固定点 \(\boldsymbol p\) 在弦上立即给出
+
+\[
+\boldsymbol p^{\mathsf T}C\boldsymbol q=1,
+\]
+
+即 \(\boldsymbol q\) 在 \(\boldsymbol p\) 的极线上。矩阵 \(C\)
+对称，正是互易关系
+\(\boldsymbol p^{\mathsf T}C\boldsymbol q=\boldsymbol q^{\mathsf T}C\boldsymbol p\)
+的代数来源。
+
+点的位置还能用无量纲量
+
+\[
+\chi=\frac{u^2}{a^2}+\frac{v^2}{b^2}
+\]
+
+分类。\(\chi<1\) 时 \(P\) 在椭圆内，极线位于椭圆外；\(\chi=1\) 时 \(P\)
+在椭圆上，极线就是该点切线；\(\chi>1\) 时 \(P\)
+在椭圆外，极线穿过椭圆，并且其两个交点正是从 \(P\)
+引出的两条切线的切点。这个分类把动弦问题与``从一点向圆锥曲线引切线''的问题统一起来。
+
+对单位圆，若 \(P\) 到圆心距离为 \(r<1\)，极线到圆心距离为
+\(1/r>1\)。因此 \(P\) 越接近圆心，极线越远；当 \(P\to O\)
+时极线退到无穷远。这给中心退化情形一个连续的几何解释，而不是把 \(0=1\)
+仅当作代数异常。
+
+\needspace{3\baselineskip}
+\textbf{充分性与图中各点的几何核验}
+
+经仿射伸缩后只需研究单位圆。设固定点向量为 \(\boldsymbol p\)，满足
+\(0<|\boldsymbol p|<1\)，极线为
+\(\boldsymbol p\cdot\boldsymbol q=1\)。柯西不等式给出
+
+\[
+|\boldsymbol q|\ge\frac1{|\boldsymbol p|}>1.
+\]
+
+因此极线上每个有限点都在圆外，确实能引出两条实切线。其切点满足
+\(\boldsymbol q\cdot\boldsymbol x=1\)，而 \(\boldsymbol p\)
+也满足这一直线方程，故该切点弦必过固定点。这样充分性得到证明，轨迹无需删去任何有限点。
+
+为核验图而选椭圆半轴 \(a=3,b=2\)，固定点取 \(P=(1.2,0)\)。极线应是
+
+\[
+x=\frac{a^2}{1.2}=7.5,
+\]
+
+完全在椭圆外，不能画成穿过椭圆的一条斜线。图4-1选取
+\(Q=(7.5,1)\)。两切点由
+
+\[
+\frac{x^2}{9}+\frac{y^2}{4}=1,\qquad
+\frac{7.5x}{9}+\frac{y}{4}=1
+\]
+
+联立生成；图4-2再换取不同的 \(Q\)，每一条切点弦都经过同一个
+\(P\)。图中的切点位于椭圆上，红色切线在切点处与法向垂直，交点则位于固定极线上。图示数值仅用于检验作图，不是证明对一般
+\(P\) 的代数结论。
+
+\newpage
+
+\section{第 5 题}\label{ux7b2c-5-ux9898}
+
+三根导线分别沿正方体棱组成图示闭合回路，长度依次为 \(4a,6a,6a\)。已知图
+a 回路自感为 \(L_1\)，图 b 回路自感为 \(L_2\)，求图 c 回路自感。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.88\linewidth,height=\textheight,keepaspectratio,alt={图5-1　正方体棱上的四棱、六棱与三面组合回路}]{../figures/question-05.pdf}
+\caption*{图5-1　正方体棱上的四棱、六棱与三面组合回路}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-4}
+
+沿正方体棱追踪回路，再把其有向边界拆成相邻面的边界。两个已知自感确定相邻面的有符号互感，第三个回路由三对交叉项求出。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-4}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  自感 \(L=\Phi/I\)。
+\item
+  相邻面回路互感。
+\item
+  磁通方向与回路绕向。
+\item
+  线性磁场叠加。
+\item
+  立体回路的面分解。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-4}
+
+图 b 可看成两个相邻正方形面回路按相容方向组合，图 c
+可看成三个两两相邻的面回路。正方体对称性使每个面自感均为
+\(L_1\)，任意相邻面间互感均为同一 \(M\)。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-4}
+
+先给各面选取与总电流一致的正向。由图 b 的总磁通求 \(M\)，再计算图 c
+三个面的总磁通。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-4}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.866\linewidth,height=\textheight,keepaspectratio,alt={图5-2　空间回路的面分解与互感磁通方向}]{../figures/solution-05.pdf}
+\caption*{图5-2　空间回路的面分解与互感磁通方向}
+\end{figure}
+
+\needspace{3\baselineskip}
+\textbf{1．先把立体折线回路分解成面回路}
+
+图 5-1
+中灰色细线表示正方体未被选入回路的棱，彩色粗线才是导线的真实闭合路径。为避免仅凭二维投影误判，先从拓扑上数棱：图
+a 沿一个正方形面的四条棱闭合；图 b 的六条棱围住两个相邻正方形面；图 c
+的六条棱围住三个共顶点的相邻面。这里``围住几个面''不是指导线真的铺满这些面，而是选取这些面作为计算磁通的跨接曲面。
+
+对每个面都用右手定则规定正法向：右手四指沿着总回路电流方向弯曲，大拇指给出该面的正法向。这样选向以后，图
+b 的两个面、图 c
+的三个面都具有相容的边界方向；公共棱在两个有向面的边界中方向相反，叠加时恰好抵消，只留下外侧六棱回路。这一步保证了后面互感项的正负号不是凭图形直觉猜出的。
+
+\needspace{3\baselineskip}
+\textbf{2．单面回路给出自感基准}
+
+单个正方形面回路中通以电流
+\(I\)。若按所选正向计算该面所链的总磁通，则自感定义为
+
+\[
+\Phi_a=L_1I.
+\tag{1}
+\]
+
+由于三个面全是边长为 \(a\)
+的全等正方形，且导线粗细、介质和空间环境相同，立方体的旋转对称性保证每一个单面回路的自感都是
+\(L_1\)。
+
+\needspace{3\baselineskip}
+\textbf{3．用双面回路反求相邻面互感}
+
+设任意两个相邻面的互感为 \(M\)。图 b 可看成面 1 与面 2
+串联组成的复合回路，而且两面中通过的是同一个电流 \(I\)。面 1
+所链磁通有两个来源：面 1 自己的电流产生 \(L_1I\)，面 2 的电流又贡献
+\(MI\)；同理，面 2 也链有 \(L_1I+MI\)。把 \(M\)
+定义为这些参考绕向下的有符号互感，故不预设其正负，代数上有
+
+\[
+\Phi_1=(L_1+M)I,
+\qquad
+\Phi_2=(L_1+M)I.
+\tag{2}
+\]
+
+复合回路的磁通链是两个有向面的磁通链之和：
+
+\[
+\begin{aligned}
+\Phi_b
+&=\Phi_1+\Phi_2\\
+&=(L_1+M)I+(L_1+M)I\\
+&=(2L_1+2M)I\\
+&=L_2I.
+\end{aligned}
+\tag{3}
+\]
+
+式中互感项是 \(2M\) 而不是 \(M\)：电流 2 对面 1 的链磁通计一次，电流 1
+对面 2 的链磁通还要再计一次。于是逐项移项得
+
+\[
+\begin{aligned}
+L_2&=2L_1+2M,\\
+2M&=L_2-2L_1,\\
+M&=\frac{L_2-2L_1}{2}.
+\end{aligned}
+\tag{4}
+\]
+
+\needspace{3\baselineskip}
+\textbf{4．计算三面回路的全部磁通链}
+
+图 c 对应的三个面两两相邻。把它们编号为 1、2、3，则互感对共有
+
+\[
+(1,2),\qquad(2,3),\qquad(3,1)
+\]
+
+三对。对任一面，例如面 1，除自身的 \(L_1I\) 外，还分别收到面 2 和面 3
+产生的互感磁通 \(MI\)，所以
+
+\[
+\begin{aligned}
+\Phi_1&=(L_1+M_{12}+M_{13})I=(L_1+2M)I,\\
+\Phi_2&=(L_1+M_{21}+M_{23})I=(L_1+2M)I,\\
+\Phi_3&=(L_1+M_{31}+M_{32})I=(L_1+2M)I.
+\end{aligned}
+\tag{5}
+\]
+
+这里使用了互易性
+\(M_{ij}=M_{ji}\)，又使用正方体对称性令所有相邻面互感相同。将三个面的磁通链相加：
+
+\[
+\begin{aligned}
+\Phi_c
+&=\Phi_1+\Phi_2+\Phi_3\\
+&=3(L_1+2M)I\\
+&=(3L_1+6M)I.
+\end{aligned}
+\tag{6}
+\]
+
+由 \(L_c=\Phi_c/I\)，并代入式（4）：
+
+\[
+\begin{aligned}
+L_c
+&=3(L_1+2M)\\
+&=3\left[L_1+2\cdot\frac{L_2-2L_1}{2}\right]\\
+&=3[L_1+L_2-2L_1]\\
+&=3(L_2-L_1)\\
+&=\boxed{3(L_2-L_1)}.
+\end{aligned}
+\tag{7}
+\]
+
+\needspace{3\baselineskip}
+\textbf{5．用磁场能量作独立复核}
+
+若若干回路中电流均为 \(I\)，系统磁场能量为
+
+\[
+W=\frac12\sum_iL_iI_i^2+\sum_{i<j}M_{ij}I_iI_j.
+\tag{8}
+\]
+
+对双面回路，两个自感项和一对互感项给出
+
+\[
+W_b=\frac12L_1I^2+\frac12L_1I^2+MI^2
+=\frac12(2L_1+2M)I^2,
+\tag{9}
+\]
+
+故 \(L_2=2L_1+2M\)。对三面回路，三个自感项和三对互感项给出
+
+\[
+\begin{aligned}
+W_c
+&=3\cdot\frac12L_1I^2+3MI^2\\
+&=\frac12(3L_1+6M)I^2\\
+&=\frac12L_cI^2,
+\end{aligned}
+\tag{10}
+\]
+
+仍得
+\(L_c=3L_1+6M=3(L_2-L_1)\)。磁通链法与能量法的系数完全一致，说明三对互感以及每对对应的系数
+\(2\) 均未漏计。
+
+\needspace{3\baselineskip}
+\textbf{补充推导与适用条件}
+
+磁能由电流的二次型表示。若把三个面电流写成列向量
+\(\boldsymbol I=(I_1,I_2,I_3)^{\mathsf T}\)，磁场能可写成
+
+\[
+W=\frac12\boldsymbol I^{\mathsf T}
+\begin{pmatrix}
+L_1&M&M\\
+M&L_1&M\\
+M&M&L_1
+\end{pmatrix}
+\boldsymbol I.
+\]
+
+图 c 对应共同模态
+\(\boldsymbol I=(I,I,I)^{\mathsf T}\)，所以等效电感就是该模态二次型除以
+\(I^2\)，自然得到
+\(3L_1+6M\)。这也解释了为何只数导线总长度无法求出答案：电感不仅含各段的``自身贡献''，还含不同部分磁场重叠产生的交叉项。
+
+先只考察任意两个面回路，由磁场能非负可得熟悉的不等式
+\(|M|\le L_1\)。若进一步要求三个两两等互感的面回路对任意电流组合都具有非负磁场能，就要检查整个电感矩阵的特征模态。
+
+共同模态 \((1,1,1)\) 的特征值为 \(L_1+2M\)；与它正交的两个差模态，例如
+\((1,-1,0)\)，特征值均为 \(L_1-M\)。正定性要求
+
+\[
+L_1+2M\ge0,\qquad L_1-M\ge0,
+\]
+
+即
+
+\[
+-\frac{L_1}{2}\le M\le L_1.
+\]
+
+因而三个等价面同时纳入时，给定量必须满足更强的范围
+
+\[
+L_1\le L_2=2(L_1+M)\le4L_1.
+\]
+
+若数据超出这个范围，就说明回路绕向、\(L_1,L_2\)
+的定义或测量结果至少有一项不一致。
+
+共同模态的磁场能集中对应图 c
+三个面电流相容叠加；差模态则对应部分面电流反向。互感的正负不是互感系数本身的绝对属性：若反转其中一个回路的参考方向，相应电流变量和互感项都会变号，但可观测磁场能不变。因此解题时应先固定有向面，再讨论
+\(M\) 的符号。
+
+还可从面积选择理解``公共边为何可以消去''。磁通定义所用跨接曲面并不唯一；只要不同曲面具有同一闭合边界，且不跨过磁单极源，磁通链的计算结果一致。把图
+b、图 c
+的总曲面分割成若干正方形面，只是在同一边界下选了便于利用对称性的曲面分片，不是给原导线另加支路。
+
+\needspace{3\baselineskip}
+\textbf{沿真实六棱路径核对面边界}
+
+给立方体前面四顶点依次编号 \(A,B,C,D\)，后面对应点为
+\(A',B',C',D'\)。图a的路径为
+
+\[
+A\to B\to C\to D\to A.
+\]
+
+图b围住前面与右面，路径为
+
+\[
+A\to B\to B'\to C'\to C\to D\to A.
+\]
+
+图c围住前面、右面与上面，路径为
+
+\[
+A\to B\to B'\to C'\to D'\to D\to A.
+\]
+
+图c的六条棱不能误画成``前面加上面''的双面路径。解析图用淡色面显示所选跨接曲面，公共棱上的两面边界箭头相反，外边界箭头才代表真实导线电流。
+
+例如前面边界有 \(B\to C\)，右面边界则有
+\(C\to B\)；相加后该公共棱为零。再加入上面时，\(C\to D\) 与
+\(D\to C\)、\(C'\to C\) 与 \(C\to C'\) 也相消，剩余边界正是上述图c路径。
+
+这一边界运算是线性叠加，能量是其二次型。必须把自感与互感按同一导线粗细和参考方向计算，公共棱的自项与交叉项才会正确相消。尤其不能因公式写作``\(L_1+M\)''就断言
+\(M>0\)。给定 \(L_1=1\)、\(L_2=1.5\) 的一组正定数据时，
+
+\[
+M=-0.25,\qquad L_c=1.5,
+\]
+
+共同模态与差模态特征值分别为
+\(0.5\)、\(1.25\)，都为正。这给有符号互感提供了简单的自洽检查。
+
+\newpage
+
+\section{第 6 题}\label{ux7b2c-6-ux9898}
+
+\(1\,\mathrm{mol}\) 铜块质量由摩尔质量 \(63.5\,\mathrm{g\,mol^{-1}}\)
+给出，外包绝热膜。铜初温 \(27^\circ\mathrm C\)，摩尔热容
+\(24.44\,\mathrm{J\,mol^{-1}K^{-1}}\)。质量 \(m=30\,\mathrm g\)
+的铅弹初温 \(30^\circ\mathrm C\)，固态比热
+\(128\,\mathrm{J\,kg^{-1}K^{-1}}\)，液态比热
+\(153\,\mathrm{J\,kg^{-1}K^{-1}}\)，熔点
+\(327.46^\circ\mathrm C\)，熔化热
+\(2.045\times10^4\,\mathrm{J\,kg^{-1}}\)。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  铜块固定，铅弹以 \(850\,\mathrm{m\,s^{-1}}\) 射入并停止，求终温。
+\item
+  铜块在光滑水平面上，求终态热力学熵变。
+\item
+  铜块固定，速度改为 \(750\,\mathrm{m\,s^{-1}}\)，铅弹带电
+  \(q=4.0\times10^{-5}\,\mathrm C\)。铅密度
+  \(11.34\,\mathrm{g\,cm^{-3}}\)，终态电容
+  \(C_f=1.5\,\mathrm{pF}\)。求熵变。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.86\linewidth,height=\textheight,keepaspectratio,alt={图6-1　铅弹嵌入绝热铜块的三种能量边界条件}]{../figures/question-06.pdf}
+\caption*{图6-1　铅弹嵌入绝热铜块的三种能量边界条件}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-5}
+
+铅弹停止后，机械能和电场能的减少量进入铜与铅的内能。每问先确定是否熔化，再按固态升温、恒温相变和液态升温计算熵。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-5}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  固定与自由铜块的动能耗散差异。
+\item
+  相变热量判据。
+\item
+  电容器能量 \(q^2/(2C)\)。
+\item
+  球体自电容 \(4\pi\varepsilon_0R\)。
+\item
+  凝聚体定热容熵变与相变熵。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-5}
+
+固定铜块时入射动能全部转成内能；自由铜块时一部分保留为整体平动。带电铅弹还有初、末静电场能之差。绝热只表示能量不逸出，不表示熵不变。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-5}
+
+统一使用开尔文温度。每问先计算可转化为热的能量
+\(Q\)，再与``升到熔点''和``完全熔化''所需能量比较。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-5}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.68\linewidth,height=\textheight,keepaspectratio,alt={图6-2　升温---熔化---液态升温的分段能量与熵积分}]{../figures/solution-06.pdf}
+\caption*{图6-2　升温---熔化---液态升温的分段能量与熵积分}
+\end{figure}
+
+记
+
+\[
+C_{\rm Cu}=24.44\,\mathrm{J\,K^{-1}},
+\quad
+m c_s=0.03\times128=3.84\,\mathrm{J\,K^{-1}},
+\tag{1}
+\]
+
+\[
+T_{\rm Cu}=300.15\,\mathrm K,\quad
+T_{\rm Pb}=303.15\,\mathrm K,\quad
+T_m=600.61\,\mathrm K.
+\tag{2}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（一）铜块固定，\(v=850\,\mathrm{m\,s^{-1}}\)}
+
+\textbf{第一步：明确能量边界。}
+铜块固定，固定装置虽然可以对系统施加冲量，但铜块的固定点不发生位移，故理想约束力不做功。外包绝热膜又使系统不向环境传热。因此铅弹停止后减少的机械能全部留在``铜块---铅弹''系统内部：
+
+\[
+\begin{aligned}
+Q
+&=\frac12mv^2\\
+&=\frac12\times0.030\times(850)^2\\
+&=10837.5\,\mathrm J.
+\end{aligned}
+\tag{3}
+\]
+
+\textbf{第二步：依次计算三个能量门槛。} 铜块从 \(T_{\rm Cu}\)
+升到铅的熔点所需热量为
+
+\[
+\begin{aligned}
+Q_{\rm Cu}
+&=C_{\rm Cu}(T_m-T_{\rm Cu})\\
+&=24.44(600.61-300.15)\\
+&=7343.2424\,\mathrm J.
+\end{aligned}
+\tag{4}
+\]
+
+固态铅弹从 \(T_{\rm Pb}\) 升到熔点所需
+
+\[
+\begin{aligned}
+Q_{\rm Pb,s}
+&=mc_s(T_m-T_{\rm Pb})\\
+&=3.84(600.61-303.15)\\
+&=1142.2464\,\mathrm J.
+\end{aligned}
+\tag{5}
+\]
+
+所以``刚到熔点但尚未熔化''的门槛是
+
+\[
+Q_{\rm heat}=Q_{\rm Cu}+Q_{\rm Pb,s}
+=8485.4888\,\mathrm J.
+\tag{6}
+\]
+
+把全部铅熔化还需要潜热
+
+\[
+Q_{\rm fus}=mL
+=0.030\times2.045\times10^4
+=613.5\,\mathrm J.
+\tag{7}
+\]
+
+两者加热到熔点并完全熔化铅所需总能量为
+
+\[
+\begin{aligned}
+Q_m
+&=Q_{\rm heat}+Q_{\rm fus}\\
+&=8485.4888+613.5\\
+&=9098.99\,\mathrm J.
+\end{aligned}
+\tag{8}
+\]
+
+\textbf{第三步：判断终态相区并求温度。} 因为
+
+\[
+10837.5\,\mathrm J>9098.99\,\mathrm J,
+\]
+
+铅已经全部熔化，终温还会高于熔点。剩余能量为
+
+\[
+Q_{\rm rem}=10837.5-9098.9888
+=1738.5112\,\mathrm J.
+\tag{9}
+\]
+
+熔点以上，铅应使用液态比热。铜块与液态铅达到共同温度时的总热容是
+
+\[
+C_{\rm high}
+=C_{\rm Cu}+mc_l
+=24.44+0.030\times153
+=29.03\,\mathrm{J\,K^{-1}}.
+\tag{10}
+\]
+
+余热使液态铅和铜继续升温：
+
+\[
+Q_{\rm rem}=C_{\rm high}(T_f-T_m).
+\tag{11}
+\]
+
+因此
+
+\[
+\begin{aligned}
+T_f-T_m
+&=\frac{1738.5112}{29.03}\\
+&=59.8867\,\mathrm K,\\
+T_f&=660.4967\,\mathrm K,\\
+t_f&=T_f-273.15\\
+&=\boxed{387.35^\circ\mathrm C}.
+\end{aligned}
+\tag{12}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（二）铜块可自由平动}
+
+\textbf{第一步：先求不可转化为热的质心动能。} 铜块质量
+
+\[
+M=1\,\mathrm{mol}\times63.5\,\mathrm{g\,mol^{-1}}
+=0.0635\,\mathrm{kg}.
+\tag{13}
+\]
+
+水平面光滑，所以水平方向没有外冲量，完全非弹性嵌入过程满足动量守恒：
+
+\[
+mv=(m+M)V_f,
+\qquad
+V_f=\frac{mv}{m+M}
+=\frac{0.030\times850}{0.0935}
+=272.727\,\mathrm{m\,s^{-1}}.
+\tag{14}
+\]
+
+碰撞后的整体仍有平动动能，不能把初动能全部计入内能。转化为内能的机械能为
+
+\[
+\begin{aligned}
+Q
+&=\frac12mv^2-\frac12(m+M)V_f^2\\
+&=\frac12mv^2-\frac12(m+M)
+\left(\frac{mv}{m+M}\right)^2\\
+&=\frac12mv^2\left(1-\frac{m}{m+M}\right)\\
+&=\frac12\frac{mM}{m+M}v^2\\
+&=7360.23\,\mathrm J.
+\end{aligned}
+\tag{15}
+\]
+
+这里的 \(\mu=mM/(m+M)\) 是两物体的约化质量，\(Q=\tfrac12\mu v^2\)
+正是碰撞前在质心系中的全部动能。
+
+\textbf{第二步：判断相态。} 与式（6）的升温门槛比较：
+
+\[
+Q=7360.23\,\mathrm J<Q_{\rm heat}=8485.49\,\mathrm J.
+\tag{16}
+\]
+
+因此铅还没有达到熔点，更不可能发生熔化；铜与铅都只经历固态升温。能量守恒为
+
+\[
+Q=C_{\rm Cu}(T_f-T_{\rm Cu})
++mc_s(T_f-T_{\rm Pb}).
+\tag{17}
+\]
+
+把含 \(T_f\) 的项集中：
+
+\[
+\begin{aligned}
+Q
+&=(C_{\rm Cu}+mc_s)T_f
+-C_{\rm Cu}T_{\rm Cu}-mc_sT_{\rm Pb},\\
+T_f
+&=\frac{Q+C_{\rm Cu}T_{\rm Cu}+mc_sT_{\rm Pb}}
+{C_{\rm Cu}+mc_s}\\
+&=\frac{7360.2273+24.44\times300.15
++3.84\times303.15}{24.44+3.84}\\
+&=560.8200\,\mathrm K\\
+&=287.67^\circ\mathrm C<T_m.
+\end{aligned}
+\tag{18}
+\]
+
+\textbf{第三步：分物体计算熵变。}
+实际嵌入和热传导过程不可逆，不能沿实际过程直接使用
+\(\delta Q/T\)；但熵是状态函数，可以为铜和铅各自选一条从初温缓慢可逆加热到终温的辅助路径。定热容物体有
+
+\[
+\Delta S=\int_{T_i}^{T_f}\frac{C\,dT}{T}
+=C\ln\frac{T_f}{T_i}.
+\tag{19}
+\]
+
+故铜块与铅弹的熵变分别为
+
+\[
+\begin{aligned}
+\Delta S_{\rm Cu}
+&=24.44\ln\frac{560.8200}{300.15}
+=15.27\,\mathrm{J\,K^{-1}},\\
+\Delta S_{\rm Pb}
+&=3.84\ln\frac{560.8200}{303.15}
+=2.37\,\mathrm{J\,K^{-1}},\\
+\Delta S_{\rm tot}
+&=\Delta S_{\rm Cu}+\Delta S_{\rm Pb}\\
+&=\boxed{17.64\,\mathrm{J\,K^{-1}}}.
+\end{aligned}
+\tag{20}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（三）带电铅弹}
+
+\textbf{第一步：由密度求半径，再求初态自电容。} 先把密度化为国际单位：
+
+\[
+\rho=11.34\,\mathrm{g\,cm^{-3}}
+=1.134\times10^4\,\mathrm{kg\,m^{-3}}.
+\tag{21}
+\]
+
+把铅弹近似为孤立导体球，其体积满足
+
+\[
+\frac43\pi R^3=\frac m\rho,
+\qquad
+R=\left(\frac{3m}{4\pi\rho}\right)^{1/3}.
+\tag{22}
+\]
+
+逐项代入：
+
+\[
+\begin{aligned}
+R
+&=\left[
+\frac{3\times0.030}
+{4\pi\times1.134\times10^4}
+\right]^{1/3}\\
+&=8.5797\times10^{-3}\,\mathrm m.
+\end{aligned}
+\tag{23}
+\]
+
+孤立导体球的自电容为
+
+\[
+\begin{aligned}
+C_i
+&=4\pi\varepsilon_0R\\
+&=4\pi(8.8542\times10^{-12})(8.5797\times10^{-3})\\
+&=9.5462\times10^{-13}\,\mathrm F\\
+&=0.95462\,\mathrm{pF}.
+\end{aligned}
+\tag{24}
+\]
+
+\textbf{第二步：写出机械能与电场能的完整账本。} 电荷 \(q\)
+保持不变时，导体的静电能为
+
+\[
+U_e=\frac{q^2}{2C}.
+\tag{25}
+\]
+
+铅弹嵌入铜块后等效电容由 \(C_i\) 增至
+\(C_f\)，所以电场能下降，下降量转化为系统内能。三个能量数值分别是
+
+\[
+\begin{aligned}
+K_i&=\frac12mv^2
+=\frac12\times0.030\times750^2
+=8437.5\,\mathrm J,\\
+U_{e,i}&=\frac{q^2}{2C_i}
+=838.027\,\mathrm J,\\
+U_{e,f}&=\frac{q^2}{2C_f}
+=533.333\,\mathrm J.
+\end{aligned}
+\tag{26}
+\]
+
+因此转化为内能的总能量为
+
+\[
+\begin{aligned}
+Q
+&=K_i+U_{e,i}-U_{e,f}\\
+&=8437.5+838.027-533.333\\
+&=8742.194\,\mathrm J.
+\end{aligned}
+\tag{27}
+\]
+
+\textbf{第三步：用两个门槛锁定终态。} 前面已经算出
+
+\[
+Q_{\rm heat}=8485.4888\,\mathrm J,\qquad
+Q_{\rm heat}+mL=9098.9888\,\mathrm J.
+\tag{28}
+\]
+
+而
+
+\[
+8485.4888<Q=8742.194<9098.9888.
+\tag{29}
+\]
+
+这说明铜和铅都先升到
+\(T_m\)，随后只有一部分铅熔化；只要固、液两相共存，终温就被钉在熔点
+\(T_m\)。用于熔化的剩余能量为
+
+\[
+Q_{\rm part}=Q-Q_{\rm heat}
+=256.7052\,\mathrm J.
+\tag{30}
+\]
+
+故熔化质量
+
+\[
+\begin{aligned}
+\Delta m
+&=\frac{Q_{\rm part}}L\\
+&=\frac{256.7052}{2.045\times10^4}\\
+&=1.25528\times10^{-2}\,\mathrm{kg}\\
+&=12.553\,\mathrm g.
+\end{aligned}
+\tag{31}
+\]
+
+该值小于总铅质量 \(30\,\mathrm g\)，与``部分熔化''的判定自洽。
+
+\textbf{第四步：逐段计算总熵变。} 铜由 \(T_{\rm Cu}\) 升到
+\(T_m\)，全部铅由 \(T_{\rm Pb}\) 升到 \(T_m\)，其中 \(\Delta m\)
+的铅再于恒温 \(T_m\) 熔化。因此
+
+\[
+\begin{aligned}
+\Delta S_{\rm Cu}
+&=C_{\rm Cu}\ln\frac{T_m}{T_{\rm Cu}}
+=24.44\ln\frac{600.61}{300.15}\\
+&=16.9531\,\mathrm{J\,K^{-1}},\\
+\Delta S_{\rm Pb,heat}
+&=mc_s\ln\frac{T_m}{T_{\rm Pb}}
+=3.84\ln\frac{600.61}{303.15}\\
+&=2.62548\,\mathrm{J\,K^{-1}},\\
+\Delta S_{\rm fus}
+&=\frac{\Delta mL}{T_m}
+=\frac{256.7052}{600.61}\\
+&=0.42741\,\mathrm{J\,K^{-1}}.
+\end{aligned}
+\tag{32}
+\]
+
+所以
+
+\[
+\begin{aligned}
+\Delta S_{\rm tot}
+&=\Delta S_{\rm Cu}
++\Delta S_{\rm Pb,heat}
++\Delta S_{\rm fus}\\
+&=16.9531+2.62548+0.42741\\
+&=\boxed{20.006\,\mathrm{J\,K^{-1}}}.
+\end{aligned}
+\tag{33}
+\]
+
+总熵变为正，符合绝热孤立系统中不可逆过程的熵增原理。
+
+\needspace{3\baselineskip}
+\textbf{补充推导与适用条件}
+
+这三问共用的是一张``能量区间图''：
+
+\[
+\begin{array}{c|c}
+Q<Q_{\rm heat}&T_f<T_m,\ \text{全为固态}\\
+Q_{\rm heat}\le Q\le Q_{\rm heat}+mL
+&T_f=T_m,\ \text{固液共存}\\
+Q>Q_{\rm heat}+mL&T_f>T_m,\ \text{铅全熔}
+\end{array}
+\]
+
+只有先确定 \(Q\)
+落在哪个区间，才能知道终温是未知量还是被钉在熔点、热容该用 \(c_s\) 还是
+\(c_l\)、潜热项该用部分质量还是全部质量。
+
+第二问可将碰撞热写为损失的相对运动能。初动能可分解为质心平动能和相对运动动能：
+
+\[
+\frac12mv^2
+=\frac12(m+M)V_{\rm cm}^2+\frac12\mu v_{\rm rel}^2,
+\qquad
+\mu=\frac{mM}{m+M}.
+\]
+
+完全嵌入后相对运动消失，只有 \(\tfrac12\mu v_{\rm rel}^2\)
+转化为内能；质心平动是有序机械能，并不属于温度所表征的无规则内能。
+
+第三问中 \(C_f>C_i\)，所以在电荷固定时 \(q^2/(2C)\)
+下降。这一符号可以先由物理判断确定，再代数计算。若误把末态场能加到热量中，能量守恒将被重复记账。
+
+能量账本与熵账本必须分开。机械能和静电场能可以转化为内能，所以它们出现在能量守恒式中；但宏观质心动能、理想静电场能不是热平衡物质的熵项。熵变只由铜、固态铅、液态铅和相变各自的初末热力学状态计算。碰撞和电流耗散造成的不可逆性，最终体现为物质总熵为正，而不是另外人为添加一个``机械熵''。
+
+部分熔化区间还可用无量纲熔化比例表示：
+
+\[
+f_{\rm melt}
+=\frac{\Delta m}{m}
+=\frac{Q-Q_{\rm heat}}{mL}.
+\]
+
+第三问代入得
+
+\[
+f_{\rm melt}
+=\frac{256.7052}{613.5}
+\approx0.4184.
+\]
+
+约 \(41.8\%\) 的铅熔化。这个比例必须落在 \(0\) 与 \(1\)
+之间；若计算得到负数或大于
+\(1\)，说明前面的相态区间判断与所用公式不一致。
+
+三问都把热容视为常数，这是题目给定数据下的模型近似。第一问终温已高于铅熔点约
+\(60\,\mathrm K\)，若真实材料热容随温度变化，数值会有修正；但解题时应忠实使用给定的常热容，并用分段相态而不是自行引入未给出的材料数据。
+
+\needspace{3\baselineskip}
+\textbf{三个终态在同一相变曲线上的位置}
+
+图6-2将横轴取为进入内能的 \(Q\)，纵轴为共同终温。两个不同初温在 \(Q=0\)
+时也会自行热平衡，对应
+
+\[
+T_*=\frac{C_{\rm Cu}T_{\rm Cu}+mc_sT_{\rm Pb}}
+{C_{\rm Cu}+mc_s}\approx300.56\,\mathrm K.
+\]
+
+因此固态段并非从 \(300.15\,\mathrm K\) 或 \(303.15\,\mathrm K\)
+单独开始，而是
+
+\[
+T_f=T_*+\frac Q{28.28\,\mathrm{J\,K^{-1}}}.
+\]
+
+到达 \(8485.4888\,\mathrm J\) 后进入熔点平台，平台宽度为
+\(613.5\,\mathrm J\)。超过 \(9098.9888\,\mathrm J\) 后才按总液态热容
+\(29.03\,\mathrm{J\,K^{-1}}\)
+再次升温。图中的三个点分别对应自由铜块、带电固定铜块和不带电固定铜块，位置由各问的实际能量决定。
+
+若要反向核查第二问，应同时回代动量与能量：
+
+\[
+(m+M)V_f=mv,\qquad
+Q+\frac12(m+M)V_f^2=\frac12mv^2.
+\]
+
+熵的温度则只使用相对物体共同运动的热平衡温度，不能把 \(V_f\)
+的宏观有序动能视为额外升温。
+
+第三问还可把熔化区间写成对电荷的限制。令
+
+\[
+A_C=\frac12\left(\frac1{C_i}-\frac1{C_f}\right)>0,
+\qquad Q=8437.5\,\mathrm J+A_Cq^2.
+\]
+
+部分熔化要求
+
+\[
+\frac{Q_{\rm heat}-8437.5}{A_C}
+<q^2<
+\frac{Q_{\rm heat}+mL-8437.5}{A_C}.
+\]
+
+题给 \(q\)
+在此区间内，故熔点平台与部分熔化结论不是由舍入数值偶然决定。这里的孤立铅弹按导体球处理；``均匀球体''指质量均匀，不代表体积电荷密度均匀。
+
+\newpage
+
+\section{第 7 题}\label{ux7b2c-7-ux9898}
+
+折射率为 \(n\)、折射棱角 \(\theta\ll1\) 的菲涅尔双棱镜，距轴上单色狭缝
+\(S\) 为 \(a\)，距观察屏为 \(b\)，波长 \(\lambda\)。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  求相邻亮纹间距。
+\item
+  狭缝垂直主轴上移 \(h\)，求零级条纹移动方向和距离。
+\item
+  再贴合一个镜面对称的相同双棱镜，形成双面双棱镜，重做前两问。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.86\linewidth,height=\textheight,keepaspectratio,alt={图7-1　单面与双面菲涅尔双棱镜的虚光源}]{../figures/question-07.pdf}
+\caption*{图7-1　单面与双面菲涅尔双棱镜的虚光源}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-6}
+
+先用薄棱镜偏折求两虚源的间距，再计算狭缝横移后的完整光程差。间距决定条纹宽度，光程差的零点决定零级位置。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-6}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  薄棱镜偏折 \((n-1)\theta\)。
+\item
+  虚光源间距。
+\item
+  双缝条纹宽度。
+\item
+  光源位移引起的条纹反向移动。
+\item
+  双面结构使偏折角加倍。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-6}
+
+单面双棱镜把一个狭缝等效成两个虚光源，双面贴合后每束光经历两次同向偏折，虚光源间距加倍，条纹宽度减半。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-6}
+
+先画反向延长线确定虚光源间距，再使用
+\(\Delta y=\lambda L/d\)。光源离轴时用全光程差判断零级条纹，不把虚像几何位移直接当条纹位移。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-6}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图7-2　虚光源间距、零级条纹及光源上移后的光程差}]{../figures/solution-07.pdf}
+\caption*{图7-2　虚光源间距、零级条纹及光源上移后的光程差}
+\end{figure}
+
+\needspace{3\baselineskip}
+\textbf{1．薄棱镜的偏折角}
+
+先由薄棱镜公式求每一半棱镜的偏折。设入射角、折射角均为小量，棱镜顶角为
+\(\theta\)。两界面处的小角关系为
+
+\[
+i_1+i_2-\theta=(i_1-r_1)+(i_2-r_2),
+\qquad
+r_1+r_2=\theta.
+\tag{1}
+\]
+
+小角近似下，斯涅尔定律 \(\sin i=n\sin r\) 化为
+\(i\simeq nr\)，故总偏折角
+
+\[
+\begin{aligned}
+\delta
+&=(i_1-r_1)+(i_2-r_2)\\
+&=(n-1)(r_1+r_2)\\
+&=(n-1)\theta.
+\end{aligned}
+\tag{2}
+\]
+
+上、下两半棱镜的底边相向，所以一束向下偏折 \(\delta\)，另一束向上偏折
+\(\delta\)；两束之间的相对角偏折是 \(2\delta\)。
+
+\needspace{3\baselineskip}
+\textbf{2．轴上狭缝时的虚光源间距与条纹宽度}
+
+如图 7-1
+左图，把两束折射光反向延长到狭缝所在平面。单束相对于原狭缝的横向虚位移，在近轴条件下为
+
+\[
+a\tan\delta\simeq a\delta.
+\tag{3}
+\]
+
+两个虚光源位于原狭缝两侧，故间距不是 \(a\delta\)，而是
+
+\[
+\begin{aligned}
+d_s
+&=a\delta+a\delta\\
+&=2a\delta\\
+&=2a(n-1)\theta.
+\end{aligned}
+\tag{4}
+\]
+
+两个虚光源与真实狭缝处在同一纵向平面，该平面到屏的距离为
+
+\[
+L=a+b.
+\tag{5}
+\]
+
+对屏上横坐标为 \(y\) 的点，在 \(|y|\ll L\)、\(d_s\ll L\)
+时，两虚源到该点的光程差为
+
+\[
+\Delta\ell\simeq\frac{d_s}{L}y.
+\tag{6}
+\]
+
+相邻亮纹的光程差相差一个波长，所以令
+
+\[
+\frac{d_s}{L}\Delta y=\lambda.
+\tag{7}
+\]
+
+由此得到
+
+\[
+\boxed{
+\Delta y=\frac{\lambda(a+b)}
+{2a(n-1)\theta}
+}.
+\tag{8}
+\]
+
+\needspace{3\baselineskip}
+\textbf{3．狭缝上移后的光程函数}
+
+仅把``两个虚像都上移''画出来，不能判断条纹整体移向，因为两束光在棱镜处已经带有由入射路程造成的初相位差。下面直接计算全光程。
+
+取棱镜平面上的横坐标为 \(\xi\)，上方为正；屏上观察点坐标为
+\(y\)。狭缝上移 \(h\) 后位于 \((x,y)=(-a,h)\)。从狭缝经棱镜点 \(\xi\)
+到屏上 \(y\) 的两段几何路程，在近轴条件下分别展开为
+
+\[
+\begin{aligned}
+\sqrt{a^2+(\xi-h)^2}
+&\simeq a+\frac{(\xi-h)^2}{2a},\\
+\sqrt{b^2+(y-\xi)^2}
+&\simeq b+\frac{(y-\xi)^2}{2b}.
+\end{aligned}
+\tag{9}
+\]
+
+这里使用了二阶展开
+\(\sqrt{\ell^2+u^2}\simeq\ell+u^2/(2\ell)\)；必须保留横向位移的二阶项，因为干涉光程差正来自这些项。
+
+薄棱镜产生的相位可以等效为线性光程项。上半棱镜使光线向下偏折
+\(\delta\)，下半棱镜使光线向上偏折 \(\delta\)，两支光程函数可统一写成
+
+\[
+\mathcal L_s(\xi)
+=a+b+\frac{(\xi-h)^2}{2a}
++\frac{(y-\xi)^2}{2b}
+-s\delta\xi,
+\qquad s=\pm1.
+\tag{10}
+\]
+
+\(s=+1\) 对应上支，\(s=-1\)
+对应下支。实际近轴光线满足费马原理，即对穿过棱镜的位置 \(\xi\) 取驻值：
+
+\[
+\frac{\partial\mathcal L_s}{\partial\xi}
+=\frac{\xi-h}{a}+\frac{\xi-y}{b}-s\delta=0.
+\tag{11}
+\]
+
+逐项通分并解出
+
+\[
+\begin{aligned}
+b(\xi-h)+a(\xi-y)-sab\delta&=0,\\
+(a+b)\xi&=bh+ay+sab\delta,\\
+\xi_s&=\frac{bh+ay+sab\delta}{a+b}.
+\end{aligned}
+\tag{12}
+\]
+
+所以两支光线在棱镜平面上的通过点相距
+
+\[
+\xi_+-\xi_-=\frac{2ab\delta}{a+b}.
+\tag{13}
+\]
+
+将式（12）的驻值代回式（10）。与 \(s\)
+无关的公共项在相减时消去，两支光的光程差为
+
+\[
+\begin{aligned}
+\Delta\ell
+&=\mathcal L_{-}(\xi_-)-\mathcal L_{+}(\xi_+)\\
+&=\frac{2\delta}{a+b}(ay+bh)\\
+&=2a\delta
+\left(
+\frac{y}{a+b}
++\frac{bh}{a(a+b)}
+\right).
+\end{aligned}
+\tag{14}
+\]
+
+利用 \(d_s=2a\delta\)，也可写成
+
+\[
+\Delta \ell
+\simeq d_s\left(\frac{y}{a+b}+\frac{h}{a}\frac{b}{a+b}\right)
+\tag{15}
+\]
+
+这正是图 7-2 中``入射段初相位差''和``出射段观察相位差''的代数合成。
+
+\needspace{3\baselineskip}
+\textbf{4．求零级条纹位置与方向}
+
+零级亮纹要求两支光光程相等，即 \(\Delta\ell=0\)。由式（14）：
+
+\[
+ay_0+bh=0.
+\tag{16}
+\]
+
+于是
+
+\[
+\boxed{y_0=-\frac ba h}.
+\tag{17}
+\]
+
+坐标正方向向上，而 \(h>0\) 时
+\(y_0<0\)，所以狭缝向上移动，零级条纹以及整组条纹向下移动，位移大小为
+\(bh/a\)。方向判断不是附加记忆，而是式（16）所表示的入射与出射光程差相互抵消。
+
+还可把任意第 \(k\) 级亮纹写为
+
+\[
+\Delta\ell=k\lambda,
+\qquad
+y_k=-\frac ba h+
+k\frac{\lambda(a+b)}{2a\delta}.
+\tag{18}
+\]
+
+这说明 \(h\) 只改变整组条纹的共同平移量，不改变相邻条纹间距。
+
+\needspace{3\baselineskip}
+\textbf{5．双面双棱镜}
+
+图 7-1
+右图中，第二个镜面对称双棱镜与第一个贴合。每支光先后经历两次同方向的小角偏折，因此单支总偏折角为
+
+\[
+\delta'=2\delta=2(n-1)\theta.
+\tag{19}
+\]
+
+虚光源相对轴线的位移随偏折角成正比，故虚光源间距加倍：
+
+\[
+\begin{aligned}
+d_s'
+&=2a\delta'\\
+&=4a(n-1)\theta\\
+&=2d_s.
+\end{aligned}
+\tag{20}
+\]
+
+因此条纹宽度为
+
+\[
+\boxed{
+\Delta y'=\frac{\lambda(a+b)}
+{4a(n-1)\theta}
+=\frac12\Delta y
+}.
+\tag{21}
+\]
+
+若在光程函数（10）中将 \(\delta\) 换成
+\(2\delta\)，则式（14）的整个右端只多出公因子 \(2\)：
+
+\[
+\Delta\ell'
+=\frac{4\delta}{a+b}(ay+bh).
+\tag{22}
+\]
+
+零光程差条件仍为 \(ay+bh=0\)，所以
+
+\[
+\boxed{y_0'=-\frac ba h}.
+\tag{23}
+\]
+
+结论可以分成两层：偏折加倍使相位随 \(y\)
+变化得更快，故条纹宽度减半；但令相位差为零时，公共的偏折因子会消去，故零级条纹位移不变。
+
+\needspace{3\baselineskip}
+\textbf{补充推导与适用条件}
+
+条纹``间距''和条纹``原点''由光程差的不同部分控制。把式（14）写成
+
+\[
+\Delta\ell(y)
+=\underbrace{\frac{2a\delta}{a+b}y}_{\text{观察位置项}}
++\underbrace{\frac{2b\delta}{a+b}h}_{\text{光源初相位项}},
+\]
+
+第一项的斜率决定条纹宽度，第二项决定整组条纹的平移。双面结构使两项同时乘
+\(2\)，所以斜率加倍而零点不变。
+
+从极限关系也能理解 \(y_0=-bh/a\)。当狭缝离棱镜很远，即 \(a\)
+很大时，入射波近似平面波，横移 \(h\)
+引起的入射倾角很小，条纹移动趋近于零；当屏更远，即 \(b\)
+增大时，同一微小角度在屏上产生更大的横向位移，故位移与 \(b\) 成正比。
+
+虚光源模型适合求轴上光源的条纹间距，但光源离轴时还必须给两个虚光源附上正确的相位关系。若只移动虚像位置而默认它们同相，就会丢掉式（14）的
+\(h\) 项，甚至得到错误的移动方向。
+
+观察到条纹还隐含``两个折射光束必须在屏上重叠''的条件。虚光源间距只决定重叠区内的相位梯度，并不保证任意大的屏面都有两束光。实际可见条纹数等于重叠区宽度除以条纹间距的数量级；棱镜口径、狭缝宽度和空间相干性会限制这个数。题目未给口径，因此只能求条纹宽度与零级位置，不能进一步给出可见条纹总数。
+
+从相位观点看，式（18）可写成
+
+\[
+\phi(y)=\frac{2\pi}{\lambda}
+\frac{2a\delta}{a+b}
+\left(y+\frac ba h\right).
+\]
+
+条纹宽度来自 \(d\phi/dy\)，零级位置来自
+\(\phi=0\)。这种``斜率---截距''分工可直接迁移到杨氏双缝、劳埃德镜和薄膜楔形干涉：系统结构控制相位斜率，光源或元件位移常表现为相位截距的改变。
+
+\needspace{3\baselineskip}
+\textbf{驻值光线必须穿过相应半棱镜}
+
+费马方程给出两支驻点，但还须核查上支 \(\xi_+>0\)、下支
+\(\xi_-<0\)。由式（12）得到
+
+\[
+-ab\delta<bh+ay<ab\delta.
+\]
+
+两束同时存在的近轴重叠区因此为
+
+\[
+-\frac ba h-b\delta<y<
+-\frac ba h+b\delta.
+\]
+
+中心正好是 \(y_0=-bh/a\)，宽度是
+\(2b\delta\)。图7-2画出上移源点经两个半棱镜到这一零级点的实际折线，在棱镜处发生偏折，并标出驻点正、负号。两条直线若根本不经过棱镜，便不能用来说明该题的光程差。
+
+\noindent\begin{minipage}{\linewidth}
+
+上、下虚源的几何位置为 $h\pm a\delta$，不过两支等效球面波还各有常量光程
+
+$$
+C_s=-s\delta h-\frac12a\delta^2.
+$$
+
+因此把虚源都上移后直接令它们同相，会漏掉
+
+$$
+C_--C_+=2\delta h.
+$$
+
+将这个常量与虚源到屏的几何路程差合并，仍得到式（14）的 $2\delta(ay+bh)/(a+b)$。这是对直接驻值计算的独立复核，也说明虚源法处理离轴光源时为什么必须保留初相位。
+
+若狭缝偏移过大，或棱镜实际口径过小，驻点可能落出玻璃区域。上述条纹位移式只描述两束仍能到达的重叠区，不保证所有偏移下都能观察到零级条纹。
+
+\end{minipage}
+
+\newpage
+
+\section{第 8 题}\label{ux7b2c-8-ux9898}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  估算一个氩气分子线度的上限。
+\item
+  边长为 \(d\)
+  的极小立方盒中只有一个中子。用两种方法估算盒壁压强的下限，已知普朗克常量
+  \(h\) 和中子质量 \(m\)。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\linewidth,height=\textheight,keepaspectratio,alt={图8-1　单分子体积上限与立方盒中受限中子}]{../figures/question-08.pdf}
+\caption*{图8-1　单分子体积上限与立方盒中受限中子}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-7}
+
+用一摩尔氩气的体积估一个原子的平均可用空间，再由限域动量和盒中基态能量分别求中子对盒壁的压强。两条路线都应给出相同的尺度幂律。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-7}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  标准状况摩尔体积。
+\item
+  每分子平均占据体积。
+\item
+  位置---动量不确定性。
+\item
+  量子盒基态能量。
+\item
+  虚功关系 \(P=-dE/dV\)。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-7}
+
+在把原子视为不可重叠粒子的粗略估算中，真实线度不能超过平均间距的数量级。中子被限制在越小的盒中，动量涨落越大；它持续撞击盒壁或以基态能量随体积变化的方式产生量子压强。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-7}
+
+第一问取 \(0^\circ\mathrm C\)、\(1\,\mathrm{atm}\)
+的摩尔体积作宽松上界。第二问分别用``碰壁冲量''和``基态能量对体积求导''，只要求数量级相近。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-7}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.88\linewidth,height=\textheight,keepaspectratio,alt={图8-2　不确定性碰壁模型与基态能量虚功模型}]{../figures/solution-08.pdf}
+\caption*{图8-2　不确定性碰壁模型与基态能量虚功模型}
+\end{figure}
+
+\needspace{3\baselineskip}
+\textbf{1．用平均占据体积估算氩分子线度上限}
+
+气体中分子彼此分散。若把每个分子连同周围空隙平均分配到一个小立方格中，那么平均格子并非实际隔间，其边长只给一个宽松的线度上限量级，不能当作严格的几何不等式或测量直径。
+
+在 \(0^\circ\mathrm C\)、\(1\,\mathrm{atm}\)
+的标准状况下，理想气体摩尔体积约为
+
+\[
+V_m=22.4\times10^{-3}\,\mathrm{m^3}.
+\tag{1}
+\]
+
+一个摩尔含 \(N_A\simeq6.02\times10^{23}\)
+个分子，所以每个分子平均分到的空间体积为
+
+\[
+\begin{aligned}
+v_1
+&=\frac{V_m}{N_A}\\
+&=\frac{22.4\times10^{-3}}
+{6.02\times10^{23}}\\
+&=3.72\times10^{-26}\,\mathrm{m^3}.
+\end{aligned}
+\tag{2}
+\]
+
+若用边长 \(\ell_{\rm cell}\) 的小立方体表示这份平均空间，则
+
+\[
+\begin{aligned}
+\ell_{\rm cell}
+&=v_1^{1/3}\\
+&=(3.72\times10^{-26})^{1/3}\,\mathrm m\\
+&=3.34\times10^{-9}\,\mathrm m.
+\end{aligned}
+\tag{3}
+\]
+
+因此氩分子线度满足宽松上界
+
+\[
+\boxed{\ell\lesssim3.3\times10^{-9}\,\mathrm m}.
+\tag{4}
+\]
+
+真实氩原子的尺度显著小于这个数，因为标准状况气体体积的大部分是原子之间的空隙。本问只要求由宏观数据推出线度不超过平均间距量级的粗略上限；氩是单原子气体，这里的``分子''指一个氩原子。
+
+\needspace{3\baselineskip}
+\textbf{2．方法一：不确定性与碰壁冲量}
+
+如图 8-2 左侧所示，只研究垂直于一对相对盒壁的 \(x\)
+方向。中子被限制在宽度约为 \(d\) 的区域内，因此可取位置不确定度的数量级
+
+\[
+\Delta x\sim d.
+\tag{5}
+\]
+
+海森堡不确定性关系为
+
+\[
+\Delta x\,\Delta p_x\ge\frac{\hbar}{2}.
+\tag{6}
+\]
+
+代入 \(\Delta x\sim d\)：
+
+\[
+\begin{aligned}
+\Delta p_x
+&\gtrsim\frac{\hbar}{2d}\\
+&=\frac{h}{4\pi d}.
+\end{aligned}
+\tag{7}
+\]
+
+中子不能处在 \(p_x=0\) 的静止状态，其典型速度分量至少为
+
+\[
+v_x\sim\frac{\Delta p_x}{m}
+\gtrsim\frac{h}{4\pi md}.
+\tag{8}
+\]
+
+将量子动量涨落暂时用经典``来回碰壁''的图像估算平均力。中子从某一面出发，到达对面再返回同一面，路程约为
+\(2d\)，所以相邻两次撞击同一面的时间间隔为
+
+\[
+\Delta t\sim\frac{2d}{v_x}.
+\tag{9}
+\]
+
+弹性反射使法向动量由 \(+mv_x\) 变成 \(-mv_x\)，动量变化量的大小为
+
+\[
+|\Delta p_{\rm wall}|=2mv_x.
+\tag{10}
+\]
+
+因此该面所受平均力的数量级为
+
+\[
+\begin{aligned}
+F
+&\sim\frac{|\Delta p_{\rm wall}|}{\Delta t}\\
+&=\frac{2mv_x}{2d/v_x}\\
+&=\frac{mv_x^2}{d}.
+\end{aligned}
+\tag{11}
+\]
+
+每个盒壁面积为 \(A=d^2\)，故压强
+
+\[
+\begin{aligned}
+P
+&=\frac FA\\
+&\sim\frac{mv_x^2/d}{d^2}\\
+&=\frac{mv_x^2}{d^3}.
+\end{aligned}
+\tag{12}
+\]
+
+代入式（8）的最小典型速度，得到
+
+\[
+\boxed{
+P\gtrsim\frac{h^2}{16\pi^2md^5}
+}.
+\tag{13}
+\]
+
+这里的 \(\gtrsim\) 表示数量级下限；因为我们只用 \(\Delta x\sim d\)
+估计，并未求盒中精确波函数，所以无量纲系数不应被视为精确结果。
+
+\needspace{3\baselineskip}
+\textbf{3．方法二：无限深方势阱基态与虚功}
+
+如图 8-2 右侧所示，把盒壁视为无限高势垒。先处理一个方向。波函数必须在
+\(x=0\) 和 \(x=d\) 处为零，基态在盒中恰容纳半个波长：
+
+\[
+\frac{\lambda_x}{2}=d,
+\qquad
+\lambda_x=2d.
+\tag{14}
+\]
+
+由德布罗意关系 \(p=h/\lambda\)：
+
+\[
+p_x=\frac{h}{2d}.
+\tag{15}
+\]
+
+立方盒三个方向相互独立，基态量子数为 \((1,1,1)\)，因此
+
+\[
+\begin{aligned}
+p_x=p_y=p_z&=\frac h{2d},\\
+E_0
+&=\frac{p_x^2+p_y^2+p_z^2}{2m}\\
+&=\frac{1}{2m}
+\left[
+3\left(\frac h{2d}\right)^2
+\right]\\
+&=\frac{3h^2}{8md^2}.
+\end{aligned}
+\tag{16}
+\]
+
+盒子缓慢、各向同性地膨胀一个微小量时，粒子的能量下降，对盒壁做功。准静态虚功关系为
+
+\[
+dE_0=-P\,dV,
+\qquad
+P=-\frac{dE_0}{dV}.
+\tag{17}
+\]
+
+这里的负号表示体积增大时基态能量降低，而粒子对外做正功。由于
+
+\[
+V=d^3,
+\tag{18}
+\]
+
+可用链式法则把对 \(V\) 的导数改写成对边长 \(d\) 的导数：
+
+\[
+P=-\frac{dE_0/dd}{dV/dd}.
+\tag{19}
+\]
+
+分别求导：
+
+\[
+\begin{aligned}
+\frac{dE_0}{dd}
+&=\frac{3h^2}{8m}\frac{d}{dd}(d^{-2})\\
+&=-\frac{3h^2}{4md^3},\\
+\frac{dV}{dd}
+&=\frac{d}{dd}(d^3)\\
+&=3d^2.
+\end{aligned}
+\tag{20}
+\]
+
+代回式（19）：
+
+\[
+\begin{aligned}
+P
+&=-\frac{-3h^2/(4md^3)}{3d^2}\\
+&=\boxed{\frac{h^2}{4md^5}}.
+\end{aligned}
+\tag{21}
+\]
+
+\needspace{3\baselineskip}
+\textbf{4．比较两种方法并做量纲检查}
+
+不确定性估算法给出 \(1/(16\pi^2)\)，精确基态法给出
+\(1/4\)。二者相差常数因子 \(4\pi^2\)，来源是第一种方法把 \(\Delta x\)
+粗略取为 \(d\)，而且用典型动量替代了精确动量分布；它们共同给出可靠标度
+
+\[
+P\sim\frac{h^2}{md^5}.
+\tag{22}
+\]
+
+量纲为
+
+\[
+\left[\frac{h^2}{md^5}\right]
+=\frac{(\mathrm{kg\,m^2\,s^{-1}})^2}
+{\mathrm{kg\,m^5}}
+=\mathrm{kg\,m^{-1}\,s^{-2}}
+=\mathrm{Pa},
+\tag{23}
+\]
+
+确实是压强。又因为 \(d\) 缩小一半时压强增大 \(2^5=32\)
+倍，体现量子限域压强对尺度极其敏感。
+
+\needspace{3\baselineskip}
+\textbf{补充推导与适用条件}
+
+第一问与第二问表面上分别属于分子物理和量子力学，实质都在做``由可用空间反推微观尺度或动量''的估算。第一问的逻辑是：每个分子平均可用的体积给出几何上限；第二问的逻辑是：粒子可用空间越小，允许的最小波长越短，最小动量和基态能量越大。
+
+严格说来，单粒子定态没有一条经典轨道，也不是一个小球周期性撞墙。方法一只是把动量通量翻译成便于建立直觉的碰壁模型；方法二从边界条件和能量导数出发，给出了无限深方势阱模型内的精确系数。因此两种方法的共同幂律比第一种方法的常数更有普适意义。
+
+压强也可直接从某一方向的能量求出。对于边长分别为 \(L_x,L_y,L_z\)
+的长方体基态，
+
+\[
+E_0=\frac{h^2}{8m}
+\left(\frac1{L_x^2}+\frac1{L_y^2}+\frac1{L_z^2}\right).
+\]
+
+只移动垂直于 \(x\) 轴的盒壁，保持 \(L_y,L_z\) 不变，则
+
+\[
+P_x=-\frac1{L_yL_z}\frac{\partial E_0}{\partial L_x}
+=\frac{h^2}{4mL_x^3L_yL_z}.
+\]
+
+令三边都等于 \(d\)，立即回到
+\(P=h^2/(4md^5)\)。这说明立方盒结果并非凭各向同性平均得到，而是每一对相对盒壁都给出相同的法向压强。
+
+立方盒结果还能由缩放关系快速复核。基态能量满足
+\(E_0\propto d^{-2}\)，体积满足 \(V=d^3\)，所以
+\(E_0\propto V^{-2/3}\)。于是
+
+\[
+P=-\frac{dE_0}{dV}
+=\frac23\frac{E_0}{V}.
+\]
+
+代入 \(E_0=3h^2/(8md^2)\) 与 \(V=d^3\)：
+
+\[
+P=\frac23
+\frac{3h^2/(8md^2)}{d^3}
+=\frac{h^2}{4md^5}.
+\]
+
+这个关系与非相对论理想气体的维里关系同型，说明量子压强仍可理解为单位体积动能所产生的动量通量，只是最低动能由边界条件而非温度决定。
+
+\needspace{3\baselineskip}
+\textbf{有限区间给出的较紧不确定性下界}
+
+第一种估算取 \(\Delta x\sim d\)，常数较松。对确实限制在 \(0\le x\le d\)
+的概率分布，可由区间方差界得到
+
+\[
+(\Delta x)^2\le\frac{d^2}{4}.
+\]
+
+故海森堡关系还给出
+
+\[
+\Delta p_x\ge\frac{\hbar}{d}
+=\frac{h}{2\pi d}.
+\]
+
+在无限深盒的定态中
+\(\langle p_x\rangle=0\)，单面平均压强与法向动量平方有关，
+
+\[
+P_x=\frac{\langle p_x^2\rangle}{md^3}
+\ge\frac{h^2}{4\pi^2md^5}.
+\]
+
+这个下界比粗取 \(\Delta x=d\) 的估算提高四倍，与精确基态结果只差
+\(\pi^2\)。不确定性下界不能在硬壁盒内取等，因为海森堡取等态为高斯，而盒的波函数必须在两面硬壁处为零。
+
+图8-2右侧画一维基态
+
+\[
+\psi_1(x)=\sqrt{\frac2d}\sin\frac{\pi x}{d}.
+\]
+
+它并非一条粒子飞行轨迹。直接对该波函数作用动量平方算符可得
+
+\[
+\langle p_x^2\rangle
+=\hbar^2\frac{\pi^2}{d^2}
+=\frac{h^2}{4d^2},
+\]
+
+于是法向动量通量再次给出
+\(P_x=h^2/(4md^5)\)，与能量虚功法一致。对有限高盒壁，允许粒子渗出后有效限域长度改变；原硬壁下界便不能只沿用原几何宽度
+\(d\)。
+\end{document}

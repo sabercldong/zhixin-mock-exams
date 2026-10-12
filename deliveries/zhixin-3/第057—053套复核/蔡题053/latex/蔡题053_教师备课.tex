@@ -1,0 +1,2666 @@
+\documentclass[12pt,a4paper,UTF8]{ctexart}
+\usepackage[a4paper,top=22mm,bottom=22mm,left=22mm,right=22mm,headheight=15pt]{geometry}
+\newcommand{\Needspace}[1]{\par\begingroup\dimen0=#1\relax\dimen2=\pagegoal\advance\dimen2 by-\pagetotal\ifdim\dimen0>\dimen2\newpage\fi\endgroup}
+\newcommand{\needspace}[1]{\par\begingroup\skip0=\lastskip\vskip-\skip0\dimen0=#1\relax\advance\dimen0 by\skip0\vskip\dimen0\penalty-100\vskip-\dimen0\vskip\skip0\penalty9999\endgroup}
+\usepackage{amsmath,amssymb,mathtools,bm}
+\usepackage{graphicx,xcolor,booktabs,longtable,array,enumitem,fancyhdr,caption,float,microtype,setspace}
+\usepackage[hidelinks,unicode]{hyperref}
+\usepackage[most]{tcolorbox}
+\definecolor{ContestBlue}{HTML}{17365D}
+\hypersetup{pdftitle={第053套},pdfauthor={}}
+\setstretch{1.24}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.35em}
+\setlength{\emergencystretch}{2em}
+\setlist{itemsep=0.35em,topsep=0.4em}
+\captionsetup{font=small,labelfont=bf,justification=centering}
+\setcounter{secnumdepth}{0}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small 第053套}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\ctexset{
+  section={format=\Large\bfseries\color{ContestBlue},beforeskip=1.2em,afterskip=0.7em},
+  subsection={format=\large\bfseries\color{ContestBlue},beforeskip=1.0em,afterskip=0.5em},
+  subsubsection={format=\normalsize\bfseries,beforeskip=0.8em,afterskip=0.35em}
+}
+\usepackage{calc}
+\newcounter{none}
+\let\originalsubsection\subsection
+\renewcommand{\subsection}{\needspace{6\baselineskip}\originalsubsection}
+\makeatletter
+\newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\newcommand{\maxwidth}{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\newcommand{\maxheight}{\ifdim\Gin@nat@height>0.72\textheight 0.72\textheight\else\Gin@nat@height\fi}
+\newcommand{\pandocbounded}[1]{\begingroup\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}#1\endgroup}
+\makeatother
+\begin{document}
+\begin{titlepage}
+  \centering
+  \vspace*{58mm}
+  {\Huge\bfseries\color{ContestBlue} 第053套\par}
+  \vfill
+  \vspace*{28mm}
+\end{titlepage}
+\section{第 1 题}\label{ux7b2c-1-ux9898}
+
+有两个星球------蔡子星和黄伯星，均可视为质点，质量均为
+\(m\)。两个星球分别被 \(x\) 星人和 \(y\) 星人限制为只能沿 \(x\) 轴和
+\(y\) 轴自由运动。初始时两星相距 \(L\)：蔡子星位于 \(x\)
+轴正半轴且初速度为零，黄伯星位于原点并具有沿 \(y\) 轴负方向的初速度
+\(u_0\)。\(u_0\)
+足够小，使两星不会彼此分离。另有一个质量可忽略的``中点星人''，始终位于两星连线的中点。万有引力常量为
+\(G\)。求：
+
+（1）当蔡子星和黄伯星的坐标分别为 \((x,0)\)、\((0,y)\) 时，求
+\(\ddot x,\ddot y\)；
+
+（2）中点星人的加速度；
+
+（3）中点星人的运动可等效为绕一个虚拟中心天体运动，求虚拟中心天体的质量；
+
+（4）中点星人离原点的最近距离和最远距离；
+
+（5）在题图坐标系中写出中点星人的轨道方程。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.643\linewidth,height=\textheight,keepaspectratio,alt={图1-1　两星的约束运动与连线中点}]{../figures/question-01.pdf}
+\caption*{图1-1　两星的约束运动与连线中点}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d}
+
+两颗受直线约束的星球，其连线中点仍满足反平方中心力方程。由中点初态求等效引力参数，再确定椭圆焦点和转向距离。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  万有引力的矢量分解。
+\item
+  受约束质点的坐标加速度。
+\item
+  中点坐标与二阶导数。
+\item
+  平方反比中心力、等效引力参数。
+\item
+  椭圆轨道的比机械能与半长轴。
+\item
+  近拱点、远拱点和焦点式轨道几何。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf}
+
+令中点星人的位置为 \[
+\bm r=\left(\frac x2,\frac y2\right),
+\qquad r=\frac12\sqrt{x^2+y^2}. \tag{1}
+\] 两星间距为
+\(2r\)。虽然两个有质量星球分别只能沿坐标轴运动，中点的两个坐标却同时变化，因此中点可以在平面内形成一条圆锥曲线。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3}
+
+先对每颗星球只取约束方向上的引力分量。随后把所得 \(\ddot x,\ddot y\)
+各除以 2，得到中点的加速度。如果结果能写成 \[
+\ddot{\bm r}=-\frac{\mu}{r^2}\hat{\bm r}, \tag{2}
+\] 就可直接读出等效引力参数 \(\mu=GM_*\)，再使用开普勒轨道关系。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790}
+
+按图 1-2 设中点位置矢量为
+\(\bm r\)，先把两颗星对应坐标分量的加速度写出，再合成径向加速度。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.84\linewidth,height=\textheight,keepaspectratio,alt={图1-2　中点轨道的焦点、中心和初始速度}]{../figures/solution-01.pdf}
+\caption*{图1-2　中点轨道的焦点、中心和初始速度}
+\end{figure}
+
+\needspace{3\baselineskip}
+\textbf{（一）两星球的坐标加速度}
+
+蔡子星到黄伯星的位移为 \[
+\bm R_{C\to H}=(-x,y),
+\qquad |\bm R_{C\to H}|=\sqrt{x^2+y^2}=2r. \tag{3}
+\] 蔡子星所受引力为 \[
+\bm F_C=\frac{Gm^2}{(2r)^3}(-x,y). \tag{4}
+\] 它只能沿 \(x\) 轴运动，\(y\) 向分量由约束力抵消，故 \[
+m\ddot x=-\frac{Gm^2x}{8r^3},
+\] 即 \[
+\boxed{\ddot x=-\frac{Gmx}{8r^3}}. \tag{5}
+\]
+
+同理，黄伯星到蔡子星的位移为 \((x,-y)\)。它只能沿 \(y\) 轴运动，所以 \[
+m\ddot y=-\frac{Gm^2y}{8r^3},
+\] 得到 \[
+\boxed{\ddot y=-\frac{Gmy}{8r^3}}. \tag{6}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（二）中点星人的加速度}
+
+由式（1）， \[
+\ddot{\bm r}
+=\frac{\ddot x}{2}\bm e_x+\frac{\ddot y}{2}\bm e_y. \tag{7}
+\] 代入式（5）、（6）： \[
+\begin{aligned}
+\ddot{\bm r}
+&=-\frac{Gm}{16r^3}(x\bm e_x+y\bm e_y)\\
+&=-\frac{Gm}{16r^3}(2\bm r)\\
+&=-\frac{Gm}{8r^3}\bm r.
+\end{aligned} \tag{8}
+\] 所以 \[
+\boxed{\ddot{\bm r}=-\frac{Gm}{8r^2}\hat{\bm r}}. \tag{9}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（三）虚拟中心天体质量}
+
+标准引力场中的加速度是 \[
+\ddot{\bm r}=-\frac{GM_*}{r^2}\hat{\bm r}. \tag{10}
+\] 比较式（9）、（10）， \[
+GM_*=\frac{Gm}{8},
+\] 因此 \[
+\boxed{M_*=\frac m8}. \tag{11}
+\]
+
+中点初始位置和速度为 \[
+\bm r_0=\left(\frac L2,0\right),
+\qquad \bm v_0=\left(0,-\frac{u_0}{2}\right). \tag{12}
+\] 速度与半径垂直，所以初态必为一个拱点。
+
+\needspace{3\baselineskip}
+\textbf{（四）半长轴与近、远拱点}
+
+记等效引力参数 \[
+\mu=GM_*=\frac{Gm}{8}. \tag{13}
+\] 中点的比机械能为 \[
+\begin{aligned}
+\varepsilon
+&=\frac12\left(\frac{u_0}{2}\right)^2-\frac{\mu}{L/2}\\
+&=\frac{u_0^2}{8}-\frac{Gm}{4L}.
+\end{aligned} \tag{14}
+\] 椭圆轨道满足 \[
+\varepsilon=-\frac{\mu}{2a}. \tag{15}
+\] 代入式（13）、（14）： \[
+\frac{u_0^2}{8}-\frac{Gm}{4L}
+=-\frac{Gm}{16a}. \tag{16}
+\] 两边乘以 16： \[
+2u_0^2-\frac{4Gm}{L}=-\frac{Gm}{a}. \tag{17}
+\] 故 \[
+\boxed{a=\frac{GmL}{2(2Gm-Lu_0^2)}}. \tag{18}
+\] 束缚椭圆要求分母为正，即 \[
+u_0^2<\frac{2Gm}{L}, \tag{19}
+\] 这正是题目所说``不会彼此分离''的定量条件。
+
+初始拱点半径为 \(r_0=L/2\)，另一个拱点半径为 \[
+r'=2a-r_0
+=\frac{L^2u_0^2}{2(2Gm-Lu_0^2)}. \tag{20}
+\] 统一写法是 \[
+\boxed{r_{\min}=\min\left(\frac L2,r'\right)},
+\qquad
+\boxed{r_{\max}=\max\left(\frac L2,r'\right)}. \tag{21}
+\]
+
+圆轨道临界速度由 \(u_0/2=\sqrt{\mu/(L/2)}\) 得 \[
+u_0^2=\frac{Gm}{L}. \tag{22}
+\] 当 \(u_0^2<Gm/L\) 时，初始速度偏小，\(L/2\) 是远拱点；当
+\(Gm/L<u_0^2<2Gm/L\) 时，初始速度偏大，\(L/2\) 是近拱点。
+
+\needspace{3\baselineskip}
+\textbf{（五）轨道方程}
+
+焦距为 \[
+c=\left|a-\frac L2\right|,
+\qquad b^2=a^2-c^2. \tag{23}
+\] 无论初始点是近拱点还是远拱点，椭圆中心的横坐标都为 \[
+x_c=\frac L2-a. \tag{24}
+\] 故轨道方程可统一写成 \[
+\boxed{
+\frac{\left[x-\left(\frac L2-a\right)\right]^2}{a^2}
++\frac{y^2}{b^2}=1
+}, \tag{25}
+\] 其中 \(a\) 由式（18）给出，\(b=\sqrt{a^2-(a-L/2)^2}\)。
+
+\textbf{中心力系数的两次``二分之一''。} 两星间距是中点半径的 2
+倍，因此引力分母给出 \(2^3=8\)；中点坐标再对两星坐标取一半。把矢量
+\(x\bm e_x+y\bm e_y=2\bm r\) 代回后，这个额外的 2
+又消去一次，最终系数仍为 \(Gm/8\)。逐步保留
+\(r=\sqrt{x^2+y^2}/2\)，可避免把等效质量误写成 \(m/4\) 或 \(m/16\)。
+
+\textbf{角动量复核偏心率。} 比角动量为 \[
+h=r_0v_0=\frac{Lu_0}{4}. \tag{26}
+\] 椭圆满足 \(h^2=\mu a(1-e^2)\)，所以 \[
+e=\sqrt{1-\frac{L^2u_0^2}{16\mu a}}. \tag{27}
+\] 代入 \(\mu=Gm/8\) 和式（18），可验证
+\(ae=|a-L/2|=c\)。这条独立路线同时核验了能量法所得半长轴与几何焦距。
+
+\textbf{三个极限。} 当 \(u_0^2=Gm/L\)，式（18）给出
+\(a=L/2,c=0\)，轨道为圆；当
+\(u_0\to0\)，\(a\to L/4,c\to L/4\)，椭圆退化为径向线段；当
+\(u_0^2\to2Gm/L\)
+的下侧时，\(a\to\infty\)，远拱点趋于无穷，椭圆逼近抛物线。三项都与中心力轨道图像一致。
+
+\textbf{另一个拱点的代数来路。} 椭圆两拱点半径之和为 \(2a\)，故 \[
+r'=2a-\frac L2. \tag{28}
+\] 将式（18）代入： \[
+\begin{aligned}
+r'
+&=\frac{GmL}{2Gm-Lu_0^2}-\frac L2\\
+&=\frac{2GmL-L(2Gm-Lu_0^2)}{2(2Gm-Lu_0^2)}\\
+&=\frac{L^2u_0^2}{2(2Gm-Lu_0^2)}.
+\end{aligned} \tag{29}
+\] 若 \(u_0^2<Gm/L\)，由 \[
+\frac{r'}{L/2}=\frac{Lu_0^2}{2Gm-Lu_0^2}<1 \tag{30}
+\] 可知 \(r'\) 是近拱点；若 \(u_0^2>Gm/L\)，不等号反向，\(r'\)
+是远拱点。这样无需凭轨道草图猜测。
+
+\textbf{轨道方程的焦点复核。} 式（25）的椭圆中心为 \(h=L/2-a\)，焦距为
+\(c=|a-L/2|=|h|\)。两个焦点是 \(h\pm c\)。当 \(h>0\) 时，\(h-c=0\)；当
+\(h<0\) 时，\(h+c=0\)。无论哪一分支，原点都确实是一个焦点。再代入初始点
+\((L/2,0)\)： \[
+\frac{[L/2-(L/2-a)]^2}{a^2}=1, \tag{31}
+\]
+说明它必在椭圆端点。焦点和端点两项同时通过，轨道平移符号才算核验完成。
+
+\textbf{约束力为什么不破坏中点方程。}
+每颗星球在垂直于允许运动轴的方向受到约束力，但相应坐标被固定，其二阶导数为零。我们只在允许方向使用牛顿第二定律，因此无需先求约束力。中点方程只由
+\(x,y\)
+两个可动坐标构成，约束力不直接出现；这不是忽略外力，而是达朗贝尔约束在广义坐标中的体现。
+
+\textbf{从初态直接判断轨道方向。} 初始中点位于 \(x\) 轴正向，速度沿
+\(-y\)，所以比角动量 \[
+h_z=x_0v_{0y}=-\frac{Lu_0}{4}<0. \tag{32}
+\] 轨道按顺时针方向运行。中心力始终指向原点，不改变
+\(h_z\)。因此轨道方程虽然只给几何曲线，配合初始速度即可唯一确定运动方向。
+
+\textbf{能量负值的分层检查。} 束缚条件 \(\varepsilon<0\) 给出
+\(u_0^2<2Gm/L\)；圆轨道条件是
+\(u_0^2=Gm/L\)。前者决定是否为椭圆，后者只决定初始拱点是哪一端。把这两个临界值混为一个，会错误地把所有非圆轨道都判成逃逸轨道。
+
+\textbf{半短轴的显式式。} 由 \(b^2=a^2-c^2\) 与 \(c=|a-L/2|\)： \[
+b^2=aL-\frac{L^2}{4}. \tag{33}
+\] 代入式（18）可得 \[
+b^2=\frac{L^3u_0^2}{4(2Gm-Lu_0^2)}. \tag{34}
+\] 在束缚且 \(u_0>0\) 时为正；\(u_0\to0\) 时
+\(b\to0\)，与退化径向轨道一致。 \textbf{轨道坐标与退化初态。}
+原题\(x,y\)是两星各自坐标；中点轨道方程另用\(X=x/2,Y=y/2\)，避免把星的坐标直接放入中点椭圆式。原点O是引力焦点，椭圆中心一般不在O。图1-2取\(u_0^2=0.6Gm/L\)，中点初始在\((L/2,0)\)，椭圆半长轴\(5L/14\)，中心位于\((L/7,0)\)。束缚且非碰撞的椭圆要求\(0<u_0^2<2Gm/L\)；\(u_0=0\)是到引力奇点的径向碰撞，不能当作可穿越奇点继续周期运动的普通椭圆。
+
+\needspace{3\baselineskip}
+\textbf{从原系统能量检查中点等效}
+
+约束力分别垂直于两星允许的速度，不做功。原系统机械能为 \[E_{\rm stars}
+=\frac m2(\dot x^2+\dot y^2)
+-\frac{Gm^2}{\sqrt{x^2+y^2}}.\]
+用中点坐标\(\boldsymbol R=(x/2,y/2)\)改写：
+\[E_{\rm stars}=2m\dot R^2-\frac{Gm^2}{2R}
+=4m\left(\frac{\dot R^2}{2}-\frac{Gm}{8R}\right).\]
+所以原系统总能量恰为中点``比机械能''的\(4m\)倍，等效参数再次得到\(\mu=Gm/8\)。虚拟中心质量\(m/8\)是描述中点加速度的参数，不是把原来两星质量相加或把真实质心质量改为\(m/8\)。
+
+令\(\xi=Lu_0^2/(Gm)\)，束缚区间为\(0<\xi<2\)，半长轴与另一拱点写成
+\[a=\frac{L}{2(2-\xi)},\qquad
+r'=\frac{L\xi}{2(2-\xi)}.\]
+偏心率为\(e=|1-\xi|\)。对图1-2的\(\xi=0.6\)，有
+\[a=5L/14,\quad r_{\min}=3L/14,\quad
+r_{\max}=L/2,\quad x_C=L/7.\]
+几何中心C与焦点O不同。初速度沿负y，轨道从右侧拱点顺时针出发，图中的初始速度方向应与这组坐标一致。
+
+\needspace{3\baselineskip}
+\textbf{以偏近圆初态求完整的时间参数}
+
+轨道方程给出位置之间的关系，若还要知道经过各点的时刻，可用偏近点角。取
+\(\xi=Lu_0^2/(Gm)=3/5\)，初始点是远拱点。此时
+\[a=\frac{5L}{14},\qquad e=\frac25,\qquad b=a\sqrt{1-e^2}=\frac{\sqrt{21}L}{14}.\]
+以椭圆中心为参照，选参数 \(\mathcal E\) 使
+\[X=\frac L7+a\cos\mathcal E,\qquad Y=-b\sin\mathcal E.\] 初态
+\(\mathcal E=0\)；随时间增加，\(Y\)
+先变负，符合原题速度方向。到原点的距离为 \[r=a(1+e\cos\mathcal E).\]
+角动量守恒要求面积速度不变。将参数式求导：
+\[X\dot Y-Y\dot X=-ab(1+e\cos\mathcal E)\dot{\mathcal E}.\] 所以
+\(\dot{\mathcal E}=n_K/(1+e\cos\mathcal E)\)，其中
+\[n_K=\sqrt{\mu/a^3}=\sqrt{\frac{343Gm}{125L^3}}.\] 从初态积分得到
+\[n_Kt=\mathcal E+e\sin\mathcal E.\]
+这条方程与从近拱点起算的常见写法符号不同，因为本题从远拱点开始。取
+\(\mathcal E=\pi\)，得到到达近拱点的时间
+\[t_{\rm near}=\frac{\pi}{n_K}=\pi\sqrt{\frac{125L^3}{343Gm}}.\] 再由
+\(x=2X,y=2Y\)
+重建两星的位置；中点参数不能直接作为两颗有质量星球的坐标。把
+\(\mathcal E=0,\pi\) 代入可分别得到两星间距 \(L\) 与
+\(3L/7\)，与前面的转向距离一致。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf}
+
+题眼是中点坐标。两个星球的受限运动看似不对称，但中点的加速度恰好沿
+\(-\bm r\)，且大小正比于 \(1/r^2\)，从而把整题压缩为一个质量参数为
+\(m/8\) 的标准开普勒问题。
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  把两星间距误当成 \(r\)，遗漏因子 8。
+\item
+  忘记中点坐标还要除以 2。
+\item
+  用中点速度 \(u_0\) 而不是 \(u_0/2\)。
+\item
+  未区分初始点可能是近拱点或远拱点。
+\item
+  椭圆中心与焦点混淆，轨道方程横向平移符号写反。
+\end{enumerate}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae}
+
+先要求学生只完成式（5）、（6），再让他们把 \((x/2,y/2)\)
+作为一个新质点位置。识别出平方反比中心力后，分别用能量和角动量两条路线求椭圆参数，并用圆轨道临界速度解释两种拱点分支。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3}
+
+\textbf{变式.} 两颗星质量改为 \(m_1,m_2\)，分别位于 \((x,0)\) 和
+\((0,y)\)，考察质量加权质心是否仍作严格平方反比中心力运动。
+
+\textbf{解答.} 在各自允许的轴向上， \[
+\ddot x=-\frac{Gm_2x}{(x^2+y^2)^{3/2}},
+\qquad
+\ddot y=-\frac{Gm_1y}{(x^2+y^2)^{3/2}}.
+\] 质心坐标是 \[
+\bm R=\left(\frac{m_1x}{m_1+m_2},
+\frac{m_2y}{m_1+m_2}\right),
+\] 其加速度为 \[
+\ddot{\bm R}=-\frac{Gm_1m_2}{m_1+m_2}
+\frac{(x,y)}{(x^2+y^2)^{3/2}}.
+\] 一般时 \((x,y)\) 与 \(\bm R\)
+不平行，因此这不是关于原点的中心加速度，更不能写成
+\(-\mu\bm R/R^3\)。只有
+\(m_1=m_2\)（或运动始终退化在某一坐标轴上）时，两向量才保持平行，原题的严格开普勒等效才成立。
+
+\needspace{3\baselineskip}
+\textbf{零速度、临界速度与轨道周期}
+
+束缚轨道的周期由等效开普勒参数决定： \[T=2\pi\sqrt{\frac{a^3}{Gm/8}}
+=2\pi\sqrt{\frac{L^3}{Gm(2-\xi)^3}}.\]
+圆轨道\(\xi=1\)给出\(T=2\pi\sqrt{L^3/(Gm)}\)；当\(\xi\to2^-\)，半长轴及周期都发散，对应逃逸边界。
+
+\(u_0=0\)时角动量为零，椭圆退化为穿过原点的径向落体，轨道方程中\(b=0\)不能再作为普通椭圆使用。两星相碰的时间等于退化开普勒轨道的半周期：
+\[t_{\rm coll}=\frac\pi{2\sqrt2}\sqrt{\frac{L^3}{Gm}}.\]
+碰撞之后点质量模型的势能奇异，原题没有给延续规则，不能让星球直接``穿过''后继续使用普通周期。
+
+不等质量变式中的质量加权质心通常不受中心加速度，但每颗星的轴向运动方程仍可逐分量求解。失去开普勒等效不代表约束力做功，只代表两个坐标的引力系数不同，不能合成同一个径向参数。
+
+\needspace{3\baselineskip}
+\textbf{轨道偏心率怎样随初速改变}
+
+令 \(\xi=Lu_0^2/(Gm)\)，束缚且非径向的范围为 \(0<\xi<2\)。中点比角动量为
+\(h=Lu_0/4\)，半通径为 \[p=\frac{h^2}{Gm/8}=\frac{\xi L}{2}.\] 再用
+\(p=a(1-e^2)\)： \[1-e^2=\xi(2-\xi),\qquad e=|1-\xi|.\] 取 \(\xi=1/2\)
+与 \(\xi=3/2\)，偏心率同为
+\(1/2\)，但前者的初态为远拱点，后者为近拱点。两者半长轴分别为 \(L/3\) 与
+\(L\)，因此不能凭偏心率相同认定它们是同一条轨道。周期比为
+\[\frac{T(3/2)}{T(1/2)}=\left(\frac{L}{L/3}\right)^{3/2}=3\sqrt3.\]
+中心坐标 \(X_c=L/2-a\)
+在前一种情况下为正，在后一种情况下为负。原点始终是焦点；椭圆中心可以位于初始点的任一侧。这个例子可用来检查学生是否把中心、焦点、初始拱点混为同一点。
+
+\needspace{3\baselineskip}
+\textbf{两星质量不等时，中点为何不再是开普勒质点}
+
+设沿 \(x\) 轴的星质量为 \(m_x\)，沿 \(y\) 轴的星质量为
+\(m_y\)，仍令中点坐标为
+\((X,Y)=(x/2,y/2)\)、\(r=\sqrt{X^2+Y^2}\)。受约束加速度为
+\[\ddot X=-\frac{Gm_y}{8r^3}X,\qquad
+\ddot Y=-\frac{Gm_x}{8r^3}Y.\] 其加速度与位置的叉积为
+\[X\ddot Y-Y\ddot X=\frac{G(m_y-m_x)}{8r^3}XY.\] 除非 \(m_x=m_y\)
+或恰在坐标轴上，该量不为零。中点比角动量因此不守恒，不能用一个固定虚拟中心质量把两个分量同时解释为同一中心引力。
+原题质量相等的条件在合成加速度时才起决定作用；它并非只用于把总质量写成
+\(2m\)。学生若把最终答案中的 \(m\)
+换成平均质量，会同时违反上述两个分量方程。对此变式应保留耦合坐标方程，或另求其积分结构，不能沿用原题椭圆。
+
+\newpage
+
+\section{第 2 题}\label{ux7b2c-2-ux9898}
+
+半径为 \(R\) 的水平圆盘上放置一根半径 \(r=nR\)、长度
+\(mR\)（\(m>1\)）、质量 \(M\)
+均匀分布的刚性滚筒。圆盘可绕中心竖直轴无摩擦转动。滚筒中心轴为
+\(AA'\)：\(A\) 端光滑铰接在圆盘轴线上，离盘面的距离为 \(r\)；\(A'\)
+端由竖直光滑限位器限制，使轴线 \(AA'\)
+始终位于纸面内。外力矩使滚筒绕自身轴以恒定角速度 \(\omega_0\) 转动。
+
+（1）圆盘允许微小形变，中心不变形、边缘形变最大，形变随半径线性变化；正压力微元
+\(\Delta N\) 正比于形变。滚筒与圆盘间为干性摩擦
+\(f=\mu\Delta N\)。求圆盘稳定角速度之比 \(\omega_1/\omega_0\)；
+
+（2）在上述稳定状态，求 \(A\) 点所受水平力与 \(Mg\) 的比值 \(F/(Mg)\)；
+
+（3）若接触处单位长度所受摩擦力正比于相对速度，求圆盘稳定角速度之比
+\(\omega_2/\omega_0\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.823\linewidth,height=\textheight,keepaspectratio,alt={图2-1　圆盘、滚筒、铰点与限位器的空间关系}]{../figures/question-02.pdf}
+\caption*{图2-1　圆盘、滚筒、铰点与限位器的空间关系}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-1}
+
+圆盘稳态由接触线上的正、反摩擦力矩相抵决定。干摩擦按压力分布加权，黏性摩擦按相对速度加权，两者的换向点不同。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-1}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  连续分布正压力与摩擦微元。
+\item
+  力矩积分中的半径权重。
+\item
+  干摩擦方向由相对速度符号决定。
+\item
+  稳态零合力矩。
+\item
+  刚体静力平衡和支座反力。
+\item
+  黏性摩擦的线性本构关系。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-1}
+
+用无量纲径向坐标 \(\rho\in[0,1]\) 表示圆盘接触点到中心的距离
+\(\rho R\)。滚筒表面速度大小处处为 \[
+v_c=\omega_0r=\omega_0nR, \tag{1}
+\] 圆盘接触点的速度为 \[
+v_d(\rho)=\omega\rho R. \tag{2}
+\] 两者相等处是摩擦方向的分界。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-1}
+
+设正压力微元为 \[
+dN=k\rho\,d\rho. \tag{3}
+\] 干摩擦微元大小为 \(df=\mu k\rho\,d\rho\)，对圆盘轴的力矩还要乘力臂
+\(\rho R\)。稳定时分界两侧力矩大小相等。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-1}
+
+图 2-2
+将接触区按相对滑动方向分成内、外两部分，下面的合力与力矩积分均使用图示的
+\(\rho\) 和分界半径 \(\lambda R\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.769\linewidth,height=\textheight,keepaspectratio,alt={图2-2　径向接触线上的摩擦换向点}]{../figures/solution-02.pdf}
+\caption*{图2-2　径向接触线上的摩擦换向点}
+\end{figure}
+
+\needspace{3\baselineskip}
+\textbf{（一）干摩擦下的稳定角速度}
+
+设相对速度在 \(\rho=\lambda\) 处为零： \[
+\omega_1\lambda R=\omega_0nR. \tag{4}
+\] 内区与外区的摩擦方向相反。稳定时圆盘角加速度为零，因此 \[
+\int_0^\lambda (\mu k\rho\,d\rho)(\rho R)
+=\int_\lambda^1(\mu k\rho\,d\rho)(\rho R). \tag{5}
+\] 约去公共因子 \(\mu kR\)： \[
+\int_0^\lambda\rho^2d\rho
+=\int_\lambda^1\rho^2d\rho. \tag{6}
+\] 积分得到 \[
+\frac{\lambda^3}{3}=\frac{1-\lambda^3}{3}, \tag{7}
+\] 故 \[
+\lambda^3=\frac12,
+\qquad \lambda=2^{-1/3}. \tag{8}
+\] 由式（4）： \[
+\boxed{\frac{\omega_1}{\omega_0}
+=\frac n\lambda=2^{1/3}n}. \tag{9}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（二）铰点 \(A\) 的水平力}
+
+两方向相反的摩擦力合力大小为 \[
+\begin{aligned}
+F
+&=\mu k\left(\int_0^\lambda\rho\,d\rho
+-\int_\lambda^1\rho\,d\rho\right)\\
+&=\frac{\mu k}{2}(2\lambda^2-1).
+\end{aligned} \tag{10}
+\]
+
+为了确定 \(k\)，对滚筒绕 \(A\) 点写竖直平面内的力矩平衡。滚筒重心距
+\(A\) 为 \(mR/2\)，故重力矩为 \[
+Mg\frac{mR}{2}. \tag{11}
+\] 正压力微元到 \(A\) 的力臂为 \(\rho R\)： \[
+\int_0^1(\rho R)dN
+=kR\int_0^1\rho^2d\rho
+=\frac{kR}{3}. \tag{12}
+\] 平衡条件给出 \[
+Mg\frac{mR}{2}=\frac{kR}{3},
+\qquad k=\frac32mMg. \tag{13}
+\] 代入式（10），再用 \(\lambda^2=2^{-2/3}\)： \[
+\begin{aligned}
+\frac F{Mg}
+&=\frac{3m\mu}{4}(2\lambda^2-1)\\
+&=\frac{3m\mu}{4}(2^{1/3}-1).
+\end{aligned} \tag{14}
+\] 因此 \[
+\boxed{\frac F{Mg}=\frac{3m\mu}{4}(2^{1/3}-1)}. \tag{15}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（三）黏性摩擦下的稳定角速度}
+
+设单位无量纲长度的摩擦力为 \[
+df=\alpha(\omega_0nR-\omega_2\rho R)d\rho, \tag{16}
+\] 其中正负号已包含方向。稳定时总力矩为零： \[
+0=\int_0^1df\,(\rho R). \tag{17}
+\] 代入式（16）并约去 \(\alpha R^2\)： \[
+\omega_0n\int_0^1\rho\,d\rho
+-\omega_2\int_0^1\rho^2d\rho=0. \tag{18}
+\] 即 \[
+\frac12\omega_0n-\frac13\omega_2=0. \tag{19}
+\] 所以 \[
+\boxed{\frac{\omega_2}{\omega_0}=\frac{3n}{2}}. \tag{20}
+\]
+
+\textbf{为什么干摩擦积分是 \(\rho^2\)。} 形变随 \(\rho\) 线性，所以
+\(dN\propto\rho d\rho\)；干摩擦大小同样含一个
+\(\rho\)；对中心取矩再乘力臂 \(\rho R\)，故积分核为
+\(\rho^2d\rho\)。若误用 \(\rho d\rho\)，会得到
+\(\lambda=1/\sqrt2\)，这正是常见错误来源。
+
+\textbf{水平合力与力矩分界不同。} 合力积分没有额外力臂，所以用
+\(\rho d\rho\)；力矩平衡用 \(\rho^2d\rho\)。式（10）中的
+\(2\lambda^2-1>0\)，说明内区合力占优，铰点反力方向与其相反；题目只问大小，最终取正值。
+
+\textbf{黏性模型无需分段。} 相对速度本身带符号，越过零点后 \(df\)
+自动反向。把它再人为拆成绝对值积分会破坏线性本构，并给出错误稳态。极限上
+\(2^{1/3}n\approx1.260n\)，\(3n/2=1.5n\)；不同摩擦律给出不同权重平均，结果不必相同。
+
+\textbf{正压力分布的归一化。} 由式（3），总支持力为 \[
+N=\int_0^1k\rho d\rho=\frac k2. \tag{21}
+\] 但一般
+\(N\ne Mg\)，因为铰点可承担竖直力，而竖直光滑限位器没有竖直反力。题目给出的滚筒长度为
+\(mR\)，正压力分布只占从 \(A\) 到圆盘边缘的 \(R\) 长度；因此确定 \(k\)
+的可靠方程是绕 \(A\) 的力矩平衡，而不是竖直合力平衡。由 \(k=3mMg/2\)
+可进一步得到 \[
+N=\frac34mMg, \tag{22}
+\] 剩余竖直反力由支承系统承担。
+
+\textbf{摩擦方向的显式判定。}
+取圆盘正转方向与滚筒接触面速度为正。相对速度 \[
+v_{\rm rel}(\rho)=\omega_0nR-\omega_1\rho R. \tag{23}
+\] 在 \(0<\rho<\lambda\) 时为正，摩擦驱动圆盘正向；在 \(\lambda<\rho<1\)
+时为负，摩擦制动圆盘。稳态不是全接触面无滑动，只有 \(\rho=\lambda\)
+的一条圆周瞬时无相对运动。干摩擦大小与滑动速率无关，所以两区的权重只由压力和力臂决定。
+
+\textbf{稳定性的定性判断。} 若圆盘角速度略低于 \(\omega_1\)，分界
+\(\lambda=n\omega_0/\omega\)
+向外移动，正向驱动力矩区域增大，圆盘被加速；若角速度略高，分界向内移动，反向制动力矩占优，圆盘减速。因此式（9）对应稳定定常状态，而不是不稳定平衡。
+
+\textbf{黏性稳态的加权平均。} 式（18）可写成 \[
+\omega_2=\omega_0n
+\frac{\int_0^1\rho d\rho}{\int_0^1\rho^2d\rho}. \tag{24}
+\] 分子来自滚筒固定表面速度乘力臂，分母来自圆盘速度本身还含一个
+\(\rho\)。这说明 \(3/2\) 不是偶然数值，而是两个几何矩之比。
+
+\textbf{从微元到力矩的逐层列表。} 对位于无量纲坐标 \(\rho\)
+的窄条，三项量依次为 \[
+dN=k\rho\,d\rho,
+\qquad df=\mu dN,
+\qquad d\tau=(\rho R)df. \tag{25}
+\] 于是 \[
+d\tau=\mu kR\rho^2d\rho. \tag{26}
+\] 式（26）清楚显示，压力分布提供一个 \(\rho\)，力臂再提供一个
+\(\rho\)。若只计算水平合力，则最后一项力臂不存在，积分核才退回
+\(\rho d\rho\)。把``微元正压力---微元摩擦力---微元力矩''分三行写出，是避免漏因子的最稳妥方法。
+
+\textbf{一般压力幂律的推广。} 若接触压力满足 \[
+dN=k\rho^p d\rho,
+\qquad p>-1, \tag{27}
+\] 干摩擦稳态要求 \[
+\int_0^\lambda\rho^{p+1}d\rho
+=\int_\lambda^1\rho^{p+1}d\rho. \tag{28}
+\] 逐步积分得 \[
+\frac{\lambda^{p+2}}{p+2}
+=\frac{1-\lambda^{p+2}}{p+2},
+\qquad
+\lambda=2^{-1/(p+2)}. \tag{29}
+\] 因此 \[
+\frac{\omega}{\omega_0}
+=\frac n\lambda
+=n\,2^{1/(p+2)}. \tag{30}
+\] 取 \(p=1\) 就还原式（9）。当 \(p\)
+增大时，压力更集中在外缘，分界半径向外移动，稳态角速度比 \(n\omega_0\)
+的超出量减小；这与外缘力矩权重增强的物理直觉一致。
+
+\textbf{铰点反力的补充核验。} 由式（22）可知接触总支持力为
+\(3mMg/4\)。若取竖直向上为正，设铰点竖直反力为 \(A_y\)，则 \[
+A_y+\frac34mMg-Mg=0,
+\qquad
+A_y=Mg\left(1-\frac{3m}{4}\right). \tag{31}
+\] 这里 \(A_y\) 可以为正也可以为负，取决于几何参数
+\(m\)；铰链能够提供双向约束力，因此这不构成矛盾。这个补充方程不能替代式（13），但能在已求出
+\(k\) 后检查整个刚体的竖直平衡。
+
+\textbf{限位器反力。}
+稳态圆盘净摩擦力矩为零；作用在滚筒上的反向摩擦对A的竖轴力矩也为零。限位器在A'的水平法向反力有非零力臂，所以竖轴力矩平衡使该反力为零，铰点独自平衡摩擦的水平合力。竖直方向有\(A_y+N=Mg\)，\(N=3mMg/4\)，故\(A_y=Mg(1-3m/4)\)。当长度参数\(m>4/3\)时\(A_y\)向下，理想双向铰接仍能提供这项力。
+
+\needspace{3\baselineskip}
+\textbf{稳态附近的回复力矩与一个数值例子}
+
+干摩擦稳态不意味着每个接触点都不滑动。设
+\(\omega>\omega_0n\)，摩擦换向半径为
+\(\lambda(\omega)=\omega_0n/\omega\)。圆盘总力矩可直接写成
+\[\tau_d(\omega)=\frac{\mu kR}{3}\left[2\lambda(\omega)^3-1\right].\] 在
+\(\omega_1=2^{1/3}n\omega_0\) 处，
+\[\left.\frac{\mathrm d\tau_d}{\mathrm d\omega}\right|_{\omega_1}
+ =-\frac{\mu kR}{\omega_1}<0.\]
+因此若圆盘角速度略大，外区制动力矩占优；若略小，内区驱动力矩占优。设圆盘惯量为
+\(J_d\)，微扰 \(\delta\omega\) 满足
+\[J_d\,\delta\dot\omega=-\frac{\mu kR}{\omega_1}\delta\omega,\]
+\[\delta\omega(t)=\delta\omega(0)\exp\!\left[-\frac{\mu kR}{J_d\omega_1}t\right].\]
+这是本模型稳态的局部稳定性；\(\omega_0\)
+必须由外部驱动维持，否则滚筒与圆盘会共同演化。
+
+例如取 \(m=6/5,n=1/10,\mu=1/5\)，干、黏两种角速度比分别为
+\[\omega_1/\omega_0=0.125992,\qquad \omega_2/\omega_0=0.150000.\]
+干摩擦水平反力为 \[F/(Mg)=\frac{9}{50}(2^{1/3}-1)\simeq0.046786.\]
+接触总正压力与铰点竖直反力为
+\[N_{\rm total}=\frac{k}{2}=\frac9{10}Mg,\qquad A_y=\frac1{10}Mg.\]
+两个角速度均小于滚筒角速度，是半径比 \(n\)
+的结果；圆盘边缘线速度则均超过滚筒表面线速度，因而确有外侧制动区。比较线速度须乘各自半径。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf-1}
+
+稳定角速度不是接触面任一点的无滑动条件，而是整个接触区的正、反摩擦力矩相互抵消。干摩擦由变形分布加权，黏性摩擦由相对速度连续加权。
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9-1}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  把滚筒表面速度写成 \(\omega_0\rho R\)；它应为常量 \(\omega_0nR\)。
+\item
+  力矩积分漏乘力臂 \(\rho R\)。
+\item
+  干摩擦不分方向，直接对全区同号积分。
+\item
+  用合力平衡确定 \(k\)，而不是绕 \(A\) 点的竖直力矩平衡。
+\item
+  黏性摩擦错误地取相对速度绝对值。
+\end{enumerate}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae-1}
+
+先在解答图上标出分界半径
+\(\lambda R\)，让学生口头判断两侧相对速度方向，再分别写合力矩与水平合力积分。最后比较干摩擦和黏性摩擦的权重差异。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3-1}
+
+设无量纲压力分布为\(\mathrm dN=k\rho^p\,\mathrm d\rho\)，\(p>-1\)，其中\(0\le\rho\le1\)。微元力矩为\(\mathrm d\tau=\mu R\rho\,\mathrm dN\)。稳态两段力矩相等：
+\[\int_0^\lambda\rho^{p+1}\,\mathrm d\rho
+=\int_\lambda^1\rho^{p+1}\,\mathrm d\rho,\] 故
+\[\lambda=2^{-1/(p+2)},\qquad\omega/\omega_0=n\,2^{1/(p+2)}.\]
+\(r=nR\)是滚筒半径，\(\lambda R\)是圆盘接触线上换向点到盘心的距离，两者不可混用。
+
+\needspace{3\baselineskip}
+\textbf{一般压力幂次下的合力}
+
+对于\(\mathrm dN=k\rho^p\,\mathrm d\rho\)、\(p>-1\)，竖直平面取矩给出
+\[\frac{kR}{p+2}=Mg\,\frac{mR}{2},\qquad
+k=\frac{m(p+2)}2Mg.\] 稳态换向点\(\lambda=2^{-1/(p+2)}\)，摩擦合力为
+\[F=\frac{\mu k}{p+1}(2\lambda^{p+1}-1),\] 因此 \[\frac F{Mg}=
+\frac{m\mu(p+2)}{2(p+1)}
+\left(2^{1/(p+2)}-1\right).\]
+在\(p=1\)还原正文结果。总正压力为\(N=k/(p+1)\)，铰点竖直力为\(A_y=Mg-N\)，它可以为负，因为铰接支座可以向下拉。
+
+若支座只能提供向上支持而不能拉，则还须要求 \[m\le\frac{2(p+1)}{p+2}.\]
+原题使用双向铰接，不必擅自加这一限制；将它改成单边接触支点时才需要检查。
+
+零净力矩时摩擦合力一般不为零，因为取矩积分与合力积分的半径权重不同。水平限位器反力为零的结论还依赖接触线、铰点和限位器的几何关系，而非单独来自``圆盘稳态''。
+
+\needspace{3\baselineskip}
+\textbf{黏性接触的稳态仍有耗散}
+
+将黏性系数改记为 \(\alpha_v\)。圆盘力矩是
+\[\tau_v=\alpha_vR^2\left(\frac{\omega_0n}{2}-\frac{\omega}{3}\right).\]
+稳态 \(\omega_2=3n\omega_0/2\)
+时总力矩为零，而相对滑动并未消失。接触耗散功率为
+\[P_{\rm loss}=\alpha_vR^2\int_0^1(\omega_0n-\omega_2\rho)^2\,\mathrm d\rho.\]
+依次积分常数、一次、二次项：
+\[P_{\rm loss}=\alpha_vR^2\left[(\omega_0n)^2-\omega_0n\omega_2+\frac{\omega_2^2}{3}\right].\]
+代入稳态得 \[P_{\rm loss}=\frac14\alpha_vR^2(\omega_0n)^2>0.\]
+圆盘受到的功率为
+\(\omega_2\tau_v=0\)，维持滚筒匀速的驱动仍须提供上述损耗。零合力矩与零耗散不是同一条件。若令圆盘初态静止，线性方程的解为
+\[\omega(t)=\omega_2[1-\exp(-t/t_v)],\qquad t_v=\frac{3J_d}{\alpha_vR^2}.\]
+此解从低速趋向稳态，无须把干摩擦的移动分界逐段代入黏性模型。
+
+\newpage
+
+\section{第 3 题}\label{ux7b2c-3-ux9898}
+
+一个长圆柱形绝缘薄壳长为 \(l\)、半径为 \(R\)，满足
+\(l\gg R\)，可绕水平中心轴转动，转动惯量为 \(I\)。质量为 \(m\)
+的小球通过轻绳绕在圆柱上，从静止释放，绳与圆柱不打滑。薄壳均匀带总电荷
+\(Q\)；转动后产生磁场和感生电场。忽略辐射与狭义相对论效应，静电力常量为
+\(k\)，真空磁导率为 \(\mu_0\)。求：
+
+（1）已知某时刻角加速度 \(\beta_1\)、角速度 \(\omega_1\)，求 \(r_1=R/2\)
+处磁感应强度 \(B_1\)；
+
+（2）求 \(r_2=2R\) 处磁感应强度 \(B_2\)；
+
+（3）求 \(r_1=R/2\) 处电场大小 \(E_1\)；
+
+（4）求 \(r_2=2R\) 处电场大小 \(E_2\)；
+
+（5）求实际角加速度 \(\beta\)；
+
+（6）小球下降高度 \(H\) 时装置的总动能 \(E_k\)；
+
+（7）求系统磁场能量 \(E_{e1}\)；
+
+（8）判断用磁场能量密度、等效电感储能、能流密度时间积分三种方法能否得到
+\(mgH-E_k\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.623\linewidth,height=\textheight,keepaspectratio,alt={图3-1　带电圆柱薄壳与下落小球}]{../figures/question-03.pdf}
+\caption*{图3-1　带电圆柱薄壳与下落小球}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-2}
+
+总电场包含径向静电场与环向感生场。后者既决定两处场强，也对带电圆柱产生反力矩；动力学与三种场能算法应给出同一个电磁惯量。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-2}
+
+面电流；长圆柱近似；高斯定律；分区法拉第环路；电磁反力矩；磁场能量；等效电感；坡印廷能流。
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-2}
+
+柱坐标的轴向是\(z\)，径向是s，环向是\(\varphi\)。若正电荷逆时针转动，B指向\(+z\)；加速时\(E_\varphi<0\)。图中的圆点表示磁场出纸面，避免把轴向磁场误画成截面内的竖直箭头。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.87\linewidth,height=\textheight,keepaspectratio,alt={图3-2　两种电场分量与磁能流入方向}]{../figures/solution-03.pdf}
+\caption*{图3-2　两种电场分量与磁能流入方向}
+\end{figure}
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-2}
+
+先求\(B(s)\)和\(E_s(s)\)，再用\(\dot B=\mu_0Q\beta/(2\pi l)\)求\(E_\varphi(s)\)。两电场分量正交，总场大小为\(\sqrt{E_s^2+E_\varphi^2}\)。壳面感生力矩与磁场能必须含同一电磁惯量系数。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-2}
+
+\needspace{3\baselineskip}
+\textbf{（一）（二）两处磁场}
+
+面电荷密度\(\sigma=Q/(2\pi Rl)\)，面电流\(K=\sigma\omega R=Q\omega/(2\pi l)\)。在长圆柱中部的准静态近似下
+\[B(s)=\begin{cases}\mu_0Q\omega/(2\pi l),&s<R,\\0,&s>R.\end{cases}\] 故
+\[\boxed{B_1=\frac{\mu_0Q\omega_1}{2\pi l},\qquad B_2\simeq0}.\]
+若问大小，取对应表达式的绝对值；磁场方向随\(Q\omega\)改变。
+
+\needspace{3\baselineskip}
+\textbf{（三）（四）总电场}
+
+高斯定律给出静电分量
+\[E_s(s)=\begin{cases}0,&s<R,\\2kQ/(ls),&s>R.\end{cases}\]
+法拉第环路在\(s<R\)包围磁通\(\pi s^2B\)，在\(s>R\)包围磁通\(\pi R^2B\)，所以
+\[E_\varphi(s)=\begin{cases}-\dfrac s2\dot B,&s<R,\\-\dfrac{R^2}{2s}\dot B,&s>R.\end{cases}\]
+其中\(\dot B=\mu_0Q\beta_1/(2\pi l)\)。代入两个半径：
+\[\boxed{E_1=\frac{\mu_0|Q\beta_1|R}{8\pi l}},\]
+\[\boxed{E_2=\sqrt{\left(\frac{kQ}{lR}\right)^2+
+\left(\frac{\mu_0Q\beta_1R}{8\pi l}\right)^2}}.\]
+两点的环向分量恰有相同大小，但外点还含径向静电场。原稿的\(E_1=0\)与\(E_2=kQ/(lR)\)只能作为静电分量答案，不能回答总电场。
+
+\needspace{3\baselineskip}
+\textbf{（五）实际角加速度}
+
+壳面\(s=R\)处\(E_\varphi=-\mu_0QR\beta/(4\pi l)\)。总环向力矩
+\[M_{\rm em}=QE_\varphi R=-I_{\rm em}\beta,\]
+\[\boxed{I_{\rm em}=\frac{\mu_0Q^2R^2}{4\pi l}}.\]
+设绳张力为T，绳与外缘相切而无滑动，小球加速度\(a=R\beta\)。两项动力学式为
+\[TR-I_{\rm em}\beta=I\beta,\qquad mg-T=mR\beta.\] 消去T：
+\[\boxed{\beta=\frac{mgR}{I+mR^2+I_{\rm em}}}.\]
+\(I_{\rm em}\)是附加惯量，不是恒定阻力；\(Q\)的符号反转不改变它。
+
+\needspace{3\baselineskip}
+\textbf{（六）总机械动能}
+
+下降高度H后，转角为\(H/R\)，从静止加速满足\(\omega^2=2\beta H/R\)。故
+\[E_k=\frac12(I+mR^2)\omega^2,\]
+\[\boxed{E_k=mgH\frac{I+mR^2}{I+mR^2+I_{\rm em}}}.\]
+圆柱和小球的机械动能都应计入，不能只取\(I\omega^2/2\)。
+
+\needspace{3\baselineskip}
+\textbf{（七）磁场能}
+
+内部场近似均匀，场区体积是\(\pi R^2l\)，并非薄壳材料体积。于是
+\[U_B=\frac{B^2}{2\mu_0}\pi R^2l
+=\frac12I_{\rm em}\omega^2,\]
+\[\boxed{E_{e1}=mgH\frac{I_{\rm em}}{I+mR^2+I_{\rm em}}=mgH-E_k}.\]
+两项能量份额相加为1，这也验证动力学中的电磁惯量系数。
+
+\needspace{3\baselineskip}
+\textbf{（八）另外两种场能计算}
+
+面电流等效为轴向均匀铺展的一匝电流
+\[i=\frac{Q\omega}{2\pi},\qquad L_{\rm eq}=\frac{\mu_0\pi R^2}{l}.\]
+这匝的内部磁通为\(\Phi=\pi R^2B=L_{\rm eq}i\)，故\(L_{\rm eq}i^2/2=I_{\rm em}\omega^2/2\)。
+
+在圆柱内部侧面的极限处，坡印廷矢量\(\boldsymbol S=\boldsymbol E\times\boldsymbol B/\mu_0\)。环向感生电场与轴向磁场给出
+\[S_s=E_\varphi B/\mu_0=-\frac R{2\mu_0}B\dot B,\]
+方向向内。进入场区的功率是
+\[P_{\rm in}=-2\pi RlS_s=\frac{\pi R^2l}{\mu_0}B\dot B
+=\frac{\mathrm d}{\mathrm dt}\left(\frac{B^2}{2\mu_0}\pi R^2l\right).\]
+由初始B为零积分，得到同一个\(U_B\)。径向静电场与B叉乘产生环向能流，不贡献侧面径向通量。
+
+因此在同一长圆柱准静态模型内，场能密度、电感储能和能流积分三种方法均得到\(mgH-E_k\)。
+
+\textbf{边界取值。}
+能流计算的是圆柱内部磁场体积的变化，要用\(s\to R^-\)的内部B。壳面磁场有跃变，不能随意取内外平均后再计算进入内部体积的能流，否则会漏因子2。壳面的机械反力矩则直接使用连续的环向感生电场。
+
+\textbf{近似的阶数。}
+本题忽略端部漏场、辐射和相对论；感生电场自身的能量属于更高阶准静态修正，这里保留领先的磁能与电磁惯量。长圆柱公式适用于中部且变化足够慢的近区，不宜将瞬时场推广至任意远距离。径向静电分布保持不变，静电场能的变化在本模型内为零。
+
+\textbf{极限与张力。}
+\(Q\to0\)时恢复普通带轮下落；\(I_{\rm em}\to\infty\)时角加速度趋零，主要能量进入磁场。张力\(T=mg-mR\beta\ge0\)，且\(\beta\le g/R\)，是两个直接的动力学检查。
+
+\needspace{3\baselineskip}
+\textbf{把动力学、功率和磁能写成同一账本}
+
+从\(TR=(I+I_{\rm em})\beta\)与小球式\(mg-T=mR\beta\)可直接求张力
+\[T=mg\,\frac{I+I_{\rm em}}{I+mR^2+I_{\rm em}}.\]
+因此\(0\le T<mg\)，小球确向下加速。电磁反力矩的机械功率为
+\[P_{\rm em}=-I_{\rm em}\beta\omega.\] 磁能的增加率为
+\[\dot U_B=I_{\rm em}\omega\beta=-P_{\rm em}.\]
+绳张力只是把小球的机械能传给圆柱，并非额外能源；电磁反力矩则把机械功送入磁场。
+
+若用小球瞬时速度\(v=R\omega\)检查总功率： \[mgv
+=\frac{\mathrm d}{\mathrm dt}
+\left[\frac12mR^2\omega^2+\frac12I\omega^2
++\frac12I_{\rm em}\omega^2\right].\]
+代入\(\beta\)后两边相等。由此可同时排除把小球平动动能漏掉、把磁能误计两次等错误。
+
+壳外电场不能只报一个方向。若\(Q>0,\beta>0\)，\(s=2R\)处静电分量向外、感生分量顺时针，它们互相垂直。两分量的比值为
+\[\frac{|E_\varphi|}{|E_s|}
+=\frac{\mu_0\beta R^2}{8\pi k}
+=\frac{\beta R^2}{2c^2}.\]
+最后一步使用\(\mu_0/(4\pi k)=1/c^2\)。慢加速时静电分量通常占优，但感生分量仍决定磁场能与反力矩，不能因其较小就把第（3）问写成零。
+
+\needspace{3\baselineskip}
+\textbf{从电流片到磁场，再到反作用转矩}
+
+圆柱面电荷面密度为 \(\sigma=Q/(2\pi Rl)\)，其表面环向速度为
+\(\omega R\)，所以环向面电流为
+\[K_\varphi=\sigma\omega R=\frac{Q\omega}{2\pi l}.\]
+在长圆柱近似下，选矩形安培回路，其两条轴向边分别在柱内、柱外。外部磁场取零，故
+\[B_zl_A=\mu_0K_\varphi l_A,\qquad B_z=\frac{\mu_0Q\omega}{2\pi l}.\]
+这里 \(l_A\)
+是回路轴向长度，最终约去；不能误用一圈电荷转动产生的电流直接作为面电流。
+
+取柱面处的法拉第回路： \[2\pi R E_\varphi=-\pi R^2\dot B_z.\] 于是
+\[E_\varphi(R)=-\frac{\mu_0QR}{4\pi l}\dot\omega.\]
+电场对全柱面电荷的转矩为 \[\tau_{\rm em}=QRE_\varphi(R)
+=-\frac{\mu_0Q^2R^2}{4\pi l}\dot\omega=-I_{\rm em}\dot\omega.\] 即使
+\(Q<0\)，电场方向会随之反转，转矩仍含
+\(Q^2\)，总是反抗角加速度。机械转动方程为 \[I\beta=TR-I_{\rm em}\beta,\]
+悬挂物体的平动方程为 \[mg-T=mR\beta.\] 消去张力：
+\[\beta=\frac{mgR}{I+mR^2+I_{\rm em}},\qquad
+T=mg\frac{I+I_{\rm em}}{I+mR^2+I_{\rm em}}.\]
+这与磁能法得到的有效惯量相同，给出一次独立的受力核验。静电场的能量不随
+\(\omega\) 改变，因而没有进入本题的加速能量账本。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf-2}
+
+同一个\(I_{\rm em}\)既出现在反力矩中，又出现在磁能中。总电场的环向分量正是两者相联系的媒介。
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9-2}
+
+壳内径向静电场为零，不代表总电场为零。外部感生电场包围的是\(\pi R^2\)磁通。轴向B不能画成径向；能流进入内部体积时使用内部侧的场值。
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae-2}
+
+按八问依次给出两处B、两处总E、角加速度、机械能、磁能和三种能量计算。先在截面上画\(E_s,E_\varphi,B_z\)的正交关系，再推自力矩，最后让三条场能路径核对同一系数。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3-2}
+
+令机械惯量\(J_m=I+mR^2\)，使磁能占重力势能损失的一半，应满足\(I_{\rm em}=J_m\)，故
+\[|Q|=\sqrt{\frac{4\pi lJ_m}{\mu_0R^2}}.\]
+此时\(\beta=mgR/(2J_m)\)，机械与磁场各得\(mgH/2\)。若电荷量增大到原来的两倍，电磁惯量变成四倍，能量份额须重新计算，不能认为场能比例简单翻倍。
+
+\needspace{3\baselineskip}
+\textbf{电荷加倍时的能量比例}
+
+设原电磁惯量与机械惯量的比为\(\zeta=I_{\rm em}/J_m\)，则磁能份额和机械动能份额分别是
+\[\eta_B=\frac{\zeta}{1+\zeta},\qquad
+\eta_K=\frac1{1+\zeta}.\]
+电荷增大到两倍时\(\zeta\to4\zeta\)，不是\(2\zeta\)。若原来\(\eta_B=1/2\)，有\(\zeta=1\)，新份额是\(\eta_B=4/5\)、\(\eta_K=1/5\)，角加速度由\(mgR/(2J_m)\)降至\(mgR/(5J_m)\)。
+
+改变Q符号而不改大小时，B与环向感生电场同时反向，反力矩仍为\(-I_{\rm em}\beta\)；磁能和下落加速度不变。把电场反向而忘记电荷也反向，会错误地把附加惯量变成助推力矩。
+
+圆柱长为l而非无限长。径向静电场在远处与端部会偏离长圆柱公式；感生场的瞬时近区表达式也要受传播时间限制。三种场能算法相互一致的前提是采用同一长圆柱、准静态近似，不将一种算法中的有限端部项与另一种的无限长近似混合。
+
+\needspace{3\baselineskip}
+\textbf{用坡印廷通量核对磁能增长率}
+
+在柱面内侧，\(E_\varphi=-R\dot B_z/2\)。取
+\(B_z>0,\dot B_z>0\)，坡印廷矢量的径向分量为
+\[S_R=\frac{E_\varphi B_z}{\mu_0}
+=-\frac{RB_z\dot B_z}{2\mu_0}<0.\] 能流穿过柱面向内。总流入功率为
+\[P_{\rm in}=-S_R(2\pi Rl)
+=\frac{\pi R^2l}{\mu_0}B_z\dot B_z.\] 磁能的时间导数是
+\[\frac{\mathrm d}{\mathrm dt}\left(\frac{B_z^2}{2\mu_0}\pi R^2l\right)
+=\frac{\pi R^2l}{\mu_0}B_z\dot B_z,\]
+与能流完全相等。柱面电荷受到感生电场的功率则为
+\[P_{\rm em}=\tau_{\rm em}\omega=-I_{\rm em}\omega\dot\omega.\]
+机械系统损失的这一项恰是磁场储能的增长率。这里 \(I_{\rm em}\)
+表示能量二次型的系数；若另讨论整个电磁场的角动量，还要处理有限端部的场，不能仅凭有效惯量名称推断其角动量分布。
+
+\needspace{3\baselineskip}
+\textbf{用一个无量纲惯量组合分配能量}
+
+取 \(I=mR^2,I_{\rm em}=2mR^2\)，则悬挂物体的等效转动惯量为
+\(mR^2\)，合计 \(4mR^2\)。角加速度和下落加速度分别为
+\[\beta=\frac{g}{4R},\qquad a=\frac g4.\] 张力为 \(T=3mg/4\)。下落距离
+\(H\) 后由 \(v^2=2aH\) 得
+\[v^2=\frac{gH}{2},\qquad \omega^2=\frac{gH}{2R^2}.\] 三个储能部分为
+\[K_{\rm mass}=\frac12mv^2=\frac14mgH,\]
+\[K_{\rm cyl}=\frac12I\omega^2=\frac14mgH,\]
+\[U_B=\frac12I_{\rm em}\omega^2=\frac12mgH.\] 它们相加为重力势能下降
+\(mgH\)。机械动能只占一半；若用重力势能全部等于机械动能求速度，会把
+\(v^2\) 算大一倍。
+在这个例子中，磁能比例较大但仍须满足原题的长圆柱、准静态与低速近似，不能仅凭所选惯量比例推广到辐射显著的快速变化情形。
+
+\newpage
+
+\section{第 4 题}\label{ux7b2c-4-ux9898}
+
+图（a）、（b）为两种由相同元件组成的交流电桥。电感阻抗
+\(\widetilde Z_L=i\omega L\)，电容阻抗
+\(\widetilde Z_C=1/(i\omega C)\)。
+
+（1）按图（a）接入 \(U(t)=U_0\cos\omega t\)，其中
+\(\omega=2\omega_0=2/\sqrt{LC}\)，求稳态干路电流振幅 \(I_0\)；
+
+（2）求干路电流相对电源的相位差 \(\varphi_0\)；
+
+（3）按图（b）接入
+\(U(t)=U_0\cos\omega_0t\)，\(\omega_0=1/\sqrt{LC}\)，求电桥中间电阻内向上电流的振幅
+\(I_1\)；
+
+（4）求该电流相对电源的相位差 \(\varphi_1\)；
+
+（5）求图（b）的干路电流振幅 \(I_2\)；
+
+（6）求干路电流相对电源的相位差 \(\varphi_2\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图4-1　同臂与交叉臂交流电桥}]{../figures/question-04.pdf}
+\caption*{图4-1　同臂与交叉臂交流电桥}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-3}
+
+两种LC桥的连接次序不同。先判断中点是否等势，再按给定频率求节点电势和支路电流；电源回路的串联电阻只计一次。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-3}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  复阻抗和相量法。
+\item
+  对称电桥的等势点。
+\item
+  串并联复阻抗。
+\item
+  基尔霍夫电流定律与电压定律。
+\item
+  电流振幅与相位的读取。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-3}
+
+定义特征阻抗 \[
+r=\sqrt{\frac LC}. \tag{1}
+\] 在 \(\omega_0=1/\sqrt{LC}\) 时， \[
+Z_L=ir,
+\qquad Z_C=-ir. \tag{2}
+\] 图（b）正是利用两种电抗大小相等、符号相反形成特殊桥路。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-3}
+
+图（a）上下两支路完全相同，中点等势，中间电阻无电流。图（b）先规定干路电流为
+\(\widetilde I\)、桥臂向上电流为
+\(\widetilde I_1\)，再利用左右节点把上下支路电流写成
+\((\widetilde I\pm\widetilde I_1)/2\)。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-3}
+
+按图 4-2 规定干路电流 \(\widetilde I\) 与桥臂电流 \(\widetilde I_1\)
+的正方向，再从节点电流关系写出四条支路电流。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.82\linewidth,height=\textheight,keepaspectratio,alt={图4-2　分别对应两种频率的电流相量}]{../figures/solution-04.pdf}
+\caption*{图4-2　分别对应两种频率的电流相量}
+\end{figure}
+
+\needspace{3\baselineskip}
+\textbf{（一）图（a）的等效阻抗}
+
+当 \(\omega=2/\sqrt{LC}\) 时， \[
+Z_L=i\omega L=2ir, \tag{3}
+\] \[
+Z_C=\frac1{i\omega C}=-\frac{i r}{2}. \tag{4}
+\] 每条串联支路阻抗为 \[
+Z_s=Z_L+Z_C=\frac32ir. \tag{5}
+\] 两条相同支路并联： \[
+Z_p=\frac{Z_s}{2}=\frac34ir. \tag{6}
+\] 再与电源串联电阻 \(R\) 相加： \[
+Z_a=R+\frac34ir. \tag{7}
+\] 因此干路电流振幅为 \[
+\boxed{I_0=\frac{U_0}{\sqrt{R^2+\dfrac{9r^2}{16}}}}. \tag{8}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（二）图（a）的相位差}
+
+阻抗辐角为 \[
+\arg Z_a=\arctan\frac{3r}{4R}. \tag{9}
+\] 电流相量是电压相量除以阻抗，所以 \[
+\boxed{\varphi_0=-\arctan\frac{3r}{4R}}. \tag{10}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（三）图（b）的方程组}
+
+以下均在 \(\omega_0\) 下计算。设干路电流相量为
+\(\widetilde I\)，中间电阻向上电流为
+\(\widetilde I_1\)。由节点电流关系，上、下有关支路电流可写成 \[
+\widetilde I_L=\frac12(\widetilde I+\widetilde I_1),
+\qquad
+\widetilde I_C=\frac12(\widetilde I-\widetilde I_1). \tag{11}
+\] 比较桥臂两端电势，可得 \[
+-ir(\widetilde I+\widetilde I_1)
+=ir(\widetilde I-\widetilde I_1)+2R\widetilde I_1. \tag{12}
+\] 展开： \[
+-ir\widetilde I-ir\widetilde I_1
+=ir\widetilde I-ir\widetilde I_1+2R\widetilde I_1. \tag{13}
+\] 约去两侧相同的 \(-ir\widetilde I_1\)： \[
+-2ir\widetilde I=2R\widetilde I_1. \tag{14}
+\] 故 \[
+\boxed{\widetilde I_1=-i\frac rR\widetilde I}. \tag{15}
+\]
+
+对包含电源的外回路写电压方程，整理后得到 \[
+\left(2R+\frac{2r^2}{R}\right)\widetilde I=2U_0. \tag{16}
+\] 所以 \[
+\boxed{\widetilde I=\frac{RU_0}{R^2+r^2}}. \tag{17}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（四）图（b）各电流振幅与相位}
+
+由式（15）、（17）： \[
+\widetilde I_1=-i\frac{rU_0}{R^2+r^2}. \tag{18}
+\] 因此 \[
+\boxed{I_1=\frac{rU_0}{R^2+r^2}},
+\qquad
+\boxed{\varphi_1=-\frac\pi2}. \tag{19}
+\]
+
+干路电流相量式（17）为正实数，所以 \[
+\boxed{I_2=\frac{RU_0}{R^2+r^2}},
+\qquad
+\boxed{\varphi_2=0}. \tag{20}
+\] 其中 \(r^2=L/C\)。
+
+\textbf{图（a）中桥臂为何无电流。} 上下两条 \(L\)---\(C\)
+串联支路参数和连接方向完全相同，在任意频率下对应中点电势相等。因此中间电阻两端电压为零。这个判断早于代入特殊频率；特殊频率只用于化简每条支路的电抗。
+
+\textbf{图（b）的功率复核。} 干路电流与电源同相，电源平均功率为
+\(U_{\rm rms}I_{\rm rms}\)。电感、电容平均功率为零，全部有功功率应耗散在电阻中。桥臂电流虽与电源相差
+\(-\pi/2\)，但其端电压不等同于电源电压，不能据此断言桥臂电阻不耗能；必须使用该电阻自身的电压电流同相关系。
+
+\textbf{极限检查。} 当
+\(R\gg r\)，\(I_2\sim U_0/R\)、\(I_1/I_2=r/R\ll1\)；当 \(R\ll r\)，干路
+\(I_2\sim RU_0/r^2\) 很小，而桥臂
+\(I_1\sim U_0/r\)。两极限均与式（19）、（20）连续相符。
+
+\textbf{式（16）的逐项来源。}
+选取包含电源、下方电阻和一组桥臂的闭合回路。将式（11）中的支路电流代入
+\(ir\) 与 \(-ir\) 的压降，桥中电阻压降用 \(R\widetilde I_1\)
+表示，再利用式（15）消去 \(\widetilde I_1\)。虚部恰好抵消，剩余实部为 \[
+2R\widetilde I+2\frac{r^2}{R}\widetilde I=2U_0. \tag{21}
+\] 除以 2 后，端口等效阻抗为 \[
+Z_{\rm in}=R+\frac{r^2}{R}. \tag{22}
+\] 它是纯实数，直接说明 \(\varphi_2=0\)，也给出式（17）。
+
+\textbf{桥臂相位的物理含义。} 式（15）中的 \(-i\)
+表明向上桥臂电流比干路电流滞后
+\(90^\circ\)。若把中间电流正方向改为向下，振幅不变，相量整体乘
+\(-1\)，相位应改为
+\(+\pi/2\)。因此相位答案必须与题目规定的``向上为正''一起报告。
+
+\textbf{复数模长的代数检查。} 图（a）中 \[
+|Z_a|^2=\left(R+\frac34ir\right)
+\left(R-\frac34ir\right)
+=R^2+\frac9{16}r^2. \tag{23}
+\] 交叉虚项相消。若振幅分母出现
+\(R^2-9r^2/16\)，说明把模平方误当成普通平方。
+
+\textbf{图（b）方程的方向约定。} 先在图中固定三个方向：干路电流
+\(\widetilde I\) 由电源流入网络，中间电流 \(\widetilde I_1\)
+向上，上、下对称支路电流分别取式（11）的组合。节点处直接检查： \[
+\frac{\widetilde I+\widetilde I_1}{2}
++\frac{\widetilde I-\widetilde I_1}{2}
+=\widetilde I. \tag{24}
+\]
+两支路电流的和确实等于干路电流，说明式（11）满足基尔霍夫第一定律。随后沿回路行进时，顺电流方向写
+\(+ZI\) 压降、逆电流方向写 \(-ZI\) 压降。方向一旦固定，中间的 \(-i\)
+相位便不再依赖猜测。
+
+\textbf{电流比的几何意义。} 由式（15）有 \[
+\left|\frac{\widetilde I_1}{\widetilde I}\right|=\frac rR,
+\qquad
+\arg\frac{\widetilde I_1}{\widetilde I}=-\frac\pi2. \tag{29}
+\] 因此相量图中两电流互相垂直，直角三角形两边之比正是 \(r:R\)。若
+\(R=r\)，两电流振幅相等，但方向仍相差
+\(90^\circ\)，不能把``振幅相等''误判成``同相''。
+
+\textbf{两种电桥的对称性不可混用。} 图（a）中上、下 \(L\)--\(C\)
+支路完全相同，中点等势，故桥臂无电流。每条支路阻抗 \[
+Z_b=i\left(\omega L-\frac1{\omega C}\right),
+\] 两支路并联后必须除以 \(2\)。图（b）在 \(\omega_0=1/\sqrt{LC}\) 时有
+\(Z_L=-Z_C\)，但中点不再等势。规定桥臂电流向上，联立节点和回路方程得 \[
+\widetilde I_1=-i\frac rR\widetilde I.
+\] 因子 \(-i\) 表示相位滞后
+\(\pi/2\)，不是简单的电流反向。若电源相量取实轴正向，则桥臂电流相量位于负虚轴；把时间约定改为
+\(e^{-i\omega t}\)
+时相位符号会整体反转，但可观测的超前、滞后关系必须与所采用的约定一致。
+
+\textbf{电流相位与电源回路。}
+图(b)的总阻抗是实数\(R+r^2/R\)，干路电流与电压同相；桥臂按向上为正，\(I_1=-irU/(R^2+r^2)\)，落后电源电压\(\pi/2\)。图(a)、(b)使用不同指定频率，两组相量必须分别标注，不能当作同一工作点的两股同时存在电流。电源下端和桥的返回端已用导线闭合。
+
+\needspace{3\baselineskip}
+\textbf{跨接支路的功率与外接电阻的最优值}
+
+图（b）中设左、右端电势分别为
+\(\widetilde U_{\rm net},0\)，中间上、下节点电势为
+\(V_P,V_Q\)。电感阻抗为 \(ir\)，电容阻抗为 \(-ir\)。节点方程为
+\[\frac{V_P-\widetilde U_{\rm net}}{ir}
++\frac{V_P}{-ir}+\frac{V_P-V_Q}{R}=0,\]
+\[\frac{V_Q-\widetilde U_{\rm net}}{-ir}
++\frac{V_Q}{ir}+\frac{V_Q-V_P}{R}=0.\]
+两式相加及相减可分别确定节点和、节点差；跨接电阻电流满足
+\[V_P-V_Q=\frac{R}{ir}\widetilde U_{\rm net}.\]
+代回输入电流得到纯实数输入阻抗
+\(r^2/R\)。再计入电源串联电阻，输入总阻抗为 \(R+r^2/R\)，这里的两个
+\(R\) 属于图中不同位置，不能只保留一只。
+
+取峰值电压 \(U_0\)，外接串联电流的峰值为
+\[I_{\rm src}=\frac{RU_0}{R^2+r^2}.\] 外接电阻平均功率为
+\[\overline P_{\rm ext}=\frac12RI_{\rm src}^2
+=\frac{U_0^2R^3}{2(R^2+r^2)^2}.\] 对 \(R\) 求导，可见该功率最大时
+\(R=\sqrt3r\)。而总源电流最大时
+\[\frac{\mathrm dI_{\rm src}}{\mathrm dR}
+=\frac{U_0(r^2-R^2)}{(R^2+r^2)^2}=0,\] 给出
+\(R=r\)。最大电流与最大外接电阻功率的参数不同，因为改变 \(R\)
+也同时改变负载。题目中的
+\(I_2=2I_{\rm src}\)，计算功率时须使用支路定义中的实际电流。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf-3}
+
+相量法的计算依据不是把每条支路都逐支路联立，而是先识别对称性与特征频率。图（a）先消桥臂，图（b）再用
+\(Z_L=-Z_C\) 把复方程压缩为两条关系。
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9-3}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  把 \(Z_C\) 写成 \(+i/(\omega C)\)。
+\item
+  两相同支路并联后阻抗未除以 2。
+\item
+  电流相位与阻抗相位取同号。
+\item
+  图（b）沿用图（a）的等势结论。
+\item
+  把相量 \(-i\) 只解释为负方向，而忽略它表示相位滞后 \(\pi/2\)。
+\end{enumerate}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae-3}
+
+先在复平面画出
+\(Z_L,Z_C\)，再分别处理两图。图（b）要求学生把节点电流写在电路图旁，明确
+\(\widetilde I_1\) 的正方向，避免最后相位符号失去物理含义。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3-3}
+
+\textbf{变式.} 在 \(\omega_0=1/\sqrt{LC}\) 下把图（b）中间电阻换成复阻抗
+\(Z_b\)，求干路电流与电源同相的条件。
+
+\textbf{解答.} 原方程中只需把桥臂电阻 \(R\) 换为 \(Z_b\)，得 \[
+\widetilde I_1=-i\frac r{Z_b}\widetilde I,
+\qquad
+Z_{\rm in}=R+\frac{r^2}{Z_b}.
+\] 干路电流与电源同相要求 \(Z_{\rm in}\) 为正实数。由于 \(R,r^2\)
+都为正实数，被动桥臂中等价条件是 \[
+\boxed{Z_b\in\mathbb R_{>0}}.
+\] 当 \(Z_b\to\infty\)
+时，\(Z_{\rm in}\to R\)、\(\widetilde I_1\to0\)，桥臂开路；当
+\(Z_b\to0^+\) 时，\(Z_{\rm in}\to\infty\)、\(\widetilde I\to0\)，但 \[
+\widetilde I_1\to-i\frac{U_0}{r},
+\] 桥臂电流保持有限且滞后电源 \(\pi/2\)。
+
+\needspace{3\baselineskip}
+\textbf{有功功率和最大干路电流}
+
+图b只有外串联R和中桥R两只电阻。以相量振幅而非有效值记电流，耗散功率为
+\[P_R=\tfrac12R|\widetilde I|^2
++\tfrac12R|\widetilde I_1|^2.\]
+用\(|\widetilde I_1|=(r/R)|\widetilde I|\)化简：
+\[P_R=\frac12(R+r^2/R)|\widetilde I|^2
+=\frac12U_0I_2.\]
+这与电源平均功率一致；桥臂电流相对源电压滞后，不妨碍桥臂电阻耗能。
+
+固定\(U_0,r\)改变R，干路振幅为\(I_2=U_0R/(R^2+r^2)\)。导数
+\[\frac{\mathrm dI_2}{\mathrm dR}
+=U_0\frac{r^2-R^2}{(R^2+r^2)^2}\] 给出最大值在\(R=r\)：
+\[I_{2,\max}=U_0/(2r),\qquad I_1=I_2.\]
+此时两只电阻各耗一半有功功率。R过小不意味着干路电流无限增大，反而因\(r^2/R\)的等效输入电阻增大而趋零。
+
+\needspace{3\baselineskip}
+\textbf{用 \(R=r\) 检查相量大小和能量}
+
+取 \(R=r\)，则总阻抗为 \(2r\)，有
+\[I_{\rm src}=\frac{U_0}{2r},\qquad I_2=\frac{U_0}{r},\qquad
+I_1=-i\frac{U_0}{2r}.\] 源提供的平均功率为
+\(U_0^2/(4r)\)。两只电阻各自消耗
+\[\overline P_{\rm ext}=\frac12r\left(\frac{U_0}{2r}\right)^2
+=\frac{U_0^2}{8r},\]
+\[\overline P_{\rm bridge}=\frac12r\left|\frac{U_0}{2r}\right|^2
+=\frac{U_0^2}{8r}.\]
+两项相加与源功率一致；理想电感、电容的平均功率均为零。相量图中的 \(I_2\)
+同相、\(I_1\) 落后 \(\pi/2\)，不能据此把 \(I_1\)
+当成零功率支路，因为它流经跨接电阻而支路两端电压也有相位。
+
+\newpage
+
+\section{第 5 题}\label{ux7b2c-5-ux9898}
+
+某种粒子的速率概率密度为 \[
+f(v)=Av^2\left(-a+\frac bv+\frac c{v^2}\right),
+\qquad a,b,c>0,
+\] 并且在允许区间内 \(f(v)>0\)。已知 \(a=3,b=2,c=1\)。求：
+
+（1）最概然速率 \(v_p\)；
+
+（2）截止速率 \(v_j\)，即 \(f(v_j)=0\) 且 \(v>v_j\) 后不再有粒子；
+
+（3）归一化常数 \(A\)；
+
+（4）平均速率 \(\bar v\) 与方均根速率
+\(v_{\rm rms}=\sqrt{\overline{v^2}}\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.68\linewidth,height=\textheight,keepaspectratio,alt={图5-1　有限区间内的速率概率密度}]{../figures/question-05.pdf}
+\caption*{图5-1　有限区间内的速率概率密度}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-4}
+
+先乘开概率密度并确定非负支撑区间，再求峰值、归一化与两个矩。平均速率、最概然速率和方均根速率各自对应不同定义。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-4}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  概率密度的非负性与支撑区间。
+\item
+  导数求最概然值。
+\item
+  归一化积分。
+\item
+  一阶矩、二阶矩与方均根。
+\item
+  端点和内部极值的比较。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-4}
+
+代入已知常数后， \[
+f(v)=A(-3v^2+2v+1). \tag{1}
+\] 它是开口向下的抛物线。速率只能取
+\(v\ge0\)，且概率密度不能为负，因此允许区间由正根确定。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-4}
+
+先暂不处理 \(A\)，因为正的归一化常数不改变极值位置和零点。解出
+\(v_p,v_j\) 后，积分上下限便明确为 \(0\le v\le v_j\)。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-4}
+
+图 5-2 同时标出分布函数的零点 \(v_j\)、极大值点 \(v_p\)
+和面积归一化条件，下面依次求这三个量。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.616\linewidth,height=\textheight,keepaspectratio,alt={图5-2　归一化密度及峰值、均值、方均根}]{../figures/solution-05.pdf}
+\caption*{图5-2　归一化密度及峰值、均值、方均根}
+\end{figure}
+
+\needspace{3\baselineskip}
+\textbf{（一）最概然速率}
+
+对式（1）求导： \[
+f'(v)=A(-6v+2). \tag{2}
+\] 令 \(f'(v)=0\)： \[
+-6v+2=0,
+\] 得到 \[
+\boxed{v_p=\frac13}. \tag{3}
+\] 又因 \[
+f''(v)=-6A<0, \tag{4}
+\] 该驻点确为最大值点。
+
+\needspace{3\baselineskip}
+\textbf{（二）截止速率}
+
+令 \(f(v)=0\)。由于 \(A>0\)： \[
+-3v^2+2v+1=0. \tag{5}
+\] 等价于 \[
+3v^2-2v-1=0. \tag{6}
+\] 二次公式给出 \[
+v=\frac{2\pm\sqrt{4+12}}6
+=\frac{2\pm4}{6}. \tag{7}
+\] 两根为 \(1\) 和 \(-1/3\)。速率非负，故 \[
+\boxed{v_j=1}. \tag{8}
+\] 概率密度的支撑区间为 \(0\le v\le1\)。
+
+\needspace{3\baselineskip}
+\textbf{（三）归一化常数}
+
+归一化条件为 \[
+\int_0^1f(v)dv=1. \tag{9}
+\] 代入式（1）： \[
+\begin{aligned}
+1
+&=A\int_0^1(-3v^2+2v+1)dv\\
+&=A\left[-v^3+v^2+v\right]_0^1\\
+&=A(-1+1+1)\\
+&=A.
+\end{aligned} \tag{10}
+\] 所以 \[
+\boxed{A=1}. \tag{11}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（四）平均速率}
+
+\[
+\begin{aligned}
+\bar v
+&=\int_0^1vf(v)dv\\
+&=\int_0^1(-3v^3+2v^2+v)dv\\
+&=\left[-\frac34v^4+\frac23v^3+\frac12v^2\right]_0^1\\
+&=-\frac34+\frac23+\frac12\\
+&=\frac{-9+8+6}{12}\\
+&=\frac5{12}.
+\end{aligned} \tag{12}
+\] 故 \[
+\boxed{\bar v=\frac5{12}\approx0.4167}. \tag{13}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（五）方均根速率}
+
+先算二阶矩： \[
+\begin{aligned}
+\overline{v^2}
+&=\int_0^1v^2f(v)dv\\
+&=\int_0^1(-3v^4+2v^3+v^2)dv\\
+&=\left[-\frac35v^5+\frac12v^4+\frac13v^3\right]_0^1\\
+&=-\frac35+\frac12+\frac13\\
+&=\frac{-18+15+10}{30}\\
+&=\frac7{30}.
+\end{aligned} \tag{14}
+\] 因此 \[
+\boxed{v_{\rm rms}=\sqrt{\frac7{30}}\approx0.4830}. \tag{15}
+\]
+
+\textbf{次序检查。} 对任意非负随机变量都有
+\(v_{\rm rms}\ge\bar v\)。本题 \[
+0<\frac13<\frac5{12}<\sqrt{\frac7{30}}<1, \tag{16}
+\]
+即最概然值、平均值、方均根值均落在支撑区间内，且方均根大于平均值。若计算得到相反次序，应优先检查积分幂次和通分。
+
+\textbf{量纲说明。} 题目把 \(a,b,c\)
+作为给定数值，实际上隐含了某个速率单位。严格地说，\(a,b/v,c/v^2\)
+必须具有同一量纲，\(A\) 也带有使 \(f(v)dv\)
+无量纲的单位。竞赛计算中按题设归一化变量处理即可，但不能据此认为所有概率密度常数都无量纲。
+
+\textbf{与麦克斯韦分布的差别。}
+麦克斯韦速率分布支撑到无穷且含指数衰减；本题是有限区间二次多项式。只有``最概然值由密度极大确定、矩由积分定义''这些通用方法相同，数值关系不能照搬。
+
+\textbf{方差复核。} 由定义 \[
+\operatorname{Var}(v)=\overline{v^2}-\bar v^{2}. \tag{17}
+\] 代入结果： \[
+\operatorname{Var}(v)
+=\frac7{30}-\left(\frac5{12}\right)^2
+=\frac{168-125}{720}
+=\frac{43}{720}>0. \tag{18}
+\] 方差为正说明两个矩的相对大小没有违反基本概率性质。标准差为
+\(\sqrt{43/720}\)，也小于整个支撑区间长度 1，数量级合理。
+
+\textbf{一般矩的统一形式。} 对任意 \(n>-1\)， \[
+\overline{v^n}
+=\int_0^1v^n(-3v^2+2v+1)dv
+=-\frac3{n+3}+\frac2{n+2}+\frac1{n+1}. \tag{19}
+\] 取 \(n=0\) 得 1，复核归一化；取 \(n=1,2\) 分别得到
+\(5/12,7/30\)。把多个积分统一成一个公式，可降低重复积分时的算术错误。
+
+\textbf{端点最大值比较。} 虽然 \(f'(v_p)=0\) 且
+\(f''<0\)，严格求全局最大还应检查端点： \[
+f(0)=1,\qquad f(1)=0,\qquad f(1/3)=\frac43. \tag{20}
+\]
+因此内部驻点确实高于端点。本题一般参数仍满足\(a,b,c>0\)，其正驻点也总位于正支撑区间内。若改变参数符号，则需另查端点。
+
+\textbf{累积分布函数的完整写法。} 对 \(0\le v\le1\)，累积分布函数为 \[
+F(v)=\int_0^v(-3s^2+2s+1)ds
+=-v^3+v^2+v. \tag{21}
+\] 连同区间外的定义，完整地写成 \[
+F(v)=
+\begin{cases}
+0,&v<0,\\
+-v^3+v^2+v,&0\le v\le1,\\
+1,&v>1.
+\end{cases} \tag{22}
+\] 在支撑区间内 \[
+F'(v)=-3v^2+2v+1=f(v)\ge0, \tag{23}
+\] 且 \(F(0)=0,F(1)=1\)。这同时复核了密度非负、归一化和截止点三个条件。
+
+\textbf{平均值积分的分项来源。} 由
+\(\bar v=\int vf(v)dv\)，被积式不是原二次式，而是 \[
+v(-3v^2+2v+1)=-3v^3+2v^2+v. \tag{24}
+\] 三个幂函数分别积分为 \[
+-\frac34v^4,
+\qquad \frac23v^3,
+\qquad \frac12v^2. \tag{25}
+\] 在 \(v=1\) 代入后，应先通分到 12： \[
+-\frac34+\frac23+\frac12
+=-\frac9{12}+\frac8{12}+\frac6{12}
+=\frac5{12}. \tag{26}
+\] 把这三步展开，可以直接定位``漏乘一个 \(v\)''与``幂次积分少加
+1''两类错误。
+
+\textbf{均方根不等于标准差。} 本题 \[
+v_{\rm rms}=\sqrt{\overline{v^2}}=\sqrt{\frac7{30}}, \tag{27}
+\] 而标准差是 \[
+\sigma_v=\sqrt{\overline{v^2}-\bar v^{2}}
+=\sqrt{\frac{43}{720}}. \tag{28}
+\]
+前者衡量速率相对于零点的二次平均，后者衡量速率相对于平均值的离散程度。二者定义不同，只有在均值为零时才可能相等；速率非负且均值不为零，不能混用。
+
+若希望核对平均值，还可用非负随机变量的尾积分公式 \[
+\bar v=\int_0^\infty[1-F(v)]\,\mathrm dv.
+\] 本题化为 \[
+\begin{aligned}
+\bar v
+&=\int_0^1(1+v^3-v^2-v)\,\mathrm dv\\
+&=\left[v+\frac14v^4-\frac13v^3-\frac12v^2\right]_0^1\\
+&=1+\frac14-\frac13-\frac12
+=\frac5{12}.
+\end{aligned}
+\] 这与直接计算 \(\int vf(v)\,\mathrm dv\)
+相互独立，能发现平均值积分中漏乘 \(v\) 的错误。
+
+还可以通过柯西---施瓦茨不等式对二阶矩作一次不依赖具体积分的核验。因为已归一化，
+\[
+\left(\int_0^1v f(v)\,\mathrm dv\right)^2
+\le
+\left(\int_0^1v^2f(v)\,\mathrm dv\right)
+\left(\int_0^1f(v)\,\mathrm dv\right),
+\] 所以必有 \(\bar v^{2}\le\overline{v^2}\)。代入本题结果， \[
+\frac{25}{144}<\frac7{30},
+\] 差值正是
+\(43/720\)。这一检查同时确认了二阶矩和均方根速率的数值次序没有写反。
+\needspace{3\baselineskip}
+\textbf{能量分布与条件平均的两个应用}
+
+令粒子质量为\(m_p\)、动能为\(\mathcal E=m_pv^2/2\)。动能支撑区间是\(0\le\mathcal E\le m_p/2\)，变量变换给出
+\[g(\mathcal E)=
+f\!\left(\sqrt{2\mathcal E/m_p}\right)
+\frac1{\sqrt{2m_p\mathcal E}}.\]
+在\(\mathcal E\to0^+\)时密度可积地发散，因为速度密度\(f(0)=1\)而Jacobian发散。动能密度的最概然值不能由\(v_p\)简单平方得到；``密度峰''不是变量变换不变的统计量。
+
+平均动能却可直接使用二阶矩： \[\langle\mathcal E\rangle
+=\frac{m_p}{2}\langle v^2\rangle=\frac{7m_p}{60}.\]
+用平均速率代入\(m_p\bar v^2/2\)会少计\(m_p\operatorname{Var}(v)/2\)。
+
+若筛选出\(v>1/2\)的粒子，保留概率为
+\[P(v>1/2)=1-F(1/2)=1-\frac58=\frac38.\] 其速率条件平均为
+\[\langle v\mid v>1/2\rangle
+=\frac{\int_{1/2}^1v(-3v^2+2v+1)\,\mathrm dv}{3/8}
+=\frac{49}{72}.\]
+它大于总体均值\(5/12\)，也位于筛选区间\((1/2,1)\)，这两个范围检查应同时满足。归一化筛选后的分布时，不能仍沿用原密度的总面积1。
+
+\needspace{3\baselineskip}
+\textbf{分布函数的区间计算与无量纲尺度}
+
+用 \(F(v)=-v^3+v^2+v\) 直接计算区间概率，比反复写积分更便于核对。例如
+\[F(1/4)=\frac{19}{64},\qquad F(3/4)=\frac{57}{64},\] 故落在
+\([1/4,3/4]\) 的概率为 \(19/32\)。位于 \([0,1/4)\) 与 \((3/4,1]\)
+的概率分别为 \(19/64\)、\(7/64\)，它们与中间区间相加恰为1。
+
+若速率图的横轴实际表示 \(V/V_*\)，则 \(v=V/V_*\)，概率守恒要求
+\[f_V(V)\,\mathrm dV=f(v)\,\mathrm dv.\] 因此量纲正确的密度为
+\[f_V(V)=\frac1{V_*}\left[1+2\frac{V}{V_*}
+-3\left(\frac{V}{V_*}\right)^2\right],\quad0\le V\le V_*.\]
+密度有速率倒数的量纲。三种典型速率随尺度变为 \[V_p=\frac{V_*}{3},\qquad
+\overline V=\frac{5V_*}{12},\qquad
+V_{\rm rms}=\sqrt{\frac7{30}}V_*.\] 若所有粒子质量为
+\(m_p\)，平均动能不是把平均速率平方后代入：
+\[\overline E_k=\frac12m_p\overline{V^2}
+=\frac7{60}m_pV_*^2,\] \[\frac12m_p\overline V^{\,2}
+=\frac{25}{288}m_pV_*^2.\] 两者相差
+\(\tfrac12m_p\operatorname{Var}(V)=43m_pV_*^2/1440>0\)。图中均方根速率大于平均速率，正是这一差值的体现。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf-4}
+
+先找截止速率，才能知道归一化和各阶矩的积分上限。概率密度为零之后题设明确没有粒子，不能把负的多项式继续积分到无穷。
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9-4}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  把原式中的 \(v^2\) 漏乘进括号。
+\item
+  求零点后误取负根。
+\item
+  归一化仍从 \(0\) 积到 \(\infty\)。
+\item
+  平均速率漏乘一个 \(v\)，二阶矩漏乘 \(v^2\)。
+\item
+  把 \(\overline{v^2}\) 直接当成 \(v_{\rm rms}\)，忘记开平方。
+\end{enumerate}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae-4}
+
+先让学生画出 \(-3v^2+2v+1\)
+的草图，用图确认最大点和正支撑区间。再把归一化、平均值、二阶矩排成三行积分，突出每一行只比上一行多乘一个
+\(v\)。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3-4}
+
+\textbf{变式.} 保留一般
+\(a,b,c>0\)，求正截止速率、内部最概然速率和归一化常数。
+
+\textbf{解答.} 概率密度化为 \[
+f(v)=A(-av^2+bv+c).
+\] 正截止根为 \[
+\boxed{v_j=\frac{b+\sqrt{b^2+4ac}}{2a}}.
+\] 内部驻点由 \(-2av+b=0\) 给出： \[
+\boxed{v_p=\frac b{2a}}.
+\] 因 \(a,b,c>0\)，有 \(0<v_p<b/a<v_j\)，且
+\(f''=-2aA<0\)，所以它必然是允许区间内的最概然速率。归一化条件给出 \[
+1=A\int_0^{v_j}(-av^2+bv+c)\,\mathrm dv,
+\] 因而 \[
+\boxed{A=\left(
+-\frac a3v_j^3+\frac b2v_j^2+cv_j
+\right)^{-1}}.
+\]
+
+\needspace{3\baselineskip}
+\textbf{中位速率与概率阈值}
+
+中位速率\(v_{1/2}\)满足\(F(v_{1/2})=1/2\)，即
+\[-v_{1/2}^3+v_{1/2}^2+v_{1/2}=\frac12.\]
+F在\((0,1)\)严格递增，因此只有一个解，数值约\(0.403032\)。它既不是密度峰\(1/3\)，也不是平均速率\(5/12\)。中位数把概率质量分成两半，不负责使速率加权积分相等。
+
+若需要按固定概率保留最慢的q比例粒子，应求\(F(v_q)=q\)，再对\([0,v_q]\)重新归一化。对给定阈值\(v_*=1/2\)，慢粒子比例是\(5/8\)，其条件平均为
+\[\langle v\mid v\le1/2\rangle
+=\frac{31/192}{5/8}=\frac{31}{120}.\]
+快速粒子的条件平均\(49/72\)与它按权重组合： \[\frac58\frac{31}{120}
++\frac38\frac{49}{72}=\frac5{12}.\]
+这个全概率分解能独立检查条件平均的归一化。任何概率或均值变式都必须保留\(v\le1\)的截止，不能把原二次多项式在负密度区继续积分。
+
+\needspace{3\baselineskip}
+\textbf{按穿过孔口的次数抽样会改变分布}
+
+原题密度按粒子数定义。若一维粒子沿同方向运动，记录单位时间穿过固定截面的粒子，则高速粒子被记录的机会与
+\(v\) 成正比。相应通量抽样密度是 \[g(v)=\frac{vf(v)}{\overline v}
+=\frac{12}{5}(v+2v^2-3v^3),\quad0\le v\le1.\] 归一化由
+\(\int vf(v)\,\mathrm dv=\overline v\) 保证。这种抽样的平均速率为
+\[\overline v_{\rm flux}=\frac{\overline{v^2}}{\overline v}
+=\frac{7/30}{5/12}=\frac{14}{25},\] 明显大于按粒子数抽样的
+\(5/12\)。通量密度的内部驻点满足 \[1+4v-9v^2=0,\] 取支撑区间内正根得
+\(v_{p,\rm flux}=(2+\sqrt{13})/9\)。这个变式只用于指定的一维同向抽样；三维气体穿孔还需速度方向和余弦因子，不能直接照搬。
+
+\needspace{3\baselineskip}
+\textbf{分位点可由单调方程稳定求解}
+
+给定概率 \(p\in(0,1)\)，分位点 \(v_p\) 满足 \(-v_p^3+v_p^2+v_p=p\)。因为
+\(f(v)>0\) 对 \(0\le v<1\) 成立，\(F\)
+严格递增，所以区间内根唯一。求中位数可从 \(v=0.4\) 开始Newton迭代：
+\[v_{k+1}=v_k-\frac{-v_k^3+v_k^2+v_k-1/2}{1+2v_k-3v_k^2}.\] 第一步给出约
+\(0.4030303\)，再迭代得到 \(0.4030317\)。用 \(F(0.4)=0.496\) 与
+\(F(0.41)>0.5\) 夹住根，可防止把其他代数根误作分位点。 均值
+\(5/12\simeq0.416667\) 大于中位数，最概然速率 \(1/3\)
+又小于中位数。三个位置分别来自积分、累计概率一半、密度驻点，定义不同；图中只要其中一种位置正确，不能认为另两种也已经确定。若实验只给中位数，就不足以据此推回平均动能，仍需要完整分布或至少二阶矩。
+
+\newpage
+
+\section{第 6 题}\label{ux7b2c-6-ux9898}
+
+两个理想平面镜相对放置，光子频率为
+\(\nu_0\)，在两镜间来回反射。把光子视为满足相对论能量动量关系的粒子。初始镜间距为
+\(l_0\)，左镜固定，右镜以 \(u_0\ll c\)
+向左匀速靠近。所有结果均在地面参考系中给出。求：
+
+（1）光子经两次反射（每面镜各一次）后的频率 \(\nu_1\)；
+
+（2）镜间距缩小到 \(l_0/2\) 时的频率 \(\nu_{1/2}\)；
+
+（3）镜间距为 \(xl_0\) 时，光子对运动镜的平均作用力。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.728\linewidth,height=\textheight,keepaspectratio,alt={图6-1　固定镜与匀速靠近的运动镜}]{../figures/question-06.pdf}
+\caption*{图6-1　固定镜与匀速靠近的运动镜}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-5}
+
+运动镜一次反射使用精确多普勒倍率，多次反射使用实际的镜面移动时序。同相位离散不变量与任意时刻的慢变近似要分别说明。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-5}
+
+光子能量动量；双多普勒频移；连续两次运动镜碰撞的时空关系；逐次不变量；平均冲量通量；慢变近似。
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-5}
+
+左镜位于0，右镜的位置\(X(t)=l_0-u_0t\)。用X记有量纲镜间距，原题第三问的小写x是无量纲比值\(X/l_0\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.449\linewidth,height=\textheight,keepaspectratio,alt={图6-2　移动镜世界线与逐次反射时序}]{../figures/solution-06.pdf}
+\caption*{图6-2　移动镜世界线与逐次反射时序}
+\end{figure}
+
+图中每一个右镜碰撞点都在同一条倾斜世界线上，反射光线才按正确时序连接。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-5}
+
+令\(\beta=u_0/c\)，先求一次运动镜反射倍率\(q=(1+\beta)/(1-\beta)\)。再比较两次相邻右镜碰撞时的腔长，检查频率与腔长的乘积。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-5}
+
+\needspace{3\baselineskip}
+\textbf{（一）一次循环的频率}
+
+右行光进入向左运动的镜面静止系时频率乘\(\gamma(1+\beta)\)；反射后再变回实验室系，又乘同一因子。因此
+\[q=\gamma^2(1+\beta)^2=\frac{1+\beta}{1-\beta}.\]
+左镜固定，反射不改变频率，两面镜各反射一次后
+\[\boxed{\nu_1=q\nu_0=\frac{c+u_0}{c-u_0}\nu_0}.\]
+慢速展开\(q=1+2\beta+O(\beta^2)\)。忽略单次高阶项后再累计大量反射，需要检查累计误差，不能直接提升精度。
+
+\needspace{3\baselineskip}
+\textbf{（二）精确的逐次时序}
+
+设第N次右镜反射结束时，腔长为\(X_N\)、光频率为\(\nu_N\)。光子先用\(X_N/c\)到左镜；再向右追移动镜。到下一次右镜碰撞的总时间为
+\[\Delta t_N=\frac{2X_N}{c+u_0}.\] 所以 \[X_{N+1}=X_N-u_0\Delta t_N
+=\frac{1-\beta}{1+\beta}X_N=X_N/q,\] \[\nu_{N+1}=q\nu_N.\]
+因此在每次右镜反射后的同一相位上 \[\boxed{\nu_NX_N=\text{常量}}\]
+是精确离散关系。不同反射之间，频率保持常数而X连续缩短；``任意时刻\(\nu X\)严格恒定''不成立。
+
+\needspace{3\baselineskip}
+\textbf{（三）镜间距减半时}
+
+原题只给初始频率与腔长，没有指定初始光子所处位置及传播相位。慢变极限下，相位造成的相对误差为\(O(\beta)\)，故
+\[\boxed{\nu_{1/2}\simeq2\nu_0}.\]
+若初态与终态都恰选在右镜反射后的同一相位，且离散反射时刻恰对应腔长减半，则这两个同相位数据满足精确的二倍关系。一般给定时刻可能落在两次反射之间，应保留相位误差，不能宣称第一项误差必为\(O(\beta^2)\)。
+
+\needspace{3\baselineskip}
+\textbf{（四）平均力的领先阶}
+
+当腔长\(X=xl_0\)变化很慢，光子的能量近似\(E=h\nu_0l_0/X\)。压缩对光子做功，故镜面所受反力大小为
+\[F\simeq-\frac{\mathrm dE}{\mathrm dX}
+=\frac{h\nu_0l_0}{X^2}.\] 代入无量纲x：
+\[\boxed{F(x)\simeq\frac{h\nu_0}{l_0x^2}},\]
+方向向右，阻碍镜面靠近。也可用单次冲量约\(2h\nu/c\)、右镜碰撞频率约\(c/(2X)\)相乘，得到同一领先阶。
+
+\needspace{3\baselineskip}
+\textbf{（五）精确一周期的平均力}
+
+采用前面反射后的相位数据，第N+1次右镜碰撞前后能量分别为\(E_N\)与\(qE_N\)，冲量为
+\[J_{N+1}=\frac{(1+q)E_N}{c}.\] 除以上一周期\(\Delta t_N\)，得到
+\[\overline F_N=\frac{qE_N}{X_N}.\] 因而
+\[u_0J_{N+1}=(q-1)E_N=E_{N+1}-E_N,\]
+功与增能精确一致。这个离散平均与按某个瞬时X报告的连续F会有\(O(\beta)\)的相位差；两者各自定义清楚后就不存在矛盾。
+
+\textbf{初始相位。}
+若初始光子已经完成一次右镜反射，\(\nu_0l_0\)就是离散不变量。若初始光子在腔内别处，第一次到右镜期间腔长已变化，再发生一次\(q\)倍率；不变量与\(\nu_0l_0\)差一个\(O(\beta)\)相位修正。原题未说明相位，所以第（二）、（三）问按慢变领先阶作答。
+
+\textbf{为何旧误差论证不成立。}
+\(\ln q=2\beta+2\beta^3/3+\cdots\)确实没有二次项；但反射次数与腔长关系若只精确到领先阶，不能只保留\(\ln q\)的三次项就断言最终相对误差为\(\beta^2\)。用精确的\(X_{N+1}=X_N/q\)，所有同相位的倍率恰好抵消，而任意时刻的相位误差仍是\(O(\beta)\)。
+
+\textbf{平均力的尺度。}
+腔长减半时，光子能量约增至二倍、单位时间撞同一镜的次数也约增至二倍，因此平均力约增至四倍。能量与碰撞频率两因素都不可遗漏。
+
+\needspace{3\baselineskip}
+\textbf{镜距减半时的离散误差实例}
+
+把初始事件明确选在一次右镜反射刚结束，\(X_0=l_0,\nu_0\)为反射后频率。第N次后
+\[X_N=l_0q^{-N},\qquad
+\nu_N=\nu_0q^N,\qquad
+t_N=\frac{l_0}{u_0}(1-q^{-N}).\]
+若\(X=l_0/2\)并不恰对应某个整数N，就处于两次右镜碰撞之间，频率仍为上次反射后的常量。设
+\[N=\left\lfloor\frac{\ln2}{\ln q}\right\rfloor,\] 则在减半时刻
+\[\nu_{1/2}=\nu_0q^N,\qquad
+\frac2q<\frac{\nu_{1/2}}{\nu_0}\le2.\]
+恰逢碰撞时的值还取决于``反射前''还是``反射后''的约定。
+
+例如\(\beta=0.01\)，\(q=101/99\)，\(\ln2/\ln q\simeq34.6562\)，所以减半时已完成34次后续运动镜反射，频率为
+\[\nu_{1/2}\simeq1.97392\,\nu_0.\]
+它接近2，却不等于2，偏差约1.3\%，仍属于一阶相位误差。若再改变初始光子位置、初始传播方向，首次碰撞也会移动；题目未给这些相位数据，只能把\(2\nu_0\)作为慢变领先阶答案。
+
+世界线图上每一段光线连接真实反射事件，光速不变而镜位置随时间改变。把所有来回路程都取为初始\(2l_0\)，会同时改变反射次数和平均力。
+
+\needspace{3\baselineskip}
+\textbf{从任意初始光子位置确定第一跳}
+
+精确递推必须从同一反射相位开始。若 \(t=0\) 时两镜距离为
+\(l_0\)，光子位于 \(x_0\) 且向右，运动镜位置为 \(l_0-u_0t\)。第一跳满足
+\[x_0+ct_1=l_0-u_0t_1,\] \[t_1=\frac{l_0-x_0}{c+u_0}.\]
+此时镜间距及第一次反射后的频率分别为
+\[X_1=\frac{cl_0+u_0x_0}{c+u_0},\qquad \nu_1=q\nu_0.\]
+后续每次运动镜反射后比较同一相位：
+\[X_n=\frac{X_1}{q^{n-1}},\qquad \nu_n=q^n\nu_0.\] 所以不变量为
+\[\nu_nX_n=q\nu_0X_1,\] 一般不等于初态任意相位的
+\(\nu_0l_0\)。若光子初始向左，应先到固定镜，再追赶运动镜：
+\[t_1=\frac{l_0+x_0}{c+u_0},\qquad
+X_1=\frac{cl_0-u_0x_0}{c+u_0}.\] 向右和向左两种初态虽可具有相同
+\(\nu_0\)，第一跳时刻仍不同。
+
+例如 \(\beta=u_0/c=0.1,x_0=l_0/2\)，向右初态给出
+\[ct_1/l_0=\frac5{11},\quad X_1/l_0=\frac{21}{22},\quad
+\nu_1/\nu_0=\frac{11}{9}.\] 当镜间距第一次降到 \(l_0/2\)
+时，频率取决于已经完成的整数反射次数。小 \(\beta\)
+连续近似会抹平这个台阶；精确答案必须交代初始位置、方向和统计相位。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf-5}
+
+同相位离散反射满足精确的\(\nu_NX_N\)不变量；任意时刻的连续频率关系是慢变近似。两种关系的精度取决于所比较的事件。
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9-5}
+
+X是长度，x是无量纲比值。固定镜反射不改频率。不要把一阶反射次数公式用于声称二阶误差，也不要把每次反射后的关系当成任意时刻恒等式。
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae-5}
+
+先画移动镜世界线，求两次相邻右镜碰撞的间隔，再推\(X\)与\(\nu\)的递推。最后用离散功和连续能量求导分别检查平均力。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3-5}
+
+两镜以同速向中心靠近且中心不动。慢变极限仍有\(\nu X\simeq\nu_0l_0\)。每面镜受力大小约为\(h\nu_0l_0/X^2\)，总外力功率为\(2u_0F\)，恰等于\(\mathrm d(h\nu_0l_0/X)/\mathrm dt\)，因为\(\dot X=-2u_0\)。
+
+\needspace{3\baselineskip}
+\textbf{两镜同时移动时的反射与功率}
+
+两镜以相同速率u向中心移动。光子每次碰到任一镜都获得\(q=(c+u)/(c-u)\)倍率，完成一次来回后倍率为\(q^2\)。腔长的变化速率是\(-2u\)，所以慢变极限
+\[E(X)\simeq E_0l_0/X,\qquad
+\dot E\simeq2uE_0l_0/X^2.\] 每面镜的平均反力大小为
+\[F\simeq E_0l_0/X^2.\]
+两面镜各以速率u作功，总功率\(2uF\)与上式一致。若只沿用单运动镜的一次循环倍率q，会少计另一面镜的频移。
+
+两镜对光子的力在一个周期中的平均方向相反，但能量增加，因为两镜速度也相反，两个\(\boldsymbol F\cdot\boldsymbol v\)都向光子输入正功。总平均动量变化可以很小，不代表平均能量变化为零。
+
+若镜面由外力维持匀速，压缩能量来自维持运动的装置。若镜具有有限质量并可反冲，则u不再固定，单次精确倍率与时间递推都需联立镜面能量动量守恒重新计算。
+
+\needspace{3\baselineskip}
+\textbf{第一跳之后的时间递推}
+
+在第 \(n\) 次运动镜反射刚结束时，镜间距为 \(X_n\)。光子向左到固定镜用时
+\(X_n/c\)；这一过程中右镜继续运动。返程追及用时为
+\(X_n(c-u_0)/[c(c+u_0)]\)，所以两次运动镜反射的时间间隔为
+\[\Delta t_n=\frac{2X_n}{c+u_0}.\] 由 \(X_n=X_1q^{-(n-1)}\) 求和：
+\[t_n=t_1+\frac{2X_1}{c+u_0}
+\frac{1-q^{-(n-1)}}{1-q^{-1}}.\] 利用 \(1-q^{-1}=2u_0/(c+u_0)\)，化为
+\[t_n=t_1+\frac{X_1}{u_0}[1-q^{-(n-1)}].\] 因为
+\(X_1=l_0-u_0t_1\)，极限时刻为
+\(l_0/u_0\)，正是两镜碰合时刻。反射次数在理想模型中趋于无穷、频率也趋于无穷；有限尺寸、有限反射率和镜面驱动等真实因素会限制该极限，原题只使用碰合之前的理想几何。
+
+\needspace{3\baselineskip}
+\textbf{半距时刻的精确台阶界}
+
+取初态恰为运动镜反射刚结束，记 \(X_0=l_0,\nu_0\)
+为该相位的频率。两次反射之间频率保持不变；在镜距第一次等于 \(l_0/2\)
+时，已完成的反射数为
+\[N_h=\left\lfloor\frac{\ln2}{\ln q}\right\rfloor,\]
+若恰与反射重合，规定使用反射后频率。由取整定义，
+\[q^{N_h}\le2<q^{N_h+1}.\] 所以半距时的精确频率满足
+\[\frac{2\nu_0}{q}<\nu_h\le2\nu_0.\] 连续近似 \(2\nu_0\)
+的相对误差上界小于 \(1-1/q=2\beta/(1+\beta)\)。当
+\(\beta=0.1\)，\(q=11/9,N_h=3\)，
+\[\nu_h=\left(\frac{11}{9}\right)^3\nu_0
+\simeq1.825789\nu_0.\] 这与连续结果有约8.71\%的差异；当
+\(\beta=0.01\)，则
+\(N_h=34,\nu_h\simeq1.973922\nu_0\)，误差约1.30\%。减小镜速会缩小每次频率跳变，但有限镜速下不能要求半距频率始终恰为初值两倍。若初态在两次运动镜反射之间，须先用前述第一跳公式重新确定不变量。
+
+\newpage
+
+\section{第 7 题}\label{ux7b2c-7-ux9898}
+
+水中的发光体位于距器皿壁 \(x\)
+处，在器皿外壁贴有一个平凸薄透镜。透镜在空气中的焦距为
+\(f\)，透镜和器皿壁均很薄；水的折射率 \(n_w=4/3\)，玻璃折射率
+\(n_G=3/2\)。物体位于主光轴上，以透出光方向为正。求：
+
+（1）像到壁距离 \(y\) 的表达式；
+
+（2）随 \(x\) 改变，物像同侧、异侧的规律；
+
+（3）位置关系改变的较大临界值 \(x_0\)；
+
+（4）\(x=f\) 时的像距 \(y\)；
+
+（5）\(x=f\) 时的放大倍数 \(\beta\)；
+
+（6）若透镜改贴在器皿内壁，求一般物距\(x\)对应的像距\(y'\)；
+
+（7）求内贴时的一般放大倍数\(\beta'(x)\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\linewidth,height=\textheight,keepaspectratio,alt={图7-1　水---玻璃---空气界面上的平凸薄透镜}]{../figures/question-07.pdf}
+\caption*{图7-1　水---玻璃---空气界面上的平凸薄透镜}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-6}
+
+光从水经过玻璃进入空气，物距项与放大率都含折射率。透镜贴内壁或外壁会改变曲面两侧介质，须重新求系统光焦度。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-6}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  球面折射公式。
+\item
+  薄透镜光焦度相加。
+\item
+  不同介质中的物距、像距符号。
+\item
+  实像与虚像判据。
+\item
+  横向放大率中的折射率因子。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-6}
+
+平凸透镜在空气中的焦距满足 \[
+\frac1f=\frac{n_G-1}{R}, \tag{1}
+\] 所以曲率半径的大小为 \[
+|R|=(n_G-1)f=\frac f2. \tag{2}
+\]
+外贴时，平面贴在器皿壁上，水中的光先通过无光焦度的水---玻璃平面，再由玻璃---空气球面射出；图中光线从左向右传播。该球面的曲率中心位于入射侧，若按向右为正，则
+\(R=-f/2\)。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-6}
+
+使用傍轴光线的约化倾角
+\(n\theta\)。薄系统的总光焦度等于各折射面光焦度之和。外贴时水---玻璃平面光焦度为零，玻璃---空气球面提供
+\(1/f\)；物方折射率是 \(4/3\)，因此物距项带 \(4/(3x)\)。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-6}
+
+图 7-2
+中物距、像距和曲率半径均按向右为正取符号，后续折射面成像式直接使用这一符号约定。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.82\linewidth,height=\textheight,keepaspectratio,alt={图7-2　外贴和内贴透镜在x=f时的虚像}]{../figures/solution-07.pdf}
+\caption*{图7-2　外贴和内贴透镜在x=f时的虚像}
+\end{figure}
+
+\needspace{3\baselineskip}
+\textbf{（一）外贴时的成像公式}
+
+薄系统的高斯成像式可写成 \[
+\frac{n_{\rm image}}{y}+\frac{n_{\rm object}}{x}=\Phi. \tag{3}
+\]
+本题外贴时像方为空气，\(n_{\rm image}=1\)；物方为水，\(n_{\rm object}=4/3\)。平面光焦度为零，球面的光焦度为
+\[
+\Phi=\frac{n_{\rm air}-n_G}{R}
+=\frac{1-3/2}{-f/2}
+=\frac1f. \tag{3a}
+\] 因此 \[
+\frac1y+\frac{4}{3x}=\frac1f. \tag{4}
+\] 解出 \[
+\boxed{y=\frac{3fx}{3x-4f}}. \tag{5}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（二）实、虚像分区}
+
+分子 \(3fx>0\)，故 \(y\) 的符号由 \(3x-4f\) 决定： \[
+\begin{cases}
+x>4f/3,&y>0,\quad\text{像在透出光一侧，为实像};\\
+0<x<4f/3,&y<0,\quad\text{像与物同侧，为虚像}.
+\end{cases} \tag{6}
+\] 所以第（2）问的侧别判据为 \[
+\boxed{0<x<4f/3\text{同侧；}x>4f/3\text{异侧。}} \tag{7}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（三）临界物距}
+
+当像在无穷远时，式（4）中的 \(1/y=0\)： \[
+\frac4{3x_0}=\frac1f. \tag{8}
+\] 故 \[
+\boxed{x_0=\frac{4f}{3}}. \tag{9}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（四）\(x=f\) 时的像距}
+
+代入式（4）： \[
+\frac1y=\frac1f-\frac4{3f}
+=-\frac1{3f}. \tag{10}
+\] 因此 \[
+\boxed{y=-3f}. \tag{11}
+\] 负号表示虚像位于水侧。
+
+\needspace{3\baselineskip}
+\textbf{（五）外贴时的放大倍数}
+
+不同物像介质间的横向放大率绝对值为 \[
+|\beta|=\frac{n_w}{n_{\rm air}}\left|\frac yx\right|. \tag{12}
+\] 代入 \(n_w=4/3,n_{\rm air}=1,x=f,|y|=3f\)： \[
+\boxed{|\beta|=\frac43\cdot3=4}. \tag{13}
+\] 虚像与物体同向，若取正负号表示正倒，则 \(\beta=+4\)。
+
+\needspace{3\baselineskip}
+\textbf{（六）改贴内壁的一般像距}
+
+内贴系统的光焦度为\(1/(3f)\)，有 \[\frac{4f}{x}+\frac{3f}{y'}=1.\] 故
+\[\boxed{y'(x)=\frac{3fx}{x-4f}}.\]
+\(x=f\)时退化为\(y'=-f\)，作为特例核对。
+
+\needspace{3\baselineskip}
+\textbf{（七）内贴的一般放大率}
+
+带符号横向放大率为 \[\beta'=-\frac{n_w y'}{n_{\rm air}x},\] 所以
+\[\boxed{\beta'(x)=-\frac{4f}{x-4f}}.\]
+\(x=f\)时\(\beta'=4/3\)，为正立虚像。
+
+\textbf{符号判据。} 本文规定透出光方向为像距正方向，所以 \(y>0\)
+是空气侧实像，\(y<0\)
+是水侧虚像。放大率若只问大小取绝对值；若要求正倒，应结合两次折射的方向约定。手算时先用像距符号判断实虚，再单独报告大小，便于检查。
+
+\textbf{临界点附近。} 当 \(x\to(4f/3)^+\)，\(y\to+\infty\)；当
+\(x\to(4f/3)^-\)，\(y\to-\infty\)。像从一侧无穷远越过到另一侧，不是在有限位置突然跳跃。这个连续极限可以帮助学生理解物像侧别判据。
+
+\textbf{内贴时为什么光焦度变为 \(1/(3f)\)。}
+透镜移到内壁后，水中的光先入射水---玻璃球面，随后通过玻璃---空气平面。曲率中心位于传播方向一侧，\(R=+f/2\)，故
+\[
+\Phi_{\rm in}
+=\frac{n_G-n_w}{R}
+=\frac{3/2-4/3}{f/2}
+=\frac1{3f}. \tag{22}
+\] 于是高斯式为 \[
+\frac1{y'}+\frac{4}{3x}=\frac1{3f}. \tag{23}
+\] 同乘 \(3f\) 就得到第（六）问的一般成像式： \[
+\frac{3f}{y'}+\frac{4f}{x}=1. \tag{24}
+\]
+这说明内贴关系不是凭答案倒推，而是来自球面相邻介质与曲率方向的同步改变。
+
+\textbf{放大率公式的来源。} 傍轴系统的拉格朗日不变量给出 \(n h\theta\)
+在折射前后保持对应关系。由物、像三角形及约化倾角关系，可得 \[
+\beta=-\frac{n_{\rm object}y}{n_{\rm image}x}. \tag{27}
+\] 负号与本文的物像距离有向约定相关。对 \(y<0\)
+的虚像，\(\beta>0\)，表示正立。只问大小时化为式（12）。折射率因子并非经验修正，而是不同介质中光线倾角尺度不同的结果。
+
+\textbf{外贴一般放大率。} 将式（5）代入： \[
+|\beta(x)|
+=\frac43\left|\frac{3f}{3x-4f}\right|
+=\frac{4f}{|3x-4f|}. \tag{28}
+\] 靠近临界物距时放大率发散；远物 \(x\to\infty\) 时趋于零。\(x=f\) 给出
+4，和正文一致。
+
+\textbf{外贴分区的逐项检查。} 由式（5）可直接列出 \[
+\begin{array}{c|c|c}
+x\text{ 的范围}&y\text{ 的符号}&\text{像的性质}\\ \hline
+0<x<4f/3&y<0&\text{水侧正立虚像}\\
+x=4f/3&|y|\to\infty&\text{出射光平行}\\
+x>4f/3&y>0&\text{空气侧倒立实像}
+\end{array}. \tag{29}
+\] 当 \(x\to0^+\) 时，\(y\to0^-\)；当 \(x\to\infty\)
+时，\(y\to f^+\)。这两个极限分别对应物体贴近界面与远物成像，均与会聚系统图像一致。
+
+\textbf{曲率方向的操作规则。} 球面公式中的 \(R\)
+是有向半径。每次都沿光线传播方向画一条正轴：曲率中心在球面右侧取
+\(R>0\)，在左侧取 \(R<0\)。外贴时有 \[
+(n_2-n_1,R)=\left(1-\frac32,-\frac f2\right), \tag{30}
+\] 内贴时有 \[
+(n_2-n_1,R)=\left(\frac32-\frac43,+\frac f2\right). \tag{31}
+\] 两者的分子、分母都随结构改变；不能只对换折射率，也不能只翻转 \(R\)。
+
+\needspace{3\baselineskip}
+\textbf{用约化倾角检查虚像光线}
+
+薄系统的光线变量取\((h,p)\)，其中\(p=n\theta\)。光焦度为\(\Phi\)时
+\[p_{\rm out}=p_{\rm in}-\Phi h.\]
+轴上物点距壁x、物方折射率n，对高度h的入射光有\(p_{\rm in}=nh/x\)。空气侧出射角即\(p_{\rm out}\)，其反向延长与主轴的交点满足
+\[y=-\frac h{p_{\rm out}}
+=\frac1{\Phi-n/x}.\]
+外贴代\(\Phi=1/f\)，内贴代\(\Phi=1/(3f)\)，立即得到正文两种像距。这个推导直接对应图7-2中的发散光和反向延长线。
+
+对有高度\(h_o\)的物点，入射约化角为\(n(h-h_o)/x\)。在像面y处，光线高度是
+\[h_i=h+y[n(h-h_o)/x-\Phi h].\] 利用成像条件，h的系数为零，只剩
+\[h_i=-\frac{ny}{x}h_o.\]
+所以\(\beta=-ny/x\)。玻璃中的倾角、空气中的倾角并不相同，即使经过薄透镜的顶点，也不能把跨不同介质的光线画成一条不偏折的普通光心线。
+
+\(x=f\)时，外贴系统出射角为\(h/(3f)>0\)，反向延长到\(y=-3f\)；内贴出射角为\(h/f>0\)，反向延长到\(y'=-f\)。这两项检查分别定位两幅虚像图。
+
+\needspace{3\baselineskip}
+\textbf{把物点从 \(f\) 移到 \(2f\) 后，逐面判断像的性质}
+
+取水中物距 \(x=2f\)。外贴时使用 \[y_{\rm out}=\frac{3fx}{3x-4f},\qquad
+\beta_{\rm out}=-\frac{4f}{3x-4f}.\] 所以
+\[y_{\rm out}=3f,\qquad \beta_{\rm out}=-2.\]
+像位于空气侧，是倒立实像。内贴时 \[y_{\rm in}=\frac{3fx}{x-4f},\qquad
+\beta_{\rm in}=-\frac{4f}{x-4f},\] 得到
+\[y_{\rm in}=-3f,\qquad \beta_{\rm in}=2.\]
+它是水侧的正立虚像。两个像的距界面距离相等，而实、虚性质和正、倒立性质均不同；只比较距离的绝对值会漏掉题目要求的像性质。
+
+再找平行出射的位置。外贴分母 \(3x-4f=0\)，给出 \(x=4f/3\)；内贴分母
+\(x-4f=0\)，给出
+\(x=4f\)。在这两个物距，出射光束没有有限交点，不能把发散的放大率解释为无限大的有限平面像。由近轴表达式可读出出射约化倾角
+\[p_{\rm out}=h\left(\frac{4}{3x}-\frac1f\right),\]
+\[p_{\rm in}=h\left(\frac{4}{3x}-\frac1{3f}\right).\]
+代入对应物距后均为零，与平行光的几何判据一致。图7-2画的是 \(x=f\)
+的虚像例子，这个变式跨过了外贴方案的平行出射位置。
+
+\needspace{3\baselineskip}
+\textbf{用出射角符号检查上述实、虚像}
+
+在 \(x=2f\)、取正高度 \(h\) 的光线处，两种放置分别给出
+\[p_{\rm out}=-\frac{h}{3f},\qquad
+p_{\rm in}=+\frac{h}{3f}.\]
+空气中的约化倾角就是实际小倾角。第一束向主轴靠拢，交点在右侧；第二束继续远离主轴，只能把出射线向左延长求虚像。这个判据直接使用光线斜率，独立于像距公式的分母正负。原题
+\(x=f\)
+时两束均发散，因此图7-2两种方案都画左侧延长线，不能把变式的实像光路混入原题图。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf-6}
+
+物方是水、像方是空气，物距项和放大率都必须带折射率比。透镜贴在外壁还是内壁，会改变曲面所接触的介质，因而改变系统光焦度。
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9-6}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  直接使用空气薄透镜公式。
+\item
+  把空气中焦距 \(f\) 当作任意介质组合下不变的系统焦距。
+\item
+  用 \(y/x\) 直接作放大率，遗漏 \(n_w/n_{\rm air}\)。
+\item
+  \(y<0\) 时仍称为透出侧实像。
+\item
+  内贴情形只把图左右翻转，却不重算光焦度。
+\end{enumerate}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae-6}
+
+先用光焦度语言处理外贴系统，再在数轴上画出 \(x=4f/3\) 的分区。对 \(x=f\)
+的特殊值，要求学生同时给出像距符号、像的实虚、正倒和放大倍数。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3-6}
+
+把水换成折射率为 \(n\) 的液体，玻璃折射率保留
+\(n_G\)。分别求外贴和内贴时的临界物距，并讨论 \(n\to1\)
+时是否退化为空气中的普通薄透镜结果。
+
+\textbf{变式的完整解答。} 把水换成折射率为 \(n\) 的液体，保留玻璃折射率
+\(n_G\)。透镜在空气中的焦距为 \(f\)，对平凸薄透镜有 \[
+R=(n_G-1)f,
+\] 其中 \(R\) 是唯一曲面的曲率半径大小。
+
+外贴时，光先通过液体---玻璃平面，该面光焦度为零；再经玻璃---空气曲面，系统光焦度仍为
+\(1/f\)。近轴成像式为 \[
+\frac1y=\frac1f-\frac n x.
+\] 解得 \[
+\boxed{y_{\rm out}=\frac{fx}{x-nf}}.
+\] 实、虚像分界在分母为零处： \[
+\boxed{x_{0,\rm out}=nf}.
+\] \(x>nf\) 时 \(y>0\)，为空气侧实像；\(0<x<nf\) 时
+\(y<0\)，为物侧虚像。
+
+内贴时，液体中的光先经液体---玻璃曲面，系统光焦度变为 \[
+\Phi_{\rm in}
+=\frac{n_G-n}{R}
+=\frac{n_G-n}{(n_G-1)f}.
+\] 随后的玻璃---空气平面不增加光焦度。因而 \[
+\frac1{y_{\rm in}}
+=\Phi_{\rm in}-\frac n x,
+\] 即 \[
+\boxed{
+y_{\rm in}
+=\frac{x(n_G-1)f}
+{x(n_G-n)-n(n_G-1)f}
+}.
+\] 若 \(n_G>n\)，分界物距为 \[
+\boxed{
+x_{0,\rm in}
+=\frac{n(n_G-1)}{n_G-n}f
+}.
+\] 若
+\(n_G\le n\)，曲面光焦度非正，对正物距不再存在有限的实像分界。最后取
+\(n\to1\)： \[
+x_{0,\rm out}\to f,
+\qquad
+x_{0,\rm in}\to f,
+\] 两种贴法都退化为空气中普通薄透镜的焦距分界，极限一致。
+
+\needspace{3\baselineskip}
+\textbf{液体折射率接近玻璃时}
+
+内贴系统的光焦度为\((n_G-n)/[(n_G-1)f]\)。当\(n\to n_G^-\)，光焦度趋零，临界物距趋向无穷；对任意固定正x，
+\[y_{\rm in}\to-x/n_G,\qquad \beta_{\rm in}\to1.\]
+系统退化为无光焦度的平面介质组合，虚像由平面折射的视深决定。若\(n>n_G\)，曲面光焦度为负，任意正物距仍为虚像，已没有有限的实像分界。
+
+外贴系统的曲面接触玻璃和空气，光焦度仍为\(1/f\)，但物方折射率改变，所以临界物距始终为\(nf\)。
+
+取\(n=1.4,n_G=1.5,x=f\)作数值对照：
+\[y_{\rm out}=-2.5f,\quad\beta_{\rm out}=3.5,\]
+\[y_{\rm in}=-5f/6,\quad\beta_{\rm in}=7/6.\]
+两个系统均为正立虚像，却有不同像距和放大率。判断实虚、正倒、大小必须分别给出，不能因为都写了``虚像''就认为成像效果相同。
+
+\needspace{3\baselineskip}
+\textbf{物距很小时，为什么两种放置都趋向同一结果}
+
+当
+\(x/f\to0\)，玻璃曲面的聚焦项小于入射光束的几何发散项。把两种像距展开：
+\[y_{\rm out}=-\frac{3x}{4}\left[1+\frac{3x}{4f}+O(x^2/f^2)\right],\]
+\[y_{\rm in}=-\frac{3x}{4}\left[1+\frac{x}{4f}+O(x^2/f^2)\right].\]
+放大率分别为 \[\beta_{\rm out}=1+\frac{3x}{4f}+O(x^2/f^2),\qquad
+\beta_{\rm in}=1+\frac{x}{4f}+O(x^2/f^2).\] 共同的零阶像距 \(-3x/4\)
+是水中物体经平面界面在空气中观察的视深，零阶放大率为1；两种透镜放置的区别进入下一阶。这个极限同时检验介质折射率因子与像距符号。若零阶得
+\(-4x/3\)，通常是把入射和出射折射率颠倒了。
+
+\newpage
+
+\section{第 8 题}\label{ux7b2c-8-ux9898}
+
+一个可绕中心竖直轴转动的装置由两端各一匹质量为 \(m\) 的木马和一根长度为
+\(L\)、质量为 \(M\) 的均匀绝缘细杆组成。杆上均匀带电，线电荷密度为
+\(\lambda\)。空间存在一个关于转轴对称、半径为
+\(r\)（\(r<L/2\)）、方向竖直向上的均匀圆柱形磁场。初始磁场为
+\(B_0\)，随后减弱至零并保持不变；忽略阻力。
+
+（1）若 \(B(t)=B_0-kt\)，求加速转动过程中的总力矩；
+
+（2）求最终角速度；
+
+（3）若 \[
+B(t)=\frac{B_0}{6}f(t),
+\qquad
+f(t)=6-\left(\frac t\tau\right)^3
++3\left(\frac t\tau\right)^2
+-5\left(\frac t\tau\right),
+\] 其中 \(\tau=1\ \mathrm s\)，求磁场减到零所需时间；
+
+（4）在第（3）问条件下，求一匹木马在加速过程中切向加速度的最小值；
+
+（5）在第（3）问条件下，求最终角速度。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.699\linewidth,height=\textheight,keepaspectratio,alt={图8-1　带电转杆穿过轴对称变化磁场}]{../figures/question-08.pdf}
+\caption*{图8-1　带电转杆穿过轴对称变化磁场}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-7}
+
+磁场减弱产生环向电场，带电杆在磁场区内外受到不同的电场。按半径分段积分力矩，再由总磁场变化和时间约束求角速度与最小角加速度。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-7}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  圆对称法拉第定律。
+\item
+  磁场内外感生电场的分段表达式。
+\item
+  连续带电杆的力矩积分。
+\item
+  复合系统转动惯量。
+\item
+  角冲量与磁通变化量。
+\item
+  多项式零点和切向加速度极值。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-7}
+
+取杆的一侧，用 \(x\) 表示距转轴的距离。对半径为 \(x\)
+的圆周应用法拉第定律。内部圆周包围磁通
+\(\pi x^2B\)，外部圆周只包围固定面积 \(\pi r^2\) 的磁通。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-7}
+
+先求单侧半根杆的力矩，再乘 2。电荷微元为 \[
+dq=\lambda dx, \tag{1}
+\] 电场力为 \(dF=E_\varphi dq\)，关于轴的力矩微元为 \[
+dM=xE_\varphi\lambda dx. \tag{2}
+\]
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-7}
+
+图 8-2 把感生电场在 \(x<r\)、\(r<x<L/2\)
+两区间的分段规律与杆上力矩微元对应起来，因此力矩积分也必须分段。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.82\linewidth,height=\textheight,keepaspectratio,alt={图8-2　分区电场与力矩积分核}]{../figures/solution-08.pdf}
+\caption*{图8-2　分区电场与力矩积分核}
+\end{figure}
+
+\needspace{3\baselineskip}
+\textbf{（一）感生电场的分段表达式}
+
+对 \(0<x<r\)： \[
+E_1(2\pi x)=-\frac d{dt}(B\pi x^2). \tag{3}
+\] 故 \[
+E_1=-\frac{x}{2}\frac{dB}{dt}. \tag{4}
+\]
+
+对 \(r<x<L/2\)： \[
+E_2(2\pi x)=-\frac d{dt}(B\pi r^2), \tag{5}
+\] 故 \[
+E_2=-\frac{r^2}{2x}\frac{dB}{dt}. \tag{6}
+\]
+
+当 \(B=B_0-kt\) 时，\(-dB/dt=k>0\)，所以 \[
+E_1=\frac{kx}{2},
+\qquad E_2=\frac{kr^2}{2x}. \tag{7}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（二）总力矩}
+
+单侧力矩为 \[
+M_{1/2}
+=\int_0^rE_1\lambda xdx
++\int_r^{L/2}E_2\lambda xdx. \tag{8}
+\] 代入式（7）： \[
+\begin{aligned}
+M_{1/2}
+&=\frac{k\lambda}{2}\int_0^rx^2dx
++\frac{k\lambda r^2}{2}\int_r^{L/2}dx\\
+&=\frac{k\lambda r^3}{6}
++\frac{k\lambda r^2}{2}\left(\frac L2-r\right)\\
+&=k\lambda r^2\left(\frac L4-\frac r3\right).
+\end{aligned} \tag{9}
+\] 两侧力矩方向相同，所以 \[
+\boxed{M=2M_{1/2}
+=k\lambda r^2\left(\frac L2-\frac{2r}{3}\right)}. \tag{10}
+\]
+
+更一般地，只需把 \(k\) 换成 \(-dB/dt\)： \[
+M(t)=\lambda r^2\left(\frac L2-\frac{2r}{3}\right)
+\left(-\frac{dB}{dt}\right). \tag{11}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（三）总转动惯量}
+
+均匀杆绕中心垂直轴的转动惯量为 \[
+I_{\rm rod}=\frac{ML^2}{12}. \tag{12}
+\] 两匹木马视为位于 \(L/2\) 处的质点： \[
+I_{\rm horse}=2m\left(\frac L2\right)^2
+=\frac{mL^2}{2}. \tag{13}
+\] 故 \[
+\boxed{I=\frac{(M+6m)L^2}{12}}. \tag{14}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（四）线性减弱时的最终角速度}
+
+磁场减到零所需时间为 \[
+t_f=\frac{B_0}{k}. \tag{15}
+\] 角加速度恒定： \[
+\alpha=\frac MI. \tag{16}
+\] 从静止出发， \[
+\omega_f=\alpha t_f
+=\frac{k\lambda r^2(L/2-2r/3)}{I}\frac{B_0}{k}. \tag{17}
+\] 代入式（14）并化简： \[
+\begin{aligned}
+\omega_f
+&=\frac{12\lambda B_0r^2}{(M+6m)L^2}
+\left(\frac L2-\frac{2r}{3}\right)\\
+&=\boxed{\frac{2\lambda B_0r^2(3L-4r)}{(M+6m)L^2}}.
+\end{aligned} \tag{18}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（五）多项式磁场减到零的时间}
+
+令 \[
+u=\frac t\tau. \tag{19}
+\] 磁场为零等价于 \[
+6-u^3+3u^2-5u=0. \tag{20}
+\] 整理并因式分解： \[
+u^3-3u^2+5u-6=0, \tag{21}
+\] \[
+(u-2)(u^2-u+3)=0. \tag{22}
+\] 二次因子的判别式 \(1-12<0\)，故唯一实根为 \[
+u=2. \tag{23}
+\] 所以 \[
+\boxed{t_f=2\tau=2\ \mathrm s}. \tag{24}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（六）切向加速度最小值}
+
+对 \(B(t)\) 求导： \[
+\frac{dB}{dt}
+=\frac{B_0}{6\tau}(-3u^2+6u-5). \tag{25}
+\] 因此 \[
+-\frac{dB}{dt}
+=\frac{B_0}{6\tau}\left[3(u-1)^2+2\right]. \tag{26}
+\] 木马位于 \(L/2\)，切向加速度为 \[
+a_t=\frac L2\frac{M(t)}{I}. \tag{27}
+\] 代入式（11）、（14）、（26）： \[
+a_t(u)=
+\frac{\lambda r^2B_0(3L-4r)}{6(M+6m)L\tau}
+\left[3(u-1)^2+2\right]. \tag{28}
+\] 在加速区间 \(0\le u\le2\) 内，平方项在 \(u=1\) 处最小。故 \[
+\boxed{
+a_{t,\min}=
+\frac{\lambda r^2B_0(3L-4r)}{3(M+6m)L\tau}
+}. \tag{29}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（七）第（3）问磁场历程下的最终角速度}
+
+由角冲量： \[
+I\omega_f=\int_0^{t_f}M(t)dt. \tag{30}
+\] 代入式（11）： \[
+I\omega_f
+=\lambda r^2\left(\frac L2-\frac{2r}{3}\right)
+\int_0^{t_f}\left(-\frac{dB}{dt}\right)dt. \tag{31}
+\] 积分只取决于磁场总变化： \[
+\int_0^{t_f}\left(-\frac{dB}{dt}\right)dt
+=B(0)-B(t_f)=B_0. \tag{32}
+\] 所以最终角速度与具体时间函数无关，仍为 \[
+\boxed{\omega_f=\frac{2\lambda B_0r^2(3L-4r)}{(M+6m)L^2}}. \tag{33}
+\]
+
+\textbf{外部无磁场不等于无电场。} 对 \(x>r\)，圆周内部仍包围变化磁通
+\(\pi r^2B\)，所以
+\(E_\varphi\propto1/x\)。若错误地把外部电场置零，就会漏掉杆上
+\(r<x<L/2\) 的主要力矩贡献。
+
+\textbf{两侧力矩为何同向。}
+感生电场绕轴呈同一环向。杆两侧电荷所受切向力方向相反，但位置矢量也相反，\(\bm r\times\bm F\)
+的轴向分量相同，因此总力矩是单侧的两倍，而不是相互抵消。
+
+\textbf{路径无关的角冲量。} 式（31）表明 \(M(t)dt\) 正比于
+\(-dB\)。只要初、末磁场相同且装置参数不变，最终角动量与减弱快慢无关；时间函数只改变瞬时角加速度及其最小、最大值。这正是第（5）问无需重新长积分的原因。
+
+\textbf{边界检查。} \(r\to0\)
+时磁通区域消失，\(M,\omega_f\to0\)；\(\lambda\to0\)
+时装置不受电驱动力矩；增加 \(M\) 或 \(m\) 只增大惯量，使角速度减小。由于
+\(r<L/2\)，\(3L-4r>L>0\)，式（18）的系数始终为正。
+
+\textbf{力矩积分在 \(x=r\) 处的连续性。} 由式（4）、（6）， \[
+E_1(r)=\frac{-\dot B}{2}r,
+\qquad
+E_2(r)=\frac{-\dot B}{2}\frac{r^2}{r}
+=\frac{-\dot B}{2}r. \tag{34}
+\]
+两段电场在边界连续，因此积分不含额外的表面冲击项。解答图的直线段与反比例曲线也应在
+\(x=r\) 无缝相接。
+
+\textbf{线性磁场的角冲量复核。} 在 \(0<t<B_0/k\)
+内，力矩常量为式（10）。总角冲量 \[
+\Delta L_z=M\frac{B_0}{k}
+=\lambda B_0r^2\left(\frac L2-\frac{2r}{3}\right). \tag{35}
+\] 除以 \(I\)
+立即得到式（18）。这比先求角加速度再乘时间更直接，也预示一般 \(B(t)\)
+情况只与 \(\Delta B\) 有关。
+
+\textbf{加速度极值的完整区间检查。} 第（3）问的有效时间是
+\(0\le u\le2\)。式（26）中的 \[
+g(u)=3(u-1)^2+2 \tag{36}
+\] 在 \(u=1\) 处取最小值 2，在两端 \(u=0,2\) 都取
+5。因此加速过程始终同向，最小值位于中点时刻而非磁场刚好为零的末时刻。尽管
+\(B(2\tau)=0\)，其导数此时仍不为零；题设说明磁场随后停止变化，意味着在末端外加控制使
+\(\dot B\) 跃变为零，感生力矩随即消失。
+
+\textbf{能量来源。}
+变化磁场由外部装置维持，感生电场对带电杆做功，装置获得转动动能。这里不存在``磁场直接对静止电荷做功''；真正做功的是非保守感生电场，能量来自产生和调节磁场的外部电源。最终角速度与变化路径无关，但外部电源的瞬时功率随
+\(B(t)\) 不同。
+
+\textbf{总力矩的另一种整理。} 将式（10）写成 \[
+M=\frac{k\lambda r^2}{6}(3L-4r). \tag{37}
+\] 其中 \(3L\) 来自磁场外的长杆区段和内部线性区的共同贡献，\(-4r\)
+是边界匹配后的修正。由于 \(r<L/2\)，有 \(3L-4r>L\)，不会发生力矩反号。
+
+\textbf{最小加速度的端点比较。} 不能只由 \(g'(u)=6(u-1)=0\)
+就结束，还要确认 \(u=1\) 位于 \([0,2]\) 内，并比较 \[
+g(0)=5,
+\qquad g(1)=2,
+\qquad g(2)=5. \tag{38}
+\]
+所以它是全区间最小值。若磁场函数换成别的多项式，驻点之外还必须检查所有端点和不可导点。
+
+\textbf{角速度方向。}
+磁场向上且减弱时，感生电场要维持向上的磁通。对正线电荷，电场力矩方向由右手定则确定。若
+\(\lambda<0\)，式（18）的角速度整体反号，大小不变；因此公式保留
+\(\lambda\) 的代数符号比一开始只写绝对值更完整。
+
+\textbf{两段力矩的占比。} 磁场内部与外部的单侧力矩分别为 \[
+M_{\rm in}^{(1)}
+=\frac{k\lambda r^3}{6}, \tag{39}
+\] \[
+M_{\rm out}^{(1)}
+=\frac{k\lambda r^2}{2}\left(\frac L2-r\right). \tag{40}
+\] 二者之比为 \[
+\frac{M_{\rm out}^{(1)}}{M_{\rm in}^{(1)}}
+=3\left(\frac{L}{2r}-1\right). \tag{41}
+\] 当 \(L\gg r\)
+时，外部无磁场区的力矩反而占主要部分。这并不矛盾：外区虽然
+\(B=0\)，但包围的磁通仍在变化，且带电杆的有效长度更长。这个比值可以直接检验解答是否遗漏了
+\(r<x<L/2\) 的积分。
+
+\textbf{最终动能与瞬时功率。} 最终角速度只由 \(\Delta B\)
+决定，因此在理想模型中最终转动动能 \[
+K_f=\frac12I\omega_f^2 \tag{42}
+\] 也只由初、末磁场决定。但瞬时外源功率 \[
+P(t)=M(t)\omega(t) \tag{43}
+\] 同时依赖 \(-\dot B(t)\) 和此前积累的
+\(\omega(t)\)。不同的磁场时间函数可以有不同的峰值功率和加速度历程，却给出相同的总角冲量与最终状态。这里要区分``最终结果的路径无关''与``全过程每个时刻都相同''。
+
+\textbf{切向与角加速度的单位关系。} 木马距轴为 \(L/2\)，故 \[
+a_t=\alpha\frac L2. \tag{44}
+\] \(\alpha\) 的单位是 \(\mathrm{s^{-2}}\)，再乘长度才得到
+\(\mathrm{m\,s^{-2}}\)。若把式（28）的结果与角加速度混用，通常会在量纲检查中发现少了一个
+\(L/2\)；这也是第（4）问必须单独写式（27）的原因。
+
+最后还可用功率关系核对力矩号和转动方程。设装置的角速度为 \(\omega\)，由
+\[
+I\dot\omega=M(t)
+\] 得到感生电场的瞬时功率 \[
+P=M(t)\omega
+=I\omega\dot\omega
+=\frac{d}{dt}\left(\frac12I\omega^2\right).
+\] 对整个磁场变化过程积分， \[
+\int P\,dt=\frac12I\omega_f^2,
+\] 正好等于转动动能的增量。若取定的正方向使
+\(\omega>0\)，则加速阶段必须有
+\(M>0\)、\(P>0\)；若计算出力矩与角速度反向，应回到法拉第定律与电荷符号重新检查。这个复核不依赖
+\(B(t)\) 的具体多项式形式。
+
+\textbf{感生电场必须按半径分段。} 当 \(x<r\)，法拉第回路包围磁通量
+\(\pi x^2B\)，故 \[
+E_\varphi=-\frac{x}{2}\dot B.
+\] 当 \(x>r\)，包围的变化磁通量固定为 \(\pi r^2B\)，故 \[
+E_\varphi=-\frac{r^2}{2x}\dot B.
+\] 杆上 \(dq=\lambda dx\)，力矩微元
+\(d\tau=xE_\varphi dq\)，所以半杆积分必须在 \(x=r\)
+拆成两段，再乘两根对称半杆的因子 \(2\)。对时间积分时
+\(\int-\dot B,dt=B_0\)，因此最终角速度只与磁场总变化量有关。
+
+\textbf{磁场法向和最小值符号。}
+顶视图中磁场沿\(+z\)，用圆点表示；磁场减弱时感生电场逆时针，杆右侧向上、左侧向下。杆在\(r\)以内的力矩积分含\(x^2\)，在\(r\)以外含常数\(r^2\)，这与图8-2的分段电场一一对应。若\(\lambda\)可带负号，所问角加速度的最小大小使用\(|\lambda|\)；本题取\(\lambda\)为正时，原方向和数值成立。这里把B当作给定外场，并忽略杆自身电流和电荷运动产生的场。
+
+\needspace{3\baselineskip}
+\textbf{从任意磁场历程直接求转动，再求做功}
+
+把力矩系数记为
+\[C_r=\lambda r^2\left(\frac L2-\frac{2r}{3}\right),\qquad
+J=\frac{(M+6m)L^2}{12}.\] 运动方程是
+\(J\dot\omega=-C_r\dot B\)。若初态静止，积分得到
+\[\omega(t)=\frac{C_r}{J}[B_0-B(t)].\] 因此最终 \(\omega_f=C_rB_0/J\)
+由磁场总变化决定，不依赖完成变化所花时间。杆与木马最终转动动能为
+\[K_f=\frac12J\omega_f^2=\frac{C_r^2B_0^2}{2J}.\] 用转矩功再算一次：
+\[W=\int\tau\omega\,\mathrm dt
+=\frac{C_r^2}{J}\int_{B_0}^{0}[-(B_0-B)]\,\mathrm dB
+=\frac{C_r^2B_0^2}{2J}.\] 即使力矩始终正向，也不能把角冲量
+\(\int\tau\,\mathrm dt=C_rB_0\)
+当成转动动能。角冲量有角动量量纲，做功还须乘角速度。
+
+对于原题多项式，令 \(u=t/\tau\)，则
+\[B/B_0=1-\frac56u+\frac12u^2-\frac16u^3,\]
+\[\frac{\omega}{\omega_f}=\frac56u-\frac12u^2+\frac16u^3,\quad0\le u\le2.\]
+在 \(u=1\) 时已获得最终角速度的一半，且角加速度恰为最小：
+\[\dot\omega(1)=\frac{\omega_f}{3\tau}.\] 起点与终点内侧的角加速度均为
+\(5\omega_f/(6\tau)\)。\(u=2\)
+之后题目令磁场恒为零，故角加速度跳为零、角速度保持不变；最小加速度问的是加速区间，不能把之后匀速阶段并入。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf-7}
+
+先分区求 \(E_\varphi\)，再积分力矩；最终角速度则由磁场总变化
+\(\Delta B\) 决定，而非由 \(B(t)\)
+的具体形状决定。瞬时加速度与最终角速度分别对应``变化率''和``总变化量''。
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9-7}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  对 \(x>r\) 仍使用 \(E\propto x\)，或直接令外部 \(E=0\)。
+\item
+  只积分半根杆却忘记乘 2。
+\item
+  力矩微元漏乘力臂 \(x\)。
+\item
+  两匹木马转动惯量写成 \(2mL^2\)。
+\item
+  多项式根未检查判别式和正时间区间。
+\item
+  求切向加速度时漏乘 \(L/2\)。
+\item
+  第（5）问重复积分多项式并产生不必要误差。
+\end{enumerate}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae-7}
+
+先画出 \(E_\varphi(x)\) 的折线---反比例图，让学生解释在 \(x=r\)
+处为何连续。力矩积分完成后，用角冲量形式重写结果，突出最终角速度只由
+\(B_0\) 决定。最后再处理多项式的时间与极值。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3-7}
+
+\textbf{变式.} 带电细杆只在 \(a<|x|<L/2\) 的两段上有线电荷密度
+\(\lambda\)，求磁场变化过程中的总力矩。
+
+\textbf{解答.} 法拉第电场在 \(x<r\) 时为 \(E_\varphi=-x\dot B/2\)，在
+\(x>r\) 时为 \(E_\varphi=-r^2\dot B/(2x)\)。两侧杆元的力矩同向，故 \[
+M=2\int_a^{L/2}\lambda xE_\varphi(x)\,\mathrm dx.
+\] 当 \(a<r\) 时， \[
+\boxed{M=-\lambda\dot B\left[
+\frac{r^3-a^3}{3}+r^2\left(\frac L2-r\right)
+\right]}.
+\] 当 \(a\ge r\) 时， \[
+\boxed{M=-\lambda r^2\dot B
+\left(\frac L2-a\right)}.
+\] 时间积分后 \(\int Mdt\) 只含
+\(\int(-\dot B)dt=B_0-B_f\)，因而最终角速度仍只依赖磁场总变化量，不依赖
+\(B(t)\) 的具体时间形状。若 \(B_f=0\)，角冲量正比于
+\(B_0\)；若磁场先减弱后增强并回到初值，则净角冲量为零，但过程中仍可能出现非零角速度与切向加速度。
+
+\needspace{3\baselineskip}
+\textbf{磁场半径覆盖整杆的分支}
+
+若变式允许\(r\ge L/2\)，整杆处于场内，原题外区积分应删除。于是
+\[M=-2\lambda\dot B\int_0^{L/2}\frac{x^2}{2}\,\mathrm dx
+=-\frac{\lambda L^3}{24}\dot B.\]
+在\(r=L/2\)，与原分段式\(\lambda r^2(L/2-2r/3)(-\dot B)\)连续一致；不能把原式无限外推到\(r>L/2\)。
+
+对任意给定时间函数，角速度满足
+\[\omega(t)-\omega(0)=\frac{\mathcal A}{I}[B(0)-B(t)],\]
+其中\(\mathcal A\)取相应半径分支的力矩系数。机械动能增加为
+\[\Delta K=\frac I2[\omega(t)^2-\omega(0)^2].\]
+磁场源做功由这个能量改变决定；不能仅用\(\int M\,\mathrm dt\)当作功，因为它的量纲是角动量。
+
+原题三次时间函数在\(0\le t/\tau\le2\)单调下降，\(-\dot B\)的最小值在\(t=\tau\)。这里最小的是切向加速度大小，角速度则在整个过程中单调增加，二者的极值时刻不同。
+
+\needspace{3\baselineskip}
+\textbf{用固定总电荷比较两种杆长}
+
+若杆总电荷 \(Q_{\rm rod}\) 固定，则
+\(\lambda=Q_{\rm rod}/L\)，不能在改变 \(L\) 时保持 \(\lambda\)
+不变。固定比值 \(\eta=r/L<1/2\) 有
+\[C_r=Q_{\rm rod}L^2\eta^2\left(\frac12-\frac{2\eta}{3}\right).\] 因此
+\[\omega_f=\frac{12Q_{\rm rod}B_0}{M+6m}
+\eta^2\left(\frac12-\frac{2\eta}{3}\right),\] 在质量和 \(\eta\)
+都固定时与整体长度无关。若反而固定 \(\lambda\)，则
+\(C_r\propto L^3,J\propto L^2\)，有
+\(\omega_f\propto L\)。这两个结果都正确，只是保持的物理量不同。 在
+\(0<\eta<1/2\) 内，
+\[\frac{\mathrm d}{\mathrm d\eta}\left[\eta^2\left(\frac12-\frac{2\eta}{3}\right)\right]
+=\eta(1-2\eta)>0.\]
+所以扩大磁场覆盖半径会增大最终转速；覆盖全杆以后，应改用全杆位于场内的系数
+\(C=Q_{\rm rod}L^2/24\)，不能继续外推原来的分区式。
+
+\needspace{3\baselineskip}
+\textbf{固定变化时间下，恒定角加速度的比较}
+
+给定总磁场变化 \(B_0\) 和完成时间 \(T_f\)，平均角加速度必为
+\(\omega_f/T_f\)。任一非负角加速度历程满足
+\[\min_{0<t<T_f}\dot\omega\le\frac1{T_f}\int_0^{T_f}\dot\omega\,\mathrm dt
+=\frac{\omega_f}{T_f}.\] 线性减磁 \(B=B_0(1-t/T_f)\)
+达到等号，产生恒定角加速度。原题多项式在 \(T_f=2\tau\)
+内完成变化，平均为 \(\omega_f/(2\tau)\)，最小为
+\(\omega_f/(3\tau)\)，后者是平均的 \(2/3\)。
+两种历程的最终角速度相同，最大转矩却不同。原题起、终点内侧力矩对应
+\(5\omega_f/(6\tau)\) 的角加速度，是平均值的
+\(5/3\)；线性减磁各时刻均等于平均。若磁场驱动允许在端点突然改变导数，则线性方案可使加速区间内的最小加速度最大；若要求端点导数连续为零，最小值趋零，优化问题需要重新约定区间和端点条件。
+\end{document}

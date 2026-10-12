@@ -1,0 +1,194 @@
+\documentclass[multi=tikzpicture,border=7pt]{standalone}
+\usepackage{ctex,amsmath,bm}
+\usepackage{tikz,pgfplots}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{arrows.meta,calc,angles,quotes,patterns,positioning,decorations.pathmorphing,3d}
+\tikzset{axis/.style={->,>=Stealth,thick},force/.style={->,>=Stealth,very thick,red!72!black},velocity/.style={->,>=Stealth,very thick,blue!72!black},dim/.style={<->,>=Stealth,thin},body/.style={draw=black,fill=blue!7,thick},guide/.style={dashed,gray!65},hidden/.style={dashed,gray!58,thick},wire/.style={brown!72!black,very thick},panel/.style={font=\bfseries,anchor=west}}
+\tikzset{wire/.style={brown!70!black,very thick},guide/.style={dashed,gray!60},force/.style={->,>=Stealth,thick,red!70!black},velocity/.style={->,>=Stealth,thick,blue!70!black},axis/.style={->,>=Stealth,thick},dim/.style={<->,>=Stealth,thin},body/.style={draw,thick,fill=blue!7},panel/.style={anchor=west,font=\bfseries}}
+\begin{document}
+
+% 1 question-01
+\begin{tikzpicture}[x=.95cm,y=.95cm]
+  \node[panel] at (-5.5,3.5){光滑小车内受恒力的质点};
+  \draw[very thick] (-5,-1.8)--(5,-1.8);
+  \draw[body] (-3.7,-1.45) rectangle (4.2,1.8);
+  \shade[ball color=orange!55] (-2.9,-1.0) circle(.45);
+  \node at (-2.9,-1.0){$m$}; \node at (3.55,1.4){$M$};
+  \draw[force] (-2.45,-1.0)--++(2.0,0) node[above]{$F$};
+  \draw[dim] (-3.7,2.35)--(4.2,2.35) node[midway,above]{$l$};
+  \node at (0,-2.45){地面与车内底面均光滑};
+\end{tikzpicture}
+
+% 2 solution-01
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+\node[panel]at(-.3,3.4){质心速度与小猪相对质心速度};
+\begin{scope}\draw[axis](0,0)--(4.5,0)node[right]{$t$};\draw[axis](0,0)--(0,2.5)node[above]{$v_C$};\draw[blue,thick](0,0)--(4,2);\node at(2,2.1){斜率 $F/(m+M)$};\end{scope}
+\begin{scope}[shift={(6,0)}]\draw[axis](0,0)--(5,0)node[right]{$t$};\draw[axis](0,-1.2)--(0,2.5)node[above]{$w=v_m-v_C$};
+\draw[blue,thick](0.000000000,0.000000000)--(1.000000000,1.000000000)--(1.000000000,-0.600000000)--(2.200000000,0.600000000)--(2.200000000,-0.360000000)--(2.920000000,0.360000000)--(2.920000000,-0.216000000)--(3.352000000,0.216000000)--(3.352000000,-0.129600000)--(3.611200000,0.129600000)--(3.611200000,-0.077760000)--(3.766720000,0.077760000)--(3.766720000,-0.046656000)--(3.860032000,0.046656000)--(3.860032000,-0.027993600)--(3.916019200,0.027993600)--(3.916019200,-0.016796160)--(3.949611520,0.016796160)--(3.949611520,-0.010077696)--(3.969766912,0.010077696)--(3.969766912,-0.006046618)--(3.981860147,0.006046618)--(3.981860147,-0.003627971)--(3.989116088,0.003627971)--(3.989116088,-0.002176782)--(3.993469653,0.002176782)--(3.993469653,-0.001306069)--(3.996081792,0.001306069)--(3.996081792,-0.000783642)--(3.997649075,0.000783642)--(3.997649075,-0.000470185)--(3.998589445,0.000470185)--(3.998589445,-0.000282111)--(3.999153667,0.000282111)--(3.999153667,-0.000169267)--(3.999492200,0.000169267)--(3.999492200,-0.000101560)--(3.999695320,0.000101560)--(4.000000000,0.000000000)--(4.700000000,0.000000000);
+\draw[guide](4,-1)--(4,1.8);\node[above]at(4,1.8){$T_\infty$};\node[above left]at(1,1){$w_0$};\node[below]at(1,-.6){$-ew_0$};\node at(2.5,-1.6){示例 $e=0.6$，各斜段斜率相同};\end{scope}
+\end{tikzpicture}
+
+% 3 question-02
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+\node[panel]at(-4.6,3.1){板间 $+x$ 向右，电场指向低电势左板};
+\fill[blue!8](-3,-1.4)rectangle(3,1.4);\draw[very thick](-3,-1.7)--(-3,1.7)(3,-1.7)--(3,1.7);
+\draw[axis](-3,-2.2)--(4,-2.2)node[right]{$x$};\draw[dim](-3,2.2)--(3,2.2)node[above,midway]{$d$};
+\foreach\y in{-1,1}{\draw[force](2.4,\y)--(-2.4,\y)node[midway,above]{$\bm E$};}
+\node at(0,0){$\varepsilon_r=\alpha x+\beta$};\node[left]at(-3,0){$\varphi=0$};\node[right]at(3,0){$\varphi=U$};
+\end{tikzpicture}
+
+% 4 solution-02
+\begin{tikzpicture}[x=.95cm,y=.95cm]
+  \node[panel] at (-5.4,3.8){位移矢量、极化强度与束缚电荷};
+  \fill[blue!8] (-3.7,-1.8) rectangle (3.7,1.8);
+  \draw[very thick] (-4.1,-2.1)--(-4.1,2.1) (4.1,-2.1)--(4.1,2.1);
+  \draw[axis] (-3.7,-2.6)--(3.9,-2.6) node[right]{$x$};
+  \foreach \x in {-3.2,-2.4,...,3.2}{\draw[force] (\x,.7)--++(-1.0,0);}
+  \node at (0,1.35){$\bm D=-D_0\bm e_x$};
+  \node at (0,.35){$\bm P=\varepsilon_0[\varepsilon_r(x)-1]\bm E$};
+  \node[red!75!black] at (-4.55,0){$+\sigma_p(0)$};
+  \node[red!75!black] at (4.65,0){$\sigma_p(d)<0$};
+  \node at (0,-.4){$\rho_p(x)>0$};
+\end{tikzpicture}
+
+% 5 question-03
+\begin{tikzpicture}[x={(1cm,0cm)},y={(.55cm,.28cm)},z={(0cm,1cm)},scale=.9]
+  \node[panel] at (-5,-3.5,4.5){上升并加速转动的水平圆盘};
+  \draw[fill=blue!8,thick] (0,0,0) ellipse[x radius=4,y radius=2.2];
+  \foreach \r in {.5,1.0,...,3.5}{\foreach \a in {0,30,...,330}{\fill[orange!65!black] ({\r*cos(\a)},{\r*sin(\a)},.12) circle(.045);}}
+  \draw[axis] (0,0,0)--(0,0,3.4) node[above]{$z$};
+  \draw[velocity] (0,0,1.4)--(0,0,3.0) node[right]{$a$};
+  \draw[->,very thick,purple!70!black] (2.4,0,.5) arc[start angle=0,end angle=300,x radius=2.4,y radius=1.25] node[right]{$\beta$};
+  \draw[dim] (0,0,.2)--(4,0,.2) node[midway,above]{$R_0$};
+\end{tikzpicture}
+
+% 6 solution-03
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+\node[panel]at(-5.2,3.4){从高处抛出及着盘位置的二维分解};
+\begin{scope}[shift={(-3.5,0)}]
+\draw[thick](-.6,-1)--(3.5,-1);\fill(0,1)circle(2pt)node[left]{释放点};
+\draw[velocity](0,1)--(0,2.2)node[left]{$v_z=at$};\draw[velocity](0,1)--(1.1,1)node[above]{$v_\theta=\beta rt$};
+\draw[blue!70!black,thick,->]plot[domain=0:2.81896,samples=70](\x,{1+.7*\x-.5*\x*\x});
+\draw[dim](-.55,-1)--(-.55,1)node[midway,left]{$h$};\node at(1.4,-1.8){接收盘在释放点下方};
+\end{scope}
+\begin{scope}[shift={(2.3,-.7)}]
+\draw[axis](-.2,0)--(3.4,0)node[right]{$\bm e_r$};\draw[axis](0,-.2)--(0,3)node[above]{$\bm e_\theta$};
+\draw[velocity](0,0)--(1.6,0)node[below]{$r$};\draw[velocity](1.6,0)--(1.6,1.9)node[right]{$Y(r)$};\draw[very thick,purple!70!black](0,0)--(1.6,1.9)node[midway,above left]{$R_f$};
+\node at(1.4,-1.1){$Y=\beta rt\,t_f+s(r)$};
+\end{scope}
+\end{tikzpicture}
+
+% 7 question-04
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+\node[panel]at(-5,3.6){真空中的单层泡与同心双层泡};
+\begin{scope}[shift={(-3,0)}]\draw[blue!70!black,thick](0,0)circle(2);\fill(0,0)circle(1.5pt);\draw[dim](0,0)--(2,0)node[above,midway]{$a$};\node at(0,-2.8){初态};\end{scope}
+\begin{scope}[shift={(3,0)}]\draw[blue!70!black,thick](0,0)circle(2.5)(0,0)circle(1.25);\fill(0,0)circle(1.5pt);
+\draw[dim](0,0)--(1.25,0)node[above,midway]{$r$};\draw[dim](0,0)--(0,-2.5)node[left,midway]{$2r$};\node at(0,-3.1){末态};\end{scope}
+\end{tikzpicture}
+
+% 8 solution-04
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+\node[panel]at(-4.7,3.5){同心双层膜的压强关系};
+\draw[blue!65!black,thick](0,0)circle(2.5)(0,0)circle(1.25);\node at(0,0){$P_B$};\node at(0,1.8){$P_A$};\node at(3.4,.7){$P_{\text{外}}=0$};
+\node at(0,-3.2){$P_A=4\sigma/(2r),\quad P_B=P_A+4\sigma/r$};\node at(0,-3.8){两个界面各有两个表面，压强跃变为 $4\sigma/\text{半径}$};
+\end{tikzpicture}
+
+% 9 question-05
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+\node[panel]at(-4.6,2.9){钢丝绕轮下侧：两侧张力均指向锚点};
+\coordinate(C)at(0,0);\coordinate(L)at(-.2052,-.5638);\coordinate(R)at(.1042,-.5909);
+\draw[body](C)circle(.6);\fill(C)circle(1.5pt);
+\draw[wire](-4,.8)--(L) (L)arc[start angle=250,end angle=280,radius=.6] (R)--(8,.8);
+\draw[guide](-4,.8)--(8,.8);\fill(-4,.8)circle(2pt)node[above]{$A$};\fill(8,.8)circle(2pt)node[above]{$B$};
+\draw[force](L)--++(-1.4,.5096)node[above]{$T_L$};\draw[force](R)--++(1.5,.2645)node[above]{$T_R$};
+\draw[force](C)--(0,-1.6)node[right]{$mg$};\draw[dim](.9,-.6)--(.9,.8)node[midway,right]{$h$};
+\draw[dim](-4,1.8)--(0,1.8)node[above,midway]{$l/3$};\draw[dim](0,1.8)--(8,1.8)node[above,midway]{$2l/3$};
+\node at(-2,-1){左倾角 $2\theta$};\node at(3,-.9){右倾角 $\theta$};\node at(2,-2.2){$\Delta\varphi\simeq3\theta$，小挠度示意};
+\end{tikzpicture}
+
+% 10 solution-05
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+\node[panel]at(-4.6,2.9){钢丝绕轮下侧：两侧张力均指向锚点};
+\coordinate(C)at(0,0);\coordinate(L)at(-.2052,-.5638);\coordinate(R)at(.1042,-.5909);
+\draw[body](C)circle(.6);\fill(C)circle(1.5pt);
+\draw[wire](-4,.8)--(L) (L)arc[start angle=250,end angle=280,radius=.6] (R)--(8,.8);
+\draw[guide](-4,.8)--(8,.8);\fill(-4,.8)circle(2pt)node[above]{$A$};\fill(8,.8)circle(2pt)node[above]{$B$};
+\draw[force](L)--++(-1.4,.5096)node[above]{$T_L$};\draw[force](R)--++(1.5,.2645)node[above]{$T_R$};
+\draw[force](C)--(0,-1.6)node[right]{$mg$};\draw[dim](.9,-.6)--(.9,.8)node[midway,right]{$h$};
+\draw[dim](-4,1.8)--(0,1.8)node[above,midway]{$l/3$};\draw[dim](0,1.8)--(8,1.8)node[above,midway]{$2l/3$};
+\node at(-2,-1){左倾角 $2\theta$};\node at(3,-.9){右倾角 $\theta$};\node at(2,-2.2){$\Delta\varphi\simeq3\theta$，小挠度示意};
+\end{tikzpicture}
+
+% 11 question-06
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+\node[panel]at(-6.7,4.1){梯形及其正方形像：实际镜前位置};
+\draw[axis](-6.8,0)--(1.3,0);\coordinate(B)at(-6,0);\coordinate(A)at(-3,0);\coordinate(C)at(-6,3);\coordinate(D)at(-3,1);
+\draw[thick](B)--(A)--(D)--(C)--cycle;
+\coordinate(Ap)at(-3,0);\coordinate(Bp)at(-2,0);\coordinate(Cp)at(-2,-1);\coordinate(Dp)at(-3,-1);\draw[blue!70!black,thick](Ap)--(Bp)--(Cp)--(Dp)--cycle;
+\draw[very thick,blue!65!black,<->](0,-1.8)--(0,3.5);\draw[very thick](.18,-1.8)--(.18,3.5);
+\foreach\y in{-1.6,-1.2,...,3.4}{\draw(.18,\y)--++(.2,.15);}
+\foreach\p/\lab/\pos in{B/B/below left,C/C/above left,D/D/above right,Ap/{A=A'}/above,Bp/{B'}/above right,Cp/{C'}/below right,Dp/{D'}/below left}{\fill(\p)circle(1.5pt)node[\pos]{$\lab$};}
+\draw[guide](C)--(Cp);\node at(.15,-2.4){透镜、镜面紧贴};
+\end{tikzpicture}
+
+% 12 solution-06
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+\node[panel]at(-6,3.2){轴上位置与反射的展开、折回};
+\draw[axis](-6.6,1)--(4.2,1);\draw[very thick](0,-.1)--(0,2.3)node[above]{$O$};
+\foreach\x/\name in{-6/B,-3/A,2/{B'_u},3/{A'_u}}{\fill(\x,1)circle(2pt)node[above]{$\name$};}
+\node at(-4.5,.4){展开物距 $6a,3a$};\node at(2.7,.4){展开像距 $2a,3a$};
+\draw[axis](-6.6,-1.5)--(4.2,-1.5);\draw[very thick](0,-2.3)--(0,-.8);
+\foreach\x/\name in{-6/B,-3/{A=A'},-2/{B'}}{\fill(\x,-1.5)circle(2pt)node[below]{$\name$};}
+\node at(2,-1.5){实际像折回镜前};\node at(-2,-3){两次透镜作用：$f'=f/2$；实体镜距 $d$ 对应展开距离 $2d$};
+\end{tikzpicture}
+
+% 13 question-07
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+\node[panel]at(-4.5,4.3){金属平板上方缓慢上移的点电荷};
+\fill[blue!7](-3,-.5)--(2,-.5)--(3,.5)--(-2,.5)--cycle;\draw[thick](-3,-.5)--(2,-.5)--(3,.5)--(-2,.5)--cycle;
+\fill[orange!85!black](0,2.5)circle(3pt)node[right]{$q$};\draw[velocity](0,2.5)--(0,3.65)node[right]{$v$};\draw[guide](0,0)--(0,2.5);
+\draw[dim](-.6,0)--(-.6,2.5)node[left,midway]{$h$};\draw[dim](0,0)--(1.7,0)node[below,midway]{$r$};
+\draw[force](3.4,2.9)--(3.4,1.3)node[right]{$\bm B$};
+\end{tikzpicture}
+
+% 14 solution-07
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+\node[panel]at(-4.5,3.8){镜像、电流连续性与安培转矩};
+\draw[very thick](-3,0)--(3,0);\fill(0,2)circle(2pt)node[right]{$q$};\draw[velocity](0,2)--(0,3)node[right]{$v$};
+\fill(0,-2)circle(2pt)node[right]{$-q$};\draw[guide](0,-2)--(0,2);
+\draw[dim](-.6,0)--(-.6,2)node[left,midway]{$h$};
+\draw[force](2.5,.15)--(.9,.15)node[above,midway]{$\alpha(r)<0$};\node at(2,1.1){$\otimes B$（俯视）};
+\node at(0,-3){$dM_z=2\pi r^2B\alpha(r)dr,\qquad M_z=-qvA/h$};
+\node at(0,-3.6){带符号的径向电流向内，转矩沿 $-z$};
+\end{tikzpicture}
+
+% 15 question-08
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+\node[panel]at(-4.5,3.2){同向入射光子与三种原子静质量};
+\draw[axis](-4,-1)--(4,-1)node[right]{$x$};\draw[velocity](-3,0)--(-1,0)node[above,midway]{$E_\gamma$};\draw[body](0,0)circle(.2);\node[below]at(0,-.25){$M_1$};\draw[velocity](0,0)--(1.5,0)node[above]{$v_0$};
+\node[draw,align=left]at(0,1.7){基态 $M_0=m$\\第一激发态 $M_1=m+\Delta E_1/c^2$\\第二激发态 $M_2=m+(\Delta E_1+\Delta E_2)/c^2$};
+\end{tikzpicture}
+
+% 16 solution-08
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+\node[panel]at(-4.8,3.2){总四动量与末态质量壳条件};
+\node[draw,align=left]at(0,1.6){吸收：$P_2=P_1+P_\gamma$\\$P_2^2=M_2^2c^2$};
+\node[draw,align=left]at(0,-.1){发射：$P'_0=P_2-P_\gamma$\\$(P'_0)^2=M_0^2c^2$};
+\node at(0,-1.8){$P_\gamma=(E_\gamma/c,E_\gamma/c)$，同向光子 $E_\gamma=p_\gamma c$};
+\node at(0,-2.6){微小反冲先作高精度计算，再取有效数字};
+\end{tikzpicture}
+
+\end{document}

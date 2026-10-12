@@ -1,0 +1,305 @@
+\documentclass[multi=tikzpicture,border=7pt]{standalone}
+\usepackage{ctex,amsmath,bm}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc,angles,quotes,decorations.pathmorphing,patterns,positioning,intersections}
+\tikzset{
+axis/.style={->,>=Stealth,thick},force/.style={->,>=Stealth,very thick},
+flow/.style={->,>=Stealth,thick,blue!70!black},dim/.style={<->,>=Stealth,thin},
+body/.style={draw=black,fill=blue!7,thick},guide/.style={text=black,dashed,gray!70,text=black},
+point/.style={circle,fill=black,inner sep=1.5pt},field/.style={->,>=Stealth,thick,purple!75!black}}
+\begin{document}
+
+% 01 question-01
+\begin{tikzpicture}[x=1cm,y=1cm]
+  \draw[thick] (-5,2.7)--(5,2.7);
+  \foreach \x in {-4.8,-4.3,...,4.7}{\draw[thin] (\x,2.7)--++(.25,.25);}
+  \coordinate (P) at (1.1,2.7); \coordinate (B) at (-.55,-1.0); \coordinate (D) at (1.1,1.7);
+  \filldraw[fill=white,thick] (P) circle(.18) node[above right]{$m$};
+  \draw[very thick] (P)--(B);
+  \filldraw[fill=orange!30,thick] (B) circle(.27) node[below left]{$2m$};
+  \draw[guide] (P)--++(0,-4.0);
+  \draw pic[draw,->,"$\theta$",angle radius=.65cm,angle eccentricity=1.4]
+    {angle=B--P--D};
+  \draw[force,red!75!black] (P)--++(-1.25,0) node[above]{$a$};
+  \draw[dim] (P)--(B) node[midway,right]{$l$};
+  \node at (0,-1.8){小环可沿水平光滑杆运动，摆球在竖直平面内摆动};
+\end{tikzpicture}
+
+% 02 solution-01
+\begin{tikzpicture}[x=.9cm,y=.9cm]
+  \begin{scope}[shift={(-4.7,0)}]
+    \coordinate (O) at (0,0);
+    \filldraw[fill=orange!30,thick] (O) circle(.24) node[below left]{$2m$};
+    \draw[guide] (O)--++(60:3.3);
+    \draw[force,blue!70!black] (O)--++(60:2.0) node[above]{$T$};
+    \draw[force,red!70!black] (O)--++(0:1.8) node[right]{$F^*=2ma$};
+    \draw[force] (O)--++(-90:2.1) node[below]{$2mg$};
+    \draw[force,green!55!black] (O)--++(-30:1.7) node[right]{$2m a_{\rm rel}$};
+    \coordinate (V) at (0,1); \coordinate (S) at (.9,1.56);
+    \draw pic[draw,->,"$30^\circ$",angle radius=.75cm,angle eccentricity=1.35]
+      {angle=S--O--V};
+    \node[align=center] at (0,-3.1){最大摆角处：相对径向加速度为零；\\相对切向加速度指向平衡位置};
+  \end{scope}
+  \begin{scope}[shift={(4.5,.1)}]
+    \draw[thick] (-3.8,2.1)--(3.8,2.1);
+    \coordinate (P) at (.8,2.1); \coordinate (B) at (-.1,-.65);
+    \draw[very thick] (P)--(B); \filldraw[fill=white,thick] (P) circle(.14);
+    \filldraw[fill=orange!30,thick] (B) circle(.20);
+    \draw[guide] (P)--++(0,-3.1);
+    \draw[flow] (P)--++(-1.3,0) node[above]{$a$};
+    \draw[flow] (B)--++(.85,-.25) node[right]{$l\beta$};
+    \node[draw,rounded corners,fill=blue!8,align=left] at (0,-2.4)
+      {$3a=2l\beta$\\$l\beta-a=g\theta$\\$\ddot\theta+\dfrac{3g}{l}\theta=0$};
+  \end{scope}
+\end{tikzpicture}
+
+% 03 question-02
+\begin{tikzpicture}[x=1cm,y=1cm]
+  \draw[blue!65!black,very thick] (-4.8,1.1)--(2.6,1.1)
+    .. controls (4.2,1.1) and (4.2,-1.1) .. (2.6,-1.1)--(-3.7,-1.1);
+  \draw[flow] (-4.2,1.65)--(-2.4,1.65) node[midway,above]{$u$};
+  \draw[flow] (-2.0,-1.65)--(-3.8,-1.65) node[midway,below]{$v$};
+  \draw[force,red!75!black] (2.9,0)--++(1.8,0) node[right]{$F$};
+  \draw[dim] (-4.8,-2.35)--(4.0,-2.35) node[midway,below]{$L$（全长）};
+  \node at (0,2.4){均匀柔软长链在移动弯折处连续改变运动方向};
+\end{tikzpicture}
+
+% 04 solution-02
+\begin{tikzpicture}[x=.92cm,y=.92cm]
+  \draw[body] (-5,-1.25) rectangle (5,1.25);
+  \draw[guide] (-1.7,-1.25)--(-1.7,1.25) (1.7,-1.25)--(1.7,1.25);
+  \draw[blue!65!black,very thick] (-5,.55)--(3.8,.55)
+    .. controls (4.55,.55) and (4.55,-.55) .. (3.8,-.55)--(-5,-.55);
+  \draw[flow] (-4,.9)--(-2.4,.9) node[midway,above]{$u$};
+  \draw[flow] (-2.4,-.9)--(-4,-.9) node[midway,below]{$v$};
+  \draw[force,red!75!black] (4.15,0)--++(1.35,0) node[right]{$F$};
+  \node[align=center] at (0,2.25){在 $dt$ 内进入并离开控制体的长度通量，\\共同决定弯折端的动量增量};
+  \node[draw,rounded corners,fill=orange!10,align=left] at (0,-2.65)
+  {$\lambda=m/L$，$\mathrm dX=\tfrac12(u-v)\,\mathrm dt$\\
+   $\mathrm d\ell=\tfrac12(u+v)\,\mathrm dt$，$\mathrm dp=\lambda\,\tfrac12(u+v)^2\,\mathrm dt$\\
+   $F=\dfrac{m}{2L}(u+v)^2$};
+\end{tikzpicture}
+
+% 05 question-03
+\begin{tikzpicture}[x=1cm,y=1cm]
+  \foreach \x in {-4.5,-3.7,...,4.5}{\node at (\x,2.25){$\times$}; \node at (\x,-2.25){$\times$};}
+  \node at (0,2.85){$\bm B$ 垂直纸面向里};
+  \draw[very thick] (-5,1.55)--(5,1.55) (-5,-1.55)--(5,-1.55);
+  \draw[body,fill=orange!15] (-1.75,-1.55) rectangle (-1.5,1.55);
+  \draw[body,fill=orange!15] (1.5,-1.55) rectangle (1.75,1.55);
+  \node[below] at (-1.62,-1.55){$m,r$}; \node[below] at (1.62,-1.55){$2m,r$};
+  \draw[thick] (-1.62,1.55)--(-1.62,.75) (1.62,1.55)--(1.62,.75);
+  \draw[thick] (-2.1,.75)--(-1.15,.75) (-2.1,.35)--(-1.15,.35);
+  \draw[thick] (1.15,.75)--(2.1,.75) (1.15,.35)--(2.1,.35);
+  \node at (-2.45,.55){$C$}; \node at (2.45,.55){$C$};
+  \draw[force,red!75!black] (1.75,0)--++(2,0) node[right]{$F_0\cos\omega t$};
+  \draw[dim] (-4.35,-1.05)--(-4.35,1.05) node[midway,left]{$l$};
+\end{tikzpicture}
+
+% 06 solution-03
+\begin{tikzpicture}[x=.82cm,y=.82cm]
+ \begin{scope}[shift={(-5,0)}]
+  \draw[thick] (-2.5,2)--(-1.7,2) (-1.35,2)--(.55,2) (.9,2)--(2.5,2)--(2.5,-1.5)--(1.8,-1.5);
+  \draw[thick] (-1.7,1.6)--(-1.7,2.4) (-1.35,1.6)--(-1.35,2.4);
+  \draw[thick] (.55,1.6)--(.55,2.4) (.9,1.6)--(.9,2.4);
+  \node[above] at (-1.525,2.4){$C$};\node[above] at (.725,2.4){$C$};
+  \draw[thick] (1.8,-1.5)--(1.6,-1.5)--(1.4,-1.2)--(1.1,-1.8)--(.8,-1.2)--(.5,-1.8)--(.2,-1.2)--(-.1,-1.8)--(-.4,-1.5)--(-2.5,-1.5)--(-2.5,2);
+  \node[below] at (.6,-1.85){$2r$};
+  \draw[flow] (-3.1,-.9)--(-3.1,1.2) node[midway,left]{$i=\dot q$};
+  \draw[flow,red!70!black] (-2.5,-.5)--(-2.5,.7) node[right]{$\mathcal E_2$};
+  \draw[flow,red!70!black] (2.5,-.5)--(2.5,.7) node[left]{$\mathcal E_1$};
+  \node[align=center] at (0,-3.05){串联回路：电容总压降 $2q/C$\\总电阻 $2r$，动生电动势按环向取符号};
+ \end{scope}
+ \begin{scope}[shift={(4.2,0)}]
+  \node[draw,rounded corners,fill=blue!8,align=left] at (0,2.1){$2m\dot v_1=Bl\dot q+F_0\cos\omega t$\\$m\dot v_2=-Bl\dot q$};
+  \node[draw,rounded corners,fill=orange!10,align=left] at (0,.15){$2r\dot q+\dfrac{2q}{C}+Bl(v_1-v_2)=0$};
+  \node[draw,rounded corners,fill=green!8,align=left] at (0,-2.05){$2r\ddot q+D\dot q=-\dfrac{BlF_0}{2m}\cos\omega t$\\$D=\dfrac2C+\dfrac{3B^2l^2}{2m}$};
+  \draw[flow] (0,1.35)--(0,.85);\draw[flow] (0,-.55)--(0,-1.1);
+ \end{scope}
+\end{tikzpicture}
+
+% 07 question-04
+\begin{tikzpicture}[x=1cm,y=1cm]
+  \draw[axis] (-5,0)--(5.2,0) node[right]{$x$};
+  \draw[axis] (0,-3.2)--(0,3.3) node[above]{$y$};
+  \draw[body,fill=blue!9] (0,0) circle(1.35);
+  \fill (0,0) circle(2pt) node[below right]{$O$};
+  \draw[dim] (0,0)--(120:1.35) node[midway,above left]{$r$};
+  \draw[blue!70!black,very thick,->] (-4.7,2.2)--(-2.2,2.2);
+  \draw[blue!70!black,very thick] (-2.2,2.2) .. controls (-.4,2.2) and (1.2,1.75) .. (4.4,1.1);
+  \filldraw[fill=orange!35,thick] (-3.3,2.2) circle(.15) node[above]{$q,m$};
+  \draw[dim] (-4.25,0)--(-4.25,2.2) node[midway,left]{$l$};
+  \node[above] at (-2.7,2.2){$v_0$};
+  \node at (0,-2.1){中性孤立导体球使来射点电荷发生偏转或俘获};
+\end{tikzpicture}
+
+% 08 solution-04
+\begin{tikzpicture}[x=.85cm,y=.85cm]
+  \begin{scope}[shift={(-4.9,.1)}]
+    \draw[body,fill=blue!8] (0,0) circle(2.0);
+    \fill (0,0) circle(2pt) node[below]{$+qr/h$};
+    \filldraw[fill=orange!35,thick] (4.4,0) circle(.17) node[above]{$q$};
+    \filldraw[fill=red!30,thick] (.91,0) circle(.15) node[above]{$-qr/h$};
+    \draw[dim] (0,-.55)--(.91,-.55) node[midway,below]{$r^2/h$};
+    \draw[dim] (0,-1.0)--(4.4,-1.0) node[midway,below]{$h$};
+    \draw[force,red!75!black] (4.25,0)--++(-1.2,0) node[midway,above]{$F(h)$};
+    \node[align=center] at (0,-3.0){像电荷与中心补偿电荷共同保证\\球面等势且导体总电荷为零};
+  \end{scope}
+  \begin{scope}[shift={(4.8,0)}]
+    \draw[axis] (-.3,0)--(5.4,0) node[right]{$\rho$};
+    \draw[axis] (0,-2.3)--(0,3.2) node[above]{$U_{\rm eff}$};
+    \draw[red!70!black,very thick] (.7,-2.0) .. controls (1.2,2.8) and (2.5,2.1) .. (5.0,.25);
+    \draw[guide] (2.05,0)--(2.05,2.35);
+    \node[above] at (2.05,2.35){势垒顶 $\rho_0$};
+    \draw[flow] (4.8,1.15)--(2.45,1.15) node[midway,above]{入射能量};
+    \node[align=center] at (2.7,-2.85){临界俘获：入射能量恰等于\\角动量势垒的最大值};
+  \end{scope}
+\end{tikzpicture}
+
+% 09 question-05
+\begin{tikzpicture}[x=1cm,y=1cm]
+  \draw[axis] (-4.1,0)--(4.4,0) node[right]{$x$};
+  \draw[axis] (0,-4.0)--(0,4.2) node[above]{$y$};
+  \draw[body,fill=blue!7] (0,0) circle(3.25);
+  \draw[thick,decorate,decoration={coil,segment length=5pt,amplitude=4pt}] (0,0)--(2.75,0);
+  \filldraw[fill=orange!35,thick] (3.0,0) circle(.20);
+  \draw[dim] (0,-.55)--(3.0,-.55) node[midway,below]{$x_0=12R/13$};
+  \draw[force,red!75!black] (3.0,0)--++(0,1.55) node[above]{$v_0$};
+  \draw[dim] (0,0)--(145:3.25) node[midway,above left]{$R$};
+  \node at (0,-4.65){质点在各次碰撞之间作二维各向同性简谐运动};
+\end{tikzpicture}
+
+% 10 solution-05
+\begin{tikzpicture}[x=.82cm,y=.82cm]
+ \begin{scope}[shift={(-4.3,0)}]
+  \draw[thick] (0,0) circle(3);
+  \foreach \a in {0,90,180,270}{
+   \begin{scope}[rotate=\a]
+    \draw[blue!70!black,very thick,domain=-40.0010782562:40.0010782562,samples=80,variable=\t] plot({-3*12/sqrt(119)*sin(\t)},{3*12/13*cos(\t)});
+   \end{scope}
+  }
+  \foreach \a in {45,135,225,315}{\filldraw[fill=orange!35] (\a:3) circle(.12);}
+  \node[align=center] at (0,-3.8){真实轨迹由四段筒内椭圆弧组成\\碰撞点构成内接正方形};
+ \end{scope}
+ \begin{scope}[shift={(4.3,.1)},x=3cm,y=2.1cm]
+  \draw[axis] (-.04,0)--(.83,0) node[right]{$\omega t$};
+  \draw[axis] (0,-.08)--(0,1.25) node[above]{$x/R,\ y/R$};
+  \draw[blue!70!black,very thick,domain=0:0.6981505199,samples=80] plot(\x,{12/13*cos(\x*180/pi)});
+  \draw[red!70!black,very thick,domain=0:0.6981505199,samples=80] plot(\x,{12/sqrt(119)*sin(\x*180/pi)});
+  \draw[guide] (0.6981505199,0)--(0.6981505199,.707107) node[above right]{$\tau$};
+  \node[blue!70!black] at (.3,1.07){$x/R$};\node[red!70!black] at (.38,.25){$y/R$};
+  \node[align=center] at (.38,-.6){仅画首次碰撞前的坐标\\碰撞后须旋转椭圆主轴};
+ \end{scope}
+\end{tikzpicture}
+
+% 11 question-06
+\begin{tikzpicture}[x=.9cm,y=.9cm]
+  \begin{scope}[shift={(-5,0)}]
+    \draw[body,fill=orange!10] (-2.3,-1.6) rectangle (2.3,1.6);
+    \foreach \x in {-1.8,-.9,0,.9,1.8}{\foreach \y in {-1.1,-.35,.35,1.1}{\node at (\x,\y){$+$};}}
+    \draw[axis] (0,0)--(0,2.7) node[above]{$z$};
+    \draw[field] (0,1.6)--(0,2.55); \draw[field] (0,-1.6)--(0,-2.55);
+    \node at (0,-3.1){带电无限平面};
+  \end{scope}
+  \begin{scope}
+    \draw[very thick] (0,-2.5)--(0,2.5) node[above]{$z$};
+    \foreach \a in {0,45,...,315}{\draw[field] (0,0)--++(\a:2);}
+    \draw[flow,red!75!black] (.45,-1.5)--(.45,1.5) node[right]{$-\lambda$ 以 $v$ 运动};
+    \node at (0,-3.1){带电长直导线};
+  \end{scope}
+  \begin{scope}[shift={(5,0)}]
+    \draw[axis] (-2.5,0)--(2.6,0) node[right]{$x$};
+    \draw[axis] (0,-2.4)--(0,2.6) node[above]{$z$};
+    \draw[force,blue!70!black] (0,0)--++(35:2) node[above]{$\bm E$};
+    \draw[flow,red!75!black] (0,0)--++(0,1.8) node[left]{$\bm v$};
+    \node at (1.65,-1.5){求 $\bm E',\bm B'$};
+    \node at (0,-3.1){运动参考系中的场};
+  \end{scope}
+\end{tikzpicture}
+
+% 12 solution-06
+\begin{tikzpicture}[x=.83cm,y=.83cm]
+  \begin{scope}[shift={(-4.8,0)}]
+    \draw[very thick] (0,-2.8)--(0,2.8) node[above]{$z$};
+    \draw[flow,red!75!black] (-.45,-1.8)--(-.45,1.8) node[left]{$-\lambda v$};
+    \draw[field] (1.0,0) arc[start angle=0,end angle=300,radius=1.0];
+    \filldraw[fill=orange!35,thick] (2.2,0) circle(.16) node[above,yshift=6pt]{$q,\ \bm v=v\hat z$};
+    \draw[force,red!75!black] (2.2,0)--++(1.25,0) node[right]{$q\bm v\times\bm B$};
+    \node[align=center] at (0,-3.65){唐鹏系：净电荷为零，\\负电荷流产生磁场};
+  \end{scope}
+  \begin{scope}[shift={(4.5,0)}]
+    \draw[very thick] (0,-2.8)--(0,2.8) node[above]{$z$};
+    \draw[flow,blue!70!black] (.45,1.8)--(.45,-1.8) node[right]{$+\lambda(-v)$};
+    \filldraw[fill=orange!35,thick] (2.2,0) circle(.16) node[right]{$q$ 静止};
+    \draw[field] (0,0)--(2.0,0) node[midway,above]{$\bm E_{\Delta\lambda}$};
+    \node[draw,rounded corners,fill=blue!8,align=center] at (1.0,-2.2)
+      {$\dfrac{q\mu_0\lambda v^2}{2\pi r}=\dfrac{q\Delta\lambda}{2\pi\varepsilon_0r}$\\
+       $\dfrac{\Delta\lambda}{\lambda}=\dfrac{v^2}{c^2}$};
+    \node[align=center] at (0,-4.15){黄俏系：用附加线电荷的电场\\补偿静止粒子缺少的磁力};
+  \end{scope}
+\end{tikzpicture}
+
+% 13 question-07
+\begin{tikzpicture}[x=1cm,y=.85cm]
+  \draw[axis] (-4.3,0)--(4.5,0) node[right]{$\lambda$};
+  \foreach \x in {-3.2,-2.3,-1.0,.5,1.7,3.0}{\draw[blue!65!black,very thick] (\x,0)--(\x,{1.2+0.45*mod(\x+4,2)});}
+  \draw[red!75!black,very thick] (.5,0)--(.5,3.6);
+  \node[above,red!75!black] at (.5,3.6){$486.1\,\mathrm{nm}$};
+  \node at (0,-1.15){低压氢灯可见光谱中的蓝绿色巴耳末线};
+\end{tikzpicture}
+
+% 14 solution-07
+\begin{tikzpicture}[x=.85cm,y=.85cm]
+  \begin{scope}[shift={(-4.7,0)}]
+    \foreach \n/\y in {1/0,2/1.7,3/2.5,4/3.0,5/3.3}{\draw[thick] (-2,\y)--(2,\y) node[right]{$n=\n$};}
+    \draw[force,red!75!black] (1.0,2.95)--(1.0,1.82) node[midway,left]{$486.1\,\mathrm{nm}$};
+    \node at (0,-.75){$n=4\to2$，即第 $3$ 激发态到第 $1$ 激发态};
+  \end{scope}
+  \begin{scope}[shift={(4.4,.2)}]
+    \draw[axis] (-4.2,0)--(4.3,0) node[right]{$\Delta\nu$};
+    \draw[axis] (0,0)--(0,3.8) node[above]{$P$};
+    \draw[blue!70!black,very thick,domain=-3.7:3.7,samples=120] plot ({\x},{3.2*exp(-\x*\x/2.2)});
+    \draw[dim] (-1.48,.5)--(1.48,.5) node[midway,above]{$2\nu_0v/c$（限速模型）};
+    \node[align=center] at (0,-1.0){热运动把速度分布线性映射为频偏分布，\\$\Delta\nu_{\rm rms}=(\nu_0/c)\sqrt{k_BT/m_H}$};
+  \end{scope}
+\end{tikzpicture}
+
+% 15 question-08
+\begin{tikzpicture}[x=1cm,y=1cm]
+  \draw[thick] (-5,-2.0)--(5,-2.0);
+  \foreach \x in {-4.8,-4.4,...,4.8}{\draw[thin] (\x,-2)--++(.22,-.22);}
+  \draw[body,fill=blue!7] (-2.8,-2)--(-2.8,2)--(2.8,2)--(2.8,-2);
+  \filldraw[fill=orange!35,thick] (2.55,-1.72) circle(.24) node[above left]{$m$};
+  \draw[force,red!75!black] (-2.8,0)--++(2.0,0) node[above]{$F$};
+  \draw[dim] (-2.8,2.55)--(2.8,2.55) node[midway,above]{$l$};
+  \node at (0,-2.9){箱质量 $M$；小球与两侧壁完全弹性碰撞};
+\end{tikzpicture}
+
+% 16 solution-08
+\begin{tikzpicture}[x=.78cm,y=.78cm]
+  \begin{scope}[shift={(-4.4,0)}]
+    \draw[axis] (-.2,0)--(7.1,0) node[right]{$t/t_0$};
+    \draw[axis] (0,-.2)--(0,4.2) node[above]{$\xi/l$};
+    \draw[blue!70!black,very thick,domain=0:1,samples=50] plot ({\x},{3.2*(1-\x*\x)});
+    \draw[blue!70!black,very thick,domain=1:3,samples=80] plot ({\x},{3.2*(1-(\x-2)*(\x-2))});
+    \draw[blue!70!black,very thick,domain=3:5,samples=80] plot ({\x},{3.2*(1-(\x-4)*(\x-4))});
+    \draw[blue!70!black,very thick,domain=5:7,samples=80] plot ({\x},{3.2*(1-(\x-6)*(\x-6))});
+    \draw[guide] (0,3.2)--(7,3.2);
+    \foreach \x in {1,3,5}{\filldraw[fill=red!70!black] (\x,0) circle(.10);}
+    \node[align=center,font=\footnotesize] at (2.75,-1.0)
+      {红点（左壁碰撞）：$t/t_0=1,3,5,\ldots$\\
+       右壁零相对速度转向：$t/t_0=2,4,6,\ldots$};
+  \end{scope}
+  \begin{scope}[shift={(5.2,.2)}]
+    \node[draw,rounded corners,fill=blue!8,align=left] at (0,2.8)
+      {$\ddot\xi=-F/M$\\$t_0=\sqrt{2Ml/F}$\\碰撞时 $\dot\xi\to-\dot\xi$};
+    \node[draw,rounded corners,fill=orange!10,align=left] at (0,-.1)
+      {$\Delta X_{\rm cm}=\dfrac{Ft^2}{2(M+m)}$\\
+       $x_m=X_{\rm cm}+\dfrac{M}{M+m}\xi$};
+    \node[draw,rounded corners,fill=green!8,align=center] at (0,-2.9)
+      {$t=5\sqrt{Ml/F}$ 时碰撞 $2$ 次\\
+       $\Delta x_m=(20\sqrt2-16)\dfrac{Ml}{M+m}$};
+  \end{scope}
+\end{tikzpicture}
+
+\end{document}

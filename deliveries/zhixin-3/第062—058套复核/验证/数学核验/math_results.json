@@ -1,0 +1,582 @@
+{
+  "passed": true,
+  "groups": [
+    {
+      "set": 62,
+      "question": 1,
+      "check": "平动、转动冲量和全过程滑动阈值",
+      "passed": true,
+      "result": {
+        "mu": 0.788675134594813,
+        "omega_threshold": 3.1966359695898894,
+        "continuous_slip_final": 0.2
+      }
+    },
+    {
+      "set": 62,
+      "question": 2,
+      "check": "绷直冲量及带标号八次碰撞的完整周期",
+      "passed": true,
+      "result": {
+        "first_contact_time": 1.0471975511965976,
+        "period": 50.26548245743669,
+        "kinetic_loss": 0.25,
+        "states": [
+          [
+            1.5707963267948966,
+            -1.5707963267948966,
+            1.3877787807814457e-17,
+            0.5
+          ],
+          [
+            1.5707963267948966,
+            1.5707963267948966,
+            0.25,
+            -0.24999999999999994
+          ],
+          [
+            3.141592653589793,
+            4.440892098500626e-16,
+            2.775557561562892e-17,
+            0.5
+          ],
+          [
+            3.141592653589793,
+            3.1415926535897936,
+            0.25,
+            -0.24999999999999994
+          ],
+          [
+            4.71238898038469,
+            1.5707963267948974,
+            2.775557561562894e-17,
+            0.5
+          ],
+          [
+            4.71238898038469,
+            4.712388980384691,
+            0.25,
+            -0.24999999999999994
+          ],
+          [
+            6.283185307179586,
+            3.1415926535897944,
+            2.7755575615628957e-17,
+            0.5
+          ],
+          [
+            6.283185307179586,
+            6.283185307179588,
+            0.25,
+            -0.24999999999999994
+          ]
+        ]
+      }
+    },
+    {
+      "set": 62,
+      "question": 3,
+      "check": "真实星形面积惯量、冲量反应和支持力下界",
+      "passed": true,
+      "result": {
+        "polygon_I": 11.0,
+        "I_about_A": 47,
+        "impulse_squared_bounds": [
+          29.083701215299275,
+          132.2962962962963
+        ],
+        "minimum_normal": 0.3153847971012811
+      }
+    },
+    {
+      "set": 62,
+      "question": 4,
+      "check": "结点通量守恒、两阶段余量和极限",
+      "passed": true,
+      "result": {
+        "two_stage_time": "Q(l2+2l3)/(DSn0)",
+        "dead_end_flux": 0
+      }
+    },
+    {
+      "set": 62,
+      "question": 5,
+      "check": "四像边界、静电能、多极矩和环量反例",
+      "passed": true,
+      "result": {
+        "energy_over_kq2": -0.1974544597298281,
+        "dipole_z": 3.209922879858118,
+        "local_dynamic_B": "not fixed by zero full-circle integral"
+      }
+    },
+    {
+      "set": 62,
+      "question": 6,
+      "check": "四流力密度、两种磁矩定义和同时体积元",
+      "passed": true,
+      "result": {
+        "electric_dipole_y": 0.19999999999999998,
+        "magnetization_moment": 0.3333333333333333,
+        "current_moment": 0.2733333333333333,
+        "torque_factor": 0.8
+      }
+    },
+    {
+      "set": 62,
+      "question": 7,
+      "check": "相位归一化、精确法线支持域和反射雅可比",
+      "passed": true,
+      "result": {
+        "exact_support": 0.06270819398473762,
+        "linear_support": 0.06283185307179587,
+        "reflection_axes": [
+          0.10153973136047688,
+          0.12566370614359174
+        ]
+      }
+    },
+    {
+      "set": 62,
+      "question": 8,
+      "check": "十二邻点坐标计数和删边并联关系",
+      "passed": true,
+      "result": {
+        "neighbors": 12,
+        "classes": {
+          "0": 1,
+          "2": 4,
+          "4": 2,
+          "6": 4,
+          "8": 1
+        },
+        "nearest_R": 0.16666666666666666,
+        "cut_R": 0.2,
+        "weighted_combination": 1.3333333333333333
+      }
+    },
+    {
+      "set": 61,
+      "question": 1,
+      "check": "数值绳角和两物体牛顿方程、轮体力矩回代",
+      "passed": true,
+      "result": {
+        "alpha": 0.02998227583423386,
+        "a_over_g": 0.030054999868583288,
+        "T_over_mg": 0.9866760825138922,
+        "friction_over_normal": 0.0718204257673928,
+        "torque_residual": -3.4638958368304884e-14
+      }
+    },
+    {
+      "set": 61,
+      "question": 2,
+      "check": "黏连递推和同一实体球对再次碰撞的反例",
+      "passed": true,
+      "result": {
+        "sticking_v6": 7.038781460199234,
+        "recollision_events": [
+          [
+            2.0,
+            0
+          ],
+          [
+            3.5,
+            1
+          ],
+          [
+            5.0,
+            0
+          ]
+        ],
+        "max_auxiliary_crossings": 15
+      }
+    },
+    {
+      "set": 61,
+      "question": 3,
+      "check": "原题切向爆炸约束、速度合成及双曲线近地点",
+      "passed": true,
+      "result": {
+        "aphelion_AU": 225.74864693144679,
+        "solar_speed_AU_yr": 8.866072103944312,
+        "earth_speed_AU_yr": 9.098510876377215,
+        "s": 40061.5688449178,
+        "min_energy_J": 89162738795338.25,
+        "eccentricity": 14.27286555357109,
+        "perigee_m": 6399999.999999984
+      }
+    },
+    {
+      "set": 61,
+      "question": 4,
+      "check": "折射集光度雅可比与有损不等式反例",
+      "passed": true,
+      "result": {
+        "Snell_jacobian": "checked",
+        "complete_lossless_beam": "equal etendue",
+        "aperture_counterexample": 0.5
+      }
+    },
+    {
+      "set": 61,
+      "question": 5,
+      "check": "磁能势垒、固定电流偏导与全导数倍数",
+      "passed": true,
+      "result": {
+        "critical_v": 0.5,
+        "force_peak_x": 0.3779644730092272,
+        "total_derivative_factor": 2
+      }
+    },
+    {
+      "set": 61,
+      "question": 6,
+      "check": "Jones矩阵、泄漏比和手性观察方向",
+      "passed": true,
+      "result": {
+        "ghost_over_normal": 0.004236928971096484,
+        "phase_delay": "+i delta for exp(-i omega t)",
+        "fixed_lab_rotation": "counterclockwise"
+      }
+    },
+    {
+      "set": 61,
+      "question": 7,
+      "check": "完整表面电流与内外场边界条件",
+      "passed": true,
+      "result": {
+        "normal_continuity": true,
+        "current_jump": "Kphi=nI; Kz=M sin(phi)",
+        "transverse_inside": 0.35
+      }
+    },
+    {
+      "set": 61,
+      "question": 8,
+      "check": "有效势二阶临界、局部速度和双向光子频移",
+      "passed": true,
+      "result": {
+        "ISCO_r_over_mu": 6,
+        "local_beta": 0.5,
+        "u_t": 1.4142135623730951,
+        "forward_redshift": 1.4142135623730951,
+        "backward_redshift": 0.47140452079103173,
+        "impact_parameter": 7.348469228349534
+      }
+    },
+    {
+      "set": 60,
+      "question": 1,
+      "check": "两个实体环的张力比与摩擦允许角区间",
+      "passed": true,
+      "result": {
+        "physical_rings": 2,
+        "critical_mu": 1.2981272163128497,
+        "critical_alpha": 0.9144038678745651,
+        "mu_1p5_roots": [
+          0.5820401316132349,
+          1.2673106104854852
+        ]
+      }
+    },
+    {
+      "set": 60,
+      "question": 2,
+      "check": "上下接触速度、随动转轴与材料点回归",
+      "passed": true,
+      "result": {
+        "center_angular_speed": 0.5,
+        "return_r_over_l": [
+          0.5773502691896258,
+          0.2581988897471611,
+          0.1690308509457033,
+          0.1259881576697424
+        ]
+      }
+    },
+    {
+      "set": 60,
+      "question": 3,
+      "check": "原图四配位Kagome周期网独立节点求解",
+      "passed": true,
+      "result": {
+        "degree": 4,
+        "finite_torus_N": 432,
+        "nearest_R": 0.4988425925925913,
+        "infinite_R": 0.5,
+        "full_star": 0.25,
+        "cut_star_AB": 0.5,
+        "cut_star_C": 0.125
+      }
+    },
+    {
+      "set": 60,
+      "question": 4,
+      "check": "内滚动几何、正则角动量和非平凡能量根",
+      "passed": true,
+      "result": {
+        "cos_alpha": 0.13350821757642523,
+        "alpha_degrees": 82.32763381687968,
+        "omega_over_qB_m": 0.4129900883201749,
+        "rolling_bead_on_AO": true
+      }
+    },
+    {
+      "set": 60,
+      "question": 5,
+      "check": "四极势的笛卡尔梯度和旋涡电场逐电荷核验",
+      "passed": true,
+      "result": {
+        "force": [
+          -0.28969876200389033,
+          0.13450426704366053,
+          0.0
+        ],
+        "parallel_b_each_force_zero": true
+      }
+    },
+    {
+      "set": 60,
+      "question": 6,
+      "check": "射线实际传播积分、波面参数和正交性",
+      "passed": true,
+      "result": {
+        "propagation_time_scaled": 1.2184108652896675,
+        "wavefront_X_at_half": -0.9237395264209521,
+        "receive_time_scaled": 0.9566114774905181
+      }
+    },
+    {
+      "set": 60,
+      "question": 7,
+      "check": "逐段管柱几何功积分、出口不可达和最后一滴温度",
+      "passed": true,
+      "result": {
+        "v_when_rear_at_A": 0.5938111377827813,
+        "work_to_first_exit_cm2": -88.60768202100576,
+        "weakly_damped_equilibrium_q": 117.27272727272727,
+        "last_drop_temperature_K": 456.5891472868217
+      }
+    },
+    {
+      "set": 60,
+      "question": 8,
+      "check": "两光子不变量、动量合成与等能最小角",
+      "passed": true,
+      "result": {
+        "equal_energy_minimum": true,
+        "gamma3_minimum_degrees": 90
+      }
+    },
+    {
+      "set": 59,
+      "question": 1,
+      "check": "时间函数独立极小化和入出水坐标",
+      "passed": true,
+      "result": {
+        "single_entry": 0.8253271331267208,
+        "two_entries": [
+          0.6974998019609082,
+          0.7779599370799838
+        ],
+        "times_seconds": [
+          2118.033988749895,
+          1963.4749861615326,
+          1945.437928788718
+        ]
+      }
+    },
+    {
+      "set": 59,
+      "question": 2,
+      "check": "重绳平衡、真实悬链线及绷直动量损失",
+      "passed": true,
+      "result": {
+        "catenary_parameter": 2.83844638004801,
+        "largest_tension": 9.900512820512821,
+        "retension_impulse": 1.0
+      }
+    },
+    {
+      "set": 59,
+      "question": 3,
+      "check": "无限螺线收敛积分和虫爬行角动量积分",
+      "passed": true,
+      "result": {
+        "center": [
+          0.3946308724829068,
+          -0.563758389261029
+        ],
+        "mass_for_lambda1": 7.265012605857261,
+        "equal_mass_worm_angle": 0.6931471805599453
+      }
+    },
+    {
+      "set": 59,
+      "question": 4,
+      "check": "错位椭球场抵消、吸引力符号和两种极限次序",
+      "passed": true,
+      "result": {
+        "longitudinal_signed_coefficient": "1/(12 pi eps^2 Gamma2)<0",
+        "finite_transverse_leading": "r b^2 / L^5",
+        "ideal_line_quadrupole": "r^5 / L^7"
+      }
+    },
+    {
+      "set": 59,
+      "question": 5,
+      "check": "纯滚摩擦消元、球面磁矩积分和轨道比",
+      "passed": true,
+      "result": {
+        "cyclotron_center": 0.7142857142857143,
+        "cyclotron_surface": 0.9523809523809524,
+        "radius_ratio": 0.75,
+        "shell_current_moment": 0.3333333333333333
+      }
+    },
+    {
+      "set": 59,
+      "question": 6,
+      "check": "抛物线等光程、焦点世界线及两种频率",
+      "passed": true,
+      "result": {
+        "lab_focus_x0": 1.7,
+        "moving_focus_frequency_factor": 1.4,
+        "fixed_axis_factor": 2.3333333333333335
+      }
+    },
+    {
+      "set": 59,
+      "question": 7,
+      "check": "绝热转折对称性、总能量、熵增与慢变近似",
+      "passed": true,
+      "result": {
+        "final_temperature_ratio": 1.27592278695768,
+        "entropy_coefficient": 0.6111272104482606,
+        "half_amplitude_hot_ratio": 1.4058259478901194,
+        "turning_total_energy": 2.55184557391536
+      }
+    },
+    {
+      "set": 59,
+      "question": 8,
+      "check": "发射事件零间隔、顺时针多普勒投影和同时面积",
+      "passed": true,
+      "result": {
+        "simultaneous_area_factor": 0.9165151389911681,
+        "null_emission_event": true,
+        "doppler_factor": 0.8188599170663635
+      }
+    },
+    {
+      "set": 58,
+      "question": 1,
+      "check": "脱离支持力、双切抛物线及能量下确界",
+      "passed": true,
+      "result": {
+        "detachment_degrees": 48.189685104221404,
+        "forbidden_contact_energy_height": 1.4142135623730951,
+        "allow_contact_infimum_height": 1
+      }
+    },
+    {
+      "set": 58,
+      "question": 2,
+      "check": "接触点角动量和双球切向冲量阈值",
+      "passed": true,
+      "result": {
+        "shell_inertia": 7.2e-07,
+        "reverse_strict_threshold": 1560.0,
+        "omega2_threshold": 1063.4009999999998,
+        "tangential_impulse": 0.0354467
+      }
+    },
+    {
+      "set": 58,
+      "question": 3,
+      "check": "十二棱电动势、六节点KCL和各向同性磁矩",
+      "passed": true,
+      "result": {
+        "edge_count": 12,
+        "KCL": "all six vertices",
+        "magnetic_moment": [
+          0.0,
+          -0.2041241452319314,
+          -0.1443375672974064
+        ],
+        "torque_x": -0.20412414523193154
+      }
+    },
+    {
+      "set": 58,
+      "question": 4,
+      "check": "任意自由函数的面积全导数和合法边界样例",
+      "passed": true,
+      "result": {
+        "area_over_r2": 0.5707963267948966,
+        "legal_cosine_examples": [
+          0.5707963267948966,
+          0.5707963267948966,
+          0.5707963267948966,
+          0.5707963267948966
+        ],
+        "total_derivative_sign": "minus r ell sin(theta)(1-sin(theta)) in area endpoint"
+      }
+    },
+    {
+      "set": 58,
+      "question": 5,
+      "check": "线圈端场梯度、互易反电动势和终端功率闭合",
+      "passed": true,
+      "result": {
+        "terminal_v": 0.9292035398230089,
+        "current": 0.7964601769911503,
+        "power_input": 3.5840707964601766,
+        "back_emf_fraction": 0.4336283185840708,
+        "approx_requires": "A^2 << kR"
+      }
+    },
+    {
+      "set": 58,
+      "question": 6,
+      "check": "分份递推、熵守恒和回用功后的温度",
+      "passed": true,
+      "result": {
+        "reversible_T_K": 319.25839456465354,
+        "W_over_capacity": 7.783210870692869,
+        "dissipated_final_C": 53.891605435346435,
+        "reverse_final_hot_C": 100
+      }
+    },
+    {
+      "set": 58,
+      "question": 7,
+      "check": "复波矢色散、衰减支和相速度界限",
+      "passed": true,
+      "result": {
+        "alpha_over_vacuum_k": 0.7701721827718363,
+        "phase_velocity_over_c": 0.7922634038520808,
+        "amplitude_depth_over_wavelength": 0.20664852178781565,
+        "energy_depth_half": true
+      }
+    },
+    {
+      "set": 58,
+      "question": 8,
+      "check": "两次洛伦兹同时性和非弹性四动量",
+      "passed": true,
+      "result": {
+        "relative_speed": 0.9459459459459459,
+        "mC": 32.432432432432435,
+        "total_rest_mass": 176.2153871643572,
+        "final_velocity": -0.5260869565217392,
+        "collision": [
+          6.0,
+          10.0
+        ],
+        "simultaneous_B_time": 3.6
+      }
+    }
+  ],
+  "script_sha256": "6e8d07921242939cbde9c5992d8220e778044859098f9f183042c4eabbb482d6"
+}

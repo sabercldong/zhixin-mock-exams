@@ -1,0 +1,212 @@
+\documentclass[multi=tikzpicture,border=7pt]{standalone}
+\usepackage{ctex,amsmath,bm}
+\usepackage{tikz,pgfplots}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{arrows.meta,calc,angles,quotes,patterns,positioning,decorations.pathmorphing,3d,intersections}
+\tikzset{wire/.style={brown!70!black,very thick},guide/.style={dashed,gray!60},force/.style={->,>=Stealth,thick,red!70!black},velocity/.style={->,>=Stealth,thick,blue!70!black},axis/.style={->,>=Stealth,thick},dim/.style={<->,>=Stealth,thin},body/.style={draw,thick,fill=blue!7},panel/.style={anchor=west,font=\bfseries},hidden/.style={dashed,gray!58,thick},orbit/.style={very thick,blue!70!black}}
+\tikzset{charge/.style={circle,draw,fill=blue!12,minimum size=5.5mm,inner sep=0pt},resistor/.style={decorate,decoration={zigzag,segment length=4pt,amplitude=2pt},thick}}
+\tikzset{vec/.style={->,>=Stealth,very thick},wall/.style={pattern=north east lines,pattern color=gray},nodept/.style={circle,fill=white,draw,inner sep=1.5pt}}
+\begin{document}
+% 1 question-01
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+\begin{scope}[shift={(-3.4,0)},rotate=30]
+\draw[very thick](-2.8,0)--(2.8,0);
+\foreach\x in{-2.45,-1.95,...,2.05}{\draw[body](\x,.04)rectangle++(.32,.28);}
+\draw[force](-.5,.9)--(-1.65,.9)node[midway,above]{$g\sin30^\circ$};
+\end{scope}
+\node at(-3.4,-2.0){10个同质量滑块};
+\begin{scope}[shift={(3.0,0)}]
+\draw[very thick](-2,-1)--(2.8,-1) (-2,-1)--(-2,1.6);
+\draw[body](-1.5,-.98)rectangle(-.8,-.35);\node at(-1.15,-.67){$m$};
+\draw[body](.5,-.98)rectangle(2.3,-.1);\node at(1.4,-.55){$M$};
+\draw[velocity](2,.15)--(.7,.15)node[midway,above]{$v_0$};
+\node[align=center]at(.4,-1.7){$M=10^5\,\mathrm{kg}$\\$m=10^{-5}\,\mathrm{kg}$};
+\end{scope}
+
+\end{tikzpicture}
+
+% 2 solution-01
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+\begin{scope}[shift={(-4,0)}]
+\draw[axis](-.3,0)--(2.8,0)node[right]{$x-at^2/2$};
+\draw[axis](-.2,-.2)--(-.2,3.9)node[above]{$t$};
+\draw[orbit](0.00000,0.00000)--(2.27500,3.50000);\draw[orbit](0.90000,0.00000)--(1.60000,3.50000);\draw[orbit](2.00000,0.00000)--(0.60000,3.50000);\fill[red](1.30000,2.00000)circle(2pt);\fill[red](1.23810,1.90476)circle(2pt);\fill[red](1.26667,1.83333)circle(2pt);
+\node[align=center]at(1.2,-.7){三标签示例：3个不同交点\\推广到10条线共45个交点};
+\end{scope}
+\begin{scope}[shift={(3,1.8)}]
+\fill[orange!15](0,0)--(0:2.1)arc(0:24:2.1)--cycle;
+\draw[thick](0,0)circle(2.1);
+\draw[axis](-2.4,0)--(2.8,0)node[right]{$X$};
+\draw[axis](0,-2.3)--(0,2.6)node[above]{$Y$};
+\draw[very thick,orange!80!black](-156:2.4)--(24:2.4);
+\draw[dim](.85,0)arc(0:24:.85)node[midway,right]{$\alpha$};
+\fill(-2.1,0)circle(2pt)node[above left]{初态};
+\draw[velocity](-2.1,0)--(-132:2.1)node[midway,below left]{$C$};
+\draw[velocity](-132:2.1)--(132:2.1)node[midway,left]{$W$};
+\node[align=center]at(.2,-2.9){反射轴夹角放大示意\\终态 $0\le Y\le\sqrt{m/M}\,X$};
+\end{scope}
+
+\end{tikzpicture}
+
+% 3 question-02
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+\fill[orange!12](-4,-.55)--(2,-.55)--(3.7,.7)--(-2.3,.7)--cycle;
+\draw[very thick](-4,-.55)--(2,-.55)--(3.7,.7)--(-2.3,.7)--cycle;
+\fill[blue!9](-4,0)--(2,0)--(3.7,1.25)--(-2.3,1.25)--cycle;
+\draw[very thick](-4,0)--(2,0)--(3.7,1.25)--(-2.3,1.25)--cycle;
+\node[blue!70!black]at(.6,.7){$+\sigma$};\node[orange!80!black]at(.5,-.8){$-\sigma$};
+\fill(-1,2.4)circle(2pt)node[left]{$P$};\draw[guide](-1,0)--(-1,2.4);
+\draw[dim](-.7,0)--(-.7,2.4)node[midway,right]{$h$};
+\draw[dim](4.1,.7)--(4.1,1.25)node[midway,right]{$d$};
+\node at(-1,-1.35){近边中点上方，$d\ll h\ll$板边长};
+
+\end{tikzpicture}
+
+% 4 solution-02
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+\draw[axis](-4.6,0)--(2,0)node[right]{$x$};
+\draw[axis](0,-1.1)--(0,3.4)node[above]{$z$};
+\draw[very thick,blue](-4.3,0)--(0,0);
+\draw[very thick,orange!85!black](-4.3,-.6)--(0,-.6);
+\node[blue]at(-3.7,.3){$+\sigma$};\node[orange!85!black]at(-3.7,-.9){$-\sigma$};
+\fill(0,2.2)circle(2pt)node[left]{$P(0,h)$};
+\fill[blue](-2,0)circle(2pt);\fill[orange!85!black](-2,-.6)circle(2pt);
+\draw[guide](-2,0)--(0,2.2) (-2,-.6)--(0,2.2);
+\draw[dim](-2,-1.1)--(0,-1.1)node[midway,below]{$u$};
+\draw[velocity](0,2.2)--(1.25,3.575)node[above]{$d\boldsymbol E_+$};
+\draw[force](0,2.2)--(-1,.8)node[left]{$d\boldsymbol E_-$};
+\draw[velocity](0,2.2)--(2,2.2)node[right]{$\boldsymbol E_{\rm total}$};
+\node[align=left,anchor=west]at(2.4,.5){$E_x=\dfrac{\sigma}{2\pi\varepsilon_0}\ln(1+d/h)$\\[5pt]$E_z=0$（半无限模型）};
+
+\end{tikzpicture}
+
+% 5 question-03
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+\draw[very thick](-2.8,0)--(2.8,0);
+\draw[very thick](-2.27023,0)--(-2.27023,5) (2.27023,0)--(2.27023,5);
+\draw[orbit]plot coordinates{(-2.27023,5.00000) (-2.23996,4.89761) (-2.20969,4.79795) (-2.17942,4.70097) (-2.14915,4.60659) (-2.11888,4.51474) (-2.08861,4.42538) (-2.05834,4.33843) (-2.02807,4.25385) (-1.99780,4.17157) (-1.96753,4.09153) (-1.93726,4.01369) (-1.90699,3.93799) (-1.87672,3.86437) (-1.84645,3.79280) (-1.81618,3.72323) (-1.78591,3.65559) (-1.75564,3.58986) (-1.72537,3.52598) (-1.69510,3.46392) (-1.66483,3.40362) (-1.63456,3.34506) (-1.60429,3.28819) (-1.57403,3.23297) (-1.54376,3.17936) (-1.51349,3.12734) (-1.48322,3.07686) (-1.45295,3.02789) (-1.42268,2.98040) (-1.39241,2.93435) (-1.36214,2.88971) (-1.33187,2.84647) (-1.30160,2.80457) (-1.27133,2.76401) (-1.24106,2.72474) (-1.21079,2.68675) (-1.18052,2.65000) (-1.15025,2.61448) (-1.11998,2.58015) (-1.08971,2.54701) (-1.05944,2.51501) (-1.02917,2.48415) (-0.99890,2.45440) (-0.96863,2.42574) (-0.93836,2.39815) (-0.90809,2.37162) (-0.87782,2.34612) (-0.84755,2.32164) (-0.81728,2.29816) (-0.78701,2.27567) (-0.75674,2.25415) (-0.72647,2.23359) (-0.69620,2.21397) (-0.66593,2.19527) (-0.63566,2.17750) (-0.60539,2.16063) (-0.57512,2.14465) (-0.54485,2.12956) (-0.51459,2.11534) (-0.48432,2.10198) (-0.45405,2.08947) (-0.42378,2.07782) (-0.39351,2.06699) (-0.36324,2.05700) (-0.33297,2.04784) (-0.30270,2.03949) (-0.27243,2.03195) (-0.24216,2.02522) (-0.21189,2.01929) (-0.18162,2.01417) (-0.15135,2.00983) (-0.12108,2.00629) (-0.09081,2.00354) (-0.06054,2.00157) (-0.03027,2.00039) (0.00000,2.00000) (0.03027,2.00039) (0.06054,2.00157) (0.09081,2.00354) (0.12108,2.00629) (0.15135,2.00983) (0.18162,2.01417) (0.21189,2.01929) (0.24216,2.02522) (0.27243,2.03195) (0.30270,2.03949) (0.33297,2.04784) (0.36324,2.05700) (0.39351,2.06699) (0.42378,2.07782) (0.45405,2.08947) (0.48432,2.10198) (0.51459,2.11534) (0.54485,2.12956) (0.57512,2.14465) (0.60539,2.16063) (0.63566,2.17750) (0.66593,2.19527) (0.69620,2.21397) (0.72647,2.23359) (0.75674,2.25415) (0.78701,2.27567) (0.81728,2.29816) (0.84755,2.32164) (0.87782,2.34612) (0.90809,2.37162) (0.93836,2.39815) (0.96863,2.42574) (0.99890,2.45440) (1.02917,2.48415) (1.05944,2.51501) (1.08971,2.54701) (1.11998,2.58015) (1.15025,2.61448) (1.18052,2.65000) (1.21079,2.68675) (1.24106,2.72474) (1.27133,2.76401) (1.30160,2.80457) (1.33187,2.84647) (1.36214,2.88971) (1.39241,2.93435) (1.42268,2.98040) (1.45295,3.02789) (1.48322,3.07686) (1.51349,3.12734) (1.54376,3.17936) (1.57403,3.23297) (1.60429,3.28819) (1.63456,3.34506) (1.66483,3.40362) (1.69510,3.46392) (1.72537,3.52598) (1.75564,3.58986) (1.78591,3.65559) (1.81618,3.72323) (1.84645,3.79280) (1.87672,3.86437) (1.90699,3.93799) (1.93726,4.01369) (1.96753,4.09153) (1.99780,4.17157) (2.02807,4.25385) (2.05834,4.33843) (2.08861,4.42538) (2.11888,4.51474) (2.14915,4.60659) (2.17942,4.70097) (2.20969,4.79795) (2.23996,4.89761) (2.27023,5.00000)};
+\draw[dim](3,0)--(3,5)node[midway,right]{$50\,\mathrm m$};
+\draw[dim](0,0)--(0,2)node[midway,left]{$20\,\mathrm m$};
+\draw[dim](.4,2)--(.4,5)node[midway,right]{$30\,\mathrm m$};
+\draw[dim](-2.27023,-.5)--(2.27023,-.5)node[midway,below]{$D$};
+\node at(0,5.45){均匀电线，总长$80\,\mathrm m$};
+
+\end{tikzpicture}
+
+% 6 solution-03
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+\draw[axis](-2.8,0)--(3.2,0)node[right]{$x$};
+\draw[axis](0,-.3)--(0,3.8)node[above]{$y=z-20$};
+\draw[orbit]plot coordinates{(-2.27023,3.00000) (-2.23996,2.89761) (-2.20969,2.79795) (-2.17942,2.70097) (-2.14915,2.60659) (-2.11888,2.51474) (-2.08861,2.42538) (-2.05834,2.33843) (-2.02807,2.25385) (-1.99780,2.17157) (-1.96753,2.09153) (-1.93726,2.01369) (-1.90699,1.93799) (-1.87672,1.86437) (-1.84645,1.79280) (-1.81618,1.72323) (-1.78591,1.65559) (-1.75564,1.58986) (-1.72537,1.52598) (-1.69510,1.46392) (-1.66483,1.40362) (-1.63456,1.34506) (-1.60429,1.28819) (-1.57403,1.23297) (-1.54376,1.17936) (-1.51349,1.12734) (-1.48322,1.07686) (-1.45295,1.02789) (-1.42268,0.98040) (-1.39241,0.93435) (-1.36214,0.88971) (-1.33187,0.84647) (-1.30160,0.80457) (-1.27133,0.76401) (-1.24106,0.72474) (-1.21079,0.68675) (-1.18052,0.65000) (-1.15025,0.61448) (-1.11998,0.58015) (-1.08971,0.54701) (-1.05944,0.51501) (-1.02917,0.48415) (-0.99890,0.45440) (-0.96863,0.42574) (-0.93836,0.39815) (-0.90809,0.37162) (-0.87782,0.34612) (-0.84755,0.32164) (-0.81728,0.29816) (-0.78701,0.27567) (-0.75674,0.25415) (-0.72647,0.23359) (-0.69620,0.21397) (-0.66593,0.19527) (-0.63566,0.17750) (-0.60539,0.16063) (-0.57512,0.14465) (-0.54485,0.12956) (-0.51459,0.11534) (-0.48432,0.10198) (-0.45405,0.08947) (-0.42378,0.07782) (-0.39351,0.06699) (-0.36324,0.05700) (-0.33297,0.04784) (-0.30270,0.03949) (-0.27243,0.03195) (-0.24216,0.02522) (-0.21189,0.01929) (-0.18162,0.01417) (-0.15135,0.00983) (-0.12108,0.00629) (-0.09081,0.00354) (-0.06054,0.00157) (-0.03027,0.00039) (0.00000,0.00000) (0.03027,0.00039) (0.06054,0.00157) (0.09081,0.00354) (0.12108,0.00629) (0.15135,0.00983) (0.18162,0.01417) (0.21189,0.01929) (0.24216,0.02522) (0.27243,0.03195) (0.30270,0.03949) (0.33297,0.04784) (0.36324,0.05700) (0.39351,0.06699) (0.42378,0.07782) (0.45405,0.08947) (0.48432,0.10198) (0.51459,0.11534) (0.54485,0.12956) (0.57512,0.14465) (0.60539,0.16063) (0.63566,0.17750) (0.66593,0.19527) (0.69620,0.21397) (0.72647,0.23359) (0.75674,0.25415) (0.78701,0.27567) (0.81728,0.29816) (0.84755,0.32164) (0.87782,0.34612) (0.90809,0.37162) (0.93836,0.39815) (0.96863,0.42574) (0.99890,0.45440) (1.02917,0.48415) (1.05944,0.51501) (1.08971,0.54701) (1.11998,0.58015) (1.15025,0.61448) (1.18052,0.65000) (1.21079,0.68675) (1.24106,0.72474) (1.27133,0.76401) (1.30160,0.80457) (1.33187,0.84647) (1.36214,0.88971) (1.39241,0.93435) (1.42268,0.98040) (1.45295,1.02789) (1.48322,1.07686) (1.51349,1.12734) (1.54376,1.17936) (1.57403,1.23297) (1.60429,1.28819) (1.63456,1.34506) (1.66483,1.40362) (1.69510,1.46392) (1.72537,1.52598) (1.75564,1.58986) (1.78591,1.65559) (1.81618,1.72323) (1.84645,1.79280) (1.87672,1.86437) (1.90699,1.93799) (1.93726,2.01369) (1.96753,2.09153) (1.99780,2.17157) (2.02807,2.25385) (2.05834,2.33843) (2.08861,2.42538) (2.11888,2.51474) (2.14915,2.60659) (2.17942,2.70097) (2.20969,2.79795) (2.23996,2.89761) (2.27023,3.00000)};
+\draw[orange!85!black,dashed,thick]plot coordinates{(-0.75833,0.28008) (-0.73306,0.25907) (-0.70778,0.23922) (-0.68250,0.22046) (-0.65722,0.20273) (-0.63194,0.18597) (-0.60667,0.17014) (-0.58139,0.15518) (-0.55611,0.14107) (-0.53083,0.12776) (-0.50556,0.11523) (-0.48028,0.10344) (-0.45500,0.09238) (-0.42972,0.08202) (-0.40444,0.07235) (-0.37917,0.06333) (-0.35389,0.05497) (-0.32861,0.04724) (-0.30333,0.04012) (-0.27806,0.03362) (-0.25278,0.02771) (-0.22750,0.02240) (-0.20222,0.01766) (-0.17694,0.01350) (-0.15167,0.00990) (-0.12639,0.00687) (-0.10111,0.00439) (-0.07583,0.00247) (-0.05056,0.00110) (-0.02528,0.00027) (0.00000,0.00000) (0.02528,0.00027) (0.05056,0.00110) (0.07583,0.00247) (0.10111,0.00439) (0.12639,0.00687) (0.15167,0.00990) (0.17694,0.01350) (0.20222,0.01766) (0.22750,0.02240) (0.25278,0.02771) (0.27806,0.03362) (0.30333,0.04012) (0.32861,0.04724) (0.35389,0.05497) (0.37917,0.06333) (0.40444,0.07235) (0.42972,0.08202) (0.45500,0.09238) (0.48028,0.10344) (0.50556,0.11523) (0.53083,0.12776) (0.55611,0.14107) (0.58139,0.15518) (0.60667,0.17014) (0.63194,0.18597) (0.65722,0.20273) (0.68250,0.22046) (0.70778,0.23922) (0.73306,0.25907) (0.75833,0.28008)};
+\fill(0,1.16667)circle(1.7pt);
+\draw[dim](.3,0)--(.3,1.16667)node[midway,right]{$a=\rho_{\min}$};
+\draw[guide](2.27023,0)--(2.27023,3)--(0,3);
+\node[right]at(2.27023,3){$(x_0,30\,\mathrm m)$};
+\draw[dim](0,-.45)--(2.27023,-.45)node[midway,below]{$x_0=a\ln7$};
+\node[align=left,anchor=west]at(3.5,1.2){$y=a[\cosh(x/a)-1]$\\$s(x_0)=40\,\mathrm m$\\橙色：局部曲率圆};
+
+\end{tikzpicture}
+
+% 7 question-04
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+\draw[thick](0,0)ellipse(3 and 2);\fill(1.2,0)circle(2pt)node[below]{$P$};\draw[guide](7.5,-3.5)--(7.5,3.7);\draw[blue!60,thick](0.61264,1.95785)--(1.69505,-1.65016);\draw[red!65!black](-0.21384,2.07279)--(7.50000,1.00000);\fill(0.61264,1.95785)circle(1.6pt);\draw[red!65!black](0.99845,-1.96818)--(7.50000,1.00000);\fill(1.69505,-1.65016)circle(1.6pt);\fill[red](7.50000,1.00000)circle(2pt);\node[above]at(0.61264,1.95785){$A$};\node[below]at(1.69505,-1.65016){$B$};\node[right]at(7.50000,1.00000){$Q$};
+\end{tikzpicture}
+
+% 8 solution-04
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+\draw[thick](0,0)ellipse(3 and 2);\fill(1.2,0)circle(2pt)node[below]{$P$};\draw[guide](7.5,-3.5)--(7.5,3.7);\node[anchor=west]at(7.8,-2.7){$x=a^2/u$};\draw[blue!60,thick](2.06897,1.44828)--(0.00000,-2.00000);\draw[red!65!black](1.41724,1.86207)--(7.50000,-2.00000);\fill(2.06897,1.44828)circle(1.6pt);\draw[red!65!black](-0.90000,-2.00000)--(7.50000,-2.00000);\fill(0.00000,-2.00000)circle(1.6pt);\fill[red](7.50000,-2.00000)circle(2pt);\draw[blue!60,thick](1.20000,1.83303)--(1.20000,-1.83303);\draw[red!65!black](0.44400,2.05299)--(7.50000,0.00000);\fill(1.20000,1.83303)circle(1.6pt);\draw[red!65!black](0.44400,-2.05299)--(7.50000,0.00000);\fill(1.20000,-1.83303)circle(1.6pt);\fill[red](7.50000,0.00000)circle(2pt);\draw[blue!60,thick](0.00000,2.00000)--(2.06897,-1.44828);\draw[red!65!black](-0.90000,2.00000)--(7.50000,2.00000);\fill(0.00000,2.00000)circle(1.6pt);\draw[red!65!black](1.41724,-1.86207)--(7.50000,2.00000);\fill(2.06897,-1.44828)circle(1.6pt);\fill[red](7.50000,2.00000)circle(2pt);\node at(2.5,-3.4){切点由椭圆与极弦方程联立生成};
+\end{tikzpicture}
+
+% 9 question-05
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+\begin{scope}[shift={(0.0,0)}]\coordinate(A)at(0,0);\coordinate(B)at(2,0);\coordinate(C)at(2,2);\coordinate(D)at(0,2);
+\coordinate(Ap)at(.9,.8);\coordinate(Bp)at(2.9,.8);\coordinate(Cp)at(2.9,2.8);\coordinate(Dp)at(.9,2.8);\draw[gray!55](A)--(B)--(C)--(D)--cycle (Ap)--(Bp)--(Cp)--(Dp)--cycle (A)--(Ap) (B)--(Bp) (C)--(Cp) (D)--(Dp);\node[below left]at(A){$A$};\node[below right]at(B){$B$};\node[above left]at(C){$C$};\node[left]at(D){$D$};\node[left]at(Ap){$A'$};\node[right]at(Bp){$B'$};\node[right]at(Cp){$C'$};\node[above]at(Dp){$D'$};\draw[wire](A)--(B)--(C)--(D)--cycle;\draw[force](.6,0)--(1.3,0);\node at(1.4,-.65){图a：$ 4a$};\end{scope}\begin{scope}[shift={(4.4,0)}]\coordinate(A)at(0,0);\coordinate(B)at(2,0);\coordinate(C)at(2,2);\coordinate(D)at(0,2);
+\coordinate(Ap)at(.9,.8);\coordinate(Bp)at(2.9,.8);\coordinate(Cp)at(2.9,2.8);\coordinate(Dp)at(.9,2.8);\draw[gray!55](A)--(B)--(C)--(D)--cycle (Ap)--(Bp)--(Cp)--(Dp)--cycle (A)--(Ap) (B)--(Bp) (C)--(Cp) (D)--(Dp);\node[below left]at(A){$A$};\node[below right]at(B){$B$};\node[above left]at(C){$C$};\node[left]at(D){$D$};\node[left]at(Ap){$A'$};\node[right]at(Bp){$B'$};\node[right]at(Cp){$C'$};\node[above]at(Dp){$D'$};\draw[wire](A)--(B)--(Bp)--(Cp)--(C)--(D)--cycle;\draw[force](.6,0)--(1.3,0);\node at(1.4,-.65){图b：$ 6a$};\end{scope}\begin{scope}[shift={(8.8,0)}]\coordinate(A)at(0,0);\coordinate(B)at(2,0);\coordinate(C)at(2,2);\coordinate(D)at(0,2);
+\coordinate(Ap)at(.9,.8);\coordinate(Bp)at(2.9,.8);\coordinate(Cp)at(2.9,2.8);\coordinate(Dp)at(.9,2.8);\draw[gray!55](A)--(B)--(C)--(D)--cycle (Ap)--(Bp)--(Cp)--(Dp)--cycle (A)--(Ap) (B)--(Bp) (C)--(Cp) (D)--(Dp);\node[below left]at(A){$A$};\node[below right]at(B){$B$};\node[above left]at(C){$C$};\node[left]at(D){$D$};\node[left]at(Ap){$A'$};\node[right]at(Bp){$B'$};\node[right]at(Cp){$C'$};\node[above]at(Dp){$D'$};\draw[wire](A)--(B)--(Bp)--(Cp)--(Dp)--(D)--cycle;\draw[force](.6,0)--(1.3,0);\node at(1.4,-.65){图c：$ 6a$};\end{scope}
+\end{tikzpicture}
+
+% 10 solution-05
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+\begin{scope}[shift={(0.0,0)}]\coordinate(A)at(0,0);\coordinate(B)at(2,0);\coordinate(C)at(2,2);\coordinate(D)at(0,2);
+\coordinate(Ap)at(.9,.8);\coordinate(Bp)at(2.9,.8);\coordinate(Cp)at(2.9,2.8);\coordinate(Dp)at(.9,2.8);\fill[blue!12](A)--(B)--(C)--(D)--cycle;\fill[orange!15](B)--(Bp)--(Cp)--(C)--cycle;\draw[gray!55](A)--(B)--(C)--(D)--cycle (Ap)--(Bp)--(Cp)--(Dp)--cycle (A)--(Ap) (B)--(Bp) (C)--(Cp) (D)--(Dp);\node[below left]at(A){$A$};\node[below right]at(B){$B$};\node[above left]at(C){$C$};\node[left]at(D){$D$};\node[left]at(Ap){$A'$};\node[right]at(Bp){$B'$};\node[right]at(Cp){$C'$};\node[above]at(Dp){$D'$};\draw[wire](A)--(B)--(Bp)--(Cp)--(C)--(D)--cycle;\draw[force](.6,0)--(1.3,0);\draw[velocity](2,.5)--(2,1.4);\draw[force](2.15,1.4)--(2.15,.5);\node[align=center]at(1.5,-1){双面：$2L_1+2M$\\公共棱边界相反};\end{scope}\begin{scope}[shift={(5.4,0)}]\coordinate(A)at(0,0);\coordinate(B)at(2,0);\coordinate(C)at(2,2);\coordinate(D)at(0,2);
+\coordinate(Ap)at(.9,.8);\coordinate(Bp)at(2.9,.8);\coordinate(Cp)at(2.9,2.8);\coordinate(Dp)at(.9,2.8);\fill[blue!12](A)--(B)--(C)--(D)--cycle;\fill[orange!15](B)--(Bp)--(Cp)--(C)--cycle;\fill[green!13](C)--(Cp)--(Dp)--(D)--cycle;\draw[gray!55](A)--(B)--(C)--(D)--cycle (Ap)--(Bp)--(Cp)--(Dp)--cycle (A)--(Ap) (B)--(Bp) (C)--(Cp) (D)--(Dp);\node[below left]at(A){$A$};\node[below right]at(B){$B$};\node[above left]at(C){$C$};\node[left]at(D){$D$};\node[left]at(Ap){$A'$};\node[right]at(Bp){$B'$};\node[right]at(Cp){$C'$};\node[above]at(Dp){$D'$};\draw[wire](A)--(B)--(Bp)--(Cp)--(Dp)--(D)--cycle;\draw[force](.6,0)--(1.3,0);\draw[velocity](2,.5)--(2,1.4);\draw[force](2.15,1.4)--(2.15,.5);\node[align=center]at(1.5,-1){三面：$3L_1+6M$\\公共棱边界相反};\end{scope}\node at(4.2,-2){$M=(L_2-2L_1)/2,\qquad L_c=3(L_2-L_1)$};
+\end{tikzpicture}
+
+% 11 question-06
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+\draw[body](0,-.8)rectangle(3.2,1.4);\node at(1.4,.9){Cu：$1\,\mathrm{mol}$};
+\draw[wall](0,-.95)rectangle(3.2,-.8);
+\draw[fill=gray!20](-1.2,.2)circle(.28);\node[above]at(-1.2,.6){Pb};
+\draw[velocity](-2.4,.2)--(-1.55,.2)node[midway,above]{$v$};
+\node[align=left,anchor=west]at(4,.8){固定：$K_f=0$\\自由：共同末速$V_f$\\带电：$C_i\to C_f$};
+\draw[guide](0,-1.4)--(3.2,-1.4);\draw[velocity](1,-1.4)--(2.2,-1.4);
+\node at(1.6,-1.9){自由情形的共同平动};
+\node[align=center]at(1.6,-2.8){$C_i=4\pi\varepsilon_0R$\\$C_f=1.5\,\mathrm{pF}$};
+
+\end{tikzpicture}
+
+% 12 solution-06
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+\draw[axis](0,0)--(8.3,0)node[right]{$Q$};\draw[axis](0,0)--(0,4.7)node[above]{$T_f$};
+\draw[orbit](0,.5)--(4,3)--(5.5,3)--(7.3,4.2);\node[left]at(0,.5){$T_*$};\node[left]at(0,3){$T_m$};
+\draw[guide](4,0)--(4,3);\draw[guide](5.5,0)--(5.5,3);\node[below]at(4,0){$8.4855$};\node[below]at(5.5,-.45){$9.0990$};
+\fill[red](3.469560,2.668475)circle(2pt);\draw[guide](3.469560,2.668475)--(2.5,3.4)node[above,text=black]{自由，固态};
+\fill[red](4.63,3)circle(2pt);\draw[guide](4.63,3)--(4.7,4)node[above,text=black]{带电，部分熔化};
+\fill[red](7.146135,4.097423)circle(2pt)node[above right]{固定，全熔};
+\node at(2,-1.15){固态升温};\node at(4.75,-1.15){熔化};\node at(6.8,-1.15){液态升温};
+\node at(4,-1.9){横轴分段缩放，热量标值单位kJ；平台端点均按热量复算};
+\end{tikzpicture}
+
+% 13 question-07
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+\begin{scope}[shift={(0,0)}]\draw[fill=blue!9](-.15,-1.3)--(.2,0)--(-.15,1.3)--cycle;\draw[thick](4,-1.5)--(4,1.5);\draw[guide](-3.3,0)--(4.4,0);\fill(-3,0.0)circle(2pt)node[left]{$S$};\draw[velocity](-3.00000,0.00000)--(0.00000,0.42857)--(4.00000,-0.00000);\draw[guide](-3.00000,0.75000)--(0.00000,0.42857);\fill[red](-3.00000,0.75000)circle(1.8pt);\draw[velocity](-3.00000,0.00000)--(0.00000,-0.42857)--(4.00000,-0.00000);\draw[guide](-3.00000,-0.75000)--(0.00000,-0.42857);\fill[red](-3.00000,-0.75000)circle(1.8pt);\draw[dim](-3,-1.9)--(0,-1.9)node[midway,below]{$a$};\draw[dim](0,-1.9)--(4,-1.9)node[midway,below]{$b$};\node at(4.2,1.75){屏};\node at(.5,1.8){$\delta=(n-1)\theta$};\end{scope}\begin{scope}[shift={(9,0)}]\draw[fill=blue!9](-.2,0)--(0,1.3)--(.2,0)--(0,-1.3)--cycle;\draw[thick](4,-1.5)--(4,1.5);\draw[guide](-3.3,0)--(4.4,0);\fill(-3,0.0)circle(2pt)node[left]{$S$};\draw[velocity](-3.00000,0.00000)--(0.00000,0.85714)--(4.00000,-0.00000);\draw[guide](-3.00000,1.50000)--(0.00000,0.85714);\fill[red](-3.00000,1.50000)circle(1.8pt);\draw[velocity](-3.00000,0.00000)--(0.00000,-0.85714)--(4.00000,-0.00000);\draw[guide](-3.00000,-1.50000)--(0.00000,-0.85714);\fill[red](-3.00000,-1.50000)circle(1.8pt);\draw[dim](-3,-1.9)--(0,-1.9)node[midway,below]{$a$};\draw[dim](0,-1.9)--(4,-1.9)node[midway,below]{$b$};\node at(4.2,1.75){屏};\node at(.5,1.8){$\delta=2(n-1)\theta$};\end{scope}
+\end{tikzpicture}
+
+% 14 solution-07
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+\begin{scope}[shift={(0,0)}]\draw[fill=blue!9](-.15,-1.3)--(.2,0)--(-.15,1.3)--cycle;\draw[thick](4,-1.5)--(4,1.5);\draw[guide](-3.3,0)--(4.4,0);\fill(-3,0.6)circle(2pt)node[left]{$S$};\draw[velocity](-3.00000,0.60000)--(0.00000,0.42857)--(4.00000,-0.80000);\draw[guide](-3.00000,1.35000)--(0.00000,0.42857);\fill[red](-3.00000,1.35000)circle(1.8pt);\draw[velocity](-3.00000,0.60000)--(0.00000,-0.42857)--(4.00000,-0.80000);\draw[guide](-3.00000,-0.15000)--(0.00000,-0.42857);\fill[red](-3.00000,-0.15000)circle(1.8pt);\draw[dim](-3,-1.9)--(0,-1.9)node[midway,below]{$a$};\draw[dim](0,-1.9)--(4,-1.9)node[midway,below]{$b$};\node at(4.2,1.75){屏};\node[right]at(4,-.8){$y_0=-bh/a$};\node[right]at(.1,.65){$\xi_+>0$};\node[right]at(.1,-.6){$\xi_-<0$};\end{scope}\node[align=left,anchor=west]at(5.5,.3){两支均满足费马方程\\上、下半棱镜分别通过\\$\Delta\ell=\dfrac{2\delta(ay+bh)}{a+b}$};
+\end{tikzpicture}
+
+% 15 question-08
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+\draw[body](-4,-1.3)rectangle(-1,1.7);\fill[orange!80](-2.5,.2)circle(.12);
+\node at(-2.5,2.1){一个氩原子的平均空间};
+\draw[dim](-4,-1.7)--(-1,-1.7)node[midway,below]{$(V_m/N_A)^{1/3}$};
+\draw[body](1,-1.3)rectangle(4,1.7);\fill[orange!80](2.2,.2)circle(.1);
+\draw[velocity](2.2,.2)--(3.4,.2)node[midway,above]{$p_x$};
+\node at(2.5,2.1){硬壁立方盒中的中子};
+\draw[dim](1,-1.7)--(4,-1.7)node[midway,below]{$d$};
+
+\end{tikzpicture}
+
+% 16 solution-08
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+\begin{scope}[shift={(-4,0)}]
+\draw[very thick](0,-1)--(0,1.4) (3,-1)--(3,1.4);
+\draw[velocity](.2,.3)--(2.8,.3);\draw[velocity](2.8,-.1)--(.2,-.1);
+\node at(1.5,1.8){碰壁估算：往返$2d/v_x$};
+\draw[dim](0,-1.4)--(3,-1.4)node[midway,below]{$d$};
+\node at(1.5,-2.2){每次冲量$2mv_x$，面积$d^2$};
+\end{scope}
+\begin{scope}[shift={(1.2,0)}]
+\draw[axis](-.3,0)--(3.5,0)node[right]{$x$};
+\draw[very thick](0,-.6)--(0,1.5) (3,-.6)--(3,1.5);
+\draw[orbit,domain=0:3,samples=80]plot(\x,{sin(60*\x)});
+\node at(1.5,1.9){基态：$\psi_1\propto\sin(\pi x/d)$};
+\node at(1.5,-1.2){$\langle p_x^2\rangle=h^2/(4d^2)$};
+\node at(1.5,-2.2){$P_x=\langle p_x^2\rangle/(md^3)$};
+\end{scope}
+
+\end{tikzpicture}
+
+\end{document}

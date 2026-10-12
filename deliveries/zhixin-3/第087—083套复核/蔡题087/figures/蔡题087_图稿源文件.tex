@@ -1,0 +1,331 @@
+\documentclass[multi=tikzpicture,border=7pt]{standalone}
+\usepackage{ctex,amsmath,bm}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{arrows.meta,calc,angles,quotes,patterns,positioning,decorations.pathmorphing,3d}
+\tikzset{
+  axis/.style={->,>=Stealth,thick},
+  force/.style={->,>=Stealth,very thick,red!72!black},
+  velocity/.style={->,>=Stealth,very thick,blue!72!black},
+  field/.style={->,>=Stealth,very thick,purple!75!black},
+  current/.style={->,>=Stealth,very thick,orange!82!black},
+  dim/.style={<->,>=Stealth,thin},
+  body/.style={draw=black,fill=blue!6,thick},
+  guide/.style={dashed,gray!65},
+  hidden/.style={dashed,gray!58,thick},
+  wire/.style={draw=black,thick},
+  panel/.style={font=\bfseries,anchor=west},
+  nodept/.style={circle,fill=black,inner sep=1.5pt}
+}
+\tikzset{wire/.style={brown!70!black,very thick},guide/.style={dashed,gray!60},force/.style={->,>=Stealth,thick,red!70!black},velocity/.style={->,>=Stealth,thick,blue!70!black},axis/.style={->,>=Stealth,thick},dim/.style={<->,>=Stealth,thin},body/.style={draw,thick,fill=blue!7},panel/.style={anchor=west,font=\bfseries}}
+\begin{document}
+
+% 1 question-01
+\begin{tikzpicture}[x=1cm,y=1cm]
+  \node[panel] at (-5.4,2.75){两小球与不可伸长细线的初始状态};
+  \draw[very thick] (-5,-.3)--(5,-.3);
+  \foreach \x in {-4.8,-4.4,...,4.8}{\draw[gray!55] (\x,-.3)--++(-.22,-.22);}
+  \coordinate (A) at (-3.2,0); \coordinate (B) at (3.2,0);
+  \draw[very thick,brown!72!black] (A)--(B);
+  \shade[ball color=blue!25] (A) circle(.32);
+  \shade[ball color=blue!25] (B) circle(.32);
+  \node[above] at (A){$A,m$}; \node[above right] at (B){$B,m$};
+  \draw[dim] ($(A)+(0,-.62)$)--($(B)+(0,-.62)$) node[midway,below]{$l$};
+  \draw[velocity] (B)--++(0,1.75) node[above]{$\bm v_0$};
+  \draw[force] (-4.65,1.65)--++(0,-1.25) node[midway,left]{$\bm g$};
+\end{tikzpicture}
+
+% 2 solution-01
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+\node[panel] at (-5,3.4){接触阶段与离桌后的速度分解};
+\draw[gray!30] (0,-2.2)--(0,3);
+\begin{scope}[shift={(-3,-1)}]
+\draw[thick] (-2,0)--(2.5,0);\coordinate(A)at(-1,0);\coordinate(B)at(1,1.8);
+\draw[wire](A)--(B);\draw[body](A)circle(.16);\draw[body](B)circle(.16);
+\node[below]at(A){$A$};\node[above]at(B){$B$};
+\draw[velocity](A)--++(.9,0)node[below]{$u$};
+\draw[velocity](B)--++(-.9,.6)node[left]{$\bm v_B$};
+\draw[force](A)--++(0,1.1)node[left]{$N$};\draw[force](A)--++(.65,.58)node[right]{$T$};
+\draw[force](B)--++(-.65,-.58)node[left]{$T$};\draw[force](B)--++(0,-1)node[right]{$mg$};
+\node at(0,-.8){$u=w\sin\theta/2$};
+\end{scope}
+\begin{scope}[shift={(3,.4)}]
+\coordinate(A)at(0,-1);\coordinate(B)at(0,1);\draw[wire](A)--(B);
+\draw[body](A)circle(.16);\draw[body](B)circle(.16);\fill(0,0)circle(1.8pt)node[left]{$C$};
+\node[below]at(A){$A$};\node[above]at(B){$B$};
+\draw[velocity](B)--++(-1.3,0)node[above]{$w_c/2$};
+\draw[velocity](.38,0)--(.38,.65)node[right]{$V_C$};
+\draw[force](B)--++(0,-.7)node[right]{$T+mg$};
+\node at(0,-2){$v_{C,x}=0$};\node at(0,-2.5){$\bm v_B=(-w_c/2,V_C)$};
+\end{scope}
+\end{tikzpicture}
+
+% 3 question-02
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+\node[panel]at(-5,2.5){相反时变磁场与实际三支路电路};
+\begin{scope}[shift={(-2.8,0)}]
+\fill[blue!6](-1,0)circle(1.1547);\fill[orange!8](1,0)circle(1.1547);
+\draw[thick](-1,0)circle(1.1547) (1,0)circle(1.1547);
+\draw[axis](-2.4,0)--(2.4,0)node[right]{$x$};\draw[axis](0,-1.5)--(0,1.5)node[above]{$y$};
+\node at(-1,.35){$\odot B$};\node at(1,.35){$\otimes B$};
+\fill(-1,0)circle(1pt)node[below]{$-r$};\fill(1,0)circle(1pt)node[below]{$r$};
+\node at(0,-1.95){$a=2r/\sqrt3,\quad B=B_0t/t_0$};
+\end{scope}
+\begin{scope}[shift={(3.1,0)}]
+\draw[gray](-1,0)circle(1.1547)(1,0)circle(1.1547);
+\draw[wire](-2,.57735)--(2,.57735)--(2,-.57735)--(-2,-.57735)--cycle (0,.57735)--(0,-.57735);
+\foreach\x in{-2,0,2}{\draw[fill=white] (\x,0)circle(.16);\node at(\x,0){\tiny V};}
+\foreach\x in{-1,1}{\foreach\y in{-.57735,.57735}{\draw[fill=white](\x-.24,\y-.08)rectangle(\x+.24,\y+.08);\node[above]at(\x,\y+.1){$R$};}}
+\fill(0,.57735)circle(1.4pt)node[above right]{$a$};\fill(0,-.57735)circle(1.4pt)node[below right]{$b$};
+\node at(0,-1.6){每表内阻 $2R_0$，红表笔在上};
+\end{scope}
+\end{tikzpicture}
+
+% 4 solution-02
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+\node[panel]at(-5,2.7){同一点电场叠加与支路电流};
+\begin{scope}[shift={(-2.8,0)}]
+\coordinate(C1)at(-1,0);\coordinate(C2)at(1,0);\coordinate(P)at(0,.32);
+\draw[gray](C1)circle(1.1547)(C2)circle(1.1547);\fill(P)circle(2pt)node[above]{$P$};
+\draw[velocity](C1)--(P)node[midway,above left]{$\bm r_1$};\draw[velocity](C2)--(P)node[midway,above right]{$\bm r_2$};
+\draw[force](P)--(0,1.7)node[above]{$\bm E=\frac{B_0r}{t_0}\hat y$};
+\node at(0,-1.65){交叠区 $B_{\rm total}=0$，$\bm E\ne0$};
+\end{scope}
+\begin{scope}[shift={(3,0)}]
+\draw[wire](-2,1)--(2,1)--(2,-1)--(-2,-1)--cycle (0,1)--(0,-1);
+\foreach\x in{-2,0,2}{\draw[fill=white](\x,0)circle(.2);\node at(\x,0){\tiny V};}
+\draw[velocity](.32,-.7)--(.32,.7)node[midway,right]{$I$};
+\draw[velocity](-2.3,.7)--(-2.3,-.7)node[midway,left]{$I/2$};\draw[velocity](2.3,.7)--(2.3,-.7)node[midway,right]{$I/2$};
+\node at(-1,1.35){$R$};\node at(1,1.35){$R$};\node at(-1,-1.35){$R$};\node at(1,-1.35){$R$};
+\node at(0,-2){$\mathcal E=\dot B\,[\text{矩形面积}-\text{小弓形}]$};
+\end{scope}
+\end{tikzpicture}
+
+% 5 question-03
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+\node[panel]at(-.3,0){金刚石晶胞：蓝线为最近邻键};
+\begin{scope}[x={(4cm,0cm)},y={(1.5cm,1.3cm)},z={(0cm,4cm)},shift={(0,.7)}]
+\draw[gray!45] (0, 0, 0)--(0, 0, 1);
+\draw[gray!45] (0, 0, 0)--(0, 1, 0);
+\draw[gray!45] (0, 0, 0)--(1, 0, 0);
+\draw[gray!45] (0, 0, 1)--(0, 1, 1);
+\draw[gray!45] (0, 0, 1)--(1, 0, 1);
+\draw[gray!45] (0, 1, 0)--(0, 1, 1);
+\draw[gray!45] (0, 1, 0)--(1, 1, 0);
+\draw[gray!45] (0, 1, 1)--(1, 1, 1);
+\draw[gray!45] (1, 0, 0)--(1, 0, 1);
+\draw[gray!45] (1, 0, 0)--(1, 1, 0);
+\draw[gray!45] (1, 0, 1)--(1, 1, 1);
+\draw[gray!45] (1, 1, 0)--(1, 1, 1);
+\draw[blue!65!black,thick] (0, 0, 0)--(0.25, 0.25, 0.25);
+\draw[blue!65!black,thick] (0, 0.5, 0.5)--(0.25, 0.25, 0.25);
+\draw[blue!65!black,thick] (0.5, 0, 0.5)--(0.25, 0.25, 0.25);
+\draw[blue!65!black,thick] (0.5, 0.5, 0)--(0.25, 0.25, 0.25);
+\draw[blue!65!black,thick] (0, 1, 1)--(0.25, 0.75, 0.75);
+\draw[blue!65!black,thick] (0, 0.5, 0.5)--(0.25, 0.75, 0.75);
+\draw[blue!65!black,thick] (0.5, 1, 0.5)--(0.25, 0.75, 0.75);
+\draw[blue!65!black,thick] (0.5, 0.5, 1)--(0.25, 0.75, 0.75);
+\draw[blue!65!black,thick] (1, 0, 1)--(0.75, 0.25, 0.75);
+\draw[blue!65!black,thick] (1, 0.5, 0.5)--(0.75, 0.25, 0.75);
+\draw[blue!65!black,thick] (0.5, 0, 0.5)--(0.75, 0.25, 0.75);
+\draw[blue!65!black,thick] (0.5, 0.5, 1)--(0.75, 0.25, 0.75);
+\draw[blue!65!black,thick] (1, 1, 0)--(0.75, 0.75, 0.25);
+\draw[blue!65!black,thick] (1, 0.5, 0.5)--(0.75, 0.75, 0.25);
+\draw[blue!65!black,thick] (0.5, 1, 0.5)--(0.75, 0.75, 0.25);
+\draw[blue!65!black,thick] (0.5, 0.5, 0)--(0.75, 0.75, 0.25);
+\fill[blue!80!black](0, 0, 0)circle(2.4pt);
+\fill[blue!80!black](0, 0, 1)circle(2.4pt);
+\fill[blue!80!black](0, 1, 0)circle(2.4pt);
+\fill[blue!80!black](0, 1, 1)circle(2.4pt);
+\fill[blue!80!black](1, 0, 0)circle(2.4pt);
+\fill[blue!80!black](1, 0, 1)circle(2.4pt);
+\fill[blue!80!black](1, 1, 0)circle(2.4pt);
+\fill[blue!80!black](1, 1, 1)circle(2.4pt);
+\fill[blue!80!black](0, 0.5, 0.5)circle(2.4pt);
+\fill[blue!80!black](1, 0.5, 0.5)circle(2.4pt);
+\fill[blue!80!black](0.5, 0, 0.5)circle(2.4pt);
+\fill[blue!80!black](0.5, 1, 0.5)circle(2.4pt);
+\fill[blue!80!black](0.5, 0.5, 0)circle(2.4pt);
+\fill[blue!80!black](0.5, 0.5, 1)circle(2.4pt);
+\fill[orange!85!black](0.25, 0.25, 0.25)circle(2.6pt);
+\fill[orange!85!black](0.25, 0.75, 0.75)circle(2.6pt);
+\fill[orange!85!black](0.75, 0.25, 0.75)circle(2.6pt);
+\fill[orange!85!black](0.75, 0.75, 0.25)circle(2.6pt);
+\end{scope}\node at(2.8,-.6){每个内部橙点连接四个蓝点；灰框不接电阻};
+\end{tikzpicture}
+
+% 6 solution-03
+\begin{tikzpicture}[x=.94cm,y=.94cm]
+  \node[panel] at (-6.1,4.0){源—汇叠加法中的键电流};
+  \begin{scope}[shift={(-3.5,.2)}]
+    \fill (0,0) circle(2pt) node[below]{$A$};
+    \foreach \ang in {35,145,215,325}{
+      \draw[wire] (0,0)--(\ang:2.2);
+      \draw[current] (\ang:.45)--(\ang:1.45);
+      \node at (\ang:1.75){$I/4$};
+    }
+    \node at (0,-2.8){单独从 $A$ 注入电流 $I$};
+  \end{scope}
+  \begin{scope}[shift={(3.8,.2)}]
+    \coordinate (A) at (-2.5,0); \coordinate (B) at (0,1.65); \coordinate (C) at (2.5,0);
+    \draw[wire] (A)--(B)--(C);
+    \foreach \ang in {140,220}{\draw[wire] (A)--++(\ang:1.55);}
+    \foreach \ang in {40,-40}{\draw[wire] (C)--++(\ang:1.55);}
+    \draw[current] ($(A)!.15!(B)$)--($(A)!.65!(B)$) node[midway,above left]{$I/4+I/12$};
+    \draw[current] ($(B)!.35!(C)$)--($(B)!.85!(C)$) node[midway,above right]{$I/12+I/4$};
+    \foreach \P/\lab in {A/A,B/B,C/C}{\fill (\P) circle(2pt) node[below]{\lab};}
+    \node at (0,-2.8){次相邻节点经公共邻点 $B$};
+  \end{scope}
+\end{tikzpicture}
+
+% 7 question-04
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+\node[panel]at(-1.6,3.4){抛物线导轨与运动棒围成的面积};
+\fill[blue!12] plot[domain=-1.7:1.7,samples=70]({.8*\x*\x},{\x})--(2.312,-1.7)--cycle;
+\draw[thick] plot[domain=-2.15:2.15,samples=70]({.8*\x*\x},{\x});
+\draw[axis](-.3,0)--(4.4,0)node[right]{$y$};\draw[axis](0,-2.4)--(0,2.8)node[above]{$x$};
+\draw[wire](2.312,-1.7)--(2.312,1.7);
+\draw[velocity](2.312,0)--(3.35,0)node[above]{$v$};
+\draw[dim](4,-1.7)--(4,1.7);\node at(4.4,1.35){$L$};
+\node at(1.25,.35){$S(Y)$};\node at(3.7,2.35){$y=kx^2$};\node at(3.6,-2.1){$\otimes B$};
+\node at(1.9,-3){$Y=vt$};
+\end{tikzpicture}
+
+% 8 solution-04
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+\node[panel]at(-1.6,3.4){抛物线导轨与运动棒围成的面积};
+\fill[blue!12] plot[domain=-1.7:1.7,samples=70]({.8*\x*\x},{\x})--(2.312,-1.7)--cycle;
+\draw[thick] plot[domain=-2.15:2.15,samples=70]({.8*\x*\x},{\x});
+\draw[axis](-.3,0)--(4.4,0)node[right]{$y$};\draw[axis](0,-2.4)--(0,2.8)node[above]{$x$};
+\draw[wire](2.312,-1.7)--(2.312,1.7);
+\draw[velocity](2.312,0)--(3.35,0)node[above]{$v$};\draw[force](2.312,.7)--(1.45,.7)node[above,midway]{$F_B$};
+\draw[dim](4,-1.7)--(4,1.7);\node[anchor=west]at(4.3,1.65){$L=2\sqrt{Y/k}$};
+\node at(1.25,.35){$S(Y)$};\node at(3.7,2.35){$y=kx^2$};\node at(3.6,-2.1){$\otimes B$};
+\node at(1.9,-3){$S=\int_0^Y L(y)dy,\qquad Y=vt$};
+\end{tikzpicture}
+
+% 9 question-05
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+\node[panel]at(-4.5,3.6){喷流的起点、管长与竖直落差};
+\draw[thick](-4,-1.4)--(-4,2.5)--(-1.8,2.5)--(-1.8,-1.4);
+\fill[blue!10](-3.95,-1.3)rectangle(-1.85,1.5);\draw[blue!65](-4,1.5)--(-1.8,1.5);
+\draw[thick](-3.15,-1.4)--(-3.15,-2.2) (-2.65,-1.4)--(-2.65,-2.2);
+\draw[velocity](-2.9,-2.2)--(-2.9,-2.9)node[right]{$v_0$};
+\draw[dim](-3.7,-1.4)--(-3.7,-2.2)node[left,midway]{$l$};
+\draw[dim](-1.2,1.5)--(-1.2,-2.2)node[right,midway]{$h$};
+\draw[dim](-3.15,-1.8)--(-2.65,-1.8)node[above]{$2r$};
+\node at(-2.9,2){$P_0+P$};
+\begin{scope}[shift={(2,0)}]
+\draw[thick](-1,-1.6)--(2.9,-1.6);\fill(0,0)circle(2pt)node[left]{出口};
+\draw[velocity](0,0)--(.85,.65)node[above]{$v_0,\alpha$};
+\draw[blue,thick]plot[domain=0:2.7,samples=50](\x,{.7*\x-.48*\x*\x});
+\draw[dim](-.6,0)--(-.6,-1.6)node[midway,left]{$h_0$};
+\draw[dim](0,-2)--(2.7,-2)node[midway,below]{$S$};
+\end{scope}
+\end{tikzpicture}
+
+% 10 solution-05
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+\node[panel]at(-5,3){水平射程与泊肃叶速度剖面};
+\begin{scope}[shift={(-3,0)}]
+\draw[thick](-1,-1.8)--(2.5,-1.8);\fill(0,0)circle(2pt);
+\draw[velocity](0,0)--(.9,.6)node[above]{$v_0$};
+\draw[blue,thick]plot[domain=0:2.3,samples=50](\x,{.65*\x-.62*\x*\x});
+\draw[dim](-.55,0)--(-.55,-1.8)node[left,midway]{$h_0$};
+\draw[dim](0,-2.2)--(2.3,-2.2)node[below,midway]{$S_{\max}$};
+\end{scope}
+\begin{scope}[shift={(3,-1.7)}]
+\draw[axis](-1.7,0)--(1.8,0)node[right]{$s$};\draw[axis](0,0)--(0,3.4)node[above]{$v(s)$};
+\draw[blue,thick]plot[domain=-1.25:1.25,samples=70](\x,{2.8*(1-(\x/1.25)^2)});
+\node[below]at(-1.25,0){$-r$};\node[below]at(1.25,0){$r$};\node[right]at(0,2.8){$v_0$};
+\node at(0,-.7){$v(s)=v_0(1-s^2/r^2)$};
+\end{scope}
+\end{tikzpicture}
+
+% 11 question-06
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+\node[panel]at(-3.4,3.9){球对称介质中的四分之一椭圆光线};
+\fill[blue!4](0,0)circle(2.7);\draw[gray](0,0)circle(2.7);\draw[body](0,0)circle(1.35);
+\draw[guide](-3,0)--(3,0)(0,-3)--(0,3.1);\node[below left]at(0,0){$O$};
+\draw[blue!70!black,very thick]plot[domain=0:90,samples=80]({1.35*cos(\x)},{2.7*sin(\x)});
+\draw[velocity](3.4,2.7)--(0,2.7);\node[above]at(1.7,2.7){真空中入射方向};
+\fill(1.35,0)circle(2pt)node[below right]{观测点};\draw[velocity](1.35,.75)--(1.35,0);
+\draw[dim](0,-.3)--(1.35,-.3)node[below,midway]{$R_0$};
+\node at(-1.5,1.8){$r=2R_0$};\node at(-1.2,-1.8){$n^2=5-r^2/R_0^2$};
+\draw[guide](1.35,0)--(2.6,0);\node at(2.4,.6){$\beta$};
+\end{tikzpicture}
+
+% 12 solution-06
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+\node[panel]at(-3.4,3.9){球对称介质中的四分之一椭圆光线};
+\fill[blue!4](0,0)circle(2.7);\draw[gray](0,0)circle(2.7);\draw[body](0,0)circle(1.35);
+\draw[guide](-3,0)--(3,0)(0,-3)--(0,3.1);\node[below left]at(0,0){$O$};
+\draw[blue!70!black,very thick]plot[domain=0:90,samples=80]({1.35*cos(\x)},{2.7*sin(\x)});
+\draw[velocity](3.4,2.7)--(0,2.7);\node[above]at(1.7,2.7){真空中入射方向};
+\fill(1.35,0)circle(2pt)node[below right]{观测点};\draw[velocity](1.35,.75)--(1.35,0);
+\draw[dim](0,-.3)--(1.35,-.3)node[below,midway]{$R_0$};
+\node at(-1.5,1.8){$r=2R_0$};\node at(-1.2,-1.8){$n^2=5-r^2/R_0^2$};
+\draw[guide](1.35,0)--(2.6,0);\draw[dim](2.15,0)arc[start angle=0,end angle=90,radius=.8];
+\node at(2.6,.8){$\beta=90^\circ$};\node at(0,-3.5){$x=R_0\cos(\tau/R_0),\quad y=2R_0\sin(\tau/R_0)$};
+\end{tikzpicture}
+
+% 13 question-07
+\begin{tikzpicture}[x=.92cm,y=.92cm]
+  \node[panel] at (-5.7,3.8){冥王星—卡戎同步圆轨道与天梯输运};
+  \draw[guide] (0,0) circle(3.3);
+  \shade[ball color=blue!35] (-.45,0) circle(.72);
+  \shade[ball color=gray!45] (2.85,0) circle(.38);
+  \fill (0,0) circle(2pt) node[below]{$C_m$};
+  \draw[very thick,brown!72!black] (.2,0)--(2.47,0);
+  \draw[current] (.75,.2)--(2.0,.2) node[midway,above]{$\Delta m$};
+  \draw[dim] (-.45,-1.15)--(2.85,-1.15) node[midway,below]{$l$};
+  \draw[velocity] (2.85,.55)--++(105:1.1) node[above]{$\omega$};
+  \node at (-.45,-.95){冥王星 $m_1$};
+  \node at (2.85,-.7){卡戎 $m_2$};
+\end{tikzpicture}
+
+% 14 solution-07
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+\node[panel]at(-4.3,2.8){相对轨道的中心、焦点与平均半径};
+\draw[guide](0,0)circle(2);\draw[blue!70!black,thick](0,0)ellipse(3 and 1.6);
+\fill(0,0)circle(1.5pt)node[below left]{$G$};\fill(2.5377,0)circle(1.8pt)node[below]{$O$};
+\draw[dim](0,0)--(3,0)node[above,midway]{$a$};\draw[dim](0,0)--(0,1.6)node[left,midway]{$b$};
+\draw[velocity](2.5377,0)--(1.5,1.386)node[above,midway]{$r(\theta)$};
+\node at(0,-2.7){离心率作示意放大；$O$ 是引力焦点，$G$ 是椭圆中心};
+\node at(0,-3.3){角度平均 $\langle r\rangle_\theta=b$，时间平均 $\langle r\rangle_t=a(1+e^2/2)$};
+\end{tikzpicture}
+
+% 15 question-08
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+\node[panel]at(-4.5,3.2){黑体面与反射面的辐射和反冲};
+\draw[body,fill=gray!40](0,0)ellipse(.35 and 1.7);
+\foreach\y in{-.9,0,.9}{\draw[velocity](-.35,\y)--(-2.3,{1.3*\y});\draw[velocity](.35,\y)--(1.7,{1.2*\y});}
+\node at(-3,2){黑体面};\node at(2.6,2){反射系数 $r$};
+\draw[force](0,-2.2)--(1.5,-2.2)node[right]{反冲};
+\node at(0,-3){左 $q=\sigma T^4$；右 $q'=(1-r)\sigma T^4$};
+\end{tikzpicture}
+
+% 16 solution-08
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+\node[panel]at(-4.4,3.2){朗伯角分布的法向动量积分};
+\draw[body](-2,-.2)rectangle(2,0);\draw[axis](0,0)--(0,2.7)node[above]{$\hat n$};
+\draw[velocity](0,0)--(1.8,2.1)node[right]{$d\dot E$};
+\draw[dim](0,.9)arc[start angle=90,end angle=49.4,radius=.9];\node at(.45,1.3){$\theta$};
+\node at(-2.1,1.6){$A=q/\pi$};\node at(0,-1.1){$d\dot p_n=\dfrac{q}{\pi c}\cos^2\theta\,2\pi\sin\theta\,d\theta\,dS$};
+\node at(0,-2){$\dot p_n/dS=2q/(3c)$};
+\end{tikzpicture}
+
+\end{document}

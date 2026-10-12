@@ -1,0 +1,247 @@
+\documentclass[12pt,a4paper,UTF8]{ctexart}
+\usepackage[a4paper,top=22mm,bottom=22mm,left=22mm,right=22mm,headheight=15pt]{geometry}
+\newcommand{\Needspace}[1]{\par\begingroup\dimen0=#1\relax\dimen2=\pagegoal\advance\dimen2 by-\pagetotal\ifdim\dimen0>\dimen2\newpage\fi\endgroup}
+\newcommand{\needspace}[1]{\par\begingroup\skip0=\lastskip\vskip-\skip0\dimen0=#1\relax\advance\dimen0 by\skip0\vskip\dimen0\penalty-100\vskip-\dimen0\vskip\skip0\penalty9999\endgroup}
+\usepackage{amsmath,amssymb,mathtools,bm}
+\usepackage{graphicx,xcolor,booktabs,longtable,array,enumitem,fancyhdr,caption,float,microtype,setspace}
+\usepackage[hidelinks,unicode]{hyperref}
+\usepackage[most]{tcolorbox}
+\definecolor{ContestBlue}{HTML}{17365D}
+\hypersetup{pdftitle={第077套},pdfauthor={}}
+\setstretch{1.24}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.35em}
+\setlength{\emergencystretch}{2em}
+\setlist{itemsep=0.35em,topsep=0.4em}
+\captionsetup{font=small,labelfont=bf,justification=centering}
+\setcounter{secnumdepth}{0}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small 第077套}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\ctexset{
+  section={format=\Large\bfseries\color{ContestBlue},beforeskip=1.2em,afterskip=0.7em},
+  subsection={format=\large\bfseries\color{ContestBlue},beforeskip=1.0em,afterskip=0.5em},
+  subsubsection={format=\normalsize\bfseries,beforeskip=0.8em,afterskip=0.35em}
+}
+\usepackage{calc}
+\newcounter{none}
+\let\originalsubsection\subsection
+\renewcommand{\subsection}{\needspace{6\baselineskip}\originalsubsection}
+\makeatletter
+\newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\newcommand{\maxwidth}{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\newcommand{\maxheight}{\ifdim\Gin@nat@height>0.72\textheight 0.72\textheight\else\Gin@nat@height\fi}
+\newcommand{\pandocbounded}[1]{\begingroup\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}#1\endgroup}
+\makeatother
+\begin{document}
+\begin{titlepage}
+  \centering
+  \vspace*{58mm}
+  {\Huge\bfseries\color{ContestBlue} 第077套\par}
+  \vfill
+  \vspace*{28mm}
+\end{titlepage}
+\section{第 1 题}\label{ux7b2c-1-ux9898}
+
+一个半径为 \(R\)
+的圆筒竖直固定在水平地面上。筒内有一可视为质点的小球，不计小球的转动。小球质量为
+\(m\)，小球与筒壁间的摩擦因数为
+\(\mu\)；小球在地面上运动时受到与速度成正比、方向与速度相反的阻力
+
+\[
+\bm f=-k\bm v.
+\]
+
+小球与筒壁碰撞时，法向恢复系数为 \(e<1\)。
+
+（1）已知
+
+\[
+\mu=\sqrt 3\,\frac{1-e}{1+e},
+\]
+
+小球从筒壁上的 \(A\) 点以速度 \(v_0\) 出射，速度方向与过 \(A\)
+点的半径夹角为
+\(\theta=60^\circ\)。求小球能够与筒壁发生第一次碰撞所需的最小 \(v_0\)。
+
+（2）在上述条件下，求第一次碰撞后小球的速度大小和方向。
+
+（3）若小球经若干次碰撞后回到 \(A\) 点，求 \(v_0\) 的最小值。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.437\linewidth,height=\textheight,keepaspectratio,alt={图1-1　圆筒内小球的初始位置、速度方向与半径}]{../figures/question-01.pdf}
+\caption*{图1-1　圆筒内小球的初始位置、速度方向与半径}
+\end{figure}
+
+\newpage
+
+\section{第 2 题}\label{ux7b2c-2-ux9898}
+
+倾角为 \(\alpha\) 的固定斜面上有一质量为 \(m\)
+的小物体。物体通过一根原长为零、劲度系数为 \(k\)
+的可伸长弹性轻绳与斜面上的固定点 \(O\) 相连。以 \(O\)
+为原点，在斜面内取沿最大坡降方向向下为 \(x\) 轴，取与 \(x\)
+轴垂直的方向为 \(y\) 轴。
+
+（1）物体与斜面间的摩擦因数为 \(\mu\)，求物体能在斜面上保持静止的区域。
+
+（2）物体与斜面间无摩擦。物体初始静止在 \((0,l)\) 处，其中
+
+\[
+l=\frac{mg\sin\alpha}{k}.
+\]
+
+给物体一个大小为 \(v_0\)、方向可任意选择的初速度。为使物体能够运动到
+\(O\) 点，求 \(v_0\) 的取值范围。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.62\linewidth,height=\textheight,keepaspectratio,alt={图2-1　斜面内坐标系、零原长弹性轻绳与重力沿斜面分量}]{../figures/question-02.pdf}
+\caption*{图2-1　斜面内坐标系、零原长弹性轻绳与重力沿斜面分量}
+\end{figure}
+
+\newpage
+
+\section{第 3 题}\label{ux7b2c-3-ux9898}
+
+半径为 \(R\) 的球形区域内均匀分布着总电量为 \(+Q\) 的电荷。一个电量为
+\(-e\)、质量为 \(m\)
+的电子只受该电荷分布产生的静电力作用。先忽略电子的电磁辐射。
+
+（1）求下列运动：
+
+I. 电子在 \(r<R\) 的圆轨道上运动时的周期 \(T\)；
+
+\begin{enumerate}
+\def\labelenumi{\Roman{enumi}.}
+\setcounter{enumi}{1}
+\item
+  电子在 \(r>R\) 的圆轨道上运动时的周期 \(T\)；
+\item
+  电子从 \(r=2R\) 处由静止释放，通过球心时的速度。
+\end{enumerate}
+
+（2）变速运动的电荷会辐射电磁波。已知电量为 \(q\) 的带电粒子以加速度
+\(a\) 运动时，辐射功率可写成
+
+\[
+P=C\xi a^n,
+\]
+
+其中 \(C=1/(6\pi)\) 为无量纲常数，\(\xi\) 只与 \(q\)、真空光速 \(c\)
+和真空介电常数 \(\varepsilon_0\) 有关，\(n\)
+为无量纲常数。用量纲分析确定 \(\xi\) 与 \(n\)。
+
+（3）计入辐射，但设电子每周的轨道半径变化满足
+\(|\Delta r|\ll r\)。分别求 \(r<R\) 与 \(r>R\) 时电子运动一周后的
+\(\Delta r\)，并判断轨道半径增大还是减小。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.72\linewidth,height=\textheight,keepaspectratio,alt={图3-1　均匀带电球内、外的电子圆轨道}]{../figures/question-03.pdf}
+\caption*{图3-1　均匀带电球内、外的电子圆轨道}
+\end{figure}
+
+\newpage
+
+\section{第 4 题}\label{ux7b2c-4-ux9898}
+
+两个理想线圈的欧姆电阻均为零、内部为空气，除匝数不同外几何形状完全相同。两个环形线圈相互套链，所在平面互相垂直，匝数分别为
+\(N_1\)、\(N_2\)。将 \(N_1\) 线圈接到电压有效值为 \(V_0\)
+的家用交流电源，将 \(N_2\) 线圈接到理想交流电压表。求电压表读数。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.66\linewidth,height=\textheight,keepaspectratio,alt={图4-1　两个相互套链且平面垂直的环形线圈}]{../figures/question-04.pdf}
+\caption*{图4-1　两个相互套链且平面垂直的环形线圈}
+\end{figure}
+
+\newpage
+
+\section{第 5 题}\label{ux7b2c-5-ux9898}
+
+（1）质量为 \(m\)、半径为 \(r\) 的绝缘薄球壳外表面均匀分布着总电量为
+\(q\) 的正电荷。球壳可绕过球心的 \(z\)
+轴自由转动，转轴摩擦忽略不计，初始角速度为零。现施加沿 \(+z\)
+方向的均匀磁场，使其磁感应强度从零缓慢增至
+\(B\)。求球壳最终获得的角速度。
+
+（2）有两个完全相同的球壳，球心均位于 \(z\) 轴上，相距 \(d\)，且
+\(d\gg2r\)。沿 \(z\) 轴的磁场增至 \(B\) 后，求两个球壳之间的电磁力。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.47\linewidth,height=\textheight,keepaspectratio,alt={图5-1　均匀带电薄球壳与沿转轴变化的磁场}]{../figures/question-05.pdf}
+\caption*{图5-1　均匀带电薄球壳与沿转轴变化的磁场}
+\end{figure}
+
+\newpage
+
+\section{第 6 题}\label{ux7b2c-6-ux9898}
+
+两条长为 \(l\)、宽为 \(w\)、高为 \(h\)
+的长方形管道上下平行放置，中间夹有厚度为 \(d\)、热导率为 \(\kappa\)
+的平板。热液体在下管中以速率 \(v\)
+从右向左流动，冷液体在上管中以相同速率从左向右流动。两种液体的单位体积热容均为
+\(c\)。
+
+平板面积为 \(A\)、两面温差为 \(\Delta T\) 时，导热功率为
+
+\[
+P=\frac{\kappa A\Delta T}{d}.
+\]
+
+热、冷液体在各自入口处的温差为 \(\Delta T_i\)，在各自出口处的温差为
+\(\Delta T_f\)；\(\Delta T_f\)
+允许为负。假设温度只随管道纵向位置变化，热量交换只来自流动和中间平板导热，且平板上下接触面的温度分别处处与相邻液体相同。求
+\(\Delta T_f\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.67\linewidth,height=\textheight,keepaspectratio,alt={图6-1　两股等流速液体的逆流换热结构}]{../figures/question-06.pdf}
+\caption*{图6-1　两股等流速液体的逆流换热结构}
+\end{figure}
+
+\newpage
+
+\section{第 7 题}\label{ux7b2c-7-ux9898}
+
+一个矩形薄壁鱼缸宽度为 \(L\)，置于焦距分别为 \(f_1\)、\(f_2\)
+的两个薄凸透镜 \(L_1\)、\(L_2\) 之间，鱼缸侧面与主光轴垂直。点光源 \(S\)
+位于 \(L_1\) 的左焦点，光屏 \(M\) 位于 \(L_2\)
+的右焦平面。鱼缸为空时，光源的像成在光屏上。
+
+现向鱼缸中装入透明液体，液体折射率随高度 \(h\) 变化：
+
+\[
+n(h)=n_0(1-\alpha h),
+\]
+
+其中 \(\alpha\) 很小。求屏上像向下移动的距离。
+
+若鱼缸两侧壁厚度均为 \(L/5\)，中间液体的宽度仍为 \(L\)，壁材料折射率为
+\(n_y\)，不计一切反射，问光屏上能否成像；若能，像在何处？
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图7-1　双透镜系统中的梯度折射率液层}]{../figures/question-07.pdf}
+\caption*{图7-1　双透镜系统中的梯度折射率液层}
+\end{figure}
+
+\newpage
+
+\section{第 8 题}\label{ux7b2c-8-ux9898}
+
+研究两个极端相对论性粒子的完全弹性碰撞。碰撞前两个粒子的速度都极其接近光速，动量大小分别为
+\(p_1\)、\(p_2\)，动量方向夹角为
+\(\varphi\)。求碰撞后两个粒子分离角的最小可能值。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.46\linewidth,height=\textheight,keepaspectratio,alt={图8-1　碰撞前两个极端相对论性粒子的动量}]{../figures/question-08.pdf}
+\caption*{图8-1　碰撞前两个极端相对论性粒子的动量}
+\end{figure}
+\end{document}

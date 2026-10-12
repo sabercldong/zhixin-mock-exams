@@ -1,0 +1,245 @@
+\documentclass[12pt,a4paper,UTF8]{ctexart}
+\usepackage[a4paper,top=22mm,bottom=22mm,left=22mm,right=22mm,headheight=15pt]{geometry}
+\newcommand{\Needspace}[1]{\par\begingroup\dimen0=#1\relax\dimen2=\pagegoal\advance\dimen2 by-\pagetotal\ifdim\dimen0>\dimen2\newpage\fi\endgroup}
+\newcommand{\needspace}[1]{\par\begingroup\skip0=\lastskip\vskip-\skip0\dimen0=#1\relax\advance\dimen0 by\skip0\vskip\dimen0\penalty-100\vskip-\dimen0\vskip\skip0\penalty9999\endgroup}
+\usepackage{amsmath,amssymb,mathtools,bm}
+\usepackage{graphicx,xcolor,booktabs,longtable,array,enumitem,fancyhdr,caption,float,microtype,setspace}
+\usepackage[hidelinks,unicode]{hyperref}
+\usepackage[most]{tcolorbox}
+\definecolor{ContestBlue}{HTML}{17365D}
+\hypersetup{pdftitle={第069套},pdfauthor={}}
+\setstretch{1.24}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.35em}
+\setlength{\emergencystretch}{2em}
+\setlist{itemsep=0.35em,topsep=0.4em}
+\captionsetup{font=small,labelfont=bf,justification=centering}
+\setcounter{secnumdepth}{0}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small 第069套}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\ctexset{
+  section={format=\Large\bfseries\color{ContestBlue},beforeskip=1.2em,afterskip=0.7em},
+  subsection={format=\large\bfseries\color{ContestBlue},beforeskip=1.0em,afterskip=0.5em},
+  subsubsection={format=\normalsize\bfseries,beforeskip=0.8em,afterskip=0.35em}
+}
+\usepackage{calc}
+\newcounter{none}
+\let\originalsubsection\subsection
+\renewcommand{\subsection}{\needspace{6\baselineskip}\originalsubsection}
+\makeatletter
+\newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\newcommand{\maxwidth}{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\newcommand{\maxheight}{\ifdim\Gin@nat@height>0.72\textheight 0.72\textheight\else\Gin@nat@height\fi}
+\newcommand{\pandocbounded}[1]{\begingroup\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}#1\endgroup}
+\makeatother
+\begin{document}
+\begin{titlepage}
+  \centering
+  \vspace*{58mm}
+  {\Huge\bfseries\color{ContestBlue} 第069套\par}
+  \vfill
+  \vspace*{28mm}
+\end{titlepage}
+\section{第 1 题}\label{ux7b2c-1-ux9898}
+
+原点处固定一物体，它对质量为 \(m\) 的质点产生线性排斥力
+
+\[
+\boldsymbol F=\alpha m\boldsymbol r.
+\]
+
+质点从 \((h,0,0)\) 出发，初速度大小为 \(v\)，且
+\(v^2<\alpha h^2\)；初速度方向与 \(x\) 轴负方向夹角为
+\(\theta\)。除上述排斥力外不计其他作用。由于系统关于 \(x\)
+轴旋转对称，只需先在 \(xOy\) 平面研究。
+
+（1）当出发角为 \(\theta_0\) 时，求质点运动过程中到原点的最近距离
+\(l_0\)。
+
+（2）当 \(\theta\) 任意时，求质点在三维空间中可能经过区域的边界方程。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.663\linewidth,height=\textheight,keepaspectratio,alt={图1-1　线性排斥场中的初始位置与发射方向}]{../figures/question-01.pdf}
+\caption*{图1-1　线性排斥场中的初始位置与发射方向}
+\end{figure}
+
+\newpage
+
+\section{第 2 题}\label{ux7b2c-2-ux9898}
+
+一半径为 \(R\) 的实心金属球被平面切成两部分，较小部分的外侧球面面积为
+\(\pi R^2\)。两部分之间夹有极薄绝缘层，间距可忽略，组合后仍可视作完整球形。初始金属球不带电。现给较小部分充入电荷
+\(+Q\)，较大部分仍保持整体电中性。
+
+（1）求整个球上的电荷分布。
+
+（2）求两部分之间的库仑力。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.624\linewidth,height=\textheight,keepaspectratio,alt={图2-1　由绝缘薄层分开的球冠与球体}]{../figures/question-02.pdf}
+\caption*{图2-1　由绝缘薄层分开的球冠与球体}
+\end{figure}
+
+\newpage
+
+\section{第 3 题}\label{ux7b2c-3-ux9898}
+
+木板 \(A\) 上放着小物块 \(B\)，\(B\) 通过不可伸长细绳与桌面上的物块
+\(C\) 相连。三者质量均为 \(m\)。用水平恒力 \(F=mg\) 向右拉木板
+\(A\)。\(A\)、\(B\) 间摩擦因数为 \(\mu_1\)，\(A\)、\(C\)
+与桌面间摩擦因数均为 \(\mu_2\)。
+
+（1）若 \(\mu_1=0.4\)、\(\mu_2=0.2\)，求 \(A\)、\(B\)、\(C\) 的加速度。
+
+（2）若 \(\mu_1=0.4\)，讨论不同 \(\mu_2\) 下三者的运动。
+
+（3）在 \(\mu_2-\mu_1\) 相图中标出：a. 三者均静止；b. \(A\) 运动而
+\(BC\) 静止；c.~三者以相同加速度运动；d.~\(A\) 与 \(BC\)
+以不同加速度运动。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.82\linewidth,height=\textheight,keepaspectratio,alt={图3-1　木板、上置物块与绳连物块的摩擦系统}]{../figures/question-03.pdf}
+\caption*{图3-1　木板、上置物块与绳连物块的摩擦系统}
+\end{figure}
+
+\newpage
+
+\section{第 4 题}\label{ux7b2c-4-ux9898}
+
+三根同口径玻璃管底端联通，构成类似正四面体三条棱的空间构型，其对称轴竖直。每根管内有长度为
+\(L\) 的水柱。水柱上方分别以大气压 \(P_0\) 封装初始长度为
+\(L/2\)、\(L/2\)、\(L/4\) 的甲烷、乙烷、丙烷，随后密封；温度保持
+\(27^\circ\mathrm C\)，平衡位置不变。求平衡位置附近的小振动模式。
+
+已知水密度 \(\rho_0\)、重力加速度 \(g\)，且
+
+\[
+L=\frac{\sqrt6}{2}\frac{P_0}{\rho_0g}.
+\]
+
+管截面积 \(S\) 不应出现在最终结果中。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.74\linewidth,height=\textheight,keepaspectratio,alt={图4-1　三根斜管联通水柱与三段密封气体}]{../figures/question-04.pdf}
+\caption*{图4-1　三根斜管联通水柱与三段密封气体}
+\end{figure}
+
+\newpage
+
+\section{第 5 题}\label{ux7b2c-5-ux9898}
+
+折射率为 \(n>1\)、厚度为 \(d\) 的均匀透明介质可作为平板波导。真空波长为
+\(\lambda\) 的光线在其中以全反射方式传播，光线与界面法线的夹角为
+\(\theta\)。
+
+（1）求发生全反射所需的最小入射角 \(\theta_1\)。
+
+（2）当波导中各处的光线形成相长干涉时，光线可有效传播。求允许的入射角
+\(\theta_2\)。
+
+（3）在有效传播模式中，求使波导中央平均能流密度最大的入射角
+\(\theta_3\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.74\linewidth,height=\textheight,keepaspectratio,alt={图5-1　平板波导内光线的连续全反射}]{../figures/question-05.pdf}
+\caption*{图5-1　平板波导内光线的连续全反射}
+\end{figure}
+
+\newpage
+
+\section{第 6 题}\label{ux7b2c-6-ux9898}
+
+质量分布均匀的杯子由倒圆锥形杯身与圆形底盘组成。杯口半径为
+\(R\)，底盘半径为 \(R/2\)，杯壁与竖直方向夹角为 \(\theta\)，且
+\(\tan\theta=0.5\)。杯子质量为
+\(M\)，置于光滑水平面上；内壁上一质点质量为 \(m=M/2\)，初始距中心轴
+\(R/2\)，具有水平方向的切向初速度。
+
+（1）忽略杯子翻倒，求质点始终不飞出杯口时初速度 \(v_0\) 的范围。
+
+（2）地面系中质点初速度为
+\(v_0\)。在杯子---质点质心系中，求质点上升高度为 \(h\) 时的速度大小。
+
+（3）把杯子放在摩擦很大的水平桌面上。若质点初速度为
+\(\sqrt{3Rg}\)，判断杯子是否翻倒。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.501\linewidth,height=\textheight,keepaspectratio,alt={图6-1　圆锥杯、底盘与内壁运动质点}]{../figures/question-06.pdf}
+\caption*{图6-1　圆锥杯、底盘与内壁运动质点}
+\end{figure}
+
+\newpage
+
+\section{第 7 题}\label{ux7b2c-7-ux9898}
+
+一种利用 \(\beta\)
+放射性的电池由绝缘的放射性芯核与封闭金属球壳组成。每秒有 \(\gamma\)
+个原子核衰变，每次释放一个电子。电子能量的概率密度为梯形：在
+\(E_1=200\,\mathrm{keV}\) 处从零线性上升，在 \(E_2=300\,\mathrm{keV}\)
+至 \(E_3=500\,\mathrm{keV}\) 间保持常量，随后在
+\(E_4=600\,\mathrm{keV}\) 处线性降为零。
+
+（1）求电池电动势、最大供电电流 \(I_{\max}\) 及达到最大电流的条件。
+
+（2）忽略内阻，求伏安特性 \(I(U)\)。
+
+（3）取
+\(I_{\max}=1.2\,\mathrm A\)，将电池接入图示含理想二极管、外加电动势
+\(\varepsilon_c\) 与电阻 \(R_1\)、\(R_2\) 的电路，求：
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\item
+  \(R_1=R_2=200\,\mathrm{k}\Omega\)、\(\varepsilon_c=150\,\mathrm{kV}\)
+  时的 \(I_{AB}\)；
+\item
+  \(R_1=2\,\mathrm{M}\Omega\)、\(R_2=500\,\mathrm{k}\Omega\)、\(\varepsilon_c=175\,\mathrm{kV}\)
+  时的 \(I_{AB}\)。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图7-1　放射性电池、电子能谱与外接工作电路}]{../figures/question-07.pdf}
+\caption*{图7-1　放射性电池、电子能谱与外接工作电路}
+\end{figure}
+
+\newpage
+
+\section{第 8 题}\label{ux7b2c-8-ux9898}
+
+原子序数为 \(Z\)、原子核质量为 \(M\) 的惰性气体原子，可近似为带正电
+\(Ze\) 的原子核被半径为 \(a\)、质量为 \(m\)、总电荷为 \(-Ze\)
+的均匀球状电子云包围，且 \(M\gg m\)。
+
+（1）电子云电荷中心相对原子核发生微小位移 \(x\) 时，求回复力 \(F=-kx\)
+与振动角频率 \(\omega_0\)。
+
+（2）利用测不准关系 \(\Delta x\Delta p\ge\hbar/2\)，证明角频率为
+\(\omega_0\) 的谐振子最低能量为 \(E_0=\hbar\omega_0/2\)。
+
+两原子核固定，间距 \(R\gg a\)，以 \(x_1\)、\(x_2\)
+表示两电子云沿核连线相对各自原子核的位移。
+
+（3）写出 \(x_1\)、\(x_2\) 的动力学方程。
+
+（4）求双原子系统中每个原子的最低能量 \(E_0'\)，以及
+
+\[
+\Delta E=E_0'-E_0.
+\]
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.84\linewidth,height=\textheight,keepaspectratio,alt={图8-1　均匀电子云模型与两原子偶极耦合}]{../figures/question-08.pdf}
+\caption*{图8-1　均匀电子云模型与两原子偶极耦合}
+\end{figure}
+\end{document}

@@ -1,0 +1,306 @@
+\documentclass[multi=tikzpicture,border=7pt]{standalone}
+\usepackage{ctex,amsmath,amssymb,bm}
+\usepackage{tikz,pgfplots}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{arrows.meta,calc,angles,quotes,patterns,positioning,decorations.pathmorphing,3d}
+\tikzset{
+axis/.style={->,>=Stealth,thick},
+force/.style={->,>=Stealth,very thick,red!72!black},
+velocity/.style={->,>=Stealth,very thick,blue!72!black},
+dim/.style={<->,>=Stealth,thin},
+body/.style={draw=black,fill=blue!7,thick},
+guide/.style={dashed,gray!68},
+hidden/.style={dashed,gray!58,thick},
+wire/.style={brown!72!black,very thick},
+field/.style={fill=blue!10,draw=blue!60!black},
+panel/.style={font=\bfseries,anchor=west}
+}
+\tikzset{wire/.style={brown!70!black,very thick},guide/.style={dashed,gray!60},force/.style={->,>=Stealth,thick,red!70!black},velocity/.style={->,>=Stealth,thick,blue!70!black},axis/.style={->,>=Stealth,thick},dim/.style={<->,>=Stealth,thin},body/.style={draw,thick,fill=blue!7},panel/.style={anchor=west,font=\bfseries}}
+\begin{document}
+
+% 1 question-01
+\begin{tikzpicture}[x=.9cm,y=.9cm]
+  \node[panel] at (-5.7,5.0){空心圆柱中的四个质点};
+  \draw[body,fill=gray!5] (-1.05,-4.1) rectangle (1.05,4.1);
+  \draw[very thick] (-.68,-4.1)--(-.68,4.1) (.68,-4.1)--(.68,4.1);
+  \foreach \y in {2.55,1.45,.35,-.75}{
+    \draw[fill=orange!18,thick] (0,\y) circle(.50);
+  }
+  \foreach \y in {3.55,2.55,1.55,.55}{\draw[fill=white,thick] (.82,\y) circle(.08);}
+  \draw[dim] (1.55,-4.1)--(1.55,4.1) node[midway,right]{$L$};
+  \draw[dim] (-2.25,4.1)--(-2.25,2.55) node[midway,left]{$z$};
+  \draw[dim] (-1.75,2.55)--(-1.75,1.45) node[midway,left]{$s$};
+  \draw[guide] (-2.6,.2)--(-1.05,.2);
+  \draw[dim] (-2.45,.2)--(-2.45,4.1) node[midway,left]{$x_{\rm cm}$};
+  \node at (0,-4.55){圆柱质量 $M$，四个质点质量均为 $m$};
+\end{tikzpicture}
+
+% 2 solution-01
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+\node[panel]at(-5.8,3.6){水平平衡测质心与绕孔的小角度复摆};
+\begin{scope}[shift={(-3,0)}]
+\draw[body](-2.4,.4)rectangle(2.4,.8);\foreach\x in{-1.4,-.7,0,.7}{\draw[fill=orange!25](\x,.6)circle(.14);}\draw[very thick](.25,-.15)--(.25,.4);\fill(.25,.6)circle(1.8pt);\node[above]at(.25,.8){$C$};\draw[force](.25,.6)--(.25,-1.2)node[right]{$\mathcal M g$};\draw[dim](-2.4,1.5)--(.25,1.5)node[above,midway]{$x_{\rm cm}$};\node at(0,-2){支点通过质心};
+\end{scope}
+\begin{scope}[shift={(3.5,1.5)}]
+\coordinate(P)at(0,0);\coordinate(C)at(.6,-1.8);\draw[body](-.18,.1)--(.9,-3.14)--(1.2,-3.04)--(.12,.2)--cycle;\foreach\x/\y in{.27/-.81,.42/-1.26,.57/-1.71,.72/-2.16}{\draw[fill=orange!25](\x,\y)circle(.10);}
+\fill(P)circle(2pt)node[above left]{$P$};\fill(C)circle(2pt)node[left]{$C$};\draw[guide](0,0)--(0,-2.9);\draw[dim](0,-.7)arc[start angle=270,end angle=288.435,radius=.7];\node at(.23,-.9){$\theta$};\draw[force](C)--++(0,-1.1)node[right]{$\mathcal M g$};\draw[force](P)--++(-.3,1.1)node[right]{$\bm F_P$};\draw[dim](-.35,-.1)--(.25,-1.9)node[left,midway]{$R_i$};
+\node at(0,-4){$I_i=I_C+\mathcal M R_i^2$};
+\end{scope}
+\end{tikzpicture}
+
+% 3 question-02
+\begin{tikzpicture}[x=.95cm,y=.95cm]
+  \node[panel] at (-5.8,4.0){凸透镜与凸面反射球};
+  \draw[axis] (-5.2,0)--(5.5,0);
+  \fill (-4.3,0) circle(2pt) node[below]{$S$};
+  \draw[thick,<->] (-4.3,-.55)--(0,-.55) node[midway,below]{$u$};
+  \draw[very thick,blue!65!black] (0,-2.25) .. controls (-.28,-1.2) and (-.28,1.2) .. (0,2.25)
+    .. controls (.28,1.2) and (.28,-1.2) .. (0,-2.25);
+  \draw[axis] (0,-2.7)--(0,2.7);
+  \draw[thick] (3.2,0) circle(1.85);
+  \draw[pattern=north east lines] (1.38,-.55) arc[start angle=197,end angle=163,radius=1.85] --cycle;
+  \draw[dim] (0,.55)--(1.35,.55) node[midway,above]{$d$};
+  \draw[dim] (3.2,0)--(4.55,1.27) node[midway,above]{$R$};
+  \node at (0,3.15){$f=R$};
+\end{tikzpicture}
+
+% 4 solution-02
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+\node[panel]at(-5.7,3.5){各次像点按同一空间坐标放置（单位：cm）};
+\draw[axis](-6.7,0)--(5.3,0);\draw[very thick](0,-1.5)--(0,1.5)node[above]{透镜 $x=0$};
+\draw[very thick](1.8,-1.2)..controls(1.35,-.6)and(1.35,.6)..(1.8,1.2);\node[above]at(1.65,1.3){凸面 $x=15$};
+\foreach\x/\lab in{-6.0612/{物：-60.61},-3.5612/{最终像：-35.61},2.9849/{首次像：29.85},4.5621/{镜像：45.62}}{\fill(\x,0)circle(2pt);\draw[guide](\x,-.2)--(\x,-1);\node[below,rotate=25]at(\x,-1){\lab};}
+\draw[guide](1.5,.5)--(4.5621,0);\draw[guide](1.5,-.5)--(4.5621,0);
+\node at(-.5,2.5){镜后虚像用虚线表示；最后光向左传播};
+\node at(-.7,-3){$v_1=29.85,\ u_2=-14.85,\ v_2=-30.62,\ u_3=45.62$};
+\end{tikzpicture}
+
+% 5 question-03
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+\node[panel]at(-3.8,3.5){转移椭圆与地心焦点扫面积};
+\draw[body](0,0)circle(1.5);\draw[gray,thick](0,0)circle(2.25);
+
+\draw[blue!70!black,thick](.75,0)ellipse(1.5 and 1.299);
+\fill(0,0)circle(2pt)node[below left]{$O$};\fill(.75,0)circle(1.5pt)node[below]{$G$};\fill(.75,1.299)circle(2pt)node[above]{$B$};\fill(2.25,0)circle(2pt)node[right]{$C$};
+\draw[guide](0,0)--(.75,1.299)(.75,0)--(.75,1.299);\draw[velocity](2.25,0)--(2.25,.9)node[right]{$v_c$};\draw[velocity](2.45,0)--(2.45,-.9)node[right]{$v_f$};
+
+
+\end{tikzpicture}
+
+% 6 solution-03
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+\node[panel]at(-3.8,3.5){转移椭圆与地心焦点扫面积};
+\draw[body](0,0)circle(1.5);\draw[gray,thick](0,0)circle(2.25);
+\fill[blue!22](0.000000,0.000000)--(0.750000,1.299000)--(0.776179,1.298802)--(0.802349,1.298209)--(0.828504,1.297220)--(0.854635,1.295836)--(0.880734,1.294057)--(0.906793,1.291884)--(0.932804,1.289317)--(0.958760,1.286358)--(0.984652,1.283007)--(1.010472,1.279265)--(1.036213,1.275134)--(1.061868,1.270614)--(1.087427,1.265707)--(1.112883,1.260414)--(1.138229,1.254738)--(1.163456,1.248679)--(1.188558,1.242240)--(1.213525,1.235422)--(1.238352,1.228229)--(1.263030,1.220661)--(1.287552,1.212721)--(1.311910,1.204412)--(1.336097,1.195736)--(1.360105,1.186696)--(1.383927,1.177294)--(1.407557,1.167533)--(1.430986,1.157417)--(1.454207,1.146949)--(1.477214,1.136131)--(1.500000,1.124967)--(1.522557,1.113460)--(1.544879,1.101614)--(1.566959,1.089433)--(1.588789,1.076920)--(1.610365,1.064079)--(1.631678,1.050913)--(1.652723,1.037428)--(1.673492,1.023626)--(1.693981,1.009513)--(1.714181,0.995092)--(1.734089,0.980368)--(1.753696,0.965345)--(1.772998,0.950028)--(1.791988,0.934422)--(1.810660,0.918532)--(1.829010,0.902361)--(1.847031,0.885916)--(1.864717,0.869201)--(1.882064,0.852221)--(1.899067,0.834981)--(1.915719,0.817487)--(1.932016,0.799744)--(1.947953,0.781758)--(1.963525,0.763533)--(1.978728,0.745076)--(1.993556,0.726392)--(2.008006,0.707486)--(2.022072,0.688365)--(2.035751,0.669034)--(2.049038,0.649500)--(2.061930,0.629768)--(2.074421,0.609844)--(2.086510,0.589734)--(2.098191,0.569444)--(2.109462,0.548981)--(2.120318,0.528351)--(2.130757,0.507560)--(2.140776,0.486614)--(2.150371,0.465520)--(2.159539,0.444284)--(2.168278,0.422913)--(2.176585,0.401413)--(2.184457,0.379791)--(2.191893,0.358053)--(2.198889,0.336206)--(2.205444,0.314257)--(2.211555,0.292211)--(2.217221,0.270077)--(2.222441,0.247861)--(2.227212,0.225569)--(2.231533,0.203208)--(2.235402,0.180786)--(2.238819,0.158308)--(2.241783,0.135782)--(2.244292,0.113215)--(2.246346,0.090614)--(2.247944,0.067984)--(2.249086,0.045334)--(2.249772,0.022671)--(2.250000,0.000000)--cycle;
+\draw[blue!70!black,thick](.75,0)ellipse(1.5 and 1.299);
+\fill(0,0)circle(2pt)node[below left]{$O$};\fill(.75,0)circle(1.5pt)node[below]{$G$};\fill(.75,1.299)circle(2pt)node[above]{$B$};\fill(2.25,0)circle(2pt)node[right]{$C$};
+\draw[guide](0,0)--(.75,1.299)(.75,0)--(.75,1.299);\draw[velocity](2.25,0)--(2.25,.9)node[right]{$v_c$};\draw[velocity](2.45,0)--(2.45,-.9)node[right]{$v_f$};
+\node at(-2.4,-1.2){$a=R$};\node at(-2.4,-1.7){$b=\sqrt3R/2$};
+\node at(0,-3){阴影以 $O$ 为顶点：$S_{BC}=ab(\pi+1)/4$};
+\end{tikzpicture}
+
+% 7 question-04
+\begin{tikzpicture}[x=.92cm,y=.92cm]
+  \node[panel] at (-5.8,4.0){“8”字形电阻丝进入磁场};
+  \draw[field] (3.7,-3.0) rectangle (6.0,3.0);
+  \draw[very thick] (3.7,-3.2)--(3.7,3.2);
+  \node[blue!60!black] at (5.0,2.45){$\otimes\,\bm B$};
+  \draw[very thick] (-1.45,0) circle(2.0);
+  \draw[very thick] (1.15,0) circle(.60);
+  \fill (-1.45,0) circle(2pt);
+  \fill (1.15,0) circle(2pt);
+  \fill (.55,0) circle(2pt) node[below]{$A$};
+  \draw[dim] (-3.45,-2.5)--(.55,-2.5) node[midway,below]{$D$};
+  \draw[dim] (.55,-1.15)--(1.75,-1.15) node[midway,below]{$d$};
+  \draw[velocity] (-3.15,.5)--(-1.5,.5) node[midway,above]{$v_0$};
+\end{tikzpicture}
+
+% 8 solution-04
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+\node[panel]at(-.5,3){小圆先进入、大圆后进入、全部进入};
+\foreach\s/\b/\lab in{0/1.8/{$0<x<d$},5/.1/{$d<x<d+D$},10/-1.4/{$x>d+D$}}{
+\begin{scope}[shift={(\s,0)}]
+\fill[blue!9](\b,-1.6)rectangle(3.3,1.6);\draw[very thick](\b,-1.7)--(\b,1.7);
+\draw[thick](0,0)circle(1)(1.65,0)circle(.65);\node at(2.8,1.25){$\otimes B$};\draw[velocity](.8,-1.25)--(1.7,-1.25)node[below]{$v$};\node at(.6,-2.1){\lab};
+\end{scope}}
+\node at(6,-3){第一、二阶段电流反向；磁阻力都阻碍运动};
+\end{tikzpicture}
+
+% 9 question-05
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+\node[panel]at(-4,3.1){与原图同一分支：$+x$ 沿桌面向左};
+\coordinate(E)at(0,0);\coordinate(C)at(0,-2.4);\coordinate(D)at(2.0785,-3.6);\coordinate(B)at(-.75,-3.699);\coordinate(A)at(-3,-2.4);\coordinate(F)at(-.3215,.557);
+\draw[axis](E)--(-2,0)node[left]{$+x$};\draw[axis](E)--(0,1.8)node[above]{$+y$};\draw[guide](-3.5,0)--(2.5,0);
+\draw[wire](A)--(B);\draw[very thick](B)--(C)--(D);\draw[blue!75!black,very thick](D)--(F);
+\foreach\p in{A,B,C,D,E,F}{\fill(\p)circle(2pt);}\node[left]at(A){$A$};\node[below]at(B){$B$};\node[left]at(C){$C$};\node[right]at(D){$D$};\node[below left]at(E){$E$};\node[above left]at(F){$F$};
+\draw[dim](-3,-2)--(0,-2)node[above,midway]{$d$};\draw[dim](.45,0)--(.45,-2.4)node[right,midway]{$h$};
+\node at(1.5,-2.65){$CD=h$};\node at(-1.5,-3.65){$BC=a$};
+
+\node at(-.2,-4.4){$BC\perp CD$，杆 $DF$ 通过桌面固定点 $E$};
+\end{tikzpicture}
+
+% 10 solution-05
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+\node[panel]at(-4,3.1){与原图同一分支：$+x$ 沿桌面向左};
+\coordinate(E)at(0,0);\coordinate(C)at(0,-2.4);\coordinate(D)at(2.0785,-3.6);\coordinate(B)at(-.75,-3.699);\coordinate(A)at(-3,-2.4);\coordinate(F)at(-.3215,.557);
+\draw[axis](E)--(-2,0)node[left]{$+x$};\draw[axis](E)--(0,1.8)node[above]{$+y$};\draw[guide](-3.5,0)--(2.5,0);
+\draw[wire](A)--(B);\draw[very thick](B)--(C)--(D);\draw[blue!75!black,very thick](D)--(F);
+\foreach\p in{A,B,C,D,E,F}{\fill(\p)circle(2pt);}\node[left]at(A){$A$};\node[below]at(B){$B$};\node[left]at(C){$C$};\node[right]at(D){$D$};\node[below left]at(E){$E$};\node[above left]at(F){$F$};
+\draw[dim](-3,-2)--(0,-2)node[above,midway]{$d$};\draw[dim](.45,0)--(.45,-2.4)node[right,midway]{$h$};
+\node at(1.5,-2.65){$CD=h$};\node at(-1.5,-3.65){$BC=a$};
+\draw[velocity](F)--++(-.45,.78)node[left]{$\dot r\bm e_r$};\draw[velocity](F)--++(-.32,-.185)node[left]{$r\dot\theta\bm e_\theta$};
+\node at(-.2,-4.4){$BC\perp CD$；图示伸长分支 $\dot\theta<0$};
+\end{tikzpicture}
+
+% 11 question-06
+\begin{tikzpicture}[x=.95cm,y=.95cm]
+  \node[panel] at (-5.5,4.1){半球形带电体};
+  \path[fill=orange!7] (0,2.2) .. controls (-3.0,1.8) and (-3.0,-1.8) .. (0,-2.2)
+    arc[start angle=-90,end angle=90,x radius=.52,y radius=2.2] --cycle;
+  \draw[very thick,orange!75!black] (0,2.2) .. controls (-3.0,1.8) and (-3.0,-1.8) .. (0,-2.2);
+  \draw[thick,orange!60!black] (0,2.2) .. controls (-1.65,1.25) and (-1.65,-1.25) .. (0,-2.2);
+  \draw[hidden] (0,2.2) .. controls (-.45,1.15) and (-.45,-1.15) .. (0,-2.2);
+  \draw[very thick,blue!65!black] (0,0) ellipse[x radius=.52,y radius=2.2];
+  \draw[hidden] (-2.15,1.0) .. controls (-1.2,.72) and (-.45,.72) .. (.25,1.0);
+  \draw[hidden] (-2.15,-1.0) .. controls (-1.2,-.72) and (-.45,-.72) .. (.25,-1.0);
+  \draw[axis] (0,0)--(5.0,0) node[right]{$+x$};
+  \fill (0,0) circle(2pt) node[below right]{$O$};
+  \draw[dim] (.75,0)--(.75,2.2) node[midway,right]{$R$};
+  \node[blue!65!black] at (.2,2.75){圆形边缘};
+  \node[orange!75!black] at (-2.3,-2.65){半球弧面};
+\end{tikzpicture}
+
+% 12 solution-06
+\begin{tikzpicture}[x=.86cm,y=.86cm]
+  \node[panel] at (-6.5,4.35){轴对称电场的几何分解};
+  \draw[gray!35] (0,3.7)--(0,-3.25);
+
+  \begin{scope}[shift={(-3.45,0)}]
+    \coordinate (O) at (0,0);
+    \coordinate (S) at ({.75*cos(55)},{2*sin(55)});
+    \coordinate (P) at (2.45,0);
+    \coordinate (X) at ($(P)+(.72,0)$);
+    \coordinate (E) at ($(P)+(.72,-.58)$);
+
+    \draw[very thick,blue!65!black] (O) ellipse[x radius=.75,y radius=2.0];
+    \draw[axis] (O)--(3.35,0) node[right]{$+x$};
+    \fill (O) circle(2pt) node[below left]{$O$};
+    \fill[orange!80!black] (S) circle(2.5pt) node[above left]{$dq$};
+    \fill (P) circle(2pt) node[below left]{$P$};
+
+    \draw[guide] (O)--(S) node[pos=.55,left]{$R$};
+    \draw[thick] (S)--(P) node[pos=.52,above right]{$s$};
+    \draw[dim] (0,-2.35)--(2.45,-2.35) node[midway,below]{$x$};
+
+    \draw[velocity] (P)--(E) node[pos=.7,below right]{$d\bm E$};
+    \draw[force,red!70!black] (P)--(X) node[midway,above]{$dE_x$};
+    \draw[guide] (X)--(E);
+    \draw pic[draw,->,"$\alpha$",angle radius=.62cm,angle eccentricity=1.35]
+      {angle=E--P--X};
+    \node at (0,-2.95){(a) 圆环轴线场};
+  \end{scope}
+
+  \begin{scope}[shift={(3.45,0)}]
+    \coordinate (O) at (0,0);
+    \coordinate (S) at ({-2*cos(35)},{2*sin(35)});
+    \coordinate (P) at (2.45,0);
+    \coordinate (X) at ($(P)+(1.25,0)$);
+    \coordinate (E) at ($(P)+(1.25,-.34)$);
+
+    % 半球位于 x<=0 一侧；图示为过对称轴的子午截面。
+    \draw[very thick,orange!75!black] (0,2.0)
+      arc[start angle=90,end angle=270,radius=2.0];
+    \draw[thick] (0,-2.0)--(0,2.0);
+    \draw[axis] (-2.55,0)--(4.2,0) node[right]{$+x$};
+    \fill (O) circle(2pt) node[below right]{$O$};
+    \fill (P) circle(2pt) node[below left]{$P$};
+
+    \draw[line width=3.2pt,orange!75!black]
+      ({2*cos(142)},{2*sin(142)})
+      arc[start angle=142,end angle=148,radius=2.0];
+    \fill[orange!80!black] (S) circle(2.3pt) node[above left]{$dS$};
+    \draw[guide] (O)--(S) node[pos=.52,above left]{$R$};
+    \draw[thick] (S)--(P) node[pos=.52,above right]{$s$};
+    \draw[->,>=Stealth,thin] (-.72,0)
+      arc[start angle=180,end angle=145,radius=.72];
+    \node at (-.94,.29){$\theta$};
+    \draw[dim] (0,-2.35)--(2.45,-2.35) node[midway,below]{$x$};
+
+    \draw[velocity] (P)--(E) node[pos=.76,below right]{$d\bm E$};
+    \draw[force,red!70!black] (P)--(X) node[midway,above]{$dE_x$};
+    \draw[guide] (X)--(E);
+    \node at (0,-2.95){(b) 半球子午截面};
+  \end{scope}
+\end{tikzpicture}
+
+% 13 question-07
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+\node[panel]at(-2.8,3.3){等张力轻链与圆柱面的两个接触点};
+\draw[thick](0,0)circle(1.6);\coordinate(A)at(-1.3856,.8);\coordinate(B)at(1.3856,.8);\coordinate(C)at(0,-1.6);\draw[wire](A)--(B)--(C)--cycle;
+\draw[guide](A)--(0,0)(0,0)--(B);\fill(0,0)circle(1.5pt)node[right]{$O$};\foreach\p/\pos in{A/above left,B/above right,C/below}{\fill(\p)circle(2pt)node[\pos]{$\p$};}
+\draw[dim](0,0)--(0,1.6)node[left,midway]{$R$};\draw[dim](-.55,0)arc[start angle=180,end angle=150,radius=.55];\node at(-.8,.16){$\theta$};\draw[body](C)circle(.12);\node at(0,-2.4){链长 $L$，下端小球质量 $m$};
+\end{tikzpicture}
+
+% 14 solution-07
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+\node[panel]at(-5,3.6){接触点等张力与以圆心为支点的小摆};
+\begin{scope}[shift={(-2.7,0)}]
+\draw[thick](0,0)circle(1.6);\coordinate(A)at(-1.3856,.8);\coordinate(B)at(1.3856,.8);\coordinate(C)at(0,-1.6);
+\draw[wire](A)--(B)--(C)--cycle;\draw[guide](A)--(0,0);\fill(0,0)circle(1.5pt)node[right]{$O$};
+\foreach\p/\pos in{A/above left,B/above right,C/below}{\fill(\p)circle(2pt)node[\pos]{$\p$};}
+\draw[force](A)--++(.9,0)node[above]{$T$};\draw[force](A)--++(.45,-.779)node[left]{$T$};\draw[force](A)--++(-.78,.45)node[left]{$N$};
+\node at(0,-2.4){$\theta=30^\circ$ 特例};
+\end{scope}
+\begin{scope}[shift={(3.2,0)}]
+\fill(0,0)circle(2pt)node[above]{$O$};\draw[guide](0,0)--(0,-1.6);\draw[wire](0,0)--(.55,-1.5025);\draw[body](.55,-1.5025)circle(.15)node[right]{$m$};
+\draw[guide](-.8,-1.386)arc[start angle=240,end angle=300,radius=1.6];\node[left]at(0,-.75){$\ell=OC$};
+\node at(0,1.2){$\ell=R\sin\theta/\cos2\theta$};\node at(0,-2.5){$T_1=2\pi\sqrt{\ell/g}$};
+\end{scope}
+\end{tikzpicture}
+
+% 15 question-08
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+\node[panel]at(-4.6,3.6){滤芯侧面流入，风扇顶部排出};
+\draw[body](-3,-2)rectangle(-.5,1.5);\node at(-1.75,-.5){$p,T$};\node at(-1.75,-1.3){滤芯桶};
+\draw[velocity](-4,.5)--(-3,.5);\draw[velocity](-4,-.5)--(-3,-.5);\draw[velocity](.5,.5)--(-.5,.5);\draw[velocity](.5,-.5)--(-.5,-.5);\draw[velocity](-1.75,1.5)--(-1.75,2.7)node[above]{排出};
+\begin{scope}[shift={(3,0)}]
+\draw[thick](0,0)circle(1.9);\draw[guide](0,0)circle(.6);\foreach\a in{0,40,...,320}{\begin{scope}[rotate=\a]\draw[fill=blue!18](.6,0)--(1.8,.15)--(1.75,.5)--(.55,.22)--cycle;\end{scope}}
+\draw[dim](0,0)--(-.4596,.3857)node[above left]{$r_1$};\draw[dim](0,0)--(1.4555,-1.2213)node[below right]{$r_2$};\node at(0,-2.6){9片扇叶；碰前空气在实验室系静止};
+\end{scope}
+\end{tikzpicture}
+
+% 16 solution-08
+\begin{tikzpicture}[x=.9cm,y=.9cm]
+  \node[panel] at (-6.2,4.2){稳态物质守恒与扇叶碰撞};
+  \draw[gray!35] (0,3.55)--(0,-3.25);
+  \begin{scope}[shift={(-3.3,0)}]
+    \draw[body] (-1.7,-2.1) rectangle (1.7,2.1);
+    \node at (0,.45){筒内 $p,T$};
+    \draw[velocity] (-3.0,.8)--(-1.7,.8) node[midway,above]{$k(p_0-p)$};
+    \draw[velocity] (1.7,-.8)--(3.1,-.8) node[midway,above]{$p\dot V_f/(R_gT)$};
+    \node at (0,-2.75){(a) 稳态摩尔流率};
+  \end{scope}
+  \begin{scope}[shift={(3.45,0)}]
+    \coordinate (Ps) at (2,-1.25); \coordinate (Os) at (0,0); \coordinate (Hs) at (1.75,0);
+    \draw[very thick] (-2.0,1.25)--(2.0,-1.25);
+    \draw[guide] (-2.3,0)--(2.3,0);
+    \fill (0,0) circle(2pt);
+    \draw[velocity] (0,0)--(1.75,0) node[above]{$\omega r$};
+    \draw[force,red!70!black] (0,0)--({1.25*cos(58)},{1.25*sin(58)}) node[right]{$v_n$};
+    \draw[velocity] (0,0)--({2.0*cos(58)},{2.0*sin(58)}) node[right]{$2v_n$};
+    \draw pic[draw,->,"$\theta$",angle radius=.75cm] {angle=Ps--Os--Hs};
+    \node at (0,-2.75){(b) 扇叶法向弹性碰撞};
+  \end{scope}
+\end{tikzpicture}
+
+\end{document}

@@ -1,0 +1,4082 @@
+\documentclass[12pt,a4paper,UTF8]{ctexart}
+\usepackage[a4paper,top=22mm,bottom=22mm,left=22mm,right=22mm,headheight=15pt]{geometry}
+\usepackage{amsmath,amssymb,mathtools,bm}
+\usepackage{graphicx,xcolor,booktabs,longtable,array,enumitem,fancyhdr,caption,float,microtype,setspace}
+\usepackage[hidelinks,unicode]{hyperref}
+\usepackage[most]{tcolorbox}
+\definecolor{ContestBlue}{HTML}{17365D}
+\hypersetup{pdftitle={第087套},pdfauthor={}}
+\setstretch{1.24}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.35em}
+\setlength{\emergencystretch}{2em}
+\setlist{itemsep=0.35em,topsep=0.4em}
+\captionsetup{font=small,labelfont=bf,justification=centering}
+\setcounter{secnumdepth}{0}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small 第087套}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\ctexset{
+  section={format=\Large\bfseries\color{ContestBlue},beforeskip=1.2em,afterskip=0.7em},
+  subsection={format=\large\bfseries\color{ContestBlue},beforeskip=1.0em,afterskip=0.5em},
+  subsubsection={format=\normalsize\bfseries,beforeskip=0.8em,afterskip=0.35em}
+}
+\makeatletter
+\newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\newcommand{\maxwidth}{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\newcommand{\maxheight}{\ifdim\Gin@nat@height>0.72\textheight 0.72\textheight\else\Gin@nat@height\fi}
+\newcommand{\pandocbounded}[1]{\begingroup\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}#1\endgroup}
+\makeatother
+\begin{document}
+\begin{titlepage}
+  \centering
+  \vspace*{58mm}
+  {\Huge\bfseries\color{ContestBlue} 第087套\par}
+  \vfill
+  \vspace*{28mm}
+\end{titlepage}
+\section{第 1 题}\label{ux7b2c-1-ux9898}
+
+两个相同小球的质量均为 \(m\)，用一根质量不计、不可伸长、长度为 \(l\)
+的细线连接，放在光滑的水平面上，如图所示。给右侧小球一个大小为
+\(v_0\)、方向竖直向上的初速度，重力加速度为 \(g\)。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  当细线方向变为竖直时，求上方小球轨迹在该时刻的曲率半径；
+\item
+  若要求在这一时刻下方小球对水平面的压力恰好为零，求初速度 \(v_0\)。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图 1-1　两小球、细线及初速度的初始位置。}]{../figures/question-01.pdf}
+\caption*{图 1-1　两小球、细线及初速度的初始位置。}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d}
+
+先判断哪条约束会失效：细线只能拉，桌面只能推。两球的水平动量守恒与机械能守恒给出速度；到竖直位置前，还要逐段检查张力和支持力。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  水平方向动量守恒；
+\item
+  不可伸长细线的速度约束；
+\item
+  机械能守恒与相对速度；
+\item
+  张力非负、支持力非负的约束有效性判据；
+\item
+  质心运动和绕质心相对转动的分解；
+\item
+  曲率半径公式 \(a_n=v^2/\rho\) 及矢量形式
+  \(\rho=v^3/|\bm v\times\bm a|\)。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf}
+
+把初始位于左侧的球记为 \(A\)，初始被上抛的右球记为 \(B\)。在 \(A\)
+仍与桌面接触的阶段，令细线与水平面的夹角为
+\(\theta\)，令两球的相对速度大小为
+
+\[
+w=l\dot\theta.
+\]
+
+当 \(\theta=90^\circ\) 时，若 \(A\)
+尚未离桌，两球的速度均为水平方向且大小相等、方向相反；若 \(A\)
+已经离桌，则系统质心还具有竖直速度，上球速度是``绕质心的水平速度''与``质心竖直速度''的合成。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3}
+
+先处理下球保持接触的阶段。利用水平方向总动量为零消去下球速度，再用机械能守恒求相对速度
+\(w(\theta)\)。随后求张力 \(T\) 和支持力 \(N\)，由
+\(T\geq0\)、\(N\geq0\) 判断哪一种约束能维持到
+\(\theta=90^\circ\)。只有先完成这一判别，曲率半径的计算才不会套错运动模型。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790}
+
+图 1-2 左图对应下球仍受桌面约束的阶段：蓝色 \(u\) 是下球水平速度，蓝色
+\(v_B\) 是上球速度，红色 \(T\)、\(N\)
+分别用于判断细线和接触约束是否有效；右图对应下球离桌后的分支，质心 \(C\)
+的水平速度恒为零，竖直速度为 \(V_C\)；上球相对于质心的水平速度大小为
+\(w/2\)，两球同时以角速度 \(w/l\)
+绕质心转动。下面第（1）---（5）步使用左图，第（6）步转入右图。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\linewidth,height=\textheight,keepaspectratio,alt={图 1-2　接触阶段的受力与离桌后的质心运动。}]{../figures/solution-01.pdf}
+\caption*{图 1-2　接触阶段的受力与离桌后的质心运动。}
+\end{figure}
+
+\textbf{（1）接触阶段的速度约束}
+
+先按图 1-2 左图建立坐标。桌面约束使 \(A\)
+点竖直坐标恒为零，细线方向则由角 \(\theta\) 唯一确定。
+
+设 \(A\) 的水平速度为 \(u\)。取 \(A\) 的坐标为 \((x,0)\)，则
+
+\[
+\bm r_B=(x+l\cos\theta)\bm e_x+l\sin\theta\bm e_y.
+\]
+
+对时间求导，得到
+
+\[
+\bm v_A=u\bm e_x,
+\]
+
+\[
+\bm v_B=(u-w\sin\theta)\bm e_x+w\cos\theta\bm e_y.
+\tag{1}
+\]
+
+系统在水平方向不受外力，初始水平总动量为零，因此
+
+\[
+m u+m(u-w\sin\theta)=0.
+\]
+
+逐项整理可得
+
+\[
+2u=w\sin\theta,
+\qquad
+u=\frac{w\sin\theta}{2}.
+\tag{2}
+\]
+
+把式（2）代回式（1），两球速度分别为
+
+\[
+\bm v_A=\frac{w\sin\theta}{2}\bm e_x,
+\]
+
+\[
+\bm v_B=-\frac{w\sin\theta}{2}\bm e_x+w\cos\theta\bm e_y.
+\tag{3}
+\]
+
+所以
+
+\[
+v_A^2=\frac{w^2\sin^2\theta}{4},
+\]
+
+\[
+v_B^2=\frac{w^2\sin^2\theta}{4}+w^2\cos^2\theta.
+\]
+
+两式相加：
+
+\[
+\begin{aligned}
+v_A^2+v_B^2
+&=\frac{w^2\sin^2\theta}{2}+w^2\cos^2\theta\\
+&=\frac{w^2}{2}\bigl(\sin^2\theta+2\cos^2\theta\bigr)\\
+&=\frac{w^2}{2}(1+\cos^2\theta).
+\end{aligned}
+\tag{4}
+\]
+
+\textbf{（2）由机械能守恒求相对速度}
+
+初态只有球 \(B\) 具有动能 \(mv_0^2/2\)。当细线转过 \(\theta\) 时，球
+\(B\) 上升的高度为
+\(l\sin\theta\)。支持力不做功，细线张力对整个系统的总功为零，故
+
+\[
+\frac12mv_0^2
+=\frac12m(v_A^2+v_B^2)+mgl\sin\theta.
+\]
+
+代入式（4）：
+
+\[
+\frac12mv_0^2
+=\frac14mw^2(1+\cos^2\theta)+mgl\sin\theta.
+\]
+
+两边乘以 \(4/m\)：
+
+\[
+2v_0^2=w^2(1+\cos^2\theta)+4gl\sin\theta.
+\]
+
+因此
+
+\[
+w^2=\frac{2v_0^2-4gl\sin\theta}{1+\cos^2\theta}.
+\tag{5}
+\]
+
+当 \(\theta=90^\circ\) 时，
+
+\[
+w^2=2v_0^2-4gl.
+\tag{6}
+\]
+
+此时两球速度大小均为 \(w/2\)，记作 \(v\)，于是
+
+\[
+v^2=\frac{w^2}{4}=\frac12v_0^2-gl.
+\tag{7}
+\]
+
+\textbf{（3）在细线竖直且下球仍接触桌面时求曲率半径}
+
+在以球 \(A\) 为瞬时参考点的相对运动中，球 \(B\) 绕 \(A\) 的半径为
+\(l\)，相对速度为 \(w=2v\)，所以沿细线向下的相对向心加速度为
+
+\[
+a_{B/A,n}=\frac{w^2}{l}=\frac{4v^2}{l}.
+\]
+
+在细线竖直的瞬间，球 \(A\) 的竖直加速度为零，因此球 \(B\)
+的竖直加速度就是 \(4v^2/l\)。对球 \(B\) 列竖直方向方程也可写成
+
+\[
+T+mg=m\frac{4v^2}{l}.
+\tag{8}
+\]
+
+球 \(B\)
+此刻速度水平、加速度竖直，二者互相垂直，故全部加速度都是法向加速度：
+
+\[
+\frac{v^2}{\rho}=\frac{4v^2}{l}.
+\]
+
+只要 \(v\neq0\)，约去 \(v^2\) 得
+
+\[
+\boxed{\rho=\frac{l}{4}}.
+\tag{9}
+\]
+
+这给出了下球保持接触分支的主体结论，但还必须检查张力和支持力是否允许这一接触模型延续到竖直位置。
+
+\textbf{（4）检查细线是否松弛}
+
+为了得到张力，先对式（2）的下球速度求导：
+
+\[
+a_A=\dot u.
+\]
+
+对式（1）继续求导，并使用 \(\dot\theta=w/l\)，上球加速度分量为
+
+\[
+a_{Bx}=\dot u-\dot w\sin\theta-\frac{w^2}{l}\cos\theta,
+\tag{10a}
+\]
+
+\[
+a_{By}=\dot w\cos\theta-\frac{w^2}{l}\sin\theta.
+\tag{10b}
+\]
+
+对下球 \(A\) 列水平方向动力学方程：
+
+\[
+m\dot u=T\cos\theta.
+\tag{10c}
+\]
+
+对上球 \(B\) 分别列水平、竖直方向方程：
+
+\[
+m a_{Bx}=-T\cos\theta,
+\tag{10d}
+\]
+
+\[
+m a_{By}=-T\sin\theta-mg.
+\tag{10e}
+\]
+
+把式（10c）代入式（10d），得到
+
+\[
+2T\cos\theta
+=m\dot w\sin\theta+\frac{mw^2}{l}\cos\theta.
+\tag{10f}
+\]
+
+式（10e）则改写为
+
+\[
+T\sin\theta
+=-m\dot w\cos\theta+\frac{mw^2}{l}\sin\theta-mg.
+\tag{10g}
+\]
+
+用式（10f）乘 \(\cos\theta\)、式（10g）乘 \(\sin\theta\)
+后相加，\(\dot w\) 项消去：
+
+\[
+T(2\cos^2\theta+\sin^2\theta)
+=\frac{mw^2}{l}(\cos^2\theta+\sin^2\theta)-mg\sin\theta.
+\]
+
+利用
+
+\[
+2\cos^2\theta+\sin^2\theta=1+\cos^2\theta,
+\]
+
+得到
+
+\[
+T=\frac{m(w^2-gl\sin\theta)}{l(1+\cos^2\theta)}.
+\tag{10h}
+\]
+
+最后代入式（5）的 \(w^2\)：
+
+\[
+\begin{aligned}
+T
+&=\frac{m}{l(1+\cos^2\theta)}
+\left[
+\frac{2v_0^2-4gl\sin\theta}{1+\cos^2\theta}
+-gl\sin\theta
+\right]\\
+&=\frac{m\left[2v_0^2-gl\sin\theta(5+\cos^2\theta)\right]}
+{l(1+\cos^2\theta)^2}.
+\end{aligned}
+\]
+
+因此接触阶段的张力为
+
+\[
+T=\frac{m\left[2v_0^2-gl\sin\theta(5+\cos^2\theta)\right]}
+{l(1+\cos^2\theta)^2}.
+\tag{10}
+\]
+
+令
+
+\[
+f(\theta)=\sin\theta(5+\cos^2\theta).
+\]
+
+在 \(0\leq\theta\leq90^\circ\) 内，\(f\) 的最大值为 \(5\)，在
+\(\theta=90^\circ\) 取得。因此，要使 \(T\)
+在到达竖直以前始终非负，必须有
+
+\[
+2v_0^2\geq5gl,
+\]
+
+即
+
+\[
+v_0^2\geq\frac52gl.
+\tag{11}
+\]
+
+若
+\(v_0^2<5gl/2\)，细线会在到达竖直位置以前松弛，题设所说的``细线方向变为竖直''不再对应上述绷紧约束运动。
+
+\textbf{（5）检查下球是否离开桌面}
+
+下球在竖直方向没有加速度。下球受到支持力 \(N\) 向上、张力竖直分量
+\(T\sin\theta\) 向上、重力 \(mg\) 向下，所以
+
+\[
+N+T\sin\theta-mg=0,
+\]
+
+即
+
+\[
+N=mg-T\sin\theta.
+\tag{12a}
+\]
+
+把式（10）代入：
+
+\[
+\begin{aligned}
+N
+&=mg-
+\frac{m\left[2v_0^2-gl\sin\theta(5+\cos^2\theta)\right]\sin\theta}
+{l(1+\cos^2\theta)^2}\\
+&=\frac{m\left\{gl(1+\cos^2\theta)^2
+-2v_0^2\sin\theta
++gl\sin^2\theta(5+\cos^2\theta)\right\}}
+{l(1+\cos^2\theta)^2}.
+\end{aligned}
+\]
+
+因此接触阶段的支持力为
+
+\[
+N=
+\frac{m\left\{gl\left[(1+\cos^2\theta)^2+
+\sin^2\theta(5+\cos^2\theta)\right]-2v_0^2\sin\theta\right\}}
+{l(1+\cos^2\theta)^2}.
+\tag{12}
+\]
+
+令 \(N=0\)，并以
+
+\[
+\beta=\frac{v_0^2}{gl},\qquad s=\sin\theta
+\]
+
+无量纲化。注意 \(1+\cos^2\theta=2-s^2\)，式（12）的分子条件化为
+
+\[
+(2-s^2)^2+s^2(6-s^2)-2\beta s=0.
+\]
+
+展开前两项：
+
+\[
+4-4s^2+s^4+6s^2-s^4-2\beta s=0,
+\]
+
+即
+
+\[
+s^2-\beta s+2=0.
+\tag{13}
+\]
+
+当 \(\beta\leq3\) 时，在 \(0<s<1\)
+内没有早于竖直位置的有效失去接触点；当 \(\beta>3\) 时，下球在
+
+\[
+\sin\theta_c
+=\frac{\beta-\sqrt{\beta^2-8}}{2}
+\tag{14}
+\]
+
+处先离开桌面。
+
+所以，当
+
+\[
+\frac52gl\leq v_0^2\leq3gl
+\]
+
+时，下球仍接触桌面直至细线竖直，曲率半径就是式（9）的 \(l/4\)。
+
+\textbf{（6）补充：下球提前离桌时的曲率半径}
+
+当支持力降为零后，图 1-2 左图中的 \(N\)
+消失，不能继续令下球竖直加速度为零。此后改用右图：质心只受总重力而自由落体，细线张力为内力，只改变两球绕质心的相对转动。
+
+若 \(v_0^2>3gl\)，必须改用质心---相对运动模型。记
+
+\[
+s_c=\sin\theta_c,\qquad c_c=\cos\theta_c.
+\]
+
+把失去接触条件 \(\beta=s_c+2/s_c\)
+代入式（5），可将离桌瞬间的相对速度化简为
+
+\[
+\begin{aligned}
+w_c^2
+&=\frac{2gl(\beta-2s_c)}{2-s_c^2}\\
+&=\frac{2gl(2/s_c-s_c)}{2-s_c^2}\\
+&=\frac{2gl}{s_c}.
+\end{aligned}
+\tag{15}
+\]
+
+离桌以后两球只受重力和内力。重力对质心产生加速度
+\(g\)，对相对运动不产生力矩，所以细线以恒定角速度
+
+\[
+\omega=\frac{w_c}{l}
+\]
+
+绕质心转动。从 \(\theta_c\) 转到 \(90^\circ\) 所需时间为
+
+\[
+\Delta t=\frac{\pi/2-\theta_c}{\omega}
+=\frac{l(\pi/2-\theta_c)}{w_c}.
+\tag{16}
+\]
+
+离桌瞬间质心竖直速度等于两球竖直速度的平均值：
+
+\[
+V_{C0}=\frac{w_c c_c}{2}.
+\]
+
+故细线竖直时
+
+\[
+V_C=\frac{w_c c_c}{2}-g\Delta t.
+\tag{17}
+\]
+
+上球速度的水平分量大小为 \(w_c/2\)，竖直分量为 \(V_C\)，因此
+
+\[
+v_B=\sqrt{\frac{w_c^2}{4}+V_C^2}.
+\tag{18}
+\]
+
+上球竖直向下的加速度大小为
+
+\[
+a_B=g+\frac{w_c^2}{2l}.
+\]
+
+使用曲率公式 \(\rho=v^3/|\bm v\times\bm a|\)，而
+
+\[
+|\bm v_B\times\bm a_B|
+=\frac{w_c}{2}\left(g+\frac{w_c^2}{2l}\right),
+\]
+
+得到
+
+\[
+\boxed{
+\rho=
+\frac{\left(w_c^2/4+V_C^2\right)^{3/2}}
+{(w_c/2)\left(g+w_c^2/(2l)\right)}
+},\qquad v_0^2>3gl.
+\tag{19}
+\]
+
+当 \(v_0^2\to3gl^+\)
+时，\(\theta_c\to90^\circ\)、\(V_C\to0\)、\(w_c^2\to2gl\)，式（19）连续趋于
+\(l/4\)，这为分段结果提供了重要校验。
+
+\textbf{把全部参数区间放在同一张逻辑图中}
+
+令 \(\beta=v_0^2/(gl)\)。接触阶段张力与支持力的无量纲形式分别为
+
+\[
+\frac{T}{mg}
+=\frac{2\beta-\sin\theta(5+\cos^2\theta)}
+{(1+\cos^2\theta)^2},
+\]
+
+\[
+\frac{N}{mg}
+=1-\frac{T}{mg}\sin\theta.
+\]
+
+由此可将运动分为三类：
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(0<\beta<5/2\)：张力先降到零，细线在到达竖直以前松弛，绷紧细线模型终止；
+\item
+  \(5/2\leq\beta\leq3\)：细线保持绷紧且下球保持接触，细线竖直时
+  \(\rho=l/4\)；
+\item
+  \(\beta>3\)：细线仍绷紧，但支持力先降到零，下球在 \(\theta_c\)
+  处离桌，之后使用质心自由落体与匀速相对转动，曲率由式（19）给出。
+\end{enumerate}
+
+在 \(\beta=5/2\) 时，细线到竖直位置才恰好 \(T=0\)；在 \(\beta=3\)
+时，下球到竖直位置才恰好
+\(N=0\)。两个等号端点都属于连续的临界状态，不能在区间判断中随意删去。
+
+还可检查第（2）问的结果 \(\beta=3\) 同时满足张力条件
+\(\beta\geq5/2\)。这说明求出的 \(v_0\)
+不会在更早时刻先导致细线松弛，临界解在完整运动过程中确实可实现。
+
+\textbf{（7）第（2）问：压力恰好为零}
+
+在细线竖直且下球仍接触桌面的临界状态，对下球列竖直方向平衡关系：
+
+\[
+N+T=mg.
+\tag{20}
+\]
+
+由式（8）和式（7），
+
+\[
+\begin{aligned}
+T
+&=\frac{4mv^2}{l}-mg\\
+&=\frac{4m}{l}\left(\frac12v_0^2-gl\right)-mg\\
+&=m\left(\frac{2v_0^2}{l}-5g\right).
+\end{aligned}
+\tag{21}
+\]
+
+要求压力为零，即 \(N=0\)。由式（20）有 \(T=mg\)，代入式（21）：
+
+\[
+m\left(\frac{2v_0^2}{l}-5g\right)=mg.
+\]
+
+约去 \(m\) 后逐步整理：
+
+\[
+\frac{2v_0^2}{l}=6g,
+\]
+
+\[
+v_0^2=3gl.
+\]
+
+因此
+
+\[
+\boxed{v_0=\sqrt{3gl}}.
+\tag{22}
+\]
+
+这一数值正好是``到达竖直位置时才临界离桌''的分界点。
+
+\textbf{补充核对：离桌后是否再次接触}
+
+离桌时 \(A\) 的竖直速度为零。此后相对角速度 \(\omega_c=w_c/l\)
+恒定，质心的竖直加速度为 \(-g\)。设离桌后的时间为 \(\tau\)，则
+
+\[y_A(\tau)=\frac l2\sin\theta_c+\frac{w_c\cos\theta_c}{2}\tau-\frac12g\tau^2-\frac l2\sin(\theta_c+\omega_c\tau).\]
+
+两次求导，得到
+
+\[\ddot y_A=-g+\frac{w_c^2}{2l}\sin(\theta_c+\omega_c\tau).\]
+
+离桌条件给 \(w_c^2\sin\theta_c=2gl\)。从 \(\theta_c\) 到
+\(\pi/2\)，正弦单调增加，因此 \(\ddot y_A\ge0\)。配合
+\(y_A(0)=\dot y_A(0)=0\)，可知这一段下球不会再次撞上桌面。把
+\(\tau=l(\pi/2-\theta_c)/w_c\)
+代入高度式，即可完成变式第2问。两个球竖直排列时高度相差
+\(l\)，因此不能设定它们在这一瞬间同时落到同一水平地面。
+
+\textbf{不等质量变式的两条临界速度}
+
+令下球质量 \(m\)、上球质量
+\(\eta m\)。保持同样初态和接触约束，总水平动量为零给
+
+\[u_A=\frac{\eta}{1+\eta}w\sin\theta,\qquad v_{B,x}=-\frac{w\sin\theta}{1+\eta}.\]
+
+两球总动能为
+\(m\eta(1+\eta\cos^2\theta)w^2/[2(1+\eta)]\)。能量关系因此给
+
+\[w^2=\frac{(1+\eta)(v_0^2-2gl\sin\theta)}{1+\eta\cos^2\theta}.\]
+
+到竖直且下球仍接触时，上球加速度为 \(-w^2/l\)，故
+\(T=\eta m(w^2/l-g)\)、\(N=mg-T\)。只在这一候选分支上，两个终点临界值为
+
+\[N=0:\quad v_0^2=(2+1/\eta)gl,\qquad T=0:\quad v_0^2=\left(2+\frac1{1+\eta}\right)gl.\]
+
+当 \(\eta=1\)，它们分别还原 \(3gl\) 与 \(5gl/2\)。当
+\(\eta=2\)，支持力终点临界为
+\(5gl/2\)。这些终点条件仍须检查之前全过程的张力、支持力符号，不能用它们替代单侧约束的完整判别。它们首先用于检验质量系数是否正确；若某约束提前失效，就必须进入新分支，不能沿用候选终点公式。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf}
+
+本题的关键不是立即计算曲率，而是先判断两种不等式约束：细线只能拉不能推，所以
+\(T\geq0\)；桌面只能给向上的支持力，所以
+\(N\geq0\)。当参数跨过临界值时，运动方程随之改变。曲率半径 \(l/4\)
+只属于下球仍接触桌面的分支。
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  把上球速度误写成 \(l\dot\theta\)，漏掉下球的水平速度；
+\item
+  机械能中只写上球动能，漏掉下球动能；
+\item
+  由 \(a_n=v^2/\rho\) 直接取 \(a_n=g\)，忽略张力产生的向心加速度；
+\item
+  得到 \(\rho=l/4\) 后不检查 \(T\)、\(N\) 的符号；
+\item
+  当下球离桌后仍使用``下球竖直加速度为零''的接触阶段方程。
+\end{enumerate}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae}
+
+先让学生只写出两球坐标并求导，用水平方向动量守恒得到
+\(u=w\sin\theta/2\)。随后把 \(T\geq0\) 与 \(N\geq0\)
+分别解释成``绳不能推''和``桌面不能拉''，再画出 \(v_0^2/(gl)\)
+的三个区间。最后在临界值 \(3gl\) 处检查两套曲率公式是否连续。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  若两球质量分别为 \(m\)、\(2m\)，重新求接触阶段的速度关系和压力为零时的
+  \(v_0\)；
+\item
+  求下球离桌后细线首次竖直时下球相对桌面的高度，并检查是否再次接触桌面；
+\item
+  若第（2）问改为``细线张力恰好为零''，比较这一临界速度与压力为零的临界速度。
+\end{enumerate}
+
+第3个变式必须仍在``下球接触桌面''的候选分支内求解。竖直时
+\(w^2=2v_0^2-4gl\)，上球的径向方程给
+
+\[T=m(w^2/l-g)=m(2v_0^2/l-5g).\]
+
+令 \(T=0\) 得 \(v_0^2=5gl/2\)；令 \(N=mg-T=0\) 则得
+\(v_0^2=3gl\)。两临界值不同，是因为绳先到``不能拉''的边界和桌面先到``不能推''的边界对应不同初速度。代入张力临界值时，\(N=mg>0\)；代入支持力临界值时，\(T=mg>0\)。这样可以直接判断是哪一约束失效，而不必只凭速度区间记忆。
+
+两值之间，细线到竖直前仍张紧，下球仍受桌面支持；再减小初速度，就要检查能否到达竖直及细线是否提前松弛。临界公式不应向这些分支自动延伸。
+
+\newpage
+
+\section{第 2 题}\label{ux7b2c-2-ux9898}
+
+两个圆的圆心分别位于 \((\pm r,0)\)，半径均为
+
+\[
+a=\frac{2\sqrt3}{3}r.
+\]
+
+两圆区域内存在方向相反、大小均为
+
+\[
+B=B_0\frac{t}{t_0}
+\]
+
+的匀强磁场，方向如图所示。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  求两圆相交部分的感生电场分布；
+\item
+  在图示电路中，各电压表的上端接红表笔、下端接黑表笔，电压表内阻均为
+  \(2R_0\)。求三个电压表的读数以及 \(U_a-U_b\)。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图 2-1　两圆形时变磁场与电压测量电路。}]{../figures/question-02.pdf}
+\caption*{图 2-1　两圆形时变磁场与电压测量电路。}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-1}
+
+两个磁场在交叠区相互抵消，感应电场却不为零。先叠加同一点的电场，再按实际三支路电路计算磁通、电流和电势差。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-1}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  环形对称时变磁场产生的涡旋电场；
+\item
+  电场的矢量叠加；
+\item
+  相交圆的弦长、扇形与弓形面积；
+\item
+  非静电场中端电压与沿路径电动势的关系；
+\item
+  对称电路、电流分流和电压表正负读数。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-1}
+
+左圆磁场与右圆磁场方向相反，因此各自产生的感生电场旋向也相反。在交叠区域内，某点相对于两圆心的位置矢量之差是常矢量，所以两份随位置线性变化的涡旋电场叠加后恰好成为匀强电场。
+
+电路由上下四个电阻支路和三个内阻为 \(2R_0\)
+的电压表组成。左右两个圆内的回路电动势方向使公共中支路中的电流同向叠加。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-1}
+
+先解决一个孤立圆形磁场：对以圆心为中心、半径为 \(\rho\)
+的圆周应用法拉第定律，得到
+\(E\propto\rho\)。再把左右圆的结果写成矢量式并相加。第二问先求一个基本回路所围的有效磁通面积
+\(S\)，令
+\(\mathcal E=(B_0/t_0)S\)，最后利用左右对称性把外侧两支路电流写成
+\(I/2\)。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-1}
+
+图 2-2 左图在交叠区同一点画出相对两个圆心的位置矢量
+\(\bm r_1,\bm r_2\)，红色箭头标出的感生电场合场沿
+\(+y\)；右图把真实电路化为两侧镜像回路，并标出中支路电流 \(I\)
+与外支路电流
+\(I/2\)。第（1）、（2）步使用左图的矢量关系，第（4）---（6）步使用右图的支路方向和表笔极性。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图 2-2　交叠区的感生电场叠加与等效支路电流。}]{../figures/solution-02.pdf}
+\caption*{图 2-2　交叠区的感生电场叠加与等效支路电流。}
+\end{figure}
+
+\textbf{（1）单个圆形磁场产生的电场}
+
+在一个圆形磁场内部，取与磁场同心、半径为 \(\rho\)
+的圆周。由法拉第电磁感应定律
+
+\[
+\oint\bm E\cdot d\bm l=-\frac{d\Phi_B}{dt}.
+\]
+
+利用圆周对称性，\(E\) 在圆周上大小相同并沿切向，因此
+
+\[
+E(2\pi\rho)=\pi\rho^2\left|\frac{dB}{dt}\right|.
+\]
+
+题中
+
+\[
+\frac{dB}{dt}=\frac{B_0}{t_0},
+\]
+
+所以
+
+\[
+E=\frac{B_0}{2t_0}\rho.
+\tag{1}
+\]
+
+若用从圆心指向场点的位置矢量 \(\bm r\) 表示，切向电场可写成
+
+\[
+\bm E=\pm\frac{B_0}{2t_0}\bm r\times\hat{\bm z},
+\tag{2}
+\]
+
+正负号由磁场方向决定。
+
+\textbf{（2）交叠区内两份电场相加}
+
+按图 2-2 左图，场点不变时 \(\bm r_2-\bm r_1\)
+恰等于从左圆心指向右圆心向量的相反量，因此场点坐标会在矢量叠加中消去。
+
+设场点 \(P\) 相对左、右圆心的位置矢量分别为
+\(\bm r_1\)、\(\bm r_2\)。按图示磁场方向，
+
+\[
+\bm E_1=-\frac{B_0}{2t_0}\bm r_1\times\hat{\bm z},
+\]
+
+\[
+\bm E_2=\frac{B_0}{2t_0}\bm r_2\times\hat{\bm z}.
+\]
+
+两式相加：
+
+\[
+\begin{aligned}
+\bm E
+&=\frac{B_0}{2t_0}(\bm r_2-\bm r_1)\times\hat{\bm z}.
+\end{aligned}
+\tag{3}
+\]
+
+两个圆心的距离为 \(2r\)。由图示坐标和磁场方向，
+
+\[
+\bm r_2-\bm r_1=-2r\hat{\bm x}.
+\]
+
+因此
+
+\[
+\bm E
+=-\frac{B_0r}{t_0}\hat{\bm x}\times\hat{\bm z}
+=\frac{B_0r}{t_0}\hat{\bm y}.
+\]
+
+所以交叠区内为沿 \(+y\) 方向的匀强感生电场：
+
+\[
+\boxed{\bm E=\frac{B_0r}{t_0}\hat{\bm y}}.
+\tag{4}
+\]
+
+\textbf{（3）计算一个基本回路的有效面积}
+
+两圆交点到任一圆心的连线与圆心连线构成 \(30^\circ\)
+角，因此相关小扇形的圆心角为 \(60^\circ\)。半径
+\(a=2\sqrt3r/3\)，故扇形面积为
+
+\[
+S_{\rm sec}=\frac16\pi a^2
+=\frac16\pi\cdot\frac43r^2
+=\frac{2\pi}{9}r^2.
+\tag{5}
+\]
+
+相应三角形面积为
+
+\[
+S_{\triangle}=\frac12a^2\sin60^\circ
+=\frac12\cdot\frac{2\sqrt3}{3}r\cdot r
+=\frac{\sqrt3}{3}r^2.
+\tag{6}
+\]
+
+所以小弓形面积为
+
+\[
+S_{\rm seg}=S_{\rm sec}-S_{\triangle}
+=\left(\frac{2\pi}{9}-\frac{\sqrt3}{3}\right)r^2.
+\tag{7}
+\]
+
+按照图示回路分割，有效磁通面积等于两个面积为 \(2\sqrt3r^2/3\)
+的几何块减去该小弓形：
+
+\[
+\begin{aligned}
+S
+&=2\cdot\frac{2\sqrt3}{3}r^2-S_{\rm seg}\\
+&=\frac{4\sqrt3}{3}r^2-\frac{2\pi}{9}r^2+\frac{\sqrt3}{3}r^2\\
+&=\frac{15\sqrt3-2\pi}{9}r^2.
+\end{aligned}
+\tag{8}
+\]
+
+于是每个基本回路的感应电动势大小为
+
+\[
+\boxed{\mathcal E=\frac{B_0r^2}{t_0}\frac{15\sqrt3-2\pi}{9}}.
+\tag{9}
+\]
+
+\textbf{（4）利用对称性求支路电流}
+
+转入图 2-2
+右图。中支路的蓝色箭头向上；到达上节点后，左右两侧完全镜像，因此电流各分为
+\(I/2\)，并从两个外侧电压表向下返回。
+
+设中间电压表支路中的电流大小为
+\(I\)，方向向上。由左右对称性，左右外侧电压表中的电流均为
+\(I/2\)，方向向下。
+
+对左侧或右侧的等效回路列基尔霍夫方程。沿电流方向的电阻压降包括中支路
+\(2R_0\) 上的 \(2R_0I\)，以及外侧串联支路在电流 \(I/2\) 下的压降：
+
+\[
+\mathcal E
+=2R_0I+\frac I2(R+2R+2R_0).
+\tag{10}
+\]
+
+括号内先合并：
+
+\[
+R+2R+2R_0=3R+2R_0.
+\]
+
+因此
+
+\[
+\begin{aligned}
+\mathcal E
+&=2R_0I+\frac I2(3R+2R_0)\\
+&=3R_0I+\frac32RI\\
+&=\frac32(2R_0+R)I.
+\end{aligned}
+\]
+
+解得
+
+\[
+\boxed{I=\frac{2\mathcal E}{3(2R_0+R)}}.
+\tag{11}
+\]
+
+代入式（9）：
+
+\[
+I=\frac{2B_0r^2(15\sqrt3-2\pi)}{27t_0(2R_0+R)}.
+\tag{12}
+\]
+
+\textbf{（5）三个电压表的读数}
+
+外侧两个电压表中的电流从上端流向下端，红表笔接在高电势端，因此
+
+\[
+V_1=V_3=\frac I2\cdot2R_0=IR_0.
+\]
+
+代入式（12）：
+
+\[
+\boxed{
+V_1=V_3=
+\frac{2B_0r^2R_0(15\sqrt3-2\pi)}
+{27t_0(2R_0+R)}
+}.
+\tag{13}
+\]
+
+中间电压表中的电流向上，即从黑表笔端流向红表笔端，所以红表笔端电势更低，读数为负：
+
+\[
+V_2=-I(2R_0).
+\]
+
+故
+
+\[
+\boxed{
+V_2=-\frac{4B_0r^2R_0(15\sqrt3-2\pi)}
+{27t_0(2R_0+R)}
+}.
+\tag{14}
+\]
+
+这里的负号不是电流大小为负，而是表示实际极性与电压表规定的``上端红、下端黑''相反。
+
+\textbf{（6）求 \(U_a-U_b\)}
+
+题面图 2-1 给出 \(a,b\) 位于交叠弦的上下端，匀强感生电场沿
+\(b\to a\)；右图则给出 \(a,b\)
+之间还串有中间电压表内阻。故两点电势差必须同时记入感生电场线积分和电阻压降。
+
+交叠区的匀强感生电场沿 \(+y\) 方向。两交点之间的距离为
+
+\[
+ab=2\sqrt{a^2-r^2}
+=2\sqrt{\frac43r^2-r^2}
+=\frac{2\sqrt3}{3}r.
+\tag{15}
+\]
+
+沿 \(b\to a\) 的感生电场线积分为
+
+\[
+\mathcal E_{ba}=E\,ab
+=\frac{B_0r}{t_0}\cdot\frac{2\sqrt3}{3}r
+=\frac{2\sqrt3B_0r^2}{3t_0}.
+\tag{16}
+\]
+
+再扣除中间电压表内阻上的压降 \(2IR_0\)，得到
+
+\[
+U_a-U_b=\frac{2\sqrt3B_0r^2}{3t_0}-2IR_0.
+\]
+
+代入式（12）：
+
+\[
+\boxed{
+U_a-U_b=
+\frac{2\sqrt3B_0r^2}{3t_0}
+-\frac{4B_0r^2R_0(15\sqrt3-2\pi)}
+{27t_0(2R_0+R)}
+}.
+\tag{17}
+\]
+
+式（17）体现了非静电场中的一个重要区别：两点间的电势差不能只由
+\(-\int\bm E\cdot d\bm l\)
+决定，还必须说明测量路径及导体支路中的欧姆压降。把感生电场线积分和电阻压降分别记账，能避免把
+\(U_a-U_b\) 与中间电压表读数 \(V_2\) 混为一谈。
+
+\textbf{用节点电流再次核对式（11）}
+
+把中支路上端记为 \(a\)、下端记为 \(b\)。设从 \(b\) 到 \(a\) 的电流为
+\(I\)。在节点
+\(a\)，电流必须分别流向左右两个完全镜像的上支路，因此每条上支路的电流都是
+\(I/2\)；在节点 \(b\)，左右下支路也各承担
+\(I/2\)。这不是预先假定的串并联关系，而是由节点电流守恒和左右镜像对称共同给出的。
+
+沿左侧闭合路径走一周时，电阻压降逐项为
+
+\[
+2R_0I,\qquad 2R\frac I2,\qquad R\frac I2,\qquad 2R_0\frac I2.
+\]
+
+相加得到
+
+\[
+\begin{aligned}
+\mathcal E
+&=2R_0I+R I+\frac12RI+R_0I\\
+&=3R_0I+\frac32RI,
+\end{aligned}
+\]
+
+与式（10）完全相同。把每个电阻对应的支路电流明确写在旁边，可以避免将外表内阻上的压降误写成
+\(2R_0I\)。
+
+\textbf{电场方向的符号校验}
+
+取交叠区中心
+\(O\)。左圆中磁场若向纸内增强，其感生电场为逆时针；在左圆心右侧的 \(O\)
+点，电场向上。右圆磁场向纸外增强，其感生电场为顺时针；在右圆心左侧的
+\(O\) 点，电场也向上。两份电场方向相同，且大小各为
+\(B_0r/(2t_0)\)，总场正好为 \(B_0r/t_0\)
+向上。这一中心点检查能迅速发现叉积次序或磁场符号的错误。
+
+\textbf{电势与感应电场的区分}
+
+图中的左右闭合支路围出等大、符号相反的变化磁通；中间支路是两回路共用的竖直导线。计算
+\(S\)
+时应取导线围成区域中实际位于磁场内的面积，不能直接取两个圆的重叠面积。圆半径
+\(2\sqrt3r/3\)、圆心间距 \(2r\) 给出的交点高度为
+\(\pm r/\sqrt3\)；弓形面积须从扇形中减去三角形。
+
+用 \(\bm E=\bm E_{\rm ind}-\nabla\varphi\)
+表示总电场。在同一条实际导线上，欧姆压降满足
+
+\[IR=\int_a^b\bm E\cdot d\bm l=\int_a^b\bm E_{\rm ind}\cdot d\bm l+\varphi(a)-\varphi(b).\]
+
+因此电阻两端电势差一般不等于 \(IR\)；正文的 \(U_a-U_b\)
+已扣除了中间导线上的感应电场积分。若讨论实验电压读数，还应交代引线如何围成测量回路，因为变化磁通可在引线中产生额外电动势。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf-1}
+
+两份涡旋电场各自随到圆心的距离线性增加，但在交叠区相加时，位置矢量中的场点坐标互相消去，只剩两个圆心间的常矢量。这是本题第一问得到匀强电场的本质原因。第二问的核心则是把电压表视为
+\(2R_0\) 的真实支路，而不是理想断路。
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9-1}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  忘记左右磁场方向相反，导致两份电场相减、方向写反；
+\item
+  把圆半径 \(a=2\sqrt3r/3\) 误当成圆心距 \(2r\)；
+\item
+  求磁通面积时直接使用整圆面积，忽略实际回路边界；
+\item
+  把电压表当成理想电压表，删去三个 \(2R_0\) 支路；
+\item
+  只给电压大小，不根据红、黑表笔连接写出中表的负号；
+\item
+  在非保守感生电场中不说明路径便直接谈两点电势差。
+\end{enumerate}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae-1}
+
+先让学生独立推导一个圆内的 \(E=B_0\rho/(2t_0)\)，再把场点 \(P\)
+的两个位置矢量画在同一图中。电路部分可先只画矩形等效图，让学生判断中支路和外支路的电流方向，最后再回到圆形几何图计算
+\(S\) 和 \(ab\)。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3-1}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  若两个圆内磁场方向相同，求交叠区电场并判断是否仍为匀强电场；
+\item
+  若两个圆半径不同但 \(dB/dt\) 相同，讨论交叠区电场的空间分布；
+\item
+  把三个电压表内阻分别改为不同值，列出完整节点电势方程；
+\item
+  交换中间电压表的红、黑表笔，判断读数符号如何变化。
+\end{enumerate}
+
+\newpage
+
+\section{第 3 题}\label{ux7b2c-3-ux9898}
+
+金刚石晶体可由下述方式理解：在立方晶胞的 \(8\) 个顶点和 \(6\)
+个面心放置碳原子；相邻三个面的面心与它们最近的顶点构成一个正四面体，共可选出
+\(8\) 个这样的正四面体。在其中两两不相邻的 \(4\)
+个正四面体中心各放置一个碳原子，再把相邻碳原子用碳碳键连接，即得到金刚石结构。
+
+现在把每个碳原子替换成电路节点，把每条碳碳键替换成阻值为 \(r\)
+的电阻。在无限大的金刚石电阻网络中，求：
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  相邻两个节点之间的等效电阻；
+\item
+  次相邻两个节点之间的等效电阻。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.517\linewidth,height=\textheight,keepaspectratio,alt={图 3-1　金刚石晶格的三维四面体连接。}]{../figures/question-03.pdf}
+\caption*{图 3-1　金刚石晶格的三维四面体连接。}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-2}
+
+晶胞边框只表示空间位置，电阻只接在最近邻键上。利用金刚石网络的局部对称性分配电流，再由节点电势差求近邻与二近邻的等效电阻。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-2}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  金刚石晶格的四面体配位结构；
+\item
+  线性电阻网络的叠加原理；
+\item
+  无限网络中由点群对称性决定的均匀分流；
+\item
+  由指定路径的电压降求等效电阻；
+\item
+  相邻节点和次相邻节点的几何区别。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-2}
+
+金刚石晶格不是平面网格。每个节点向空间中四个正四面体方向各连出一条等价电阻，因此从一个节点向无穷远注入电流
+\(I\) 时，四条键必然各分得 \(I/4\)。
+
+两个相邻节点之间有一条直接键。两个次相邻节点不直接相连，但共享一个公共邻点；从一个端点到另一个端点可沿两条键组成的折线路径计算电势差。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-2}
+
+先建立两个辅助电流场：
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  在节点 \(A\) 注入 \(I\)，让电流在无穷远流出；
+\item
+  让电流从无穷远流入，并在目标节点抽取 \(I\)。
+\end{enumerate}
+
+电阻网络是线性的，两个电流场可以相加。叠加以后，网络外部没有净注入，恰好等价于从
+\(A\) 注入 \(I\)、从目标节点抽取 \(I\) 的等效电阻测量。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-2}
+
+图 3-2 左图表示只在源点 \(A\) 注入电流时，四条等价键各分得
+\(I/4\)；右图把次相邻端点之间的公共邻点 \(B\)
+单独画出，橙色箭头分别标明源场的 \(I/4+I/12\) 与汇场的
+\(I/12+I/4\)。以下第（1）步用左图完成相邻节点叠加，第（2）步沿右图的
+\(A\to B\to C\) 路径累加两段压降。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图 3-2　源---汇叠加法中的键电流分配。}]{../figures/solution-03.pdf}
+\caption*{图 3-2　源---汇叠加法中的键电流分配。}
+\end{figure}
+
+\textbf{（1）相邻节点之间的等效电阻}
+
+先看图 3-2 左图。四条键在以 \(A\)
+为中心的空间点群变换下完全等价，因此单源问题中的四支电流必须相同。
+
+设相邻节点为 \(A\)、\(B\)。在第一个辅助问题中，从 \(A\) 注入电流
+\(I\)。由于 \(A\) 发出的四条键完全等价，每条键上的电流都是
+
+\[
+I_A=\frac I4.
+\tag{1}
+\]
+
+因此直接键 \(AB\) 上从 \(A\) 指向 \(B\) 的电流为 \(I/4\)。
+
+在第二个辅助问题中，从无穷远流入电流，并在 \(B\) 抽取 \(I\)。节点 \(B\)
+的四条入射键也完全等价，每条键上都有 \(I/4\) 流向 \(B\)。所以直接键
+\(AB\) 上又有一份从 \(A\) 指向 \(B\) 的电流 \(I/4\)。
+
+将两个辅助解叠加，\(AB\) 键中的总电流为
+
+\[
+I_{AB}=\frac I4+\frac I4=\frac I2.
+\tag{2}
+\]
+
+每条键的电阻为 \(r\)，故 \(A\)、\(B\) 两点的电势差可以沿直接键计算：
+
+\[
+U_A-U_B=I_{AB}r=\frac I2r.
+\tag{3}
+\]
+
+等效电阻定义为端电压除以总注入电流，因此
+
+\[
+\boxed{R_{AB}=\frac{U_A-U_B}{I}=\frac r2}.
+\tag{4}
+\]
+
+\textbf{（2）次相邻节点之间的等效电阻}
+
+转入图 3-2 右图。\(A,C\) 没有直接键，必须通过公共邻点 \(B\)；从 \(A\)
+到达 \(B\) 的 \(I/4\) 在排除来路后，再向其余三条等价键分流，故指定的
+\(BC\) 键只得到 \(I/12\)。
+
+设次相邻节点为 \(A\)、\(C\)，它们共享公共邻点 \(B\)。选取路径
+\(A\to B\to C\) 计算电势差。
+
+仍先考虑只从 \(A\) 注入 \(I\) 的辅助问题。电流离开 \(A\) 后，沿 \(AB\)
+键的电流为 \(I/4\)。到达 \(B\) 的这部分电流不能沿原键返回，而由 \(B\)
+其余三条等价键继续向外分流，因此沿指定的 \(BC\) 键流出的电流为
+
+\[
+I_{BC}^{(A)}=\frac13\cdot\frac I4=\frac I{12}.
+\tag{5}
+\]
+
+再考虑在 \(C\) 抽取 \(I\) 的辅助问题。由时间反演或源汇对称性，\(BC\)
+键上流向 \(C\) 的电流为 \(I/4\)；而在 \(AB\) 键上，由 \(A\) 流向 \(B\)
+的附加电流为 \(I/12\)。
+
+所以叠加后
+
+\[
+I_{AB}=\frac I4+\frac I{12}=\frac I3,
+\tag{6}
+\]
+
+\[
+I_{BC}=\frac I{12}+\frac I4=\frac I3.
+\tag{7}
+\]
+
+沿路径 \(A\to B\to C\)，两段电压降同号：
+
+\[
+\begin{aligned}
+U_A-U_C
+&=I_{AB}r+I_{BC}r\\
+&=\frac I3r+\frac I3r\\
+&=\frac{2I}{3}r.
+\end{aligned}
+\tag{8}
+\]
+
+因此
+
+\[
+\boxed{R_{AC}=\frac{U_A-U_C}{I}=\frac{2r}{3}}.
+\tag{9}
+\]
+
+\textbf{为什么可以用一条路径上的压降代表端电压}
+
+虽然无限网络中还存在无数旁路，但稳恒电路中的电势是单值函数。只要辅助源汇叠加后形成真实的稳恒电流分布，从
+\(A\) 到 \(B\) 或从 \(A\) 经 \(B\) 到 \(C\) 沿任意路径累加 \(IR\)
+压降，都应得到同一个端电压。这里选直接键或最短两键路径，只是因为相应键电流最容易由对称性确定。
+
+\textbf{\(I/12\) 的来历}
+
+\(I/12\) 不是把总电流 \(I\)
+直接平均分成十二份。它经历两次分流：先在源点四等分得到
+\(I/4\)，再在相邻节点排除来路后向其余三条等价键三等分，故
+
+\[
+\frac I4\times\frac13=\frac I{12}.
+\]
+
+\textbf{把源场和汇场分别写成电势降}
+
+在相邻节点问题中，单独的源场使直接键 \(AB\) 上产生
+
+\[
+\Delta U_{AB}^{(A)}=\frac I4r.
+\]
+
+单独的汇场又产生同方向的
+
+\[
+\Delta U_{AB}^{(B)}=\frac I4r.
+\]
+
+两者相加才得到
+\(Ir/2\)。若把第二个辅助场想象成``把所有电流箭头反向，再把中心从 \(A\)
+平移到 \(B\)''，便可清楚判断两份电压降是相加而不是相减。
+
+在次相邻问题中，路径 \(A\to B\to C\) 的源场电压降为
+
+\[
+\Delta U^{(A)}
+=\frac I4r+\frac I{12}r
+=\frac I3r,
+\]
+
+汇场的电压降同样为 \(Ir/3\)，于是总端电压为
+\(2Ir/3\)。这种写法把``哪一份电流属于哪个辅助场''完全分开，尤其适合第一次接触无限网络叠加法的学生。
+
+\textbf{对无限远边界的说明}
+
+辅助问题中的``无穷远''只是构造线性解的工具。单独源场可能涉及无限多节点，但在源场与汇场相加后，无穷远处的流入和流出逐点抵消，最终物理问题只有
+\(A\)、\(B\) 或 \(A\)、\(C\)
+两个端口。等效电阻的有限性来自这一步消去，而不是假设电流真的在无穷远凭空消失。
+
+\textbf{推广到配位数为 \(q\) 的同类网络}
+
+若某个无限均匀网络每个节点有 \(q\) 条完全等价的边，每条边电阻仍为
+\(r\)，同样的源汇叠加给出相邻边上的电流
+
+\[
+\frac Iq+\frac Iq=\frac{2I}{q}.
+\]
+
+因此相邻节点等效电阻的一般形式为
+
+\[
+R_1=\frac{2r}{q}.
+\]
+
+对于经一个公共邻点连接的次相邻节点，源场在第一条边上给
+\(I/q\)，在第二条指定边上再分为
+
+\[
+\frac{I/q}{q-1}=\frac{I}{q(q-1)}.
+\]
+
+把源场和汇场合并后，两段路径的总电压降为
+
+\[
+2r\left(\frac Iq+\frac{I}{q(q-1)}\right)
+=\frac{2Ir}{q-1}.
+\]
+
+故
+
+\[
+R_2=\frac{2r}{q-1}.
+\]
+
+金刚石晶格 \(q=4\)，立即得到
+\(R_1=r/2\)、\(R_2=2r/3\)。这一推广也反向检查了两处电流分母 \(4\) 和
+\(12=4\times3\)。
+
+\textbf{推广公式所需的对称性}
+
+二近邻电阻的推导不只使用``每点有 \(q\)
+个近邻''。它还要求：固定一条近邻键后，其余 \(q-1\)
+条键能由网络对称变换互相交换，从而对应电流相等。金刚石网络满足这一局部条件。若只是任意
+\(q\)
+正则图，即使每点度数相同，也不能据此给出统一的二近邻电阻。有限网络还要说明边界；无限网络的电流通向无穷远，宜以越来越大的周期网络检查极限。图中的蓝线仅连接最近邻，灰线是晶胞边框，二者不能都当成电阻。
+
+\textbf{用有限周期网络检验无穷网络}
+
+可将许多金刚石原胞组成周期边界图，向一个点注入1A、从选定近邻或二近邻点流出1A，再解节点拉普拉斯方程。固定一个节点电势以消除整体加常数的不确定性，源汇电势差就是等效电阻。增大周期尺寸时，近邻电阻趋
+\(r/2\)，二近邻趋 \(2r/3\)。
+
+有限网络中电流没有真正流向无穷远，源汇两点的路径还会通过周期边界相互影响。因此小尺寸结果与极限值存在误差是正常的，不能只用一张单晶胞把角点全部合并来替代无穷晶格。数学核验记录给出尺寸增长和误差，连线仍用四条最近邻键；若误加灰色晶胞边框，电阻会明显偏小。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf-2}
+
+无限网络并不意味着必须截断后求极限。只要网络具有足够强的空间对称性，就可以先构造``点源到无穷远''的基本电流场，再用叠加原理把无穷远端消去。相邻问题需要一层分流，次相邻问题需要再追踪一层，因此自然出现
+\(I/4\) 与 \(I/12\)。
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9-2}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  把金刚石晶格画成平面正方形网络，错误改变配位数；
+\item
+  认为相邻键中只有一份 \(I/4\)，忘记源场与汇场要叠加；
+\item
+  把次相邻节点误认为有直接电阻相连；
+\item
+  把 \(I/12\) 写成 \(I/16\)，忽略第二次分流只有三条可继续前进的等价键；
+\item
+  用局部两三条电阻简单串并联，忽略其余无限网络仍参与分流。
+\end{enumerate}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae-2}
+
+先用三维图确认每个节点只有四条键，再用一个``向无穷远均匀排水''的类比建立
+\(I/4\)。讲次相邻节点时，把公共邻点的来路划掉，现场数出剩余三条等价去路，使
+\(I/12\) 的来源可视化。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3-2}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  在无限正方形电阻网络中，用同样的源汇叠加思想解释相邻节点问题与本题的异同；
+\item
+  若金刚石网络每条键电阻改为 \(2r\)，写出两个答案；
+\item
+  求同一正四面体上任意两个顶点之间的等效电阻，并说明它们属于哪一种邻接关系；
+\item
+  讨论有限晶胞边界会怎样破坏 \(I/4\) 的严格对称分流。
+\end{enumerate}
+
+\newpage
+
+\section{第 4 题}\label{ux7b2c-4-ux9898}
+
+水平桌面上有两条光滑抛物线导轨，满足
+
+\[
+y=kx^2,
+\]
+
+其中 \(k\) 为常量，\(xOy\) 平面与桌面重合。一根平行于 \(x\)
+轴的导体棒横跨两导轨，棒的两端始终与导轨接触。空间中存在竖直方向、磁感应强度为
+\(B\) 的匀强磁场。导体棒从坐标原点开始沿 \(y\) 轴正方向以恒定速度 \(v\)
+运动。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  求导体棒上的动生电动势 \(\mathcal E(t)\)；
+\item
+  若导体棒单位长度电阻为 \(\lambda\)，导轨电阻不计，求回路电流；
+\item
+  求维持导体棒匀速运动所需外力的功率。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.494\linewidth,height=\textheight,keepaspectratio,alt={图 4-1　抛物线导轨、导体棒及磁场方向。}]{../figures/question-04.pdf}
+\caption*{图 4-1　抛物线导轨、导体棒及磁场方向。}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-3}
+
+运动棒的长度随位置改变，电阻和电动势也随之改变。先从抛物线导轨求棒长及围成面积，再把磁通变化、安培力功率和焦耳热接起来。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-3}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  抛物线交点与导体棒瞬时长度；
+\item
+  曲边图形面积积分；
+\item
+  动生电动势 \(\mathcal E=BLv\)；
+\item
+  均匀导体电阻 \(R=\lambda L\)；
+\item
+  安培力、焦耳热与机械功率守恒。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-3}
+
+时刻 \(t\)，导体棒所在位置为 \(y=vt\)。由
+\(y=kx^2\)，棒的两个端点坐标分别为
+
+\[
+x=\pm\sqrt{\frac{vt}{k}}.
+\]
+
+所以棒长与 \(\sqrt t\)
+成正比。棒越往右，电动势越大，但电阻也按同一比例增大，因此电流可能保持不变。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-3}
+
+先求瞬时棒长 \(L(t)\)。第一问可直接使用
+\(\mathcal E=BLv\)，同时用磁通面积积分作校验。第二问把 \(R=\lambda L\)
+代入欧姆定律，观察 \(L\) 是否约去。第三问用 \(F=BIL\)，再乘速度 \(v\)。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-3}
+
+图 4-2 中棕色竖线是时刻 \(t\) 的导体棒，端点纵坐标为
+\(y=vt\)，棒长是两条抛物线支路之间的横向距离；淡紫色区域是磁通面积
+\(S(y)\)，红色 \(F_B\) 指出安培力与棒的运动方向相反。第（1）步由棕色线求
+\(L(t)\)，第（2）步对紫色区域积分，第（4）步使用红色力箭头判断外力方向。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.59\linewidth,height=\textheight,keepaspectratio,alt={图 4-2　导体棒与抛物线围成的瞬时面积。}]{../figures/solution-04.pdf}
+\caption*{图 4-2　导体棒与抛物线围成的瞬时面积。}
+\end{figure}
+
+\textbf{（1）导体棒的瞬时长度}
+
+按图 4-2，导体棒平行于 \(x\) 轴，因此两个端点具有相同的
+\(y=vt\)，而横坐标关于 \(y\) 轴对称。
+
+导体棒在
+
+\[
+y=vt
+\tag{1}
+\]
+
+处。与抛物线 \(y=kx^2\) 联立：
+
+\[
+vt=kx^2.
+\]
+
+所以
+
+\[
+x=\pm\sqrt{\frac{vt}{k}}.
+\]
+
+上下两个接触点的距离为
+
+\[
+\boxed{L(t)=2\sqrt{\frac{vt}{k}}}.
+\tag{2}
+\]
+
+\textbf{（2）用面积法求电动势}
+
+图 4-2 的淡紫色区域可由``高为 \(y\)、宽为 \(2x_0\)
+的矩形''减去抛物线以下的两侧曲边面积得到，这正对应下面式（3）的两项。
+
+令棒的上端坐标为
+\(x_0=\sqrt{y/k}\)。导体棒、两条导轨和原点围成的面积可写成``矩形面积减去抛物线左侧面积''：
+
+\[
+S=2x_0y-\int_{-x_0}^{x_0}kx^2\,dx.
+\tag{3}
+\]
+
+分别计算两项。由于 \(y=kx_0^2\)，
+
+\[
+2x_0y=2kx_0^3.
+\]
+
+积分项为
+
+\[
+\begin{aligned}
+\int_{-x_0}^{x_0}kx^2\,dx
+&=2k\int_0^{x_0}x^2\,dx\\
+&=2k\left[\frac{x^3}{3}\right]_0^{x_0}\\
+&=\frac23kx_0^3.
+\end{aligned}
+\]
+
+因此
+
+\[
+\begin{aligned}
+S
+&=2kx_0^3-\frac23kx_0^3\\
+&=\frac43kx_0^3\\
+&=\frac43k\left(\frac yk\right)^{3/2}\\
+&=\frac43\frac{y^{3/2}}{\sqrt k}.
+\end{aligned}
+\tag{4}
+\]
+
+代入 \(y=vt\)：
+
+\[
+S(t)=\frac43\frac{(vt)^{3/2}}{\sqrt k}.
+\tag{5}
+\]
+
+磁通量大小为
+
+\[
+\Phi=B S=\frac{4B}{3\sqrt k}(vt)^{3/2}.
+\]
+
+由法拉第定律，电动势大小
+
+\[
+\begin{aligned}
+\mathcal E
+&=\left|\frac{d\Phi}{dt}\right|\\
+&=\frac{4B}{3\sqrt k}\cdot\frac32(vt)^{1/2}v\\
+&=2Bv\sqrt{\frac{vt}{k}}.
+\end{aligned}
+\]
+
+所以
+
+\[
+\boxed{\mathcal E(t)=2Bv\sqrt{\frac{vt}{k}}}.
+\tag{6}
+\]
+
+这与直接代入 \(\mathcal E=BLv\)、使用式（2）完全一致。
+
+\textbf{（3）求回路电流}
+
+导轨电阻不计，只有导体棒有电阻。棒的单位长度电阻为 \(\lambda\)，故
+
+\[
+R(t)=\lambda L(t)=2\lambda\sqrt{\frac{vt}{k}}.
+\tag{7}
+\]
+
+由欧姆定律
+
+\[
+\begin{aligned}
+I
+&=\frac{\mathcal E}{R}\\
+&=\frac{2Bv\sqrt{vt/k}}{2\lambda\sqrt{vt/k}}\\
+&=\frac{Bv}{\lambda}.
+\end{aligned}
+\]
+
+因此
+
+\[
+\boxed{I=\frac{Bv}{\lambda}}.
+\tag{8}
+\]
+
+虽然电动势随 \(\sqrt t\)
+增大，但电阻以完全相同的比例增大，所以电流与时间无关。
+
+\textbf{（4）求外力功率}
+
+由图 4-2 的红色箭头，安培力沿 \(-y\)，所以维持棕色导体棒沿 \(+y\)
+匀速运动的外力必须反向抵消它。
+
+导体棒受到的安培力大小为
+
+\[
+F_B=BIL.
+\tag{9}
+\]
+
+根据楞次定律，安培力方向与导体棒运动方向相反。维持匀速所需外力与运动方向相同，大小等于
+\(F_B\)。所以外力功率
+
+\[
+P=F_Bv=BILv.
+\]
+
+代入 \(I=Bv/\lambda\) 和 \(L=2\sqrt{vt/k}\)：
+
+\[
+\begin{aligned}
+P
+&=B\cdot\frac{Bv}{\lambda}\cdot2\sqrt{\frac{vt}{k}}\cdot v\\
+&=\frac{2B^2v^2}{\lambda}\sqrt{\frac{vt}{k}}.
+\end{aligned}
+\]
+
+故
+
+\[
+\boxed{P(t)=\frac{2B^2v^2}{\lambda}\sqrt{\frac{vt}{k}}}.
+\tag{10}
+\]
+
+还可用能量守恒核验。焦耳热功率为
+
+\[
+I^2R
+=\left(\frac{Bv}{\lambda}\right)^2
+\cdot2\lambda\sqrt{\frac{vt}{k}}
+=\frac{2B^2v^2}{\lambda}\sqrt{\frac{vt}{k}},
+\]
+
+恰好等于式（10）。这说明匀速条件下棒的动能不变，外力做功全部转化为焦耳热。
+
+\textbf{面积导数为何直接等于棒长}
+
+把式（4）看作 \(S(y)\)：
+
+\[
+S(y)=\frac43\frac{y^{3/2}}{\sqrt k}.
+\]
+
+直接求导：
+
+\[
+\frac{dS}{dy}
+=\frac43\cdot\frac32\frac{\sqrt y}{\sqrt k}
+=2\sqrt{\frac yk}
+=L(y).
+\]
+
+这不是偶然。边界沿 \(y\) 方向移动微小距离 \(dy\)
+时，新增加的面积在一阶近似下就是``瞬时棒长乘位移'' \(L\,dy\)。于是
+
+\[
+\frac{d\Phi}{dt}
+=B\frac{dS}{dy}\frac{dy}{dt}
+=BLv,
+\]
+
+从几何上解释了磁通法与动生电动势线积分为什么必然一致。
+
+\textbf{初始时刻的极限}
+
+在 \(t=0\)，棒长、电动势和电阻都趋于零，\(I=\mathcal E/R\) 表面上是
+\(0/0\)。应先在 \(t>0\) 时化简公共因子 \(L\)，再取 \(t\to0^+\)
+极限，得到
+\(I\to Bv/\lambda\)。真实导体还会有接触电阻和自感，使突变被平滑；题设理想模型忽略这些效应。
+
+\textbf{用矢量方向核对外力符号}
+
+设磁场沿 \(+z\) 方向、导体棒速度沿 \(+y\)
+方向。正电荷受到的洛伦兹力方向为
+
+\[
+q\bm v\times\bm B
+=qvB\,\hat{\bm y}\times\hat{\bm z}
+=qvB\,\hat{\bm x}.
+\]
+
+因此棒内正电荷沿 \(+x\) 端聚集，回路电流方向由此确定。棒受到的安培力为
+
+\[
+\bm F_B=I\bm L\times\bm B.
+\]
+
+电流方向与 \(\bm L\) 的选择代入后，\(\bm F_B\) 沿 \(-y\)，恰好阻碍棒向
+\(+y\) 运动。外力必须沿 \(+y\)，其功率为正。另一方面
+
+\[
+P_{\rm ext}=F_Bv=BILv=I\mathcal E,
+\]
+
+再由 \(\mathcal E=IR\) 得
+
+\[
+P_{\rm ext}=I^2R.
+\]
+
+这条三段等式同时核对了电流方向、安培力方向和功率数值。
+
+\textbf{从运动边界重新算磁通}
+
+固定 \(y\) 时，导轨给 \(x=\pm\sqrt{y/k}\)。从顶点到棒的位置
+\(Y\)，闭合区域不是矩形，而是
+
+\[S(Y)=\int_0^Y2\sqrt{y/k}\,dy=\frac{4Y^{3/2}}{3\sqrt k}.\]
+
+于是 \(dS/dY=L(Y)\)，再乘 \(\dot Y=v\) 得
+\(\mathcal E=BLv\)。图中阴影的右边界是棒，上下边界是两支抛物线；这三个边界决定了积分限。用
+\(F_B=BIL\) 检查机械功率，\(F_Bv=I^2R\)，与焦耳热完全相同。起始时
+\(L,R,\mathcal E\) 同时趋零，恒定 \(I=Bv/\lambda\) 只表示 \(t>0\)
+的极限关系，不能把退化的零长度回路当作普通电路。
+
+\textbf{用焦耳功积分核对外力总功}
+
+在速度恒定且忽略棒惯性变化的原模型中，外力功率等于 \(I^2R\)。由
+\(R=2\lambda\sqrt{vt/k}\)，有
+
+\[W(0,t)=\int_0^t\frac{2B^2v^2}{\lambda}\sqrt{v\tau/k}\,d\tau=\frac{4B^2v^{5/2}t^{3/2}}{3\lambda\sqrt k}.\]
+
+另一方面，电荷通过量为 \(Q=It=Bvt/\lambda\)，但不能写总热量为 \(Q^2R/t\)
+并直接用终态 \(R(t)\)，因为电阻在全过程中改变。该错误会得到大 \(3/2\)
+倍的结果。图中的棒长随 \(\sqrt t\) 增长，足以提示功率也随 \(\sqrt t\)
+增长，应积分后求总功。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf-3}
+
+棒长 \(L\) 同时控制三件事：动生电动势 \(BLv\)、电阻 \(\lambda L\)
+和安培力 \(BIL\)。前两者的 \(L\) 在电流中约去，使 \(I\) 为常量；第三个
+\(L\) 保留下来，因此外力功率仍随 \(\sqrt t\) 增大。
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9-3}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  把棒所在位置写成 \(x=vt\)，混淆坐标轴；
+\item
+  棒长漏写因子 \(2\)；
+\item
+  把曲边面积误当成 \(2xy\) 的矩形面积；
+\item
+  认为导体棒电阻恒定，忘记棒的有效长度随时间改变；
+\item
+  安培力写成 \(BIv\) 或漏掉棒长 \(L\)；
+\item
+  功率只写 \(F\)，没有再乘速度 \(v\)。
+\end{enumerate}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae-3}
+
+可先不积分，直接用 \(BLv\)
+得到电动势；再要求学生独立用磁通面积法复核，从而理解变边界回路中两种方法的一致性。第二问让学生预测电流随时间增大还是不变，再通过约分验证直觉。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3-3}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  若导轨方程改为 \(y=k|x|^n\)，求 \(\mathcal E(t)\)、\(I(t)\) 和
+  \(P(t)\) 的时间幂律；
+\item
+  若导体棒总电阻固定而不随长度改变，重新求电流和功率；
+\item
+  若外力恒定而不是速度恒定，建立棒的运动微分方程；
+\item
+  若磁场随 \(y\) 变化为 \(B=B_0(1+ay)\)，分别用线积分和磁通法求电动势。
+\end{enumerate}
+
+\newpage
+
+\section{第 5 题}\label{ux7b2c-5-ux9898}
+
+一只企鹅在距离水平冰面高度为 \(h_0\) 的位置，以初速度 \(v_0\)
+喷出粪便。随后采用下列流体模型研究其喷射过程。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  忽略空气阻力，求使水平射程最大的喷射仰角
+  \(\alpha\)。以水平面上方为正角、下方为负角；
+\item
+  把粪便视为密度为
+  \(\rho\)、不可压缩且无黏性的液体。企鹅利用胃内高压，使充满整个直肠的液体由泄殖孔喷出，出口速度为
+  \(v_0\)。直肠近似为长度 \(l\)、半径 \(r\)
+  的光滑均匀圆管，胃与泄殖孔的高度差为 \(h\)，大气压为
+  \(P_0\)，初始胃内压强为 \(P_0+P_1\)，求 \(P_1\)；
+\item
+  若考虑黏滞，黏滞系数为 \(\eta\)，直肠中形成充分发展的层流，满足
+\end{enumerate}
+
+\[
+\Delta P=\frac{8\eta lQ}{\pi r^4},
+\]
+
+且速度随距中心轴的距离二次下降、在管壁处为零。求中心轴速度为 \(v_0\)
+时的体积流率 \(Q_1\)； 4. 在第（3）问模型下，若中心轴速度仍为
+\(v_0\)，初始胃内压强为 \(P_0+P_2\)，求 \(P_2\)； 5.
+回到第（2）问的无黏、不可压缩模型。把直肠两端封闭，在体积为 \(V\)
+的胃中充入压强 \(P_0\)、温度 \(T_0\)
+的双原子理想气体。直肠中靠近胃的一端装入长度为 \(l/2\)
+的绝热粪便，忽略直肠高度 \(h\)。迅速压缩胃内气体，使其体积缩小到
+\(nV\)，随后用该气体把粪便推出。求粪便喷出时的速度，结果以
+\(\sqrt{P_0/\rho}\) 为单位。已知 \(\pi r^2l<(1-n)V\)。
+
+参数为
+
+\[
+\begin{gathered}
+v_0=2.0\,\mathrm{m/s},\quad g=9.8\,\mathrm{m/s^2},\quad h_0=0.192\,\mathrm m,\\
+l=0.20\,\mathrm m,\quad h=0.18\,\mathrm m,\quad r=1.0\times10^{-3}\,\mathrm m,\\
+\eta=4.04\times10^{-3}\,\mathrm{Pa\cdot s},\quad
+\rho=922\,\mathrm{kg/m^3},\\
+\frac{V}{\pi r^2l}=129,\qquad n=0.587.
+\end{gathered}
+\]
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.43\linewidth,height=\textheight,keepaspectratio,alt={图 5-1　喷射抛体与直肠流动模型。}]{../figures/question-05.pdf}
+\caption*{图 5-1　喷射抛体与直肠流动模型。}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-4}
+
+这四问分别用到抛体、黏性管流、气体绝热膨胀和喷流动量。每问先写清控制体与能量来源，尤其要区分管长、竖直落差和液柱前端的位移。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-4}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  从有限高度抛射的最大水平射程；
+\item
+  伯努利方程和重力势能项；
+\item
+  圆管泊肃叶速度分布及体积流率积分；
+\item
+  压强差与黏滞损失；
+\item
+  双原子理想气体的绝热指数 \(\gamma=7/5\)；
+\item
+  绝热关系 \(TV^{\gamma-1}=\text{常量}\)；
+\item
+  气体内能减少、克服大气压做功和粪便动能之间的能量账本。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-4}
+
+第（1）问可把抛体在时刻 \(t\) 的位移分解为初速度位移 \(\bm v_0t\)
+与自由落体位移。对固定飞行时间，初速度位移的长度固定；最大水平距离对应一个几何切线条件。
+
+第（3）问的流速剖面是以中心轴为顶点、管壁为零点的抛物线。第（5）问中气体先由
+\(V\) 绝热压缩到 \(nV\)，再随着粪便向外移动而绝热膨胀到
+\(nV+\pi r^2l/2\)。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-4}
+
+第（1）问用标准抛体方程消去飞行时间，或先求最优时间再求角度。第（2）问从胃内液面到出口列伯努利方程。第（3）问先写速度分布，再对同心圆环积分。第（5）问必须先求绝热压缩后的温度和推动结束时的温度，再把气体内能下降分配给大气压功和粪便动能。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-4}
+
+图 5-2 左图对应第（1）问：喷射点高出冰面 \(h_0\)，初速度 \(v_0\)
+与水平线夹角为 \(\alpha\)，落点水平距离为
+\(S_{\max}\)；右图对应第（3）、（4）问：圆管截面内速度从中心的 \(v_0\)
+按抛物线降到管壁的零。第（1）步用左图建立落地条件，第（3）步按右图速度剖面对应的同心圆环积分体积流率。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.872\linewidth,height=\textheight,keepaspectratio,alt={图 5-2　最大射程几何与圆管层流速度剖面。}]{../figures/solution-05.pdf}
+\caption*{图 5-2　最大射程几何与圆管层流速度剖面。}
+\end{figure}
+
+\textbf{（1）最大射程对应的仰角}
+
+按图 5-2 左图取喷射点为坐标原点，冰面位于 \(y=-h_0\)；因此落地条件不是
+\(y=0\)，而是式（3）的 \(y=-h_0\)。
+
+取喷射点为原点，水平向右为 \(x\) 正方向，竖直向上为 \(y\)
+正方向。抛体方程为
+
+\[
+x=v_0\cos\alpha\,t,
+\tag{1}
+\]
+
+\[
+y=v_0\sin\alpha\,t-\frac12gt^2.
+\tag{2}
+\]
+
+落到冰面时 \(y=-h_0\)，所以
+
+\[
+v_0\sin\alpha\,t-\frac12gt^2=-h_0.
+\tag{3}
+\]
+
+为了避免一开始解含根式的飞行时间，可把初速度矢量分解为
+
+\[
+v_{0x}=\frac{x}{t},
+\]
+
+\[
+v_{0y}=\frac{gt}{2}-\frac{h_0}{t}.
+\]
+
+由 \(v_{0x}^2+v_{0y}^2=v_0^2\)，得到
+
+\[
+\frac{x^2}{t^2}+\left(\frac{gt}{2}-\frac{h_0}{t}\right)^2=v_0^2.
+\]
+
+两边乘以 \(t^2\)：
+
+\[
+x^2=v_0^2t^2-\left(\frac12gt^2-h_0\right)^2.
+\tag{4}
+\]
+
+令 \(z=t^2\)，则
+
+\[
+x^2=-\frac14g^2z^2+(v_0^2+gh_0)z-h_0^2.
+\tag{5}
+\]
+
+这是关于 \(z\) 的开口向下二次函数。最大值在顶点取得：
+
+\[
+z_{\rm opt}=\frac{2(v_0^2+gh_0)}{g^2}.
+\tag{6}
+\]
+
+代回式（5），可得最大射程
+
+\[
+\boxed{x_{\max}=\frac{v_0\sqrt{v_0^2+2gh_0}}{g}}.
+\tag{7}
+\]
+
+由式（1），最优角度满足
+
+\[
+\cos\alpha=\frac{x_{\max}}{v_0t_{\rm opt}}.
+\]
+
+使用式（6）（7）：
+
+\[
+\begin{aligned}
+\cos^2\alpha
+&=\frac{x_{\max}^2}{v_0^2t_{\rm opt}^2}\\
+&=\frac{v_0^2(v_0^2+2gh_0)/g^2}
+{v_0^2\cdot2(v_0^2+gh_0)/g^2}\\
+&=\frac{v_0^2+2gh_0}{2v_0^2+2gh_0}.
+\end{aligned}
+\]
+
+因此
+
+\[
+\boxed{
+\alpha=\arccos\sqrt{\frac{v_0^2+2gh_0}{2v_0^2+2gh_0}}
+}.
+\tag{8}
+\]
+
+代入数值：
+
+\[
+\boxed{\alpha\approx35.7^\circ},
+\qquad
+x_{\max}\approx0.569\,\mathrm m.
+\tag{9}
+\]
+
+\textbf{（2）无黏模型下的胃内超压 \(P_1\)}
+
+从胃内液体到泄殖孔出口沿同一流线列伯努利方程。取出口高度为零，胃内位置高出出口
+\(h\)。胃内液体速度近似为零，出口压强等于大气压 \(P_0\)、速度为
+\(v_0\)：
+
+\[
+(P_0+P_1)+\rho gh
+=P_0+\frac12\rho v_0^2.
+\tag{10}
+\]
+
+两边消去 \(P_0\)：
+
+\[
+P_1+\rho gh=\frac12\rho v_0^2.
+\]
+
+所以
+
+\[
+\boxed{P_1=\frac12\rho v_0^2-\rho gh}.
+\tag{11}
+\]
+
+代入参数：
+
+\[
+\begin{aligned}
+P_1
+&=\frac12\times922\times(2.0)^2
+-922\times9.8\times0.18\\
+&=1844-1626.408\\
+&\approx2.18\times10^2\,\mathrm{Pa}.
+\end{aligned}
+\]
+
+故
+
+\[
+\boxed{P_1\approx2.2\times10^2\,\mathrm{Pa}}.
+\tag{12}
+\]
+
+重力使液体从较高的胃部向较低出口流动，因此所需超压小于单纯由 \(v_0^2/2\)
+给出的动压。
+
+\textbf{（3）层流的体积流率 \(Q_1\)}
+
+转入图 5-2 右图。横轴 \(s\) 是管道截面直径上的有符号坐标，蓝色曲线给出
+\(v(s)=v_0(1-s^2/r^2)\)；半径 \(s\) 处应取周长 \(2\pi s\)、厚度 \(ds\)
+的圆环，而不能把中心速度乘整个截面积。
+
+充分发展圆管层流的速度分布为
+
+\[
+v(s)=v_0\left(1-\frac{s^2}{r^2}\right),
+\tag{13}
+\]
+
+其中 \(s\) 是到中心轴的距离。半径 \(s\)、厚度 \(ds\) 的同心圆环面积为
+
+\[
+dA=2\pi s\,ds.
+\]
+
+体积流率为
+
+\[
+Q_1=\int_Av\,dA
+=\int_0^rv(s)2\pi s\,ds.
+\]
+
+代入式（13）：
+
+\[
+\begin{aligned}
+Q_1
+&=2\pi v_0\int_0^r\left(1-\frac{s^2}{r^2}\right)s\,ds\\
+&=2\pi v_0\left[\frac{s^2}{2}-\frac{s^4}{4r^2}\right]_0^r\\
+&=2\pi v_0\left(\frac{r^2}{2}-\frac{r^2}{4}\right)\\
+&=\frac12\pi r^2v_0.
+\end{aligned}
+\]
+
+因此
+
+\[
+\boxed{Q_1=\frac12\pi r^2v_0}.
+\tag{14}
+\]
+
+代入 \(r=10^{-3}\,\mathrm m\)、\(v_0=2.0\,\mathrm{m/s}\)：
+
+\[
+\boxed{Q_1=\pi\times10^{-6}\,\mathrm{m^3/s}
+\approx3.14\times10^{-6}\,\mathrm{m^3/s}}.
+\tag{15}
+\]
+
+平均速度为 \(Q_1/(\pi r^2)=v_0/2\)，这是抛物线速度剖面的标准结果。
+
+\textbf{（4）黏性模型下的胃内超压 \(P_2\)}
+
+由题给泊肃叶关系
+
+\[
+\Delta P=\frac{8\eta lQ_1}{\pi r^4}.
+\]
+
+代入式（14）：
+
+\[
+\begin{aligned}
+\Delta P
+&=\frac{8\eta l}{\pi r^4}\cdot\frac12\pi r^2v_0\\
+&=\frac{4\eta lv_0}{r^2}.
+\end{aligned}
+\tag{16}
+\]
+
+胃内到出口的压强与重力势能账本为
+
+\[
+(P_0+P_2)+\rho gh-P_0=\Delta P.
+\tag{17}
+\]
+
+所以
+
+\[
+\boxed{P_2=\frac{4\eta lv_0}{r^2}-\rho gh}.
+\tag{18}
+\]
+
+数值计算：
+
+\[
+\frac{4\eta lv_0}{r^2}
+=\frac{4\times4.04\times10^{-3}\times0.20\times2.0}{(10^{-3})^2}
+=6464\,\mathrm{Pa},
+\]
+
+\[
+\rho gh=1626.408\,\mathrm{Pa}.
+\]
+
+因此
+
+\[
+\boxed{P_2\approx4.84\times10^3\,\mathrm{Pa}}.
+\tag{19}
+\]
+
+\textbf{（5）绝热气体推动粪便}
+
+双原子理想气体的绝热指数为
+
+\[
+\gamma=\frac75,
+\qquad
+\gamma-1=\frac25.
+\]
+
+绝热过程中
+
+\[
+TV^{\gamma-1}=TV^{2/5}=\text{常量}.
+\tag{20}
+\]
+
+初态为 \((P_0,V,T_0)\)。气体被绝热压缩到体积 \(nV\) 后，温度为 \(T_1\)：
+
+\[
+T_1(nV)^{2/5}=T_0V^{2/5}.
+\]
+
+约去 \(V^{2/5}\)，得到
+
+\[
+\boxed{T_1=n^{-2/5}T_0}.
+\tag{21}
+\]
+
+粪便长度为 \(l/2\)，横截面积为
+
+\[
+A=\pi r^2.
+\]
+
+粪便前端刚到出口、开始喷出时，气体新增体积为
+
+\[
+\Delta V_g=A\frac l2=\frac12\pi r^2l.
+\]
+
+所以气体末体积
+
+\[
+V_2=nV+\frac12\pi r^2l.
+\]
+
+由绝热关系，从最初状态直接写到末态：
+
+\[
+T_2V_2^{2/5}=T_0V^{2/5}.
+\]
+
+把 \(V_2\) 提取 \(V\)：
+
+\[
+V_2=V\left(n+\frac{\pi r^2l}{2V}\right).
+\]
+
+因此
+
+\[
+\boxed{
+T_2=T_0\left(n+\frac{\pi r^2l}{2V}\right)^{-2/5}
+}.
+\tag{22}
+\]
+
+双原子理想气体内能为
+
+\[
+U=\frac52\nu RT.
+\]
+
+初始状态满足
+\(P_0V=\nu RT_0\)，所以从压缩终态到推动结束，气体内能减少量为
+
+\[
+\begin{aligned}
+W_g
+&=\frac52\nu R(T_1-T_2)\\
+&=\frac52\frac{P_0V}{T_0}(T_1-T_2)\\
+&=\frac52P_0V\left[
+n^{-2/5}
+-\left(n+\frac{\pi r^2l}{2V}\right)^{-2/5}
+\right].
+\end{aligned}
+\tag{23}
+\]
+
+粪便质量为
+
+\[
+m_p=\rho A\frac l2=\frac12\rho\pi r^2l.
+\tag{24}
+\]
+
+气体推动粪便移动 \(l/2\) 时，还要克服大气压做功
+
+\[
+W_0=P_0A\frac l2=\frac12P_0\pi r^2l.
+\tag{25}
+\]
+
+忽略其他损失，能量守恒为
+
+\[
+W_g-W_0=\frac12m_pv^2.
+\tag{26}
+\]
+
+代入式（23）---（25）：
+
+\[
+\begin{aligned}
+&\frac52P_0V\left[
+n^{-2/5}
+-\left(n+\frac{\pi r^2l}{2V}\right)^{-2/5}
+\right]
+-\frac12P_0\pi r^2l\\
+&\qquad=\frac12\cdot\frac12\rho\pi r^2l\,v^2.
+\end{aligned}
+\]
+
+两边乘以 \(4/(\rho\pi r^2l)\)：
+
+\[
+v^2=\frac{P_0}{\rho}\left\{
+\frac{10V}{\pi r^2l}\left[
+n^{-2/5}
+-\left(n+\frac{\pi r^2l}{2V}\right)^{-2/5}
+\right]-2
+\right\}.
+\]
+
+因此
+
+\[
+\boxed{
+v=\sqrt{
+\frac{10V}{\pi r^2l}\left[
+n^{-2/5}
+-\left(n+\frac{\pi r^2l}{2V}\right)^{-2/5}
+\right]-2
+}\sqrt{\frac{P_0}{\rho}}
+}.
+\tag{27}
+\]
+
+使用 \(V/(\pi r^2l)=129\)、\(n=0.587\)：
+
+\[
+n^{-2/5}-\left(n+\frac1{2\times129}\right)^{-2/5}
+\approx0.00325346.
+\]
+
+所以根号内无量纲量为
+
+\[
+10\times129\times0.00325346-2\approx2.19696,
+\]
+
+最终
+
+\[
+\boxed{v\approx1.48\sqrt{\frac{P_0}{\rho}}}.
+\tag{28}
+\]
+
+第（5）问中减去的 \(2\) 来自克服大气压做功。若遗漏
+\(W_0=P_0Al/2\)，根号内会少掉这一项，得到系统性偏大的速度。题给条件
+\(\pi r^2l<(1-n)V\)
+保证粪便推出所需的体积增量不超过预留的压缩空间，使状态序列具有几何可实现性。
+
+第（2）问与第（4）问不能把伯努利动压和泊肃叶压降同时重复加入。题目在第（4）问明确改用充分发展层流模型，应按照给定的
+\(\Delta P\) 关系计算黏滞压降，再与重力压头组合。
+
+\textbf{最大射程的直接微分法}
+
+由竖直运动方程解出正的飞行时间
+
+\[
+t=\frac{v_0\sin\alpha+
+\sqrt{v_0^2\sin^2\alpha+2gh_0}}{g}.
+\]
+
+射程为
+
+\[
+x(\alpha)=\frac{v_0\cos\alpha}{g}
+\left(v_0\sin\alpha+
+\sqrt{v_0^2\sin^2\alpha+2gh_0}\right).
+\]
+
+直接对 \(\alpha\) 求导虽然代数较长，但令导数为零并整理后得到
+
+\[
+\tan\alpha=\frac{v_0}{\sqrt{v_0^2+2gh_0}}.
+\]
+
+由
+\(\cos^2\alpha=1/(1+\tan^2\alpha)\)，立即回到式（8）。这条路线可用于检查几何顶点法，而不宜作为初学者的首选推导。
+
+\textbf{泊肃叶结果的量纲检查}
+
+式（16）中
+
+\[
+\frac{\eta lv_0}{r^2}
+\]
+
+的量纲为
+
+\[
+\frac{(\mathrm{Pa\cdot s})\,\mathrm m\,(\mathrm{m/s})}{\mathrm{m^2}}
+=\mathrm{Pa},
+\]
+
+确为压强。半径出现在分母平方，说明为了保持相同中心速度，细管半径减半会使黏滞压降增大四倍。
+
+\textbf{用 \(P\,dV\) 积分核验气体能量}
+
+绝热过程中 \(PV^\gamma=K\)。气体从 \(nV\) 膨胀到 \(V_2\) 所做功为
+
+\[
+W_g=\int_{nV}^{V_2}K V^{-\gamma}\,dV
+=\frac{K}{1-\gamma}
+\left[V_2^{1-\gamma}-(nV)^{1-\gamma}\right].
+\]
+
+再用 \(PV=\nu RT\) 和 \(\gamma-1=2/5\) 化简，可得
+
+\[
+W_g=\frac52\nu R(T_1-T_2),
+\]
+
+与式（23）的内能下降完全一致。一个是过程功积分，一个是状态函数内能差，两条路线相符。
+
+\textbf{气塞终态与流量的核对}
+
+气塞初始长度为 \(l/2\)。前端刚到管口时，整段气塞移动
+\(l/2\)，所以后方气体体积增加 \(Al/2\)，而不是
+\(Al\)。若题目改问整个气塞离开管口，终态位移应改成
+\(l\)，绝热功与速度都须重新计算。图中的 \(l\) 沿管轴量，\(h\)
+是储液面到出口的竖直高度，不能把它们画成同一条尺寸线。
+
+泊肃叶流中，截面平均速度为 \(v_0/2\)，从而
+\(Q=\pi r^2v_0/2\)。将黏性压降 \(8\eta lQ/(\pi r^4)\)
+写成轴心速度，才得到
+\(4\eta lv_0/r^2\)。无黏与黏性小问采用各自的理想化压力模型，不能把同一动能项在伯努利关系和黏性压降里重复计入。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf-4}
+
+同一情景中的不同小问并不共享同一个流体模型。无黏模型用伯努利方程，黏性充分发展层流用泊肃叶关系，气体推动问题则要从绝热内能变化出发。先辨认模型，再选择守恒律，是避免混用公式的关键。
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9-4}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  最大射程仍套用同高度公式 \(45^\circ\)，忽略落点低于喷射点；
+\item
+  伯努利方程中把重力项符号写反；
+\item
+  第（3）问用 \(Q=\pi r^2v_0\)，把中心速度误当平均速度；
+\item
+  泊肃叶公式中的 \(r^4\) 漏写平方；
+\item
+  第（5）问把双原子气体误用单原子气体的 \(\gamma=5/3\)；
+\item
+  把绝热温度指数写成 \(-5/2\) 而不是 \(-2/5\)；
+\item
+  只计算气体内能减少，漏掉克服大气压的功；
+\item
+  粪便质量误写成 \(\rho\pi r^2l\)，漏掉长度只有 \(l/2\)。
+\end{enumerate}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae-4}
+
+建议把五问分成三张模型卡片：抛体、液体流动、绝热气体。讲第（3）问时让学生先画速度剖面并判断平均速度必小于
+\(v_0\)；讲第（5）问时画出 \(V\to nV\to nV+Al/2\)
+的状态箭头，并在能量等式两侧逐项标注``气体给出''\,``大气压消耗''\,``粪便获得''。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3-4}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  若落点比喷射点高 \(h_0\)，重新推导最优角度；
+\item
+  若圆管速度分布为 \(v=v_0[1-(s/r)^n]\)，求平均速度与体积流率；
+\item
+  若粪便长度为 \(\xi l\)，把式（27）推广到任意 \(0<\xi<1\)；
+\item
+  若胃内气体为单原子理想气体，修改温度指数和最终速度；
+\item
+  在第（4）问中把管半径减半，判断维持同一中心速度所需超压增加多少倍。
+\end{enumerate}
+
+\newpage
+
+\section{第 6 题}\label{ux7b2c-6-ux9898}
+
+日落时，太阳光实际从当地水平线以下射来，但由于大气折射，地面观察者仍能看见太阳。设某行星半径为
+\(R_0\)，大气球对称且十分厚重，折射率与离地高度 \(h\) 的关系为
+
+\[
+n(h)=\sqrt{5-\frac{(h+R_0)^2}{R_0^2}},
+\qquad 0<h<R_0.
+\]
+
+当地面观察者刚好看见太阳落山时，求太阳的实际方向与观察者所认为的太阳方向之间的夹角
+\(\beta\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.502\linewidth,height=\textheight,keepaspectratio,alt={图 6-1　球对称分层大气中的日落光线。}]{../figures/question-06.pdf}
+\caption*{图 6-1　球对称分层大气中的日落光线。}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-5}
+
+折射率随离球心的距离变化，光路不能当作匀强介质中的直线。由薄层折射得到守恒量，再把光线方程化成椭圆运动，检查入射与观测端的切线方向。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-5}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  球对称分层介质中的斯涅耳不变量；
+\item
+  几何光学的费马原理与力学类比；
+\item
+  中心力运动中的角动量守恒；
+\item
+  二维简谐运动的椭圆轨迹；
+\item
+  光线切向入射与地平线方向的几何关系。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-5}
+
+令
+
+\[
+r=R_0+h,
+\]
+
+则大气层范围是 \(R_0<r<2R_0\)，折射率写成
+
+\[
+n(r)=\sqrt{5-\frac{r^2}{R_0^2}}.
+\]
+
+地面处 \(r=R_0\)，故 \(n=2\)；大气外边界 \(r=2R_0\)，故
+\(n=1\)，与外部真空连续。观察者看到太阳恰在地平线，意味着光线到达地面时沿当地切线传播。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-5}
+
+先在相邻两个同心薄层之间应用折射定律和正弦定理，导出
+
+\[
+nr\sin\psi=\text{常量},
+\]
+
+其中 \(\psi\) 是光线方向与径向的夹角。再令一个假想质点的速率
+\(u=n\)，则上述常量变成角动量，而 \(n^2=5-r^2/R_0^2\)
+变成简谐振子的能量方程。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-5}
+
+图 6-2 把实际光线映射成以地心为中心的椭圆：内圆为地面
+\(r=R_0\)，外圆为大气边界
+\(r=2R_0\)，蓝色轨迹分别在地面观测点和大气入射点与同心圆相切。第（1）---（3）步建立折射不变量并证明两端都是切点，第（4）步再利用椭圆长、短轴正交读取偏折角
+\(\beta\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.457\linewidth,height=\textheight,keepaspectratio,alt={图 6-2　光线等效谐振子的椭圆轨道。}]{../figures/solution-06.pdf}
+\caption*{图 6-2　光线等效谐振子的椭圆轨道。}
+\end{figure}
+
+\textbf{（1）同心薄层中的折射不变量}
+
+在半径 \(r\) 的界面，入射、折射光与当地径向的夹角分别记为
+\(\psi\)、\(\alpha\)。斯涅耳定律为
+
+\[n(r)\sin\psi=n(r+dr)\sin\alpha.\]
+
+光在下一薄层内沿直线传播。该直线到圆心的垂距不变，因此在下一个界面有
+
+\[r\sin\alpha=(r+dr)\sin\psi'.\]
+
+两式相乘并取薄层极限，得到
+
+\[\boxed{n(r)r\sin\psi=J=\text{常量}.}\]
+
+这里 \(\alpha\) 是同一界面折射后的角，\(\psi'\)
+是下一界面的入射角；把这两个角混写，便不能正确消去几何传播步骤。
+
+\textbf{（2）建立力学类比}
+
+设一个质量为 \(m\) 的假想质点，其速率取为
+
+\[
+u=n.
+\tag{4}
+\]
+
+则式（3）乘以 \(m\) 后成为
+
+\[
+L=mur\sin\psi=mJ,
+\tag{5}
+\]
+
+形式上正是质点绕行星中心的角动量。
+
+另一方面，
+
+\[
+u^2=n^2=5-\frac{r^2}{R_0^2}.
+\]
+
+移项并乘以 \(m/2\)：
+
+\[
+\frac12mu^2+\frac12\frac{m}{R_0^2}r^2=\frac52m.
+\tag{6}
+\]
+
+式（6）是二维各向同性简谐振子的能量方程，其角频率为
+
+\[
+\omega_0=\frac1{R_0}.
+\]
+
+若用直角坐标表示，
+
+\[
+r^2=x^2+y^2,
+\]
+
+能量方程为
+
+\[
+\frac12m(\dot x^2+\dot y^2)
++\frac12\frac{m}{R_0^2}(x^2+y^2)=\frac52m.
+\tag{7}
+\]
+
+分别对 \(x\)、\(y\) 写运动方程：
+
+\[
+\ddot x+\frac{x}{R_0^2}=0,
+\qquad
+\ddot y+\frac{y}{R_0^2}=0.
+\tag{8}
+\]
+
+两个同频、相位不同的简谐运动合成后，轨迹是以原点为中心的椭圆。
+
+\textbf{（3）利用地面切向条件求不变量}
+
+回看图 6-2
+右侧地面观测点，蓝色光线沿视地平线方向，恰与半径垂直，所以这里
+\(\psi_0=90^\circ\)。把该条件代入不变量后，外边界处也得到
+\(\psi_1=90^\circ\)，对应图中上方的另一切点。
+
+地面观察者刚好看到太阳位于地平线，说明光线到达地面 \(r=R_0\)
+时与径向垂直：
+
+\[
+\psi_0=90^\circ.
+\]
+
+地面折射率为
+
+\[
+n_0=\sqrt{5-1}=2.
+\]
+
+因此守恒量
+
+\[
+J=n_0R_0\sin\psi_0=2R_0.
+\tag{9}
+\]
+
+在大气外边界 \(r_1=2R_0\)，折射率
+
+\[
+n_1=\sqrt{5-4}=1.
+\]
+
+由式（3）：
+
+\[
+2R_0=n_1r_1\sin\psi_1
+=1\cdot2R_0\sin\psi_1.
+\]
+
+所以
+
+\[
+\sin\psi_1=1,
+\]
+
+即
+
+\[
+\psi_1=90^\circ.
+\tag{10}
+\]
+
+可见光线在进入大气外边界时也恰好沿球面切向传播。
+
+\textbf{（4）由椭圆几何求偏折角}
+
+图 6-2 的两个切点分别位于椭圆短轴端和长轴端：半径 \(R_0\) 是最小值，半径
+\(2R_0\)
+是最大值。两条半径互相垂直，而两条光线又分别与各自半径垂直，因此光线方向之间也保持
+\(90^\circ\)。
+
+在椭圆轨道的两个切向端点，径向速度为零，半径分别达到两个极值：
+
+\[
+r_{\min}=R_0,
+\qquad
+r_{\max}=2R_0.
+\]
+
+它们分别是椭圆的短半轴和长半轴端点。椭圆的长、短半轴互相垂直，因此从行星中心看，外边界入射点与地面观测点的半径夹角为
+
+\[
+90^\circ.
+\]
+
+光线在两个端点都与相应半径垂直，分别代表太阳实际方向和观察者所认为的地平线方向。把两条半径同时旋转
+\(90^\circ\) 不改变夹角，所以两条光线方向之间的夹角也是
+
+\[
+\boxed{\beta=90^\circ}.
+\tag{11}
+\]
+
+可用解析解再次核验。选择相位使椭圆轨道写成
+
+\[
+x=R_0\cos\tau,
+\qquad
+y=2R_0\sin\tau.
+\]
+
+当 \(\tau=0\) 时，质点位于 \((R_0,0)\)，速度沿 \(+y\)
+方向，对应地面切向；当 \(\tau=\pi/2\) 时，质点位于 \((0,2R_0)\)，速度沿
+\(-x\) 方向，对应外边界切向。两个速度方向正交，直接给出
+\(\beta=90^\circ\)。
+
+这个数值远大于真实地球大气中的日落折射角，是题设非常强烈、延伸到
+\(h=R_0\) 的理想折射率分布所造成的，并非现实大气的数值预言。
+
+\textbf{用极坐标积分直接求转角}
+
+由几何关系
+
+\[
+\tan\psi=r\frac{d\varphi}{dr}.
+\]
+
+又由 \(J=nr\sin\psi\)，有
+
+\[
+\tan\psi=\frac{J}{\sqrt{n^2r^2-J^2}}.
+\]
+
+所以
+
+\[
+\frac{d\varphi}{dr}
+=\frac{J}{r\sqrt{n^2r^2-J^2}}.
+\tag{12}
+\]
+
+代入 \(J=2R_0\)、\(n^2=5-r^2/R_0^2\)，再令 \(x=r/R_0\)：
+
+\[
+\Delta\varphi
+=\int_1^2
+\frac{2\,dx}{x\sqrt{(x^2-1)(4-x^2)}}.
+\tag{13}
+\]
+
+作代换
+
+\[
+x^2=1+3\sin^2u,
+\]
+
+则 \(u\) 从 \(0\) 变到 \(\pi/2\)，式（13）变为
+
+\[
+\Delta\varphi
+=2\int_0^{\pi/2}\frac{du}{1+3\sin^2u}.
+\]
+
+利用
+
+\[
+\int_0^{\pi/2}\frac{du}{1+k\sin^2u}
+=\frac{\pi}{2\sqrt{1+k}},
+\]
+
+取 \(k=3\)，得到
+
+\[
+\Delta\varphi
+=2\cdot\frac{\pi}{4}
+=\frac\pi2.
+\]
+
+这与椭圆长短轴给出的 \(90^\circ\)
+完全一致，同时验证了守恒量、夹角定义和边界条件。
+
+\textbf{为什么可以使用简谐振子的轨迹}
+
+仅由标量``能量''关系不能分别推出 \(x\)、\(y\)
+的运动方程。应从费马原理得到
+\(d(n\hat{\bm t})/ds=\nabla n\)，再定义辅助参数 \(\tau\) 使
+\(ds/d\tau=n\)。这样
+
+\[\frac{d\bm r}{d\tau}=n\hat{\bm t},\qquad \frac{d^2\bm r}{d\tau^2}=n\nabla n=\frac12\nabla n^2=-\frac{\bm r}{R_0^2}.\]
+
+于是轨迹确为二维简谐运动的椭圆；\(\tau\)
+是数学参数，不是光在介质中的真实传播时间。取
+\(x=R_0\cos(\tau/R_0)\)、\(y=2R_0\sin(\tau/R_0)\)，两端切向分别水平和竖直。外界真空中的入射方向与地面观测者沿当地切线看到的方向夹角为
+\(90^\circ\)，图中用这两条方向线标出所求角。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf-5}
+
+折射率分布被有意设计成
+
+\[
+n^2+\frac{r^2}{R_0^2}=5,
+\]
+
+使``光学速率平方''与``半径平方''之和为常量，恰好对应二维简谐振子。识别这一结构后，复杂的连续折射问题就化为椭圆两半轴的几何问题。
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9-5}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  把高度 \(h\) 直接当作距行星中心的半径，漏写 \(r=R_0+h\)；
+\item
+  球对称折射不变量漏掉因子 \(r\)，误写成普通平面分层介质的
+  \(n\sin\psi\)；
+\item
+  把 \(\psi\) 定义成光线与切线的夹角，却仍使用与径向夹角的公式；
+\item
+  认为观察到日落意味着大气外边界处光线水平，而不检查局部切向；
+\item
+  得到椭圆后把 \(R_0\)、\(2R_0\)
+  放在同一条轴上，忽略它们是两条互相垂直的半轴。
+\end{enumerate}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae-5}
+
+先从两个同心薄层推导
+\(nr\sin\psi\)，再把式（6）与熟悉的谐振子能量并排比较。让学生说出地面和大气外边界的
+\(n\)
+值，并由守恒量判断两端都是切向点；最后只依靠椭圆长短轴互相垂直完成角度判断。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3-5}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  若 \(n^2=A-Br^2\)，求等效谐振子频率并讨论光线轨道形状；
+\item
+  若地面观测方向与切线成小角 \(\delta\)，写出新的守恒量；
+\item
+  若大气外边界半径不是 \(2R_0\)，判断光线能否从真空平滑进入；
+\item
+  用极坐标积分直接计算本题的方位角变化，与椭圆法结果比较。
+\end{enumerate}
+
+\newpage
+
+\section{第 7 题}\label{ux7b2c-7-ux9898}
+
+冥王星半径为 \(r_1=2.30\times10^6\,\mathrm m\)，质量为
+\(m_1=1.29\times10^{22}\,\mathrm{kg}\)，自转周期为 \(T=6.387\)
+天。卡戎是冥王星的伴星，距离冥王星中心
+\(l=1.974\times10^7\,\mathrm m\)，半径为
+\(r_2=6.03\times10^5\,\mathrm m\)。假设卡戎与冥王星做圆周运动，公转周期等于冥王星自转周期。取
+
+\[
+G=6.67\times10^{-11}\,\mathrm{N\,m^2/kg^2}.
+\]
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  求卡戎质量 \(m_2\)，保留两位有效数字；
+\item
+  设有一条连接两星体的``天梯''，把冥王星上的少量质量
+  \(\Delta m=1.0\times10^{10}\,\mathrm{kg}\)
+  缓慢搬运到卡戎。求系统周期的增加量 \(\Delta T\)
+  和两星距离随轨道角度的平均值变化量
+  \(\Delta l\)，均保留两位有效数字。搬运后轨道不再严格为圆轨道。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.661\linewidth,height=\textheight,keepaspectratio,alt={图 7-1　冥王星---卡戎同步圆轨道与质量输运。}]{../figures/question-07.pdf}
+\caption*{图 7-1　冥王星---卡戎同步圆轨道与质量输运。}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-6}
+
+先分清轨道能量、星体自转和搬运装置之间如何交换能量与角动量。正文按参考解额外采用的轨道模型计算微扰，再用开普勒关系求周期和平均距离的变化。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-6}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  二体系统的约化质量 \(\mu=m_1m_2/(m_1+m_2)\)；
+\item
+  圆轨道角速度 \(\omega^2=G(m_1+m_2)/l^3\)；
+\item
+  椭圆轨道能量 \(E=-GM\mu/(2a)\)；
+\item
+  开普勒第三定律 \(T^2\propto a^3/M\)；
+\item
+  椭圆角动量 \(L=b\sqrt{-2E\mu}\)；
+\item
+  小量对数微分和二阶偏心率；
+\item
+  极坐标轨道方程及角平均。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-6}
+
+初态为两星绕共同质心的同步圆轨道，星心距离为 \(l\)。搬运 \(\Delta m\)
+后，总质量 \(M=m_1+m_2\)
+不变，但质量分配改变，约化质量增加；原参考模型进一步假定搬运功输入轨道系统、轨道角动量不变，以下在这组附加条件下计算新椭圆。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-6}
+
+第一问先把周期换算成秒，令 \(\omega=2\pi/T\)。第二问按照
+
+\[
+\Delta m\longrightarrow\Delta\mu,\Delta E
+\longrightarrow\Delta a,\Delta T,\Delta b
+\longrightarrow e^2,p,\overline\rho
+\]
+
+的顺序推进。每一步只保留一阶小量，但由于圆轨道初态
+\(e=0\)，偏心率对平均距离的最低贡献是 \(e^2\)，这项必须保留。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-6}
+
+图 7-2 中虚线圆是搬运前半径为 \(l\)
+的同步圆轨道，蓝色实线是搬运后的微小椭圆；横向半轴为 \(a\)，纵向半轴为
+\(b\)，近地点方向定义极角 \(\theta\)，半径满足
+\(\rho=p/(1+e\cos\theta)\)。第（4）步求 \(a\)，第（5）步求
+\(b,e\)，第（6）步再沿图中极角对 \(\rho\) 做角平均。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.623\linewidth,height=\textheight,keepaspectratio,alt={图 7-2　质量输运后的椭圆轨道参数。}]{../figures/solution-07.pdf}
+\caption*{图 7-2　质量输运后的椭圆轨道参数。}
+\end{figure}
+
+\textbf{（1）求卡戎质量}
+
+总质量记为
+
+\[
+M=m_1+m_2,
+\]
+
+约化质量为
+
+\[
+\mu=\frac{m_1m_2}{m_1+m_2}.
+\]
+
+二体相对运动的圆轨道动力学方程为
+
+\[
+\frac{Gm_1m_2}{l^2}=\mu\omega^2l.
+\tag{1}
+\]
+
+代入 \(\mu=m_1m_2/M\) 并约去 \(m_1m_2\)：
+
+\[
+\frac G{l^2}=\frac{\omega^2l}{M}.
+\]
+
+所以
+
+\[
+M=\frac{\omega^2l^3}{G},
+\]
+
+\[
+\boxed{m_2=\frac{\omega^2l^3}{G}-m_1}.
+\tag{2}
+\]
+
+把周期换算成秒：
+
+\[
+T=6.387\times86400\,\mathrm s
+=5.518368\times10^5\,\mathrm s.
+\]
+
+因此
+
+\[
+\omega=\frac{2\pi}{T}
+\approx1.1386\times10^{-5}\,\mathrm{s^{-1}}.
+\]
+
+代入式（2）：
+
+\[
+m_2\approx2.05\times10^{21}\,\mathrm{kg}.
+\]
+
+保留两位有效数字：
+
+\[
+\boxed{m_2=2.1\times10^{21}\,\mathrm{kg}}.
+\tag{3}
+\]
+
+\textbf{（2）约化质量的变化}
+
+搬运后
+
+\[
+\Delta m_1=-\Delta m,
+\qquad
+\Delta m_2=+\Delta m,
+\qquad
+\Delta M=0.
+\]
+
+对
+
+\[
+\mu=\frac{m_1m_2}{M}
+\]
+
+作对数微分：
+
+\[
+\frac{\Delta\mu}{\mu}
+=\frac{\Delta m_1}{m_1}
++\frac{\Delta m_2}{m_2}
+-\frac{\Delta M}{M}.
+\]
+
+利用 \(\Delta M=0\)：
+
+\[
+\boxed{
+\frac{\Delta\mu}{\mu}
+=-\frac{\Delta m}{m_1}+\frac{\Delta m}{m_2}
+}.
+\tag{4}
+\]
+
+后续小量计算保留式（1）中质量的未舍入值，最终结果再取两位有效数字。得到
+
+\[
+\boxed{\frac{\Delta\mu}{\mu}\approx4.1018\times10^{-12}}.
+\tag{5}
+\]
+
+\textbf{（3）搬运导致的轨道能量变化}
+
+把单位质量从冥王星表面缓慢移至卡戎表面，需要比较两端的引力势和同步转动参考系中的离心势。在共转参考系中按有效势计算搬运功，再按原参考解的附加约定把它全记为轨道能量增量：
+
+\[
+\begin{aligned}
+\Delta E=\Delta m\Bigg(&
+\frac{Gm_1}{r_1}-\frac{Gm_1}{l}
+-\frac{Gm_2}{r_2}+\frac{Gm_2}{l}\\
+&+\frac{\omega^2l^2}{2}\frac{m_2}{M}
+-\frac{\omega^2l^2}{2}\frac{m_1}{M}
+\Bigg).
+\end{aligned}
+\tag{6}
+\]
+
+前四项是从两星表面与星际位置之间的引力势差，最后两项来自共转参考系的离心势差。代入数据得到约
+
+\[
+\boxed{\Delta E\approx9.2303\times10^{14}\,\mathrm J}.
+\tag{7}
+\]
+
+初始圆轨道总机械能为
+
+\[
+E=-\frac{GM\mu}{2l}.
+\tag{8}
+\]
+
+数值约为
+
+\[
+E\approx-4.4687\times10^{25}\,\mathrm J.
+\]
+
+因此
+
+\[
+\boxed{\frac{\Delta E}{E}\approx-2.06553\times10^{-11}}.
+\tag{9}
+\]
+
+分母 \(E\) 为负而 \(\Delta E\)
+为正，所以比值为负；物理意义是轨道能量变得不那么负。
+
+\textbf{（4）半长轴与周期的变化}
+
+从这一步开始使用图 7-2 的蓝色椭圆。总质量 \(M\)
+不变时，轨道能量只通过约化质量 \(\mu\) 和半长轴 \(a\)
+变化，故对椭圆能量式作对数微分。
+
+新椭圆轨道仍满足
+
+\[
+E=-\frac{GM\mu}{2a}.
+\tag{10}
+\]
+
+由于 \(M\) 不变，对式（10）作对数微分：
+
+\[
+\frac{\Delta E}{E}
+=\frac{\Delta\mu}{\mu}-\frac{\Delta a}{a}.
+\]
+
+所以
+
+\[
+\boxed{
+\frac{\Delta a}{a}
+=-\frac{\Delta E}{E}+\frac{\Delta\mu}{\mu}
+}.
+\tag{11}
+\]
+
+代入式（5）（9）：
+
+\[
+\frac{\Delta a}{a}
+\approx2.06553\times10^{-11}+0.41018\times10^{-11}
+=2.47571\times10^{-11}.
+\tag{12}
+\]
+
+总质量不变时，开普勒第三定律给出
+
+\[
+\frac{a^3}{T^2}=\text{常量}.
+\]
+
+对数微分：
+
+\[
+3\frac{\Delta a}{a}-2\frac{\Delta T}{T}=0.
+\]
+
+所以
+
+\[
+\frac{\Delta T}{T}=\frac32\frac{\Delta a}{a}.
+\tag{13}
+\]
+
+代入 \(T=5.518368\times10^5\,\mathrm s\)：
+
+\[
+\begin{aligned}
+\Delta T
+&=T\cdot\frac32\frac{\Delta a}{a}\\
+&\approx5.518368\times10^5\times\frac32\times2.47571\times10^{-11}\,\mathrm s\\
+&\approx2.0\times10^{-5}\,\mathrm s.
+\end{aligned}
+\]
+
+因此
+
+\[
+\boxed{\Delta T=2.0\times10^{-5}\,\mathrm s}.
+\tag{14}
+\]
+
+\textbf{（5）半短轴与偏心率}
+
+图 7-2 标出的另一半轴 \(b\)
+不能由开普勒第三定律直接给出，需要利用角动量守恒；随后由同一图中的
+\(a,b\) 关系确定偏心率。
+
+椭圆轨道角动量可写为
+
+\[
+L=b\sqrt{-2E\mu}.
+\tag{15}
+\]
+
+原参考模型另行假定轨道角动量 \(L\)
+守恒；总系统无外力矩本身不能排除轨道与自转交换角动量。对式（15）作对数微分：
+
+\[
+\frac{\Delta b}{b}
++\frac12\frac{\Delta(-E)}{-E}
++\frac12\frac{\Delta\mu}{\mu}=0.
+\]
+
+注意
+
+\[
+\frac{\Delta(-E)}{-E}=\frac{\Delta E}{E}.
+\]
+
+因此
+
+\[
+\boxed{
+\frac{\Delta b}{b}
+=-\frac12\frac{\Delta\mu}{\mu}
+-\frac12\frac{\Delta E}{E}
+}.
+\tag{16}
+\]
+
+代入数值：
+
+\[
+\frac{\Delta b}{b}
+\approx-\frac12(4.1018\times10^{-12})
+-\frac12(-2.06553\times10^{-11})
+\approx8.27676\times10^{-12}.
+\tag{17}
+\]
+
+偏心率满足
+
+\[
+e^2=1-\frac{b^2}{a^2}.
+\]
+
+初态 \(a=b=l\)。对 \(b^2/a^2\) 作一阶展开：
+
+\[
+\frac{b^2}{a^2}
+\approx1+2\frac{\Delta b}{b}-2\frac{\Delta a}{a}.
+\]
+
+所以
+
+\[
+\begin{aligned}
+e^2
+&\approx2\left(\frac{\Delta a}{a}-\frac{\Delta b}{b}\right)\\
+&=2(2.47571-0.827676)\times10^{-11}\\
+&\approx3.29607\times10^{-11}.
+\end{aligned}
+\tag{18}
+\]
+
+\textbf{（6）两星距离的角平均变化}
+
+按图 7-2 从近地点方向量取极角 \(\theta\)，两星瞬时距离就是极坐标半径
+\(\rho(\theta)\)。题目要求的是对角度均匀平均，不是对时间平均，因此积分权重直接为
+\(d\theta/(2\pi)\)。
+
+椭圆的半通径为
+
+\[
+p=a(1-e^2)=\frac{b^2}{a}.
+\]
+
+轨道极坐标方程为
+
+\[
+\rho(\theta)=\frac{p}{1+e\cos\theta}.
+\tag{19}
+\]
+
+题目要求随轨道角度的平均值：
+
+\[
+\overline\rho
+=\frac1{2\pi}\int_0^{2\pi}\frac{p}{1+e\cos\theta}\,d\theta.
+\]
+
+由于 \(e\) 极小，展开到 \(e^2\)：
+
+\[
+\frac1{1+e\cos\theta}
+\approx1-e\cos\theta+e^2\cos^2\theta.
+\]
+
+利用
+
+\[
+\frac1{2\pi}\int_0^{2\pi}\cos\theta\,d\theta=0,
+\]
+
+\[
+\frac1{2\pi}\int_0^{2\pi}\cos^2\theta\,d\theta=\frac12,
+\]
+
+得到
+
+\[
+\overline\rho\approx p\left(1+\frac{e^2}{2}\right).
+\tag{20}
+\]
+
+再把 \(p=b^2/a\) 展开：
+
+\[
+\frac{\Delta p}{p}
+=2\frac{\Delta b}{b}-\frac{\Delta a}{a}.
+\]
+
+因此
+
+\[
+\frac{\overline\rho-l}{l}
+\approx2\frac{\Delta b}{b}-\frac{\Delta a}{a}+\frac{e^2}{2}.
+\]
+
+由式（18），\(e^2/2=\Delta a/a-\Delta b/b\)，故上式大幅化简为
+
+\[
+\frac{\overline\rho-l}{l}
+=\frac{\Delta b}{b}.
+\tag{21}
+\]
+
+于是
+
+\[
+\Delta l=l\frac{\Delta b}{b}
+=1.974\times10^7\times8.27676\times10^{-12}\,\mathrm m.
+\]
+
+所以
+
+\[
+\boxed{\Delta l\approx1.6\times10^{-4}\,\mathrm m}.
+\tag{22}
+\]
+
+这里的``平均''是对轨道角度 \(\theta\)
+的平均，而不是对时间的平均。椭圆上天体在远地点附近停留时间更长，若改成时间平均，权重应包含
+\(dt/d\theta\)，结果不会直接等于式（20）。
+
+后续使用未舍入质量 \(m_2=2.0504419\times10^{21}\,\mathrm{kg}\)，得到
+\(\Delta T=2.04928\times10^{-5}\,\mathrm s\)、\(\Delta l=1.63383\times10^{-4}\,\mathrm m\)，最后才取两位有效数字。原参考解提前舍入后的
+\(1.9\times10^{-5}\,\mathrm s\) 与 \(1.5\times10^{-4}\,\mathrm m\)
+可作数量级比较，但不应替代按题给参数精算的结果。
+
+\textbf{式（6）中有效势项的来历}
+
+双星以角速度 \(\omega\) 共转。冥王星和卡戎到质心的距离分别为
+
+\[
+a_1=\frac{m_2}{M}l,
+\qquad
+a_2=\frac{m_1}{M}l.
+\]
+
+在共转参考系中，单位质量的离心势为
+
+\[
+\Phi_{\rm cf}=-\frac12\omega^2a^2.
+\]
+
+因此把质量从冥王星一侧缓慢送到卡戎一侧时，离心势变化与引力势变化一起决定外界所需功。式（6）把这个变化化为质量比形式。这里使用的是共转有效势，不能把最后两项简单解释成实验室系动能差，否则符号会相反。
+
+\textbf{为什么平均距离只剩半短轴相对变化}
+
+把式（20）写成相对小量：
+
+\[
+\frac{\Delta\overline\rho}{l}
+=\left(2\frac{\Delta b}{b}-\frac{\Delta a}{a}\right)
++\frac12e^2.
+\]
+
+而
+
+\[
+\frac12e^2=\frac{\Delta a}{a}-\frac{\Delta b}{b}.
+\]
+
+逐项相加时，\(-\Delta a/a\) 与 \(+\Delta a/a\) 抵消，两个 \(\Delta b/b\)
+只剩一个。这个抵消不是近似巧合，而是 \(p=b^2/a\) 与 \(e^2=1-b^2/a^2\)
+两个椭圆恒等式共同造成的。
+
+\textbf{数值层级检查}
+
+\(\Delta m/m_2\) 只有约 \(5\times10^{-12}\)，所以 \(\Delta T/T\) 和
+\(\Delta l/l\) 都应处于 \(10^{-11}\) 量级。周期约
+\(5.5\times10^5\,\mathrm s\)，乘后得到 \(10^{-5}\,\mathrm s\)；距离约
+\(2\times10^7\,\mathrm m\)，乘后得到
+\(10^{-4}\,\mathrm m\)。不做精细计算也能先锁定正确数量级。
+
+\textbf{结果的适用模型与平均方式}
+
+原参考解把搬运质子所需功全记入两体相对轨道能量，并假定轨道角动量不变。以下微小周期和平均距离变化只在这两项附加约定下成立。实际搬运还可改变两星自转、星体束缚能、携带装置的储能和轨道角动量；仅凭总能量守恒不能唯一确定搬运后的轨道。若有外加轨道角动量
+\(\delta L\)，则
+
+\[\frac{\delta b}{b}=\frac{\delta L}{L}-\frac12\left(\frac{\delta\mu}{\mu}+\frac{\delta E}{E}\right),\qquad \frac{\delta a}{a}=\frac{\delta\mu}{\mu}-\frac{\delta E}{E}.\]
+
+其中 \(E<0\) 是轨道能量。对椭圆
+\(r(\theta)=a(1-e^2)/(1+e\cos\theta)\)，角度等权平均严格为
+
+\[\langle r\rangle_\theta=\frac1{2\pi}\int_0^{2\pi}r(\theta)\,d\theta=b.\]
+
+按时间等权平均则为
+\(\langle r\rangle_t=a(1+e^2/2)\)，两者不能混用。图中的 \(O\)
+表示相对轨道的引力焦点，\(G\) 是椭圆中心；\(a,b\) 从 \(G\) 量起，\(r\)
+从 \(O\)
+量起。微小能量差应保留质量和半径的中间精度；过早把卡戎质量取两位有效数字会影响最后的小量。
+
+\textbf{搬运功与轨道能量不能自动画等号}
+
+原题只给``缓慢搬运''，这说明运输过程可近似准静态，却不决定能量最终存在哪里。设搬运装置做功
+\(W\)，系统能量记账应至少区分轨道、自转、星体自身引力束缚和装置储能：
+
+\[W=\delta E_{\rm orb}+\delta E_{\rm spin}+\delta E_{\rm bind}+\delta E_{\rm device}.\]
+
+同样，总角动量守恒只给这些部分角动量变化之和为零，不等于
+\(\delta L_{\rm orb}=0\)。正文之所以能继续推导，正是另外选定
+\(\delta E_{\rm orb}=W\)、\(\delta L_{\rm orb}=0\)。教学时应在公式旁标明这两条模型约定；它们不属于从题面已给条件必然推出的定律。
+
+若把真正传给轨道的能量比例写成 \(f\)，则周期微扰会改为
+
+\[\frac{\delta T}{T}=\frac32\left(\frac{\delta\mu}{\mu}-\frac{fW}{E}\right).\]
+
+半短轴还要使用实际的轨道角动量变化。即使总搬运功相同，不同运输方式也可以给出不同周期变化。参考解的具体数值是这组形式模型的算例，不能标成现实双星运输的唯一预测。计算中的
+\(e\propto\sqrt{\Delta m}\)
+也表明它是在圆轨道边界附近指定能量与角动量的形式扰动，并非任意平滑运输过程都会具有同一响应。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf-6}
+
+质量只是在两星之间重新分配，总质量不变，却同时改变了约化质量和轨道能量。半长轴由能量决定，半短轴还受角动量约束；二者变化不相同，于是原圆轨道产生极小偏心率。角平均距离最终只剩
+\(\Delta b/b\)，是多项一阶小量精确抵消的结果。
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9-6}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  把冥王星固定不动，使用
+  \(Gm_1/l^2=\omega^2l\)，漏掉卡戎对总质量的贡献；
+\item
+  周期未从天换算成秒；
+\item
+  搬运质量后仍把轨道当成圆，不引入 \(a\)、\(b\)、\(e\)；
+\item
+  对负能量 \(E\) 求相对变化时把符号写反；
+\item
+  在 \(\Delta\mu/\mu\) 中漏掉 \(-\Delta m/m_1\)；
+\item
+  认为 \(e\) 是一阶小量而丢掉 \(e^2\)，事实上本题可直接确定的是
+  \(e^2\)；
+\item
+  把角平均误当作时间平均；
+\item
+  过早舍入导致最后两位有效数字不稳定。
+\end{enumerate}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae-6}
+
+先用相对坐标把二体圆轨道化成``一粒约化质量绕总质量运动''，完成第一问。第二问在黑板上画一条依赖链：\(\Delta\mu,\Delta E\to\Delta a\to\Delta T\)，再从角动量分出
+\(\Delta b\to e^2\to\Delta l\)。每次对数微分都先写原公式，避免学生凭记忆拼接符号。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3-6}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  若搬运方向相反，从卡戎搬到冥王星，判断 \(\Delta T\)、\(\Delta l\)
+  的符号；
+\item
+  若搬运过程中向系统施加已知外力矩，修改半短轴变化公式；
+\item
+  用未舍入的 \(m_2\) 全程计算，比较最终数值差异；
+\item
+  求新轨道的近地点和远地点距离变化；
+\item
+  把角平均改为时间平均，推导到 \(e^2\) 阶。
+\end{enumerate}
+
+\newpage
+
+\section{第 8 题}\label{ux7b2c-8-ux9898}
+
+黑体吸收所有射向其表面的电磁波，也不断向外辐射电磁波。单位时间、单位面积的黑体辐射功率为
+
+\[
+q=\sigma T^4.
+\]
+
+若物体对入射电磁波的反射比例为 \(r\)，由基尔霍夫定律，其本征辐射功率变为
+
+\[
+q'=(1-r)\sigma T^4.
+\]
+
+平面向外辐射时，在与法线夹角为 \(\theta\)
+的方向上，单位立体角辐射强度正比于 \(\cos\theta\)。
+
+现有一个温度为 \(T\)、比热容为 \(C\)、质量为 \(m\)
+的薄圆盘。一面为黑体，另一面的反射系数为
+\(r\)。把圆盘置于真空中，它因两面辐射不对称而获得动量。忽略相对论效应和宇宙背景辐射，求圆盘最终能够获得的最大动能。光子能量和动量满足
+
+\[
+E=h\nu,
+\qquad
+p=\frac{h\nu}{c}.
+\]
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.616\linewidth,height=\textheight,keepaspectratio,alt={图 8-1　两面发射率不同的高温圆盘。}]{../figures/question-08.pdf}
+\caption*{图 8-1　两面发射率不同的高温圆盘。}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-7}
+
+黑体面与反射面的辐射功率不同，法向辐射动量也不同。由朗伯角分布积分得到反冲力，再把反冲与圆盘降温过程合并积分。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-7}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  光子动量 \(p=E/c\)；
+\item
+  朗伯余弦辐射定律；
+\item
+  立体角微元 \(d\Omega=2\pi\sin\theta\,d\theta\)；
+\item
+  辐射能流与法向动量流的角积分；
+\item
+  冲量与内能损失之间的微分关系；
+\item
+  非相对论动能 \(K=p^2/(2m)\)。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-7}
+
+一面为黑体，辐射功率密度为 \(q\)；另一面反射系数为 \(r\)，发射率为
+\(1-r\)，辐射功率密度为
+\((1-r)q\)。两面都把动量传给圆盘，但反冲方向相反。黑体面辐射更强，因此净反冲指向黑体面辐射的反方向。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-7}
+
+先只研究单位面积的一面。把总辐射功率 \(q\) 按 \(\cos\theta\)
+分配到半球方向，计算每束光子动量的法向分量。得到法向动量流 \(2q/(3c)\)
+后，再写圆盘净力与总散热功率之比。由于二者都含面积和
+\(\sigma T^4\)，积分时这些量会消去。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-7}
+
+图 8-2 的黑色箭头是表面法线 \(\hat n\)，蓝色箭头是与法线夹角为
+\(\theta\) 的辐射方向，旁边记单位时间辐射能量
+\(d\dot E\)。辐射的法向动量还要乘
+\(\cos\theta/c\)；同一极角的方向绕法线一周，立体角为
+\(2\pi\sin\theta\,d\theta\)。先归一化角分布，再按图投影得到法向动量流。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.623\linewidth,height=\textheight,keepaspectratio,alt={图 8-2　半球辐射的法向动量积分。}]{../figures/solution-08.pdf}
+\caption*{图 8-2　半球辐射的法向动量积分。}
+\end{figure}
+
+\textbf{（1）归一化半球辐射强度}
+
+按图 8-2，所有方位角等价，只需对极角 \(\theta\) 积分；极角在 \(\theta\)
+到 \(\theta+d\theta\) 的整圈方向对应立体角微元
+\(d\Omega=2\pi\sin\theta\,d\theta\)。
+
+设单位面积向与法线夹角 \(\theta\) 的单位立体角内辐射功率为
+
+\[
+d\dot E=A\cos\theta\,d\Omega,
+\tag{1}
+\]
+
+其中 \(A\) 是待定常量。轴对称条件下
+
+\[
+d\Omega=2\pi\sin\theta\,d\theta.
+\tag{2}
+\]
+
+对外侧半球积分，总辐射功率密度应为 \(q\)：
+
+\[
+q=\int_0^{\pi/2}A\cos\theta\cdot2\pi\sin\theta\,d\theta.
+\]
+
+计算积分：
+
+\[
+\begin{aligned}
+q
+&=2\pi A\int_0^{\pi/2}\sin\theta\cos\theta\,d\theta\\
+&=2\pi A\left[\frac12\sin^2\theta\right]_0^{\pi/2}\\
+&=\pi A.
+\end{aligned}
+\]
+
+因此
+
+\[
+A=\frac q\pi.
+\tag{3}
+\]
+
+\textbf{（2）求一面的法向动量流}
+
+图中蓝色箭头所示辐射携带的动量沿光线方向，圆盘平动只关心其法向分量，所以在朗伯因子
+\(\cos\theta\) 之外还要再乘投影因子 \(\cos\theta\)。这就是式（4）中出现
+\(\cos^2\theta\) 的来源。
+
+能量为 \(dE\) 的辐射携带动量 \(dE/c\)。其中沿表面法线的分量还要乘
+\(\cos\theta\)，所以单位时间、单位面积的法向动量流为
+
+\[
+\dot p_n
+=\int_0^{\pi/2}
+\frac{A\cos\theta}{c}\cos\theta
+\cdot2\pi\sin\theta\,d\theta.
+\tag{4}
+\]
+
+代入 \(A=q/\pi\)：
+
+\[
+\begin{aligned}
+\dot p_n
+&=\frac{2q}{c}
+\int_0^{\pi/2}\cos^2\theta\sin\theta\,d\theta.
+\end{aligned}
+\]
+
+令 \(u=\cos\theta\)，\(du=-\sin\theta\,d\theta\)：
+
+\[
+\int_0^{\pi/2}\cos^2\theta\sin\theta\,d\theta
+=\int_0^1u^2\,du
+=\frac13.
+\]
+
+所以
+
+\[
+\boxed{\dot p_n=\frac{2q}{3c}}.
+\tag{5}
+\]
+
+注意不是
+\(q/c\)。因为辐射分布在整个半球，只有法向动量分量对圆盘平动产生同向贡献。
+
+\textbf{（3）圆盘两面的净反冲力}
+
+设圆盘单面面积为 \(S\)。黑体面辐射功率密度为
+
+\[
+q=\sigma T^4,
+\]
+
+反射面辐射功率密度为
+
+\[
+q'=(1-r)q.
+\]
+
+两面反冲方向相反，净力大小为
+
+\[
+\begin{aligned}
+F
+&=S\left(\frac{2q}{3c}-\frac{2q'}{3c}\right)\\
+&=\frac{2S}{3c}\left[q-(1-r)q\right]\\
+&=\frac{2rSq}{3c}.
+\end{aligned}
+\tag{6}
+\]
+
+\textbf{（4）用散热能量消去冷却时间}
+
+圆盘两面的总辐射功率为
+
+\[
+P_{\rm rad}=S(q+q')=S(2-r)q.
+\tag{7}
+\]
+
+若圆盘温度降低微小量 \(-dT>0\)，放出的热量为
+
+\[
+-dQ=-mC\,dT.
+\]
+
+相应获得的动量增量为
+
+\[
+dp=F\,dt.
+\]
+
+又有
+
+\[
+-dQ=P_{\rm rad}\,dt.
+\]
+
+因此
+
+\[
+\frac{dp}{-dQ}=\frac{F}{P_{\rm rad}}.
+\]
+
+代入式（6）（7）：
+
+\[
+\frac{dp}{-dQ}
+=\frac{2rSq/(3c)}{S(2-r)q}
+=\frac{2r}{3(2-r)c}.
+\tag{8}
+\]
+
+面积 \(S\)、斯忒藩常量 \(\sigma\) 和随温度变化的 \(T^4\) 全部消去。由
+\(-dQ=-mC\,dT\)，
+
+\[
+dp=-\frac{2rmC}{3(2-r)c}\,dT.
+\]
+
+圆盘从初温 \(T\) 冷却到理论最低温度 \(0\) 时，获得最大动量：
+
+\[
+\begin{aligned}
+p_{\max}
+&=\int_T^0-\frac{2rmC}{3(2-r)c}\,dT'\\
+&=\frac{2rmCT}{3(2-r)c}.
+\end{aligned}
+\tag{9}
+\]
+
+\textbf{（5）最大动能}
+
+题目允许忽略相对论效应，因此
+
+\[
+K_{\max}=\frac{p_{\max}^2}{2m}.
+\]
+
+代入式（9）：
+
+\[
+\begin{aligned}
+K_{\max}
+&=\frac1{2m}
+\left[\frac{2rmCT}{3(2-r)c}\right]^2\\
+&=\frac{2r^2mC^2T^2}{9(2-r)^2c^2}.
+\end{aligned}
+\]
+
+所以
+
+\[
+\boxed{
+K_{\max}=\frac{2r^2mC^2T^2}{9(2-r)^2c^2}
+}.
+\tag{10}
+\]
+
+可做两个极限检查：
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  当 \(r=0\) 时，两面都是黑体，辐射完全对称，式（10）给出
+  \(K_{\max}=0\)；
+\item
+  当 \(r\to1\)
+  时，一面为黑体、另一面理想不发射，反冲最大，式（10）有限而不发散。
+\end{enumerate}
+
+量纲也成立：\(mCT\) 是能量，除以 \(c\)
+得动量；再平方并除以质量，得到动能。
+
+这里默认比热容 \(C\) 在从 \(T\) 冷却到零的理想区间内保持常量。若
+\(C=C(T)\)，式（9）中的 \(mCT\) 应替换为 \(m\int_0^TC(T')\,dT'\)。
+
+\textbf{直接以温度为变量积分}
+
+圆盘在温度 \(T'\) 时的净力与降温速率分别满足
+
+\[
+\frac{dp}{dt}=\frac{2rS\sigma T'^4}{3c},
+\]
+
+\[
+mC\frac{dT'}{dt}=-(2-r)S\sigma T'^4.
+\]
+
+两式相除，时间、面积和 \(T'^4\) 同时消去：
+
+\[
+\frac{dp}{dT'}
+=-\frac{2rmC}{3(2-r)c}.
+\]
+
+右端为常量，所以最大动量与初温 \(T\) 线性相关，而最大动能与 \(T^2\)
+相关。这个微分方程写法比先引入热量 \(dQ\)
+更直接，也明确说明冷却越慢并不会改变最终冲量。
+
+\textbf{非相对论条件自洽性}
+
+由式（9），最大速度近似为
+
+\[
+v_{\max}=\frac{p_{\max}}m
+=\frac{2rCT}{3(2-r)c}.
+\]
+
+要求 \(v_{\max}\ll c\)，等价于
+
+\[
+\frac{2rCT}{3(2-r)c^2}\ll1.
+\]
+
+对通常材料，\(CT\) 远小于
+\(c^2\)，所以题目给出的非相对论近似非常安全。若热容能量尺度接近静能，则不仅动能公式要改，相对论多普勒效应也会反过来改变两面的辐射反冲。
+
+\textbf{用加权平均余弦理解 \(2/3\)}
+
+辐射功率在方向上的权重本身正比于
+\(\cos\theta\)。因此每单位辐射能量所携带的平均法向动量因子不是均匀方向平均，而是
+
+\[
+\langle\cos\theta\rangle
+=\frac{\int_0^{\pi/2}\cos\theta\cdot
+(\cos\theta)\,2\pi\sin\theta\,d\theta}
+{\int_0^{\pi/2}(\cos\theta)\,2\pi\sin\theta\,d\theta}.
+\]
+
+分子积分为 \(2\pi/3\)，分母积分为 \(\pi\)，所以
+
+\[
+\langle\cos\theta\rangle=\frac23.
+\]
+
+于是法向动量流可以直接理解为
+
+\[
+\dot p_n=\frac qc\langle\cos\theta\rangle
+=\frac{2q}{3c}.
+\]
+
+这一平均值解释比单纯记忆积分系数更稳固，也能自然推广到 \(\cos^n\theta\)
+的角分布。
+
+\textbf{角分布归一化与冷却极限}
+
+朗伯分布的常数来自
+\(q=\int A\cos\theta\,d\Omega=\pi A\)，所以每个方向的辐射功率密度是
+\(A=q/\pi\)。求法向动量时再乘一次 \(\cos\theta/c\)：
+
+\[\frac{d\dot p_n}{dS}=\frac{q}{\pi c}\int_0^{\pi/2}\cos^2\theta\,2\pi\sin\theta\,d\theta=\frac{2q}{3c}.\]
+
+图中的微元式须有 \(1/\pi\)，否则积分会多出 \(\pi\)
+倍。对恒热容且非相对论的圆盘，\(mCT\)
+是可辐射热量；冷却到零温的表达表示理想模型的最终上限，实际冷却一般渐近接近这一状态。应有
+\(CT/c^2\ll1\)，才能忽略辐射引起的质量变化。
+
+\textbf{反射系数的两个边界}
+
+当 \(r=0\)，两面同为黑体，辐射动量互相抵消，反冲为零；总功率为
+\(2Sq\)。当 \(r\to1\)，右面不再热辐射，只剩左面发射，总功率趋
+\(Sq\)，动量输出为 \(2Sq/(3c)\)。这两种边界都由
+\(F=2rSq/(3c)\)、\(P=S(2-r)q\) 自动还原。
+
+消去时间得到
+\(dp/(-dU)=2r/[3(2-r)c]\)，这个比例与温度瞬时值无关，因此可直接把恒热容的总热量
+\(mCT\) 乘进去。若热容随温度变化，应将 \(mCT\) 改为
+\(m\int_0^T C(T')dT'\)；反冲与能量的比例仍相同。这个推广只改变热量，不改变朗伯分布的
+\(2/3\) 因子。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf-7}
+
+无需求冷却时间，也无需知道圆盘面积。净反冲力与总散热功率都正比于
+\(S\sigma T^4\)，二者相除后只剩一个常数。于是整个动力学过程被压缩成``每损失一焦耳内能，圆盘获得多少动量''的能量---动量换算。
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9-7}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  把半球辐射全部当成沿法线传播，直接使用 \(q/c\)；
+\item
+  角积分中只乘一次 \(\cos\theta\)，漏掉动量投影的第二个 \(\cos\theta\)；
+\item
+  立体角微元漏写 \(2\pi\sin\theta\,d\theta\)；
+\item
+  两面总散热功率误写成 \(rq\)，正确是 \((2-r)q\)；
+\item
+  净反冲差误写成 \((1-r)q\)，正确是 \(q-(1-r)q=rq\)；
+\item
+  最后把动量直接当动能，漏写 \(K=p^2/(2m)\)；
+\item
+  忘记检查 \(r=0\) 时结果必须为零。
+\end{enumerate}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae-7}
+
+先用``每束光子的动量是能量除以
+\(c\)''建立微元，再让学生指出为什么总功率积分含一个
+\(\cos\theta\)、法向动量积分含两个。得到 \(2/3\)
+系数后，把净力和总散热功率写成上下两行，让共同因子直接约去。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3-7}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  若两面反射系数分别为 \(r_1\)、\(r_2\)，推广最大动能公式；
+\item
+  若比热容满足 \(C(T)=C_0T^3\)，重新积分最大动量；
+\item
+  若辐射强度角分布正比于 \(\cos^n\theta\)，求法向动量流与总功率之比；
+\item
+  保留宇宙背景温度 \(T_b\)，把冷却终温改为 \(T_b\)；
+\item
+  估计在什么参数范围内非相对论近似 \(p\ll mc\) 会失效。
+\end{enumerate}
+
+第3个变式设 \(d\dot E=A_n\cos^n\theta\,d\Omega\)，其中 \(n>-1\)
+保证总功率积分有限。归一化给
+
+\[q=\frac{2\pi A_n}{n+1},\qquad \dot p_n=\frac{2\pi A_n}{c(n+2)}.\]
+
+所以法向动量与辐射能量之比为 \((n+1)/[(n+2)c]\)。取 \(n=1\) 还原朗伯系数
+\(2/(3c)\)；取 \(n=0\) 得均匀半球方向的 \(1/(2c)\)；\(n\to\infty\)
+时辐射集中于法线附近，系数趋
+\(1/c\)。这三个端点可用于检查积分的权重和归一化。
+
+第2个变式中，\(C(T)=C_0T^3\) 给可释放热量
+
+\[U_0=m\int_0^{T_0}C_0T^3dT=\frac{mC_0T_0^4}{4}.\]
+
+两面仍有相同的角分布，故反冲动量为 \(p=2rU_0/[3(2-r)c]\)，非相对论动能为
+\(p^2/(2m)\)。此时动能随初温的八次方增长，而不是恒比热模型的二次方；变化来自总热量随温度的幂次，不能通过把瞬时比热
+\(C(T_0)\) 直接代入恒比热答案得到。
+
+若两面反射系数分别为 \(r_1,r_2\)，总发射功率正比于
+\(2-r_1-r_2\)，净反冲则正比于
+\(r_2-r_1\)。两者同时等于1时，两面都不辐射，理想模型不发生冷却，不能对零功率套用``冷却到零''的冲量公式。
+\end{document}

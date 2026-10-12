@@ -1,0 +1,1031 @@
+{
+  "passed": true,
+  "groups": [
+    {
+      "set": 52,
+      "question": 1,
+      "section": "worked_case",
+      "passed": true,
+      "checks": {
+        "heights": true,
+        "period": true,
+        "amplitude": true
+      }
+    },
+    {
+      "set": 52,
+      "question": 2,
+      "section": "worked_case",
+      "passed": true,
+      "checks": {
+        "zero_energy": true,
+        "second_derivative": true,
+        "coalescence": true
+      }
+    },
+    {
+      "set": 52,
+      "question": 3,
+      "section": "worked_case",
+      "passed": true,
+      "checks": {
+        "point_scale": true,
+        "arc": true,
+        "rolling_scale": true
+      }
+    },
+    {
+      "set": 52,
+      "question": 4,
+      "section": "worked_case",
+      "passed": true,
+      "checks": {
+        "reversal": true,
+        "energy": true,
+        "equilibrium": true,
+        "frequency": true
+      }
+    },
+    {
+      "set": 52,
+      "question": 5,
+      "section": "worked_case",
+      "passed": true,
+      "checks": {
+        "ring_tilt_larger": true,
+        "unique": true,
+        "friction": true
+      }
+    },
+    {
+      "set": 52,
+      "question": 6,
+      "section": "worked_case",
+      "passed": true,
+      "checks": {
+        "cosine": true,
+        "error": true,
+        "quadratic_improves": true
+      }
+    },
+    {
+      "set": 52,
+      "question": 7,
+      "section": "worked_case",
+      "passed": true,
+      "checks": {
+        "chords": true,
+        "biased_fit": true,
+        "area": true
+      }
+    },
+    {
+      "set": 52,
+      "question": 8,
+      "section": "worked_case",
+      "passed": true,
+      "checks": {
+        "adjacent": true,
+        "low_l": true
+      }
+    },
+    {
+      "set": 51,
+      "question": 2,
+      "section": "worked_case",
+      "passed": true,
+      "checks": {
+        "exact_jump": true,
+        "lead": true,
+        "cycles": true
+      }
+    },
+    {
+      "set": 51,
+      "question": 4,
+      "section": "worked_case",
+      "passed": true,
+      "checks": {
+        "parameter_conversion": true,
+        "frequencies": true,
+        "sum_squares": true
+      }
+    },
+    {
+      "set": 51,
+      "question": 5,
+      "section": "worked_case",
+      "passed": true,
+      "checks": {
+        "laplacian": true,
+        "dissipation": true,
+        "decay_energy": true
+      }
+    },
+    {
+      "set": 51,
+      "question": 7,
+      "section": "worked_case",
+      "passed": true,
+      "checks": {
+        "cusp_x": true,
+        "cusp_y": true,
+        "integrability": true
+      }
+    },
+    {
+      "set": 50,
+      "question": 1,
+      "section": "worked_case",
+      "passed": true,
+      "checks": {
+        "variable_mass_distance": true,
+        "critical_r": true,
+        "half_transfer": true
+      }
+    },
+    {
+      "set": 50,
+      "question": 2,
+      "section": "worked_case",
+      "passed": true,
+      "checks": {
+        "vector_coefficient": true,
+        "sum_coefficient": true
+      }
+    },
+    {
+      "set": 50,
+      "question": 3,
+      "section": "worked_case",
+      "passed": true,
+      "checks": {
+        "flux": true,
+        "radial_energy": true,
+        "threshold": true
+      }
+    },
+    {
+      "set": 50,
+      "question": 4,
+      "section": "worked_case",
+      "passed": true,
+      "checks": {
+        "disk": true,
+        "ring": true,
+        "stopping_time": true
+      }
+    },
+    {
+      "set": 50,
+      "question": 5,
+      "section": "worked_case",
+      "passed": true,
+      "checks": {
+        "mass_modes": true,
+        "new_w_mass": true,
+        "volume": true
+      }
+    },
+    {
+      "set": 50,
+      "question": 6,
+      "section": "worked_case",
+      "passed": true,
+      "checks": {
+        "short_flux": true,
+        "long_limit": true,
+        "count_not_escaped": true
+      }
+    },
+    {
+      "set": 50,
+      "question": 7,
+      "section": "worked_case",
+      "passed": true,
+      "checks": {
+        "partial_width": true,
+        "full_width": true,
+        "edge": true
+      }
+    },
+    {
+      "set": 50,
+      "question": 8,
+      "section": "worked_case",
+      "passed": true,
+      "checks": {
+        "simultaneity": true,
+        "length": true,
+        "finite_limit": true
+      }
+    },
+    {
+      "set": 49,
+      "question": 1,
+      "section": "worked_case",
+      "passed": true,
+      "checks": {
+        "support_separation": true,
+        "outer_bounds": true,
+        "offset_circle": true
+      }
+    },
+    {
+      "set": 49,
+      "question": 2,
+      "section": "worked_case",
+      "passed": true,
+      "checks": {
+        "one_stage": true,
+        "two_stage": true,
+        "three_stage": true
+      }
+    },
+    {
+      "set": 49,
+      "question": 3,
+      "section": "worked_case",
+      "passed": true,
+      "checks": {
+        "symmetry_axis": true,
+        "center": true,
+        "moving_depth": true
+      }
+    },
+    {
+      "set": 49,
+      "question": 4,
+      "section": "worked_case",
+      "passed": true,
+      "checks": {
+        "stick_velocity": true,
+        "slip_sign": true,
+        "slip_normal": true
+      }
+    },
+    {
+      "set": 49,
+      "question": 5,
+      "section": "worked_case",
+      "passed": true,
+      "checks": {
+        "intersection": true,
+        "finite_mirror": true
+      }
+    },
+    {
+      "set": 49,
+      "question": 6,
+      "section": "worked_case",
+      "passed": true,
+      "checks": {
+        "volume_closure": true,
+        "hot_work": true,
+        "cold_work": true
+      }
+    },
+    {
+      "set": 49,
+      "question": 7,
+      "section": "worked_case",
+      "passed": true,
+      "checks": {
+        "center_normal": true,
+        "curvature_distance": true,
+        "charge_reversal": true
+      }
+    },
+    {
+      "set": 49,
+      "question": 8,
+      "section": "worked_case",
+      "passed": true,
+      "checks": {
+        "turning_sum": true,
+        "turning_product": true,
+        "near_speed": true
+      }
+    },
+    {
+      "set": 48,
+      "question": 1,
+      "section": "worked_case",
+      "passed": true,
+      "checks": {
+        "kingpin_torque": true,
+        "caster": true
+      }
+    },
+    {
+      "set": 48,
+      "question": 2,
+      "section": "worked_case",
+      "passed": true,
+      "checks": {
+        "mirror": true,
+        "loss_cone": true,
+        "escaped": true
+      }
+    },
+    {
+      "set": 48,
+      "question": 3,
+      "section": "worked_case",
+      "passed": true,
+      "checks": {
+        "kinetic_weight": true,
+        "potential_weight": true,
+        "zero_net_rotation": true
+      }
+    },
+    {
+      "set": 48,
+      "question": 4,
+      "section": "worked_case",
+      "passed": true,
+      "checks": {
+        "total_entropy": true,
+        "latent_heat": true,
+        "latent_max": true
+      }
+    },
+    {
+      "set": 48,
+      "question": 5,
+      "section": "worked_case",
+      "passed": true,
+      "checks": {
+        "beta_integral": true,
+        "amplitude_scale": true
+      }
+    },
+    {
+      "set": 48,
+      "question": 6,
+      "section": "worked_case",
+      "passed": true,
+      "checks": {
+        "orthonormal": true,
+        "diag_projection": true,
+        "adj_projection": true
+      }
+    },
+    {
+      "set": 48,
+      "question": 7,
+      "section": "worked_case",
+      "passed": true,
+      "checks": {
+        "speed_threshold": true,
+        "period_threshold": true,
+        "exact_equation": true
+      }
+    },
+    {
+      "set": 48,
+      "question": 8,
+      "section": "worked_case",
+      "passed": true,
+      "checks": {
+        "shift_nm": true,
+        "critical": true,
+        "inside_wave_number": true
+      }
+    },
+    {
+      "set": 52,
+      "question": 2,
+      "section": "additional_derivation",
+      "passed": true,
+      "checks": {
+        "radial_ratio": true,
+        "frequency": true
+      }
+    },
+    {
+      "set": 52,
+      "question": 3,
+      "section": "additional_derivation",
+      "passed": true,
+      "checks": {
+        "friction_increases": true,
+        "release_bound": true,
+        "normal_positive": true
+      }
+    },
+    {
+      "set": 52,
+      "question": 7,
+      "section": "additional_derivation",
+      "passed": true,
+      "checks": {
+        "time_gradient": true,
+        "mass_scaling": true
+      }
+    },
+    {
+      "set": 51,
+      "question": 1,
+      "section": "additional_derivation",
+      "passed": true,
+      "checks": {
+        "exact_belt": true,
+        "ratio": true,
+        "length_excess": true
+      }
+    },
+    {
+      "set": 51,
+      "question": 3,
+      "section": "additional_derivation",
+      "passed": true,
+      "checks": {
+        "critical_angle": true,
+        "height": true,
+        "length": true
+      }
+    },
+    {
+      "set": 51,
+      "question": 6,
+      "section": "additional_derivation",
+      "passed": true,
+      "checks": {
+        "first_law": true,
+        "efficiency": true,
+        "original_limit": true
+      }
+    },
+    {
+      "set": 51,
+      "question": 8,
+      "section": "additional_derivation",
+      "passed": true,
+      "checks": {
+        "strict_cutoff": true,
+        "jump_sum": true,
+        "fixed_interval": true
+      }
+    },
+    {
+      "set": 50,
+      "question": 1,
+      "section": "additional_derivation",
+      "passed": true,
+      "checks": {
+        "velocity_equation": true,
+        "stop": true,
+        "distance": true
+      }
+    },
+    {
+      "set": 50,
+      "question": 2,
+      "section": "additional_derivation",
+      "passed": true,
+      "checks": {
+        "radial": true,
+        "tangent": true,
+        "contact_bound": true
+      }
+    },
+    {
+      "set": 50,
+      "question": 3,
+      "section": "additional_derivation",
+      "passed": true,
+      "checks": {
+        "transit_integral": true,
+        "radial_energy": true
+      }
+    },
+    {
+      "set": 50,
+      "question": 4,
+      "section": "additional_derivation",
+      "passed": true,
+      "checks": {
+        "feasible_interval": true,
+        "normal_boundary": true,
+        "all_contacts": true,
+        "no_interval_at_half": true
+      }
+    },
+    {
+      "set": 50,
+      "question": 5,
+      "section": "additional_derivation",
+      "passed": true,
+      "checks": {
+        "total_energy": true,
+        "mode_energy": true,
+        "flow": true
+      }
+    },
+    {
+      "set": 50,
+      "question": 6,
+      "section": "additional_derivation",
+      "passed": true,
+      "checks": {
+        "count_expansion": true,
+        "impulse_expansion": true,
+        "escape_expansion": true
+      }
+    },
+    {
+      "set": 50,
+      "question": 7,
+      "section": "additional_derivation",
+      "passed": true,
+      "checks": {
+        "circle_overlap": true,
+        "full_aperture": true,
+        "visibility": true
+      }
+    },
+    {
+      "set": 50,
+      "question": 8,
+      "section": "additional_derivation",
+      "passed": true,
+      "checks": {
+        "second_order_simultaneity": true,
+        "speed_transform": true
+      }
+    },
+    {
+      "set": 49,
+      "question": 2,
+      "section": "additional_derivation",
+      "passed": true,
+      "checks": {
+        "series_coeff": true,
+        "advantage": true,
+        "limit": true
+      }
+    },
+    {
+      "set": 49,
+      "question": 4,
+      "section": "additional_derivation",
+      "passed": true,
+      "checks": {
+        "restitution": true,
+        "contact_tangent": true,
+        "energy": true,
+        "example": true
+      }
+    },
+    {
+      "set": 49,
+      "question": 6,
+      "section": "additional_derivation",
+      "passed": true,
+      "checks": {
+        "first_law": true,
+        "COP": true,
+        "heat_pump": true,
+        "coordinate": true
+      }
+    },
+    {
+      "set": 49,
+      "question": 7,
+      "section": "additional_derivation",
+      "passed": true,
+      "checks": {
+        "first_branch": true,
+        "ordering": true,
+        "unique_positive": true
+      }
+    },
+    {
+      "set": 49,
+      "question": 8,
+      "section": "additional_derivation",
+      "passed": true,
+      "checks": {
+        "radial_action": true,
+        "factorization": true
+      }
+    },
+    {
+      "set": 48,
+      "question": 1,
+      "section": "additional_derivation",
+      "passed": true,
+      "checks": {
+        "force": true,
+        "yaw": true,
+        "middle": true
+      }
+    },
+    {
+      "set": 48,
+      "question": 2,
+      "section": "additional_derivation",
+      "passed": true,
+      "checks": {
+        "mirror_ratio": true,
+        "inside": true,
+        "frequency": true
+      }
+    },
+    {
+      "set": 48,
+      "question": 3,
+      "section": "additional_derivation",
+      "passed": true,
+      "checks": {
+        "tip_root": true,
+        "period": true,
+        "frequency": true
+      }
+    },
+    {
+      "set": 48,
+      "question": 4,
+      "section": "additional_derivation",
+      "passed": true,
+      "checks": {
+        "heat_capacity_shape": true,
+        "jump": true
+      }
+    },
+    {
+      "set": 48,
+      "question": 5,
+      "section": "additional_derivation",
+      "passed": true,
+      "checks": {
+        "quartic_coefficient": true,
+        "frequency_shift": true
+      }
+    },
+    {
+      "set": 48,
+      "question": 6,
+      "section": "additional_derivation",
+      "passed": true,
+      "checks": {
+        "free_boundary": true,
+        "finite_larger": true,
+        "limit": true
+      }
+    },
+    {
+      "set": 48,
+      "question": 7,
+      "section": "additional_derivation",
+      "passed": true,
+      "checks": {
+        "smooth_series": true,
+        "period_improves": true,
+        "speed_series": true
+      }
+    },
+    {
+      "set": 52,
+      "question": 6,
+      "section": "final_model_check",
+      "passed": true,
+      "checks": {
+        "interior_orders": true,
+        "angles": true
+      }
+    },
+    {
+      "set": 52,
+      "question": 1,
+      "section": "final_model_check",
+      "passed": true,
+      "checks": {
+        "added_mass": true,
+        "narrow_limit": true
+      }
+    },
+    {
+      "set": 52,
+      "question": 4,
+      "section": "final_model_check",
+      "passed": true,
+      "checks": {
+        "turning": true,
+        "cross_barrier": true,
+        "period": true
+      }
+    },
+    {
+      "set": 52,
+      "question": 8,
+      "section": "final_model_check",
+      "passed": true,
+      "checks": {
+        "circular_relativistic": true,
+        "speed_condition": true
+      }
+    },
+    {
+      "set": 51,
+      "question": 2,
+      "section": "final_model_check",
+      "passed": true,
+      "checks": {
+        "recurrence": true,
+        "cycles": true,
+        "integer_reaches": true
+      }
+    },
+    {
+      "set": 51,
+      "question": 4,
+      "section": "final_model_check",
+      "passed": true,
+      "checks": {
+        "characteristic": true,
+        "growth": true,
+        "cycle_growth": true
+      }
+    },
+    {
+      "set": 51,
+      "question": 5,
+      "section": "final_model_check",
+      "passed": true,
+      "checks": {
+        "common_mode": true,
+        "decay_mode": true,
+        "charge": true,
+        "remaining_energy": true
+      }
+    },
+    {
+      "set": 51,
+      "question": 7,
+      "section": "final_model_check",
+      "passed": true,
+      "checks": {
+        "second_reflection": true,
+        "explicit_direction": true
+      }
+    },
+    {
+      "set": 50,
+      "question": 7,
+      "section": "final_model_check",
+      "passed": true,
+      "checks": {
+        "parallel_beam": true,
+        "pupil_image": true,
+        "pupil_relation": true
+      }
+    },
+    {
+      "set": 49,
+      "question": 3,
+      "section": "final_model_check",
+      "passed": true,
+      "checks": {
+        "nonstationary_bernoulli": true
+      }
+    },
+    {
+      "set": 49,
+      "question": 5,
+      "section": "final_model_check",
+      "passed": true,
+      "checks": {
+        "intersection": true,
+        "reflection": true,
+        "valid_ray": true
+      }
+    },
+    {
+      "set": 48,
+      "question": 8,
+      "section": "final_model_check",
+      "passed": true,
+      "checks": {
+        "penetration": true,
+        "shift": true
+      }
+    },
+    {
+      "set": 48,
+      "question": 6,
+      "section": "final_model_check",
+      "passed": true,
+      "checks": {
+        "finite_node": true,
+        "residual": true,
+        "power": true,
+        "error": true
+      }
+    },
+    {
+      "set": 48,
+      "question": 3,
+      "section": "final_model_check",
+      "passed": true,
+      "checks": {
+        "tip_orthogonality": true
+      }
+    },
+    {
+      "set": 51,
+      "question": 4,
+      "section": "last_derivation",
+      "passed": true,
+      "checks": {
+        "eigenvector": true,
+        "generalized": true
+      }
+    },
+    {
+      "set": 51,
+      "question": 5,
+      "section": "last_derivation",
+      "passed": true,
+      "checks": {
+        "first_equation": true,
+        "second_equation": true,
+        "charge": true,
+        "heat": true
+      }
+    },
+    {
+      "set": 51,
+      "question": 6,
+      "section": "last_derivation",
+      "passed": true,
+      "checks": {
+        "entropy": true,
+        "lost_work": true
+      }
+    },
+    {
+      "set": 50,
+      "question": 8,
+      "section": "last_derivation",
+      "passed": true,
+      "checks": {
+        "clocks": true,
+        "positive_clock_difference": true
+      }
+    },
+    {
+      "set": 50,
+      "question": 8,
+      "section": "rigid_model",
+      "passed": true,
+      "checks": {
+        "time_metric": true,
+        "space_metric": true,
+        "cross_metric": true
+      }
+    },
+    {
+      "set": 49,
+      "question": 1,
+      "section": "last_derivation",
+      "passed": true,
+      "checks": {
+        "road_family": true,
+        "offset_circle": true,
+        "positive_offsets": true
+      }
+    },
+    {
+      "set": 49,
+      "question": 8,
+      "section": "last_derivation",
+      "passed": true,
+      "checks": {
+        "orbit_differentiation": true
+      }
+    },
+    {
+      "set": 48,
+      "question": 5,
+      "section": "last_derivation",
+      "passed": true,
+      "checks": {
+        "sixth_coefficient": true,
+        "frequency": true
+      }
+    },
+    {
+      "set": 48,
+      "question": 6,
+      "section": "last_derivation",
+      "passed": true,
+      "checks": {
+        "energy_laplacian": true,
+        "grounded_positive": true,
+        "gauge": true
+      }
+    },
+    {
+      "set": 52,
+      "question": 3,
+      "section": "general_rolling_variant",
+      "passed": true,
+      "checks": {
+        "ring_radius": true,
+        "sphere_radius": true,
+        "friction": true
+      }
+    },
+    {
+      "set": 51,
+      "question": 3,
+      "section": "helix_tension",
+      "passed": true,
+      "checks": {
+        "integrated_budget": true,
+        "ratio": true,
+        "circle_ratio": true
+      }
+    },
+    {
+      "set": 51,
+      "question": 8,
+      "section": "smooth_cutoff",
+      "passed": true,
+      "checks": {
+        "derivative": true,
+        "series": true,
+        "series_next": true,
+        "sum_numeric": true
+      }
+    },
+    {
+      "set": 50,
+      "question": 7,
+      "section": "general_apertures",
+      "passed": true,
+      "checks": {
+        "visible_at_three": true,
+        "full_at_three": true,
+        "switch": true,
+        "both_boundaries": true
+      }
+    },
+    {
+      "set": 48,
+      "question": 6,
+      "section": "finite_recurrence_bound",
+      "passed": true,
+      "checks": {
+        "fixed_point": true,
+        "error_bounds": true
+      }
+    },
+    {
+      "set": 52,
+      "question": 2,
+      "section": "general_negative_energy",
+      "passed": true,
+      "checks": {
+        "elimination": true,
+        "count": true
+      }
+    },
+    {
+      "set": 51,
+      "question": 1,
+      "section": "exact_belt_derivatives",
+      "passed": true,
+      "checks": {
+        "first_1": true,
+        "first_2": true,
+        "hessian": true
+      }
+    },
+    {
+      "set": 48,
+      "question": 3,
+      "section": "tip_energy_identity",
+      "passed": true,
+      "checks": {
+        "stiffness_mass": true,
+        "boundary": true
+      }
+    },
+    {
+      "set": 49,
+      "question": 7,
+      "section": "time_parameter",
+      "passed": true,
+      "checks": {
+        "spiral": true,
+        "speed_squared": true,
+        "outward": true
+      }
+    }
+  ],
+  "script_sha256": "9cd5e9ae9ace365acc3704a1b447749fc33477f76b1cbb018b1530f8e104b1ff",
+  "note": "36项带解示例与27项补充推导和14项末轮模型检验和9项后续推导及5项收尾变式和4项终稿推导的关键关系交叉核验；非全文自动证明，不改变道路全局最优、双镜可见性和题面模型歧义的未证范围。"
+}

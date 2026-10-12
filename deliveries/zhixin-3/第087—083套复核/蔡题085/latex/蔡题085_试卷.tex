@@ -1,0 +1,303 @@
+\documentclass[12pt,a4paper,UTF8]{ctexart}
+\usepackage[a4paper,top=22mm,bottom=22mm,left=22mm,right=22mm,headheight=15pt]{geometry}
+\usepackage{amsmath,amssymb,mathtools,bm}
+\usepackage{graphicx,xcolor,booktabs,longtable,array,enumitem,fancyhdr,caption,float,microtype,setspace}
+\usepackage[hidelinks,unicode]{hyperref}
+\usepackage[most]{tcolorbox}
+\definecolor{ContestBlue}{HTML}{17365D}
+\hypersetup{pdftitle={第085套},pdfauthor={}}
+\setstretch{1.24}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.35em}
+\setlength{\emergencystretch}{2em}
+\setlist{itemsep=0.35em,topsep=0.4em}
+\captionsetup{font=small,labelfont=bf,justification=centering}
+\setcounter{secnumdepth}{0}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small 第085套}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\ctexset{
+  section={format=\Large\bfseries\color{ContestBlue},beforeskip=1.2em,afterskip=0.7em},
+  subsection={format=\large\bfseries\color{ContestBlue},beforeskip=1.0em,afterskip=0.5em},
+  subsubsection={format=\normalsize\bfseries,beforeskip=0.8em,afterskip=0.35em}
+}
+\makeatletter
+\newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\newcommand{\maxwidth}{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\newcommand{\maxheight}{\ifdim\Gin@nat@height>0.72\textheight 0.72\textheight\else\Gin@nat@height\fi}
+\newcommand{\pandocbounded}[1]{\begingroup\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}#1\endgroup}
+\makeatother
+\begin{document}
+\begin{titlepage}
+  \centering
+  \vspace*{58mm}
+  {\Huge\bfseries\color{ContestBlue} 第085套\par}
+  \vfill
+  \vspace*{28mm}
+\end{titlepage}
+\section{第 1 题}\label{ux7b2c-1-ux9898}
+
+质量为 \(m\) 的小猪位于质量为 \(M\)、车内长度为 \(l\)
+的光滑小车中。小猪受到大小恒为
+\(F\)、方向向右的外力，系统由静止开始运动，地面光滑。小猪与车壁碰撞的恢复系数为
+\(e\)。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  当 \(e=1\) 时，求任意时刻 \(t\) 小猪的速度；
+\item
+  当 \(e<1\) 时，求经过多长时间系统达到稳定状态；
+\item
+  在第（2）问条件下，画出质心速度 \(v_C\)
+  随时间变化的图像，以及小猪相对质心的速度 \(w=v_m-v_C\)
+  随时间变化的图像；
+\item
+  已知第二次碰撞后小猪的速度恰好为零，求恢复系数 \(e\)；
+\item
+  在第（4）问条件下，求系统达到稳定状态前小猪走过的总路程，注意所求不是位移。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.823\linewidth,height=\textheight,keepaspectratio,alt={图 1-1　受恒力小猪在光滑小车内的初始状态。}]{../figures/question-01.pdf}
+\caption*{图 1-1　受恒力小猪在光滑小车内的初始状态。}
+\end{figure}
+
+\newpage
+
+\section{第 2 题}\label{ux7b2c-2-ux9898}
+
+建立如图所示的 \(x\) 轴。平行板电容器极板面积为 \(S\)、板间距为
+\(d\)，且 \(\sqrt S\gg d\)，可以忽略边缘效应。板间充满相对介电常量
+
+\[
+\varepsilon_r(x)=\alpha x+\beta
+\]
+
+的非均匀介质，其中 \(\alpha,\beta\) 均为正数。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  求电容 \(C_1\)；
+\item
+  左极板接地，右极板接电压 \(U\)，求 \(x=0\) 处的极化面电荷密度
+  \(\sigma_p(0)\)；
+\item
+  求 \(x=d\) 处的极化面电荷密度 \(\sigma_p(d)\)；
+\item
+  求介质内部的极化体电荷密度 \(\rho_p(x)\)。
+\end{enumerate}
+
+参数为
+
+\[
+\alpha=168\,\mathrm{m^{-1}},\quad
+d=0.010\,\mathrm m,\quad
+\beta=1.16,\quad
+S=7.75\,\mathrm{m^2},
+\]
+
+\[
+U=940\,\mathrm V,\qquad
+\varepsilon_0=8.85\times10^{-12}\,\mathrm{F/m}.
+\]
+
+计算体极化电荷密度时取 \(x=0.00378\,\mathrm m\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.804\linewidth,height=\textheight,keepaspectratio,alt={图 2-1　介电常量沿板间方向线性变化的平行板电容器。}]{../figures/question-02.pdf}
+\caption*{图 2-1　介电常量沿板间方向线性变化的平行板电容器。}
+\end{figure}
+
+\newpage
+
+\section{第 3 题}\label{ux7b2c-3-ux9898}
+
+在一个足够大的水平圆盘上均匀铺一层半径为 \(R_0\)
+的砂子，初始面积数密度为 \(\sigma(r)=\sigma_0\)。砂子与圆盘的摩擦因数为
+\(\mu\)，忽略空气阻力。圆盘从静止开始以不小于零的加速度 \(a\) 沿 \(z\)
+轴正方向运动，同时以恒定角加速度 \(\beta\) 转动。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  为保证在时刻 \(t\) 以前砂子与圆盘不发生相对滑动，求 \(a\) 的最小值
+  \(a_0\)；
+\item
+  取 \(a>a_0\) 完成上述运动。时刻 \(t\) 后突然使圆盘下降 \(h\)
+  并静止，求砂子落下刚接触圆盘时的面积数密度；
+\item
+  假设砂子与圆盘的法向碰撞完全非弹性，并考虑碰撞冲量所能提供的切向摩擦冲量以及碰后的滑动，求砂子全部静止后的面积数密度。若反函数导致高阶方程不能显式求解，可给出清楚的隐式结果。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图 3-1　水平圆盘上砂层的竖直加速与转动。}]{../figures/question-03.pdf}
+\caption*{图 3-1　水平圆盘上砂层的竖直加速与转动。}
+\end{figure}
+
+\newpage
+
+\section{第 4 题}\label{ux7b2c-4-ux9898}
+
+先在真空中用表面张力系数为 \(\sigma\) 的肥皂水吹成一个半径为 \(a\)
+的肥皂泡。随后用细管在该泡内再吹一个小气泡，直到内、外两泡半径之比为
+\(1:2\)。整个过程温度保持为 \(T_0\)，气体视为理想气体，摩尔气体常量为
+\(R\)。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  求初态气泡内压强和气体摩尔数；
+\item
+  求末态外层气泡的半径和其内部环形区域气体的压强；
+\item
+  求末态内层气泡的压强和其中气体的摩尔数。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.752\linewidth,height=\textheight,keepaspectratio,alt={图 4-1　单层肥皂泡与同心双层肥皂泡。}]{../figures/question-04.pdf}
+\caption*{图 4-1　单层肥皂泡与同心双层肥皂泡。}
+\end{figure}
+
+\newpage
+
+\section{第 5 题}\label{ux7b2c-5-ux9898}
+
+同高的 \(A\)、\(B\) 两点之间连有一根细钢丝，\(|AB|=l\)，钢丝总长略大于
+\(l\)。质量为 \(m\) 的黄侃骑独轮车在钢丝上表演。当他行至钢丝总长的
+\(1/3\) 处时，钢丝最低点与直线 \(AB\) 的高度差为 \(h\)，且 \(h\ll l\)。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  为保持平衡，他至少应给车轮多大的力矩？假设人的重心在车轮正上方，车轮半径为
+  \(r\)，且 \(r\ll l\)；
+\item
+  为使车轮不相对钢丝滑动，人与钢丝间至少应有多大的摩擦因数？
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图 5-1　独轮车位于钢丝三分点附近时的几何位置。}]{../figures/question-05.pdf}
+\caption*{图 5-1　独轮车位于钢丝三分点附近时的几何位置。}
+\end{figure}
+
+\newpage
+
+\section{第 6 题}\label{ux7b2c-6-ux9898}
+
+一个薄凸透镜紧贴着一面平面反射镜放置。直角梯形 \(ABCD\) 的边 \(AB\)
+位于主光轴上，经该光学系统成像后恰好得到正方形
+\(A'B'C'D'\)。已知梯形较长的底边 \(AB\) 长为 \(l\)。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  连接 \(CA\) 与 \(AC'\)，求不大于 \(180^\circ\) 的角 \(\angle CAC'\)；
+\item
+  若 \(A\) 到光心 \(O\) 的距离是 \(B'\) 到 \(O\) 距离的 \(1.5\)
+  倍，求正方形边长和透镜焦距 \(f\)。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.609\linewidth,height=\textheight,keepaspectratio,alt={图 6-1　直角梯形经凸透镜---平面镜组合成正方形。}]{../figures/question-06.pdf}
+\caption*{图 6-1　直角梯形经凸透镜---平面镜组合成正方形。}
+\end{figure}
+
+\newpage
+
+\section{第 7 题}\label{ux7b2c-7-ux9898}
+
+一块可视为无限大的水平金属平板上方，高度为 \(h\) 处有一点电荷 \(q\)。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  求静电平衡时，平板上距垂足为 \(r\) 处的感应电荷面密度 \(\sigma(r)\)；
+\item
+  点电荷以很小的速度 \(v\)
+  竖直向上运动，并可认为每一时刻平板都处于准静电平衡。求金属板上感应电荷移动形成的径向线电流密度
+  \(\alpha(r)\)；
+\item
+  空间中存在竖直向下、大小随半径变化为 \(B(r)=A/r^2\)
+  的磁场。求感应电荷运动所形成电流受到的安培力对垂直轴的总力矩 \(M\)。
+\end{enumerate}
+
+题目给出积分公式
+
+\[
+\int\frac{x\,\mathrm dx}{(x^2+a^2)^{3/2}}
+=-\frac1{\sqrt{x^2+a^2}}+C.
+\]
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.845\linewidth,height=\textheight,keepaspectratio,alt={图 7-1　无限导体平面上方的运动点电荷与轴对称感应电荷。}]{../figures/question-07.pdf}
+\caption*{图 7-1　无限导体平面上方的运动点电荷与轴对称感应电荷。}
+\end{figure}
+
+\newpage
+
+\section{第 8 题}\label{ux7b2c-8-ux9898}
+
+在狭义相对论框架下考虑一种理想化的``链式反应''。某原子的基态与第一激发态（亚稳态）之间的能级差为
+\(\Delta E_1\)，第一激发态与第二激发态之间的能级差为
+\(\Delta E_2\)。原子处于基态时的静止质量为
+\(m\)。计算中不使用不同能级静止质量之间的小量近似，并采用理想化场景。
+
+现有频率为 \(\nu_0\)、沿 \(+x\) 方向传播的光子，满足
+
+\[
+h\nu_0=\Delta E_1+\Delta E_2.
+\]
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  第一激发态原子也沿 \(+x\)
+  方向运动。求使它吸收该光子后跃迁至第二激发态所需的入射速度 \(v_0/c\)；
+\item
+  求吸收光子后原子的速度 \(v_0'/c\)；
+\item
+  第二激发态原子沿 \(+x\) 方向以 \(v_1\) 运动，随后跃迁回基态，并沿
+  \(+x\) 方向发出频率为 \(\nu_0\) 的光子。求 \(v_1/c\)；
+\item
+  求发射光子后基态原子的速度 \(v_1'/c\)。
+\end{enumerate}
+
+参数为
+
+\[
+m=2.45\times10^{-26}\,\mathrm{kg},
+\qquad
+c=3.0\times10^8\,\mathrm{m/s},
+\]
+
+\[
+\Delta E_1=8.31\times10^{-19}\,\mathrm J,
+\qquad
+\Delta E_2=2.95\times10^{-19}\,\mathrm J.
+\]
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图 8-1　同向传播的光子与运动原子的吸收、发射过程。}]{../figures/question-08.pdf}
+\caption*{图 8-1　同向传播的光子与运动原子的吸收、发射过程。}
+\end{figure}
+\end{document}

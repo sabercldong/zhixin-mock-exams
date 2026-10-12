@@ -1,0 +1,112 @@
+\documentclass[tikz,border=5pt]{standalone}
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath,amssymb}
+\usetikzlibrary{arrows.meta,calc,angles,quotes}
+\definecolor{ink}{HTML}{243447}\definecolor{blue}{HTML}{2765A2}
+\definecolor{green}{HTML}{3F7D5B}\definecolor{red}{HTML}{B74739}
+\tikzset{body/.style={draw=ink,thick},vec/.style={draw=blue,thick,-{Latex}},dim/.style={ink,{Latex}-{Latex}},guide/.style={gray!70,dashed},line cap=round,line join=round}
+\begin{document}
+% 题设俯视图：按跳跃次序跨过一个顶点，而非正五边形。
+\begin{tikzpicture}
+  \draw[body] (0,0)--(3.2,0)--(3.2,3.7);
+  \fill[blue!8] (3.2,0) rectangle(3.4,3.7);
+  \fill[ink] (2.8,.2) circle(2pt);
+  \draw[vec] (2.8,.2)--(3.05,.75) node[left]{$\boldsymbol v_1$};
+  \draw[green,thick,-{Latex}] (3.05,.75)--(3.05,2.2) node[left]{$V$};
+  \draw[guide] (0,3.7)--(3.2,3.7);
+  \draw[dim] (-.4,0)--(-.4,3.7) node[midway,left]{$h$};
+  \node at (1.6,-.6) {（a）井底边缘};
+  \begin{scope}[xshift=6.5cm,yshift=1.6cm]
+    \draw[body] (0,0) circle(1.8);
+    \foreach \i in {0,...,4}{\coordinate(P\i) at ({1.8*cos(90+72*\i)},{1.8*sin(90+72*\i)});}
+    \draw[blue,thick] (P0)--(P2)--(P4)--(P1)--(P3)--cycle;
+    \draw[vec] (0,0)--(P0) node[midway,right]{$r$};
+    \fill[ink] (0,0) circle(1.5pt);\node[below left] at(0,0){$O$};
+    \node at (0,-2.2) {（b）水平投影};
+  \end{scope}
+\end{tikzpicture}
+% 同一墙面的内法线始终朝左；第一次水平速度朝墙。
+\begin{tikzpicture}
+  \draw[body] (-.4,0)--(2.4,0);\fill[blue!6](-.4,-.18)rectangle(2.4,0);
+  \coordinate(P) at(0,.25);\fill[ink](P)circle(2pt);
+  \draw[vec](P)--(1.5,.25) node[midway,below]{$mx$};
+  \draw[vec](P)--(0,1.8) node[midway,left]{$my$};
+  \draw[green,thick,-{Latex}](P)--(1.5,1.8) node[above right]{$\boldsymbol J_f$};
+  \draw[guide](1.5,.25)--(1.5,1.8)--(0,1.8);
+  \node at(1,-.7){地面：法向向上};
+  \begin{scope}[xshift=6cm]
+    \draw[body](1.6,-.3)--(1.6,2.6);\fill[blue!6](1.6,-.3)rectangle(1.8,2.6);
+    \coordinate(Q)at(1.4,.3);\fill[ink](Q)circle(2pt);
+    \draw[vec](Q)--(-.2,.3)node[midway,below]{$-mx$};
+    \draw[vec](Q)--(1.4,1.9)node[midway,right]{$md$};
+    \draw[green,thick,-{Latex}](Q)--(-.2,1.9)node[above left]{$\boldsymbol J_w$};
+    \draw[guide](-.2,.3)--(-.2,1.9)--(1.4,1.9);
+    \node at(.6,-.7){井壁：内法向向左};
+  \end{scope}
+\end{tikzpicture}
+% 一元优化：绿色最优点位于真实可行区间，不延伸非最优摩擦边界。
+\begin{tikzpicture}[x=4cm,y=2cm]
+  \foreach \m/\shift in {.5/0,2/1.6}{
+    \begin{scope}[xshift=\shift*4cm]
+      \pgfmathsetmacro{\xf}{\m/sqrt(1+\m*\m)}
+      \pgfmathsetmacro{\xc}{1/sqrt(1+\m*\m)}
+      \pgfmathsetmacro{\opt}{min(\xf,\xc)}
+      \pgfmathsetmacro{\endone}{min(\xf,\xc)}
+      \draw[vec](0,0)--(1.03,0)node[right]{$x/v_0$};
+      \draw[vec](0,0)--(0,2.08)node[above]{$V/v_0$};
+      \draw[blue,very thick,domain=0:\endone,samples=60]plot(\x,{sqrt(1-\x*\x)+\m*\x});
+      \ifdim\m pt>1pt
+        \draw[red,very thick,domain=\xc:\xf,samples=60]plot(\x,{2*sqrt(1-\x*\x)});
+      \fi
+      \pgfmathsetmacro{\val}{sqrt(1-\opt*\opt)+min(\m*\opt,sqrt(1-\opt*\opt))}
+      \draw[guide](\opt,0)--(\opt,\val);\fill[green](\opt,\val)circle(2pt);
+      \node[green,above right]at(\opt,\val){最优};
+      \node[below]at(\xf,0){$x_f/v_0$};
+      \ifdim\m pt>1pt\node[below]at(\xc,0){$x_c/v_0$};\fi
+      \node at(.5,-.55){$\mu=\m$};
+    \end{scope}
+  }
+\end{tikzpicture}
+% 五角星一段弦与内法线的18度；作用点为A。
+\begin{tikzpicture}
+  \coordinate(O)at(0,0);\coordinate(A)at(0,2);
+  \coordinate(B)at({2*cos(234)},{2*sin(234)});
+  \draw[body](O)circle(2);\fill[ink](O)circle(1.5pt);\node[right]at(O){$O$};
+  \foreach\i in{0,...,4}{\coordinate(P\i)at({2*cos(90+72*\i)},{2*sin(90+72*\i)});}
+  \draw[gray!55](P0)--(P2)--(P4)--(P1)--(P3)--cycle;
+  \draw[green,very thick](A)--(B);\draw[guide](A)--(O)--(B);
+  \node[above]at(A){$A$};\node[below left]at(B){$B$};
+  \draw[vec](A)--(0,.7);\node[right]at(.1,1.6){法线};
+  \draw[vec](A)--({.45*2*cos(234)},{2+.45*(2*sin(234)-2)});
+  \node[left]at(-.3,1.45){$u$};
+  \draw[blue](0,1.35)arc[start angle=270,end angle=252,radius=.65];
+  \draw[guide](-.1,1.36)--(.3,.65);
+  \node[blue,right]at(.3,.65){$\alpha=18^\circ$};
+  \draw[ink](0,.6)arc[start angle=90,end angle=234,radius=.6];
+  \node at(-.92,.45){$144^\circ$};
+  \node[right]at(2.6,.5){$AB=2r\cos18^\circ$};
+  \node[right]at(2.6,-.2){$u_n=u\cos18^\circ$};
+\end{tikzpicture}
+% 透明/剖开的空间井壁：抛物线端点同高，中段拱起。
+\begin{tikzpicture}[x={(1cm,0)},y={(0,.32cm)},z={(0,1cm)}]
+  \draw[body,domain=0:360,samples=90]plot({2*cos(\x)},{2*sin(\x)},2.5);
+  \draw[guide,domain=0:360,samples=90]plot({2*cos(\x)},{2*sin(\x)},0);
+  \draw[body](-2,0,0)--(-2,0,2.5)(2,0,0)--(2,0,2.5);
+  \foreach\j in{0,...,4}{
+    \pgfmathsetmacro{\xa}{2*cos(90+144*\j)}\pgfmathsetmacro{\ya}{2*sin(90+144*\j)}
+    \pgfmathsetmacro{\xb}{2*cos(90+144*(\j+1))}\pgfmathsetmacro{\yb}{2*sin(90+144*(\j+1))}
+    \draw[blue,very thick,domain=0:1,samples=55]plot({(1-\x)*\xa+\x*\xb},{(1-\x)*\ya+\x*\yb},{.4+4*1.15*\x*(1-\x)});
+    \fill[green](\xa,\ya,.4)circle(2pt);
+  }
+  \node at(0,0,-1){井壁剖开，端点同高};
+  \begin{scope}[xshift=5cm]
+    \draw[vec](0,0,0)--(3.2,0,0)node[right]{$t$};
+    \draw[vec](0,0,0)--(0,0,2.2)node[above]{$z$};
+    \draw[blue,very thick,domain=0:2.8,samples=65]plot(\x,0,{.77*\x*(2.8-\x)});
+    \node[below]at(2.8,0,0){$T=2w/g$};
+    \draw[guide](1.4,0,0)--(1.4,0,1.5092);
+    \node[above]at(1.4,0,1.51){$w^2/(2g)$};
+    \draw[vec](0,0,.15)--(.45,0,1.05)node[left]{$w$};
+  \end{scope}
+\end{tikzpicture}
+\end{document}

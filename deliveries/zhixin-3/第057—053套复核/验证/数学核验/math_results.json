@@ -1,0 +1,438 @@
+{
+  "passed": true,
+  "groups": [
+    {
+      "set": 57,
+      "question": 1,
+      "passed": true,
+      "checks": [
+        "contact",
+        "minimum",
+        "energy_stationary",
+        "energy_minimum"
+      ]
+    },
+    {
+      "set": 57,
+      "question": 2,
+      "passed": true,
+      "checks": [
+        "potential_quadratic",
+        "potential_quartic",
+        "mass",
+        "mass_quadratic",
+        "frequency_ratio"
+      ]
+    },
+    {
+      "set": 57,
+      "question": 3,
+      "passed": true,
+      "checks": [
+        "threshold",
+        "intersection",
+        "finite_rod",
+        "not_tangent"
+      ]
+    },
+    {
+      "set": 57,
+      "question": 4,
+      "passed": true,
+      "checks": [
+        "first_group",
+        "nine_groups",
+        "ten_group"
+      ]
+    },
+    {
+      "set": 57,
+      "question": 5,
+      "passed": true,
+      "checks": [
+        "peak",
+        "unstable",
+        "speed_energy",
+        "ring_plane"
+      ]
+    },
+    {
+      "set": 57,
+      "question": 6,
+      "passed": true,
+      "checks": [
+        "force",
+        "radial_mode",
+        "scaling"
+      ]
+    },
+    {
+      "set": 57,
+      "question": 7,
+      "passed": true,
+      "checks": [
+        "epicyclic",
+        "poisson",
+        "uniform_core"
+      ]
+    },
+    {
+      "set": 57,
+      "question": 8,
+      "passed": true,
+      "checks": [
+        "number",
+        "electric_dipole",
+        "current_moment",
+        "left_velocity"
+      ]
+    },
+    {
+      "set": 56,
+      "question": 1,
+      "passed": true,
+      "checks": [
+        "common_density",
+        "ground_velocity_sum",
+        "acceleration_rotation"
+      ]
+    },
+    {
+      "set": 56,
+      "question": 2,
+      "passed": true,
+      "checks": [
+        "efficiency",
+        "maximum_work",
+        "optimal_work"
+      ]
+    },
+    {
+      "set": 56,
+      "question": 3,
+      "passed": true,
+      "checks": [
+        "friction_bounds",
+        "slopes",
+        "stop",
+        "locked"
+      ]
+    },
+    {
+      "set": 56,
+      "question": 4,
+      "passed": true,
+      "checks": [
+        "triangle_root",
+        "dimensionless_period",
+        "square_axis",
+        "no_general_upper_bound_claim"
+      ]
+    },
+    {
+      "set": 56,
+      "question": 5,
+      "passed": true,
+      "checks": [
+        "energy_balance",
+        "positive_root",
+        "reciprocal_energy_condition"
+      ]
+    },
+    {
+      "set": 56,
+      "question": 6,
+      "passed": true,
+      "checks": [
+        "outgoing",
+        "return_time",
+        "simultaneous_identity"
+      ]
+    },
+    {
+      "set": 56,
+      "question": 7,
+      "passed": true,
+      "checks": [
+        "commuting",
+        "A_image",
+        "B_image"
+      ]
+    },
+    {
+      "set": 56,
+      "question": 8,
+      "passed": true,
+      "checks": [
+        "recurrence",
+        "R2",
+        "potentials",
+        "reciprocity"
+      ]
+    },
+    {
+      "set": 55,
+      "question": 1,
+      "passed": true,
+      "checks": [
+        "initial_velocity",
+        "lorentz",
+        "constant_speed"
+      ]
+    },
+    {
+      "set": 55,
+      "question": 2,
+      "passed": true,
+      "checks": [
+        "mirror_displacement",
+        "spacing",
+        "measured_wavelength",
+        "beat_frequency"
+      ]
+    },
+    {
+      "set": 55,
+      "question": 3,
+      "passed": true,
+      "checks": [
+        "norm",
+        "sample",
+        "angular"
+      ]
+    },
+    {
+      "set": 55,
+      "question": 4,
+      "passed": true,
+      "checks": [
+        "zero_location",
+        "peak",
+        "sample_peak",
+        "compression_threshold"
+      ]
+    },
+    {
+      "set": 55,
+      "question": 5,
+      "passed": true,
+      "checks": [
+        "final_image",
+        "virtual_sample",
+        "parallel",
+        "equal_distances"
+      ]
+    },
+    {
+      "set": 55,
+      "question": 6,
+      "passed": true,
+      "checks": [
+        "outside_time",
+        "inside_time",
+        "potential_C1",
+        "gravity_surface_charge"
+      ]
+    },
+    {
+      "set": 55,
+      "question": 7,
+      "passed": true,
+      "checks": [
+        "rod_inertias",
+        "equal_omega",
+        "linear_impulse",
+        "center_of_percussion"
+      ]
+    },
+    {
+      "set": 55,
+      "question": 8,
+      "passed": true,
+      "checks": [
+        "null",
+        "aberration",
+        "simultaneity",
+        "time"
+      ]
+    },
+    {
+      "set": 54,
+      "question": 1,
+      "passed": true,
+      "checks": [
+        "length",
+        "moment",
+        "geometry"
+      ]
+    },
+    {
+      "set": 54,
+      "question": 2,
+      "passed": true,
+      "checks": [
+        "matrix_positive",
+        "no_stick",
+        "normal_Newton",
+        "energy_restoration",
+        "geometry",
+        "energy_sign"
+      ]
+    },
+    {
+      "set": 54,
+      "question": 3,
+      "passed": true,
+      "checks": [
+        "efficiency",
+        "entropy",
+        "small_cycle"
+      ]
+    },
+    {
+      "set": 54,
+      "question": 4,
+      "passed": true,
+      "checks": [
+        "H2x",
+        "H2y",
+        "centroid",
+        "centroid_moment",
+        "square_limit"
+      ]
+    },
+    {
+      "set": 54,
+      "question": 5,
+      "passed": true,
+      "checks": [
+        "high_network",
+        "low_network",
+        "high_poles",
+        "phase_sign"
+      ]
+    },
+    {
+      "set": 54,
+      "question": 6,
+      "passed": true,
+      "checks": [
+        "average_p4",
+        "splitting",
+        "nonrelativistic"
+      ]
+    },
+    {
+      "set": 54,
+      "question": 7,
+      "passed": true,
+      "checks": [
+        "shoelace",
+        "Jacobian",
+        "all_real"
+      ]
+    },
+    {
+      "set": 54,
+      "question": 8,
+      "passed": true,
+      "checks": [
+        "maximum",
+        "linear",
+        "softening",
+        "threshold"
+      ]
+    },
+    {
+      "set": 53,
+      "question": 1,
+      "passed": true,
+      "checks": [
+        "energy",
+        "second_turning",
+        "sample_geometry",
+        "mass",
+        "period_squared"
+      ]
+    },
+    {
+      "set": 53,
+      "question": 2,
+      "passed": true,
+      "checks": [
+        "dry_torque",
+        "dry_force",
+        "viscous",
+        "pressure"
+      ]
+    },
+    {
+      "set": 53,
+      "question": 3,
+      "passed": true,
+      "checks": [
+        "magnetic_inertia",
+        "Poynting",
+        "Faraday_continuity"
+      ]
+    },
+    {
+      "set": 53,
+      "question": 4,
+      "passed": true,
+      "checks": [
+        "crossed_impedance",
+        "series_current",
+        "real_power"
+      ]
+    },
+    {
+      "set": 53,
+      "question": 5,
+      "passed": true,
+      "checks": [
+        "normalization",
+        "mean",
+        "variance",
+        "conditionals",
+        "mode"
+      ]
+    },
+    {
+      "set": 53,
+      "question": 6,
+      "passed": true,
+      "checks": [
+        "same_phase",
+        "work_impulse",
+        "force",
+        "exact_half"
+      ]
+    },
+    {
+      "set": 53,
+      "question": 7,
+      "passed": true,
+      "checks": [
+        "external_sample",
+        "internal_sample",
+        "magnifications",
+        "reduced_ray"
+      ]
+    },
+    {
+      "set": 53,
+      "question": 8,
+      "passed": true,
+      "checks": [
+        "zero_time",
+        "monotone",
+        "min_acceleration",
+        "torque",
+        "angular_impulse"
+      ]
+    }
+  ],
+  "script_sha256": "0db13c9c36f213a1a80d054a6c708a11cf7a1ab41133587262848fdba45bd161",
+  "scope": "关键关系的独立符号或数值核验；不等同于证明一般多边形平衡点上界。"
+}

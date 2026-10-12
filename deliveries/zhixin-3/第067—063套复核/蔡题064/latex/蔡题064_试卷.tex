@@ -1,0 +1,251 @@
+\documentclass[12pt,a4paper,UTF8]{ctexart}
+\usepackage[a4paper,top=22mm,bottom=22mm,left=22mm,right=22mm,headheight=15pt]{geometry}
+\newcommand{\Needspace}[1]{\par\begingroup\dimen0=#1\relax\dimen2=\pagegoal\advance\dimen2 by-\pagetotal\ifdim\dimen0>\dimen2\newpage\fi\endgroup}
+\newcommand{\needspace}[1]{\par\begingroup\skip0=\lastskip\vskip-\skip0\dimen0=#1\relax\advance\dimen0 by\skip0\vskip\dimen0\penalty-100\vskip-\dimen0\vskip\skip0\penalty9999\endgroup}
+\usepackage{amsmath,amssymb,mathtools,bm}
+\usepackage{graphicx,xcolor,booktabs,longtable,array,enumitem,fancyhdr,caption,float,microtype,setspace}
+\usepackage[hidelinks,unicode]{hyperref}
+\usepackage[most]{tcolorbox}
+\definecolor{ContestBlue}{HTML}{17365D}
+\hypersetup{pdftitle={第064套},pdfauthor={}}
+\setstretch{1.24}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.35em}
+\setlength{\emergencystretch}{2em}
+\setlist{itemsep=0.35em,topsep=0.4em}
+\captionsetup{font=small,labelfont=bf,justification=centering}
+\setcounter{secnumdepth}{0}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small 第064套}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\ctexset{
+  section={format=\Large\bfseries\color{ContestBlue},beforeskip=1.2em,afterskip=0.7em},
+  subsection={format=\large\bfseries\color{ContestBlue},beforeskip=1.0em,afterskip=0.5em},
+  subsubsection={format=\normalsize\bfseries,beforeskip=0.8em,afterskip=0.35em}
+}
+\usepackage{calc}
+\newcounter{none}
+\let\originalsubsection\subsection
+\renewcommand{\subsection}{\needspace{6\baselineskip}\originalsubsection}
+\makeatletter
+\newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\newcommand{\maxwidth}{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\newcommand{\maxheight}{\ifdim\Gin@nat@height>0.72\textheight 0.72\textheight\else\Gin@nat@height\fi}
+\newcommand{\pandocbounded}[1]{\begingroup\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}#1\endgroup}
+\makeatother
+\begin{document}
+\begin{titlepage}
+  \centering
+  \vspace*{58mm}
+  {\Huge\bfseries\color{ContestBlue} 第064套\par}
+  \vfill
+  \vspace*{28mm}
+\end{titlepage}
+\section{第 1 题}\label{ux7b2c-1-ux9898}
+
+如图，\(A\)、\(B\)、\(C\) 三个物体的质量均为 \(m\)。\(A\) 与
+\(C\)、\(B\) 与 \(C\) 之间的摩擦因数分别为 \(\mu_1\)、\(\mu_2\)，\(C\)
+与地面之间的摩擦因数为 \(\mu_3\)。轻绳绕过安装在 \(A\)、\(B\)
+上的光滑滑轮，绳的自由端受水平拉力 \(F\)，且 \(A\)、\(B\) 相距足够远。
+
+（1）从 \(F=0\) 开始缓慢增大拉力，直至有物体开始运动。以
+\(x=\mu_1/\mu_3\) 为横轴、\(y=\mu_2/\mu_3\)
+为纵轴，划分最先发生各种运动的参数区域，并给出边界方程。
+
+（2）在首次运动发生后继续增大
+\(F\)，讨论各摩擦因数组合下可能出现的运动状态。只需说明哪些物体运动以及
+\(C\) 的运动方向。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.76\linewidth,height=\textheight,keepaspectratio,alt={图1-1　三物体、滑轮与轻绳的连接关系}]{../figures/question-01.pdf}
+\caption*{图1-1　三物体、滑轮与轻绳的连接关系}
+\end{figure}
+
+\newpage
+
+\section{第 2 题}\label{ux7b2c-2-ux9898}
+
+在光滑的一个抛物面 \(z=\dfrac a2(x^2+y^2)\) 上放一个质量为 \(m\)
+的质点，重力加速度 \(g\) 沿着 \(z\)
+轴负方向。任意给定初态后质点开始振动，振动的幅度远小于 \(1/a\)，其中
+\(a>0\)。
+
+（1）计算两个方向独立的简谐振动的角频率 \(\omega_0\)。
+
+（2）换到一个以恒定角速度 \(\omega_1\) 绕 \(z\)
+轴转动的参照系中，新的水平坐标轴记为 \(X',Y'\)，写下 \(X'\)、\(Y'\)
+应当满足的微分方程。
+
+（3）解出（2）中的微分方程，并解释这个结果如何和（1）中的结果对应。
+
+（4）我们把抛物面改为马鞍面
+\(z=\dfrac a2x^2-\dfrac a4y^2\)，这样显然振动是不稳定的，但是如果让这个面绕着
+\(z\) 轴以恒定的角速度 \(\omega_2\)
+转动起来，则会得到稳定的运动（质点不会跑到无穷远处，而是在一个范围内振动）。求出
+\(\omega_2\) 的最小值。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.88\linewidth,height=\textheight,keepaspectratio,alt={图2-1　旋转抛物面与旋转马鞍面的空间结构}]{../figures/question-02.pdf}
+\caption*{图2-1　旋转抛物面与旋转马鞍面的空间结构}
+\end{figure}
+
+\newpage
+
+\section{第 3 题}\label{ux7b2c-3-ux9898}
+
+如图，质量 \(m\)、长度 \(2l\)
+的匀质薄板在光滑桌面上，两桌面之间有两个以角速度 \(\omega\)
+匀速转动的半径为 \(r\) 的圆柱，摩擦系数都为
+\(\mu\)，桌面边缘和两圆柱上顶点比桌面稍高一点点，使得薄板总是点接触。
+
+（1）若将匀质薄板放在两圆柱上，并使得薄板中心稍微偏离两圆柱中心，求证当
+\(\omega>0\) 时薄板将做简谐运动，并求其周期；
+
+（2）当 \(\omega=0\) 时，求匀质板右侧能顺利到达右侧桌面的最小初始速度
+\(v_{10}\)；
+
+（3）接（1），求这种情况下匀质板右侧到达左桌面边缘，到匀质板右侧到达右桌面边缘的时间；
+
+（4）此问不是考题不计分。\(\omega>0\) 且初始速度为
+\(v_0=2\omega r\)，令无量纲参量
+\(\beta=\dfrac{\mu gl}{\omega^2r^2}\)，在 \(\beta\)
+取各种可能值的情况下，求匀质板右侧到达左桌面边缘，到匀质板左侧到达右桌面边缘的时间。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.66\linewidth,height=\textheight,keepaspectratio,alt={图3-1　薄板搭在两转动圆柱上}]{../figures/question-03.pdf}
+\caption*{图3-1　薄板搭在两转动圆柱上}
+\end{figure}
+
+\newpage
+
+\section{第 4 题}\label{ux7b2c-4-ux9898}
+
+焦距为 \(f\) 的理想薄凸透镜对一个正三角形 \(ABC\) 成像。正三角形的边
+\(AC\) 垂直于主轴，顶点 \(A\) 位于主轴上，顶点 \(B\) 位于 \(AC\)
+与透镜之间。要求三个顶点的像 \(A'B'C'\) 构成内角为
+\(30^\circ\)、\(60^\circ\)、\(90^\circ\) 的直角三角形。
+
+（1）当像三角形的一条直角边垂直于主轴时，求 \(A\) 点物距的较大值
+\(u_1\)；
+
+（2）求（1）所对应的正三角形边长 \(l_1\)；
+
+（3）仍令像三角形的一条直角边垂直于主轴，求 \(A\) 点物距的较小值
+\(u_2\)；
+
+（4）求（3）所对应的正三角形边长 \(l_2\)；
+
+（5）当像三角形的斜边垂直于主轴时，求 \(A\) 点物距 \(u_3\)；
+
+（6）求（5）所对应的正三角形边长 \(l_3\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.72\linewidth,height=\textheight,keepaspectratio,alt={图4-1　正三角形各顶点相对薄凸透镜与主轴的位置关系。}]{../figures/question-04.pdf}
+\caption*{图4-1　正三角形各顶点相对薄凸透镜与主轴的位置关系。}
+\end{figure}
+
+\newpage
+
+\section{第 5 题}\label{ux7b2c-5-ux9898}
+
+如图所示，有一惯性系 \(S\)，另一惯性系 \(S'\) 相对 \(S\) 以
+\(\beta c\,\bm i\) 运动，\(S''\) 相对 \(S\) 以
+\(\beta c(\cos\theta\,\bm i+\sin\theta\,\bm j)\) 运动，设
+\(0\le\beta<1\)；比较相邻随动系时取
+\(|\theta|\ll1\)。这些惯性系采用标准对时方式，即设三个惯性系的原点同时相遇，并各自在自己的参考系中将各处时钟同时调为
+\(0\)。
+
+（1）将 \(x'',y'',t''\) 用 \(x',y',t'\) 表示。为简化，可引入
+\(\gamma=\dfrac1{\sqrt{1-\beta^2}}\)。（提示：可作坐标变换
+\(\begin{cases}\xi=\cos\theta\,x+\sin\theta\,y\\ \eta=-\sin\theta\,x+\cos\theta\,y\end{cases}\)，\(\begin{cases}\xi''=\cos\theta\,x''+\sin\theta\,y''\\ \eta''=-\sin\theta\,x''+\cos\theta\,y''\end{cases}\)，则
+\((\xi,\eta,t)\) 与 \((\xi'',\eta'',t'')\) 满足常规形式的洛伦兹变换。）
+
+（2）在 \(t'=t''=0\) 的同时面上，\(S''\) 系的坐标架相对 \(S'\)
+系转过一小角度 \(d\varphi\)（逆时针为正）。设 \(S',S''\)
+分别为一粒子在时刻 \(t\) 和 \(t+dt\)
+的``随动系''，即粒子的``随动系''坐标架以 \(\bm\omega_t\) 旋转，且
+\(\bm\omega_t\) 的正方向与 \(d\varphi\) 一致。用粒子的 \(\bm a,\bm v\)
+表示 \(\bm\omega_t\)，已知 \(|\bm v|\ll c\) 且
+\(\bm a\perp\bm v\)。这一现象称为托马斯旋进，对电子的自旋---轨道相互作用有重要影响。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\linewidth,height=\textheight,keepaspectratio,alt={图5-1　惯性系 S\textquotesingle{} 与 S\textquotesingle\textquotesingle{} 相对同一惯性系 S 的等速、不同方向运动。}]{../figures/question-05.pdf}
+\caption*{图5-1　惯性系 \(S'\) 与 \(S''\) 相对同一惯性系 \(S\)
+的等速、不同方向运动。}
+\end{figure}
+
+\newpage
+
+\section{第 6 题}\label{ux7b2c-6-ux9898}
+
+（1）\(n\) 摩尔理想气体的摩尔定容热容为 \(C_V\)。已知在
+\(p=p_0\)、\(T=T_0\) 时熵为 \(S_0\)，求 \(S(p,T)\)。
+
+（2）化学势定义为
+
+\[
+\mu=\frac{U+pV-TS}{n}.
+\]
+
+取 \(U|_{T=0}=0\)，求 \(\mu(p,T)\)。
+
+（3）对反应
+\(n\to p+e^-+\bar\nu\)，平衡条件为两侧反应物化学势之和相等。取
+\(\mu_e\simeq N_A m_ec^2\)、\(\mu_{\bar\nu}\simeq0\)；质子、中子均视作理想气体，二者的
+\(C_V,p_0,T_0,S_0/n\) 相同。求平衡时质子分压比 \(x_p=p_p/p\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.66\linewidth,height=\textheight,keepaspectratio,alt={图6-1　理想气体状态与反应组分}]{../figures/question-06.pdf}
+\caption*{图6-1　理想气体状态与反应组分}
+\end{figure}
+
+\newpage
+
+\section{第 7 题}\label{ux7b2c-7-ux9898}
+
+边长为 \(l\) 的最大正方形的四个角上，各连接一个边长为原来 \(1/3\)
+的相似正方形；对每个小正方形重复此过程无限次，得到平面分形电阻网络。所有导线单位长度电阻为
+\(r\)。垂直纸面向内存在均匀随时间变化的磁场 \(B=kt\)。
+
+（1）计算最大正方形对角线两端之间的等效电阻；
+
+（2）计算最大正方形相邻两顶点之间的等效电阻；
+
+（3）求最外框中间一段长度为 \(l/3\) 的导线中的电流 \(I_c\)；
+
+（4）假设已知总功率可以拆分为四个角上每个相似子网络各自受磁场影响所产生的功率
+\(P_1\)，与仅由电流 \(I_c\) 在网络中流动所产生的功率 \(P_2\)
+之和，求整个电阻网络单位时间的焦耳热；
+
+（5）证明第（4）问中的总功率确实可以作上述分解。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.411\linewidth,height=\textheight,keepaspectratio,alt={图7-1　四角自相似正方形电阻网络}]{../figures/question-07.pdf}
+\caption*{图7-1　四角自相似正方形电阻网络}
+\end{figure}
+
+\newpage
+
+\section{第 8 题}\label{ux7b2c-8-ux9898}
+
+交流电源 \(U(t)=U_0\cos\omega t\)
+接在``日''字形理想变压器的左侧线圈上。三根铁芯柱上的线圈匝数为
+\(N_1,N_2,N_3\)；输入回路串联电阻为 \(r_1'\)，右侧负载含
+\(r_1,r_2,r_3\)。忽略漏磁、铁损和线圈电阻。求稳定工作时 \(r_2\)
+上的平均功率 \(P_2\)，并在 \(N_1:N_2:N_3=4:2:1\) 时化简。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.84\linewidth,height=\textheight,keepaspectratio,alt={图8-1　日字形铁芯、三线圈与负载连接}]{../figures/question-08.pdf}
+\caption*{图8-1　日字形铁芯、三线圈与负载连接}
+\end{figure}
+\end{document}

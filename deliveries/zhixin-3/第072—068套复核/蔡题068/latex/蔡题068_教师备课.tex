@@ -1,0 +1,4573 @@
+\documentclass[12pt,a4paper,UTF8]{ctexart}
+\usepackage[a4paper,top=22mm,bottom=22mm,left=22mm,right=22mm,headheight=15pt]{geometry}
+\newcommand{\Needspace}[1]{\par\begingroup\dimen0=#1\relax\dimen2=\pagegoal\advance\dimen2 by-\pagetotal\ifdim\dimen0>\dimen2\newpage\fi\endgroup}
+\newcommand{\needspace}[1]{\par\begingroup\skip0=\lastskip\vskip-\skip0\dimen0=#1\relax\advance\dimen0 by\skip0\vskip\dimen0\penalty-100\vskip-\dimen0\vskip\skip0\penalty9999\endgroup}
+\usepackage{amsmath,amssymb,mathtools,bm}
+\usepackage{graphicx,xcolor,booktabs,longtable,array,enumitem,fancyhdr,caption,float,microtype,setspace}
+\usepackage[hidelinks,unicode]{hyperref}
+\usepackage[most]{tcolorbox}
+\definecolor{ContestBlue}{HTML}{17365D}
+\hypersetup{pdftitle={第068套},pdfauthor={}}
+\setstretch{1.24}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.35em}
+\setlength{\emergencystretch}{2em}
+\setlist{itemsep=0.35em,topsep=0.4em}
+\captionsetup{font=small,labelfont=bf,justification=centering}
+\setcounter{secnumdepth}{0}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small 第068套}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\ctexset{
+  section={format=\Large\bfseries\color{ContestBlue},beforeskip=1.2em,afterskip=0.7em},
+  subsection={format=\large\bfseries\color{ContestBlue},beforeskip=1.0em,afterskip=0.5em},
+  subsubsection={format=\normalsize\bfseries,beforeskip=0.8em,afterskip=0.35em}
+}
+\usepackage{calc}
+\newcounter{none}
+\let\originalsubsection\subsection
+\renewcommand{\subsection}{\needspace{6\baselineskip}\originalsubsection}
+\makeatletter
+\newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\newcommand{\maxwidth}{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\newcommand{\maxheight}{\ifdim\Gin@nat@height>0.72\textheight 0.72\textheight\else\Gin@nat@height\fi}
+\newcommand{\pandocbounded}[1]{\begingroup\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}#1\endgroup}
+\makeatother
+\begin{document}
+\begin{titlepage}
+  \centering
+  \vspace*{58mm}
+  {\Huge\bfseries\color{ContestBlue} 第068套\par}
+  \vfill
+  \vspace*{28mm}
+\end{titlepage}
+\section{第 1 题}\label{ux7b2c-1-ux9898}
+
+一质量为 \(m\)、半径为 \(r\) 的均匀刚性球以质心速度 \(v_0\)
+在水平地面上向右做纯滚动。取水平向右为 \(x\) 轴正方向、竖直向上为 \(y\)
+轴正方向。在球前方有一台阶，将台阶棱边局部等效为光滑凸起；球与凸起间无摩擦且发生完全弹性碰撞。球与地面间的摩擦系数为
+\(\mu=2/7\)，球与地面的碰撞为完全非弹性碰撞。
+
+（1）若凸起高度 \(h=r/2\)，求球撞上凸起后的质心速度 \(\boldsymbol v_1\)
+与角速度 \(\omega_1\)。
+
+（2）若凸起高度 \(h=3r/2\)，求球依次与凸起、地面碰撞后的质心速度
+\(\boldsymbol v_2\) 与角速度 \(\omega_2\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.88\linewidth,height=\textheight,keepaspectratio,alt={图1-1　滚动球与两种高度凸起的碰撞几何}]{../figures/question-01.pdf}
+\caption*{图1-1　滚动球与两种高度凸起的碰撞几何}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d}
+
+先按台阶棱角的法线反射质心速度，再计算接触地面时的法向、切向冲量。自转在光滑棱角碰撞中不变，地面摩擦是否饱和需由球底滑速判断。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  均匀实心球的转动惯量 \(I_C=\frac25mr^2\)。
+\item
+  纯滚动条件 \(v_0=r\omega_0\)。
+\item
+  光滑固定面的弹性碰撞只反转质心速度的法向分量。
+\item
+  通过球心的法向冲量对球心力矩为零，因而不改变自转角速度。
+\item
+  完全非弹性法向碰撞使碰后法向速度为零。
+\item
+  地面切向冲量既改变质心水平速度，又改变绕球心的角速度。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf}
+
+当 \(h=r/2\) 时，球在凸起上方撞到斜面，接触法线与水平方向成
+\(30^\circ\)；碰撞可视作质心速度关于接触面切线的镜面反射。由于冲量沿球心---接触点连线，球的自转保持不变。
+
+当 \(h=3r/2\)
+时，第一次碰撞把球反射到斜向下方，随后球与地面发生法向完全非弹性碰撞。地面对球产生向上的法向冲量，同时由于接触点相对地面滑动而产生切向摩擦冲量。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3}
+
+先由几何关系求接触法线方向，再把入射速度分解为法向与切向分量。第二问中不要直接写``碰后滚动''，而应先算出球落地前接触点的相对滑动方向，由此确定摩擦冲量的正负号，再分别列平动冲量方程与绕球心的角冲量方程。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图1-2　两阶段碰撞的速度分解与地面冲量}]{../figures/solution-01.pdf}
+\caption*{图1-2　两阶段碰撞的速度分解与地面冲量}
+\end{figure}
+
+规定逆时针角速度为正。球初始向右纯滚，因此
+
+\[
+\boldsymbol v_0=v_0\boldsymbol e_x,
+\qquad
+\omega_0=-\frac{v_0}{r}.
+\tag{1}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（一）\(h=r/2\) 时的光滑弹性碰撞}
+
+球心离地高度为 \(r\)，凸起顶点离地高度为
+\(h=r/2\)。接触瞬间，球心与接触点的竖直高度差为
+
+\[
+r-h=\frac r2.
+\tag{2}
+\]
+
+两点间距离等于半径 \(r\)。若球心到接触点的连线与水平方向夹角为
+\(\theta\)，则
+
+\[
+\sin\theta=\frac{r-h}{r}=\frac12,
+\qquad
+\theta=30^\circ.
+\tag{3}
+\]
+
+接触点位于球心的右下方。从接触点指向球心的单位法向量为
+
+\[
+\boldsymbol n=(-\cos\theta,\sin\theta).
+\tag{4}
+\]
+
+取与之垂直并指向右上方的单位切向量
+
+\[
+\boldsymbol t=(\sin\theta,\cos\theta).
+\tag{5}
+\]
+
+入射速度在这两个方向上的分量为
+
+\[
+v_n=\boldsymbol v_0\cdot\boldsymbol n=-v_0\cos\theta,
+\qquad
+v_t=\boldsymbol v_0\cdot\boldsymbol t=v_0\sin\theta.
+\]
+
+固定光滑面上的完全弹性碰撞满足
+
+\[
+v_n'=-v_n,
+\qquad
+v_t'=v_t.
+\tag{6}
+\]
+
+于是碰后质心速度为
+
+\[
+\begin{aligned}
+\boldsymbol v_1
+&=v_t'\boldsymbol t+v_n'\boldsymbol n\\
+&=v_0\sin\theta\,\boldsymbol t
++v_0\cos\theta\,\boldsymbol n\\
+&=-v_0(\cos^2\theta-\sin^2\theta)\boldsymbol e_x
++2v_0\sin\theta\cos\theta\boldsymbol e_y\\
+&=-v_0\cos2\theta\,\boldsymbol e_x
++v_0\sin2\theta\,\boldsymbol e_y.
+\end{aligned}
+\tag{7}
+\]
+
+代入 \(2\theta=60^\circ\)，得到
+
+\[
+\boxed{
+\boldsymbol v_1
+=-\frac12v_0\boldsymbol e_x
++\frac{\sqrt3}{2}v_0\boldsymbol e_y
+}.
+\tag{8}
+\]
+
+式（8）的模仍为 \(v_0\)：
+
+\[
+|\boldsymbol v_1|
+=v_0\sqrt{\frac14+\frac34}
+=v_0,
+\tag{9}
+\]
+
+这与弹性碰撞且固定凸起不吸收能量相符。
+
+凸起对球的冲量沿球心---接触点连线，冲量作用线通过球心
+\(C\)。因此它对球心的角冲量为零：
+
+\[
+\Delta L_C=0.
+\tag{10}
+\]
+
+故球的自转角速度不变：
+
+\[
+\boxed{
+\omega_1=-\frac{v_0}{r}
+}.
+\tag{11}
+\]
+
+若把顺时针规定为正，则式（11）写为 \(\omega_1=v_0/r\)。
+
+\needspace{3\baselineskip}
+\textbf{（二）\(h=3r/2\) 时的两次碰撞}
+
+第一次与凸起的碰撞仍是速度关于接触面法线的镜面反射。由图中几何，球离开凸起后的速度可写为
+
+\[
+\boldsymbol v^{-}
+=-v_0\cos2\theta\,\boldsymbol e_x
+-v_0\sin2\theta\,\boldsymbol e_y,
+\qquad \theta=30^\circ,
+\tag{12}
+\]
+
+其中上标``\(-\)''表示即将撞地之前。第一次碰撞不改变自转，因此
+
+\[
+\omega^-=-\frac{v_0}{r}.
+\tag{13}
+\]
+
+设地面对球的法向冲量为 \(J_y\)，取向上为正；切向摩擦冲量为
+\(J_x\)，取向右为正。地面碰撞完全非弹性意味着碰后球心竖直速度为零：
+
+\[
+0-v_y^-=\frac{J_y}{m}.
+\tag{14}
+\]
+
+由 \(v_y^-=-v_0\sin2\theta\) 得
+
+\[
+\boxed{
+J_y=mv_0\sin2\theta
+}.
+\tag{15}
+\]
+
+落地前球的最低点相对地面的水平速度为
+
+\[
+u_A^-=v_x^-+r\omega^-.
+\tag{16}
+\]
+
+代入式（12）、（13）：
+
+\[
+u_A^-
+=-v_0\cos2\theta-v_0<0.
+\tag{17}
+\]
+
+接触点相对地面向左滑，所以地面对球的摩擦冲量向右。但在直接取
+\(J_x=\mu J_y\) 之前，还要判断摩擦是否足以在碰撞期间消除滑动。
+
+若碰后恰好恢复无滑动，应有
+
+\[
+v_2+r\omega_2=0.
+\]
+
+设达到该状态所需的切向冲量为 \(J_{\rm req}\)。平动和转动冲量关系分别为
+
+\[
+v_2=v_x^-+\frac{J_{\rm req}}m,
+\qquad
+\omega_2=\omega^-+\frac{rJ_{\rm req}}{I_C}.
+\]
+
+相加得到接触点碰后速度
+
+\[
+v_2+r\omega_2
+=u_A^-+
+J_{\rm req}\left(\frac1m+\frac{r^2}{I_C}\right).
+\]
+
+代入 \(u_A^-=-(3/2)v_0\)、\(I_C=2mr^2/5\)：
+
+\[
+\begin{aligned}
+J_{\rm req}
+&=\frac{(3/2)v_0}
+{1/m+5/(2m)}\\
+&=\frac37mv_0.
+\end{aligned}
+\]
+
+实际可提供的最大摩擦冲量为
+
+\[
+\begin{aligned}
+\mu J_y
+&=\frac27mv_0\sin60^\circ\\
+&=\frac{\sqrt3}{7}mv_0
+<\frac37mv_0.
+\end{aligned}
+\]
+
+所以摩擦不足以把滑动降为零，碰撞结束时接触点仍在滑动，切向冲量确实达到滑动摩擦极限：
+
+\[
+J_x=\mu J_y
+=\mu mv_0\sin2\theta.
+\tag{18}
+\]
+
+质心的水平冲量方程为
+
+\[
+mv_2-mv_x^-=J_x.
+\tag{19}
+\]
+
+因此
+
+\[
+\begin{aligned}
+v_2
+&=v_x^-+\frac{J_x}{m}\\
+&=-v_0\cos2\theta+\mu v_0\sin2\theta.
+\end{aligned}
+\tag{20}
+\]
+
+代入 \(\theta=30^\circ\)、\(\mu=2/7\)：
+
+\[
+\begin{aligned}
+v_2
+&=v_0\left(-\frac12+\frac27\cdot\frac{\sqrt3}{2}\right)\\
+&=\left(\frac{\sqrt3}{7}-\frac12\right)v_0.
+\end{aligned}
+\tag{21}
+\]
+
+故
+
+\[
+\boxed{
+\boldsymbol v_2
+=\left(\frac{\sqrt3}{7}-\frac12\right)v_0\boldsymbol e_x
+}.
+\tag{22}
+\]
+
+由于 \(\sqrt3/7<1/2\)，碰后球向左运动。
+
+法向冲量作用线通过球心，对球心无力矩；只有切向冲量改变自转。绕球心的角冲量方程为
+
+\[
+I_C(\omega_2-\omega^-)=rJ_x.
+\tag{23}
+\]
+
+注意：向右的地面摩擦冲量作用于球心下方，对球产生逆时针角冲量，所以式（23）右端为正。代入
+\(I_C=2mr^2/5\)：
+
+\[
+\begin{aligned}
+\omega_2
+&=\omega^-+\frac{rJ_x}{I_C}\\
+&=-\frac{v_0}{r}
++\frac{r\mu mv_0\sin2\theta}{(2/5)mr^2}\\
+&=-\frac{v_0}{r}
++\frac{5\mu}{2}\frac{v_0\sin2\theta}{r}.
+\end{aligned}
+\tag{24}
+\]
+
+代入数值：
+
+\[
+\boxed{
+\omega_2
+=-\left(1-\frac{5\sqrt3}{14}\right)\frac{v_0}{r}
+}.
+\tag{25}
+\]
+
+若顺时针为正，则相应地写为
+
+\[
+\boxed{
+\omega_2
+=\left(1-\frac{5\sqrt3}{14}\right)\frac{v_0}{r}
+}.
+\tag{26}
+\]
+
+\needspace{3\baselineskip}
+\textbf{补充推导与适用条件}
+
+第一段运动中，球与地面保持纯滚动，因而
+\(v_C=r\omega\)；碰到光滑凸起的极短时间内，冲量沿球心与接触点的连线，冲量对球心的力矩为零，所以
+\(\omega\)
+不变。完全弹性只说明质心速度的法向分量反向，切向分量不变。若把入射速度写成
+
+\[
+\boldsymbol v^- =v_n^-\boldsymbol n+v_t^-\boldsymbol t,
+\]
+
+则碰后速度就是
+
+\[
+\boldsymbol v^+=-v_n^-\boldsymbol n+v_t^-\boldsymbol t.
+\]
+
+它在几何上等价于速度矢量关于接触切线作镜像，因此不必分别求接触冲量的大小。
+
+第二段落地碰撞则不同。法向冲量仍通过球心，但摩擦冲量作用于球底，既改变
+\(v_x\)，又改变 \(\omega\)。计算顺序是：先由碰前接触点水平速度
+\(u_A^-=v_x^-+r\omega^-\)
+判断滑动方向；再算``若要瞬时恢复纯滚动所需的冲量''
+\(J_{x,\mathrm{req}}\)；最后比较 \(|J_{x,\mathrm{req}}|\) 与
+\(\mu J_y\)。本题有
+
+\[
+|J_{x,\mathrm{req}}|=\frac37mv_0,
+\qquad
+\mu J_y=\frac{\sqrt3}{7}mv_0,
+\]
+
+前者较大，所以摩擦已经达到极限而仍不足以消除滑动，使用 \(J_x=\mu J_y\)
+才有依据。这个检验是本题选择摩擦分支的依据。
+
+式（22）给出碰后台阶方向的速度分量为负，说明球在地面碰撞结束后向远离凸起的一侧运动。它不仅是一个符号结果，也排除了``落地后立刻再次碰台阶''的额外接触过程。
+
+\textbf{结果校验。} 第一次碰撞前后质心速度模均为
+\(v_0\)，且角速度不变，故球的平动能和转动能分别不变，符合光滑固定凸起完全弹性的条件。落地碰撞后则不能要求机械能守恒：竖直完全非弹性碰撞必有能量损失，滑动摩擦冲量也会耗散接触点相对运动对应的能量。可用
+
+\[
+K^+=\frac12m(v_x^{+2}+v_y^{+2})+\frac12I\omega^{+2}
+\]
+
+与碰前动能比较，确认
+\(K^+<K^-\)。本题还可把这一检查算到底。第二次碰撞前，第一次光滑弹性碰撞没有改变质心速度的大小，也没有改变自转，故
+
+\[
+K^-=\frac12mv_0^2+\frac12\left(\frac25mr^2\right)\frac{v_0^2}{r^2}
+=\frac7{10}mv_0^2.
+\]
+
+由式（22）、（25）令
+
+\[
+a=-\frac12+\frac{\sqrt3}{7}
+=\frac{2\sqrt3-7}{14},
+\qquad
+b=1-\frac{5\sqrt3}{14}
+=\frac{14-5\sqrt3}{14}.
+\]
+
+则碰后动能为
+
+\[
+\begin{aligned}
+K^+
+&=\frac12m(av_0)^2
++\frac12\left(\frac25mr^2\right)
+\left(b\frac{v_0}{r}\right)^2\\
+&=mv_0^2\left(\frac{a^2}{2}+\frac{b^2}{5}\right)\\
+&=\frac{847-420\sqrt3}{1960}mv_0^2\\
+&\approx0.0610\,mv_0^2.
+\end{aligned}
+\]
+
+因此 \(K^+<K^-\) 明确成立，损失的机械能为
+
+\[
+\Delta E_{\mathrm{loss}}
+=K^--K^+
+=\frac{525+420\sqrt3}{1960}mv_0^2>0.
+\]
+
+这部分损失同时来自法向完全非弹性约束和切向滑动冲量，不能简单地全部归入``摩擦生热''。再看极限：若
+\(\mu\to0\)，水平速度与角速度在落地瞬间都不变；若 \(\mu\) 增大到
+\(\mu_c\)，接触点恰好停止滑动。两端都与冲量分段模型相符。
+
+\needspace{3\baselineskip}
+\textbf{冲击次序、台阶构型与碰后滑动}
+
+图1-1按原图画低棱角与悬在球心上方的高棱角。第二个构型不应画成从地面连续升高的实心直立墙，否则球会先撞墙面而到不了指定棱角。两问分别用球心右下与右上方的接触点，图1-2的法线箭头与反射式一一对应。
+
+第二问球心在第一次冲击时已处于离地 \(r\)
+的位置。参考答案采用``先光滑棱角反射，再粗糙地面冲击''的瞬时序列；没有另给自由飞行高度，因此式（12）的向下速度直接用作紧接着的地面碰前速度。若要求两个接触同时持续的多点冲击模型，需另给接触时序或恢复定律，不能凭现有数据唯一确定另一组冲量。
+
+本题
+\(\mu_c=J_{\rm req}/J_y=\sqrt3/7\times\sqrt3=\sqrt3/7\,3/\sqrt3=\sqrt3/7\times3/\sqrt3\)
+的连写没有必要，直接约分可得
+
+\[
+\mu_c=\frac{3/7}{\sqrt3/2}=\frac{2\sqrt3}{7}\approx0.495,
+\qquad \mu=2/7<\mu_c.
+\]
+
+落地冲击后球底仍向左滑。若继续考虑此后的水平地面滑动，额外摩擦冲量会使它最终恢复纯滚动。以
+\(u_2=v_2+r\omega_2\) 计，有 \(J_{\rm later}=-(2m/7)u_2\)，从而
+
+\[
+v_{\rm roll}=v_2+J_{\rm later}/m=-\frac{mv_0}{14m}=-\frac{v_0}{14},\qquad
+\omega_{\rm roll}=\frac{v_0}{14r}.
+\]
+
+该终态不等于第二问要求的``地面碰撞刚结束''状态。把两者分开，才能理解图中的摩擦箭头为何虽向右，质心最后仍向左。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf}
+
+这道题把三种容易混淆的接触过程放在了一起：纯滚动、光滑固定曲面的完全弹性碰撞、粗糙水平面的斜碰。三段运动不能共用同一套约束。
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  把``光滑''误解为没有冲量。光滑只排除切向冲量，法向冲量正是改变速度方向的原因。
+\item
+  直接把水平速度反向。反向的是沿接触法线的分量；本题接触法线是倾斜的，必须先投影。
+\item
+  采用指向凸起球心的法线，却仍沿用指向刚球球心的投影符号，导致 \(x\)
+  分量多出一个负号。法线可以任取，但
+  \(v_n=\boldsymbol v\cdot\boldsymbol n\) 与反射公式必须使用同一方向。
+\item
+  认为碰后台阶时仍满足
+  \(v=r\omega\)。冲击阶段地面约束已经解除，纯滚动关系不能跨越碰撞自动保留。
+\item
+  未计算球底接触点的速度就猜摩擦方向。摩擦反对的是接触点相对滑动，不一定反对质心运动。
+\item
+  一见粗糙碰撞就写
+  \(J_x=\mu J_y\)。只有先证明所需黏着冲量超过库仑上限，才能确认全程滑动。
+\item
+  在绕球心的角冲量方程中计入法向冲量。法向冲量作用线通过球心，对球心的力矩为零。
+\item
+  未声明角速度正方向。建议始终约定逆时针为正，并把纯滚动写成
+  \(v_x+r\omega=0\)，避免凭图记号。
+\end{enumerate}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae}
+
+课堂上可把全过程分成一条``状态链''：初始纯滚动状态 \(S_0\)，棱角碰后状态
+\(S_1\)，紧接着的地面碰前状态 \(S_2^-\)，地面碰后状态
+\(S_2^+\)。要求学生在每个箭头上写明哪些量连续、哪些量突变：飞行阶段
+\(v_x\) 与 \(\omega\) 不变，\(v_y\)
+由重力改变；冲击阶段位置连续而速度可突变。
+
+讲第一问时先暂时遮住代数，只画 \(\boldsymbol n\)、\(\boldsymbol t\)
+和入射速度。让学生用``法向反号、切向不变''画出碰后箭头，再用坐标分解验证。这样能把公式与图中的镜像关系绑定起来。
+
+讲第二问时在黑板上保留三个方程框：
+
+\[
+m(v_y^+-v_y^-)=J_y,
+\qquad
+m(v_x^+-v_x^-)=J_x,
+\qquad
+I(\omega^+-\omega^-) = rJ_x.
+\]
+
+每写一个式子都让学生指出：研究对象是球；时间区间是落地碰撞的极短过程；重力冲量为何可忽略；力矩为何取球心。最后再单列``摩擦状态判据''，避免把本构关系和动力学方程混成一步。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3}
+
+将地面摩擦系数改为参数 \(\mu\)。设落地前
+\(u_A^-=v_x^-+r\omega^-\)，由平动、转动冲量式以及碰后纯滚动条件
+\(v_x^++r\omega^+=0\)，可得达到黏着所需冲量
+
+\[
+J_{x,\mathrm{req}}
+=-\frac{mI}{I+mr^2}\,u_A^-
+=-\frac27m u_A^-
+\]
+
+（实心球 \(I=2mr^2/5\)）。临界摩擦系数为
+
+\[
+\mu_c=\frac{|J_{x,\mathrm{req}}|}{J_y}.
+\]
+
+当 \(\mu<\mu_c\) 时，碰后仍滑动，取
+\(J_x=-\mu J_y\operatorname{sgn}u_A^-\)；当 \(\mu\ge\mu_c\)
+时，实际摩擦冲量只取 \(J_{x,\mathrm{req}}\)，不能继续机械地写成
+\(\mu J_y\)。这一变式可训练学生建立``先判接触状态，再选方程''的完整习惯。
+
+\newpage
+
+\section{第 2 题}\label{ux7b2c-2-ux9898}
+
+一绝缘厚球壳的初始内、外半径分别为
+\(R/2\)、\(R\)，其体内均匀带电，总电荷量为
+\(Q\)。球壳以内、外半径始终保持 \(1:2\)
+的方式均匀膨胀，直到内、外半径分别变为
+\(3R/4\)、\(3R/2\)，总电荷不变且电荷仍均匀分布。
+
+（1）判断膨胀过程中距球心 \(R/4\) 处的电场、电势以及距球心 \(2R\)
+处的电场、电势是否改变。
+
+（2）求距球心 \(R/2\) 处的电势终值与初值之比。
+
+（3）求距球心 \(R\) 处的电场终值与初值之比。
+
+膨胀完成后，令球壳不带净电荷并按静电平衡导体处理。在距球心 \(R/8\) 和
+\(3R\) 处、同一直线上同一侧，分别放置电荷量为 \(q\) 的点电荷。
+
+（4）求球心处的电势。
+
+（5）求该静电系统的电势能。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\linewidth,height=\textheight,keepaspectratio,alt={图2-1　厚球壳的相似膨胀及中性导体构型}]{../figures/question-02.pdf}
+\caption*{图2-1　厚球壳的相似膨胀及中性导体构型}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-1}
+
+前三问是固定观察点处的球对称场，后两问按中性导体空腔模型计算。内、外镜像各只在自己的区域有效，中性约束再确定导体的常量电势。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-1}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  球对称电荷分布的高斯定律。
+\item
+  球对称体电荷的电势积分与相似缩放。
+\item
+  点电荷对接地球面的镜像电荷。
+\item
+  中性孤立导体相对于接地导体的等势常量修正。
+\item
+  由诱导电势计算静电能时的 \(1/2\) 因子。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-1}
+
+膨胀是比例为 \(\lambda=3/2\) 的相似变换。球壳外部只``看见''总电荷
+\(Q\)，因此外部场与势不随电荷在壳内如何重新分布而改变；空腔内场恒为零，但势是各带电层贡献的常量和，会随尺寸改变。
+
+后半部分应把导体分成``内腔问题''和``外部问题''：内腔点电荷用内球面镜像，外部点电荷用外球面镜像；最后再加一个均匀分布在外表面的补偿电荷，使整个导体净电荷为零。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-1}
+
+前三问分别按空间区域判断：\(r<a\)、\(a<r<b\)、\(r>b\)。后两问先做接地导体，再计算为恢复中性所需添加的外表面电荷。不要把``镜像电荷''当成真实电荷参与总电荷守恒，它只是在指定区域内复现边界条件的数学工具。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-1}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.507\linewidth,height=\textheight,keepaspectratio,alt={图2-2　内腔点电荷、外部点电荷及中性补偿电荷的镜像关系}]{../figures/solution-02.pdf}
+\caption*{图2-2　内腔点电荷、外部点电荷及中性补偿电荷的镜像关系}
+\end{figure}
+
+记
+
+\[
+k=\frac{1}{4\pi\varepsilon_0}.
+\tag{1}
+\]
+
+初始内、外半径为
+
+\[
+a=\frac R2,
+\qquad
+b=R,
+\tag{2}
+\]
+
+末态内、外半径为
+
+\[
+a'=\frac{3R}{4},
+\qquad
+b'=\frac{3R}{2}.
+\tag{3}
+\]
+
+因此所有线性尺度都乘以
+
+\[
+\lambda=\frac{a'}a=\frac{b'}b=\frac32.
+\tag{4}
+\]
+
+在逐点判断之前，先把任意内半径 \(a\)、外半径 \(b\)
+的均匀带电厚球壳公式完整推导出来。体电荷密度为
+
+\[
+\rho=\frac{Q}{\frac43\pi(b^3-a^3)}
+=\frac{3Q}{4\pi(b^3-a^3)}.
+\tag{4a}
+\]
+
+当 \(0\le r<a\) 时，高斯面内没有电荷，由高斯定律
+
+\[
+E(r)\,4\pi r^2=\frac{0}{\varepsilon_0},
+\]
+
+所以
+
+\[
+E(r)=0.
+\tag{4b}
+\]
+
+当 \(a<r<b\) 时，半径 \(r\) 的高斯面包围体积为
+\(\frac43\pi(r^3-a^3)\)，于是
+
+\[
+Q_{\rm enc}(r)
+=\frac43\pi\rho(r^3-a^3).
+\tag{4c}
+\]
+
+因此
+
+\[
+\begin{aligned}
+E(r)
+&=\frac{kQ_{\rm enc}(r)}{r^2}\\
+&=\frac{4\pi k\rho}{3}
+\left(r-\frac{a^3}{r^2}\right).
+\end{aligned}
+\tag{4d}
+\]
+
+当 \(r>b\) 时，高斯面包围全部电荷，故
+
+\[
+E(r)=\frac{kQ}{r^2}.
+\tag{4e}
+\]
+
+电势不能仅由``包围电荷''求出，因为高斯面外的球层虽不产生电场，却会贡献常量电势。对位于
+\(a<r<b\) 的观察点，把带电材料分成 \(a<s<r\) 与 \(r<s<b\)
+两部分。内侧电荷可集中到球心，外侧每个薄球壳在其内部产生常量势，因而
+
+\[
+V(r)
+=\frac{k}{r}\int_a^r4\pi\rho s^2\,\mathrm ds
++\int_r^b\frac{k}{s}4\pi\rho s^2\,\mathrm ds.
+\tag{4f}
+\]
+
+第一项逐步积分为
+
+\[
+\frac{4\pi k\rho}{r}
+\left[\frac{s^3}{3}\right]_a^r
+=\frac{4\pi k\rho}{3}
+\left(r^2-\frac{a^3}{r}\right),
+\tag{4g}
+\]
+
+第二项为
+
+\[
+4\pi k\rho\left[\frac{s^2}{2}\right]_r^b
+=2\pi k\rho(b^2-r^2).
+\tag{4h}
+\]
+
+相加并合并同类项：
+
+\[
+\boxed{
+V(r)=2\pi k\rho
+\left(b^2-\frac{r^2}{3}-\frac{2a^3}{3r}\right),
+\qquad a<r<b
+}.
+\tag{4i}
+\]
+
+空腔内 \(r<a\) 的电势等于内边界处的电势。令式（4i）中的 \(r=a\)：
+
+\[
+\begin{aligned}
+V_{\rm cavity}
+&=2\pi k\rho(b^2-a^2)\\
+&=\frac{3kQ}{2}
+\frac{b^2-a^2}{b^3-a^3}.
+\end{aligned}
+\tag{4j}
+\]
+
+外部则有
+
+\[
+V(r)=\frac{kQ}{r},
+\qquad r>b.
+\tag{4k}
+\]
+
+把 \(r=a\)、\(r=b\)
+分别代入上述分段式，可检查电势连续；把式（4i）求导并使用
+\(E=-\mathrm dV/\mathrm dr\)，又能还原式（4d）。因此这些分段公式不仅给出答案，还完成了高斯定律与电势积分之间的交叉校验。
+
+对初态 \(a=R/2\)、\(b=R\)，式（4j）给出
+
+\[
+\begin{aligned}
+V_i(r<R/2)
+&=\frac{3kQ}{2}
+\frac{R^2-R^2/4}{R^3-R^3/8}\\
+&=\frac{3kQ}{2R}\cdot\frac{3/4}{7/8}\\
+&=\frac{9kQ}{7R}.
+\end{aligned}
+\tag{4l}
+\]
+
+末态所有尺度扩大 \(3/2\)，直接由式（4j）可见分子按 \(\lambda^2\)、分母按
+\(\lambda^3\) 变化，所以空腔势按 \(1/\lambda\) 变化：
+
+\[
+V_f(r<3R/4)
+=\frac23\,V_i
+=\frac{6kQ}{7R}.
+\tag{4m}
+\]
+
+这样，第（1）、（2）问的电势变化不仅来自量纲缩放，也可由完整积分公式逐项复核。
+
+\needspace{3\baselineskip}
+\textbf{（一）\(r=R/4\) 与 \(r=2R\) 处的量}
+
+\(R/4\) 在初、末两态都位于空腔内。由球对称性和高斯定律，任取半径
+\(r<R/2\) 的高斯面，包围净电荷为零，故
+
+\[
+\boxed{E(R/4)=0}
+\tag{5}
+\]
+
+在膨胀前后均成立，电场不变。
+
+但空腔内电势虽与位置无关，却不一定为零。对任意一个带电球面层，壳内电势与其半径成反比。整个电荷分布做相似放大而总电荷不变时，空腔内电势按
+\(1/\lambda\) 缩放：
+
+\[
+V_f(R/4)=\frac1\lambda V_i(R/4)=\frac23V_i(R/4).
+\tag{6}
+\]
+
+所以该点电势改变。
+
+\(2R\) 大于末态外半径
+\(3R/2\)，初、末均在球壳外部。外部电场与电势只由总电荷决定：
+
+\[
+E(2R)=\frac{kQ}{(2R)^2},
+\qquad
+V(2R)=\frac{kQ}{2R}.
+\tag{7}
+\]
+
+总电荷 \(Q\) 与观测点不变，故两者均不变。
+
+结论为：
+
+\[
+\boxed{
+\begin{array}{c|cc}
+\text{位置}&E&V\\ \hline
+R/4&\text{不变，恒为零}&\text{改变，变为原来的 }2/3\\
+2R&\text{不变}&\text{不变}
+\end{array}}
+\tag{8}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（二）\(r=R/2\) 处的电势比}
+
+\(r=R/2\)
+在初态位于内边界，在末态位于空腔中。相似膨胀前后，这两个点并不是同一个``相似对应点''；但由于末态空腔内电势处处相等，仍可把末态
+\(R/2\) 处电势等同于末态内边界 \(a'=3R/4\) 处电势。
+
+相似坐标关系为
+
+\[
+a'=\lambda a.
+\tag{9}
+\]
+
+总电荷不变时，电势的量纲为 \(kQ/L\)，故
+
+\[
+\boxed{
+\frac{V_f(R/2)}{V_i(R/2)}
+=\frac{1}{\lambda}
+=\frac23
+}.
+\tag{10}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（三）\(r=R\) 处的电场比}
+
+初态 \(r=R\) 位于球壳外表面，因此
+
+\[
+E_i(R)=\frac{kQ}{R^2}.
+\tag{11}
+\]
+
+末态 \(R\) 位于带电材料内部。末态电荷体密度均匀，故半径 \(R\)
+的高斯面所包电荷等于总体积电荷的体积比例：
+
+\[
+Q_{\rm enc}
+=Q\frac{R^3-(3R/4)^3}{(3R/2)^3-(3R/4)^3}.
+\tag{12}
+\]
+
+把各项写成 \(R^3\) 的倍数：
+
+\[
+\begin{aligned}
+R^3-\left(\frac{3R}{4}\right)^3
+&=R^3\left(1-\frac{27}{64}\right)
+=\frac{37}{64}R^3,\\
+\left(\frac{3R}{2}\right)^3
+-\left(\frac{3R}{4}\right)^3
+&=R^3\left(\frac{27}{8}-\frac{27}{64}\right)\\
+&=R^3\frac{216-27}{64}
+=\frac{189}{64}R^3.
+\end{aligned}
+\tag{13}
+\]
+
+所以
+
+\[
+Q_{\rm enc}=\frac{37}{189}Q.
+\tag{14}
+\]
+
+在同一半径 \(R\) 处，高斯定律给出
+
+\[
+E_f(R)=\frac{kQ_{\rm enc}}{R^2}
+=\frac{37}{189}\frac{kQ}{R^2}.
+\tag{15}
+\]
+
+故
+
+\[
+\boxed{
+\frac{E_f(R)}{E_i(R)}=\frac{37}{189}
+}.
+\tag{16}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（四）中性导体存在时球心电势}
+
+以下按题目后半部分所要求的静电平衡导体模型处理。内表面半径
+
+\[
+a=\frac{3R}{4},
+\tag{17}
+\]
+
+外表面半径
+
+\[
+b=\frac{3R}{2}.
+\tag{18}
+\]
+
+内腔点电荷位于
+
+\[
+s_1=\frac R8.
+\tag{19}
+\]
+
+对半径为 \(a\) 的接地球面，点电荷 \(q\) 的镜像电荷为
+
+\[
+q_1'=-\frac{a}{s_1}q=-6q,
+\tag{20}
+\]
+
+其位置距球心
+
+\[
+s_1'=\frac{a^2}{s_1}
+=\frac{(3R/4)^2}{R/8}
+=\frac{9R}{2}.
+\tag{21}
+\]
+
+真实内点电荷与其镜像在球心产生的电势为
+
+\[
+\begin{aligned}
+V_{c,1}
+&=k\left(\frac{q}{R/8}+\frac{-6q}{9R/2}\right)\\
+&=\frac{kq}{R}\left(8-\frac{12}{9}\right)\\
+&=\frac{20}{3}\frac{kq}{R}.
+\end{aligned}
+\tag{22}
+\]
+
+外部点电荷位于 \(s_2=3R\)。对外半径 \(b=3R/2\) 的接地球面，其镜像为
+
+\[
+q_2'=-\frac{b}{s_2}q=-\frac q2,
+\qquad
+s_2'=\frac{b^2}{s_2}=\frac{3R}{4}.
+\tag{23}
+\]
+
+接地解中，内腔点电荷使内表面感应总电荷
+\(-q\)；外点电荷使外表面感应总电荷
+\(-q/2\)。若导体整体必须保持中性，就要再在外表面补上
+
+\[
+Q_0=\frac{3q}{2}.
+\tag{24}
+\]
+
+均匀分布在半径 \(b\) 的外表面上的电荷
+\(Q_0\)，在整个导体及空腔内产生同一常量电势
+
+\[
+V_0=\frac{kQ_0}{b}
+=\frac{k(3q/2)}{3R/2}
+=\frac{kq}{R}.
+\tag{25}
+\]
+
+因此球心总电势为
+
+\[
+\boxed{
+V_C=V_{c,1}+V_0
+=\frac{23}{3}\frac{kq}{R}
+}.
+\tag{26}
+\]
+
+这里接地外部子问题的物理解在导体和空腔中为零，这是等势边界与唯一性定理的结论；外球镜像仅用于外部区域，不能把它移进空腔直接作库仑叠加。
+
+\needspace{3\baselineskip}
+\textbf{（五）系统电势能}
+
+计算导体诱导体系的能量时，可用先求每个真实点电荷位置处由``其他真实电荷与全部诱导电荷''产生的电势，再用
+
+\[
+U=\frac12\sum_i q_i\varphi_{\rm other}(\boldsymbol r_i).
+\tag{27}
+\]
+
+在这种写法中，两真实点电荷的直接相互作用会在求和中出现两次，前面的
+\(1/2\) 恰好把它计一次；诱导电荷随真实电荷建立所需的 \(1/2\)
+也同时得到正确处理。
+
+先求内腔真实电荷 \(q\) 所在位置 \(s_1=R/8\) 的他源电势。它的内球面镜像为
+\(q_1'=-6q\)，位置 \(s_1'=9R/2\)，两者间距离
+
+\[
+s_1'-s_1
+=\frac{9R}{2}-\frac R8
+=\frac{35R}{8}.
+\]
+
+因此该镜像在真实电荷处产生
+
+\[
+\varphi_{1,\rm image}
+=k\frac{-6q}{35R/8}
+=-\frac{48}{35}\frac{kq}{R}.
+\]
+
+外部真实电荷对应的接地物理解在金属与空腔中电势为零；空腔中不能直接使用该外部镜像公式。恢复中性时添加的外表面均匀电荷产生常量电势
+\(V_0=kq/R\)。故
+
+\[
+\begin{aligned}
+\varphi_{\rm other}(\boldsymbol r_1)
+&=-\frac{48}{35}\frac{kq}{R}
++\frac{kq}{R}\\
+&=-\frac{13}{35}\frac{kq}{R}.
+\end{aligned}
+\tag{28}
+\]
+
+再求外部真实电荷 \(q\) 所在位置 \(s_2=3R\) 的他源电势。它的外球镜像为
+\(q_2'=-q/2\)，位置 \(s_2'=3R/4\)，两者间距离
+
+\[
+s_2-s_2'
+=3R-\frac{3R}{4}
+=\frac{9R}{4}.
+\]
+
+镜像贡献为
+
+\[
+\varphi_{2,\rm image}
+=k\frac{-q/2}{9R/4}
+=-\frac29\frac{kq}{R}.
+\]
+
+内腔真实电荷与内表面诱导电荷构成的接地解在导体外部电势为零，所以不再另加直接的
+\(q_1\) 项。外表面中性补偿电荷在 \(s_2=3R\) 处产生
+
+\[
+\varphi_{2,0}
+=\frac{k(3q/2)}{3R}
+=\frac12\frac{kq}{R}.
+\]
+
+于是
+
+\[
+\begin{aligned}
+\varphi_{\rm other}(\boldsymbol r_2)
+&=\left(-\frac29+\frac12\right)\frac{kq}{R}\\
+&=\frac5{18}\frac{kq}{R}.
+\end{aligned}
+\tag{29}
+\]
+
+最后代入式（27）：
+
+\[
+\begin{aligned}
+U
+&=\frac12q\left[
+-\frac{13}{35}\frac{kq}{R}
++\frac5{18}\frac{kq}{R}
+\right]\\
+&=\frac12\frac{kq^2}{R}
+\left(\frac{-234+175}{630}\right)\\
+&=\boxed{-\frac{59}{1260}\frac{kq^2}{R}}.
+\end{aligned}
+\tag{30}
+\]
+
+负号说明吸引项占优。分区记账还说明，金属层隔离了内、外非恒定场，两侧只通过导体整体电势的中性补偿相联系。
+
+\needspace{3\baselineskip}
+\textbf{补充推导与适用条件}
+
+导体部分困难的是中性边界条件。镜像法最直接给出的是``导体电势指定为零''的接地解；孤立中性导体则要求导体表面等势且导体总电荷为零。两者之差可以是一个满足拉普拉斯方程的常量电势修正，而对球形导体，这个修正在外域等价于球心的等效电荷，在内域是常量势。于是计算程序应拆成三层：
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  对内腔点电荷求内表面的接地镜像，保证内边界等势；
+\item
+  对外部点电荷求外球面的接地镜像，保证外边界等势；
+\item
+  统计两个接地子问题在导体上诱导出的总电荷，再补球心电荷，使真实导体净电荷为零。
+\end{enumerate}
+
+球心电势还有一个简洁的检查。外部电荷在接地球面上满足零电势边界，物理内域的调和解因此为零；不能用外部镜像在球心的形式数值判断内域电势。真实中性球的非零球心电势全部来自最后的常量修正。这样既能检查
+\(23kq/(3R)\)，也能解释为什么内、外两个真实电荷虽然互相被金属屏蔽，仍会通过导体整体电势的约束影响能量记账。
+
+静电能不能简单写成所有真实电荷与镜像电荷两两作用能。导体诱导电荷随真实电荷逐渐建立，诱导部分必须带
+\(1/2\)；真实点电荷彼此的直接作用则只计一次。文中采用
+
+\[
+U=\frac12\sum_i q_i\phi_{\mathrm{ind}}(\boldsymbol r_i)
++\sum_{i<j}\frac{kq_iq_j}{r_{ij}}
+\]
+
+就是为了明确这两类贡献的系数不同。
+
+\textbf{边界与量纲校验。} 对均匀带电厚球壳，应在内边界和外边界分别检查
+\(V\) 连续。由于题设没有额外面电荷，\(E_r\) 也连续；把壳层内部公式令
+\(r=a\)、\(r=b\)，应分别接上空腔常量势和外部
+\(kQ/r\)。所有电势答案都应含 \(kQ/R\) 或 \(kq/R\)，电场答案含
+\(kQ/R^2\)，能量含
+\(kq^2/R\)。对导体子问题还可在金属内部任选一点检查总场为零；若补偿项改变了电场而不仅是电势常量，说明球心等效电荷或作用区域处理有误。最后把两个真实点电荷同时缩小为零，诱导能应按
+\(q^2\) 归零，不应残留与 \(q\) 无关的常数。
+
+\needspace{3\baselineskip}
+\textbf{镜像位置、作用区域与装配能}
+
+图2-2分成内域和外域两个面板。内腔镜像 \(-6q\) 位于
+\(9R/2\)，已在外部真实电荷 \(3R\) 的更远处；它只重现空腔内的场。外域镜像
+\(-q/2\) 位于
+\(3R/4\)，只重现金属球外的场。原图把二者和所有真实电荷画在一条轴上，却没有标作用域，容易误把虚拟电荷当成真实电荷相加。
+
+接地内腔解在金属和外域的物理延拓为零；接地外域解在金属和空腔的物理延拓也为零。它们各自的库仑镜像表达式不能跨越相应球面使用。中性补偿
+\(Q_0=3q/2\) 是另一个真实外表面球对称电荷分布，在内域贡献
+\(kQ_0/b\)，在外域贡献 \(kQ_0/s\)。这两条表达式在 \(s=b\)
+连续，内域电场为零。
+
+装配能以去掉点电荷无限自能后的静电能为准。把两真实电荷从零同时按比例增至
+\(q\)，线性诱导使他源势也按同一比例增加，积分
+\(\int_0^1\lambda\,d\lambda=1/2\)
+给出正文的系数。金属总电荷始终为零，其等势项 \(V_cQ_c/2\)
+为零，所以仅对两个真实点电荷求和即可。负装配能表示导体极化使相互作用能降低，不意味着完整电场能连同无限自能是负数。
+
+原题前三问用均匀体电荷模型，后两问的镜像参考答案须把壳另按中性导体处理。若始终坚持绝缘体且没有给出介电常数，后两问不能直接使用该导体答案；整理题干已明确这一模型转换。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf-1}
+
+前三问可以用一个统一的缩放观点组织。若所有长度同时放大 \(\lambda\)
+倍而总电荷保持不变，则体电荷密度变为原来的
+\(\lambda^{-3}\)。把库仑势积分中的源点坐标也按 \(\lambda\)
+缩放，立刻得到对应位置的电势按 \(\lambda^{-1}\) 缩放、电场按
+\(\lambda^{-2}\)
+缩放。不过题目考察的是固定空间点，不是随物体一起移动的对应点，因此必须先判断该点在初态、末态分别落在空腔、带电材料还是外部区域。\(r=R/2\)
+和 \(r=R\) 正是跨区点，不能只套缩放指数。
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9-1}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  由空腔内 \(E=0\) 推出
+  \(V=0\)。只能推出电势为空间常量；该常量由外层电荷共同决定。
+\item
+  在壳层内部使用 \(kQ/r\)。高斯面只包围半径 \(r\)
+  内的电荷，而且外侧球层对该点仍贡献常量电势。
+\item
+  在 \(r=R\) 的末态仍使用全部
+  \(Q\)。末态该点位于带电材料内部，包围电荷只是总体的一部分。
+\item
+  相似膨胀时误认为体电荷密度不变。总电荷固定意味着
+  \(\rho\propto \lambda^{-3}\)。
+\item
+  把内球面镜像与外球面镜像放在同一个无边界的库仑问题中直接相加，却不检查各自满足哪一侧的边界条件。
+\item
+  把镜像电荷等同于真实导体表面的总电荷。镜像只是在指定区域内复现场的数学构造，必须结合高斯定律判断其对应的诱导电荷总量。
+\item
+  忘记孤立中性导体相对接地导体多一个常量电势自由度，因而错误地强令导体电势为零。
+\item
+  计算能量时，对真实电荷---真实电荷作用也乘
+  \(1/2\)，或对真实电荷---诱导电荷作用漏掉 \(1/2\)。
+\end{enumerate}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae-1}
+
+第一部分建议先画一条半径轴，并把初态边界 \(R/2,R\) 与末态边界
+\(3R/4,3R/2\) 同时标出。让学生对 \(R/4,R/2,R,2R\)
+四个观测点逐个填写``空腔、材料、外部''，然后再选择高斯定律或电势积分。这个步骤能避免大部分公式使用错误。
+
+电势推导可从薄球壳叠加出发。半径为 \(s\)、厚度为 \(\mathrm ds\)
+的薄层电荷为
+\(4\pi s^2\rho\,\mathrm ds\)；当观测点在薄层内侧时，其电势贡献为
+\(k\,\mathrm dQ/s\)，在外侧时为 \(k\,\mathrm dQ/r\)。把积分区间按
+\(s<r\) 与 \(s>r\) 拆开，学生就能看清壳层内部电势公式中每一项的来源。
+
+镜像部分用一张三列表格组织：真实电荷位置、接地镜像的电荷量与位置、该子问题给导体带来的总诱导电荷。完成两行后再加``中性补偿''一行。求能量时另画一张清单，明确每个真实电荷位置处的``其余真实电荷势''和``诱导势''，最后统一代入能量公式，避免遗漏或重复。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3-1}
+
+把相似膨胀倍数推广为 \(\lambda\)，新边界为 \(\lambda R/2\) 与
+\(\lambda R\)。对固定观测半径 \(r\)，临界值分别是 \(\lambda=r/R\) 与
+\(\lambda=2r/R\)，因而 \(E(r,\lambda)\)
+必须分成外部、带电材料和空腔三段写出。作出随 \(\lambda\)
+的函数图像，并检查跨越两条边界时电势连续；若体电荷在边界处没有面电荷，电场也应连续。
+
+再把导体净电荷改为给定值
+\(Q_c\)。接地镜像部分完全不变，只需令球心补偿电荷满足
+
+\[
+q_0+q_{\mathrm{ind,in}}+q_{\mathrm{ind,out}}=Q_c.
+\]
+
+于是导体电势增加 \(kQ_c/b\)（\(b\)
+为外球半径）对应的常量项，球心电势与系统能量均可在中性结果上作线性或二次修正。这个变式能检验学生是否理解``边界形状决定非恒定部分，总电荷决定常量部分''。
+
+\newpage
+
+\section{第 3 题}\label{ux7b2c-3-ux9898}
+
+质量为 \(M\)、顶角为 \(\beta\)、高为 \(H\)
+的均匀实心圆锥，其锥尖固定在水平地面上的 \(O\)
+点。圆锥绕自身对称轴以角速度 \(\omega\)
+自转，并在重力、地面支持力和静摩擦力作用下做稳定定点进动。圆锥轴线与竖直方向夹角为
+\(\theta\)。
+
+（1）求进动角速度 \(\Omega\)。
+
+（2）当圆锥轴线位于 \(yOz\) 平面内时，求地面对锥尖的作用力
+\(\boldsymbol F\)。
+
+（3）求实现稳定运动所需的最小静摩擦系数 \(\mu_0\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.501\linewidth,height=\textheight,keepaspectratio,alt={图3-1　均匀圆锥的三维定点进动}]{../figures/question-03.pdf}
+\caption*{图3-1　均匀圆锥的三维定点进动}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-2}
+
+圆锥的快速自转角动量随轴线进动，质心同时作水平圆周运动。进动频率由转动方程确定，地面反力和摩擦下限由质心加速度确定。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-2}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  均匀实心圆锥的质心位置 \(OC=3H/4\)。
+\item
+  圆锥绕对称轴的转动惯量。
+\item
+  稳定进动中的力矩---角动量关系 \(\boldsymbol\tau=d\boldsymbol L/dt\)。
+\item
+  质心绕竖直轴做圆周运动的向心加速度。
+\item
+  接触力分解与静摩擦系数下限。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-2}
+
+圆锥的自转角动量近似沿自身对称轴，重力对锥尖的力矩使这一角动量矢量绕竖直轴转动。质心同时以水平半径
+\((3H/4)\sin\theta\) 绕 \(z\)
+轴做圆周运动，因此地面作用力不仅要平衡重力，还要提供水平向心力。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-2}
+
+第一问用``力矩大小 =
+角动量方向变化率''；第二问直接对圆锥质心列牛顿第二定律。两处的
+\(\sin\theta\) 来源不同：力矩臂中的 \(\sin\theta\)
+与角动量矢量转动速度中的 \(\sin\theta\) 会约去，而向心加速度仍保留一个
+\(\sin\theta\)。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-2}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.51\linewidth,height=\textheight,keepaspectratio,alt={图3-2　角动量进动、重力矩与地面作用力分解}]{../figures/solution-03.pdf}
+\caption*{图3-2　角动量进动、重力矩与地面作用力分解}
+\end{figure}
+
+均匀实心圆锥的质心在轴线上，距锥尖
+
+\[
+h_C=\frac{3H}{4}.
+\tag{1}
+\]
+
+底面半径为
+
+\[
+a=H\tan\frac\beta2.
+\tag{2}
+\]
+
+均匀实心圆锥绕对称轴的转动惯量为
+
+\[
+I_3=\frac{3}{10}Ma^2
+=\frac{3}{10}MH^2\tan^2\frac\beta2.
+\tag{3}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（一）稳定进动角速度}
+
+在快速自转近似下，自转角动量为
+
+\[
+\boldsymbol L\approx I_3\omega\boldsymbol e_3,
+\tag{4}
+\]
+
+其大小
+
+\[
+L=I_3\omega.
+\tag{5}
+\]
+
+重力关于锥尖 \(O\) 的力矩大小为
+
+\[
+\tau=Mg h_C\sin\theta.
+\tag{6}
+\]
+
+稳定进动时，\(\boldsymbol L\) 以角速度 \(\Omega\)
+绕竖直轴转动。矢量端点在半径 \(L\sin\theta\) 的圆上运动，所以
+
+\[
+\left|\frac{d\boldsymbol L}{dt}\right|
+=\Omega L\sin\theta.
+\tag{7}
+\]
+
+由 \(\boldsymbol\tau=d\boldsymbol L/dt\)：
+
+\[
+Mg h_C\sin\theta
+=\Omega I_3\omega\sin\theta.
+\tag{8}
+\]
+
+当 \(\theta\ne0\) 时约去 \(\sin\theta\)：
+
+\[
+\Omega=\frac{Mg h_C}{I_3\omega}.
+\tag{9}
+\]
+
+代入式（1）、（3）：
+
+\[
+\begin{aligned}
+\Omega
+&=\frac{Mg(3H/4)}{(3/10)MH^2\tan^2(\beta/2)\omega}\\
+&=\frac{3MgH}{4}\cdot
+\frac{10}{3MH^2\tan^2(\beta/2)\omega}\\
+&=\frac{5g}{2\omega H\tan^2(\beta/2)}.
+\end{aligned}
+\tag{10}
+\]
+
+故
+
+\[
+\boxed{
+\Omega=\frac{5g}{2\omega H\tan^2(\beta/2)}
+}.
+\tag{11}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（二）地面对锥尖的作用力}
+
+题设时刻轴线位于 \(yOz\) 平面。取质心位于 \(+y\)
+一侧，则质心相对竖直轴的水平位移为
+
+\[
+y_C=h_C\sin\theta.
+\tag{12}
+\]
+
+质心做匀速圆周运动，向心加速度沿 \(-y\) 方向：
+
+\[
+\boldsymbol a_C
+=-\Omega^2h_C\sin\theta\,\boldsymbol e_y.
+\tag{13}
+\]
+
+圆锥所受外力只有重力 \(-Mg\boldsymbol e_z\) 和地面作用力
+\(\boldsymbol F\)。牛顿第二定律给出
+
+\[
+\boldsymbol F-Mg\boldsymbol e_z=M\boldsymbol a_C.
+\tag{14}
+\]
+
+因此
+
+\[
+\boldsymbol F
+=-M\Omega^2h_C\sin\theta\,\boldsymbol e_y
++Mg\boldsymbol e_z.
+\tag{15}
+\]
+
+代入 \(h_C=3H/4\) 及式（11）：
+
+\[
+\begin{aligned}
+M\Omega^2h_C\sin\theta
+&=M\left[
+\frac{5g}{2\omega H\tan^2(\beta/2)}
+\right]^2\frac{3H}{4}\sin\theta\\
+&=\frac{75Mg^2\sin\theta}
+{16\omega^2H\tan^4(\beta/2)}.
+\end{aligned}
+\tag{16}
+\]
+
+故
+
+\[
+\boxed{
+\boldsymbol F
+=-\frac{75Mg^2\sin\theta}
+{16\omega^2H\tan^4(\beta/2)}\boldsymbol e_y
++Mg\boldsymbol e_z
+}.
+\tag{17}
+\]
+
+其中竖直分量是支持力，水平分量是静摩擦力。
+
+\needspace{3\baselineskip}
+\textbf{（三）最小静摩擦系数}
+
+接触点不滑动要求 \(|F_y|\le \mu F_z\)。临界状态取等号，并代入式（17）：
+
+\[
+\begin{aligned}
+\mu_0
+&=\frac{|F_y|}{F_z}\\
+&=\boxed{\frac{75g\sin\theta}
+{16\omega^2H\tan^4(\beta/2)}}.
+\end{aligned}
+\tag{18}
+\]
+
+其中 \(g/(\omega^2H)\) 和各三角函数均无量纲，故 \(\mu_0\) 的量纲正确。
+
+\needspace{3\baselineskip}
+\textbf{补充推导与适用条件}
+
+在快速自转近似下，角动量主要沿圆锥对称轴，大小为
+\(L\simeq I_3\omega\)。稳定进动时对称轴与竖直方向的夹角保持
+\(\theta\)，所以 \(\boldsymbol L\) 的端点以角速度 \(\Omega\)
+绕竖直轴画圆：
+
+\[
+\left|\frac{\mathrm d\boldsymbol L}{\mathrm dt}\right|
+=\Omega L\sin\theta.
+\]
+
+重力对固定点的力臂为 \(h_C\sin\theta\)，力矩大小为
+\(Mgh_C\sin\theta\)。两式相等后 \(\sin\theta\) 消去，说明快速稳定进动的
+\(\Omega\)
+在该近似下与倾角无关。这一``反直觉''结果正是检查推导是否漏项的标志。
+
+地面对锥尖的作用力不是简单的 \(Mg\) 竖直向上。质心到锥尖的距离为
+\(h_C=3H/4\)，其水平投影半径为
+\(h_C\sin\theta\)，故质心具有水平向心加速度
+\(\Omega^2h_C\sin\theta\)。因此接触力水平分量的大小为
+
+\[
+|F_y|=M\Omega^2h_C\sin\theta,
+\]
+
+竖直分量才是 \(F_z=Mg\)。所需最小静摩擦系数是
+\(|F_y|/F_z\)，而不是重力矩与支持力矩的比。
+
+最后要识别近似的适用边界。若 \(\omega\) 不够大，进动本身对角动量的贡献与
+\(I_3\omega\) 同阶，此时 \(\Omega\)
+不再满足简单的反比式，而应由完整欧拉方程得到两支解；当前答案对应其中的慢进动支。
+
+\textbf{近似与极限校验。} 快速自转近似至少要求
+\(\Omega\ll\omega\)，还须检查下述横向角动量修正。将所得
+
+\[
+\Omega=\frac{5g}{2\omega H\tan^2(\beta/2)}
+\]
+
+代回，条件变为
+\(\omega^2H\tan^2(\beta/2)\gg5g/2\)。若给定参数不满足这个不等式，就不能把正文公式当作精确结论。再考察几何极限：\(H\)
+或底面半径增大，\(I_3\omega\) 增大，进动变慢；\(\omega\)
+增大，\(\Omega\) 反比减小；\(\theta\to0\) 时重力矩与角动量方向变化率都按
+\(\sin\theta\) 趋零，而所需水平摩擦也趋零。\(\mu_0\) 中
+\(g/(\omega^2H)\) 无量纲，这同时核对了式中只能含一个 \(H\) 而不能含
+\(H^2\)。
+
+\needspace{3\baselineskip}
+\textbf{完整转动惯量和快速自转条件}
+
+图3-1中的 \(\beta\) 是全顶角，底面半径
+\(a=H\tan(\beta/2)\)；原参考推导若用半顶角记号，不能直接把 \(\tan\beta\)
+抄入本稿。均匀圆锥的薄片质量元为 \(dm=3Mz^2dz/H^3\)，所以
+
+\[
+h_C=\frac1M\int_0^Hz\,dm=\frac{3H}{4},\qquad
+I_3=\int_0^H\frac12\frac{a^2z^2}{H^2}\,dm=\frac{3Ma^2}{10}.
+\]
+
+关于锥尖的横向惯量还含薄片离锥尖的距离：
+
+\[
+I_1=\int_0^H\left(z^2+\frac14\frac{a^2z^2}{H^2}\right)dm
+=\frac{3M}{5}\left(H^2+\frac{a^2}{4}\right).
+\]
+
+用实际轴向角速度 \(\omega_3\) 表示，完整稳定进动方程为
+
+\[
+I_1\Omega^2\cos\theta-I_3\omega_3\Omega+Mgh_C=0.
+\]
+
+正文取其慢支首项。所需精度的控制量是
+\(4I_1Mgh_C|\cos\theta|/(I_3^2\omega_3^2)\ll1\)，而非仅检查
+\(\Omega/\omega_3\ll1\)；细长圆锥有较大的
+\(I_1/I_3\)，后一个条件可能还不够。若给定``绕自身轴的自转''指欧拉角速率
+\(\dot\psi\)，则 \(\omega_3=\dot\psi+\Omega\cos\theta\)，须先代换。
+
+图3-2的重力矩沿 \(-x\)，支持点水平摩擦沿
+\(-y\)，它们分属转动与平动方程。两个箭头不能画成同一个方向，也不能用摩擦对锥尖的零力矩来断言质心没有水平加速度。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf-2}
+
+稳定进动包含两个不同层次的运动方程。绕固定点 \(O\)
+的转动方程决定进动角速度；质心的平动方程决定地面对锥尖的合力。若把两者混在一起，常会用接触力矩去求
+\(\Omega\)，又在求接触力时误设质心静止。
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9-2}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  把顶角 \(\beta\) 当成半顶角。底面半径应为 \(a=H\tan(\beta/2)\)。
+\item
+  把质心位置写成 \(H/4\)。均匀实心圆锥质心距底面为 \(H/4\)，距锥尖则是
+  \(3H/4\)。
+\item
+  直接套薄圆盘转动惯量
+  \(Ma^2/2\)。圆锥各截面半径和质量随高度变化，正确轴向转动惯量为
+  \(I_3=3Ma^2/10\)。
+\item
+  在 \(|\mathrm d\boldsymbol L/\mathrm dt|\) 中漏掉
+  \(\sin\theta\)，或在重力矩中也漏掉它，虽有时``碰巧''仍得同一形式，但物理过程并不完整。
+\item
+  用 \(\tau=I\alpha\)
+  的标量定轴公式处理进动。这里角动量大小近似不变而方向变化，应使用矢量关系
+  \(\boldsymbol\tau=\mathrm d\boldsymbol L/\mathrm dt\)。
+\item
+  认为稳定进动等于质心静止。稳定只表示 \(\theta\) 与 \(\Omega\)
+  不变，质心仍在水平圆周上运动。
+\item
+  水平力方向写反。若轴的水平投影指向 \(+y\)，向心加速度和摩擦力应指向
+  \(-y\)。
+\item
+  求摩擦系数时用合力除以支持力。库仑条件比较的是切向分量与法向分量，即
+  \(\mu_0=|F_y|/F_z\)。
+\end{enumerate}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae-2}
+
+先用相似薄圆盘积分推一遍 \(I_3\)。取距锥尖 \(z\) 处的薄片，半径为
+\(a z/H\)，质量元与截面积成正比。写出
+\(\mathrm dI=(1/2)(a z/H)^2\mathrm dm\) 后积分，能让学生理解 \(3/10\)
+的来源，而不是死记结论。
+
+随后用一支倾斜铅笔表示
+\(\boldsymbol L\)，让铅笔端点在水平圆上缓慢转动。把一个很小时间
+\(\Delta t\) 内的 \(\Delta\boldsymbol L\) 画成圆的切向弦，从几何上得到
+\(|\Delta L|\simeq L\sin\theta\,\Omega\Delta t\)。再画
+\(\boldsymbol r_C\times M\boldsymbol g\) 的方向，验证两者一致。
+
+求支持力时把圆锥暂时``缩成质心''，单独画质心圆周轨迹。要求学生先写
+\(\boldsymbol a_C\)，再写
+\(\boldsymbol F+M\boldsymbol g=M\boldsymbol a_C\)。通过这一步明确：绕
+\(O\) 取矩时接触力不出现，求平动时接触力却是主要未知量。
+
+讲完后做三项口头检验：\(\omega\) 越大，\(\Omega\)
+是否越小；底面半径越大，角动量是否越大；\(\theta\to0\)
+时水平摩擦是否趋零。三项都与最终公式一致。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3-2}
+
+若锥尖改由无摩擦球铰固定，球铰仍可提供任意方向的约束力而不提供力偶，因此进动角速度的力矩推导不变；反力仍由质心平动方程求得，只是不再需要用库仑摩擦系数解释其水平分量。
+
+进一步取消快速自转近似。设 \(\boldsymbol e_3\)
+沿圆锥对称轴，\(\boldsymbol e_\theta\)
+位于竖直轴与对称轴构成的平面内并指向倾角增大的方向，\(\boldsymbol e_\phi\)
+沿进动切向。竖直单位矢量可分解为
+
+\[
+\boldsymbol e_z
+=\cos\theta\,\boldsymbol e_3
+-\sin\theta\,\boldsymbol e_\theta.
+\]
+
+稳定进动时，刚体总角速度由绕竖直轴的进动与绕自身轴的转动叠加：
+
+\[
+\boldsymbol\omega_{\mathrm{body}}
+=\Omega\boldsymbol e_z+\dot\psi\boldsymbol e_3
+=\omega_3\boldsymbol e_3
+-\Omega\sin\theta\,\boldsymbol e_\theta,
+\]
+
+其中
+
+\[
+\omega_3=\dot\psi+\Omega\cos\theta
+\]
+
+是角速度在对称轴上的真实分量。对称刚体在横向的转动惯量为
+\(I_1\)，轴向转动惯量为 \(I_3\)，所以角动量不再严格沿对称轴，而是
+
+\[
+\boldsymbol L
+=I_3\omega_3\boldsymbol e_3
+-I_1\Omega\sin\theta\,\boldsymbol e_\theta.
+\]
+
+在实验室系中，\(\boldsymbol L\) 随刚体以角速度 \(\Omega\boldsymbol e_z\)
+绕竖直轴转动，因此
+
+\[
+\frac{\mathrm d\boldsymbol L}{\mathrm dt}
+=\Omega\boldsymbol e_z\times\boldsymbol L.
+\]
+
+利用
+
+\[
+\boldsymbol e_z\times\boldsymbol e_3
+=\sin\theta\,\boldsymbol e_\phi,
+\qquad
+\boldsymbol e_z\times\boldsymbol e_\theta
+=\cos\theta\,\boldsymbol e_\phi,
+\]
+
+逐项计算得
+
+\[
+\frac{\mathrm d\boldsymbol L}{\mathrm dt}
+=\Omega\sin\theta
+\left(I_3\omega_3-I_1\Omega\cos\theta\right)
+\boldsymbol e_\phi.
+\]
+
+另一方面，重力对锥尖的力矩为
+
+\[
+\boldsymbol\tau_g
+=h_C\boldsymbol e_3\times(-Mg\boldsymbol e_z)
+=Mgh_C\sin\theta\,\boldsymbol e_\phi.
+\]
+
+令 \(\mathrm d\boldsymbol L/\mathrm dt=\boldsymbol\tau_g\)，对
+\(\sin\theta\ne0\) 消去公因子，得到完整稳定进动条件
+
+\[
+\boxed{
+I_1\Omega^2\cos\theta-I_3\omega_3\Omega+Mgh_C=0
+}.
+\]
+
+当 \(\cos\theta\ne0\) 时，两支解为
+
+\[
+\boxed{
+\Omega_\pm
+=\frac{I_3\omega_3\pm
+\sqrt{I_3^2\omega_3^2-4I_1Mgh_C\cos\theta}}
+{2I_1\cos\theta}
+}.
+\]
+
+对 \(\cos\theta>0\)，判别式非负要求
+
+\[
+I_3^2\omega_3^2
+\ge4I_1Mgh_C\cos\theta,
+\]
+
+这给出规则进动存在的最低轴向自转条件。若 \(I_3\omega_3\)
+足够大，对根式作二项展开：
+
+\[
+\sqrt{I_3^2\omega_3^2-4I_1Mgh_C\cos\theta}
+\simeq I_3\omega_3
+-\frac{2I_1Mgh_C\cos\theta}{I_3\omega_3}.
+\]
+
+取减号支便得到慢进动
+
+\[
+\Omega_-
+\simeq\frac{Mgh_C}{I_3\omega_3},
+\]
+
+正是正文所用公式；加号支则是量级约为 \(I_3\omega_3/(I_1\cos\theta)\)
+的快进动。这样可以清楚看出：快速陀螺近似不是另一个独立定律，而是完整二次方程慢支的首项。
+
+\newpage
+
+\section{第 4 题}\label{ux7b2c-4-ux9898}
+
+实验室用开尔文双电桥测量金属丝的电阻，并由电阻随载荷的变化测定金属丝的杨氏模量。标准电阻
+\(R_s=0.6000\,\Omega\)，桥臂电阻实测为
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.76\linewidth,height=\textheight,keepaspectratio,alt={图4-1　开尔文双电桥测量金属丝低电阻}]{../figures/question-04.pdf}
+\caption*{图4-1　开尔文双电桥测量金属丝低电阻}
+\end{figure}
+
+\[
+R_1=R_2=4004.7\,\Omega,
+\qquad
+R_3=R_4=3000.1\,\Omega.
+\]
+
+金属丝长度 \(L=105.9\,\mathrm{cm}\)，直径
+\(d=0.4856\,\mathrm{mm}\)。加载、卸载时分别记录电阻读数
+\(r_i\)、\(r_i'\)，以 \(\bar r_i=(r_i+r_i')/2\)
+减少对称迟滞的偏移。已知每个砝码质量为 \(m\)，泊松比 \(\mu=0.27\)。
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\centering\arraybackslash}p{(\linewidth - 16\tabcolsep) * \real{0.1111}}
+  >{\centering\arraybackslash}p{(\linewidth - 16\tabcolsep) * \real{0.1111}}
+  >{\centering\arraybackslash}p{(\linewidth - 16\tabcolsep) * \real{0.1111}}
+  >{\centering\arraybackslash}p{(\linewidth - 16\tabcolsep) * \real{0.1111}}
+  >{\centering\arraybackslash}p{(\linewidth - 16\tabcolsep) * \real{0.1111}}
+  >{\centering\arraybackslash}p{(\linewidth - 16\tabcolsep) * \real{0.1111}}
+  >{\centering\arraybackslash}p{(\linewidth - 16\tabcolsep) * \real{0.1111}}
+  >{\centering\arraybackslash}p{(\linewidth - 16\tabcolsep) * \real{0.1111}}
+  >{\centering\arraybackslash}p{(\linewidth - 16\tabcolsep) * \real{0.1111}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\centering
+砝码个数
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+\(2\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+\(3\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+\(4\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+\(5\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+\(6\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+\(7\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+\(8\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+\(9\)
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\(R_x\)（增加） & \(r_2\) & \(r_3\) & \(r_4\) & \(r_5\) & \(r_6\) &
+\(r_7\) & \(r_8\) & \(r_9\) \\
+\(R_x\)（减少） & \(r_2'\) & \(r_3'\) & \(r_4'\) & \(r_5'\) & \(r_6'\) &
+\(r_7'\) & \(r_8'\) & \(r_9'\) \\
+平均值 & \(\bar r_2\) & \(\bar r_3\) & \(\bar r_4\) & \(\bar r_5\) &
+\(\bar r_6\) & \(\bar r_7\) & \(\bar r_8\) & \(\bar r_9\) \\
+\end{longtable}
+}
+
+（1）双电桥的平衡条件为下列哪一项？
+
+\[
+\begin{array}{ll}
+\mathrm A.\ \dfrac{R_1}{R_4}=\dfrac{R_2}{R_3}=\dfrac{R_x}{R_s},
+&\mathrm B.\ \dfrac{R_1}{R_2}=\dfrac{R_4}{R_3}=\dfrac{R_x}{R_s},\\[6pt]
+\mathrm C.\ \dfrac{R_1}{R_3}=\dfrac{R_2}{R_4}=\dfrac{R_x}{R_s},
+&\mathrm D.\ \dfrac{R_4}{R_1}=\dfrac{R_2}{R_3}=\dfrac{R_x}{R_s}.
+\end{array}
+\]
+
+（2）根据上述实测数据计算金属丝电阻 \(R_x\) 和电阻率
+\(\rho\)，并按测量数据的有效数字表示结果。
+
+（3）另测得每个砝码的质量为 \(m\)。
+
+（a）用逐差法处理表中数据，写出单个砝码引起的电阻变化
+\(\Delta R_x\)；结果用 \(r_i\)、\(r_i'\) 或 \(\bar r_i\) 表示。
+
+（b）写出 \(\Delta R_x\) 的标准不确定度 \(\sigma(\Delta R_x)\)；结果用
+\(r_i\)、\(r_i'\) 或 \(\bar r_i\) 表示。
+
+（4）金属丝受拉时，轴向应变 \(\varepsilon_l=\Delta L/L\) 与径向应变满足
+\(\varepsilon_r=-\mu\varepsilon_l\)，其中泊松比 \(\mu=0.27\)。
+
+（a）该实验是否需要考虑径向形变对 \(R_x\) 的影响？A．是；B．否。
+
+（b）用 \(\Delta R_x\)、\(R_x\)、\(m\)、\(\mu\) 和 \(d\) 推导杨氏模量
+\(E\)。
+
+（c）用 \(\sigma(\Delta R_x)\)、\(\sigma(R_x)\)、\(\sigma(m)\) 和
+\(\sigma(d)\) 写出杨氏模量的相对标准不确定度。
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-3}
+
+双电桥的两组比例臂消去连接电阻。逐差给出单砝码电阻增量，再由长度伸长和截面收缩共同求轴向应变及杨氏模量。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-3}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  开尔文双电桥平衡条件。
+\item
+  电阻率公式 \(\rho=RS/L\)。
+\item
+  加载---卸载取平均消除系统迟滞。
+\item
+  等间隔数据的逐差法。
+\item
+  轴向应变、横向应变与应变片灵敏关系。
+\item
+  独立量乘除关系的相对不确定度合成。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-3}
+
+四端接法把供电电流端与电势测量端分开，显著减小引线和接触电阻的影响。拉伸金属丝时，长度增加、横截面积减小；即使材料电阻率近似不变，这两种几何变化都会使电阻增大。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-3}
+
+先用桥臂比例判断
+\(R_x/R_s\)。逐差处理时先把加载和卸载的同一载荷读数平均，再将相隔四个砝码的读数作差并除以
+\(4\)，得到四个``每个砝码的电阻增量''，最后求平均和平均值标准不确定度。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-3}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图4-2　逐差数据链与轴向、径向应变关系}]{../figures/solution-04.pdf}
+\caption*{图4-2　逐差数据链与轴向、径向应变关系}
+\end{figure}
+
+\needspace{3\baselineskip}
+\textbf{（一）双电桥平衡条件}
+
+先说明式中各比例为什么这样排列。取图 4-1 左端 \(A\) 的电势为 \(U\)，右端
+\(B\) 的电势为零；上方主比例臂的中点记为 \(F\)，辅助比例臂的中点记为
+\(G_0\)。检流计示零时，检流计支路没有电流，因而
+
+\[
+U_F=U_{G_0}.
+\tag{1}
+\]
+
+主比例臂 \(R_1\)、\(R_4\) 直接跨接在 \(A\)、\(B\) 之间，由分压关系
+
+\[
+U_F=U\frac{R_4}{R_1+R_4}.
+\tag{2}
+\]
+
+再看下方低阻支路。设流过 \(R_x\) 和 \(R_s\) 的总电流为
+\(I\)，\(D\)、\(E\)
+分别为待测电阻、标准电阻与中间连接部分相接的四端电势端。无论连接电阻
+\(r\) 与辅助比例臂怎样分流，\(R_x\)、\(R_s\) 仍在总电流通路的两端，所以
+
+\[
+U_D=U-IR_x,
+\qquad
+U_E=IR_s.
+\tag{3}
+\]
+
+辅助比例臂 \(R_2\)、\(R_3\) 跨接在 \(D\)、\(E\) 之间，且 \(G_0\)
+是二者的中点，因此
+
+\[
+U_{G_0}
+=\frac{R_3U_D+R_2U_E}{R_2+R_3}.
+\tag{4}
+\]
+
+现在令共同的比例为
+
+\[
+k=\frac{R_1}{R_4}
+=\frac{R_2}{R_3}
+=\frac{R_x}{R_s}.
+\tag{5}
+\]
+
+将 \(R_2=kR_3\)、\(R_x=kR_s\) 代入式（4）：
+
+\[
+\begin{aligned}
+U_{G_0}
+&=\frac{U_D+kU_E}{1+k}\\
+&=\frac{U-IkR_s+kIR_s}{1+k}\\
+&=\frac{U}{1+k}.
+\end{aligned}
+\tag{6}
+\]
+
+其中含 \(I\) 的两项严格抵消；而式（2）同样给出
+
+\[
+U_F=U\frac{R_4}{R_1+R_4}=\frac{U}{1+k}.
+\tag{7}
+\]
+
+于是 \(U_F=U_{G_0}\)，而且结果中完全不含连接电阻
+\(r\)。开尔文双电桥采用两组相同的比例，使它对平衡条件的贡献抵消。
+
+开尔文双电桥消除连接电阻影响的平衡条件为
+
+\[
+\boxed{
+\frac{R_1}{R_4}
+=\frac{R_2}{R_3}
+=\frac{R_x}{R_s}
+}.
+\tag{8}
+\]
+
+对应选项 A。
+
+题给两组比例相同：
+
+\[
+\frac{R_1}{R_4}
+=\frac{4004.7}{3000.1},
+\qquad
+\frac{R_2}{R_3}
+=\frac{4004.7}{3000.1}.
+\tag{9}
+\]
+
+因此
+
+\[
+\begin{aligned}
+R_x
+&=R_s\frac{R_1}{R_4}\\
+&=0.6000\times\frac{4004.7}{3000.1}\,\Omega\\
+&=0.800913\ldots\,\Omega.
+\end{aligned}
+\tag{10}
+\]
+
+按标准电阻的四位有效数字，
+
+\[
+\boxed{R_x=0.8009\,\Omega}.
+\tag{11}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（二）电阻率}
+
+金属丝横截面积
+
+\[
+S=\frac{\pi d^2}{4}.
+\tag{12}
+\]
+
+由
+
+\[
+R_x=\rho\frac{L}{S}
+\tag{13}
+\]
+
+得到
+
+\[
+\rho=\frac{R_xS}{L}
+=\frac{R_x\pi d^2}{4L}.
+\tag{14}
+\]
+
+统一为国际单位：
+
+\[
+L=1.059\,\mathrm m,
+\qquad
+d=4.856\times10^{-4}\,\mathrm m.
+\tag{15}
+\]
+
+逐步代入：
+
+\[
+\begin{aligned}
+\rho
+&=\frac{0.8009\times\pi\times(4.856\times10^{-4})^2}
+{4\times1.059}\\
+&=1.40065\ldots\times10^{-7}\,\Omega\!\cdot\!\mathrm m.
+\end{aligned}
+\tag{16}
+\]
+
+各测量量均至少有四位有效数字，故保留四位：
+
+\[
+\boxed{
+\rho=1.401\times10^{-7}\,\Omega\!\cdot\!\mathrm m
+}.
+\tag{17}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（三）逐差法与不确定度}
+
+先对加载、卸载读数取平均：
+
+\[
+\bar r_i=\frac{r_i+r_i'}2,
+\qquad i=2,3,\ldots,9.
+\tag{18}
+\]
+
+把相隔四个砝码的读数作差。定义四个单砝码增量估计值
+
+\[
+d_i=\frac{\bar r_{i+4}-\bar r_i}{4},
+\qquad i=2,3,4,5.
+\tag{19}
+\]
+
+则单个砝码引起的平均电阻变化为
+
+\[
+\begin{aligned}
+\Delta R_x
+&=\frac14\sum_{i=2}^{5}d_i\\
+&=\frac1{16}\left[
+(\bar r_6-\bar r_2)
++(\bar r_7-\bar r_3)
++(\bar r_8-\bar r_4)
++(\bar r_9-\bar r_5)
+\right].
+\end{aligned}
+\tag{20}
+\]
+
+若以这四个独立估计值的平均值标准不确定度作为 \(\Delta R_x\) 的 A
+类不确定度，则
+
+\[
+\boxed{
+\sigma(\Delta R_x)
+=\sqrt{
+\frac{\sum_{i=2}^{5}(d_i-\Delta R_x)^2}{4(4-1)}
+}
+}.
+\tag{21}
+\]
+
+式（21）的分母可从样本统计定义逐步得到。四个逐差估计值的样本方差为
+
+\[
+s_d^2
+=\frac{1}{4-1}\sum_{i=2}^{5}(d_i-\Delta R_x)^2.
+\tag{22}
+\]
+
+这里 \(s_d\) 描述单个 \(d_i\) 的离散程度；所求 \(\Delta R_x\) 是四个
+\(d_i\) 的平均值，其标准不确定度还要除以 \(\sqrt4\)：
+
+\[
+\sigma(\Delta R_x)
+=\frac{s_d}{\sqrt4}
+=\sqrt{\frac{1}{4(4-1)}
+\sum_{i=2}^{5}(d_i-\Delta R_x)^2}.
+\tag{23}
+\]
+
+若必须把结果完全写成表中的 \(\bar r_i\)，则把
+\(d_i=(\bar r_{i+4}-\bar r_i)/4\) 代回即可：
+
+\[
+\boxed{
+\sigma(\Delta R_x)
+=\frac14\sqrt{
+\frac{1}{12}
+\sum_{i=2}^{5}
+\left[(\bar r_{i+4}-\bar r_i)-4\Delta R_x\right]^2
+}
+}.
+\tag{24}
+\]
+
+式（21）与式（24）完全等价；前者结构更清楚，后者满足``只用表中读数表示''的要求。这里把四个跨区间差值视为独立估计。若同一读数被重复用于不同差值，或仪器零点随时间相关漂移，则还应在协方差矩阵中保留相关项，不能机械套用独立样本公式。
+
+\needspace{3\baselineskip}
+\textbf{（四）泊松效应与杨氏模量}
+
+金属丝受拉时，轴向应变为
+
+\[
+\varepsilon_l=\frac{\Delta L}{L},
+\tag{25}
+\]
+
+径向应变为
+
+\[
+\varepsilon_r=-\mu\varepsilon_l.
+\tag{26}
+\]
+
+横截面积 \(S\propto d^2\)，所以一阶近似下
+
+\[
+\frac{\Delta S}{S}=2\frac{\Delta d}{d}
+=2\varepsilon_r
+=-2\mu\varepsilon_l.
+\tag{27}
+\]
+
+由 \(R=\rho L/S\)，并假定小应变范围内材料电阻率 \(\rho\) 不变：
+
+\[
+\frac{\Delta R_x}{R_x}
+=\frac{\Delta L}{L}-\frac{\Delta S}{S}.
+\tag{28}
+\]
+
+代入式（26）、（27）：
+
+\[
+\frac{\Delta R_x}{R_x}
+=\varepsilon_l+2\mu\varepsilon_l
+=(1+2\mu)\varepsilon_l.
+\tag{29}
+\]
+
+因此必须考虑径向形变。若忽略它，会把轴向应变高估为真实值的 \(1+2\mu\)
+倍。
+
+单个砝码施加拉力 \(F=mg\)，轴向应力为
+
+\[
+\sigma_l=\frac{mg}{S}.
+\tag{30}
+\]
+
+杨氏模量定义为
+
+\[
+E=\frac{\sigma_l}{\varepsilon_l}.
+\tag{31}
+\]
+
+由式（29）解出
+
+\[
+\varepsilon_l
+=\frac{\Delta R_x}{(1+2\mu)R_x}.
+\tag{32}
+\]
+
+代入式（30）、（31）：
+
+\[
+\begin{aligned}
+E
+&=\frac{mg/S}{\Delta R_x/[(1+2\mu)R_x]}\\
+&=\frac{mg(1+2\mu)R_x}{S\Delta R_x}\\
+&=\frac{4mg(1+2\mu)R_x}{\pi d^2\Delta R_x}.
+\end{aligned}
+\tag{33}
+\]
+
+故
+
+\[
+\boxed{
+E=\frac{4mg(1+2\mu)R_x}{\pi d^2\Delta R_x}
+}.
+\tag{34}
+\]
+
+把 \(g\)、\(\pi\)、\(\mu\)
+视为准确量，\(E\propto mR_xd^{-2}(\Delta R_x)^{-1}\)。独立不确定度按平方和合成：
+
+\[
+\boxed{
+\frac{\sigma(E)}{E}
+=\sqrt{
+\left[\frac{\sigma(m)}m\right]^2
++\left[\frac{\sigma(R_x)}{R_x}\right]^2
++\left[\frac{2\sigma(d)}d\right]^2
++\left[\frac{\sigma(\Delta R_x)}{\Delta R_x}\right]^2
+}
+}.
+\tag{35}
+\]
+
+\needspace{3\baselineskip}
+\textbf{补充推导与适用条件}
+
+\[
+\frac{R_1}{R_4}=\frac{R_2}{R_3}=\frac{R_x}{R_s},
+\]
+
+所以必须由 \(R_x=R_sR_1/R_4\) 计算，不能因为 \(R_1=R_2\)、\(R_3=R_4\)
+就误判 \(R_x=R_s\)。数值 \(R_x=0.8009\,\Omega\)
+还可用数量级检查：比例臂之比约为 \(4:3\)，未知电阻理应约为
+\(0.8\,\Omega\)。
+
+材料部分包含两个层次的微小变化。几何上
+
+\[
+R=\rho\frac{L}{S},
+\qquad
+\frac{\Delta R}{R}=\frac{\Delta\rho}{\rho}
++\frac{\Delta L}{L}-\frac{\Delta S}{S}.
+\]
+
+若忽略材料本征压阻效应，\(\Delta\rho=0\)；圆截面有
+\(S\propto d^2\)，轴向拉伸时 \(\Delta d/d=-\mu\varepsilon_l\)，因此
+\(\Delta S/S=-2\mu\varepsilon_l\)。最终
+
+\[
+\frac{\Delta R}{R}=(1+2\mu)\varepsilon_l.
+\]
+
+泊松修正不是附加的经验系数，而是截面收缩对电阻变化的贡献。\(\mu=0.27\)
+时 \(1+2\mu=1.54\)，若省略，杨氏模量会产生约 \(35\%\) 的系统偏差。
+
+逐差法的目的也不只是``多取几次平均''。把相隔四个载荷的数据作差，常量零点被消去，但随载荷次序线性变化的仪器漂移仍会进入斜率；四个差值再平均，相当于利用了全部八个测量点。每个跨距含四个砝码，所以最后必须再除以
+\(4\)，得到单个砝码对应的 \(\Delta R_x\)。
+
+不确定度公式应从最终乘除结构逐项读取。\(E\propto m(1+2\mu)R_xd^{-2}(\Delta R_x)^{-1}\)，独立量的相对标准不确定度按灵敏系数平方加和；直径项的指数是
+\(-2\)，因此贡献为
+\([2\sigma(d)/d]^2\)。这也提供了实验改进方向：直径误差通常会被放大，需优先提高测径质量。
+
+\textbf{数据质量校验。} 在正式代入杨氏模量前，应先画 \(\bar r_i\)
+对砝码数 \(i\) 的散点图。若材料处于线弹性区，各逐差量
+\(d_2,d_3,d_4,d_5\)
+应在不确定度范围内相容；若随载荷系统增大或减小，说明出现非线性、夹持滑移或温度漂移，不能只用平均值掩盖。加载与卸载之差
+\(r_i-r_i'\) 还能单独诊断迟滞，若差值远大于读数随机波动，应把迟滞作为 B
+类或模型不确定度处理。电阻率结果的单位应为
+\(\Omega\cdot\mathrm m\)，杨氏模量应为 \(\mathrm{Pa}\)；金属的 \(E\)
+通常在 \(10^{10}\) 至 \(10^{11}\,\mathrm{Pa}\)
+量级，偏离数个数量级时优先检查毫米换算和逐差分母。
+
+\needspace{3\baselineskip}
+\textbf{桥臂失配与逐差的不确定度含义}
+
+图4-1保留中间连接电阻 \(r\)，不是普通四臂电桥。令主臂比
+\(p=R_1/R_4\)，辅助臂比 \(q=R_2/R_3\)，并记
+\(s=R_2+R_3\)。示零时将中间支路的并联电阻 \(r_{\rm eff}=rs/(r+s)\)
+代入节点电势，可得
+
+\[
+R_x=pR_s+\frac{rR_3}{r+R_2+R_3}(p-q).
+\]
+
+当 \(p=q\) 时，连接电阻项才严格消失。正文题给两组比值完全匹配，故用
+\(R_x=pR_s\)；实际器件比例误差会使引线贡献重新出现。
+
+逐差图的四个配对使用八个不同读数，因此在各读数独立、方差相近时，四个
+\(d_i\) 可按独立样本估计。示例取
+\(d_i=(1.0,1.1,0.9,1.0)\times10^{-4}\,\Omega\)，平均为
+\(10^{-4}\,\Omega\)，平均值标准不确定度为
+\(4.08\times10^{-6}\,\Omega\)。此例只说明公式中 \(\sqrt{4(4-1)}\)
+的意义，未替原卷补造测量数据。
+
+若读数模型是 \(\bar r_i=R_0+si+ci\)，其中 \(ci\)
+来自随测量次序的线性漂移，则逐差也得到
+\(s+c\)；它并不能消除该漂移。加载、卸载平均仅在迟滞近似反对称时减小偏移，剩余温漂和迟滞需另作系统项处理。杨氏模量最终式不含长度
+\(L\)，因为使用的是相对电阻变化来直接求应变。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf-3}
+
+第（1）问决定了整道实验题的数值基准。开尔文双电桥同时使用主比例臂
+\(R_1,R_4\) 与辅助比例臂
+\(R_2,R_3\)；当两组比例相等时，连接低阻之间的导线电阻 \(r\)
+对检流计两端电势的影响被消去。平衡条件是
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9-3}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  只看到两对桥臂分别相等就写
+  \(R_x=R_s\)。应比较的是跨桥的比例，而不是同侧元件是否相等。
+\item
+  把平衡条件写成
+  \(R_1/R_3=R_2/R_4\)，没有从图中的两个分压中点出发核对。建议在检流计示零时明确写出两个中点电势相等。
+\item
+  把四端测量误画成普通惠斯通电桥，导致连接导线电阻仍串入 \(R_x\)。图 4-1
+  中 \(r\) 及辅助比例臂的作用必须说清。
+\item
+  有效数字过多。\(R_s\)
+  与比例臂给出五位左右有效数字，结果应按输入精度保留，不能把计算器所有小数抄入。
+\item
+  厘米、毫米未换算成米便代入 \(\rho=RS/L\)，造成 \(10^3\) 或 \(10^6\)
+  的错误。
+\item
+  逐差后忘记一个差值跨越四个砝码，直接把四条差的平均当成单砝码增量。
+\item
+  把加载与卸载值直接混成一个序列。应先对同一载荷取
+  \(\bar r_i=(r_i+r_i')/2\)，再逐差，以削弱迟滞。
+\item
+  在 \(\Delta R/R\) 中只计长度变化，漏掉横向收缩；或者把 \(\Delta S/S\)
+  写成 \(-\mu\varepsilon\)，漏掉面积含两个横向尺度。
+\item
+  不确定度传播中漏掉指数灵敏系数，例如 \(d^2\) 对应系数
+  \(2\)，或把四个逐差值的样本标准差直接当作平均值的不确定度。
+\end{enumerate}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae-3}
+
+讲电桥时先不背平衡式。给左、右电流端加同一电压，把主比例臂中点电势和辅助比例臂中点电势分别写成分压表达式；令检流计电流为零，再利用两组比例相等消去连接电阻影响。随后用
+\(4004.7/3000.1\approx4/3\) 做心算，预判 \(R_x\) 必大于
+\(R_s\)，借此检查比例方向。
+
+讲逐差法时在横轴上标出 \(2\) 至 \(9\) 个砝码的八个平均读数。图 4-2
+的四条弧线分别连接
+\((2,6)\)、\((3,7)\)、\((4,8)\)、\((5,9)\)，每条斜率估计都跨四个步长。把四条差相加再除以
+\(16\)，学生便能从图上理解分母，不必机械记忆。
+
+材料推导按``电学定义---几何微分---弹性关系---胡克定律''四行展开：
+
+\[
+R=\rho L/S
+\longrightarrow
+\Delta R/R=\varepsilon_l-\Delta S/S
+\longrightarrow
+\Delta R/R=(1+2\mu)\varepsilon_l
+\longrightarrow
+E=\sigma/\varepsilon_l.
+\]
+
+最后让学生用单位核验
+\(4mgR_x/(\pi d^2\Delta R_x)\)：分子与分母中的电阻相消，剩下
+\(\mathrm N/\mathrm{m}^2\)，正是杨氏模量单位。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3-3}
+
+若材料存在本征压阻效应，令
+\(\Delta\rho/\rho=k_\rho\varepsilon_l\)，则应变灵敏系数由 \(1+2\mu\)
+改为
+
+\[
+K=1+2\mu+k_\rho.
+\]
+
+若仍用纯几何公式反推
+\(E\)，所得值将带有系统偏差。可设计一次独立拉伸实验测定
+\(K\)，再把正文公式中的 \(1+2\mu\) 替换为实测 \(K\)。
+
+另一个变式是改变逐差跨度。若共有 \(2n\) 个等间隔载荷点，可将前 \(n\)
+个分别与后 \(n\) 个作差；单步增量估计为
+
+\[
+\Delta R_x=\frac1{n^2}\sum_{i=1}^{n}(\bar r_{i+n}-\bar r_i).
+\]
+
+要求学生比较不同 \(n\)
+对随机误差和非线性误差的影响：跨度增大能提高信号差，却可能掩盖材料非线性。这比单纯套逐差公式更接近真实实验设计。
+
+\newpage
+
+\section{第 5 题}\label{ux7b2c-5-ux9898}
+
+（1）一块厚度为 \(d\)、导热系数为 \(\sigma\)
+的均匀各向同性大平板中，嵌入两个半径为 \(a\)、厚度同为 \(d\)
+的圆柱形良导体，两圆柱轴线间距为 \(l\)。平板尺寸远大于 \(l\)，且
+\(l\gg a\)。两圆柱分别以功率 \(P_1\)、\(P_2\)
+向平板持续传热。求稳态时两圆柱之间的温度差 \(\Delta T=T_1-T_2\)。
+
+（2）在导热系数为 \(\sigma\) 的无限大均匀材料中嵌入两个半径为 \(a\)
+的球形良导体，球心距为 \(l\)，且 \(l\gg a\)。环境远处温度为
+\(T_0\)，两球温度保持为 \(T_1\)、\(T_2\)。求稳态时向两球传热的功率
+\(P_1\)、\(P_2\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.88\linewidth,height=\textheight,keepaspectratio,alt={图5-1　二维平板与三维无限介质中的双热源模型}]{../figures/question-05.pdf}
+\caption*{图5-1　二维平板与三维无限介质中的双热源模型}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-4}
+
+二维导热通过圆柱侧面扩散，三维导热通过球面扩散。先积分单源温度场，再加入另一热源的贡献；二维绝对温度还依赖远边界。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-4}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  傅里叶定律 \(\boldsymbol j_q=-\sigma\nabla T\)。
+\item
+  二维径向稳态导热的对数温度场。
+\item
+  三维球对称稳态导热的 \(1/r\) 温度场。
+\item
+  线性稳态热方程的叠加原理。
+\item
+  两源耦合的二元一次方程组。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-4}
+
+在薄平板中，热流通过半径 \(r\) 的圆柱侧面向外传播，导热面积为
+\(2\pi rd\)，随 \(r\) 一次增加，因此温差积分产生
+\(\ln r\)。在三维无限介质中，热流通过面积 \(4\pi r^2\)
+的球面传播，积分产生 \(1/r\)。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-4}
+
+先独立写出单个热源在距离 \(r\)
+处造成的温升，再利用叠加求两个导体表面的温度。二维问题的远场常数会在温差中自动消去；三维问题则用远处温度
+\(T_0\) 作为明确边界条件。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-4}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图5-2　径向热流面积与双热源温度叠加}]{../figures/solution-05.pdf}
+\caption*{图5-2　径向热流面积与双热源温度叠加}
+\end{figure}
+
+\needspace{3\baselineskip}
+\textbf{（一）薄平板中的两个圆柱热源}
+
+先考虑单个圆柱热源，稳态时穿过半径 \(r\) 的圆柱侧面的总热流率为
+\(P\)。圆柱侧面积为
+
+\[
+A(r)=2\pi rd.
+\tag{1}
+\]
+
+傅里叶定律给出
+
+\[
+P=-\sigma A(r)\frac{dT}{dr}
+=-2\pi\sigma dr\frac{dT}{dr}.
+\tag{2}
+\]
+
+分离变量：
+
+\[
+dT=-\frac{P}{2\pi\sigma d}\frac{dr}{r}.
+\tag{3}
+\]
+
+从半径 \(a\) 积分到 \(r\)：
+
+\[
+T(r)-T(a)
+=-\frac{P}{2\pi\sigma d}
+\int_a^r\frac{dr'}{r'}.
+\tag{4}
+\]
+
+所以
+
+\[
+T(r)=T(a)-\frac{P}{2\pi\sigma d}\ln\frac ra.
+\tag{5}
+\]
+
+在无限二维区域中，单个净热源的绝对温度需要远场边界才能确定；但两个热源表面温差中的任意远场常数会消去。
+
+设某一足够远的参考尺度为 \(L\)。圆柱 1 表面温度由自身源和圆柱 2
+的交叉贡献叠加：
+
+\[
+T_1=C+\frac{P_1}{2\pi\sigma d}\ln\frac La
++\frac{P_2}{2\pi\sigma d}\ln\frac Ll.
+\tag{6}
+\]
+
+同理
+
+\[
+T_2=C+\frac{P_2}{2\pi\sigma d}\ln\frac La
++\frac{P_1}{2\pi\sigma d}\ln\frac Ll.
+\tag{7}
+\]
+
+两式相减：
+
+\[
+\begin{aligned}
+T_1-T_2
+&=\frac{P_1-P_2}{2\pi\sigma d}
+\left(\ln\frac La-\ln\frac Ll\right)\\
+&=\frac{P_1-P_2}{2\pi\sigma d}\ln\frac la.
+\end{aligned}
+\tag{8}
+\]
+
+因此
+
+\[
+\boxed{
+\Delta T
+=\frac{P_1-P_2}{2\pi\sigma d}\ln\frac la
+}.
+\tag{9}
+\]
+
+若 \(P_1=P_2\)，对称性立即给出 \(T_1=T_2\)，与式（9）一致。
+
+\needspace{3\baselineskip}
+\textbf{（二）无限三维介质中的两个球形良导体}
+
+对单个球对称热源，穿过半径 \(r\) 球面的面积为 \(4\pi r^2\)。傅里叶定律为
+
+\[
+P=-4\pi\sigma r^2\frac{dT}{dr}.
+\tag{10}
+\]
+
+积分并用 \(T(\infty)=T_0\)：
+
+\[
+\begin{aligned}
+T(r)-T_0
+&=\int_\infty^r
+-\frac{P}{4\pi\sigma r'^2}\,dr'\\
+&=\frac{P}{4\pi\sigma r}.
+\end{aligned}
+\tag{11}
+\]
+
+令
+
+\[
+\Delta_1=T_1-T_0,
+\qquad
+\Delta_2=T_2-T_0.
+\tag{12}
+\]
+
+在 \(l\gg a\) 近似下，每个球表面的交叉温升可用另一球心处的点源场表示：
+
+\[
+\Delta_1
+=\frac{P_1}{4\pi\sigma a}
++\frac{P_2}{4\pi\sigma l},
+\tag{13}
+\]
+
+\[
+\Delta_2
+=\frac{P_2}{4\pi\sigma a}
++\frac{P_1}{4\pi\sigma l}.
+\tag{14}
+\]
+
+两式乘以 \(4\pi\sigma\)：
+
+\[
+\frac{P_1}{a}+\frac{P_2}{l}=4\pi\sigma\Delta_1,
+\tag{15}
+\]
+
+\[
+\frac{P_1}{l}+\frac{P_2}{a}=4\pi\sigma\Delta_2.
+\tag{16}
+\]
+
+用消元法求 \(P_1\)。式（15）乘 \(l\)，式（16）乘 \(a\) 后相减：
+
+\[
+P_1\left(\frac la-\frac al\right)
+=4\pi\sigma(l\Delta_1-a\Delta_2).
+\tag{17}
+\]
+
+由于
+
+\[
+\frac la-\frac al=\frac{l^2-a^2}{al},
+\tag{18}
+\]
+
+得到
+
+\[
+\boxed{
+P_1
+=4\pi\sigma\frac{al}{l^2-a^2}
+\left[l(T_1-T_0)-a(T_2-T_0)\right]
+}.
+\tag{19}
+\]
+
+同理
+
+\[
+\boxed{
+P_2
+=4\pi\sigma\frac{al}{l^2-a^2}
+\left[l(T_2-T_0)-a(T_1-T_0)\right]
+}.
+\tag{20}
+\]
+
+同一线性方程组还可用``和、差模态''求解，这条路线能把物理意义直接保留下来。定义
+
+\[
+P_+=P_1+P_2,
+\qquad P_-=P_1-P_2,
+\tag{20a}
+\]
+
+\[
+\Delta_+=\Delta_1+\Delta_2,
+\qquad \Delta_-=\Delta_1-\Delta_2.
+\tag{20b}
+\]
+
+将式（15）、（16）相加，左边的 \(P_1\)、\(P_2\) 自动合并为同相模式：
+
+\[
+\left(\frac1a+\frac1l\right)P_+
+=4\pi\sigma\Delta_+.
+\tag{20c}
+\]
+
+因为
+
+\[
+\frac1a+\frac1l=\frac{l+a}{al},
+\]
+
+所以
+
+\[
+P_+=4\pi\sigma\frac{al}{l+a}\Delta_+.
+\tag{20d}
+\]
+
+将式（15）、（16）相减，则得到反相模式：
+
+\[
+\left(\frac1a-\frac1l\right)P_-
+=4\pi\sigma\Delta_-,
+\tag{20e}
+\]
+
+从而
+
+\[
+P_-=4\pi\sigma\frac{al}{l-a}\Delta_-.
+\tag{20f}
+\]
+
+最后由
+
+\[
+P_1=\frac{P_++P_-}{2},
+\qquad
+P_2=\frac{P_+-P_-}{2}
+\tag{20g}
+\]
+
+还原，即可逐项化回式（19）、（20）。同相模式中两球共同升温，另一球的热场也贡献温升，因此相同供热功率对应更高温度，即热阻较大；反相模式中一个加热、一个吸热，温度梯度集中在两球之间，等效关系由
+\(l-a\) 控制。这个分解也解释了为什么最终分母分解为
+
+\[
+l^2-a^2=(l+a)(l-a).
+\tag{20h}
+\]
+
+当 \(l\to\infty\) 时，式（19）、（20）分别趋于
+
+\[
+P_i\to4\pi\sigma a(T_i-T_0),
+\tag{21}
+\]
+
+即孤立球形热源的结果。
+
+\needspace{3\baselineskip}
+\textbf{补充推导与适用条件}
+
+这种差异可以直接从热流扩散面积看出。在厚度为 \(d\) 的平板中，距圆柱轴线
+\(r\) 处的等温面是侧面积 \(2\pi rd\)，傅里叶定律给出
+
+\[
+-\sigma(2\pi rd)\frac{\mathrm dT}{\mathrm dr}=P,
+\]
+
+所以
+\(\mathrm dT\propto \mathrm dr/r\)，积分必然出现对数。在三维材料中等温面是球面积
+\(4\pi r^2\)，于是 \(\mathrm dT\propto \mathrm dr/r^2\)，积分得到
+\(1/r\)。在列式前先由空间维数预判函数形式，是有效的自检方法。
+
+二维无限域还有一个细节：若总注入功率
+\(P_1+P_2\ne0\)，绝对温度相对于无穷远会含发散的对数常量，因此题目只问两圆柱之间的温差。取差时公共的远场项消去，最后只剩
+\(P_1-P_2\)。这解释了为什么不能分别强行令两点相对于无穷远有有限温升。
+
+三维问题则可写成热阻矩阵
+
+\[
+\begin{pmatrix}T_1-T_0\\T_2-T_0\end{pmatrix}
+=\frac1{4\pi\sigma}
+\begin{pmatrix}1/a&1/l\\1/l&1/a\end{pmatrix}
+\begin{pmatrix}P_1\\P_2\end{pmatrix}.
+\]
+
+对角元是自热阻，非对角元是互热阻。矩阵对称体现热传导的互易性；其特征向量
+\((1,1)\) 与 \((1,-1)\)
+分别对应同相加热和差模加热。把问题看成两个模式，能快速理解温度和、温度差各由哪一组功率控制。
+
+近似条件 \(l\gg a\)
+也不能省略。它允许把另一球产生的温度在本球表面近似为常量
+\(P/(4\pi\sigma l)\)；若 \(l\) 与 \(a\)
+同阶，就必须处理球面上不均匀的边界温度，简单的二元线性方程不再精确。
+
+\textbf{线性系统校验。} 热阻矩阵的两个特征值为
+
+\[
+\lambda_+=\frac1{4\pi\sigma}\left(\frac1a+\frac1l\right),
+\qquad
+\lambda_-=\frac1{4\pi\sigma}\left(\frac1a-\frac1l\right).
+\]
+
+题设 \(l>a\) 使二者均为正，符合耗散系统热阻正定的要求；分母 \(l^2-a^2\)
+也因此不会为零。若 \(T_1=T_2>T_0\)，对称性给出
+\(P_1=P_2>0\)；若某球温度虽高于
+\(T_0\)，却受到另一只更热球的强烈加热，其维持恒温所需 \(P_i\)
+可以为负，表示该球需要向外抽热，并非计算矛盾。对二维答案，\(P/(\sigma d)\)
+的单位为开尔文，\(\ln(l/a)\) 无量纲，量纲闭合。
+
+\needspace{3\baselineskip}
+\textbf{功率符号与近似精度}
+
+图5-1的 \(P_i>0\)
+表示外部装置给良导体供热，随后热量由良导体流向材料；若结果
+\(P_i<0\)，装置须从该良导体抽热。题目``向两球传热的功率''采用这一供热功率约定，不能反过来再把式（19）、（20）整体变号。
+
+另一球在本球表面上产生的温度并非严格常数。取表面方向与连心线夹角
+\(\chi\)，其距离展开为
+
+\[
+\frac1{\sqrt{l^2+a^2-2la\cos\chi}}
+=\frac1l+\frac{a\cos\chi}{l^2}+O(a^2/l^3).
+\]
+
+正文只保留常量项
+\(1/l\)。等温球须通过表面热流重新分配消去角向项，因此分母 \(l^2-a^2\)
+是单极子近似方程的完整解，并不意味着已精确保留有限球的所有高阶效应。
+
+二维净供热不为零时，大平板必须借助远处边界或散热维持稳态。对称远边界且尺度远大于
+\(l\)
+时，公共主项在两源温差中抵消；边界位置不对称时会留下小修正，不能宣称任意有限边界的
+\(\ln L\)
+都精确消去。图5-2将二维与三维热流面分开，并用跨源箭头表示仅在另一导体中心计算的交叉项。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf-4}
+
+稳态导热方程与静电势方程具有同样的线性结构。温度 \(T\) 对应电势，热流率
+\(P\) 对应电流或源强，导热系数 \(\sigma\)
+对应电导率。因而单个热源的格林函数决定了全部答案：二维点源产生 \(\ln r\)
+型温度场，三维点源产生 \(1/r\) 型温度场。
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9-4}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  在二维模型中使用球面面积
+  \(4\pi r^2\)。平板内热流沿面内扩散，等温面面积应为 \(2\pi rd\)。
+\item
+  忘记厚度 \(d\)，导致结果量纲从热阻 \(\mathrm K/\mathrm W\)
+  变成错误的量纲。
+\item
+  对二维无限域分别设
+  \(T(\infty)=T_0\)，未意识到非零净功率产生对数发散；题目给出的可观测量是两个有限位置的温差。
+\item
+  把 \(P_1+P_2\) 写入温差。交换下标 \(1\leftrightarrow2\) 时 \(T_1-T_2\)
+  应变号，因此只能与反对称组合 \(P_1-P_2\) 成正比。
+\item
+  自热项也用距离 \(l\)。球面自身的温升由表面半径 \(a\)
+  决定，交叉项才用球心距 \(l\)。
+\item
+  把交叉距离写成 \(l-a\)
+  并声称更精确。另一热源到本球表面各点距离并不相同；题设近似的系统做法是保留零阶常量
+  \(1/l\)。
+\item
+  解矩阵时漏掉行列式 \(1/a^2-1/l^2\)，从而遗漏 \(l^2-a^2\)。
+\item
+  没有检查 \(l\to\infty\) 极限。此时两球必须分别退化为
+  \(P_i=4\pi\sigma a(T_i-T_0)\)。
+\end{enumerate}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae-4}
+
+先从傅里叶定律 \(\boldsymbol j_Q=-\sigma\nabla T\)
+出发，对包围热源的闭合曲线或曲面积分。不要直接给出对数势和 \(1/r\)
+势，而是让学生分别填写二维圆柱面面积 \(2\pi rd\)、三维球面面积
+\(4\pi r^2\)，再积分得到基本解。这样``对数与反比''的差别来自几何，而不是两个孤立公式。
+
+二维部分可设置一个对称性检查：令
+\(P_1=P_2\)，两圆柱所处环境互为镜像，温度差必须为零；令
+\(P_2=-P_1\)，远处净热流为零，温差有限且加倍。学生完成这两个极限后再看一般式，符号通常不会错。
+
+三维部分把图 5-2 中的两球看作两个热节点，先口头写出
+
+\[
+T_1-T_0=R_{11}P_1+R_{12}P_2,
+\qquad
+T_2-T_0=R_{21}P_1+R_{22}P_2,
+\]
+
+再由几何识别
+\(R_{11}=R_{22}=1/(4\pi\sigma a)\)、\(R_{12}=R_{21}=1/(4\pi\sigma l)\)。之后让学生先用加减方程求
+\(P_1\pm P_2\)，再还原
+\(P_1,P_2\)；这比直接求逆矩阵更能显示同相、差模的物理意义。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3-4}
+
+将两球半径改为 \(a_1,a_2\)，热阻矩阵变为
+
+\[
+\frac1{4\pi\sigma}
+\begin{pmatrix}1/a_1&1/l\\1/l&1/a_2\end{pmatrix}.
+\]
+
+要求在给定总功率 \(P=P_1+P_2\) 下使两球等温。由两行相减可得
+
+\[
+P_1\left(\frac1{a_1}-\frac1l\right)
+=P_2\left(\frac1{a_2}-\frac1l\right),
+\]
+
+再与总功率条件联立即可。学生应检查 \(l\to\infty\) 时
+\(P_1/P_2=a_1/a_2\)：半径更大的球要获得相同温升，需要更大的功率。
+
+还可把平板外边界改成半径 \(L\) 的恒温圆。此时单源自热阻变为
+\(\ln(L/a)/(2\pi\sigma d)\)，绝对温度不再发散；当边界相对两源具有对称性且远大于源间距时，温差中的公共主项
+\(\ln L\)
+消去。这一变式有助于理解二维无限域的发散只是参考温度问题，并不妨碍有限点间温差的计算。
+
+\newpage
+
+\section{第 6 题}\label{ux7b2c-6-ux9898}
+
+已知一个圆形物体经过理想薄凸透镜成像后，像仍为圆形。
+
+（1）求该圆形必须满足的几何条件。提示：考察焦点到圆的切线段长度 \(p\)
+与焦距 \(f\) 的关系。
+
+（2）图示两个共轴圆，一个为物、一个为像，圆心距为 \(d\)，半径分别为
+\(R\)、\(r\)。证明小圆圆心到相应焦点的有向距离为
+
+\[
+\frac{R^2-r^2-d^2}{2d}.
+\]
+
+（3）（本问不计分）根据物圆和像圆，用尺规作图确定薄凸透镜的位置与焦点，并说明步骤。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.627\linewidth,height=\textheight,keepaspectratio,alt={图6-1　圆形物与圆形像的共轴几何}]{../figures/question-06.pdf}
+\caption*{图6-1　圆形物与圆形像的共轴几何}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-5}
+
+圆所在的平面必须先说明。以下按原参考答案的画法，研究包含光轴的平面内的圆形轨迹，用理想薄透镜作逐点近轴映射。这个模型可以推出切线长
+\(p=f\)，但同时强制物、像圆半径相等；原卷第二问的不等半径图不能直接满足它。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-5}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  同一实验室坐标中的薄透镜映射。
+\item
+  物距、像距与坐标符号的区别。
+\item
+  二次曲线的两个平方项系数。
+\item
+  圆幂与焦点切线长度。
+\item
+  前、后焦点分居透镜两侧。
+\item
+  逐点回代对整条像轨迹的检验。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-5}
+
+光从左向右传播，透镜在 \(X=0\)，前焦点 \(F=(-f,0)\)，后焦点
+\(F'=(f,0)\)。物圆上的各点有不同物距，横向放大率也不同。要求整个像轨迹仍为圆，需同时约束轴向与横向二次项，不能只把圆心成像后再统一放大半径。
+
+图6-1保留原卷内含两圆的几何关系，仅作为待核验的给定图。图6-2使用一组能够逐点成像的等半径圆，另画焦点和切线。两图分别对应原始条件和经薄透镜公式检验的构型，不能把前者当成后者的数值示意。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-5}
+
+先用 \(u=-X\)、\(v=X'\) 写
+\(1/u+1/v=1/f\)，再回到统一坐标。将映射的逆式代入物圆方程，比较像的
+\(X'^2\) 与 \(Y'^2\)
+系数。求出圆像条件后，还要配方算出像的圆心和半径；这最后一步是原解析缺失的检查。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-5}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.845\linewidth,height=\textheight,keepaspectratio,alt={图6-2　统一坐标下的等半径圆成像、两个焦点与切线长}]{../figures/solution-06.pdf}
+\caption*{图6-2　统一坐标下的等半径圆成像、两个焦点与切线长}
+\end{figure}
+
+\needspace{3\baselineskip}
+\textbf{（一）统一坐标中的逐点映射}
+
+对位于左侧的实物点，\(X<0\)，物距是 \(u=-X>0\)。成像公式为
+
+\[
+-\frac1X+\frac1{X'}=\frac1f.
+\]
+
+解得轴向像坐标，再用放大率 \(Y'/Y=-v/u=X'/X\)，得到
+
+\[
+\boxed{X'=\frac{fX}{X+f},\qquad
+Y'=\frac{fY}{X+f}}.
+\tag{1}
+\]
+
+分母为零的 \(X=-f\)
+是前焦平面，其点成像于无穷远；有限像轨迹须避开它。像点位于右侧时
+\(X'>0\)、横向倒立，这两项可直接检查式（1）的符号。
+
+逆映射为
+
+\[
+\boxed{X=\frac{fX'}{f-X'},\qquad
+Y=\frac{fY'}{f-X'}}.
+\tag{2}
+\]
+
+不能把左右两侧都以``从透镜朝外的正距离''作横坐标，却又声称它们是同一个有向坐标。原稿式（1）的轴向和横向符号没有与图中的焦点位置保持一致，以下统一使用式（1）、（2）。
+
+\needspace{3\baselineskip}
+\textbf{（二）圆像条件和切线长度}
+
+设物圆圆心为 \((D,0)\)、半径为 \(R\)：
+
+\[
+(X-D)^2+Y^2=R^2.
+\tag{3}
+\]
+
+代入式（2），乘以 \((f-X')^2\)：
+
+\[
+[(f+D)X'-Df]^2+f^2Y'^2
+=R^2(f-X')^2.
+\]
+
+逐项展开：
+
+\[
+\begin{aligned}
+&[(f+D)^2-R^2]X'^2+f^2Y'^2\\
+&\quad+2f[R^2-D(f+D)]X'
++f^2(D^2-R^2)=0.
+\end{aligned}
+\tag{4}
+\]
+
+轴向与横向系数相等，才可能成为圆。因此圆像条件为
+
+\[
+(f+D)^2-R^2=f^2,
+\qquad D^2+2fD-R^2=0.
+\tag{5}
+\]
+
+前焦点 \(F=(-f,0)\) 对物圆的幂为
+
+\[
+\operatorname{Pow}_{\Gamma}(F)=(D+f)^2-R^2=f^2>0.
+\]
+
+由圆幂定理，焦点到物圆的实切线段长满足
+
+\[
+\boxed{p=f}.
+\tag{6}
+\]
+
+\(F\)
+是前焦点，不是透镜光心，也不是像侧的后焦点。将三点区分后，切线条件与坐标条件完全相符。
+
+\needspace{3\baselineskip}
+\textbf{（三）配方检查：像圆半径必须相等}
+
+由式（5），有 \(R^2=D^2+2fD\)，故
+
+\[
+R^2-D(f+D)=fD.
+\]
+
+把它代入式（4），除以 \(f^2\)：
+
+\[
+X'^2+Y'^2+2DX'+D^2-R^2=0.
+\]
+
+配方便得
+
+\[
+\boxed{(X'+D)^2+Y'^2=R^2}.
+\tag{7}
+\]
+
+像圆圆心为 \((-D,0)\)，半径仍为
+\(R\)。所以，在此含光轴平面内、圆心在光轴上的模型中，
+
+\[
+\boxed{r=R}.
+\tag{8}
+\]
+
+这不是``小圆放大为大圆''的普通横向放大率问题。圆心本身是物体内部的一个点，其像通常也不是像轮廓的圆心；不能用圆心成像关系替代整个圆的映射。
+
+\needspace{3\baselineskip}
+\textbf{（四）原卷第二问待证式的限制}
+
+原卷给出的式子
+
+\[
+s=\frac{R^2-r^2-d^2}{2d}
+\tag{9}
+\]
+
+确实可由以下纯几何假设推出：取两圆心为
+\(O_1=(-d,0)\)、\(O_2=(0,0)\)，一个点 \(G=(s,0)\) 对两圆等幂。此时
+
+\[
+(s+d)^2-R^2=s^2-r^2,
+\]
+
+消去平方项即得到式（9）。它确定的是根轴与连心线的交点
+\(G\)。但``等幂点''不能直接改称为``同一透镜的焦点''。物圆条件使用前焦点
+\(F\)，像圆条件使用后焦点 \(F'\)，两个焦点相距 \(2f\)。
+
+尤其在原图内含两圆且 \(R>r\)
+的情形，式（8）已说明该图不能是本模型中的圆物和圆像；因而式（9）不能作为原物像条件的普遍结论。若等幂点的幂为负，它连实切线都作不出。原解析在这一处把两侧焦点合并，得到了一条几何上成立、光学上依据不足的公式。
+
+若圆所在平面垂直于光轴，薄透镜确能把不同半径圆相互成像，半径比是
+\(|v/u|\)；但此时第一问的 \(p=f\)
+并非必要条件。原题未区分两种平面模型，因此不能既采用含光轴平面的切线条件，又套用垂轴圆的任意放大率。
+
+\needspace{3\baselineskip}
+\textbf{（五）可以核验的尺规构造}
+
+若给定一对满足上述模型的实物、实像圆，需先有 \(R=r\)、圆心距
+\(d>2R\)。光心 \(O\) 是两圆心连线的中点，透镜线过 \(O\)
+且垂直光轴。取物圆中心 \(D=-d/2\)，由式（5）求
+
+\[
+\boxed{f=\frac d4-\frac{R^2}{d}>0}.
+\tag{10}
+\]
+
+于是
+\(F=O-f\hat x\)、\(F'=O+f\hat x\)。式（10）由加减、乘除和相似三角形可尺规构造；它不需要把两圆的等幂点当成焦点。构造完成后，从
+\(F\) 向物圆作切线，检查长度为 \(f\)，并至少映射两个非轴上物点到像圆。
+
+图6-2取 \(f=1\)、\(R=1\)，物圆圆心 \(D=-1-\sqrt2\)、像圆圆心
+\(-D=1+\sqrt2\)。两圆距为 \(d=2+2\sqrt2\)，代入式（10）得到
+\(f=1\)；两圆半径相等、分处透镜两侧。前焦点对物圆的幂为
+\(2-1=1\)，切线长正好为 \(1\)。
+
+对轴上两端点，物点坐标为 \(D\pm R\)。按式（1）分别变换后，恰为像圆的
+\(-D\mp R\)。对任意圆周参数点
+
+\[
+X=D+R\cos t,\qquad Y=R\sin t,
+\]
+
+回代式（1）恒满足
+
+\[
+(X'+D)^2+Y'^2=R^2.
+\]
+
+因此图中的圆、焦点与光线来自同一套成像数据，不是几何上随意拼出的圆。
+
+\needspace{3\baselineskip}
+\textbf{（六）一般圆的像与退化情形}
+
+若不满足式（5），定义 \(A=(f+D)^2-R^2\)。式（4）中的 \(X'^2\) 系数为
+\(A\)，\(Y'^2\) 系数为 \(f^2\)。\(A>0\) 时一般是椭圆，\(A=0\)
+时为抛物线，\(A<0\)
+时为双曲线；这也说明圆跨过前焦平面时像可能延伸到无穷远。
+
+这些二次曲线属于理想近轴逐点映射，不代表任意大口径透镜都能无像差地成出相同轮廓。题目说``理想薄透镜''时采用的是这一数学模型，审题与作图须在同一个模型内完成。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf-5}
+
+第一问的切线条件需要配方检查补足：\(p=f\)
+不仅使两个平方项系数相等，还确定像圆与物圆半径相等。第二问的根轴公式是独立的等幂几何式；没有额外光学依据时，等幂点不能当焦点。
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9-5}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  把正物距和正像距当作同一实验室坐标。
+\item
+  混淆光心、前焦点和后焦点。
+\item
+  只比较平方项、不再求像圆的半径。
+\item
+  将圆心的像当成像轮廓的圆心。
+\item
+  对内含的不等半径圆强行作出本模型的透镜。
+\item
+  等幂点在圆内时仍试图作实切线。
+\item
+  混用含光轴平面的圆与垂直光轴平面的圆。
+\item
+  将参考答案的待证式当作省略所有条件的定理。
+\end{enumerate}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae-5}
+
+先把前、后焦点分别画在透镜两侧，并令学生以一个位于 \(X<-f\)
+的物点核对式（1）：像在右侧且倒立。随后做代入、比较系数和配方三步，完整算出像圆的圆心与半径。
+
+讨论原卷第二问时，可先承认式（9）是正确的根轴坐标，再让学生检查根轴点为什么不能自动成为两个焦点。用图6-2的具体参数作逐点回代，能把坐标推导与尺规构造连起来。
+
+\textbf{可用于课堂的反例。} 取原卷内含圆的示意参数
+\(R=2,r=1,d=0.5\)。式（9）给出 \(s=2.75\)，等幂值为
+\(s^2-r^2=6.5625>0\)，所以两条实切线确实等长。但是任何满足式（5）的物圆都由式（7）映成同半径圆，无法得到半径
+\(1\) 的像。可作切线只证明几何条件成立，不能证明薄透镜成像成立。
+
+\textbf{订正后的教学用问法。}
+可将第二问改为：``一对共轴等半径圆在含光轴平面内互为实物与实像，圆心距为
+\(d>2R\)，求光心与焦距并作图。''答案就是光心取中点、焦距取式（10）。原卷问题在试卷中保留，解析明确其条件冲突，便于教师说明来源。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3-5}
+
+若给定物圆半径 \(R\) 和焦距 \(f\)，满足圆像条件的轴上圆心有
+
+\[
+D=-f\pm\sqrt{f^2+R^2}.
+\]
+
+左侧实物支取 \(D=-f-\sqrt{f^2+R^2}\)，所得像圆心为 \(-D\)、半径为
+\(R\)。另一个支需结合虚物与传播方向讨论，不能直接称作普通左侧实物。
+
+若给定圆位于垂直光轴的平面内，另用 \(r/R=|v/u|\) 与 \(1/u+1/v=1/f\)
+求像。这是不同模型，应先交代圆的空间平面，再比较两题为什么得到不同半径条件。
+
+\newpage
+
+\section{第 7 题}\label{ux7b2c-7-ux9898}
+
+一块长为 \(l\)、宽为 \(b\)、厚为 \(t\) 的亚克力悬臂板左端固定，右端
+\(P\) 点悬挂砝码。四个相同微型电阻应变片贴在距固定端 \(x\) 处，其中
+\(R_1\)、\(R_4\) 位于板的下表面，\(R_2\)、\(R_3\)
+位于上表面，并接成全桥。电源电动势为 \(\mathcal E\)，应变片标称电阻为
+\(R\)。
+
+（1）若轴向应变为 \(\varepsilon\)、泊松比为 \(\mu\)，推导应变片灵敏系数
+\(K=\Delta R/(R\varepsilon)\)。
+
+（2）当受拉、受压应变片的电阻分别变化 \(+\Delta R\)、\(-\Delta R\)
+时，求电压表读数变化 \(\Delta U\)，并分析温度变化的影响。
+
+（3）为使加减一个砝码时电压变化尽可能大，求 \(x\) 的最佳取值。
+
+（4）若应变片贴在最佳位置，忽略胶层影响，由质量变化 \(m\)、电压变化
+\(\Delta U\) 求板的杨氏模量。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图7-1　悬臂板应变片布置与全桥电路}]{../figures/question-07.pdf}
+\caption*{图7-1　悬臂板应变片布置与全桥电路}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-6}
+
+砝码先产生悬臂板弯矩，再产生上下表面相反的应变，四片电阻把应变变成桥路电压。输出极性按实际接线判定，杨氏模量用电压变化的幅值计算。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-6}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  电阻 \(R=\rho L/S\) 对小形变的一阶响应。
+\item
+  泊松效应与几何灵敏系数 \(K=1+2\mu\)。
+\item
+  全桥两中点电势与温度补偿。
+\item
+  悬臂梁弯矩 \(M(x)=F(l-x)\)。
+\item
+  矩形截面惯性矩 \(I=bt^3/12\)。
+\item
+  弯曲表面应变 \(\varepsilon=My/(EI)\)。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-6}
+
+悬臂板受端部载荷后，上、下表面分别一拉一压。把两片受拉和两片受压应变片交叉接入全桥，可使四个电阻变化在输出端同向叠加；温度导致的共同电阻漂移则在两桥臂中相互抵消。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-6}
+
+电学部分先单独算两个分压点 \(A\)、\(B\)
+的电势，不要背``全桥系数''。力学部分从截面弯矩开始，依次写曲率、表面应变、应变片电阻变化，最后与桥路输出联立。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-6}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.878\linewidth,height=\textheight,keepaspectratio,alt={图7-2　截面弯曲应变、桥臂增减阻与输出极性}]{../figures/solution-07.pdf}
+\caption*{图7-2　截面弯曲应变、桥臂增减阻与输出极性}
+\end{figure}
+
+\needspace{3\baselineskip}
+\textbf{（一）应变片灵敏系数}
+
+应变片可视为均匀金属电阻丝：
+
+\[
+R=\rho\frac{L}{S}.
+\tag{1}
+\]
+
+取一阶相对变化：
+
+\[
+\frac{\Delta R}{R}
+=\frac{\Delta\rho}{\rho}
++\frac{\Delta L}{L}
+-\frac{\Delta S}{S}.
+\tag{2}
+\]
+
+题目按纯几何效应处理，故 \(\Delta\rho=0\)。轴向应变
+
+\[
+\varepsilon=\frac{\Delta L}{L}.
+\tag{3}
+\]
+
+径向应变
+
+\[
+\varepsilon_r=-\mu\varepsilon.
+\tag{4}
+\]
+
+因为 \(S\propto d^2\)：
+
+\[
+\frac{\Delta S}{S}=2\varepsilon_r=-2\mu\varepsilon.
+\tag{5}
+\]
+
+代入式（2）：
+
+\[
+\frac{\Delta R}{R}
+=\varepsilon+2\mu\varepsilon
+=(1+2\mu)\varepsilon.
+\tag{6}
+\]
+
+故
+
+\[
+\boxed{K=1+2\mu}.
+\tag{7}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（二）全桥输出与温度补偿}
+
+右端载荷向下时，固定端附近上表面受拉、下表面受压。按题图接线，下表面的
+\(R_1,R_4\) 电阻减小：
+
+\[
+R_1=R_4=R-\Delta R,
+\tag{8}
+\]
+
+上表面的 \(R_2,R_3\) 电阻增大：
+
+\[
+R_2=R_3=R+\Delta R.
+\tag{9}
+\]
+
+桥路两端加电动势 \(\mathcal E\)。上支路中点 \(A\) 的电势为
+
+\[
+U_A=\mathcal E\frac{R_1}{R_1+R_2}.
+\tag{10}
+\]
+
+代入式（8）、（9）：
+
+\[
+\begin{aligned}
+U_A
+&=\mathcal E\frac{R-\Delta R}{(R-\Delta R)+(R+\Delta R)}\\
+&=\frac{\mathcal E}{2}\left(1-\frac{\Delta R}{R}\right).
+\end{aligned}
+\tag{11}
+\]
+
+下支路中点 \(B\) 的电势为
+
+\[
+U_B=\mathcal E\frac{R_3}{R_3+R_4}
+=\frac{\mathcal E}{2}\left(1+\frac{\Delta R}{R}\right).
+\tag{12}
+\]
+
+因此输出电压
+
+\[
+\begin{aligned}
+\Delta U
+&=U_A-U_B\\
+&=-\mathcal E\frac{\Delta R}{R}.
+\end{aligned}
+\tag{13}
+\]
+
+故
+
+\[
+\boxed{
+|\Delta U|=\mathcal E\frac{|\Delta R|}{R}
+=\mathcal E K|\varepsilon|
+}.
+\tag{14}
+\]
+
+若温度变化使四片电阻共同增加
+\(\delta R_T\)，每条支路的上下两个电阻都增加相同量，桥路仍保持对称。共同模电阻变化不产生一阶差动输出，因此理想情况下温度影响被抵消。
+
+为了看清``抵消到哪一阶''，把温升造成的共同相对变化记作
+\(\tau\)，应变造成的相对变化记作 \(\delta=\Delta R/R\)。四臂可统一写成
+
+\[
+\begin{aligned}
+R_1=R_4&=R(1+\tau-\delta),\\
+R_2=R_3&=R(1+\tau+\delta).
+\end{aligned}
+\tag{14a}
+\]
+
+代入两个分压式，分母均为 \(2R(1+\tau)\)，故
+
+\[
+\Delta U
+=-\mathcal E\frac{\delta}{1+\tau}.
+\tag{14b}
+\]
+
+对 \(|\tau|\ll1\) 展开：
+
+\[
+\Delta U
+=-\mathcal E\delta(1-\tau+\cdots)
+=-\mathcal E\delta+O(\tau\delta).
+\tag{14c}
+\]
+
+因此纯温升项 \(O(\tau)\)
+确实完全消失，剩余温度影响只以温度变化与机械应变的乘积进入二阶小量。若四片温度不一致，令各臂温漂为
+\(\tau_i\)，则会出现一阶差模组合，补偿不再成立。这说明``全桥温度补偿''依赖于四片参数一致并处于近似相同的温度场。
+
+\needspace{3\baselineskip}
+\textbf{（三）最佳贴片位置}
+
+距固定端 \(x\) 处截面的弯矩为
+
+\[
+M(x)=mg(l-x).
+\tag{15}
+\]
+
+表面应变与弯矩成正比，所以
+
+\[
+|\varepsilon(x)|\propto l-x.
+\tag{16}
+\]
+
+在 \(0\le x\le l\) 内，\(l-x\) 随 \(x\) 单调减小，最大值出现在
+
+\[
+\boxed{x=0}.
+\tag{17}
+\]
+
+实际操作中应在不受夹具和应力集中影响的前提下尽量靠近固定端。
+
+若应变片中心不能放在理论位置 \(x=0\)，则不应仍把弯矩写成
+\(mgl\)。保留一般位置，有
+
+\[
+\begin{aligned}
+\varepsilon(x)
+&=\frac{M(x)(t/2)}{E_YI}\\
+&=\frac{mg(l-x)(t/2)}{E_Y(bt^3/12)}\\
+&=\frac{6mg(l-x)}{E_Ybt^2},
+\end{aligned}
+\tag{17a}
+\]
+
+于是一般测量式为
+
+\[
+\boxed{
+E_Y=\frac{6mg(l-x)K\mathcal E}{bt^2|\Delta U|}
+}.
+\tag{17b}
+\]
+
+令 \(x=0\) 才得到后文的最佳位置公式。这一步把题图中的坐标 \(x\)
+接入了计算，也便于实际实验按应变片中心位置修正结果。
+
+\needspace{3\baselineskip}
+\textbf{（四）杨氏模量}
+
+最佳位置处弯矩
+
+\[
+M_0=mgl.
+\tag{18}
+\]
+
+下面不直接引用弯曲正应力公式，而从梁的几何假设推到表面应变。小挠度、线弹性弯曲中，原来垂直于中性面的截面在变形后仍近似保持平面。若中性层曲率为
+\(\chi\)，距中性层有向距离为 \(y\) 的纤维，其轴向应变随 \(y\) 线性变化：
+
+\[
+\varepsilon(y)=\chi y.
+\tag{18a}
+\]
+
+胡克定律给出该处正应力
+
+\[
+\sigma(y)=E_Y\varepsilon(y)=E_Y\chi y.
+\tag{18b}
+\]
+
+截面上一小面积元 \(\mathrm dA\) 承受轴向力
+\(\mathrm dF=\sigma(y)\mathrm dA\)，它对中性轴的力矩为
+\(y\,\mathrm dF\)。把整个截面上的力矩相加：
+
+\[
+\begin{aligned}
+M
+&=\int_A y\,\mathrm dF\\
+&=\int_A y\sigma(y)\,\mathrm dA\\
+&=E_Y\chi\int_A y^2\,\mathrm dA.
+\end{aligned}
+\tag{18c}
+\]
+
+定义截面对中性轴的面积二次矩
+
+\[
+I=\int_A y^2\,\mathrm dA,
+\tag{18d}
+\]
+
+便有
+
+\[
+M=E_YI\chi,
+\qquad
+\chi=\frac{M}{E_YI}.
+\tag{18e}
+\]
+
+于是任意高度处的应变、应力分别为
+
+\[
+\varepsilon(y)=\frac{My}{E_YI},
+\qquad
+\sigma(y)=\frac{My}{I}.
+\tag{18f}
+\]
+
+对宽为 \(b\)、厚为 \(t\) 的矩形截面，取厚度方向为 \(y\)，面积元为
+\(\mathrm dA=b\,\mathrm dy\)。因此
+
+\[
+\begin{aligned}
+I
+&=\int_{-t/2}^{t/2}y^2b\,\mathrm dy\\
+&=b\left[\frac{y^3}{3}\right]_{-t/2}^{t/2}\\
+&=\frac{b}{3}\left[
+\left(\frac t2\right)^3-
+\left(-\frac t2\right)^3
+\right]\\
+&=\frac{bt^3}{12}.
+\end{aligned}
+\tag{18g}
+\]
+
+这也解释了为什么弯曲方向上的厚度 \(t\) 以三次方进入截面刚度，而宽度
+\(b\) 只以一次方进入。
+
+矩形截面对中性轴的惯性矩为 \(I=bt^3/12\)，上、下表面距中性轴
+\(y=t/2\)。将弯曲正应力公式 \(\sigma=M_0y/I\) 和胡克定律
+\(\varepsilon=\sigma/E_Y\) 逐项代入，再与全桥输出式（14）联立：
+
+\[
+\begin{aligned}
+\varepsilon
+&=\frac{M_0(t/2)}{E_Y(bt^3/12)}\\
+&=\frac{mgl\,t}{2E_Y}\cdot\frac{12}{bt^3}\\
+&=\frac{6mgl}{E_Ybt^2},\\
+\frac{|\Delta U|}{K\mathcal E}
+&=\frac{6mgl}{E_Ybt^2},\\
+E_Y
+&=\boxed{\frac{6mglK\mathcal E}{bt^2|\Delta U|}}.
+\end{aligned}
+\tag{22}
+\]
+
+\needspace{3\baselineskip}
+\textbf{补充推导与适用条件}
+
+应变片灵敏系数首先来自几何：
+
+\[
+R=\rho L/S,
+\qquad
+\frac{\Delta R}{R}
+=\frac{\Delta L}{L}-\frac{\Delta S}{S}
+=(1+2\mu)\varepsilon,
+\]
+
+所以在忽略本征压阻效应时 \(K=1+2\mu\)。这里的 \(2\mu\)
+是两个横向尺度同时收缩的结果。
+
+全桥的优势是差分叠加。按图 7-1 接法，上表面的 \(R_2,R_3\) 受拉而增加
+\(\Delta R\)，下表面的 \(R_1,R_4\) 受压而减小
+\(\Delta R\)。两个分压中点一个上升、一个下降，一阶展开后
+
+\[
+U_A-U_B=-\mathcal E\frac{\Delta R}{R},
+\]
+
+其绝对值是单臂四分之一桥的四倍。若四片温度相同而都增加
+\(\delta R_T\)，两个桥臂比例同时保持不变，差模输出的一阶温漂相消。温度补偿要求四片温度场相近且温度系数一致，并不是``任何温度变化都完全没有影响''。
+
+最佳贴片位置由应变而非挠度决定。端部集中载荷下，距固定端 \(x\)
+的截面弯矩为 \(M(x)=mg(l-x)\)，表面应变
+
+\[
+|\varepsilon(x)|=\frac{M(x)(t/2)}{E_Y(bt^3/12)}
+=\frac{6mg(l-x)}{E_Ybt^2}
+\]
+
+随 \(x\) 单调减小，所以理论最佳位置是
+\(x=0\)。实际实验不能把片中心压在夹具边缘或应力集中区，应取``尽量靠近固定端但仍处于均匀弯曲、可可靠粘贴的位置''，并在公式中使用应变片中心的实际
+\(x\)。
+
+最终式还可用比例关系检查：\(\Delta U\)
+越大代表同一载荷下应变越大，材料越软，所以
+\(E_Y\propto1/\Delta U\)；板宽或厚度增大，弯曲更难，故同一输出对应的
+\(E_Y\) 应按 \(1/(bt^2)\) 进入。厚度平方是最敏感的几何量。
+
+\textbf{实验与量纲校验。} 最终式
+
+\[
+E_Y=\frac{6mglK\mathcal E}{bt^2|\Delta U|}
+\]
+
+中 \(K\) 与 \(\mathcal E/\Delta U\) 无量纲，\(mgl/(bt^2)\) 的单位为
+\(\mathrm N/\mathrm m^2\)，故结果为帕斯卡。若载荷加倍且仍在线弹性小挠度区，\(\Delta U\)
+应加倍，反算的 \(E_Y\)
+不变；若正、反向加载所得斜率不等，应检查夹持间隙和粘贴层。线性化还要求
+\(|\Delta R|/R\ll1\)，同时梁挠度相对长度足够小，使弯矩仍可按未变形几何计算。实际数据处理宜用
+\(\Delta U\)---\(m\) 直线斜率而不是单次差值，这能降低零点漂移对 \(E_Y\)
+的影响。
+
+\needspace{3\baselineskip}
+\textbf{接线、输出极性与有限片长}
+
+图7-1把电源正端接左公共端，负端接右公共端，上支路从左到右是
+\(R_2,R_1\)，下支路是
+\(R_4,R_3\)。电压表正端接上中点A、负端接下中点B。这一接法才对应正文
+\(U_A=\mathcal E R_1/(R_1+R_2)\)、\(U_B=\mathcal E R_3/(R_3+R_4)\)。载荷向下时上表面的
+\(R_2,R_3\) 受拉，下表面的 \(R_1,R_4\) 受压，故
+\(U_A-U_B<0\)。反求正的杨氏模量时必须使用 \(|\Delta U|\)。
+
+理想点片最佳位置是 \(x=0\)。若片长为 \(L_g\) 且覆盖
+\([x_c-L_g/2,x_c+L_g/2]\)，在线性弯矩区的平均应变为
+
+\[
+\bar\varepsilon=\frac1{L_g}\int_{x_c-L_g/2}^{x_c+L_g/2}
+\frac{6mg(l-x)}{E_Ybt^2}\,dx
+=\frac{6mg(l-x_c)}{E_Ybt^2}.
+\]
+
+线性弯矩使中心值与平均值相等，因此片长本身在均匀弯曲区不会产生此项偏差；实际靠近夹持处的应力集中或胶层传递才会破坏这一结论。若假设片从
+\(x=0\) 起覆盖 \([0,L_g]\)，其中心就是 \(L_g/2\)，不能仍用点片的
+\(mgl\)。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf-6}
+
+本题把材料电阻变化、惠斯通电桥差分和悬臂梁弯曲三部分串成一条测量链：载荷
+\(m\)
+先产生弯矩，弯矩产生表面应变，应变改变四片电阻，最后电桥把四个微小变化转换成电压。任何一步的符号或系数错误都会传到最终杨氏模量。
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9-6}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  把挠度最大位置当成应变最大位置。自由端位移最大，但端截面弯矩为零；固定端附近表面应变最大。
+\item
+  不根据弯曲方向判断拉压，机械地把上表面写成受压。对图示向下载荷，悬臂板上表面伸长、下表面缩短。
+\item
+  四个应变片的桥臂位置排列错误，使相邻臂的效应互相抵消。接线是否正确应直接代入两个分压公式检查。
+\item
+  把半桥的 \(\Delta U=\mathcal E\Delta R/(2R)\)
+  套给全桥，漏掉另两片的同向贡献。
+\item
+  宣称全桥能消除一切温度影响。只有共同温升且四片参数、粘贴和散热近似一致时，共模项才消去。
+\item
+  灵敏系数中漏掉泊松收缩，或把横截面积相对变化写成 \(-\mu\varepsilon\)。
+\item
+  截面惯性矩把 \(b,t\) 互换。弯曲方向上的厚度必须三次方：\(I=bt^3/12\)。
+\item
+  在弯曲正应力 \(\sigma=My/I\) 中取 \(y=t\) 而非表面距离
+  \(t/2\)，结果多一倍。
+\item
+  理论上写 \(x=0\)
+  后忽略夹具边缘的应力集中和应变片有限长度。实验位置应以片中心坐标代入。
+\item
+  电源电动势和杨氏模量都写作 \(E\)，导致最终公式含义混乱；本文分别用
+  \(\mathcal E\) 与 \(E_Y\)。
+\end{enumerate}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae-6}
+
+先在图 7-1
+的侧视图上画出变形后的虚线轮廓。选靠近固定端的一小段，比较上、下表面弧长，先由几何确认``上拉下压''，再给四个电阻标上
+\(+\Delta R\) 或
+\(-\Delta R\)。随后逐项写两个中点电势，不允许直接背全桥灵敏度公式。
+
+电桥一阶展开可专门示范一次：
+
+\[
+\frac{R-\Delta R}{(R-\Delta R)+(R+\Delta R)}
+=\frac12-\frac{\Delta R}{2R},
+\]
+
+分母恰为
+\(2R\)，所以本题甚至不需要泰勒展开；另一支路同理得到相反变化。再给四臂同时加
+\(\delta R_T\)，让学生观察它为何只形成共模。
+
+力学部分按截面法处理。于距固定端 \(x\) 处切开，右段载荷对截面的力矩为
+\(mg(l-x)\)；写出 \(I=bt^3/12\)、\(y=t/2\)，逐层得到应力与应变。把图 7-2
+放在这一步之后，要求学生指出图中哪一个符号进入电桥方程、哪一个几何量进入弯曲方程，完成图中关系与方程的对应。
+
+最后做三项实验判断：应变片位置向自由端移动时输出应减小；板厚加倍时输出约降为四分之一；反转载荷方向时输出极性反转但幅值近似不变。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3-6}
+
+若只使用两片应变片，一片贴上表面受拉，另一片贴下表面受压。把它们接在相邻桥臂时，两者差分贡献相加，得到半桥输出幅值
+
+\[
+|\Delta U|\simeq\frac{\mathcal E}{2}\frac{\Delta R}{R};
+\]
+
+若误接在对臂，其一阶效应可能抵消。要求学生直接用分压式验证，而不是凭``相邻/对臂''口诀。
+
+若载荷作用点改为 \(x=l_0<l\)，弯矩成为分段函数
+
+\[
+M(x)=
+\begin{cases}
+mg(l_0-x),&0\le x\le l_0,\\
+0,&l_0<x\le l.
+\end{cases}
+\]
+
+应变片应布置在 \(0\le x<l_0\) 且尽量靠近固定端的区域。若再加入应变片长度
+\(L_g\)，测到的是覆盖区间内的平均应变，而非中心点瞬时值；可让学生积分求平均并估计点测量公式的误差。
+
+\newpage
+
+\section{第 8 题}\label{ux7b2c-8-ux9898}
+
+在实验室参考系中，静止质量为 \(m_1=3m\) 的粒子以 \(v=0.8c\)
+向东运动，静止质量为 \(m_2=2m\) 的粒子以 \(u=0.6c\)
+向北运动。两粒子在十字路口发生反应碰撞；碰后两粒子的静止质量分别变为
+\(M_1=4m\) 与 \(M_2=m\)，过程中无辐射。求质量为 \(4m\)
+的粒子碰后速度方向的可能范围。三角函数数值保留三位有效数字。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.492\linewidth,height=\textheight,keepaspectratio,alt={图8-1　两相对论粒子的正交入射与总四动量}]{../figures/question-08.pdf}
+\caption*{图8-1　两相对论粒子的正交入射与总四动量}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-7}
+
+用两粒子的总能量和总动量建立质心系。末态两体能量确定散射动量，洛伦兹变换后动量端点在椭圆上，方向极限由原点向椭圆的切线给出。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-7}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  相对论能量与动量
+  \(E=\gamma mc^2\)、\(\boldsymbol p=\gamma m\boldsymbol v\)。
+\item
+  系统不变质量 \(E^2/c^2-p^2\)。
+\item
+  质心系速度 \(\boldsymbol V_C=c^2\boldsymbol P/E\)。
+\item
+  两体末态在质心系中的等大反向动量。
+\item
+  四动量的洛伦兹变换。
+\item
+  有理函数的方向角极值。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-7}
+
+总动量指向东偏北
+\(20.6^\circ\)。在质心系中，碰后两粒子动量大小固定、方向可以在平面内转动。把质量为
+\(4m\)
+的粒子变换回实验室系后，沿质心运动方向的动量受到洛伦兹``推挤''，因此其方向只能落在总动量方向两侧的有限扇形内。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-7}
+
+不能把两粒子的静止质量简单相加后用经典形式求质心速度。相对论中质心速度由系统总能量和总动量共同决定：\(\boldsymbol V_C=c^2\boldsymbol P/E\)。这一步若错，后面的角度范围会整体错误。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-7}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.464\linewidth,height=\textheight,keepaspectratio,alt={图8-2　质心系散射角与实验室系允许方向扇形}]{../figures/solution-08.pdf}
+\caption*{图8-2　质心系散射角与实验室系允许方向扇形}
+\end{figure}
+
+\needspace{3\baselineskip}
+\textbf{（一）初态总能量与总动量}
+
+对质量 \(3m\)、速度 \(0.8c\) 的粒子：
+
+\[
+\gamma_1=\frac1{\sqrt{1-0.8^2}}=\frac53.
+\tag{1}
+\]
+
+其能量为
+
+\[
+E_1=\gamma_1(3m)c^2
+=5mc^2,
+\tag{2}
+\]
+
+向东动量为
+
+\[
+p_{1x}=\gamma_1(3m)(0.8c)
+=4mc.
+\tag{3}
+\]
+
+对质量 \(2m\)、速度 \(0.6c\) 的粒子：
+
+\[
+\gamma_2=\frac1{\sqrt{1-0.6^2}}=\frac54.
+\tag{4}
+\]
+
+其能量为
+
+\[
+E_2=\gamma_2(2m)c^2
+=\frac52mc^2,
+\tag{5}
+\]
+
+向北动量为
+
+\[
+p_{2y}=\gamma_2(2m)(0.6c)
+=\frac32mc.
+\tag{6}
+\]
+
+总能量
+
+\[
+E=E_1+E_2
+=\frac{15}{2}mc^2.
+\tag{7}
+\]
+
+总动量矢量
+
+\[
+\boldsymbol P
+=4mc\boldsymbol e_x
++\frac32mc\boldsymbol e_y.
+\tag{8}
+\]
+
+其大小为
+
+\[
+\begin{aligned}
+P
+&=mc\sqrt{4^2+\left(\frac32\right)^2}\\
+&=\frac{\sqrt{73}}2mc.
+\end{aligned}
+\tag{9}
+\]
+
+总动量方向相对东方向的夹角为
+
+\[
+\boxed{
+\theta_C=\arctan\frac{(3/2)}4
+=\arctan\frac38
+=20.6^\circ
+}.
+\tag{10}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（二）质心系速度}
+
+相对论系统质心速度为
+
+\[
+\boldsymbol V_C=\frac{c^2\boldsymbol P}{E}.
+\tag{11}
+\]
+
+所以
+
+\[
+\beta_C=\frac{V_C}{c}
+=\frac{Pc}{E}
+=\frac{\sqrt{73}/2}{15/2}
+=\frac{\sqrt{73}}{15}
+=0.570.
+\tag{12}
+\]
+
+相应洛伦兹因子
+
+\[
+\begin{aligned}
+\gamma_C
+&=\frac1{\sqrt{1-\beta_C^2}}\\
+&=\frac1{\sqrt{1-73/225}}\\
+&=\frac{15}{2\sqrt{38}}
+=1.217.
+\end{aligned}
+\tag{13}
+\]
+
+必须强调：不能用 \((3m+2m)\gamma_CV_C=P\)。两粒子在实验室系的总能量不是
+\(5m\gamma_Cc^2\)，系统的惯性质量由总能量决定。
+
+\needspace{3\baselineskip}
+\textbf{（三）系统不变质量与末态质心动量}
+
+系统总四动量的平方在所有惯性系中不变。质心系总能量 \(E_*\) 满足
+
+\[
+\left(\frac{E_*}{c}\right)^2
+=\left(\frac{E}{c}\right)^2-P^2.
+\tag{14}
+\]
+
+代入式（7）、（9）：
+
+\[
+\begin{aligned}
+\left(\frac{E_*}{c}\right)^2
+&=\left(\frac{15}{2}mc\right)^2
+-\left(\frac{\sqrt{73}}2mc\right)^2\\
+&=\frac{225-73}{4}m^2c^2\\
+&=38m^2c^2.
+\end{aligned}
+\tag{15}
+\]
+
+故
+
+\[
+E_*=\sqrt{38}\,mc^2.
+\tag{16}
+\]
+
+碰后在质心系中，两粒子动量等大反向，记大小为 \(p_*\). 能量守恒：
+
+\[
+\sqrt{(4mc^2)^2+(p_*c)^2}
++\sqrt{(mc^2)^2+(p_*c)^2}
+=\sqrt{38}\,mc^2.
+\tag{17}
+\]
+
+可用两体运动学的 Källén 公式：
+
+该公式也可以从能量守恒逐步推出。记质心系总能量为
+
+\[
+W=E_*=\sqrt{38}\,mc^2.
+\tag{17a}
+\]
+
+质量为 \(4m\)、\(m\) 的两粒子在质心系中的能量分别记作
+\(E_{1*}\)、\(E_{2*}\)。两者动量大小同为 \(p_*\)，所以
+
+\[
+E_{1*}^2=16m^2c^4+p_*^2c^2,
+\tag{17b}
+\]
+
+\[
+E_{2*}^2=m^2c^4+p_*^2c^2.
+\tag{17c}
+\]
+
+两式相减，动量项消去：
+
+\[
+E_{1*}^2-E_{2*}^2=15m^2c^4.
+\tag{17d}
+\]
+
+又因能量守恒 \(E_{1*}+E_{2*}=W\)，故
+
+\[
+(E_{1*}-E_{2*})W=15m^2c^4,
+\tag{17e}
+\]
+
+从而
+
+\[
+E_{1*}-E_{2*}=\frac{15m^2c^4}{W}.
+\tag{17f}
+\]
+
+把和、差两式相加、相减：
+
+\[
+\begin{aligned}
+E_{1*}
+&=\frac12\left(W+\frac{15m^2c^4}{W}\right)\\
+&=\frac{W^2+15m^2c^4}{2W}
+=\frac{53}{2\sqrt{38}}mc^2,
+\end{aligned}
+\tag{17g}
+\]
+
+\[
+\begin{aligned}
+E_{2*}
+&=\frac12\left(W-\frac{15m^2c^4}{W}\right)\\
+&=\frac{W^2-15m^2c^4}{2W}
+=\frac{23}{2\sqrt{38}}mc^2.
+\end{aligned}
+\tag{17h}
+\]
+
+再由式（17b）反求动量：
+
+\[
+\begin{aligned}
+p_*^2c^2
+&=E_{1*}^2-16m^2c^4\\
+&=m^2c^4\left(\frac{53^2}{4\times38}-16\right)\\
+&=m^2c^4\frac{2809-2432}{152}\\
+&=m^2c^4\frac{377}{152}\\
+&=m^2c^4\frac{13\times29}{4\times38}.
+\end{aligned}
+\tag{17i}
+\]
+
+取正根便得到下式。一般地，把两末态静止质量写成
+\(M_1\)、\(M_2\)，同样的平方差消元会把分子因式分解为
+
+\[
+\bigl[W^2-(M_1+M_2)^2c^4\bigr]
+\bigl[W^2-(M_1-M_2)^2c^4\bigr],
+\]
+
+这就是 Källén 公式中两个因子的来源，并非需要额外记忆的结论。
+
+\[
+p_*
+=\frac{mc}{2\sqrt{38}}
+\sqrt{[38-(4+1)^2][38-(4-1)^2]}.
+\tag{18}
+\]
+
+逐项计算：
+
+\[
+38-25=13,
+\qquad
+38-9=29.
+\tag{19}
+\]
+
+所以
+
+\[
+\boxed{
+p_*=mc\sqrt{\frac{13\times29}{4\times38}}
+=1.575mc
+}.
+\tag{20}
+\]
+
+质量为 \(4m\) 的粒子在质心系中的能量为
+
+\[
+\begin{aligned}
+E_{1*}
+&=\sqrt{16m^2c^4+p_*^2c^2}\\
+&=4.299mc^2.
+\end{aligned}
+\tag{21}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（四）洛伦兹变换与方向极值}
+
+以总动量方向为 \(X\) 轴，垂直方向为 \(Y\) 轴。设质量 \(4m\)
+粒子在质心系中的散射角为 \(\alpha\)：
+
+\[
+p_{X*}=p_*\cos\alpha,
+\qquad
+p_{Y*}=p_*\sin\alpha.
+\tag{22}
+\]
+
+由质心系向实验室系做沿 \(+X\) 方向、速度 \(V_C\) 的洛伦兹变换：
+
+\[
+p_X
+=\gamma_C\left(p_*\cos\alpha
++\beta_C\frac{E_{1*}}c\right),
+\tag{23}
+\]
+
+\[
+p_Y=p_*\sin\alpha.
+\tag{24}
+\]
+
+设实验室系中该粒子相对 \(X\) 轴的方向角为 \(\phi\)，则
+
+\[
+\tan\phi
+=\frac{p_*\sin\alpha}
+{\gamma_C[p_*\cos\alpha+\beta_CE_{1*}/c]}.
+\tag{25}
+\]
+
+为求最大偏角，令
+
+\[
+A=p_*,
+\qquad
+B=\beta_C\frac{E_{1*}}c.
+\tag{26}
+\]
+
+则 \(B>A>0\)，分母始终为正。对
+
+\[
+f(\alpha)=\frac{A\sin\alpha}{B+A\cos\alpha}
+\tag{27}
+\]
+
+求导：
+
+\[
+\begin{aligned}
+f'(\alpha)
+&=\frac{A\cos\alpha(B+A\cos\alpha)
++A^2\sin^2\alpha}
+{(B+A\cos\alpha)^2}\\
+&=\frac{AB\cos\alpha+A^2}
+{(B+A\cos\alpha)^2}.
+\end{aligned}
+\tag{28}
+\]
+
+极值条件为
+
+\[
+AB\cos\alpha+A^2=0,
+\tag{29}
+\]
+
+即
+
+\[
+\cos\alpha=-\frac AB.
+\tag{30}
+\]
+
+代回并考虑式（25）额外的 \(\gamma_C\)：
+
+\[
+\tan\phi_{\max}
+=\frac{A}{\gamma_C\sqrt{B^2-A^2}}.
+\tag{31}
+\]
+
+代入数值
+
+\[
+A=1.574885mc,
+\qquad
+B=\beta_C\frac{E_{1*}}c
+=2.448mc,
+\tag{32}
+\]
+
+得到
+
+\[
+\tan\phi_{\max}=0.690,
+\qquad
+\boxed{\phi_{\max}=34.6^\circ}.
+\tag{33}
+\]
+
+还可用图 8-2 中的椭圆切线作一次完全独立的几何复核。由式（23）、（24）令
+
+\[
+C=\gamma_C\beta_C\frac{E_{1*}}c,
+\]
+
+则
+
+\[
+p_X-C=\gamma_Cp_*\cos\alpha,
+\qquad
+p_Y=p_*\sin\alpha.
+\tag{33a}
+\]
+
+消去参数 \(\alpha\)：
+
+\[
+\boxed{
+\frac{(p_X-C)^2}{\gamma_C^2p_*^2}
++\frac{p_Y^2}{p_*^2}=1
+}.
+\tag{33b}
+\]
+
+所以末态动量端点确实位于以 \((C,0)\) 为中心、半轴分别为 \(\gamma_Cp_*\)
+与 \(p_*\) 的椭圆上。取从原点出发、斜率为 \(t=\tan\phi\) 的射线
+
+\[
+p_Y=tp_X.
+\tag{33c}
+\]
+
+代入式（33b）并乘以 \(\gamma_C^2p_*^2\)：
+
+\[
+(p_X-C)^2+\gamma_C^2t^2p_X^2
+=\gamma_C^2p_*^2.
+\tag{33d}
+\]
+
+整理成关于 \(p_X\) 的二次方程：
+
+\[
+(1+\gamma_C^2t^2)p_X^2
+-2Cp_X+C^2-\gamma_C^2p_*^2=0.
+\tag{33e}
+\]
+
+极限方向对应射线与椭圆相切，因此该二次方程只有一个实根，判别式等于零：
+
+\[
+4C^2-4(1+\gamma_C^2t^2)
+(C^2-\gamma_C^2p_*^2)=0.
+\tag{33f}
+\]
+
+移项并约去 \(\gamma_C^2\) 后得到
+
+\[
+t^2
+=\frac{p_*^2}{C^2-\gamma_C^2p_*^2}
+=\frac{p_*^2}
+{\gamma_C^2[(\beta_CE_{1*}/c)^2-p_*^2]}.
+\tag{33g}
+\]
+
+因此
+
+\[
+|t|
+=\frac{p_*}
+{\gamma_C\sqrt{(\beta_CE_{1*}/c)^2-p_*^2}},
+\tag{33h}
+\]
+
+与式（31）完全一致。求导法说明极值条件，椭圆切线法说明为什么两个端点之间的所有方向连续可达；两者相互核验。
+
+质心运动方向相对东为 \(\theta_C=20.6^\circ\)，因此质量 \(4m\)
+粒子的实验室方向范围为
+
+\[
+\theta_C-\phi_{\max}
+\le \theta\le
+\theta_C+\phi_{\max}.
+\tag{34}
+\]
+
+最终
+
+\[
+\boxed{
+-14.1^\circ\le\theta\le55.2^\circ
+}.
+\tag{35}
+\]
+
+这里负角表示东偏南，正角表示东偏北。
+
+\needspace{3\baselineskip}
+\textbf{（五）质心速度公式的独立复核}
+
+一种常见误算是把系统质量直接取为 \(3m+2m=5m\)，再由 \(5m\gamma_CV_C=P\)
+得到
+\(V_C\approx0.650c\)。但两个粒子在实验室系中具有相对运动，不能视为静止质量
+\(5m\) 的单一复合粒子。相对论系统质心速度必须由总能量和总动量确定：
+
+\[
+\boldsymbol V_C=\frac{c^2\boldsymbol P}{E},
+\tag{36}
+\]
+
+由此得到 \(0.570c\)。若使用 \(0.650c\)，会得到错误范围
+\([-6.64^\circ,48.0^\circ]\)；通过四动量不变量与直接洛伦兹变换两种独立方法均可确认，正确范围应为式（35）。
+
+\needspace{3\baselineskip}
+\textbf{补充推导与适用条件}
+
+\[
+E=\sum_i\gamma_i m_ic^2,
+\qquad
+\boldsymbol P=\sum_i\gamma_i m_i\boldsymbol v_i.
+\]
+
+系统质心系速度由能流关系
+
+\[
+\boldsymbol V_C=\frac{c^2\boldsymbol P}{E}
+\]
+
+给出。分母是总能量 \(E/c^2\)，不是静止质量和
+\(5m\)，因为两束正交运动粒子并不是一个具有共同速度的刚性复合体。
+
+总四动量不变量
+
+\[
+s=\frac{E^2}{c^4}-\frac{P^2}{c^2}
+\]
+
+给出质心系总能量
+\(E_*=\sqrt{s}\,c^2=\sqrt{38}\,mc^2\)。它大于末态静质量能
+\((4m+m)c^2=5mc^2\)，所以末态有非零动能。两体末态在质心系中动量大小相等、方向相反；由两体运动学公式得到
+\(4m\) 粒子的固定动量 \(p_*\) 与能量
+\(E_1^*\)。注意``动量大小相等''不意味着速度大小相等，因为两者质量不同。
+
+把 \(4m\) 粒子从质心系变回实验室系时，沿 \(\boldsymbol V_C\)
+的分量发生平移与伸缩：
+
+\[
+p_\parallel=\gamma_C(p_*\cos\alpha+\beta_CE_1^*/c),
+\qquad
+p_\perp=p_*\sin\alpha.
+\]
+
+当 \(\alpha\) 绕一周变化，\((p_\parallel,p_\perp)\)
+描出一条椭圆，椭圆中心位于正的平行轴上。实验室观察到的方向角是从原点连到椭圆上各点的射线角；极大、极小方向恰好对应从原点向椭圆作切线。代数求导条件与几何切线条件完全等价。
+
+若椭圆包围原点，方向可遍及整周；若原点在椭圆外，才只有有限扇区。本题平移量
+
+\[
+B=\gamma_C\beta_CE_1^*/c
+\]
+
+大于纵向半轴 \(\gamma_Cp_*\)，原点在椭圆外，因此存在两条切线。求得的
+\(\phi_{\max}\)
+是相对于总动量方向的偏角，最后还必须加上总动量相对东方向的方位角
+\(\theta_C\)，得到 \([-14.1^\circ,55.2^\circ]\)。
+
+两种独立检查都很重要：一是用末态两粒子质心系能量之和核对
+\(\sqrt{38}mc^2\)；二是把极值角代回变换式，检查导数为零且
+\(p_\parallel>0\)。这能有效排除采用经典质心或错误复合质量造成的貌似合理数值。
+
+\textbf{数值复算链。} 初态有
+\(E/(mc^2)=5+2.5=7.5\)，\(\boldsymbol P/(mc)=(4,1.5)\)，故
+\(P/(mc)=\sqrt{73}/2\)，\(\beta_C=P c/E=\sqrt{73}/15\)。于是
+
+\[
+\gamma_C=\frac{15}{2\sqrt{38}},
+\quad
+p_*/(mc)=\sqrt{377/152},
+\quad
+E_{1*}/(mc^2)=\frac{53}{2\sqrt{38}}.
+\]
+
+这三个精确式应保留到最后再取小数，以避免角度端点累计误差。代入切线条件得到相对质心运动方向的最大偏角
+\(34.620^\circ\)；总动量方位角为
+\(\arctan(1.5/4)=20.556^\circ\)，相加减得到 \(-14.064^\circ\) 与
+\(55.176^\circ\)。端点关于 \(20.556^\circ\)
+严格对称，是检查角度基准和正负号的最直接办法。
+
+\needspace{3\baselineskip}
+\textbf{末态反应与方向包络的回代}
+
+初、末粒子的静止质量分别为 \((3m,2m)\) 和
+\((4m,m)\)，粒子种类或内态发生变化，不能把它称为通常保持粒子身份的完全弹性散射。原卷只需无辐射的总四动量守恒，以下按反应碰撞处理。
+
+图8-2同时画出动量端点椭圆和两条切线，扇区只表示平面内允许的方向。椭圆中心到原点的距离是
+\(C=\gamma_CB\)，纵向半轴是 \(\gamma_Cp_*\)，原点在外的正确判据为
+\(B>p_*\)，或等价的 \(C>\gamma_Cp_*\)；不能拿椭圆中心距与横向半轴比较。
+
+本题末态 \(4m\) 粒子在质心系中的速率为
+\(p_*c^2/E_{1*}=\sqrt{377}\,c/53\approx0.366c\)，小于质心系速度
+\(0.570c\)，故实验室中沿总动量方向的分量始终为正。极值时
+\(\cos\alpha=-p_*/B\)，将该角代回两个末态四动量的洛伦兹变换，能同时检查总能量
+\(7.5mc^2\)、总动量 \((4,1.5)mc\) 以及每个末态质量壳
+\(E_i^2-p_i^2c^2=M_i^2c^4\)。
+
+若允许三维散射，方位极限来自围绕总动量轴的锥面；本稿图示是该锥面在入射平面内的截面。质量为
+\(4m\) 粒子的平面方向范围仍为
+\([-14.1^\circ,55.2^\circ]\)，图中不暗示所有三维末态都落在纸面。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf-7}
+
+第一步必须构造系统总四动量，而不是先猜质心速度。两入射粒子的总能量和二维总动量分别为
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9-7}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  使用经典质心速度
+  \(\sum m_i\boldsymbol v_i/\sum m_i\)。相对论权重是能量而不是静止质量。
+\item
+  写成
+  \(5m\gamma_CV_C=P\)。两粒子速度方向不同，不能先把静止质量相加后套单粒子动量公式。
+\item
+  总动量大小直接把东西、南北分量相加。它们正交，应使用平方和；方向也应由反正切确定象限。
+\item
+  用总能量减去静质量能来猜碰后动能分配。两体末态的能量由总不变量和各自质量共同决定。
+\item
+  在质心系认为两粒子速度大小相同。正确条件是动量等大反向，质量不同时速度不同。
+\item
+  洛伦兹变换中把 \(p_\parallel\) 误写成
+  \(\gamma_C(p_*\cos\alpha+\beta_Cp_*)\)，漏掉能量项
+  \(\beta_CE_1^*/c\)。
+\item
+  横向分量也乘 \(\gamma_C\)。沿 boost 垂直方向的动量分量不变。
+\item
+  用速度方向代替动量方向而另做速度合成。对单粒子
+  \(\boldsymbol p\parallel\boldsymbol v\)，直接研究动量角最简洁。
+\item
+  求得 \(\pm\phi_{\max}\) 后未加总动量方位角
+  \(\theta_C\)，导致答案基准方向错误。
+\item
+  只给两个端点而未说明区间连续。\(\alpha\)
+  连续变化且椭圆连通，因此两条切线之间的全部方向都可实现。
+\end{enumerate}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae-7}
+
+把入射数据先整理成表格，每一行写
+\(m_i/m\)、\(v_i/c\)、\(\gamma_i\)、\(E_i/(mc^2)\)、\(p_{ix}/(mc)\)、\(p_{iy}/(mc)\)。总能量与总动量由列求和得到，学生能直接看出为何两个方向不能合成一个``总速度''。
+
+随后画图 8-2：先画总动量方向作为 \(\parallel\)
+轴，再画质心系的固定动量圆。说明 Lorentz boost
+后圆在平行方向伸缩并平移为椭圆。让学生先用直尺从原点作两条切线，预判方向只落在一个扇区，再做求导。几何预判能防止反三角函数分支错误。
+
+代数上可将
+
+\[
+\tan\phi(\alpha)
+=\frac{p_*\sin\alpha}
+{\gamma_Cp_*\cos\alpha+B}
+\]
+
+视作分式函数。极值条件 \(\mathrm d(\tan\phi)/\mathrm d\alpha=0\)
+化为一个关于 \(\cos\alpha\) 的一次条件。求出 \(\alpha\) 后，不只计算
+\(\phi\)，还要检查分母符号，确认角度所在象限。
+
+最后完成四项检查：初态不变量等于末态不变量；末态质心系两能量之和等于
+\(\sqrt{38}mc^2\)；\(B>\gamma_Cp_*\) 因而范围不是整周；上下限关于
+\(\theta_C\) 对称。四项结果应同时满足。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3-7}
+
+保持初态不变，把末态质量推广为 \(M_1,M_2\)。反应能够发生的阈值条件是
+
+\[
+\sqrt{s}\ge M_1+M_2.
+\]
+
+令 \(\mathcal M=W/c^2\) 为系统不变质量，则质心系动量写成
+
+\[
+p_*=\frac{c}{2\mathcal M}
+\sqrt{[\mathcal M^2-(M_1+M_2)^2]
+[\mathcal M^2-(M_1-M_2)^2]}.
+\]
+
+再代入同一椭圆变换即可研究 \(M_1\) 的方向范围。要求学生讨论当
+\(M_1+M_2\)
+逐渐接近阈值时，\(p_*\to0\)，允许方向区间如何收缩到质心速度方向。
+
+若碰撞伴随一束四动量为 \(K^\mu=(E_\gamma/c,\boldsymbol k)\)
+的光子辐射，先构造剩余两体总四动量
+
+\[
+P_{\mathrm{rem}}^\mu=P_{\mathrm{in}}^\mu-K^\mu,
+\]
+
+再由 \(P_{\mathrm{rem}}^2\) 判断两体末态是否可行，并以
+\(\boldsymbol V_{C,\mathrm{rem}}=c^2\boldsymbol P_{\mathrm{rem}}/E_{\mathrm{rem}}\)
+建立新的质心系。这个变式强调：质心系永远由当前研究系统的总四动量定义，不能沿用无辐射情形的速度。
+\end{document}

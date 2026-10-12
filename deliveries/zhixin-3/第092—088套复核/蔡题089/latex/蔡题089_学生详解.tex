@@ -1,0 +1,3330 @@
+\documentclass[12pt,a4paper,UTF8]{ctexart}
+\usepackage[a4paper,top=22mm,bottom=22mm,left=22mm,right=22mm,headheight=15pt]{geometry}
+\usepackage{amsmath,amssymb,mathtools,bm}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{booktabs,longtable,array}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{microtype}
+\usepackage{setspace}
+\usepackage[hidelinks,unicode]{hyperref}
+\usepackage[most]{tcolorbox}
+
+\definecolor{ContestBlue}{HTML}{17365D}
+\definecolor{SoftBlue}{HTML}{EEF4FA}
+\definecolor{SoftGray}{HTML}{F5F6F7}
+\hypersetup{pdftitle={第089套},pdfauthor={}}
+
+\setstretch{1.24}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.35em}
+\setlist{itemsep=0.35em,topsep=0.4em}
+\captionsetup{font=small,labelfont=bf,justification=centering}
+\setcounter{secnumdepth}{0}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small 第089套}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\ctexset{
+  section={format=\Large\bfseries\color{ContestBlue},beforeskip=1.2em,afterskip=0.7em},
+  subsection={format=\large\bfseries\color{ContestBlue},beforeskip=1.0em,afterskip=0.5em},
+  subsubsection={format=\normalsize\bfseries,beforeskip=0.8em,afterskip=0.35em}
+}
+
+\makeatletter
+\newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\newcommand{\maxwidth}{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\newcommand{\maxheight}{\ifdim\Gin@nat@height>0.72\textheight 0.72\textheight\else\Gin@nat@height\fi}
+\newcommand{\pandocbounded}[1]{\begingroup\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}#1\endgroup}
+\makeatother
+
+\begin{document}
+
+\begin{titlepage}
+  \centering
+  \vspace*{58mm}
+  {\Huge\bfseries\color{ContestBlue} 第089套\par}
+  \vfill
+  \vspace*{28mm}
+\end{titlepage}
+
+
+\section{第 1 题}\label{ux7b2c-1-ux9898}
+
+倾角为 \(30^\circ\) 的斜面上放有一个质量为 \(m\)、半径为 \(r\)
+的匀质薄壁圆筒。圆筒与斜面之间的静摩擦因数为
+
+\[
+\mu=\frac{\sqrt3}{3}.
+\]
+
+一根长为 \(r\) 的轻杆，一端铰接在圆筒内的 \(A\) 点，且
+
+\[
+OA=\frac{\sqrt3}{3}r;
+\]
+
+另一端通过橡胶垫支承在斜面的 \(B\) 点。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  若橡胶垫与斜面之间的摩擦足够大，求 \(OA\) 与竖直方向夹角 \(\varphi\)
+  的可取范围；
+\item
+  若要使上述范围内的所有 \(\varphi\)
+  都能实现静止，求橡胶垫与斜面之间的静摩擦因数 \(\mu'\) 的最小值。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.497\linewidth,height=\textheight,keepaspectratio,alt={图 1-1　斜面上的圆筒、铰点与轻杆。}]{../figures/question-01.pdf}
+\caption*{图 1-1　斜面上的圆筒、铰点与轻杆。}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d}
+
+杆端受力只能沿杆轴，圆筒受重力、杆力和斜面合力三力平衡。由作用线共点得到极限构型，再检查两个接触处的摩擦锥是否同时允许。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  静摩擦约束 \(|f|\leq\mu N\)；
+\item
+  接触合力的摩擦锥半角 \(\alpha=\arctan\mu\)；
+\item
+  轻杆为二力杆，两端合力必沿杆轴线；
+\item
+  平面内受三个不平行力的刚体平衡时，三条作用线必共点；
+\item
+  相切几何与余弦关系。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf}
+
+斜面对圆筒的接触力可分为法向力 \(N_C\) 和摩擦力
+\(f_C\)。与其分别讨论，不如把它们合成一个合力 \(\bm R_C\)。由
+
+\[
+\tan\alpha=\frac{|f_C|}{N_C}\leq\mu
+\]
+
+可知，\(\bm R_C\) 只能落在以斜面法线为中心、半角为 \(\alpha\)
+的摩擦锥中。本题
+
+\[
+\alpha=\arctan\frac1{\sqrt3}=30^\circ.
+\]
+
+当圆筒恰好达到可平衡的边界时，\(\bm R_C\)
+位于摩擦锥边界，轻杆的作用线也恰好取到极限方向。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3}
+
+解题时先不求各力大小，而是使用三力平衡的共点性。重力的作用线是过 \(O\)
+的竖直线；斜面接触合力的作用线通过圆筒接触点 \(C\)；轻杆对圆筒的力沿
+\(AB\)。因此，可用``过 \(C\) 的摩擦锥边界线''与``过 \(O\)
+的竖直线''的交点构造极限几何。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790}
+
+图 1-2(a) 把接触点 \(C\) 处的法向力与摩擦力合成为
+\(\bm R_C\)，红色边界线表示 \(|f_C|=\mu N_C\)；图 1-2(b)
+再把这条极限作用线与 \(OA\)、\(AB\)
+的长度约束合到同一几何图中。以下先由左图确定允许方向，再由右图写投影方程。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.807\linewidth,height=\textheight,keepaspectratio,alt={图 1-2　圆筒接触合力的摩擦锥及轻杆的极限位置。}]{../figures/solution-01.pdf}
+\caption*{图 1-2　圆筒接触合力的摩擦锥及轻杆的极限位置。}
+\end{figure}
+
+\textbf{（1）圆筒接触合力的极限方向}
+
+由于 \(\mu=1/\sqrt3\)，摩擦锥半角为
+
+\[
+\alpha=30^\circ.
+\]
+
+斜面法线与竖直方向之间的夹角恰为
+\(30^\circ\)。所以在一侧的极限情况下，接触合力作用线可转到竖直方向；继续增大
+\(\varphi\) 时，所需方向将超出摩擦锥，静止不再可能。
+
+\textbf{（2）极限构型的几何方程}
+
+转入图 1-2(b)。记最大夹角为 \(\gamma\)。沿斜面法线方向投影：\(OA\)
+与指向斜面的法线方向夹角为 \(\gamma+30^\circ\)，故投影为
+\(OA\cos(\gamma+30^\circ)\)；圆心到斜面的法向距离为 \(r\)，杆 \(AB\)
+在同一方向上的投影为 \(r\cos30^\circ\)。因此
+
+\[
+OA\cos(\gamma+30^\circ)
+=r-r\cos30^\circ.
+\]
+
+代入 \(OA=r/\sqrt3\) 和 \(\cos30^\circ=\sqrt3/2\)：
+
+\[
+\frac r{\sqrt3}\cos(\gamma+30^\circ)
+=r\left(1-\frac{\sqrt3}{2}\right).
+\]
+
+两边同除以 \(r/\sqrt3\)：
+
+\[
+\cos(\gamma+30^\circ)
+=\sqrt3\left(1-\frac{\sqrt3}{2}\right)
+=\sqrt3-\frac32.
+\]
+
+因此
+
+\[
+\gamma
+=\arccos\left(\sqrt3-\frac32\right)-30^\circ
+\approx46.58^\circ.
+\]
+
+下限 \(\varphi=0\) 对应 \(OA\)
+沿竖直方向。若将``与竖直方向夹角''取为非负角，则可取范围为
+
+\[
+\boxed{
+0\leq\varphi\leq
+\arccos\left(\sqrt3-\frac32\right)-30^\circ
+\approx46.58^\circ
+}.
+\]
+
+若题目把边界滑动排除、只讨论严格静摩擦，则将两个等号改为严格不等号。通常竞赛题把极限静摩擦视为可达边界，因此保留等号。
+
+\textbf{（3）橡胶垫摩擦因数}
+
+轻杆是二力杆，所以橡胶垫对杆端 \(B\) 的合力必须沿 \(AB\)。当 \(\varphi\)
+扫过第（1）问的全部范围时，\(AB\) 相对斜面法线的最大偏角为
+\(60^\circ\)。若橡胶垫摩擦锥要包含这个方向，必须有
+
+\[
+\arctan\mu'\geq60^\circ.
+\]
+
+对两边取正切：
+
+\[
+\boxed{\mu'_{\min}=\tan60^\circ=\sqrt3}.
+\]
+
+\textbf{（4）把三力共点条件逐项核对}
+
+为说明上述几何条件为什么足以决定边界，把圆筒从系统中单独隔离。圆筒只受三类外力：
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  重力 \(m\bm g\)，作用线通过圆心 \(O\) 且竖直向下；
+\item
+  斜面接触点 \(C\) 处的合力 \(\bm R_C\)，作用线通过 \(C\)；
+\item
+  轻杆在 \(A\) 处的作用力 \(\bm P\)，由于轻杆为二力杆，\(\bm P\) 必须沿
+  \(AB\)。
+\end{enumerate}
+
+平衡条件为
+
+\[
+m\bm g+\bm R_C+\bm P=\bm0,
+\tag{1}
+\]
+
+以及对任意点的合力矩为零。若三条作用线不共点，可取重力线与杆力线的交点为矩心：前两力对该点力矩为零，而
+\(\bm R_C\)
+的作用线不经过该点，必留下非零力矩，这与平衡矛盾。因此三条作用线共点是必要条件。
+
+反过来，在图 1-2 所示的可行范围内，过 \(C\)
+的合力线仍落在摩擦锥内部，且三条作用线共点。沿其中任意两个不平行方向分解重力，就能确定
+\(P\) 与 \(R_C\)
+的大小。接触合力指向圆筒一侧，法向分量为正；其切向与法向分量之比不超过
+\(\mu\)。所以在此范围内，方向条件也能给出满足接触约束的力值。
+
+\textbf{（5）为什么最大角出现在摩擦锥边界}
+
+当 \(\varphi\) 从 \(0\) 连续增大时，点 \(A\) 随 \(OA\)
+转动，长度固定的杆 \(AB=r\)
+随之改变方向。为了保持三力共点，接触合力线也必须连续转动。只要该线严格位于摩擦锥内部，就还保留一小段方向余量，\(\varphi\)
+仍可继续变化；真正失去静止可能性的第一时刻，必有
+
+\[
+|f_C|=\mu N_C,
+\tag{2}
+\]
+
+即接触合力恰落在摩擦锥边界。于是``求最大角''可以转化为图 1-2
+中的极限几何，而不需要先求 \(N_C,f_C,P\) 三个力的数值。
+
+\textbf{（6）极限角的数值计算与反代}
+
+先计算反余弦中的量：
+
+\[
+\sqrt3-\frac32
+\approx1.7320508-1.5000000
+=0.2320508.
+\]
+
+因此
+
+\[
+\arccos(0.2320508)\approx76.58^\circ,
+\]
+
+从而
+
+\[
+\gamma\approx76.58^\circ-30.00^\circ
+=46.58^\circ.
+\]
+
+把 \(\gamma+30^\circ=76.58^\circ\) 反代原投影式：
+
+\[
+\begin{aligned}
+\frac r{\sqrt3}\cos76.58^\circ
+&\approx0.57735r\times0.23205\\
+&\approx0.13397r,
+\end{aligned}
+\]
+
+而
+
+\[
+r-r\cos30^\circ
+=(1-0.86603)r
+=0.13397r.
+\]
+
+两边一致，说明角度换算没有把 \(30^\circ\) 的加减号写反。
+
+\textbf{（7）橡胶垫极限摩擦的分量核验}
+
+设杆轴与橡胶垫处斜面法线的夹角为 \(\beta\)。橡胶垫合力沿杆轴，故
+
+\[
+N_B=P\cos\beta,
+\qquad
+|f_B|=P\sin\beta.
+\]
+
+两式相除：
+
+\[
+\frac{|f_B|}{N_B}=\tan\beta.
+\tag{3}
+\]
+
+在全部允许构型中 \(\beta\) 最大为 \(60^\circ\)，所以最不利构型要求
+
+\[
+\frac{|f_B|}{N_B}=\tan60^\circ=\sqrt3.
+\]
+
+这不仅说明 \(\mu'=\sqrt3\) 是必要条件，也说明它足以覆盖其余
+\(\beta<60^\circ\) 的构型。
+
+\textbf{力作用线方法的完整性检查}
+
+三力共点性只解决``方向是否可能''，还要确认力的大小不会导致法向力为负。在可行几何内，重力向下，圆筒接触合力从斜面指向圆筒，杆力可取压力；用任意两个不平行方向分解
+\(m\bm g\) 可得两个正的系数。因此上述几何条件不仅是必要的，也是充分的。
+
+\textbf{摩擦锥与分量法的对应}
+
+若需回到分量方程，可沿斜面和斜面法线写
+
+\[
+R_C\sin\delta=f_C,
+\qquad
+R_C\cos\delta=N_C,
+\]
+
+其中 \(\delta\) 是 \(\bm R_C\) 偏离法线的角。于是
+
+\[
+\frac{|f_C|}{N_C}=|\tan\delta|\leq\mu,
+\]
+
+与 \(|\delta|\leq\arctan\mu\)
+完全等价。几何法并没有省略静摩擦方程，只是把两个分量未知量压缩成了一个允许方向区间。
+
+\textbf{参数变化的定性检查}
+
+圆筒---斜面摩擦因数增大时，摩擦锥张开，接触合力可覆盖的方向增多，因此
+\(\varphi\) 的上限不应减小。橡胶垫处则有
+\(|f_B|/N_B=\tan\beta\)；杆轴越偏离法线，所需摩擦越大。这两个单调性可用来检查一般化结果的方向是否合理。
+
+\newpage
+
+\section{第 2 题}\label{ux7b2c-2-ux9898}
+
+\(O\)、\(A\)
+为两个固定点。\(AB\)、\(BE\)、\(BD\)、\(EC\)、\(DC\)、\(DO\)、\(EO\) 是
+7 根轻质刚杆，所有连接点均为理想铰链。各杆长满足
+
+\[
+AB=OA=L,\qquad
+BD=BE=DC=EC=a,\qquad
+OD=OE=b.
+\]
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  如图在 \(C\) 点悬挂质量为 \(m\) 的重物。求使杆系保持平衡时 \(C\)
+  点可能所在的位置；
+\item
+  在第（1）问基础上，再在 \(B\) 点悬挂一个质量为 \(m\)
+  的重物。求系统在平衡位置附近做微小振动的周期。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.876\linewidth,height=\textheight,keepaspectratio,alt={图 2-1　空间铰接杆系的透视结构。}]{../figures/question-02.pdf}
+\caption*{图 2-1　空间铰接杆系的透视结构。}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-1}
+
+空间铰接杆系的几何约束先决定悬点高度，再决定小振动的势能和动能。把前后节点按对称性分层，可减少坐标并避免漏掉空间自由度。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-1}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  空间对称杆系的中垂面；
+\item
+  刚杆长度约束与勾股定理；
+\item
+  中心高度不变对应的随遇平衡；
+\item
+  小角展开 \(1-\cos\theta\simeq\theta^2/2\)；
+\item
+  广义质量与简谐振动周期。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-1}
+
+\(D,E\) 是关于机构对称面的一对空间节点。由 \(BD=BE\) 与 \(CD=CE\)
+可知，\(B,C\) 都在线段 \(DE\)
+的中垂面上。在该对称面中，可把空间四边形的横向半尺度记为 \(x\)，把
+\(BC\) 的半长记为
+\(y\)。这样，原来不容易从平面图看清的空间关系被化为两个直角三角形。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-1}
+
+在杆 \(OA\) 与 \(AB\) 的对称面内取构型角 \(\theta\)。对称截面上，\(OB\)
+的投影为 \(2L\cos(\theta/2)\)。另设
+
+\[
+DE=2x,\qquad BC=2y.
+\]
+
+四根等长杆 \(BD,BE,CD,CE\) 给出第一个长度约束；\(OD=OE=b\)
+给出第二个长度约束。两式相减就能消去 \(x\)。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-1}
+
+图 2-2(a) 是空间杆系的对称截面：横向半宽为 \(x=DE/2\)，纵向半长为
+\(y=BC/2\)；图 2-2(b) 单独给出平衡附近的广义坐标
+\(\theta\)。第一问用左图建立两个直角三角形，第二问再用右图计算两个质点的速度与势能。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图 2-2　空间杆系的对称坐标与小振动广义坐标。}]{../figures/solution-02.pdf}
+\caption*{图 2-2　空间杆系的对称坐标与小振动广义坐标。}
+\end{figure}
+
+\textbf{（1）写出两个长度约束}
+
+由 \(BD=BE=CD=CE=a\)，对称截面中的直角三角形给出
+
+\[
+x^2+y^2=a^2.\tag{1}
+\]
+
+从 \(O\) 到 \(D\) 或 \(E\) 时，沿对称面方向的长度由 \(2L\cos(\theta/2)\)
+与 \(y\) 组成，因此
+
+\[
+x^2+\left(2L\cos\frac\theta2+y\right)^2=b^2.\tag{2}
+\]
+
+用式（2）减去式（1）：
+
+\[
+\left(2L\cos\frac\theta2+y\right)^2-y^2=b^2-a^2.
+\]
+
+展开左边：
+
+\[
+4L^2\cos^2\frac\theta2
++4Ly\cos\frac\theta2
+=b^2-a^2.
+\]
+
+解出 \(y\)：
+
+\[
+\begin{aligned}
+4Ly\cos\frac\theta2
+&=b^2-a^2-4L^2\cos^2\frac\theta2,\\
+y
+&=\frac{b^2-a^2}{4L\cos(\theta/2)}
+-L\cos\frac\theta2.
+\end{aligned}\tag{3}
+\]
+
+\textbf{（2）证明 \(C\) 点高度为常量}
+
+选取与固定机架一起的高度零点。根据几何投影，\(C\) 点高度可写成
+
+\[
+h_C=L+L\cos\theta+2y\cos\frac\theta2.\tag{4}
+\]
+
+把式（3）代入：
+
+\[
+\begin{aligned}
+h_C
+&=L+L\cos\theta
++2\cos\frac\theta2
+\left[
+\frac{b^2-a^2}{4L\cos(\theta/2)}
+-L\cos\frac\theta2
+\right]\\
+&=L+L\cos\theta
++\frac{b^2-a^2}{2L}
+-2L\cos^2\frac\theta2.
+\end{aligned}
+\]
+
+利用半角公式
+
+\[
+2\cos^2\frac\theta2=1+\cos\theta,
+\]
+
+得
+
+\[
+\begin{aligned}
+h_C
+&=L+L\cos\theta
++\frac{b^2-a^2}{2L}
+-L(1+\cos\theta)\\
+&=\boxed{\frac{b^2-a^2}{2L}}.
+\end{aligned}\tag{5}
+\]
+
+\(h_C\) 与 \(\theta\) 无关，所以在机构允许的连续构型中，\(C\)
+点可以停在高度
+
+\[
+\boxed{h_C=\frac{b^2-a^2}{2L}}
+\]
+
+的整条水平轨迹上。由于重物势能 \(mgh_C\)
+不随构型改变，这是随遇平衡，而不是某一个孤立平衡点。
+
+\textbf{（3）在 \(B\) 点加质量后的平衡位置}
+
+\(C\) 点的高度不变，因此 \(C\) 点重物对广义坐标 \(\theta\)
+不产生恢复力矩。新加在 \(B\) 点的质量使系统在 \(B\) 最低时平衡，即
+\(AB\) 在对称面内竖直向下。以该位置为 \(\theta=0\)。
+
+\textbf{（4）势能的二阶展开}
+
+当 \(AB\) 偏转小角 \(\theta\) 时，\(B\) 点上升高度为
+
+\[
+\Delta h_B=L(1-\cos\theta).
+\]
+
+所以势能增量为
+
+\[
+\Delta U=mgL(1-\cos\theta).
+\]
+
+小角下
+
+\[
+\cos\theta=1-\frac{\theta^2}{2}+O(\theta^4),
+\]
+
+故
+
+\[
+\boxed{
+\Delta U\simeq\frac12mgL\theta^2
+}.\tag{6}
+\]
+
+\textbf{（5）动能与等效惯量}
+
+回看图 2-2(b)，\(B\) 点随长为 \(L\) 的杆端转动；图 2-2(a) 中的 \(C\)
+点则沿第（2）步得到的水平轨迹运动。两者都具有与 \(\dot\theta\)
+同阶的速度，因此总动能必须同时保留两项。
+
+\(B\) 点质量到转动中心的有效距离为 \(L\)，其速度的一阶项为
+
+\[
+v_B=L\dot\theta.
+\]
+
+由杆长约束对式（3）在平衡位置线性化，\(C\) 点速度的一阶项为
+
+\[
+v_C=\frac{|b^2-a^2|}{4L}\dot\theta.
+\]
+
+第（1）问已证明 \(C\) 点竖直速度为零，所以这里的 \(v_C\)
+是水平方向的速度。两个质量的总动能为
+
+\[
+\begin{aligned}
+T
+&=\frac12mv_B^2+\frac12mv_C^2\\
+&=\frac12mL^2\dot\theta^2
++\frac12m\left(\frac{b^2-a^2}{4L}\right)^2\dot\theta^2\\
+&=\frac12m
+\left[
+L^2+\left(\frac{b^2-a^2}{4L}\right)^2
+\right]\dot\theta^2.
+\end{aligned}\tag{7}
+\]
+
+因而广义惯量为
+
+\[
+I_{\rm eff}=m
+\left[
+L^2+\left(\frac{b^2-a^2}{4L}\right)^2
+\right].\tag{8}
+\]
+
+\textbf{（6）小振动方程与周期}
+
+由式（6），等效恢复系数为
+
+\[
+K_{\rm eff}=mgL.
+\]
+
+小振动方程为
+
+\[
+I_{\rm eff}\ddot\theta+K_{\rm eff}\theta=0.
+\]
+
+因此角频率
+
+\[
+\omega^2
+=\frac{K_{\rm eff}}{I_{\rm eff}}
+=\frac{gL}{L^2+\left[(b^2-a^2)/(4L)\right]^2}.
+\]
+
+周期为
+
+\[
+\boxed{
+T=2\pi
+\sqrt{
+\frac{
+L^2+\left(\dfrac{b^2-a^2}{4L}\right)^2
+}{gL}}
+}.
+\]
+
+\textbf{（7）补出 \(C\) 点速度的一阶推导}
+
+式（7）中 \(C\)
+点动能的关键是其水平速度，下面把这一处约束微分完整写出。记
+
+\[
+k=\frac{b^2-a^2}{4L}.
+\]
+
+式（3）可写成
+
+\[
+y=k\sec\frac\theta2-L\cos\frac\theta2.
+\tag{9}
+\]
+
+由对称截面的几何投影，\(B\) 点相对平衡竖线的水平坐标为
+\(L\sin\theta\)；从 \(B\) 到 \(C\) 的长度为 \(2y\)，该线与竖直方向夹角为
+\(\theta/2\)，故
+
+\[
+X_C=L\sin\theta+2y\sin\frac\theta2.
+\tag{10}
+\]
+
+平衡位置 \(\theta=0\) 时，式（9）给出
+
+\[
+y_0=k-L.
+\tag{11}
+\]
+
+对式（10）关于时间求导：
+
+\[
+\begin{aligned}
+\dot X_C
+={}&L\cos\theta\,\dot\theta
++2\dot y\sin\frac\theta2
++y\cos\frac\theta2\,\dot\theta.
+\end{aligned}
+\tag{12}
+\]
+
+在 \(\theta=0\) 处，\(\sin(\theta/2)=0\)，所以含 \(\dot y\)
+的项即使存在也不贡献一阶速度；又有 \(\cos0=1\)。于是
+
+\[
+\begin{aligned}
+\dot X_C\big|_{\theta=0}
+&=(L+y_0)\dot\theta\\
+&=[L+(k-L)]\dot\theta\\
+&=k\dot\theta\\
+&=\frac{b^2-a^2}{4L}\dot\theta.
+\end{aligned}
+\tag{13}
+\]
+
+因此
+
+\[
+v_C^2=\left(\frac{b^2-a^2}{4L}\right)^2\dot\theta^2
+\]
+
+到二阶精度成立。速度方向的正负只改变运动方向，动能中取平方后自然消失。
+
+\textbf{（8）从拉格朗日方程复核小振动方程}
+
+将动能和势能写成标准形式
+
+\[
+T=\frac12I_{\rm eff}\dot\theta^2,
+\qquad
+U=U_0+\frac12mgL\theta^2.
+\]
+
+拉格朗日方程为
+
+\[
+\frac d{dt}\frac{\partial T}{\partial\dot\theta}
+-\frac{\partial T}{\partial\theta}
++\frac{\partial U}{\partial\theta}=0.
+\]
+
+在小振动近似下 \(I_{\rm eff}\) 为常量，因此
+
+\[
+\frac d{dt}\frac{\partial T}{\partial\dot\theta}
+=I_{\rm eff}\ddot\theta,
+\qquad
+\frac{\partial T}{\partial\theta}=0,
+\qquad
+\frac{\partial U}{\partial\theta}=mgL\theta.
+\]
+
+于是
+
+\[
+I_{\rm eff}\ddot\theta+mgL\theta=0,
+\]
+
+与前述结果一致。
+
+\textbf{（9）机构可行域的检查}
+
+由式（1）必须有
+
+\[
+x^2=a^2-y^2\geq0,
+\]
+
+即 \(|y|\leq a\)；同时式（3）要求 \(\cos(\theta/2)\ne0\)。所以 \(C\)
+点的``水平轨迹''只取机构杆长约束允许的那一段，而不是无限延伸的整条直线。小振动还要求平衡构型位于这一可行段内部，否则会先碰到机构的几何死点，简谐近似失效。
+
+\textbf{为什么不能只算 \(B\) 点质量的动能}
+
+\(C\) 点高度不变只意味着它的竖直速度为零，不意味着 \(C\)
+点静止。机构变形时，\(C\) 点仍沿水平轨迹运动，并且其速度是
+\(\dot\theta\) 的一阶量。在小振动计算中，动能要保留到 \(\dot\theta^2\)
+阶，因此 \(C\) 点动能不能省略。
+
+\textbf{质量不相等时的推广}
+
+若 \(B,C\) 点质量分别为 \(m_B,m_C\)，恢复势能只来自 \(B\) 点：
+
+\[
+U-U_0\simeq\frac12m_BgL\theta^2.
+\]
+
+总动能为
+
+\[
+T=\frac12\left[
+m_BL^2+m_C\left(\frac{b^2-a^2}{4L}\right)^2
+\right]\dot\theta^2.
+\]
+
+因此
+
+\[
+T_{m_B,m_C}=2\pi\sqrt{
+\frac{m_BL^2+m_C[(b^2-a^2)/(4L)]^2}
+{m_BgL}}
+.
+\]
+
+令 \(m_B=m_C=m\)
+即回到正文结果。这个推广清楚区分了``提供恢复力的质量''与``贡献惯性的质量''。
+
+\textbf{保留小量阶数的规则}
+
+势能展开到 \(\theta^2\)，速度取一阶即可，因为动能还要平方。式（12）的
+\(\dot y\sin(\theta/2)\) 至少为 \(\theta\dot\theta\)
+阶，代入动能后可忽略。
+
+\newpage
+
+\section{第 3 题}\label{ux7b2c-3-ux9898}
+
+两个无限长、同轴、薄壁圆柱壳的半径分别为 \(a,c\)，内壳带电量
+\(+Q\)、质量为 \(m\)，外壳带电量 \(-Q\)、质量为
+\(M\)。两壳之间有一个固定的无限长螺线管，半径为 \(b\)，满足
+\(a<b<c\)，单位长度包含 \(n\) 匝。取长度为 \(l\) 的一段，且 \(l\)
+远大于各半径。忽略边缘效应与高阶感应效应。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  螺线管中的电流由 \(I_0\) 缓慢减小到
+  \(0\)，求内、外圆柱壳最终获得的角动量；
+\item
+  电磁场动量密度为
+  \(\bm g=\varepsilon_0\bm E\times\bm B\)。求上述过程中电磁场角动量的变化。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图 3-1　同轴圆柱壳、螺线管及电流方向。}]{../figures/question-03.pdf}
+\caption*{图 3-1　同轴圆柱壳、螺线管及电流方向。}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-2}
+
+螺线管电流变化产生环向电场，电场力矩把角动量传给带电圆柱壳。把壳的机械角动量与电磁场角动量分开计算，可直接核对守恒。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-2}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  长螺线管内部磁场 \(B=\mu_0nI\)；
+\item
+  法拉第定律 \(\oint\bm E\cdot d\bm l=-d\Phi_B/dt\)；
+\item
+  圆柱壳所受电力矩 \(\tau_z=qR E_\varphi\)；
+\item
+  高斯定律与同轴圆柱间的径向电场；
+\item
+  场角动量
+  \(\bm L_{\rm em}=\int\bm r\times(\varepsilon_0\bm E\times\bm B)\,dV\)。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-2}
+
+螺线管电流改变时，磁通量改变产生环绕轴线的感生电场。带电圆柱壳因而受到环向力矩。螺线管外虽然
+\(B\simeq0\)，但环路包围的磁通量仍在改变，所以外壳所在处仍有感生电场。
+
+初始时，在 \(a<\rho<b\)
+的环形区域中同时存在径向电场和轴向磁场，因此存在环向场动量及轴向场角动量。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-2}
+
+对于半径 \(\rho<b\) 的环路，磁通量为 \(\mu_0nI\pi\rho^2\)；对于
+\(\rho>b\) 的环路，被包围的磁通量固定为
+\(\mu_0nI\pi b^2\)。这正是内壳与外壳公式不同的原因。
+
+为避免方向混乱，取指向纸内的轴向 \(\hat{\bm z}\)
+为角动量正方向（图示初始磁场指向纸外），并以图示螺线管电流方向为初始方向。在这一约定下，内壳最终角动量带负号，外壳带正号。若反转螺线管电流方向或改变角坐标正方向，下列所有角动量符号同时反转，大小不变。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-2}
+
+图 3-2(a) 画出半径 \(a\)、\(c\)
+处的感生电场，其圆周切向正是电力矩方向；图 3-2(b) 标出 \(a<\rho<b\)
+的场重叠区域，并画出
+\(\bm E\)、\(\bm B\)、\(\bm g=\varepsilon_0\bm E\times\bm B\)
+的相互方向。第一问使用左图，第二问的体积分使用右图。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图 3-2　感生电场的环向分布与场角动量所在的环形区域。}]{../figures/solution-03.pdf}
+\caption*{图 3-2　感生电场的环向分布与场角动量所在的环形区域。}
+\end{figure}
+
+\textbf{（1）内壳所在处的感生电场}
+
+螺线管内
+
+\[
+B=\mu_0nI.
+\]
+
+对半径为 \(a\) 的同心圆环路应用法拉第定律，取符号后先写大小：
+
+\[
+2\pi a\,|E_\varphi(a)|
+=\pi a^2\mu_0n\left|\frac{dI}{dt}\right|.
+\]
+
+所以
+
+\[
+|E_\varphi(a)|
+=\frac{\mu_0na}{2}
+\left|\frac{dI}{dt}\right|.\tag{1}
+\]
+
+内壳的电力矩大小为
+
+\[
+|\tau_a|=Qa|E_\varphi(a)|
+=\frac{\mu_0nQa^2}{2}
+\left|\frac{dI}{dt}\right|.
+\]
+
+由 \(dL_a/dt=\tau_a\)，并将电流从 \(I_0\) 积分到 \(0\)，按图示正方向得
+
+\[
+\boxed{
+\bm L_a=-\frac{\mu_0nQI_0a^2}{2}\,\hat{\bm z}
+}.\tag{2}
+\]
+
+\textbf{（2）外壳所在处的感生电场}
+
+外壳半径 \(c>b\)，但其环路包围的磁通量只来自半径 \(b\) 内的螺线管区域：
+
+\[
+\Phi_B(c)=\mu_0nI\pi b^2.
+\]
+
+因此
+
+\[
+2\pi c\,|E_\varphi(c)|
+=\pi b^2\mu_0n\left|\frac{dI}{dt}\right|,
+\]
+
+即
+
+\[
+|E_\varphi(c)|
+=\frac{\mu_0nb^2}{2c}
+\left|\frac{dI}{dt}\right|.\tag{3}
+\]
+
+外壳带电 \(-Q\)，所以它所受力矩方向与同处正电荷相反。力矩大小为
+
+\[
+|\tau_c|
+=Qc|E_\varphi(c)|
+=\frac{\mu_0nQb^2}{2}
+\left|\frac{dI}{dt}\right|.
+\]
+
+积分后
+
+\[
+\boxed{
+\bm L_c=+\frac{\mu_0nQI_0b^2}{2}\,\hat{\bm z}
+}.\tag{4}
+\]
+
+注意外壳结果中出现的是 \(b^2\) 而不是
+\(c^2\)，因为决定感生电场的是被包围的磁通量。
+
+\textbf{（3）机械角动量的合量}
+
+式（2）与式（4）相加：
+
+\[
+\begin{aligned}
+\bm L_{\rm mech}
+&=\bm L_a+\bm L_c\\
+&=\frac{\mu_0nQI_0}{2}(b^2-a^2)\hat{\bm z}.
+\end{aligned}\tag{5}
+\]
+
+\textbf{（4）初始径向电场}
+
+转入图 3-2(b)。场角动量只需在同时有 \(\bm E\) 和 \(\bm B\)
+的紫色环形区域积分。螺线管磁场只在 \(\rho<b\) 内存在；在内壳与中壳之间
+\(a<\rho<b\)，高斯面包围电荷 \(Q\)，故
+
+\[
+E_\rho(\rho)\,2\pi\rho l=\frac{Q}{\varepsilon_0}.
+\]
+
+解得
+
+\[
+E_\rho(\rho)=\frac{Q}{2\pi\varepsilon_0l\rho}.\tag{6}
+\]
+
+\textbf{（5）场角动量密度的积分}
+
+场动量密度大小为
+
+\[
+g=\varepsilon_0E_\rho B.
+\]
+
+半径为 \(\rho\)、厚度为 \(d\rho\) 的圆柱薄层体积为
+
+\[
+dV=2\pi\rho l\,d\rho.
+\]
+
+动量密度沿环向，对轴线的力臂为 \(\rho\)，因此场角动量元为
+
+\[
+dL_{\rm em}
+=\rho\,g\,dV
+=\rho\left(\varepsilon_0E_\rho B\right)
+\left(2\pi\rho l\,d\rho\right).
+\]
+
+代入式（6）和 \(B=\mu_0nI_0\)：
+
+\[
+\begin{aligned}
+dL_{\rm em}
+&=\rho\varepsilon_0
+\frac{Q}{2\pi\varepsilon_0l\rho}
+\mu_0nI_0
+2\pi\rho l\,d\rho\\
+&=\mu_0nQI_0\rho\,d\rho.
+\end{aligned}
+\]
+
+在 \(a<\rho<b\) 上积分：
+
+\[
+\begin{aligned}
+L_{\rm em,i}
+&=\mu_0nQI_0\int_a^b\rho\,d\rho\\
+&=\mu_0nQI_0\left[\frac{\rho^2}{2}\right]_a^b\\
+&=\frac{\mu_0nQI_0}{2}(b^2-a^2).
+\end{aligned}\tag{7}
+\]
+
+电流减小到零后，磁场消失，所以 \(L_{\rm em,f}=0\)。因此
+
+\[
+\boxed{
+\Delta\bm L_{\rm em}
+=-\frac{\mu_0nQI_0}{2}(b^2-a^2)\hat{\bm z}
+}.\tag{8}
+\]
+
+对比式（5）和式（8）：
+
+\[
+\boxed{
+\Delta\bm L_{\rm em}+\bm L_{\rm mech}=0
+}.
+\]
+
+电磁场失去的角动量恰好转移给了带电圆柱壳。
+
+\textbf{（6）不省略时间积分的写法}
+
+第一问的结果与电流下降所经历的具体时间无关，可以直接从力矩冲量看出。以内壳为例，保留符号的法拉第定律可写成
+
+\[
+E_\varphi(a)=C_a\frac{dI}{dt},
+\]
+
+其中 \(C_a\) 的正负由电流方向和 \(\varphi\) 正方向共同决定，而大小为
+\(\mu_0na/2\)。内壳力矩为
+
+\[
+\tau_a=QaE_\varphi(a)
+=QaC_a\frac{dI}{dt}.
+\]
+
+角动量增量是
+
+\[
+\begin{aligned}
+\Delta L_a
+&=\int_{t_i}^{t_f}\tau_a\,dt\\
+&=QaC_a\int_{t_i}^{t_f}\frac{dI}{dt}\,dt\\
+&=QaC_a\int_{I_0}^{0}dI\\
+&=-QaC_aI_0.
+\end{aligned}
+\tag{9}
+\]
+
+可见只要初、末电流相同，无论电流线性下降还是以其他缓慢方式下降，角冲量都相同。外壳的推导完全类似，只需把包围磁通的面积换成
+\(\pi b^2\)，并把电荷换成 \(-Q\)。
+
+\textbf{（7）逐层检查场的存在区域}
+
+场角动量积分前应把径向区域分开，而不能一开始就写 \(0<\rho<c\)：
+
+\begin{itemize}
+\tightlist
+\item
+  \(0<\rho<a\)：高斯面未包围内壳电荷，理想薄壳内部 \(E_\rho=0\)；
+\item
+  \(a<\rho<b\)：包围净电荷为 \(+Q\)，且螺线管内
+  \(B\ne0\)，所以这里对场角动量有贡献；
+\item
+  \(b<\rho<c\)：径向电场可以不为零，但理想长螺线管外 \(B\simeq0\)，故
+  \(\varepsilon_0\bm E\times\bm B=0\)；
+\item
+  \(\rho>c\)：同样没有螺线管磁场，对本题的场角动量积分无贡献。
+\end{itemize}
+
+所以积分上下限严格是 \(a\) 与 \(b\)。这一步同时解释了结果为何含
+\(b^2-a^2\)，而不含外壳半径 \(c\)。
+
+\textbf{（8）场角动量元的方向核对}
+
+在 \(a<\rho<b\) 内，\(\bm E\) 沿径向，\(\bm B\) 沿轴向，因此
+
+\[
+\bm g=\varepsilon_0\bm E\times\bm B
+\]
+
+沿环向。再取
+
+\[
+d\bm L=\bm r\times\bm g\,dV,
+\]
+
+径向的 \(\bm r\) 与环向的 \(\bm g\)
+叉乘后沿轴向。也就是说，积分时虽然只写了大小
+\(\rho g\,dV\)，它对应的矢量方向确实是 \(\pm\hat{\bm z}\)，而不是环向。
+
+电流降到零后 \(B=0\)，故场角动量从式（7）的初值降到零。按照前述
+\(\hat{\bm z}\)
+正方向约定，场角动量变化为负，而内、外壳机械角动量合量为正，二者大小相同。
+
+\textbf{（9）量纲复核}
+
+由 \(B=\mu_0nI\) 可知 \(\mu_0nI\) 的量纲为磁感应强度。又因为 \(QB r^2\)
+的量纲为
+
+\[
+\mathrm C\cdot\mathrm T\cdot\mathrm{m^2}
+=\mathrm{kg\,m^2/s},
+\]
+
+恰为角动量量纲。因此式（2）、（4）、（7）中共同出现的 \(\mu_0nQI_0r^2\)
+在量纲上正确；若误把外壳结果写成与半径成一次方，量纲检查会立即暴露错误。
+
+\textbf{中壳的角动量与本题闭环}
+
+题目第（1）只问内、外壳，中壳的机械响应不影响上述两个结果。若进一步把螺线管、固定支架与中壳都纳入总系统，则还应明确外界降低电流时的电源与支架是否向系统输入角冲量。本题所比较的是场角动量与内、外壳机械角动量之间的局部转移，式（5）与式（8）正好闭合。
+
+\textbf{磁通---角动量的紧凑关系}
+
+对位于半径 \(R\) 的薄带电壳，若圆周包围磁通 \(\Phi_B\)，则
+
+\[
+2\pi R E_\varphi=-\frac{d\Phi_B}{dt}.
+\]
+
+由 \(\tau_z=qRE_\varphi\) 得
+
+\[
+\frac{dL_z}{dt}=-\frac q{2\pi}\frac{d\Phi_B}{dt},
+\]
+
+故
+
+\[
+\Delta L_z=-\frac q{2\pi}\Delta\Phi_B.
+\]
+
+内壳取 \(q=Q\)、\(\Phi_B=\mu_0nI\pi a^2\)；外壳取
+\(q=-Q\)、\(\Phi_B=\mu_0nI\pi b^2\)，可立即复核式（2）、（4）。
+
+\textbf{转动惯量为什么没有出现}
+
+角冲量直接确定角动量增量，与壳的转动惯量无关。只有在进一步求角速度时，才需要用
+\(L=J\omega\)。所以题设给出的质量 \(m,M\)
+不出现在本题角动量答案中是合理的，并非漏用条件。
+
+\newpage
+
+\section{第 4 题}\label{ux7b2c-4-ux9898}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  一个三维立方体有 8
+  个顶点，用三位二进制位串命名，两个相邻顶点之间均连接电阻 \(r\)。求顶点
+  \((000)\) 与 \((101)\) 之间的等效电阻。
+\item
+  一个四维超立方体有 16
+  个顶点，用四位二进制位串命名，相邻顶点之间也均连接电阻 \(r\)。
+
+  \begin{enumerate}
+  \def\labelenumii{\arabic{enumii}.}
+  \tightlist
+  \item
+    求 \((0000)\) 与 \((1111)\) 之间的等效电阻；
+  \item
+    求 \((0000)\) 与 \((1101)\) 之间的等效电阻。
+  \end{enumerate}
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图 4-1　三维立方体电阻网络与四维超立方体的三维投影。}]{../figures/question-04.pdf}
+\caption*{图 4-1　三维立方体电阻网络与四维超立方体的三维投影。}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-3}
+
+超立方体电阻网络在源、汇为对角点时，可按到源点的汉明距离合并为等势层。非对角端点需重新检查边界对称性，再用节点方程或拉普拉斯特征模求电阻。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-3}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  等电势点合并与并联电阻；
+\item
+  二进制位串与汉明距离；
+\item
+  \(n\) 维超立方体的顶点度数为 \(n\)；
+\item
+  按与源点的汉明距离进行对称分层；
+\item
+  网络拉普拉斯特征模与有效电阻。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-3}
+
+四维超立方体不能在三维空间中无失真地嵌入。图 4-1
+采用``两个三维立方体+对应顶点连线''的投影：黑色立方体表示第四位为
+\(0\)，蓝色立方体表示第四位为
+\(1\)，橙色连线表示仅第四位发生变化的边。这是保留节点邻接关系的拓扑图，不是把四维对象误认成普通三维物体。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-3}
+
+两个位串不同的位数称为汉明距离 \(d\)。超立方体对称性保证：有效电阻只与
+\(n\) 和 \(d\) 有关，与具体哪几位不同无关。本题三种情况分别是
+
+\[
+(n,d)=(3,2),\qquad(4,4),\qquad(4,3).
+\]
+
+可先用直观的等电势合并处理前两问，再用一个统一公式处理三种情况并交叉验算。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-3}
+
+图 4-2(a) 将三维网络中的两对等势点合并，并把合并后的并联支路直接标成
+\(r/2\)；图 4-2(b)
+则把四维对角点问题压缩为按汉明距离排列的五层串联网络。以下第（1）步用左图，第（2）步用右图；第（3）步以后再以特征模公式核验两种缩并。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图 4-2　等电势节点缩并与四维对角点的汉明分层。}]{../figures/solution-04.pdf}
+\caption*{图 4-2　等电势节点缩并与四维对角点的汉明分层。}
+\end{figure}
+
+\textbf{（1）三维立方体：\((000)\) 与 \((101)\)}
+
+两端的汉明距离为 \(d=2\)。固定这两个端点后，交换第 1 位和第 3
+位不改变网络与边界条件，所以
+
+\[
+V_{001}=V_{100},\qquad
+V_{011}=V_{110}.
+\]
+
+图 4-2(a) 将这两对等势点合并后，相应的两条等值电阻并联为
+\(r/2\)。对缩并网络连续使用节点电势法，可得
+
+\[
+\boxed{R_{000,101}=\frac34r}.\tag{1}
+\]
+
+下面用统一公式把这一结果再算一次，以免等势缩并中漏边。
+
+\textbf{（2）四维对角点：\((0000)\) 与 \((1111)\)}
+
+转入图 4-2(b)。按与 \((0000)\) 的汉明距离分层，各层顶点数为
+
+\[
+1, 4, 6, 4, 1.
+\]
+
+相邻两层之间的边数依次为
+
+\[
+4, 12, 12, 4.
+\]
+
+同层顶点等电势，因此每一组边等效为并联电阻：
+
+\[
+\frac r4,\quad\frac r{12},\quad\frac r{12},\quad\frac r4.
+\]
+
+这四段再串联：
+
+\[
+\begin{aligned}
+R_{0000,1111}
+&=\frac r4+\frac r{12}+\frac r{12}+\frac r4\\
+&=\frac{3r+r+r+3r}{12}\\
+&=\boxed{\frac23r}.
+\end{aligned}\tag{2}
+\]
+
+\textbf{（3）统一的特征模公式}
+
+对 \(n\) 维超立方体，设两端点的汉明距离为 \(d\)。用位集 \(S\)
+标记拉普拉斯算子的特征模。当 \(S\) 与两端点的差异位集 \(D\)
+交集的元素数为奇数时，该模对端点电势差有贡献。有效电阻为
+
+\[
+R_{n,d}
+=\frac{2r}{2^n}
+\sum_{\substack{S\subseteq\{1,\ldots,n\}\\
+|S\cap D|\ \text{is odd}}}
+\frac1{|S|}.\tag{3}
+\]
+
+该公式对每个非空子集 \(S\) 只需知道两件事：\(|S|\) 是多少，以及
+\(|S\cap D|\) 是奇数还是偶数。
+
+\textbf{（4）用统一公式验算三维结果}
+
+\(n=3,d=2\)。交集中只能取 1 个差异位。若不取剩余那一位，有 \(2\)
+种选法，\(|S|=1\)；若同时取剩余那一位，也有 \(2\)
+种选法，\(|S|=2\)。所以
+
+\[
+\sum\frac1{|S|}
+=2\cdot1+2\cdot\frac12=3.
+\]
+
+代入式（3）：
+
+\[
+R_{3,2}=\frac{2r}{8}\cdot3=\frac34r,
+\]
+
+与式（1）一致。
+
+\textbf{（5）计算 \((0000)\) 与 \((1101)\)}
+
+两端点有 3 位不同，所以 \(n=4,d=3\)。差异位集 \(D\) 含 3 个元素，剩余 1
+位是相同位。要使 \(|S\cap D|\) 为奇数，可从 \(D\) 中取 1 个或 3 个元素。
+
+分四种情况计数：
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  从 \(D\) 中取 1 个，不取相同位：\(3\) 个子集，\(|S|=1\)；
+\item
+  从 \(D\) 中取 1 个，同时取相同位：\(3\) 个子集，\(|S|=2\)；
+\item
+  从 \(D\) 中取 3 个，不取相同位：\(1\) 个子集，\(|S|=3\)；
+\item
+  从 \(D\) 中取 3 个，同时取相同位：\(1\) 个子集，\(|S|=4\)。
+\end{enumerate}
+
+因此
+
+\[
+\begin{aligned}
+\sum\frac1{|S|}
+&=3\cdot1+3\cdot\frac12+1\cdot\frac13+1\cdot\frac14\\
+&=3+\frac32+\frac13+\frac14\\
+&=\frac{36+18+4+3}{12}\\
+&=\frac{61}{12}.
+\end{aligned}
+\]
+
+代入 \(n=4\)：
+
+\[
+\begin{aligned}
+R_{4,3}
+&=\frac{2r}{16}\cdot\frac{61}{12}\\
+&=\boxed{\frac{61}{96}r}.
+\end{aligned}\tag{4}
+\]
+
+\textbf{（6）对角点结果的特征模验算}
+
+对 \(n=4,d=4\)，奇数交集大小为 1 或 3：
+
+\[
+\sum\frac1{|S|}
+=\binom41\frac11+\binom43\frac13
+=4+\frac43
+=\frac{16}{3}.
+\]
+
+所以
+
+\[
+R_{4,4}=\frac{2r}{16}\cdot\frac{16}{3}=\frac23r,
+\]
+
+与汉明分层法完全一致。
+
+\textbf{（7）三维立方体的节点电势法明算}
+
+为补全式（1）中被等势缩并省略的代数，令
+
+\[
+V_{000}=V_0,
+\qquad
+V_{101}=0.
+\]
+
+由交换第 1、3 位的对称性，先记
+
+\[
+V_{001}=V_{100}=u,
+\qquad
+V_{011}=V_{110}=v.
+\]
+
+网络还关于同时翻转第 1、3
+位并交换源、汇具有反对称性，于是中间四个点的电势为 \(V_0/2\)，具体为
+
+\[
+u=v=\frac{V_0}{2}.
+\tag{5}
+\]
+
+剩余两点 \((010)\)、\((111)\) 互为源汇反演点。对 \((010)\)
+写基尔霍夫电流定律：它的三个相邻点为 \((000),(011),(110)\)，所以
+
+\[
+\frac{V_{010}-V_0}{r}
++\frac{V_{010}-V_0/2}{r}
++\frac{V_{010}-V_0/2}{r}=0.
+\]
+
+乘以 \(r\) 并合并：
+
+\[
+3V_{010}-2V_0=0,
+\]
+
+故
+
+\[
+V_{010}=\frac{2V_0}{3}.
+\tag{6}
+\]
+
+同理
+
+\[
+V_{111}=\frac{V_0}{3}.
+\tag{7}
+\]
+
+从源点 \((000)\) 流出的总电流等于沿三条相邻棱的电流之和：
+
+\[
+\begin{aligned}
+I
+&=\frac{V_0-V_{001}}r
++\frac{V_0-V_{010}}r
++\frac{V_0-V_{100}}r\\
+&=\frac1r\left(
+\frac{V_0}{2}+\frac{V_0}{3}+\frac{V_0}{2}
+\right)\\
+&=\frac{4V_0}{3r}.
+\end{aligned}
+\tag{8}
+\]
+
+因此
+
+\[
+R=\frac{V_0}{I}
+=\frac{V_0}{4V_0/(3r)}
+=\frac{3r}{4}.
+\]
+
+这给出了式（1）不跳步的节点电势验证。
+
+\textbf{（8）四维对角分层中的边数来源}
+
+在 \(n\) 维超立方体中，距源点汉明距离为 \(k\) 的顶点共有 \(\binom nk\)
+个。每个这样的顶点有 \(n-k\) 个尚未翻转的位，翻转其中任意一位都会进入第
+\(k+1\) 层。因此第 \(k\) 层与第 \(k+1\) 层之间的边数为
+
+\[
+N_{k,k+1}=\binom nk(n-k).
+\tag{9}
+\]
+
+对于 \(n=4\)：
+
+\[
+\begin{aligned}
+N_{0,1}&=\binom40(4)=4,\\
+N_{1,2}&=\binom41(3)=12,\\
+N_{2,3}&=\binom42(2)=12,\\
+N_{3,4}&=\binom43(1)=4.
+\end{aligned}
+\]
+
+每组 \(N\) 条电阻 \(r\) 的棱连接两个等势层，故等效为
+\(r/N\)。四组等效电阻沿层序串联，得到式（2）。这里的``并联''不是根据图上看起来平行，而是因为同一组边的两端分别接在同一对等势节点上。
+
+\textbf{（9）式（3）的组合计数为什么只取奇交集}
+
+设两端点差异位集合为 \(D\)。特征模 \(S\) 在位串 \(x\) 上的符号为
+\((-1)^{|S\cap x|}\)。从一个端点走到另一个端点，相当于翻转 \(D\)
+中的各位，因此该模的符号相对变化因子是
+
+\[
+(-1)^{|S\cap D|}.
+\]
+
+若 \(|S\cap D|\)
+为偶数，两端在该模上的振幅相同，对电势差没有贡献；若为奇数，两端振幅相反，该模才进入有效电阻求和。这就是式（3）筛选条件的来源。
+
+分母 \(|S|\) 则来自该模对应的网络拉普拉斯特征值
+\(2|S|/r\)。因此求和并非经验公式，而是把每个能够区分两端的独立对称模按其``导通强度''加权。
+
+\textbf{（10）三个答案的大小关系检查}
+
+本题结果为
+
+\[
+R_{3,2}=\frac{72}{96}r,
+\qquad
+R_{4,4}=\frac{64}{96}r,
+\qquad
+R_{4,3}=\frac{61}{96}r.
+\]
+
+增加维数会增加从源到汇的并联通路，等效电阻通常下降；在四维网络中，汉明距离为
+\(3\) 的两点比完全对角的距离 \(4\) 更近，所以 \(61r/96<64r/96\)
+也符合直觉。这个检查不能代替推导，但可用于发现把 \(61/96\) 误抄成
+\(61/64\) 一类错误。
+
+\textbf{式（3）的来源}
+
+\(n\) 维超立方体的每个顶点可视为群 \((\mathbb Z_2)^n\) 的元素。字符
+
+\[
+\chi_S(x)=(-1)^{\sum_{j\in S}x_j}
+\]
+
+是网络拉普拉斯算子的特征向量，特征值为
+\(2|S|/r\)。两端点在该模上的振幅差平方只可能是 \(0\) 或 \(4\)，恰在
+\(|S\cap D|\) 为奇数时取
+\(4\)。把有效电阻写成拉普拉斯伪逆的二次型，即得式（3）。
+
+\textbf{只含组合数的通式}
+
+把 \(S\) 按从差异位集 \(D\) 中取 \(j\) 位、从其余 \(n-d\) 位中取 \(k\)
+位分类，可将式（3）改写为
+
+\[
+R_{n,d}
+=\frac{2r}{2^n}
+\sum_{\substack{1\leq j\leq d\\j\text{ 为奇数}}}
+\sum_{k=0}^{n-d}
+\binom dj\binom{n-d}{k}\frac1{j+k}.
+\]
+
+因为 \(j\) 为奇数，所以 \(j+k\) 不会为零。该式直接显示等效电阻只依赖
+\(n,d\)，也便于进行程序验算。
+
+当 \(d=n\) 时没有相同位，公式简化为
+
+\[
+R_{n,n}
+=\frac{2r}{2^n}
+\sum_{\substack{1\leq j\leq n\\j\text{ 为奇数}}}
+\binom nj\frac1j.
+\]
+
+对 \(n=4\) 代入 \(j=1,3\)，立刻得到
+\(2r/3\)。它与汉明分层法分别是在特征模空间和实空间利用同一对称性。
+
+\newpage
+
+\section{第 5 题}\label{ux7b2c-5-ux9898}
+
+骑手与电动独轮车在马戏团的圆筒形内壁上做水平圆周运动。圆筒半径为
+\(R\)，骑手与独轮车的总高度为 \(h\)，重力加速度为
+\(g\)。平衡骑行时，骑手身体与水平方向的夹角为 \(\theta\)。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  将骑手与独轮车视为质点。已知圆周运动角速度为
+  \(\omega_0\)，求轮胎与圆筒内壁之间的摩擦因数 \(\mu\) 至少为多少；
+\item
+  若 \(h\ll R\)，先用集中质量的近似力矩模型，求平衡角速度 \(\omega_1\)；
+\item
+  将骑手与独轮车视为一根长度为 \(h\)、质量为 \(m\)
+  的匀质细杆，求平衡角速度 \(\omega_2\)。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.746\linewidth,height=\textheight,keepaspectratio,alt={图 5-1　圆筒内壁、骑手与水平圆周运动的空间关系。}]{../figures/question-05.pdf}
+\caption*{图 5-1　圆筒内壁、骑手与水平圆周运动的空间关系。}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-4}
+
+圆筒内骑行的法向力提供向心加速度，摩擦力支撑重力。若骑手和车架有有限高度，惯性力矩要沿杆积分，不能一律集中在质心。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-4}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  圆周运动向心力 \(m\omega^2R\)；
+\item
+  静摩擦条件 \(f\leq\mu N\)；
+\item
+  随动系中的离心力 \(dm\,\omega^2\rho\)；
+\item
+  对接触点取力矩以消去未知支持力；
+\item
+  匀质杆元 \(dm=(m/h)dx\) 的力矩积分。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-4}
+
+圆筒的轴线沿竖直方向，骑手绕轴线做水平圆周运动。内壁对轮胎的法向力指向圆筒轴线，提供向心力；摩擦力沿竖直方向向上，平衡重力。
+
+当把骑手视为有限长度的杆时，每一个杆元到圆筒轴线的距离都不同，所受离心力也不同。这正是第（3）问结果中出现
+\(h/R\) 修正的原因。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-4}
+
+第（1）问分别在竖直和水平径向列方程。第（2）、（3）问选轮胎与内壁的接触点
+\(P\) 为力矩中心，这样支持力与摩擦力对 \(P\)
+的力矩都为零。只需平衡重力力矩与离心力力矩。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-4}
+
+图 5-2(a) 是第（1）问的质点受力图，径向法向力 \(N\) 与竖直摩擦力 \(f\)
+分别承担向心和抗重力作用；图 5-2(b) 以接触点 \(P\) 为矩心，标出质心
+\(G\)、杆元到轴线的距离 \(\rho(x)\)
+以及水平离心力的力臂。第（2）问使用右图中的集中质量
+\(G\)，第（3）问再把它细分为杆元积分。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图 5-2　质点模型的受力与有限长杆的杆元力矩。}]{../figures/solution-05.pdf}
+\caption*{图 5-2　质点模型的受力与有限长杆的杆元力矩。}
+\end{figure}
+
+\textbf{（1）质点模型的法向力}
+
+水平径向上，内壁法向力提供向心力：
+
+\[
+N=m\omega_0^2R.\tag{1}
+\]
+
+竖直方向无加速度，摩擦力平衡重力：
+
+\[
+f=mg.\tag{2}
+\]
+
+要不下滑，必须满足
+
+\[
+f\leq\mu N.
+\]
+
+代入式（1）、（2）：
+
+\[
+mg\leq\mu m\omega_0^2R.
+\]
+
+约去 \(m\)，得
+
+\[
+\boxed{
+\mu\geq\frac{g}{\omega_0^2R}
+}.\tag{3}
+\]
+
+所以最小摩擦因数为
+
+\[
+\boxed{\mu_{\min}=\frac{g}{\omega_0^2R}}.
+\]
+
+\textbf{（2）集中质量近似}
+
+转入图 5-2(b)。在随圆周运动的参考系中，质心 \(G\)
+处受到水平向外的离心力。当 \(h\ll R\)
+时，可近似认为质心到圆筒轴线的距离为 \(R\)，故离心力大小为
+
+\[
+F_{\rm cf}=m\omega_1^2R.
+\]
+
+质心位于长度 \(h\) 的中点。对接触点 \(P\) 取力矩。重力的力臂是质心到过
+\(P\) 竖直线的水平距离：
+
+\[
+\ell_g=\frac h2\cos\theta.
+\]
+
+离心力的力臂是质心到过 \(P\) 水平线的竖直距离：
+
+\[
+\ell_{\rm cf}=\frac h2\sin\theta.
+\]
+
+平衡时两个力矩大小相等：
+
+\[
+mg\frac h2\cos\theta
+=m\omega_1^2R\frac h2\sin\theta.
+\]
+
+约去公共因子 \(mh/2\)：
+
+\[
+g\cos\theta=\omega_1^2R\sin\theta.
+\]
+
+因此
+
+\[
+\boxed{
+\omega_1
+=\sqrt{\frac{g}{R\tan\theta}}
+}.\tag{4}
+\]
+
+\textbf{（3）匀质细杆的重力力矩}
+
+匀质细杆的重心仍在 \(h/2\) 处，所以重力力矩与上一问相同：
+
+\[
+\tau_g=mg\frac h2\cos\theta.\tag{5}
+\]
+
+\textbf{（4）杆元的离心力力矩}
+
+仍按图 5-2(b) 的几何，从接触点 \(P\) 沿杆向上取坐标
+\(x\)，\(0\leq x\leq h\)。长度为 \(dx\) 的杆元质量为
+
+\[
+dm=\frac mh\,dx.\tag{6}
+\]
+
+该杆元沿水平向内偏移 \(x\cos\theta\)，所以它到圆筒轴线的距离为
+
+\[
+\rho(x)=R-x\cos\theta.\tag{7}
+\]
+
+杆元所受离心力大小为
+
+\[
+dF_{\rm cf}=dm\,\omega_2^2\rho(x)
+=\frac mh\omega_2^2(R-x\cos\theta)dx.
+\]
+
+该水平力对 \(P\) 的力臂为杆元高度
+
+\[
+x\sin\theta.
+\]
+
+因此力矩元为
+
+\[
+d\tau_{\rm cf}
+=\frac mh\omega_2^2(R-x\cos\theta)x\sin\theta\,dx.
+\]
+
+对全杆积分：
+
+\[
+\begin{aligned}
+\tau_{\rm cf}
+&=\frac mh\omega_2^2\sin\theta
+\int_0^h(Rx-x^2\cos\theta)dx\\
+&=\frac mh\omega_2^2\sin\theta
+\left[
+\frac{Rx^2}{2}-\frac{x^3\cos\theta}{3}
+\right]_0^h\\
+&=\frac mh\omega_2^2\sin\theta
+\left(
+\frac{Rh^2}{2}-\frac{h^3\cos\theta}{3}
+\right)\\
+&=m\omega_2^2h\sin\theta
+\left(
+\frac R2-\frac{h\cos\theta}{3}
+\right).
+\end{aligned}\tag{8}
+\]
+
+\textbf{（5）平衡力矩方程}
+
+令式（5）与式（8）相等：
+
+\[
+mg\frac h2\cos\theta
+=m\omega_2^2h\sin\theta
+\left(
+\frac R2-\frac{h\cos\theta}{3}
+\right).
+\]
+
+约去 \(mh/2\)：
+
+\[
+g\cos\theta
+=\omega_2^2\sin\theta
+\left(R-\frac{2h\cos\theta}{3}\right).
+\]
+
+解出 \(\omega_2^2\)：
+
+\[
+\begin{aligned}
+\omega_2^2
+&=\frac{g\cos\theta}
+{\sin\theta\left(R-\dfrac{2h\cos\theta}{3}\right)}\\
+&=\frac{g}{R\tan\theta}
+\left(1-\frac{2h\cos\theta}{3R}\right)^{-1}.
+\end{aligned}
+\]
+
+因此
+
+\[
+\boxed{
+\omega_2
+=\sqrt{\frac{g}{R\tan\theta}}
+\left(1-\frac{2h\cos\theta}{3R}\right)^{-1/2}
+}.\tag{9}
+\]
+
+当 \(h/R\to0\) 时，修正因子趋于
+\(1\)，式（9）回到式（4），说明有限长杆模型与质点近似连续衔接。
+
+\textbf{（6）惯性系与随动系两种描述的对应}
+
+第一问在地面惯性系中列平动方程最直接。质点具有水平向心加速度，故
+
+\[
+\sum F_{\rm radial}=m\omega_0^2R.
+\]
+
+第二、三问为了讨论身体倾角，转到与骑手共同转动的参考系。在该系中骑手相对静止，必须补入离心惯性力，随后才能写``合力矩为零''。两种描述不能混搭：若已经在随动系中加入离心力，就不能再在径向方程右端重复写
+\(m\omega^2R\)。
+
+对接触点 \(P\) 取矩的好处是，轮胎处的法向力和摩擦力都通过
+\(P\)，其力矩均为零。于是倾角只由重力和离心惯性力的力矩竞争决定，而不需要先求接触反力的具体大小。
+
+\textbf{（7）质点近似的力臂逐项验证}
+
+质心到 \(P\) 的位置矢量大小为 \(h/2\)，与水平方向夹角为
+\(\theta\)。其水平、竖直分量分别为
+
+\[
+x_G=\frac h2\cos\theta,
+\qquad
+z_G=\frac h2\sin\theta.
+\tag{10}
+\]
+
+重力竖直向下，它对 \(P\) 的力臂是水平分量 \(x_G\)，所以
+
+\[
+|\tau_g|=mgx_G=mg\frac h2\cos\theta.
+\]
+
+离心力水平向外，它的力臂是竖直分量 \(z_G\)，所以
+
+\[
+|\tau_{\rm cf}|=m\omega_1^2Rz_G
+=m\omega_1^2R\frac h2\sin\theta.
+\]
+
+这说明式（4）中的 \(\tan\theta\)
+来自两个互补方向的力臂之比，而不是凭经验把身体倾角套入斜面公式。
+
+\textbf{（8）有限长杆积分的三层依赖关系}
+
+对距 \(P\) 为 \(x\) 的杆元，离心力矩中同时出现三个随 \(x\) 变化的量：
+
+\[
+dm=\frac mh\,dx,
+\qquad
+\rho(x)=R-x\cos\theta,
+\qquad
+\ell(x)=x\sin\theta.
+\]
+
+因此
+
+\[
+d\tau_{\rm cf}
+=\omega_2^2\,dm\,\rho(x)\,\ell(x).
+\tag{11}
+\]
+
+逐项代入后出现
+
+\[
+Rx-x^2\cos\theta.
+\]
+
+其中 \(Rx\) 项给出集中质量近似中的主要力矩，\(-x^2\cos\theta\)
+项给出有限长度修正。积分结果中的 \(1/2\) 来自
+\(\int_0^h x\,dx\)，\(1/3\) 来自
+\(\int_0^h x^2\,dx\)；这两个系数有明确的几何来源，不能互换。
+
+\textbf{（9）解的存在条件}
+
+式（9）要求根号内为正，特别是
+
+\[
+R-\frac{2h\cos\theta}{3}>0.
+\tag{12}
+\]
+
+在题设 \(h\ll R\)
+下该条件自动满足。若形式上把杆取得很长，使左式不再为正，则离心力矩随
+\(\omega^2\)
+增大也无法按当前模型与重力矩平衡，说明细杆完全位于圆筒内且保持刚直的几何假设已失效。
+
+此外，式（4）、（9）都要求 \(0<\theta<90^\circ\)。当
+\(\theta\to90^\circ\) 时重力力矩趋于零，所需角速度趋于零；当
+\(\theta\to0\)
+时离心力力臂趋于零，维持近水平姿态所需角速度趋于无穷。这两个极限与力矩图像相符。
+
+\textbf{（10）摩擦条件与倾角条件的分工}
+
+第一问给出的
+
+\[
+\mu\geq\frac{g}{\omega_0^2R}
+\]
+
+保证骑手不沿筒壁下滑；第二、三问给出的角速度保证身体关于接触点没有倾倒趋势。真实稳定骑行必须同时满足两类条件。只满足力矩平衡而摩擦不足，整体仍会下滑；只满足摩擦条件而倾角不对，骑手仍会绕接触点翻转。
+
+\textbf{一阶尺度修正}
+
+对 \(h/R\ll1\) 可进一步展开
+
+\[
+(1-\varepsilon)^{-1/2}
+=1+\frac\varepsilon2+O(\varepsilon^2),
+\qquad
+\varepsilon=\frac{2h\cos\theta}{3R}.
+\]
+
+所以
+
+\[
+\omega_2
+\simeq\omega_1
+\left(1+\frac{h\cos\theta}{3R}\right).
+\]
+
+有限长度使杆上部更靠近圆筒轴线，同样的 \(\omega\)
+下离心力矩较小，因此要达到同样的倾角需要略大的角速度。
+
+\textbf{修正因子的单调性与数值使用}
+
+由
+
+\[
+\frac{\omega_2}{\omega_1}
+=\left(1-\frac{2h\cos\theta}{3R}\right)^{-1/2}
+\]
+
+可见在 \(0<\theta<90^\circ\)
+且几何条件满足时，\(\omega_2/\omega_1>1\)。杆越长，离心力作用点的有效半径整体越小，修正越显著；\(\theta\)
+越接近 \(90^\circ\)，\(\cos\theta\) 越小，有限长度修正越弱。
+
+例如 \(h/R=0.10\)、\(\theta=60^\circ\) 时，
+
+\[
+\frac{2h\cos\theta}{3R}=\frac1{30},
+\]
+
+故精确修正因子约为 \(1.0171\)，一阶式给出
+\(1+1/60=1.0167\)，二者接近，说明小参数展开在此尺度下有效。
+
+\textbf{支持力分布的模型边界}
+
+细杆模型把轮胎接触视为一点
+\(P\)，并假设骑手---车体保持刚直。真实系统的支持力可能分布在有限接触斑，人体也可通过关节主动调节。本题求得的是给定理想模型下的静态倾角条件，不能据此分析侧向摆动稳定性；若研究稳定性，还需考虑角位移后的净力矩方向和控制响应。
+
+\newpage
+
+\section{第 6 题}\label{ux7b2c-6-ux9898}
+
+某人在练习理想薄透镜成像作图时，透镜和光心位置已经模糊，只知道一组物点分布在一条顶点为原点、开口沿
+\(+y\) 方向的抛物线上。这些物点的像点分布在另一条开口沿 \(-y\)
+方向的抛物线上，并通过
+
+\[
+A(x_1,y_1),\qquad B(x_2,y_2).
+\]
+
+透镜光轴沿 \(y\) 轴。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  求像点抛物线顶点的纵坐标 \(h\)；
+\item
+  求透镜光心的纵坐标 \(p\)；
+\item
+  求透镜焦距 \(f\)。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.813\linewidth,height=\textheight,keepaspectratio,alt={图 6-1　物点抛物线、像点抛物线与薄透镜的坐标关系。}]{../figures/question-06.pdf}
+\caption*{图 6-1　物点抛物线、像点抛物线与薄透镜的坐标关系。}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-5}
+
+物点和像点满足薄透镜公式，但坐标原点并不在光心。把物、像抛物线代入同一映射并比较系数，可求光心和焦距的约束。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-5}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  物抛物线 \(y=ax^2\)；
+\item
+  薄透镜公式 \(1/f=1/s+1/s'\)；
+\item
+  横向放大率 \(X/x=-s'/s\)；
+\item
+  参数消元与曲线类型判断；
+\item
+  由抛物线上两点确定顶点和二次项系数。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-5}
+
+光轴是 \(y\) 轴，透镜光心位于 \(P=(0,p)\)。物点 \((x,y)\)
+到透镜的轴向距离为
+\(p-y\)。对于同一个物点，像点纵坐标由物距和像距决定，横坐标由横向放大率决定。因此不能只用一条过光心光线就直接得到像点轨迹。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-5}
+
+先将物点抛物线写成
+
+\[
+y=ax^2,\qquad a>0.
+\]
+
+对任意物点使用成像公式，得到 \(X,Y\) 关于 \(x\) 的参数表达式。对一般
+\(p,f\)，消去 \(x\)
+后不会得到二次抛物线。题设要求像轨迹为开口向下的抛物线，这迫使分母中的常量项消失，即
+\(p=f\)。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-5}
+
+图 6-2(a) 用带符号的物距 \(s=p-y\)、像距 \(s'=Y-p\)
+建立单个物点的成像关系；图 6-2(b) 画出 \(p=f\)
+后参数映射得到的倒抛物线。以下先由左图列透镜公式和横向放大率，再在第（2）、（3）步转入右图识别轨迹形状。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图 6-2　薄透镜成像的符号几何及 p=f 时的抛物线映射。}]{../figures/solution-06.pdf}
+\caption*{图 6-2　薄透镜成像的符号几何及 \(p=f\) 时的抛物线映射。}
+\end{figure}
+
+\textbf{（1）建立成像坐标关系}
+
+物点为
+
+\[
+Q=(x,y),\qquad y=ax^2.
+\]
+
+透镜位于 \(y=p\)，物距为
+
+\[
+s=p-y=p-ax^2.\tag{1}
+\]
+
+设像距为 \(s'\)。薄透镜公式为
+
+\[
+\frac1f=\frac1s+\frac1{s'}.
+\]
+
+移项并通分：
+
+\[
+\frac1{s'}
+=\frac1f-\frac1s
+=\frac{s-f}{fs}.
+\]
+
+取倒数：
+
+\[
+s'=\frac{fs}{s-f}
+=\frac{f(p-y)}{p-y-f}.\tag{2}
+\]
+
+像点纵坐标为
+
+\[
+Y=p+s'
+=p+\frac{f(p-y)}{p-y-f}.\tag{3}
+\]
+
+横向放大率为
+
+\[
+\frac Xx=-\frac{s'}s.
+\]
+
+代入式（2）：
+
+\[
+\frac Xx=-\frac{f}{p-y-f}.
+\]
+
+所以
+
+\[
+X=-\frac{fx}{p-f-y}
+=-\frac{fx}{p-f-ax^2}.\tag{4}
+\]
+
+\textbf{（2）利用像轨迹为抛物线确定 \(p=f\)}
+
+图 6-2(b) 表明，只有当透镜位于物抛物线的焦点高度，即 \(p=f\)
+时，像点参数式才直接化为关于 \(X\)
+的二次式。下面从式（4）的分母验证这一几何判断。
+
+式（4）的分母中有常量 \(p-f\) 和二次项 \(-ax^2\)。若 \(p-f\ne0\)，则由
+\(X\) 反解 \(x\) 时会出现高于二次的有理关系，代入式（3）后一般不可能化为
+\(Y=h-kX^2\) 的抛物线。
+
+题设明确给出整条像点轨迹为抛物线，因此必须有
+
+\[
+\boxed{p=f}.\tag{5}
+\]
+
+这时式（4）立即简化为
+
+\[
+X=-\frac{fx}{-ax^2}
+=\frac{f}{ax}.\tag{6}
+\]
+
+\textbf{（3）求像点抛物线方程}
+
+将 \(p=f\) 代入式（3）：
+
+\[
+\begin{aligned}
+Y
+&=f+\frac{f(f-y)}{f-y-f}\\
+&=f+\frac{f(f-y)}{-y}\\
+&=f-\frac{f^2}{y}+f\\
+&=2f-\frac{f^2}{y}.
+\end{aligned}\tag{7}
+\]
+
+由 \(y=ax^2\) 和式（6）：
+
+\[
+X^2=\frac{f^2}{a^2x^2}.
+\]
+
+两边乘以 \(a\)：
+
+\[
+aX^2=\frac{f^2}{ax^2}=\frac{f^2}{y}.\tag{8}
+\]
+
+把式（8）代入式（7）：
+
+\[
+\boxed{Y=2f-aX^2}.\tag{9}
+\]
+
+这的确是一条开口向 \(-y\) 的抛物线，其顶点纵坐标为
+
+\[
+h=2f.\tag{10}
+\]
+
+再结合式（5）：
+
+\[
+\boxed{p=f=\frac h2}.\tag{11}
+\]
+
+\textbf{（4）利用 \(A,B\) 两点求 \(h\)}
+
+将像点抛物线写成
+
+\[
+Y=h-aX^2.\tag{12}
+\]
+
+\(A,B\) 在该抛物线上，因此
+
+\[
+\begin{cases}
+y_1=h-ax_1^2,\\
+y_2=h-ax_2^2.
+\end{cases}\tag{13}
+\]
+
+两式相减：
+
+\[
+y_1-y_2=-a(x_1^2-x_2^2).
+\]
+
+所以
+
+\[
+a=\frac{y_2-y_1}{x_1^2-x_2^2}.\tag{14}
+\]
+
+消去 \(a\)，可直接得顶点纵坐标
+
+\[
+\boxed{
+h=\frac{y_1x_2^2-y_2x_1^2}{x_2^2-x_1^2}
+}.\tag{15}
+\]
+
+最后
+
+\[
+\boxed{
+p=f=\frac{y_1x_2^2-y_2x_1^2}
+{2(x_2^2-x_1^2)}
+}.\tag{16}
+\]
+
+公式适用于 \(x_1^2\ne x_2^2\)。若 \(x_1^2=x_2^2\)，则 \(A,B\) 关于 \(y\)
+轴对称，只靠这两点不能唯一确定抛物线顶点高度。
+
+\textbf{（5）严格证明为什么必须有 \(p=f\)}
+
+前面根据曲线类型作出了判断，下面通过消元给出不跳步证明。记
+
+\[
+\delta=p-f.
+\]
+
+由式（3）和 \(y=ax^2\)：
+
+\[
+\begin{aligned}
+Y
+&=p+\frac{f(p-ax^2)}{p-f-ax^2}\\
+&=p+\frac{f[(\delta-ax^2)+f]}{\delta-ax^2}\\
+&=p+f+\frac{f^2}{\delta-ax^2}.
+\end{aligned}
+\tag{17}
+\]
+
+令
+
+\[
+Z=Y-(p+f),
+\]
+
+则
+
+\[
+Z=\frac{f^2}{\delta-ax^2},
+\qquad
+\delta-ax^2=\frac{f^2}{Z}.
+\tag{18}
+\]
+
+由式（4）
+
+\[
+X^2=\frac{f^2x^2}{(\delta-ax^2)^2}.
+\tag{19}
+\]
+
+再由式（18）解出
+
+\[
+x^2=\frac{\delta-f^2/Z}{a}.
+\tag{20}
+\]
+
+把式（18）、（20）同时代入式（19）：
+
+\[
+\begin{aligned}
+X^2
+&=f^2\frac{\delta-f^2/Z}{a}
+\frac{Z^2}{f^4}\\
+&=\frac{\delta Z^2}{af^2}-\frac Za.
+\end{aligned}
+\]
+
+整理得到像轨迹的一般隐式方程
+
+\[
+\boxed{
+\delta Z^2-f^2Z-af^2X^2=0
+}.
+\tag{21}
+\]
+
+若 \(\delta\ne0\)，式（21）同时含有 \(Z^2\) 与
+\(X^2\)，其二次型非退化，不是以 \(y\) 轴为轴、只含 \(X^2\) 和 \(Z\)
+一次项的抛物线。题设明确像轨迹为抛物线，因此二次项 \(\delta Z^2\)
+的系数必须为零：
+
+\[
+\delta=0,
+\]
+
+即
+
+\[
+p=f.
+\]
+
+当 \(\delta=0\) 时，式（21）退化为
+
+\[
+-f^2Z-af^2X^2=0,
+\]
+
+约去 \(-f^2\) 后有
+
+\[
+Z=-aX^2.
+\]
+
+又因 \(Z=Y-2f\)，立刻得到 \(Y=2f-aX^2\)，与式（9）一致。
+
+\textbf{（6）横向倒像符号为什么没有出现在最终开口系数中}
+
+式（4）保留了薄透镜横向放大率的负号。当 \(p=f\) 时，分母又变为
+\(-ax^2\)，两个负号相消：
+
+\[
+X=\frac{f}{ax}.
+\]
+
+对于 \(x>0\) 的物点，像点横坐标也为正；对于 \(x<0\)
+的物点，像点横坐标也为负。这不意味着普通实像不倒立，而是因为本题的横向坐标方向与物、像所在轴向位置的符号约定共同进入了公式。最终轨迹只含
+\(X^2\)，左右两支仍关于光轴对称。
+
+\textbf{（7）由两点消元的另一种核验}
+
+将式（13）分别乘以 \(x_2^2\)、\(x_1^2\)：
+
+\[
+y_1x_2^2=hx_2^2-ax_1^2x_2^2,
+\]
+
+\[
+y_2x_1^2=hx_1^2-ax_1^2x_2^2.
+\]
+
+两式相减时含 \(a\) 的项严格抵消：
+
+\[
+y_1x_2^2-y_2x_1^2
+=h(x_2^2-x_1^2).
+\]
+
+所以
+
+\[
+h=\frac{y_1x_2^2-y_2x_1^2}{x_2^2-x_1^2}.
+\]
+
+这种交叉相乘法比先求 \(a\)
+再回代更不易发生符号错误，也能直接看出分母为何是 \(x_2^2-x_1^2\)。
+
+\textbf{（8）极限行为检查}
+
+当物点沿物抛物线趋近顶点时，\(x\to0\)、\(y=ax^2\to0\)，由式（6）
+
+\[
+|X|=\left|\frac{f}{ax}\right|\to\infty.
+\]
+
+这说明顶点位于前焦平面，接近顶点的物点成像到无穷远。反之，当
+\(|x|\to\infty\) 时，\(X\to0\)，而
+
+\[
+Y=2f-aX^2\to2f.
+\]
+
+因此远离物抛物线顶点的物点，其像点趋近像抛物线顶点
+\((0,2f)\)。两个极限与所求曲线的几何形状一致。
+
+\textbf{为什么 \(p=f\) 与``物抛物线顶点在前焦点''一致}
+
+物抛物线的顶点在原点，透镜光心在 \(y=p\)。\(p=f\)
+意味着原点到透镜的距离恰为焦距，即物抛物线顶点位于前焦点。当物点向顶点趋近时，像距趋于无穷；这与式（6）中
+\(x\to0\) 时 \(|X|\to\infty\) 完全一致。
+
+\textbf{一般像轨迹的圆锥曲线分类}
+
+正文式（21）为
+
+\[
+\delta Z^2-af^2X^2-f^2Z=0,
+\qquad \delta=p-f.
+\]
+
+把它看成一般二次曲线 \(AX^2+B XZ+CZ^2+\cdots=0\)，有
+
+\[
+A=-af^2,
+\qquad B=0,
+\qquad C=\delta.
+\]
+
+判别量为
+
+\[
+B^2-4AC=4af^2\delta.
+\]
+
+由于 \(a,f^2>0\)，\(\delta>0\) 时轨迹为双曲型，\(\delta<0\)
+时为椭圆型，只有 \(\delta=0\) 时判别量为零并退化为抛物型。这给出了
+\(p=f\) 的完整圆锥曲线解释。
+
+\textbf{坐标符号约定的自洽性}
+
+若改用实物距、实像距均取正的另一套符号约定，中间的 \(s'\) 与 \(Y\)
+公式会改变，但从实际坐标消元所得的几何轨迹不变。备课时应先固定``坐标方向''和``距离正负''中的一种体系，避免把两套公式拼接使用。
+
+\newpage
+
+\section{第 7 题}\label{ux7b2c-7-ux9898}
+
+两惯性系 \(S\) 与 \(S'\) 的坐标轴彼此平行，\(S'\) 相对 \(S\) 沿 \(x\)
+轴正方向以速度 \(u\) 匀速运动。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  设某质点在 \(S\) 系中的速度分量为 \((v_x,v_y,v_z)\)，写出它在 \(S'\)
+  系中的速度分量；
+\item
+  平面界面上方为折射率 \(n_1\)、相对 \(S\) 静止的透明介质，下方为折射率
+  \(n_2\)、相对 \(S\) 沿 \(x\) 轴正方向以速度 \(u\)
+  运动的透明介质。一束平面光波在 \(S\) 系中由上方入射，入射角为
+  \(\theta\)。利用惠更斯原理求光波在下方介质静止系 \(S'\) 中的入射角
+  \(i'\)；
+\item
+  求折射光线在 \(S\) 系中的折射角 \(i\)；
+\item
+  求发生全反射时的临界入射角 \(\theta_c\)；
+\item
+  设大气各相邻薄层的折射率均近似为 \(n_0\)，相邻高度相差 \(dh\)
+  的两层之间具有水平相对速度
+  \(u=\alpha\,dh\)。若一条接近水平传播的光线不断处于临界折射状态，求其轨迹曲率半径
+  \(R\)。
+\end{enumerate}
+
+所有角均从界面法线方向量起，并取光线沿 \(x\) 轴正方向传播的情形。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图 7-1　运动介质界面、入射波面与参考系关系。}]{../figures/question-07.pdf}
+\caption*{图 7-1　运动介质界面、入射波面与参考系关系。}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-6}
+
+运动介质界面两侧的光速不同，先作速度变换再用本地折射定律。连续分层极限把每层的微小偏折累积成宏观弯曲半径。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-6}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  洛伦兹坐标变换与三维速度变换；
+\item
+  同一对事件在不同惯性系中的时间间隔和空间间隔；
+\item
+  惠更斯原理与波面包络；
+\item
+  光在介质静止系中的速度 \(c/n\)；
+\item
+  速度的相对论合成；
+\item
+  全反射临界条件；
+\item
+  小量展开与曲率半径的几何定义。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-6}
+
+上方介质静止在 \(S\) 系中，下方介质静止在 \(S'\)
+系中。不能直接把普通斯涅耳定律同时用于两个介质，因为入射光在上方介质静止系中描述，而折射光的各向同性速度
+\(c/n_2\) 只在下方介质静止系中成立。
+
+选择入射波面先后扫过界面上两点的两个事件，先用洛伦兹变换把这两个事件之间的时空间隔变到
+\(S'\) 系，再在 \(S'\) 系中用惠更斯作图。求得 \(i'\)
+后，最后把折射光速度从 \(S'\) 变回 \(S\)。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-6}
+
+关键不是直接变换``角''，而是变换能够定义该角的物理量：
+
+\begin{itemize}
+\tightlist
+\item
+  对入射波面，变换界面上两个事件的 \(\Delta x\) 与 \(\Delta t\)；
+\item
+  对折射光线，变换速度分量 \(v_x'\) 与 \(v_y'\)；
+\item
+  对连续大气层，把临界角公式与圆弧的局部几何关系分别展开到 \(dh\)
+  的一阶。
+\end{itemize}
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-6}
+
+图 7-2
+把三个层次放在同一张图中：左图用于波面事件变换，中图用于折射速度变换，右图用于连续分层的曲率极限。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图 7-2　波面事件、速度分量与连续分层极限。}]{../figures/solution-07.pdf}
+\caption*{图 7-2　波面事件、速度分量与连续分层极限。}
+\end{figure}
+
+\textbf{（1）由洛伦兹变换推导速度变换}
+
+沿 \(x\) 方向的洛伦兹变换为
+
+\[
+\begin{aligned}
+x'&=\gamma_u(x-ut),\\
+y'&=y,\\
+z'&=z,\\
+t'&=\gamma_u\left(t-\frac{ux}{c^2}\right),
+\end{aligned}\tag{1}
+\]
+
+其中
+
+\[
+\gamma_u=\frac1{\sqrt{1-u^2/c^2}}.
+\]
+
+对同一条粒子世界线取微分：
+
+\[
+\begin{aligned}
+dx'&=\gamma_u(dx-u\,dt),\\
+dy'&=dy,\\
+dz'&=dz,\\
+dt'&=\gamma_u\left(dt-\frac{u\,dx}{c^2}\right).
+\end{aligned}\tag{2}
+\]
+
+由于 \(v_x=dx/dt\)，有
+
+\[
+dt'=\gamma_u\,dt\left(1-\frac{uv_x}{c^2}\right).
+\]
+
+因此纵向速度为
+
+\[
+\begin{aligned}
+v_x'
+&=\frac{dx'}{dt'}\\
+&=\frac{\gamma_u(dx-u\,dt)}
+{\gamma_u\left(dt-u\,dx/c^2\right)}\\
+&=\boxed{\frac{v_x-u}{1-uv_x/c^2}}.
+\end{aligned}\tag{3}
+\]
+
+横向速度虽然对应的坐标不变，但分母中的时间发生了变换：
+
+\[
+\begin{aligned}
+v_y'
+&=\frac{dy'}{dt'}
+=\frac{dy}{\gamma_u\,dt(1-uv_x/c^2)}\\
+&=\boxed{\frac{v_y}{\gamma_u(1-uv_x/c^2)}}.
+\end{aligned}\tag{4}
+\]
+
+同理
+
+\[
+\boxed{
+v_z'=\frac{v_z}{\gamma_u(1-uv_x/c^2)}
+}.
+\tag{5}
+\]
+
+这里最容易漏掉的是式（4）、（5）中的
+\(\gamma_u\)。横坐标以外的坐标虽然不收缩，但速度是``位移除以时间''，而
+\(dt'\) 并不等于 \(dt\)。
+
+\textbf{（2）求下方介质静止系中的入射角 \(i'\)}
+
+在 \(S\) 系中选取两个事件：入射波面先经过界面上的点 \(A\)，经过时间
+\(\tau\) 后再经过点 \(B\)。设 \(AB=\Delta\)。
+
+在时间 \(\tau\) 内，波面沿法线方向前进的距离为
+
+\[
+\frac{c}{n_1}\tau.
+\]
+
+由图中直角三角形，入射角从法线量起，所以
+
+\[
+\frac{c}{n_1}\tau=\Delta\sin\theta.
+\]
+
+从而
+
+\[
+\boxed{
+\Delta=\frac{c\tau}{n_1\sin\theta}
+}.
+\tag{6}
+\]
+
+注意 \(A\)、\(B\) 是界面上的两个位置，而这里变换的是``波面经过
+\(A\)''和``波面经过 \(B\)''这两个事件。两个事件在 \(S\) 系中的间隔为
+
+\[
+\Delta x=\Delta,\qquad \Delta t=\tau.
+\]
+
+变到 \(S'\) 系：
+
+\[
+\begin{aligned}
+\tau'
+&=\gamma_u\left(\tau-\frac{u\Delta}{c^2}\right)\\
+&=\gamma_u\tau\left(1-
+\frac{u}{n_1c\sin\theta}\right),
+\end{aligned}\tag{7}
+\]
+
+以及
+
+\[
+\begin{aligned}
+\Delta'
+&=\gamma_u(\Delta-u\tau)\\
+&=\gamma_u\tau\left(
+\frac{c}{n_1\sin\theta}-u
+\right).
+\end{aligned}\tag{8}
+\]
+
+在 \(S'\) 系中，下方介质静止，惠更斯次波在时间 \(\tau'\) 内传播半径
+
+\[
+\frac{c}{n_2}\tau'.
+\]
+
+因此新的波面几何给出
+
+\[
+\sin i'=\frac{(c/n_2)\tau'}{\Delta'}.
+\tag{9}
+\]
+
+将式（7）、（8）代入，\(\gamma_u\tau\) 约去：
+
+\[
+\begin{aligned}
+\sin i'
+&=\frac{c}{n_2}
+\frac{1-u/(n_1c\sin\theta)}
+{c/(n_1\sin\theta)-u}\\
+&=\frac{c}{n_2}
+\frac{n_1c\sin\theta-u}
+{n_1c\sin\theta}
+\frac{n_1\sin\theta}
+{c-n_1u\sin\theta}\\
+&=\boxed{
+\frac{n_1c\sin\theta-u}
+{n_2c-n_1n_2u\sin\theta}
+}.
+\end{aligned}\tag{10}
+\]
+
+检验 \(u=0\)，式（10）退化为
+
+\[
+n_1\sin\theta=n_2\sin i',
+\]
+
+即普通斯涅耳定律。
+
+\textbf{（3）把折射光速度从 \(S'\) 变回 \(S\)}
+
+转入图 7-2(b)。在下方介质静止系 \(S'\) 中，光速大小为
+\(c/n_2\)，图中的两条分量分别为
+
+\[
+v_x'=\frac{c}{n_2}\sin i',\qquad
+v_y'=\frac{c}{n_2}\cos i'.
+\tag{11}
+\]
+
+由逆速度变换
+
+\[
+v_x=\frac{v_x'+u}{1+uv_x'/c^2},\qquad
+v_y=\frac{v_y'}{\gamma_u(1+uv_x'/c^2)}.
+\tag{12}
+\]
+
+分别代入式（11）：
+
+\[
+v_x=\frac{(c/n_2)\sin i'+u}
+{1+(u/n_2c)\sin i'},
+\tag{13}
+\]
+
+\[
+v_y=\frac{(c/n_2)\cos i'}
+{\gamma_u[1+(u/n_2c)\sin i']}.
+\tag{14}
+\]
+
+折射角 \(i\) 从法线量起，所以
+\(\tan i=v_x/v_y\)。式（13）、（14）具有相同分母，约去后得到
+
+\[
+\begin{aligned}
+\tan i
+&=\gamma_u
+\frac{(c/n_2)\sin i'+u}
+{(c/n_2)\cos i'}\\
+&=\boxed{
+\gamma_u\frac{\sin i'+n_2u/c}{\cos i'}
+}.
+\end{aligned}\tag{15}
+\]
+
+其中 \(i'\) 由式（10）确定。若希望直接写成正弦形式，则由
+\(\sin i=\tan i/\sqrt{1+\tan^2i}\) 得
+
+\[
+\boxed{
+\sin i=
+\frac{\gamma_u(\sin i'+n_2u/c)}
+{\sqrt{\cos^2i'+\gamma_u^2(\sin i'+n_2u/c)^2}}
+}.
+\tag{16}
+\]
+
+\textbf{（4）全反射临界角}
+
+全反射的边界是折射光在下方介质静止系中恰沿界面传播，即
+
+\[
+i'=90^\circ,\qquad \sin i'=1.
+\]
+
+把该条件代入式（10）：
+
+\[
+1=\frac{n_1c\sin\theta_c-u}
+{n_2c-n_1n_2u\sin\theta_c}.
+\tag{17}
+\]
+
+交叉相乘并把含 \(\sin\theta_c\) 的项移到左边：
+
+\[
+n_1c\sin\theta_c+n_1n_2u\sin\theta_c
+=n_2c+u.
+\]
+
+提取公因子：
+
+\[
+n_1(c+n_2u)\sin\theta_c=n_2c+u.
+\]
+
+所以
+
+\[
+\boxed{
+\sin\theta_c=\frac{n_2c+u}{n_1(c+n_2u)}
+}.
+\tag{18}
+\]
+
+当 \(u=0\) 时，式（18）变为
+\(\sin\theta_c=n_2/n_1\)。这也说明只有右端不大于 \(1\)
+时才存在所述临界角。
+
+\textbf{（5）连续分层大气中的光线曲率半径}
+
+转入图
+7-2(c)。相邻两层的法线相差一个微小转角，绿色轨迹在这一局部可视为半径为
+\(R\) 的圆弧。取
+
+\[
+n_1=n_2=n_0,\qquad u=\alpha\,dh.
+\]
+
+式（18）变为
+
+\[
+\sin\theta_c=\frac{n_0c+u}
+{n_0(c+n_0u)}.
+\tag{19}
+\]
+
+分子、分母同除以 \(n_0c\)：
+
+\[
+\sin\theta_c=
+\frac{1+u/(n_0c)}{1+n_0u/c}.
+\tag{20}
+\]
+
+因 \(u/c\) 为一阶小量，使用
+
+\[
+\frac{1+A}{1+B}\approx1+A-B
+\]
+
+并只保留一阶项，得到
+
+\[
+\begin{aligned}
+\sin\theta_c
+&\approx1+\frac{u}{n_0c}-\frac{n_0u}{c}\\
+&=1-\frac{n_0^2-1}{n_0}\frac{u}{c}.
+\end{aligned}\tag{21}
+\]
+
+另一方面，若光线轨迹在该微小范围内是半径为 \(R\)
+的圆弧，法线转过的微小角所对应的几何关系为
+
+\[
+\sin\theta_c=\frac{R}{R+dh}.
+\tag{22}
+\]
+
+同样只保留 \(dh/R\) 的一阶项：
+
+\[
+\frac{R}{R+dh}
+=\frac1{1+dh/R}
+\approx1-\frac{dh}{R}.
+\tag{23}
+\]
+
+将 \(u=\alpha\,dh\) 代入式（21），再与式（23）比较：
+
+\[
+\frac{dh}{R}
+=\frac{n_0^2-1}{n_0}\frac{\alpha\,dh}{c}.
+\]
+
+约去非零微元 \(dh\)，可得
+
+\[
+\boxed{
+R=\frac{n_0}{n_0^2-1}\frac{c}{\alpha}
+}.
+\tag{24}
+\]
+
+量纲检验：\(\alpha\) 是速度对高度的变化率，量纲为
+\(\mathrm{s^{-1}}\)，故 \(c/\alpha\) 的量纲为长度，结果正确。
+
+\textbf{参考系选择的本质}
+
+本题的两次变换承担不同任务。式（7）、（8）变换的是定义波面的两个事件，目的是在
+\(S'\)
+中恢复惠更斯作图；式（12）变换的是折射光的速度，目的是把最终可观测的光线方向带回
+\(S\)。若把二者混为一次``角度变换''，通常会遗漏同时性的改变。
+
+\textbf{低速极限的方向判断}
+
+当下层介质沿光线的切向分量同向运动时，速度合成使 \(S\)
+系中的折射光更偏向 \(+x\) 方向。式（15）中 \(n_2u/c\) 为正，因而 \(i\)
+增大，和``运动介质拖曳光线''的直观一致。
+
+\textbf{一阶近似必须在精确式之后进行}
+
+第二至四问保留了完整的 \(\gamma_u\)
+与速度合成分母。只有第五问明确给出相邻薄层 \(dh\)，才把 \(u=\alpha dh\)
+当作一阶小量。若在式（7）、（8）之前就把 \(\gamma_u\) 取为 \(1\)
+并随意删项，可能错误丢掉 \(u/(n_1c\sin\theta)\)
+这一决定临界角修正的线性项。
+
+\textbf{关于介质中光速的模型假设}
+
+本题把介质静止系中的光传播速度取为各向同性的
+\(c/n\)，并忽略色散。于是可以把波面传播速度与题设光线方向统一处理。若介质强色散，应区分相速度和群速度；惠更斯波面、能量传播方向与速度变换的对象也要分别说明，不能直接沿用本题结果。
+
+\textbf{曲率方向的符号}
+
+正文给出的是曲率半径大小。若保留 \(\alpha\) 的正负，则局部有向曲率满足
+
+\[
+\frac1{R_{\rm s}}
+=\frac{n_0^2-1}{n_0}\frac{\alpha}{c}.
+\]
+
+\(\alpha\) 反号时光线弯曲方向反转，而半径大小取 \(R=|R_{\rm s}|\)。
+
+\newpage
+
+\section{第 8 题}\label{ux7b2c-8-ux9898}
+
+某湖初始水深为 \(H_0=5.0\ \mathrm{m}\)，湖面已有厚度
+\(d_0=1.0\times10^{-2}\ \mathrm{m}\) 的冰层。空气温度保持为
+\(-10\ ^\circ\mathrm C\)，湖底水温保持为
+\(4\ ^\circ\mathrm C\)。忽略侧向传热，已知
+
+\[
+\begin{aligned}
+&\lambda_w=0.57\ \mathrm{W/(m\cdot K)},\qquad
+\lambda_i=2.2\ \mathrm{W/(m\cdot K)},\\
+&\rho_w=0.999\times10^3\ \mathrm{kg/m^3},\qquad
+\rho_i=0.92\times10^3\ \mathrm{kg/m^3},\\
+&L=3.3\times10^5\ \mathrm{J/kg}.
+\end{aligned}
+\]
+
+其中 \(\lambda_w,\lambda_i\) 分别为水和冰的热导率，\(L\)
+为冰的熔化潜热。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  判断冰层刚开始增长时，冰中向上的导热与水中由湖底向上的导热何者占主导；
+\item
+  求初始时刻冰层厚度的增长速率；
+\item
+  若最终达到稳态，求冰层厚度 \(h_i\) 和冰下水层深度 \(h_w\)；
+\item
+  说明湖水不易从湖底开始冻结的主要原因。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.672\linewidth,height=\textheight,keepaspectratio,alt={图 8-1　冰层---水层---湖底构成的三维传热柱体。}]{../figures/question-08.pdf}
+\caption*{图 8-1　冰层---水层---湖底构成的三维传热柱体。}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-7}
+
+冰层增长的早期是瞬态热流，长时间后才达到分层稳态。先用热阻求两侧热流，再由界面能量守恒把净热量换成冰层质量变化。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-7}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  一维傅里叶导热定律 \(q=\lambda\Delta T/h\)；
+\item
+  相变界面的能量守恒；
+\item
+  单位面积建模；
+\item
+  水结冰时密度改变引起的液面与厚度关系；
+\item
+  稳态时各层热流密度相等；
+\item
+  水在 \(4\ ^\circ\mathrm C\) 附近的反常膨胀与稳定分层。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-7}
+
+取湖面的单位水平面积作为研究柱体。冰层上表面接触
+\(-10\ ^\circ\mathrm C\) 空气，冰水界面在相变过程中近似保持
+\(0\ ^\circ\mathrm C\)；水层底部为
+\(4\ ^\circ\mathrm C\)。冰层把相变释放的潜热向上传出，水层则从湖底向冰水界面补充热量。
+
+冰继续增长的净散热能力不是冰中热流本身，而是``冰向上带走的热流减去水从下方送来的热流''。这一差值才用于释放新增冰的潜热。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-7}
+
+先把所有热量都除以面积和时间，改用热流密度。这样无需引入湖面面积。初始速率用
+\(d_0\) 与 \(H_0\)；最终稳态则设未知厚度
+\(h_i,h_w\)，联立热流相等和总质量守恒。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-7}
+
+图 8-2
+给出了单位面积热阻网络与相变界面的能量收支。箭头方向只表示热量传递方向，大小由温差、热导率和层厚共同决定。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图 8-2　分层导热热阻与冰水界面能量收支。}]{../figures/solution-08.pdf}
+\caption*{图 8-2　分层导热热阻与冰水界面能量收支。}
+\end{figure}
+
+\textbf{（1）比较初始时刻冰层与水层的导热强弱}
+
+对厚度为 \(h\) 的均匀平板，一维稳态导热的热流密度为
+
+\[
+q=\lambda\frac{\Delta T}{h}.
+\tag{1}
+\]
+
+冰层初始厚度仅为 \(d_0=0.01\ \mathrm m\)，其上下表面温差为
+\(10\ \mathrm K\)，所以
+
+\[
+\begin{aligned}
+q_{i0}
+&=\lambda_i\frac{10}{d_0}\\
+&=2.2\times\frac{10}{0.01}\\
+&=\boxed{2.20\times10^3\ \mathrm{W/m^2}}.
+\end{aligned}\tag{2}
+\]
+
+水层初始深度可近似取 \(H_0=5.0\ \mathrm m\)，从湖底
+\(4\ ^\circ\mathrm C\) 到冰水界面 \(0\ ^\circ\mathrm C\)，故
+
+\[
+\begin{aligned}
+q_{w0}
+&=\lambda_w\frac{4}{H_0}\\
+&=0.57\times\frac4{5.0}\\
+&=\boxed{0.456\ \mathrm{W/m^2}}.
+\end{aligned}\tag{3}
+\]
+
+二者之比为
+
+\[
+\frac{q_{i0}}{q_{w0}}
+=\frac{2200}{0.456}
+\approx4.82\times10^3.
+\tag{4}
+\]
+
+因此初始阶段冰层向上的导热远强于水层向上的供热，冰水界面有很强的净散热能力，冰层迅速增长。若题目以选项给出，则应选择表述``冰层导热占主导''的选项。
+
+\textbf{（2）初始冰层增长速率}
+
+回看图 8-2(a)：冰层向上的热流为 \(q_{i0}\)，水层送到界面的热流为
+\(q_{w0}\)，两支箭头同向却分处相变界面的两侧。用于结冰潜热的净输出是二者之差。设冰层厚度增长速率为
+\(\dot d=dd/dt\)。在单位面积上，时间 \(dt\) 内新增冰的体积为
+
+\[
+dV=\dot d\,dt.
+\]
+
+其质量为
+
+\[
+dm=\rho_i\dot d\,dt,
+\]
+
+结冰释放的潜热为
+
+\[
+dQ_L=L\,dm=\rho_iL\dot d\,dt.
+\tag{5}
+\]
+
+同一时间内，冰层向上带走热量 \(q_{i0}dt\)，而水层从下方送入热量
+\(q_{w0}dt\)。相变界面的能量守恒为
+
+\[
+q_{i0}dt=q_{w0}dt+\rho_iL\dot d\,dt.
+\tag{6}
+\]
+
+约去 \(dt\)：
+
+\[
+\rho_iL\dot d=q_{i0}-q_{w0}.
+\tag{7}
+\]
+
+因此
+
+\[
+\begin{aligned}
+\dot d
+&=\frac{2200-0.456}
+{(0.92\times10^3)(3.3\times10^5)}\\
+&=\boxed{7.24\times10^{-6}\ \mathrm{m/s}}.
+\end{aligned}\tag{8}
+\]
+
+换算为每天增长的厚度：
+
+\[
+\begin{aligned}
+\dot d
+&=(7.24\times10^{-6})\times86400\\
+&\approx\boxed{0.626\ \mathrm{m/d}}.
+\end{aligned}\tag{9}
+\]
+
+这个数值只表示 \(d=d_0\)
+的瞬时切线斜率。随着冰层变厚，\(q_i=10\lambda_i/d\)
+快速减小，实际冰厚不可能按 \(0.626\ \mathrm{m/d}\) 长时间线性增加。
+
+\textbf{（3）最终稳态的冰层厚度和水层深度}
+
+转入图
+8-2(b)。达到稳态后，冰水界面不再移动，因而不再有潜热释放；贯穿冰层和水层的同一支热流箭头表示两层热流密度相等：
+
+\[
+\lambda_i\frac{10}{h_i}
+=\lambda_w\frac4{h_w}.
+\tag{10}
+\]
+
+交叉相乘可得厚度比：
+
+\[
+\frac{h_w}{h_i}
+=\frac{4\lambda_w}{10\lambda_i}.
+\tag{11}
+\]
+
+还需注意水结成冰后密度变小，不能误写成
+\(h_i+h_w=H_0\)。仍取单位面积，初始水的总质量为
+
+\[
+m_0=\rho_wH_0.
+\]
+
+最终冰和水的总质量为
+
+\[
+m=\rho_ih_i+\rho_wh_w.
+\]
+
+质量守恒给出
+
+\[
+\rho_ih_i+\rho_wh_w=\rho_wH_0.
+\tag{12}
+\]
+
+由式（10）解出
+
+\[
+h_w=\frac{4\lambda_w}{10\lambda_i}h_i,
+\tag{13}
+\]
+
+代入式（12）：
+
+\[
+\rho_ih_i+\rho_w
+\frac{4\lambda_w}{10\lambda_i}h_i
+=\rho_wH_0.
+\]
+
+提取 \(h_i\)：
+
+\[
+h_i\left(
+\rho_i+\rho_w\frac{4\lambda_w}{10\lambda_i}
+\right)=\rho_wH_0.
+\]
+
+所以
+
+\[
+\begin{aligned}
+h_i
+&=\frac{\rho_wH_0}
+{\rho_i+\rho_w(4\lambda_w)/(10\lambda_i)}\\
+&=\frac{\rho_wH_0\lambda_i10}
+{\rho_i\lambda_i10+\rho_w\lambda_w4}.
+\end{aligned}\tag{14}
+\]
+
+代入数据：
+
+\[
+\begin{aligned}
+h_i
+&=\frac{(0.999\times10^3)(5.0)(2.2)(10)}
+{(0.92\times10^3)(2.2)(10)
++(0.999\times10^3)(0.57)(4)}\\
+&\approx\boxed{4.88\ \mathrm m}.
+\end{aligned}\tag{15}
+\]
+
+再由式（13）：
+
+\[
+\begin{aligned}
+h_w
+&=\frac{(0.57)(4)}{(2.2)(10)}\times4.880\\
+&\approx\boxed{0.506\ \mathrm m}.
+\end{aligned}\tag{16}
+\]
+
+用质量关系复核：
+
+\[
+h_w=H_0-\frac{\rho_i}{\rho_w}h_i
+=5.0-\frac{0.92}{0.999}\times4.880
+\approx0.506\ \mathrm m,
+\]
+
+与式（16）一致。由于冰的密度小于水，最终 \(h_i+h_w>H_0\)
+并不矛盾；冻结后的总体积有所膨胀。
+
+\textbf{（4）湖底不易先冻结的原因}
+
+水的密度在约 \(4\ ^\circ\mathrm C\) 时最大。表层水从较高温度冷却到
+\(4\ ^\circ\mathrm C\) 的过程中密度增大，会下沉并发生对流；当表层继续由
+\(4\ ^\circ\mathrm C\) 冷却到 \(0\ ^\circ\mathrm C\)
+时，密度反而减小，较冷的水停留在上部，较密的 \(4\ ^\circ\mathrm C\)
+水留在下部，形成稳定分层。
+
+因此湖面先结冰，冰层又进一步抑制散热；湖底附近则可长期保持约
+\(4\ ^\circ\mathrm C\)，不易从湖底开始冻结。主要原因是水在
+\(4\ ^\circ\mathrm C\)
+附近的密度反常及其造成的稳定分层，而不是冰层压力使水的凝固点发生了主要改变。
+
+\textbf{瞬时模型与长期模型的边界}
+
+式（8）使用了初始厚度 \(d_0\)，因此只回答 \(t=0\)
+附近的导数。若研究完整冻结过程，应写成随厚度变化的微分方程
+
+\[
+\rho_iL\frac{dd}{dt}
+=\frac{10\lambda_i}{d}
+-\frac{4\lambda_w}{h_w(d)},
+\]
+
+再由质量守恒确定 \(h_w(d)\)。这时冰层热阻随 \(d\)
+增大，增长速度逐渐下降。
+
+\textbf{稳态结果的适用性}
+
+式（15）、（16）是在空气温度、湖底温度和一维导热模型长期保持不变时的理论极限。真实湖泊存在季节变化、对流、辐射、盐度和地热等因素，结果应理解为题设模型下的稳态，而不是任意自然湖泊的实际冰厚。
+
+\textbf{忽略水层供热时的解析增长律}
+
+在结冰早期 \(q_w\ll q_i\)，可暂时忽略水层供热。微分方程简化为
+
+\[
+\rho_iL\frac{dd}{dt}=\frac{10\lambda_i}{d}.
+\]
+
+两边乘以 \(d\)：
+
+\[
+d\frac{dd}{dt}=\frac{10\lambda_i}{\rho_iL}.
+\]
+
+利用 \(d(dd/dt)=\tfrac12d(d^2)/dt\)，从 \(d_0\) 积分到 \(d(t)\)：
+
+\[
+\boxed{
+d^2(t)=d_0^2+\frac{20\lambda_i}{\rho_iL}t
+}.
+\]
+
+所以冰厚按 \(\sqrt t\)
+增长，而不是按初始速率线性增长。这一结果可作为第二问数值很大的物理解释。
+
+\textbf{稳态热流的交叉核验}
+
+代回可得
+\(q_i=2.2\times10/4.880\approx4.51\ \mathrm{W/m^2}\)，\(q_w=0.57\times4/0.506\approx4.51\ \mathrm{W/m^2}\)。两者在取整误差内相等，且冰水质量守恒，稳态解同时满足两条约束。
+
+\end{document}

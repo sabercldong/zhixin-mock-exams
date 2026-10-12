@@ -1,0 +1,47 @@
+\documentclass[tikz,border=5pt]{standalone}
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath,amssymb}
+\usetikzlibrary{arrows.meta,calc,angles,quotes,decorations.pathmorphing}
+\definecolor{ink}{HTML}{243447}\definecolor{blue}{HTML}{2765A2}
+\definecolor{green}{HTML}{3F7D5B}\definecolor{red}{HTML}{B74739}
+\tikzset{body/.style={draw=ink,thick},vec/.style={draw=blue,thick,-{Latex}},guide/.style={gray!65,dashed},dim/.style={ink,{Latex}-{Latex}},line cap=round,line join=round}
+\begin{document}
+\begin{tikzpicture}
+\draw[body](0,0)--(7,0);
+\fill[blue!15](0,0)circle(.18);\node[below]at(0,-.25){地球};
+\fill[orange!50](7,0)circle(.18);\node[below]at(7,-.25){目标恒星};
+\draw[body,fill=gray!15](3,-.15)rectangle(4,.15);
+\draw[vec](4.1,0)--(5.2,0)node[midway,above]{$v$};
+\draw[dim](0,1)--(7,1)node[midway,above]{$d=4.2\,\mathrm{ly}$};
+\node at(3.5,-1){飞船钟 $\tau_{\mathrm{trip}}=42\,\mathrm{yr}$};
+\node at(.7,.55){出发静止};\node at(6.3,.55){到达静止};
+\end{tikzpicture}
+\begin{tikzpicture}
+\node[body,fill=blue!5,minimum width=1.6cm,minimum height=.65cm](a)at(0,0){$M$，静止};
+\draw[vec](1.5,0)--(2.8,0);
+\node[body,fill=blue!5,minimum width=2.4cm,minimum height=.65cm](b)at(5.4,0){$M+\mathrm dM$};
+\draw[green,thick,-{Latex}](6.75,0)--(7.8,0)node[midway,above]{$\mathrm du$};
+\draw[red,thick,-{Latex},decorate,decoration={snake,amplitude=.7pt,segment length=7pt}](4,0)--(3.1,0);
+\node[red]at(3.7,-.65){$\mathrm dE_\gamma,\ -\mathrm dE_\gamma/c$};
+\node at(4.6,1){发射前瞬时静止系};
+\end{tikzpicture}
+\begin{tikzpicture}[x=5cm,y=2.7cm]
+\draw[vec](0,0)--(1.17,0)node[right]{$\tau/\tau_{\mathrm{trip}}$};
+\draw[vec](0,0)--(0,1.25)node[above]{$\eta/\eta_{\max}$};
+\draw[blue,thick](0,0)--(0,1)--(1,1)--(1,0);
+\draw[green,thick,dashed](0,0)--(.5,1)--(1,0);
+\node[left]at(0,1){$1$};\node[below]at(1,0){$1$};
+\node[blue]at(.5,1.18){巡航极限};
+\node[green]at(.5,.35){有限加速示意};
+\end{tikzpicture}
+\begin{tikzpicture}
+\node[body,fill=blue!5,minimum width=1.8cm,minimum height=.8cm](s)at(0,0){飞船 $M$};
+\draw[green,thick,-{Latex}](.2,1.2)--(1.7,1.2)node[midway,above]{$\mathrm du$};
+\fill[ink](4.7,0)circle(.07);\node[above]at(4.7,.2){$\mathrm dm$};
+\draw[vec](4.4,0)--(2.4,0)node[midway,above]{$-v$};
+\node at(3.6,-.7){$E_{\mathrm{in}}=\gamma\,\mathrm dm\,c^2$};
+\draw[red,thick,-{Latex},decorate,decoration={snake,amplitude=.7pt,segment length=7pt}](-1,0)--(-3.2,0);
+\node[red]at(-2.1,.55){$\mathrm dE_\gamma$};
+\node at(-1.5,-1.4){消耗正物质 $\mathrm dm$；剩余静质量 $M-\mathrm dm$};
+\end{tikzpicture}
+\end{document}

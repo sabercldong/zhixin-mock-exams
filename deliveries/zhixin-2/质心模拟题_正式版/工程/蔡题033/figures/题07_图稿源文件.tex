@@ -1,0 +1,82 @@
+\documentclass[tikz,border=5pt]{standalone}
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath,amssymb}
+\usetikzlibrary{arrows.meta,calc,decorations.pathmorphing}
+\definecolor{ink}{HTML}{243447}
+\definecolor{blue}{HTML}{2765A2}
+\definecolor{red}{HTML}{B74739}
+\tikzset{edge/.style={draw=ink,thick},back/.style={draw=gray!65,dashed},
+ arrow/.style={draw=blue,thick,-{Latex[length=2mm]}},
+ resistor/.style={draw=ink,thick,decorate,decoration={zigzag,amplitude=1.8pt,segment length=4pt,pre length=10pt,post length=10pt}}}
+\begin{document}
+
+% 正二十面体的等棱长坐标；投影沿(0,-1,1/4)观察。
+\begin{tikzpicture}[scale=2.7]
+ \coordinate(P0) at (0,1);
+ \coordinate(P11) at (0,-1);
+ \foreach \i in {0,...,4}{
+  \pgfmathsetmacro{\j}{int(\i+1)}
+  \coordinate(P\j) at ({2/sqrt(5)*cos(234+72*\i)},{1/sqrt(5)+.25*2/sqrt(5)*sin(234+72*\i)});
+  \pgfmathsetmacro{\j}{int(\i+6)}
+  \coordinate(P\j) at ({2/sqrt(5)*cos(270+72*\i)},{-1/sqrt(5)+.25*2/sqrt(5)*sin(270+72*\i)});
+ }
+ % 遮挡边由相邻三角形面相对观察方向的法向量确定。
+ \foreach \a/\b in {0/4,3/4,3/8,4/5,4/8,4/9,5/9,7/8,8/9,8/11,9/10,9/11}{\draw[back] (P\a)--(P\b);}
+ \foreach \a/\b in {0/1,0/2,0/3,0/5,1/2,1/5,1/6,1/10,2/3,2/6,2/7,3/7,5/10,6/7,6/10,6/11,7/11,10/11}{\draw[edge] (P\a)--(P\b);}
+ \foreach \a/\b in {0/1,1/6,1/2}{\draw[blue,very thick] (P\a)--(P\b);}
+ \foreach \i in {0,...,11}{\fill[ink] (P\i) circle(.015);}
+ \node[above=3pt] at(P0){$A$};
+ \node[left=4pt,fill=white,inner sep=1pt] at(P1){$B$};
+ \node[right=4pt,fill=white,inner sep=1pt] at(P2){$D$};
+ \node[below=4pt,fill=white,inner sep=1pt] at(P6){$C$};
+ \node[below=6pt] at(P11){每条棱的电阻均为 $r$};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+ \foreach \name/\y/\label in {A/0/A,U/-1.8/\{U_i\},L/-3.6/\{L_i\},Z/-5.4/Z}{
+  \fill[blue] (0,\y) circle(2pt);
+  \node[above left=4pt] at(0,\y){$\label$};
+ }
+ \draw[resistor] (0,0)--(0,-1.8) node[midway,right=5pt] {$r/5$};
+ \draw[resistor] (0,-1.8)--(0,-3.6) node[midway,right=5pt] {$r/10$};
+ \draw[resistor] (0,-3.6)--(0,-5.4) node[midway,right=5pt] {$r/5$};
+ \draw[arrow] (0,1)--(0,.08) node[pos=0,left]{$I_0$};
+ \draw[arrow] (0,-1.8)--(-2,-1.8) node[left] {$5I_0/11$};
+ \draw[arrow] (0,-3.6)--(-2,-3.6) node[left] {$5I_0/11$};
+ \draw[arrow] (0,-5.4)--(-2,-5.4) node[left] {$I_0/11$};
+ \node[right] at(1.25,-.9){总电流 $I_0$};
+ \node[right] at(1.25,-2.7){总电流 $6I_0/11$};
+ \node[right] at(1.25,-4.5){总电流 $I_0/11$};
+ \node at(0,-6.25){辅助网络的四个等势层};
+ \begin{scope}[xshift=8.5cm]
+  \node[align=center] at(0,.9){两组辅助注流相加\\正号为外部注入};
+  \foreach \y/\label/\value in {-.5/A/{I_0+I_0/11=12I_0/11},-2.5/{P\ne A,C}/{-I_0/11+I_0/11=0},-4.5/C/{-I_0/11-I_0=-12I_0/11}}{
+   \fill[blue] (-2,\y) circle(2pt);
+   \node[left] at(-2,\y){$\label$};
+   \node[right,draw=blue!35,fill=blue!4,inner sep=7pt] at(-1.65,\y){$\value$};
+  }
+  \node at(0,-6.25){真实端口电流 $I=12I_0/11$};
+ \end{scope}
+\end{tikzpicture}
+
+\begin{tikzpicture}
+ \foreach \s/\title/\ab/\bc/\ac in {
+  0/{取出 $AB$、$BC$}/x/x/y,
+  5.7/{恢复 $AB$、$BC$}/p/p/y,
+  11.4/{仅恢复 $BC$}/r/{r/2}/{7r/8}}{
+  \begin{scope}[xshift=\s cm]
+   \coordinate(A)at(0,3);\coordinate(B)at(-1.7,0);\coordinate(C)at(1.7,0);
+   \draw[resistor](A)--(B);
+   \draw[resistor](B)--(C);
+   \draw[resistor](A)--(C);
+   \node[left=7pt] at($(A)!.5!(B)$){$\ab$};
+   \node[below=7pt] at($(B)!.5!(C)$){$\bc$};
+   \node[right=7pt] at($(A)!.5!(C)$){$\ac$};
+   \foreach \n in{A,B,C}{\fill[ink](\n)circle(2pt);}
+   \node[above=3pt]at(A){$A$};\node[left=3pt]at(B){$B$};\node[right=3pt]at(C){$C$};
+   \node at(0,-1.05){\title};
+  \end{scope}
+ }
+ \node[below]at(5.7,-1.5){$p=r\parallel x$，测量端口为 $A$、$C$ 时 $B$ 浮置};
+\end{tikzpicture}
+\end{document}

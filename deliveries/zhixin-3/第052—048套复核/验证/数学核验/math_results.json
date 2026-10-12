@@ -1,0 +1,418 @@
+{
+  "passed": true,
+  "groups": [
+    {
+      "set": 52,
+      "question": 1,
+      "passed": true,
+      "checks": [
+        "partial_cover",
+        "finite_vessel",
+        "period_limit"
+      ]
+    },
+    {
+      "set": 52,
+      "question": 2,
+      "passed": true,
+      "checks": [
+        "bound_root",
+        "coupling",
+        "only_n1_bound",
+        "stability_polynomial"
+      ]
+    },
+    {
+      "set": 52,
+      "question": 3,
+      "passed": true,
+      "checks": [
+        "cycloid_arclength",
+        "tautochrone",
+        "Abel_halfwidth"
+      ]
+    },
+    {
+      "set": 52,
+      "question": 4,
+      "passed": true,
+      "checks": [
+        "isolated_energy",
+        "reach",
+        "interior_equilibrium"
+      ]
+    },
+    {
+      "set": 52,
+      "question": 5,
+      "passed": true,
+      "checks": [
+        "tilt",
+        "angular_velocity",
+        "uniqueness"
+      ]
+    },
+    {
+      "set": 52,
+      "question": 6,
+      "passed": true,
+      "checks": [
+        "grazing_linear",
+        "grazing_quadratic",
+        "allowed_order"
+      ]
+    },
+    {
+      "set": 52,
+      "question": 7,
+      "passed": true,
+      "checks": [
+        "radii",
+        "photometric_ratio",
+        "central_mismatch",
+        "orbital_mass",
+        "planet_radiation"
+      ]
+    },
+    {
+      "set": 52,
+      "question": 8,
+      "passed": true,
+      "checks": [
+        "circular_shift",
+        "n2_splitting",
+        "time_average"
+      ]
+    },
+    {
+      "set": 51,
+      "question": 1,
+      "passed": true,
+      "checks": [
+        "belt_derivative",
+        "symmetry",
+        "cone_sum"
+      ]
+    },
+    {
+      "set": 51,
+      "question": 2,
+      "passed": true,
+      "checks": [
+        "density",
+        "inertia",
+        "sway_period",
+        "fast_map",
+        "cycles"
+      ]
+    },
+    {
+      "set": 51,
+      "question": 3,
+      "passed": true,
+      "checks": [
+        "full_curve_even",
+        "tangent",
+        "selflock"
+      ]
+    },
+    {
+      "set": 51,
+      "question": 4,
+      "passed": true,
+      "checks": [
+        "critical",
+        "earth_modes",
+        "critical_defect"
+      ]
+    },
+    {
+      "set": 51,
+      "question": 5,
+      "passed": true,
+      "checks": [
+        "node_sources",
+        "AD_emf",
+        "AB_power"
+      ]
+    },
+    {
+      "set": 51,
+      "question": 6,
+      "passed": true,
+      "checks": [
+        "heat_segments",
+        "efficiency",
+        "triangle_area"
+      ]
+    },
+    {
+      "set": 51,
+      "question": 7,
+      "passed": true,
+      "checks": [
+        "curvature_numerator",
+        "reflection",
+        "emission",
+        "separation"
+      ]
+    },
+    {
+      "set": 51,
+      "question": 8,
+      "passed": true,
+      "checks": [
+        "strict_modes",
+        "sum_modes",
+        "finite_force"
+      ]
+    },
+    {
+      "set": 50,
+      "question": 1,
+      "passed": true,
+      "checks": [
+        "variable_speed_integral",
+        "cylinder",
+        "sphere"
+      ]
+    },
+    {
+      "set": 50,
+      "question": 2,
+      "passed": true,
+      "checks": [
+        "effective_inertia",
+        "support_vector",
+        "force_sum"
+      ]
+    },
+    {
+      "set": 50,
+      "question": 3,
+      "passed": true,
+      "checks": [
+        "grazing_geometry",
+        "global_flux_continuity",
+        "straight_center_field"
+      ]
+    },
+    {
+      "set": 50,
+      "question": 4,
+      "passed": true,
+      "checks": [
+        "contact_geometry",
+        "collision_threshold",
+        "threshold_zero_speed"
+      ]
+    },
+    {
+      "set": 50,
+      "question": 5,
+      "passed": true,
+      "checks": [
+        "volume_constraint",
+        "positive_energy",
+        "equal_modes"
+      ]
+    },
+    {
+      "set": 50,
+      "question": 6,
+      "passed": true,
+      "checks": [
+        "wall_collision_fraction",
+        "short_time",
+        "long_time"
+      ]
+    },
+    {
+      "set": 50,
+      "question": 7,
+      "passed": true,
+      "checks": [
+        "transfer",
+        "extreme_visible",
+        "ray_max",
+        "bright_center"
+      ]
+    },
+    {
+      "set": 50,
+      "question": 8,
+      "passed": true,
+      "checks": [
+        "simultaneity",
+        "proper_time",
+        "finite_event",
+        "domain_limit"
+      ]
+    },
+    {
+      "set": 49,
+      "question": 1,
+      "passed": true,
+      "checks": [
+        "Ackermann",
+        "offset_constraint",
+        "full_boundary_sweep",
+        "counterexample"
+      ]
+    },
+    {
+      "set": 49,
+      "question": 2,
+      "passed": true,
+      "checks": [
+        "optimal_stage",
+        "global_grid",
+        "required_mass_ratio"
+      ]
+    },
+    {
+      "set": 49,
+      "question": 3,
+      "passed": true,
+      "checks": [
+        "lab_velocities",
+        "moving_frame",
+        "height_ratio"
+      ]
+    },
+    {
+      "set": 49,
+      "question": 4,
+      "passed": true,
+      "checks": [
+        "sticking",
+        "normal_restitution",
+        "energy",
+        "critical"
+      ]
+    },
+    {
+      "set": 49,
+      "question": 5,
+      "passed": true,
+      "checks": [
+        "reflection_composition",
+        "formal_group_order",
+        "branch_centers",
+        "visibility_not_claimed"
+      ]
+    },
+    {
+      "set": 49,
+      "question": 6,
+      "passed": true,
+      "checks": [
+        "parallel_edges",
+        "net_efficiency",
+        "second_cycle",
+        "entropy_closure"
+      ]
+    },
+    {
+      "set": 49,
+      "question": 7,
+      "passed": true,
+      "checks": [
+        "spiral_parameter",
+        "curvature",
+        "center_identity"
+      ]
+    },
+    {
+      "set": 49,
+      "question": 8,
+      "passed": true,
+      "checks": [
+        "near_far",
+        "eccentricity",
+        "splitting"
+      ]
+    },
+    {
+      "set": 48,
+      "question": 1,
+      "passed": true,
+      "checks": [
+        "perpendicular",
+        "restoring_torque",
+        "front_force"
+      ]
+    },
+    {
+      "set": 48,
+      "question": 2,
+      "passed": true,
+      "checks": [
+        "adiabatic_perp",
+        "mirror_ratio",
+        "strict_boundary"
+      ]
+    },
+    {
+      "set": 48,
+      "question": 3,
+      "passed": true,
+      "checks": [
+        "fixed_free_shape",
+        "free_shear",
+        "torsion_free_both"
+      ]
+    },
+    {
+      "set": 48,
+      "question": 4,
+      "passed": true,
+      "checks": [
+        "formal_value",
+        "SI_density",
+        "max_entropy_shape"
+      ]
+    },
+    {
+      "set": 48,
+      "question": 5,
+      "passed": true,
+      "checks": [
+        "magnetic_force",
+        "stiffness",
+        "zero_current_quartic"
+      ]
+    },
+    {
+      "set": 48,
+      "question": 6,
+      "passed": true,
+      "checks": [
+        "network_diagonal",
+        "network_adjacent",
+        "ladder_fixedpoint"
+      ]
+    },
+    {
+      "set": 48,
+      "question": 7,
+      "passed": true,
+      "checks": [
+        "period_expansion",
+        "speed_correction"
+      ]
+    },
+    {
+      "set": 48,
+      "question": 8,
+      "passed": true,
+      "checks": [
+        "phase_derivative",
+        "positive_shift",
+        "unit_modulus"
+      ]
+    }
+  ],
+  "script_sha256": "e1e66c539d41e1f4661af93c13570a03805f84f2f8505050ee115e2dad231ff7",
+  "note": "核对列出的关键关系；不声称自动证明完整解析，也不证明第049套道路全局最优或双镜实际可见性。"
+}

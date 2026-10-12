@@ -1,0 +1,236 @@
+\documentclass[multi=tikzpicture,border=7pt]{standalone}
+\usepackage{ctex,amsmath,bm}
+\usepackage{tikz,pgfplots}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{arrows.meta,calc,angles,quotes,patterns,positioning,decorations.pathmorphing,3d}
+\tikzset{
+axis/.style={->,>=Stealth,thick},
+force/.style={->,>=Stealth,very thick,red!72!black},
+velocity/.style={->,>=Stealth,very thick,blue!72!black},
+dim/.style={<->,>=Stealth,thin},
+body/.style={draw=black,fill=blue!7,thick},
+guide/.style={dashed,gray!65},
+hidden/.style={dashed,gray!58,thick},
+wire/.style={brown!72!black,very thick},
+panel/.style={font=\bfseries,anchor=west}
+}
+\tikzset{wire/.style={brown!70!black,very thick},guide/.style={dashed,gray!60},force/.style={->,>=Stealth,thick,red!70!black},velocity/.style={->,>=Stealth,thick,blue!70!black},axis/.style={->,>=Stealth,thick},dim/.style={<->,>=Stealth,thin},body/.style={draw,thick,fill=blue!7},panel/.style={anchor=west,font=\bfseries}}
+\begin{document}
+
+% 1 question-01
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+\node[panel]at(-4.5,5.2){液体桶、连续绳与部分浸入物块};
+\fill[blue!13](-2.35,-1.95)rectangle(2.35,-.65);\draw[very thick](-2.4,0)--(-2.4,-2)--(2.4,-2)--(2.4,0);\draw[blue!65!black,thick](-2.35,-.65)--(2.35,-.65);
+\draw[thick](-2.4,0)arc[start angle=180,end angle=0,radius=2.4];\draw[very thick](0,2.4)--(0,2.55);
+\draw[thick](0,2.8)circle(.25);\draw[thick](.60,3.8)circle(.35);\draw[very thick](.6,4.15)--(.6,4.5);\draw[very thick](-1,4.5)--(1.4,4.5);
+\draw[wire](-.25,4.5)--(-.25,2.8)arc[start angle=180,end angle=360,radius=.25]--(.25,3.8)arc[start angle=180,end angle=0,radius=.35]--(.95,-.35);
+\draw[body,fill=orange!18](.5,-1.55)rectangle(1.4,-.35);\node at(.95,-1.1){$\rho,V$};\node at(-1.4,-1.35){$\rho_0,V_0$};\draw[dim](1.8,-1.55)--(1.8,-.65)node[right,midway]{$V_1=\alpha V$};
+\end{tikzpicture}
+
+% 2 solution-01
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+\node[panel]at(-5,3.7){平衡已消去：只画增量力};
+\begin{scope}[shift={(-3,0)}]\draw[body](-.6,-.8)rectangle(.6,.8);
+\draw[force](-.2,.8)--(-.2,2)node[left]{$\Delta T$};\draw[force](.25,-.3)--(.25,1.4)node[right]{$\Delta F_b$};\draw[velocity](-1,.7)--(-1,-.7)node[left]{$x$};\node at(0,-1.7){物块向下位移};\end{scope}
+\begin{scope}[shift={(3,0)}]\draw[body](-1,-.8)rectangle(1,.8);
+\draw[force](-.3,.8)--(-.3,2.2)node[left]{$2\Delta T$};\draw[force](.3,.6)--(.3,-1)node[right]{$\Delta F_b$};\draw[velocity](1.4,-.4)--(1.4,.4)node[right]{$x/2$};\node at(0,-1.7){桶向上位移};\end{scope}
+\node at(0,-2.5){相对浸入深度增量 $3x/2$，$\Delta F_b=3\rho_0l^2gx/2$};
+\end{tikzpicture}
+
+% 3 question-02
+\begin{tikzpicture}[x={(1cm,0cm)},y={(.45cm,.60cm)},z={(0cm,1cm)},scale=.9]
+  \node[panel] at (-5,-3.7,4.7){正八面体电阻网络};
+  \coordinate (A) at (0,0,3); \coordinate (B) at (0,0,-3);
+  \coordinate (C) at (3,0,0); \coordinate (D) at (-3,0,0);
+  \coordinate (E) at (0,3,0); \coordinate (F) at (0,-3,0);
+  \foreach \P in {C,D,E,F}{\draw[thick] (A)--(\P) (B)--(\P);}
+  \draw[thick] (C)--(E)--(D);
+  \draw[hidden] (D)--(F)--(C);
+  \foreach \P/\lab/\pos in {A/A/above,B/B/below,C/C/right,D/D/left,E/E/above right,F/F/below left}
+    {\fill (\P) circle(2.4pt) node[\pos]{\lab};}
+  \node at (3.5,2.8,1.2){每条边均为 $R$};
+\end{tikzpicture}
+
+% 4 solution-02
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+\node[panel]at(-5,3.5){真实连接、等势化简与电流叠加};
+\begin{scope}[shift={(-3,0)}]
+\fill(-2,0)circle(2pt)node[left]{$A$};\fill(2,0)circle(2pt)node[right]{$B$};\fill(0,0)circle(2pt)node[below]{$C,D,E,F$};
+\draw[thick](-2,0)--(2,0);\draw[fill=white](-1.35,-.12)rectangle(-.65,.12);\draw[fill=white](.65,-.12)rectangle(1.35,.12);\node[above]at(-1,.2){$R/4$};\node[above]at(1,.2){$R/4$};\node at(0,-1.2){中间四点等势，$R_{AB}=R/2$};
+\end{scope}
+\begin{scope}[shift={(3,0)}]
+\node[draw,rounded corners,align=left]at(0,0){$A\to B$：流入 $I$\\$C\to B$：流入 $2I$\\叠加后 $B$ 流出 $3I$};
+\node at(0,-1.5){$U_{AD}=5IR/12$};\end{scope}
+\node at(0,-2.5){对顶点 $AB,CD,EF$ 之间没有电阻};
+\end{tikzpicture}
+
+% 5 question-03
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+\node[panel]at(-4.2,3.8){圆弧中点与双镜的形式展开};
+\coordinate(O)at(0,-1.5);\coordinate(A)at(-2,.5);\coordinate(B)at(2,.5);
+\draw[very thick](O)--(A)(O)--(B);\draw[blue!70!black,thick](A)..controls(-.8,.67)and(.8,.67)..(B);
+\coordinate(C)at(0,.6275);\fill(C)circle(2pt)node[right]{$C$};\fill(O)circle(2pt)node[below]{$O$};\node[left]at(A){$A$};\node[right]at(B){$B$};
+\fill(0,2.5)circle(2pt)node[right]{$S$};\draw[guide](0,-2.4)--(0,3);
+\node at(2.9,1.5){$R=\alpha l$};\node at(-2.9,1.5){$\alpha\gg1$};\node at(0,-2.9){角度取 $90^\circ$ 或 $120^\circ$，弓高保留一阶};
+
+\end{tikzpicture}
+
+% 6 solution-03
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+\node[panel]at(-5,5.2){双镜形式展开：物距及轴外高度};
+\begin{scope}[shift={(-3,0)}]
+\coordinate(O)at(0,0);\coordinate(A)at(-1.5,1.5);\coordinate(B)at(1.5,1.5);\coordinate(C)at(0,1.58);
+\draw[very thick](O)--(A)(O)--(B);\draw[blue,thick](A)..controls(-.5,1.60)and(.5,1.60)..(B);\draw[guide](0,-4)--(0,4.3);
+\foreach\y/\lab in{0/O,1.58/C,3.72/S_2,-3.72/S_4}{\fill(0,\y)circle(2pt)node[left]{$\lab$};}
+\draw[dim](2,-3.72)--(2,1.58)node[right,midway]{$u_4$};\node at(0,4.5){$90^\circ$：$u_4=OC+OS_2$};
+\end{scope}
+\begin{scope}[shift={(3.6,0)}]
+\coordinate(O)at(0,0);\coordinate(A)at(-1.7,.981);\coordinate(B)at(1.7,.981);\coordinate(C)at(0,1.03);\coordinate(S)at(-3.031,-1.75);
+\draw[very thick](O)--(A)(O)--(B);\draw[blue,thick](A)..controls(-.5,1.05)and(.5,1.05)..(B);\draw[guide](0,-2.8)--(0,4.1)(B)--(S);
+\fill(O)circle(2pt)node[below right]{$O$};\fill(C)circle(2pt)node[right]{$C$};\fill(0,3.5)circle(2pt)node[right]{$S_2$};\fill(S)circle(2pt)node[left]{$S_3$};
+\draw[dim](.7,-1.75)--(.7,1.03)node[right,midway]{$u_3$};\draw[dim](-3.031,-2.4)--(0,-2.4)node[below,midway]{$|y_3|$};\node at(-.7,4.5){$120^\circ$：两次反射后的 $S_3$};
+\end{scope}
+\node at(0,-4.5){$u_3=OC+OS_2/2,\qquad y_3=-\sqrt3\,OS_2/2$};
+\end{tikzpicture}
+
+% 7 question-04
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+\node[panel]at(-4.5,4.2){两位老师均位于物体下方};
+\draw[thick](0,2.8)circle(.65);\draw[wire](-.65,2.8)--(-.65,0)(.65,2.8)--(.65,0);
+\draw[wire](-.65,2.8)arc[start angle=180,end angle=0,radius=.65];
+\draw[body](-.95,-.35)rectangle(-.35,0);\node[left]at(-.95,-.18){$m$};
+\draw[body](1.45,0)circle(.8);\fill(1.45,0)circle(2pt);\node[right]at(2.25,0){$M=\alpha m$};
+\draw[force](.65,0)--(.65,1.25)node[right]{$T$};\draw[force](1.45,0)--(1.45,-1.35)node[right]{$Mg$};
+\draw[velocity](2,.5)arc[start angle=42,end angle=-50,radius=.743];\node at(2.65,.7){$\beta$};
+\draw[dim](-1.5,-.35)--(-1.5,-2.2)node[left,midway]{$H$};\draw[dim](3,-.8)--(3,-2.65)node[right,midway]{$H$};
+\node at(-.65,-2.55){唐鹏（左）};\node at(1.45,-3){杜楠（右）};
+
+\end{tikzpicture}
+
+% 8 solution-04
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+\node[panel]at(-4.5,4.2){两位老师均位于物体下方};
+\draw[thick](0,2.8)circle(.65);\draw[wire](-.65,2.8)--(-.65,0)(.65,2.8)--(.65,0);
+\draw[wire](-.65,2.8)arc[start angle=180,end angle=0,radius=.65];
+\draw[body](-.95,-.35)rectangle(-.35,0);\node[left]at(-.95,-.18){$m$};
+\draw[body](1.45,0)circle(.8);\fill(1.45,0)circle(2pt);\node[right]at(2.25,0){$M=\alpha m$};
+\draw[force](.65,0)--(.65,1.25)node[right]{$T$};\draw[force](1.45,0)--(1.45,-1.35)node[right]{$Mg$};
+\draw[velocity](2,.5)arc[start angle=42,end angle=-50,radius=.743];\node at(2.65,.7){$\beta$};
+\draw[dim](-1.5,-.35)--(-1.5,-2.2)node[left,midway]{$H$};\draw[dim](3,-.8)--(3,-2.65)node[right,midway]{$H$};
+\node at(-.65,-2.55){唐鹏（左）};\node at(1.45,-3){杜楠（右）};
+\node at(.7,-3.7){两边均向下：$0<\alpha<3$；先后分界：$\alpha=1$};
+\end{tikzpicture}
+
+% 9 question-05
+\begin{tikzpicture}[x={(1cm,0cm)},y={(.58cm,.30cm)},z={(0cm,1cm)},scale=.95]
+  \node[panel] at (-5,-3.7,4.5){圆环与平行无限长直线电荷};
+  \draw[axis] (-4,0,0)--(4,0,0) node[right]{$x$};
+  \draw[axis] (0,-3,0)--(0,3,0) node[right]{$y$};
+  \draw[axis] (0,0,-2.3)--(0,0,3.2) node[above]{$z$};
+  \draw[very thick,orange!75!black] (0,0,0) ellipse[x radius=2.1,y radius=1.2];
+  \draw[dim] (0,0,.1)--(2.1,0,.1) node[midway,above]{$r$};
+  \draw[very thick,green!55!black] (3.3,0,-2.0)--(3.3,0,3.0);
+  \draw[dim] (0,0,-1.6)--(3.3,0,-1.6) node[midway,below]{$a$};
+  \node[orange!75!black] at (-1.9,-1.5,.5){圆环：$\lambda$};
+  \node[green!55!black] at (3.5,0,2.7){直线：$\lambda$};
+\end{tikzpicture}
+
+% 10 solution-05
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+\node[panel]at(-5.3,3.4){直线电荷的场与圆环微元的水平分力};
+\begin{scope}[shift={(-3.3,0)}]
+\draw[very thick](-1.6,0)--(1.6,0);\node[right]at(1.6,0){线电荷 $\lambda$};\draw[guide](0,0)--(0,1.7);\fill(0,1.7)circle(2pt)node[left]{$P$};\draw[force](0,1.7)--(0,2.7)node[right]{$\bm E$};\draw[dim](-.55,0)--(-.55,1.7)node[left,midway]{$s$};\node at(0,-1.3){$E=\lambda/(2\pi\varepsilon_0s)$};
+\end{scope}
+\begin{scope}[shift={(3.6,0)}]
+\draw[thick](0,0)circle(1.5);\fill(0,0)circle(1.5pt)node[below]{$O$};\draw[dim](0,0)--(-1.5,0)node[above,midway]{$r$};\fill(3,0)circle(2pt)node[right]{直线穿过处};\draw[dim](0,-2)--(3,-2)node[below,midway]{$a$};
+\fill(.75,1.299)circle(2pt)node[above right]{$dq$};\draw[guide](3,0)--(.75,1.299);\draw[force](.75,1.299)--(-.12,1.801)node[left]{$d\bm F$};\draw[force](.75,1.299)--(-.12,1.299)node[below]{$dF_x$};
+\end{scope}
+\node at(0,-3){直线位于圆环外侧时，圆环合力使圆心远离直线};
+\end{tikzpicture}
+
+% 11 question-06
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+\node[panel]at(-4.3,3.5){弯曲场线的局部半径与回旋尺度};
+\foreach\r in{1.6,2.2,2.8}{\draw[blue!65!black,thick](-\r,0)arc[start angle=180,end angle=0,radius=\r];}
+\fill(0,0)circle(2pt)node[below]{$O$};\draw[dim](0,0)--(0,2.2)node[right,midway]{$R$};
+\draw[velocity](0,2.2)--(1.1,2.2)node[above]{$V_\parallel$};
+\draw[guide](0,2.2)circle(.2);\node[left]at(-.3,2.2){$r_L\ll R$};\node at(0,-1){场强沿曲率外侧减小；局部方向见解析图};
+\end{tikzpicture}
+
+% 12 solution-06
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+\node[panel]at(-4.5,3.1){离心力、等效电场与局部漂移方向};
+\draw[axis](-3,0)--(3.2,0)node[right]{$+x$};\draw[axis](0,-1.5)--(0,2.4)node[above]{$-z$};
+\draw[velocity](0,.2)--(0,1.7)node[right]{$\bm B$};
+\draw[force](.2,.1)--(2,.1)node[above]{$\bm F_{\rm cf}$};
+\draw[velocity](-.2,-.35)--(-2,-.35)node[below]{$\bm E_{\rm eff}=\bm F_{\rm cf}/(-e)$};
+\draw[thick](1.6,1.6)circle(.15);\fill(1.6,1.6)circle(1pt);\node[right]at(1.8,1.6){$+y$ 朝纸外};
+\draw[thick](-1.6,1.6)circle(.15);\draw[thick](-1.7,1.5)--(-1.5,1.7)(-1.7,1.7)--(-1.5,1.5);\node[left]at(-1.8,1.6){$\bm V_d$ 朝纸内};
+\node at(0,-2.4){曲率中心在 $-x$ 侧；电子漂移为 $-\hat y$};
+\end{tikzpicture}
+
+% 13 question-07
+\begin{tikzpicture}[x=.95cm,y=.95cm]
+  \node[panel] at (-5.5,4.0){截面积不同的连通器};
+  \draw[very thick] (-4,2.6)--(-4,-2.5)--(4,-2.5)--(4,2.6);
+  \draw[very thick] (-1.1,2.6)--(-1.1,-.8)--(2.7,-.8)--(2.7,2.6);
+  \fill[blue!12] (-3.9,-2.4) rectangle (-1.2,.8);
+  \fill[blue!12] (-1.1,-2.4) rectangle (3.9,-.8);
+  \fill[blue!12] (2.8,-.8) rectangle (3.9,.8);
+  \draw[blue!60!black,thick] (-3.9,.8)--(-1.2,.8) (2.8,.8)--(3.9,.8);
+  \node at (-2.55,3.0){$A:4S$}; \node at (3.35,3.0){$B:S$};
+  \node at (.8,-2.0){底部：$S$};
+  \draw[dim] (-4.5,.8)--(-4.5,2.55) node[midway,left]{$H$};
+\end{tikzpicture}
+
+% 14 solution-07
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+\node[panel]at(-5,5.7){四种液面状态示意：深管与浅管的体积关系};
+\foreach\sx/\sy/\lab/\sealed/\shallow in{-3/2/{深管开口}/0/0,3/2/{深管封闭}/1/0,-3/-2/{浅管开口}/0/1,3/-2/{浅管封闭}/1/1}{
+\begin{scope}[shift={(\sx,\sy)}]
+\draw[very thick](-1.5,1.6)--(-1.5,-1)--(1.5,-1)--(1.5,1.6);
+\draw[very thick](-.7,1.6)--(-.7,-.2)--(.7,-.2)--(.7,1.6);
+\fill[blue!10](-1.45,-.95)rectangle(-.75,.65);\fill[blue!10](-1.45,-.95)rectangle(1.45,-.25);
+\ifnum\shallow=0\fill[blue!10](.75,-.25)rectangle(1.45,-.05);\fill[orange!20](.75,-.05)rectangle(1.45,.2);\draw[thick,orange](.75,.2)--(1.45,.2);\else\fill[orange!20](.2,-.95)rectangle(1.45,-.25);\draw[thick,orange](.2,-.95)--(.2,-.25);\fi
+\draw[blue,thick](-1.45,.65)--(-.75,.65);
+\ifnum\sealed=1\draw[very thick,red](-1.5,1.6)--(-.7,1.6);\node at(-1.1,1.2){$p_A$};\else\node at(-1.1,1.2){$p_0$};\fi
+\node at(1.1,1.2){$p_0$};\node at(0,-1.5){\lab};\draw[dim](-1.8,-1)--(-1.8,.65)node[left,midway]{$h_A$};
+\end{scope}}
+\node at(0,-4.3){蓝色：原液体；橙色：新增液体；封闭时另列气体体积};
+\end{tikzpicture}
+
+% 15 question-08
+\begin{tikzpicture}[x=.95cm,y=.95cm]
+  \node[panel] at (-5.4,4.1){直线—半圆—直线轮子输送轨道};
+  \draw[very thick,dashed] (-3,-2.4)--(-3,.4) arc[start angle=180,end angle=0,radius=3]--(3,-2.4);
+  \foreach \y in {-2.1,-1.3,-.5}{\draw[body] (-3,\y) circle(.24);}
+  \foreach \a in {160,130,100,70,40,20}{\draw[body] ({3*cos(\a)},{.4+3*sin(\a)}) circle(.24);}
+  \foreach \y in {-.2,-1.0,-1.8}{\draw[body] (3,\y) circle(.24);}
+  \node[left] at (-3,-2.4){$A$}; \node[left] at (-3,.4){$B$};
+  \node[right] at (3,.4){$C$}; \node[right] at (3,-2.4){$D$};
+  \draw[velocity] (-3,-2.15)--(-3,-.9) node[left]{$v_0$};
+  \draw[dim] (0,.4)--(0,3.4) node[midway,right]{$r$};
+\end{tikzpicture}
+
+% 16 solution-08
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+\node[panel]at(-5.5,3.8){进弯姿态约束与出弯去旋转的两次作用};
+\begin{scope}[shift={(-4.6,0)}]\draw[body](-.2,-.6)rectangle(.2,.6);\draw[velocity](0,0)--(0,1.6)node[left]{$v_0$};\node at(0,-1.3){入弯前 $\omega=0$};\end{scope}
+\begin{scope}[shift={(-.9,0)}]\draw[guide](0,0)arc[start angle=180,end angle=0,radius=1.6];\fill(1.6,0)circle(2pt)node[below]{$O$};\draw[body](-.2,-.6)rectangle(.2,.6);\draw[velocity](0,0)--(0,1.3)node[left]{$v$};\draw[velocity](.65,.45)arc[start angle=35,end angle=-55,radius=.78];\node at(1.4,-1.25){弯道内 $\omega=v/r$};\end{scope}
+\begin{scope}[shift={(4.3,0)}]\draw[body](-.2,-.6)rectangle(.2,.6);\draw[velocity](0,0)--(0,-1.6)node[left]{$v$};\node at(0,1.5){沿 $CD$ 向下};\node at(0,-2.1){出弯后 $\omega=0$};\end{scope}
+\node at(0,-3){进弯：$mv_0r=mvr+I\omega$；出弯：去旋转时切向速度不变};
+\end{tikzpicture}
+
+\end{document}

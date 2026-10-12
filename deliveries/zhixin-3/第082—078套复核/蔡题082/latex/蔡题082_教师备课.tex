@@ -1,0 +1,3981 @@
+\documentclass[12pt,a4paper,UTF8]{ctexart}
+\usepackage[a4paper,top=22mm,bottom=22mm,left=22mm,right=22mm,headheight=15pt]{geometry}
+\newcommand{\Needspace}[1]{\par\begingroup\skip0=\lastskip\vskip-\skip0\dimen0=#1\relax\advance\dimen0 by\skip0\vskip\dimen0\penalty-100\vskip-\dimen0\vskip\skip0\penalty9999\endgroup}
+\usepackage{amsmath,amssymb,mathtools,bm}
+\usepackage{graphicx,xcolor,booktabs,longtable,array,enumitem,fancyhdr,caption,float,microtype,setspace}
+\usepackage[hidelinks,unicode]{hyperref}
+\usepackage[most]{tcolorbox}
+\definecolor{ContestBlue}{HTML}{17365D}
+\hypersetup{pdftitle={第082套},pdfauthor={}}
+\setstretch{1.24}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.35em}
+\setlength{\emergencystretch}{2em}
+\setlist{itemsep=0.35em,topsep=0.4em}
+\captionsetup{font=small,labelfont=bf,justification=centering}
+\setcounter{secnumdepth}{0}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small 第082套}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\ctexset{
+  section={format=\Large\bfseries\color{ContestBlue},beforeskip=1.2em,afterskip=0.7em},
+  subsection={format=\large\bfseries\color{ContestBlue},beforeskip=1.0em,afterskip=0.5em},
+  subsubsection={format=\normalsize\bfseries,beforeskip=0.8em,afterskip=0.35em}
+}
+\usepackage{calc}
+\newcounter{none}
+\let\originalsubsection\subsection
+\renewcommand{\subsection}{\Needspace{6\baselineskip}\originalsubsection}
+\makeatletter
+\newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\newcommand{\maxwidth}{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\newcommand{\maxheight}{\ifdim\Gin@nat@height>0.72\textheight 0.72\textheight\else\Gin@nat@height\fi}
+\newcommand{\pandocbounded}[1]{\begingroup\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}#1\endgroup}
+\makeatother
+\begin{document}
+\begin{titlepage}
+  \centering
+  \vspace*{58mm}
+  {\Huge\bfseries\color{ContestBlue} 第082套\par}
+  \vfill
+  \vspace*{28mm}
+\end{titlepage}
+\section{第 1 题}\label{ux7b2c-1-ux9898}
+
+某教师要从北极点发射一枚飞行器，目标位于北纬
+\(32^\circ\)。忽略空气阻力和地球自转。已知万有引力常量
+\(G=6.67\times10^{-11}\,\mathrm{N\,m^2/kg^2}\)，地球半径
+\(R=6370\,\mathrm{km}\)，地表重力加速度 \(g=9.8\,\mathrm{m/s^2}\)。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  求飞行器从北极点出发并到达目标所需的最小发射速度 \(v_{0\min}\)；
+\item
+  在南、北极点同时沿切向发射两枚速度大小、方向均相同的高能火箭。经过
+  \(t=4\,\mathrm h\) 两火箭相距最远，求最远距离 \(L\)。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图 1-1　北极至北纬 32\^{}\textbackslash circ 的转移弹道，以及南、北极同步发射的对称弹道。}]{../figures/question-01.pdf}
+\caption*{图 1-1　北极至北纬 \(32^\circ\)
+的转移弹道，以及南、北极同步发射的对称弹道。}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d}
+
+先用两地表交点确定最小能量椭圆，再求发射速度。南北极同向发射的轨道关于赤道镜像；最远距离来自远地点，但4小时是否为首次达到必须说明。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  地表关系 \(GM=gR^2\)；
+\item
+  椭圆轨道总机械能 \(E=-GMm/(2a)\)；
+\item
+  焦点、弦中点与半长轴的几何关系；
+\item
+  开普勒第三定律；
+\item
+  对称轨道与最远距离判定；
+\item
+  单位统一和数量级检查。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf}
+
+在第一问中，飞行器起点 \(A\) 为北极，终点 \(B\) 位于北纬
+\(32^\circ\)，所以地心角不是 \(32^\circ\)，而是
+
+\[
+\angle AOB=90^\circ-32^\circ=58^\circ.
+\]
+
+最小速度对应一条以地心 \(O\) 为焦点、恰好通过 \(A,B\)
+的最低能量椭圆。它是两点定轨的``最小能量转移椭圆''：第二焦点位于弦
+\(AB\) 的中点。发射速度沿该椭圆在 \(A\)
+处的切线，并不要求沿地球表面切线；把这一点与第二问给定的``沿切向发射''区分开，是正确建模的前提。
+
+第二问中两条轨道关于赤道所在平面镜像对称；两初速度相同，不能作中心反演。两火箭同时到达各自远地点时，两个远地点位于同一直径的两端，因此间距达到最大。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3}
+
+第二问按原参考解补充``第一次相距最远''的条件；若不补充，另有周期分支。第一问先用等腰三角形
+\(\triangle AOB\) 求地心到弦 \(AB\)
+的距离，再把它与椭圆焦点几何结合，得到半长轴 \(a\)；随后用轨道能量守恒求
+\(v_{0\min}\)。第二问直接由 \(T=2t\) 求半长轴，再用 \(L=4a-2R\)
+求最远距离。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图 1-2　转移椭圆半长轴的几何构造，以及两火箭在半周期后到达对称远地点。}]{../figures/solution-01.pdf}
+\caption*{图
+1-2　转移椭圆半长轴的几何构造，以及两火箭在半周期后到达对称远地点。}
+\end{figure}
+
+图 1-2(a) 把地心角 \(58^\circ\) 平分为两个
+\(29^\circ\)，由此得到弦中点到地心的距离；图 1-2(b)
+表明每条轨道从地表近地点到远地点所需时间均为
+\(T/2\)，而每个远地点到地心的距离是
+\(2a-R\)。这些几何量分别直接进入能量式和最远距离式。
+
+\Needspace{3\baselineskip}
+\textbf{（1）最小发射速度}
+
+设椭圆半长轴为 \(a\)，另一个焦点为
+\(F\)。椭圆定义给出，对于轨道上任一点，至两焦点的距离之和为 \(2a\)。由于
+\(OA=OB=R\)，又有
+
+\[
+AF=BF=2a-R,
+\]
+
+所以 \(F\) 必在弦 \(AB\) 的垂直平分线上。设弦中点为
+\(M\)，则由等腰三角形 \(\triangle AOB\) 可得
+
+\[
+OM=R\cos29^\circ,
+\qquad
+AM=R\sin29^\circ.
+\tag{1}
+\]
+
+若记 \(FM=x_F\)，则
+
+\[
+AF=\sqrt{x_F^2+AM^2},
+\]
+
+从而
+
+\[
+2a=R+\sqrt{x_F^2+AM^2}.
+\]
+
+右端随 \(x_F^2\) 增大而增大，故半长轴最小时 \(x_F=0\)，即第二焦点 \(F\)
+与弦中点 \(M\) 重合。于是
+
+\[
+\boxed{2a=R+R\sin29^\circ}.
+\tag{2}
+\]
+
+因此
+
+\[
+a=\frac R2\left(1+\sin29^\circ\right).
+\tag{3}
+\]
+
+发射瞬间飞行器位于 \(r=R\) 处，机械能为
+
+\[
+E_0=\frac12mv_{0\min}^2-\frac{GMm}{R}.
+\tag{4}
+\]
+
+椭圆轨道总机械能只由半长轴决定：
+
+\[
+E=-\frac{GMm}{2a}.
+\tag{5}
+\]
+
+令式（4）等于式（5），逐项移项：
+
+\[
+\begin{aligned}
+\frac12mv_{0\min}^2-\frac{GMm}{R}
+&=-\frac{GMm}{2a},\\
+\frac12mv_{0\min}^2
+&=GMm\left(\frac1R-\frac1{2a}\right),\\
+v_{0\min}^2
+&=2GM\left(\frac1R-\frac1{2a}\right).
+\end{aligned}
+\tag{6}
+\]
+
+利用地表重力关系
+
+\[
+g=\frac{GM}{R^2}
+\quad\Longrightarrow\quad
+GM=gR^2,
+\tag{7}
+\]
+
+并代入式（2）：
+
+\[
+\begin{aligned}
+v_{0\min}^2
+&=2gR^2\left[
+\frac1R-\frac1{R(1+\sin29^\circ)}
+\right]\\
+&=2gR\left[
+1-\frac1{1+\sin29^\circ}
+\right]\\
+&=2gR\frac{\sin29^\circ}{1+\sin29^\circ}.
+\end{aligned}
+\tag{8}
+\]
+
+代入 \(R=6.370\times10^6\,\mathrm m\)：
+
+\[
+v_{0\min}
+=\sqrt{2\times9.8\times6.370\times10^6
+\frac{\sin29^\circ}{1+\sin29^\circ}}
+\approx6.39\times10^3\,\mathrm{m/s}.
+\]
+
+故
+
+\[
+\boxed{v_{0\min}\approx6.4\times10^3\,\mathrm{m/s}}.
+\tag{9}
+\]
+
+\Needspace{3\baselineskip}
+\textbf{（2）两火箭的最远距离}
+
+从近地点到远地点走过半条椭圆，所需时间为半个周期。因此
+
+\[
+t=\frac T2
+\quad\Longrightarrow\quad
+T=2t=8\,\mathrm h=2.88\times10^4\,\mathrm s.
+\tag{10}
+\]
+
+开普勒第三定律为
+
+\[
+T^2=\frac{4\pi^2a^3}{GM}.
+\tag{11}
+\]
+
+解出 \(a\)，再用 \(GM=gR^2\)：
+
+\[
+\begin{aligned}
+a^3&=\frac{GMT^2}{4\pi^2}
+=\frac{gR^2T^2}{4\pi^2},\\
+a&=\left(\frac{gR^2T^2}{4\pi^2}\right)^{1/3}
+\approx2.03\times10^7\,\mathrm m.
+\end{aligned}
+\tag{12}
+\]
+
+椭圆近地点距地心为 \(R\)。长轴两端到焦点的距离之和为
+\(2a\)，故远地点距地心
+
+\[
+r_a=2a-R.
+\tag{13}
+\]
+
+两火箭的远地点位于地心两侧，最远距离是两个远地点半径之和：
+
+\[
+\begin{aligned}
+L&=2r_a=2(2a-R)=4a-2R\\
+&\approx4(2.03\times10^7)-2(6.370\times10^6)\\
+&\approx6.84\times10^7\,\mathrm m.
+\end{aligned}
+\]
+
+所以
+
+\[
+\boxed{L\approx6.84\times10^7\,\mathrm m}.
+\tag{14}
+\]
+
+\subsubsection{结果核验}\label{ux7ed3ux679cux6838ux9a8c}
+
+第一问所得速度应低于地表圆轨道速度
+
+\[
+v_c=\sqrt{gR}
+\approx\sqrt{9.8\times6.370\times10^6}
+\approx7.90\times10^3\,\mathrm{m/s}.
+\]
+
+这里 \(v_{0\min}\approx6.4\,\mathrm{km/s}<v_c\)
+是合理的：飞行器并不维持地表圆轨道，而是进入一条能量更低、部分位于地球内部的数学椭圆，只使用其中从
+\(A\) 到 \(B\) 的外部弧段。它也远低于逃逸速度
+\(v_e=\sqrt2v_c\approx11.2\,\mathrm{km/s}\)，所以轨道必为束缚椭圆。
+
+第二问可先核对半长轴与地球半径的比例：
+
+\[
+\frac aR\approx\frac{2.03\times10^7}{6.370\times10^6}
+\approx3.19.
+\]
+
+远地点半径因此为
+
+\[
+r_a=2a-R\approx5.0R,
+\]
+
+两条对称轨道的最远间距约为 \(10R\)，即 \(6.4\times10^7\,\mathrm m\)
+的量级，与式（14）一致。再从量纲看，开普勒式中的 \(gR^2T^2\) 量纲为
+\(\mathrm{m^3}\)，开三次方后确为长度；\(4a-2R\)
+也具有长度量纲。几何、数量级和量纲三种检查相互一致。
+
+\Needspace{3\baselineskip}
+\textbf{地表外弧段与发射方向}
+
+取 \(R=1\)
+作几何尺度，\(A=(0,1)\)，\(B=(\cos32^\circ,\sin32^\circ)\)，\(M=(A+B)/2\)。第二焦点在
+\(M\)，椭圆中心应在 \(G=M/2\)，不是地心。图中的 \(OM=R\cos29^\circ\) 与
+\(AM=R\sin29^\circ\) 分别是焦距构造和弦半长，不能交换标注。
+
+椭圆在 \(A\) 的外法向与 \(\widehat{OA}+\widehat{MA}\)
+平行。两单位矢量相加后，指向 \(B\) 的切线与当地水平线夹角为
+\(29^\circ\)。轨道外弧先上升，再下降到
+\(B\)；其余数学椭圆在地球内，不进入真实飞行过程。最小能量是对通过两点的椭圆族取极值，不是对整条轨道的近地点半径取极值。
+
+\Needspace{3\baselineskip}
+\textbf{第二问的首次条件}
+
+以北极位置为 \(A_N=(0,R)\)、共同发射方向为水平 \(-x\)，南极位置为
+\((0,-R)\)。中心引力保持 \(x_S=x_N\)、\(y_S=-y_N\)，故间距为
+\(2|y_N|\)。两火箭到远地点时分别位于南、北方向，间距为
+\(2r_a\)。图稿按这个镜像关系绘制近地点、远地点、焦点与发射箭头。
+
+原题只说在 \(t=4\,\mathrm h\) 相距最远，未说``第一次''。一般可以有
+
+\[t=(2j+1)\frac T2,\qquad a_j=\left[\frac{gR^2}{4\pi^2}\left(\frac{2t}{2j+1}\right)^2\right]^{1/3},\qquad L_j=4a_j-2R.\]
+
+切向发射且不进入地球要求 \(a_j\ge R\)。本题允许 \(j=0,1,2\)，对应
+\(L_j\) 约为
+\(6.8425\times10^7\)、\(2.6280\times10^7\)、\(1.5018\times10^7\,\mathrm m\)。原参考解取
+\(j=0\)；只有补上首次条件时该值才唯一。圆轨道的常距离情形也应与``有一次严格最大值''区分。
+
+\Needspace{3\baselineskip}
+\textbf{变式解析：一般纬度与时间范围}
+
+目标纬度为 \(\lambda\) 时，两地心角为 \(\Delta=\pi/2-\lambda\)。令
+\(s=\sin(\Delta/2)\)，则
+
+\[a=\frac R2(1+s),\qquad v_{0\min}=\sqrt{\frac{2gRs}{1+s}}.\]
+
+当目标趋近北极，\(s\to0\)，所需速度趋零；目标趋近南极，\(s\to1\)，速度趋圆轨道速度。这是本题外弧模型的极限，不是任意两点之间穿过地球的直线运动。发射仰角为
+\(\Delta/2\)，可通过两焦点单位矢量之和重新验证。
+
+两火箭第一次达到最远点还要求
+
+\[t\ge t_c=\pi\sqrt{R/g}\approx0.7036\,\mathrm h.\]
+
+这是 \(a\ge R\) 的时间条件。等号为圆轨道，两火箭间距始终是
+\(2R\)；严格存在第一次孤立最大值应取 \(t>t_c\)。若给定的 \(t\)
+很大而未说首次，应先枚举满足该不等式的奇数周期分支。
+
+计入自转的变式须谨慎：北极的地表自转线速度为零，不能直接写通常的赤道东西向速度修正。发射与落点的地面参考系不同，需先给定经度、飞行时间和惯性轨道，再讨论转动地球上的命中条件。
+
+\Needspace{3\baselineskip}
+\textbf{最小半长轴为什么对应弦的中点}
+
+设另一焦点为 \(F\)。由于地心到两个发射、落地点的距离都为
+\(R\)，椭圆定义要求
+
+\[AF=BF=2a-R.\]
+
+两距离相等，所以 \(F\) 必在弦 \(AB\) 的垂直平分线上。三角不等式又给
+
+\[AF+BF\ge AB=2R\sin29^\circ,\]
+
+即 \(a\ge R(1+\sin29^\circ)/2\)。等号只能在 \(F\)
+落在弦上时成立，与垂直平分线合用，得到 \(F=M\)。先求最小
+\(a\)，再用活力公式
+
+\[\frac{v_0^2}{2}-gR=-\frac{gR^2}{2a},\qquad
+v_0^2=gR\left(2-\frac Ra\right),\]
+
+得到正文速度。图上 \(OM\) 是两焦点间距 \(2c\)，因此
+\(c=R\cos29^\circ/2\)；短半轴还须满足 \(b^2=a^2-c^2>0\)。把 \(M\)
+当椭圆中心会同时破坏距离和、能量及发射切线。
+
+\Needspace{3\baselineskip}
+\textbf{带入轨道方程核对地表交点}
+
+在以 \(OM\) 为长轴的坐标中，中心是 \(G=M/2\)。将 \(\bm r-G\)
+沿长轴、短轴分解为 \(\xi,\eta\)，应满足
+
+\[\frac{\xi^2}{a^2}+\frac{\eta^2}{b^2}=1.\]
+
+代入 \(A\) 和 \(B\)
+都等于1，是检查图稿坐标的直接办法。再令地心为极点，\(p=b^2/a\)、\(e=c/a\)，轨道为
+\(r=p/(1+e\cos\nu)\)；由 \(r=R\) 找到两个交点后，飞行只选择其间
+\(r\ge R\)
+的那一段。图中的虚线保留数学椭圆，实线保留地表外弧，积分飞行时间时也应沿同一弧段。
+
+第二问图中的两椭圆长轴垂直，中心分别在地心上下。近地点为极点位置
+\(R=a-c\)，远地点为 \(r_a=a+c=2a-R\)，两轨道短半轴须取
+\(\sqrt{a^2-c^2}\)，不能独立调节到视觉对称。轨道周期由半长轴决定，镜像只决定两火箭的同时位置；两条关系分别使用，才得到
+\(L_{\max}=4a-2R\)。
+
+\Needspace{3\baselineskip}
+\textbf{备课补充：能量极小与飞行时间是两个问题}
+
+最小能量椭圆的构造没有用到飞行时间。如果另要求在指定时间到达同一落点，最佳轨道通常还需改变，不能把第一问的半长轴和第二问的4小时直接拼接。
+
+对已经选定的椭圆，长轴正向取从中心 \(G\) 指向地心 \(O\)，偏近点角为
+\(E\)，轨道坐标为
+
+\[\xi=a\cos E,\qquad\eta=b\sin E,\]
+
+并按真实飞行方向连续选取 \(E\) 的分支。时间与平均近点角的关系为
+
+\[n\Delta t=\Delta E-e(\sin E_B-\sin E_A),\qquad
+n=\sqrt{GM/a^3}.\]
+
+这里两个端点都不是近地点，不能直接把角差比例乘周期。面积速度恒定，但极角和偏近点角均非匀速变量。若沿图中数学椭圆进入地球的短弧算出时间，它不满足题目飞行条件，应先由
+\(r\ge R\) 选外弧。
+
+教学中可让学生依次核对焦点距离和、两端切线、外弧半径，再计算能量。给轨道图加中心
+\(G\) 是为了区分几何参数与力的中心
+\(O\)；所有角动量和面积速度仍必须对地心取矩。
+
+\Needspace{3\baselineskip}
+\textbf{备课算例：轨道参数和时间尺度}
+
+先全部以地球半径归一。由目标纬度得
+
+\[\Delta=58^\circ,\quad s=\sin29^\circ,\quad
+2a/R=1+s,\] \[2c/R=\cos29^\circ,\quad
+4b^2/R^2=(1+s)^2-\cos^229^\circ=2s(1+s).\]
+
+所以 \(e=c/a=\cos29^\circ/(1+s)\)，偏心率严格小于1。发射速率可写
+
+\[\frac{v_{
+0\min}^2}{gR}=\frac{2s}{1+s}.\]
+
+这个无量纲值小于1，说明最小能量外弧的发射速率小于圆轨道速率。它仍有向上分量，因此不违反不能从地表水平低于圆速飞行的条件。
+
+第二问以4小时求 \(a_0\) 后，按奇数 \(1,3,5\)
+将周期缩短，半长轴按这些奇数的 \(-2/3\)
+次方缩小。长度不是按1、1/3、1/5缩放，因为还要减去共同的 \(2R\)：
+
+\[L_j=4a_0(2j+1)^{-2/3}-2R.\]
+
+枚举到7时已不满足
+\(a_j\ge R\)，因此三个分支穷尽该椭圆且地表外近地点模型。若题明确首次，才只留第一项。
+
+\Needspace{3\baselineskip}
+\textbf{备课变式：固定轨道候选下的东西发射速度}
+
+第一问采用地球不转、目标在惯性系固定的模型。若先保留这个轨道候选，再加入发射点的地面速度
+\(u=\Omega R\cos\phi\)，地面测得的初速度必须由向量差求出。
+
+令轨道所需速率为 \(v_*\)、仰角为
+\(\alpha\)，向东、向西的惯性系速度分别为
+
+\[\bm v_E=v_*\cos\alpha\,\hat e+v_*\sin\alpha\,\hat n,\]
+\[\bm v_W=-v_*\cos\alpha\,\hat e+v_*\sin\alpha\,\hat n.\]
+
+这里 \(\hat e\) 向东，\(\hat n\) 为当地向上法向。地面速度为
+\(u\hat e\)，所以
+
+\[w_E^2=v_*^2+u^2-2uv_*\cos\alpha,\]
+\[w_W^2=v_*^2+u^2+2uv_*\cos\alpha.\]
+
+由此 \(w_W^2-w_E^2=4uv_*\cos\alpha>0\)。地面仰角也随矢量差改变，不能只把
+\(u\) 从总速率标量中减去。正文的 \(\alpha=29^\circ\)
+是原惯性系候选的角，不自动是地面测得的角。
+
+若题目真的要求击中随地球转动的指定地面点，落点在飞行期间已移动。此时必须把到达时间与目标位置一并求解，上面两式只能比较固定候选，不能声称已经重新求得``计入自转后的全球最小速度''。这区分了惯性系换速与移动目标边值问题，也说明变式为何需要额外的纬度、经度和转轴方向。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  ``最小速度''本质上是轨道能量最低，不能直接套第一宇宙速度或逃逸速度；
+\item
+  纬度 \(32^\circ\) 对应从北极量起的地心角 \(58^\circ\)；
+\item
+  ``经过 \(4\,\mathrm h\) 相距最远''把动力学信息转化为半周期条件；
+\item
+  \(L\) 不是 \(2a\)，而是两个远地点半径之和 \(2(2a-R)\)。
+\end{enumerate}
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  把 \(32^\circ\) 当成 \(\angle AOB\)；
+\item
+  忘记 \(R\) 要由千米换成米；
+\item
+  把椭圆能量写成 \(-GMm/a\)，漏掉因子 \(2\)；
+\item
+  在第二问取 \(T=4\,\mathrm h\)，而不是 \(T=8\,\mathrm h\)；
+\item
+  把远地点到地心的距离误写成 \(a\)。
+\end{enumerate}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae}
+
+先让学生在地球圆周上标出北极和北纬
+\(32^\circ\)，独立回答``地心角是多少''；随后只讨论椭圆的近、远地点半径之和为何为
+\(2a\)。等几何骨架建立后，再引入能量和开普勒第三定律，能显著减少公式堆叠感。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  把目标纬度改为北纬 \(\lambda\)，推导 \(v_{0\min}(\lambda)\) 的表达式；
+\item
+  若两火箭在 \(t\) 后相距最远，推导 \(L(t)\)，并讨论 \(t\) 增大时 \(L\)
+  的数量级变化；
+\item
+  若计入地球自转，比较向东和向西发射的地面所需速度。
+\end{enumerate}
+
+\newpage
+
+\section{第 2 题}\label{ux7b2c-2-ux9898}
+
+如图，\(ACDE\) 是由均匀细导线制成的等腰梯形线框，以底边 \(AE\)
+为转轴转动；其余三边长度相等。线框处在磁感应强度为 \(B\)
+的匀强磁场中，以恒定角速度 \(\omega\) 转动，俯视为逆时针，且
+\(\bm B\perp AE\)。已知 \(AE=d\)，边 \(AE\) 的电阻为
+\(R\)；取线框平面与磁场平行的时刻为 \(t=0\)。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  求任意时刻 \(t\) 线框中的电流；
+\item
+  规定 \(U_A=0\)。在 \(t=0\) 时，点 \(P\) 位于 \(CD\) 上，且
+  \(CP=x\)。求 \(U_P\)，并画出 \(U_P\) 随 \(x\) 的关系图。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.508\linewidth,height=\textheight,keepaspectratio,alt={图 2-1　等腰梯形导线框绕底边 AE 在匀强磁场中转动。}]{../figures/question-02.pdf}
+\caption*{图 2-1　等腰梯形导线框绕底边 \(AE\) 在匀强磁场中转动。}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-1}
+
+整回路电流由磁通求，局部电势由动生电动势减去欧姆压降。先检查梯形的公共边长是否已给定；原参考解另取b=d/2，讲义分别列一般式和这个特例。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-1}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  相似导线的电阻与长度成正比；
+\item
+  梯形面积；
+\item
+  法拉第电磁感应定律；
+\item
+  动生电动势 \(\int(\bm v\times\bm B)\cdot d\bm l\)；
+\item
+  含非静电力导体中的电势差；
+\item
+  分段电阻与线性电势分布。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-1}
+
+以下先按原参考解补充
+\(AC=CD=DE=d/2\)；这不能由``其余三边长度相等''推出。在这一特殊几何下，梯形高为
+
+\[
+h=\sqrt{\left(\frac d2\right)^2-\left(\frac d4\right)^2}
+=\frac{\sqrt3}{4}d.
+\]
+
+线框转动时，磁通量按正弦规律改变，感应电动势按余弦规律改变。沿 \(CD\) 从
+\(C\) 到 \(P\)，局部动生电动势与长度 \(x\) 成正比，电阻压降也与 \(x\)
+成正比，因此 \(U_P-x\) 必为直线。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-1}
+
+先由几何求面积和总电阻，得闭合回路电流。求点电势时选定从 \(A\) 经 \(C\)
+到 \(P\) 的路径，使用
+
+\[
+U_P-U_A=\int_A^P(\bm v\times\bm B)\cdot d\bm l-iR_{AP},
+\]
+
+并始终保持同一绕行正方向。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-1}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图 2-2　沿导线积分动生电场，并由路径电动势与电阻压降得到 U\_P-x 图线。}]{../figures/solution-02.pdf}
+\caption*{图 2-2　沿导线积分动生电场，并由路径电动势与电阻压降得到
+\(U_P-x\) 图线。}
+\end{figure}
+
+图 2-2(a) 把 \(\bm v\times\bm B\) 沿导线的切向分量直接标在路径上；图
+2-2(b) 显示 \(U_P\) 对 \(x\) 的斜率为正常数，截距为负，零点位于
+\(x=d/28\)。图线不是凭结论画出，而是由后文一次函数逐项对应。
+
+\Needspace{3\baselineskip}
+\textbf{（1）线框中的电流}
+
+梯形面积为
+
+\[
+\begin{aligned}
+S&=\frac{AE+CD}{2}\,h\\
+&=\frac{d+d/2}{2}\cdot\frac{\sqrt3}{4}d\\
+&=\frac{3\sqrt3}{16}d^2.
+\end{aligned}
+\tag{1}
+\]
+
+取 \(t=0\) 时线框平面平行于 \(\bm B\)，故线框法线与 \(\bm B\)
+垂直。转过角 \(\omega t\) 后，磁通量可写为
+
+\[
+\Phi=-BS\sin\omega t.
+\tag{2}
+\]
+
+按 \(t=0\) 时沿 \(A   o C o D o E o A\) 为正定义的有符号电动势
+
+\[
+\mathcal E=B\omega S\cos\omega t
+=\frac{3\sqrt3}{16}B\omega d^2\cos\omega t.
+\tag{3}
+\]
+
+导线均匀、截面相同，电阻与长度成正比。由于长度为 \(d\) 的 \(AE\) 电阻为
+\(R\)，其余三条长度均为 \(d/2\)，每条电阻为 \(R/2\)。总电阻
+
+\[
+R_{\rm tot}=R+3\cdot\frac R2=\frac52R.
+\tag{4}
+\]
+
+所以闭合回路电流为
+
+\[
+\boxed{
+i(t)=\frac{\mathcal E}{R_{\rm tot}}
+=\frac{3\sqrt3}{40R}B\omega d^2\cos\omega t
+}.
+\tag{5}
+\]
+
+式（5）的正负号取决于预先规定的绕行方向；若把式中正方向规定为
+\(A\to C\to D\to E\to A\)，反向规定时整体变号，物理电流方向不变。
+
+\Needspace{3\baselineskip}
+\textbf{（2）\(t=0\) 时点 \(P\) 的电势}
+
+对绕定轴转动的刚体，距轴垂直距离为 \(r_\perp\) 的导线元速度大小为
+\(v=\omega r_\perp\)。边 \(AC\) 上到转轴的距离从 \(0\) 线性增至
+\(\sqrt3d/4\)，而边 \(AC\) 沿转轴方向的投影长度为 \(d/4\)。因此沿路径
+\(A\to C\) 对 \(\bm v\times\bm B\) 积分：
+
+\[
+\begin{aligned}
+\mathcal E_{AC}
+&=B\omega\left(\frac{0+\sqrt3d/4}{2}\right)\frac d4\\
+&=\frac{\sqrt3}{32}B\omega d^2
+\end{aligned}
+\quad(t=0).
+\tag{6}
+\]
+
+沿 \(CD\) 从 \(C\) 到距其 \(x\) 的点 \(P\)，由于 \(CD\)
+平行转轴方向且整段离轴距离相同，单位长度动生电动势恒定。因此
+
+\[
+\mathcal E_{CP}
+=\frac{\mathcal E_{CD}}{CD}x
+=\frac{\sqrt3}{4}B\omega d\,x.
+\tag{7}
+\]
+
+从 \(A\) 到 \(P\) 的导线电阻为
+
+\[
+\begin{aligned}
+R_{AP}
+&=R_{AC}+R_{CP}\\
+&=\frac R2+\frac{R}{d}x.
+\end{aligned}
+\tag{8}
+\]
+
+取 \(U_A=0\)。沿
+\(A\to C\to P\)，电势升高等于动生电动势之和减去沿电流方向的欧姆压降：
+
+\[
+U_P=\mathcal E_{AC}+\mathcal E_{CP}-iR_{AP}.
+\tag{9}
+\]
+
+把式（5）在 \(t=0\) 的值以及式（6）---（8）代入：
+
+\[
+\begin{aligned}
+U_P
+&=\frac{\sqrt3}{32}B\omega d^2
++\frac{\sqrt3}{4}B\omega d\,x
+-\frac{3\sqrt3}{40R}B\omega d^2
+\left(\frac R2+\frac Rd x\right)\\
+&=\sqrt3B\omega\left(
+\frac{d^2}{32}+\frac{dx}{4}
+-\frac{3d^2}{80}-\frac{3dx}{40}
+\right)\\
+&=\sqrt3B\omega\left(
+-\frac{d^2}{160}+\frac{7dx}{40}
+\right)\\
+&=\frac{\sqrt3}{4}B\omega d
+\left(\frac7{10}x-\frac1{40}d\right).
+\end{aligned}
+\tag{10}
+\]
+
+故
+
+\[
+\boxed{
+U_P=\frac{\sqrt3}{4}B\omega d
+\left(\frac7{10}x-\frac d{40}\right),
+\qquad 0\le x\le\frac d2
+}.
+\tag{11}
+\]
+
+它是斜率为
+
+\[
+k_U=\frac{7\sqrt3}{40}B\omega d
+\]
+
+的一次函数，且
+
+\[
+U_P=0
+\quad\Longrightarrow\quad
+x=\frac d{28}.
+\tag{12}
+\]
+
+端点值为
+
+\[
+U_C=-\frac{\sqrt3}{160}B\omega d^2,
+\qquad
+U_D=\frac{13\sqrt3}{160}B\omega d^2.
+\tag{13}
+\]
+
+\Needspace{3\baselineskip}
+\textbf{逐段积分与回路自洽性复核}
+
+为把式（6）、（7）的来源再落实一遍，在 \(t=0\)
+时建立局部正交方向：\(\bm e_z\) 沿转轴 \(AE\)，\(\bm e_\rho\)
+从转轴指向导线框外侧，\(\bm e_\phi\) 沿瞬时速度方向。选取 \(\bm B\)
+的方向后，有
+
+\[
+\bm v=\omega\rho\,\bm e_\phi,
+\qquad
+\bm v\times\bm B
+=B\omega\rho\,\bm e_z.
+\tag{14}
+\]
+
+因此只有导线元在转轴方向的投影 \(dz\) 对电动势有贡献：
+
+\[
+d\mathcal E=(\bm v\times\bm B)\cdot d\bm l
+=B\omega\rho\,dz.
+\tag{15}
+\]
+
+梯形的横向宽度即其高：
+
+\[
+\rho_C=\rho_D=\frac{\sqrt3}{4}d.
+\tag{16}
+\]
+
+从 \(A\) 到 \(C\)，\(\rho\) 从 \(0\) 线性增大到
+\(\sqrt3d/4\)，而沿转轴方向的投影长度为
+
+\[
+|\Delta z_{AC}|=\frac{AE-CD}{2}=\frac{d-d/2}{2}=\frac d4.
+\tag{17}
+\]
+
+线性函数的积分等于``平均值乘区间长度''，所以
+
+\[
+\begin{aligned}
+\mathcal E_{AC}
+&=B\omega\int_A^C\rho\,dz\\
+&=B\omega\cdot
+\frac{0+\sqrt3d/4}{2}\cdot\frac d4\\
+&=\frac{\sqrt3}{32}B\omega d^2.
+\end{aligned}
+\tag{18}
+\]
+
+边 \(CD\) 到转轴的距离恒为 \(\sqrt3d/4\)，其长度为 \(d/2\)，故整段电动势
+
+\[
+\mathcal E_{CD}
+=B\omega\frac{\sqrt3d}{4}\cdot\frac d2
+=\frac{\sqrt3}{8}B\omega d^2.
+\tag{19}
+\]
+
+边 \(DE\) 与 \(AC\) 对称：
+
+\[
+\mathcal E_{DE}=\frac{\sqrt3}{32}B\omega d^2.
+\tag{20}
+\]
+
+转轴边 \(EA\) 上 \(\rho=0\)，所以
+
+\[
+\mathcal E_{EA}=0.
+\tag{21}
+\]
+
+把四段相加：
+
+\[
+\begin{aligned}
+\mathcal E_{\rm loop}
+&=\mathcal E_{AC}+\mathcal E_{CD}
++\mathcal E_{DE}+\mathcal E_{EA}\\
+&=\left(\frac1{32}+\frac18+\frac1{32}\right)
+\sqrt3B\omega d^2\\
+&=\frac{3\sqrt3}{16}B\omega d^2,
+\end{aligned}
+\tag{22}
+\]
+
+与式（3）在 \(t=0\)
+的总电动势完全一致。这一核验同时确认了三条非轴边的符号必须相同。
+
+再检查点电势的端点。令 \(x=0\)，式（11）给出 \(U_C\)；令 \(x=d/2\)，给出
+\(U_D\)。两端差值为
+
+\[
+\begin{aligned}
+U_D-U_C
+&=\frac{14\sqrt3}{160}B\omega d^2\\
+&=\frac{7\sqrt3}{80}B\omega d^2.
+\end{aligned}
+\tag{23}
+\]
+
+另一方面，沿 \(C\to D\) 有
+
+\[
+U_D-U_C
+=\mathcal E_{CD}-iR_{CD}
+=\frac{\sqrt3}{8}B\omega d^2
+-\frac{3\sqrt3}{40R}B\omega d^2\cdot\frac R2,
+\tag{24}
+\]
+
+右端化简同样为
+\(7\sqrt3B\omega d^2/80\)。因此局部电势式、闭合回路电流和整回路电动势三者彼此相容。
+
+\Needspace{3\baselineskip}
+\textbf{原题几何条件不足时的一般解}
+
+记另外三边公共长度为 \(b\)，按图的短上底取
+\(d/3<b<d\)。梯形高、面积和电阻为
+
+\[h=\sqrt{b^2-\frac{(d-b)^2}{4}},\quad S=\frac{(d+b)h}{2},\quad R_{\rm tot}=R\left(1+\frac{3b}{d}\right).\]
+
+于是沿本文正向的电流为
+
+\[i(t)=\frac{B\omega h\,d(d+b)}{2R(d+3b)}\cos\omega t.\]
+
+在 \(t=0\)，\(\bm B\) 向右、角速度按俯视逆时针选择，运动导体的
+\(\bm v\times\bm B\) 指向沿轴向下。沿 \(A\to C\) 的轴向投影为
+\((d-b)/2\)，故
+
+\[\mathcal E_{AC}=\frac{B\omega h(d-b)}4,\quad \mathcal E_{CP}=B\omega hx,\quad R_{AP}=\frac Rd(b+x).\]
+
+代入 \(U_P=\mathcal E_{AC}+\mathcal E_{CP}-i(0)R_{AP}\)，得到
+
+\[\boxed{U_P=B\omega h\left[\frac{d^2-5b^2}{4(d+3b)}+\frac{d+5b}{2(d+3b)}x\right],\quad0\le x\le b.}\]
+
+只知道三边等长，不能给出唯一的面积、电流振幅或电势截距。本文原式（1）---（24）及右侧电势图均是额外取
+\(b=d/2\) 的特例，代回一般式可逐项还原。原题图上不应标入未经给定的
+\(d/2\)。
+
+\Needspace{3\baselineskip}
+\textbf{变式解析：点在侧边与任意时刻}
+
+保持 \(b=d/2\)，令点在 \(AC\) 上，到 \(A\) 的沿线距离为
+\(s\)，\(0\le s\le b\)。由于轴向投影和距轴距离都随 \(s\)
+线性增大，\(\rho=hs/b\)、\(dz=(d-b)ds/(2b)\)，局部电动势不是沿长度的一次函数，而是
+
+\[\mathcal E_{AP}=\frac{B\omega h(d-b)}{4b^2}s^2\cos\omega t.\]
+
+电阻为 \(Rs/d\)。因而
+
+\[U_P(s,t)=\left[\frac{B\omega h(d-b)}{4b^2}s^2-i(0)\frac Rd s\right]\cos\omega t.\]
+
+在 \(s=b\) 时还原点 \(C\)，在 \(s=0\)
+时为零。沿侧边的电势通常是二次函数；沿平行转轴的 \(CD\)
+才是一次函数。这一区别来自图中距轴距离是否随积分位置改变。
+
+忽略自感且磁场固定时，全框电势及电流同乘 \(\cos\omega t\)。除
+\(\cos\omega t=0\) 时所有点同时等势外，\(CD\)
+上零电势点的位置不随时间改变。磁通为零时电动势最大，磁通极值时电动势为零，不能以同一个正弦函数同时表示二者。若加入电感，则电流出现相位滞后，零电势点会随时刻移动，需要另解含感应电动势的回路方程。
+
+\Needspace{3\baselineskip}
+\textbf{电势的符号可以从一小段导线核查}
+
+沿指定的电流正向取导线微元，稳恒欧姆关系写成
+
+\[i\,dR=(-\nabla V+\bm v\times\bm B)\cdot d\bm l.\]
+
+从 \(A\) 积分到 \(P\)，移项后得到
+
+\[V(P)-V(A)=\int_A^P(\bm v\times\bm B)\cdot d\bm l-iR_{AP}.\]
+
+这说明电势差是路径上的动生源减去电阻压降，不能直接等于全回路电动势。取
+\(b=d/2\) 时，\(h=\sqrt3d/4\)；参考解的三个检查点是
+
+\[\frac{U_C}{\sqrt3B\omega d^2}=-\frac1{160},\qquad
+\frac{U_D}{\sqrt3B\omega d^2}=\frac{13}{160},\qquad
+\frac{x_{U=0}}d=\frac1{28}.\]
+
+右图的截距、终点及零点依次对应这三式。\(U_D>U_C\) 与沿 \(CD\)
+的正向动生源一致；若反转磁场或角速度，电流及整条电势线均反号，而零点不变。
+
+\Needspace{3\baselineskip}
+\textbf{整圈积分与局部积分的一致性}
+
+回到任意 \(b\)，\(EA\)
+在轴上，所以它没有动生电动势。两侧边的距轴距离从0到 \(h\)
+线性变化，贡献各为 \(B\omega h(d-b)/4\)；平行轴的 \(CD\) 贡献为
+\(B\omega hb\)。因此
+
+\[\oint(\bm v\times\bm B)\cdot d\bm l
+=B\omega h\left(\frac{d-b}{2}+b\right)
+=B\omega S.\]
+
+这与磁通法在 \(t=0\) 的结果一致。题面的三边等长限制还意味着
+\(b>d/3\)，等号是高为零的退化梯形；取 \(b\to d\) 时成为矩形，面积趋
+\(d^2\)，总电阻趋 \(4R\)，电流振幅趋
+\(B\omega d^2/(4R)\)。这些极限既检查长度条件，也检查一般公式的分母。
+
+若在教师板书中先采用
+\(b=d/2\)，应在图旁说明它是参考解追加的条件，然后再给一般式。否则学生会误以为``等腰梯形、三边等长''已经固定了四条边的比值。
+
+\Needspace{3\baselineskip}
+\textbf{备课补充：加入自感后零电势点会移动}
+
+记全回路自感为 \(\mathcal L\)、总电阻 \(R_t\)，电动势为
+\(\mathcal E_m\cos\omega t\)。稳定周期电流是
+
+\[i(t)=I_m\cos(\omega t-\phi),\quad
+I_m=\frac{\mathcal E_m}{\sqrt{R_t^2+(\omega\mathcal L)^2}},\quad
+\tan\phi=\frac{\omega\mathcal L}{R_t}.\]
+
+动生源与欧姆电流不再同相。局部导线上的电势还受自感电场分布影响；若只给总自感而未给导线中的感应电场分配，不能直接把无自感公式中
+\(i\)
+换成滞后电流就声称得到了唯一局部标量电势。非保守电场下应说明测量引线的路径。
+
+全回路的平均能量关系却可以直接检查：
+
+\[\langle\mathcal E i\rangle=\frac12\mathcal E_mI_m\cos\phi
+=\frac12R_tI_m^2.\]
+
+电感储能在一周期的净变化为零，平均机械输入功率等于焦耳耗散。忽略自感的原题可看作
+\(\omega\mathcal L/R_t\to0\)
+的极限，局部电势式与整圈法拉第式在这一极限内一致。
+
+\Needspace{3\baselineskip}
+\textbf{备课算例：一般公式在三个特殊位置的回代}
+
+保留任意 \(b\)，局部式写成 \(U_P=B\omega h(A_b+C_bx)\)，其中
+
+\[A_b=\frac{d^2-5b^2}{4(d+3b)},\qquad
+C_b=\frac{d+5b}{2(d+3b)}.\]
+
+在 \(C,D\) 处分别为 \(x=0,b\)；若零点落在CD上，则
+
+\[x_*=-A_b/C_b=\frac{5b^2-d^2}{2(d+5b)}.\]
+
+当 \(b<d/\sqrt5\) 时
+\(A_b>0\)，整段电势从正截距继续增加，不存在内部零点。\(b=d/\sqrt5\)
+时零点恰在C；\(b>d/\sqrt5\) 才进入线段。还须检验
+\(x_*\le b\)，这个条件对本文的正长度分支成立。
+
+取 \(b=d/2\)，得到 \(x_*=d/28\)；取矩形极限 \(b=d\)，得到
+\(x_*=d/3\)。所以参考图的零点位置并不是``三边等长''的普遍结果。让学生先根据截距符号判断零点是否存在，再计算坐标，可避免机械解出一个落在导线外的根。
+
+在某时刻
+\(\cos\omega t=0\)，整个电势场与电流瞬时为零，不能再从公共因子约去后说只有这个单点等势。
+
+\Needspace{3\baselineskip}
+\textbf{备课变式：由焦耳热反求驱动转矩}
+
+忽略自感，设有效磁通角为 \(\vartheta=\omega t\)，选正向后电动势为
+\(BS\omega\cos\vartheta\)。回路电流随之为
+
+\[i=\frac{BS\omega}{R_{\rm tot}}\cos\vartheta.\]
+
+机械驱动保持匀速，瞬时输入功率等于电源对电荷做功，故
+
+\[P_{\rm drive}=i\mathcal E
+=\frac{B^2S^2\omega^2}{R_{\rm tot}}\cos^2\vartheta\ge0.\]
+
+除以非零角速度，驱动转矩为
+
+\[\tau_{\rm drive}=\frac{B^2S^2\omega}{R_{\rm tot}}\cos^2\vartheta,\]
+
+磁阻力矩方向与它相反。一个周期内
+
+\[\langle P\rangle=\frac{B^2S^2\omega^2}{2R_{\rm tot}},\qquad
+Q_{\rm cycle}=\frac{\pi B^2S^2\omega}{R_{\rm tot}}.\]
+
+这里约定 \(\omega>0\)；反转时周期改取
+\(2\pi/|\omega|\)，耗热仍正，阻力矩仍反向。把一般面积 \(S=(d+b)h/2\)
+和总电阻 \(R(1+3b/d)\) 代入即可比较不同梯形，不必重新求全部点电势。
+
+这条能量链把图上动生力方向与真实外部驱动联系起来。电流某时刻变号并不意味着机械能被返还，因为电动势同时变号，乘积始终非负。若回路含自感，瞬时输入还应含
+\(d(\mathcal Li^2/2)/dt\)，只有周期平均才能直接等于平均焦耳热。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf-1}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  闭合回路总电动势由磁通量变化率求，点电势却必须使用``局部动生电动势减欧姆压降''；
+\item
+  运动导体不是静电平衡导体，不能默认整根导线等势；
+\item
+  \(U_P-x\)
+  线性来自两个线性事实：\(R_{CP}\propto x\)，\(\mathcal E_{CP}\propto x\)。
+\end{enumerate}
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9-1}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  把梯形高误写成 \(\sqrt3d/2\)；
+\item
+  总电阻漏计 \(AE\)，或把其余三边电阻也写成 \(R\)；
+\item
+  把 \(t=0\) 误认为磁通量最大，从而把余弦和正弦错位；
+\item
+  求 \(U_P\) 时只算 \(iR\) 而漏掉 \(\bm v\times\bm B\)；
+\item
+  中途改变回路正方向，导致常数项符号错误。
+\end{enumerate}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae-1}
+
+建议先把第一问完全讲成``整回路问题''，再把第二问讲成``局部路径问题''。板书时用两种颜色分别标出非静电力积分和电阻压降，每推进一小段导线就更新一次电势，可避免学生把电动势与电势差混为一谈。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3-1}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  将 \(P\) 改在边 \(AC\) 上，求 \(U_P\) 随沿线距离的关系；
+\item
+  若导线各边截面积不同，给出分段电势图；
+\item
+  若 \(t\ne0\)，写出 \(U_P(x,t)\) 并说明零电势点是否随时间移动。
+\end{enumerate}
+
+\newpage
+
+\section{第 3 题}\label{ux7b2c-3-ux9898}
+
+质量为 \(m=1\,\mathrm{kg}\) 的物体从水平面上的 \(A\)
+点由静止开始运动，\(B\) 点位于 \(A\) 点右侧
+\(L=4\,\mathrm m\)。用水平向右的恒力 \(F=6\,\mathrm N\) 拉物体，经过
+\(t=2\,\mathrm s\) 到达 \(B\)。取 \(g=10\,\mathrm{m/s^2}\)。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  求物体与地面间的动摩擦因数 \(\mu\)；
+\item
+  保持拉力大小 \(F=6\,\mathrm N\) 不变，改变拉力与水平方向的夹角
+  \(\theta\)，求使向右加速度最大的 \(\theta\) 和最大加速度；
+\item
+  物体重新从 \(A\) 点静止出发，拉力方向保持
+  \(\theta'=30^\circ\)，大小随位移线性减小：\(F(x)=F_0-kx\)，其中
+  \(F_0=10\,\mathrm N\)，\(k=3\,\mathrm{N/m}\)；力减至零后停止牵引。判断物体能否到达
+  \(B\) 点。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图 3-1　粗糙水平面上的斜向变力牵引模型。}]{../figures/question-03.pdf}
+\caption*{图 3-1　粗糙水平面上的斜向变力牵引模型。}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-2}
+
+三问依次反求摩擦因数、选择上拉角度、检查变力牵引后能否到达目标。第三问先看累计动能是否在牵引段归零，再计算力消失后的滑行。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-2}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  匀变速直线运动；
+\item
+  斜向拉力对支持力的影响；
+\item
+  三角函数配相与极值；
+\item
+  变力功积分；
+\item
+  摩擦功随法向力变化；
+\item
+  牵引段与滑行段分段处理。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-2}
+
+斜向上拉时，竖直方向无加速度，支持力为 \(N=mg-F\sin\theta\)，因此增大
+\(\theta\) 同时带来两种相反影响：水平分力 \(F\cos\theta\) 减小，但摩擦力
+\(\mu N\) 也减小。第三问中拉力到 \(x_0=F_0/k\)
+时为零，之后物体只在摩擦作用下减速滑行。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-2}
+
+第一问先由 \(L=at^2/2\) 求 \(a\)。第二问把加速度写成
+\(\cos\theta+\mu\sin\theta\) 的形式。第三问不用求 \(a(x)\)
+再积分时间，而直接用功---能定理求牵引结束时的速度，再计算滑行距离。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-2}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图 3-2　斜向拉力的分解，以及由变力与摩擦共同决定的净动能曲线。}]{../figures/solution-03.pdf}
+\caption*{图 3-2　斜向拉力的分解，以及由变力与摩擦共同决定的净动能曲线。}
+\end{figure}
+
+图 3-2
+左侧把拉力、支持力、重力与摩擦分别标出；右侧按题给数值绘制净动能。拉力结束前曲线为开口向下的抛物线，此后只受摩擦，动能随位移线性下降；曲线与横轴的交点给出最终停止位置。
+
+\Needspace{3\baselineskip}
+\textbf{（1）求动摩擦因数}
+
+物体由静止做匀加速运动：
+
+\[
+L=\frac12at^2.
+\]
+
+因此
+
+\[
+a=\frac{2L}{t^2}=\frac{2\times4}{2^2}=2\,\mathrm{m/s^2}.
+\tag{1}
+\]
+
+水平拉力时 \(N=mg\)，摩擦力为 \(f=\mu mg\)。水平方向牛顿第二定律：
+
+\[
+F-\mu mg=ma.
+\tag{2}
+\]
+
+解出
+
+\[
+\mu=\frac{F-ma}{mg}
+=\frac{6-1\times2}{1\times10}=0.4.
+\]
+
+故
+
+\[
+\boxed{\mu=0.4}.
+\tag{3}
+\]
+
+\Needspace{3\baselineskip}
+\textbf{（2）最优拉力方向}
+
+竖直方向平衡：
+
+\[
+N+F\sin\theta-mg=0,
+\]
+
+所以
+
+\[
+N=mg-F\sin\theta.
+\tag{4}
+\]
+
+水平方向：
+
+\[
+F\cos\theta-\mu N=ma.
+\tag{5}
+\]
+
+代入式（4）：
+
+\[
+\begin{aligned}
+ma
+&=F\cos\theta-\mu(mg-F\sin\theta)\\
+&=F(\cos\theta+\mu\sin\theta)-\mu mg.
+\end{aligned}
+\]
+
+即
+
+\[
+a(\theta)=\frac Fm(\cos\theta+\mu\sin\theta)-\mu g.
+\tag{6}
+\]
+
+对括号内的函数求导：
+
+\[
+\frac d{d\theta}(\cos\theta+\mu\sin\theta)
+=-\sin\theta+\mu\cos\theta.
+\]
+
+令导数为零：
+
+\[
+-\sin\theta+\mu\cos\theta=0
+\quad\Longrightarrow\quad
+\boxed{\tan\theta=\mu}.
+\tag{7}
+\]
+
+代入 \(\mu=0.4\)：
+
+\[
+\boxed{\theta=\arctan0.4\approx21.8^\circ}.
+\tag{8}
+\]
+
+利用
+
+\[
+\max(\cos\theta+\mu\sin\theta)=\sqrt{1+\mu^2},
+\]
+
+有
+
+\[
+\begin{aligned}
+a_{\max}
+&=\frac Fm\sqrt{1+\mu^2}-\mu g\\
+&=6\sqrt{1+0.4^2}-4\\
+&\approx2.46\,\mathrm{m/s^2}.
+\end{aligned}
+\]
+
+故
+
+\[
+\boxed{a_{\max}\approx2.46\,\mathrm{m/s^2}}.
+\tag{9}
+\]
+
+\Needspace{3\baselineskip}
+\textbf{（3）判断能否到达 \(B\)}
+
+拉力减到零的位置满足
+
+\[
+F_0-kx_0=0,
+\]
+
+所以
+
+\[
+x_0=\frac{F_0}{k}=\frac{10}{3}\,\mathrm m.
+\tag{10}
+\]
+
+在 \(0\le x\le x_0\) 内，拉力水平分力做功：
+
+\[
+\begin{aligned}
+W_F
+&=\int_0^{x_0}(F_0-kx)\cos30^\circ\,dx\\
+&=\cos30^\circ
+\left[F_0x-\frac12kx^2\right]_0^{x_0}\\
+&=\frac12F_0x_0\cos30^\circ.
+\end{aligned}
+\tag{11}
+\]
+
+斜向拉力使支持力随 \(x\) 改变：
+
+\[
+N(x)=mg-F(x)\sin30^\circ.
+\tag{12}
+\]
+
+摩擦力做功为
+
+\[
+\begin{aligned}
+W_f
+&=-\int_0^{x_0}\mu N(x)\,dx\\
+&=-\mu\int_0^{x_0}[mg-(F_0-kx)\sin30^\circ]dx\\
+&=-\mu mgx_0
++\frac12\mu F_0x_0\sin30^\circ.
+\end{aligned}
+\tag{13}
+\]
+
+由功---能定理，牵引结束时速度为 \(v_0'\)：
+
+\[
+\frac12m{v_0'}^2=W_F+W_f.
+\tag{14}
+\]
+
+代入数值：
+
+\[
+\begin{aligned}
+W_F&=\frac12\times10\times\frac{10}{3}\times\frac{\sqrt3}{2}
+\approx14.43\,\mathrm J,\\
+W_f&=-0.4\times10\times\frac{10}{3}
++\frac12\times0.4\times10\times\frac{10}{3}\times\frac12\\
+&=-10.00\,\mathrm J,\\
+\frac12{v_0'}^2&=4.43\,\mathrm J.
+\end{aligned}
+\]
+
+故
+
+\[
+{v_0'}^2\approx8.87\,\mathrm{m^2/s^2}.
+\tag{15}
+\]
+
+力消失后仅受动摩擦，减速度大小为
+
+\[
+a_f=\mu g=4\,\mathrm{m/s^2}.
+\]
+
+由 \(0={v_0'}^2-2a_fs_2\)：
+
+\[
+s_2=\frac{{v_0'}^2}{2\mu g}
+=\frac{8.87}{8}\approx1.11\,\mathrm m.
+\tag{16}
+\]
+
+总可前进距离
+
+\[
+x_0+s_2\approx3.33+1.11=4.44\,\mathrm m>4\,\mathrm m.
+\]
+
+因此
+
+\[
+\boxed{\text{物体能够到达 }B\text{ 点}}.
+\tag{17}
+\]
+
+\Needspace{3\baselineskip}
+\textbf{可运动与接触条件的检查}
+
+第二问最优角处
+\(N=10-6\sin(\arctan0.4)\approx7.77\,\mathrm N>0\)，所以物体没有离地。第三问
+\(N(x)=5+1.5x\)，在牵引段全为正。题面沿用动摩擦模型，并默认能够从静止启动；若另给静摩擦因数，应在初态单独检查。
+
+第三问令
+\(C=\cos30^\circ+\mu\sin30^\circ\approx1.0660\)。净水平力与累计动能是
+
+\[F_{\rm net}(x)=C(F_0-kx)-\mu mg,\qquad K(x)=(CF_0-\mu mg)x-\frac12Ckx^2.\]
+
+净力变负只表示开始减速，不能直接判停止。\(K\)
+是开口向下的二次函数，其正根
+\(x_*=2(CF_0-\mu mg)/(Ck)\approx4.16\,\mathrm m\)，大于
+\(x_0=10/3\,\mathrm m\)，证明物体能完成牵引段。随后
+
+\[K(B)=K(x_0)-\mu mg(L-x_0)\approx1.77\,\mathrm J>0,\]
+
+故到达 \(B\) 的速度约 \(1.88\,\mathrm{m/s}\)；总停止距离约
+\(4.44\,\mathrm m\)。若另画 \(F-x\) 三角形，它的面积只表示
+\(\int Fdx\)，算拉力功还要乘 \(\cos30^\circ\)，算摩擦减小量还要乘
+\(\mu\sin30^\circ\)。
+
+\Needspace{3\baselineskip}
+\textbf{一般停止位置与方向优化的适用范围}
+
+给定任意上拉角 \(\vartheta\)，设
+\(C=\cos\vartheta+\mu\sin\vartheta>0\)，\(A=CF_0-\mu mg\)。能够启动且保持接触时：若
+\(A\le0\)，该动摩擦模型不能从静止向右加速；若
+\(A>0\)，先比较累计动能的正根 \(2A/(Ck)\) 与牵引终点 \(F_0/k\)。
+
+若
+\(2A/(Ck)\le F_0/k\)，物体在拉力仍未为零时停止；到此不能把动摩擦积分继续延伸为负动能。否则，牵引结束时
+
+\[K_0=\frac{CF_0^2}{2k}-\frac{\mu mgF_0}{k},\qquad x_{\rm stop}=\frac{F_0}{k}+\frac{K_0}{\mu mg}.\]
+
+还须检查
+\(F_0\sin\vartheta\le mg\)，以保证初态支持力非负；拉力随位移减小后这一条件只会更容易满足。
+
+恒力最优方向的 \(\tan\theta=\mu\) 也依赖接触条件。如果这个角使
+\(mg-F\sin\theta<0\)，就应将角度限制在 \(\sin\theta\le mg/F\)
+后重新取边界极值。斜向下推时摩擦项变成 \(-\mu F\sin\theta\)，在
+\(0\le\theta\le\pi/2\)
+内最大向右加速度取水平推力，不能直接把上拉的最优角照搬过去。
+
+\Needspace{3\baselineskip}
+\textbf{数值回代时分别记拉力功和摩擦功}
+
+第三问牵引段的拉力大小从10 N线性减到0，区间 \(x_0=10/3\) m。它的面积是
+
+\[\int_0^{x_0}F(x)dx=\frac{F_0x_0}{2}=\frac{50}{3}\ \mathrm{N\,m}.\]
+
+拉力的水平功为这个面积乘
+\(\cos30^\circ\)；上拉引起的摩擦减少量是同一面积乘
+\(\mu\sin30^\circ\)。与恒定的重力摩擦项合并，
+
+\[K(x_0)=\frac{50}{3}(\cos30^\circ+0.4\sin30^\circ)-4\frac{10}{3}
+\simeq4.4338\ \mathrm J.\]
+
+还需滑行 \(4-10/3=2/3\) m，故
+
+\[K(B)=4.4338-4\frac23\simeq1.7671\ \mathrm J,
+\qquad v_B=\sqrt{2K(B)/m}\simeq1.880\ \mathrm{m/s}.\]
+
+同一计算也可由 \(K(x)\)
+的导数还原净力。导数为零的点是速度最大处，不是停止处；停止必须由 \(K=0\)
+判定。
+
+\Needspace{3\baselineskip}
+\textbf{用速度最大处检查整段轨迹}
+
+在拉力随位移下降的阶段，\(K'(x)=A-Ckx\)，所以
+
+\[x_m=\frac{A}{Ck},\qquad K_{\max}=\frac{A^2}{2Ck}.\]
+
+若
+\(0<x_m<x_0\)，轨迹先加速后减速。给定参数满足这个条件，到牵引终点仍有正动能。检查某一目标点时，要先确定该点位于
+\(x_0\) 的哪一侧：左侧代入二次函数，右侧使用
+\(K_0-\mu mg(x-x_0)\)。两段在 \(x_0\) 处动能连续，斜率也同为
+\(-\mu mg\)，因为拉力恰好归零。
+
+在 \(\mu\to0\) 时，第二段不会自行停止，含 \(1/\mu\)
+的停止距离公式不能直接按有限值使用；牵引段的动能却有正常极限
+\(CF_0^2/(2k)\)。若 \(k\to0\)，给定的牵引终点 \(F_0/k\)
+发散，模型应改回恒力题，而不是把固定的4
+m目标错误地放入``拉力已消失''阶段。
+
+\Needspace{3\baselineskip}
+\textbf{备课补充：随时间减小的拉力不能沿用三角形位移面积}
+
+若变式改为 \(F(t)=F_0-kt\)，这里 \(k\)
+的单位是N/s。保持上拉角及支持力为正，设
+
+\[a_0=\frac{CF_0-\mu mg}{m},\qquad b=\frac{Ck}{m}.\]
+
+在力归零之前，由静止开始
+
+\[v(t)=a_0t-\frac12bt^2,\qquad
+x(t)=\frac12a_0t^2-\frac16bt^3.\]
+
+此时拉力做功为 \(\int F(t)\cos\theta\,v(t)dt\)，横坐标不是时间，不能用
+\(F-t\) 图下面积当能量。应先比较 \(2a_0/b\) 与
+\(F_0/k\)，判断物体是否在驱动力结束前已经停下。若提前停止，动摩擦的方向规则需重新处理，不能把该速度公式延伸为负速度而继续沿用同一摩擦号。
+
+这个变式可用来检查学生是否知道功积分中的自变量。原题的 \(F-x\)
+直线给动能二次函数，\(F-t\)
+直线则给速度二次、位移三次，两者量纲及停止判据都不同。
+
+\Needspace{3\baselineskip}
+\textbf{备课算例：两种停止顺序的分界}
+
+净力积分的正根为 \(x_s=2(CF_0-\mu mg)/(Ck)\)，牵引终点为
+\(x_0=F_0/k\)。两者之比
+
+\[\frac{x_s}{x_0}=2-\frac{2\mu mg}{CF_0}.\]
+
+所以能够先完成牵引段的条件是
+\(CF_0>2\mu mg\)；恰等号时在牵引结束点停止；若
+\(\mu mg<CF_0<2\mu mg\)，能启动，却会在拉力归零之前停下。
+
+给定参数 \(CF_0\simeq10.660\) N、\(2\mu mg=8\)
+N，属于第一类。牵引段速度最大点
+
+\[x_m=\frac{CF_0-\mu mg}{Ck}\simeq2.08\ \mathrm m\]
+
+早于终点 \(10/3\)
+m。图中的动能先上升再下降，而非随拉力减小从始至终减速。最终滑行到
+\(x_0+K_0/(\mu mg)\simeq4.44\) m，4 m目标在这之前。
+
+分界式只含初力和摩擦负担，不含 \(k\)；\(k\)
+改变距离尺度，却不改变两种事件的先后比例。若牵引机构在物体停止后仍维持随位置变化的力，接下来是否重新启动还涉及静摩擦，原动摩擦模型只计算到第一次停止。
+
+\Needspace{3\baselineskip}
+\textbf{备课变式：最优角受地面接触条件限制}
+
+恒力斜拉的加速度可写成
+
+\[ma=F(\cos\theta+\mu\sin\theta)-\mu mg.\]
+
+配相求得的无约束角 \(\theta_*=\arctan\mu\) 还须满足
+\(N=mg-F\sin\theta\ge0\)。在这个候选角处
+
+\[N_*=mg-\frac{F\mu}{\sqrt{1+\mu^2}}.\]
+
+本题 \(F=6\) N、\(mg=10\) N、\(\mu=0.4\)，显然有
+\(N_*>0\)，因而正文极值可实现。若变式提高 \(F\) 到使
+\(N_*<0\)，原角意味着离开水平面，不能继续使用地面摩擦公式。
+
+当 \(F>mg\) 时，允许的接触角为
+
+\[0\le\theta\le\theta_c=\arcsin(mg/F).\]
+
+若 \(\theta_c<\theta_*\)，加速度在该区间一直增加，最大值出现在 \(N=0\)
+的边界：
+
+\[a_{\max}=\frac{F\cos\theta_c}{m}
+=\frac{\sqrt{F^2-m^2g^2}}m.\]
+
+若另外要求严格正的支持力，边界值则只是上确界。越过该角后应联立水平和竖直运动，摩擦因失去接触而消失；这已是另一段动力学。第三问的
+\(F(x)\le10\) N、固定30°，全过程 \(N\ge5\) N，故不存在这一脱离分支。
+
+开始运动还涉及静摩擦阈值。原题已用实际运动反推出动摩擦，并给出从静止拉动的过程；推广到任意
+\(F\) 时若没有静摩擦因数，不能仅凭正的动摩擦加速度保证物体必定起动。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf-2}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  最优角不是让水平分力最大，而是让``水平驱动力减去摩擦''最大；
+\item
+  斜拉时摩擦力不是常量，因为 \(N\) 随 \(F(x)\) 改变；
+\item
+  第三问必须在 \(x_0\) 处分段，不能把 \(F_0-kx\) 延长到负值；
+\item
+  变力功等于 \(F-x\) 图线下的有向面积。
+\end{enumerate}
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9-2}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  第一问把 \(L=at^2\)，漏掉 \(1/2\)；
+\item
+  写成 \(N=mg+F\sin\theta\)；
+\item
+  优化时只对 \(F\cos\theta\) 求极值；
+\item
+  第三问仍取摩擦力为 \(\mu mg\)；
+\item
+  只比较 \(x_0\) 与 \(L\)，忽略物体在拉力消失后仍有速度。
+\end{enumerate}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae-2}
+
+可先让学生定性比较 \(\theta=0\)
+与略微抬高拉力时加速度的变化，再推导式（6）。第三问板书应画出完整
+\(F-x\)
+三角形，并把``牵引段''和``自由滑行段''用竖线分开，以培养分段建模习惯。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3-2}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  改为斜向下推力，求最优角是否存在；
+\item
+  给定静摩擦因数大于动摩擦因数，先判断能否启动；
+\item
+  将 \(F(x)\) 改为二次函数，仍用功---能法求停止位置。
+\end{enumerate}
+
+\newpage
+
+\section{第 4 题}\label{ux7b2c-4-ux9898}
+
+一定量理想气体经历图示循环，摩尔定容热容为 \(C_V=\frac52R\)。状态 \(1\)
+的压强、体积分别为 \(P_1,V_1\)；状态 \(2\) 的压强为 \(2P_1\)；状态 \(4\)
+的体积为 \(2V_1\)；状态 \(3\) 的体积为 \(3V_1\)。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  求过程 \(1\to2\) 的吸热 \(Q_{12}\)；
+\item
+  求过程 \(2\to3\) 的做功 \(W_{23}\) 和吸热 \(Q_{23}\)；
+\item
+  求过程 \(3\to4\) 的放热量；
+\item
+  求循环效率 \(\eta\)。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.534\linewidth,height=\textheight,keepaspectratio,alt={图 4-1　由等容、等压和直线过程组成的理想气体循环。}]{../figures/question-04.pdf}
+\caption*{图 4-1　由等容、等压和直线过程组成的理想气体循环。}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-3}
+
+各状态的PV决定内能，路径下的面积决定做功。先逐段求热量并核查符号，再用循环面积复算净功；改变路径时也要检查端点温度是否允许。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-3}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  理想气体内能变化；
+\item
+  \(P-V\) 图下的面积与气体做功；
+\item
+  直线过程的平均压强；
+\item
+  热力学第一定律；
+\item
+  循环净功与吸热效率；
+\item
+  吸热、放热的符号约定。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-3}
+
+四个状态为
+
+\[
+1:(V_1,P_1),\quad
+2:(V_1,2P_1),\quad
+3:(3V_1,2P_1),\quad
+4:(2V_1,P_1).
+\]
+
+循环沿顺时针方向，净功为正。过程 \(3\to4\)
+压强和体积都减小，内能下降且气体受压做负功，因此必然放热。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-3}
+
+先把每个状态的 \(PV\) 值列成表。因为 \(nRT=PV\)，所以任何过程都有
+
+\[
+\Delta U=\frac52\Delta(PV).
+\]
+
+再分别从路径求 \(W=\int P\,dV\)，最后用 \(Q=\Delta U+W\)。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-3}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.746\linewidth,height=\textheight,keepaspectratio,alt={图 4-2　循环所围面积给出净功，斜线区域表示过程 3\textbackslash to4 的负功大小。}]{../figures/solution-04.pdf}
+\caption*{图 4-2　循环所围面积给出净功，斜线区域表示过程 \(3\to4\)
+的负功大小。}
+\end{figure}
+
+图 4-2 中蓝色四边形的有向面积是循环净功；右侧斜边下方从 \(3V_1\) 积到
+\(2V_1\)，积分方向向左，所以 \(W_{34}<0\)。图形方向直接决定做功正负。
+
+统一取``气体对外做功为正、气体吸热为正''。由
+
+\[
+U=nC_VT=\frac52nRT=\frac52PV,
+\tag{1}
+\]
+
+任意过程的内能变化为
+
+\[
+\Delta U=\frac52(P_fV_f-P_iV_i).
+\tag{2}
+\]
+
+\Needspace{3\baselineskip}
+\textbf{（1）过程 \(1\to2\)}
+
+等容过程 \(W_{12}=0\)。内能变化
+
+\[
+\Delta U_{12}=\frac52(2P_1V_1-P_1V_1)
+=\frac52P_1V_1.
+\]
+
+故
+
+\[
+\boxed{Q_{12}=\frac52P_1V_1}.
+\tag{3}
+\]
+
+\Needspace{3\baselineskip}
+\textbf{（2）过程 \(2\to3\)}
+
+该过程压强恒为 \(2P_1\)：
+
+\[
+\begin{aligned}
+W_{23}
+&=2P_1(3V_1-V_1)\\
+&=4P_1V_1.
+\end{aligned}
+\]
+
+所以
+
+\[
+\boxed{W_{23}=4P_1V_1}.
+\tag{4}
+\]
+
+内能变化
+
+\[
+\begin{aligned}
+\Delta U_{23}
+&=\frac52(2P_1\cdot3V_1-2P_1\cdot V_1)\\
+&=\frac52(6-2)P_1V_1\\
+&=10P_1V_1.
+\end{aligned}
+\]
+
+由热力学第一定律
+
+\[
+\boxed{Q_{23}=\Delta U_{23}+W_{23}=14P_1V_1}.
+\tag{5}
+\]
+
+\Needspace{3\baselineskip}
+\textbf{（3）过程 \(3\to4\) 的放热量}
+
+路径是直线，平均压强为
+
+\[
+\bar P=\frac{2P_1+P_1}{2}=\frac32P_1.
+\]
+
+体积变化 \(\Delta V=2V_1-3V_1=-V_1\)，所以
+
+\[
+W_{34}=\bar P\Delta V
+=-\frac32P_1V_1.
+\tag{6}
+\]
+
+内能变化
+
+\[
+\begin{aligned}
+\Delta U_{34}
+&=\frac52(P_1\cdot2V_1-2P_1\cdot3V_1)\\
+&=\frac52(2-6)P_1V_1\\
+&=-10P_1V_1.
+\end{aligned}
+\tag{7}
+\]
+
+因此
+
+\[
+Q_{34}=\Delta U_{34}+W_{34}
+=-10P_1V_1-\frac32P_1V_1
+=-\frac{23}{2}P_1V_1.
+\tag{8}
+\]
+
+负号表示放热，放热量大小为
+
+\[
+\boxed{Q_{34}^{\mathrm{out}}=\frac{23}{2}P_1V_1}.
+\tag{9}
+\]
+
+\Needspace{3\baselineskip}
+\textbf{（4）循环效率}
+
+还需核对过程 \(4\to1\)。它是等压压缩：
+
+\[
+W_{41}=P_1(V_1-2V_1)=-P_1V_1,
+\tag{10}
+\]
+
+\[
+\Delta U_{41}=\frac52(P_1V_1-2P_1V_1)
+=-\frac52P_1V_1,
+\tag{11}
+\]
+
+\[
+Q_{41}=\Delta U_{41}+W_{41}
+=-\frac72P_1V_1.
+\tag{12}
+\]
+
+循环净功为各过程做功之和：
+
+\[
+\begin{aligned}
+W_{\rm net}
+&=W_{12}+W_{23}+W_{34}+W_{41}\\
+&=0+4P_1V_1-\frac32P_1V_1-P_1V_1\\
+&=\frac32P_1V_1.
+\end{aligned}
+\tag{13}
+\]
+
+吸热只发生在 \(1\to2\) 和 \(2\to3\)：
+
+\[
+Q_{\rm in}=Q_{12}+Q_{23}
+=\frac52P_1V_1+14P_1V_1
+=\frac{33}{2}P_1V_1.
+\tag{14}
+\]
+
+因此
+
+\[
+\boxed{
+\eta=\frac{W_{\rm net}}{Q_{\rm in}}
+=\frac{3/2}{33/2}=\frac1{11}
+}.
+\tag{15}
+\]
+
+\Needspace{3\baselineskip}
+\textbf{沿整个斜线检查热量符号}
+
+令 \(p=P/P_1\)、\(v=V/V_1\)。斜线 \(3\to4\) 满足 \(p=v-1\)，\(v\)
+从3减至2。微元热量为
+
+\[\frac{\delta Q}{P_1V_1}=\frac52d[pv]+p\,dv=\left(6v-\frac72\right)dv.\]
+
+区间内括号始终为正而 \(dv<0\)，故整段都放热。\(4\to1\)
+也全为放热，所以效率分母只含前两段吸热，不存在同一段热流换向而漏加的情况。
+
+循环面积可以用梯形或鞋带公式复核：顶部宽2、底部宽1、高1，净功为
+\((2+1)/2=3/2\) 个 \(P_1V_1\)。逐段内能变化为
+\((5/2,10,-10,-5/2)P_1V_1\)，总和为零；逐段热量为
+\((5/2,14,-23/2,-7/2)P_1V_1\)，总和等于净功。这三组数分别检查状态函数、热流与图形面积。
+
+\Needspace{3\baselineskip}
+\textbf{变式解析：改变热容或路径}
+
+若 \(C_V=\alpha R\)，原四个状态和路径不变，则
+
+\[Q_{12}=\alpha P_1V_1,\quad Q_{23}=(4\alpha+4)P_1V_1,\]
+\[Q_{34}=-(4\alpha+3/2)P_1V_1,\quad Q_{41}=-(\alpha+1)P_1V_1.\]
+
+净功不随热容变化，总吸热为 \((5\alpha+4)P_1V_1\)，因此
+
+\[\eta=\frac{3}{2(5\alpha+4)}.\]
+
+代 \(\alpha=5/2\) 得 \(1/11\)；代 \(\alpha=3/2\) 得
+\(3/23\)。这个比较使用同一循环几何，不是把不同状态的最高、最低温度代入卡诺效率。
+
+原状态3与4的 \(PV\) 分别为6和2个
+\(P_1V_1\)，不能直接把它们连成等温过程。修订的等温变式由3膨胀到压强
+\(P_1\)，新终点是 \(4':(6V_1,P_1)\)，有
+
+\[W_{34'}=Q_{34'}=6P_1V_1\ln2>0.\]
+
+再由 \(4'\) 等压压缩回1，\(W_{4'1}=-5P_1V_1\)。新循环净功为
+\((6\ln2-1)P_1V_1\)，总吸热为
+\((33/2+6\ln2)P_1V_1\)。必须重画终点和路径，才能讨论效率；保持原两个端点而硬套等温公式会违背状态方程。反向运行原循环时，制冷量取原放热量15个
+\(P_1V_1\)，输入功为
+\(3P_1V_1/2\)，形式制冷系数为10；这一数值还以每段与相应温度热源换热的循环安排为前提。
+
+\Needspace{3\baselineskip}
+\textbf{状态编号直接带入第一定律}
+
+本题 \(U=(5/2)PV\)，各段先算 \(\Delta U\)，再算
+\(W=\int P,dV\)。以斜段为例，\(P/P_1=V/V_1-1\)，所以
+
+\[\frac{W_{34}}{P_1V_1}=\int_3^2(v-1)dv=-\frac32,\]
+
+而 \(\Delta U_{34}/(P_1V_1)=(5/2)(2-6)=-10\)。因此
+
+\[Q_{34}=\Delta U_{34}+W_{34}=-\frac{23}{2}P_1V_1.\]
+
+四段做功为 \(0,4,-3/2,-1\) 个 \(P_1V_1\)，合计 \(3/2\)。吸热为
+\(5/2+14=33/2\)，于是
+\(\eta=(3/2)/(33/2)=1/11\)。压缩段的负功必须带入第一定律，不能先取面积的正值再凭冷热名称改符号。
+
+\Needspace{3\baselineskip}
+\textbf{用熵变化检查端点温度}
+
+设状态1温度为 \(T_1\)，四状态温度比例依次为 \(1,2,6,2\)。对
+\(C_V=\alpha R\)，各段气体熵变化只由端点确定：
+
+\[\frac{\Delta S_{12}}{nR}=\alpha\ln2,\]
+\[\frac{\Delta S_{23}}{nR}=(\alpha+1)\ln3,\]
+\[\frac{\Delta S_{34}}{nR}=-\alpha\ln3+\ln(2/3),\]
+\[\frac{\Delta S_{41}}{nR}=-(\alpha+1)\ln2.\]
+
+相加为零，符合气体返回初态。环境熵是否也为零则取决于怎样安排热源；仅知道
+\(P-V\)
+曲线不能断言整个装置可逆。特别是用单个固定温度热源完成温度不断改变的吸热段，会有有限温差，不能把四段气体熵之和为零当成环境没有熵产生。
+
+这一核查还立即排除把原状态3、4直接连成等温线：它们温度为 \(6T_1\) 和
+\(2T_1\)，并不相等。
+
+\Needspace{3\baselineskip}
+\textbf{备课补充：斜线段热流换向的通用判据}
+
+在 \(p=av+b\) 的任意线段上，\(C_V=\alpha R\)，微元第一定律给
+
+\[\frac{\delta Q}{P_1V_1}=\alpha d(pv)+p,dv
+=[a(2\alpha+1)v+(\alpha+1)b]dv.\]
+
+若 \(a\ne0\)，潜在热流换向点是
+
+\[v_*=-\frac{(\alpha+1)b}{a(2\alpha+1)}.\]
+
+先判断它是否落在端点之间，再分别积分吸热和放热部分。段的总 \(Q\)
+为正不代表整段都吸热；效率分母必须把全部正热流相加。原题
+\(a=1,b=-1,\alpha=5/2\)，给 \(v_*=7/12\)，在斜段 \([2,3]\)
+之外，所以整段放热，正文分母没有漏项。
+
+最高、最低温度为 \(6T_1,T_1\)，仅作为两恒温热源间卡诺上限时给
+\(5/6\)。原循环每段温度都变化，得到 \(1/11\)
+远低于该上限并不矛盾。判断效率前必须先确定实际热源安排，不能把气体的两个端点温度自动当作整条过程的热源温度。
+
+\Needspace{3\baselineskip}
+\textbf{备课算例：换热容但保持路径}
+
+以 \(\alpha=C_V/R\) 表示每摩尔热容，状态量 \(PV/(P_1V_1)\) 仍为
+\(1,2,6,2\)。逐段 \(\Delta U\) 为
+
+\[\alpha,\quad 4\alpha,\quad -4\alpha,\quad -\alpha\]
+
+个 \(P_1V_1\)；路径功依次为 \(0,4,-3/2,-1\)。热量便是
+
+\[\alpha,\quad 4\alpha+4,\quad -4\alpha-3/2,\quad -\alpha-1.\]
+
+对 \(\alpha>0\)，前两段为正、后两段为负，故效率为
+\(3/[2(5\alpha+4)]\)。单原子 \(\alpha=3/2\) 时为 \(3/23\)，双原子
+\(\alpha=5/2\) 时为 \(1/11\)。
+
+改变热容时循环面积不变，所以净功不变，吸热随热容增加，效率下降。若把所有热量一起按热容比例缩放，会漏掉路径功的常数项4、3/2、1。它们来源于图形而非气体微观自由度。
+
+反向运行时同一段热量整体反号，但制冷量取哪几段还需说明热源安排。正文给出的形式制冷系数10只是把原来全部放热段合并为冷端负担，不能据此构造只与两个固定温度库换热的同一四段循环。
+
+\Needspace{3\baselineskip}
+\textbf{备课变式：等温替换循环的温度与熵账目}
+
+修订变式的状态3为 \((3V_1,2P_1)\)，状态 \(4'\) 为
+\((6V_1,P_1)\)，二者都满足
+\(T=6T_1\)。等温膨胀的做功、吸热和气体熵增分别为
+
+\[W_{34'}=Q_{34'}=6P_1V_1\ln2,\] \[\Delta S_{34'}=nR\ln2.\]
+
+由 \(4'\) 等压压缩回1，温度由 \(6T_1\) 降至 \(T_1\)。以 \(C_V=5R/2\)
+计算，
+
+\[\Delta U_{4'1}=-\frac{25}{2}P_1V_1,\qquad
+W_{4'1}=-5P_1V_1,\] \[Q_{4'1}=-\frac{35}{2}P_1V_1.\]
+
+于是新循环效率为
+
+\[\eta'=\frac{6\ln2-1}{33/2+6\ln2}\simeq0.1529.\]
+
+熵也应闭合。前两段熵增为 \((5/2)nR\ln2\)、\((7/2)nR\ln3\)，最后等压段为
+\(-(7/2)nR\ln6\)，再加等温段的
+\(nR\ln2\)，总和为零。它核对了新终点和路径的温度归一化。
+
+图中虚线等温线通过状态3，朝低压侧到达
+\(V/V_1=6\)；它不能同时通过原来的状态4。新循环增加的面积不全等于增加的吸热，必须重新算最后的等压压缩。这是效率增加但远未达到
+\(5/6\)
+上限的原因。若只在原效率式上加一项等温功而保留旧放热，能量闭合便会失败。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf-3}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  对给定 \(C_V\)，用 \(PV\) 直接求 \(\Delta U\)
+  最省步骤且不易漏掉物质的量；
+\item
+  直线过程做功可用平均压强，但必须保留 \(\Delta V\) 的正负；
+\item
+  效率分母是总吸热，不是吸热与放热的代数和；
+\item
+  循环净功可同时用逐段求和和图形面积交叉核验。
+\end{enumerate}
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9-3}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  把 \(C_V\) 当成总热容而漏写物质的量；
+\item
+  认为 \(3\to4\) 做功为正；
+\item
+  题目问``放热量''却把负号直接写进最终大小；
+\item
+  求效率时漏算 \(Q_{12}\) 或把 \(Q_{34}\) 加入吸热；
+\item
+  忘记检查一周 \(\sum\Delta U=0\)。
+\end{enumerate}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae-3}
+
+先画一个四行表格，列出各状态的 \(P/P_1\)、\(V/V_1\) 和
+\(PV/(P_1V_1)\)。随后每个过程只做两件事：从端点差求
+\(\Delta U\)，从路径面积求
+\(W\)。最后用两种方法核验净功，训练学生形成热学计算的闭环检查。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3-3}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  将 \(C_V\) 改为 \(3R/2\)，重新求效率；
+\item
+  由状态3改作等温过程，直到压强为\(P_1\)的新状态\(4'\)；求热量并重新检查循环方向；
+\item
+  反向运行循环，求制冷系数并判断每段热量符号。
+\end{enumerate}
+
+\newpage
+
+\section{第 5 题}\label{ux7b2c-5-ux9898}
+
+从 \(O\) 点引出两根细长杆，两杆与竖直线的夹角均为
+\(30^\circ\)。三根长度均为 \(l\) 的轻绳连接于结点 \(C\)，其中
+\(A\)、\(B\) 端分别连接套在两杆上的轻质小环，\(D\) 端连接质点 \(m\)。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  两环光滑且系统静止平衡时，求 \(OD\)；
+\item
+  两环与杆间的摩擦因数均为 \(\mu=0.2\)，系统保持左右对称，求静止平衡时
+  \(OD\) 的范围；
+\item
+  保持第（1）问的小环位置，摩擦因数仍为 \(0.2\)。给 \(D\)
+  一个初速度，使其在纸面内左右摆动。求保证 \(A\)、\(B\)
+  不滑动所允许的最大摆角 \(\theta\)。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.486\linewidth,height=\textheight,keepaspectratio,alt={图 5-1　对称细杆、两个滑环、三根等长绳及悬挂质点。}]{../figures/question-05.pdf}
+\caption*{图 5-1　对称细杆、两个滑环、三根等长绳及悬挂质点。}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-4}
+
+先由轻环平衡确定绳与杆的方向，再用摩擦锥求静止位置范围。摆动中一根上绳先松弛，支点随之改变；最大绳角须分两段判断。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-4}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  轻质小环的二力平衡；
+\item
+  对称几何与直角三角形；
+\item
+  静摩擦锥半角 \(\varphi=\arctan\mu\)；
+\item
+  轻绳只能受拉、不能受压；
+\item
+  三力平衡的方向可行域；
+\item
+  分段临界状态。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-4}
+
+光滑环只受杆的支持力和绳张力，两力必须共线反向，所以 \(AC\)、\(BC\)
+分别垂直于两根杆。加上摩擦后，杆对环的合反力可在法线两侧偏转，最大偏角为
+\(\varphi=\arctan\mu\)。因此几何垂距不再固定为 \(l\)，而在
+\(l\cos\varphi\) 到 \(l\) 之间。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-4}
+
+第一问先确定 \(AC\perp OA\)。第二问用``点 \(C\) 到杆的垂距''表达
+\(OC\)。第三问不要直接写
+\(\tan\theta=\mu\)；应先找双侧绳张力均非负的角度上限
+\(60^\circ\)，再分析单侧绳受力落在摩擦锥边界的附加角 \(\varphi\)。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-4}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图 5-2　双绳阶段的零张力边界，以及松绳后绕 A 转动的单绳阶段。}]{../figures/solution-05.pdf}
+\caption*{图 5-2　双绳阶段的零张力边界，以及松绳后绕 \(A\)
+转动的单绳阶段。}
+\end{figure}
+
+图 5-2 左侧标出 \(T_B=0\) 的边界，先得到双绳阶段的 \(60^\circ\)；右侧以
+\(A\) 为新支点，画出 \(AD=2l\) 及绳张力。单绳偏离杆向的角为
+\(\theta-60^\circ\)，由它计算环处的摩擦与正压力之比，再求最大摆角。
+
+\Needspace{3\baselineskip}
+\textbf{（1）光滑时的平衡位置}
+
+以左环 \(A\) 为研究对象。小环质量忽略、杆光滑，环只受绳 \(AC\)
+的张力和杆的支持力。二力平衡要求两力共线，所以
+
+\[
+AC\perp OA.
+\tag{1}
+\]
+
+系统左右对称，\(C\) 位于过 \(O\) 的竖直线上。三角形 \(\triangle OAC\) 在
+\(A\) 处为直角，且
+
+\[
+\angle AOC=30^\circ,
+\qquad AC=l.
+\]
+
+于是
+
+\[
+\sin30^\circ=\frac{AC}{OC}=\frac l{OC}.
+\]
+
+所以
+
+\[
+OC=\frac l{\sin30^\circ}=2l.
+\tag{2}
+\]
+
+又 \(CD=l\)，故
+
+\[
+\boxed{OD=OC+CD=3l}.
+\tag{3}
+\]
+
+\Needspace{3\baselineskip}
+\textbf{（2）有摩擦时 \(OD\) 的范围}
+
+设摩擦锥半角为 \(\varphi\)。在极限静摩擦状态，合反力相对法线偏转
+\(\varphi\)，满足
+
+\[
+\tan\varphi=\mu.
+\tag{4}
+\]
+
+故
+
+\[
+\varphi=\arctan0.2\approx11.31^\circ.
+\tag{5}
+\]
+
+由于绳张力必须与杆的合反力反向，绳 \(AC\) 与杆法线的夹角最多为
+\(\varphi\)。长度为 \(l\) 的 \(AC\) 在垂直于杆方向上的投影为
+
+\[
+l_\perp=l\cos\varphi.
+\tag{6}
+\]
+
+另一方面，位于竖直轴上的 \(C\) 到任一杆的垂距为
+
+\[
+d_\perp=OC\sin30^\circ=\frac{OC}{2}.
+\tag{7}
+\]
+
+静止可行时 \(d_\perp=l_\perp\)；极限偏转给出最小 \(OC\)：
+
+\[
+\frac{OC_{\min}}2=l\cos\varphi
+\quad\Longrightarrow\quad
+OC_{\min}=2l\cos\varphi.
+\tag{8}
+\]
+
+绳与杆法线重合时 \(OC\) 最大，即 \(OC_{\max}=2l\)。因此
+
+\[
+l+2l\cos\varphi\le OD\le3l.
+\tag{9}
+\]
+
+利用
+
+\[
+\cos\varphi=\frac1{\sqrt{1+\tan^2\varphi}}
+=\frac1{\sqrt{1+\mu^2}},
+\]
+
+得
+
+\[
+OD_{\min}=l+\frac{2l}{\sqrt{1+0.2^2}}
+\approx2.961l.
+\]
+
+所以
+
+\[
+\boxed{2.961l\le OD\le3l}.
+\tag{10}
+\]
+
+\Needspace{3\baselineskip}
+\textbf{（3）最大摆角}
+
+保持第（1）问中 \(A\)、\(B\) 的位置。先考虑 \(D\) 向右摆，\(CD\)
+与竖直线夹角为 \(\theta\)。
+
+当 \(0\le\theta\le60^\circ\) 时，结点 \(C\)
+受到三根绳的张力。\(CA\)、\(CB\) 的方向固定，\(CD\)
+的张力方向逐渐向右偏。只要 \(CD\) 的反向延长线位于 \(CA\)、\(CB\)
+两张力方向所张成的凸锥内，就能由两个非负张力合成平衡。边界正好对应右侧绳张力降为零，因此
+
+\[
+\theta_1=60^\circ.
+\tag{11}
+\]
+
+超过 \(60^\circ\)
+后，右绳松弛，左绳承担结点传来的拉力。要保持左环不沿杆滑动，杆对环的合反力方向必须仍在摩擦锥内。允许的附加偏角就是
+
+\[
+\varphi=\arctan\mu.
+\tag{12}
+\]
+
+于是最大摆角
+
+\[
+\begin{aligned}
+\theta_{\max}
+&=60^\circ+\varphi\\
+&=60^\circ+\arctan0.2\\
+&\approx71.31^\circ.
+\end{aligned}
+\]
+
+故
+
+\[
+\boxed{\theta_{\max}\approx71.31^\circ}.
+\tag{13}
+\]
+
+这里的 \(60^\circ\) 和 \(\arctan\mu\)
+物理来源不同：前者是``轻绳张力不得为负''的几何边界，后者是滑环不滑动的摩擦边界。
+
+\Needspace{3\baselineskip}
+\textbf{张力非负条件的显式证明}
+
+下面把式（11）的 \(60^\circ\)
+从力的分解中直接算出。第（1）问的位置保持不变时，从结点 \(C\)
+指向两环的单位矢量可取为
+
+\[
+\bm e_A=
+\left(-\frac{\sqrt3}{2},-\frac12\right),
+\qquad
+\bm e_B=
+\left(\frac{\sqrt3}{2},-\frac12\right),
+\tag{14}
+\]
+
+其中取水平向右为 \(x\) 轴、竖直向下为 \(y\) 轴。摆球向右偏角为
+\(\theta\) 时，绳 \(CD\) 对结点的拉力方向为
+
+\[
+\bm e_D=(\sin\theta,\cos\theta).
+\tag{15}
+\]
+
+设三根绳张力分别为 \(T_A,T_B,T_D\)。轻质结点质量忽略，任意时刻必须满足
+
+\[
+T_A\bm e_A+T_B\bm e_B+T_D\bm e_D=\bm0.
+\tag{16}
+\]
+
+沿 \(x\)、\(y\) 分量展开：
+
+\[
+-\frac{\sqrt3}{2}T_A
++\frac{\sqrt3}{2}T_B
++T_D\sin\theta=0,
+\tag{17}
+\]
+
+\[
+-\frac12T_A-\frac12T_B
++T_D\cos\theta=0.
+\tag{18}
+\]
+
+由式（18）得
+
+\[
+T_A+T_B=2T_D\cos\theta.
+\tag{19}
+\]
+
+由式（17）得
+
+\[
+T_B-T_A=-\frac{2}{\sqrt3}T_D\sin\theta.
+\tag{20}
+\]
+
+两式相加、相减：
+
+\[
+T_A=T_D\left(\cos\theta+\frac{\sin\theta}{\sqrt3}\right),
+\tag{21}
+\]
+
+\[
+T_B=T_D\left(\cos\theta-\frac{\sin\theta}{\sqrt3}\right).
+\tag{22}
+\]
+
+向右摆时 \(T_A\) 始终为正，先可能降到零的是
+\(T_B\)。轻绳不能承受压力，故必须满足
+
+\[
+T_B\ge0.
+\tag{23}
+\]
+
+代入式（22）：
+
+\[
+\cos\theta-\frac{\sin\theta}{\sqrt3}\ge0
+\quad\Longleftrightarrow\quad
+\tan\theta\le\sqrt3.
+\tag{24}
+\]
+
+所以双绳都张紧的上限为
+
+\[
+\boxed{\theta\le60^\circ}.
+\tag{25}
+\]
+
+在 \(\theta=60^\circ\)
+时，\(T_B=0\)，右侧绳恰好松弛；再继续向右摆，不能把式（22）算出的负张力当作真实力，而必须改用``单绳张紧''的新模型。此时仍张紧的绳对相应滑环的作用线开始偏离原法线方向，静摩擦使杆的合反力最多再偏转
+
+\[
+\varphi=\arctan\mu.
+\tag{26}
+\]
+
+因此从双绳临界到滑环临界还允许转过
+\(\varphi\)，这才得到式（13）。这一分段证明也解释了为什么直接对三绳方程延拓到
+\(\theta>60^\circ\) 会得到没有物理意义的负张力。
+
+\Needspace{3\baselineskip}
+\textbf{第（2）问区间的几何复核}
+
+由 \(\tan\varphi=\mu\)，
+
+\[
+\cos\varphi=\frac1{\sqrt{1+\mu^2}}.
+\tag{27}
+\]
+
+因此
+
+\[
+OD_{\min}
+=l+2l\cos\varphi
+=l\left(1+\frac2{\sqrt{1+\mu^2}}\right).
+\tag{28}
+\]
+
+当 \(\mu\to0\) 时，\(\varphi\to0\)，上下界同时趋于
+\(3l\)，还原光滑情形；当 \(\mu\) 增大时，\(OD_{\min}\) 下降而
+\(OD_{\max}=3l\)
+不变，说明更大的摩擦扩大了可静止的几何范围。两个极限都与物理直觉一致。
+
+\Needspace{3\baselineskip}
+\textbf{单绳阶段的支点与摆角}
+
+在双绳张紧阶段，\(C\) 是两长度约束的交点，位置固定；\(A,B\)
+的受力始终垂直于杆，摩擦实际可为零。向右摆到 \(60^\circ\) 时 \(BC\)
+张力为零，\(A,C,D\) 恰好共线。此后 \(C\)
+不再保持原位置：两根有张力的轻绳 \(AC\)、\(CD\) 共线，合成一根长度
+\(2l\) 的绳，摆球绕固定环 \(A\) 运动。
+
+本文 \(\theta\) 指当前绳 \(CD\) 与竖直线的夹角，单绳阶段也等于 \(AD\)
+的夹角；不能继续把它当作以原固定 \(C\)
+为圆心的摆角。沿杆方向与法向分解作用于环的张力 \(T\)，偏离原法线的角度为
+\(\theta-60^\circ\)，于是
+
+\[\frac{|f|}{N}=|\tan(\theta-60^\circ)|\le\mu.\]
+
+这才得到
+\(\theta_{\max}=60^\circ+\arctan\mu\)。临界角约71.31°，转向点绳张力
+\(mg\cos\theta_{\max}>0\)，所以该阶段没有因绳松弛而提前失效。
+
+如果问从竖直最低点发射达到这个摆角所需初速度，也要随支点变化分段算高度：到60°先上升
+\(l/2\)，再绕 \(A\) 上升 \(2l(1/2-\cos\theta_{\max})\)。能量给
+
+\[v_0^2=2gl\left(\frac32-2\cos\theta_{\max}\right)\approx1.7182gl.\]
+
+这个回代同时核对运动连续性和轻绳张力条件。
+
+\Needspace{3\baselineskip}
+\textbf{一般杆角与不对称摩擦的变式}
+
+两杆各与竖直夹角为 \(\alpha\)，\(0<\alpha<\pi/2\)，光滑情形有
+\(OC=l/\sin\alpha\)，故 \(OD=l+l/\sin\alpha\)。静止、有摩擦且对称时，令
+\(\varphi=\arctan\mu\)，垂距投影给
+
+\[l+\frac{l\cos\varphi}{\sin\alpha}\le OD\le l+\frac l{\sin\alpha}.\]
+
+还要保证所选环点落在两根实际杆段内，且两绳给结点的竖直合力能支撑
+\(mg\)；不能把极大的摩擦角无条件外推到绳向下拉的几何分支。
+
+光滑位置的两上绳与竖直线成
+\(\pi/2-\alpha\)。双绳非负张力的最大摆角为该角，之后以一侧环为支点；只要绳保持张紧且不越过水平线，摩擦给出的最大角为
+
+\[\theta_{\max}=\frac\pi2-\alpha+\varphi.\]
+
+若左右摩擦因数不同，向右摆时剩余的是左环支撑，故用左环的
+\(\varphi_A\)；向左摆时用右环的
+\(\varphi_B\)。不对称摩擦并不自动改变双绳阶段的60°，它改变的是单绳后的余量。三绳不等长的变式须重新求两圆交点，不能沿用对称轴上的结点；若只改
+\(CD\) 而两上绳仍等长，对称静止位置仍在轴上。
+
+\Needspace{3\baselineskip}
+\textbf{结点张力的两个临界值}
+
+双绳阶段将 \(CD\) 的张力记为 \(T\)，向右偏角为
+\(\theta\)。光滑环位置保持不动，两个上绳与竖直夹角均为60°。结点的水平、竖直平衡给
+
+\[\frac{\sqrt3}{2}(T_A-T_B)=T\sin\theta,\qquad
+\frac12(T_A+T_B)=T\cos\theta.\]
+
+解得
+
+\[T_A=T\left(\cos\theta+\frac{\sin\theta}{\sqrt3}\right),\quad
+T_B=T\left(\cos\theta-\frac{\sin\theta}{\sqrt3}\right).\]
+
+右摆时先变为零的是 \(T_B\)，解 \(T_B=0\)
+得60°。左摆则交换两者。这一条件与 \(T\) 的大小无关，但要有
+\(T>0\)；随后只能保留非负的张力，不能把 \(T_B<0\)
+当成细绳的压力继续使用。图 5-2 左图标明零张力，右图才转为绕 \(A\)
+的单绳阶段。
+
+\Needspace{3\baselineskip}
+\textbf{转向点也要检查绳没有松弛}
+
+单绳阶段的有效长度为 \(2l\)。沿 \(AD\) 向内，
+
+\[T-mg\cos\theta=\frac{mv^2}{2l}.\]
+
+由达到最大角的能量关系，
+
+\[v^2=4gl(\cos\theta-\cos\theta_{\max}),\]
+
+于是
+
+\[T=mg(3\cos\theta-2\cos\theta_{\max}).\]
+
+在 \(60^\circ\le\theta\le\theta_{\max}<90^\circ\)
+上，最小值发生在转向点，等于
+\(mg\cos\theta_{\max}>0\)。因此本题的最大角确由环的摩擦锥限制，轻绳不会先失去张力。如果将摩擦角增大到使候选角超过90°，这个论证不再成立，应先求
+\(T=0\) 的角度，再处理自由飞行；不能把 \(60^\circ+\arctan\mu\)
+无条件用于所有 \(\mu\)。
+
+此处 \(\theta\)
+是绳方向的角。单绳阶段球相对于原结点的位置角不同，画圆弧时必须采用真正的支点
+\(A\)。
+
+\Needspace{3\baselineskip}
+\textbf{备课补充：摩擦锥约束为什么与张力大小无关}
+
+轻环质量为零，杆沿轴方向不能提供除摩擦以外的力。若绳张力与杆法线偏角为
+\(\psi\)，环的两个平衡分量给
+
+\[N=T\cos\psi,\qquad f=-T\sin\psi.\]
+
+因而 \(|f|/N=|\tan\psi|\)。张力 \(T>0\)
+时大小约去，这就是最大角取决于方向的原因；\(T=0\) 时
+\(N=f=0\)，比值不能继续除法，它属于失去绳约束的边界。
+
+双绳阶段
+\(\psi=0\)，无论摆球向心张力怎样改变，小环都不需要摩擦。进入单绳阶段，\(\psi=\theta-60^\circ\)，才逐渐调用摩擦余量。把一开始所有环的摩擦都写成
+\(\mu N\) 会人为强加极限状态，使静止位置和摆角都算错。
+
+有质量的小环则多了
+\(m_rg\)，反力方向不再由绳方向单独确定。若环还允许滑动，环的加速度沿杆也进入方程，双绳结点未必固定。因此``轻质、保持不滑动''是正文方向法可用的两个条件，改动任意一个都要重列动力学。
+
+\Needspace{3\baselineskip}
+\textbf{备课算例：静止位置范围的几何分支}
+
+杆与竖直夹角30°，结点C在轴上。\(C\) 到杆的垂距为
+\(OC\sin30^\circ=OC/2\)。上绳长 \(l\)，与杆法线偏角 \(\psi\)，所以
+
+\[\frac{OC}{2}=l\cos\psi.\]
+
+摩擦条件 \(|\tan\psi|\le0.2\) 给
+
+\[\frac{2l}{\sqrt{1.04}}\le OC\le2l,\]
+\[l+\frac{2l}{\sqrt{1.04}}\le OD\le3l.\]
+
+对于同一垂距，圆与杆可能有两个交点，分别位于垂足两侧。绳的竖直分量必须向上支撑结点；若杆实际长度有限，环点也须落在真实杆段上。这些条件不能只从余弦值判断。
+
+摆动问题固定的是光滑位置，故上绳本来垂直杆；不是任取上述静摩擦范围的一组环点。若从另一个允许静止位置开始摆动，双绳角和支点坐标都改变，60°与两段高度公式也需重算。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf-4}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  光滑轻环只受两力，立刻得到绳垂直于杆；
+\item
+  有摩擦时不能一开始就取 \(f=\mu N\)，只有边界才取等号；
+\item
+  第三问最大摆角不是单一摩擦角，而是 \(60^\circ\) 与摩擦角之和；
+\item
+  轻绳不能``推''，某一张力算成负值意味着该绳应松弛并切换模型。
+\end{enumerate}
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9-4}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  把绳 \(AC\) 与竖直线的夹角误当成 \(30^\circ\)；两杆夹角本来就是
+  \(60^\circ\)；
+\item
+  用 \(l\sin\varphi\) 代替垂直投影 \(l\cos\varphi\)；
+\item
+  把静摩擦恒写成 \(\mu N\)；
+\item
+  第三问直接得 \(\theta=\arctan\mu\)，漏掉先发生的绳松弛边界；
+\item
+  未检查张力非负。
+\end{enumerate}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae-4}
+
+先讲``二力轻环''，让学生从力的方向反推几何；再单独画一个摩擦锥，不代数计算。第三问把
+\(CD\)
+方向缓慢旋转，让学生观察哪一侧张力先变为零。只有辨明三种状态后再写
+\(60^\circ+\arctan\mu\)，结论才有清晰来龙去脉。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3-4}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  将两杆与竖直夹角改为 \(\alpha\)，求前三问的一般表达式；
+\item
+  左右摩擦因数不同，分别求向左、向右最大摆角；
+\item
+  若三根绳长度不相等，讨论静止位置是否仍在对称轴上。
+\end{enumerate}
+
+\newpage
+
+\section{第 6 题}\label{ux7b2c-6-ux9898}
+
+一根轻绳吊着粗细均匀的长棒，棒下端距地面高度为 \(H\)。一位质量为 \(m\)
+的人通过轻环套在棒上，距棒下端 \(h=3H/4\)；棒的质量也为
+\(m\)。人与棒之间的最大静摩擦力和滑动摩擦力均为
+\(4mg\)。剪断轻绳后，棒和人自由下落。棒足够长，与地面碰撞时接触时间极短且无动能损失，运动中始终竖直，忽略空气阻力。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  求从剪断轻绳到棒与地面第二次碰撞期间，棒运动的路程 \(s\)；
+\item
+  求从剪断轻绳到棒和人最终都静止，摩擦力对人与棒所做的总功 \(W\)；
+\item
+  证明全过程中人不会与地面接触。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.695\linewidth,height=\textheight,keepaspectratio,alt={图 6-1　人与竖直长棒共同下落，长棒触地后发生瞬时弹性反弹。}]{../figures/question-06.pdf}
+\caption*{图 6-1　人与竖直长棒共同下落，长棒触地后发生瞬时弹性反弹。}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-5}
+
+碰地只让棒瞬时反向，人继续下落。先求两者速度追平，再算下一次碰地；速度递推决定总滑距、摩擦耗散和人距地面的最低高度。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-5}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  自由落体与弹性反弹；
+\item
+  摩擦力方向由相对运动判断；
+\item
+  绝对运动与相对运动；
+\item
+  分段匀变速运动；
+\item
+  等比速度递推；
+\item
+  摩擦耗散等于 \(f\) 乘总相对路程；
+\item
+  等比级数与``不接地''证明。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-5}
+
+第一次碰地前人与棒均向下，速度大小
+\(V_1=\sqrt{2gH}\)。棒弹性反弹后速度变为向上 \(V_1\)，人的速度仍向下
+\(V_1\)，相对速度大小为
+\(2V_1\)。摩擦使人向上加速、使棒向下加速，直到两者速度相同。此后无需摩擦即可共同以重力加速度下落。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-5}
+
+每一轮碰撞后都使用同一套模板：先由相对运动求滑动距离，再求共同速度和下一次碰地速度。只要证明
+\(V_{n+1}=V_n/2\)，第二、三问就转化为公比 \(1/4\) 的几何级数。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-5}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.637\linewidth,height=\textheight,keepaspectratio,alt={图 6-2　一次触地周期内棒与人的速度方向、摩擦方向和相对滑动阶段。}]{../figures/solution-06.pdf}
+\caption*{图
+6-2　一次触地周期内棒与人的速度方向、摩擦方向和相对滑动阶段。}
+\end{figure}
+
+图 6-2
+按时间从左到右展开：碰撞把棒的速度瞬时反向，随后摩擦令相对速度减小；相对速度归零后两者共同下落；下一次碰地速度恰为本轮的
+\(1/2\)。图中的 \(a_p=3g\)、\(a_r=-5g\) 采用竖直向上为正。
+
+\Needspace{3\baselineskip}
+\textbf{第一次触地及碰后相对滑动}
+
+剪绳后两者从静止下落 \(H\)，第一次触地前速度大小
+
+\[
+V_1=\sqrt{2gH}.
+\tag{1}
+\]
+
+取向上为正。碰撞后棒的速度为 \(+V_1\)，人的速度仍为
+\(-V_1\)。人相对棒向下滑，因此人受摩擦向上，棒受摩擦向下。
+
+人的加速度：
+
+\[
+a_p=\frac{4mg-mg}{m}=3g.
+\tag{2}
+\]
+
+棒的加速度：
+
+\[
+a_r=\frac{-4mg-mg}{m}=-5g.
+\tag{3}
+\]
+
+相对加速度
+
+\[
+a_{\rm rel}=a_p-a_r=3g-(-5g)=8g.
+\tag{4}
+\]
+
+初始相对速度为
+
+\[
+v_{\rm rel,0}=(-V_1)-(+V_1)=-2V_1.
+\]
+
+相对速度变为零所需时间
+
+\[
+\Delta t_1=\frac{2V_1}{8g}=\frac{V_1}{4g}.
+\tag{5}
+\]
+
+此时人的速度
+
+\[
+v_p=-V_1+3g\Delta t_1
+=-V_1+\frac34V_1=-\frac14V_1,
+\tag{6}
+\]
+
+棒的速度
+
+\[
+v_r=V_1-5g\Delta t_1
+=V_1-\frac54V_1=-\frac14V_1.
+\tag{7}
+\]
+
+两者速度确实相同，随后共同自由下落。
+
+\Needspace{3\baselineskip}
+\textbf{（1）棒到第二次碰地的路程}
+
+第一次反弹后，棒先向上运动，减速度大小为 \(5g\)。到速度降为零时上升高度
+
+\[
+H_1=\frac{V_1^2}{2\cdot5g}
+=\frac{2gH}{10g}=\frac H5.
+\tag{8}
+\]
+
+之后棒转而向下，最终回到地面并发生第二次碰撞。故棒的总路程由三段组成：第一次下落
+\(H\)、反弹上升 \(H/5\)、再次下降 \(H/5\)。
+
+\[
+\boxed{
+s=H+\frac H5+\frac H5=\frac75H
+}.
+\tag{9}
+\]
+
+\Needspace{3\baselineskip}
+\textbf{速度递推}
+
+相对速度归零时，棒位于地面上方。它在相对滑动阶段的位移为
+
+\[
+\begin{aligned}
+y_1
+&=V_1\Delta t_1-\frac12(5g)\Delta t_1^2\\
+&=V_1\frac{V_1}{4g}
+-\frac{5g}{2}\frac{V_1^2}{16g^2}\\
+&=\frac{3V_1^2}{32g}.
+\end{aligned}
+\tag{10}
+\]
+
+从该处以向下速度 \(V_1/4\) 做自由落体，下一次碰地速度 \(V_2\) 满足
+
+\[
+\begin{aligned}
+V_2^2
+&=\left(\frac{V_1}{4}\right)^2+2gy_1\\
+&=\frac{V_1^2}{16}
++2g\frac{3V_1^2}{32g}\\
+&=\frac{V_1^2}{16}+\frac{3V_1^2}{16}
+=\frac{V_1^2}{4}.
+\end{aligned}
+\]
+
+因此
+
+\[
+\boxed{V_2=\frac12V_1}.
+\tag{11}
+\]
+
+同理，每轮过程完全相似：
+
+\[
+\boxed{V_{n+1}=\frac12V_n}.
+\tag{12}
+\]
+
+\Needspace{3\baselineskip}
+\textbf{（2）摩擦力做的总功}
+
+第 \(n\) 次碰撞后相对速度初值为 \(2V_n\)，相对减速度大小为
+\(8g\)。相对滑动距离由
+
+\[
+0=(2V_n)^2-2(8g)s_n
+\]
+
+得到
+
+\[
+s_n=\frac{V_n^2}{4g}.
+\tag{13}
+\]
+
+第一次为
+
+\[
+s_1=\frac{V_1^2}{4g}
+=\frac{2gH}{4g}=\frac H2.
+\tag{14}
+\]
+
+由于速度每轮乘 \(1/2\)，相对滑动距离每轮乘 \(1/4\)：
+
+\[
+s_{n+1}=\frac14s_n.
+\tag{15}
+\]
+
+总相对滑动距离
+
+\[
+\begin{aligned}
+s_{\rm rel}
+&=\frac H2\left(1+\frac14+\frac1{4^2}+\cdots\right)\\
+&=\frac H2\cdot\frac1{1-1/4}\\
+&=\frac{2H}{3}.
+\end{aligned}
+\tag{16}
+\]
+
+一对内摩擦力对``人+棒''系统所做总功等于 \(-f\) 乘相对滑动距离：
+
+\[
+\begin{aligned}
+W
+&=-4mg\,s_{\rm rel}\\
+&=-4mg\cdot\frac{2H}{3}\\
+&=-\frac83mgH.
+\end{aligned}
+\]
+
+故
+
+\[
+\boxed{W=-\frac83mgH}.
+\tag{17}
+\]
+
+\Needspace{3\baselineskip}
+\textbf{（3）证明人不接触地面}
+
+人最初距棒下端为
+
+\[
+h=\frac34H.
+\tag{18}
+\]
+
+人相对棒只在每次碰后的滑动阶段向下移动，所有这些相对位移之和正是式（16）：
+
+\[
+s_{\rm rel}=\frac23H.
+\]
+
+比较可得
+
+\[
+\frac23H<\frac34H=h.
+\tag{19}
+\]
+
+所以即使经历无限多次碰撞，人相对棒向下移动的总量也不足以到达棒下端，且棒下端从不进入地面以下。故
+
+\[
+\boxed{\text{人在全过程中不会与地面接触}}.
+\tag{20}
+\]
+
+\Needspace{3\baselineskip}
+\textbf{第 \(n\) 轮运动的完整递推}
+
+为了说明式（12）不是只对前两次碰撞成立，设第 \(n\)
+次碰地前人与棒共同向下，速度大小为 \(V_n\)。碰撞瞬间后：
+
+\[
+v_{p,n}(0)=-V_n,
+\qquad
+v_{r,n}(0)=+V_n.
+\tag{21}
+\]
+
+在随后相对滑动阶段，式（2）、（3）的加速度与 \(V_n\) 无关，始终为
+
+\[
+a_p=3g,
+\qquad
+a_r=-5g.
+\tag{22}
+\]
+
+因此两者速度随本轮起算时间 \(\tau\) 变化为
+
+\[
+v_p(\tau)=-V_n+3g\tau,
+\tag{23}
+\]
+
+\[
+v_r(\tau)=V_n-5g\tau.
+\tag{24}
+\]
+
+令二者相等：
+
+\[
+-V_n+3g\tau_n=V_n-5g\tau_n,
+\]
+
+于是
+
+\[
+\boxed{\tau_n=\frac{V_n}{4g}}.
+\tag{25}
+\]
+
+代回式（23）或（24），共同速度为
+
+\[
+v_{c,n}=-V_n+\frac34V_n=-\frac14V_n.
+\tag{26}
+\]
+
+棒在相对滑动阶段离开地面的高度为
+
+\[
+\begin{aligned}
+y_n
+&=V_n\tau_n-\frac12(5g)\tau_n^2\\
+&=\frac{V_n^2}{4g}
+-\frac{5V_n^2}{32g}\\
+&=\frac{3V_n^2}{32g}.
+\end{aligned}
+\tag{27}
+\]
+
+相对速度归零后，两者从高度 \(y_n\)、向下初速度 \(V_n/4\)
+共同自由落体。下一次碰地前：
+
+\[
+\begin{aligned}
+V_{n+1}^2
+&=\left(\frac{V_n}{4}\right)^2+2gy_n\\
+&=\frac{V_n^2}{16}
++2g\frac{3V_n^2}{32g}\\
+&=\frac{V_n^2}{4}.
+\end{aligned}
+\tag{28}
+\]
+
+取速度大小的正根：
+
+\[
+\boxed{V_{n+1}=\frac12V_n}.
+\tag{29}
+\]
+
+于是显式通项为
+
+\[
+V_n=\frac{V_1}{2^{n-1}}
+=\frac{\sqrt{2gH}}{2^{n-1}}.
+\tag{30}
+\]
+
+第 \(n\) 轮相对滑动距离可以直接由相对运动求得。相对初速度大小为
+\(2V_n\)，相对减速度大小为 \(8g\)：
+
+\[
+\begin{aligned}
+s_n
+&=\frac{(2V_n)^2}{2\cdot8g}\\
+&=\frac{V_n^2}{4g}\\
+&=\frac{V_1^2}{4g}\frac1{4^{n-1}}\\
+&=\frac H2\frac1{4^{n-1}}.
+\end{aligned}
+\tag{31}
+\]
+
+对 \(n=1,2,\ldots\) 求和：
+
+\[
+\sum_{n=1}^{\infty}s_n
+=\frac H2\sum_{n=0}^{\infty}\left(\frac14\right)^n
+=\frac H2\cdot\frac{1}{1-1/4}
+=\frac{2H}{3}.
+\tag{32}
+\]
+
+这与式（16）一致。
+
+\Needspace{3\baselineskip}
+\textbf{能量耗散交叉核验}
+
+每次相对滑动时，一对摩擦力对两物体所做功之和为
+
+\[
+W_n=-f\,s_n=-4mg\,s_n.
+\tag{33}
+\]
+
+代入式（31）：
+
+\[
+W_n=-2mgH\left(\frac14\right)^{n-1}.
+\tag{34}
+\]
+
+总和
+
+\[
+\begin{aligned}
+\sum_{n=1}^{\infty}W_n
+&=-2mgH\sum_{n=0}^{\infty}\left(\frac14\right)^n\\
+&=-2mgH\cdot\frac43\\
+&=-\frac83mgH,
+\end{aligned}
+\tag{35}
+\]
+
+再次得到式（17）。注意这里使用的是人与棒之间的相对位移；若分别把两者相对地面的路程都乘
+\(4mg\)，会把共同自由落体阶段错误计入摩擦功。
+
+式（30）还说明
+\(V_n\to0\)，每一轮的高度、时间和相对位移也都趋于零。理想模型中发生无限多次越来越弱的碰撞，但所有关键级数均收敛，最终状态具有有限总耗散和有限总相对位移。
+
+\Needspace{3\baselineskip}
+\textbf{无限次碰撞的终止时间与能量核验}
+
+第 \(n\) 次反弹后，滑动时长为 \(V_n/(4g)\)；共同自由落体阶段从向下
+\(V_n/4\) 到 \(V_n/2\)，时长也为 \(V_n/(4g)\)。每一轮总时长
+\(V_n/(2g)\)，故第一次落地后至无限次碰撞累积点所需时间
+
+\[\sum_{n=1}^{\infty}\frac{V_n}{2g}=\frac{V_1}{g}.\]
+
+加上初次落地时间 \(V_1/g\)，总时间为
+\(2\sqrt{2H/g}\)。理想模型的无限碰撞在有限时间累积，此后棒由地面支持，人由静摩擦支撑，静摩擦所需
+\(mg<4mg\)，终态可保持。
+
+人的最终距棒底端高度为 \(h-2H/3=H/12\)。人的质心总下降
+\(H+2H/3=5H/3\)，棒整体下降 \(H\)；系统重力势能减少
+
+\[mg\left(H+\frac{5H}{3}\right)=\frac83mgH.\]
+
+初、终动能均为零，碰撞又无损耗，故摩擦总功必为其负值，与级数结果一致。棒的上升顶点发生在滑动结束之前，图中``相对速度归零''状态应位于地面上方，不能画成已再次触地。
+
+\Needspace{3\baselineskip}
+\textbf{变式解析：摩擦系数与边界}
+
+把滑动摩擦改成
+\(\lambda mg\)，等质量且地面完全弹性。碰后人与棒加速度分别为
+\((\lambda-1)g\) 和 \(-(\lambda+1)g\)，相对减速度为 \(2\lambda g\)。若
+\(\lambda>1\)，它们能在下一次棒碰地前取得共同速度，且
+
+\[\tau_n=\frac{V_n}{\lambda g},\quad v_c=-\frac{V_n}{\lambda},\quad y_n=\frac{V_n^2(\lambda-1)}{2\lambda^2g}.\]
+
+于是 \(V_{n+1}=V_n/\sqrt\lambda\)，每轮相对滑动距离
+\(s_n=V_n^2/(\lambda g)\)，总相对滑距为
+
+\[s_{\rm rel}=\frac{2H}{\lambda-1}.\]
+
+不接地须
+\(h>2H/(\lambda-1)\)；等号只给极限终态恰到棒底端，不能称全过程严格保持正间距。原题取
+\(\lambda=4\)，即还原 \(2H/3\)。当
+\(\lambda\le1\)，滑动结束前棒可能已经再次触地，事件顺序改变，上述递推不可继续套用。
+
+若恢复系数小于1，棒碰后速度是 \(eV_n\) 而人仍是 \(-V_n\)，相对初速度为
+\((1+e)V_n\)。应先比较速度追平时刻和棒再次触地时刻；确认顺序后才可推下一轮。此变式还需要计入地面碰撞耗散，摩擦功不再等于总势能损失。
+
+\Needspace{3\baselineskip}
+\textbf{一次反弹后两个事件的先后}
+
+令刚碰地前速度大小为 \(V\)，向上为正。碰后棒 \(+V\)、人 \(-V\)。滑动阶段
+
+\[v_r=V-5gt,\qquad v_p=-V+3gt.\]
+
+追平时刻 \(t_s=V/(4g)\)，共同速度为
+\(-V/4\)。棒离地后再次回到地面的自由滑动解对应 \(t=2V/(5g)\)，它大于
+\(t_s\)；所以先结束相对滑动，不能一直用 \(a_r=-5g\)
+算到地面。追平时棒底高度
+
+\[y_s=Vt_s-\frac52gt_s^2=\frac{3V^2}{32g}.\]
+
+共同运动后用 \(v^2=(V/4)^2+2gy_s\)，得到再次落地速率
+\(V/2\)。与此同时，相对位移
+
+\[\int_0^{t_s}(v_r-v_p)dt=\int_0^{V/(4g)}(2V-8gt)dt=\frac{V^2}{4g}.\]
+
+速度递推和滑距递推来自同一个事件序列，图上必须把速度追平放在第二次触地之前。
+
+\Needspace{3\baselineskip}
+\textbf{一般摩擦情况下的时间级数}
+
+沿前述 \(\lambda>1\) 模型，追平后共同速度为
+\(-V_n/\lambda\)，下次入射速率为 \(V_n/\sqrt\lambda\)。共同下落时间为
+
+\[\frac{V_n}{g}\left(\frac1{\sqrt\lambda}-\frac1\lambda\right).\]
+
+加上滑动时间 \(V_n/(\lambda g)\)，单轮总时间简化为
+\(V_n/(g\sqrt\lambda)\)。因此第一次触地后的全部轮次用时
+
+\[t_{\rm after}=\frac{V_1}{g(\sqrt\lambda-1)},\]
+
+从释放起总时间为 \(V_1\sqrt\lambda/[g(\sqrt\lambda-1)]\)。当
+\(\lambda=4\) 时还原正文结果；当 \(\lambda\downarrow1\)
+时发散，正好反映轮次收缩趋弱，不能假设所有参数下都在同一有限时间结束。
+
+若人始终未接地，棒下降 \(H\)、人下降 \(H+2H/(\lambda-1)\)，总势能变化给
+\(W_f=-2\lambda mgH/(\lambda-1)\)。这一式还要求终态静摩擦能够支撑人，以及棒长度足够容纳全部相对滑动。
+
+\Needspace{3\baselineskip}
+\textbf{备课补充：人与棒质量不同时的递推}
+
+令棒质量 \(M\)、人质量 \(m\)、\(\eta=m/M\)，滑动摩擦仍为
+\(\lambda mg\)。完全弹性反弹后相对初速度为 \(2V_n\)，相对减速度为
+\(\lambda g(1+\eta)\)。因此
+
+\[\tau_n=\frac{2V_n}{\lambda g(1+\eta)},\qquad
+s_n=\frac{2V_n^2}{\lambda g(1+\eta)}.\]
+
+追平时棒底高度为
+
+\[y_n=\frac{2V_n^2(\lambda-1)}{\lambda^2g(1+\eta)^2},\]
+
+仍要求 \(\lambda>1\)
+才能在再次触地前追平。对同一轮始末作能量账目，棒高度不变、人下降
+\(s_n\)，摩擦耗能为 \(\lambda mg s_n\)，给
+
+\[\frac{V_{n+1}^2}{V_n^2}=1-\frac{4\eta(\lambda-1)}{\lambda(1+\eta)^2}.\]
+
+等质量时还原 \(1/\lambda\)。从高度 \(H\) 释放，几何级数求总相对滑距为
+
+\[s_{\rm total}=\frac{(1+\eta)H}{\eta(\lambda-1)}.\]
+
+质量比改变时，不能只替换加速度中的某个
+\(m\)，而仍保留原来的速度减半递推。全轮的能量方法同时检验重力、地面弹性反弹和相对摩擦，适合备课时交叉检查分段运动式。
+
+\Needspace{3\baselineskip}
+\textbf{备课算例：功率与相对速度积分}
+
+一轮滑动时摩擦大小为 \(4mg\)，棒和人所受摩擦力反向。系统瞬时摩擦功率为
+
+\[P_f=-4mg(v_r-v_p)=-4mg(2V-8gt).\]
+
+积分到追平时刻 \(V/(4g)\)，
+
+\[W_{f,n}=-4mg\int_0^{V/(4g)}(2V-8gt)dt=-mV^2.\]
+
+这不是把棒和人的摩擦功各算成 \(-4mg\)
+乘各自的路程：摩擦可以对其中一个物体做正功，但系统总和始终由相对滑动决定。
+
+下次入射速度减半，耗散按1/4缩小，故
+
+\[W_{f,
+\rm total}=-mV_1^2\sum_{j=0}^\infty4^{-j}
+=-\frac43mV_1^2=-\frac83mgH.\]
+
+棒对地面每次碰撞完全弹性，不另耗散；若恢复系数小于1，则总势能损失需要分给摩擦和地面碰撞，不能仍把上述功率积分外的损失全部归于摩擦。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf-5}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  碰撞只瞬时改变棒的速度，人的速度连续；
+\item
+  摩擦方向由相对运动决定，不能只看各自相对地面的方向；
+\item
+  相对速度归零后两者共同自由落体，此时所需摩擦为零；
+\item
+  速度比 \(1/2\) 导致位移比 \(1/4\)，无限过程因等比级数而可求和。
+\end{enumerate}
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9-5}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  认为棒反弹后始终向上到相对速度归零；实际上它先在 \(V_1/(5g)\)
+  时刻转向；
+\item
+  把人的加速度写成 \(5g\)；
+\item
+  忽略重力，误取相对滑动后共同速度为零；
+\item
+  用各自路程之和代替相对滑动距离计算摩擦耗散；
+\item
+  只检查第一次相对位移，未求无限级数。
+\end{enumerate}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae-5}
+
+先只画第一次碰撞后的两个速度箭头，要求学生判断环相对棒向哪里滑，再标摩擦方向。完成一次完整周期后，把所有
+\(V_1\) 换成
+\(V_n\)，让学生自己发现相似递推。这样比直接给等比级数更能建立模型感。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3-5}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  把摩擦力改为 \(\lambda mg\)，推导速度递推比和不接地条件；
+\item
+  若地面碰撞恢复系数为 \(e<1\)，重新建立递推；
+\item
+  改变初始 \(h/H\)，求刚好不接地的临界值。
+\end{enumerate}
+
+\newpage
+
+\section{第 7 题}\label{ux7b2c-7-ux9898}
+
+一个均匀带电薄球壳的总电量为 \(Q\)、半径为
+\(R\)，球心在坐标原点。球壳在正 \(z\) 轴与球面的交点附近开有一个半径为
+\(r\) 的小圆孔，且 \(r\ll R\)。求圆孔外侧 \(z=R+\delta\) 与内侧
+\(z=R-\delta\) 两点的电场强度，其中 \(\delta\ll r\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图 7-1　小圆孔位于均匀带电薄球壳北极附近，场点紧邻圆孔两侧。}]{../figures/question-07.pdf}
+\caption*{图 7-1　小圆孔位于均匀带电薄球壳北极附近，场点紧邻圆孔两侧。}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-6}
+
+把有孔球壳写成完整球壳减去孔处电荷片，分别做内外两侧的向量减法。半场结果只保留\(\delta\ll r\ll R\)的主导项，有限距离和球面曲率另行核查。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-6}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  均匀带电薄球壳内、外电场；
+\item
+  电场叠加；
+\item
+  局部平面近似；
+\item
+  无限大均匀带电平面的电场；
+\item
+  场的方向与``减去电荷''的符号；
+\item
+  多重小量条件的使用次序。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-6}
+
+完整球壳在外侧紧邻处的电场为 \(kQ/R^2\)，方向沿
+\(+z\)；内侧电场为零。被挖去的小圆盘若仍存在，在外侧产生 \(+z\)
+场，在内侧产生 \(-z\) 场。实际有孔球壳要减去圆盘场，因此两侧最终都指向
+\(+z\)。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-6}
+
+先求球面电荷密度
+\(\sigma=Q/(4\pi R^2)\)。随后分别写``完整球壳场减圆盘场''，不要凭边界条件直接猜平均值；方向核对是本题最重要的一步。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-6}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图 7-2　补偿法分解：完整球壳的场减去孔处局部带电圆盘的场。}]{../figures/solution-07.pdf}
+\caption*{图 7-2　补偿法分解：完整球壳的场减去孔处局部带电圆盘的场。}
+\end{figure}
+
+图 7-2
+左侧为完整球壳，中间为被挖去圆片的两侧场，右侧为向量相减后的有孔壳场。圆片场在两侧反向，扣除后剩余壳的两个箭头却同向，下面逐项写出这一减法。
+
+完整球壳的面电荷密度为
+
+\[
+\sigma=\frac{Q}{4\pi R^2}.
+\tag{1}
+\]
+
+令
+
+\[
+k=\frac1{4\pi\varepsilon_0}.
+\]
+
+\Needspace{3\baselineskip}
+\textbf{外侧点 \(z=R+\delta\)}
+
+完整球壳在该点的场近似为
+
+\[
+\bm E_{\rm shell,out}=\frac{kQ}{R^2}\bm e_z.
+\tag{2}
+\]
+
+孔处小圆盘的轴线上电场精确形式为
+
+\[
+E_{\rm disk}(\delta)
+=\frac{\sigma}{2\varepsilon_0}
+\left(1-\frac{\delta}{\sqrt{\delta^2+r^2}}\right).
+\tag{3}
+\]
+
+因 \(\delta\ll r\)，括号趋近 \(1\)，故
+
+\[
+E_{\rm disk}\approx\frac{\sigma}{2\varepsilon_0}.
+\tag{4}
+\]
+
+外侧圆盘场沿 \(+z\)，但实际要减去该圆盘：
+
+\[
+\begin{aligned}
+\bm E_{\rm out}
+&=\left(\frac{kQ}{R^2}-\frac{\sigma}{2\varepsilon_0}\right)\bm e_z\\
+&=\left[\frac{Q}{4\pi\varepsilon_0R^2}
+-\frac{Q}{8\pi\varepsilon_0R^2}\right]\bm e_z\\
+&=\frac{Q}{8\pi\varepsilon_0R^2}\bm e_z.
+\end{aligned}
+\tag{5}
+\]
+
+\Needspace{3\baselineskip}
+\textbf{内侧点 \(z=R-\delta\)}
+
+完整球壳内部电场为
+
+\[
+\bm E_{\rm shell,in}=0.
+\tag{6}
+\]
+
+正电圆盘在内侧产生沿 \(-z\) 的场：
+
+\[
+\bm E_{\rm disk,in}
+=-\frac{\sigma}{2\varepsilon_0}\bm e_z.
+\tag{7}
+\]
+
+减去圆盘场：
+
+\[
+\begin{aligned}
+\bm E_{\rm in}
+&=0-\bm E_{\rm disk,in}\\
+&=\frac{\sigma}{2\varepsilon_0}\bm e_z\\
+&=\frac{Q}{8\pi\varepsilon_0R^2}\bm e_z.
+\end{aligned}
+\tag{8}
+\]
+
+因此两点的主导项相同：
+
+\[
+\boxed{
+\bm E(R+\delta)\simeq\bm E(R-\delta)
+=\frac{Q}{8\pi\varepsilon_0R^2}\bm e_z
+=\frac{kQ}{2R^2}\bm e_z
+}.
+\tag{9}
+\]
+
+被忽略的修正量相对阶数为 \(O(\delta/r)\) 和 \(O(r/R)\)。
+
+\Needspace{3\baselineskip}
+\textbf{主导项与有限距离不能混为严格等式}
+
+平面圆盘近似下，保留 \(\delta/r\) 的修正得
+
+\[E_{\rm out}\approx\frac{kQ}{(R+\delta)^2}-\frac{\sigma}{2\varepsilon_0}\left(1-\frac{\delta}{\sqrt{r^2+\delta^2}}\right),\]
+\[E_{\rm in}\approx\frac{\sigma}{2\varepsilon_0}\left(1-\frac{\delta}{\sqrt{r^2+\delta^2}}\right).\]
+
+两点电场在主导阶相同，有限 \(\delta\)
+时并非严格相等。孔内没有面电荷给出的连续性，是同一点两侧取极限的结论，不能把它直接用于相隔
+\(2\delta\) 的两个点。
+
+还可在 \(z=R\) 处直接对剩余球面做轴向积分。令孔边缘极角为
+\(\theta_0\)，\(\sigma\) 为剩余球面的固定面密度，利用
+\(u=\sin(\theta/2)\) 得
+
+\[E_z(R)=\frac{\sigma}{2\varepsilon_0}\int_{\sin(\theta_0/2)}^1du
+=\frac{\sigma}{2\varepsilon_0}\left[1-\sin(\theta_0/2)\right].\]
+
+这给出曲率相对修正约为 \(-r/(2R)\)，并独立验证主导的半个完整壳场。若
+\(Q\) 指挖孔后的剩余总电量，准确面密度为
+\(Q/[2\pi R^2(1+\cos\theta_0)]\)；与 \(Q/(4\pi R^2)\) 的差别仅为
+\(O(r^2/R^2)\)，不改变本题主导结论。对
+\(Q<0\)，所有箭头和场矢量整体反向。
+
+\Needspace{3\baselineskip}
+\textbf{补片变式与两个极限的次序}
+
+孔处补入一块面密度 \(\sigma'\)
+的薄圆片，令片面与当地切平面重合。近孔两侧，剩余壳产生共同背景场
+\(\sigma/(2\varepsilon_0)\bm e_z\)，新圆片产生反向的两侧场。于是
+
+\[\bm E_{\rm out}\simeq\frac{\sigma+\sigma'}{2\varepsilon_0}\bm e_z,\qquad
+\bm E_{\rm in}\simeq\frac{\sigma-\sigma'}{2\varepsilon_0}\bm e_z.\]
+
+取 \(\sigma'=0\) 得孔；取 \(\sigma'=\sigma\)
+恢复完整球壳的外场和零内场。两侧差为
+\(\sigma'/\varepsilon_0\)，与补片的表面跳变条件一致。补片是固定均匀电荷模型；若改成导体，电荷会重新分布，不能直接沿用。
+
+将孔移至球面单位法向 \(\bm n\) 所指位置，主导场为
+\(Q\bm n/(8\pi\varepsilon_0R^2)\)。若先令 \(r\to0\) 而保持 \(\delta\)
+不变，会离开 \(\delta\ll r\) 的近孔范围，场趋向完整球壳结果；若先令
+\(\delta/r\to0\)，再缩小孔，局部场保留半场主导项。这不是同一空间尺度的极限，图中须分别标明
+\(r\)、\(R\)、\(\delta\)。
+
+\Needspace{3\baselineskip}
+\textbf{圆盘项的方向从轴向积分确定}
+
+对面密度 \(\sigma\)、半径 \(r\) 的平面圆盘，轴上 \(z>0\) 点的场为
+
+\[E_{
+\rm disk}(z)=\frac{\sigma}{4\pi\varepsilon_0}\int_0^r\frac{2\pi\rho z,d\rho}{(\rho^2+z^2)^{3/2}}
+=\frac{\sigma}{2\varepsilon_0}\left(1-\frac z{\sqrt{r^2+z^2}}\right).\]
+
+在下侧方向反转。挖孔就是从完整球壳减去该圆盘：外侧从向外的壳场中减去向外盘场，内侧则从零减去向内盘场。因此两个剩余场都指向孔外的法向，而不是一上一下。
+
+取 \(z=\delta\ll r\)，盘场趋 \(\sigma/(2\varepsilon_0)\)，壳外场趋
+\(\sigma/\varepsilon_0\)，两侧各留下半场。图中两个红箭头同向，对应的是这一向量减法。若只把两个大小相减而不保留法向，会把内侧方向写反。
+
+\Needspace{3\baselineskip}
+\textbf{球面精确积分的变量替换}
+
+球面环元距北极的距离为 \(2R\sin(\theta/2)\)，从环元指向北极的轴向投影为
+\(R(1-\cos\theta)\)。环元电量是
+\(2\pi R^2\sigma\sin\theta\,d\theta\)。库仑积分化简为
+
+\[dE_z=\frac{\sigma}{4\varepsilon_0}\cos(\theta/2)\,d\theta.\]
+
+从孔边 \(\theta_0\) 积到 \(\pi\)，得到正文的
+\(\sigma[1-\sin(\theta_0/2)]/(2\varepsilon_0)\)。这里没有平面圆盘近似，因此它可以独立检查曲率修正的符号。孔变大时，在固定面密度口径下积分区间缩短，场变小；在固定剩余总电量口径下，面密度同时上升，应先替换归一化再比较。
+
+若孔半径按边缘圆的半径定义，\(r=R\sin\theta_0\)；若按球面弧长定义，则为
+\(R\theta_0\)。小孔主导项相同，高阶展开却要注明使用哪一种。
+
+\Needspace{3\baselineskip}
+\textbf{备课补充：导体开孔不能套固定面密度壳}
+
+正文的补偿法假设挖孔后剩余电荷保持原来的均匀面密度。因此``完整壳减圆片''是对给定电荷分布的线性叠加。如果球壳改成导体，孔边缘的电荷会重排，表面密度不再均匀，原积分只能作为某个试探分布，不能自动满足等势边界。
+
+即使总电荷相同，高阶局部场也由孔边电荷分布决定。两侧电场的表面跳变关系
+
+\[\bm n\cdot(\bm E_+-\bm E_-)=\sigma_{\rm local}/\varepsilon_0\]
+
+只告诉我们同一表面点两侧的差值；孔中心没有带电表面，于是连续，却没有单独确定共同场的数值。共同场仍需解整个边值问题。
+
+课堂可用补片面密度 \(\sigma'\) 的变式核对这条关系：外、内场之差恰为
+\(\sigma'/\varepsilon_0\)。随后再问若补片接上导体，\(\sigma'\)
+是否还能随意指定。这样把叠加法的输入条件与边界条件分开，学生也能看出为什么不能只凭``连续''推出半场大小。
+
+\Needspace{3\baselineskip}
+\textbf{备课算例：剩余总电量口径的精确孔边项}
+
+孔边缘极角为 \(\theta_0\)，令 \(u_0=\sin(\theta_0/2)\)。剩余球面面积是
+\(2\pi R^2(1+\cos\theta_0)=4\pi R^2(1-u_0^2)\)。若剩余总电量固定为Q，则
+
+\[\sigma=\frac{Q}{4\pi R^2(1-u_0^2)}.\]
+
+代入北极处直接积分，
+
+\[E_z(R)=\frac{Q}{8\pi\varepsilon_0R^2}
+\frac{1-u_0}{1-u_0^2}
+=\frac{Q}{8\pi\varepsilon_0R^2(1+u_0)}.\]
+
+在小孔极限，\(u_0\simeq r/(2R)\)，所以
+
+\[E_z(R)\simeq\frac{Q}{8\pi\varepsilon_0R^2}
+\left(1-\frac r{2R}+O(r^2/R^2)\right).\]
+
+若Q改为挖孔之前完整壳的总电量，面密度保持原值，则应使用
+\(1-u_0\)，而不是
+\(1/(1+u_0)\)。两式主导项和一次项相同，二次项才有差别，因此本题主导答案不能区分两种口径，高阶计算必须说明。
+
+孔半径趋零时此式仍是先在孔中心取 \(\delta=0\) 的极限，不能用来替代固定
+\(\delta\) 下恢复完整壳的外、内场。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf-6}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  开孔不是把完整球壳场简单乘面积比例，而是减去一个局部带电片的场；
+\item
+  小圆盘虽电量很小，但场点离它极近，其局部场不能忽略；
+\item
+  内外两侧场相同来自``完整球壳的跳变''与``圆盘场的跳变''相抵消；
+\item
+  \(\delta\ll r\) 使圆盘近场可取无限平面极限，\(r\ll R\)
+  使局部球面曲率的主导修正可忽略。
+\end{enumerate}
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9-6}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  认为孔的面积很小，所以其影响必然很小；
+\item
+  内侧减去圆盘场时漏掉圆盘场本身沿 \(-z\) 的符号；
+\item
+  把平面场写成 \(\sigma/\varepsilon_0\)；
+\item
+  把球壳外场也取为 \(kQ/[2R^2]\) 后再减一次；
+\item
+  不说明近似适用条件。
+\end{enumerate}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae-6}
+
+先让学生分别画正电平面两侧的电场箭头，再写``完整球壳−圆盘''。外、内两点逐行做向量减法，不要只算大小。最后用表面边界条件
+\(E_{\rm out,n}-E_{\rm in,n}=\sigma_{\rm local}/\varepsilon_0=0\)
+核验：孔处局部无面电荷，所以两侧法向场连续。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3-6}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  保留有限 \(\delta/r\)，用式（3）写出近似修正；
+\item
+  圆孔改为贴上一块面密度 \(\sigma'\) 的圆片，求两侧场；
+\item
+  小孔不在北极，写出结果的矢量方向。
+\end{enumerate}
+
+\newpage
+
+\section{第 8 题}\label{ux7b2c-8-ux9898}
+
+十个半径均为 \(R\) 的相同光滑圆筒按 \(4\)、\(3\)、\(2\)、\(1\)
+层三角形堆叠。最下层左右两侧各放置一个高度为
+\(h\)、固定在地面上的垫块，以维持图示堆叠。求垫块的最小高度。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.54\linewidth,height=\textheight,keepaspectratio,alt={图 8-1　十个相同光滑圆筒组成的四层三角形堆体及两侧垫块。}]{../figures/question-08.pdf}
+\caption*{图 8-1　十个相同光滑圆筒组成的四层三角形堆体及两侧垫块。}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-7}
+
+先沿外缘传递斜接触力，再用内部圆筒的平衡检查这些力能否同时实现。垫块高度由支持力方向决定，所有接触压力都必须非负；只求外筒的局部下界会漏掉内部约束。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-7}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  光滑圆筒的接触力沿两圆心连线。
+\item
+  斜接触线与水平夹角为60°，同排接触线水平。
+\item
+  无黏着接触只能推，地面反力也不能为负。
+\item
+  反力方向与垫块顶角的圆周接触几何。
+\item
+  逐体平衡、对称化与受约束极值。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-7}
+
+最上筒的重力分给第二层两筒。斜力沿外缘向下增大，但各排的水平压力不能任意取零：第三层中心筒和两个内底筒也须平衡。原参考令外缘三个水平压力全为零，内底筒却留下向外的净力，因而该组反力不可实现。
+
+左右对称的结构可取对称受力。任何可行非对称解与其镜像平均后仍满足线性平衡和非负条件，所以采用对称力不损失本题的可行范围。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-7}
+
+将每筒重力记为
+\(w=mg\)，避免把``左半堆重力''直接当作外底筒所受的竖直力。保留第二层、第三层、底层外侧及底层中央的水平压力
+\(T_1,T_2,T_3,T_4\)。先列两种外缘斜力，再用内底筒的水平平衡约束
+\(T_3\)。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-7}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.527\linewidth,height=\textheight,keepaspectratio,alt={图 8-2　四层真实接触网络与外底筒顶角接触；临界第二层水平压力非零。}]{../figures/solution-08.pdf}
+\caption*{图
+8-2　四层真实接触网络与外底筒顶角接触；临界第二层水平压力非零。}
+\end{figure}
+
+图中外缘 \(F_1,F_2,F_3\) 向下递推。\(T_1\) 是第二层两筒间压力，\(T_2\)
+是第三层外筒与中心筒间压力，\(T_3\)
+是底层外筒与相邻内筒间压力；底层两个内筒间压力另记
+\(T_4\)。这些力对应具体接触点，不能只按每层选一个系数后忽略内部。
+
+\Needspace{3\baselineskip}
+\textbf{1. 顶层与第二层外筒}
+
+顶层的两个斜支持力相等，故
+
+\[2F_1\sin60^\circ=w,\qquad F_1=\frac w{\sqrt3}.\]
+
+第二层左筒受顶层 \(F_1\)，下方外、内两支持力记 \(F_2,G_2\)，同排压力
+\(T_1\) 向左。平衡方程为
+
+\[\frac12F_2-\frac12G_2-\frac12F_1-T_1=0,\]
+\[\frac{\sqrt3}{2}(F_2+G_2-F_1)=w.\]
+
+相加消元，得到
+
+\[F_2=\frac{2w}{\sqrt3}+T_1,\qquad G_2=\frac w{\sqrt3}-T_1.\]
+
+所以 \(T_1\) 不能无限增大：
+
+\[0\le T_1\le\frac w{\sqrt3}.\]
+
+\Needspace{3\baselineskip}
+\textbf{2. 第三层外筒及中心筒}
+
+同样对第三层左外筒列方程，其下方两力为
+
+\[F_3=\frac{3w}{\sqrt3}+T_1+T_2,\qquad
+G_3=\frac w{\sqrt3}-T_2.\]
+
+因此 \(0\le T_2\le w/\sqrt3\)。第三层中心筒收到上方两个
+\(G_2\)，它的下方两支持力由对称性相等，记为 \(H\)。竖直平衡为
+
+\[\sqrt3H=\sqrt3G_2+w,\]
+
+即
+
+\[H=\frac{2w}{\sqrt3}-T_1.\]
+
+这一步引入了原参考遗漏的内部力，随后内底筒的水平平衡会限制外缘可选参数。
+
+\Needspace{3\baselineskip}
+\textbf{3. 内底筒决定 \(T_3\) 不能任意归零}
+
+左内底筒上方受 \(G_3\) 向右下、\(H\) 向左下；左外底筒给它向右的
+\(T_3\)，右内底筒给它向左的 \(T_4\)。水平方程是
+
+\[\frac12G_3-\frac12H+T_3-T_4=0.\]
+
+所以
+
+\[2T_3=\frac w{\sqrt3}-T_1+T_2+2T_4.\]
+
+结合 \(T_4\ge0\)，得到
+
+\[T_3\ge\frac12\left(\frac w{\sqrt3}-T_1+T_2\right)\ge0.\]
+
+若按原参考取 \(T_1=T_2=T_3=0\)，上式要求
+\(T_4=-w/(2\sqrt3)<0\)，也就是两个内底筒必须相互拉住。光滑接触不能提供拉力，因此原下界虽然满足外底筒方程，却不可实现。
+
+\Needspace{3\baselineskip}
+\textbf{4. 外底筒的支撑方向与真正最小值}
+
+记地面对外底筒反力为 \(F_N\)，垫块支持力分量为
+\(N_x,N_y\)，均朝圆心。外底筒的两分量方程为
+
+\[2N_x=\sqrt3w+T_1+T_2+2T_3,\] \[2N_y=5w+\sqrt3(T_1+T_2)-2F_N.\]
+
+令支持力与竖直夹角为 \(\theta\)，由非负性及内部约束，
+
+\[\tan\theta=\frac{N_x}{N_y}
+\ge\frac{4w/\sqrt3+2T_2}{5w+\sqrt3(T_1+T_2)}.\]
+
+再用 \(T_1\le w/\sqrt3\)，
+
+\[\tan\theta\ge\frac{4w/\sqrt3+2T_2}{6w+\sqrt3T_2}.\]
+
+右端对 \(T_2\) 的导数为
+
+\[\frac{8w}{(6w+\sqrt3T_2)^2}>0.\]
+
+因此最小值为
+
+\[\boxed{\tan\theta_{\min}=\frac{2}{3\sqrt3}}.\]
+
+等号可取
+
+\[T_1=\frac w{\sqrt3},\quad T_2=T_3=T_4=0,\quad F_N=0.\]
+
+第二层水平压力非零，恰使
+\(G_2=0\)；这解除内底筒原先需要的拉力。该选择还要逐体回代，而不是仅凭比值宣布可行。
+
+\Needspace{3\baselineskip}
+\textbf{5. 把所有反力回代到十个圆筒}
+
+上述临界解给
+
+\[F_1=\frac w{\sqrt3},\quad F_2=\sqrt3w,\quad
+F_3=\frac{4w}{\sqrt3},\] \[G_2=0,\quad G_3=H=\frac w{\sqrt3}.\]
+
+两个内底筒地面反力分别为
+
+\[F_{
+\rm inner}=w+\frac{\sqrt3}{2}(G_3+H)=2w.\]
+
+两个侧垫块各有
+
+\[N_x=\frac{2w}{\sqrt3},\qquad N_y=3w,\qquad
+N=\sqrt{\frac{31}{3}}w.\]
+
+所有接触力非负，内部水平方程成立；全堆竖直支持为
+\(2\times3w+2\times2w=10w\)，等于十筒重力。零压力接触仍可几何相切，本题求静力临界，并不要求每一接触都有严格正压力。
+
+\Needspace{3\baselineskip}
+\textbf{6. 顶角接触几何}
+
+外底筒圆心距地面 \(R\)，垫块顶角距地面
+\(h\)，连接顶角与圆心的线为支持力方向，故
+
+\[R-h=R\cos\theta.\]
+
+由 \(\tan\theta=2/(3\sqrt3)\)，
+
+\[\cos\theta=\frac{3\sqrt3}{\sqrt{31}},\]
+
+于是
+
+\[\boxed{h_{
+\min}=R\left(1-\frac{3\sqrt3}{\sqrt{31}}\right)
+\simeq0.0667435R}.\]
+
+原参考的 \(R(1-5/\sqrt{28})\simeq0.0551R\)
+是遗漏内部非负条件的局部下界。讲义保留这一差异说明，结论和图稿均采用可实现的全堆结果。
+
+\Needspace{3\baselineskip}
+\textbf{7. 六筒变式为什么仍给原先的高度}
+
+三层六筒不存在本题四层中的同一内部冲突。顶层
+\(F_1=w/\sqrt3\)，外缘第二支为 \(2w/\sqrt3\)，内向支为
+\(w/\sqrt3\)。两个外底筒所需侧力为
+
+\[N_x=\frac w{\sqrt3},\qquad N_y=2w.\]
+
+中心底筒收到两支 \(w/\sqrt3\)，地面反力为 \(2w\)，水平合力为零。因此
+
+\[\tan\theta=\frac1{2\sqrt3},\qquad
+\frac{h_{
+\min}}R=1-\frac{2\sqrt3}{\sqrt{13}}\simeq0.03923.\]
+
+支持力为 \(\sqrt{13/3}w\)，总支持
+\(4w+2w=6w\)。三层正确不能证明把外缘递推式任意推广到四层或更多层也正确；层数改变后，内部节点必须重新检查。
+
+\Needspace{3\baselineskip}
+\textbf{把内底筒的每个分量与图上接触对应}
+
+临界解中，左内底筒的两个上方斜力分别为
+\(G_3=H=w/\sqrt3\)。前者向右下，后者向左下，因此
+
+\[F_{x,\rm inner}=\frac12G_3-\frac12H=0.\]
+
+二者的竖直分量均为 \(w/2\)，再加该筒自重，地面必须提供
+
+\[F_{y,\rm floor}=w+\frac{\sqrt3}{2}(G_3+H)=2w.\]
+
+第三层中心筒上方的两接触压力已为零，下面的两支 \(H\)
+却仍非零，恰好托住它的自重：
+
+\[2H\sin60^\circ=w.\]
+
+第二层左筒的 \(G_2=0\)
+不表示少列一条约束，而表示该约束恰好取零；它的水平分量由
+\(T_1=w/\sqrt3\)
+补足。把同样的三个局部检查作镜像，再检查顶筒和两外底筒，就覆盖了十筒。只核对总支持
+\(10w\) 可能掩盖一对相反的局部残差，逐体两分量为零才可接受候选高度。
+
+垫块向内水平分量为 \(N_x\)，向上分量为
+\(N_y\)，对应圆心与顶角之间的水平、竖直投影。几何还给
+
+\[\frac{|\Delta x|}R=\sin\theta=\frac2{\sqrt{31}},\qquad
+\frac{R-h}R=\frac{3\sqrt3}{\sqrt{31}}.\]
+
+两投影的平方和为1，提供了独立于受力递推的作图检查。题面图与解答图采用这一接触比例；图上顶角不能只凭外观移到更高处，否则箭头方向就不再对应最小高度。
+
+\Needspace{3\baselineskip}
+\textbf{备课补充：接触网络的线性规划形式}
+
+将每个圆心记为 \(\bm r_i\)。相切两筒 \(i,j\) 的压力大小为
+\(p_{ij}\ge0\)，作用在 \(i\) 上的方向为
+
+\[\bm e_{ij}=\frac{\bm r_i-\bm r_j}{2R}.\]
+
+每筒分别列
+
+\[\sum_jp_{ij}\bm e_{ij}+F_i\hat y+\bm N_i-w\hat y=0.\]
+
+其中只有底排有 \(F_i\ge0\)，只有两外底筒有垫块反力。固定候选
+\(t=\tan\theta\)，将左右侧反力写为
+\((tN_y,N_y)\)、\((-tN_y,N_y)\)，便得到矩阵方程
+\(A(t)\bm z=\bm b\)。变量包含所有水平接触，不能只记录沿外缘的支路。
+
+在计算中，保留全部底排地面反力，给所有变量下界0；以零目标函数检查是否有可行解。先代原候选
+\(t=\sqrt3/5\)，再代修订值
+\(2/(3\sqrt3)\)。前者无非负解，后者给两内底反力 \(2w\) 和两侧竖直分量
+\(3w\)。
+
+要作独立最小化，还可把每侧竖直分量归一为1，让共同重力 \(w\)
+成为未知的缩放变量。此时每侧水平分量是待最小化的
+\(t\)，全部约束仍线性，目标就是最小化 \(t\)。归一后得到
+\(w=1/3\)、\(t=2/(3\sqrt3)\)，再恢复物理重力即可还原前述解。
+
+该方法适合五层变式，能够避免先猜哪些压力为零。计算出的零值是活动约束的结果，不能在建模阶段为了简化而预先删去；数值解最后仍要逐体回代，报告平衡残差和最小压力，并检验总竖直支持。精确四层结论已经有正文的解析下界证明，数值可行性检验在这里是独立交叉核对。
+
+\Needspace{3\baselineskip}
+\textbf{备课补充：略高于临界的垫块如何保持平衡}
+
+设侧反力方向比为 \(t>2/(3\sqrt3)\)。先保持正文临界内部压力不变，即
+\(T_1=w/\sqrt3\)、\(T_2=T_3=T_4=0\)，外底筒所需水平支持仍为
+\(2w/\sqrt3\)。因此侧反力竖直分量改为
+
+\[N_y=\frac{2w}{\sqrt3t}<3w.\]
+
+差额由地面补上：
+
+\[F_{\rm outer}=3w-N_y>0.\]
+
+两个内底反力仍为 \(2w\)，于是总支持为
+
+\[2N_y+2F_{\rm outer}+2(2w)=10w.\]
+
+这给出临界附近每一个较高垫块的明确可行受力，而非仅依据``较高应该更稳''作判断。方向比增加时
+\(h/R=1-(1+t^2)^{-1/2}\) 单调增加，几何与可行域一致。
+
+若还希望第二层原零斜压力变为正，可令
+
+\[T_1=(1-\epsilon)\frac w{\sqrt3},\qquad
+T_3=\frac{\epsilon w}{2\sqrt3},\quad T_2=T_4=0.\]
+
+内底水平平衡仍成立，且
+
+\[G_2=\frac{\epsilon w}{\sqrt3},\quad
+H=(1+\epsilon)\frac w{\sqrt3}.\]
+
+外底水平分量仍为 \(2w/\sqrt3\)，地面反力成为
+
+\[F_{\rm outer}=3w-\frac{\epsilon w}{2}-\frac{2w}{\sqrt3t}.\]
+
+取 \(0<\epsilon<\min\{1,6-4/(\sqrt3t)\}\) 即保证它正；内底反力则为
+\((2+\epsilon/2)w\)。合计支持依然为 \(10w\)。临界角时允许的 \(\epsilon\)
+缩到零，反映该边界由非负约束共同夹住。仍为零的 \(T_2,T_4\)
+属于这组可行选择，不能据此声称所有接触都具有严格正压力。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf-7}
+
+外筒平衡给必要条件，内部圆筒平衡给可实现性。本题的最小值由多个单边约束共同决定：\(G_2=0\)、外底地面反力为零、第三层和底层水平压力为零，但第二层水平压力仍为
+\(w/\sqrt3\)。
+
+支持力大小与方向分别计算。高度只依赖方向比，不能以一个看似合理的高度代替整堆受力验算。对任何候选解，都应至少检查一个内底筒和第三层中心筒。
+
+\Needspace{3\baselineskip}
+\textbf{独立节点核验}
+
+以真实圆心坐标 \((-3,1),(-1,1),(1,1),(3,1)\) 为底排，每上升一排高度增加
+\(\sqrt3\)、水平位置向内移1。距离为2的圆心之间建立压力变量。每个圆筒写水平、竖直两式，共20式，所有压力及地面反力非负。
+
+固定侧反力方向后，这是线性可行性问题。直接节点模型确认
+\(\tan\theta=\sqrt3/5\) 无非负解，而 \(2/(3\sqrt3)\)
+有上述临界解。该核验不先使用外缘递推，也就能发现局部下界的漏洞。
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9-7}
+
+\begin{itemize}
+\tightlist
+\item
+  把每排所有水平压力都设为零，会使内部某些筒缺少水平支持。
+\item
+  只检查两侧外筒，而不检查内部接触是否要求拉力。
+\item
+  将相同大小的斜压力赋给所有斜接触；临界解中有些斜压力为零。
+\item
+  把 \(N_x,N_y\) 直接当支持力大小，漏掉向量合成。
+\item
+  取零地面反力等同于圆筒已经离地；在静力临界中它仍可相切。
+\end{itemize}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae-7}
+
+先按原参考路线得到局部下界，让学生对左内底筒写一条水平平衡。出现负的
+\(T_4\) 后，再恢复第二层水平压力
+\(T_1\)，寻找能解除这个负值的临界选择。这样能看到错误发生在约束遗漏，而不是某个三角函数算错。
+
+板书按``顶层、第二层外筒、第三层中心、内底筒、外底筒''的顺序列式，最后才求高度。图上用不同字母区分外缘力、内部斜力、同排压力和地面反力。
+
+得到终值后，再合计全堆竖直反力。总重力检验是最后一道核查，但它不能替代局部水平平衡：原错误解也可能通过总竖直力检查。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3-7}
+
+\textbf{三层不同质量。} 顶层质量 \(m_1\)、中层每筒 \(m_2\)、底层每筒
+\(m_3\)，半径仍相同。临界侧力为
+
+\[N_x=\frac{(m_1+m_2)g}{2\sqrt3},\qquad
+N_y=\left[m_3+\frac{m_1+m_2}{2}\right]g,\]
+
+所以 \(\tan\theta=(m_1+m_2)/[\sqrt3(2m_3+m_1+m_2)]\)。中心底筒反力
+\((m_3+m_2)g\)；合计支持为
+\((m_1+2m_2+3m_3)g\)。同排非负条件仍逐个检验。
+
+\textbf{加入底面摩擦。} 每个底筒另设水平摩擦 \(f_i\) 与地面压力
+\(F_i\)，满足 \(|f_i|\le\mu F_i\)。不能在原临界外底筒 \(F_i=0\)
+上直接加任意摩擦；应重新求解所有力。摩擦不一定只改变外底筒，还会改变底排内部的水平传力。
+
+\textbf{增为五层。}
+请按圆心距离建立全部接触，不沿用四层系数。先从某候选外缘递推得到下界，再用内部方程查可行性。得到数值后列出非零压力与总支持，才可判断该高度能否实现。
+
+\textbf{取消一侧垫块。}
+光滑地面没有水平支持，单侧垫块的水平分量无法由另一外力平衡，故不能保持原对称静止堆形。若同时加入地面摩擦，则属于另一组约束问题。
+\end{document}

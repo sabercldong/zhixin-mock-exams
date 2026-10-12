@@ -1,0 +1,234 @@
+\documentclass[12pt,a4paper,UTF8]{ctexart}
+\usepackage[a4paper,top=22mm,bottom=22mm,left=22mm,right=22mm,headheight=15pt]{geometry}
+\newcommand{\Needspace}[1]{\par\begingroup\skip0=\lastskip\vskip-\skip0\dimen0=#1\relax\advance\dimen0 by\skip0\vskip\dimen0\penalty-100\vskip-\dimen0\vskip\skip0\penalty9999\endgroup}
+\usepackage{amsmath,amssymb,mathtools,bm}
+\usepackage{graphicx,xcolor,booktabs,longtable,array,enumitem,fancyhdr,caption,float,microtype,setspace}
+\usepackage[hidelinks,unicode]{hyperref}
+\usepackage[most]{tcolorbox}
+\definecolor{ContestBlue}{HTML}{17365D}
+\hypersetup{pdftitle={第082套},pdfauthor={}}
+\setstretch{1.24}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.35em}
+\setlength{\emergencystretch}{2em}
+\setlist{itemsep=0.35em,topsep=0.4em}
+\captionsetup{font=small,labelfont=bf,justification=centering}
+\setcounter{secnumdepth}{0}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small 第082套}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\ctexset{
+  section={format=\Large\bfseries\color{ContestBlue},beforeskip=1.2em,afterskip=0.7em},
+  subsection={format=\large\bfseries\color{ContestBlue},beforeskip=1.0em,afterskip=0.5em},
+  subsubsection={format=\normalsize\bfseries,beforeskip=0.8em,afterskip=0.35em}
+}
+\usepackage{calc}
+\newcounter{none}
+\let\originalsubsection\subsection
+\renewcommand{\subsection}{\Needspace{6\baselineskip}\originalsubsection}
+\makeatletter
+\newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\newcommand{\maxwidth}{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\newcommand{\maxheight}{\ifdim\Gin@nat@height>0.72\textheight 0.72\textheight\else\Gin@nat@height\fi}
+\newcommand{\pandocbounded}[1]{\begingroup\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}#1\endgroup}
+\makeatother
+\begin{document}
+\begin{titlepage}
+  \centering
+  \vspace*{58mm}
+  {\Huge\bfseries\color{ContestBlue} 第082套\par}
+  \vfill
+  \vspace*{28mm}
+\end{titlepage}
+\section{第 1 题}\label{ux7b2c-1-ux9898}
+
+某教师要从北极点发射一枚飞行器，目标位于北纬
+\(32^\circ\)。忽略空气阻力和地球自转。已知万有引力常量
+\(G=6.67\times10^{-11}\,\mathrm{N\,m^2/kg^2}\)，地球半径
+\(R=6370\,\mathrm{km}\)，地表重力加速度 \(g=9.8\,\mathrm{m/s^2}\)。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  求飞行器从北极点出发并到达目标所需的最小发射速度 \(v_{0\min}\)；
+\item
+  在南、北极点同时沿切向发射两枚速度大小、方向均相同的高能火箭。经过
+  \(t=4\,\mathrm h\) 两火箭相距最远，求最远距离 \(L\)。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图 1-1　北极至北纬 32\^{}\textbackslash circ 的转移弹道，以及南、北极同步发射的对称弹道。}]{../figures/question-01.pdf}
+\caption*{图 1-1　北极至北纬 \(32^\circ\)
+的转移弹道，以及南、北极同步发射的对称弹道。}
+\end{figure}
+
+\newpage
+
+\section{第 2 题}\label{ux7b2c-2-ux9898}
+
+如图，\(ACDE\) 是由均匀细导线制成的等腰梯形线框，以底边 \(AE\)
+为转轴转动；其余三边长度相等。线框处在磁感应强度为 \(B\)
+的匀强磁场中，以恒定角速度 \(\omega\) 转动，俯视为逆时针，且
+\(\bm B\perp AE\)。已知 \(AE=d\)，边 \(AE\) 的电阻为
+\(R\)；取线框平面与磁场平行的时刻为 \(t=0\)。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  求任意时刻 \(t\) 线框中的电流；
+\item
+  规定 \(U_A=0\)。在 \(t=0\) 时，点 \(P\) 位于 \(CD\) 上，且
+  \(CP=x\)。求 \(U_P\)，并画出 \(U_P\) 随 \(x\) 的关系图。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.508\linewidth,height=\textheight,keepaspectratio,alt={图 2-1　等腰梯形导线框绕底边 AE 在匀强磁场中转动。}]{../figures/question-02.pdf}
+\caption*{图 2-1　等腰梯形导线框绕底边 \(AE\) 在匀强磁场中转动。}
+\end{figure}
+
+\newpage
+
+\section{第 3 题}\label{ux7b2c-3-ux9898}
+
+质量为 \(m=1\,\mathrm{kg}\) 的物体从水平面上的 \(A\)
+点由静止开始运动，\(B\) 点位于 \(A\) 点右侧
+\(L=4\,\mathrm m\)。用水平向右的恒力 \(F=6\,\mathrm N\) 拉物体，经过
+\(t=2\,\mathrm s\) 到达 \(B\)。取 \(g=10\,\mathrm{m/s^2}\)。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  求物体与地面间的动摩擦因数 \(\mu\)；
+\item
+  保持拉力大小 \(F=6\,\mathrm N\) 不变，改变拉力与水平方向的夹角
+  \(\theta\)，求使向右加速度最大的 \(\theta\) 和最大加速度；
+\item
+  物体重新从 \(A\) 点静止出发，拉力方向保持
+  \(\theta'=30^\circ\)，大小随位移线性减小：\(F(x)=F_0-kx\)，其中
+  \(F_0=10\,\mathrm N\)，\(k=3\,\mathrm{N/m}\)；力减至零后停止牵引。判断物体能否到达
+  \(B\) 点。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图 3-1　粗糙水平面上的斜向变力牵引模型。}]{../figures/question-03.pdf}
+\caption*{图 3-1　粗糙水平面上的斜向变力牵引模型。}
+\end{figure}
+
+\newpage
+
+\section{第 4 题}\label{ux7b2c-4-ux9898}
+
+一定量理想气体经历图示循环，摩尔定容热容为 \(C_V=\frac52R\)。状态 \(1\)
+的压强、体积分别为 \(P_1,V_1\)；状态 \(2\) 的压强为 \(2P_1\)；状态 \(4\)
+的体积为 \(2V_1\)；状态 \(3\) 的体积为 \(3V_1\)。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  求过程 \(1\to2\) 的吸热 \(Q_{12}\)；
+\item
+  求过程 \(2\to3\) 的做功 \(W_{23}\) 和吸热 \(Q_{23}\)；
+\item
+  求过程 \(3\to4\) 的放热量；
+\item
+  求循环效率 \(\eta\)。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.534\linewidth,height=\textheight,keepaspectratio,alt={图 4-1　由等容、等压和直线过程组成的理想气体循环。}]{../figures/question-04.pdf}
+\caption*{图 4-1　由等容、等压和直线过程组成的理想气体循环。}
+\end{figure}
+
+\newpage
+
+\section{第 5 题}\label{ux7b2c-5-ux9898}
+
+从 \(O\) 点引出两根细长杆，两杆与竖直线的夹角均为
+\(30^\circ\)。三根长度均为 \(l\) 的轻绳连接于结点 \(C\)，其中
+\(A\)、\(B\) 端分别连接套在两杆上的轻质小环，\(D\) 端连接质点 \(m\)。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  两环光滑且系统静止平衡时，求 \(OD\)；
+\item
+  两环与杆间的摩擦因数均为 \(\mu=0.2\)，系统保持左右对称，求静止平衡时
+  \(OD\) 的范围；
+\item
+  保持第（1）问的小环位置，摩擦因数仍为 \(0.2\)。给 \(D\)
+  一个初速度，使其在纸面内左右摆动。求保证 \(A\)、\(B\)
+  不滑动所允许的最大摆角 \(\theta\)。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.486\linewidth,height=\textheight,keepaspectratio,alt={图 5-1　对称细杆、两个滑环、三根等长绳及悬挂质点。}]{../figures/question-05.pdf}
+\caption*{图 5-1　对称细杆、两个滑环、三根等长绳及悬挂质点。}
+\end{figure}
+
+\newpage
+
+\section{第 6 题}\label{ux7b2c-6-ux9898}
+
+一根轻绳吊着粗细均匀的长棒，棒下端距地面高度为 \(H\)。一位质量为 \(m\)
+的人通过轻环套在棒上，距棒下端 \(h=3H/4\)；棒的质量也为
+\(m\)。人与棒之间的最大静摩擦力和滑动摩擦力均为
+\(4mg\)。剪断轻绳后，棒和人自由下落。棒足够长，与地面碰撞时接触时间极短且无动能损失，运动中始终竖直，忽略空气阻力。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  求从剪断轻绳到棒与地面第二次碰撞期间，棒运动的路程 \(s\)；
+\item
+  求从剪断轻绳到棒和人最终都静止，摩擦力对人与棒所做的总功 \(W\)；
+\item
+  证明全过程中人不会与地面接触。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.695\linewidth,height=\textheight,keepaspectratio,alt={图 6-1　人与竖直长棒共同下落，长棒触地后发生瞬时弹性反弹。}]{../figures/question-06.pdf}
+\caption*{图 6-1　人与竖直长棒共同下落，长棒触地后发生瞬时弹性反弹。}
+\end{figure}
+
+\newpage
+
+\section{第 7 题}\label{ux7b2c-7-ux9898}
+
+一个均匀带电薄球壳的总电量为 \(Q\)、半径为
+\(R\)，球心在坐标原点。球壳在正 \(z\) 轴与球面的交点附近开有一个半径为
+\(r\) 的小圆孔，且 \(r\ll R\)。求圆孔外侧 \(z=R+\delta\) 与内侧
+\(z=R-\delta\) 两点的电场强度，其中 \(\delta\ll r\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图 7-1　小圆孔位于均匀带电薄球壳北极附近，场点紧邻圆孔两侧。}]{../figures/question-07.pdf}
+\caption*{图 7-1　小圆孔位于均匀带电薄球壳北极附近，场点紧邻圆孔两侧。}
+\end{figure}
+
+\newpage
+
+\section{第 8 题}\label{ux7b2c-8-ux9898}
+
+十个半径均为 \(R\) 的相同光滑圆筒按 \(4\)、\(3\)、\(2\)、\(1\)
+层三角形堆叠。最下层左右两侧各放置一个高度为
+\(h\)、固定在地面上的垫块，以维持图示堆叠。求垫块的最小高度。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.54\linewidth,height=\textheight,keepaspectratio,alt={图 8-1　十个相同光滑圆筒组成的四层三角形堆体及两侧垫块。}]{../figures/question-08.pdf}
+\caption*{图 8-1　十个相同光滑圆筒组成的四层三角形堆体及两侧垫块。}
+\end{figure}
+\end{document}

@@ -1,0 +1,317 @@
+\documentclass[12pt,a4paper,UTF8]{ctexart}
+\usepackage[a4paper,top=22mm,bottom=22mm,left=22mm,right=22mm,headheight=15pt]{geometry}
+\usepackage{amsmath,amssymb,mathtools,bm}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{booktabs,longtable,array}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{microtype}
+\usepackage{setspace}
+\usepackage[hidelinks,unicode]{hyperref}
+\usepackage[most]{tcolorbox}
+
+\definecolor{ContestBlue}{HTML}{17365D}
+\definecolor{SoftBlue}{HTML}{EEF4FA}
+\definecolor{SoftGray}{HTML}{F5F6F7}
+\hypersetup{pdftitle={第089套},pdfauthor={}}
+
+\setstretch{1.24}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.35em}
+\setlist{itemsep=0.35em,topsep=0.4em}
+\captionsetup{font=small,labelfont=bf,justification=centering}
+\setcounter{secnumdepth}{0}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small 第089套}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\ctexset{
+  section={format=\Large\bfseries\color{ContestBlue},beforeskip=1.2em,afterskip=0.7em},
+  subsection={format=\large\bfseries\color{ContestBlue},beforeskip=1.0em,afterskip=0.5em},
+  subsubsection={format=\normalsize\bfseries,beforeskip=0.8em,afterskip=0.35em}
+}
+
+\makeatletter
+\newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\newcommand{\maxwidth}{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\newcommand{\maxheight}{\ifdim\Gin@nat@height>0.72\textheight 0.72\textheight\else\Gin@nat@height\fi}
+\newcommand{\pandocbounded}[1]{\begingroup\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}#1\endgroup}
+\makeatother
+
+\begin{document}
+
+\begin{titlepage}
+  \centering
+  \vspace*{58mm}
+  {\Huge\bfseries\color{ContestBlue} 第089套\par}
+  \vfill
+  \vspace*{28mm}
+\end{titlepage}
+
+
+\section{第 1 题}\label{ux7b2c-1-ux9898}
+
+倾角为 \(30^\circ\) 的斜面上放有一个质量为 \(m\)、半径为 \(r\)
+的匀质薄壁圆筒。圆筒与斜面之间的静摩擦因数为
+
+\[
+\mu=\frac{\sqrt3}{3}.
+\]
+
+一根长为 \(r\) 的轻杆，一端铰接在圆筒内的 \(A\) 点，且
+
+\[
+OA=\frac{\sqrt3}{3}r;
+\]
+
+另一端通过橡胶垫支承在斜面的 \(B\) 点。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  若橡胶垫与斜面之间的摩擦足够大，求 \(OA\) 与竖直方向夹角 \(\varphi\)
+  的可取范围；
+\item
+  若要使上述范围内的所有 \(\varphi\)
+  都能实现静止，求橡胶垫与斜面之间的静摩擦因数 \(\mu'\) 的最小值。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.497\linewidth,height=\textheight,keepaspectratio,alt={图 1-1　斜面上的圆筒、铰点与轻杆。}]{../figures/question-01.pdf}
+\caption*{图 1-1　斜面上的圆筒、铰点与轻杆。}
+\end{figure}
+
+\newpage
+
+\section{第 2 题}\label{ux7b2c-2-ux9898}
+
+\(O\)、\(A\)
+为两个固定点。\(AB\)、\(BE\)、\(BD\)、\(EC\)、\(DC\)、\(DO\)、\(EO\) 是
+7 根轻质刚杆，所有连接点均为理想铰链。各杆长满足
+
+\[
+AB=OA=L,\qquad
+BD=BE=DC=EC=a,\qquad
+OD=OE=b.
+\]
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  如图在 \(C\) 点悬挂质量为 \(m\) 的重物。求使杆系保持平衡时 \(C\)
+  点可能所在的位置；
+\item
+  在第（1）问基础上，再在 \(B\) 点悬挂一个质量为 \(m\)
+  的重物。求系统在平衡位置附近做微小振动的周期。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.876\linewidth,height=\textheight,keepaspectratio,alt={图 2-1　空间铰接杆系的透视结构。}]{../figures/question-02.pdf}
+\caption*{图 2-1　空间铰接杆系的透视结构。}
+\end{figure}
+
+\newpage
+
+\section{第 3 题}\label{ux7b2c-3-ux9898}
+
+两个无限长、同轴、薄壁圆柱壳的半径分别为 \(a,c\)，内壳带电量
+\(+Q\)、质量为 \(m\)，外壳带电量 \(-Q\)、质量为
+\(M\)。两壳之间有一个固定的无限长螺线管，半径为 \(b\)，满足
+\(a<b<c\)，单位长度包含 \(n\) 匝。取长度为 \(l\) 的一段，且 \(l\)
+远大于各半径。忽略边缘效应与高阶感应效应。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  螺线管中的电流由 \(I_0\) 缓慢减小到
+  \(0\)，求内、外圆柱壳最终获得的角动量；
+\item
+  电磁场动量密度为
+  \(\bm g=\varepsilon_0\bm E\times\bm B\)。求上述过程中电磁场角动量的变化。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图 3-1　同轴圆柱壳、螺线管及电流方向。}]{../figures/question-03.pdf}
+\caption*{图 3-1　同轴圆柱壳、螺线管及电流方向。}
+\end{figure}
+
+\newpage
+
+\section{第 4 题}\label{ux7b2c-4-ux9898}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  一个三维立方体有 8
+  个顶点，用三位二进制位串命名，两个相邻顶点之间均连接电阻 \(r\)。求顶点
+  \((000)\) 与 \((101)\) 之间的等效电阻。
+\item
+  一个四维超立方体有 16
+  个顶点，用四位二进制位串命名，相邻顶点之间也均连接电阻 \(r\)。
+
+  \begin{enumerate}
+  \def\labelenumii{\arabic{enumii}.}
+  \tightlist
+  \item
+    求 \((0000)\) 与 \((1111)\) 之间的等效电阻；
+  \item
+    求 \((0000)\) 与 \((1101)\) 之间的等效电阻。
+  \end{enumerate}
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图 4-1　三维立方体电阻网络与四维超立方体的三维投影。}]{../figures/question-04.pdf}
+\caption*{图 4-1　三维立方体电阻网络与四维超立方体的三维投影。}
+\end{figure}
+
+\newpage
+
+\section{第 5 题}\label{ux7b2c-5-ux9898}
+
+骑手与电动独轮车在马戏团的圆筒形内壁上做水平圆周运动。圆筒半径为
+\(R\)，骑手与独轮车的总高度为 \(h\)，重力加速度为
+\(g\)。平衡骑行时，骑手身体与水平方向的夹角为 \(\theta\)。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  将骑手与独轮车视为质点。已知圆周运动角速度为
+  \(\omega_0\)，求轮胎与圆筒内壁之间的摩擦因数 \(\mu\) 至少为多少；
+\item
+  若 \(h\ll R\)，先用集中质量的近似力矩模型，求平衡角速度 \(\omega_1\)；
+\item
+  将骑手与独轮车视为一根长度为 \(h\)、质量为 \(m\)
+  的匀质细杆，求平衡角速度 \(\omega_2\)。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.746\linewidth,height=\textheight,keepaspectratio,alt={图 5-1　圆筒内壁、骑手与水平圆周运动的空间关系。}]{../figures/question-05.pdf}
+\caption*{图 5-1　圆筒内壁、骑手与水平圆周运动的空间关系。}
+\end{figure}
+
+\newpage
+
+\section{第 6 题}\label{ux7b2c-6-ux9898}
+
+某人在练习理想薄透镜成像作图时，透镜和光心位置已经模糊，只知道一组物点分布在一条顶点为原点、开口沿
+\(+y\) 方向的抛物线上。这些物点的像点分布在另一条开口沿 \(-y\)
+方向的抛物线上，并通过
+
+\[
+A(x_1,y_1),\qquad B(x_2,y_2).
+\]
+
+透镜光轴沿 \(y\) 轴。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  求像点抛物线顶点的纵坐标 \(h\)；
+\item
+  求透镜光心的纵坐标 \(p\)；
+\item
+  求透镜焦距 \(f\)。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.813\linewidth,height=\textheight,keepaspectratio,alt={图 6-1　物点抛物线、像点抛物线与薄透镜的坐标关系。}]{../figures/question-06.pdf}
+\caption*{图 6-1　物点抛物线、像点抛物线与薄透镜的坐标关系。}
+\end{figure}
+
+\newpage
+
+\section{第 7 题}\label{ux7b2c-7-ux9898}
+
+两惯性系 \(S\) 与 \(S'\) 的坐标轴彼此平行，\(S'\) 相对 \(S\) 沿 \(x\)
+轴正方向以速度 \(u\) 匀速运动。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  设某质点在 \(S\) 系中的速度分量为 \((v_x,v_y,v_z)\)，写出它在 \(S'\)
+  系中的速度分量；
+\item
+  平面界面上方为折射率 \(n_1\)、相对 \(S\) 静止的透明介质，下方为折射率
+  \(n_2\)、相对 \(S\) 沿 \(x\) 轴正方向以速度 \(u\)
+  运动的透明介质。一束平面光波在 \(S\) 系中由上方入射，入射角为
+  \(\theta\)。利用惠更斯原理求光波在下方介质静止系 \(S'\) 中的入射角
+  \(i'\)；
+\item
+  求折射光线在 \(S\) 系中的折射角 \(i\)；
+\item
+  求发生全反射时的临界入射角 \(\theta_c\)；
+\item
+  设大气各相邻薄层的折射率均近似为 \(n_0\)，相邻高度相差 \(dh\)
+  的两层之间具有水平相对速度
+  \(u=\alpha\,dh\)。若一条接近水平传播的光线不断处于临界折射状态，求其轨迹曲率半径
+  \(R\)。
+\end{enumerate}
+
+所有角均从界面法线方向量起，并取光线沿 \(x\) 轴正方向传播的情形。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图 7-1　运动介质界面、入射波面与参考系关系。}]{../figures/question-07.pdf}
+\caption*{图 7-1　运动介质界面、入射波面与参考系关系。}
+\end{figure}
+
+\newpage
+
+\section{第 8 题}\label{ux7b2c-8-ux9898}
+
+某湖初始水深为 \(H_0=5.0\ \mathrm{m}\)，湖面已有厚度
+\(d_0=1.0\times10^{-2}\ \mathrm{m}\) 的冰层。空气温度保持为
+\(-10\ ^\circ\mathrm C\)，湖底水温保持为
+\(4\ ^\circ\mathrm C\)。忽略侧向传热，已知
+
+\[
+\begin{aligned}
+&\lambda_w=0.57\ \mathrm{W/(m\cdot K)},\qquad
+\lambda_i=2.2\ \mathrm{W/(m\cdot K)},\\
+&\rho_w=0.999\times10^3\ \mathrm{kg/m^3},\qquad
+\rho_i=0.92\times10^3\ \mathrm{kg/m^3},\\
+&L=3.3\times10^5\ \mathrm{J/kg}.
+\end{aligned}
+\]
+
+其中 \(\lambda_w,\lambda_i\) 分别为水和冰的热导率，\(L\)
+为冰的熔化潜热。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  判断冰层刚开始增长时，冰中向上的导热与水中由湖底向上的导热何者占主导；
+\item
+  求初始时刻冰层厚度的增长速率；
+\item
+  若最终达到稳态，求冰层厚度 \(h_i\) 和冰下水层深度 \(h_w\)；
+\item
+  说明湖水不易从湖底开始冻结的主要原因。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.672\linewidth,height=\textheight,keepaspectratio,alt={图 8-1　冰层---水层---湖底构成的三维传热柱体。}]{../figures/question-08.pdf}
+\caption*{图 8-1　冰层---水层---湖底构成的三维传热柱体。}
+\end{figure}
+
+\end{document}

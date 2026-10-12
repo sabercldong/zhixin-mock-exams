@@ -1,0 +1,214 @@
+\documentclass[12pt,a4paper,UTF8]{ctexart}
+\usepackage[a4paper,top=22mm,bottom=22mm,left=22mm,right=22mm,headheight=15pt]{geometry}
+\newcommand{\Needspace}[1]{\par\begingroup\dimen0=#1\relax\dimen2=\pagegoal\advance\dimen2 by-\pagetotal\ifdim\dimen0>\dimen2\newpage\fi\endgroup}
+\newcommand{\needspace}[1]{\par\begingroup\skip0=\lastskip\vskip-\skip0\dimen0=#1\relax\advance\dimen0 by\skip0\vskip\dimen0\penalty-100\vskip-\dimen0\vskip\skip0\penalty9999\endgroup}
+\usepackage{amsmath,amssymb,mathtools,bm}
+\usepackage{graphicx,xcolor,booktabs,longtable,array,enumitem,fancyhdr,caption,float,microtype,setspace}
+\usepackage[hidelinks,unicode]{hyperref}
+\usepackage[most]{tcolorbox}
+\definecolor{ContestBlue}{HTML}{17365D}
+\hypersetup{pdftitle={第072套},pdfauthor={}}
+\setstretch{1.24}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.35em}
+\setlength{\emergencystretch}{2em}
+\setlist{itemsep=0.35em,topsep=0.4em}
+\captionsetup{font=small,labelfont=bf,justification=centering}
+\setcounter{secnumdepth}{0}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small 第072套}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\ctexset{
+  section={format=\Large\bfseries\color{ContestBlue},beforeskip=1.2em,afterskip=0.7em},
+  subsection={format=\large\bfseries\color{ContestBlue},beforeskip=1.0em,afterskip=0.5em},
+  subsubsection={format=\normalsize\bfseries,beforeskip=0.8em,afterskip=0.35em}
+}
+\usepackage{calc}
+\newcounter{none}
+\let\originalsubsection\subsection
+\renewcommand{\subsection}{\needspace{6\baselineskip}\originalsubsection}
+\makeatletter
+\newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\newcommand{\maxwidth}{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\newcommand{\maxheight}{\ifdim\Gin@nat@height>0.72\textheight 0.72\textheight\else\Gin@nat@height\fi}
+\newcommand{\pandocbounded}[1]{\begingroup\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}#1\endgroup}
+\makeatother
+\begin{document}
+\begin{titlepage}
+  \centering
+  \vspace*{58mm}
+  {\Huge\bfseries\color{ContestBlue} 第072套\par}
+  \vfill
+  \vspace*{28mm}
+\end{titlepage}
+\section{第 1 题}\label{ux7b2c-1-ux9898}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  光滑长斜面倾角 \(30^\circ\)，同一直线上放置 \(10\)
+  个完全相同的滑块。解除约束时分别给予任意大小、可沿斜面向上或向下的初速度。所有碰撞完全弹性，求滑块之间最多碰撞次数。
+\item
+  光滑水平面左端有墙，质量 \(M=10^5\,\mathrm{kg}\) 的大滑块在右，质量
+  \(m=10^{-5}\,\mathrm{kg}\)
+  的小滑块在墙与大滑块之间。小滑块初静止，大滑块以
+  \(v_0=3\,\mathrm{m\,s^{-1}}\) 向左。所有碰撞完全弹性，求总碰撞次数。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.84\linewidth,height=\textheight,keepaspectratio,alt={图1-1　同质量斜面滑块与墙边双质量碰撞系统}]{../figures/question-01.pdf}
+\caption*{图1-1　同质量斜面滑块与墙边双质量碰撞系统}
+\end{figure}
+
+\newpage
+
+\section{第 2 题}\label{ux7b2c-2-ux9898}
+
+两个相同的大长方形绝缘平板平行，相距 \(d\)。上板面电荷密度为
+\(+\sigma\)，下板为 \(-\sigma\)。点 \(P\) 位于上板一侧长边中点的正上方
+\(h\) 处，且
+
+\[
+d\ll h\ll \text{平板边长}.
+\]
+
+估算 \(P\) 点电场大小和方向。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\linewidth,height=\textheight,keepaspectratio,alt={图2-1　相反带电平行板边缘上方的观察点}]{../figures/question-02.pdf}
+\caption*{图2-1　相反带电平行板边缘上方的观察点}
+\end{figure}
+
+\newpage
+
+\section{第 3 题}\label{ux7b2c-3-ux9898}
+
+两根高 \(50\,\mathrm m\) 的电线杆之间悬挂一根均匀柔软电线，线长
+\(80\,\mathrm m\)，两端等高，最低点离地 \(20\,\mathrm m\)。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  求两杆间距。
+\item
+  求电线最低点的曲率半径。
+\end{enumerate}
+
+并整理 \(\sinh x,\cosh x\) 的恒等式、反函数及导数。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.533\linewidth,height=\textheight,keepaspectratio,alt={图3-1　等高悬点之间的均匀悬链线}]{../figures/question-03.pdf}
+\caption*{图3-1　等高悬点之间的均匀悬链线}
+\end{figure}
+
+\newpage
+
+\section{第 4 题}\label{ux7b2c-4-ux9898}
+
+过椭圆内部固定点 \(P\) 作一条动直线，与椭圆交于 \(A,B\)。在 \(A,B\)
+处分别作椭圆切线，交于 \(Q\)。证明 \(Q\) 的轨迹在一条固定直线上。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.72\linewidth,height=\textheight,keepaspectratio,alt={图4-1　过椭圆内定点的动弦及两端切线交点}]{../figures/question-04.pdf}
+\caption*{图4-1　过椭圆内定点的动弦及两端切线交点}
+\end{figure}
+
+\newpage
+
+\section{第 5 题}\label{ux7b2c-5-ux9898}
+
+三根导线分别沿正方体棱组成图示闭合回路，长度依次为 \(4a,6a,6a\)。已知图
+a 回路自感为 \(L_1\)，图 b 回路自感为 \(L_2\)，求图 c 回路自感。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.88\linewidth,height=\textheight,keepaspectratio,alt={图5-1　正方体棱上的四棱、六棱与三面组合回路}]{../figures/question-05.pdf}
+\caption*{图5-1　正方体棱上的四棱、六棱与三面组合回路}
+\end{figure}
+
+\newpage
+
+\section{第 6 题}\label{ux7b2c-6-ux9898}
+
+\(1\,\mathrm{mol}\) 铜块质量由摩尔质量 \(63.5\,\mathrm{g\,mol^{-1}}\)
+给出，外包绝热膜。铜初温 \(27^\circ\mathrm C\)，摩尔热容
+\(24.44\,\mathrm{J\,mol^{-1}K^{-1}}\)。质量 \(m=30\,\mathrm g\)
+的铅弹初温 \(30^\circ\mathrm C\)，固态比热
+\(128\,\mathrm{J\,kg^{-1}K^{-1}}\)，液态比热
+\(153\,\mathrm{J\,kg^{-1}K^{-1}}\)，熔点
+\(327.46^\circ\mathrm C\)，熔化热
+\(2.045\times10^4\,\mathrm{J\,kg^{-1}}\)。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  铜块固定，铅弹以 \(850\,\mathrm{m\,s^{-1}}\) 射入并停止，求终温。
+\item
+  铜块在光滑水平面上，求终态热力学熵变。
+\item
+  铜块固定，速度改为 \(750\,\mathrm{m\,s^{-1}}\)，铅弹带电
+  \(q=4.0\times10^{-5}\,\mathrm C\)。铅密度
+  \(11.34\,\mathrm{g\,cm^{-3}}\)，终态电容
+  \(C_f=1.5\,\mathrm{pF}\)。求熵变。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.86\linewidth,height=\textheight,keepaspectratio,alt={图6-1　铅弹嵌入绝热铜块的三种能量边界条件}]{../figures/question-06.pdf}
+\caption*{图6-1　铅弹嵌入绝热铜块的三种能量边界条件}
+\end{figure}
+
+\newpage
+
+\section{第 7 题}\label{ux7b2c-7-ux9898}
+
+折射率为 \(n\)、折射棱角 \(\theta\ll1\) 的菲涅尔双棱镜，距轴上单色狭缝
+\(S\) 为 \(a\)，距观察屏为 \(b\)，波长 \(\lambda\)。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  求相邻亮纹间距。
+\item
+  狭缝垂直主轴上移 \(h\)，求零级条纹移动方向和距离。
+\item
+  再贴合一个镜面对称的相同双棱镜，形成双面双棱镜，重做前两问。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.86\linewidth,height=\textheight,keepaspectratio,alt={图7-1　单面与双面菲涅尔双棱镜的虚光源}]{../figures/question-07.pdf}
+\caption*{图7-1　单面与双面菲涅尔双棱镜的虚光源}
+\end{figure}
+
+\newpage
+
+\section{第 8 题}\label{ux7b2c-8-ux9898}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  估算一个氩气分子线度的上限。
+\item
+  边长为 \(d\)
+  的极小立方盒中只有一个中子。用两种方法估算盒壁压强的下限，已知普朗克常量
+  \(h\) 和中子质量 \(m\)。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\linewidth,height=\textheight,keepaspectratio,alt={图8-1　单分子体积上限与立方盒中受限中子}]{../figures/question-08.pdf}
+\caption*{图8-1　单分子体积上限与立方盒中受限中子}
+\end{figure}
+\end{document}

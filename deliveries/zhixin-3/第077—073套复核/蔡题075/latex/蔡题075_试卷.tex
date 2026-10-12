@@ -1,0 +1,241 @@
+\documentclass[12pt,a4paper,UTF8]{ctexart}
+\usepackage[a4paper,top=22mm,bottom=22mm,left=22mm,right=22mm,headheight=15pt]{geometry}
+\newcommand{\Needspace}[1]{\par\begingroup\dimen0=#1\relax\dimen2=\pagegoal\advance\dimen2 by-\pagetotal\ifdim\dimen0>\dimen2\newpage\fi\endgroup}
+\newcommand{\needspace}[1]{\par\begingroup\skip0=\lastskip\vskip-\skip0\dimen0=#1\relax\advance\dimen0 by\skip0\vskip\dimen0\penalty-100\vskip-\dimen0\vskip\skip0\penalty9999\endgroup}
+\usepackage{amsmath,amssymb,mathtools,bm}
+\usepackage{graphicx,xcolor,booktabs,longtable,array,enumitem,fancyhdr,caption,float,microtype,setspace}
+\usepackage[hidelinks,unicode]{hyperref}
+\usepackage[most]{tcolorbox}
+\definecolor{ContestBlue}{HTML}{17365D}
+\hypersetup{pdftitle={第075套},pdfauthor={}}
+\setstretch{1.24}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.35em}
+\setlength{\emergencystretch}{2em}
+\setlist{itemsep=0.35em,topsep=0.4em}
+\captionsetup{font=small,labelfont=bf,justification=centering}
+\setcounter{secnumdepth}{0}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small 第075套}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\ctexset{
+  section={format=\Large\bfseries\color{ContestBlue},beforeskip=1.2em,afterskip=0.7em},
+  subsection={format=\large\bfseries\color{ContestBlue},beforeskip=1.0em,afterskip=0.5em},
+  subsubsection={format=\normalsize\bfseries,beforeskip=0.8em,afterskip=0.35em}
+}
+\usepackage{calc}
+\newcounter{none}
+\let\originalsubsection\subsection
+\renewcommand{\subsection}{\needspace{6\baselineskip}\originalsubsection}
+\makeatletter
+\newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\newcommand{\maxwidth}{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\newcommand{\maxheight}{\ifdim\Gin@nat@height>0.72\textheight 0.72\textheight\else\Gin@nat@height\fi}
+\newcommand{\pandocbounded}[1]{\begingroup\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}#1\endgroup}
+\makeatother
+\begin{document}
+\begin{titlepage}
+  \centering
+  \vspace*{58mm}
+  {\Huge\bfseries\color{ContestBlue} 第075套\par}
+  \vfill
+  \vspace*{28mm}
+\end{titlepage}
+\section{第 1 题}\label{ux7b2c-1-ux9898}
+
+质量为 \(m\)、半径为 \(R\)
+的均匀细圆环竖直放在粗糙水平面上，圆环与地面间的摩擦因数为
+\(\mu\)。圆环的一条直径 \(CA\) 与竖直方向的夹角为 \(\theta\)，其中
+\(0<\theta<\pi/2\)。在圆环上 \(A\) 点施加一瞬时冲量
+\(I\)，冲量方向与竖直方向的夹角为 \(\varphi\)，其中
+\(0<\varphi<\pi/2\)。
+
+（1）求冲量作用后圆环最低点 \(M\) 相对地面发生滑动的条件。
+
+（2）分别求最低点不滑动和发生滑动时，冲量作用刚结束后圆心的速度与圆环的角速度。
+
+（3）求圆环随后能够滚回初始位置的条件。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.577\linewidth,height=\textheight,keepaspectratio,alt={图1-1　圆环、冲量方向与接地点的几何关系}]{../figures/question-01.pdf}
+\caption*{图1-1　圆环、冲量方向与接地点的几何关系}
+\end{figure}
+
+\newpage
+
+\section{第 2 题}\label{ux7b2c-2-ux9898}
+
+一根两端固定、长度为 \(L\) 的细弦，在恒定张力 \(T\) 下作小振动。
+
+（1）若弦的线密度处处为 \(\mu\)，求基频和第一泛音的频率。
+
+（2）若弦的前 \(L/3\) 段线密度为 \(4\mu\)，后 \(2L/3\) 段线密度为
+\(\mu\)，连接处连续且张力仍为 \(T\)，求基频和第一泛音的频率。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.82\linewidth,height=\textheight,keepaspectratio,alt={图2-1　均匀弦与分段弦的结构}]{../figures/question-02.pdf}
+\caption*{图2-1　均匀弦与分段弦的结构}
+\end{figure}
+
+\newpage
+
+\section{第 3 题}\label{ux7b2c-3-ux9898}
+
+两个均匀带电的绝缘薄半球壳同轴放置，球心位置相差无穷小，可视为重合。两半球壳所带电荷量分别为
+\(Q\) 和 \(q\)。求两个半球壳之间的静电作用力：
+
+（1）两半球壳的半径均为 \(R\)；
+
+（2）带电荷量 \(Q\) 的半球壳半径为 \(R\)，带电荷量 \(q\) 的半球壳半径为
+\(R/2\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.741\linewidth,height=\textheight,keepaspectratio,alt={图3-1　等半径与不同半径的两种半球壳结构}]{../figures/question-03.pdf}
+\caption*{图3-1　等半径与不同半径的两种半球壳结构}
+\end{figure}
+
+\newpage
+
+\section{第 4 题}\label{ux7b2c-4-ux9898}
+
+带电粒子可以借助非均匀磁场构成的``磁瓶''实现约束。设磁场随空间位置缓慢变化，粒子的拉莫尔回旋半径远小于磁场变化的特征尺度。
+
+（1）证明粒子的回旋磁矩
+
+\[
+\mu_m=IS
+\]
+
+在上述条件下为绝热不变量，并写出它与粒子垂直于磁场方向动能的关系。
+
+（2）两个半径均为 \(R\) 的圆形线圈同轴放置，圆心间距为
+\(L\)，通有同向电流 \(I\)。取 \(L=2R\)。在两线圈中央平面内，考虑距轴线
+\(a=1.5R\)
+处进入磁瓶的粒子。求粒子能够被磁镜反射而不从线圈附近逃逸时，初速度与当地磁场方向夹角的临界值
+\(\theta_m\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.724\linewidth,height=\textheight,keepaspectratio,alt={图4-1　双线圈磁瓶的三维结构与粒子运动区域}]{../figures/question-04.pdf}
+\caption*{图4-1　双线圈磁瓶的三维结构与粒子运动区域}
+\end{figure}
+
+\newpage
+
+\section{第 5 题}\label{ux7b2c-5-ux9898}
+
+在云室照片中，观察到三条近似直线的带电粒子径迹汇聚于同一个碰撞点，三条径迹之间的夹角依次为
+\(90^\circ\)、\(120^\circ\)、\(150^\circ\)。已知入射粒子为 \(\alpha\)
+粒子，它与初始静止的某原子核 \(Z\)
+发生弹性碰撞，碰撞过程中没有核反应。根据径迹几何关系，判断原子核 \(Z\)
+可能属于何种元素或核素。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.524\linewidth,height=\textheight,keepaspectratio,alt={图5-1　三条云室径迹及其夹角}]{../figures/question-05.pdf}
+\caption*{图5-1　三条云室径迹及其夹角}
+\end{figure}
+
+\newpage
+
+\section{第 6 题}\label{ux7b2c-6-ux9898}
+
+由三层平行介质构成一平面光波导。中间芯层的折射率为 \(n_i\)、厚度为
+\(h\)，上下包层的折射率均为 \(n_e\)，且 \(n_e<n_i\)。取 \(y\)
+轴垂直薄膜界面，\(x\) 轴与 \(z\) 轴平行于界面；光在 \(x\)---\(y\)
+平面内沿 \(+x\)
+方向传播。光在芯层---包层界面发生全反射，每次全反射产生相位增量
+\(\varphi_r\)。真空波长为 \(\lambda_0\)。
+
+（1）求芯层内发生全反射所需的最小入射角。
+
+（2）求能够在波导中稳定传播的离散入射角条件。
+
+（3）已知
+
+\[
+n_i=3.5,
+\qquad
+n_e=3.0,
+\qquad
+h=6\ \mu\mathrm m,
+\qquad
+\lambda_0=1\ \mu\mathrm m,
+\]
+
+并给定全反射相位增量
+
+\[
+\varphi_r(\theta)
+=\frac{\pi}{2}\left[1-e^{-(\theta-\theta_c)}\right],
+\]
+
+求该波导中可传播的模式数。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.82\linewidth,height=\textheight,keepaspectratio,alt={图6-1　三层平面波导中的全反射传播路径}]{../figures/question-06.pdf}
+\caption*{图6-1　三层平面波导中的全反射传播路径}
+\end{figure}
+
+\newpage
+
+\section{第 7 题}\label{ux7b2c-7-ux9898}
+
+一艘小船漂浮在静水中，船上固定放置一个水平圆柱形密闭容器。容器长度为
+\(L=10\ \mathrm m\)，横截面积处处相同。空船与容器的总质量为
+\(M=150\ \mathrm{kg}\)，容器中装有质量为 \(m=120\ \mathrm{kg}\)
+的理想气体。初态气体温度均匀，
+
+\[
+T_0=300\ \mathrm K,
+\]
+
+压强为
+
+\[
+p_0=150\ \mathrm{atm}.
+\]
+
+保持容器左端温度为 \(300\ \mathrm K\)，右端温度为
+\(332\ \mathrm K\)。达到稳定状态后，容器内温度沿轴线按位置线性变化。忽略水平方向的水阻力。
+
+（1）求稳定后气体的压强。
+
+（2）求在加热过程中小船相对水面的位移大小和方向。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.88\linewidth,height=\textheight,keepaspectratio,alt={图7-1　船载密闭容器及线性温度分布}]{../figures/question-07.pdf}
+\caption*{图7-1　船载密闭容器及线性温度分布}
+\end{figure}
+
+\newpage
+
+\section{第 8 题}\label{ux7b2c-8-ux9898}
+
+在实验室惯性系 \(S\) 中，\(N\) 个人在 \(t=0\) 时均匀分布在半径为 \(r\)
+的圆周上。每个人都沿圆周切线方向以相同速率 \(v\)
+作匀速直线运动（前两问），并在实验室系的 \(t=0\)
+时刻把各自随身时钟调为零。编号按圆周方向依次为 \(1,2,\ldots,N\)。
+
+（1）在第 \(1\) 个人的瞬时惯性系中，求第 \(i\) 个人的速度大小。
+
+（2）在第 \(1\) 个人的瞬时惯性系中，与第 \(1\) 个人调钟事件同时的第
+\(2\) 个人到第 \(1\) 个人的距离是多少？
+
+（3）若所有人随后沿圆周作匀速圆周运动，并取 \(N\to\infty\)，构造角速度
+\(\omega=v/r\) 的共转参考系
+\(S^*\)。求共转系测得的圆周长以及圆周长与半径的比值，并从狭义相对论角度解释结果。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.575\linewidth,height=\textheight,keepaspectratio,alt={图8-1　圆周上的观察者及其切向速度分布}]{../figures/question-08.pdf}
+\caption*{图8-1　圆周上的观察者及其切向速度分布}
+\end{figure}
+\end{document}

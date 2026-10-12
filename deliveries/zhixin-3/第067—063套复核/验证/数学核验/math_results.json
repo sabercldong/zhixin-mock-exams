@@ -1,0 +1,709 @@
+{
+  "passed": true,
+  "scope": "40题列出的关键结果；附加假设在各组说明，非全部物理模型的穷尽证明",
+  "script_sha256": "9244eec24f524c204f081d6f2aa8f0e111f5c8dbeb4244a2bf2b729014da37dc",
+  "groups": [
+    {
+      "set": 67,
+      "question": 1,
+      "check": "自由刚体接触等效质量、动能和单调交点阈值",
+      "passed": true,
+      "result": {
+        "effective_mass": 2.0,
+        "threshold": 9.174498695475439
+      }
+    },
+    {
+      "set": 67,
+      "question": 2,
+      "check": "精确镜像势、偶数阶展开、两端曲率和倾角修正",
+      "passed": true,
+      "result": {
+        "T0_over_Tpi": 1.7320508075688772,
+        "finite_a_curvatures": "symbolically checked",
+        "tilt_shift": "checked at a=.005,.01"
+      }
+    },
+    {
+      "set": 67,
+      "question": 3,
+      "check": "模态本征值、初速叠加和单端去约束",
+      "passed": true,
+      "result": {
+        "omega_squared": [
+          1.5,
+          8.5
+        ],
+        "single_free_end_no_zero": true
+      }
+    },
+    {
+      "set": 67,
+      "question": 4,
+      "check": "起振初值解、KVL及新增三次非线性供耗能平衡",
+      "passed": true,
+      "result": {
+        "growing_oscillation": true,
+        "nonlinear_amplitude_depends_on_eta": true
+      }
+    },
+    {
+      "set": 67,
+      "question": 5,
+      "check": "一般质量的质心、角动量微分和真实轨迹末点",
+      "passed": true,
+      "result": {
+        "equal_mass_phi_end": -0.3370957766587268,
+        "equal_mass_psi_end_degrees": 70.68583470577035
+      }
+    },
+    {
+      "set": 67,
+      "question": 6,
+      "check": "由原始椭圆截距反演、复阻抗回代及量化读数角点",
+      "passed": true,
+      "result": {
+        "r_Ohm": 9.85473796080774,
+        "L_mH": 9.992512882731656,
+        "C_uF": 1.5955677950719722,
+        "f0_Hz": 1260.4486059051899,
+        "r_quantization_range": [
+          9.217435951658572,
+          10.49481059001397
+        ]
+      }
+    },
+    {
+      "set": 67,
+      "question": 7,
+      "check": "大气静力、气体定质量和丢配重最高平衡高度",
+      "passed": true,
+      "result": {
+        "ballast_exhaustion_height": 2.886213391019874,
+        "sealed_gas_mass_constant": true
+      }
+    },
+    {
+      "set": 67,
+      "question": 8,
+      "check": "相干矩阵、波片变换、最大方向及非偏振比例",
+      "passed": true,
+      "result": {
+        "eigen_intensity": [
+          0.75,
+          1.75
+        ],
+        "unpolarized_fraction": 0.6,
+        "degree_of_polarization": 0.4
+      }
+    },
+    {
+      "set": 66,
+      "question": 1,
+      "check": "非线性弹力能量导数、材料坐标积分与正截面",
+      "passed": true,
+      "result": {
+        "stretched_length": 1.5482603519067852,
+        "positive_area_condition": true
+      }
+    },
+    {
+      "set": 66,
+      "question": 2,
+      "check": "单球电荷积分、球腔场积分及平均场代数",
+      "passed": true,
+      "result": {
+        "single_sphere_integral": 12.566370614359172,
+        "cavity_factor": 0.3333333333333333,
+        "mixture_result": "conditional spherical-cavity mean field"
+      }
+    },
+    {
+      "set": 66,
+      "question": 3,
+      "check": "两种变质量动量ODE与正种子极限",
+      "passed": true,
+      "result": {
+        "active_h_limit": "gt^2/8",
+        "swept_h_limit": "gt^2/14",
+        "time_ratio": 1.3228756555322954,
+        "zero_seed": "positive seed limit only"
+      }
+    },
+    {
+      "set": 66,
+      "question": 4,
+      "check": "真实行程速度积分、循环功和等功率匀速",
+      "passed": true,
+      "result": {
+        "down_time": 1.0397207708399179,
+        "up_time": 1.0397207708399179,
+        "cycle_average": 2.003743112345783
+      }
+    },
+    {
+      "set": 66,
+      "question": 5,
+      "check": "Morse有限能量精确轨迹、非对称转折点及红外尺度",
+      "passed": true,
+      "result": {
+        "finite_energy_trajectory": "symbolic energy conserved",
+        "turns": [
+          -0.4054651081081644,
+          0.6931471805599453
+        ],
+        "small_oscillation_wavelength_m": 4.6109481217071325e-06
+      }
+    },
+    {
+      "set": 66,
+      "question": 6,
+      "check": "Fresnel实数支能流守恒、布儒斯特角和基矢",
+      "passed": true,
+      "result": {
+        "Brewster_degrees": 56.309932474020215,
+        "energy_conservation": true
+      }
+    },
+    {
+      "set": 66,
+      "question": 7,
+      "check": "四种真实电路的支路电流、两二次式和稳定小根",
+      "passed": true,
+      "result": {
+        "current_A": [
+          0.005535055350553505,
+          0.012396694214876033,
+          0.01115518096182449,
+          0.012315270935960588
+        ],
+        "epsilon": 1.4999999999999998,
+        "S": 120.99999999999999,
+        "recovered": [
+          20.0,
+          1.0,
+          100.0
+        ]
+      }
+    },
+    {
+      "set": 66,
+      "question": 8,
+      "check": "转折三次根和角动量方向导数",
+      "passed": true,
+      "result": {
+        "initial_omega": 3.2073871093457007,
+        "second_turn_degrees": 61.63495392554691,
+        "torque_azimuthal": true
+      }
+    },
+    {
+      "set": 65,
+      "question": 1,
+      "check": "同步支曲线、临界展开与势能三阶导数",
+      "passed": true,
+      "result": {
+        "critical_L_over_l0": 1.3333333333333333,
+        "critical_is_not_minimum": true
+      }
+    },
+    {
+      "set": 65,
+      "question": 2,
+      "check": "完整互感梯度、周期积分平均力和稳定峰值",
+      "passed": true,
+      "result": {
+        "force_peak": 0.3779644730092272,
+        "average_force": 0.26610863266405316
+      }
+    },
+    {
+      "set": 65,
+      "question": 3,
+      "check": "真实相遇根、地面轨迹初速、转动系负号和多普勒",
+      "passed": true,
+      "result": {
+        "throwing": [
+          {
+            "alpha_degrees": 29.13869626617102,
+            "time": 4.22073791854712,
+            "ground_angle_degrees": 75.43065186691449
+          },
+          {
+            "alpha_degrees": 127.83706068386749,
+            "time": 1.8526807554567002,
+            "ground_angle_degrees": 26.081469658066254
+          }
+        ],
+        "doppler_Hz": 229.36222420896524
+      }
+    },
+    {
+      "set": 65,
+      "question": 4,
+      "check": "两种波长口径逐对反演并回代折射率",
+      "passed": true,
+      "result": {
+        "in_medium": [
+          1.8308378434368068e+16,
+          1.9696777976950304e+16,
+          2.030619005374197e+16
+        ],
+        "vacuum": [
+          2.7060467068530124e+16,
+          2.9311320075225736e+16,
+          3.029479748303653e+16
+        ]
+      }
+    },
+    {
+      "set": 65,
+      "question": 5,
+      "check": "半球角积分、镜面动量与黑体发射反冲",
+      "passed": true,
+      "result": {
+        "energy_flux_factor": 0.25,
+        "mirror_pressure_factor": 0.3333333333333333,
+        "blackbody_absorption_plus_emission": 0.3333333333333333
+      }
+    },
+    {
+      "set": 65,
+      "question": 6,
+      "check": "三档原19微秒排除与190微秒条件校勘",
+      "passed": true,
+      "result": {
+        "original": [
+          {
+            "f": 50,
+            "L": 0.0006333408551757089,
+            "C": 0.003999472906821558
+          },
+          {
+            "f": 1000,
+            "L": 0.0006363592785311523,
+            "C": 9.951255825581722e-06
+          }
+        ],
+        "high_frequency_period_smaller_than_shift": true,
+        "corrected_190us": [
+          0.013399316673350684,
+          4.7260424781516596e-07
+        ]
+      }
+    },
+    {
+      "set": 65,
+      "question": 7,
+      "check": "实际屏面投影、两光线精确交点及正初值优化",
+      "passed": true,
+      "result": {
+        "tipped_screen_width_um": 25.881904510252074,
+        "exact_asymmetry": -7.10150889337742e-05,
+        "growth_minimum": "positive product initial-value model"
+      }
+    },
+    {
+      "set": 65,
+      "question": 8,
+      "check": "流量、局部与整体弯管压强、书本比值和搭桥回代",
+      "passed": true,
+      "result": {
+        "Q": 8.333333333333333e-05,
+        "v": 0.11789255043844099,
+        "local_Pa": 9.120040114641759,
+        "average_dynamic_Pa": 5.340431771997754,
+        "book_Pa": 163.33333333333334,
+        "ratio": 0.032696521053047475,
+        "bridge_radius": 0.9839948356327152
+      }
+    },
+    {
+      "set": 64,
+      "question": 1,
+      "check": "首次滑动三阈值、有效边界及共同加速受力",
+      "passed": true,
+      "result": {
+        "first_events": [
+          {
+            "x": 3,
+            "y": 5,
+            "first": 0,
+            "F": 1.0
+          },
+          {
+            "x": 9,
+            "y": 2,
+            "first": 1,
+            "F": 1.0
+          },
+          {
+            "x": 12,
+            "y": 9,
+            "first": 2,
+            "F": 3
+          },
+          {
+            "x": 9,
+            "y": 6,
+            "first": 0,
+            "F": 3.0
+          }
+        ],
+        "velocity_history_required_after_start": true
+      }
+    },
+    {
+      "set": 64,
+      "question": 2,
+      "check": "完整一阶状态特征根和临界线性漂移解",
+      "passed": true,
+      "result": {
+        "strict_stability": "Omega > sqrt(ga)",
+        "critical_linear_drift": true
+      }
+    },
+    {
+      "set": 64,
+      "question": 3,
+      "check": "位置积分与高速闭式、beta分支出口能量及转折",
+      "passed": true,
+      "result": {
+        "high_speed_time": 1.0521076247504673,
+        "beta_ge_one_no_complete_crossing": true,
+        "turning_boundary_beta": 2
+      }
+    },
+    {
+      "set": 64,
+      "question": 4,
+      "check": "三组逐点像坐标、直角点积及边长比",
+      "passed": true,
+      "result": {
+        "image_coordinates": [
+          [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.3333333333333335,
+              -0.5773502691896257
+            ],
+            [
+              0.0,
+              -0.5773502691896257
+            ]
+          ],
+          [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              1.0,
+              -0.5773502691896258
+            ],
+            [
+              0.0,
+              -0.5773502691896258
+            ]
+          ],
+          [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.16666666666666674,
+              -0.2886751345948129
+            ],
+            [
+              0.0,
+              -0.3849001794597506
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "set": 64,
+      "question": 5,
+      "check": "独立标准推动复合、度规与小角空间旋转项",
+      "passed": true,
+      "result": {
+        "metric_preserved": true,
+        "passive_axis_rotation_coefficient": 0.40028008402800985
+      }
+    },
+    {
+      "set": 64,
+      "question": 6,
+      "check": "理想气体熵全微分与摩尔/粒子静能指数",
+      "passed": true,
+      "result": {
+        "molar_particle_exponent_equal": true,
+        "low_temperature": "formal classical-model limit only"
+      }
+    },
+    {
+      "set": 64,
+      "question": 7,
+      "check": "从几何去重建立有限导线图，核对递推和无限极限",
+      "passed": true,
+      "result": {
+        "finite_graphs": [
+          {
+            "depth": 0,
+            "nodes": 4,
+            "edges": 4,
+            "Rdiag": 0.9999999999999999,
+            "Radj": 0.7499999999999999,
+            "Ic": 0.25,
+            "P": 0.25,
+            "kcl": 0.0
+          },
+          {
+            "depth": 1,
+            "nodes": 16,
+            "edges": 20,
+            "Rdiag": 0.8333333333333329,
+            "Radj": 0.6666666666666663,
+            "Ic": 0.2916666666666664,
+            "P": 0.26388888888888884,
+            "kcl": 3.0531133177191805e-16
+          },
+          {
+            "depth": 2,
+            "nodes": 64,
+            "edges": 84,
+            "Rdiag": 0.7777777777777783,
+            "Radj": 0.6249999999999996,
+            "Ic": 0.318181818181818,
+            "P": 0.2865693976805088,
+            "kcl": 1.0547118733938987e-15
+          },
+          {
+            "depth": 3,
+            "nodes": 256,
+            "edges": 340,
+            "Rdiag": 0.7500000000000205,
+            "Radj": 0.6018518518518617,
+            "Ic": 0.3281250000000021,
+            "P": 0.29766305891563094,
+            "kcl": 2.525757381022231e-15
+          },
+          {
+            "depth": 4,
+            "nodes": 1024,
+            "edges": 1364,
+            "Rdiag": 0.7345679012344433,
+            "Radj": 0.5887345679011646,
+            "Ic": 0.33333333333331516,
+            "P": 0.30335749020972314,
+            "kcl": 2.7353119769202294e-14
+          },
+          {
+            "depth": 5,
+            "nodes": 4096,
+            "edges": 5460,
+            "Rdiag": 0.7258230452750055,
+            "Radj": 0.5812757201695621,
+            "Ic": 0.33629893238542297,
+            "P": 0.30650768670037287,
+            "kcl": 2.625261119604261e-13
+          }
+        ],
+        "limit_Rdiag": 0.7142857142857143,
+        "limit_Radj": 0.5714285714285714,
+        "limit_Ic": 0.3402777777777778,
+        "limit_P": 0.31068840579710144
+      }
+    },
+    {
+      "set": 64,
+      "question": 8,
+      "check": "真实公共电阻交叉项、源功率守恒及最大负载功率",
+      "passed": true,
+      "result": {
+        "D": 387.0,
+        "all_loss_power": 0.12919896640826872,
+        "optimal_r2": 89.75
+      }
+    },
+    {
+      "set": 63,
+      "question": 1,
+      "check": "参考摩擦圆时刻及明确坐标下的陀螺反作用",
+      "passed": true,
+      "result": {
+        "quasisteady_rear_limit_seconds": 18.808888655423605,
+        "body_gyro_torque": [
+          -1,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "set": 63,
+      "question": 2,
+      "check": "过渡两侧有效质量能量和修正周期数值",
+      "passed": true,
+      "result": {
+        "periods_seconds": [
+          2.6458419963411632,
+          2.2770103524404393,
+          2.8261751604628813
+        ],
+        "connection_model": "short smooth lossless transition, conditional"
+      }
+    },
+    {
+      "set": 63,
+      "question": 3,
+      "check": "均匀双杆样例与松绳分支刚杆加速度约束",
+      "passed": true,
+      "result": {
+        "uniform_beta": 14.700000000000001,
+        "uniform_T": 0.0,
+        "uniform_S": 2.45,
+        "slack_rod_acceleration_residual": 0.0
+      }
+    },
+    {
+      "set": 63,
+      "question": 4,
+      "check": "两透镜逐步像距、第二镜孔径和圆孔半立体角",
+      "passed": true,
+      "result": {
+        "u_over_f": 1.5351837584879966,
+        "second_aperture_ratio": 0.30277563773199445,
+        "exact_half_flux_r": 0.055313354893208884
+      }
+    },
+    {
+      "set": 63,
+      "question": 5,
+      "check": "循环网孔矩阵与半无限端部三对角独立求解",
+      "passed": true,
+      "result": {
+        "periodic_AC_complex": [
+          0.0914045236822554,
+          0.007105045324294398
+        ],
+        "halfline_AC_complex": [
+          -0.06803704189486658,
+          -0.20887143934067112
+        ],
+        "decay_root_abs": 0.35440680800169394
+      }
+    },
+    {
+      "set": 63,
+      "question": 6,
+      "check": "真实偶极场线二阶展开及相对论频率半径",
+      "passed": true,
+      "result": {
+        "gamma": 19.569471624266143,
+        "v_over_c": 0.9986935415832026,
+        "radius_m": 111042.54117306061,
+        "cyclotron_omega": 2696.2710728434713,
+        "slow_omega": 21.170833004708957
+      }
+    },
+    {
+      "set": 63,
+      "question": 7,
+      "check": "有限钢珠更新、连续极限和单次光子四动量",
+      "passed": true,
+      "result": {
+        "finite_steel_fraction": 0.64,
+        "photon_A_increment": 0.10000000000000009,
+        "reflected_energy": 0.05494505494505494
+      }
+    },
+    {
+      "set": 63,
+      "question": 8,
+      "check": "逐半周期阈值追踪、总能量耗散、次数和速度映射",
+      "passed": true,
+      "result": {
+        "effective_C": 1.2000000000000002,
+        "states": [
+          {
+            "lambda_": -9,
+            "F": -1,
+            "halfcycles": 4,
+            "vf": -4.800000000000001,
+            "loss": 48.000000000000014
+          },
+          {
+            "lambda_": -3,
+            "F": 1,
+            "halfcycles": 1,
+            "vf": -2.4000000000000004,
+            "loss": 4.800000000000001
+          },
+          {
+            "lambda_": -1,
+            "F": -1,
+            "halfcycles": 0,
+            "vf": 0.0,
+            "loss": 0.0
+          },
+          {
+            "lambda_": -0.6,
+            "F": -0.6,
+            "halfcycles": 0,
+            "vf": 0.0,
+            "loss": 0.0
+          },
+          {
+            "lambda_": 0.6,
+            "F": 0.6,
+            "halfcycles": 0,
+            "vf": 0.0,
+            "loss": 0.0
+          },
+          {
+            "lambda_": 1,
+            "F": 1,
+            "halfcycles": 0,
+            "vf": 0.0,
+            "loss": 0.0
+          },
+          {
+            "lambda_": 2,
+            "F": 0,
+            "halfcycles": 1,
+            "vf": 1.2000000000000002,
+            "loss": 2.4000000000000004
+          },
+          {
+            "lambda_": 3,
+            "F": -1,
+            "halfcycles": 1,
+            "vf": 2.4000000000000004,
+            "loss": 4.800000000000001
+          },
+          {
+            "lambda_": 4,
+            "F": 0,
+            "halfcycles": 2,
+            "vf": 2.4000000000000004,
+            "loss": 9.600000000000001
+          },
+          {
+            "lambda_": 8.2,
+            "F": 0.1999999999999993,
+            "halfcycles": 4,
+            "vf": 4.800000000000001,
+            "loss": 40.31999999999999
+          }
+        ]
+      }
+    }
+  ],
+  "extra": []
+}

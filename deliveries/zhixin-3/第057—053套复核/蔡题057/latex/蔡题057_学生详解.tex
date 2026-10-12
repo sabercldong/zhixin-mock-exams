@@ -1,0 +1,3093 @@
+\documentclass[12pt,a4paper,UTF8]{ctexart}
+\usepackage[a4paper,top=22mm,bottom=22mm,left=22mm,right=22mm,headheight=15pt]{geometry}
+\newcommand{\Needspace}[1]{\par\begingroup\dimen0=#1\relax\dimen2=\pagegoal\advance\dimen2 by-\pagetotal\ifdim\dimen0>\dimen2\newpage\fi\endgroup}
+\newcommand{\needspace}[1]{\par\begingroup\skip0=\lastskip\vskip-\skip0\dimen0=#1\relax\advance\dimen0 by\skip0\vskip\dimen0\penalty-100\vskip-\dimen0\vskip\skip0\penalty9999\endgroup}
+\usepackage{amsmath,amssymb,mathtools,bm}
+\usepackage{graphicx,xcolor,booktabs,longtable,array,enumitem,fancyhdr,caption,float,microtype,setspace}
+\usepackage[hidelinks,unicode]{hyperref}
+\usepackage[most]{tcolorbox}
+\definecolor{ContestBlue}{HTML}{17365D}
+\hypersetup{pdftitle={第057套},pdfauthor={}}
+\setstretch{1.24}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.35em}
+\setlength{\emergencystretch}{2em}
+\setlist{itemsep=0.35em,topsep=0.4em}
+\captionsetup{font=small,labelfont=bf,justification=centering}
+\setcounter{secnumdepth}{0}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small 第057套}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\ctexset{
+  section={format=\Large\bfseries\color{ContestBlue},beforeskip=1.2em,afterskip=0.7em},
+  subsection={format=\large\bfseries\color{ContestBlue},beforeskip=1.0em,afterskip=0.5em},
+  subsubsection={format=\normalsize\bfseries,beforeskip=0.8em,afterskip=0.35em}
+}
+\usepackage{calc}
+\newcounter{none}
+\let\originalsubsection\subsection
+\renewcommand{\subsection}{\needspace{6\baselineskip}\originalsubsection}
+\makeatletter
+\newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\newcommand{\maxwidth}{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\newcommand{\maxheight}{\ifdim\Gin@nat@height>0.72\textheight 0.72\textheight\else\Gin@nat@height\fi}
+\newcommand{\pandocbounded}[1]{\begingroup\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}#1\endgroup}
+\makeatother
+\begin{document}
+\begin{titlepage}
+  \centering
+  \vspace*{58mm}
+  {\Huge\bfseries\color{ContestBlue} 第057套\par}
+  \vfill
+  \vspace*{28mm}
+\end{titlepage}
+\section{第 1 题}\label{ux7b2c-1-ux9898}
+
+如图所示，质量分别为 \(m_A\)、\(m_B\) 的小球 \(A\)、\(B\) 由长度为 \(L\)
+的轻直杆连接。小球 \(A\) 被限制在内壁光滑的竖直滑槽中运动，小球 \(B\)
+位于光滑水平面上。初始时杆竖直，两球均静止。受微小扰动后，\(B\)
+开始沿水平面向右运动。求：
+
+（1）\(A\) 球着地时的速度；
+
+（2）\(A\) 球机械能最小时，水平面对 \(B\) 球的支持力；
+
+（3）若 \(m_A=m_B\)，求 \(A\) 球机械能最小时杆与竖直方向夹角 \(\theta\)
+的余弦；
+
+（4）在第（3）问条件下，求 \(A\)
+球机械能的最小值，以水平面为重力势能零面。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.68\linewidth,height=\textheight,keepaspectratio,alt={图1-1　轻杆连接的两球及其相互垂直的运动约束}]{../figures/question-01.pdf}
+\caption*{图1-1　轻杆连接的两球及其相互垂直的运动约束}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d}
+
+轻杆把A的竖直位移与B的水平位移联系起来。先从长度约束求速度关系，再用能量求落地速度和动能分配；支持力要另由动力学方程求出。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  刚杆长度约束与速度投影关系。
+\item
+  理想约束下系统机械能守恒。
+\item
+  子系统能量变化与内力做功。
+\item
+  极值时速度对广义坐标的导数为零。
+\item
+  杆力为零与水平支持力的判断。
+\item
+  极值点的物理可行性、端点检验和量纲检验。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf}
+
+取杆与竖直向下方向的夹角为 \(\theta\)。当 \(\theta\) 从 \(0\) 增大到
+\(\pi/2\) 时，\(A\) 沿滑槽下降，\(B\) 向右移动。图 1-2
+同时给出位置关系和瞬时速度方向。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.86\linewidth,height=\textheight,keepaspectratio,alt={图1-2　轻杆位形、速度约束与动能分配}]{../figures/solution-01.pdf}
+\caption*{图1-2　轻杆位形、速度约束与动能分配}
+\end{figure}
+
+由图可见，\(A\) 与 \(B\)
+的速度方向互相垂直，却不能因此认为两球速度相等。它们的大小由同一个角速度
+\(\dot\theta\) 决定：
+
+\[
+v_A=L\sin\theta\,\dot\theta,\qquad
+v_B=L\cos\theta\,\dot\theta. \tag{1}
+\]
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3}
+
+以地面为 \(y=0\)，滑槽与地面的交点为坐标原点。由杆长约束，
+
+\[
+x_B=L\sin\theta,\qquad y_A=L\cos\theta. \tag{2}
+\]
+
+对时间求导：
+
+\[
+\dot x_B=L\cos\theta\,\dot\theta,\qquad
+\dot y_A=-L\sin\theta\,\dot\theta. \tag{3}
+\]
+
+因此取速度大小后得到式（1），并可消去 \(\dot\theta\)：
+
+\[
+v_A\cos\theta=v_B\sin\theta. \tag{4}
+\]
+
+式（4）是本题所有计算的运动学入口。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790}
+
+\needspace{3\baselineskip}
+\textbf{（一）建立任意位置的能量方程}
+
+初态两球静止，只有 \(A\) 球具有重力势能
+\(m_AgL\)。滑槽支持力、水平面支持力均垂直于相应小球位移，杆是理想轻杆，所以系统机械能守恒：
+
+\[
+m_AgL
+=m_AgL\cos\theta
++\frac12m_Av_A^2
++\frac12m_Bv_B^2. \tag{5}
+\]
+
+把式（1）代入，可得到角速度形式：
+
+\[
+\begin{aligned}
+m_AgL(1-\cos\theta)
+&=\frac12m_A L^2\sin^2\theta\,\dot\theta^2
+ +\frac12m_B L^2\cos^2\theta\,\dot\theta^2\\
+&=\frac12L^2
+\left(m_A\sin^2\theta+m_B\cos^2\theta\right)\dot\theta^2.
+\end{aligned} \tag{6}
+\]
+
+所以
+
+\[
+\dot\theta^2
+=\frac{2m_Ag(1-\cos\theta)}
+{L\left(m_A\sin^2\theta+m_B\cos^2\theta\right)}. \tag{7}
+\]
+
+式（7）不仅用于计算，还说明初态 \(\theta=0\)
+是不稳定平衡：微小偏离后，重力势能下降，\(\dot\theta^2\) 变为正值。
+
+\needspace{3\baselineskip}
+\textbf{（二）第（1）问：\(A\) 球着地速度}
+
+\(A\) 球着地时 \(y_A=0\)，由式（2）
+
+\[
+\cos\theta=0,\qquad \theta=\frac{\pi}{2}. \tag{8}
+\]
+
+此时由式（1）
+
+\[
+v_B=L\cos\theta\,\dot\theta=0. \tag{9}
+\]
+
+这并不表示 \(B\) 在此前没有运动，而表示在着地瞬间，杆水平，\(B\)
+的瞬时速度为零。式（5）于是化为
+
+\[
+m_AgL=\frac12m_Av_A^2. \tag{10}
+\]
+
+质量 \(m_A\) 约去：
+
+\[
+\boxed{v_A=\sqrt{2gL}}. \tag{11}
+\]
+
+该结果与 \(m_B\) 无关。原因是终态 \(B\)
+的速度恰为零，全部减少的重力势能都转化为 \(A\) 的动能。
+
+\needspace{3\baselineskip}
+\textbf{（三）第（2）问：把 \(A\) 的能量极小转化为 \(B\) 的动能极大}
+
+定义
+
+\[
+E_A=m_Agy_A+\frac12m_Av_A^2,\qquad
+K_B=\frac12m_Bv_B^2. \tag{12}
+\]
+
+由系统总机械能守恒，
+
+\[
+E_A+K_B=m_AgL. \tag{13}
+\]
+
+对时间求导：
+
+\[
+\frac{\mathrm dE_A}{\mathrm dt}
++\frac{\mathrm dK_B}{\mathrm dt}=0. \tag{14}
+\]
+
+因此在内部极值位置，
+
+\[
+E_A\ \text{最小}
+\quad\Longleftrightarrow\quad
+K_B\ \text{最大}
+\quad\Longleftrightarrow\quad
+v_B\ \text{最大}. \tag{15}
+\]
+
+在 \(v_B\) 的最大值时刻，
+
+\[
+a_B=\frac{\mathrm dv_B}{\mathrm dt}=0. \tag{16}
+\]
+
+设杆对 \(B\) 的作用力大小为 \(T\)，沿杆方向。只要极值点不在 \(\theta=0\)
+或 \(\pi/2\)，杆力就有非零水平分量 \(T\sin\theta\)。\(B\)
+的水平方向只有杆力分量，因此
+
+\[
+m_Ba_B=-T\sin\theta. \tag{17}
+\]
+
+结合式（16）以及 \(\sin\theta\ne0\)，得到
+
+\[
+T=0. \tag{18}
+\]
+
+此时 \(B\) 在竖直方向无加速度，竖直方向受力平衡：
+
+\[
+N-m_Bg=0. \tag{19}
+\]
+
+所以
+
+\[
+\boxed{N=m_Bg}. \tag{20}
+\]
+
+这里的计算时须先区分``杆竖直分力碰巧为零''，而是先由 \(v_B\)
+极大推出杆力整体为零。
+
+\needspace{3\baselineskip}
+\textbf{（四）第（3）问：求极值位置}
+
+现在令
+
+\[
+m_A=m_B=m. \tag{21}
+\]
+
+速度约束式（4）给出
+
+\[
+v_A=v_B\tan\theta. \tag{22}
+\]
+
+把式（22）代入能量方程（5）：
+
+\[
+mgL(1-\cos\theta)
+=\frac12m v_B^2\tan^2\theta+\frac12m v_B^2. \tag{23}
+\]
+
+括号中的三角函数为
+
+\[
+1+\tan^2\theta=\sec^2\theta=\frac1{\cos^2\theta}. \tag{24}
+\]
+
+因此
+
+\[
+mgL(1-\cos\theta)
+=\frac12m\frac{v_B^2}{\cos^2\theta}. \tag{25}
+\]
+
+约去 \(m\) 并整理：
+
+\[
+v_B^2
+=2gL(1-\cos\theta)\cos^2\theta. \tag{26}
+\]
+
+令
+
+\[
+u=\cos\theta,\qquad 0\le u\le1. \tag{27}
+\]
+
+则
+
+\[
+v_B^2=2gL(1-u)u^2. \tag{28}
+\]
+
+由于 \(v_B\ge0\)，极大化 \(v_B\) 与极大化 \(v_B^2\) 等价。对 \(u\)
+求导：
+
+\[
+\begin{aligned}
+\frac{\mathrm d(v_B^2)}{\mathrm du}
+&=2gL\frac{\mathrm d}{\mathrm du}(u^2-u^3)\\
+&=2gL(2u-3u^2)\\
+&=2gL\,u(2-3u).
+\end{aligned} \tag{29}
+\]
+
+内部驻点满足
+
+\[
+2-3u=0,\qquad u=\frac23. \tag{30}
+\]
+
+两个端点 \(u=0\)、\(u=1\) 均给出
+\(v_B=0\)，而式（30）给出正值，所以它确为最大值点。于是
+
+\[
+\boxed{\cos\theta=\frac23}. \tag{31}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（五）第（4）问：\(A\) 球机械能的最小值}
+
+在 \(u=2/3\) 时，由式（28）
+
+\[
+\begin{aligned}
+v_{B,\max}^2
+&=2gL\left(1-\frac23\right)\left(\frac23\right)^2\\
+&=2gL\cdot\frac13\cdot\frac49\\
+&=\frac{8}{27}gL.
+\end{aligned} \tag{32}
+\]
+
+所以 \(B\) 球最大动能为
+
+\[
+K_{B,\max}
+=\frac12m v_{B,\max}^2
+=\frac12m\cdot\frac{8}{27}gL
+=\frac{4}{27}mgL. \tag{33}
+\]
+
+利用式（13）：
+
+\[
+\begin{aligned}
+E_{A,\min}
+&=mgL-K_{B,\max}\\
+&=mgL-\frac{4}{27}mgL\\
+&=\boxed{\frac{23}{27}mgL}.
+\end{aligned} \tag{34}
+\]
+
+\needspace{3\baselineskip}
+\textbf{结果检验}
+
+式（11）的量纲为速度；式（20）的量纲为力；式（31）位于
+\([0,1]\)；式（34）小于初始的 \(mgL\) 而大于零，均符合物理要求。
+
+\textbf{接触条件与细绳变式。} 令 \(u=\cos\theta\)，两端速度满足
+\(\dot y_A=-L\dot\theta\sin\theta\)、\(v_B=L\dot\theta\cos\theta\)。质量不相等时
+\[v_B^2=\frac{2m_AgL(1-u)u^2}{m_A+(m_B-m_A)u^2}.\]
+极值可直接对这个有理函数求导，不能沿用等质量的
+\(u=2/3\)。质量相等时，杆对B的水平推力起初向右；若换成轻绳，绳只能拉，不能提供这股推力，因而立即松弛，原有长度约束失效。B保持原地，A先作竖直自由落体。细杆问题还应由B的竖直平衡检查
+\(N_B=m_Bg-F_{{\rm rod},y}\ge0\)；落地前的支撑模型成立才可使用上述能量式。
+
+\needspace{3\baselineskip}
+\textbf{等质量时的接触条件}
+
+取杆对B的力为\(P(\sin\theta,-\cos\theta)\)，规定\(P>0\)表示杆受压。由能量式
+\[\dot\theta^2=\frac{2g}{L}(1-\cos\theta)\] 对时间求导，在运动分支上得到
+\[\ddot\theta=\frac gL\sin\theta.\] B的水平加速度因此为 \[\ddot x_B
+=L\cos\theta\,\ddot\theta-L\sin\theta\,\dot\theta^2
+=g\sin\theta(3\cos\theta-2).\] 水平牛顿方程给出 \[P=mg(3\cos\theta-2).\]
+用B的竖直平衡求支持力： \[N=mg+P\cos\theta
+=mg(1-2u+3u^2),\qquad u=\cos\theta.\] 配方后
+\[\frac N{mg}=3\left(u-\frac13\right)^2+\frac23>0.\]
+所以等质量的整个落地前分支保持接触。能量极小时\(u=2/3\)，正好\(P=0\)、\(N=mg\)；此后杆由受压转为受拉。图1-2的杆不能画成只承受拉力的绳。
+
+严格竖直且无扰动的初态也满足静力平衡，会一直保持静止。题目所求是微扰后向右倒下、再令初始扰动趋零的运动分支。小角度有
+\[\ddot\theta\simeq(g/L)\theta,\]
+因而平衡不稳定。这个区别解释了为什么能量式在初态给出零速度，却不妨碍后续运动。
+
+\newpage
+
+\section{第 2 题}\label{ux7b2c-2-ux9898}
+
+天花板上有两个定滑轮，间距为 \(l\)。一根总长为 \(4l\)
+的轻绳依次绕过两个定滑轮，并在中间两段上各悬挂一个质量为 \(m\)
+的动滑轮。所有滑轮均可视为质点，忽略摩擦。初始时两个动滑轮均静止在与两个定滑轮构成正三角形的平衡位置
+\(A\)，且二者位置重合。绳始终绷紧，运动保持在初始平面内。求：
+
+（1）把其中一个动滑轮固定在 \(A\)，另一动滑轮在 \(A\) 附近小振动的频率；
+
+（2）限制两个动滑轮都只能沿通过 \(A\) 的竖直直线运动，求它们在 \(A\)
+附近上下小振动的频率。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.76\linewidth,height=\textheight,keepaspectratio,alt={图2-1　两定滑轮与两动滑轮构成的闭合绳路}]{../figures/question-02.pdf}
+\caption*{图2-1　两定滑轮与两动滑轮构成的闭合绳路}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-1}
+
+绳长给出两种不同的小振动约束。固定一只活动滑轮时用椭圆最低点曲率；两只都沿竖线运动时，用同一绳长改变量展开动能与势能。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-1}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  椭圆定义：到两定点距离之和为常量。
+\item
+  曲线最低点附近的曲率半径。
+\item
+  小振动的切向线性化。
+\item
+  绳长约束下广义坐标的选取。
+\item
+  二项式展开到二阶。
+\item
+  从 \(E=\frac12M_{\rm eff}\dot x^2+\frac12k_{\rm eff}x^2\) 读取角频率。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-1}
+
+如图 2-2
+左侧，固定一个动滑轮后，剩余可动滑轮到两个定滑轮的绳段长度之和保持不变，因此轨迹为以两个定滑轮为焦点的椭圆。
+
+第（2）问中，两动滑轮沿同一竖直线运动。用 \(s_1=l+x\)、\(s_2=l-x\)
+表示两条折线的一半长度，绳长约束被自动满足。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图2-2　两种绳长约束及椭圆半轴}]{../figures/solution-02.pdf}
+\caption*{图2-2　两种绳长约束及椭圆半轴}
+\end{figure}
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-1}
+
+平衡位置 \(A\) 与两个定滑轮构成边长为 \(l\) 的正三角形，所以 \(A\)
+到每个定滑轮的水平距离为 \(l/2\)，竖直距离为
+
+\[
+y_0=\sqrt{l^2-\frac{l^2}{4}}
+=\frac{\sqrt3}{2}l. \tag{1}
+\]
+
+第（1）问寻找轨道在 \(A\) 点的曲率半径；第（2）问则围绕 \(x=0\)
+展开到二阶。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-1}
+
+\needspace{3\baselineskip}
+\textbf{（一）第（1）问：识别椭圆轨道}
+
+设固定的动滑轮停在 \(A\)。总绳长为
+\(4l\)，固定滑轮与已固定动滑轮所占绳段长度不变，因此另一动滑轮到两个定滑轮的距离之和为常量。
+
+在位置 \(A\)，这两个距离均为 \(l\)，故常量为
+
+\[
+r_1+r_2=2l. \tag{2}
+\]
+
+椭圆的长轴长为 \(2a=2l\)，所以
+
+\[
+a=l. \tag{3}
+\]
+
+两个焦点间距为 \(l\)，即
+
+\[
+2c=l,\qquad c=\frac l2. \tag{4}
+\]
+
+椭圆参数满足
+
+\[
+b^2=a^2-c^2. \tag{5}
+\]
+
+代入式（3）、（4）：
+
+\[
+\begin{aligned}
+b^2
+&=l^2-\frac{l^2}{4}\\
+&=\frac34l^2,
+\end{aligned}
+\qquad
+b=\frac{\sqrt3}{2}l. \tag{6}
+\]
+
+位置 \(A\) 是椭圆短轴的下端点。椭圆在短轴端点的曲率半径为
+
+\[
+\rho_A=\frac{a^2}{b}. \tag{7}
+\]
+
+于是
+
+\[
+\rho_A
+=\frac{l^2}{(\sqrt3/2)l}
+=\frac{2l}{\sqrt3}. \tag{8}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（二）把曲线最低点线性化为等效单摆}
+
+取沿椭圆的弧长坐标为 \(s\)，\(s=0\) 对应最低点
+\(A\)。当位移很小时，轨道可用曲率圆近似。切线与水平方向的小夹角满足
+
+\[
+\alpha\simeq\frac{s}{\rho_A}. \tag{9}
+\]
+
+重力沿切线方向的分量为
+
+\[
+F_t=-mg\sin\alpha\simeq-mg\alpha
+\simeq-\frac{mg}{\rho_A}s. \tag{10}
+\]
+
+切向运动方程为
+
+\[
+m\ddot s=-\frac{mg}{\rho_A}s. \tag{11}
+\]
+
+约去 \(m\)：
+
+\[
+\ddot s+\frac{g}{\rho_A}s=0. \tag{12}
+\]
+
+所以角频率和频率分别为
+
+\[
+\omega_1=\sqrt{\frac{g}{\rho_A}}
+=\sqrt{\frac{\sqrt3\,g}{2l}}, \tag{13}
+\]
+
+\[
+\boxed{
+f_1=\frac{1}{2\pi}
+\sqrt{\frac{\sqrt3\,g}{2l}}
+}. \tag{14}
+\]
+
+质量消失，符合单摆类小振动的特点。
+
+\needspace{3\baselineskip}
+\textbf{（三）第（2）问：用绳段长度改变量作广义坐标}
+
+令两个动滑轮分别对应的``半折线长度''为
+
+\[
+s_1=l+x,\qquad s_2=l-x. \tag{15}
+\]
+
+于是
+
+\[
+2s_1+2s_2=4l, \tag{16}
+\]
+
+绳长约束对任意 \(x\) 都自动成立。
+
+把竖直向上取为正方向。每个动滑轮到定滑轮的水平距离为
+\(l/2\)，故两个动滑轮的竖直坐标为
+
+\[
+y_1=-\sqrt{(l+x)^2-\frac{l^2}{4}}, \tag{17}
+\]
+
+\[
+y_2=-\sqrt{(l-x)^2-\frac{l^2}{4}}. \tag{18}
+\]
+
+平衡位置 \(x=0\) 时，
+
+\[
+y_1=y_2=-\frac{\sqrt3}{2}l. \tag{19}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（四）展开速度，求等效质量}
+
+对式（17）求导：
+
+\[
+\dot y_1
+=-\frac{l+x}{\sqrt{(l+x)^2-l^2/4}}\,\dot x. \tag{20}
+\]
+
+在 \(x=0\) 附近只需要保留速度系数的零阶值：
+
+\[
+\dot y_1
+\simeq-\frac{l}{(\sqrt3/2)l}\dot x
+=-\frac{2}{\sqrt3}\dot x. \tag{21}
+\]
+
+同理，
+
+\[
+\dot y_2
+=\frac{l-x}{\sqrt{(l-x)^2-l^2/4}}\,\dot x
+\simeq\frac{2}{\sqrt3}\dot x. \tag{22}
+\]
+
+两动滑轮总动能为
+
+\[
+\begin{aligned}
+K
+&=\frac12m\dot y_1^2+\frac12m\dot y_2^2\\
+&\simeq\frac12m\frac43\dot x^2
++\frac12m\frac43\dot x^2\\
+&=\frac43m\dot x^2.
+\end{aligned} \tag{23}
+\]
+
+与标准形式 \(\frac12M_{\rm eff}\dot x^2\) 比较：
+
+\[
+M_{\rm eff}=\frac83m. \tag{24}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（五）展开势能，求等效劲度}
+
+先展开式（17）。提出常量：
+
+\[
+\begin{aligned}
+y_1
+&=-\sqrt{\frac34l^2+2lx+x^2}\\
+&=-\frac{\sqrt3}{2}l
+\sqrt{1+\frac{8x}{3l}+\frac{4x^2}{3l^2}}.
+\end{aligned} \tag{25}
+\]
+
+使用
+
+\[
+\sqrt{1+z}=1+\frac12z-\frac18z^2+O(z^3), \tag{26}
+\]
+
+并保留到 \(x^2\)：
+
+\[
+y_1
+\simeq-\frac{\sqrt3}{2}l
+-\frac{2}{\sqrt3}x
++\frac{1}{3\sqrt3\,l}x^2. \tag{27}
+\]
+
+将 \(x\) 换成 \(-x\) 得
+
+\[
+y_2
+\simeq-\frac{\sqrt3}{2}l
++\frac{2}{\sqrt3}x
++\frac{1}{3\sqrt3\,l}x^2. \tag{28}
+\]
+
+两式相加时一次项抵消：
+
+\[
+y_1+y_2
+\simeq-\sqrt3\,l+\frac{2}{3\sqrt3\,l}x^2. \tag{29}
+\]
+
+所以重力势能为
+
+\[
+V=mg(y_1+y_2)
+\simeq-\sqrt3\,mgl
++\frac{2mg}{3\sqrt3\,l}x^2. \tag{30}
+\]
+
+常量项不影响运动。与 \(\frac12k_{\rm eff}x^2\) 比较：
+
+\[
+k_{\rm eff}
+=\frac{4mg}{3\sqrt3\,l}
+=\frac{4\sqrt3\,mg}{9l}. \tag{31}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（六）求振动频率}
+
+角频率满足
+
+\[
+\omega_2^2=\frac{k_{\rm eff}}{M_{\rm eff}}. \tag{32}
+\]
+
+代入式（24）、（31）：
+
+\[
+\begin{aligned}
+\omega_2^2
+&=\frac{4mg/(3\sqrt3\,l)}{8m/3}\\
+&=\frac{g}{2\sqrt3\,l}.
+\end{aligned} \tag{33}
+\]
+
+因此
+
+\[
+\boxed{
+f_2=\frac1{2\pi}\sqrt{\frac{g}{2\sqrt3\,l}}
+}. \tag{34}
+\]
+
+\needspace{3\baselineskip}
+\textbf{说明}
+
+若把 \(x\)
+定义为整条折线长度的改变量而不是半折线长度的改变量，\(M_{\rm eff}\) 与
+\(k_{\rm eff}\)
+会同时改变四倍，但其比值不变。广义坐标的尺度不影响最终频率。
+
+\textbf{椭圆与小振动坐标。}
+以两固定滑轮中点为原点，\(x\)向右、\(y\)向上，活动质点位于
+\(y<0\)。绳长条件是 \(s_1+s_2=2l\)，两焦点为 \((\pm l/2,0)\)；故
+\[\frac{x^2}{l^2}+\frac{y^2}{3l^2/4}=1.\] 图中的横、纵半轴按
+\(l:\sqrt3l/2\) 绘制，\(s_1\)属于左焦点支路。绳的四段总长是
+\(4l\)，图中初态重叠的两个活动滑轮只为辨认支路而分开画，不能把间隙另计入绳长。小振动用同一\(x\)坐标展开：\(M_{\rm eff}=8m/3\)，\(k_{\rm eff}=4mg/(3\sqrt3l)\)，其比值即第二种频率平方。
+
+\needspace{3\baselineskip}
+\textbf{用轨道方程和高度差复核两种频率}
+
+第一种约束下，把活动滑轮的水平位移另记为\(q\)，以免与第二问的绳段改变量\(x\)混用。椭圆下半支为
+\[y(q)=-b\sqrt{1-q^2/a^2},\qquad a=l,\quad b=\sqrt3l/2.\] 在\(q=0\)附近
+\[y(q)=-b+\frac{b}{2a^2}q^2+O(q^4).\]
+轨道斜率为一阶小量，故动能的二阶部分是\(m\dot q^2/2\)，势能二阶部分是\(mgbq^2/(2a^2)\)。由此直接得到
+\[\omega_1^2=\frac{gb}{a^2}=\frac{\sqrt3g}{2l},\]
+与曲率法一致。这里重力升高的高度是\(y(q)+b\)，不是水平位移\(q\)。
+
+第二问用\(s_1=l+x,s_2=l-x\)。两物体的一阶高度改变量互相抵消，但二阶都向上：
+\[\Delta y_1+\Delta y_2=\frac{2x^2}{3\sqrt3l}+O(x^4).\]
+因此总势能增加，存在回复作用。若误把``一个上升、一个下降''理解为总重力势能始终不变，就会错误地得到零频率。两种结果满足
+\[\frac{\omega_1^2}{\omega_2^2}=3,\qquad
+\frac{f_1}{f_2}=\sqrt3.\]
+图2-2中第二种模式只在一阶近似为等量反向竖直位移；有限位移不能直接写成\(y_1+y_2\)不变。
+
+\newpage
+
+\section{第 3 题}\label{ux7b2c-3-ux9898}
+
+在水平面内有一根质量为 \(m\)、长度为 \(2l\)
+的光滑刚性细杆，可无摩擦地绕穿过其中点 \(O\)
+的竖直轴转动。空间中存在与转轴平行、方向垂直纸面向里的匀强磁场
+\(\bm B\)。把质量为 \(2m\)、电量为 \(q>0\)
+的光滑小环套在杆上。小环与杆之间无电荷转移，不计相对论效应。求：
+
+（1）杆连同小环以角速度 \(\omega_0\)
+转动时，小环在杆上任意位置均可相对杆静止，求无量纲比值
+\(\omega_0m/(qB)\)；
+
+（2）杆的初角速度为
+\(\omega_1\)，小环初始静止在转轴处。受微小扰动后小环沿杆运动，且恰好不从杆端脱离，求
+\(\omega_1\)；
+
+（3）初角速度为 \(\omega_2\)
+时，小环从杆端脱出。能否使小环在杆转过半圈之前重新回到杆上并如此往复？令
+\(\alpha=\omega_2/(qB/m)\)，列出判定所用的数值方程，并说明结论。数值量保留四位有效数字。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.74\linewidth,height=\textheight,keepaspectratio,alt={图3-1　匀强磁场中的转动细杆与带电小环}]{../figures/question-03.pdf}
+\caption*{图3-1　匀强磁场中的转动细杆与带电小环}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-2}
+
+带电小环在杆上时同时满足能量积分和含磁场项的角动量积分。脱离后的自由回旋还要与有限杆段逐点比较；相交是否能重新套回，取决于横向速度和捕获条件。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-2}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  洛伦兹力方向与径向分量。
+\item
+  匀强磁场中磁力不做功。
+\item
+  机械角动量的变化与磁力矩。
+\item
+  守恒组合 \(L_z-\frac12qBr^2\)。
+\item
+  杆端临界条件 \(\dot r=0\)。
+\item
+  带电粒子脱离后的回旋半径和回旋角速度。
+\item
+  两个匀速转动对象的追及与有限杆长几何。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-2}
+
+小环在杆上时有两个速度分量：沿杆的径向速度 \(\dot r\)
+和随杆转动的切向速度
+\(r\omega\)。其中切向速度产生沿杆方向的磁力，能推动小环径向移动；径向速度产生切向磁力，对整个``杆---环''系统施加关于
+\(O\) 的力矩。
+
+脱离后，如图 3-2，小环以合速度
+
+\[
+u=\sqrt{v^2+\omega'^2l^2} \tag{1}
+\]
+
+在磁场中作圆周运动，而细杆以恒定角速度 \(\omega'\) 转动。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.702\linewidth,height=\textheight,keepaspectratio,alt={图3-2　自由小环的实际轨迹与有限杆内部交点}]{../figures/solution-03.pdf}
+\caption*{图3-2　自由小环的实际轨迹与有限杆内部交点}
+\end{figure}
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-2}
+
+记小环到轴的有向距离为 \(r\)。在小环仍套在杆上时，系统转动惯量为
+
+\[
+I(r)=\frac{1}{12}m(2l)^2+(2m)r^2
+=\frac13ml^2+2mr^2. \tag{2}
+\]
+
+磁场不做功，故总动能守恒。另一方面，径向速度 \(\dot r\) 产生切向磁力
+
+\[
+F_\varphi=qB\dot r, \tag{3}
+\]
+
+相应磁力矩为
+
+\[
+\tau_z=qBr\dot r. \tag{4}
+\]
+
+由 \(\dot L_z=\tau_z\) 可积分得到守恒组合。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-2}
+
+\needspace{3\baselineskip}
+\textbf{（一）第（1）问：任意位置都能相对静止}
+
+设小环位于 \(r\ne0\)。相对杆静止时，小环随杆以角速度 \(\omega_0\)
+作圆周运动，切向速度大小为
+
+\[
+v_\varphi=\omega_0r. \tag{5}
+\]
+
+\(q>0\)、\(\bm B\) 向里且转动方向如图时，洛伦兹力沿指向 \(O\)
+的方向，大小为
+
+\[
+F_B=qv_\varphi B=qB\omega_0r. \tag{6}
+\]
+
+小环质量为 \(2m\)，所需向心力为
+
+\[
+F_c=(2m)\omega_0^2r. \tag{7}
+\]
+
+要使杆对小环沿杆方向的约束力为零，并且任意 \(r\)
+都可保持相对静止，需令式（6）、（7）相等：
+
+\[
+qB\omega_0r=2m\omega_0^2r. \tag{8}
+\]
+
+对非零的 \(\omega_0,r\) 约去公共因子：
+
+\[
+\omega_0=\frac{qB}{2m}. \tag{9}
+\]
+
+因此
+
+\[
+\boxed{\frac{\omega_0}{qB/m}=\frac12}. \tag{10}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（二）推导在杆上运动时的角动量积分}
+
+机械角动量满足
+
+\[
+\frac{\mathrm dL_z}{\mathrm dt}=qBr\dot r. \tag{11}
+\]
+
+注意
+
+\[
+r\dot r=\frac12\frac{\mathrm d(r^2)}{\mathrm dt}. \tag{12}
+\]
+
+代入式（11）：
+
+\[
+\frac{\mathrm dL_z}{\mathrm dt}
+=\frac12qB\frac{\mathrm d(r^2)}{\mathrm dt}. \tag{13}
+\]
+
+移项：
+
+\[
+\frac{\mathrm d}{\mathrm dt}
+\left(L_z-\frac12qBr^2\right)=0. \tag{14}
+\]
+
+所以
+
+\[
+\boxed{L_z-\frac12qBr^2=\text{常量}}. \tag{15}
+\]
+
+这不是机械角动量守恒；多出的磁场项正好记录磁力矩的累积效应。
+
+\needspace{3\baselineskip}
+\textbf{（三）第（2）问：临界到达杆端}
+
+初态小环在 \(r=0\)，杆的角速度为
+\(\omega_1\)。此时机械角动量只有杆的贡献：
+
+\[
+L_{z0}=\frac13ml^2\omega_1. \tag{16}
+\]
+
+临界情形下，小环到达杆端 \(r=l\)
+时径向速度恰为零。设此时杆与环的共同角速度为 \(\omega\)。
+
+由式（15）：
+
+\[
+\left(\frac13ml^2+2ml^2\right)\omega
+-\frac12qBl^2
+=\frac13ml^2\omega_1. \tag{17}
+\]
+
+括号内化简为
+
+\[
+\frac13ml^2+2ml^2=\frac73ml^2. \tag{18}
+\]
+
+故
+
+\[
+\frac73ml^2\omega-\frac12qBl^2
+=\frac13ml^2\omega_1. \tag{19}
+\]
+
+磁场不做功，且轴无摩擦，所以动能守恒。初态动能为
+
+\[
+K_0=\frac12\cdot\frac13ml^2\omega_1^2. \tag{20}
+\]
+
+临界到端点时径向速度为零，动能为
+
+\[
+K_l=\frac12\cdot\frac73ml^2\omega^2. \tag{21}
+\]
+
+令二者相等：
+
+\[
+\frac16ml^2\omega_1^2
+=\frac76ml^2\omega^2. \tag{22}
+\]
+
+约去公共因子：
+
+\[
+\omega=\frac{\omega_1}{\sqrt7}. \tag{23}
+\]
+
+把式（23）代入式（19），并除以 \(l^2\)：
+
+\[
+\frac73m\frac{\omega_1}{\sqrt7}
+-\frac12qB
+=\frac13m\omega_1. \tag{24}
+\]
+
+第一项化简为 \((\sqrt7/3)m\omega_1\)。两边乘以 \(6\)：
+
+\[
+2\sqrt7\,m\omega_1-3qB
+=2m\omega_1. \tag{25}
+\]
+
+所以
+
+\[
+2m(\sqrt7-1)\omega_1=3qB. \tag{26}
+\]
+
+得到
+
+\[
+\omega_1
+=\frac{3qB}{2m(\sqrt7-1)}. \tag{27}
+\]
+
+有理化：
+
+\[
+\frac{3}{2(\sqrt7-1)}
+=\frac{3(\sqrt7+1)}{2(7-1)}
+=\frac{\sqrt7+1}{4}. \tag{28}
+\]
+
+因此
+
+\[
+\boxed{
+\omega_1=\frac{\sqrt7+1}{4}\frac{qB}{m}
+}. \tag{29}
+\]
+
+数值上
+
+\[
+\frac{\omega_1}{qB/m}=0.9114. \tag{30}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（四）第（3）问：脱离瞬间的 \(\omega'\) 与径向速度}
+
+定义
+
+\[
+\Omega=\frac{qB}{m},\qquad
+\omega_2=\alpha\Omega. \tag{31}
+\]
+
+设小环在 \(r=l\) 脱离时，杆和小环的共同角速度为
+\(\omega'\)，沿杆向外的速度为 \(v\)。
+
+由式（15）：
+
+\[
+\frac73ml^2\omega'
+-\frac12qBl^2
+=\frac13ml^2\omega_2. \tag{32}
+\]
+
+除以 \(ml^2\)，并用 \(qB/m=\Omega\)：
+
+\[
+\frac73\omega'-\frac12\Omega
+=\frac13\alpha\Omega. \tag{33}
+\]
+
+两边乘以 \(6\)：
+
+\[
+14\omega'-3\Omega=2\alpha\Omega. \tag{34}
+\]
+
+所以
+
+\[
+\boxed{
+\omega'=\frac{3+2\alpha}{14}\Omega
+}. \tag{35}
+\]
+
+能量守恒给出
+
+\[
+\frac12\cdot\frac73ml^2\omega'^2
++\frac12(2m)v^2
+=\frac12\cdot\frac13ml^2\omega_2^2. \tag{36}
+\]
+
+即
+
+\[
+\frac76ml^2\omega'^2+mv^2
+=\frac16ml^2\alpha^2\Omega^2. \tag{37}
+\]
+
+除以 \(m\)，代入式（35）：
+
+\[
+v^2
+=l^2\Omega^2
+\left[
+\frac{\alpha^2}{6}
+-\frac76\frac{(3+2\alpha)^2}{14^2}
+\right]. \tag{38}
+\]
+
+把第二项化简：
+
+\[
+\frac76\frac1{14^2}
+=\frac7{1176}
+=\frac1{168}. \tag{39}
+\]
+
+所以
+
+\[
+\begin{aligned}
+\frac{v^2}{l^2\Omega^2}
+&=\frac{\alpha^2}{6}
+-\frac{(3+2\alpha)^2}{168}\\
+&=\frac{28\alpha^2-(4\alpha^2+12\alpha+9)}{168}\\
+&=\frac{24\alpha^2-12\alpha-9}{168}\\
+&=\frac{8\alpha^2-4\alpha-3}{56}.
+\end{aligned} \tag{40}
+\]
+
+于是
+
+\[
+\boxed{
+v^2=\frac{\Omega^2l^2}{56}
+\left(8\alpha^2-4\alpha-3\right)
+}. \tag{41}
+\]
+
+要真正向外脱离，必须 \(v^2>0\)：
+
+\[
+8\alpha^2-4\alpha-3>0. \tag{42}
+\]
+
+正根为
+
+\[
+\alpha>\frac{1+\sqrt7}{4}=0.9114. \tag{43}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（五）脱离后的回旋参数}
+
+脱离瞬间的合速度满足
+
+\[
+\begin{aligned}
+u^2
+&=v^2+\omega'^2l^2\\
+&=\Omega^2l^2
+\left[
+\frac{8\alpha^2-4\alpha-3}{56}
++\frac{(3+2\alpha)^2}{196}
+\right].
+\end{aligned} \tag{44}
+\]
+
+通分到 \(392\)：
+
+\[
+\begin{aligned}
+\frac{u^2}{\Omega^2l^2}
+&=\frac{7(8\alpha^2-4\alpha-3)
++2(4\alpha^2+12\alpha+9)}{392}\\
+&=\frac{64\alpha^2-4\alpha-3}{392}.
+\end{aligned} \tag{45}
+\]
+
+所以
+
+\[
+u=\frac{\Omega l}{14\sqrt2}
+\sqrt{64\alpha^2-4\alpha-3}. \tag{46}
+\]
+
+小环质量为 \(2m\)，其回旋角频率是
+
+\[
+\Omega_0=\frac{qB}{2m}=\frac{\Omega}{2}. \tag{47}
+\]
+
+故回旋半径为
+
+\[
+\begin{aligned}
+R
+&=\frac{u}{\Omega_0}
+=\frac{2u}{\Omega}\\
+&=\boxed{
+\frac{l}{7\sqrt2}
+\sqrt{64\alpha^2-4\alpha-3}
+}.
+\end{aligned} \tag{48}
+\]
+
+式（48）中的因子 \(2\) 来自小环质量为
+\(2m\)；漏掉它会使后续几何方程的尺度错误。
+
+\needspace{3\baselineskip}
+\textbf{（六）有限杆段的相交条件}
+
+取脱离瞬间为 \(t=0\)，杆沿\(x\)轴，小环位置为 \((l,0)\)。令
+\[w=\frac{\omega'}\Omega=\frac{3+2\alpha}{14},\qquad
+b=\frac v{\Omega l}=\sqrt{\frac{8\alpha^2-4\alpha-3}{56}},\qquad \tau=\frac{\Omega t}{2}.\]
+自由小环的速度按回旋角频率 \(\Omega/2\) 逆时针转动。积分后，其坐标为
+\[X=\frac xl=1+2b\sin\tau+2w(\cos\tau-1),\]
+\[Y=\frac yl=2b(1-\cos\tau)+2w\sin\tau.\] 杆的方位角为
+\(\varphi=2w\tau\)。把小环位置分解为平行、垂直杆的分量，得到
+\[\boxed{F(\tau)=Y\cos(2w\tau)-X\sin(2w\tau)=0},\]
+\[\boxed{S(\tau)=X\cos(2w\tau)+Y\sin(2w\tau),\quad |S|\le1},\] 并须满足
+\(0<2w\tau<\pi\)。第一式检查共线，第二式检查小环确实落在有限杆段内。只比较两端点圆周，会漏掉杆的内部。
+
+例如取 \(\alpha=1.000\)，得到
+\[w=0.3571,\quad b=0.1336,\quad \tau=3.131,\]
+\[\varphi=2.236\ \mathrm{rad}<\pi,\qquad S=0.6894.\]
+因此小环能在半圈内与杆的内部相交，原稿``没有重逢''的结论不成立。图3-2画的是这组参数的实际轨迹，交点对应
+\(S=0.6894\)，不是端点。
+
+\needspace{3\baselineskip}
+\textbf{（七）相交与无冲量重新套回的区别}
+
+在该交点
+\(F'(\tau)=0.1631\ne0\)，小环相对杆有横向速度。一个有限孔径的小环与细杆相交并不自动等于重新获得理想的滑动约束；套回时通常要发生冲量。题设没有给出碰撞、捕获或损耗规律，故无法据此确定``如此往复''的周期运动。
+
+若把``套回''限定为没有横向冲量的光滑重接，则除了上面两个条件，还要
+\[\dot F=0.\] 这是一项额外速度匹配条件。设自由运动时极径为
+\(\rho\)，回旋角频率 \(\kappa=\Omega/2\)。自由环的守恒量给出
+\[u_\varphi=\frac\kappa2\rho+
+\left(\omega'-\frac\kappa2\right)\frac{l^2}{\rho}.\]
+因此相对杆的横向速度为 \[u_\varphi-\omega'\rho=
+\left(\omega'-\frac\kappa2\right)
+\left(\frac{l^2}{\rho}-\rho\right).\] 本题脱离区间
+\(\omega'>\kappa/2\)，所以光滑重接只能发生在 \(\rho=l\)
+的端点。内部相交不能无冲量套回。原题若要求有损或弹性捕获后的重复运动，还须补充捕获模型。
+
+第（3）问可确定的结论是：半圈内的几何相交确实存在；仅凭现有条件，不能给出唯一的重复套回运动。不能用只针对端点的方程否定所有内部相交。
+
+\newpage
+
+\section{第 4 题}\label{ux7b2c-4-ux9898}
+
+研究图示交流电桥。毫伏表按输入阻抗足够大的电压表处理。忽略导线电阻、接触电阻及一切互感。左侧待测线圈的电感为
+\(L_x\)、内阻为 \(R_L\)；右侧标准线圈的电感为 \(L_0\)、内阻为
+\(R_{L0}\)；其余三只电阻的阻值为 \(R_0,R_1,R_2\)。
+
+（1）接通交流电源后，若交流毫伏表读数为零，且除 \(L_x,R_L\)
+外其余量均已知，用已知量表示 \(L_x,R_L\)。
+
+（2）若毫伏表读数不为零，且 \(R_{L0}\) 固定，\(R_0,R_1,R_2,L_0\)
+均可连续调节，证明至少需要选择两个独立调节量才能一般性地调平。实际器材中，电源角频率为
+\(\omega=10^4\ \mathrm{s^{-1}}\)，待测线圈标称
+\(L_x=\sqrt3\ \mathrm{mH}\)、\(R_L=30\ \Omega\)，\(R_1=\sqrt3\ \mathrm{k}\Omega\)，初始
+\(R_0=10\ \Omega\)、\(R_2=1.00\ \mathrm{k}\Omega\)；标准线圈调至
+\(L_0=2.00\ \mathrm{mH}\)，此时
+\(R_{L0}=(20/\sqrt3-10)\ \Omega\)。每一组操作先只调 \(R_0\)
+使读数最小，再只调 \(R_2\)
+使读数最小，如此反复。至少经过多少组操作，\(L_x\)
+测量值与标称值的相对误差才能小于 \(0.03\)？
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.613\linewidth,height=\textheight,keepaspectratio,alt={图4-1　含待测线圈与标准线圈的交流电桥}]{../figures/question-04.pdf}
+\caption*{图4-1　含待测线圈与标准线圈的交流电桥}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-3}
+
+电桥的零读数由两项分压相等决定。反复调最小读数时，必须优化完整的电压比；桥差分子与表电压有相同的零点，却有不同的最小值路径。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-3}
+
+复阻抗与分压；两个独立调平参数；复电压模平方的极小值；单变量有约束极小化；相对误差和整数停止条件。
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-3}
+
+电源接左右两个顶点，电压表接上下两个顶点。左上臂为
+\(Z_x=R_L+i\omega L_x\)，右上臂为
+\(Z_s=R_0+R_{L0}+i\omega L_0\)，左下、右下分别为\(R_1,R_2\)。这四个位置决定了分压式。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.88\linewidth,height=\textheight,keepaspectratio,alt={图4-2　完整电桥分压与逐组相对误差}]{../figures/solution-04.pdf}
+\caption*{图4-2　完整电桥分压与逐组相对误差}
+\end{figure}
+
+把右源端设为零电势、左源端设为\(U\)，上、下顶点的电势分别是
+\(UZ_s/(Z_x+Z_s)\)、\(UR_2/(R_1+R_2)\)。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-3}
+
+表电压相量与源电压的比值为
+\[H=\frac{Z_s}{Z_x+Z_s}-\frac{R_2}{R_1+R_2}.\]
+平衡时\(H=0\)；调最小值时则应最小化\(|H|^2\)。电桥分子的模与实际表电压的模是两个不同目标函数。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-3}
+
+\needspace{3\baselineskip}
+\textbf{（一）平衡与两个调节量}
+
+由\(H=0\)交叉相乘，得 \[R_2Z_x=R_1Z_s.\] 分离实、虚部：
+\[R_2R_L=R_1(R_0+R_{L0}),\qquad R_2L_x=R_1L_0.\] 所以
+\[\boxed{R_L=\frac{R_1}{R_2}(R_0+R_{L0}),\quad L_x=\frac{R_1}{R_2}L_0}.\]
+一般情况下，这是两个独立实条件。例如仅调\(R_0\)不会改变虚部差，初始虚部不为零时便无法调平。选择两参数还需它们对两个条件的响应线性独立；两个相互依赖的旋钮仍不足以一般性调平。
+
+\needspace{3\baselineskip}
+\textbf{（二）实际读数的目标函数}
+
+用欧姆作单位，记
+\[a=R_1=1000\sqrt3,\quad x=R_L=30,\quad d=\omega L_x=10\sqrt3,\]
+\[c=\omega L_0=20,\quad s=R_0+R_{L0},\quad t=R_2,\quad b=\frac{t}{a+t}.\]
+则 \[h(s)=\frac{s+ic}{x+s+i(d+c)},\qquad H=h(s)-b.\] 展开模平方：
+\[\boxed{f(s,b)=|H|^2=
+\frac{[(1-b)s-bx]^2+[c-b(d+c)]^2}{(s+x)^2+(d+c)^2}}.\]
+图4-2的两个分压节点与式中\(h,b\)一一对应。表的有效值等于源有效值乘\(\sqrt f\)，故用\(f\)作目标与调表完全等价。
+
+\needspace{3\baselineskip}
+\textbf{（三）一组操作的解析更新}
+
+第一步固定\(t\)，也就固定\(b\)，调\(s\ge R_{L0}\)。令
+\[A=1-b,\ B=-bx,\ C=c-b(d+c),\ D=d+c.\]
+分子为\((As+B)^2+C^2\)。求导并约去公共正分母，极值条件是
+\[\boxed{A(As+B)[(s+x)^2+D^2]
+-(s+x)[(As+B)^2+C^2]=0}.\]
+三次项抵消，实际是二次方程。把其允许范围内的根与端点\(s=R_{L0}\)、\(s\to\infty\)比较，取全局最小值；本题各组的极小点都在允许区间内部。
+
+第二步固定\(s\)，调\(b\in[0,1)\)。写\(h=h_R+ih_I\)，则
+\[f=(h_R-b)^2+h_I^2.\] 其极小值在\(b=h_R\)，因此
+\[\boxed{t_{\rm new}=a\frac{\Re h(s)}{1-\Re h(s)}}.\]
+若一般参数使\(\Re h\)落在允许区间外，必须在可实现的边界取值，不能无条件使用此更新式。
+
+\needspace{3\baselineskip}
+\textbf{（四）从给定初态逐组迭代}
+
+起点为\(t_0=1000\)，\(s_0=20/\sqrt3\)。每次先用二次方程求\(s_n\)，再由实部分压更新\(t_n\)。每组完成后按平衡公式报告的电感为
+\[L_{x,n}^{\rm meas}=\frac{a}{t_n}L_0.\] 题中相对误差以标称值为分母：
+\[\delta_n=\left|\frac{L_{x,n}^{\rm meas}-\sqrt3\ \mathrm{mH}}
+{\sqrt3\ \mathrm{mH}}\right|.\]
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedleft\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedleft\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedleft\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedleft\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}
+  >{\raggedleft\arraybackslash}p{(\linewidth - 8\tabcolsep) * \real{0.2000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedleft
+完整组数\(n\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+\(R_0/\Omega\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+\(R_2/\Omega\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+\(L_x^{\rm meas}/\mathrm{mH}\)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+\(\delta_n\)
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+1 & 17.0900 & 1359.6813 & 2.547731 & 0.470933 \\
+2 & 22.5203 & 1563.4877 & 2.215624 & 0.279191 \\
+3 & 25.7675 & 1692.5785 & 2.046642 & 0.181629 \\
+4 & 27.8835 & 1779.2183 & 1.946980 & 0.124089 \\
+5 & 29.3282 & 1839.4190 & 1.883259 & 0.087300 \\
+6 & 30.3432 & 1882.1967 & 1.840457 & 0.062588 \\
+7 & 31.0700 & 1913.0584 & 1.810766 & 0.045446 \\
+8 & 31.5970 & 1935.5599 & 1.789715 & 0.033293 \\
+9 & 31.9827 & 1952.0899 & 1.774560 & 0.024543 \\
+\end{longtable}
+}
+
+第8组仍超过\(0.03\)，第9组首次低于阈值，故
+\[\boxed{\text{至少需要9组操作。}}\]
+
+\needspace{3\baselineskip}
+\textbf{（五）平衡点与量纲检查}
+
+理想平衡点为 \[t_*=\frac{aL_0}{L_x}=2000\ \Omega,\]
+\[s_* =\frac{t_*R_L}{a}=20\sqrt3\ \Omega.\]
+所以\(R_{0*}=20\sqrt3-(20/\sqrt3-10)=33.0940\ \Omega\)。迭代中的\(R_2\)和\(R_0\)逐渐趋向这些数值，电感也从上方趋向\(\sqrt3\)
+mH。
+
+\needspace{3\baselineskip}
+\textbf{把驻点方程化为可直接计算的二次式}
+
+令\(z=s+x\)，则\(As+B=Az-x\)，并记\(D=d+c\)。分压模平方变成
+\[f=\frac{(Az-x)^2+C^2}{z^2+D^2}.\]
+对\(z\)求导并只保留决定符号的分子，得到
+\[Axz^2+(A^2D^2-x^2-C^2)z-AxD^2=0.\]
+本题\(A,x,D>0\)，两根乘积为\(-D^2\)，故恰有一个正根。设\(E=A^2D^2-x^2-C^2\)，这个根为
+\[z_{\min}=
+\frac{-E+\sqrt{E^2+4A^2x^2D^2}}{2Ax},\qquad
+s_{\min}=z_{\min}-x.\]
+导数在该正根前为负、之后为正，故它是正\(z\)区间的唯一极小点。若\(s_{\min}<R_{L0}\)，有约束解应取\(s=R_{L0}\)；本题各组均不触碰这个下限。
+
+第二步所需的实部也可避免复数除法，写成 \[\Re h(s)=
+\frac{s(s+x)+cD}{(s+x)^2+D^2}.\]
+因此一组更新只需一次平方根和实数四则运算。第1组代入\(b_0=1000/(1000+1000\sqrt3)\)，得到
+\[s_1=18.63703284\ \Omega,\qquad
+R_{0,1}=17.09002746\ \Omega.\]
+再更新\(b_1\)与\(R_{2,1}\)，得到表中\(1359.6813\ \Omega\)。这一写法能逐行复算表格，也能检查数值优化器是否取到了边界或错误驻点。
+
+\newpage
+
+\section{第 5 题}\label{ux7b2c-5-ux9898}
+
+一个圆形平行板电容器的极板面积为 \(S\)，初始板间距为 \(d\)，且 \(d\)
+远小于圆盘半径。每块极板质量均为
+\(m\)，各由中间一根光滑绝缘直杆导向，只能沿竖直方向运动。两根导杆始终与相应极板保持良好电接触，并由可伸缩导线连接到恒压电源
+\(U\)。两极板的总电荷为 \(2Q\)
+且保持不变；电源在两板间转移电荷以维持电势差
+\(U\)。装置处于真空中，真空介电常数为 \(\varepsilon_0\)、光速为
+\(c\)。忽略边缘效应、重力以及导杆对电场和磁场的影响。
+
+（1）释放后若两极板能在静电作用下保持静止，求 \(Q\)；
+
+（2）判断该平衡是否稳定；
+
+（3）以下取第（1）问的 \(Q\)，在 \(t=0\)
+时给一微扰，使两极板开始相互远离。任意时刻板距为
+\(x(t)\)，求两板相对速度 \(v=\dot x\)；
+
+（4）求板间电场强度随时间的变化率 \(\dot E(x)\)，保留正负号；
+
+（5）在两圆盘正中间的平面上，距导杆为 \(r\) 的点满足 \(r\)
+远小于极板半径。求该点磁感应强度的大小 \(B(x)\)；
+
+（6）一个面积为 \(A\)、均匀带电 \(+q\)
+的绝缘小圆环，其圆心位于两极板的中间平面，圆心到导杆的距离为
+\(r\)。环面包含圆心处的径向方向和极板法线方向，环法线沿环向磁场方向；环的尺寸远小于
+\(r\) 及板间距。小环相对其轴的转动惯量为
+\(I\)，只可绕自身轴转动，忽略小环自感。初始角速度为零。求小环可达到的最大角速度
+\(\omega_0\) 以及此时板距 \(d_0\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.72\linewidth,height=\textheight,keepaspectratio,alt={图5-1　恒压连接的平行圆盘电容器与竖直导向结构}]{../figures/question-05.pdf}
+\caption*{图5-1　恒压连接的平行圆盘电容器与竖直导向结构}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-4}
+
+恒压电源改变两板的电荷分配。先求板间作用力与分离速度，再求变化电场产生的环向磁场；小环的转速峰值与该磁场峰值相对应。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-4}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  平行板电容 \(C=\varepsilon_0S/x\)。
+\item
+  带固定净电荷并接恒压源时的电荷分解。
+\item
+  两均匀带电面的相互作用力。
+\item
+  相对坐标的加速度与速度---位移积分。
+\item
+  安培---麦克斯韦定律和位移电流。
+\item
+  法拉第电磁感应定律。
+\item
+  均匀带电圆环所受感生电场转矩。
+\item
+  单变量函数的极值。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-4}
+
+恒压源在两极板间维持电势差 \(U\)，所以板距变成 \(x\)
+时，电容器差模电荷为
+
+\[
+Q_C(x)=C(x)U=\frac{\varepsilon_0SU}{x}. \tag{1}
+\]
+
+每块极板的电荷均可分解出同号共同分量
+\(Q\)；恒压源在两板间转移的差模电荷为
+\(\pm Q_C\)。因此两个面对另一极板起作用的电荷分别是
+\(Q\pm Q_C\)。图5-1是径向与板法线构成的截面，环向磁场垂直于该截面，也垂直于小环环面。图5-2画出
+\(|\dot E|\) 随板距的变化；在固定位置，\(B_\varphi\) 和小环转速均与
+\(|\dot E|\) 成正比。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.814\linewidth,height=\textheight,keepaspectratio,alt={图5-2　变化电场的峰值与环向磁场}]{../figures/solution-05.pdf}
+\caption*{图5-2　变化电场的峰值与环向磁场}
+\end{figure}
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-4}
+
+定义
+
+\[
+q_+(x)=Q+\frac{\varepsilon_0SU}{x},\qquad
+q_-(x)=Q-\frac{\varepsilon_0SU}{x}. \tag{2}
+\]
+
+单个无限均匀带电面在任一侧产生的场强大小为
+\(|\sigma|/(2\varepsilon_0)\)。因此一块极板受到另一块极板的力可直接写成两个有效电荷的乘积：
+
+\[
+F(x)=\frac{q_+(x)q_-(x)}{2\varepsilon_0S}. \tag{3}
+\]
+
+取 \(F>0\) 表示两板相互排斥、板距增大。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-4}
+
+\needspace{3\baselineskip}
+\textbf{（一）第（1）问：静止条件}
+
+把式（2）代入式（3）：
+
+\[
+\begin{aligned}
+F(x)
+&=\frac{1}{2\varepsilon_0S}
+\left(
+Q+\frac{\varepsilon_0SU}{x}
+\right)
+\left(
+Q-\frac{\varepsilon_0SU}{x}
+\right)\\
+&=\frac{1}{2\varepsilon_0S}
+\left[
+Q^2-\left(\frac{\varepsilon_0SU}{x}\right)^2
+\right].
+\end{aligned} \tag{4}
+\]
+
+初始板距为 \(d\)。静止要求
+
+\[
+F(d)=0. \tag{5}
+\]
+
+所以
+
+\[
+Q^2-\left(\frac{\varepsilon_0SU}{d}\right)^2=0. \tag{6}
+\]
+
+得到
+
+\[
+\boxed{
+Q=\pm\frac{\varepsilon_0SU}{d}
+}. \tag{7}
+\]
+
+两个符号对应共同电荷方向相反，力学结论相同。以下为书写方便取
+
+\[
+Q=\frac{\varepsilon_0SU}{d}. \tag{8}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（二）第（2）问：稳定性}
+
+由式（4）、（8）
+
+\[
+F(x)=\frac{\varepsilon_0SU^2}{2}
+\left(
+\frac1{d^2}-\frac1{x^2}
+\right). \tag{9}
+\]
+
+在 \(x=d+\delta x\) 且 \(|\delta x|\ll d\) 时，
+
+\[
+\frac1{x^2}
+=\frac1{d^2}
+\left(1+\frac{\delta x}{d}\right)^{-2}
+\simeq\frac1{d^2}
+\left(1-\frac{2\delta x}{d}\right). \tag{10}
+\]
+
+于是
+
+\[
+\frac1{d^2}-\frac1{x^2}
+\simeq\frac{2\delta x}{d^3}. \tag{11}
+\]
+
+代入式（9）：
+
+\[
+F\simeq\frac{\varepsilon_0SU^2}{d^3}\delta x. \tag{12}
+\]
+
+当 \(\delta x>0\) 时 \(F>0\)，力继续推动两板分离；当 \(\delta x<0\) 时
+\(F<0\)，力继续使板距减小。力与位移同向，而不是回复力，因此
+
+\[
+\boxed{\text{该平衡不稳定}}. \tag{13}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（三）第（3）问：相对运动方程}
+
+两块极板所受力大小均为 \(F\)、方向相反。若取板距 \(x\)
+为相对坐标，则上板和下板沿增大 \(x\) 方向的加速度各为 \(F/m\)，故
+
+\[
+\ddot x=\frac{F}{m}+\frac{F}{m}
+=\frac{2F}{m}. \tag{14}
+\]
+
+代入式（9）：
+
+\[
+\ddot x
+=\frac{\varepsilon_0SU^2}{m}
+\left(
+\frac1{d^2}-\frac1{x^2}
+\right). \tag{15}
+\]
+
+令
+
+\[
+v=\dot x. \tag{16}
+\]
+
+利用链式法则
+
+\[
+\ddot x=\frac{\mathrm dv}{\mathrm dt}
+=\frac{\mathrm dv}{\mathrm dx}\frac{\mathrm dx}{\mathrm dt}
+=v\frac{\mathrm dv}{\mathrm dx}. \tag{17}
+\]
+
+于是
+
+\[
+v\,\mathrm dv
+=\frac{\varepsilon_0SU^2}{m}
+\left(
+\frac1{d^2}-\frac1{x^2}
+\right)\mathrm dx. \tag{18}
+\]
+
+初始条件为
+
+\[
+x=d,\qquad v=0. \tag{19}
+\]
+
+从 \(d\) 积分到 \(x\)：
+
+\[
+\int_0^v v\,\mathrm dv
+=\frac{\varepsilon_0SU^2}{m}
+\int_d^x
+\left(
+\frac1{d^2}-\frac1{\xi^2}
+\right)\mathrm d\xi. \tag{20}
+\]
+
+左边为 \(v^2/2\)。右边积分：
+
+\[
+\begin{aligned}
+\int_d^x
+\left(
+\frac1{d^2}-\frac1{\xi^2}
+\right)\mathrm d\xi
+&=\frac{x-d}{d^2}
++\left(\frac1x-\frac1d\right)\\
+&=\frac{x(x-d)+d^2-dx}{d^2x}\\
+&=\frac{x^2-2dx+d^2}{d^2x}\\
+&=\frac{(x-d)^2}{d^2x}.
+\end{aligned} \tag{21}
+\]
+
+所以
+
+\[
+\frac12v^2
+=\frac{\varepsilon_0SU^2}{m}
+\frac{(x-d)^2}{d^2x}. \tag{22}
+\]
+
+两板正在远离，取正根：
+
+\[
+\boxed{
+v(x)=\dot x
+=\frac{U(x-d)}{d}
+\sqrt{\frac{2\varepsilon_0S}{mx}}
+}. \tag{23}
+\]
+
+当 \(x=d\) 时 \(v=0\)；当 \(x>d\) 时 \(v>0\)，与运动方向一致。
+
+\needspace{3\baselineskip}
+\textbf{（四）第（4）问：电场变化率}
+
+忽略边缘效应时
+
+\[
+E(x)=\frac{U}{x}. \tag{24}
+\]
+
+对时间求导：
+
+\[
+\dot E
+=-\frac{U}{x^2}\dot x. \tag{25}
+\]
+
+代入式（23）：
+
+\[
+\begin{aligned}
+\dot E(x)
+&=-\frac{U}{x^2}
+\frac{U(x-d)}{d}
+\sqrt{\frac{2\varepsilon_0S}{mx}}\\
+&=\boxed{
+-\frac{U^2}{d}
+\sqrt{\frac{2\varepsilon_0S}{m}}
+\frac{x-d}{x^{5/2}}
+}.
+\end{aligned} \tag{26}
+\]
+
+在 \(x>d\) 时式（26）为负，表示恒压条件下板距增大使场强减小。
+
+\needspace{3\baselineskip}
+\textbf{（五）第（5）问：位移电流产生的磁场}
+
+取中间平面内以导杆为圆心、半径为 \(r\) 的圆周。由于 \(r\)
+远小于极板半径，圆周上的磁场可视为切向且等大。
+
+安培---麦克斯韦定律为
+
+\[
+\oint\bm B\cdot\mathrm d\bm l
+=\mu_0\varepsilon_0
+\frac{\mathrm d\Phi_E}{\mathrm dt}. \tag{27}
+\]
+
+左边
+
+\[
+\oint\bm B\cdot\mathrm d\bm l=B\cdot2\pi r. \tag{28}
+\]
+
+半径 \(r\) 内的电通量为
+
+\[
+\Phi_E=E\pi r^2. \tag{29}
+\]
+
+因此
+
+\[
+2\pi rB
+=\mu_0\varepsilon_0\pi r^2|\dot E|. \tag{30}
+\]
+
+使用
+
+\[
+\mu_0\varepsilon_0=\frac1{c^2}, \tag{31}
+\]
+
+得到
+
+\[
+B(x)=\frac{r}{2c^2}|\dot E(x)|. \tag{32}
+\]
+
+代入式（26）的大小：
+
+\[
+\boxed{
+B(x)
+=\frac{rU^2}{2c^2d}
+\sqrt{\frac{2\varepsilon_0S}{m}}
+\frac{x-d}{x^{5/2}}
+}. \tag{33}
+\]
+
+磁场方向由 \(\dot E\)
+的符号和右手定则确定；题目只问大小，所以式（33）取正。
+
+\needspace{3\baselineskip}
+\textbf{（六）第（6）问：感生电场对带电圆环的转矩}
+
+小环面积为 \(A\)，且足够小，可认为穿过小环的磁场均匀。法拉第定律给出
+
+\[
+\mathcal E=-\frac{\mathrm d\Phi_B}{\mathrm dt}
+=-A\frac{\mathrm dB}{\mathrm dt}. \tag{34}
+\]
+
+若小环半径为 \(a\)，环向感生电场近似均匀，则
+
+\[
+\mathcal E=2\pi aE_\varphi. \tag{35}
+\]
+
+环上电荷元 \(\mathrm dq\) 受到切向力
+\(E_\varphi\mathrm dq\)，对圆心的力矩元为
+
+\[
+\mathrm d\tau=aE_\varphi\,\mathrm dq. \tag{36}
+\]
+
+对全环积分：
+
+\[
+\tau=aE_\varphi\int\mathrm dq
+=aqE_\varphi. \tag{37}
+\]
+
+由式（35）
+
+\[
+aE_\varphi=\frac{\mathcal E}{2\pi}. \tag{38}
+\]
+
+所以
+
+\[
+\tau=\frac{q\mathcal E}{2\pi}
+=-\frac{Aq}{2\pi}\frac{\mathrm dB}{\mathrm dt}. \tag{39}
+\]
+
+转动方程为
+
+\[
+I\frac{\mathrm d\omega}{\mathrm dt}=\tau. \tag{40}
+\]
+
+代入式（39）并积分：
+
+\[
+\mathrm d\omega
+=-\frac{Aq}{2\pi I}\,\mathrm dB. \tag{41}
+\]
+
+初态 \(x=d\) 时，由式（33）有 \(B(d)=0\)，且
+\(\omega(d)=0\)。因此角速度大小为
+
+\[
+|\omega(x)|
+=\frac{Aq}{2\pi I}B(x). \tag{42}
+\]
+
+所以最大角速度与 \(B(x)\) 的最大值出现在同一板距。
+
+\needspace{3\baselineskip}
+\textbf{（七）求 \(B(x)\) 的极大值}
+
+除正的常量因子外，需要极大化
+
+\[
+f(x)=\frac{x-d}{x^{5/2}},\qquad x\ge d. \tag{43}
+\]
+
+求导：
+
+\[
+\begin{aligned}
+f'(x)
+&=x^{-5/2}
+-\frac52(x-d)x^{-7/2}\\
+&=x^{-7/2}
+\left[
+x-\frac52(x-d)
+\right]\\
+&=\frac{5d-3x}{2x^{7/2}}.
+\end{aligned} \tag{44}
+\]
+
+令 \(f'(x)=0\)：
+
+\[
+5d-3x=0. \tag{45}
+\]
+
+所以
+
+\[
+\boxed{d_0=x_{\max}=\frac53d}. \tag{46}
+\]
+
+在 \(d<x<5d/3\) 时 \(f'>0\)，在 \(x>5d/3\) 时 \(f'<0\)，故确为最大值。
+
+把 \(x=5d/3\) 代入式（33）：
+
+\[
+\begin{aligned}
+B_{\max}
+&=\frac{rU^2}{2c^2d}
+\sqrt{\frac{2\varepsilon_0S}{m}}
+\frac{(2/3)d}{[(5/3)d]^{5/2}}\\
+&=\frac{6rU^2}{25c^2d^2}
+\sqrt{\frac{3\varepsilon_0S}{10md}}.
+\end{aligned} \tag{47}
+\]
+
+由式（42）：
+
+\[
+\begin{aligned}
+\omega_0
+&=\frac{Aq}{2\pi I}B_{\max}\\
+&=\boxed{
+\frac{3qArU^2}{25\pi Ic^2d^2}
+\sqrt{\frac{3\varepsilon_0S}{10md}}
+}.
+\end{aligned} \tag{48}
+\]
+
+若把根式中的 \(2\) 重新并入前面的系数，也可写成等价形式
+
+\[
+\boxed{
+\omega_0
+=\frac{3qArU^2}{50\pi Ic^2d^2}
+\sqrt{\frac{6\varepsilon_0S}{5md}}
+}. \tag{49}
+\]
+
+式（48）、（49）完全等价。
+
+\needspace{3\baselineskip}
+\textbf{量纲核验}
+
+式（23）中根式的量纲为
+
+\[
+\sqrt{\frac{\varepsilon_0SU^2}{mx}}
+=\sqrt{\frac{\mathrm J}{\mathrm{kg}}}
+=\mathrm{m\,s^{-1}}.
+\]
+
+式（33）由 \(r\dot E/c^2\) 构成，量纲为特斯拉。式（42）中 \(AqB/I\)
+的量纲为角速度，结果自洽。
+
+\textbf{严格初态和磁场方向。}
+若恰有\(x=d,\dot x=0\)，运动方程的右侧为零，唯一解是保持静止。题中分离过程应理解为微小分离或微小初速的极限；令初始\(x_0>d\)时，能量积分为
+\[v^2-v_0^2=\frac{2\varepsilon SU^2}{m}
+\left[\frac{x-x_0}{d^2}+\frac1x-\frac1{x_0}\right].\]
+图中位于两板中间面的感生磁场沿以板轴为中心的圆周方向，环须放在包含径向和板法线的竖直平面内，才能使其法向与该磁场一致。环足够小且\(a\ll r\)时，可用\(\mu=q\omega A/(2\pi)\)与局部\(B\)相乘计算磁矩势能。两板实际电荷是
+\(Q\pm C(x)U\)；\(2Q\)为固定的总电荷，不能说每块板的电荷各自不变。峰值\(x=5d/3\)还须落在忽略边缘场的范围
+\(x\ll\sqrt{S/\pi}\) 内。
+
+\newpage
+
+\section{第 6 题}\label{ux7b2c-6-ux9898}
+
+一条理想高分子链由 \(N\) 个 Kuhn 链段组成，每段长度为
+\(b\)。链首、链尾距离为 \(R\)，并满足
+
+\[
+\langle R^2\rangle=Nb^2.
+\]
+
+令末端位置矢量为\(\boldsymbol R\)、其长度为R。高斯链末端位置的三维概率密度为
+
+\[
+p(R)=\frac{\Omega(N,R)}
+{\int\Omega(N,\boldsymbol R)\,\mathrm d^3R}
+=\left(
+\frac{3}{2\pi\langle R^2\rangle}
+\right)^{3/2}
+\exp\left[
+-\frac{3R^2}{2\langle R^2\rangle}
+\right].
+\]
+
+亥姆霍兹自由能为 \(F=U-TS\)，其中 \(U\) 与 \(R\)
+无关，\(S=k\ln\Omega\)。求：
+
+（1）相对 \(R=0\) 的初态，证明熵变 \(\Delta S\propto R^2\)；
+
+（2）等温条件下分子链的弹力 \(f=\partial F/\partial R\)；
+
+（3）若 \(N\) 不变而温度变为原来的两倍，作用力如何变化？若温度不变而
+\(N\) 变为原来的三倍，作用力如何变化？
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.76\linewidth,height=\textheight,keepaspectratio,alt={图6-1　高斯链的末端距离与链段构象}]{../figures/question-06.pdf}
+\caption*{图6-1　高斯链的末端距离与链段构象}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-5}
+
+固定末端位置矢量时，拉伸使构象密度下降，熵降低。自由能随伸长增加，其导数给出保持伸长所需的外力。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-5}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  玻尔兹曼熵 \(S=k\ln\Omega\)。
+\item
+  概率密度与微观态数的比例关系。
+\item
+  亥姆霍兹自由能 \(F=U-TS\)。
+\item
+  广义力与自由能梯度。
+\item
+  高斯链的线性熵弹性。
+\item
+  参数比例关系与量纲。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-5}
+
+当 \(R=0\) 时，链可以蜷曲成最多的构象，熵最大。拉长到 \(R>0\)
+后，可实现该末端位置矢量的构象密度按高斯因子减少，自由能随 \(R^2\)
+增大。如图
+6-2，自由能曲线是一条开口向上的抛物线，斜率就是保持该伸长所需的外力大小。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.766\linewidth,height=\textheight,keepaspectratio,alt={图6-2　固定末端矢量的自由能与外力}]{../figures/solution-06.pdf}
+\caption*{图6-2　固定末端矢量的自由能与外力}
+\end{figure}
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-5}
+
+归一化积分
+
+\[
+\mathcal N(N)=\int\Omega(N,\boldsymbol R)\,\mathrm d^3R \tag{1}
+\]
+
+对同一个 \(N\) 而言与 \(R\) 无关，所以
+
+\[
+\frac{\Omega(N,R)}{\Omega(N,0)}
+=\frac{p(R)}{p(0)}. \tag{2}
+\]
+
+这使概率密度中的归一化常量在熵差中完全消失。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-5}
+
+\needspace{3\baselineskip}
+\textbf{（一）第（1）问：求熵变}
+
+定义
+
+\[
+\Delta S=S(R)-S(0). \tag{3}
+\]
+
+由 \(S=k\ln\Omega\)：
+
+\[
+\begin{aligned}
+\Delta S
+&=k\ln\Omega(N,R)-k\ln\Omega(N,0)\\
+&=k\ln\frac{\Omega(N,R)}{\Omega(N,0)}.
+\end{aligned} \tag{4}
+\]
+
+使用式（2）：
+
+\[
+\Delta S=k\ln\frac{p(R)}{p(0)}. \tag{5}
+\]
+
+概率密度中的前置因子与 \(R\) 无关，故
+
+\[
+\frac{p(R)}{p(0)}
+=\exp\left(
+-\frac{3R^2}{2Nb^2}
+\right). \tag{6}
+\]
+
+代入式（5）：
+
+\[
+\begin{aligned}
+\Delta S
+&=k\ln
+\exp\left(
+-\frac{3R^2}{2Nb^2}
+\right)\\
+&=-\frac{3kR^2}{2Nb^2}.
+\end{aligned} \tag{7}
+\]
+
+所以
+
+\[
+\boxed{
+\Delta S=-\frac{3k}{2Nb^2}R^2
+}. \tag{8}
+\]
+
+熵变与 \(R^2\) 成正比，比例系数为负；伸长使熵降低。
+
+\needspace{3\baselineskip}
+\textbf{（二）第（2）问：由自由能求弹力}
+
+\(U\) 与 \(R\) 无关，因此相对 \(R=0\) 的自由能变化为
+
+\[
+\Delta F
+=-T\Delta S. \tag{9}
+\]
+
+代入式（8）：
+
+\[
+\Delta F
+=\frac{3kT}{2Nb^2}R^2. \tag{10}
+\]
+
+题目把维持伸长所需的外力定义为
+
+\[
+f=\frac{\partial F}{\partial R}. \tag{11}
+\]
+
+所以
+
+\[
+\begin{aligned}
+f
+&=\frac{\partial}{\partial R}
+\left(
+\frac{3kT}{2Nb^2}R^2
+\right)\\
+&=\boxed{
+\frac{3kT}{Nb^2}R
+}.
+\end{aligned} \tag{12}
+\]
+
+若写分子链自身的回复力矢量，则方向与 \(\bm R\) 相反：
+
+\[
+\bm F_{\rm restore}
+=-\frac{3kT}{Nb^2}\bm R. \tag{13}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（三）第（3）问：参数变化}
+
+在 \(R,b\) 不变时，式（12）给出
+
+\[
+f\propto\frac{T}{N}. \tag{14}
+\]
+
+若
+
+\[
+T\longrightarrow2T,\qquad N\ \text{不变}, \tag{15}
+\]
+
+则
+
+\[
+\boxed{f\longrightarrow2f}. \tag{16}
+\]
+
+若
+
+\[
+N\longrightarrow3N,\qquad T\ \text{不变}, \tag{17}
+\]
+
+则
+
+\[
+\boxed{f\longrightarrow\frac13f}. \tag{18}
+\]
+
+温度升高时熵损失的能量代价 \(T|\Delta S|\)
+增大，因此链表现得更``硬''；链段数增多时，同一末端距离相对于自然尺度
+\(\sqrt N b\) 更小，因此回复力减弱。
+
+\textbf{概率密度的含义。}
+高斯公式\(p(\boldsymbol R)\)的量纲是长度的\(-3\)次方，它是末端位置矢量的三维密度：概率为\(p(\boldsymbol R)\,\mathrm d^3R\)。若改问长度落在\([R,R+\mathrm dR]\)的概率，要乘球壳因子\(4\pi R^2\)。固定矢量末端与只固定长度属于不同约束，不能把球壳分布与\(p(0)\)直接比较。弹性恢复力取向内，保持伸长所需的外力为\(3kT\boldsymbol R/(Nb^2)\)。
+
+\needspace{3\baselineskip}
+\textbf{三维密度与径向分布不能混用}
+
+记\(\sigma^2=Nb^2/3\)，三维高斯密度可分解为三个独立分量：
+\[p(\boldsymbol R)=
+\prod_{i=x,y,z}\frac1{\sqrt{2\pi\sigma^2}}
+\exp\!\left[-\frac{R_i^2}{2\sigma^2}\right].\]
+每个分量的方差为\(\sigma^2\)，所以 \[\langle R^2\rangle
+=\langle R_x^2+R_y^2+R_z^2\rangle
+=3\sigma^2=Nb^2.\]
+对固定位置矢量，最可能位置是\(\boldsymbol R=0\)。若只问末端距离，则概率密度应改成
+\[P_{\rm rad}(R)=4\pi R^2p(\boldsymbol R),\qquad R\ge0.\]
+在\(R>0\)对其对数求导： \[\frac{\mathrm d}{\mathrm dR}\ln P_{\rm rad}
+=\frac2R-\frac{3R}{Nb^2}.\] 因此最概然距离为
+\[R_{\rm mode}=\sqrt{\frac{2Nb^2}{3}},\]
+而不是零。这与固定矢量的熵最大点并不矛盾，球壳上可选方向的数目带来了\(R^2\)权重。
+
+把径向密度用于另一种只固定距离的约束，会多出\(-2kT\ln R\)的自由能项。它的导数不是本题固定末端矢量的拉伸外力。原题从\(R=0\)比较熵差，因此必须保留三维密度的定义；这一点也决定图6-2画哪条自由能曲线。高斯链只适用于\(R\ll Nb\)，接近完全拉直时构象有限伸长效应不能忽略。
+
+\newpage
+
+\section{第 7 题}\label{ux7b2c-7-ux9898}
+
+考虑一团低速、纯暗物质组成的稀薄云团，可视为只受自身万有引力作用的理想气体。云团球对称分布并处于力学平衡和热平衡，温度恒为
+\(T\)，摩尔质量为 \(\mu\)。距中心 \(r\) 处的质量密度为
+\(\rho(r)\)、压强为 \(p(r)\)、引力场大小为 \(g(r)\)，万有引力常量为
+\(G\)。
+
+（1）利用理想气体状态方程，用 \(p,\mu,R,T\) 表示 \(\rho\)；
+
+（2）用 \(g,p,\mu,r,T,R\) 表示 \(\mathrm dp/\mathrm dr\)；
+
+（3）建立 \(\rho(r)\) 满足的常微分方程；
+
+（4）质量为 \(m\) 的小星体只受云团引力，在半径 \(r_0\)
+处作圆周运动。已知该处压强为 \(p_0\)、引力场为 \(g_0\)，求轨道周期
+\(T_0\)；
+
+（5）在圆周运动基础上施加小的径向扰动，求径向振动周期 \(T_1\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.66\linewidth,height=\textheight,keepaspectratio,alt={图7-1　球对称等温自引力气体云团}]{../figures/question-07.pdf}
+\caption*{图7-1　球对称等温自引力气体云团}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-6}
+
+气体静力平衡把密度、压力与自引力场联系起来。先消去压力和包围质量，再求密度方程；圆轨道的径向扰动要保留角动量约束。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-6}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  理想气体状态方程的密度形式。
+\item
+  球对称流体静力平衡。
+\item
+  包围质量 \(M(r)\) 与引力场 \(g(r)\)。
+\item
+  球坐标下的引力场散度。
+\item
+  圆周运动条件。
+\item
+  角动量守恒下的径向线性化。
+\item
+  \(g'(r)\) 与局部密度的关系。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-6}
+
+半径 \(r\)
+的薄球壳内侧压强略大于外侧压强，二者之差抵消壳层所受向内引力。测试星体在半径
+\(r_0\) 的圆轨道上时，引力提供向心力；施加径向扰动后，离心项按
+\(r^{-3}\) 变化，引力项按局部的 \(g(r)\) 变化，如图 7-2。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.76\linewidth,height=\textheight,keepaspectratio,alt={图7-2　径向轨道扰动和小振动频率}]{../figures/solution-07.pdf}
+\caption*{图7-2　径向轨道扰动和小振动频率}
+\end{figure}
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-6}
+
+定义半径 \(r\) 内的云团质量
+
+\[
+M(r)=4\pi\int_0^r\rho(\xi)\xi^2\,\mathrm d\xi. \tag{1}
+\]
+
+球对称引力场为
+
+\[
+g(r)=\frac{GM(r)}{r^2}. \tag{2}
+\]
+
+对式（2）求导可得到后两问需要的局部关系
+
+\[
+g'(r)=4\pi G\rho(r)-\frac{2g(r)}{r}. \tag{3}
+\]
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-6}
+
+\needspace{3\baselineskip}
+\textbf{（一）第（1）问：状态方程}
+
+取体积为 \(V\)、其中气体质量为 \(M_g\)。物质的量为
+
+\[
+n=\frac{M_g}{\mu}. \tag{4}
+\]
+
+理想气体状态方程
+
+\[
+pV=nRT \tag{5}
+\]
+
+变为
+
+\[
+pV=\frac{M_g}{\mu}RT. \tag{6}
+\]
+
+质量密度是
+
+\[
+\rho=\frac{M_g}{V}. \tag{7}
+\]
+
+把式（6）除以 \(V\)：
+
+\[
+p=\frac{\rho}{\mu}RT. \tag{8}
+\]
+
+因此
+
+\[
+\boxed{
+\rho=\frac{\mu p}{RT}
+}. \tag{9}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（二）第（2）问：流体静力平衡}
+
+取半径 \(r\)、厚度 \(\mathrm dr\)、面积元 \(\mathrm dA\)
+的小柱体。内侧压强力沿外，大小为
+\(p(r)\mathrm dA\)；外侧压强力沿内，大小为
+
+\[
+\left[
+p(r)+\frac{\mathrm dp}{\mathrm dr}\mathrm dr
+\right]\mathrm dA. \tag{10}
+\]
+
+小柱体质量为
+
+\[
+\mathrm dm=\rho(r)\,\mathrm dA\,\mathrm dr. \tag{11}
+\]
+
+其引力大小为
+
+\[
+\mathrm dF_g=g(r)\rho(r)\,\mathrm dA\,\mathrm dr. \tag{12}
+\]
+
+取径向向外为正，平衡条件为
+
+\[
+p\,\mathrm dA
+-\left(p+\frac{\mathrm dp}{\mathrm dr}\mathrm dr\right)\mathrm dA
+-\rho g\,\mathrm dA\,\mathrm dr=0. \tag{13}
+\]
+
+约去 \(\mathrm dA\,\mathrm dr\)：
+
+\[
+\frac{\mathrm dp}{\mathrm dr}=-\rho g. \tag{14}
+\]
+
+用式（9）消去 \(\rho\)：
+
+\[
+\boxed{
+\frac{\mathrm dp}{\mathrm dr}
+=-\frac{\mu}{RT}p(r)g(r)
+}. \tag{15}
+\]
+
+压强随半径增大而减小，负号符合物理图像。
+
+\needspace{3\baselineskip}
+\textbf{（三）第（3）问：建立密度方程}
+
+由式（8）
+
+\[
+p=\frac{RT}{\mu}\rho. \tag{16}
+\]
+
+温度恒定，所以
+
+\[
+\frac{\mathrm dp}{\mathrm dr}
+=\frac{RT}{\mu}\frac{\mathrm d\rho}{\mathrm dr}. \tag{17}
+\]
+
+与式（14）比较：
+
+\[
+\frac{RT}{\mu}\rho'=-\rho g. \tag{18}
+\]
+
+解出 \(g\)：
+
+\[
+g=-\frac{RT}{\mu}\frac{\rho'}{\rho}. \tag{19}
+\]
+
+球对称引力场满足
+
+\[
+\frac1{r^2}\frac{\mathrm d}{\mathrm dr}
+\left(r^2g\right)
+=4\pi G\rho. \tag{20}
+\]
+
+把式（19）代入：
+
+\[
+-\frac{RT}{\mu}
+\frac1{r^2}\frac{\mathrm d}{\mathrm dr}
+\left(
+r^2\frac{\rho'}{\rho}
+\right)
+=4\pi G\rho. \tag{21}
+\]
+
+移项并乘以 \(\mu/(RT)\)：
+
+\[
+\boxed{
+\frac1{r^2}\frac{\mathrm d}{\mathrm dr}
+\left(
+r^2\frac{\rho'}{\rho}
+\right)
++\frac{4\pi G\mu}{RT}\rho=0
+}. \tag{22}
+\]
+
+式（22）是紧凑形式。若要求展开为显式二阶方程，先计算
+
+\[
+\frac{\mathrm d}{\mathrm dr}
+\left(
+r^2\frac{\rho'}{\rho}
+\right)
+=2r\frac{\rho'}{\rho}
++r^2
+\left[
+\frac{\rho''}{\rho}
+-\left(\frac{\rho'}{\rho}\right)^2
+\right]. \tag{23}
+\]
+
+除以 \(r^2\) 后得到
+
+\[
+\boxed{
+\rho''
++\frac2r\rho'
+-\frac{(\rho')^2}{\rho}
++\frac{4\pi G\mu}{RT}\rho^2=0
+}. \tag{24}
+\]
+
+球心处的正则边界条件为
+
+\[
+\rho(0)=\rho_c<\infty,\qquad
+\rho'(0)=0. \tag{25}
+\]
+
+第二个条件来自球对称性。
+
+\needspace{3\baselineskip}
+\textbf{（四）第（4）问：圆轨道周期}
+
+在半径 \(r_0\) 的圆轨道上，引力提供向心力：
+
+\[
+mg_0=m\frac{v_0^2}{r_0}. \tag{26}
+\]
+
+约去测试星体质量 \(m\)：
+
+\[
+v_0^2=g_0r_0. \tag{27}
+\]
+
+圆周运动速度也可写成
+
+\[
+v_0=\frac{2\pi r_0}{T_0}. \tag{28}
+\]
+
+代入式（27）：
+
+\[
+\frac{4\pi^2r_0^2}{T_0^2}
+=g_0r_0. \tag{29}
+\]
+
+所以
+
+\[
+\boxed{
+T_0=2\pi\sqrt{\frac{r_0}{g_0}}
+}. \tag{30}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（五）第（5）问：径向运动方程}
+
+测试星体受中心力，单位质量角动量
+
+\[
+h=r^2\dot\varphi \tag{31}
+\]
+
+守恒。圆轨道上
+
+\[
+h=r_0v_0. \tag{32}
+\]
+
+由式（27）
+
+\[
+h^2=r_0^2v_0^2=g_0r_0^3. \tag{33}
+\]
+
+极坐标径向运动方程为
+
+\[
+\ddot r-r\dot\varphi^2=-g(r). \tag{34}
+\]
+
+利用 \(r\dot\varphi^2=h^2/r^3\)：
+
+\[
+\ddot r-\frac{h^2}{r^3}=-g(r), \tag{35}
+\]
+
+即
+
+\[
+\ddot r=\frac{h^2}{r^3}-g(r). \tag{36}
+\]
+
+令
+
+\[
+r=r_0(1+\eta),\qquad |\eta|\ll1. \tag{37}
+\]
+
+则
+
+\[
+\ddot r=r_0\ddot\eta. \tag{38}
+\]
+
+离心项展开：
+
+\[
+\begin{aligned}
+\frac{h^2}{r^3}
+&=\frac{g_0r_0^3}{r_0^3(1+\eta)^3}\\
+&=g_0(1+\eta)^{-3}\\
+&\simeq g_0(1-3\eta).
+\end{aligned} \tag{39}
+\]
+
+引力场展开：
+
+\[
+g(r)
+\simeq g_0+g_0'(r-r_0)
+=g_0+g_0'r_0\eta. \tag{40}
+\]
+
+代入式（36）：
+
+\[
+r_0\ddot\eta
+=g_0(1-3\eta)
+-g_0-g_0'r_0\eta. \tag{41}
+\]
+
+常量项抵消：
+
+\[
+r_0\ddot\eta
+=-\left(3g_0+g_0'r_0\right)\eta. \tag{42}
+\]
+
+所以
+
+\[
+\ddot\eta
++\left(
+\frac{3g_0}{r_0}+g_0'
+\right)\eta=0. \tag{43}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（六）用局部密度消去 \(g_0'\)}
+
+由式（3），在 \(r_0\) 处
+
+\[
+g_0'=4\pi G\rho_0-\frac{2g_0}{r_0}. \tag{44}
+\]
+
+代入式（43）：
+
+\[
+\ddot\eta
++\left(
+\frac{g_0}{r_0}+4\pi G\rho_0
+\right)\eta=0. \tag{45}
+\]
+
+由式（9）
+
+\[
+\rho_0=\frac{\mu p_0}{RT}. \tag{46}
+\]
+
+所以径向振动角频率为
+
+\[
+\omega_r^2
+=\frac{g_0}{r_0}
++\frac{4\pi G\mu p_0}{RT}. \tag{47}
+\]
+
+最终
+
+\[
+\boxed{
+T_1
+=\frac{2\pi}{
+\sqrt{
+\dfrac{g_0}{r_0}
++\dfrac{4\pi G\mu p_0}{RT}
+}}
+}. \tag{48}
+\]
+
+式（47）为正，所以该圆轨道对小径向扰动是线性稳定的。
+
+\needspace{3\baselineskip}
+\textbf{结果比较}
+
+由式（30）
+
+\[
+\left(\frac{2\pi}{T_0}\right)^2=\frac{g_0}{r_0}. \tag{49}
+\]
+
+式（47）多出正项 \(4\pi G\rho_0\)，故
+
+\[
+\omega_r>\frac{2\pi}{T_0},\qquad
+T_1<T_0. \tag{50}
+\]
+
+局部物质密度增强了径向回复作用。
+
+\needspace{3\baselineskip}
+\textbf{用有效势和两个极限检查径向频率}
+
+令引力势每单位质量为\(\Phi(r)\)，满足\(\Phi'=g\)。固定单位质量角动量\(h\)时，径向有效势是
+\[V_{\rm eff}(r)=\Phi(r)+\frac{h^2}{2r^2}.\]
+圆轨道条件\(V_{\rm eff}'(r_0)=0\)给出\(h^2=g_0r_0^3\)；二阶导数则为
+\[V_{\rm eff}''(r_0)=g'_0+\frac{3g_0}{r_0}.\]
+因径向动能为\(\dot r^2/2\)，这正是\(\omega_r^2\)。有效势法与直接展开动力学方程得到同一系数。
+
+在云团外部真空区，\(\rho_0=0\)且\(g=GM/r^2\)，有
+\[\omega_r^2=\frac{GM}{r_0^3}=\omega_\varphi^2.\]
+近圆开普勒轨道每绕行一周完成一次径向振动。作为引力场检验，另取均匀密度球内部：
+\[g=\frac{4\pi G\rho_c}{3}r,\qquad
+\omega_\varphi^2=\frac{4\pi G\rho_c}{3}.\] 于是
+\[\omega_r^2=\frac{16\pi G\rho_c}{3}=4\omega_\varphi^2.\]
+均匀密度球不是严格等温静力解，但它可用于独立检查一般球对称轨道公式。若误把径向扰动时的角速度固定，两种极限中的至少一种会失败。
+
+\newpage
+
+\section{第 8 题}\label{ux7b2c-8-ux9898}
+
+在惯性系 \(S\) 中，半径为 \(r\) 的圆环上均匀分布 \(N\)
+个电子，每个电子电量为 \(-e\)，且 \(N\) 很大。电子以角速度 \(\omega\)
+逆时针作圆周运动，满足 \(\omega r<c\)。圆环中心有一个静止的正电荷
+\(+Ne\)，因而系统总电荷为零。圆环上点 \(A\) 的位置矢量与 \(x\) 轴夹角为
+\(\theta\)。惯性系 \(S'\) 相对 \(S\) 以速度 \(\beta c\) 沿 \(+x\)
+方向运动。求：
+
+（1）在 \(S'\) 中，\(A\) 点电子的速度；
+
+（2）在 \(S'\) 中，\(A\) 点圆环电子的线密度；
+
+（3）在 \(S'\) 中，整个系统的磁偶极矩和电偶极矩。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.64\linewidth,height=\textheight,keepaspectratio,alt={图8-1　中性旋转电子圆环及沿 x 方向的洛伦兹变换}]{../figures/question-08.pdf}
+\caption*{图8-1　中性旋转电子圆环及沿 \(x\) 方向的洛伦兹变换}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-7}
+
+速度变换可以逐电子处理，密度和偶极矩则必须取同一观察系的同时截面。先求电子数元与椭圆弧长，再直接积分电偶极矩和明确定义的电流磁矩。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-7}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  洛伦兹速度变换。
+\item
+  同时性条件 \(dt'=0\)。
+\item
+  圆周运动相邻电子的角标记变化。
+\item
+  线密度的粒子数守恒。
+\item
+  电流环磁偶极矩。
+\item
+  极化强度与磁化强度的洛伦兹混合。
+\item
+  积分偶极矩中的密度变换与体积收缩。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-7}
+
+在 \(S\) 中，\(A\)
+点电子速度沿圆切线。把它分成平行和垂直于相对运动速度的分量后，分别使用纵向和横向速度变换。
+
+如图 8-2，系统在 \(S\) 中只有指向 \(-z\) 的磁偶极矩；从沿 \(+x\)
+方向运动的 \(S'\) 观察，系统整体向 \(-x\) 运动，并出现沿 \(-y\)
+的电偶极矩。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.89\linewidth,height=\textheight,keepaspectratio,alt={图8-2　新系同时截面的椭圆与偶极矩定义}]{../figures/solution-08.pdf}
+\caption*{图8-2　新系同时截面的椭圆与偶极矩定义}
+\end{figure}
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-7}
+
+定义洛伦兹因子
+
+\[
+\gamma=\frac1{\sqrt{1-\beta^2}}. \tag{1}
+\]
+
+在 \(S\) 中，点 \(A\) 的坐标为
+
+\[
+x=r\cos\theta,\qquad y=r\sin\theta. \tag{2}
+\]
+
+逆时针圆周运动的速度为
+
+\[
+u_x=-\omega r\sin\theta,\qquad
+u_y=\omega r\cos\theta. \tag{3}
+\]
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-7}
+
+\needspace{3\baselineskip}
+\textbf{（一）第（1）问：速度洛伦兹变换}
+
+\(S'\) 相对 \(S\) 以
+
+\[
+V=\beta c \tag{4}
+\]
+
+沿 \(+x\) 方向运动。速度变换公式为
+
+\[
+u_x'=\frac{u_x-V}{1-u_xV/c^2}, \tag{5}
+\]
+
+\[
+u_y'=\frac{u_y}{\gamma(1-u_xV/c^2)}. \tag{6}
+\]
+
+先算共同分母：
+
+\[
+1-\frac{u_xV}{c^2}
+=1-\frac{(-\omega r\sin\theta)(\beta c)}{c^2}
+=1+\beta\frac{\omega r}{c}\sin\theta. \tag{7}
+\]
+
+代入式（5）：
+
+\[
+\boxed{
+u_x'
+=-\frac{\beta c+\omega r\sin\theta}
+{1+\beta(\omega r/c)\sin\theta}
+}. \tag{8}
+\]
+
+代入式（6）：
+
+\[
+\boxed{
+u_y'
+=\frac{\omega r\cos\theta\sqrt{1-\beta^2}}
+{1+\beta(\omega r/c)\sin\theta}
+}. \tag{9}
+\]
+
+若 \(\beta=0\)，式（8）、（9）还原成式（3）；若 \(\omega=0\)，则
+\(u_x'=-\beta c,u_y'=0\)，说明变换方向正确。
+
+\needspace{3\baselineskip}
+\textbf{（二）第（2）问：建立 \(S'\) 同时的两个事件}
+
+在 \(S'\) 中取同一时刻的两个相邻电子事件，因此
+
+\[
+dt'=0. \tag{10}
+\]
+
+洛伦兹时间变换为
+
+\[
+dt'=\gamma\left(dt-\frac{\beta}{c}dx\right). \tag{11}
+\]
+
+所以
+
+\[
+dt=\frac{\beta}{c}dx. \tag{12}
+\]
+
+设两个事件在几何位置上的角差为 \(d\theta\)。在 \(S\) 中相应坐标差为
+
+\[
+dx=-r\sin\theta\,d\theta, \tag{13}
+\]
+
+\[
+dy=r\cos\theta\,d\theta. \tag{14}
+\]
+
+由式（12）
+
+\[
+dt=-\frac{\beta r}{c}\sin\theta\,d\theta. \tag{15}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（三）求这两个事件所对应电子在同一 \(S\) 时刻的角标记差}
+
+由于第二个事件与第一个事件在 \(S\) 中相差时间 \(dt\)，电子在此期间转过
+\(\omega dt\)。因此同一 \(S\) 时刻的电子角标记差为
+
+\[
+d\theta_0=d\theta-\omega dt. \tag{16}
+\]
+
+代入式（15）：
+
+\[
+\begin{aligned}
+d\theta_0
+&=d\theta
++\beta\frac{\omega r}{c}\sin\theta\,d\theta\\
+&=\left(
+1+\beta\frac{\omega r}{c}\sin\theta
+\right)d\theta.
+\end{aligned} \tag{17}
+\]
+
+在 \(S\) 中电子均匀分布，线密度为
+
+\[
+\lambda=\frac{N}{2\pi r}. \tag{18}
+\]
+
+相邻角标记间的电子数为
+
+\[
+dN=\lambda r\,d\theta_0
+=\frac{N}{2\pi}d\theta_0. \tag{19}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（四）求 \(S'\) 中的弧长元}
+
+在 \(dt'=0\) 条件下，洛伦兹空间变换给出
+
+\[
+dx'=\frac{dx}{\gamma}
+=\sqrt{1-\beta^2}\,dx, \tag{20}
+\]
+
+而横向坐标不变：
+
+\[
+dy'=dy. \tag{21}
+\]
+
+因此
+
+\[
+\begin{aligned}
+d\ell'
+&=\sqrt{dx'^2+dy'^2}\\
+&=\sqrt{
+(1-\beta^2)r^2\sin^2\theta\,d\theta^2
++r^2\cos^2\theta\,d\theta^2
+}\\
+&=r\sqrt{1-\beta^2\sin^2\theta}\,d\theta.
+\end{aligned} \tag{22}
+\]
+
+于是 \(S'\) 中线密度为
+
+\[
+\lambda'(\theta)=\frac{dN}{d\ell'}. \tag{23}
+\]
+
+把式（17）、（19）、（22）代入：
+
+\[
+\boxed{
+\lambda'(\theta)
+=\frac{N}{2\pi r}
+\frac{
+1+\beta(\omega r/c)\sin\theta
+}{
+\sqrt{1-\beta^2\sin^2\theta}
+}
+}. \tag{24}
+\]
+
+当 \(\omega=0\) 时，式（24）仍随 \(\theta\) 改变，这是圆环在 \(x\)
+方向洛伦兹收缩后的几何线密度变化；当 \(\beta=0\) 时恢复均匀密度
+\(N/(2\pi r)\)。
+
+\needspace{3\baselineskip}
+\textbf{（五）第（3）问：\(S\) 中的磁偶极矩}
+
+电子总电荷为 \(-Ne\)，转动周期为
+
+\[
+\mathcal T=\frac{2\pi}{\omega}. \tag{25}
+\]
+
+约定逆时针为正。由于电荷为负，常规电流方向与电子运动方向相反，电流为
+
+\[
+I_e=\frac{-Ne}{\mathcal T}
+=-\frac{Ne\omega}{2\pi}. \tag{26}
+\]
+
+圆环面积为
+
+\[
+\mathcal A=\pi r^2. \tag{27}
+\]
+
+所以磁偶极矩为
+
+\[
+\begin{aligned}
+\bm\mu
+&=I_e\mathcal A\,\hat{\bm z}\\
+&=-\frac{Ne\omega}{2\pi}\pi r^2\hat{\bm z}\\
+&=\boxed{
+-\frac12Ne\omega r^2\hat{\bm z}
+}.
+\end{aligned} \tag{28}
+\]
+
+中心正电荷静止，不贡献磁偶极矩。系统在 \(S\)
+中总电荷为零且分布中心对称，所以
+
+\[
+\bm p=0. \tag{29}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（六）在同一\(S'\)时刻直接积分偶极矩}
+
+选择\(t'=0\)，中心正电荷位于原点。电子环的几何轨迹是
+\[x'=\frac r\gamma\cos\theta,\qquad y'=r\sin\theta.\]
+由前面求出的粒子数元，记\(a=\omega r/c\)，有
+\[\mathrm dq'=-\frac{Ne}{2\pi}(1+\beta a\sin\theta)\,\mathrm d\theta.\]
+总电荷仍为零。直接积分电偶极矩： \[p_x'=\int x'\,\mathrm dq'=0,\]
+\[p_y'=\int y'\,\mathrm dq'=-\frac{Ne\beta\omega r^2}{2c}.\] 故
+\[\boxed{\boldsymbol p'=-\frac{Ne\beta\omega r^2}{2c}\hat{\boldsymbol y}}.\]
+图8-2以椭圆上的不均匀电子数元表示这一偏心电荷分布，中心正电荷不能省略。
+
+若采用通常的瞬时电流积分定义
+\[\boldsymbol\mu_j'=\frac12\int\boldsymbol r'\times\boldsymbol j'\,\mathrm d^3r'
+=\frac12\int\boldsymbol r'\times\boldsymbol u'\,\mathrm dq',\]
+代入式（8）、（9）时，共同分母与\(\mathrm dq'\)中的因子相消。因此
+\[\mu_{j,z}'=-\frac{Ne}{4\pi}\int_0^{2\pi}
+\left[\omega r^2\left(\frac{\cos^2\theta}{\gamma^2}+\sin^2\theta\right)
++\beta cr\sin\theta\right]\mathrm d\theta.\]
+用\(\int\cos^2\theta\,\mathrm d\theta=\int\sin^2\theta\,\mathrm d\theta=\pi\)，得到
+\[\boxed{\boldsymbol\mu_j'=-\frac12Ne\omega r^2
+\left(1-\frac{\beta^2}{2}\right)\hat{\boldsymbol z}}.\]
+中心正电荷虽然随系统平移，但在所选时刻位于原点，不贡献这项积分。
+
+\needspace{3\baselineskip}
+\textbf{（七）另一种磁矩定义须注明}
+
+若把``磁偶极矩''定义成内禀磁化密度的积分
+\(\boldsymbol\mu_{\mathcal M}'=\int\boldsymbol{\mathcal M}'\,\mathrm dV'\)，其垂直磁化分量与体积元的洛伦兹因子抵消，得到
+\(\boldsymbol\mu_{\mathcal M}'=\boldsymbol\mu\)。这是与上面瞬时电流积分不同的量。运动且有极化的系统中
+\[\boldsymbol j=\nabla\times\boldsymbol{\mathcal M}+\frac{\partial\boldsymbol P}{\partial t},\]
+极化电流也进入\(\boldsymbol\mu_j\)，不能略去后直接把两种定义等同。本讲义对原题采用显式的瞬时电流积分；若课程采用内禀磁化定义，应把下标\(\mathcal M\)标明。
+
+\needspace{3\baselineskip}
+\textbf{速度箭头由同一截面的速度变换确定}
+
+在原系令电子的位置为\((r\cos\theta,r\sin\theta)\)、速度为\((-\omega r\sin\theta,\omega r\cos\theta)\)。记\(a=\omega r/c\)、\(\beta=V/c\)，变到沿\(+x\)运动的系后
+\[u'_x=c\frac{-a\sin\theta-\beta}{1+\beta a\sin\theta},\qquad
+u'_y=c\frac{a\cos\theta}{\gamma(1+\beta a\sin\theta)}.\]
+在椭圆左端\(\theta=\pi\)，有 \[u'_x=-V,\qquad u'_y=-\omega r/\gamma.\]
+因此图8-2的速度箭头必须向左下，不能沿椭圆切线单独向上。椭圆是\(t'=0\)的各粒子位置集合，并不是每颗电子在新系中的固定闭合轨道；运动的环心还带有\(-V\)的平移速度。
+
+电偶极方向也可从数密度检查。其角分布含\(1+\beta a\sin\theta\)，对上半环有更多负电荷，于是
+\[p'_y=-e\frac N{2\pi}
+\int_0^{2\pi}r\sin\theta
+(1+\beta a\sin\theta)\,\mathrm d\theta
+=-\frac{Ne\beta\omega r^2}{2c}.\]
+中心正电荷位于原点，对这个积分贡献为零。速度和密度必须在同一个\(t'\)截面配套使用；把旧系均匀角分布与新系速度混合，会同时改变电偶极矩和电流磁矩。
+\end{document}

@@ -1,0 +1,58 @@
+\documentclass[tikz,border=5pt]{standalone}
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath}
+\usetikzlibrary{arrows.meta,calc}
+\definecolor{ink}{HTML}{243447}
+\definecolor{blue}{HTML}{2765A2}
+\definecolor{red}{HTML}{B74739}
+\tikzset{line cap=round,line join=round,
+vec/.style={thick,-{Latex[length=2mm]}},
+dim/.style={thin,{Latex[length=1.4mm]}-{Latex[length=1.4mm]}},
+guide/.style={gray,dashed}}
+\begin{document}
+\begin{tikzpicture}
+ \shade[inner color=white,outer color=blue!20](0,0)circle(1.5);
+ \draw[ink,thick](0,0)circle(1.5);
+ \draw[gray,dashed](-1.5,0)arc(180:0:1.5 and .3);
+ \draw[gray](-1.5,0)arc(180:360:1.5 and .3);
+ \draw[dim](0,0)--(-1.29904,.75)node[midway,above left]{$r$};
+ \node at(.25,.85){$T(z)+\Delta$};
+ \node at(.2,-.65){$p(z)$};
+ \draw[ink](-.6,-1.3748)--(-.3,-1.95);
+ \draw[ink](.6,-1.3748)--(.3,-1.95);
+ \filldraw[fill=gray!15,draw=ink](-.35,-1.95)rectangle(.35,-2.25);
+ \node[right]at(.45,-2.1){$m_0$};
+ \draw[red,vec](-2,-1.45)--(-.65,-1.45)node[pos=.2,below]{$P$};
+ \draw[red,vec](1.06066,1.06066)--(1.85,1.85);
+ \node[red,above right]at(1.7,1.8){$4\pi r^2\kappa\Delta$};
+ \node[blue,right,align=left]at(1.9,.4){外界：$T(z),p(z)$\\$T(z)=T_0-az$};
+ \draw[ink,thick](-3.1,-2.9)--(4.5,-2.9);
+ \node[below]at(1.9,-2.9){地面：$T_0,p_0$};
+ \draw[guide](-2.5,0)--(-1.6,0);
+ \draw[dim](-2.6,-2.9)--(-2.6,0)node[midway,left]{$z$};
+\end{tikzpicture}
+\begin{tikzpicture}
+ \begin{scope}
+  \filldraw[fill=blue!7,draw=ink,thick](0,0)rectangle(1.8,.9);
+  \draw[blue,vec](.5,0)--(.5,.68);
+  \draw[blue,vec](1.3,.9)--(1.3,.22);
+  \node[blue,below]at(.4,-.08){$pA$};
+  \node[blue,above]at(1.1,1.05){$(p+\mathrm dp)A$};
+  \draw[red,vec](.9,.45)--(.9,-1.2);
+  \node[red,below]at(.9,-1.3){$\rho_{\text{外}}gA\,\mathrm dz$};
+  \draw[dim](2.2,0)--(2.2,.9)node[midway,right]{$\mathrm dz$};
+  \draw[vec](-.65,-.2)--(-.65,1.5)node[above]{$z$};
+  \node[align=center]at(.9,-2.7){底面积 $A$\\$\mathrm dp<0$};
+ \end{scope}
+ \begin{scope}[xshift=7.1cm,yshift=.1cm]
+  \shade[inner color=white,outer color=blue!20](0,0)circle(1.05);
+  \draw[ink,thick](0,0)circle(1.05);
+  \draw[guide](-1.05,0)arc(180:0:1.05 and .21);
+  \draw[gray](-1.05,0)arc(180:360:1.05 and .21);
+  \fill[ink](0,0)circle(2pt);
+  \draw[blue,vec](0,0)--(0,2.15)node[above]{$F_b=\rho_{\text{外}}Vg$};
+  \draw[red,vec](0,0)--(0,-2.05)node[below]{$(m_0+\rho_{\text{内}}V)g$};
+  \node[left]at(-1.15,0){$V$};
+ \end{scope}
+\end{tikzpicture}
+\end{document}

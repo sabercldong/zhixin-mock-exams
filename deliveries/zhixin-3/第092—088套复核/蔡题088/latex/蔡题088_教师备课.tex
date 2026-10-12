@@ -1,0 +1,4135 @@
+\documentclass[12pt,a4paper,UTF8]{ctexart}
+\usepackage[a4paper,top=22mm,bottom=22mm,left=22mm,right=22mm,headheight=15pt]{geometry}
+\usepackage{amsmath,amssymb,mathtools,bm}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{booktabs,longtable,array}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{microtype}
+\usepackage{setspace}
+\usepackage[hidelinks,unicode]{hyperref}
+\usepackage[most]{tcolorbox}
+
+\definecolor{ContestBlue}{HTML}{17365D}
+\definecolor{SoftBlue}{HTML}{EEF4FA}
+\definecolor{SoftGray}{HTML}{F5F6F7}
+\hypersetup{pdftitle={第088套},pdfauthor={}}
+
+\setstretch{1.24}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.35em}
+\setlist{itemsep=0.35em,topsep=0.4em}
+\captionsetup{font=small,labelfont=bf,justification=centering}
+\setcounter{secnumdepth}{0}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small 第088套}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\ctexset{
+  section={format=\Large\bfseries\color{ContestBlue},beforeskip=1.2em,afterskip=0.7em},
+  subsection={format=\large\bfseries\color{ContestBlue},beforeskip=1.0em,afterskip=0.5em},
+  subsubsection={format=\normalsize\bfseries,beforeskip=0.8em,afterskip=0.35em}
+}
+
+\makeatletter
+\newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\newcommand{\maxwidth}{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\newcommand{\maxheight}{\ifdim\Gin@nat@height>0.72\textheight 0.72\textheight\else\Gin@nat@height\fi}
+\newcommand{\pandocbounded}[1]{\begingroup\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}#1\endgroup}
+\makeatother
+
+\begin{document}
+
+\begin{titlepage}
+  \centering
+  \vspace*{58mm}
+  {\Huge\bfseries\color{ContestBlue} 第088套\par}
+  \vfill
+  \vspace*{28mm}
+\end{titlepage}
+
+
+\section{第 1 题}\label{ux7b2c-1-ux9898}
+
+如图所示，一个质量为 \(m\)、半径为 \(r\)
+的匀质薄壁圆筒由轴承限制，只能绕通过圆心 \(O\)
+的中心轴转动。轴承铅垂安装在水平面上，圆筒质心位于水平光滑桌面内。一根长度为
+\(l=2r\) 的不可伸长细绳，一端系在圆筒边缘的 \(B\) 点，另一端连接质量为
+\(m\) 的质点 \(A\)。系统初始静止。沿垂直于细绳的方向对质点施加大小为
+
+\[
+J=mv_0
+\]
+
+的冲量。不计重力。
+
+试判断细绳与系绳点处法线 \(OB\) 的夹角能否达到
+\(30^\circ\)。若能，求此时圆筒相对地面的角速度；若不能，说明理由。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图 1-1　圆筒、细绳和质点的初始构型。}]{../figures/question-01.pdf}
+\caption*{图 1-1　圆筒、细绳和质点的初始构型。}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d}
+
+冲量后质点和圆筒共享动能，随后细绳方向与圆筒角度又发生耦合。将两种转角作为广义坐标，以能量和关于轴承点的角动量筛选可达状态。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  匀质薄壁圆筒对中心轴的转动惯量 \(I_O=mr^2\)；
+\item
+  刚体上一点的速度 \(\bm v_B=\bm\omega\times\overrightarrow{OB}\)；
+\item
+  相对运动速度合成 \(\bm v_A=\bm v_B+\bm v_{A/B}\)；
+\item
+  约束力不做功时的机械能守恒；
+\item
+  轴承反力对 \(O\) 点力矩为零时的角动量守恒；
+\item
+  由守恒方程判断给定构型是否可达。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf}
+
+取 \(\alpha\) 为半径 \(OB\) 相对初始 \(x\) 轴的转角，取 \(\theta\)
+为细绳 \(BA\) 与半径 \(OB\) 的夹角。于是细绳相对地面的方向角为
+\(\alpha+\theta\)。系绳点 \(B\) 绕 \(O\) 做半径为 \(r\) 的圆周运动；质点
+\(A\) 一方面随 \(B\) 运动，另一方面绕 \(B\) 做半径为 \(l\) 的转动。
+
+需要特别区分三个量：圆筒角速度是
+\(\dot\alpha\)，细绳相对半径的转动速度是
+\(\dot\theta\)，细绳相对地面的转动速度则是 \(\dot\alpha+\dot\theta\)。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3}
+
+先由几何关系写出 \(B\) 点速度和 \(A\) 相对 \(B\)
+的速度，再利用两速度方向之间的夹角仍为 \(\theta\)，得到
+\(v_A^2\)。随后分别列出总动能和对 \(O\)
+点的总角动量。这样可以完全消去细绳张力与轴承反力，不必直接求约束力。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790}
+
+如图 1-2，先把圆筒转角记为 \(\alpha\)，把绳段 \(BA\) 相对半径 \(OB\)
+的夹角记为 \(\theta\)。图中 \(B\) 点蓝色箭头对应圆筒转动速度
+\(\bm v_B\)，\(A\) 点的两支箭头分别对应牵连速度 \(\bm v_B\) 与相对速度
+\(\bm v_{A/B}\)；下面的速度平方正由这两个箭头作矢量合成得到。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.826\linewidth,height=\textheight,keepaspectratio,alt={图 1-2　系绳点和质点的速度分解。}]{../figures/solution-01.pdf}
+\caption*{图 1-2　系绳点和质点的速度分解。}
+\end{figure}
+
+\textbf{（1）写出两项基本速度}
+
+点 \(B\) 固连在圆筒上，因此
+
+\[
+v_B=r\dot\alpha.
+\tag{1}
+\]
+
+细绳相对地面的方向角是 \(\alpha+\theta\)，所以质点相对 \(B\)
+的速度大小为
+
+\[
+v_{A/B}=l(\dot\alpha+\dot\theta).
+\tag{2}
+\]
+
+\(\bm v_B\) 垂直于 \(OB\)，\(\bm v_{A/B}\) 垂直于
+\(BA\)。同时把两个方向都旋转 \(90^\circ\) 不改变夹角，故 \(\bm v_B\) 与
+\(\bm v_{A/B}\) 的夹角也是 \(\theta\)。由余弦定理，
+
+\[
+\begin{aligned}
+v_A^2
+&=v_B^2+v_{A/B}^2+2v_Bv_{A/B}\cos\theta\\
+&=(r\dot\alpha)^2+l^2(\dot\alpha+\dot\theta)^2
++2rl\dot\alpha(\dot\alpha+\dot\theta)\cos\theta.
+\end{aligned}
+\tag{3}
+\]
+
+\textbf{（2）列机械能守恒方程}
+
+薄壁圆筒的转动惯量为
+
+\[
+I_O=mr^2.
+\]
+
+轴承支点不发生位移，轴承反力不做功；理想细绳张力属于内约束力；题设又忽略重力。因此冲量作用结束后的运动阶段机械能守恒。由题设冲量后初始状态，系统初动能为
+\(mv_0^2/2\)，故
+
+\[
+\frac12mv_0^2
+=\frac12mr^2\dot\alpha^2+\frac12mv_A^2.
+\tag{4}
+\]
+
+把式（3）代入，得到
+
+\[
+\begin{aligned}
+v_0^2={}&r^2\dot\alpha^2
++r^2\dot\alpha^2
++l^2(\dot\alpha+\dot\theta)^2\\
+&+2rl\dot\alpha(\dot\alpha+\dot\theta)\cos\theta.
+\end{aligned}
+\tag{5}
+\]
+
+等号右端前两项分别来自圆筒和质点随 \(B\)
+点运动的动能，不能漏掉其中任何一项。
+
+\textbf{（3）列对圆心 \(O\) 的角动量守恒方程}
+
+冲量作用瞬间，质点位于 \(O\) 点右侧 \(r+l=3r\) 处，冲量方向垂直于
+\(OA\)，故冲量产生的角动量为
+
+\[
+L_{O,0}=J(r+l)=mv_0(r+l).
+\tag{6}
+\]
+
+运动过程中，轴承力通过 \(O\)，对 \(O\)
+点力矩为零；细绳作用力是系统内力。因此系统对 \(O\) 点的角动量保持不变。
+
+圆筒的角动量为
+
+\[
+L_{O,\rm cyl}=mr^2\dot\alpha.
+\]
+
+质点的位置矢量为
+
+\[
+\bm r_A=r\bm e_r(\alpha)+l\bm e_r(\alpha+\theta),
+\]
+
+速度为
+
+\[
+\bm v_A=r\dot\alpha\bm e_t(\alpha)
++l(\dot\alpha+\dot\theta)\bm e_t(\alpha+\theta).
+\]
+
+逐项计算二维叉积，使用
+
+\[
+\bm e_r(\alpha)\times\bm e_t(\alpha+\theta)=\cos\theta\,\bm e_z,
+\]
+
+可得质点角动量
+
+\[
+\begin{aligned}
+L_{O,A}=m\{&r^2\dot\alpha+l^2(\dot\alpha+\dot\theta)\\
+&+rl\dot\alpha\cos\theta
++rl(\dot\alpha+\dot\theta)\cos\theta\}.
+\end{aligned}
+\tag{7}
+\]
+
+于是角动量守恒写成
+
+\[
+\begin{aligned}
+mv_0(r+l)={}&mr^2\dot\alpha\\
+&+m\{r^2\dot\alpha+l^2(\dot\alpha+\dot\theta)
++rl\dot\alpha\cos\theta\\
+&\qquad+rl(\dot\alpha+\dot\theta)\cos\theta\}.
+\end{aligned}
+\tag{8}
+\]
+
+\textbf{（4）无量纲化并代入 \(l=2r\)}
+
+令
+
+\[
+x=\frac{r\dot\alpha}{v_0},
+\qquad
+y=\frac{r\dot\theta}{v_0}.
+\tag{9}
+\]
+
+因为 \(l=2r\)，所以
+
+\[
+\frac{l(\dot\alpha+\dot\theta)}{v_0}=2(x+y).
+\]
+
+把式（9）代入能量方程（5），逐项展开：
+
+\[
+\begin{aligned}
+1
+&=x^2+x^2+4(x+y)^2+4x(x+y)\cos\theta\\
+&=(6+4\cos\theta)x^2
++(8+4\cos\theta)xy+4y^2.
+\end{aligned}
+\tag{10}
+\]
+
+同理，角动量方程（8）化为
+
+\[
+(6+4\cos\theta)x+(4+2\cos\theta)y=3.
+\tag{11}
+\]
+
+\textbf{（5）检验 \(\theta=30^\circ\) 是否有物理解}
+
+取
+
+\[
+\cos\theta=\cos30^\circ=\frac{\sqrt3}{2},
+\]
+
+式（10）、（11）成为
+
+\[
+\begin{cases}
+(6+2\sqrt3)x^2+(8+2\sqrt3)xy+4y^2=1,\\
+(6+2\sqrt3)x+(4+\sqrt3)y=3.
+\end{cases}
+\tag{12}
+\]
+
+由第二式解出
+
+\[
+y=\frac{3-(6+2\sqrt3)x}{4+\sqrt3}.
+\tag{13}
+\]
+
+将式（13）代回第一式并通分，得到关于 \(x\) 的二次方程
+
+\[
+(30+10\sqrt3)x^2-30x+17-8\sqrt3=0.
+\tag{14}
+\]
+
+两组数值解为
+
+\[
+(x,y)\approx(0.132464,0.304664),
+\]
+
+以及
+
+\[
+(x,y)\approx(0.501511,-0.304664).
+\]
+
+系统由 \(\theta=0\) 开始向 \(\theta\)
+增大的方向运动，初始所在的连续分支满足 \(y>0\)。因此在
+\(\theta=30^\circ\) 时应选第一组解。它给出正的
+\(\dot\theta\)，说明系统在此处尚未到达转向点，故 \(30^\circ\) 确实可达。
+
+由 \(x=r\dot\alpha/v_0\)，圆筒相对地面的角速度为
+
+\[
+\boxed{
+\omega_{\rm cyl}=\dot\alpha
+\approx0.13246\frac{v_0}{r}
+}.
+\tag{15}
+\]
+
+若只保留两位有效数字，可写为
+
+\[
+\boxed{\omega_{\rm cyl}\approx0.13\frac{v_0}{r}}.
+\]
+
+\textbf{可达性与符号检查。}
+两条守恒式给出的不是任意角速度组合都能实现：能量方程是一条速度椭圆，角动量方程则是一条随夹角变化的直线。消去一个无量纲速度后会得到关于另一个速度的二次方程，判别式非负是构型可达的必要条件。即使判别式通过，也要沿运动连续性选择与冲量后初态相连的分支；另一个代数根若要求速度瞬间反向，就不是本次运动的解。最终角速度的正负还取决于图中对圆筒转向的约定，报告大小时应在式后单独标明方向。
+
+\textbf{把守恒关系当作状态约束。}
+角动量方程关于圆筒角速度和绳角速度是线性的，能量方程则是二次型。固定
+\(\theta\)
+后，两者的交点给出该构型下可能的瞬时速度；它们不能单独确定角度随时间怎样演化，后者还需使用拉格朗日方程。由冲量产生的初速度确定运动支路后，再判断
+\(30^\circ\)
+是否落在该支路的可达角区间。若只解代数交点而不跟踪初始方向，容易把另一支运动也误判为实际轨迹。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf}
+
+本题最重要的不是求出某个张力，而是识别出两个转角。只写一个``绳角''会把
+\(B\)
+点的随动速度漏掉。第二个关键点是：判断给定角度能否到达，本质上是在守恒量限定的相轨道上检查该构型是否存在与运动分支连续的实速度解。
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  把质点速度误写成 \(l\dot\theta\)；
+\item
+  把细绳相对地面的角速度误写成 \(\dot\theta\)，漏掉 \(\dot\alpha\)；
+\item
+  能量中漏写圆筒的转动动能 \(mr^2\dot\alpha^2/2\)；
+\item
+  角动量只计算质点而漏掉圆筒；
+\item
+  二次方程得到两组解后不判断运动分支，误取 \(y<0\) 的回程解；
+\item
+  把所求角速度写成
+  \(\dot\alpha+\dot\theta\)，而题目问的是圆筒相对地面的角速度
+  \(\dot\alpha\)。
+\end{enumerate}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae}
+
+先让学生分别画出 \(\bm v_B\) 和
+\(\bm v_{A/B}\)，并指出两者为什么不共线。随后从位置矢量
+
+\[
+\bm r_A=r\bm e_r(\alpha)+l\bm e_r(\alpha+\theta)
+\]
+
+直接求导，使速度合成自然出现。讲守恒方程时，应让学生逐项说明每一项来自哪个物体、哪一种运动，最后再无量纲化，避免一上来面对长方程失去物理对应关系。
+
+\textbf{建议的板书展开。} 第一栏只画几何并写
+
+\[
+\arg(OB)=\alpha,
+\qquad
+\arg(BA)=\alpha+\theta;
+\]
+
+第二栏对位置矢量求导，得到两个速度；第三栏列``能量''和``对 \(O\)
+角动量''两张账本。每写出一个二次项或交叉项，都在图上指出它对应哪两个速度的数量积。这样学生会理解
+\(\cos\theta\) 的来源，而不是把它视为人为拼出的系数。
+
+求出两组速度解后，可按以下顺序筛选：先检查是否为实数，再检查初态连续性，最后检查
+\(\dot\theta\)
+的符号。这里第二组解不是数学错误，而是同一构型在回程中可能出现的速度状态。应明确告诉学生，守恒方程通常给出相轨道而不是唯一时间演化，分支选择必须回到初始条件。
+
+\textbf{课堂核验清单。} 让学生独立完成三次反代：\(\theta=0\)
+时物理支满足 \((x,y)=(0,1/2)\)；\(\theta=30^\circ\) 时能量式左端等于
+\(1\)；选得的 \(x\) 乘 \(v_0/r\)
+后量纲为角速度。三次核验分别检查初态、代数和量纲。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  将细绳长度改为一般的 \(l=kr\)，建立对应的能量和角动量方程，并讨论给定
+  \(\theta\) 的可达条件；
+\item
+  将薄壁圆筒改为匀质实心圆柱，令 \(I_O=mr^2/2\)，比较
+  \(\theta=30^\circ\) 时圆筒角速度的变化；
+\item
+  求物理分支上 \(\dot\theta=0\)
+  时的最大夹角，并说明该点在相轨道上的意义。
+\end{enumerate}
+
+\textbf{变式训练的备课展开。} 对于第1个变式，仍令
+\(x=r\dot\alpha/v_0\)、\(y=r\dot\theta/v_0\)，但保留
+\(k=l/r\)。速度关系变为
+
+\[
+\frac{v_A^2}{v_0^2}
+=x^2+k^2(x+y)^2+2kx(x+y)\cos\theta.
+\]
+
+若圆筒的无量纲转动惯量记为 \(I_O=\kappa mr^2\)，能量方程统一写成
+
+\[
+\kappa x^2+x^2+k^2(x+y)^2+2kx(x+y)\cos\theta=1.
+\]
+
+角动量方程为
+
+\[
+1+k=(\kappa+1)x+k^2(x+y)+kx\cos\theta+k(x+y)\cos\theta.
+\]
+
+薄壁圆筒取 \(\kappa=1\)，实心圆柱取
+\(\kappa=1/2\)。课堂上可让学生在同一坐标系画出两种 \(\kappa\)
+对应的二次曲线与直线；交点给出允许速度，交点消失的位置就是不可达边界。
+
+第3个变式中转向点满足 \(y=0\)。将 \(y=0\)
+同时代入能量和角动量方程，可先由角动量求
+\(x(\theta)\)，再代入能量得到只含 \(\cos\theta\)
+的方程。这个过程能训练学生把``最大角''翻译为``广义速度为零''，而不是对
+\(\theta(t)\) 直接求极值。
+
+\textbf{课堂核验与变式追问。}
+课堂演示可先把冲量作用时间取为零，确认冲量只改变质点速度，再讨论约束绳如何在随后的有限时间内交换圆筒和质点的角动量。能量守恒适用于冲量后的自由阶段，不应拿来替代冲量定理；角动量守恒则要求外力矩关于轴承点为零。改变绳长后，守恒方程形式不变，但可达角范围会变，适合让学生用判别式作图比较。
+
+\textbf{课堂延伸。}
+追问学生：若圆筒有重力或轴承存在摩擦，哪条守恒式先失效？重力若对转轴无力矩，角动量仍可能守恒，但机械能会增加势能项；轴承摩擦则会同时引入外力矩和耗散。让学生分别改写两式，比直接套用原结果更能检验其是否理解系统边界。
+
+\textbf{教师展开补充。}
+讲守恒前先明确时间分段：冲量作用期间使用冲量---动量关系；冲量结束后才用机械能和对轴承点的角动量。随后从两个位置矢量的和求质点速度，把平动、转动和交叉项分别圈在几何图上。对给定构型，守恒方程通常是关于两个广义速度的直线与二次曲线；交点是代数可行态，初始冲量决定实际从哪一支进入。求数值后同时回代两条守恒式，并检查转向点满足
+\(\dot\theta=0\)。若阻力矩加入，角动量方程出现外力矩积分；若圆筒重力对轴承点力矩为零，角动量可保留而能量需加入重力势能。用这两个改动分开测试学生是否知道每条守恒定律的条件。
+
+\newpage
+
+\section{第 2 题}\label{ux7b2c-2-ux9898}
+
+万有引力常量为 \(G\)。三个质量均为 \(m\) 的星体保持边长为 \(l\)
+的正三角形相对构型，在万有引力作用下绕质心以恒定角速度 \(\omega\) 转动。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  求 \(\omega\)，以及体系总相互作用势能 \(E_p\) 与总动能 \(E_k\) 的比值
+  \(E_p/E_k\)；
+\item
+  将三个星体的质量改为 \(m,\,2m,\,3m\)，重新求 \(\omega\) 与
+  \(E_p/E_k\)；
+\item
+  将体系改为四个质量均为 \(m\) 的星体，保持边长为 \(l\)
+  的正方形相对构型，求 \(\omega\) 与 \(E_p/E_k\)；
+\item
+  考虑由 \(N\) 个质量均为 \(m\) 的星体组成的正 \(N\)
+  边形，相邻星体间距为 \(l\)。求 \(\omega\) 与 \(E_p/E_k\)。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图 2-1　三角形与正方形相对平衡构型。}]{../figures/question-02.pdf}
+\caption*{图 2-1　三角形与正方形相对平衡构型。}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-1}
+
+旋转构型中每个星体的加速度由所有引力合力提供。按质量与对称性逐项求径向分量后，可用平方反比势的位力关系检查总势能和动能。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-1}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  匀速圆周运动的向心力；
+\item
+  正多边形的外接圆半径；
+\item
+  两体引力势能 \(-Gm_im_j/r_{ij}\)；
+\item
+  质心转动惯量的两两距离公式；
+\item
+  正多边形对称求和；
+\item
+  齐次势能与位力定理 \(2E_k+E_p=0\)。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-1}
+
+在随体系共同转动的参考系中，各星体彼此静止；在惯性系中，每个星体都绕共同质心做匀速圆周运动。对于等质量正多边形，切向引力分量成对抵消，所有引力的合力沿半径指向质心。对于
+\(m,\,2m,\,3m\)
+的正三角形，合力仍指向系统质心，这正是拉格朗日正三角形解。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-1}
+
+正三角形和正方形可以直接求一个顶点处的径向合力。一般正 \(N\)
+边形则取外接圆半径 \(R\)，把第 \(k\) 个顶点与所研究顶点之间的弦长写成
+
+\[
+d_k=2R\sin\frac{k\pi}{N},
+\]
+
+再求该引力沿指向圆心方向的分量。势能应按无序点对计数，不能把每一对相互作用重复计算。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-1}
+
+\textbf{（1）三个等质量星体组成正三角形}
+
+每一对星体间的引力大小为
+
+\[
+F=\frac{Gm^2}{l^2}.
+\]
+
+在任一顶点，两条引力夹角为
+\(60^\circ\)，合力沿角平分线指向三角形中心，大小为
+
+\[
+F_{\rm c}=2F\cos30^\circ
+=\sqrt3\frac{Gm^2}{l^2}.
+\tag{1}
+\]
+
+正三角形外接圆半径为
+
+\[
+R=\frac{l}{\sqrt3}.
+\]
+
+由向心力方程
+
+\[
+m\omega^2R=F_{\rm c},
+\]
+
+得
+
+\[
+m\omega^2\frac{l}{\sqrt3}
+=\sqrt3\frac{Gm^2}{l^2},
+\]
+
+所以
+
+\[
+\boxed{\omega=\sqrt{\frac{3Gm}{l^3}}}.
+\tag{2}
+\]
+
+三角形共有 \(3\) 对星体，故总势能为
+
+\[
+E_p=-3\frac{Gm^2}{l}.
+\tag{3}
+\]
+
+总动能为
+
+\[
+\begin{aligned}
+E_k
+&=3\times\frac12m\omega^2R^2\\
+&=\frac32m\cdot\frac{3Gm}{l^3}\cdot\frac{l^2}{3}\\
+&=\frac{3Gm^2}{2l}.
+\end{aligned}
+\tag{4}
+\]
+
+因此
+
+\[
+\boxed{\frac{E_p}{E_k}=-2}.
+\tag{5}
+\]
+
+\textbf{（2）质量分别为 \(m,\,2m,\,3m\) 的正三角形}
+
+拉格朗日正三角形解的共同角速度只与总质量有关。这里把这一结论直接推导出来。设三个质量为
+\(m_1,m_2,m_3\)，边长均为 \(l\)，总质量为
+
+\[
+M=m_1+m_2+m_3.
+\]
+
+取质量 \(m_1\) 所在顶点。它受到的合力为
+
+\[
+\bm F_1
+=\frac{Gm_1}{l^3}\left[m_2(\bm r_2-\bm r_1)+m_3(\bm r_3-\bm r_1)\right].
+\]
+
+由质心定义
+
+\[
+M\bm r_C=m_1\bm r_1+m_2\bm r_2+m_3\bm r_3,
+\]
+
+可将方括号化为
+
+\[
+\begin{aligned}
+m_2\bm r_2+m_3\bm r_3-(m_2+m_3)\bm r_1
+&=M\bm r_C-m_1\bm r_1-(M-m_1)\bm r_1\\
+&=M(\bm r_C-\bm r_1).
+\end{aligned}
+\]
+
+故
+
+\[
+\bm F_1=-\frac{GMm_1}{l^3}(\bm r_1-\bm r_C).
+\tag{6}
+\]
+
+这正是指向质心的向心力形式。与
+
+\[
+\bm F_1=-m_1\omega^2(\bm r_1-\bm r_C)
+\]
+
+比较，得到
+
+\[
+\omega^2=\frac{GM}{l^3}.
+\]
+
+本题 \(M=6m\)，所以
+
+\[
+\boxed{\omega=\sqrt{\frac{6Gm}{l^3}}}.
+\tag{7}
+\]
+
+总势能为三对势能之和：
+
+\[
+\begin{aligned}
+E_p
+&=-\frac{G}{l}\left[(m)(2m)+(2m)(3m)+(3m)(m)\right]\\
+&=-\frac{Gm^2}{l}(2+6+3)\\
+&=-\frac{11Gm^2}{l}.
+\end{aligned}
+\tag{8}
+\]
+
+关于质心的转动惯量可用两两距离公式
+
+\[
+I_C=\frac1M\sum_{i<j}m_im_jr_{ij}^2.
+\]
+
+由于三个两两距离都等于 \(l\)，
+
+\[
+\begin{aligned}
+I_C
+&=\frac{l^2}{6m}\left(2m^2+6m^2+3m^2\right)\\
+&=\frac{11}{6}ml^2.
+\end{aligned}
+\tag{9}
+\]
+
+于是
+
+\[
+\begin{aligned}
+E_k
+&=\frac12I_C\omega^2\\
+&=\frac12\cdot\frac{11}{6}ml^2\cdot\frac{6Gm}{l^3}\\
+&=\frac{11Gm^2}{2l}.
+\end{aligned}
+\tag{10}
+\]
+
+仍有
+
+\[
+\boxed{\frac{E_p}{E_k}=-2}.
+\tag{11}
+\]
+
+\textbf{（3）四个等质量星体组成正方形}
+
+在一个顶点，两个相邻星体各产生大小为 \(Gm^2/l^2\)
+的引力，它们沿对角线方向的合分量为
+
+\[
+2\frac{Gm^2}{l^2}\cos45^\circ
+=\sqrt2\frac{Gm^2}{l^2}.
+\]
+
+对角顶点的距离为 \(\sqrt2l\)，它产生的引力为
+
+\[
+\frac{Gm^2}{(\sqrt2l)^2}
+=\frac{Gm^2}{2l^2},
+\]
+
+方向也沿对角线指向中心。因此径向合力为
+
+\[
+F_{\rm c}=\left(\sqrt2+\frac12\right)\frac{Gm^2}{l^2}.
+\tag{12}
+\]
+
+正方形外接圆半径为 \(R=l/\sqrt2\)。由 \(m\omega^2R=F_{\rm c}\)，
+
+\[
+\omega^2
+=\frac{Gm}{l^3}\sqrt2\left(\sqrt2+\frac12\right)
+=\frac{(4+\sqrt2)Gm}{2l^3}.
+\]
+
+故
+
+\[
+\boxed{\omega=\sqrt{\frac{(4+\sqrt2)Gm}{2l^3}}}.
+\tag{13}
+\]
+
+正方形有 \(4\) 条边和 \(2\) 条对角线，所以
+
+\[
+E_p
+=-4\frac{Gm^2}{l}-2\frac{Gm^2}{\sqrt2l}
+=-(4+\sqrt2)\frac{Gm^2}{l}.
+\tag{14}
+\]
+
+总动能为
+
+\[
+\begin{aligned}
+E_k
+&=4\times\frac12m\omega^2\frac{l^2}{2}\\
+&=m\omega^2l^2\\
+&=\frac{(4+\sqrt2)Gm^2}{2l}.
+\end{aligned}
+\tag{15}
+\]
+
+因此
+
+\[
+\boxed{\frac{E_p}{E_k}=-2}.
+\tag{16}
+\]
+
+\textbf{（4）推广到正 \(N\) 边形}
+
+前三种构型的共同结构可归结为图 2-2。固定顶点 \(P\) 后，第 \(k\) 个顶点
+\(Q_k\) 与 \(P\) 的连线是弦 \(PQ_k\)；图中的红色箭头 \(F_{k,r}\)
+是该引力沿 \(PC_m\) 方向的分量，只有这些径向分量参与向心力方程。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.896\linewidth,height=\textheight,keepaspectratio,alt={图 2-2　正多边形中单个引力的径向分解。}]{../figures/solution-02.pdf}
+\caption*{图 2-2　正多边形中单个引力的径向分解。}
+\end{figure}
+
+正 \(N\) 边形外接圆半径为
+
+\[
+R=\frac{l}{2\sin(\pi/N)}.
+\tag{17}
+\]
+
+从固定顶点 \(P\) 数起，第 \(k\) 个顶点 \(Q_k\) 与 \(P\) 的距离为
+
+\[
+d_k=2R\sin\frac{k\pi}{N}.
+\tag{18}
+\]
+
+引力大小为
+
+\[
+F_k=\frac{Gm^2}{4R^2\sin^2(k\pi/N)}.
+\]
+
+弦 \(PQ_k\) 与指向圆心的半径方向夹角为 \(\pi/2-k\pi/N\)，所以径向分量为
+
+\[
+\begin{aligned}
+F_{k,r}
+&=F_k\sin\frac{k\pi}{N}\\
+&=\frac{Gm^2}{4R^2\sin(k\pi/N)}.
+\end{aligned}
+\tag{19}
+\]
+
+切向分量由 \(k\) 与 \(N-k\) 两项互相抵消。径向合力为
+
+\[
+F_{\rm c}
+=\frac{Gm^2}{4R^2}
+\sum_{k=1}^{N-1}\frac1{\sin(k\pi/N)}.
+\tag{20}
+\]
+
+由 \(m\omega^2R=F_{\rm c}\)，
+
+\[
+\omega^2
+=\frac{Gm}{4R^3}
+\sum_{k=1}^{N-1}\frac1{\sin(k\pi/N)}.
+\]
+
+将式（17）代入，并注意
+
+\[
+4R^3=\frac{l^3}{2\sin^3(\pi/N)},
+\]
+
+得到
+
+\[
+\boxed{
+\omega=
+\sqrt{
+\frac{2Gm\sin^3(\pi/N)}{l^3}
+\sum_{k=1}^{N-1}\frac1{\sin(k\pi/N)}
+}
+}.
+\tag{21}
+\]
+
+下面直接计算能量比。每个顶点与其余顶点的势能求和后会把每一对计算两次，因此
+
+\[
+\begin{aligned}
+E_p
+&=-\frac{N}{2}\sum_{k=1}^{N-1}\frac{Gm^2}{d_k}\\
+&=-\frac{NGm^2}{4R}
+\sum_{k=1}^{N-1}\frac1{\sin(k\pi/N)}.
+\end{aligned}
+\tag{22}
+\]
+
+总动能为
+
+\[
+E_k=\frac12Nm\omega^2R^2.
+\]
+
+利用向心力关系
+
+\[
+m\omega^2R
+=\frac{Gm^2}{4R^2}\sum_{k=1}^{N-1}\frac1{\sin(k\pi/N)},
+\]
+
+可得
+
+\[
+E_k
+=\frac{NGm^2}{8R}
+\sum_{k=1}^{N-1}\frac1{\sin(k\pi/N)}.
+\tag{23}
+\]
+
+比较式（22）与（23），
+
+\[
+\boxed{\frac{E_p}{E_k}=-2}.
+\tag{24}
+\]
+
+\textbf{用整体尺度关系复核。}
+对任意一个以质心为原点的刚性旋转构型，逐个星体乘以其位置矢量并求和，左边成为向心加速度对应的
+\(-2E_k\)；右边的引力项按距离的 \(-1\) 次齐次性化为总引力势能
+\(E_p\)。因此
+\(E_p=-2E_k\)，与选的是正三角形、正方形还是一般正多边形无关。这个关系只能核查总能量比例，不能代替径向合力方程，因为不同构型的角速度仍需各自计算。
+
+\textbf{检查正多边形的两个极限。} 对
+\(N=3\)，每个星体所受其余两个星体的引力夹角为
+\(60^\circ\)，合力沿中线而非任意一条边；把结果代回径向方程，应恢复前面正三角形的角速度。随着
+\(N\)
+增大，单个相邻质量的贡献趋于边界局部贡献，但远端星体的合力不能忽略。势能求和时每一对只计一次，动能求和时每个星体各计一次；这两个求和范围不同，位力关系正好能抓出重复计数。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf-1}
+
+一是正多边形中不必逐个写二维分量，只要利用 \(k\) 与 \(N-k\)
+的对称性，切向分量自动抵消。二是 \(E_p/E_k=-2\)
+并非偶然：引力势能是距离的 \(-1\)
+次齐次函数，稳定的匀速相对平衡满足位力关系 \(2E_k+E_p=0\)。
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9-1}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  正三角形的转动半径误写成 \(l\)；
+\item
+  正方形中漏掉对角顶点的引力；
+\item
+  势能求和把每一对星体计算两次；
+\item
+  在不等质量三角形中仍绕几何中心而不是质量中心；
+\item
+  一般正多边形中把径向投影因子写成 \(\cos(k\pi/N)\)；
+\item
+  将势能比写成正数，忽略引力势能取负值。
+\end{enumerate}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae-1}
+
+先分别完成正三角形和正方形，让学生发现 \(E_p/E_k\) 都等于
+\(-2\)，再提出``这是图形巧合还是引力势的一般性质''。随后讲一般正 \(N\)
+边形的弦长和径向投影，最后用位力定理回查结果。对于不等质量三角形，重点展示式（6）如何由质心定义自然出现。
+
+\textbf{建议的板书展开。}
+将黑板分为``动力学''和``能量''两列。动力学列只研究一个顶点，依次写距离、单个引力、径向投影和向心力；能量列先数无序点对，再写总动能。完成
+\(N=3\) 后暂不推广，而是让学生用同样模板完成
+\(N=4\)，以暴露对角线引力和转动半径两个常见遗漏。
+
+推广到正 \(N\) 边形时，先写顶点编号 \(k=1,ldots,N-1\)，再把 \(k\) 与
+\(N-k\)
+用同一种颜色配对。这样可以直观看见切向分量抵消，而径向分量相加。求和式中的
+\(\csc(k\pi/N)\) 应在图上对应到弦长的一个因子被径向投影抵消后的结果。
+
+对于不等质量三角形，不建议直接计算质心坐标和三个转动半径。应先写向量合力，再用质心定义一次性化成式（6）。随后用两两距离公式求
+\(I_C\)，可以让学生看到质心坐标并不是每道题都必须显式求出。
+
+\textbf{课堂核验清单。} 令 \(N=3\)、\(N=4\)
+代入一般公式，看能否分别恢复式（2）、（13）；再用位力定理检查能量比。一般公式通过两个特殊值和一个结构定理的三重核验后，可信度远高于只检查代数。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3-1}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  求正六边形构型的 \(\omega\)，并将一般公式中的求和显式化简；
+\item
+  将万有引力改为大小与距离的 \(-(s+1)\)
+  次幂成正比的吸引中心力（\(s>0\)），讨论能量比如何变化；
+\item
+  对质量为 \(m_1,m_2,m_3\)
+  的拉格朗日正三角形解，推导任一星体到质心的距离和总转动惯量。
+\end{enumerate}
+
+\textbf{变式训练的备课展开。} 正六边形中
+
+\[
+\sum_{k=1}^{5}\csc\frac{k\pi}{6}
+=2+\frac{2}{\sin60^\circ}+1+2
+=5+\frac4{\sqrt3}.
+\]
+
+又有 \(\sin^3(\pi/6)=1/8\)，故一般公式给出
+
+\[
+\omega^2
+=\frac{Gm}{4l^3}\left(5+\frac4{\sqrt3}\right).
+\]
+
+这可与``相邻两点、次相邻两点和对顶点''三类引力直接求和互相核验。
+
+上述力对应次数为 \(-s\) 的齐次势能；整体尺度放大 \(\rho\) 时有
+\(U(\rho\bm r)=\rho^{-s}U(\bm r)\)，位力关系变为
+
+\[
+2E_k+sE_p=0,
+\]
+
+因此
+
+\[
+\frac{E_p}{E_k}=-\frac2s.
+\]
+
+万有引力对应 \(s=1\)，恢复本题的
+\(-2\)。这个变式适合用来区分``由正多边形几何得到的
+\(\omega\)''和``由势能齐次性得到的能量比''。
+
+对于任意三质量正三角形，转动惯量可直接写成
+
+\[
+I_C=\frac{l^2}{M}(m_1m_2+m_2m_3+m_3m_1),
+\]
+
+再与 \(\omega^2=GM/l^3\) 组合，立即得到 \(E_k=-E_p/2\)。
+
+\textbf{课堂核验与变式追问。}
+用一个正三角形例子先检查径向合力是否指向质心，再扩展到不等质量构型。对不等质量情形，旋转中心必须是质心，不能未经验证就把图形中心当成转动中心。把所有星体的径向方程乘以位置后求和，得到势能与动能的位力关系；它可以发现漏计成对引力势能的因子2，但仍须逐个顶点求和来确定角速度。
+
+\textbf{课堂延伸。}
+课堂可将正多边形结果与连续圆环极限比较。先估计最近邻力，再判断大量远邻的矢量和是否抵消；能量和力的收敛性可能不同。也可把某一个质量稍作扰动，观察相对平衡是否仍能保持刚性形状，说明``存在圆周解''与``线性稳定''是两个问题。
+
+\textbf{教师展开补充。}
+正多边形引力题适合让学生先以三角形做完整例子，再推广到 \(N\)
+边形。对某一顶点，成对顶点的力大小相同，合力的横向分量由对称性抵消，径向分量相加后才与
+\(m\omega^2R\)
+比较。随后单独计算总势能：每一条边及每一条对角线只计一次；动能则对每个星体各计一次。这样能量中的``二分之一''有明确的计数来源。位力定理给出能量比，但不替代径向受力求角速度。拓展到非等质量时，先求质心和转动中心是否重合，再讨论刚性旋转；不能因为图形是正多边形就自动把几何中心当作动力学中心。
+
+\newpage
+
+\section{第 3 题}\label{ux7b2c-3-ux9898}
+
+如图所示，两个绝热圆筒的底面积分别为 \(2S\) 和
+\(S\)，底部通过一个细的绝热阀门连通。左右圆筒内各有一个密闭、绝热、不计阻力和重力的活塞，活塞上端通过理想轻绳和定滑轮连接。两活塞上方均为大气，压强为
+\(P_0\)。初始时阀门关闭，左缸充有体积为 \(2V_0\)、温度为 \(T_0\)
+的理想气体，右缸为体积 \(V_0\) 的真空。气体的定容摩尔热容为
+
+\[
+C_V=\frac32R.
+\]
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  缓慢打开阀门，研究左右气体达到压强平衡的过程，求相应的左右体积
+  \(V_L,V_R\) 和温度 \(T_L,T_R\)；
+\item
+  将活塞改为导热活塞，并将左缸截面积改为 \(xS\)、左缸初始体积改为
+  \(xV_0\)。打开阀门后，平衡状态下左缸体积是否可能不为零？若可能，求
+  \(x\) 的范围。
+\end{enumerate}
+
+提示：活塞导热率很低，在机械平衡已建立但热平衡尚未建立时，两侧气体可在较长时间内维持不同温度。理想气体绝热方程为
+
+\[
+pV^\gamma=C,
+\qquad
+\gamma=\frac{C_V+R}{C_V}.
+\]
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.611\linewidth,height=\textheight,keepaspectratio,alt={图 3-1　双活塞圆筒与底部阀门。}]{../figures/question-03.pdf}
+\caption*{图 3-1　双活塞圆筒与底部阀门。}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-2}
+
+开阀后气体在两侧容器间迁移，活塞通过轻绳联动且可能先后触底。每一阶段都要同时满足绳长、力平衡和总能量约束。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-2}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  无重活塞的准静态受力平衡；
+\item
+  定滑轮轻绳的位移约束；
+\item
+  理想气体内能 \(U=nC_VT=(C_V/R)pV\)；
+\item
+  外界大气对气体做功；
+\item
+  单原子理想气体的绝热指数 \(\gamma=5/3\)；
+\item
+  假设解落在几何允许区间之外时的边界状态判断。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-2}
+
+轻绳长度不变意味着一只活塞上升多少，另一只就下降多少。由于左右截面积不同，相同的高度变化对应不同的体积变化。阀门打开后，气体从左缸流向右缸，同时左活塞下移、右活塞上移。若在触底前实现共同压强，则活塞受力会强迫共同压强恰好等于大气压；但能量方程表明实现这一状态需要负的左缸体积参数，因此真实过程先到达几何边界。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-2}
+
+先隔离两个活塞，求初态气体压强。随后用活塞高度而不是直接用体积写轻绳约束。热力学方程采用``左右气体作为一个整体''，这样穿过阀门的气体交换不再是外界传热或做功，系统唯一的外界功来自大气压。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-2}
+
+\textbf{（1）初态左缸压强与物质的量}
+
+右活塞下方是真空。设绳张力为 \(T_s\)，右活塞平衡给出
+
+\[
+T_s=P_0S.
+\tag{1}
+\]
+
+设初态左缸气体压强为 \(P_i\)。左活塞受到气体向上的压力 \(2SP_i\)、绳张力
+\(T_s\) 和大气向下的压力 \(2SP_0\)。平衡条件为
+
+\[
+2SP_i+T_s=2SP_0.
+\]
+
+代入式（1）：
+
+\[
+2SP_i+P_0S=2P_0S,
+\]
+
+因此
+
+\[
+\boxed{P_i=\frac12P_0}.
+\tag{2}
+\]
+
+初态气体物质的量为
+
+\[
+n=\frac{P_i(2V_0)}{RT_0}
+=\frac{P_0V_0}{RT_0}.
+\tag{3}
+\]
+
+又因为
+
+\[
+\gamma=\frac{C_V+R}{C_V}
+=\frac{\frac32R+R}{\frac32R}
+=\frac53.
+\tag{4}
+\]
+
+\textbf{（2）假设触底前存在共同压强平衡}
+
+从这一步开始需要使用活塞位移约束。如图 3-2 左图，绳长不变直接给出
+\(h_L+h_R=2V_0/S\)；右图则画出左活塞触底后的边界状态，稍后第（4）步中的
+\(V_L\to0\)、\(V_R=2V_0\) 和终态压强均对应此图。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图 3-2　活塞位移约束与左活塞触底状态。}]{../figures/solution-03.pdf}
+\caption*{图 3-2　活塞位移约束与左活塞触底状态。}
+\end{figure}
+
+令某一时刻左缸体积为
+
+\[
+V_L=\mu V_0.
+\tag{5}
+\]
+
+左活塞高度为
+
+\[
+h_L=\frac{V_L}{2S}=\frac{\mu V_0}{2S}.
+\]
+
+初态左右活塞高度都等于 \(V_0/S\)。轻绳长度不变，所以
+
+\[
+h_L+h_R=\frac{2V_0}{S}.
+\]
+
+于是右活塞高度为
+
+\[
+h_R=\frac{2V_0}{S}-\frac{\mu V_0}{2S},
+\]
+
+右缸体积为
+
+\[
+\boxed{V_R=Sh_R=\left(2-\frac\mu2\right)V_0}.
+\tag{6}
+\]
+
+若阀门已使左右压强相等，记共同压强为 \(P\)。左、右活塞的平衡方程分别为
+
+\[
+T_s=2S(P_0-P),
+\qquad
+T_s=S(P_0-P).
+\]
+
+两式相等，因截面积不同，只能有
+
+\[
+\boxed{P=P_0},
+\qquad T_s=0.
+\tag{7}
+\]
+
+\textbf{（3）对整体气体使用热力学第一定律}
+
+初态内能为
+
+\[
+\begin{aligned}
+U_i
+&=nC_VT_0\\
+&=\frac{C_V}{R}P_i(2V_0)\\
+&=\frac32\cdot\frac12P_0\cdot2V_0\\
+&=\frac32P_0V_0.
+\end{aligned}
+\tag{8}
+\]
+
+在假设的共同压强状态，左右温度可以不同，但利用
+\(n_jRT_j=PV_j\)，总内能只需写成
+
+\[
+\begin{aligned}
+U_f
+&=n_LC_VT_L+n_RC_VT_R\\
+&=\frac{C_V}{R}P_0(V_L+V_R)\\
+&=\frac32P_0(V_L+V_R).
+\end{aligned}
+\tag{9}
+\]
+
+左缸由 \(2V_0\) 压缩到 \(V_L\)，大气对左侧气体做正功
+
+\[
+W_L=P_0(2V_0-V_L).
+\]
+
+右缸由 \(V_0\) 膨胀到 \(V_R\)，气体克服大气做功，所以大气对右侧气体做功
+
+\[
+W_R=-P_0(V_R-V_0).
+\]
+
+整体绝热，故
+
+\[
+U_f-U_i=W_L+W_R.
+\tag{10}
+\]
+
+代入式（8）、（9）：
+
+\[
+\frac32P_0(V_L+V_R)-\frac32P_0V_0
+=P_0(2V_0-V_L)-P_0(V_R-V_0).
+\]
+
+约去 \(P_0\) 并整理：
+
+\[
+\frac32(V_L+V_R-V_0)=3V_0-V_L-V_R,
+\]
+
+即
+
+\[
+\frac52(V_L+V_R)=\frac92V_0.
+\]
+
+所以假设状态要求
+
+\[
+V_L+V_R=\frac95V_0.
+\tag{11}
+\]
+
+另一方面，由式（5）、（6），
+
+\[
+V_L+V_R
+=\left(2+\frac\mu2\right)V_0.
+\]
+
+与式（11）比较：
+
+\[
+2+\frac\mu2=\frac95,
+\]
+
+得到
+
+\[
+\mu=-\frac25.
+\tag{12}
+\]
+
+但左缸体积参数必须满足
+\(\mu\geq0\)。因此式（12）不是物理状态，而是在告诉我们：
+
+\[
+\boxed{\text{左右压强在左活塞触底前不可能相等。}}
+\tag{13}
+\]
+
+\textbf{（4）求左活塞刚触底时的右缸状态}
+
+触底瞬间
+
+\[
+V_L\to0,
+\qquad
+V_R=2V_0.
+\tag{14}
+\]
+
+此时几乎全部气体都在右缸。设右缸压强和温度为 \(P_R,T_R\)。最终内能为
+
+\[
+U_f=\frac{C_V}{R}P_RV_R
+=\frac32P_R(2V_0)=3P_RV_0.
+\]
+
+从初态到触底，大气总功为
+
+\[
+\begin{aligned}
+W_{\rm atm}
+&=P_0(2V_0-0)-P_0(2V_0-V_0)\\
+&=P_0V_0.
+\end{aligned}
+\]
+
+由第一定律
+
+\[
+3P_RV_0-\frac32P_0V_0=P_0V_0,
+\]
+
+故
+
+\[
+\boxed{P_R=\frac56P_0}.
+\tag{15}
+\]
+
+再由理想气体状态方程，利用式（3）：
+
+\[
+\begin{aligned}
+T_R
+&=\frac{P_RV_R}{nR}\\
+&=\frac{(5P_0/6)(2V_0)}{P_0V_0/T_0}\\
+&=\frac53T_0.
+\end{aligned}
+\]
+
+所以
+
+\[
+\boxed{T_R=\frac53T_0}.
+\tag{16}
+\]
+
+在左活塞将要触底时，消去两个活塞平衡方程中的绳张力：
+
+\[
+2S(P_0-P_L)=S(P_0-P_R).
+\]
+
+因此
+
+\[
+2P_L=P_0+P_R
+=P_0+\frac56P_0
+=\frac{11}{6}P_0,
+\]
+
+从而
+
+\[
+\boxed{P_L\to\frac{11}{12}P_0}.
+\tag{17}
+\]
+
+左缸中只剩趋于零的微小气团，严格说已不存在具有有限物质的``最终左侧温度''。若按题目提示对最后残留气团作准静态绝热近似，则
+
+\[
+\frac{T_L}{T_0}
+=\left(\frac{P_L}{P_i}\right)^{(\gamma-1)/\gamma}
+=\left(\frac{11/12}{1/2}\right)^{2/5},
+\]
+
+即其极限温度为
+
+\[
+\boxed{T_L\to T_0\left(\frac{11}{6}\right)^{2/5}}.
+\tag{18}
+\]
+
+式（18）应理解为触底前的左侧局部极限，而不是一个具有有限 \(V_L\)
+和有限物质的共同平衡态。
+
+\textbf{（5）第（2）问：修改截面积后重新核对初态}
+
+左缸截面积变为 \(xS\)、初始体积变为
+\(xV_0\)。右缸仍为真空，故初态绳张力仍为 \(P_0S\)。设修改后的左缸初压为
+\(P_i'\)，左活塞平衡给出
+
+\[
+xSP_i'+P_0S=xSP_0.
+\]
+
+所以
+
+\[
+\boxed{P_i'=\frac{x-1}{x}P_0}.
+\tag{19}
+\]
+
+为使初压为正，必须有
+
+\[
+x>1.
+\tag{20}
+\]
+
+设触底前的平衡状态中左活塞高度为 \(\mu V_0/S\)。由于初态两活塞高度仍均为
+\(V_0/S\)，轻绳约束给出
+
+\[
+V_L=x\mu V_0,
+\qquad
+V_R=(2-\mu)V_0,
+\qquad 0<\mu<2.
+\tag{21}
+\]
+
+若左右压强相等，和第（1）问相同，机械平衡要求共同压强为 \(P_0\)。
+
+修改后的初态内能必须随初态压强和体积一同修改：
+
+\[
+U_i'
+=\frac32P_i'(xV_0)
+=\frac32(x-1)P_0V_0.
+\tag{22}
+\]
+
+假设平衡态的内能为
+
+\[
+U_f'=\frac32P_0[V_L+V_R]
+=\frac32P_0[2+(x-1)\mu]V_0.
+\tag{23}
+\]
+
+大气对气体所做的总功为
+
+\[
+\begin{aligned}
+W_{\rm atm}'
+&=P_0(xV_0-V_L)-P_0(V_R-V_0)\\
+&=P_0(x-1)(1-\mu)V_0.
+\end{aligned}
+\tag{24}
+\]
+
+由 \(U_f'-U_i'=W_{\rm atm}'\)：
+
+\[
+\frac32[2+(x-1)\mu]-\frac32(x-1)
+=(x-1)(1-\mu).
+\]
+
+逐项整理：
+
+\[
+3+\frac32(x-1)\mu-\frac32(x-1)
+=(x-1)-(x-1)\mu,
+\]
+
+所以
+
+\[
+\frac52(x-1)\mu=\frac52(x-1)-3.
+\]
+
+得到
+
+\[
+\boxed{\mu=\frac{5x-11}{5(x-1)}}.
+\tag{25}
+\]
+
+结合 \(x>1\) 和 \(0<\mu<2\)，其中 \(\mu>0\) 给出
+
+\[
+x>\frac{11}{5},
+\]
+
+而 \(\mu<2\) 在该范围内自动满足。因此按题面``截面积与初态体积都改为
+\(x\) 倍''的字面条件，非零左缸体积的平衡态存在范围为
+
+\[
+\boxed{x>\frac{11}{5}}.
+\tag{26}
+\]
+
+若在这一问仍沿用修改前的初态内能 \(\frac32P_0V_0\)，会得到与 \(x>1\)
+冲突的结论。式（22）表明，既然初压和初体积都已改变，初态内能也必须同步改变；因此应按新的状态量重新计算初态内能。
+
+\textbf{触底前后分段。}
+活塞可运动时，压强由各自活塞的受力和轻绳张力共同约束；一侧活塞触底后，该侧体积固定，原来的联动方程随即失效。重新选定阶段变量后，应检查阀门两侧压强是否还存在相等解，并把触底瞬间的温度和物质的量作为下一阶段初值。这里的绝热条件排除了热交换，却不排除气体经阀门携带内能迁移；遗漏流动项会让最终温度不满足全系统能量守恒。
+
+\textbf{绝热不等于每侧内能不变。}
+阀门打开后，左右气体各自都是开口系统，跨阀质量流会带走焓；把左右两侧合在一起，内部流动的能量通量才相消。活塞触底后虽然容积固定，剩余气体仍可继续流动和改变温度。检查最终状态时，把两侧
+\(nRT\)
+的变化与外界大气功、活塞功及汽缸约束逐项对照；若总能量账目不闭合，应先查触底前后是否沿用了错误的体积自由度。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf-2}
+
+本题真正的判据不是``方程有没有解''，而是解是否落在活塞允许的几何区间。第一问得到
+\(\mu=-2/5\)，意味着假想共同压强状态位于左缸体积为负的延拓区域，所以实际过程先碰到
+\(V_L=0\)
+的边界。第二问则提醒：一旦修改初压和初体积，初态内能不能继续照搬原表达式。
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9-2}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  忽略右活塞决定的初态绳张力；
+\item
+  把两活塞``位移相等''错误写成``两缸体积变化相等''；
+\item
+  大气功的符号写反；
+\item
+  左右温度不同时误以为不能用 \(U=(C_V/R)pV\)；
+\item
+  得到负体积参数后仍把它当作形式答案；
+\item
+  在第（2）问改变初压、初体积后仍沿用原初态内能。
+\end{enumerate}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae-2}
+
+建议先只讨论机械部分，让学生独立得到初压和体积约束，再把左右气体合并为一个热力学系统。讲第一问的负解时，可以把
+\(V_L+V_R\) 随 \(\mu\)
+的几何表达与能量要求画在同一条数轴上，直观看出交点落在
+\(\mu<0\)。第二问应作为``状态量必须成套修改''的核验案例。
+
+\textbf{建议的状态表。} 板书列出初态、假想共同压强态和触底态，并记录
+\(V_L,V_R,P_L,P_R,U\)。先填几何和力学关系，再填内能。这样可以分清绳长约束、状态方程和热学条件各自提供的信息。
+
+大气功的符号可采用统一规则：
+
+\[
+W_{\rm atm,on}=-P_0\Delta V.
+\]
+
+对左右两缸分别代入 \(\Delta V\)
+后再相加，不在脑中判断``压缩为正、膨胀为负''。这一书写方式尤其适合面积不同、两侧体积变化不等的情况。
+
+第（2）问应展示一次``错误答案审计''：如果改变 \(P_i,V_i\) 后仍写原来的
+\(U_i\)，能量守恒所用的已不是同一个初态。让学生逐项核对
+
+\[
+U_i=\frac{C_V}{R}P_iV_i
+\]
+
+中的三个因素，可以培养对参数变式的敏感性。这里依据题面状态量做一致性校验，不能只修改部分初态条件。
+
+\textbf{课堂核验清单。} 第一问触底态应同时满足几何关系
+\(V_R=2V_0\)、能量关系和右缸状态方程；第二问可任选
+\(x=3\)，由式（25）得到
+\(\mu=0.4\)，再把各体积和内能反代第一定律，检查等号两端均为
+\(1.2P_0V_0\)。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3-2}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  将左右截面积推广为 \(aS\) 和 \(bS\)，写出共同压强平衡的必要条件；
+\item
+  若活塞有质量，重新写初态和末态的机械平衡，并计入重力势能；
+\item
+  若圆筒壁导热、过程最终达到共同温度，再增加热平衡条件求最终状态。
+\end{enumerate}
+
+\textbf{变式训练的备课展开。} 若左右截面积分别为 \(aS,bS\)，共同压强为
+\(P\) 时两个活塞的张力条件为
+
+\[
+aS(P_0-P)=bS(P_0-P).
+\]
+
+只要 \(a\neq b\) 且活塞未接触边界，就仍有
+\(P=P_0\)。这说明共同压强等于大气压并不是本题 \(2:1\)
+面积比的偶然结果，而是不同截面积通过同一绳张力耦合的普遍结论。
+
+若左右活塞质量分别为 \(M_L,M_R\)，取向上为正，平衡方程应改为
+
+\[
+T_s+aSP_L-aSP_0-M_Lg=0,
+\]
+
+\[
+T_s+bSP_R-bSP_0-M_Rg=0.
+\]
+
+热力学第一定律中还需加入两活塞重力势能变化。可让学生先写``系统边界包含气体还是包含气体与活塞''两种方案，并检查两种能量账本最后是否一致。
+
+若最终还达到热平衡，则除状态方程和机械条件外还要增加
+\(T_L=T_R\)。方程数的清点非常重要：每引入一个末态未知量，都必须能指出由哪个独立物理条件约束。
+
+\textbf{课堂核验与变式追问。}
+可把气体分成``仍可运动的活塞阶段''和``某一活塞已经触底阶段''分别教学。每一阶段都先画受力图，确定压强与绳张力关系，再用总能量而非单侧气体的能量守恒。阀门打开后，单侧气体不是封闭系统；只有把两侧气体合为整体，内部迁移项才会抵消。变式可改变两缸底面积，要求先判定哪只活塞触底，随后重新建立体积约束。
+
+\textbf{课堂延伸。}
+讨论活塞触底时的冲击假设：题设忽略活塞质量且采用缓慢过程，活塞动能不进入能量账本。若改为有质量并允许有限速度触底，才需说明碰撞损耗。准静态近似来自过程足够缓慢，不能从``绝热''二字推出。
+
+\textbf{教师展开补充。}
+可用一张状态表控制活塞与气体问题的方程数。每一阶段分别列出左右体积、气体物质的量、温度、压强、活塞是否接触限位，以及当前有效的绳长约束。阀门打开后，两侧各自是开口系统，跨阀质量流携带焓；把两侧气体放在同一系统边界内，内部焓流才相消。活塞未触底时，绳长和受力平衡决定体积关系；一侧触底后，先检查轻绳是否松弛；绳松弛时改用触底活塞的固定体积条件，若绳仍绷紧，其长度约束仍须保留。每换阶段都应重新清点未知量与独立方程，不能把前一阶段的活塞受力式照搬。若还要求最终热平衡，再补
+\(T_L=T_R\)，不要预先把两侧温度设为相同。
+
+\newpage
+
+\section{第 4 题}\label{ux7b2c-4-ux9898}
+
+两个静止质量均为 \(m_0\) 的探测器，在地面参考系中以速度 \(v_0=0.8c\)
+相向运动。为避免相撞，其中一个探测器沿前进方向发射大量光子，这些光子被另一个探测器完全吸收，最终两个探测器相对静止。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  求地面系中所发射光子的总能量 \(E_0\)；
+\item
+  当地面系中累计发射的光子能量为 \(E\) 时，求发射器此时的静止质量 \(m\)
+  和地面系速度 \(v\)；
+\item
+  若在发射器的瞬时共动参考系中，单位时间发射光子的功率恒为
+  \(W\)，求地面系中完成全部发射所需的时间 \(t\)。
+\end{enumerate}
+
+提示：
+
+\[
+\int_a^b\frac{dx}{x}=\ln\frac ba.
+\]
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图 4-1　相向运动的探测器与光子传能。}]{../figures/question-04.pdf}
+\caption*{图 4-1　相向运动的探测器与光子传能。}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-3}
+
+发射器把静质量转成定向光子，接收器吸收后也改变速度。分别对发射和吸收事件守恒四动量，光子能量与末态共同速度随之确定。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-3}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  相对论能量 \(\mathcal E=\gamma mc^2\) 与动量 \(p=\gamma mv\)；
+\item
+  能量---动量关系 \(\mathcal E^2-p^2c^2=m^2c^4\)；
+\item
+  光子的能量与动量关系 \(E_\gamma=p_\gamma c\)；
+\item
+  一维发射过程中的能量、动量守恒；
+\item
+  光子能量的洛伦兹变换；
+\item
+  固有时 \(d\tau=dt/\gamma\)。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-3}
+
+发射器向前发光时，光子带走正向动量，发射器的正向动量逐渐减小。由于光子由发射器的静质量供能，发射器静止质量也随累计光子能量
+\(E\)
+减小。当发射器恰好停下时，光子总动量等于它的初始动量。接收器吸收同一束光子后也恰好停下，从而两者最终相对静止。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-3}
+
+先只研究发射器和已经发出的光子。把累计光子能量记为
+\(E\)，列出发射器一侧的能量、动量守恒，再利用能量---动量不变量求
+\(m(E)\) 和 \(v(E)\)。第三问在一个微小发射过程中变换光子能量和时间，得到
+\(dE/dt\) 与共动系功率 \(W\) 的关系。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-3}
+
+图 4-2
+把同一个守恒过程画成箭头账本：上方蓝色箭头是发射器的初始动量，中间橙色箭头是累计光子动量，下方蓝色箭头是发射后剩余发射器动量。下面的式（2）---（6）分别就是这三支箭头对应的能量与动量分量。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.692\linewidth,height=\textheight,keepaspectratio,alt={图 4-2　发射器和光子的能量、动量分配。}]{../figures/solution-04.pdf}
+\caption*{图 4-2　发射器和光子的能量、动量分配。}
+\end{figure}
+
+\textbf{（1）初态洛伦兹因子和总发射能量}
+
+初速度为 \(v_0=0.8c=4c/5\)，故
+
+\[
+\gamma_0
+=\frac1{\sqrt{1-v_0^2/c^2}}
+=\frac1{\sqrt{1-16/25}}
+=\frac53.
+\tag{1}
+\]
+
+发射器初始能量和动量分别为
+
+\[
+\mathcal E_{i}=\gamma_0m_0c^2=\frac53m_0c^2,
+\]
+
+\[
+p_i=\gamma_0m_0v_0
+=\frac53m_0\cdot\frac45c
+=\frac43m_0c.
+\tag{2}
+\]
+
+初态两探测器动量大小相等、方向相反，因此总动量为零。末态两探测器相对静止，说明它们具有共同速度。总动量仍为零，所以这个共同速度只能是零，即两探测器最终都在地面系静止。
+
+当发射器停止时，它的末动量为零。沿前进方向的光子总动量为
+\(E_0/c\)。对发射器与光子系统使用动量守恒：
+
+\[
+p_i=\frac{E_0}{c}.
+\]
+
+代入式（2）：
+
+\[
+\frac43m_0c=\frac{E_0}{c},
+\]
+
+所以
+
+\[
+\boxed{E_0=\frac43m_0c^2}.
+\tag{3}
+\]
+
+能量守恒还给出停止后的发射器静止质量 \(m_f\)：
+
+\[
+\frac53m_0c^2=m_fc^2+\frac43m_0c^2,
+\]
+
+故 \(m_f=m_0/3\)。这可作为式（3）的独立核验。
+
+\textbf{（2）累计发射能量为 \(E\) 时的 \(m\) 与 \(v\)}
+
+设此时发射器的静止质量为 \(m\)、速度为 \(v\)、洛伦兹因子为
+\(\gamma\)。能量守恒为
+
+\[
+\gamma mc^2+E=\frac53m_0c^2.
+\tag{4}
+\]
+
+动量守恒为
+
+\[
+\gamma mv+\frac{E}{c}=\frac43m_0c.
+\tag{5}
+\]
+
+把式（5）乘以 \(c\)，可写出发射器剩余能量和动量：
+
+\[
+\mathcal E
+=\gamma mc^2
+=\frac53m_0c^2-E,
+\tag{6}
+\]
+
+\[
+pc
+=\gamma mvc
+=\frac43m_0c^2-E.
+\tag{7}
+\]
+
+因为
+
+\[
+\frac vc=\frac{pc}{\mathcal E},
+\]
+
+所以
+
+\[
+\frac vc
+=\frac{\frac43m_0c^2-E}{\frac53m_0c^2-E}
+=\frac{4m_0c^2-3E}{5m_0c^2-3E}.
+\]
+
+即
+
+\[
+\boxed{v
+=c\frac{4m_0c^2-3E}{5m_0c^2-3E}}.
+\tag{8}
+\]
+
+再由能量---动量关系
+
+\[
+m^2c^4=\mathcal E^2-p^2c^2,
+\]
+
+代入式（6）、（7）：
+
+\[
+\begin{aligned}
+m^2c^4
+&=\left(\frac53m_0c^2-E\right)^2
+-\left(\frac43m_0c^2-E\right)^2\\
+&=\left(\frac13m_0c^2\right)
+\left(3m_0c^2-2E\right)\\
+&=m_0^2c^4\left(1-\frac{2E}{3m_0c^2}\right).
+\end{aligned}
+\]
+
+取正的静止质量根：
+
+\[
+\boxed{m=m_0\sqrt{1-\frac{2E}{3m_0c^2}}}.
+\tag{9}
+\]
+
+反代 \(E=0\)，可得 \(m=m_0,v=0.8c\)；反代 \(E=E_0=4m_0c^2/3\)，可得
+\(m=m_0/3,v=0\)，两个端点都正确。
+
+\textbf{（3）共动系恒功率与地面系时间}
+
+考虑一个极短的发射过程。地面系中向前发射的光子能量为
+\(dE\)。在发射器的瞬时共动系中，光子能量的洛伦兹变换为
+
+\[
+dE'=\gamma(dE-v,dp).
+\]
+
+光子满足 \(dp=dE/c\)，令 \(\beta=v/c\)，则
+
+\[
+dE'=\gamma(1-\beta)dE.
+\tag{10}
+\]
+
+发射器固有时与地面系时间满足
+
+\[
+d\tau=\frac{dt}{\gamma}.
+\tag{11}
+\]
+
+共动系功率恒为 \(W\)：
+
+\[
+W=\frac{dE'}{d\tau}.
+\]
+
+代入式（10）、（11）：
+
+\[
+\begin{aligned}
+W
+&=\frac{\gamma(1-\beta)dE}{dt/\gamma}\\
+&=\gamma^2(1-\beta)\frac{dE}{dt}\\
+&=\frac{1-\beta}{1-\beta^2}\frac{dE}{dt}\\
+&=\frac1{1+\beta}\frac{dE}{dt}.
+\end{aligned}
+\]
+
+因此
+
+\[
+\frac{dE}{dt}=W(1+\beta).
+\tag{12}
+\]
+
+由式（8），
+
+\[
+\beta(E)=\frac{4m_0c^2-3E}{5m_0c^2-3E}.
+\]
+
+所以
+
+\[
+1+\beta
+=\frac{9m_0c^2-6E}{5m_0c^2-3E}
+=3\frac{3m_0c^2-2E}{5m_0c^2-3E}.
+\]
+
+由式（12）分离变量：
+
+\[
+dt
+=\frac{5m_0c^2-3E}{3W(3m_0c^2-2E)},dE.
+\tag{13}
+\]
+
+从 \(E=0\) 积分到 \(E_0=4m_0c^2/3\)。令 \(M=m_0c^2\)，先作代数分解：
+
+\[
+\frac{5M-3E}{3(3M-2E)}
+=\frac12+\frac{M}{6(3M-2E)}.
+\tag{14}
+\]
+
+于是
+
+\[
+\begin{aligned}
+t
+&=\frac1W\int_0^{4M/3}
+\left[\frac12+\frac{M}{6(3M-2E)}\right]dE\\
+&=\frac1W\left[
+\frac E2-\frac{M}{12}\ln(3M-2E)
+\right]_0^{4M/3}\\
+&=\frac1W\left[
+\frac{2M}{3}+\frac{M}{12}\ln\frac{3M}{M/3}
+\right]\\
+&=\frac1W\left[
+\frac{2M}{3}+\frac{M}{12}\ln9
+\right]\\
+&=\frac{M}{6W}(4+\ln3).
+\end{aligned}
+\]
+
+因此
+
+\[
+\boxed{t=\frac{(4+\ln3)m_0c^2}{6W}}.
+\tag{15}
+\]
+
+\textbf{四动量方向不能省略。}
+发射器向前发光时，光子带走正向动量，发射器反冲；接收器吸收同一束光子时，其动量也沿光子方向增加。把两次事件的能量方程分开列，再用光子能量与动量
+\(p_gamma=E_gamma/c\)
+连接，才能消去中间的光子量。若题目要求末态两探测器相对静止，还需再检验总动量为零：在本题对称初态下，共同速度只能为零。仅比较两者的动能变化会漏掉静质量变化。
+
+\textbf{从发射器静质量变化看光子能量。} 发射前后都使用
+\(E^2-p^2c^2=M^2c^4\)，其中 \(M\) 是当时探测器的静质量。光子携带能量
+\(E_\gamma\) 和动量
+\(E_\gamma/c\)；因此每次事件的能量、动量方程并非独立的两道普通代数式，而受同一光子关系约束。可先解发射，再把同一光子四动量送入接收事件。把两探测器、光子一起看成总系统，初末总能量和总动量还应与逐事件计算一致。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf-3}
+
+发射器静止质量减小不是额外假设，而是由四动量守恒必然得到。第三问的关键是光子能量和时间都要变换：只变换
+\(dE\) 而仍用地面系 \(dt\)，或只使用时间膨胀，都得不到正确的 \(1+\beta\)
+因子。
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9-3}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  认为``最终相对静止''允许两探测器以非零共同速度运动，忽略总动量为零；
+\item
+  把光子动量写成 \(Ec\) 而不是 \(E/c\)；
+\item
+  在第（2）问假设发射器静止质量不变；
+\item
+  用经典动能公式处理 \(0.8c\)；
+\item
+  将共动系功率直接等同于地面系 \(dE/dt\)；
+\item
+  积分上限忘记使用第（1）问的 \(E_0\)。
+\end{enumerate}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae-3}
+
+先用初态总动量为零说明末态共同速度必须为零，再把问题缩小到单独研究发射器。第（2）问应把
+\(\mathcal E\) 和 \(pc\) 并排列出，让学生看见两者都减去同一个光子能量
+\(E\)。第三问则分两行写 \(dE'\) 与 \(d\tau\) 的变换，最后才组合成功率。
+
+\textbf{建议的四动量账本。} 在板书上把发射前、光子、发射后分别写成
+
+\[
+(\mathcal E/c,p),
+\qquad
+(E/c,E/c),
+\qquad
+(\gamma mc,\gamma mv).
+\]
+
+先做两个分量守恒，再做不变量。学生会清楚看见静质量来自发射后四动量的模，而不是由``剩余能量除以
+\(c^2\)''直接得到。
+
+第（2）问反代两个端点非常重要。\(E=0\) 检查初态，\(E=E_0\)
+检查停止态；若速度公式或质量公式中任何正负号写错，至少一个端点会立即暴露问题。还可检查质量根号中的量在整个
+\(0\leq E\leq E_0\) 区间保持非负。
+
+第三问先解释 \(W\)
+的定义：它是发射器自己携带的钟测得的单位固有时能量。随后分别处理光子多普勒因子和时间膨胀。组合后出现
+
+\[
+\gamma^2(1-\beta)=\frac1{1+\beta},
+\]
+
+可让学生用 \((1-\beta^2)=(1-\beta)(1+\beta)\)
+自行化简，避免把这个关键因子当成记忆公式。
+
+\textbf{课堂核验清单。} 检查 \(t\) 的量纲为能量除以功率；检查
+\(\beta\to0\) 时 \(dE/dt\to W\)；检查发射初期 \(\beta=0.8\)
+时地面系光子能量率大于共动系功率，符合前向多普勒增能。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3-3}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  将初速度改为一般的 \(\beta_0c\)，求 \(E_0\) 和停止后的发射器静止质量；
+\item
+  若光子沿与速度方向成角 \(\psi\) 的方向发射，写出微元能量的洛伦兹变换；
+\item
+  若地面系发射功率恒定，比较完成发射所需时间与本题结果。
+\end{enumerate}
+
+\textbf{变式训练的备课展开。} 对一般初速度
+\(\beta_0c\)，初始洛伦兹因子为
+\(\gamma_0\)。若向前发射光子直至发射器停止，动量守恒直接给出
+
+\[
+E_0=\gamma_0m_0\beta_0c^2.
+\]
+
+再由能量守恒，停止后的静止质量为
+
+\[
+\begin{aligned}
+m_f
+&=\gamma_0m_0-\frac{E_0}{c^2}\\
+&=\gamma_0m_0(1-\beta_0)\\
+&=m_0\sqrt{\frac{1-\beta_0}{1+\beta_0}}.
+\end{aligned}
+\]
+
+代入 \(\beta_0=4/5\)，得到 \(E_0=4m_0c^2/3\) 和 \(m_f=m_0/3\)。
+
+若光子在地面系与速度方向夹角为 \(\psi\)，则
+\(dp_x=(dE/c)\cos\psi\)，共动系能量变换为
+
+\[
+dE'=\gamma dE(1-\beta\cos\psi).
+\]
+
+这表明前向发射、侧向发射和后向发射在共动系中对应不同的多普勒因子。课堂上可让学生判断在相同地面系光子能量下，哪种发射方向减速最有效，并用纵向动量变化验证。
+
+\textbf{课堂核验与变式追问。}
+可让学生用四动量的时间分段图跟踪光子：在发射事件它离开发射器，在吸收事件进入接收器，中间的传播不改变光子的
+\(E/c\)
+关系。发射器和接收器的静质量变化必须保留，否则能量方程与动量方程不相容。变式若改为只吸收部分光子，末态探测器一般不再相对静止，需把剩余光子列入系统总动量。
+
+\textbf{课堂延伸。}
+可将光子能量很小的极限展开到一阶，检查探测器动量改变是否等于
+\(E_\gamma/c\)，静质量改变是否为 \(E_\gamma/c^2\) 的适当多普勒修正。再取
+\(v_0\to0\)，发射与吸收恢复成静止探测器的普通能量账目。两个极限都成立，说明相对论表达式与低速直觉相容。
+
+\textbf{教师展开补充。}
+这题可把四动量写成``发射前探测器、发射后探测器、光子''三行，再在吸收事件重复同一账本。对每个孤立事件，能量与动量守恒必须同时满足，且光子始终满足
+\(E_\gamma=pc\)；探测器静质量则由本身四动量的不变量求得，不能把总能量简单除以
+\(c^2\)
+当静质量。若光子方向改变，吸收器末态一般也会获得反冲；只有题设的方向与速度条件才允许某些分量抵消。课堂上可先用低速、小光子能量展开检查动量传递，再回到精确相对论式。动量变化须与同一参考系中的光子动量比较；混用地面系和共动系能量会引入错误的多普勒因子。
+
+\newpage
+
+\section{第 5 题}\label{ux7b2c-5-ux9898}
+
+如图所示，一个正八面体框架的每条棱长均为 \(l\)，每条棱的电阻均为
+\(r\)。电流 \(I\) 从顶点 \(A\) 流入，从与 \(A\) 相邻的顶点 \(B\) 流出。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  求 \(A,B\) 两点间的电势差；
+\item
+  空间中存在沿正八面体上下对角线方向的匀强磁场
+  \(\bm B\)，求八面体所受支撑力的合力。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.462\linewidth,height=\textheight,keepaspectratio,alt={图 5-1　正八面体电阻网络、电流端点与磁场方向。}]{../figures/question-05.pdf}
+\caption*{图 5-1　正八面体电阻网络、电流端点与磁场方向。}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-4}
+
+八面体网络在给定电流端点后，只能合并边界条件允许交换的等势节点，再由节点方程求等效电阻。磁场中的总安培力还可用电流连续性化为端点位移的矢量和。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-4}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  正八面体的顶点连接关系；
+\item
+  电势对称性与基尔霍夫电流定律；
+\item
+  直导线安培力 \(\bm F=I\bm L\times\bm B\)；
+\item
+  网络内部节点的电流守恒；
+\item
+  正八面体棱与一条顶点对角线的空间夹角；
+\item
+  静止框架的支撑力与磁力平衡。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-4}
+
+正八面体的六个顶点可分为三对互为对顶点的节点：\(A,A'\)，\(B,B'\)，\(C,C'\)。每个顶点与除自身及其对顶点以外的四个顶点相连。电流从相邻顶点
+\(A\) 流入、从 \(B\) 流出后，交换 \(C\) 与 \(C'\)
+不改变边界条件，因此它们必为等势点。
+
+磁场问题中，每条支路都有不同电流，但支路安培力的矢量和只依赖总电流和流入、流出端点。复杂网络在匀强磁场中等效为一段从
+\(A\) 指向 \(B\)、电流为 \(I\) 的直导线。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-4}
+
+第一问不要从串并联图形直觉出发，而应先给六个节点命名并列节点方程。第二问先证明恒等式
+
+\[
+\sum I_{ij}(\bm r_j-\bm r_i)=I(\bm r_B-\bm r_A),
+\]
+
+再与 \(\bm B\) 作叉积。这样无需知道每一条棱上的具体电流。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-4}
+
+图 5-2 分成两个直接参与推导的部分：左图把对称等势节点标成
+\(2U/5\)、\(U/2\)、\(3U/5\)，用于第（1）---（3）步列节点方程；右图把整个网络的合磁力等效为
+\(I\overrightarrow{AB}\times\bm B\)，用于第（4）、（5）步判断大小和方向。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.854\linewidth,height=\textheight,keepaspectratio,alt={图 5-2　等势节点归并与合安培力方向。}]{../figures/solution-05.pdf}
+\caption*{图 5-2　等势节点归并与合安培力方向。}
+\end{figure}
+
+\textbf{（1）建立节点电势未知量}
+
+设
+
+\[
+V_A=U,
+\qquad
+V_B=0.
+\]
+
+\(A'\) 是 \(A\) 的对顶点，\(B'\) 是 \(B\)
+的对顶点。剩余两个互为对顶点的节点记为 \(C,C'\)。由于边界条件在交换
+\(C,C'\) 后不变，故
+
+\[
+V_C=V_{C'}=z.
+\]
+
+再令
+
+\[
+V_{A'}=x,
+\qquad
+V_{B'}=y.
+\]
+
+每个节点连接四条电阻均为 \(r\)
+的棱。对内部节点列基尔霍夫电流定律时，可把各支路电流都乘以
+\(r\)，得到``本节点电势的四倍等于相邻节点电势之和''。
+
+\textbf{（2）逐个列节点方程}
+
+\(A'\) 与 \(B,B',C,C'\) 相连，所以
+
+\[
+4x=0+y+z+z,
+\]
+
+即
+
+\[
+4x=y+2z.
+\tag{1}
+\]
+
+\(B'\) 与 \(A,A',C,C'\) 相连，所以
+
+\[
+4y=U+x+2z.
+\tag{2}
+\]
+
+\(C\) 与 \(A,A',B,B'\) 相连，所以
+
+\[
+4z=U+x+0+y.
+\tag{3}
+\]
+
+由式（1）得 \(y=4x-2z\)。代入式（3）：
+
+\[
+4z=U+x+4x-2z,
+\]
+
+所以
+
+\[
+6z=U+5x.
+\tag{4}
+\]
+
+再将 \(y=4x-2z\) 代入式（2）：
+
+\[
+4(4x-2z)=U+x+2z,
+\]
+
+整理得
+
+\[
+15x-10z=U.
+\tag{5}
+\]
+
+联立式（4）、（5）。由式（4）有 \(5x=6z-U\)，代入式（5）：
+
+\[
+3(6z-U)-10z=U,
+\]
+
+即
+
+\[
+8z=4U,
+\]
+
+所以
+
+\[
+z=\frac U2.
+\]
+
+进而
+
+\[
+x=\frac{6z-U}{5}=\frac{2U}{5},
+\]
+
+\[
+y=4x-2z=\frac{3U}{5}.
+\tag{6}
+\]
+
+因此各节点电势为
+
+\[
+V_{A'}=\frac25U,
+\quad
+V_{B'}=\frac35U,
+\quad
+V_C=V_{C'}=\frac12U.
+\]
+
+\textbf{（3）求从 \(A\) 流出的总电流}
+
+\(A\) 与 \(B,B',C,C'\) 四点相连。因此
+
+\[
+\begin{aligned}
+I
+&=\frac{U-0}{r}
++\frac{U-3U/5}{r}
++\frac{U-U/2}{r}
++\frac{U-U/2}{r}\\
+&=\frac Ur+\frac{2U}{5r}+\frac{U}{2r}+\frac{U}{2r}\\
+&=\frac{12U}{5r}.
+\end{aligned}
+\tag{7}
+\]
+
+所以
+
+\[
+U=\frac{5}{12}Ir.
+\]
+
+即
+
+\[
+\boxed{U_{AB}=\frac{5}{12}Ir},
+\qquad
+\boxed{R_{AB}=\frac{5}{12}r}.
+\tag{8}
+\]
+
+\textbf{（4）证明复杂网络的合安培力等效关系}
+
+回看图 5-2 右图，橙色箭头 \(I\overrightarrow{AB}\)
+不是某一根导线，而是所有有向支路电流矢量和的等效结果。下面先用节点电流守恒证明内部节点贡献成对消去。
+
+任选每条棱的电流正方向，记由节点 \(i\) 指向节点 \(j\) 的电流为
+\(I_{ij}\)，对应有向棱矢量为
+
+\[
+\bm L_{ij}=\bm r_j-\bm r_i.
+\]
+
+该棱受到的安培力为
+
+\[
+\bm F_{ij}=I_{ij}\bm L_{ij}\times\bm B.
+\]
+
+总磁力为
+
+\[
+\bm F_{\rm m}
+=\left[\sum_{ij}I_{ij}(\bm r_j-\bm r_i)\right]\times\bm B.
+\tag{9}
+\]
+
+观察方括号内任一内部节点 \(k\) 的位置矢量系数：流入该点的支路给出
+\(+I\bm r_k\)，流出该点的支路给出
+\(-I\bm r_k\)。由节点电流守恒，两者总和为零。因此所有内部节点的位置矢量都消去。
+
+只剩电流流入端 \(A\) 和流出端 \(B\)。在 \(A\) 点净流出网络的电流为
+\(I\)，系数为 \(-I\bm r_A\)；在 \(B\) 点净流入的电流为 \(I\)，系数为
+\(+I\bm r_B\)。故
+
+\[
+\sum_{ij}I_{ij}(\bm r_j-\bm r_i)
+=I(\bm r_B-\bm r_A)
+=I\overrightarrow{AB}.
+\tag{10}
+\]
+
+代回式（9）：
+
+\[
+\boxed{\bm F_{\rm m}=I\overrightarrow{AB}\times\bm B}.
+\tag{11}
+\]
+
+\textbf{（5）求空间夹角和支撑力}
+
+图 5-2 右图还标出了 \(\overrightarrow{AB}\) 与竖直磁场的 \(45^\circ\)
+夹角，因此式（11）取模时必须保留
+\(\sin45^\circ\)；合磁力方向再由叉乘右手定则确定。
+
+正八面体的一条上下对角线连接一对相对顶点。取坐标
+
+\[
+B=(0,0,a),
+\qquad
+D=(0,0,-a),
+\qquad
+A=(-a,0,0).
+\]
+
+则
+
+\[
+\overrightarrow{AB}=(a,0,a),
+\]
+
+其长度为
+
+\[
+|\overrightarrow{AB}|=\sqrt2a=l.
+\]
+
+磁场沿 \(DB\) 方向，方向矢量可取 \((0,0,1)\)。因此
+
+\[
+\cos\psi
+=\frac{(a,0,a)\cdot(0,0,1)}{\sqrt2a}
+=\frac1{\sqrt2},
+\]
+
+所以
+
+\[
+\psi=45^\circ.
+\tag{12}
+\]
+
+由式（11），磁力大小为
+
+\[
+F_{\rm m}=IlB\sin45^\circ
+=\frac{IlB}{\sqrt2}.
+\tag{13}
+\]
+
+若正八面体由支架保持静止，支撑力合力 \(\bm R\) 与磁力平衡：
+
+\[
+\boxed{\bm R=-I\overrightarrow{AB}\times\bm B},
+\]
+
+\[
+\boxed{R=\frac{IlB}{\sqrt2}}.
+\tag{14}
+\]
+
+方向由右手定则确定，并与合安培力相反。
+
+\textbf{两个计算各自依赖不同的简化。}
+电势差可由等势节点合并求出；求磁力时则应保留每条通电棱的方向。对封闭网络使用节点电流守恒，内部结点处各支路的
+\(I\,d\boldsymbol\ell\)
+矢量和可以相消，最后只剩外端点之间的位移。因此合磁力的方向由端点连线与磁场叉乘确定，而不是由网络某个投影图直接猜出。把电流反向后，电势差和磁力都应同时反号，这也是方便的符号检查。
+
+\textbf{磁力矢量和的边界检查。}
+对任一闭合导电支路，\(\oint d\boldsymbol\ell=\boldsymbol0\)，所以匀强磁场中闭合回路的总安培力为零。八面体网格由多条闭合路径叠加而成，内部回路贡献相消后，外部端点等效段留下的合力仍是
+\(I\boldsymbol L\times\boldsymbol B\)。这一判断与电势差计算无关，不能用某个电阻分流比例代替方向分析。磁场平行端点连线时合力为零，可据此验算方向。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf-4}
+
+电阻问的关键是``连接关系''，不是平面画法；磁力问的关键是内部节点电流守恒。式（10）是可直接用于任意网络的恒等式：任意形状的稳恒电流网络放在匀强磁场中，若只有一个流入端和一个流出端，其合安培力只由总电流与两端点位移决定。
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9-4}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  把正八面体平面投影中的交叉线误认为相连节点；
+\item
+  误把对顶点之间也接上一条电阻；
+\item
+  只按串并联直觉化简而没有验证等势条件；
+\item
+  磁力求和时把支路电流都当成 \(I\)；
+\item
+  将上下对角线与棱的夹角误判为平面图中的角；
+\item
+  题目问支撑力时只给磁力方向，忘记两者反向。
+\end{enumerate}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae-4}
+
+先用顶点对 \(A,A'\)、\(B,B'\)、\(C,C'\)
+重画连接表，再列方程，帮助学生摆脱透视图的干扰。磁力部分先在一个简单的分流---汇流网络上证明端点等效，再推广到八面体。空间夹角必须用坐标或明确的直角三角形求，不能直接从透视投影量角。
+
+\textbf{建议的连接表。} 先标出每个节点不与自身及对顶点相连。\(A\)
+的邻点为 \(B,B\prime,C,C\prime\)；核对后再列节点方程。
+
+等势判断需要同时满足``几何对称''和``边界条件对称''。本题只有 \(C,C'\)
+可直接交换；\(A,A'\) 或 \(B,B'\)
+虽是几何对顶关系，但流入、流出边界条件不同，不能判为等势。可让学生明确说出交换操作是否保持电源端不变。
+
+合磁力证明可先画一个节点有三支路的局部图，把三条 \(I\bm L\)
+中该节点位置矢量的系数写出来。由``流入等于流出''看到系数为零后，再推广到整个网络。这个证明比直接声称``等效为直导线''更适合竞赛训练，因为它同时说明了结论的适用条件是稳恒电流和匀强磁场。
+
+空间夹角采用坐标核验：正八面体可置于坐标轴的六个正负端点，棱长为
+\(\sqrt2a\)。这一步也能核对重绘图的立体关系，防止学生从二维投影误读成
+\(30^\circ\) 或 \(60^\circ\)。
+
+\textbf{课堂核验清单。} 将节点电势代回每个内部节点，检查净电流为零；把
+\(U=5Ir/12\) 代回 \(A\) 点四支路电流，检查总和为 \(I\)；磁力结果在
+\(\bm B\parallel\overrightarrow{AB}\) 的假想极限中应为零。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3-4}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  电流从一对对顶点流入、流出时，求等效电阻；
+\item
+  证明具有多个流入、流出端的网络满足 \(\sum_a I_a\bm r_a\)
+  形式的合磁力公式；
+\item
+  若磁场沿另一条对角线，分别求合磁力的大小和方向。
+\end{enumerate}
+
+\textbf{变式训练的备课展开。}
+若电流从一对对顶点流入、流出，其余四个节点完全等势。每条从流入端到等势层、再到流出端的路径含两个电阻，等效为
+\(2r\)；四条相同路径并联，因此
+
+\[
+\boxed{R_{\rm opp}=\frac r2}.
+\]
+
+这个结果也可以用节点法验证：四个中间节点电势均为端点电势差的一半，每条入端支路电流均为
+\(U/(2r)\)，总电流为 \(2U/r\)。
+
+对于多个外接端口，把流入网络的电流约定为正并记为
+\(I_a\)，节点电流守恒给出
+\(\sum_a I_a=0\)。沿所有支路求和后，内部节点仍全部消去，得到
+
+\[
+\sum_{ij}I_{ij}(\bm r_j-\bm r_i)
+=-\sum_a I_a\bm r_a,
+\]
+
+符号取决于端口电流的约定。与 \(\bm B\)
+作叉积即可得到合磁力。该结论可推广到任意空间电阻网络，不要求支路阻值相同。
+
+若磁场换向，只需重新计算 \(\overrightarrow{AB}\) 与 \(\bm B\)
+的夹角；等效电阻和支路电流分配不受磁场影响，前提是忽略磁阻效应与导线形变。
+
+\textbf{课堂核验与变式追问。}
+电势差题可用``等势组''代替逐节点列十几个未知量；安培力题则从
+\(I\,d\boldsymbol\ell\times\boldsymbol B\)
+出发，把整条闭合网络的矢量和缩并到端点。二者共享网络几何，却用到不同的守恒性质：前者是电流连续和电势唯一，后者是线积分与节点电流守恒。变式把电流入口换到非相邻顶点时，先重新找对称类，再决定哪些棱的力能够相消。
+
+\textbf{课堂延伸。}
+变式可给定一个任意通电子图而不指定具体棱电流，要求先按节点电流定律分解成闭合回路与端点路径，再判断总力。若磁场不均匀，\(\boldsymbol B\)
+不能从线积分中提出，内部回路的力也不再自动抵消；这时必须逐段积分，题目依赖匀强场的条件就清楚了。
+
+\textbf{教师展开补充。}
+电阻网络和磁力虽然共用同一组棱，推理步骤不同。求电阻时先根据端点交换对称性找等势类，再按每组节点写基尔霍夫电流方程；每条边的电流由两端电势差决定。求合磁力时，从
+\(\sum I\,d\boldsymbol\ell\times\boldsymbol B\) 出发，在匀强磁场下把
+\(\boldsymbol B\)
+提到积分外，并利用每个内部节点的电流连续使节点位置项抵消。留下的端点项才等效为端点间的直线段。建议先用一个只有两条支路的分流图演示节点项如何消掉，再回到空间网络。若磁场不均匀，就不能把
+\(\boldsymbol B\) 提出积分，闭合回路也可能受非零合力。
+
+\newpage
+
+\section{第 6 题}\label{ux7b2c-6-ux9898}
+
+一个静止质量为 \(m\)、电量为 \(q\)
+的电荷初始静止在原点。空间存在匀强电场和匀强磁场
+
+\[
+\bm E=(0,-E_0,0),
+\qquad
+\bm B=(0,0,-B_0),
+\]
+
+且满足
+
+\[
+E_0=cB_0,
+\]
+
+其中 \(c\) 为光速。考虑狭义相对论效应，求粒子的运动轨迹，并用
+\(x,y,m,c,q,E_0\) 表示。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.86\linewidth,height=\textheight,keepaspectratio,alt={图 6-1　相互垂直的匀强电场和磁场。}]{../figures/question-06.pdf}
+\caption*{图 6-1　相互垂直的匀强电场和磁场。}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-5}
+
+电场与磁场等强关系使场不变量同时退化，不能通过亚光速坐标变换消去其中一个场。用能量和动量方程消去时间，可直接得到粒子轨迹。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-5}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  相对论动量 \(\bm p=\gamma m\bm v\)；
+\item
+  相对论总能量 \(\mathcal E=\sqrt{p^2c^2+m^2c^4}\)；
+\item
+  洛伦兹力 \(d\bm p/dt=q(\bm E+\bm v\times\bm B)\)；
+\item
+  电场做功与总能量变化；
+\item
+  由 \(p_y/p_x=v_y/v_x=dy/dx\) 消去时间；
+\item
+  半立方抛物线 \(Y^3\propto X^2\)。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-5}
+
+以下先取 \(qE_0>0\)。粒子初始受到电场力沿 \(-y\) 方向，因而产生
+\(v_y<0\)。磁场沿 \(-z\) 方向，于是 \(q\bm v\times\bm B\) 逐渐产生
+\(+x\) 方向的力，轨迹向右下方弯曲。若 \(qE_0<0\)，轨迹关于 \(x\)
+轴镜像，推导形式相同。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-5}
+
+先从 \(x\) 分量洛伦兹力得到 \(p_x\) 与 \(y\)
+的线性关系；再从电场做功得到总能量与 \(y\) 的关系。由于
+\(E_0=cB_0\)，这两条关系恰好使能量写成 \(mc^2+cp_x\)，平方后立即得到
+\(p_y^2=2mcp_x\)。最后用动量分量之比等于轨迹斜率完成积分。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-5}
+
+如图 6-2，粒子从原点进入右下象限。图中红色 \(p_x\) 与蓝色 \(p_y\)
+是同一动量矢量的两个分量：第（1）步由磁场得到
+\(p_x=-qB_0y\)，第（3）步再得到
+\(p_y^2=2mcp_x\)；第（4）、（5）步正是把图中的分量比 \(p_y/p_x\)
+转化为轨迹切线斜率。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图 6-2　粒子的半立方抛物线轨迹。}]{../figures/solution-06.pdf}
+\caption*{图 6-2　粒子的半立方抛物线轨迹。}
+\end{figure}
+
+\textbf{（1）写出 \(x\) 方向动量方程}
+
+磁场只有 \(z\) 分量 \(B_z=-B_0\)。洛伦兹力的 \(x\) 分量为
+
+\[
+\frac{dp_x}{dt}
+=q(\bm v\times\bm B)_x
+=qv_yB_z
+=-qB_0v_y.
+\]
+
+又因为 \(v_y=dy/dt\)，
+
+\[
+dp_x=-qB_0\,dy.
+\]
+
+粒子从原点静止出发，初态 \(p_x=0,y=0\)，积分得
+
+\[
+\boxed{p_x=-qB_0y}.
+\tag{1}
+\]
+
+利用 \(B_0=E_0/c\)，也可写成
+
+\[
+p_x=-\frac{qE_0}{c}y.
+\tag{2}
+\]
+
+对于 \(qE_0>0\) 且 \(y<0\) 的物理分支，式（2）给出
+\(p_x>0\)，与轨迹向右弯曲一致。
+
+\textbf{（2）由电场做功写总能量}
+
+相对论总能量满足
+
+\[
+\frac{d\mathcal E}{dt}=q\bm E\cdot\bm v.
+\]
+
+由于 \(\bm E=(0,-E_0,0)\)，
+
+\[
+\frac{d\mathcal E}{dt}=-qE_0v_y=-qE_0\frac{dy}{dt}.
+\]
+
+因此
+
+\[
+d\mathcal E=-qE_0\,dy.
+\]
+
+初态粒子静止，\(\mathcal E(0)=mc^2\)，故
+
+\[
+\boxed{\mathcal E=mc^2-qE_0y}.
+\tag{3}
+\]
+
+由式（2）有 \(-qE_0y=cp_x\)，所以式（3）化为极其简洁的形式：
+
+\[
+\boxed{\mathcal E=mc^2+cp_x}.
+\tag{4}
+\]
+
+这一步正是临界条件 \(E_0=cB_0\) 发挥作用的地方。
+
+\textbf{（3）利用能量---动量关系消去能量}
+
+相对论能量---动量关系为
+
+\[
+\mathcal E^2=(p_x^2+p_y^2)c^2+m^2c^4.
+\tag{5}
+\]
+
+将式（4）代入式（5）：
+
+\[
+(mc^2+cp_x)^2
+=(p_x^2+p_y^2)c^2+m^2c^4.
+\]
+
+展开左端：
+
+\[
+m^2c^4+2mc^3p_x+c^2p_x^2
+=c^2p_x^2+c^2p_y^2+m^2c^4.
+\]
+
+两边相同的 \(m^2c^4\) 和 \(c^2p_x^2\) 消去，得到
+
+\[
+2mc^3p_x=c^2p_y^2.
+\]
+
+所以
+
+\[
+\boxed{p_y^2=2mcp_x}.
+\tag{6}
+\]
+
+\textbf{（4）把动量关系转化为轨迹微分方程}
+
+相对论动量与速度满足
+
+\[
+p_x=\gamma mv_x,
+\qquad
+p_y=\gamma mv_y.
+\]
+
+共同因子 \(\gamma m\) 消去，因此
+
+\[
+\frac{dy}{dx}
+=\frac{v_y}{v_x}
+=\frac{p_y}{p_x}.
+\tag{7}
+\]
+
+将式（6）除以 \(p_x^2\)：
+
+\[
+\left(\frac{dy}{dx}\right)^2
+=\frac{2mc}{p_x}.
+\]
+
+再用式（2）：
+
+\[
+\left(\frac{dy}{dx}\right)^2
+=\frac{2mc^2}{-qE_0y}.
+\tag{8}
+\]
+
+粒子沿右下方运动，故 \(dy/dx<0\)，应取负根：
+
+\[
+\frac{dy}{dx}
+=-\sqrt{\frac{2mc^2}{-qE_0y}}.
+\tag{9}
+\]
+
+\textbf{（5）分离变量并积分}
+
+将式（9）改写为
+
+\[
+\sqrt{-y}\,dy
+=-\sqrt{\frac{2mc^2}{qE_0}}\,dx.
+\tag{10}
+\]
+
+从原点 \((0,0)\) 积分到 \((x,y)\)：
+
+\[
+\int_0^y\sqrt{-\eta}\,d\eta
+=-\sqrt{\frac{2mc^2}{qE_0}}\int_0^x d\xi.
+\]
+
+左端令 \(u=-\eta\)，\(d\eta=-du\)：
+
+\[
+\int_0^y\sqrt{-\eta}\,d\eta
+=-\frac23(-y)^{3/2}.
+\]
+
+所以
+
+\[
+-\frac23(-y)^{3/2}
+=-\sqrt{\frac{2mc^2}{qE_0}}x.
+\]
+
+消去负号：
+
+\[
+\boxed{
+\frac23(-y)^{3/2}
+=\sqrt{\frac{2mc^2}{qE_0}}x
+}.
+\tag{11}
+\]
+
+两边平方并整理：
+
+\[
+\frac49(-y)^3
+=\frac{2mc^2}{qE_0}x^2,
+\]
+
+故轨迹方程为
+
+\[
+\boxed{
+(-y)^3=\frac{9mc^2}{2qE_0}x^2
+},
+\qquad(qE_0>0).
+\tag{12}
+\]
+
+这是一条以原点为尖点、向 \(+x,-y\) 方向展开的半立方抛物线。若
+\(qE_0<0\)，可用 \(Y=-\operatorname{sgn}(qE_0)y>0\) 统一写为
+
+\[
+Y^3=\frac{9mc^2}{2|q|E_0}x^2.
+\]
+
+\textbf{轨迹方程的物理分支。}
+由运动方程积分得到的位置关系后，要回代初始条件：初始静止要求轨迹经过原点且初始切线与电场方向一致。关系式中出现的平方或立方会引入多个数学分支，必须根据
+\(q\)、电场方向和 \(t>0\)
+选择实际象限。再将结果对时间求导，检查导出的速度方向是否与洛伦兹力一致。此处
+\(E=cB\)
+是临界情形；若只在最后答案中代入该关系而仍用普通磁场回旋半径，会错过电场持续做功造成的轨迹变化。
+
+\textbf{检验临界场轨迹的极限行为。}
+初始时粒子静止，磁力为零，电场先使它沿负 \(y\)
+方向加速；随后磁力使轨迹向侧面弯曲。所得参数方程应满足
+\(\dot{\boldsymbol p}=q(\boldsymbol E+\boldsymbol v\times\boldsymbol B)\)，且总能量变化率为
+\(q\boldsymbol E\cdot\boldsymbol v\)。当 \(q\)
+或两个场同时反号，轨迹的时序方向随之改变。把 \(c\to\infty\)
+的形式极限与非相对论场关系比较，能看出题设恰好选择了 relativistic
+修正不可忽略的尺度。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf-5}
+
+若直接联立
+\(dv_x/dt,dv_y/dt\)，洛伦兹因子会使方程十分复杂。最简路径是寻找可直接积分的量：\(x\)
+向动量来自磁场项并与 \(y\) 成正比，总能量来自电场做功也与 \(y\)
+成正比。临界条件 \(E_0=cB_0\) 使两者恰好组合成
+\(\mathcal E=mc^2+cp_x\)。
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9-5}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  叉乘符号错误，写成 \(p_x=+qB_0y\)；
+\item
+  忽略初态常数 \(mc^2\)；
+\item
+  把 \(p_y/p_x\) 误写成 \(\gamma v_y/\gamma v_x\) 后没有约去共同因子；
+\item
+  轨迹向右下方却在式（9）取正根；
+\item
+  积分 \(\int\sqrt{-y}\,dy\) 时漏掉负号；
+\item
+  最终公式量纲中缺少一个 \(c\)，使 \((-y)^3\) 与 \(x^2\) 的量纲不匹配。
+\end{enumerate}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae-5}
+
+先让学生只判断初始运动方向，再写
+\(dp_x=-qB_0dy\)，建立符号直觉。随后把能量和 \(p_x\)
+两条一次积分结果并排展示，突出 \(E_0=cB_0\)
+的作用。最后再解释为什么即使在相对论中仍有
+\(dy/dx=p_y/p_x\)，因为两个动量分量共享同一个 \(\gamma m\)。
+
+\textbf{建议的符号表。} 在推导前先写
+
+\[
+q>0:\quad F_y(0)=-qE_0<0,
+\]
+
+\[
+v_y<0,\ B_z<0\quad\Rightarrow\quad F_x=qv_yB_z>0.
+\]
+
+因此物理分支必须满足
+\(y<0,x>0,p_x>0,p_y<0\)。以后每得到一个关系，就用这四个符号检查一次。式（1）若误写正号，会立刻给出
+\(p_x<0\)，无需等到最后才发现。
+
+能量积分可从电势能角度再解释一次：匀强电场的势能变化为 \(qE_0y\)，所以
+
+\[
+\mathcal E+qE_0y=mc^2.
+\]
+
+这与功率积分完全一致。两种方法并列可以帮助学生把相对论总能量与普通电势能守恒连接起来。
+
+轨迹积分后应做量纲检查。系数 \(mc^2/(qE_0)\)
+的量纲是长度，因此右端系数乘 \(x^2\) 后为长度三次，和 \((-y)^3\)
+一致。还应检查原点附近由 \(y\propto-x^{2/3}\) 得
+\(|dy/dx|\to\infty\)，即轨迹最初沿竖直方向启动，与初始洛伦兹力一致。
+
+\textbf{课堂核验清单。} 用式（12）求出的斜率反代式（8）；用
+\(p_x=-qE_0y/c\) 检查 \(p_x\) 的量纲；令 \(c\to\infty\)
+不应直接得到有意义的经典极限，因为临界条件同时要求
+\(B_0=E_0/c\to0\)，这一点可用于讨论参数极限必须成套处理。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3-5}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  讨论 \(E_0<cB_0\) 和 \(E_0>cB_0\) 时能否通过洛伦兹变换消去一种场；
+\item
+  将粒子初速度改为沿 \(x\) 方向，重新积分 \(p_x(y)\) 并写出能量常数；
+\item
+  从式（12）求曲线在任意点的切线斜率，并与动量方向核对。
+\end{enumerate}
+
+\textbf{变式训练的备课展开。} 正交场满足 \(\bm E\cdot\bm B=0\)。若
+\(E_0<cB_0\)，存在沿 \(\bm E\times\bm B\)
+方向运动的惯性系，使电场消失，剩下纯磁场，粒子在该系中做匀速圆周运动；若
+\(E_0>cB_0\)，则存在使磁场消失的惯性系，剩下纯电场。临界情况
+\(E_0=cB_0\) 正处在两类之间，所需参考系速度达到
+\(c\)，因此不能用普通惯性系消去任一场。
+
+由轨迹式
+
+\[
+(-y)^3=Kx^2,
+\qquad K=\frac{9mc^2}{2qE_0},
+\]
+
+对 \(x\) 求导：
+
+\[
+-3(-y)^2\frac{dy}{dx}=2Kx.
+\]
+
+结合原轨迹式可化为
+
+\[
+\frac{dy}{dx}=-\frac{2(-y)}{3x}.
+\]
+
+它在物理分支上为负，并可与 \(p_y/p_x\)
+的符号和大小核验。接近原点时切线趋于竖直，符合粒子最初只受电场力而向
+\(-y\) 方向启动的图像。
+
+\textbf{课堂核验与变式追问。}
+临界场关系下，能量增长与横向偏转同时存在，因而轨迹不能用``恒定速率圆周运动''描述。解题后把
+\(x(t)\)
+单调性、动量方向和初始加速度逐项回代；轨迹幂次来自消去时间，不应在积分时先假定轨迹是抛物线。改变场强比
+\(E_0/(cB_0)\)
+后，系统进入电型或磁型不变量分支，存在可消去一个场的参考系，需重新判断运动类型。
+
+\textbf{课堂延伸。}
+采用数值积分时，应同时监控归一化能量残差和动量残差。它们可以发现步长误差，却不能替代解析分支判断：数值解可能稳定地沿着与初始条件不符的数学支路前进。课堂可先做短时间小步积分，再用解析轨迹检查初始斜率和曲率。
+
+\textbf{教师展开补充。} 当 \(\boldsymbol E\perp\boldsymbol B\) 且
+\(E=cB\)
+时，两个场不变量都为零，属于零不变量型电磁场；无法用亚光速变换消去其中一个场。先由
+\(d(\gamma mc^2)/dt=q\boldsymbol E\cdot\boldsymbol v\)
+和洛伦兹力方程求动量，再消去时间得到轨迹。初始静止条件确定支路与符号，数值残差用于核验积分。
+
+\newpage
+
+\section{第 7 题}\label{ux7b2c-7-ux9898}
+
+如图所示，一条均匀链条的长度为
+
+\[
+L=\frac{\pi R}{3},
+\]
+
+单位长度质量为 \(\lambda\)。链条贴在半径为 \(R\)
+的光滑球面外侧，顶端固定在球面最高点。现从静止开始释放链条顶端。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  刚释放时，链条上各点的切向加速度大小是多少？
+\item
+  刚释放时，链条上何处的张力最大？
+\item
+  当链条顶端沿球面转过 \(\varphi=10^\circ\)
+  且链条仍未离开球面时，求最大张力及其所在位置，并求该处单位长度链条对球面的压力。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图 7-1　光滑球面上的均匀链条。}]{../figures/question-07.pdf}
+\caption*{图 7-1　光滑球面上的均匀链条。}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-6}
+
+链条沿球面滑动时，各质元切向速度相同，张力却随弧长变化。整体能量先给速度，再对任意截面和法向微元分别列方程。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-6}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  均匀链条质量元 \(dm=\lambda R\,d\theta\)；
+\item
+  重力的切向分量 \(g\sin\theta\) 与径向分量 \(g\cos\theta\)；
+\item
+  不可伸长链条的共同切向加速度；
+\item
+  张力函数 \(T(\theta)\) 的极值条件；
+\item
+  连续体重力势能积分；
+\item
+  曲线微元两端张力的法向合力 \(T\,d\theta\)。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-6}
+
+以球心为极点，\(\theta\)
+从竖直向上的半径起沿链条下滑方向计量。链长对应的圆心角为
+
+\[
+\alpha=\frac LR=\frac\pi3.
+\]
+
+刚释放时链条占据 \(0\leq\theta\leq\alpha\)。当顶端已移动 \(\varphi\)
+后，链条占据
+\(\varphi\leq\theta\leq\varphi+\alpha\)。由于两端都是自由端，张力在链条两端均为零，因此张力必在中间某处取得最大值。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-6}
+
+先对整条链沿运动方向求重力切向分量的积分，得到共同切向加速度。再截取从顶端到任意角位置
+\(\theta\)
+的链段，写``截面张力+该段重力切向分量=该段质量乘共同加速度''，即可得到张力分布。第三问的法向压力不能由切向方程得到，必须额外使用速度和曲率半径。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-6}
+
+图 7-2 左图规定链段占据的角区间，右图放大角坐标为 \(\theta\)
+的微元：两端张力用于切向方程，重力的切向分量用于求共同加速度，红色法向支持力则只在第（6）步的曲率方程中出现。下面各积分上下限均以这幅图的角坐标为准。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图 7-2　链段坐标及微元受力。}]{../figures/solution-07.pdf}
+\caption*{图 7-2　链段坐标及微元受力。}
+\end{figure}
+
+记
+
+\[
+\alpha=\frac LR=\frac\pi3.
+\tag{1}
+\]
+
+\textbf{（1）刚释放时的共同切向加速度}
+
+取角坐标为 \(\theta\) 的微元，长度为
+
+\[
+ds=R\,d\theta,
+\]
+
+质量为
+
+\[
+dm=\lambda R\,d\theta.
+\]
+
+其重力沿下滑切线方向的分量为
+
+\[
+dF_t=dm\,g\sin\theta
+=\lambda Rg\sin\theta\,d\theta.
+\]
+
+整条链的切向驱动力为
+
+\[
+\begin{aligned}
+F_t
+&=\int_0^\alpha\lambda Rg\sin\theta\,d\theta\\
+&=\lambda Rg(1-\cos\alpha).
+\end{aligned}
+\tag{2}
+\]
+
+整条链的质量为
+
+\[
+M=\lambda L=\lambda R\alpha.
+\]
+
+设共同切向加速度为 \(a_0\)，由 \(Ma_0=F_t\)：
+
+\[
+\lambda R\alpha a_0
+=\lambda Rg(1-\cos\alpha).
+\]
+
+所以
+
+\[
+a_0=g\frac{1-\cos\alpha}{\alpha}.
+\tag{3}
+\]
+
+代入 \(\alpha=\pi/3\) 和 \(\cos\alpha=1/2\)：
+
+\[
+\boxed{a_0=\frac{3g}{2\pi}}.
+\tag{4}
+\]
+
+因为链条不可伸长，刚释放时各点的切向加速度大小相同，均等于式（4）。不同位置的加速度方向分别沿各自切线。
+
+\textbf{（2）刚释放时的张力分布}
+
+按图 7-2 右图截取从自由顶端到 \(\theta\)
+的链段；截面处张力沿下滑方向拉动所截链段，而顶端张力为零，因此张力项在下式中取正号。
+
+截取从自由顶端 \(\theta=0\) 到任意位置 \(\theta\) 的一段链条。该段质量为
+
+\[
+M_\theta=\lambda R\theta.
+\]
+
+顶端张力为零，截面处其余链条对该段施加沿下滑方向的张力
+\(T(\theta)\)。该段重力切向合力为
+
+\[
+\int_0^\theta\lambda Rg\sin u\,du
+=\lambda Rg(1-\cos\theta).
+\]
+
+切向动力学方程为
+
+\[
+T(\theta)+\lambda Rg(1-\cos\theta)
+=\lambda R\theta a_0.
+\]
+
+所以
+
+\[
+\boxed{
+T(\theta)=\lambda R
+\left[\theta a_0-g(1-\cos\theta)\right]
+}.
+\tag{5}
+\]
+
+先检查两个端点。显然 \(T(0)=0\)。在 \(\theta=\alpha\) 处，利用式（3）：
+
+\[
+T(\alpha)
+=\lambda R[\alpha a_0-g(1-\cos\alpha)]=0,
+\]
+
+与下端也是自由端相符。
+
+对式（5）求导：
+
+\[
+\frac{dT}{d\theta}
+=\lambda R(a_0-g\sin\theta).
+\tag{6}
+\]
+
+张力极值位置满足
+
+\[
+\sin\theta_m=\frac{a_0}{g}=\frac{3}{2\pi}.
+\]
+
+由于 \(0<\theta_m<\pi/3\)，这是链内的最大值点。因此
+
+\[
+\boxed{
+\theta_m=\arcsin\frac{3}{2\pi}
+\approx28.52^\circ
+}.
+\tag{7}
+\]
+
+若同时计算最大张力，代入式（5）：
+
+\[
+\begin{aligned}
+T_{m,0}
+&=\lambda Rg\left[
+\frac{3}{2\pi}\theta_m-1+\cos\theta_m
+\right]\\
+&\approx0.1163\lambda Rg.
+\end{aligned}
+\tag{8}
+\]
+
+\textbf{（3）顶端移动 \(\varphi=10^\circ\) 时的切向加速度}
+
+此时链条占据
+
+\[
+\varphi\leq\theta\leq\varphi+\alpha.
+\]
+
+整条链的切向重力为
+
+\[
+\begin{aligned}
+F_t(\varphi)
+&=\int_\varphi^{\varphi+\alpha}
+\lambda Rg\sin\theta\,d\theta\\
+&=\lambda Rg[cos\varphi-\cos(\varphi+\alpha)].
+\end{aligned}
+\]
+
+因此共同切向加速度为
+
+\[
+a_\varphi
+=\frac{g}{\alpha}
+[\cos\varphi-\cos(\varphi+\alpha)].
+\tag{9}
+\]
+
+定义无量纲量
+
+\[
+k=\frac{a_\varphi}{g}
+=\frac{\cos\varphi-\cos(\varphi+\alpha)}{\alpha}.
+\tag{10}
+\]
+
+代入 \(\varphi=10^\circ\)、\(\alpha=60^\circ\)：
+
+\[
+k
+=\frac{\cos10^\circ-\cos70^\circ}{\pi/3}
+\approx0.613817.
+\tag{11}
+\]
+
+\textbf{（4）此时的张力分布、最大位置和最大值}
+
+截取从当前顶端 \(\varphi\) 到任意位置 \(\theta\) 的链段。其质量为
+\(\lambda R(\theta-\varphi)\)。沿下滑切向列方程：
+
+\[
+T(\theta)
++\int_\varphi^\theta\lambda Rg\sin u\,du
+=\lambda R(\theta-\varphi)a_\varphi.
+\]
+
+积分后
+
+\[
+\boxed{
+T(\theta)=\lambda Rg
+\left[k(\theta-\varphi)+\cos\theta-\cos\varphi\right]
+}.
+\tag{12}
+\]
+
+求导：
+
+\[
+\frac{dT}{d\theta}=\lambda Rg(k-\sin\theta).
+\]
+
+最大张力位置满足
+
+\[
+\sin\theta_m=k.
+\]
+
+所以
+
+\[
+\boxed{
+\theta_m=\arcsin k
+\approx37.87^\circ
+}.
+\tag{13}
+\]
+
+这是从竖直向上的半径起算的绝对角位置；它距离当前链条顶端的弧角为
+
+\[
+\theta_m-\varphi\approx27.87^\circ.
+\]
+
+把式（13）代入式（12）：
+
+\[
+\begin{aligned}
+T_m
+&=\lambda Rg
+\left[k(\theta_m-\varphi)+\cos\theta_m-\cos\varphi\right]\\
+&\approx\lambda Rg
+\left[0.613817(0.66089-0.17453)
++\cos37.87^\circ-\cos10^\circ\right]\\
+&\approx0.10317\lambda Rg.
+\end{aligned}
+\]
+
+因此
+
+\[
+\boxed{T_m\approx0.103\lambda Rg}.
+\tag{14}
+\]
+
+\textbf{（5）由机械能求此时链速}
+
+以球心所在水平面为零势能面。角位置为 \(\theta\) 的微元高度为
+\(R\cos\theta\)，所以顶端位于 \(\varphi\) 时整条链的重力势能为
+
+\[
+\begin{aligned}
+U(\varphi)
+&=\int_\varphi^{\varphi+\alpha}
+(\lambda R\,d\theta)g(R\cos\theta)\\
+&=\lambda gR^2
+[\sin(\varphi+\alpha)-\sin\varphi].
+\end{aligned}
+\tag{15}
+\]
+
+初态 \(\varphi=0\)：
+
+\[
+U(0)=\lambda gR^2\sin\alpha.
+\]
+
+整条链的速率相同，动能为
+
+\[
+K=\frac12(\lambda R\alpha)v^2.
+\]
+
+由机械能守恒 \(K=U(0)-U(\varphi)\)：
+
+\[
+\frac12\lambda R\alpha v^2
+=\lambda gR^2
+[\sin\alpha-\sin(\varphi+\alpha)+\sin\varphi].
+\]
+
+约去 \(\lambda R\)：
+
+\[
+\boxed{
+\frac{v^2}{Rg}
+=\frac2\alpha
+[\sin\alpha-\sin(\varphi+\alpha)+\sin\varphi]
+}.
+\tag{16}
+\]
+
+代入 \(\alpha=60^\circ\)、\(\varphi=10^\circ\)：
+
+\[
+\frac{v^2}{Rg}\approx0.190950.
+\tag{17}
+\]
+
+\textbf{（6）最大张力处的单位长度压力}
+
+再次使用图 7-2
+右侧微元。此处需要把切向问题切换为法向问题：两端张力的微小转角合力和重力法向分量指向球心，球面支持力指向外侧。
+
+取最大张力处长度为 \(ds=R\,d\theta\) 的微元。因为这里
+\(dT/d\theta=0\)，两端张力大小可视为同为 \(T_m\)，两张力的法向合力为
+
+\[
+T_m\,d\theta
+\]
+
+并指向球心。重力指向球心的分量为
+
+\[
+\lambda R\,d\theta\,g\cos\theta_m.
+\]
+
+设球面支持力线密度为 \(n\)，径向向外为正。取弧长 \(R\,d\theta\)
+的链元，径向列式：
+
+\[
+T_m\,d\theta
++\lambda Rg\cos\theta_m\,d\theta
+-nR\,d\theta
+=\lambda R\,d\theta\frac{v^2}{R}.
+\]
+
+除以 \(R\,d\theta\)：
+
+\[
+n=\frac{T_m}{R}+\lambda g\cos\theta_m-\lambda\frac{v^2}{R}.
+\tag{18}
+\]
+
+代入式（14）、（17）和 \(\theta_m=37.87^\circ\)：
+
+\[
+\begin{aligned}
+\frac{n}{\lambda g}
+&=0.10317+\cos37.87^\circ-0.19095\\
+&\approx0.70167.
+\end{aligned}
+\]
+
+所以链条对球面的单位长度压力大小为
+
+\[
+\boxed{n\approx0.702\lambda g}.
+\tag{19}
+\]
+
+链条对球面的压力与球面对链条的支持力大小相等、方向相反。
+
+\textbf{截面受力与支撑压力。} 对链上从顶端到弧长 \(s\)
+的部分列切向方程，可求截面张力；对长度 \(ds\)
+的链元列法向方程，得到它对球面的压力分布。两者必须使用同一个弧长方向和速度平方，截面上端的张力在整体积分时应成对抵消。端点处链条与固定点连接，边界反力可以非零；自由末端若存在，则末端张力应按边界条件取零。把最后一问的压力积分，亦可与该段链条的法向动量变化相核对。
+
+\textbf{法向压力并非张力的同义量。}
+张力由截面两侧链条的切向动量变化决定；球面支持力则由链元曲率运动所需的法向合力决定。对链元列式时，张力的两个端点方向有微小夹角，合成后产生径向分量，不能只保留张力大小而忽略方向变化。把最终压力对整段弧长积分，可与球面所受总法向力比较；总量应与链条的径向动量变化相符，但局部压力分布仍需微元方程才能得到。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf-6}
+
+柔链问题应按``整体求共同加速度---局部求张力分布---法向求接触力''的顺序处理。张力极值来自
+\(dT/d\theta=0\)，而压力还依赖速度产生的向心加速度，所以不能仅凭最大张力直接判断最大压力。
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9-6}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  把链条总质量写成 \(\lambda R\)，漏掉角长 \(\alpha\)；
+\item
+  把重力切向分量写成 \(g\cos\theta\)；
+\item
+  截取链段时把截面张力方向写反；
+\item
+  第（3）问仍从 \(0\) 积分而忘记链条已整体移到
+  \([\varphi,\varphi+\alpha]\)；
+\item
+  最大张力位置 \(\theta_m\) 与距链条顶端的角位移 \(\theta_m-\varphi\)
+  混淆；
+\item
+  法向方程漏掉两端张力的曲率合力 \(T\,d\theta\)。
+\end{enumerate}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae-6}
+
+先让学生把离散的三节小链条画出来，观察中间连接处张力如何变化，再取连续极限。第二问重点核对
+\(T(0)=T(\alpha)=0\)，这是检验符号最有效的办法。第三问将切向、能量、法向三类方程分区书写，避免在同一行混入
+\(a_\varphi\)、\(v^2/R\) 和 \(n\)。
+
+\textbf{建议的三层板书。}
+第一层只对整条链列切向方程，求共同加速度；第二层截取从自由端到
+\(\theta\)
+的链段，求张力函数；第三层只取一个微元列法向方程。每一层都标出研究对象，避免把整链质量
+\(\lambda R\alpha\) 和局部链段质量 \(\lambda R(\theta-\varphi)\) 混用。
+
+张力函数写出后先不求导，而是检查两个自由端是否给出零张力。若端点检查失败，说明截面张力方向或重力积分符号已经错了。通过端点后再求
+\(dT/d\theta=0\)，并检查极值点确实位于链条所占区间。
+
+第三问中，\(\theta_m=37.87^\circ\)
+是相对竖直方向的绝对角，而链条顶端已在 \(10^\circ\)，所以距顶端只有
+\(27.87^\circ\)。板书中应同时写这两个量，避免口头说``最大张力在
+\(37.87^\circ\) 处''却没有说明角度起点。
+
+法向方程可先用一小段折线近似链条。两端大小相等的张力夹角为
+\(d\theta\)，合力约为 \(T\,d\theta\)
+并指向曲率中心。这个离散图像能解释连续体公式的来源，也能防止把法向张力项误写成
+\(dT\)。
+
+\textbf{课堂核验清单。} 检查 \(T\) 的量纲为力，\(n\)
+的量纲为力每长度；令 \(v=0\) 可恢复刚释放的法向平衡形式；最终 \(n>0\)
+与题设``仍未离开球面''相容。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3-6}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  将链长改为 \(L=R\alpha\)，推导刚释放时最大张力位置随 \(\alpha\)
+  的变化；
+\item
+  求链条开始离开球面的判据，并确定最先失去接触的位置；
+\item
+  若球面存在动摩擦，写出整体切向动力学和机械能损失表达式。
+\end{enumerate}
+
+\textbf{变式训练的备课展开。} 对一般角长 \(\alpha\)，刚释放时
+
+\[
+a_0=g\frac{1-\cos\alpha}{\alpha},
+\]
+
+张力极值位置满足
+
+\[
+\sin\theta_m=\frac{1-\cos\alpha}{\alpha}.
+\]
+
+因此
+
+\[
+T_m=\lambda Rg
+\left[\frac{1-\cos\alpha}{\alpha}\theta_m-1+\cos\theta_m\right].
+\]
+
+先考察 \(\alpha\ll1\)，可得
+\(\theta_m\simeq\alpha/2\)，与短链的中点近似相符。推广到较长弧段时，还须检查张力及支持力处处非负；若某处为负，该全链贴球模型已不可用，不能继续外推。
+
+链条失去接触的判据是某处球面支持力降到零。对任意位置
+\(\theta\)，法向微元方程给出
+
+\[
+n(\theta)=\frac{T(\theta)}R+\lambda g\cos\theta-\lambda\frac{v^2}{R}.
+\]
+
+应在整条链所占角区间内寻找 \(n(\theta)\)
+的最小值；当最小值首次等于零时，该点最先离开球面。这个变式可帮助学生理解``仍未飞离''的条件不是一句无关说明，而是法向约束
+\(n\geq0\)。
+
+若加入动摩擦
+\(f=\mu n\)，切向方程与法向方程发生耦合，机械能也不再守恒。可先写
+
+\[
+\frac{dK}{dt}=-\int \mu n v\,ds+\text{重力功率},
+\]
+
+再与整体切向动力学联立。
+
+\textbf{课堂核验与变式追问。}
+可在弧段上取任意位置作控制截面，先由截面以上链条的切向动量变化求张力，再对微小链元求法向支持力。链长只有
+\(\pi R/3\)，所以链条没有覆盖整球面；把质量积分范围误取成半圆会使末端速度和张力都偏大。把弧长坐标从固定端改为自由端，结果应能通过
+\(s\mapsto L-s\) 的质量区间变换互相核对。
+
+\textbf{课堂延伸。}
+可比较两种末端条件：链条自由端时末端张力为零；若末端也被牵引，则必须添加边界拉力。最大张力位置由
+\(T(\theta)\)
+的导数或端点比较决定，不一定落在链条中点。要求学生先写出完整区间函数，再讨论极值，比凭图猜峰值更可靠。
+
+\textbf{教师展开补充。}
+链条题的截面方程最好从一段明确的控制体推导。切向方向上，截面张力差等于该段重力分量与链条动量变化率之和；法向方向上，张力方向转折产生的合力、重力法向分量和球面支持力共同提供向心加速度。先求速度再求张力，可避免把两条方程中的未知量混在一起；再代入张力沿弧长的函数求极值，最后检查支持力处处非负。若某处
+\(n=0\)，表示链段刚失去球面接触，之后的运动模型需要改变。链条长度只覆盖题设弧段，积分上下限也应跟随实际端点，不能把空白球面当成有链条。
+
+\newpage
+
+\section{第 8 题}\label{ux7b2c-8-ux9898}
+
+容器中装有冰水混合物。在 \(t=0\ \mathrm{min}\) 时接通功率为
+
+\[
+P_0=400\ \mathrm W
+\]
+
+的电热炉。图中给出了物质温度 \(T\) 与时间 \(t\) 的关系。散热功率 \(Q\)
+与温差 \(\Delta T=T-T_0\) 成正比，环境温度取
+\(T_0=0^\circ\mathrm C\)，故
+
+\[
+Q=\alpha T,
+\]
+
+其中 \(\alpha\) 为与温度无关的常数。根据图像求：
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  初始冰水混合物中冰的质量 \(m_{\rm ice}\)；
+\item
+  容器中物质的总质量 \(m\)；
+\item
+  散热比例系数 \(\alpha\)；
+\item
+  使水始终不会沸腾的最大加热功率 \(P_{\max}\)；
+\item
+  若改用功率 \(P_1=300\ \mathrm W\)
+  的电热炉，求从冰开始熔化到水达到沸点所需的时间。
+\end{enumerate}
+
+已知水的比热容
+
+\[
+c=4200\ \mathrm{J/(kg\cdot{}^\circ C)},
+\]
+
+冰的熔解热
+
+\[
+\lambda=3.2\times10^5\ \mathrm{J/kg}.
+\]
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\linewidth,height=\textheight,keepaspectratio,alt={图 8-1　冰水混合物的温度---时间曲线。}]{../figures/question-08.pdf}
+\caption*{图 8-1　冰水混合物的温度---时间曲线。}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-7}
+
+冰水混合物先在零度吸热熔冰，随后水温上升且持续散热。用升温曲线确定等效热容量与散热系数，再分别计算熔化和升温时间。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-7}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  熔化潜热 \(Q=m\lambda\)；
+\item
+  瞬时能量平衡 \(mc\,dT=(P-\alpha T)dt\)；
+\item
+  一阶线性微分方程的分离变量解；
+\item
+  温度曲线初始斜率与热容；
+\item
+  稳态温度 \(T_\infty=P/\alpha\)；
+\item
+  图读数据的有效数字与近似误差。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-7}
+
+在 \(0\leq t\leq2\ \mathrm{min}\) 内，温度保持
+\(0^\circ\mathrm C\)，输入能量全部用于熔冰；因为环境也是
+\(0^\circ\mathrm C\)，这一阶段散热功率为零。冰全部熔化后，输入功率一部分提高水温，另一部分以
+\(\alpha T\) 散失。温度越高，净加热功率越小，曲线斜率逐渐减小。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-7}
+
+先从平台长度直接求冰质量。升温阶段从 \(t_1=2\ \mathrm{min}\)、\(T=0\)
+开始，列出
+
+\[
+mc\frac{dT}{dt}=P_0-\alpha T.
+\]
+
+积分得到 \(T(t)\) 后，再从图上读取约
+\((7\ \mathrm{min},50^\circ\mathrm C)\) 和
+\((14\ \mathrm{min},100^\circ\mathrm C)\)
+两点。由于图线较粗，参数结果只能保留约两位有效数字。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-7}
+
+图 8-2 左图提供实验读数：\(0^\circ\mathrm C\)
+平台给出熔冰时间，平台后的曲线给出两组温度---时间数据；右图把同一升温阶段写成能量流，输入功率
+\(P_0\) 分成水的吸热率 \(mc\,dT/dt\) 与散热率
+\(\alpha T\)。下面第（1）步读取左图平台，第（2）步直接依据右图列能量守恒。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图 8-2　升温曲线的读数与能量平衡。}]{../figures/solution-08.pdf}
+\caption*{图 8-2　升温曲线的读数与能量平衡。}
+\end{figure}
+
+\textbf{（1）由熔化平台求初始冰质量}
+
+图像显示温度在前
+
+\[
+t_1=2.0\ \mathrm{min}=120\ \mathrm s
+\]
+
+内保持 \(0^\circ\mathrm C\)。这一阶段
+\(Q=\alpha T=0\)，因此电热炉输入的能量全部用于熔冰：
+
+\[
+P_0t_1=m_{\rm ice}\lambda.
+\]
+
+所以
+
+\[
+\begin{aligned}
+m_{\rm ice}
+&=\frac{P_0t_1}{\lambda}\\
+&=\frac{400\times120}{3.2\times10^5}\ \mathrm{kg}\\
+&=0.150\ \mathrm{kg}.
+\end{aligned}
+\]
+
+故
+
+\[
+\boxed{m_{\rm ice}=0.15\ \mathrm{kg}}.
+\tag{1}
+\]
+
+\textbf{（2）建立升温微分方程}
+
+在升温阶段的短时间 \(dt\) 内，电热炉输入能量为
+\(P_0dt\)，向环境散失的能量为 \(\alpha Tdt\)，水吸收的热量为
+\(mc\,dT\)。能量守恒为
+
+\[
+P_0dt-\alpha Tdt=mc\,dT.
+\]
+
+即
+
+\[
+mc\frac{dT}{dt}=P_0-\alpha T.
+\tag{2}
+\]
+
+分离变量：
+
+\[
+\frac{dT}{P_0-\alpha T}=\frac{dt}{mc}.
+\]
+
+升温起点为 \(t=t_1,T=0\)。积分得
+
+\[
+\int_0^T\frac{d\eta}{P_0-\alpha\eta}
+=\int_{t_1}^t\frac{d\tau}{mc}.
+\]
+
+左端积分为
+
+\[
+\frac1\alpha\ln\frac{P_0}{P_0-\alpha T},
+\]
+
+所以
+
+\[
+\frac1\alpha\ln\frac{P_0}{P_0-\alpha T}
+=\frac{t-t_1}{mc}.
+\]
+
+两边取指数：
+
+\[
+\frac{P_0-\alpha T}{P_0}
+=\exp\left[-\frac{\alpha}{mc}(t-t_1)\right].
+\]
+
+最终得到
+
+\[
+\boxed{
+T(t)=\frac{P_0}{\alpha}
+\left[1-\exp\left(-\frac{\alpha}{mc}(t-t_1)\right)\right]
+}.
+\tag{3}
+\]
+
+\textbf{（3）由图像读数求 \(\alpha\) 和总质量 \(m\)}
+
+令
+
+\[
+A=\frac{P_0}{\alpha},
+\qquad
+k=\frac{\alpha}{mc}.
+\]
+
+则式（3）写成
+
+\[
+T=A[1-e^{-k(t-t_1)}].
+\tag{4}
+\]
+
+从图上读取两组近似数据：
+
+\[
+(t,T)\approx(7\ \mathrm{min},50^\circ\mathrm C),
+\]
+
+\[
+(t,T)\approx(14\ \mathrm{min},100^\circ\mathrm C).
+\]
+
+升温起点为 \(t_1=2\ \mathrm{min}\)，故相应时间差为 \(300\ \mathrm s\) 和
+\(720\ \mathrm s\)。代入式（4）：
+
+\[
+50=A(1-e^{-300k}),
+\tag{5}
+\]
+
+\[
+100=A(1-e^{-720k}).
+\tag{6}
+\]
+
+数值联立求解得到
+
+\[
+A\approx2.03\times10^2\ ^\circ\mathrm C,
+\qquad
+k\approx9.44\times10^{-4}\ \mathrm{s^{-1}}.
+\]
+
+于是
+
+\[
+\alpha=\frac{P_0}{A}
+\approx1.97\ \mathrm{W/{}^\circ C},
+\]
+
+\[
+m=\frac{\alpha}{kc}
+\approx0.50\ \mathrm{kg}.
+\]
+
+考虑实验图网格和曲线线宽，图读参数保留两位有效数字为
+
+\[
+\boxed{\alpha\approx2.0\ \mathrm{W/{}^\circ C}},
+\tag{7}
+\]
+
+\[
+\boxed{m\approx0.48\ \mathrm{kg}}.
+\tag{8}
+\]
+
+把 \(\alpha=2.0\ \mathrm{W/{}^\circ C}\)、\(m=0.48\ \mathrm{kg}\)
+代回式（3），在 \(t=7\ \mathrm{min}\) 得约 \(51.5^\circ\mathrm C\)，在
+\(t=14\ \mathrm{min}\) 得约
+\(102^\circ\mathrm C\)，与图读精度一致。因此后续计算采用 \(2.0\) 和
+\(0.48\)。
+
+初始混合物中液态水质量约为
+
+\[
+m_{\rm water}=m-m_{\rm ice}
+\approx0.48-0.15
+=0.33\ \mathrm{kg}.
+\]
+
+\textbf{（4）求使水始终不沸腾的最大功率}
+
+在功率为 \(P\) 的恒定加热下，式（2）的稳态温度为
+
+\[
+T_\infty=\frac P\alpha.
+\]
+
+若要求水温永远不超过沸点 \(100^\circ\mathrm C\)，应满足
+
+\[
+\frac P\alpha\leq100^\circ\mathrm C.
+\]
+
+临界最大功率为
+
+\[
+P_{\max}=100\alpha.
+\]
+
+代入 \(\alpha\approx2.0\ \mathrm{W/{}^\circ C}\)：
+
+\[
+\boxed{P_{\max}\approx200\ \mathrm W}.
+\tag{9}
+\]
+
+当 \(P=P_{\max}\) 时，水温只会渐近趋近
+\(100^\circ\mathrm C\)，净加热功率趋于零，因而不会持续沸腾。
+
+\textbf{（5）改用 \(P_1=300\ \mathrm W\) 时的熔冰时间}
+
+熔冰阶段温度仍为 \(0^\circ\mathrm C\)，散热为零。所需潜热不变，因此
+
+\[
+t_1'
+=\frac{m_{\rm ice}\lambda}{P_1}
+=\frac{P_0t_1}{P_1}.
+\]
+
+代入数值：
+
+\[
+t_1'
+=\frac{400}{300}\times2\ \mathrm{min}
+=\frac83\ \mathrm{min}
+\approx2.67\ \mathrm{min}.
+\tag{10}
+\]
+
+\textbf{（6）改用 \(P_1\) 后的升温时间}
+
+冰全部熔化后，升温方程改为
+
+\[
+mc\frac{dT}{dt}=P_1-\alpha T.
+\]
+
+从 \(t=t_1',T=0\) 开始，解为
+
+\[
+T=\frac{P_1}{\alpha}
+\left[1-\exp\left(-\frac{\alpha}{mc}(t-t_1')\right)\right].
+\tag{11}
+\]
+
+令 \(T=100^\circ\mathrm C\)：
+
+\[
+\exp\left[-\frac{\alpha}{mc}(t-t_1')\right]
+=1-\frac{100\alpha}{P_1}.
+\]
+
+取对数：
+
+\[
+t-t_1'
+=-\frac{mc}{\alpha}
+\ln\left(1-\frac{100\alpha}{P_1}\right).
+\tag{12}
+\]
+
+采用上述图读参数
+\(m=0.48\ \mathrm{kg}\)、\(\alpha=2.0\ \mathrm{W/{}^\circ C}\)：
+
+\[
+1-\frac{100\alpha}{P_1}
+=1-\frac{200}{300}
+=\frac13.
+\]
+
+因此升温阶段所需时间为
+
+\[
+\begin{aligned}
+\Delta t
+&=\frac{0.48\times4200}{2.0}\ln3\ \mathrm s\\
+&\approx1107\ \mathrm s\\
+&\approx18.46\ \mathrm{min}.
+\end{aligned}
+\]
+
+总时间为
+
+\[
+\begin{aligned}
+t
+&=t_1'+\Delta t\\
+&\approx2.67+18.46\\
+&\approx21.1\ \mathrm{min}.
+\end{aligned}
+\]
+
+所以
+
+\[
+\boxed{t\approx21\ \mathrm{min}}.
+\tag{13}
+\]
+
+\textbf{先识别曲线的两个时间尺度。}
+熔化平台期间温度不变，炉功率一部分补偿散热，余下部分用于潜热；平台结束后没有相变，能量方程才化为一阶升温微分方程。用两个温度读数或初始斜率确定指数时间常数时，应使用摄氏温差与开尔文温差数值相同这一点，但绝对温度仍必须用开尔文。最后把熔化潜热和液态水升温显热分别除以各自阶段的净功率，不能把总炉功率直接当成净吸热功率。
+
+\textbf{由曲线反推模型时注意单位。}
+图横轴以分钟计，能量方程若用瓦特和焦耳，时间必须换成秒；否则拟合出的热容量会差
+\(60\) 倍。读图得到的升温曲线可写成 \(T(t)=T_\infty(1-e^{-t/\tau})\)
+一类指数形式，但本题环境基准为
+\(0^\circ\mathrm C\)，稳态温度和时间常数要由给定散热模型确定。用反算的等效总质量检查熔冰平台，再代回升温方程；两段若不能同时吻合，说明曲线读数或散热项的单位出了问题。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf-7}
+
+曲线不是匀速升温直线。它的斜率
+
+\[
+\frac{dT}{dt}=\frac{P-\alpha T}{mc}
+\]
+
+随温度升高而减小。图像能同时提供三类信息：平台长度给潜热质量，升温曲线的初始斜率给热容，弯曲程度或稳态趋势给散热系数。最后一问必须重新计算熔化平台长度，不能只替换升温公式中的功率。
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9-7}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  在 \(0^\circ\mathrm C\) 熔冰阶段仍扣除散热功率；
+\item
+  把总质量误当成冰质量；
+\item
+  用整段割线斜率代替任意时刻的瞬时斜率；
+\item
+  在指数中把分钟直接与以秒为单位的 \(k\) 混用；
+\item
+  把 \(P_{\max}\) 理解成``恰好持续沸腾''的功率；
+\item
+  第（5）问漏加新的熔冰时间 \(t_1'\)。
+\end{enumerate}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae-7}
+
+先让学生把图分成``相变平台''和``液态升温''两段。升温段从一个极短时间
+\(dt\)
+的能量账本出发，逐步积分得到指数函数。参数反演时明确说明图读误差：精确联立读数点得到约
+\(\alpha=1.97,m=0.50\)，按图线有效数字取
+\(2.0,0.48\)，两者在图线精度内一致。
+
+\textbf{建议的图像读取顺序。} 第一遍只读转折时刻
+\(t_1=2\ \mathrm{min}\)，用于潜热；第二遍在升温起点作切线，估计初始斜率；第三遍读曲线上的中间点和接近
+\(100^\circ\mathrm C\)
+的点，估计弯曲程度。不要把所有读数一次塞进同一条算式，否则学生难以分辨每个图像特征控制哪个物理量。
+
+式（3）可以从三个角度检查：当 \(t=t_1\) 时 \(T=0\)；当 \(t\to\infty\) 时
+\(T\to P_0/\alpha\)；在 \(t=t_1\) 处求导得到
+
+\[
+\left.\frac{dT}{dt}\right|_{t_1}=\frac{P_0}{mc}.
+\]
+
+这三项分别检查初始条件、稳态值和初始斜率。一个指数解通过三项检查后，学生不容易把指数符号或时间常数写反。
+
+参数反演应强调有效数字。题图不是精密实验表格，线宽本身对应若干小格；因此
+\(m=0.48\ \mathrm{kg}\) 与由两点精确拟合得到的约 \(0.50\ \mathrm{kg}\)
+不应被解释为物理矛盾。正式答案采用与图线精度相称的读数，并说明近似来源。
+
+最后一问在时间轴上画两段：\(0\to t_1'\) 为熔化，\(t_1'\to t\)
+为升温。功率从 \(400\ \mathrm W\) 改为 \(300\ \mathrm W\)
+后，两段都改变；只在指数式中换功率会漏掉 \(8/3\ \mathrm{min}\)
+的相变时间。
+
+\textbf{课堂核验清单。} 检查
+\(P_{\max}=200\ \mathrm W<P_1=300\ \mathrm W<P_0=400\ \mathrm W\)，所以
+\(300\ \mathrm W\) 确实可以最终达到 \(100^\circ\mathrm C\)；检查对数真数
+\(1-100\alpha/P_1=1/3\) 在 \(0\) 与 \(1\) 之间；检查总时间大于原图的约
+\(14\ \mathrm{min}\)，符合功率降低的直觉。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3-7}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  若环境温度为 \(T_0\neq0\)，重新写散热项和升温解；
+\item
+  若加热功率随时间线性变化，建立相应微分方程；
+\item
+  给定另一条实验曲线，利用初始切线斜率和长时间极限直接反求 \(m\) 与
+  \(\alpha\)。
+\end{enumerate}
+
+\textbf{变式训练的备课展开。} 若环境温度为 \(T_0\)，散热功率应写成
+\(\alpha(T-T_0)\)，升温方程为
+
+\[
+mc\frac{dT}{dt}=P-\alpha(T-T_0).
+\]
+
+从 \(t=t_s,T=T_s\) 开始的解为
+
+\[
+T-T_0
+=\frac P\alpha
++\left(T_s-T_0-\frac P\alpha\right)
+e^{-\alpha(t-t_s)/(mc)}.
+\]
+
+稳态温差而不是稳态绝对温度等于 \(P/\alpha\)。
+
+若实验曲线给出了升温起点的切线斜率 \(s_0\) 和长时间极限
+\(T_\infty\)，则无需联立两个指数读数：
+
+\[
+s_0=\frac{P-\alpha T_s}{mc},
+\qquad
+T_\infty=T_0+\frac P\alpha.
+\]
+
+先由第二式求 \(\alpha\)，再由第一式求
+\(m\)。这是一种比任取两点更稳定的图像反演方法。
+
+若 \(P(t)=P_a+bt\)，方程
+
+\[
+mc\dot T+\alpha T=P_a+bt
+\]
+
+可用积分因子 \(e^{\alpha t/(mc)}\)
+求解。课堂上可要求学生只写出积分表达式，并检查 \(b\to0\)
+时能否退化到本题的指数升温公式。
+
+\textbf{课堂核验与变式追问。}
+用曲线读数反推模型前，先指出温度平台表示潜热过程，平台结束才开始显热升温。炉功率的一部分始终流向环境，所以升温解的指数时间常数由等效热容与散热系数之比决定。变式可改变炉功率，预言平台长度与升温曲线斜率如何变化；也可令环境温度非零，检验指数解是否趋向环境温度而非零度。
+
+\textbf{课堂延伸。}
+若把炉功率改成随时间变化，平台期间的熔冰质量由净输入热量的时间积分决定；升温阶段则需解带时变源项的一阶线性方程。若环境温度高于水温，散热项会改变符号，系统不再按原曲线单调升温。通过改变边界条件，学生能看出指数曲线是能量微分方程的结果，而不是对图线的经验拟合。
+
+\textbf{教师展开补充。}
+让学生先在温度---时间图上标出平台起止时刻和曲线起始切线。平台长度对应净功率乘时间所供的熔化潜热；平台后的初始斜率由净输入功率与等效热容之比决定；长时间极限则由加热功率与散热项平衡决定。三个图像特征分别约束潜热、热容量和散热系数，避免从曲线上任取两点硬拟合所有参数。指数段可改写为
+\(\ln[(T_\infty-T)/(T_\infty-T_s)]=- (t-t_s)/\tau\)
+作线性检查，但图读误差在对数变换后会被放大，所以此式适合检验斜率，不宜声称高精度实验拟合。修改功率后，平台与升温段的起点都要重算。
+
+\end{document}

@@ -1,0 +1,78 @@
+\documentclass[tikz,border=5pt]{standalone}
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath,amssymb}
+\usetikzlibrary{arrows.meta,calc,angles,quotes,decorations.pathmorphing,patterns}
+\definecolor{ink}{HTML}{243447}\definecolor{blue}{HTML}{2765A2}
+\definecolor{green}{HTML}{3F7D5B}\definecolor{red}{HTML}{B74739}
+\tikzset{body/.style={draw=ink,thick},vec/.style={draw=blue,thick,-{Latex}},guide/.style={gray!60,dashed},dim/.style={ink,{Latex}-{Latex}},line cap=round,line join=round}
+\begin{document}
+
+% 2-1 初始构型
+\begin{tikzpicture}
+\fill[gray!10] (-1.8,-.18) rectangle (2.4,0);
+\draw[body] (-1.8,0)--(2.4,0);
+\draw[body,line width=1.5pt] (0,.18)--(0,3);
+\filldraw[fill=blue!15,draw=ink] (0,3) circle (.16);
+\filldraw[fill=blue!15,draw=ink] (0,.18) circle (.16);
+\node[left=7pt] at (0,3) {$m$};
+\node[left=7pt] at (0,.18) {$m'$};
+\draw[dim] (.65,.18)--node[right] {$l$}(.65,3);
+\draw[vec] (1.65,.35)--(2.55,.35) node[right] {$x$};
+\draw[vec] (1.65,.35)--(1.65,1.3) node[above] {$y$};
+\node[below] at (.2,-.18) {光滑水平桌面};
+\draw[guide] (0,3)--(.65,2.9);
+\draw[-{Latex},green,thick] (.05,3.45) arc[start angle=90,end angle=35,radius=.8];
+\node[right,green] at (.6,3.5) {微扰后倒下};
+\end{tikzpicture}
+% 2-2 运动学
+\begin{tikzpicture}
+\coordinate (L) at (0,0);
+\coordinate (U) at (2.3,1.93);
+\draw[body] (-1.4,0)--(4.5,0);
+\draw[body,line width=1.5pt] (L)--node[above left] {$l$}(U);
+\fill (L) circle(2.6pt); \fill (U) circle(2.6pt);
+\node[below right] at (L) {$(X,0)$};
+\node[above left] at (U) {上端};
+\draw[guide] (U)--(2.3,0);
+\draw[dim] (3.8,0)--node[right] {$l\sin\theta$}(3.8,1.93);
+\draw[dim] (0,-.65)--node[below] {$l\cos\theta$}(2.3,-.65);
+\draw[ink] (.65,0) arc[start angle=0,end angle=40,radius=.65];
+\node at (.87,.3) {$\theta$};
+\draw[vec] (L)--(-.5785,0) node[above] {$\boldsymbol v_b$};
+\draw[vec] (U)--(2.8785,.5511) node[below left] {$\boldsymbol v_u$};
+\draw[vec,green] (3.5,2.35)--(4.25,2.98) node[right] {$\boldsymbol e$};
+\draw[vec,green] (3.5,2.35)--(2.95,3.01) node[above] {$\boldsymbol n$};
+\node[below,align=center] at (2,-1.3) {$\boldsymbol v_u-\boldsymbol v_b=l\dot\theta\,\boldsymbol n$\\倒下支：$\dot\theta<0$};
+\end{tikzpicture}
+% 2-3 分离受力
+\begin{tikzpicture}
+\coordinate (L) at (0,0);\coordinate (U) at (2.3,1.93);
+\draw[body] (-1.5,-.18)--(4,-.18);
+\draw[body,line width=1.3pt] (L)--(U);
+\fill (L) circle(2.6pt); \fill (U) circle(2.6pt);
+\draw[vec,red] (U)--(2.3,.73) node[right] {$mg$};
+\draw[vec,green] (U)--(1.41,1.18) node[above left] {$-T\boldsymbol e$};
+\draw[vec,red] (L)--(0,-1.25) node[right] {$m'g$};
+\draw[vec] (L)--(0,1.35) node[left] {$N$};
+\draw[vec,green] (L)--(.88,.74) node[right] {$T\boldsymbol e$};
+\node[above right] at (U) {$m$};
+\node[left] at (L) {$m'$};
+\node[below,align=center] at (1.25,-1.6) {$T>0$：拉力；$T<0$：压力\\无磁场时底端竖直平衡：$N=m'g-T\sin\theta$};
+\end{tikzpicture}
+% 2-4 洛伦兹力
+\begin{tikzpicture}
+\coordinate (L) at (0,0);\coordinate (U) at (2.3,1.93);
+\draw[body] (-1.5,-.14)--(4.4,-.14);
+\draw[body] (L)--(U);
+\fill (L) circle(2.6pt); \fill (U) circle(2.6pt);
+\draw[vec] (L)--(-.7785,0) node[above] {$\boldsymbol v_b$};
+\draw[vec,red] (L)--(0,.6228) node[left] {$q\boldsymbol v_b\times\boldsymbol B$};
+\draw[vec] (U)--(2.6785,.5511) node[right] {$\boldsymbol v_u$};
+\draw[vec,red] (U)--(1.1969,1.6272) node[above left] {$q\boldsymbol v_u\times\boldsymbol B$};
+\node[above right] at (U) {$+q$};
+\node[below left] at (L) {$+q$};
+\node at (3.7,2.95) {$\odot\,\boldsymbol B$};
+\draw[guide] (2.3,1.93)--(3.3,1.93);
+\node[below,align=center] at (1.55,-.7) {$\boldsymbol F_B=qB(v_y,-v_x)$\\图示倒下支速度；磁场力与各自速度垂直};
+\end{tikzpicture}
+\end{document}

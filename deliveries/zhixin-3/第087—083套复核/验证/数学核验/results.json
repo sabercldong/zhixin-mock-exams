@@ -1,0 +1,714 @@
+{
+  "papers": [
+    {
+      "set": 87,
+      "passed": true,
+      "questions": [
+        {
+          "question": 1,
+          "method": "两球各自速度代回能量与单侧力条件",
+          "passed": true,
+          "evidence": {
+            "beta": 2.8,
+            "energy_residual": 0.0,
+            "T": 0.7149885159216463,
+            "N": 0.4355138928444926,
+            "critical_beta": 3
+          }
+        },
+        {
+          "question": 2,
+          "method": "直接积分回路内反向磁场圆帽面积",
+          "passed": true,
+          "evidence": {
+            "cap": 0.12078143160810623,
+            "rectangle": 2.3094010767585034,
+            "effective_area": 2.188619645150397
+          }
+        },
+        {
+          "question": 3,
+          "method": "周期金刚石网络节点方程逼近无穷极限",
+          "passed": true,
+          "evidence": {
+            "sizes": {
+              "4": [
+                0.4960937499999999,
+                0.65625
+              ],
+              "8": [
+                0.49951171875,
+                0.665364583333333
+              ],
+              "12": [
+                0.49985532407407407,
+                0.6662808641975311
+              ]
+            },
+            "limits": [
+              0.5,
+              0.6666666666666666
+            ]
+          }
+        },
+        {
+          "question": 4,
+          "method": "对抛物线回路积分并检查功率",
+          "passed": true,
+          "evidence": {
+            "area": 4.898979485566356,
+            "power_identity": "BILv=I²λL"
+          }
+        },
+        {
+          "question": 5,
+          "method": "数值极值、泊肃叶截面积分与绝热功",
+          "passed": true,
+          "evidence": {
+            "angle_degrees": 35.671169757937065,
+            "range_m": 0.5686228495434447,
+            "P1_Pa": 217.5920000000001,
+            "P2_Pa": 4837.592000000001,
+            "gas_factor": 1.4822158863179284
+          }
+        },
+        {
+          "question": 6,
+          "method": "参数椭圆独立检查折射率和角动量",
+          "passed": true,
+          "evidence": {
+            "parameter_samples": 51,
+            "invariant": 2,
+            "angle_degrees": 90
+          }
+        },
+        {
+          "question": 7,
+          "method": "70位精度轨道微扰（仅原参考附加模型）",
+          "passed": true,
+          "evidence": {
+            "m2": "2.05044193271236872e+21",
+            "dmu": "4.10180361389445958e-12",
+            "dE": "923034575623759.909",
+            "dEE": "-2.06553279301861176e-11",
+            "da": "2.47571315440805772e-11",
+            "db": "8.276762158145829e-12",
+            "dT": "0.000020492844372696727",
+            "dl": "0.000163383285001798664",
+            "e2": "3.29607387718694963e-11",
+            "exact_conic_delta_T": "0.00002049284437324372",
+            "exact_conic_delta_b": "0.000163383285004700633"
+          }
+        },
+        {
+          "question": 8,
+          "method": "朗伯分布归一化与法向动量积分",
+          "passed": true,
+          "evidence": {
+            "normalization": 3.141592653589793,
+            "momentum_factor": 0.6666666666666666,
+            "cosine_power_exponents_checked": [
+              0,
+              1,
+              3,
+              10
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "set": 86,
+      "passed": true,
+      "questions": [
+        {
+          "question": 1,
+          "method": "几何约束+能量求根与切向冲量回代",
+          "passed": true,
+          "evidence": {
+            "turn_displacement_over_d": 0.2043371173936216,
+            "radius_over_d": 0.04921561537549879,
+            "energy_residual": -1.4210854715202004e-14,
+            "critical_impulse_over_m_sqrt_gd": 0.3219124929529047
+          }
+        },
+        {
+          "question": 2,
+          "method": "独立求导定位三种极值",
+          "passed": true,
+          "evidence": {
+            "Imax_A": 0.0038348249442368525,
+            "Pinf_W": 10,
+            "dstar_m": 0.01533929977694741,
+            "constrained_P_W": 7.407407407407407
+          }
+        },
+        {
+          "question": 3,
+          "method": "逐绳元势能和摩擦功交叉核验",
+          "passed": true,
+          "evidence": {
+            "energy": 27.195392000000002,
+            "mu_start": 0.5625,
+            "net_force_increases": true
+          }
+        },
+        {
+          "question": 4,
+          "method": "刚体向量点积与三角恒等式",
+          "passed": true,
+          "evidence": {
+            "u_over_v": 1.3859855926176456,
+            "vC_over_v": 0.7174389352143009
+          }
+        },
+        {
+          "question": 5,
+          "method": "三股库仑力与近远地点能量",
+          "passed": true,
+          "evidence": {
+            "force_coefficient": 0.4571067811865476,
+            "half_period_relation": "a=(R0+R1)/2; t=πsqrt(ma³/Γ)",
+            "turning_energy": -0.5000000000000002
+          }
+        },
+        {
+          "question": 6,
+          "method": "支持力矢量模长与等势一阶展开",
+          "passed": true,
+          "evidence": {
+            "N_over_Fg": 0.9877759860034444,
+            "delta_h_over_R": 0.01
+          }
+        },
+        {
+          "question": 7,
+          "method": "绝热P-dV积分与两体能量动量；比较外压功",
+          "passed": true,
+          "evidence": {
+            "deltaU_J": 81.52407826274874,
+            "bulk_model": {
+              "0": {
+                "W_J": 81.52407826274874,
+                "vwater": 9.652480259364799,
+                "vrocket": 24.131200648411998
+              },
+              "100000.0": {
+                "W_J": 31.524078262748745,
+                "vwater": 6.0022927298299935,
+                "vrocket": 15.005731824574983
+              }
+            }
+          }
+        },
+        {
+          "question": 8,
+          "method": "抛物线减切线严格配方及环序号",
+          "passed": true,
+          "evidence": {
+            "domain": "r≥c",
+            "center": "original axis",
+            "principal_cone_curvatures": "0 and sinθ/r",
+            "numerical_inverse": {
+              "radii_m": [
+                0.002158113883008419,
+                0.002273861278752583
+              ],
+              "rho_recovered": 0.0999999999999996,
+              "mass_kg": 1.7951958020513105e-06
+            },
+            "radius_error_propagation": {
+              "A_per_m": 19645.03187422456,
+              "B_per_m": -18645.03187422456,
+              "independent_radius_sigma_m": 1e-06,
+              "mass_relative_sigma": 0.027084395709156016,
+              "common_offset_relative_error": 0.001,
+              "finite_difference": "pass"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "set": 85,
+      "passed": true,
+      "questions": [
+        {
+          "question": 1,
+          "method": "逐碰撞分段积分实验室速率验证路程",
+          "passed": true,
+          "evidence": {
+            "time_limit": 5.656854249492381,
+            "lab_path": 3.7222222222222237,
+            "net_displacement": 3.5,
+            "negative_displacement": 0.1111111111111111
+          }
+        },
+        {
+          "question": 2,
+          "method": "积分电压与总束缚电荷守恒",
+          "passed": true,
+          "evidence": {
+            "C_F": 1.2869003013736122e-08,
+            "D": 1.560885526827349e-06,
+            "left": 2.1529455542446184e-07,
+            "right": -1.011277946958564e-06,
+            "rho_at_point": 8.138269623035318e-05
+          }
+        },
+        {
+          "question": 3,
+          "method": "有限差分验证飞行+滑移径向雅可比",
+          "passed": true,
+          "evidence": {
+            "tf": 0.46455213498449405,
+            "critical_radius": 0.3352610922848042,
+            "jacobian_checked": true
+          }
+        },
+        {
+          "question": 4,
+          "method": "双膜压强与气体量守恒",
+          "passed": true,
+          "evidence": {
+            "radius_over_a": 0.5345224838248488,
+            "outer_n_over_initial": 1,
+            "inner_n_over_initial": 0.42857142857142855
+          }
+        },
+        {
+          "question": 5,
+          "method": "两条切线的力矩与小包角展开",
+          "passed": true,
+          "evidence": {
+            "torque_over_mgr": 0.0225,
+            "minimum_mu": 0.0225,
+            "contact_angles": [
+              0.06,
+              0.03
+            ]
+          }
+        },
+        {
+          "question": 6,
+          "method": "双程薄透镜矩阵与2d传播",
+          "passed": true,
+          "evidence": {
+            "f_over_l": 1,
+            "square_side_over_l": 0.3333333333333333,
+            "folded_angle": 180
+          }
+        },
+        {
+          "question": 7,
+          "method": "表面总电荷与带符号环带力矩数值积分",
+          "passed": true,
+          "evidence": {
+            "total_charge": -3.0000000000000004,
+            "torque": -1.02
+          }
+        },
+        {
+          "question": 8,
+          "method": "70位四动量守恒与两次质量壳核验",
+          "passed": true,
+          "evidence": {
+            "beta0": "0.8715404298751052868377558",
+            "beta_after_abs": "0.8715404299072699568117815",
+            "v1": "0.07659863942644555510277277",
+            "v1after": "-0.07659863944600339364770852"
+          }
+        }
+      ]
+    },
+    {
+      "set": 84,
+      "passed": true,
+      "questions": [
+        {
+          "question": 1,
+          "method": "总动能的速度比检查小振动惯性系数",
+          "passed": true,
+          "evidence": {
+            "m_eff": "m+Mliq/4",
+            "k_eff": "9ρ0l²g/4",
+            "omega2": "3ρ0g/((2ρ−αρ0)l)",
+            "symbolic_energy_ratio": "pass"
+          }
+        },
+        {
+          "question": 2,
+          "method": "真实十二边节点矩阵与逐边功率",
+          "passed": true,
+          "evidence": {
+            "resistances": [
+              0.5,
+              0.4166666666666667
+            ],
+            "UAD_for_I1": 0.41666666666666663,
+            "edges": 12,
+            "RAB_deleted_CE": 0.5
+          }
+        },
+        {
+          "question": 3,
+          "method": "反射矩阵合成与90度成像一阶符号展开",
+          "passed": true,
+          "evidence": {
+            "double_reflection_point": [
+              -0.8660254037844388,
+              -0.4999999999999998
+            ],
+            "right_angle_first_order_checked": true,
+            "second_mirror_forward_line_test": "a(1+t)>0: no intersection with OB"
+          }
+        },
+        {
+          "question": 4,
+          "method": "四条动力学关系、能量和碰撞分区",
+          "passed": true,
+          "evidence": [
+            {
+              "alpha": 0.5,
+              "a": 0.7142857142857143,
+              "aM": 0.42857142857142855,
+              "first": "left"
+            },
+            {
+              "alpha": 1,
+              "a": 0.5,
+              "aM": 0.5,
+              "first": "same"
+            },
+            {
+              "alpha": 2,
+              "a": 0.2,
+              "aM": 0.6,
+              "first": "right"
+            },
+            {
+              "alpha": 4,
+              "a": -0.14285714285714285,
+              "aM": 0.7142857142857143,
+              "first": "left moves up"
+            }
+          ]
+        },
+        {
+          "question": 5,
+          "method": "完整方位角力积分验证内外分段",
+          "passed": true,
+          "evidence": {
+            "force_kernel_integrals": {
+              "0.5": 7.077671781985373e-16,
+              "2": 3.1415926535897927
+            },
+            "excluded": "a=r"
+          }
+        },
+        {
+          "question": 6,
+          "method": "局部叉积方向与热平均",
+          "passed": true,
+          "evidence": {
+            "cross": [
+              0,
+              -1,
+              0
+            ],
+            "thermal_for_1eV_B01_R1": -20
+          }
+        },
+        {
+          "question": 7,
+          "method": "静水压+气体体积方程直接求四种状态",
+          "passed": true,
+          "evidence": {
+            "h1": 1.755,
+            "h2": 2.017173779705466,
+            "h3": 1.31625,
+            "h4": 1.817793371588205,
+            "deep_left_rise": 0.2985652440589068,
+            "shallow_left_rise": 0.4762653027294359
+          }
+        },
+        {
+          "question": 8,
+          "method": "质量度量速度投影的独立变分",
+          "passed": true,
+          "evidence": {
+            "model": "orientation follows tangent; exit removes spin without tangent impulse"
+          }
+        }
+      ]
+    },
+    {
+      "set": 83,
+      "passed": true,
+      "questions": [
+        {
+          "question": 1,
+          "method": "生成周期数据后反演重力、位置和惯量",
+          "passed": true,
+          "evidence": {
+            "g_recovered": 8.099999999999998,
+            "delta": -0.3142857142857143,
+            "position_candidates": [
+              3.7696969696969695,
+              1.0000000000000002
+            ],
+            "nonidentifiable_mass_fraction_example": {
+              "L": 1.0,
+              "s": 0.2581988897471611,
+              "z": 0.11270166537925835,
+              "hI": 0.08333333333333333
+            }
+          }
+        },
+        {
+          "question": 2,
+          "method": "完整往返ABCD矩阵与成像条件",
+          "passed": true,
+          "evidence": {
+            "matrix": [
+              [
+                "-1/8",
+                "105/2"
+              ],
+              [
+                "-3/160",
+                "-1/8"
+              ]
+            ],
+            "face_distance": 60.61192809848265,
+            "image_distance": 35.61192809848266
+          }
+        },
+        {
+          "question": 3,
+          "method": "椭圆焦点面积数值积分与相向碰撞",
+          "passed": true,
+          "evidence": {
+            "time_fraction": 0.3295774715459477,
+            "mass_ratio": 0.06591980615681411
+          }
+        },
+        {
+          "question": 4,
+          "method": "两段弦长平方积分与磁通带符号积分",
+          "passed": true,
+          "evidence": {
+            "net_charge_area": "π(D²−d²)/4",
+            "absolute_charge_area": "π(D²+d²)/4",
+            "finite_crossing": "v0>threshold"
+          }
+        },
+        {
+          "question": 5,
+          "method": "机构位置有限差分核对矢量速度",
+          "passed": true,
+          "evidence": {
+            "theta_dot": -0.0666666666666667,
+            "velocity_x_left_y_up": [
+              0.11712812921102045,
+              0.11712812921102041
+            ]
+          }
+        },
+        {
+          "question": 6,
+          "method": "半球纬圈积分直接数值核验",
+          "passed": true,
+          "evidence": {
+            "E_over_2pi_ke_sigma": {
+              "0": 0.5,
+              "0.2": 0.485483107726996,
+              "2": 0.1381966011250105,
+              "20": 0.002375155957640269
+            },
+            "ring_max_position_over_R": 0.7071067811865475
+          }
+        },
+        {
+          "question": 7,
+          "method": "接触几何与一般摆长，检查退化边界",
+          "passed": true,
+          "evidence": {
+            "length_30": 5.196152422706631,
+            "OC_30": 0.9999999999999997,
+            "infimum": 4,
+            "finite_equilibrium": "L>4R",
+            "period_general": "2πsqrt(Rsinθ/(gcos2θ))",
+            "theta20_example": {
+              "L_over_R": 4.332748435383173,
+              "ell_over_R": 0.44647558819579863,
+              "period_over_theta30": 0.6681882879816128
+            }
+          }
+        },
+        {
+          "question": 8,
+          "method": "扇叶条带逐项积分与稳态摩尔守恒",
+          "passed": true,
+          "evidence": {
+            "geometric_flow": 0.17321707952592544,
+            "pressure_ratio": 0.9664257043547696,
+            "outside_flow": 0.16740143808711863,
+            "power": 29.152607676224193,
+            "speed_comparison_table": [
+              [
+                35,
+                0.9829262323153741,
+                0.08512980567554522,
+                3.706294065886136
+              ],
+              [
+                70,
+                0.9664257043547696,
+                0.16740143808711863,
+                29.152607676224186
+              ],
+              [
+                140,
+                0.9350326419945052,
+                0.32392724701539677,
+                225.64498981101352
+              ]
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "extra": [
+    {
+      "method": "金刚石网络随尺寸收敛",
+      "passed": true,
+      "evidence": {
+        "size12": [
+          0.49985532407407407,
+          0.6662808641975311
+        ],
+        "limit_errors": [
+          -0.00014467592592593004,
+          -0.0003858024691355544
+        ],
+        "second_neighbour_errors": [
+          0.01041666666666663,
+          0.0013020833333335924,
+          0.0003858024691355544
+        ]
+      }
+    },
+    {
+      "method": "椭圆角平均严格积分等于半短轴",
+      "passed": true,
+      "evidence": {
+        "angle_mean": 2.4,
+        "time_mean": 3.54
+      }
+    },
+    {
+      "method": "120度两种反射次序对称",
+      "passed": true,
+      "evidence": {
+        "order_AB": [
+          -0.8660254037844386,
+          -0.5
+        ],
+        "order_BA": [
+          0.8660254037844386,
+          -0.5
+        ],
+        "forward_intersection": "excluded except degenerate common vertex"
+      }
+    },
+    {
+      "method": "圆盘老师先后分界不是α=3",
+      "passed": true,
+      "evidence": {
+        "boundary_alpha": 1,
+        "both_below_domain": [
+          0,
+          3
+        ]
+      }
+    },
+    {
+      "method": "圆锥曲率不等于球面曲率",
+      "passed": true,
+      "evidence": {
+        "meridional": 0,
+        "azimuthal": "sinθ/r",
+        "theta02_r002_azimuthal_curvature": 9.999333346666539
+      }
+    },
+    {
+      "method": "气塞前端与完全推出体积不同",
+      "passed": true,
+      "evidence": {
+        "first_exit": "Al/2",
+        "complete_exit": "Al"
+      }
+    },
+    {
+      "method": "非线性材料静态功率始终正",
+      "passed": true,
+      "evidence": {
+        "high_field_differential_conductance": "negative",
+        "static_resistivity": "positive"
+      }
+    },
+    {
+      "method": "滑绳净力单调性",
+      "passed": true,
+      "evidence": {
+        "dF_ds": "kg(1+μ)(L−l0−s)≥0"
+      }
+    },
+    {
+      "method": "同心环半径平方差先减接触半径",
+      "passed": true,
+      "evidence": {
+        "identity": "(r_next−c)²−(r_n−c)²=λρ"
+      }
+    },
+    {
+      "method": "发射后微小速度差精度",
+      "passed": true,
+      "evidence": {
+        "values": {
+          "beta0": "0.8715404298751052868377558",
+          "beta_after_abs": "0.8715404299072699568117815",
+          "v1": "0.07659863942644555510277277",
+          "v1after": "-0.07659863944600339364770852"
+        },
+        "precision_digits": 70
+      }
+    },
+    {
+      "method": "转动着盘圆盘相对速度必须为矢量",
+      "passed": true,
+      "evidence": {
+        "radial": "ΩdΩi rt_f",
+        "azimuthal": "(Ωi−Ωd)r",
+        "independent_vector_example": [
+          2.0999999999999996,
+          0.6999999999999997
+        ]
+      }
+    },
+    {
+      "method": "空气移动壁弹性碰撞",
+      "passed": true,
+      "evidence": {
+        "lab_initial": 0,
+        "wall_normal_speed": 1,
+        "wall_frame_before": -1,
+        "wall_frame_after": 1,
+        "lab_after": 2
+      }
+    }
+  ],
+  "scope": "关键结果交叉核验；原稿与全部文字另经逐题审读。带附加假设的题目按明示模型验证，不证明现实模型唯一。"
+}

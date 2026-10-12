@@ -1,0 +1,4215 @@
+\documentclass[12pt,a4paper,UTF8]{ctexart}
+\usepackage[a4paper,top=22mm,bottom=22mm,left=22mm,right=22mm,headheight=15pt]{geometry}
+\newcommand{\Needspace}[1]{\par\begingroup\skip0=\lastskip\vskip-\skip0\dimen0=#1\relax\advance\dimen0 by\skip0\vskip\dimen0\penalty-100\vskip-\dimen0\vskip\skip0\penalty9999\endgroup}
+\usepackage{amsmath,amssymb,mathtools,bm}
+\usepackage{graphicx,xcolor,booktabs,longtable,array,enumitem,fancyhdr,caption,float,microtype,setspace}
+\usepackage[hidelinks,unicode]{hyperref}
+\usepackage[most]{tcolorbox}
+\definecolor{ContestBlue}{HTML}{17365D}
+\hypersetup{pdftitle={第081套},pdfauthor={物理竞赛教学资料}}
+\setstretch{1.24}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.35em}
+\setlength{\emergencystretch}{2em}
+\setlist{itemsep=0.35em,topsep=0.4em}
+\captionsetup{font=small,labelfont=bf,justification=centering}
+\setcounter{secnumdepth}{0}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small 第081套}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\ctexset{
+  section={format=\Large\bfseries\color{ContestBlue},beforeskip=1.2em,afterskip=0.7em},
+  subsection={format=\large\bfseries\color{ContestBlue},beforeskip=1.0em,afterskip=0.5em},
+  subsubsection={format=\normalsize\bfseries,beforeskip=0.8em,afterskip=0.35em}
+}
+\usepackage{calc}
+\newcounter{none}
+\let\originalsubsection\subsection
+\renewcommand{\subsection}{\Needspace{6\baselineskip}\originalsubsection}
+\makeatletter
+\newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\newcommand{\maxwidth}{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\newcommand{\maxheight}{\ifdim\Gin@nat@height>0.72\textheight 0.72\textheight\else\Gin@nat@height\fi}
+\newcommand{\pandocbounded}[1]{\begingroup\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}#1\endgroup}
+\makeatother
+\begin{document}
+\begin{titlepage}
+  \centering
+  \vspace*{58mm}
+  {\Huge\bfseries\color{ContestBlue} 第081套\par}
+  \vfill
+  \vspace*{28mm}
+\end{titlepage}
+\section{第 1 题}\label{ux7b2c-1-ux9898}
+
+两个大小可忽略的小球串在一个光滑圆环上，圆环周长为
+\(L\)。两球同时从同一点出发，分别沿顺时针和逆时针方向运动。两球碰撞时交换速度，其余时间各自保持匀速运动。以出发点为原点，定义位置
+\(x\) 为沿逆时针方向从原点到该点的弧长，取值范围为 \(0\leq x\leq L\)。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  两球速度大小分别为 \(2v_0\) 和 \(3v_0\) 时，第二次碰撞位置为
+  \(x_1\)，求 \(x_1/L\)。
+\item
+  两球速度大小分别为 \(2v_0\) 和 \(9v_0\) 时，第二次碰撞位置为
+  \(x_2\)，求 \(x_2/L\)。
+\item
+  两球速度大小分别为 \(3v_0\) 和 \(11v_0\)
+  时，圆环上可能发生碰撞的位置共有多少个？
+\item
+  承接第 3 问，求第 \(2016\) 次碰撞位置 \(x_3\) 满足的 \(x_3/L\)。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.555\linewidth,height=\textheight,keepaspectratio,alt={图 1-1　两球从圆环同一点沿相反方向出发，位置 x 按逆时针弧长定义。}]{../figures/question-01.pdf}
+\caption*{图 1-1　两球从圆环同一点沿相反方向出发，位置 \(x\)
+按逆时针弧长定义。}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d}
+
+速度交换可改为两条互相穿过的匀速轨迹，碰撞时刻由相对位移整周决定。出发重合不计入碰撞，随后的位置对周长取模，编号与方向要始终一致。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9}
+
+\begin{itemize}
+\tightlist
+\item
+  等质量小球一维弹性碰撞的速度交换。
+\item
+  将``碰撞后交换速度''等效为``两个幽灵粒子相互穿过''。
+\item
+  周期边界下的相对运动。
+\item
+  同余、最大公约数与碰撞点个数。
+\item
+  时空展开图中直线与整数格线的交点。
+\end{itemize}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf}
+
+每次碰撞时，左行速度和右行速度只是换了承载者。如果不区分两球的姓名，只关心``什么时刻、什么位置有两条轨迹相交''，就可以让两条匀速轨迹直接穿过对方。圆环再沿周向展开，运动就变成数轴上两个相向匀速点的周期重合。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3}
+
+取逆时针方向为正。设顺时针小球的速率为 \(av_0\)，逆时针小球的速率为
+\(bv_0\)。把碰撞视为穿透后，两球在展开直线上的位置分别为
+
+\[s_A=-av_0t,\qquad s_B=bv_0t.\]
+
+它们在圆环上重合，等价于两者展开坐标相差周长 \(L\)
+的整数倍。这一条件直接给出所有碰撞时刻，再将任一小球的位置对 \(L\)
+取模，即可得到碰撞点。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790}
+
+图 1-2
+把圆环沿周向展开。一簇相差整数周长的平行线表示同一个圆环位置，两球世界线的交点给出碰撞事件。以同余式推导时，它与图中的整数格交点完全一致。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.716\linewidth,height=\textheight,keepaspectratio,alt={图 1-2　圆环展开后的时空格点图；横轴为归一时间，交点纵坐标对 1 取模后即为碰撞位置。}]{../figures/solution-01.pdf}
+\caption*{图 1-2　圆环展开后的时空格点图；横轴为归一时间，交点纵坐标对
+\(1\) 取模后即为碰撞位置。}
+\end{figure}
+
+\Needspace{3\baselineskip}
+\textbf{1. 建立碰撞位置通式}
+
+第 \(k\) 次碰撞时，两球在展开坐标上的路程差应满足
+
+\[s_B-s_A=kL,\qquad k=1,2,3,\ldots.\]
+
+出发时两球只是同点分开，不计作碰撞。第一次重新相遇对应
+\(k=1\)，第二次对应 \(k=2\)；这与原参考解使用相对位移 \(2L\)
+的编号一致。
+
+代入 \(s_A=-av_0t\) 和 \(s_B=bv_0t\)：
+
+\[
+\begin{aligned}
+bv_0t_k-(-av_0t_k)&=kL,\\
+(a+b)v_0t_k&=kL,\\
+t_k&=\frac{kL}{(a+b)v_0}.
+\end{aligned}
+\]
+
+用逆时针小球的位置表示碰撞点：
+
+\[
+\begin{aligned}
+x_k
+&\equiv s_B(t_k)\pmod L\\
+&\equiv bv_0\frac{kL}{(a+b)v_0}\pmod L\\
+&\equiv \frac{bk}{a+b}L\pmod L.
+\end{aligned}
+\]
+
+故无量纲位置通式为
+
+\[\boxed{\frac{x_k}{L}=\left\{\frac{bk}{a+b}\right\}}, \tag{1}\]
+
+其中 \(\{q\}=q-\lfloor q\rfloor\) 表示小数部分。若小数部分为
+\(0\)，碰撞就在出发点；\(x=0\) 与 \(x=L\)
+是圆环上的同一点，不能重复计数。
+
+\Needspace{3\baselineskip}
+\textbf{2. 第 1 问}
+
+此时 \(a=2\)、\(b=3\)，第二次碰撞取 \(k=2\)。由式（1）：
+
+\[
+\begin{aligned}
+\frac{x_1}{L}
+&=\left\{\frac{3\times2}{2+3}\right\}\\
+&=\left\{\frac65\right\}\\
+&=\frac65-1\\
+&=\boxed{\frac15}.
+\end{aligned}
+\]
+
+若采用展开格点法，可写成 \(y=-\frac23x\) 与 \(y=x-2\)。联立得展开坐标
+\(x=6/5\)，再对一个圆周取模，同样得到 \(x_1/L=1/5\)。
+
+\Needspace{3\baselineskip}
+\textbf{3. 第 2 问}
+
+此时 \(a=2\)、\(b=9\)，仍取 \(k=2\)：
+
+\[
+\begin{aligned}
+\frac{x_2}{L}
+&=\left\{\frac{9\times2}{2+9}\right\}\\
+&=\left\{\frac{18}{11}\right\}\\
+&=\frac{18}{11}-1\\
+&=\boxed{\frac7{11}}.
+\end{aligned}
+\]
+
+\Needspace{3\baselineskip}
+\textbf{4. 第 3 问}
+
+此时 \(a=3\)、\(b=11\)，所有碰撞位置为
+
+\[
+\frac{x_k}{L}=\left\{\frac{11k}{14}\right\},\qquad k=1,2,3,\ldots.
+\]
+
+由于 \(11\) 与 \(14\) 互质，乘以 \(11\) 只会把模 \(14\)
+的剩余类重新排列，不会使两个不同剩余类合并。若
+
+\[11k_1\equiv11k_2\pmod{14},\]
+
+则由 \(\gcd(11,14)=1\) 可在同余式两边约去 \(11\)，得到
+
+\[k_1\equiv k_2\pmod{14}.\]
+
+因此 \(k=1,2,\ldots,14\) 产生 \(14\) 个不同位置，之后周期重复：
+
+\[\boxed{N=14}.\]
+
+更一般地，速率比为 \(a:b\) 时，不同碰撞点的个数为
+
+\[N=\frac{a+b}{\gcd(b,a+b)}=\frac{a+b}{\gcd(a,b)}.\]
+
+\Needspace{3\baselineskip}
+\textbf{5. 第 4 问}
+
+因为
+
+\[2016=14\times144,\]
+
+所以 \(2016\equiv0\pmod{14}\)。代入位置通式：
+
+\[
+\begin{aligned}
+\frac{x_3}{L}
+&=\left\{\frac{11\times2016}{14}\right\}\\
+&=\{11\times144\}\\
+&=\boxed{0}.
+\end{aligned}
+\]
+
+即第 \(2016\) 次碰撞恰好回到出发点。
+
+\Needspace{3\baselineskip}
+\textbf{方向与碰撞点的直接核对}
+
+题面``分别顺时针和逆时针''的顺序给出
+\(-2v_0\)、\(+3v_0\)。从圆环最低点出发，逆时针切向应向右，顺时针应向左；位置弧长也沿逆时针量取。图稿把这个方向与速度标签一并固定。不要以圆弧在页面左侧还是右侧判断正向。
+
+以第一问为例，第一、第二次碰撞时刻分别为
+\(L/(5v_0)\)、\(2L/(5v_0)\)，逆时针幽灵轨迹坐标分别为
+\(3L/5\)、\(6L/5\)，因此真正碰撞点为
+\(3L/5\)、\(L/5\)。实体球在碰撞后交换速度，轨迹集合仍相同。对于
+\(3:11\)，14次的余数依次为
+
+\[11,8,5,2,13,10,7,4,1,12,9,6,3,0.\]
+
+这些正好遍历模14的全部剩余类，既确认14个位置，也确认第2016次为0。速度比非有理数时，碰撞点不再有限：它们构成无限序列，在圆环上稠密，但不会在有限次数中遍历每个点。
+
+\Needspace{3\baselineskip}
+\textbf{不跟踪球的身份，碰撞编号仍能逐次检查}
+
+取两条幽灵轨迹的有向速率为
+\(-av_0\)、\(bv_0\)，\(a,b>0\)。它们相对位移增加为 \((a+b)v_0t\)，所以
+
+\[t_k=\frac{kL}{(a+b)v_0},\qquad
+x_k=L\left\{\frac{bk}{a+b}\right\},\qquad k=1,2,\ldots.\]
+
+若 \(a,b\) 已化为互素正整数，\(\gcd(b,a+b)=1\)，最小重复周期为
+\(a+b\)；若尚未约分，则不同位置数为 \((a+b)/\gcd(a,b)\)。例如 \(6:22\)
+与 \(3:11\) 完全同轨，位置仍为14个而非28个。
+
+第 \(k\) 次的位置与第 \(k+14\)
+次相同，但球的身份可能交换。题目问碰撞位置时可忽略身份；若改问某指定球碰后的方向，就需另外记录偶奇次速度交换。对于2016，先算
+\(2016=14\times144\)，位置立刻回到原点，不需要逐次列出2016个时刻。
+
+图中的横轴是
+\(\tau\)，纵轴是展开弧长；相交只确定幽灵轨迹的同一时空点。把纵坐标取模后，才回到实际圆环，不能把时间横坐标也当成位置。
+
+\Needspace{3\baselineskip}
+\textbf{质心速度与轨迹速度交换的区别}
+
+等质量两球弹性碰撞时，动量与动能给
+
+\[v_1'+v_2'=v_1+v_2,\qquad
+(v_1')^2+(v_2')^2=v_1^2+v_2^2.\]
+
+除未发生相互作用的平凡解外，得到
+\(v_1'=v_2,v_2'=v_1\)。质心速度在每次碰撞前后不变，碰撞只是两条速度分支交换所属球。轨道集合可由幽灵轨迹计算，但指定球的速度需按碰撞次数交替。
+
+在 \(a:b=3:11\)
+时，实体球第一次交换后谁顺时针、谁逆时针已经改变，幽灵轨迹仍用固定的
+\(-3v_0,+11v_0\)。碰撞点序列因此可以统一取 \(11k/14\)
+的小数部分。若两球质量不相等，速度不再简单交换，这个替代方法就失效，需由一般弹性碰撞式逐次更新。
+
+题面把球视为质点，碰撞位置只有一个点。有限半径球的接触时两圆心并不重合，最初同点放置也不可能；本题位置周期结论属于质点理想模型，不能直接当成有限球在轨道中的精确接触坐标。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf}
+
+这道题真正的降维不是``算相对速度''，而是先把速度交换变成身份交换。一旦把实体小球换成可穿透的轨迹，后面的碰撞编号、位置周期和碰撞点个数都变成同余问题。
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9}
+
+\begin{itemize}
+\tightlist
+\item
+  把出发时刻的重合与后续碰撞编号混淆，造成 \(k\) 相差
+  \(1\)。本题不计出发时的重合，第二次重新相遇对应 \(k=2\)。
+\item
+  只算出展开坐标 \(6L/5\) 或 \(18L/11\)，忘记对 \(L\) 取模。
+\item
+  仍逐次追踪小球姓名，容易在碰撞后把方向写反。
+\item
+  将 \(x=0\) 和 \(x=L\) 当成两个不同位置。
+\item
+  计数碰撞点时直接写分母 \(14\)，却不检查分子与分母是否有公因子。
+\end{itemize}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae}
+
+先用两种颜色在直线上画一次对穿，把颜色当作``速度标签''而非``小球姓名''。当学生认可交换速度与直接穿过具有相同的轨迹集合后，再把圆环剪开成数轴。最后才引入同余，可避免学生把它理解成脱离物理图像的纯数论技巧。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  若速率比为 \(4:10\)，求不同碰撞点的个数，并说明为什么不是 \(14\)。
+\item
+  若两球不再等质量，碰撞后不能简单交换速度，请指出``幽灵粒子''等效法失效的具体一步，并尝试写出连续碰撞间的速度迭代关系。
+\end{enumerate}
+
+\Needspace{3\baselineskip}
+\textbf{教师备课补充：两种独立验算}
+
+第一种验算只用相对运动。两条幽灵轨迹的相对速度大小为
+
+\[v_{\mathrm{rel}}=(a+b)v_0.\]
+
+每当相对位移增加一周长
+\(L\)，两球就在圆环上重合一次，所以相邻碰撞时间间隔恒为
+
+\[\Delta t=\frac{L}{(a+b)v_0}.\]
+
+逆时针轨迹在这一时间内前进
+
+\[\Delta x=bv_0\Delta t=\frac{b}{a+b}L.\]
+
+所以碰撞点构成圆环上的等步长转动：
+
+\[x_{k+1}\equiv x_k+\frac{b}{a+b}L\pmod L.\]
+
+从 \(x_0=0\)
+出发立即恢复式（1）。这条递推比时空格点图更短，适合课堂最后做口头验算。
+
+第二种验算针对第 3 问。令
+
+\[q=\frac{b}{a+b}=\frac{11}{14}.\]
+
+寻找最小正整数 \(T\) 使 \(Tq\) 为整数：
+
+\[\frac{11T}{14}\in\mathbb Z.\]
+
+因 \(11\) 与 \(14\) 互质，最小
+\(T=14\)。这既是碰撞位置序列的周期，也是不同位置的个数。若学生只答``分母是
+14''，应追问约分步骤；例如速度比 \(4:10\) 时步长为
+\(10/14=5/7\)，周期应为 \(7\) 而非 \(14\)。
+
+\Needspace{3\baselineskip}
+\textbf{存在条件与编号说明}
+
+原整理稿的编号说明自相矛盾：若把 \(t=0\)
+计作第一次，第二次就应对应相对位移 \(L\)，不是
+\(2L\)。本题答案按原解所用的通常编号：\(t=0\)
+不计，第一次重新相遇为第一次碰撞。若另外规定把出发重合也编号，则第 \(N\)
+次对应本文 \(k=N-1\)；相应第二次位置变为
+\(3L/5\)、\(9L/11\)，第2016次位置变为
+\(3L/14\)。须改变全套编号，不能只改一句说明而保留原数值。
+
+\newpage
+
+\section{第 2 题}\label{ux7b2c-2-ux9898}
+
+一个交流黑盒内含有一只电感、一只电阻、一只电容和三个接线柱。将交流电源接在端子
+\(1\)、\(2\) 之间，将交流安培表接在端子 \(3\)、\(2\) 之间。当电源频率
+\(f_1=1000\,\mathrm{Hz}\) 时，安培表示数
+\(I_1=0.10\,\mathrm{A}\)，电流比电源电压落后 \(\pi/6\)。将频率降低到
+\(100\,\mathrm{Hz}\) 时，电流增大，但增大倍数小于 \(2\)。恢复
+\(1000\,\mathrm{Hz}\)，再用理想交流伏特表替换安培表，此时伏特表示数
+\(U_1=20\,\mathrm{V}\)，伏特表两端电压比电源电压落后
+\(\pi/6\)。电源内阻不计，所有仪表均为理想仪表。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  在题给四种接法中选出正确接法。
+\item
+  求电感 \(L\)。
+\item
+  求电容 \(C\)。
+\item
+  求电阻 \(R\)。
+\item
+  电源频率为多少时，伏特表电压比电源电压落后 \(\pi/2\)？
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.481\linewidth,height=\textheight,keepaspectratio,alt={图 2-1　交流黑盒的测量接线：电源接端子 1、2，电流表或电压表接端子 3、2。}]{../figures/question-02.pdf}
+\caption*{图 2-1　交流黑盒的测量接线：电源接端子
+\(1\)、\(2\)，电流表或电压表接端子 \(3\)、\(2\)。}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-1}
+
+先按电流表短路、伏特表开路分别画等效电路，再用两组相位筛选接法。相位定电抗与电阻的比值，幅值定参数尺度，两次测量的电流不能混用。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-1}
+
+\begin{itemize}
+\tightlist
+\item
+  理想安培表等效为导线，理想伏特表等效为断路。
+\item
+  复阻抗 \(Z_R=R\)、\(Z_L=j\omega L\)、\(Z_C=-j/(\omega C)\)。
+\item
+  阻抗角、电流相位与电压分配。
+\item
+  串联谐振条件 \(\omega L=1/(\omega C)\)。
+\item
+  多工况数据的交叉检验。
+\end{itemize}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-1}
+
+正确接法中，电感 \(L\) 和电阻 \(R\) 从端子 \(1\) 串联到端子 \(3\)，电容
+\(C\) 从端子 \(3\) 接到公共端 \(2\)。接安培表时，\(3\)、\(2\)
+被短接，电容被旁路，电源只看到 \(R\)、\(L\)
+串联；接伏特表时，测量支路不导电，主回路为 \(RLC\)
+串联，伏特表测电容两端电压。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-1}
+
+先不代数值，只画``安培表短路''和``伏特表开路''两个等效电路。统一取电流相位为零，在复平面上写电源电压与电容电压的相位。先由两个相位差求
+\(\omega L/R\) 与 \(1/(\omega CR)\)，再用 \(0.10\,\mathrm A\) 与
+\(20\,\mathrm V\) 定标。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-1}
+
+图 2-2 左侧给出选项 D 的实际拓扑，右侧比较两种测量工况的阻抗相量。两个
+\(\pi/6\) 不是同一个阻抗角：前者说明 \(RL\) 总阻抗角为
+\(+\pi/6\)，后者结合电容电压落后电流 \(\pi/2\) 可推出串联 \(RLC\)
+总阻抗角为 \(-\pi/3\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图 2-2　选项 D 的等效电路以及两种测量工况的阻抗相量。}]{../figures/solution-02.pdf}
+\caption*{图 2-2　选项 D 的等效电路以及两种测量工况的阻抗相量。}
+\end{figure}
+
+\Needspace{3\baselineskip}
+\textbf{1. 确定接法}
+
+安培表接在 \(3\)、\(2\) 之间时，理想安培表内阻为零，端子 \(3\) 与 \(2\)
+等电势。该工况电流落后电源电压，电源看到的回路必须呈感性。换成伏特表后，外接支路断开，而被测电压必须表现出电容性。只有接法
+D 同时满足：
+
+\[1\longrightarrow L\longrightarrow R\longrightarrow3,\qquad 3\longrightarrow C\longrightarrow2.\]
+
+故
+
+\[\boxed{\text{选 D}}.\]
+
+安培表工况的等效阻抗是
+
+\[Z_A=R+j\omega L,\]
+
+伏特表工况的串联总阻抗是
+
+\[Z_V=R+j\left(\omega L-\frac1{\omega C}\right),\]
+
+伏特表示数是电容电压有效值
+
+\[U_C=I\frac1{\omega C}.\]
+
+\Needspace{3\baselineskip}
+\textbf{2. 安培表工况的相位条件}
+
+记 \(\omega_1=2\pi f_1=2000\pi\,\mathrm{rad/s}\)。在 \(RL\)
+串联电路中，电流落后电源电压 \(\pi/6\)，即阻抗角为 \(+\pi/6\)：
+
+\[
+\tan\frac\pi6=\frac{\omega_1L}{R}=\frac1{\sqrt3}.
+\]
+
+所以
+
+\[\boxed{\omega_1L=\frac{R}{\sqrt3}}. \tag{1}\]
+
+阻抗模为
+
+\[
+\begin{aligned}
+|Z_A|
+&=\sqrt{R^2+(\omega_1L)^2}\\
+&=\sqrt{R^2+\frac{R^2}{3}}\\
+&=\frac{2R}{\sqrt3}.
+\end{aligned}
+\]
+
+设电源有效值为 \(U_0\)，由 \(I_1=0.10\,\mathrm A\)：
+
+\[0.10=\frac{U_0}{2R/\sqrt3}. \tag{2}\]
+
+频率降至 \(100\,\mathrm{Hz}\) 时，电感电抗变为原来的
+\(1/10\)，新阻抗模为
+
+\[|Z_{100}|=R\sqrt{1+\frac1{300}}.\]
+
+故电流倍数
+
+\[
+\frac{I_{100}}{I_{1000}}
+=\frac{2/\sqrt3}{\sqrt{1+1/300}}
+\approx1.15<2,
+\]
+
+与题设的辅助判据相符。
+
+\Needspace{3\baselineskip}
+\textbf{3. 伏特表工况的相位条件}
+
+取串联电流 \(\tilde I\) 相位为 \(0\)。电容电压
+
+\[\tilde U_C=-j\frac{I}{\omega_1C}\]
+
+比电流落后 \(\pi/2\)。题设又说 \(U_C\) 比电源电压 \(U_0\) 落后
+\(\pi/6\)。设电源电压比电流超前的相位角为 \(\varphi\)，则
+
+\[-\frac\pi2-\varphi=-\frac\pi6.\]
+
+逐项移项：
+
+\[
+\begin{aligned}
+-\varphi&=-\frac\pi6+\frac\pi2,\\
+-\varphi&=\frac\pi3,\\
+\varphi&=-\frac\pi3.
+\end{aligned}
+\]
+
+所以整个串联回路呈容性，总阻抗角为 \(-\pi/3\)：
+
+\[
+\frac{\omega_1L-1/(\omega_1C)}{R}
+=\tan\left(-\frac\pi3\right)
+=-\sqrt3.
+\]
+
+整理：
+
+\[\frac1{\omega_1C}-\omega_1L=\sqrt3R.\]
+
+代入式（1）：
+
+\[
+\begin{aligned}
+\frac1{\omega_1C}
+&=\sqrt3R+\frac{R}{\sqrt3}\\
+&=\frac{3R+R}{\sqrt3}\\
+&=\frac{4R}{\sqrt3}.
+\end{aligned}
+\]
+
+即
+
+\[\boxed{\frac1{\omega_1C}=\frac{4R}{\sqrt3}}. \tag{3}\]
+
+伏特表工况总阻抗模为
+
+\[
+\begin{aligned}
+|Z_V|
+&=\sqrt{R^2+\left(\omega_1L-\frac1{\omega_1C}\right)^2}\\
+&=\sqrt{R^2+(-\sqrt3R)^2}\\
+&=2R.
+\end{aligned}
+\]
+
+因此
+
+\[
+\begin{aligned}
+\frac{U_C}{U_0}
+&=\frac{I/(\omega_1C)}{I|Z_V|}\\
+&=\frac{4R/\sqrt3}{2R}\\
+&=\frac2{\sqrt3}.
+\end{aligned}
+\]
+
+由 \(U_C=20\,\mathrm V\)：
+
+\[20=\frac2{\sqrt3}U_0,\]
+
+所以
+
+\[\boxed{U_0=10\sqrt3\,\mathrm V}. \tag{4}\]
+
+\Needspace{3\baselineskip}
+\textbf{4. 求 \(R\)、\(L\)、\(C\)}
+
+把式（4）代入式（2）：
+
+\[
+\begin{aligned}
+0.10
+&=\frac{10\sqrt3}{2R/\sqrt3}\\
+&=10\sqrt3\cdot\frac{\sqrt3}{2R}\\
+&=\frac{15}{R}.
+\end{aligned}
+\]
+
+因此
+
+\[\boxed{R=150\,\Omega}.\]
+
+由式（1）：
+
+\[
+\begin{aligned}
+L
+&=\frac{R}{\sqrt3\,\omega_1}\\
+&=\frac{150}{\sqrt3\times2000\pi}\,\mathrm H\\
+&=1.378\times10^{-2}\,\mathrm H,
+\end{aligned}
+\]
+
+即
+
+\[\boxed{L\approx13.8\,\mathrm{mH}}.\]
+
+由式（3）：
+
+\[
+\begin{aligned}
+C
+&=\frac{\sqrt3}{4R\omega_1}\\
+&=\frac{\sqrt3}{4\times150\times2000\pi}\,\mathrm F\\
+&=4.594\times10^{-7}\,\mathrm F,
+\end{aligned}
+\]
+
+即
+
+\[\boxed{C\approx0.459\,\mu\mathrm F}.\]
+
+\Needspace{3\baselineskip}
+\textbf{5. 相位落后 \(\pi/2\) 时的频率}
+
+电容电压始终比串联电流落后 \(\pi/2\)。要使它也比电源电压落后
+\(\pi/2\)，电源电压必须与电流同相，即串联谐振：
+
+\[\omega_2L=\frac1{\omega_2C},\qquad \omega_2^2LC=1.\]
+
+由
+
+\[L=\frac{R}{\sqrt3\omega_1},\qquad C=\frac{\sqrt3}{4R\omega_1},\]
+
+可得
+
+\[
+\begin{aligned}
+LC
+&=\frac{R}{\sqrt3\omega_1}\cdot\frac{\sqrt3}{4R\omega_1}\\
+&=\frac1{4\omega_1^2}.
+\end{aligned}
+\]
+
+于是
+
+\[\omega_2=\frac1{\sqrt{LC}}=2\omega_1,\]
+
+所以
+
+\[\boxed{f_2=2f_1=2000\,\mathrm{Hz}}.\]
+
+\Needspace{3\baselineskip}
+\textbf{两组相量与实际电流}
+
+在 \(1\,\mathrm{kHz}\)，\(X_L=R/\sqrt3\)、\(X_C=4R/\sqrt3\)。以 \(R\)
+归一化，两种回路阻抗分别为
+
+\[Z_A/R=1+j/\sqrt3,\qquad Z_V/R=1-j\sqrt3.\]
+
+它们的角度是 \(+30^\circ\) 与 \(-60^\circ\)，不是正负30°。电容电压在
+\(-90^\circ\)，与第二个源相量相差
+\(-30^\circ\)；图中同时标出这三个参照量。
+
+换成伏特表后电流为
+\(I_V=U_0/(2R)=\sqrt3/30\approx0.05774\,\mathrm A\)，并非电流表工况的0.10
+A。用它复算 \(I_VX_C=20.0\,\mathrm V\)，还可核对电阻功率
+\(I_V^2R=0.500\,\mathrm W\)。电容电压超过源电压并不意味着有源放大，电感和电容电压在复平面上反向相消。
+
+本题用 \(e^{j\omega t}\) 约定。若换成
+\(e^{-j\omega t}\)，所有虚部符号同时改变，实际``超前''\,``落后''保持不变；不能仅将电容符号改号而保留其他相量。
+
+\Needspace{3\baselineskip}
+\textbf{将两次读数放回同一接法}
+
+D接法中，理想电流表旁路电容，电源看到
+\(Z_A=R+j\omega L\)；理想伏特表开路，电源回路是串联RLC，\(Z_V=R+j(\omega L-1/\omega C)\)。于是
+
+\[\frac{\omega_1L}{R}=\tan30^\circ=\frac1{\sqrt3},\qquad
+\frac{\omega_1L-1/\omega_1C}{R}=-\sqrt3.\]
+
+第二个等式来自电容电压相对串联电流滞后90°，不能把``电容电压落后电源30°''直接当成阻抗角负30°。两式相减，
+
+\[L=\frac R{\sqrt3\omega_1},\qquad C=\frac{\sqrt3}{4R\omega_1}.\]
+
+串联工况 \(|Z_V|=2R\)，旁路工况
+\(|Z_A|=2R/\sqrt3\)。分别代入对应的电流读数后才求 \(R\)
+和电源有效值；把两组电流当成同一回路电流会破坏这组比例。图 2-2
+两个相量的横分量同为 \(R\)，纵分量分别是 \(R/\sqrt3\) 和
+\(-\sqrt3R\)，也可直接检查90°夹角。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf-1}
+
+题中两次``落后 \(\pi/6\)''的参照对象不同。安培表工况中，它直接给出
+\(RL\) 阻抗角；伏特表工况中，被测的是 \(U_C\)，必须先利用 \(U_C\)
+相对电流的 \(-\pi/2\)，才能反推总阻抗角为 \(-\pi/3\)。
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9-1}
+
+\begin{itemize}
+\tightlist
+\item
+  将理想安培表当作开路，或将理想伏特表当作短路。
+\item
+  看见 \(U_C\) 落后 \(U_0\) 为 \(\pi/6\)，就误写总阻抗角为 \(+\pi/6\)。
+\item
+  在 \(Z=R+j(X_L-X_C)\) 中把电容电抗的符号写成正号。
+\item
+  用 \(U_C=IX_C\) 时误取安培表工况的
+  \(I=0.10\,\mathrm A\)；两种工况的总阻抗不同，电流不同。
+\item
+  求第 5 问时把``落后
+  \(\pi/2\)''误解成纯电容回路，忽略伏特表测的本来就是电容电压。
+\end{itemize}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae-1}
+
+把两次测量分成两张等效图，每张图先写``哪个元件被短接或断开''，再画相量。可要求学生用一句话说明
+\(\varphi=-\pi/3\) 的来源：``\(U_C\) 相对 \(I\) 是
+\(-90^\circ\)，而它相对 \(U_0\) 只落后 \(30^\circ\)，所以 \(U_0\) 相对
+\(I\) 必为 \(-60^\circ\)。''
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3-1}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  若伏特表工况中 \(U_C\) 比 \(U_0\) 落后的相位改为
+  \(\pi/3\)，其余条件不变，重新求 \(X_C/R\)。
+\item
+  将伏特表改接在电阻 \(R\)
+  两端，求谐振时伏特表示数与电源电压的关系，并说明为何不再出现电容电压的``电压放大''比值。
+\end{enumerate}
+
+\Needspace{3\baselineskip}
+\textbf{教师备课补充：相量关系的几何复核}
+
+在伏特表工况中取电流沿实轴。三个元件电压分别为
+
+\[\widetilde U_R=IR,\qquad
+\widetilde U_L=jI\omega_1L,\qquad
+\widetilde U_C=-j\frac{I}{\omega_1C}.\]
+
+于是电源电压的实部为 \(IR\)，虚部为
+
+\[I\left(\omega_1L-\frac1{\omega_1C}\right)=-I\sqrt3R.\]
+
+故
+
+\[\widetilde U_0=IR(1-j\sqrt3)=2IR\,e^{-i\pi/3}.\]
+
+而
+
+\[\widetilde U_C=-jI\frac{4R}{\sqrt3}
+=\frac{4IR}{\sqrt3}e^{-i\pi/2}.\]
+
+两者相位之差确为
+
+\[-\frac\pi2-\left(-\frac\pi3\right)=-\frac\pi6,\]
+
+幅值之比确为
+
+\[\frac{4IR/\sqrt3}{2IR}=\frac2{\sqrt3}.\]
+
+这同时复核了相位和 \(20\,\mathrm V\) 的幅值关系，能发现把 \(-\pi/3\)
+写成 \(+\pi/3\) 的常见错误。
+
+\Needspace{3\baselineskip}
+\textbf{为什么低频数据仍有作用}
+
+一旦从其他条件猜出接法 D，\(100\,\mathrm{Hz}\)
+条件看似没有参与求参。它的实际作用是排除那些也能在单一频率下伪造相位关系的拓扑。对接法
+D，安培表短接电容，降频只使 \(X_L\) 减小，电流增大但上限是
+
+\[\frac{|Z_{1000}|}{R}=\frac2{\sqrt3}<2.\]
+
+应对四种给定接法逐一判断，不能笼统认为含电容的回路降频后电流必减小：在接近谐振时并不一定。接法A中，电流表短接使电阻被旁路，源端只有并联纯LC，电流相位只能与电压相差90°；接法C短接后也是纯LC串联，不能给30°。接法B换成理想伏特表后，通向端子3的电阻无电流，电压表读数等于纯LC串联中的电容电压，与源电压只能同相或反相，也不能落后30°。D才同时满足两组相位，并通过低频幅值趋势检查。
+
+原卷接法B为L接在端子1到分支点之间、R接在分支点到3之间；原整理图将二者颠倒。题面四个选项现按原扫描恢复。
+
+\Needspace{3\baselineskip}
+\textbf{量纲核查}
+
+\[[L]=\frac{[\Omega]}{[\mathrm{s^{-1}}}=\Omega\cdot\mathrm s=\mathrm H,\]
+
+\[[C]=\frac1{[\Omega][\mathrm{s^{-1}}}=\frac{\mathrm s}{\Omega}=\mathrm F.\]
+
+代入量级后，\(13.8\,\mathrm{mH}\) 在 \(1\,\mathrm{kHz}\) 时的感抗为
+
+\[X_L=\omega_1L\approx86.6\,\Omega,\]
+
+而 \(0.459\,\mu\mathrm F\) 的容抗为
+
+\[X_C=\frac1{\omega_1C}\approx346.4\,\Omega,\]
+
+正好满足 \(X_C=4X_L\)，这是最直接的数值复核。
+
+\Needspace{3\baselineskip}
+\textbf{教师备课补充：归一化变量与传递函数视角}
+
+把 \(1000\,\mathrm{Hz}\) 工况的电抗用电阻归一化：
+
+\[p=\frac{\omega_1L}{R},\qquad q=\frac1{\omega_1CR}.\]
+
+安培表相位直接给出
+
+\[p=\tan\frac\pi6=\frac1{\sqrt3}.\]
+
+伏特表工况的电容电压传递函数为
+
+\[
+H_C(\omega)
+=\frac{\widetilde U_C}{\widetilde U_0}
+=\frac{-j/(\omega C)}
+{R+j\left(\omega L-1/(\omega C)\right)}.
+\]
+
+在 \(\omega=\omega_1\) 时同时除以 \(R\)：
+
+\[
+H_C(\omega_1)
+=\frac{-jq}{1+j(p-q)}.
+\]
+
+其相位为
+
+\[
+\arg H_C
+=-\frac\pi2-\arctan(p-q).
+\]
+
+题设 \(\arg H_C=-\pi/6\)，所以
+
+\[
+\arctan(p-q)=-\frac\pi3,
+\]
+
+\[p-q=-\sqrt3.\]
+
+代入 \(p=1/\sqrt3\)：
+
+\[
+q=p+\sqrt3
+=\frac1{\sqrt3}+\frac3{\sqrt3}
+=\frac4{\sqrt3}.
+\]
+
+这样先得到两个纯数 \(p,q\)，再由幅值定标求
+\(R\)。这条路线把``相位决定比例、幅值决定尺度''的结构表现得最清楚，也适合推广到未知元件参数更多的黑盒问题。
+
+传递函数的幅频特性为
+
+\[
+|H_C(\omega)|
+=\frac{1/(\omega C)}
+{\sqrt{R^2+\left(\omega L-1/(\omega C)\right)^2}}.
+\]
+
+在串联谐振 \(\omega_2=1/\sqrt{LC}\) 时，
+
+\[
+|H_C(\omega_2)|
+=\frac1{\omega_2CR}
+=\frac{\omega_2L}{R}.
+\]
+
+本题 \(\omega_2=2\omega_1\)，故
+
+\[
+\frac{\omega_2L}{R}
+=2\frac{\omega_1L}{R}
+=\frac2{\sqrt3}.
+\]
+
+所以谐振时电容电压仍是电源电压的 \(2/\sqrt3\)
+倍。相位条件和幅值条件在这一点给出同一个无量纲比值，可作为最后的全局核验。
+
+\Needspace{3\baselineskip}
+\textbf{低频极限检查}
+
+安培表工况只含 \(RL\)，当 \(f\to0\) 时 \(X_L\to0\)：
+
+\[I(f)\to\frac{U_0}{R}.\]
+
+而 \(1000\,\mathrm{Hz}\) 时
+
+\[I_1=\frac{U_0}{2R/\sqrt3}.\]
+
+因此任何更低频率下的最大增大倍数都不会超过
+
+\[
+\lim_{f\to0}\frac{I(f)}{I_1}
+=\frac{2}{\sqrt3}
+\approx1.155.
+\]
+
+题设``增大不到 2 倍''不只是 \(100\,\mathrm{Hz}\)
+的偶然数值，而是整个低频极限的结构性上界。
+
+\newpage
+
+\section{第 3 题}\label{ux7b2c-3-ux9898}
+
+一个离心式自动调速装置由四根长度均为 \(l\) 的轻杆、两个质量均为 \(m\)
+的小球和一个质量为 \(M\)
+的滑块组成。各连接处均为理想铰接，整个装置绕竖直主轴转动。定义角速度
+\(\omega\) 为小球线速度与小球到转轴距离的比值。滑块到顶端铰点的距离为
+\(h\)，发动机输出功率满足 \(P=kh\)，其中 \(k\)
+为已知常量。每个小球所受空气阻力为 \(f=\alpha v\)，方向与小球速度相反。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  若假定系统稳定工作时 \(h=h_1\)，仅从功率平衡角度求角速度
+  \(\omega_1\)。
+\item
+  结合装置的力学平衡条件，求实际稳定角速度 \(\omega\)。
+\item
+  求实际稳定时的 \(h\)，并说明该装置如何使角速度自动稳定。
+\end{enumerate}
+
+参数为
+
+\[k=350\,\mathrm{W/m},\quad h_1=2.41\,\mathrm m,\quad \alpha=485\,\mathrm{N\,s/m},\]
+\[l=3.62\,\mathrm m,\quad M=0.651\,\mathrm{kg},\quad m=1.25\,\mathrm{kg},\quad g=10\,\mathrm{m/s^2}.\]
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.536\linewidth,height=\textheight,keepaspectratio,alt={图 3-1　离心式自动调速装置的对称剖面；两小球到转轴的距离由 h 决定。}]{../figures/question-03.pdf}
+\caption*{图 3-1　离心式自动调速装置的对称剖面；两小球到转轴的距离由
+\(h\) 决定。}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-2}
+
+功率平衡与杆系力学平衡分别给出一条工作曲线，交点才是实际状态。稳定性判断要同时看输入功率、阻力耗散和位形响应，并说明准静态近似。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-2}
+
+\begin{itemize}
+\tightlist
+\item
+  线性阻力 \(f=\alpha v\) 的耗散功率 \(fv=\alpha v^2\)。
+\item
+  菱形杆系几何关系 \(\rho^2=l^2-h^2/4\)。
+\item
+  转动参考系中的离心势能与广义坐标平衡。
+\item
+  两条工作特性曲线的交点。
+\item
+  ``转速---小球升降---滑块位置---输出功率''负反馈。
+\end{itemize}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-2}
+
+两小球、顶铰点和滑块构成竖直对角线为 \(h\) 的菱形。每根杆长
+\(l\)，故小球到转轴的水平距离 \(\rho\) 与 \(h/2\)
+构成直角三角形。小球向外张开时 \(\rho\) 增大、\(h\) 减小；因
+\(P=kh\)，发动机输出功率随之减小。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-2}
+
+先由一根杆写
+
+\[\rho^2+\left(\frac h2\right)^2=l^2,\]
+
+再分别建立两条关系：
+
+\[\text{功率平衡：}\quad kh=2\alpha\omega^2\rho^2,\]
+
+\[\text{力学平衡：}\quad \omega^2=\frac{2(M+m)g}{mh}.\]
+
+第一条曲线反映发动机与阻力的能量平衡，第二条曲线反映杆系在给定 \(h\)
+下所要求的转速。实际稳定工作点必须同时落在两条曲线上。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-2}
+
+图 3-2
+中，一条曲线来自功率平衡，另一条来自转动杆系的力学平衡。单独代入任意
+\(h_1\) 只会得到功率曲线上的点，不保证它也在力学平衡曲线上。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.576\linewidth,height=\textheight,keepaspectratio,alt={图 3-2　功率平衡曲线与力学平衡曲线的交点确定实际稳定工作状态。}]{../figures/solution-03.pdf}
+\caption*{图 3-2　功率平衡曲线与力学平衡曲线的交点确定实际稳定工作状态。}
+\end{figure}
+
+\Needspace{3\baselineskip}
+\textbf{1. 几何关系}
+
+由对称性，每个小球都位于顶铰点和滑块铰点高度的中间，一根杆在竖直方向的投影为
+\(h/2\)。设小球到转轴的距离为 \(\rho\)：
+
+\[
+\begin{aligned}
+\rho^2+\left(\frac h2\right)^2&=l^2,\\
+\rho^2&=l^2-\frac{h^2}{4},\\
+\rho&=\sqrt{l^2-\frac{h^2}{4}}.
+\end{aligned} \tag{1}
+\]
+
+几何上还需满足 \(0<h<2l\)。
+
+\Needspace{3\baselineskip}
+\textbf{2. 第 1 问：仅从功率平衡求 \(\omega_1\)}
+
+小球线速度为 \(v=\omega\rho\)。每个小球的阻力耗散功率是
+
+\[P_{\mathrm d,1}=fv=\alpha v^2=\alpha\omega^2\rho^2.\]
+
+装置有两个小球，因此总耗散功率
+
+\[P_{\mathrm d}=2\alpha\omega^2\rho^2.\]
+
+稳定转动时，发动机输出功率等于阻力耗散功率：
+
+\[kh=2\alpha\omega^2\rho^2.\]
+
+代入式（1）：
+
+\[kh=2\alpha\omega^2\left(l^2-\frac{h^2}{4}\right).\]
+
+当 \(h=h_1\)：
+
+\[
+\boxed{\omega_1=\sqrt{\frac{kh_1}{2\alpha\left(l^2-h_1^2/4\right)}}}. \tag{2}
+\]
+
+先算几何量：
+
+\[
+l^2-\frac{h_1^2}{4}
+=(3.62)^2-\frac{(2.41)^2}{4}
+=11.6524\,\mathrm{m^2}.
+\]
+
+因此
+
+\[
+\begin{aligned}
+\omega_1
+&=\sqrt{\frac{350\times2.41}{2\times485\times11.6524}}\\
+&=0.27318\,\mathrm{rad/s},
+\end{aligned}
+\]
+
+即
+
+\[\boxed{\omega_1\approx0.273\,\mathrm{rad/s}}.\]
+
+\Needspace{3\baselineskip}
+\textbf{3. 建立力学平衡条件}
+
+在随装置以角速度 \(\omega\)
+转动的参考系中，取顶端铰点高度为零。滑块向下距离为 \(h\)
+时，其重力势能为 \(-Mgh\)；两个小球各向下 \(h/2\)，总重力势能为
+
+\[2\left(-mg\frac h2\right)=-mgh.\]
+
+两个小球的离心势能总和为
+
+\[2\left(-\frac12m\omega^2\rho^2\right)=-m\omega^2\rho^2.\]
+
+因此以 \(h\) 为广义坐标的有效势能为
+
+\[
+\begin{aligned}
+V_{\mathrm{eff}}(h)
+&=-m\omega^2\left(l^2-\frac{h^2}{4}\right)-(M+m)gh\\
+&=-m\omega^2l^2+\frac14m\omega^2h^2-(M+m)gh.
+\end{aligned}
+\]
+
+平衡形状满足
+
+\[
+\begin{aligned}
+\frac{\mathrm dV_{\mathrm{eff}}}{\mathrm dh}
+&=\frac12m\omega^2h-(M+m)g\\
+&=0.
+\end{aligned}
+\]
+
+所以
+
+\[\boxed{\omega^2=\frac{2(M+m)g}{mh}}. \tag{3}\]
+
+并且
+
+\[\frac{\mathrm d^2V_{\mathrm{eff}}}{\mathrm dh^2}=\frac12m\omega^2>0,\]
+
+说明对于给定 \(\omega\)，该形状是有效势能的极小值。
+
+\Needspace{3\baselineskip}
+\textbf{4. 联立两种平衡}
+
+功率平衡可写成
+
+\[\boxed{\omega^2=\frac{kh}{2\alpha\left(l^2-h^2/4\right)}}. \tag{4}\]
+
+令式（3）、（4）相等：
+
+\[
+\frac{2(M+m)g}{mh}
+=\frac{kh}{2\alpha\left(l^2-h^2/4\right)}.
+\]
+
+交叉相乘：
+
+\[4\alpha(M+m)g\left(l^2-\frac{h^2}{4}\right)=kmh^2.\]
+
+展开并移项：
+
+\[
+\begin{aligned}
+4\alpha(M+m)gl^2-\alpha(M+m)gh^2&=kmh^2,\\
+4\alpha(M+m)gl^2&=[km+\alpha(M+m)g]h^2.
+\end{aligned}
+\]
+
+故
+
+\[h^2=\frac{4\alpha(M+m)gl^2}{km+\alpha(M+m)g}.\]
+
+因 \(h>0\)，取正根：
+
+\[\boxed{h=2l\sqrt{\frac{\alpha(M+m)g}{km+\alpha(M+m)g}}}. \tag{5}\]
+
+代入数值：
+
+\[
+\begin{aligned}
+h
+&=2\times3.62
+\sqrt{\frac{485(0.651+1.25)\times10}
+{350\times1.25+485(0.651+1.25)\times10}}\\
+&=7.0741\,\mathrm m.
+\end{aligned}
+\]
+
+它满足 \(h<2l=7.24\,\mathrm m\)。再代入式（3）：
+
+\[
+\begin{aligned}
+\omega
+&=\sqrt{\frac{2(M+m)g}{mh}}\\
+&=\sqrt{\frac{2(0.651+1.25)\times10}{1.25\times7.0741}}\\
+&=2.0736\,\mathrm{rad/s}.
+\end{aligned}
+\]
+
+所以
+
+\[\boxed{h\approx7.07\,\mathrm m,\qquad \omega\approx2.07\,\mathrm{rad/s}}.\]
+
+仅用人为给定的 \(h_1\) 做功率平衡得到的 \(0.273\,\mathrm{rad/s}\)
+并非真正稳定转速，因为 \(h_1\) 未必满足杆系力学平衡。
+
+在杆系位形能及时跟随转速、且控制延迟可忽略的近似下，当转速偶然增大时，离心效应使小球向外张开，几何关系使
+\(h\) 减小，于是 \(P=kh\)
+减小；同时空气阻力耗散随速度增大，转速被拉回。转速偶然减小时过程相反，这说明该近似下反馈方向有利于恢复；完整动力学稳定性还要给定转动惯量、铰接耗散和控制时延。
+
+\Needspace{3\baselineskip}
+\textbf{两条工作特性与稳定性边界}
+
+令 \(A=2(M+m)g/m\)。在力学准静态分支上 \(h=A/\omega^2\)，阻力耗散为
+
+\[P_d=2\alpha l^2\omega^2-\frac{\alpha A^2}{2\omega^2}.\]
+
+原发动机功率 \(P=kA/\omega^2\)，净功率因此为
+
+\[P-P_d=\frac{kA+\alpha A^2/2}{\omega^2}-2\alpha l^2\omega^2.\]
+
+对 \(\omega>0\)
+求导恒为负。在该分支上，转速正扰动使净功率下降，确实具有恢复趋势。这比只看小球外张更完整，不过仍采用位形即时跟随的近似。图中的曲线使用题给参数和
+\(0<h<2l\) 的精确函数，交点约
+\((7.074\,\mathrm m,2.074\,\mathrm{rad/s})\)。
+
+当 \(h=h_1\) 时功率方程给 \(0.273\,\mathrm{rad/s}\)，力学方程却要求约
+\(3.55\,\mathrm{rad/s}\)，所以它不是真工作点。两个数分别满足不同方程，不能为了接近原值改动参数。
+
+\Needspace{3\baselineskip}
+\textbf{功率变式的修正判断}
+
+若
+\(P=k(2l-h)\)，小球外张的确使输入功率增大，但阻力也改变，不能就此断言整个装置不稳定。在同一准静态分支上，
+
+\[P-P_d=(2l-h)\left[k-\frac{\alpha A(2l+h)}{2h}\right].\]
+
+非退化工作点满足
+
+\[h_* =\frac{2\alpha Al}{2k-\alpha A},\qquad0<h_*<2l,\]
+
+即要求 \(k>\alpha A\)。本题
+\(\alpha A\approx1.475\times10^4\,\mathrm{W/m}\)，大于
+\(k=350\,\mathrm{W/m}\)，故这个变式以原参数没有非退化工作点。若参数满足存在条件，在工作点对h求净功率导数为正，而
+\(dh/d\omega<0\)，于是对转速的净功率导数仍为负。输入功率单个通道的正反馈，不足以替代总功率与机械动态的稳定判据。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf-2}
+
+``功率已经平衡''不等于``整个机械系统已经平衡''。功率方程只限定转动动能不增减，还必须用广义力或有效势能确保滑块与小球的几何位形不再变化。
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9-2}
+
+\begin{itemize}
+\tightlist
+\item
+  将``四根杆''误读成``四个小球''，把耗散功率误写成
+  \(4\alpha v^2\)。图中是两个小球、四根杆。
+\item
+  忘记每根杆的竖直投影是 \(h/2\)，误写 \(\rho^2=l^2-h^2\)。
+\item
+  把阻力功率写成 \(\alpha v\)，忽略功率还要再乘速度 \(v\)。
+\item
+  离心势能符号写反；它是 \(-\frac12m\omega^2\rho^2\)。
+\item
+  得到 \(h\) 后不检查 \(0<h<2l\)。
+\end{itemize}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae-2}
+
+先用可收缩菱形演示：水平对角线变长时，竖直对角线必变短。再把第 1
+问得到的点标在功率曲线上，追问``它是否也满足杆系平衡？''由此自然引出第二条曲线，学生会更容易理解为什么第
+1 问结果不是最终答案。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3-2}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  若阻力改为 \(f=\beta v^2\)，重新建立功率平衡方程，并分析稳定转速对参数
+  \(k\) 的标度关系。
+\item
+  若发动机功率改为
+  \(P=k(2l-h)\)，比较发动机反馈与阻力耗散的变化，并判断工作点是否存在；不能只由反馈通道的符号判定整体稳定。
+\end{enumerate}
+
+\Needspace{3\baselineskip}
+\textbf{教师备课补充：不用有效势能的受力推导}
+
+设上、下两根杆对小球的作用力大小分别为
+\(T_1\)、\(T_2\)，每根杆与竖直轴夹角为 \(\vartheta\)。几何关系为
+
+\[\cos\vartheta=\frac{h}{2l},\qquad \sin\vartheta=\frac{\rho}{l}.\]
+
+对一个小球，竖直方向没有加速度：
+
+\[T_1\cos\vartheta-T_2\cos\vartheta-mg=0. \tag{A}\]
+
+水平方向需要向心力：
+
+\[
+(T_1+T_2)\sin\vartheta=m\omega^2\rho. \tag{B}
+\]
+
+滑块竖直平衡。左右两根下杆对滑块的竖直分力向上：
+
+\[2T_2\cos\vartheta=Mg. \tag{C}\]
+
+由式（C）
+
+\[T_2\cos\vartheta=\frac{Mg}{2}.\]
+
+代入式（A）：
+
+\[T_1\cos\vartheta=mg+\frac{Mg}{2}
+=\frac{(M+2m)g}{2}.\]
+
+因此
+
+\[
+(T_1+T_2)\cos\vartheta=(M+m)g.
+\]
+
+将式（B）两边乘以 \(\cos\vartheta/\sin\vartheta\)：
+
+\[
+(T_1+T_2)\cos\vartheta
+=m\omega^2\rho\frac{\cos\vartheta}{\sin\vartheta}.
+\]
+
+再用 \(\rho=l\sin\vartheta\)：
+
+\[
+(M+m)g=m\omega^2l\cos\vartheta
+=m\omega^2\frac h2,
+\]
+
+于是
+
+\[\omega^2=\frac{2(M+m)g}{mh},\]
+
+与有效势能法完全一致。受力法适合尚未学习转动系势能的学生；有效势能法更紧凑，且能立即用二阶导数判断局部稳定。
+
+\Needspace{3\baselineskip}
+\textbf{负反馈的小扰动表述}
+
+在稳定点 \((h_*,\omega_*)\) 附近给转速一个小的正扰动
+\(\delta\omega>0\)。离心力的一阶变化为正，使小球外移，即
+\(\delta\rho>0\)。由
+
+\[2\rho\,\delta\rho+\frac h2\,\delta h=0\]
+
+可知 \(\delta h<0\)。发动机功率变化为
+
+\[\delta P=k\,\delta h<0,\]
+
+而阻力耗散功率 \(P_{\mathrm d}=2\alpha\omega^2\rho^2\)
+的一阶变化为正。因此净输入功率
+
+\[\delta(P-P_{\mathrm d})<0,\]
+
+转动动能的变化率减小，扰动被压回。这个符号链比``快了就减速''更适合竞赛备课中的稳定性说明。
+
+\Needspace{3\baselineskip}
+\textbf{教师备课补充：无量纲化后的工作点}
+
+令
+
+\[z=\frac{h}{2l},\qquad 0<z<1.\]
+
+则
+
+\[\rho=l\sqrt{1-z^2}.\]
+
+功率平衡与力学平衡分别变为
+
+\[
+\omega^2
+=\frac{klz}{\alpha l^2(1-z^2)}
+=\frac{k}{\alpha l}\frac{z}{1-z^2},
+\]
+
+\[
+\omega^2
+=\frac{(M+m)g}{mlz}.
+\]
+
+联立并约去公共量：
+
+\[
+\frac{k}{\alpha l}\frac{z}{1-z^2}
+=\frac{(M+m)g}{mlz}.
+\]
+
+交叉相乘：
+
+\[
+kmz^2=\alpha(M+m)g(1-z^2).
+\]
+
+所以
+
+\[
+z^2
+=\frac{\alpha(M+m)g}
+{km+\alpha(M+m)g}.
+\]
+
+这就是正文式（5）除以 \((2l)^2\) 后的形式。无量纲化揭示：形状比例
+\(h/(2l)\) 与杆长 \(l\) 无关，只由两个竞争量
+
+\[km,\qquad \alpha(M+m)g\]
+
+的比值决定。杆长只按 \(h\propto l\) 整体缩放，并通过
+\(\omega^2\propto1/l\) 改变时间尺度。
+
+定义控制参数
+
+\[
+\Pi=\frac{km}{\alpha(M+m)g},
+\]
+
+则
+
+\[
+\frac{h}{2l}=\frac1{\sqrt{1+\Pi}}.
+\]
+
+当 \(\Pi\ll1\)
+时，发动机功率对滑块位移的响应较弱，\(h\approx2l\)，小球靠近轴线；当
+\(\Pi\gg1\) 时，
+
+\[h\approx2l\,\Pi^{-1/2},\]
+
+小球显著外张。这个极限分析能让学生判断最终数值 \(h=7.07\,\mathrm m\)
+接近 \(2l=7.24\,\mathrm m\) 是否合理：本题 \(\Pi\) 仅约
+\(0.0475\)，确实应有 \(h/(2l)\) 接近 \(1\)。
+
+\Needspace{3\baselineskip}
+\textbf{为什么 \(\omega_1\) 与 \(\omega\) 相差很大}
+
+\(h_1=2.41\,\mathrm m\) 对应
+
+\[\rho_1=\sqrt{l^2-h_1^2/4}\approx3.414\,\mathrm m,\]
+
+小球离轴很远，阻力耗散强，仅从功率平衡得到很小的
+\(\omega_1\)。实际力学平衡却要求
+
+\[h\approx7.07\,\mathrm m,\]
+
+此时
+
+\[\rho\approx\sqrt{3.62^2-7.074^2/4}\approx0.770\,\mathrm m.\]
+
+小球离轴显著缩近，同一输出功率下可达到更高转速。这个几何变化解释了
+\(0.273\) 与 \(2.07\,\mathrm{rad/s}\) 的数量级差，不应把它当成计算异常。
+
+\newpage
+
+\section{第 4 题}\label{ux7b2c-4-ux9898}
+
+用焦距为 \(f\) 的薄透镜 \(L\) 模拟眼球晶状体，直径为 \(D\) 的瞳孔 \(P\)
+紧贴透镜，视网膜 \(R\) 上感光细胞间距为
+\(\delta=2\,\mu\mathrm m\)，透镜到视网膜的距离为
+\(d=2.4\,\mathrm{cm}\)。物体 \(S\) 到透镜的距离为
+\(u\)。整个模型位于空气中，不考虑衍射，结果保留两位有效数字。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  正常眼观看 \(25\,\mathrm{cm}\)
+  处物体时，两物点的最小可分辨间距为多少？
+\item
+  某近视眼不戴眼镜，室内瞳孔直径 \(D=8\,\mathrm{mm}\)，此时恰能分辨
+  \(15\,\mathrm{cm}\) 处相距 \(1\,\mathrm{mm}\)
+  的两点。采用类似瑞利判据：一个像点的弥散斑边缘恰好经过相邻像点中心时，两点刚好可分辨。求晶状体的等效焦距。
+\item
+  承接第 2 问，保持等效焦距不变，将瞳孔直径缩小为
+  \(2\,\mathrm{mm}\)。观看 \(15\,\mathrm{cm}\)
+  处物体时，两物点的最小可分辨间距为多少？
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图 4-1　薄透镜---瞳孔---视网膜模型及物距 u、像距 d 和孔径 D 的定义。}]{../figures/question-04.pdf}
+\caption*{图 4-1　薄透镜---瞳孔---视网膜模型及物距 \(u\)、像距 \(d\)
+和孔径 \(D\) 的定义。}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-3}
+
+清晰成像时由细胞间距反算物方距离；离焦时比较斑半径与斑中心间距。缩孔只减小几何离焦斑，最后还要与细胞采样下限比较。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-3}
+
+\begin{itemize}
+\tightlist
+\item
+  近轴条件下 \(\Delta y'=d\Delta y/u\)。
+\item
+  薄透镜成像公式 \(1/f=1/u+1/v\)。
+\item
+  孔径有限时的离焦弥散斑。
+\item
+  光锥相似三角形。
+\item
+  分辨判据与缩孔效应。
+\end{itemize}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-3}
+
+一个物点经薄透镜后，通过直径 \(D\)
+的光束本应聚到几何像面的一点。若像面不与视网膜重合，光锥在视网膜上截成圆斑。缩小瞳孔就是缩细光锥，所以在题设忽略衍射的模型中会减小弥散斑。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-3}
+
+第 1 问把感光细胞间距 \(\delta\) 折算回物方。第 2 问引入真实几何像距
+\(v\)，先用图 4-2 的相似三角形求 \(v\)，再由薄透镜公式求
+\(f\)。注意题设判据对应的是弥散斑半径，而不是直径。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-3}
+
+图 4-2
+中，蓝色和红色光锥对应两个物点。几何聚焦点在视网膜前方，光束越过焦点后再扩张；视网膜上弥散斑半径由瞳孔半径
+\(D/2\) 按相似三角形缩放。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.721\linewidth,height=\textheight,keepaspectratio,alt={图 4-2　两物点的光锥在视网膜上形成弥散斑；斑半径与瞳孔直径成正比。}]{../figures/solution-04.pdf}
+\caption*{图
+4-2　两物点的光锥在视网膜上形成弥散斑；斑半径与瞳孔直径成正比。}
+\end{figure}
+
+\Needspace{3\baselineskip}
+\textbf{1. 由感光细胞间距折算物方间距}
+
+设两物点间距为 \(\Delta s\)。它们对眼的角间距近似为
+
+\[\Delta\theta\approx\frac{\Delta s}{u}.\]
+
+在距透镜 \(d\) 的视网膜上，两像中心间距为
+
+\[\Delta s'=d\Delta\theta=\frac d u\Delta s.\]
+
+刚好可分辨时取 \(\Delta s'=\delta\)，于是
+
+\[\Delta s_{\min}=\frac u d\delta.\]
+
+代入
+\(u=25\,\mathrm{cm}\)、\(d=2.4\,\mathrm{cm}\)、\(\delta=2\,\mu\mathrm m\)：
+
+\[
+\begin{aligned}
+\Delta s_{\min}
+&=\frac{25}{2.4}\times2\,\mu\mathrm m\\
+&=20.833\,\mu\mathrm m.
+\end{aligned}
+\]
+
+保留两位有效数字：
+
+\[\boxed{\Delta s_{\min}\approx21\,\mu\mathrm m}.\]
+
+\Needspace{3\baselineskip}
+\textbf{2. 由弥散斑判据确定像距}
+
+设几何聚焦面到透镜距离为
+\(v\)。近视眼在该物距下的像面位于视网膜之前，所以 \(v<d\)。
+
+光锥在透镜处半径为
+\(D/2\)，在焦点处为零，越过焦点到视网膜时的弥散斑半径记为
+\(r_b\)。由相似三角形：
+
+\[\frac{r_b}{d-v}=\frac{D/2}{v}.\]
+
+故
+
+\[\boxed{r_b=\frac D2\frac{d-v}{v}}. \tag{1}\]
+
+两物点物方间距
+\(\Delta s=1\,\mathrm{mm}\)。通过透镜光心的主光线不偏折，所以它们在视网膜平面上的中心间距为
+
+\[\Delta s_R=\frac d u\Delta s.\]
+
+用毫米统一单位：
+
+\[
+\begin{aligned}
+\Delta s_R
+&=\frac{24}{150}\times1\,\mathrm{mm}\\
+&=0.16\,\mathrm{mm}.
+\end{aligned}
+\]
+
+``一个弥散斑的边缘恰好经过另一像点中心''意味着
+
+\[r_b=\Delta s_R=0.16\,\mathrm{mm}.\]
+
+把 \(D/2=4\,\mathrm{mm}\) 代入式（1）：
+
+\[4\frac{d-v}{v}=0.16.\]
+
+逐步整理：
+
+\[
+\begin{aligned}
+\frac{d-v}{v}&=0.04=\frac1{25},\\
+25(d-v)&=v,\\
+25d-25v&=v,\\
+25d&=26v,\\
+v&=\frac{25}{26}d.
+\end{aligned}
+\]
+
+故
+
+\[v=\frac{25}{26}\times2.4\,\mathrm{cm}=2.3077\,\mathrm{cm}.\]
+
+由薄透镜公式
+
+\[\frac1f=\frac1u+\frac1v,\]
+
+得到
+
+\[
+\begin{aligned}
+f
+&=\frac{uv}{u+v}\\
+&=\frac{15\times2.3077}{15+2.3077}\,\mathrm{cm}\\
+&=2.0000\,\mathrm{cm}.
+\end{aligned}
+\]
+
+所以
+
+\[\boxed{f=2.0\,\mathrm{cm}}.\]
+
+\Needspace{3\baselineskip}
+\textbf{3. 缩小瞳孔后的分辨率}
+
+\(u\)、\(f\)、\(d\) 不变，所以 \(v\) 与比例 \((d-v)/v\)
+不变。由式（1），弥散斑半径与 \(D\) 成正比。
+
+\[\frac{D_2}{D_1}=\frac28=\frac14.\]
+
+新弥散斑半径为
+
+\[r_{b2}=\frac14r_{b1}=\frac14\times0.16\,\mathrm{mm}=0.040\,\mathrm{mm}.\]
+
+设新最小物点间距为 \(\Delta s_2\)，刚好可分辨时
+
+\[\frac d u\Delta s_2=r_{b2}.\]
+
+所以
+
+\[
+\begin{aligned}
+\Delta s_2
+&=\frac u d r_{b2}\\
+&=\frac{150}{24}\times0.040\,\mathrm{mm}\\
+&=0.25\,\mathrm{mm}.
+\end{aligned}
+\]
+
+即
+
+\[\boxed{\Delta s_{2,\min}=0.25\,\mathrm{mm}}.\]
+
+\Needspace{3\baselineskip}
+\textbf{光线图与采样下限的核对}
+
+第2问几何像距为 \(v=23.0769\,\mathrm{mm}\)，视网膜在
+\(d=24\,\mathrm{mm}\)，所以两束光都要在视网膜前聚焦，再扩张到视网膜。解析图标出这两个平面，并在放大图中比较斑半径
+\(r_b\) 与斑中心间距，不能把尚未聚焦的两条线直接当成离焦斑。
+
+瞳孔直径D沿透镜平面竖直量取；它不等于透镜与瞳孔之间的水平间距。二者题设紧贴，横向间隔只作线型辨识，所有距离仍由透镜平面起量。
+
+在15 cm物距下，细胞采样折算为
+\(u\delta/d=12.5\,\mu\mathrm m\)；缩孔后的离焦限制为250
+\(\mu\mathrm m\)，仍远大于采样下限，故原第三问结果由离焦决定。若继续缩孔到两者相等，临界D约为0.10
+mm；再缩小，在这个忽略衍射的模型中也不能越过细胞采样下限。实际眼睛的衍射与像差不在本题的计算范围。
+
+\Needspace{3\baselineskip}
+\textbf{像差斑与物方间距的换算}
+
+物点距透镜 \(u\)，薄透镜像距为 \(v=fu/(u-f)\)。光锥在视网膜 \(d\ne v\)
+处截面的半径是
+
+\[r_b=\frac D2\frac{|v-d|}{v}.\]
+
+两个物点间距 \(\Delta s\) 在视网膜上对应的主光线间距为
+\(d\Delta s/u\)。采用题中的``一个斑边缘经过相邻像点中心''判据，
+
+\[\frac d u\Delta s\ge r_b\quad\Longrightarrow\quad
+\Delta s\ge\frac{u}{d}r_b.\]
+
+这不是以几何像平面的放大率 \(v/u\) 换算。视网膜位置固定，应始终使用
+\(d/u\)。减小瞳孔直径 \(D\)，几何弥散斑线性缩小，但衍射斑约与 \(1/D\)
+成正比；因此题中的几何模型只适用于衍射尚可忽略的口径区间，不能据此断言瞳孔越小辨识能力越好。
+
+\Needspace{3\baselineskip}
+\textbf{把第2、3问的毫米数全部放回光线关系}
+
+第2问 \(u=150\) mm、\(d=24\) mm、\(D=8\) mm，物点间距1
+mm给视网膜中心间距0.16 mm。按半径判据，
+
+\[r_b=0.16\ \mathrm{mm},\qquad
+4(d/v-1)=0.16.\]
+
+所以 \(d/v=1.04\)、\(v=24/1.04=23.076923\) mm，
+
+\[\frac1f=\frac1{150}+\frac1{23.076923}=\frac1{20}.\]
+
+这确认焦平面在视网膜前。缩孔至2
+mm时，像距不变，半径缩为原来的1/4，即0.04 mm，物方阈值为
+
+\[\Delta s=\frac{150}{24}\times0.04=0.25\ \mathrm{mm}.\]
+
+细胞采样下限为 \((150/24)\times0.002=0.0125\)
+mm，仍小得多，因此最终阈值取0.25 mm。若误用直径0.08 mm，会得到0.50
+mm，正好偏大两倍；这也是检查分辨判据时最方便的数值诊断。
+
+上述主光线在视网膜处的中心间距与孔径无关，而弥散斑半径与孔径成正比。图中实线光锥、焦点和视网膜三个位置应分别辨识，不能只画两束彼此交叉的线而不说明在哪个平面比较。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf-3}
+
+``弥散斑边缘到相邻像点中心''对应的是弥散斑半径。另一个本质点是：离焦时虽没有清晰像点，但弥散斑中心仍由过光心的主光线确定，其间距是
+\(d\Delta s/u\)，不是 \(v\Delta s/u\)。
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9-3}
+
+\begin{itemize}
+\tightlist
+\item
+  把像方间距与物方间距的换算颠倒：像方为 \(d\Delta s/u\)，反算物方才乘
+  \(u/d\)。
+\item
+  把 \(D=8\,\mathrm{mm}\) 直接当作光锥半径，漏掉因子 \(1/2\)。
+\item
+  把弥散斑直径等于两像点间距，与题设判据不符。
+\item
+  不判断 \(v<d\) 就使用 \(d-v\)；若像面在视网膜后应使用 \(|d-v|\)。
+\item
+  忽略题目``不考虑衍射''的限定，把``缩孔总能提高分辨率''外推到真实眼睛。
+\end{itemize}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae-3}
+
+先画单个物点的完整光锥，标出 \(D/2\)、\(v\)、\(d-v\) 与
+\(r_b\)。等学生写出 \(r_b/(d-v)=(D/2)/v\)
+后，再叠加第二个光锥讲分辨判据，避免同时追踪过多光线。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3-3}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  若几何像面在视网膜后方，即 \(v>d\)，重新画图并证明
+  \(r_b=(D/2)(v-d)/v\)。
+\item
+  若考虑衍射，设衍射斑尺度正比于 \(1/D\)，离焦斑尺度正比于
+  \(D\)。用两者平方和估计总模糊尺度，并说明为何存在最佳孔径。
+\end{enumerate}
+
+\Needspace{3\baselineskip}
+\textbf{教师备课补充：三个尺度必须严格区分}
+
+本题同时出现：
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  真实几何像面上的像高，比例为 \(v/u\)；
+\item
+  视网膜平面上两条主光线的交点间距，比例为 \(d/u\)；
+\item
+  单个物点在视网膜上的弥散斑半径，比例为 \((D/2)|d-v|/v\)。
+\end{enumerate}
+
+这三个量在清晰成像 \(v=d\) 时会部分重合，离焦后却绝不能混用。第 2
+问的判据比较的是第 2 项与第 3 项：
+
+\[
+\frac d u\Delta s
+=\frac D2\frac{d-v}{v}.
+\]
+
+直接交叉相乘可得一个适合一般参数的公式：
+
+\[
+\Delta s
+=\frac{Du}{2d}\frac{d-v}{v}. \tag{A}
+\]
+
+若已知最小分辨物距间隔 \(\Delta s\)，式（A）可直接解出
+
+\[
+\frac{d-v}{v}=\frac{2d\Delta s}{Du},
+\]
+
+\[
+v=\frac{d}{1+2d\Delta s/(Du)}.
+\]
+
+将本题数据代入，分母修正量为
+
+\[
+\frac{2d\Delta s}{Du}
+=\frac{2\times24\times1}{8\times150}
+=0.04,
+\]
+
+所以
+\(v=d/1.04=25d/26\)。这一通式可作为黑板上的总结公式，但正式解答仍建议先从相似三角形推导，避免学生只记结论。
+
+\Needspace{3\baselineskip}
+\textbf{数量级与模型边界}
+
+第 1 问得到 \(21\,\mu\mathrm m\)，约为细胞间距 \(2\,\mu\mathrm m\) 的
+\(25/2.4\approx10.4\) 倍，符合从视网膜反投影到 \(25\,\mathrm{cm}\)
+物面的量级。第 3 问瞳孔缩小为原来的
+\(1/4\)，在纯几何离焦模型中分辨距离也缩小为原来的
+\(1/4\)。但真实光学中衍射斑半径约按 \(\lambda d/D\) 增大，所以 \(D\to0\)
+不可能令分辨率无限提高。题目明确排除衍射，解答才可使用线性比例。
+
+\Needspace{3\baselineskip}
+\textbf{教师备课补充：一般离焦分辨公式}
+
+将物点间距记为 \(s\)，弥散斑半径记为 \(r_b\)。一般地，
+
+\[r_b=\frac D2\frac{|d-v|}{v},\]
+
+而两斑中心间距为
+
+\[s_R=\frac d u s.\]
+
+按本题判据 \(r_b=s_R\)：
+
+\[
+s_{\min}
+=\frac{Du}{2d}\frac{|d-v|}{v}. \tag{B}
+\]
+
+再用
+
+\[v=\frac{uf}{u-f}\]
+
+消去 \(v\)。因为
+
+\[
+\frac{d-v}{v}
+=\frac d v-1
+=d\left(\frac1f-\frac1u\right)-1,
+\]
+
+可得
+
+\[
+\boxed{
+s_{\min}
+=\frac{Du}{2d}
+\left|
+\frac d f-\frac d u-1
+\right|
+}. \tag{C}
+\]
+
+式（C）直接展示三种依赖：
+
+\begin{itemize}
+\tightlist
+\item
+  对给定离焦量，\(s_{\min}\propto D\)；
+\item
+  当 \(1/f=1/u+1/d\) 时括号为零，几何离焦完全消失；
+\item
+  同一焦距下改变物距 \(u\)
+  会改变离焦量，缩孔带来的改善比例虽仍线性，但绝对分辨率不同。
+\end{itemize}
+
+用第 2 问
+\(u=15\,\mathrm{cm}\)、\(f=2.0\,\mathrm{cm}\)、\(d=2.4\,\mathrm{cm}\)：
+
+\[
+\frac d f-\frac d u-1
+=1.2-0.16-1
+=0.04.
+\]
+
+于是
+
+\[
+s_{\min}
+=\frac{8\times150}{2\times24}\times0.04\,\mathrm{mm}
+=1.0\,\mathrm{mm},
+\]
+
+与题设反推完全一致。
+
+\Needspace{3\baselineskip}
+\textbf{清晰成像极限与细胞采样极限}
+
+若
+\(v=d\)，式（B）给出几何离焦限制为零，但真实模型仍受感光细胞间距限制：
+
+\[s_{\mathrm{cell}}=\frac u d\delta.\]
+
+因此完整的几何模型至少应取
+
+\[
+s_{\min}\ge
+\max\left(
+\frac u d\delta,\,
+\frac{Du}{2d}\frac{|d-v|}{v}
+\right).
+\]
+
+第 1 问考查前一项，第 2、3
+问主要考查后一项。教师讲解时可指出：两种限制不是同一公式的两次代入，而是两个不同的成像瓶颈。
+
+\newpage
+
+\section{第 5 题}\label{ux7b2c-5-ux9898}
+
+如图所示为一个六芒星形无源电磁网络。六个外部顶点分别是相通的电路节点；除这些顶点外，图中导线虽有交叉，但交叉处彼此不相通。外环相邻节点之间的电容均为
+\(C\)，内部次近邻节点之间的电感均为
+\(L\)。求该电路所有有限的谐振角频率。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.656\linewidth,height=\textheight,keepaspectratio,alt={图 5-1　六节点周期电磁网络：外环为相邻节点间的电容，内部两组三角形支路为次近邻节点间的电感；交叉处不连接。}]{../figures/question-05.pdf}
+\caption*{图
+5-1　六节点周期电磁网络：外环为相邻节点间的电容，内部两组三角形支路为次近邻节点间的电感；交叉处不连接。}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-4}
+
+先把交叉网络读成六节点邻接表，再用离散傅里叶模化简节点方程。有限正频率、静电零模和整体等电位方向分别判断，不能由图形外观增加连接。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-4}
+
+\begin{itemize}
+\tightlist
+\item
+  电容支路电流 \(I_C=C\,\mathrm d(U_n-U_j)/\mathrm dt\)。
+\item
+  电感支路的电压---电流关系与二阶振荡方程。
+\item
+  环形离散平移对称性。
+\item
+  正常模假设 \(U_n\propto e^{-in\phi}\)。
+\item
+  本征频率简并与全节点等电位零模。
+\end{itemize}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-4}
+
+把六个顶点按圆周编号为 \(n=0,1,\ldots,5\)。电容只比较相邻节点 \(n\pm1\)
+的电势差，电感只比较次近邻节点 \(n\pm2\)
+的电势差。若各节点电压沿圆周每前进一步都乘同一相位因子
+\(e^{-i\phi}\)，所有节点的方程便完全相同，六自由度问题缩成一个代数方程。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-4}
+
+设
+
+\[\widetilde U_n=U_0e^{i\omega t-in\phi}.\]
+
+由于绕六个节点一周后必须回到同一电压，
+
+\[e^{-i6\phi}=1,\]
+
+所以
+
+\[\phi=\frac{2\pi m}{6},\qquad m=0,1,\ldots,5.\]
+
+接下来只需对一个节点写基尔霍夫电流定律，并用
+\(e^{\pm i\phi}\)、\(e^{\pm i2\phi}\) 代替相邻和次近邻节点电压。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-4}
+
+图 5-2 把六个离散波数 \(m\) 对应的无量纲本征值 \(\omega^2LC\)
+画出。\(m\) 与 \(6-m\) 为复共轭行波，它们具有相同频率；\(m=0\)
+时所有节点等电位，所有元件两端电压均为零，因而它不是有限频率振荡模。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.665\linewidth,height=\textheight,keepaspectratio,alt={图 5-2　六个离散傅里叶模的本征值；共轭模 m 与 6-m 简并。}]{../figures/solution-05.pdf}
+\caption*{图 5-2　六个离散傅里叶模的本征值；共轭模 \(m\) 与 \(6-m\)
+简并。}
+\end{figure}
+
+\Needspace{3\baselineskip}
+\textbf{1. 建立节点方程}
+
+对节点 \(n\)，两条电容支路连接到 \(n+1\) 和 \(n-1\)；两条电感支路连接到
+\(n+2\) 和 \(n-2\)，下标均按模 \(6\)
+理解。原图中内部支路与其他导线的交叉处不相通，因此六只电感实际构成偶数节点三角形与奇数节点三角形。
+
+为了避免同时保留电感电流未知量，可先对节点电流方程关于时间再求一次导数。电容电流的一阶导数为
+
+\[
+\frac{\mathrm d I_{C,nj}}{\mathrm dt}
+=C\frac{\mathrm d^2}{\mathrm dt^2}(U_n-U_j),
+\]
+
+电感满足
+
+\[L\frac{\mathrm d I_{L,nj}}{\mathrm dt}=U_n-U_j,\]
+
+故
+
+\[\frac{\mathrm d I_{L,nj}}{\mathrm dt}=\frac{U_n-U_j}{L}.\]
+
+对节点 KCL 求导后，有
+
+\[
+C\frac{\mathrm d^2}{\mathrm dt^2}
+\left[(U_n-U_{n+1})+(U_n-U_{n-1})\right]
++\frac1L\left[(U_n-U_{n+2})+(U_n-U_{n-2})\right]=0.
+\]
+
+代入简谐时间因子 \(e^{i\omega t}\)，二阶时间导数给出 \(-\omega^2\)：
+
+\[
+-\omega^2C
+\left[(U_n-U_{n+1})+(U_n-U_{n-1})\right]
++\frac1L\left[(U_n-U_{n+2})+(U_n-U_{n-2})\right]=0.
+\]
+
+两边乘以 \(L\)，并定义
+
+\[\lambda=\omega^2LC,\]
+
+得到
+
+\[
+\lambda[(U_n-U_{n+1})+(U_n-U_{n-1})]
+-[(U_n-U_{n+2})+(U_n-U_{n-2})]=0. \tag{1}
+\]
+
+这与前述循环节点方程完全一致。
+
+\Needspace{3\baselineskip}
+\textbf{2. 代入离散傅里叶模}
+
+由
+
+\[U_{n+1}=U_ne^{-i\phi},\qquad U_{n-1}=U_ne^{i\phi},\]
+
+以及
+
+\[U_{n+2}=U_ne^{-i2\phi},\qquad U_{n-2}=U_ne^{i2\phi},\]
+
+将式（1）除以非零的 \(U_n\)：
+
+\[
+\lambda[(1-e^{-i\phi})+(1-e^{i\phi})]
+-[(1-e^{-i2\phi})+(1-e^{i2\phi})]=0.
+\]
+
+分别整理两个括号：
+
+\[
+(1-e^{-i\phi})+(1-e^{i\phi})
+=2-(e^{i\phi}+e^{-i\phi})
+=2-2\cos\phi,
+\]
+
+\[
+(1-e^{-i2\phi})+(1-e^{i2\phi})
+=2-2\cos2\phi.
+\]
+
+因此
+
+\[
+\lambda(2-2\cos\phi)-(2-2\cos2\phi)=0,
+\]
+
+从而
+
+\[\boxed{\lambda=\frac{2-2\cos2\phi}{2-2\cos\phi}}. \tag{2}\]
+
+\Needspace{3\baselineskip}
+\textbf{3. 逐个计算六个模}
+
+允许的相位为 \(\phi_m=m\pi/3\)。
+
+当 \(m=1\) 或 \(5\) 时，\(\phi=\pm\pi/3\)：
+
+\[
+\begin{aligned}
+\lambda
+&=\frac{2-2\cos(2\pi/3)}{2-2\cos(\pi/3)}\\
+&=\frac{2-2(-1/2)}{2-2(1/2)}\\
+&=\frac3{1}=3.
+\end{aligned}
+\]
+
+所以
+
+\[\omega_{1,5}=\sqrt{\frac3{LC}}.\]
+
+当 \(m=2\) 或 \(4\) 时，\(\phi=\pm2\pi/3\)：
+
+\[
+\begin{aligned}
+\lambda
+&=\frac{2-2\cos(4\pi/3)}{2-2\cos(2\pi/3)}\\
+&=\frac{2-2(-1/2)}{2-2(-1/2)}\\
+&=1,
+\end{aligned}
+\]
+
+所以
+
+\[\omega_{2,4}=\frac1{\sqrt{LC}}.\]
+
+当 \(m=3\) 时，\(\phi=\pi\)：
+
+\[
+\begin{aligned}
+\lambda
+&=\frac{2-2\cos2\pi}{2-2\cos\pi}\\
+&=\frac{2-2\times1}{2-2\times(-1)}\\
+&=\frac04\\
+&=0.
+\end{aligned}
+\]
+
+该模中节点电压依次为
+\(+U,-U,+U,-U,+U,-U\)。同一奇偶三角形内的三个节点电压完全相等，所以每只电感两端电压为零；电容上虽可保留静态电荷，却没有电感电流提供恢复振荡。故它是零频静电模，不是有限频率谐振。
+
+\textbf{结果校核：} 若在 \(m=3\) 行把式（2）的分子误写成 \(2\)，会得到
+\(\omega^2=1/(2LC)\)。但 \(\cos 2\pi=1\)，分子应为
+\(2-2\cos2\pi=0\)。该处还可用电路图像交叉验证：\(m=3\)
+时两套电感三角形内部各自等电位，全部电感均无电势差，不能形成有限频率振荡。因此
+\(m=3\) 只能是静电零模，不能多计一个有限频率。
+
+\(m=0\)
+时所有节点电压相同，所有元件两端电压均为零，属于整体电势平移的冗余零模；\(m=3\)
+是具有非零电容电压的静电零模。两者都不列入有限谐振频率。
+
+综上，两种不同的有限谐振角频率为
+
+\[\boxed{
+\omega=\frac1{\sqrt{LC}},\qquad
+\omega=\sqrt{\frac3{LC}}
+}.\]
+
+两者各有一对共轭简并模。
+
+\Needspace{3\baselineskip}
+\textbf{从真实支路核对模式}
+
+以顶点按圆周编号，电容的端点是 \((0,1),(1,2),\ldots,(5,0)\)；电感端点是
+\((0,2),(2,4),(4,0)\) 与
+\((1,3),(3,5),(5,1)\)。图中的每只元件都沿这条端点关系重画，内部无节点标记的交叉不连接。顶点编号放在节点旁，不能集中写在图中心后让读者猜对应。
+
+在 \(m=1\) 的实模上，节点电压比例
+\((1,1/2,-1/2,-1,-1/2,1/2)\)，电容拉普拉斯作用给原向量1倍，电感拉普拉斯给3倍。\(m=2\)
+的余弦模给两者各3倍。另用六节点矩阵求广义本征值可得非平凡五维空间中的
+\(0,1,1,3,3\)，与两种有限正频率相符。
+
+广义本征问题的整体等电位方向必须先去除：\(m=0\)
+的分子与分母都为0，不能用任意有限数给它赋频率。\(m=3\)
+的分母为4、分子为0，才是真正的静电零频模。图上只标六个允许波数，连线仅辅助比较，不能解释为连续允许频谱。
+
+\Needspace{3\baselineskip}
+\textbf{在每个节点写电流守恒后再约去模因子}
+
+令 \(V_j=V e^{i(qj-\omega t)}\)。相邻电容的总电流含空间因子
+\(2-2\cos q\)，次近邻电感含 \(2-2\cos2q\)。节点方程给
+
+\[\omega^2LC(1-\cos q)=1-\cos2q.\]
+
+只在 \(q\ne0\) 时约去 \(1-\cos q\)，得到
+
+\[\omega^2LC=\frac{1-\cos2q}{1-\cos q}=2(1+\cos q)=4\cos^2(q/2).\]
+
+六节点允许 \(q=2\pi m/6\)。代 \(m=1,2,3,4,5\)，依次为
+\(3,1,0,1,3\)。\(m=0\) 的原节点式是
+\(0=0\)，所有节点等势，元件没有电压和振荡能量，不能从约分后的极限4给它虚构频率。\(m=3\)
+时电容电压可以非零，次近邻却等势，因此是不同的静态零模。图上只画后者的零点。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf-4}
+
+对称性不是``看起来很对称''这样一句定性描述，而是告诉我们应选择怎样的基底：在节点编号每平移一格时只乘一个相位因子的离散行波基底。这个基底把循环耦合矩阵直接对角化，六元联立方程因而变成六次代入同一个标量公式。
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9-4}
+
+\begin{itemize}
+\tightlist
+\item
+  把内部导线交叉处全部当成相通节点，改变了网络拓扑。
+\item
+  在电容支路与电感支路中都只写电势差，却忘记两类元件对应的时间微分阶数不同。
+\item
+  代入 \(e^{-in\phi}\) 时把 \(n+1\) 对应的因子写成 \(e^{+i\phi}\)。
+\item
+  忽略 \(m\) 与 \(6-m\) 的简并，误报五种不同的频率。
+\item
+  把全节点等电位的 \(m=0\) 模列为普通有限频率谐振。
+\end{itemize}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae-4}
+
+先用六个学生围成一圈模拟节点，让第 \(n\)
+人的``电压''比前一人多固定相位。只要说明相邻差和次近邻差在每个位置具有同一形式，学生便能理解为什么只写一个节点方程。之后再把
+\(m=1\) 与 \(m=5\) 解释为顺、逆时针行波，简并就不再只是代数巧合。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3-4}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  将六节点推广为 \(N\) 节点，电容连接相邻节点，电感连接第 \(p\)
+  个近邻。写出一般色散关系。
+\item
+  若其中一个电容变为
+  \(C+\Delta C\)，旋转对称性被破坏。讨论原先的二重简并是否会劈裂，并说明可用何种小参数方法估计频率移动。
+\end{enumerate}
+
+\Needspace{3\baselineskip}
+\textbf{教师备课补充：用实驻波理解简并}
+
+离散傅里叶模 \(e^{-in\phi}\) 是复数形式，实际节点电压可取其实部或虚部：
+
+\[U_n^{(c)}=U_0\cos(n\phi),\qquad
+U_n^{(s)}=U_0\sin(n\phi).\]
+
+当 \(m=1\) 时，\(\phi=\pi/3\)，两组实模分别是
+
+\[
+U^{(c)}\propto
+\left(1,\frac12,-\frac12,-1,-\frac12,\frac12\right),
+\]
+
+\[
+U^{(s)}\propto
+\left(0,\frac{\sqrt3}{2},\frac{\sqrt3}{2},0,
+-\frac{\sqrt3}{2},-\frac{\sqrt3}{2}\right).
+\]
+
+它们线性独立却具有同一频率 \(\sqrt{3/(LC)}\)，这就是二重简并。\(m=5\)
+并不是第三、第四个独立实模，而是 \(m=1\) 的复共轭表示。
+
+当 \(m=2\) 时同理得到另一对实驻波，频率为 \(1/\sqrt{LC}\)。
+
+当 \(m=3\) 时
+
+\[U_n\propto(-1)^n.\]
+
+所有偶数节点等电位，所有奇数节点等电位。每一只电感都连接同奇偶性的节点，所以
+
+\[U_L=0.\]
+
+这比代入三角函数更能一眼看出为什么该模没有磁场恢复力。若计算中多出
+\(1/\sqrt{2LC}\)，这一电位模式图就是最直接的物理反证。
+
+\Needspace{3\baselineskip}
+\textbf{矩阵形式的交叉核验}
+
+令
+\(\bm U=(U_0,\ldots,U_5)^\mathsf T\)。相邻节点的离散拉普拉斯矩阵本征值为
+
+\[\mu_C(m)=2-2\cos\phi_m,\]
+
+次近邻三角形网络的拉普拉斯本征值为
+
+\[\mu_L(m)=2-2\cos2\phi_m.\]
+
+振荡方程是
+
+\[\omega^2LC\,\mu_C(m)=\mu_L(m).\]
+
+有限频率要求 \(\mu_C>0\) 且 \(\mu_L>0\)。逐项检查：
+
+\[
+\begin{array}{c|cccccc}
+m&0&1&2&3&4&5\\ \hline
+\mu_C&0&1&3&4&3&1\\
+\mu_L&0&3&3&0&3&3
+\end{array}
+\]
+
+因此比值只产生
+\(3,1,0,1,3\)，再次确认有限频率只有两种。这个表格适合教师备课核验，不必全部展示给第一次接触正常模的学生。
+
+\Needspace{3\baselineskip}
+\textbf{教师备课补充：一般 \(N\) 节点色散关系}
+
+若把六节点推广为 \(N\) 节点，电容连接相邻节点，电感连接相距 \(p\)
+个节点的节点，取
+
+\[
+U_n=U_0e^{i\omega t-i2\pi mn/N},
+\]
+
+则电容拉普拉斯本征值为
+
+\[
+\mu_C(m)=2-2\cos\frac{2\pi m}{N},
+\]
+
+电感拉普拉斯本征值为
+
+\[
+\mu_L(m)=2-2\cos\frac{2\pi pm}{N}.
+\]
+
+因此
+
+\[
+\boxed{
+\omega_m^2
+=\frac1{LC}
+\frac{2-2\cos(2\pi pm/N)}
+{2-2\cos(2\pi m/N)}
+}. \tag{A}
+\]
+
+本题取
+\(N=6\)、\(p=2\)，立即恢复正文式（2）。这个一般式还有两个重要结论：
+
+第一，若
+
+\[pm\equiv0\pmod N,\]
+
+则 \(\mu_L=0\)。只要同时 \(\mu_C\ne0\)，就出现非平凡静电零模。本题
+\(p=2,m=3\) 正是如此。
+
+第二，若网络参数完全均匀，\(m\) 与 \(N-m\)
+总是简并，因为余弦为偶函数。若破坏镜像或旋转对称性，该简并通常劈裂。
+
+\Needspace{3\baselineskip}
+\textbf{能量正定性核验}
+
+无源理想 \(LC\) 网络的有限本征频率必须满足
+
+\[\omega^2\ge0.\]
+
+式（2）的分子、分母都是
+
+\[2-2\cos q=4\sin^2\frac q2\ge0.\]
+
+因此不会产生负的
+\(\omega^2\)。若节点方程符号写反，可能得到负本征值；这与电容电能
+
+\[E_C=\frac12\sum C(U_i-U_j)^2\]
+
+和电感磁能均非负相矛盾，是检查 KCL 正负号的一条物理标准。
+
+\Needspace{16\baselineskip}
+
+\Needspace{3\baselineskip}
+\textbf{图形阅读的规范步骤}
+
+面对交叉网络，不应先凭图形外观命名``内环''\,``外环''，而应执行：
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  给真正相通的节点编号；
+\item
+  对每只元件记录两个端点；
+\item
+  将交叉但无节点圆点的位置明确排除；
+\item
+  形成邻接表后再写矩阵。
+\end{enumerate}
+
+本题的电感邻接表是
+
+\[
+0\leftrightarrow2,4;\quad
+1\leftrightarrow3,5;\quad
+2\leftrightarrow0,4;\quad\ldots
+\]
+
+即两个互不相连的三角形。完成这一步后，\(m=3\)
+的零模几乎无需计算即可看出。
+
+\newpage
+
+\section{第 6 题}\label{ux7b2c-6-ux9898}
+
+一个``雨天使''具有四条相邻夹角均为 \(90^\circ\)
+的相同机械腿，每条腿由三节刚杆铰接而成，长度分别为
+\(l_1=l\)、\(l_2=l_3=3l\)。四条腿对称放置。考察其中一条腿所在的竖直平面：此刻
+\(l_1\) 竖直，\(l_2\)、\(l_3\) 与竖直方向的夹角均为
+\(\theta_2=\theta_3=30^\circ\)；足端固定在海面不动。杆 \(l_1\)
+向外，即图中逆时针方向，以恒定角速度 \(\omega\) 转动；主体连接点 \(C\)
+同时以恒定速度 \(v_0\) 竖直向上运动。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  求此刻铰点 \(A\) 的速度和加速度。
+\item
+  求此刻铰点 \(B\) 的速度大小和加速度大小。
+\item
+  求杆 \(l_3\) 的角速度和角加速度，规定逆时针为正。
+\item
+  若在上述瞬时几何与速度条件下，主体还具有大小为
+  \(a_0\)、方向竖直向上的加速度，求杆 \(l_3\) 的角速度和角加速度。
+\item
+  非考查拓展：若杆 \(l_1\) 攧出纸面运动，同时保持点 \(B\)
+  位于题图平面内，其余条件不变，重新讨论第 4 问。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.586\linewidth,height=\textheight,keepaspectratio,alt={图 6-1　三节铰接腿在所考察竖直平面内的瞬时构形；l\_2=l\_3=3l，二者均与竖直方向成 30\^{}\textbackslash circ。}]{../figures/question-06.pdf}
+\caption*{图
+6-1　三节铰接腿在所考察竖直平面内的瞬时构形；\(l_2=l_3=3l\)，二者均与竖直方向成
+\(30^\circ\)。}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-5}
+
+已知A与C的瞬时运动后，用两根定长杆的一阶约束求B速度，二阶约束求B加速度。向心项与方向必须保留，空间拓展还要使用三维相对速度的模平方。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-5}
+
+\begin{itemize}
+\tightlist
+\item
+  刚体两点速度关系 \(\bm v_Q-\bm v_P=\bm\omega\times\bm r_{PQ}\)。
+\item
+  刚体两点加速度关系
+  \(\bm a_Q-\bm a_P=\bm\alpha\times\bm r_{PQ}-\omega^2\bm r_{PQ}\)。
+\item
+  定长约束的一次、二次时间微分。
+\item
+  杆向单位向量与法向单位向量的投影。
+\item
+  瞬时运动学中速度条件与加速度条件的分层。
+\end{itemize}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-5}
+
+点 \(A\) 在长度为 \(l\) 的第一节杆端作圆周运动；点 \(C\)
+的运动由主体直接给定。点 \(B\) 是两根长度均为 \(3l\)
+的杆的公共铰点，既要满足 \(AB\) 长度不变，又要满足 \(BC\) 长度不变。于是
+\(\bm v_B\) 是两条``允许速度直线''的唯一交点；\(\bm a_B\)
+则在此基础上再加入两个由杆角速度产生的向心投影。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-5}
+
+取水平向右为 \(\hat{\bm x}\)、竖直向上为 \(\hat{\bm y}\)。按图定义从
+\(A\) 指向 \(B\) 和从 \(B\) 指向 \(C\) 的单位向量：
+
+\[
+\bm e_2=\frac12\hat{\bm x}+\frac{\sqrt3}{2}\hat{\bm y},\qquad
+\bm e_3=\frac12\hat{\bm x}-\frac{\sqrt3}{2}\hat{\bm y}.
+\]
+
+对应逆时针法向单位向量为
+
+\[
+\bm n_2=-\frac{\sqrt3}{2}\hat{\bm x}+\frac12\hat{\bm y},\qquad
+\bm n_3=\frac{\sqrt3}{2}\hat{\bm x}+\frac12\hat{\bm y}.
+\]
+
+然后依次使用
+
+\[
+(\bm v_B-\bm v_A)\cdot\bm e_2=0,\qquad
+(\bm v_C-\bm v_B)\cdot\bm e_3=0,
+\]
+
+以及两条二阶投影约束。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-5}
+
+图 6-2 把 \(A\)、\(B\)、\(C\)
+三点的已知和未知速度、加速度放在同一构形中。蓝色与红色矢量是边界端点给定运动，点B的运动由两条杆长约束联立得到；图中分别标出给定端点速度与求解所需的杆向、法向。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.568\linewidth,height=\textheight,keepaspectratio,alt={图 6-2　点 A、C 的给定运动以及两根定长杆对点 B 施加的速度、加速度约束。}]{../figures/solution-06.pdf}
+\caption*{图 6-2　点 \(A\)、\(C\) 的给定运动以及两根定长杆对点 \(B\)
+施加的速度、加速度约束。}
+\end{figure}
+
+\Needspace{3\baselineskip}
+\textbf{1. 第 1 问：点 \(A\) 的速度与加速度}
+
+第一节杆以恒定角速度 \(\omega\) 逆时针转动。此刻杆竖直，点 \(A\)
+位于固定足端的上方，所以切向速度水平向左：
+
+\[\boxed{\bm v_A=-\omega l\,\hat{\bm x}}. \tag{1}\]
+
+由于 \(\omega\)
+恒定，切向加速度为零，只有指向转轴的向心加速度。固定足端在 \(A\)
+下方，故
+
+\[\boxed{\bm a_A=-\omega^2l\,\hat{\bm y}}. \tag{2}\]
+
+因此速度、加速度大小分别为
+
+\[v_A=\omega l,\qquad a_A=\omega^2l.\]
+
+\Needspace{3\baselineskip}
+\textbf{2. 第 2 问：点 \(B\) 的速度}
+
+主体连接点
+
+\[\bm v_C=v_0\hat{\bm y}.\]
+
+设
+
+\[\bm v_B=v_x\hat{\bm x}+v_y\hat{\bm y}.\]
+
+杆 \(AB\) 长度不变，故相对速度沿杆方向的投影为零：
+
+\[
+(\bm v_B-\bm v_A)\cdot\bm e_2=0.
+\]
+
+逐项代入：
+
+\[
+\left[(v_x+\omega l)\hat{\bm x}+v_y\hat{\bm y}\right]
+\cdot
+\left(\frac12\hat{\bm x}+\frac{\sqrt3}{2}\hat{\bm y}\right)=0,
+\]
+
+即
+
+\[\frac12(v_x+\omega l)+\frac{\sqrt3}{2}v_y=0. \tag{3}\]
+
+杆 \(BC\) 长度不变：
+
+\[
+(\bm v_C-\bm v_B)\cdot\bm e_3=0.
+\]
+
+代入：
+
+\[
+\left[-v_x\hat{\bm x}+(v_0-v_y)\hat{\bm y}\right]
+\cdot
+\left(\frac12\hat{\bm x}-\frac{\sqrt3}{2}\hat{\bm y}\right)=0,
+\]
+
+所以
+
+\[-\frac12v_x-\frac{\sqrt3}{2}(v_0-v_y)=0. \tag{4}\]
+
+将式（3）、（4）同乘 \(2\)：
+
+\[
+\begin{cases}
+v_x+\sqrt3v_y=-\omega l,\\
+-v_x+\sqrt3v_y=\sqrt3v_0.
+\end{cases}
+\]
+
+两式相加：
+
+\[2\sqrt3v_y=\sqrt3v_0-\omega l,\]
+
+所以
+
+\[v_y=\frac{v_0}{2}-\frac{\omega l}{2\sqrt3}.\]
+
+再代回第一式：
+
+\[
+\begin{aligned}
+v_x
+&=-\omega l-\sqrt3v_y\\
+&=-\omega l-\frac{\sqrt3}{2}v_0+\frac12\omega l\\
+&=-\frac{\omega l}{2}-\frac{\sqrt3v_0}{2}.
+\end{aligned}
+\]
+
+故
+
+\[\boxed{
+\bm v_B=
+-\left(\frac{\omega l}{2}+\frac{\sqrt3v_0}{2}\right)\hat{\bm x}
++\left(\frac{v_0}{2}-\frac{\omega l}{2\sqrt3}\right)\hat{\bm y}
+}. \tag{5}\]
+
+速度大小的平方为
+
+\[
+\begin{aligned}
+v_B^2
+&=v_x^2+v_y^2\\
+&=\left(\frac{\omega l}{2}+\frac{\sqrt3v_0}{2}\right)^2
++\left(\frac{v_0}{2}-\frac{\omega l}{2\sqrt3}\right)^2\\
+&=\frac{\omega^2l^2}{4}+\frac{\sqrt3}{2}\omega lv_0+\frac{3v_0^2}{4}
++\frac{v_0^2}{4}-\frac{\omega lv_0}{2\sqrt3}+\frac{\omega^2l^2}{12}\\
+&=v_0^2+\frac13\omega^2l^2+\frac1{\sqrt3}\omega lv_0.
+\end{aligned}
+\]
+
+因此
+
+\[\boxed{
+v_B=\sqrt{v_0^2+\frac13\omega^2l^2+\frac1{\sqrt3}\omega lv_0}
+}. \tag{6}\]
+
+\Needspace{3\baselineskip}
+\textbf{3. 两根长杆的角速度}
+
+由刚体两点速度关系
+
+\[\bm v_B-\bm v_A=3l\,\dot\theta_2\bm n_2,\]
+
+在 \(\bm n_2\) 上投影：
+
+\[
+\dot\theta_2
+=\frac{(\bm v_B-\bm v_A)\cdot\bm n_2}{3l}
+=\frac{3v_0-\sqrt3\omega l}{9l}. \tag{7}
+\]
+
+同理，
+
+\[\bm v_C-\bm v_B=3l\,\dot\theta_3\bm n_3,\]
+
+所以
+
+\[
+\dot\theta_3
+=\frac{(\bm v_C-\bm v_B)\cdot\bm n_3}{3l}
+=\frac{3v_0+\sqrt3\omega l}{9l}.
+\]
+
+即杆 \(l_3\) 的角速度为
+
+\[\boxed{\omega_3=\dot\theta_3=\frac{v_0}{3l}+\frac{\omega}{3\sqrt3}}. \tag{8}\]
+
+该值为正，表示逆时针。
+
+\Needspace{3\baselineskip}
+\textbf{4. 点 \(B\) 的加速度}
+
+第 2 问中 \(\bm a_C=\bm0\)。设
+\(\bm a_B=a_x\hat{\bm x}+a_y\hat{\bm y}\)。
+
+对定长约束 \((\bm r_B-\bm r_A)^2=(3l)^2\) 连续求两次时间导数，可得
+
+\[
+(\bm a_B-\bm a_A)\cdot\bm e_2=-3l\dot\theta_2^2. \tag{9}
+\]
+
+同理，
+
+\[
+(\bm a_C-\bm a_B)\cdot\bm e_3=-3l\dot\theta_3^2. \tag{10}
+\]
+
+把 \(\bm a_A=-\omega^2l\hat{\bm y}\)、\(\bm a_C=0\)
+以及式（7）、（8）代入式（9）、（10）并解两元一次方程，得到
+
+\[\boxed{
+a_x=-\frac{\sqrt3}{2}\omega^2l
++\frac{4\sqrt3}{9}\omega v_0
+}. \tag{11}
+\]
+
+以及
+
+\[\boxed{
+a_y=-\frac{\omega^2l}{2}
+-\frac{2\omega^2l}{9\sqrt3}
+-\frac{2v_0^2}{9\sqrt3\,l}
+}. \tag{12}
+\]
+
+为了把没有跳步的代数核对清楚，可将二式分别写成共同分母：
+
+\[
+a_x=\frac{\sqrt3(-9\omega^2l+8\omega v_0)}{18},
+\]
+
+\[
+a_y=-\frac{(27+4\sqrt3)\omega^2l^2+12\sqrt3v_0^2}{54l}.
+\]
+
+因此
+
+\[
+\boxed{
+a_B=\sqrt{a_x^2+a_y^2}
+}. \tag{13}
+\]
+
+若需要完全展开：
+
+\[
+a_B=
+\sqrt{
+\frac{
+(247+18\sqrt3)\omega^4l^4
+-324\omega^3l^3v_0
++(168+54\sqrt3)\omega^2l^2v_0^2
++36v_0^4
+}{243l^2}
+}. \tag{14}
+\]
+
+\Needspace{3\baselineskip}
+\textbf{5. 第 3 问：杆 \(l_3\) 的角加速度}
+
+刚体加速度关系在 \(\bm n_3\) 上的投影给出
+
+\[
+(\bm a_C-\bm a_B)\cdot\bm n_3=3l\,\ddot\theta_3.
+\]
+
+代入 \(\bm a_C=0\)、\(\bm n_3=(\sqrt3/2)\hat{\bm x}+(1/2)\hat{\bm y}\)：
+
+\[
+\ddot\theta_3
+=\frac{-\frac{\sqrt3}{2}a_x-\frac12a_y}{3l}.
+\]
+
+将式（11）、（12）代入并逐项整理：
+
+\[
+\begin{aligned}
+\ddot\theta_3
+&=\frac{
+(27+\sqrt3)\omega^2l^2
+-18\omega lv_0
++3\sqrt3v_0^2
+}{81l^2}.
+\end{aligned}
+\]
+
+所以
+
+\[\boxed{
+\alpha_3=\ddot\theta_3
+=\frac{
+(27+\sqrt3)\omega^2l^2
+-18\omega lv_0
++3\sqrt3v_0^2
+}{81l^2}
+}. \tag{15}\]
+
+\Needspace{3\baselineskip}
+\textbf{6. 第 4 问：主体有向上加速度 \(a_0\)}
+
+瞬时位置与瞬时速度条件未改变，所以式（5）、式（8）仍成立；特别是
+
+\[\boxed{\omega_3=\frac{v_0}{3l}+\frac{\omega}{3\sqrt3}}.\]
+
+改变的是 \(\bm a_C=a_0\hat{\bm y}\)。重新用式（9）、（10）联立，可得
+
+\[
+a_x=-\frac{\sqrt3}{2}a_0
+-\frac{\sqrt3}{2}\omega^2l
++\frac{4\sqrt3}{9}\omega v_0,
+\]
+
+\[
+a_y=\frac12a_0
+-\frac{\omega^2l}{2}
+-\frac{2\omega^2l}{9\sqrt3}
+-\frac{2v_0^2}{9\sqrt3l}.
+\]
+
+角加速度改为
+
+\[
+\ddot\theta_3
+=\frac{(\bm a_C-\bm a_B)\cdot\bm n_3}{3l}.
+\]
+
+把 \(a_0\) 项和原有项分别合并：
+
+\[
+\begin{aligned}
+\ddot\theta_3
+&=\frac{
+27a_0l+(27+\sqrt3)\omega^2l^2
+-18\omega lv_0+3\sqrt3v_0^2
+}{81l^2}\\
+&=\frac{a_0}{3l}
++\frac{
+(27+\sqrt3)\omega^2l^2
+-18\omega lv_0+3\sqrt3v_0^2
+}{81l^2}.
+\end{aligned}
+\]
+
+故
+
+\[\boxed{
+\alpha_3
+=\frac{a_0}{3l}
++\frac{
+(27+\sqrt3)\omega^2l^2
+-18\omega lv_0+3\sqrt3v_0^2
+}{81l^2}
+}. \tag{16}\]
+
+与无主体加速度的结果相比，角速度不变，而角加速度增加
+\(a_0/(3l)\)。这正是``速度约束只依赖瞬时速度，加速度约束才感受到
+\(a_0\)''的直接体现。
+
+\Needspace{3\baselineskip}
+\textbf{完整的代回检查}
+
+令
+\(l=1\,\mathrm m\)、\(\omega=1\,\mathrm{s^{-1}}\)、\(v_0=0\)，主体瞬时固定。式（5）给
+\(\bm v_B=(-1/2,-1/(2\sqrt3))\,\mathrm{m/s}\)，两杆角速度为
+\(\mp1/(3\sqrt3)\,\mathrm{s^{-1}}\)。正文加速度给
+
+\[a_x=-\sqrt3/2,\qquad a_y=-1/2-2/(9\sqrt3),\]
+
+单位均为
+\(\mathrm{m/s^2}\)。代回两根杆的二阶约束，各自杆向相对加速度都等于
+\(-3l\omega_i^2=-1/9\,\mathrm{m/s^2}\)。这能直接检出教师补充中把第二根杆向心项改正号的错误，而仅做量纲检查检不出来。
+
+变式若第一节杆具有角加速度 \(\varepsilon\)，则
+\(\bm a_A=(-\varepsilon l,-\omega^2l)\)。保持此刻速度不变，点B的加速度增量为
+\((-\varepsilon l/2,-\varepsilon l/(2\sqrt3))\)，故第三杆角加速度增加
+\(\varepsilon/(3\sqrt3)\)。一阶速度关系的系数仅在当前30°构形成立，不能把它直接对时间求导。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf-5}
+
+定长杆约束的一阶微分只说明端点相对速度在杆向没有分量；二阶微分并不是杆向相对加速度为零，而是等于
+\(-r\dot\theta^2\)。后一个向心项若漏掉，点 \(B\) 的加速度和杆 \(l_3\)
+的角加速度都会系统性错误。
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9-5}
+
+\begin{itemize}
+\tightlist
+\item
+  将``杆与竖直夹角 \(30^\circ\)''的正弦、余弦分量对调。
+\item
+  写 \((\bm a_B-\bm a_A)\cdot\bm e_2=0\)，漏掉 \(-3l\dot\theta_2^2\)。
+\item
+  在 \(BC\) 杆中混用从 \(B\) 指向 \(C\) 与从 \(C\) 指向 \(B\)
+  的单位向量，导致角速度符号翻转。
+\item
+  主体有 \(a_0\) 时重新计算速度，实际上瞬时速度约束没有改变。
+\item
+  只给出点 \(B\) 的分量而不按题意求大小，或在平方展开时漏掉交叉项。
+\end{itemize}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae-5}
+
+先只讲速度，要求学生把``相对速度垂直于杆''画成两条方向约束线，求得
+\(\bm v_B\)。再把同一几何图保留，说明加速度图不能简单复制速度图，因为每根杆还需要向心加速度。让学生亲自从
+\((\bm r\cdot\bm r)'=0\)、\((\bm r\cdot\bm r)''=0\)
+推出二阶约束，能显著减少死记公式。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3-5}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  若 \(\theta_2\) 与 \(\theta_3\) 不相等，保留一般角度，写出求
+  \(\bm v_B\) 的 \(2\times2\)
+  线性方程，并讨论两杆共线时为何出现运动学奇异。
+\item
+  若第一节杆角速度不恒定而具有角加速度
+  \(\dot\omega=\varepsilon\)，在式（2）中加入点 \(A\)
+  的切向加速度，重新求 \(\alpha_3\) 对 \(\varepsilon\) 的线性响应。
+\end{enumerate}
+
+\Needspace{3\baselineskip}
+\textbf{教师备课补充：二阶约束的完整消元}
+
+令
+\(q_2=v_0/(3l)-\omega/(3\sqrt3)\)、\(q_3=v_0/(3l)+\omega/(3\sqrt3)\)。主体加速度为
+\(a_0\) 时，正确方程为
+
+\[a_x+\sqrt3a_y=-\sqrt3\omega^2l-6lq_2^2,\]
+\[-a_x+\sqrt3a_y=\sqrt3a_0-6lq_3^2.\]
+
+第二条向心项也为负；原补充推导误写为正，随后``平方和、平方差''消元也与正文不一致。相减和相加分别得
+
+\[a_x=-\frac{\sqrt3}{2}(a_0+\omega^2l)+3l(q_3^2-q_2^2),\]
+\[a_y=\frac{a_0-\omega^2l}{2}-\sqrt3l(q_2^2+q_3^2).\]
+
+用 \(q_3^2-q_2^2=4\omega v_0/(9\sqrt3l)\) 和
+\(q_2^2+q_3^2=2v_0^2/(9l^2)+2\omega^2/27\)
+即还原正文式（11）、（12）和第4问加速度。这两种紧凑形式也便于分别代回杆长二阶约束。矩阵行列式为
+\(2\sqrt3\)，故当前非共线构形解唯一。
+
+\Needspace{3\baselineskip}
+\textbf{独立检验角加速度}
+
+可直接对式（8）
+
+\[\dot\theta_3=\frac{v_0}{3l}+\frac{\omega}{3\sqrt3}\]
+
+求时间导数吗？不能。式（8）只是在``此刻两杆均与竖直成
+\(30^\circ\)''的瞬时关系，系数本身随构形改变；把它当作全时间恒等式求导会漏掉几何导数项。正确角加速度必须由二阶刚杆约束得到。这是瞬时运动学题中很有代表性的陷阱。
+
+\Needspace{3\baselineskip}
+\textbf{第 5 问的空间运动边界}
+
+对非计分的第5问，采用自然的明确几何：足端固定，\(l_1\) 绕经过足端的水平
+\(x\) 轴以恒定角速度转出纸面，此刻
+\(\bm v_A=\omega l\hat{\bm z}\)、\(\bm a_A=-\omega^2l\hat{\bm y}\)；点B始终限制在原xy平面，C保持竖直运动。在此约定下问题可解，不能笼统说二维图不足便不计算。
+
+一阶长度约束给
+
+\[\bm v_B=-\frac{\sqrt3v_0}{2}\hat{\bm x}+\frac{v_0}{2}\hat{\bm y},\qquad \omega_3=\frac{v_0}{3l}.\]
+
+二阶长度约束应使用完整三维相对速度，\(|\bm v_B-\bm v_A|^2=v_0^2+\omega^2l^2\)，\(|\bm v_C-\bm v_B|^2=v_0^2\)，从而
+
+\[a_x=-\frac{\sqrt3}{2}(a_0+\omega^2l)-\frac{\omega^2l}{3},\]
+\[a_y=\frac{a_0-\omega^2l}{2}-\frac{2v_0^2+\omega^2l^2}{3\sqrt3l}.\]
+
+杆BC仍在平面内，法向投影给
+
+\[\boxed{\alpha_3=\frac{a_0}{3l}+\left(\frac13+\frac{2\sqrt3}{27}\right)\omega^2+\frac{v_0^2}{9\sqrt3l^2}.}\]
+
+出纸面速度反向时平方项不变；若另取其他转轴或角加速度，就须重新给定边界运动。此结果明确依赖上述恒速水平转轴约定。
+
+\Needspace{3\baselineskip}
+\textbf{教师备课补充：用瞬时转动中心复核速度}
+
+杆 \(AB\)
+的两个端点速度在杆向的投影相同，因此其瞬时运动可看作绕某一瞬时中心转动。正文式（7）
+
+\[
+\dot\theta_2=\frac{3v_0-\sqrt3\omega l}{9l}
+\]
+
+可以由相对速度
+
+\[
+\bm v_B-\bm v_A=3l\dot\theta_2\bm n_2
+\]
+
+直接复核。计算相对速度分量：
+
+\[
+\begin{aligned}
+v_{Bx}-v_{Ax}
+&=-\frac{\omega l}{2}-\frac{\sqrt3v_0}{2}+\omega l\\
+&=\frac{\omega l}{2}-\frac{\sqrt3v_0}{2},
+\end{aligned}
+\]
+
+\[
+v_{By}-v_{Ay}
+=\frac{v_0}{2}-\frac{\omega l}{2\sqrt3}.
+\]
+
+而
+
+\[3l\dot\theta_2\bm n_2
+=3l\dot\theta_2
+\left(-\frac{\sqrt3}{2},\frac12\right).
+\]
+
+用 \(y\) 分量求
+
+\[
+\dot\theta_2
+=\frac{2}{3l}
+\left(\frac{v_0}{2}-\frac{\omega l}{2\sqrt3}\right)
+=\frac{v_0}{3l}-\frac{\omega}{3\sqrt3},
+\]
+
+与式（7）一致；代入 \(x\) 分量也成立。杆 \(BC\) 可作同样检查。
+
+\Needspace{3\baselineskip}
+\textbf{特殊参数检查}
+
+若
+
+\[v_0=\frac{\omega l}{\sqrt3},\]
+
+则
+
+\[\dot\theta_2=0.\]
+
+此刻杆 \(AB\) 作瞬时平移，而杆 \(BC\) 仍转动：
+
+\[
+\dot\theta_3
+=\frac{1}{3l}\frac{\omega l}{\sqrt3}
++\frac{\omega}{3\sqrt3}
+=\frac{2\omega}{3\sqrt3}.
+\]
+
+这个特殊情形能帮助学生理解两根杆角速度不必相等。若
+\(v_0=0\)，主体瞬时不升降，则
+
+\[
+\dot\theta_2=-\frac{\omega}{3\sqrt3},
+\qquad
+\dot\theta_3=+\frac{\omega}{3\sqrt3},
+\]
+
+两长杆以等大反向角速度改变构形，符合左右端点一个由 \(A\)
+驱动、一个瞬时固定的几何直觉。
+
+\Needspace{3\baselineskip}
+\textbf{量纲核查}
+
+正文式（15）中每个分子项都具有
+
+\[[\omega^2l^2]=[v_0^2]=\mathrm{m^2/s^2},\]
+
+再除以 \(l^2\) 得 \(\mathrm{s^{-2}}\)，正是角加速度量纲。式（16）新增项
+\(a_0/(3l)\) 同样为
+\(\mathrm{s^{-2}}\)。由于展开式较长，量纲检查是避免把 \(v_0^2/l^2\)
+误写成 \(v_0/l^2\) 的最有效方法。
+
+\newpage
+
+\section{第 7 题}\label{ux7b2c-7-ux9898}
+
+三个半径均为 \(R\) 的球形蛋被限制在同一竖直平面内运动。球 \(A\)
+固定在地面上，球 \(B\) 的质量为 \(m\)，球 \(C\) 的质量为 \(nm\)，其中
+\(n\) 为无量纲正数。三球从图示相互接触的位置由静止释放。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  若所有接触面均光滑，在 \(AB\)、\(BC\) 分离之前，当连线 \(AB\)
+  与水平面夹角为 \(\theta_1\) 时，求球 \(B\) 的速度 \(v_{B1}\)。
+\item
+  承接第 1 问，判断 \(AB\) 与 \(BC\) 的分离先后关系： A. \(n>1\) 时
+  \(AB\) 先分离； B. \(n>1\) 时 \(BC\) 先分离； C. \(n<1\) 时 \(AB\)
+  先分离； D. \(n<1\) 时 \(BC\) 先分离； E. 无论 \(n\) 如何，\(AB\) 与
+  \(BC\) 同时分离。
+\item
+  若 \(AB\)、\(BC\) 接触处的摩擦足够大，球 \(C\)
+  与地面光滑接触，仍从图示位置静止释放。在分离前、\(AB\) 与水平面夹角为
+  \(\theta_1\) 时，求球 \(B\) 的球心绕 \(A\) 转动的角速度
+  \(\omega_{BA}\)。
+\item
+  承接第 3 问，求此时球 \(B\) 的自转角速度 \(\omega_{B2}\)。
+\item
+  承接第 3 问，求此时球 \(C\) 的自转角速度 \(\omega_{C2}\)。
+\item
+  承接第 3 问，取 \(n=1.6\)，求球 \(B\) 落地时的速度 \(v_{B3}\)。
+\end{enumerate}
+
+除第 6 问外，数值参数为
+
+\[g=10\,\mathrm{m/s^2},\qquad R=0.105\,\mathrm m,\qquad n=1.19,\qquad \theta_1=0.831\,\mathrm{rad}.\]
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.855\linewidth,height=\textheight,keepaspectratio,alt={图 7-1　三球的初始接触构形：A 固定，C 可沿地面平动，B 位于二者上方。}]{../figures/question-07.pdf}
+\caption*{图 7-1　三球的初始接触构形：\(A\) 固定，\(C\)
+可沿地面平动，\(B\) 位于二者上方。}
+\end{figure}
+
+复核说明：原解对第3---6问另取均匀实心球转动惯量；原题未给质量分布。第6问还缺少滑动摩擦参数，原参考落地速度不能由现有条件唯一确定，详见解析。
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-6}
+
+光滑情形由球心约束和能量求速度，再用非负接触力判断分离。粗糙情形先说明惯量模型，并逐接触点检查无滑动与摩擦锥；当前滚动解不能无条件外推至落地。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-6}
+
+\begin{itemize}
+\tightlist
+\item
+  两等半径球保持接触时球心距离为 \(2R\)。
+\item
+  瞬时几何约束下的速度关系。
+\item
+  多物体系统的机械能守恒。
+\item
+  单边接触条件 \(N\geq0\) 与分离条件 \(N=0\)。
+\item
+  球面接触处的无滑动约束。
+\item
+  均匀实心球转动惯量 \(I=\frac25mR^2\)。
+\end{itemize}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-6}
+
+分离前，点 \(B\) 的球心沿以 \(A\) 为圆心、半径 \(2R\) 的圆弧运动。由于
+\(C\) 的球心只能水平移动，且 \(BC=2R\)，对称几何给出 \(C\) 的水平坐标是
+\(B\) 水平位移的两倍。光滑时球不自转；粗糙时，\(AB\) 和 \(BC\)
+两接触点同时无滑动，把球心轨道角速度依次传递为球 \(B\)、球 \(C\)
+的自转角速度。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-6}
+
+以 \(A\) 球心为原点，水平向右为 \(x\) 轴。分离前可写
+
+\[
+\bm r_B=2R(\cos\theta\,\hat{\bm x}+\sin\theta\,\hat{\bm y}),
+\]
+
+\[
+\bm r_C=4R\cos\theta\,\hat{\bm x}.
+\]
+
+从而
+
+\[v_B=2R|\dot\theta|,\qquad v_C=4R\sin\theta\,|\dot\theta|.\]
+
+先把这两个速度代入总能量守恒，再处理接触力或滚动约束。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-6}
+
+图 7-2 标出球 \(B\)
+所受的重力以及两接触法向力。光滑情形中，这两力同时降到零时接触约束解除；粗糙情形中，还需在两接触点分别写切向速度相等。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图 7-2　球 B 的两接触法向力与重力；粗糙接触时两接触点的无滑动条件决定自转。}]{../figures/solution-07.pdf}
+\caption*{图 7-2　球 \(B\)
+的两接触法向力与重力；粗糙接触时两接触点的无滑动条件决定自转。}
+\end{figure}
+
+\Needspace{3\baselineskip}
+\textbf{1. 光滑情形的几何速度关系}
+
+由
+
+\[x_B=2R\cos\theta,\qquad y_B=2R\sin\theta,\]
+
+对时间求导：
+
+\[
+\dot x_B=-2R\sin\theta\,\dot\theta,\qquad
+\dot y_B=2R\cos\theta\,\dot\theta.
+\]
+
+所以
+
+\[
+\begin{aligned}
+v_B^2
+&=\dot x_B^2+\dot y_B^2\\
+&=4R^2(\sin^2\theta+\cos^2\theta)\dot\theta^2\\
+&=4R^2\dot\theta^2,
+\end{aligned}
+\]
+
+即
+
+\[v_B=2R|\dot\theta|. \tag{1}\]
+
+由 \(BC=2R\) 且 \(C\) 球心高度不变，可得
+
+\[x_C-x_B=2R\cos\theta,\]
+
+故
+
+\[x_C=4R\cos\theta.\]
+
+于是
+
+\[\dot x_C=-4R\sin\theta\,\dot\theta,\]
+
+所以
+
+\[v_C=4R\sin\theta\,|\dot\theta|. \tag{2}\]
+
+\Needspace{3\baselineskip}
+\textbf{2. 第 1 问：光滑情形的能量守恒}
+
+初始时三球相切，\(AB\) 与水平夹角为 \(\pi/3\)，所以球 \(B\) 球心相对
+\(A\) 球心的高度是
+
+\[y_{B0}=2R\sin\frac\pi3=\sqrt3R.\]
+
+当夹角变为 \(\theta\) 时，
+
+\[y_B=2R\sin\theta.\]
+
+球 \(B\) 重力势能减少
+
+\[
+\Delta E_p=mg(y_{B0}-y_B)
+=mgR(\sqrt3-2\sin\theta).
+\]
+
+光滑接触不产生自转，球 \(C\) 的高度不变。因此能量守恒为
+
+\[
+\frac12m v_B^2+\frac12nm v_C^2
+=mgR(\sqrt3-2\sin\theta).
+\]
+
+代入式（1）、（2）：
+
+\[
+\frac12m(2R\dot\theta)^2
++\frac12nm(4R\sin\theta\,\dot\theta)^2
+=mgR(\sqrt3-2\sin\theta).
+\]
+
+展开左边：
+
+\[
+2mR^2\dot\theta^2+8nmR^2\sin^2\theta\,\dot\theta^2
+=mgR(\sqrt3-2\sin\theta).
+\]
+
+提取公因子：
+
+\[
+\frac12mR^2(4+16n\sin^2\theta)\dot\theta^2
+=mgR(\sqrt3-2\sin\theta).
+\]
+
+约去 \(mR\)：
+
+\[
+\frac12R(4+16n\sin^2\theta)\dot\theta^2
+=g(\sqrt3-2\sin\theta).
+\]
+
+所以
+
+\[
+\dot\theta^2
+=\frac{2g}{R}\,
+\frac{\sqrt3-2\sin\theta}{4+16n\sin^2\theta}. \tag{3}
+\]
+
+由 \(v_B=2R|\dot\theta|\)，在 \(\theta=\theta_1\) 时
+
+\[
+\boxed{
+v_{B1}
+=2R\sqrt{\frac{2g}{R}\,
+\frac{\sqrt3-2\sin\theta_1}{4+16n\sin^2\theta_1}}
+}. \tag{4}\]
+
+代入
+\(g=10\,\mathrm{m/s^2}\)、\(R=0.105\,\mathrm m\)、\(n=1.19\)、\(\theta_1=0.831\)：
+
+\[\boxed{v_{B1}\approx0.386\,\mathrm{m/s}}.\]
+
+\Needspace{3\baselineskip}
+\textbf{3. 第 2 问：分离的同步性}
+
+分离前，球 \(B\) 沿 \(AB\) 方向的加速度投影与球 \(C\)
+的水平加速度共同决定两接触法向力。把法向力按对球 \(B\) 的方向定义为
+\(N_{AB}\)、\(N_{BC}\)，对 \(B\)、\(C\)
+分别列牛顿第二定律并使用约束加速度后，可得
+
+\[
+N_{AB}
+=\frac{(2n+1)m}{1+4n\sin^2\theta}
+\left(g\sin\theta-2R\dot\theta^2\right),
+\]
+
+\[
+N_{BC}
+=\frac{2nm}{1+4n\sin^2\theta}
+\left(g\sin\theta-2R\dot\theta^2\right).
+\]
+
+由于 \(n>0\)，两式前面的系数都严格为正，所以两法向力的符号都由同一个因子
+
+\[g\sin\theta-2R\dot\theta^2\]
+
+决定。当任一接触力降到零时，另一个也同时为零。因此
+
+\[\boxed{\text{选 E：无论 }n\text{ 如何，}AB\text{ 与 }BC\text{ 同时分离。}}\]
+
+这一步也可由两条接触力方程直接消元得到；不能仅凭``较重的球惯性更大''猜测先后。
+
+\Needspace{3\baselineskip}
+\textbf{4. 第 3---5 问：粗糙接触的滚动约束}
+
+设 \(\dot\theta<0\) 表示球 \(B\) 从初始位置向下运动。以下
+\(\omega_{BA}\)
+表示顺时针轨道角速度的大小；若统一逆时针为正，轨道的带符号角速度为
+\(\dot\theta<0\)。因此
+
+\[\boxed{\omega_{BA}=-\dot\theta}. \tag{5}\]
+
+下面区分``球心绕 \(A\) 公转''与``球自身自转''。
+
+在 \(AB\) 接触点无滑动。球 \(A\) 固定，其接触点速度为零。球 \(B\)
+球心的切向速度大小为 \(2R|\dot\theta|\)；要让球 \(B\) 面向 \(A\)
+的接触点瞬时静止，自转在接触点产生的速度必须抵消球心速度：
+
+\[R|\omega_{B2}|=2R|\dot\theta|.\]
+
+统一逆时针为正时，B接触A的速度为
+\(2R\dot\theta\bm t-R\omega_{B2}\bm t\)，故B顺时针自转，得到
+
+\[\boxed{\omega_{B2}=2\dot\theta=-2\omega_{BA}}. \tag{6}\]
+
+在 \(BC\) 接触点也无滑动。由式（2），球 \(C\) 的平动速度来自
+\(4R\cos\theta\) 的变化；结合球 \(B\) 接触点速度与式（6）可得
+
+\[R|\omega_{C2}|=4R|\dot\theta|,\]
+
+C的自转为逆时针，因此
+
+\[\boxed{\omega_{C2}=-4\dot\theta=4\omega_{BA}}. \tag{7}\]
+
+三个角速度之间的倍数 \(1:2:4\)
+来自球心几何位移倍数，而不是由球的质量决定。
+
+\Needspace{3\baselineskip}
+\textbf{5. 第 6 问：粗糙情形的分离与落地}
+
+粗糙情形中还要计入两球自转动能。由式（1）、（2）、（6）、（7），分离前总动能为
+
+\[
+\begin{aligned}
+T={}&\frac12m(2R\dot\theta)^2
++\frac12nm(4R\sin\theta\,\dot\theta)^2\\
+&+\frac12\left(\frac25mR^2\right)(2\dot\theta)^2
++\frac12\left(\frac25nmR^2\right)(4\dot\theta)^2.
+\end{aligned}
+\]
+
+逐项化简：
+
+\[
+\begin{aligned}
+T
+&=2mR^2\dot\theta^2
++8nmR^2\sin^2\theta\,\dot\theta^2\\
+&\quad+\frac45mR^2\dot\theta^2
++\frac{16}{5}nmR^2\dot\theta^2\\
+&=\frac{2}{5}mR^2
+\left(7+20n\sin^2\theta+8n\right)\dot\theta^2.
+\end{aligned}
+\]
+
+与势能减少相等：
+
+\[
+\frac{2}{5}mR^2
+\left(7+20n\sin^2\theta+8n\right)\dot\theta^2
+=mgR(\sqrt3-2\sin\theta).
+\]
+
+故
+
+\[
+-\dot\theta
+=\frac1{2R}
+\sqrt{
+\frac{10gR(\sqrt3-2\sin\theta)}
+{7+20n\sin^2\theta+8n}
+}. \tag{8}
+\]
+
+负号表示运动过程中 \(\theta\) 减小。
+
+\Needspace{3\baselineskip}
+\textbf{原第6问的条件缺失与滚动模型检查}
+
+原题未给转动惯量。上式按原参考解另取均匀实心球
+\(I_B=2mR^2/5\)、\(I_C=2nmR^2/5\)。这个补充不能由``球形蛋''自动推出。即使采用该惯量，有限摩擦也不允许无滑动约束一直保持到分离。
+
+令 \(s=\sin\theta\)、\(K=7+8n+20ns^2\)。对滚动分支由能量和广义动力学得到
+
+\[\dot\theta^2=\frac{5g(\sqrt3-2s)}{2RK},\qquad
+\ddot\theta=-\frac{\cos\theta}{K}\left(20ns\dot\theta^2+\frac{5g}{2R}\right).\]
+
+选 \(AB\) 接触切向为 \(\bm t=(-\sin\theta,\cos\theta)\)，\(BC\)
+对B的切向为 \((-\sin\theta,-\cos\theta)\)。两球转动方程给
+
+\[f_{BC}=\frac85nmR\ddot\theta,\qquad f_{AB}=-\frac45(1+2n)mR\ddot\theta.\]
+
+平动方程再给
+
+\[D=-2mR\dot\theta^2-\frac{14}{5}mR\tan\theta\ddot\theta,\]
+\[N_{AB}=(2n+1)D,\qquad N_{BC}=2nD.\]
+
+两法向力虽按固定比例变化，切向摩擦却通常不为零。在形式条件 \(D\to0\) 时
+\(\ddot\theta\ne0\)，所以 \(|f|/N\)
+发散。任何有限静摩擦因数都会先失去无滑动条件，随后需要滑动摩擦定律继续计算；``足够大''不能消除这个发散。
+
+原参考解把光滑分离条件 \(2R\dot\theta_s^2=g\sin\theta_s\)
+与滚动能量直接联立，得 \(s=0.2696\) 和落地速度1.30
+m/s；两式不属于同一可维持的动力学分支，因此该数值没有现有题设的充分依据。严格答案应为
+
+\[\boxed{\text{第6问的实际落地速度不能由现有条件唯一确定。}}\]
+
+若只形式地将滚动分支延伸至 \(D=0\)，应解
+
+\[60ns^3+40\sqrt3ns^2+17(7+8n)s-5\sqrt3(7+8n)=0.\]
+
+取 \(n=1.6\) 得
+\(s\approx0.42712\)，不同于原参考值。但这时有限切向力仍被要求存在，不能把它称作真实分离时刻。若此刻直接删去所有接触力作抛体，径向运动会进入A球内部，违反接触约束；形式零法向结果也不能拿来报一个``修正的落地速度''。
+
+\Needspace{3\baselineskip}
+\textbf{第3---5问的数值与可行性}
+
+在题给 \(n=1.19\)、\(\theta_1=0.831\) 处，采用均匀实心球且接触尚未滑动，
+
+\[\omega_{BA}\approx1.4341\,\mathrm{rad/s},\quad\omega_{B2}\approx-2.8681\,\mathrm{rad/s},\quad\omega_{C2}\approx+5.7363\,\mathrm{rad/s}.\]
+
+代回接触力方程，所需两处静摩擦因数下限均约0.332，法向力为正，C的地面支持力也为正。所以这组当前时刻结果可在足够摩擦下成立；它不证明后续整个运动始终滚动。要求第6问唯一数值时，应补两球惯量、静/动摩擦参数以及滑动后的事件规则，再分段积分。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf-6}
+
+这题有三种不同的``角速度''：球 \(B\) 球心绕 \(A\) 的轨道角速度、球 \(B\)
+的自转角速度、球 \(C\) 的自转角速度。它们的 \(1:2:4\)
+倍数来自接触点无滑动与球心位移几何。若不先把三者命名区分，能量式中的转动动能几乎一定会代错。
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9-6}
+
+\begin{itemize}
+\tightlist
+\item
+  光滑情形把球的转动动能计入，实际上接触力沿球心连线，不对球心产生力矩。
+\item
+  忘记球 \(C\) 的质量是 \(nm\)，或忘记其速度是
+  \(4R\sin\theta|\dot\theta|\)。
+\item
+  只凭 \(n>1\) 猜重球一侧先分离，不列法向力方程。
+\item
+  把 \(\omega_{BA}\) 当成球 \(B\) 自转角速度。
+\item
+  粗糙情形漏掉球 \(C\) 的转动动能，或把均匀实心球转动惯量写成 \(mR^2\)。
+\item
+  分离后求落地速度时把下降高度误写成 \(R\sin\theta_s\)。
+\end{itemize}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae-6}
+
+在黑板上固定三列符号：轨道运动 \(\omega_{BA}\)、球 \(B\) 自转
+\(\omega_{B2}\)、球 \(C\) 自转
+\(\omega_{C2}\)。每写一个无滑动条件，就在对应接触点画出两个相等的切向速度箭头。能量守恒最后再写，这样学生先看清哪些动能项存在，再进行代数汇总。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3-6}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  若球 \(A\) 不固定而质量为
+  \(M_A\)，地面光滑，建立系统水平动量守恒与两接触几何约束，讨论分离是否仍同步。
+\item
+  若球为薄球壳，转动惯量改为
+  \(I=\frac23mR^2\)，重新推导粗糙情形的式（8），并判断分离角与落地速度相对实心球增大还是减小。
+\end{enumerate}
+
+\Needspace{3\baselineskip}
+\textbf{教师备课补充：同步分离公式的逐步推导}
+
+由球心坐标可得
+
+\[
+\bm a_B
+=2R
+\begin{pmatrix}
+-\cos\theta\,\dot\theta^2-\sin\theta\,\ddot\theta\\
+-\sin\theta\,\dot\theta^2+\cos\theta\,\ddot\theta
+\end{pmatrix},
+\]
+
+\[
+a_{Cx}=4R(-\cos\theta\,\dot\theta^2-\sin\theta\,\ddot\theta).
+\]
+
+取
+
+\[\bm e_{AB}=(\cos\theta,\sin\theta),\qquad
+\bm e_{CB}=(-\cos\theta,\sin\theta).\]
+
+球 \(B\) 的水平、竖直动力学方程分别为
+
+\[
+N_{AB}\cos\theta-N_{BC}\cos\theta=ma_{Bx}, \tag{A}
+\]
+
+\[
+N_{AB}\sin\theta+N_{BC}\sin\theta-mg=ma_{By}. \tag{B}
+\]
+
+球 \(C\) 的水平方程为
+
+\[N_{BC}\cos\theta=nm\,a_{Cx}. \tag{C}\]
+
+将 \(a_{Bx}\)、\(a_{By}\)、\(a_{Cx}\) 代入式（A）---（C），消去
+\(\ddot\theta\)，可得正文中的
+
+\[
+N_{AB}
+=\frac{(2n+1)m}{1+4n\sin^2\theta}
+(g\sin\theta-2R\dot\theta^2),
+\]
+
+\[
+N_{BC}
+=\frac{2nm}{1+4n\sin^2\theta}
+(g\sin\theta-2R\dot\theta^2).
+\]
+
+它们的比值恒为
+
+\[\frac{N_{AB}}{N_{BC}}=\frac{2n+1}{2n}>0.\]
+
+这比只写``同时分离''更强：在整个保持双接触的阶段，两接触力始终按固定比例变化。
+
+\Needspace{3\baselineskip}
+\textbf{粗糙情形能量式的项数核查}
+
+建议把四项动能按表格逐项核对：
+
+\[
+\begin{array}{c|c|c}
+\text{对象}&\text{速度或角速度}&\text{动能}\\ \hline
+B\text{ 平动}&2R|\dot\theta|&2mR^2\dot\theta^2\\
+C\text{ 平动}&4R\sin\theta|\dot\theta|&8nmR^2\sin^2\theta\dot\theta^2\\
+B\text{ 自转}&2|\dot\theta|&\frac45mR^2\dot\theta^2\\
+C\text{ 自转}&4|\dot\theta|&\frac{16}{5}nmR^2\dot\theta^2
+\end{array}
+\]
+
+合并时常数项为
+
+\[2+\frac45=\frac{14}{5},\]
+
+\(n\) 的常数项为 \(16n/5\)，平动的角度项为 \(8n\sin^2\theta\)。提取
+\(2/5\) 后正好得到
+
+\[7+8n+20n\sin^2\theta,\]
+
+与式（8）的分母一致。
+
+\Needspace{3\baselineskip}
+\textbf{落地阶段为何只增加平动动能}
+
+在真实分离且随后确无其他接触的阶段，重力通过球心，不对球心产生力矩，球
+\(B\)
+的自转角速度保持不变。重力势能的下降只增加质心平动动能。因此可以直接用
+
+\[v_f^2=v_s^2+2g\Delta h,\]
+
+而无须把自转动能重新放进落地阶段的能量差；若把自转项再次加入，会重复计算分离前已具有且之后保持不变的能量。
+
+\Needspace{3\baselineskip}
+\textbf{教师备课补充：光滑分离角的参数方程}
+
+光滑情形的同时分离条件也是
+
+\[2R\dot\theta_s^2=g\sin\theta_s. \tag{A}\]
+
+将能量式（3）代入。令 \(s=\sin\theta_s\)：
+
+\[
+2R\left[
+\frac{2g}{R}
+\frac{\sqrt3-2s}{4+16ns^2}
+\right]=gs.
+\]
+
+约去 \(g\)：
+
+\[
+\frac{4(\sqrt3-2s)}{4+16ns^2}=s.
+\]
+
+交叉相乘：
+
+\[
+4\sqrt3-8s=4s+16ns^3.
+\]
+
+整理为
+
+\[
+\boxed{4ns^3+3s-\sqrt3=0}. \tag{B}
+\]
+
+式（B）左端对 \(s>0\) 的导数是
+
+\[12ns^2+3>0,\]
+
+所以物理区间内至多有一个根。随 \(n\) 增大，同一 \(s\) 下左端增大，因此根
+\(s\) 减小，即较重的 \(C\) 使系统在更低高度处分离。虽然分离角随 \(n\)
+改变，但两接触仍同步解除。
+
+\Needspace{3\baselineskip}
+\textbf{能量式的无量纲形式}
+
+令
+
+\[q=\frac{v_B^2}{gR}.\]
+
+由式（4）：
+
+\[
+q
+=\frac{8(\sqrt3-2\sin\theta)}
+{4+16n\sin^2\theta}
+=\frac{2(\sqrt3-2\sin\theta)}
+{1+4n\sin^2\theta}.
+\]
+
+这表明速度自然尺度是 \(\sqrt{gR}\)。本题
+
+\[\sqrt{gR}=\sqrt{1.05}\approx1.025\,\mathrm{m/s},\]
+
+而 \(v_{B1}\approx0.386\,\mathrm{m/s}\)，无量纲速度约
+\(0.376\)，处于合理范围。原第6问所列1.30
+m/s由不相容分支拼接而来，已在解析中撤去。
+
+\Needspace{3\baselineskip}
+\textbf{滚动方向与``速度大小''的区分}
+
+在页面上逆时针为正、\(\theta\) 从+x量起。下落时
+\(\dot\theta<0\)，B球心的轨道和B自转都为顺时针，C自转为逆时针：
+
+\[\Omega_{BA}=\dot\theta,\qquad\omega_{B2}=2\dot\theta,\qquad\omega_{C2}=-4\dot\theta.\]
+
+本文 \(\omega_{BA}=-\dot\theta\) 是轨道速率，因此带符号自转是
+\(-2\omega_{BA}\)、\(+4\omega_{BA}\)。共同改变观察面法向会把三个符号都反转，不能把它作为B、C自转同向的理由。接触点速度相等的矢量式是最直接的检查。
+
+若两球有同一惯量系数
+\(\kappa\)，\(I_B=\kappa mR^2\)、\(I_C=\kappa nmR^2\)，则
+
+\[\dot\theta^2=\frac{g(\sqrt3-2\sin\theta)}{2R[1+\kappa+4\kappa n+4n\sin^2\theta]}.\]
+
+薄壳取
+\(\kappa=2/3\)，在同一角度速度低于实心球。后续落地速度还涉及摩擦失效与滑动分段，不能只凭这条能量式判断分离角或落地速度增减。
+
+\newpage
+
+\section{第 8 题}\label{ux7b2c-8-ux9898}
+
+一节原长为 \(l\) 的正方形车厢以速度 \(v\)
+沿水平方向作匀速直线运动。当车厢处于图示位置时，车厢左下角的时钟 \(O'\)
+与地面原点处的时钟 \(O\) 同时调为零。光速为 \(c\)。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  在车厢参考系中，\(t'=0\) 时一束激光从 \(O'\)
+  发出，经车厢顶面反射后到达右下角 \(B\)。求 \(B\)
+  接收到信号时的车厢系时间 \(t_1'\)、此时地面点 \(O\) 到点 \(B\)
+  的车厢系距离 \(x_B'\)，以及地面点 \(O\) 所带时钟的示数 \(t_1\)。
+\item
+  在地面参考系中，求车厢沿运动方向的长度 \(l_1\)。
+\item
+  仍在地面参考系中观察同一组发射、反射和接收事件。求激光从 \(O'\)
+  发出时与水平方向的夹角 \(\theta\)，点 \(B\) 接收到信号时的地面系时间
+  \(t_2\)、点 \(B\) 的地面系坐标 \(x_B\)，以及在该地面系时刻点 \(O'\)
+  所带时钟的示数 \(t_2'\)。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.691\linewidth,height=\textheight,keepaspectratio,alt={图 8-1　车厢系中的光路：激光从 O\textquotesingle{} 射向顶面中点，反射后到达右下角 B。}]{../figures/question-08.pdf}
+\caption*{图 8-1　车厢系中的光路：激光从 \(O'\)
+射向顶面中点，反射后到达右下角 \(B\)。}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-7}
+
+先在车厢系写出发射、反射和接收事件，再变换到地面系。问另一只钟的读数时，须按题目指定参考系另取同时事件，不能只把接收坐标除以\(\gamma\)。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-7}
+
+\begin{itemize}
+\tightlist
+\item
+  光速不变与车厢系中的几何光程。
+\item
+  洛伦兹因子 \(\gamma=1/\sqrt{1-\beta^2}\)，其中 \(\beta=v/c\)。
+\item
+  长度收缩 \(l_1=l/\gamma\)。
+\item
+  速度分量的洛伦兹变换。
+\item
+  事件坐标的洛伦兹变换。
+\item
+  固有时、坐标时与相对同时性。
+\end{itemize}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-7}
+
+在车厢系中，车厢是边长 \(l\) 的正方形，光路是两条全等斜边，总长为
+\(\sqrt5l\)。在地面系中，车厢水平方向收缩、顶面与接收点一起向右运动，光路不再左右对称。两个参考系对发射、反射、接收三个事件的描述不同，但每个事件本身及任意两事件的时空间隔保持一致。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-7}
+
+定义
+
+\[\beta=\frac vc,\qquad \gamma=\frac1{\sqrt{1-\beta^2}}.\]
+
+先在车厢系 \(S'\) 中写出接收事件 \(E_B\)：
+
+\[E_B:\qquad (ct_B',x_B',y_B')=(\sqrt5l,l,0).\]
+
+再对这一事件使用从 \(S'\) 到地面系 \(S\) 的洛伦兹变换
+
+\[ct=\gamma(ct'+\beta x'),\qquad x=\gamma(x'+\beta ct').\]
+
+光线初始方向则用速度分量变换，不必在移动镜面上重新做一次复杂的反射几何。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-7}
+
+图 8-2
+左侧是车厢系对称光路，右侧是地面系时空图。接收事件是两段光世界线与点
+\(B\) 世界线的交点；点 \(O'\) 与点 \(B\)
+在车厢系中静止，却在地面系中具有不同空间位置。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图 8-2　车厢系中的对称光路，以及地面系中车尾 O\textquotesingle、镜面中点 M、车头 B 的平行世界线与光信号事件链。}]{../figures/solution-08.pdf}
+\caption*{图 8-2　车厢系中的对称光路，以及地面系中车尾 \(O'\)、镜面中点
+\(M\)、车头 \(B\) 的平行世界线与光信号事件链。}
+\end{figure}
+
+\Needspace{3\baselineskip}
+\textbf{1. 第 1 问：车厢系光程与时间}
+
+光从 \(O'\) 到顶面反射点的水平位移为 \(l/2\)，竖直位移为
+\(l\)，故第一段光程
+
+\[
+s_1=\sqrt{l^2+\left(\frac l2\right)^2}
+=\frac{\sqrt5}{2}l.
+\]
+
+第二段与第一段全等，所以总光程
+
+\[s'=2s_1=\sqrt5l.\]
+
+光速为 \(c\)，因此
+
+\[\boxed{t_1'=\frac{\sqrt5l}{c}}. \tag{1}\]
+
+在车厢系中，点 \(B\) 始终位于 \(x_B'=l\)；地面点 \(O\) 以速度 \(-v\)
+向左运动。接收时刻，\(O\) 的坐标为
+
+\[x_O'=-vt_1'=-\frac{\sqrt5vl}{c}=-\sqrt5\beta l.\]
+
+所以该时刻 \(O\) 到 \(B\) 的车厢系距离是
+
+\[
+\begin{aligned}
+x_{OB}'
+&=x_B'-x_O'\\
+&=l+\sqrt5\beta l.
+\end{aligned}
+\]
+
+即
+
+\[\boxed{x_{OB}'=l(1+\sqrt5\beta)}. \tag{2}\]
+
+题目还问地面点 \(O\) 所带时钟的示数。应在 \(S'\)
+中取与接收事件同时、位于 \(O\) 世界线上的事件。该事件坐标满足
+
+\[t'=t_1',\qquad x'=-vt_1'.\]
+
+从 \(S'\) 变换到 \(S\)：
+
+\[
+\begin{aligned}
+t_1
+&=\gamma\left(t_1'+\frac{vx'}{c^2}\right)\\
+&=\gamma\left(t_1'-\frac{v^2t_1'}{c^2}\right)\\
+&=\gamma t_1'(1-\beta^2)\\
+&=\frac{t_1'}{\gamma}.
+\end{aligned}
+\]
+
+因为点 \(O\) 在地面系静止，其地面系时间就是该钟固有时，所以
+
+\[\boxed{t_1=\frac{\sqrt5l}{\gamma c}}. \tag{3}\]
+
+\Needspace{3\baselineskip}
+\textbf{2. 第 2 问：长度收缩}
+
+车厢沿 \(x\) 方向的固有长度是
+\(l\)。地面系测量运动车厢的长度时，必须在地面系同一时刻记录车厢前后端位置，结果为
+
+\[\boxed{l_1=\frac l\gamma=l\sqrt{1-\beta^2}}. \tag{4}\]
+
+竖直方向与相对运动垂直，不发生长度收缩，车厢高度仍为 \(l\)。
+
+\Needspace{3\baselineskip}
+\textbf{3. 第 3 问：地面系中的发射方向}
+
+在车厢系中，第一段光线的方向分量由位移比确定：
+
+\[
+u_x'=c\frac{l/2}{\sqrt5l/2}=\frac c{\sqrt5},
+\]
+
+\[
+u_y'=c\frac{l}{\sqrt5l/2}=\frac{2c}{\sqrt5}.
+\]
+
+速度分量从 \(S'\) 变换到 \(S\)：
+
+\[
+u_x=\frac{u_x'+v}{1+vu_x'/c^2},
+\]
+
+\[
+u_y=\frac{u_y'}{\gamma(1+vu_x'/c^2)}.
+\]
+
+逐项代入 \(u_x'/c=1/\sqrt5\)：
+
+\[
+\begin{aligned}
+\frac{u_x}{c}
+&=\frac{1/\sqrt5+\beta}{1+\beta/\sqrt5}\\
+&=\frac{1+\sqrt5\beta}{\sqrt5+\beta},
+\end{aligned}
+\]
+
+\[
+\begin{aligned}
+\frac{u_y}{c}
+&=\frac{2/\sqrt5}{\gamma(1+\beta/\sqrt5)}\\
+&=\frac{2}{\gamma(\sqrt5+\beta)}.
+\end{aligned}
+\]
+
+因此发射角满足
+
+\[
+\tan\theta=\frac{u_y}{u_x}
+=\frac{2}{\gamma(1+\sqrt5\beta)}.
+\]
+
+所以
+
+\[\boxed{
+\theta=\arctan\frac{2}{\gamma(1+\sqrt5\beta)}
+}. \tag{5}\]
+
+当 \(v=0\)
+时，\(\tan\theta=2\)，正好回到静止正方形中``竖直边与半条水平边之比为
+\(2:1\)''的几何结果。
+
+\Needspace{3\baselineskip}
+\textbf{4. 接收事件的地面系时间和位置}
+
+车厢系中的接收事件为
+
+\[ct_B'=\sqrt5l,\qquad x_B'=l.\]
+
+利用洛伦兹变换：
+
+\[
+\begin{aligned}
+ct_2
+&=\gamma(ct_B'+\beta x_B')\\
+&=\gamma(\sqrt5l+\beta l)\\
+&=\gamma l(\sqrt5+\beta),
+\end{aligned}
+\]
+
+所以
+
+\[\boxed{t_2=\frac{\gamma l}{c}(\sqrt5+\beta)}. \tag{6}\]
+
+接收点的地面系坐标为
+
+\[
+\begin{aligned}
+x_B
+&=\gamma(x_B'+\beta ct_B')\\
+&=\gamma(l+\sqrt5\beta l)\\
+&=\gamma l(1+\sqrt5\beta).
+\end{aligned}
+\]
+
+故
+
+\[\boxed{x_B=\gamma l(1+\sqrt5\beta)}. \tag{7}\]
+
+可以用点 \(B\) 的匀速世界线交叉检查。地面系中，\(t=0\) 时点 \(B\) 位于
+\(l/\gamma\)，之后以速度 \(v\) 运动：
+
+\[x_B=\frac l\gamma+vt_2.\]
+
+代入式（6）：
+
+\[
+\begin{aligned}
+\frac l\gamma+vt_2
+&=\frac l\gamma+\beta\gamma l(\sqrt5+\beta)\\
+&=\gamma l(1+\sqrt5\beta),
+\end{aligned}
+\]
+
+与式（7）一致。
+
+\Needspace{3\baselineskip}
+\textbf{5. 同一地面系时刻点 \(O'\) 的时钟读数}
+
+题目问的是``在地面系接收时刻 \(t_2\)，点 \(O'\)
+的钟读多少''，即取地面系中与接收事件同时、位于 \(O'\) 世界线上的事件。点
+\(O'\) 以速度 \(v\) 匀速运动，其固有时为地面坐标时除以 \(\gamma\)：
+
+\[t_2'=\frac{t_2}{\gamma}.\]
+
+代入式（6）：
+
+\[\boxed{
+t_2'=\frac l c(\sqrt5+\beta)
+}. \tag{8}\]
+
+这不等于 \(B\) 处接收事件的车厢系时间 \(\sqrt5l/c\)。二者差
+
+\[
+\Delta t'=\frac{\beta l}{c}
+\]
+
+正是相对同时性的体现：在地面系同时的 \(O'\) 事件与 \(B\)
+接收事件，在车厢系并不同时。
+
+\Needspace{3\baselineskip}
+\textbf{6. 时空间隔核验}
+
+从发射事件到接收事件，在车厢系有
+
+\[c^2t_1'^2-x_B'^2=5l^2-l^2=4l^2.\]
+
+在地面系用式（6）、（7）：
+
+\[
+\begin{aligned}
+c^2t_2^2-x_B^2
+&=\gamma^2l^2\left[(\sqrt5+\beta)^2-(1+\sqrt5\beta)^2\right]\\
+&=\gamma^2l^2\left[4(1-\beta^2)\right]\\
+&=4l^2.
+\end{aligned}
+\]
+
+两个参考系给出同一时空间隔，说明事件变换、正负号和 \(\gamma\)
+因子彼此一致。
+
+\Needspace{3\baselineskip}
+\textbf{时空图中的投影与同时线}
+
+右图仅画x与ct，是三维事件链在这两轴上的投影；两段实际光线都还有竖直位移
+\(\pm l\)。因此投影光线的斜率不是光锥的
+\(\pm1\)，不能据此认为光速改变。反射事件在顶面，接收事件在底面，这个y坐标信息在左图给出。
+
+把三个车厢系事件记为
+
+\[E_0=(0,0,0),\quad E_M=(\sqrt5l/2,l/2,l),\quad E_B=(\sqrt5l,l,0).\]
+
+逐事件变换后，\(E_M\) 的ct和x均为 \(E_B\) 的一半。两段各自满足完整间隔
+\(\Delta(ct)^2-\Delta x^2-\Delta y^2=0\)；发射到接收间隔为
+\(4l^2\)，因为这两个端点之间的路线有一次反射，不能把整体间隔也设成零。
+
+地面系同时线是水平线，车厢系同时线满足
+\(ct-\beta x=\text{常量}\)。图中分别画过接收事件的两条线，与O及\(O'\)世界线的交点才是另一个钟的``此时''事件。本文的
+\(x'_B=l\) 是接收端坐标，\(x'_{OB}=l(1+\sqrt5\beta)\)
+是另一个量，不能共用符号后混算。
+
+\Needspace{3\baselineskip}
+\textbf{事件坐标检验优于只变换一个总时间}
+
+车厢系中发射、反射、到达三事件的 \(ct'/l,x'/l,z'/l\) 分别为
+
+\[(0,0,0),\quad(\sqrt5/2,1/2,1),\quad(\sqrt5,1,0).\]
+
+每一段满足 \(\Delta(ct')^2=\Delta x'^2+\Delta z'^2\)。地面系用
+
+\[ct=\gamma(ct'+\beta x'),\qquad x=\gamma(x'+\beta ct'),\qquad z=z'.\]
+
+变换后两段仍是零间隔。到达事件还须满足车头 \(B\) 的世界线
+\(x=l/\gamma+v t\)；反射事件应在镜面世界线上。图 8-2 中 \(x-ct\)
+投影的光线斜率可以超过 \(1/c\) 对应的纵横比例，因为它仍有 \(z\)
+向分量，不能把二维投影的表观速率误当成真实光速。
+
+若只用时间膨胀 \(t=\gamma t'\)，会漏掉两事件 \(\Delta x'=l\) 带来的
+\(\gamma vl/c^2\)
+项。时间膨胀直接适用的是同一静止钟上的两个事件，而本题起点与终点不在同一个车厢位置。
+
+\Needspace{3\baselineskip}
+\textbf{接收事件对应的四个钟读数}
+
+令接收事件为 \(E_B\)。车厢系接收时间为 \(t'_B=\sqrt5l/c\)，地面系为
+\(t_B=\gamma(\sqrt5+\beta)l/c\)。两种同时约定选出的另一个钟事件不同：
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+同时约定
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+地面钟 \(O\) 的读数
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+车厢尾钟 \(O'\) 的读数
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+地面系与 \(E_B\) 同时 & \(\gamma(\sqrt5+\beta)l/c\) &
+\((\sqrt5+\beta)l/c\) \\
+车厢系与 \(E_B\) 同时 & \(\sqrt5l/(\gamma c)\) & \(\sqrt5l/c\) \\
+\end{longtable}
+}
+
+第一行中 \(O'\) 沿 \(x=vt\) 运动，固有时间为地面时间除以
+\(\gamma\)。第二行中地面钟处 \(x=0\)，所以洛伦兹式给
+\(t'=\gamma t\)，再令
+\(t'=t'_B\)。图上的水平同时线与倾斜同时线，分别选出表中两行。
+
+当 \(\beta=0\)，两行都还原为
+\(\sqrt5l/c\)。速度不为零时，即使每个钟的运动规律都已给出，也不能省去``哪一个系判断同时''这一条件。表中的差异来自所比较事件的不同，不是给同一个事件赋予两种相互冲突的读数。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf-7}
+
+同一句``此时某个钟的读数''必须先问清``此时''由哪个参考系定义。若要求地面系接收时刻的
+\(O'\) 钟读数，就要在地面系作同时切片；若要求车厢系接收时刻的 \(O\)
+钟读数，就要在车厢系作同时切片。两问分别得到 \(t_2/\gamma\) 与
+\(t_1'/\gamma\)，不能把接收事件本身的 \(t'\) 坐标机械套用。
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9-7}
+
+\begin{itemize}
+\tightlist
+\item
+  把每段光程误写成 \(\sqrt2l\)，忘记反射点在顶面中点，水平位移只有
+  \(l/2\)。
+\item
+  在车厢系求 \(O\) 到 \(B\) 距离时只写
+  \(l\)，忘记地面原点在此期间向左移动。
+\item
+  洛伦兹变换方向混淆，把 \(ct=\gamma(ct'+\beta x')\) 写成负号。
+\item
+  对车厢高度也使用长度收缩。
+\item
+  用经典速度叠加 \(u_x=u_x'+v\)，导致光速模不再为 \(c\)。
+\item
+  把 \(B\) 处接收事件的车厢系时刻与``地面系同时的 \(O'\)
+  钟读数''混为一谈。
+\end{itemize}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae-7}
+
+建议先在图 8-2
+的时空图上圈出四个不同事件：发射、反射、接收、以及与接收在地面系同时的
+\(O'\)
+事件。用一条水平线表示地面系同时面，再用一条倾斜线表示车厢系同时面。学生一旦看见两条同时线不同，式（3）与式（8）的差别就不再需要死记。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3-7}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  若反射点在顶面上距左端 \(\eta l\) 处，其中
+  \(0<\eta<1\)，在车厢系求总光程，并用反射定律判断只有哪个 \(\eta\)
+  能使光从 \(O'\) 经水平镜面反射到 \(B\)。
+\item
+  直接在地面系用移动镜面反射和点 \(B\) 世界线求
+  \(t_2\)，再与洛伦兹变换结果比较，验证两种方法的一致性。
+\end{enumerate}
+
+\Needspace{3\baselineskip}
+\textbf{教师备课补充：四个容易混淆的时间}
+
+将本题相关时间并列：
+
+\[
+\begin{array}{c|c|c}
+\text{符号}&\text{事件或同时性条件}&\text{数值}\\ \hline
+t_1'&B\text{ 接收事件在车厢系的坐标时}&\sqrt5l/c\\
+t_1&\text{与接收在车厢系同时的 }O\text{ 钟读数}&\sqrt5l/(\gamma c)\\
+t_2&B\text{ 接收事件在地面系的坐标时}&\gamma l(\sqrt5+\beta)/c\\
+t_2'&\text{与接收在地面系同时的 }O'\text{ 钟读数}&l(\sqrt5+\beta)/c
+\end{array}
+\]
+
+\(t_1'\) 与 \(t_2\) 是同一接收事件在两个参考系的坐标；\(t_1\)、\(t_2'\)
+则分别来自另一条世界线上的同时事件。课堂上若只说``时间变慢''，无法区分这四个量，必须连同世界线和同时面一起说明。
+
+\Needspace{3\baselineskip}
+\textbf{速度变换的光速核验}
+
+由正文得到
+
+\[
+\frac{u_x}{c}=\frac{1+\sqrt5\beta}{\sqrt5+\beta},
+\qquad
+\frac{u_y}{c}=\frac{2}{\gamma(\sqrt5+\beta)}.
+\]
+
+检验速度模：
+
+\[
+\begin{aligned}
+\frac{u_x^2+u_y^2}{c^2}
+&=\frac{(1+\sqrt5\beta)^2+4/\gamma^2}
+{(\sqrt5+\beta)^2}\\
+&=\frac{1+2\sqrt5\beta+5\beta^2+4(1-\beta^2)}
+{5+2\sqrt5\beta+\beta^2}\\
+&=\frac{5+2\sqrt5\beta+\beta^2}
+{5+2\sqrt5\beta+\beta^2}\\
+&=1.
+\end{aligned}
+\]
+
+所以变换后光速仍为 \(c\)。若学生把横向分量误写成 \(u_y'=u_y\)
+或使用经典速度叠加，这一核验会立刻失败。
+
+\Needspace{3\baselineskip}
+\textbf{从地面系世界线直接复核接收事件}
+
+在地面系中，点 \(B\) 的世界线为
+
+\[x_B(t)=\frac l\gamma+vt.\]
+
+正文式（7）与式（6）必须满足
+
+\[
+\gamma l(1+\sqrt5\beta)
+=\frac l\gamma+\beta c
+\left[\frac{\gamma l}{c}(\sqrt5+\beta)\right].
+\]
+
+右边化简：
+
+\[
+\begin{aligned}
+\frac l\gamma+\gamma l\beta\sqrt5+\gamma l\beta^2
+&=\gamma l(1-\beta^2)+\gamma l\beta\sqrt5+\gamma l\beta^2\\
+&=\gamma l(1+\sqrt5\beta).
+\end{aligned}
+\]
+
+等式成立。这条检查只涉及接收点运动，不依赖光路细节，因此能独立发现洛伦兹变换中
+\(x'\) 项正负号的错误。
+
+\Needspace{3\baselineskip}
+\textbf{教师备课补充：直接由光线速度求接收事件}
+
+地面系中第一段光线的分量为正文所给 \(u_x,u_y\)。顶面高度仍为
+\(l\)，所以到达顶面的地面系时间
+
+\[t_R=\frac l{u_y}
+=\frac{\gamma l}{2c}(\sqrt5+\beta).\]
+
+这恰好是总接收时间的一半：
+
+\[t_R=\frac{t_2}{2}.\]
+
+地面系中水平镜面沿自身方向运动，反射不改变切向速度分量
+\(u_x\)，只使竖直分量反号。因此第二段所需时间也为
+\(l/u_y=t_R\)。这里``时间相等''不是因为地面系光路左右对称，而是因为反射前后竖直速度大小相等且两段竖直位移均为
+\(l\)。
+
+反射点的地面坐标为
+
+\[
+\begin{aligned}
+x_R
+&=u_xt_R\\
+&=c\frac{1+\sqrt5\beta}{\sqrt5+\beta}
+\cdot\frac{\gamma l}{2c}(\sqrt5+\beta)\\
+&=\frac{\gamma l}{2}(1+\sqrt5\beta).
+\end{aligned}
+\]
+
+接收点坐标是
+
+\[x_B=2x_R=\gamma l(1+\sqrt5\beta),\]
+
+正好恢复洛伦兹变换结果。这个直接解法也说明：在地面系中反射点仍位于接收事件水平坐标的一半，但这并不等于车厢地面长度的一半；它是整组运动与光行程共同产生的事件坐标关系。
+
+\Needspace{3\baselineskip}
+\textbf{横向长度不收缩的几何意义}
+
+车厢高度方向与相对速度垂直。洛伦兹变换中
+
+\[y=y',\]
+
+所以顶面始终满足 \(y=l\)。正因为这一点，地面系两段光程的竖直位移仍各为
+\(l\)。若误将高度也写成
+\(l/\gamma\)，不仅反射时间错误，速度变换后的光速核验也无法闭合。
+
+\Needspace{3\baselineskip}
+\textbf{低速极限}
+
+当 \(\beta\ll1\)：
+
+\[\gamma=1+\frac12\beta^2+O(\beta^4).\]
+
+接收时间展开为
+
+\[
+t_2
+=\frac l c
+\left[
+\sqrt5+\beta+\frac{\sqrt5}{2}\beta^2+O(\beta^3)
+\right].
+\]
+
+零阶项 \(\sqrt5l/c\) 是静止车厢结果；一阶项 \(\beta l/c=vl/c^2\)
+来自接收端在光传播期间向右移动；时间膨胀从二阶才出现。发射角则有
+
+\[
+\tan\theta
+=\frac{2}{1+\sqrt5\beta}+O(\beta^2)
+\approx2(1-\sqrt5\beta),
+\]
+
+说明车速向右时光线在地面系中更偏向水平方向，符合光行差直觉。
+\end{document}

@@ -1,0 +1,244 @@
+\documentclass[12pt,a4paper,UTF8]{ctexart}
+\usepackage[a4paper,top=22mm,bottom=22mm,left=22mm,right=22mm,headheight=15pt]{geometry}
+\usepackage{amsmath,amssymb,mathtools,bm}
+\usepackage{graphicx,xcolor,booktabs,longtable,array,enumitem,fancyhdr,caption,float,microtype,setspace}
+\newcommand{\Needspace}[1]{\par\begingroup\dimen0=#1\relax\dimen2=\pagegoal\advance\dimen2 by-\pagetotal\ifdim\dimen0>\dimen2\newpage\fi\endgroup}
+\newcommand{\needspace}[1]{\par\begingroup\skip0=\lastskip\vskip-\skip0\dimen0=#1\relax\advance\dimen0 by\skip0\vskip\dimen0\penalty-100\vskip-\dimen0\vskip\skip0\penalty9999\endgroup}
+\usepackage[hidelinks,unicode]{hyperref}
+\usepackage[most]{tcolorbox}
+\definecolor{ContestBlue}{HTML}{17365D}
+\hypersetup{pdftitle={第 051 套},pdfauthor={}}
+\setstretch{1.24}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.35em}
+\setlength{\emergencystretch}{2em}
+\setlist{itemsep=0.35em,topsep=0.4em}
+\captionsetup{font=small,labelfont=bf,justification=centering}
+\setcounter{secnumdepth}{0}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small 第 051 套}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\ctexset{
+  section={format=\Large\bfseries\color{ContestBlue},beforeskip=1.2em,afterskip=0.7em},
+  subsection={format=\large\bfseries\color{ContestBlue},beforeskip=1.0em,afterskip=0.5em},
+  subsubsection={format=\normalsize\bfseries,beforeskip=0.8em,afterskip=0.35em}
+}
+\makeatletter
+\newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\newcommand{\maxwidth}{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\newcommand{\maxheight}{\ifdim\Gin@nat@height>0.72\textheight 0.72\textheight\else\Gin@nat@height\fi}
+\newcommand{\pandocbounded}[1]{\begingroup\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}#1\endgroup}
+\makeatother
+\begin{document}
+\begin{titlepage}
+  \centering
+  \vspace*{58mm}
+  {\Huge\bfseries\color{ContestBlue} 第 051 套\par}
+  \vfill
+  \vspace*{28mm}
+\end{titlepage}
+\section{第 1 题}\label{ux7b2c-1-ux9898}
+
+主动轮和从动轮都由两个共轴、顶点相对的圆锥组成，金属带的截面为扁梯形。已知圆锥顶角为
+\(\theta\)，金属带宽度为 \(l\)，主动轮与从动轮的两顶点间距分别为
+\(d_1\)、\(d_2\)，主动轮角速度为 \(\omega_1\)。
+
+（1）求从动轮角速度 \(\omega_2\)。
+
+（2）金属带总长度不变，且两轮轴间距远大于轮的有效半径。若主动轮顶点间距由
+\(d_1\) 变为
+\(d_1-x\)，为保持各接触面紧密，从动轮顶点间距也相应改变，求新的
+\(\omega_2\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.533\linewidth,height=\textheight,keepaspectratio,alt={图1-1　对置圆锥与金属带的径向几何关系}]{../figures/question-01.pdf}
+\caption*{图1-1　对置圆锥与金属带的径向几何关系}
+\end{figure}
+
+\newpage
+
+\section{第 2 题}\label{ux7b2c-2-ux9898}
+
+Jack 船长站在一艘均匀半圆柱形船上。船的半径为 \(r\)，水的密度为
+\(\rho_0\)。平衡时船的吃水深度为 \(8r/13\)，即船底到水面的竖直距离为
+\(8r/13\)。前五问忽略船长的影响。
+
+（1）船的平均密度为 \(\rho\)，求 \(\rho/\rho_0\)；
+
+（2）船的质心到圆心的距离为 \(h\)，求 \(h/r\)；
+
+（3）船绕圆心轴的转动惯量为 \(I=\lambda Mr^2\)，求 \(\lambda\)；
+
+（4）船不发生左右摇摆，只作小幅竖直振动，周期为 \(T_1\)，求
+\(T_1\sqrt{g/r}\)；
+
+（5）令重力与浮力始终近似相等，船作小角度左右摇摆，周期为 \(T_2\)，求
+\(T_2\sqrt{g/r}\)；
+
+（6）船以角振幅 \(\theta_0\) 摇摆。船长质量为 \(m\)，船质量为
+\(M\)。每当一侧船舷到达最低点，船长便以很大的相对速度跑到另一侧，并停留到另一侧到达最低点后再跑回。已知
+\(v_0T_2\gg r\)、\(\theta_0=0.01\)、\(m/M=10^{-4}\)。船长来回跑 \(N\)
+个周期后，振幅增至 \(\theta_0'=0.02\)，估算 \(N\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\linewidth,height=\textheight,keepaspectratio,alt={图2-1　半圆柱船的吃水几何}]{../figures/question-02.pdf}
+\caption*{图2-1　半圆柱船的吃水几何}
+\end{figure}
+
+\newpage
+
+\section{第 3 题}\label{ux7b2c-3-ux9898}
+
+一个半径为 \(r\) 的刚性圆柱体，轴线水平，表面静摩擦系数为
+\(\mu\)。一根细长、柔软、不可伸长的绳子搭在圆柱上，两端位于同一竖直平面内，并沿与水平方向夹角为
+\(\theta\)
+的方向拉紧。某些角度下，无论拉力整体放大多少，绳子都能保持静止，形成几何自锁。
+
+（1）求 \(\theta\) 的取值范围；
+
+（2）令 \(\theta\) 取临界值。取圆柱轴线为 \(z\)
+轴，以绳线对称中点所在横截面为 \(z=0\)，柱面径向坐标为
+\(\rho\)，从圆柱最高母线起量方位角 \(\alpha\)。求临界绳线的
+\(z\)、\(\rho\)、\(\alpha\) 关系。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\linewidth,height=\textheight,keepaspectratio,alt={图3-1　粗糙圆柱面上的空间绳线}]{../figures/question-03.pdf}
+\caption*{图3-1　粗糙圆柱面上的空间绳线}
+\end{figure}
+
+\newpage
+
+\section{第 4 题}\label{ux7b2c-4-ux9898}
+
+两个天体质量分别为 \(M\) 和 \(m\)，相距
+\(l\)，作相对圆周运动。忽略第三物体的质量。
+
+（1）求两天体绕共同质心转动的角速度 \(\Omega\)；
+
+（2）在随两天体共同转动的参考系中，以质心为原点、\(x\) 轴指向质量 \(m\)
+的天体，写出平面内点 \((x,y)\) 的单位质量有效势能
+\(V_{\mathrm{eff}}(x,y)\)；
+
+（3）画出平面内全部拉格朗日点；
+
+（4）求非共线拉格朗日点的坐标；
+
+（5）在一个非共线拉格朗日点附近作小位移，\(x\)、\(y\) 方向偏离分别为
+\(u\)、\(v\)，求有效势能改变量
+\(\Delta V_{\mathrm{eff}}(u,v)\)，判断该点是势能极大还是极小；
+
+（6）在该处放置质量为 \(m_0\)
+的小物体，写出线性化运动方程并判断稳定性。对地月系统取月球质量约为地球的
+\(1/80\)，判断稳定性并说明是否符合物理常识。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.617\linewidth,height=\textheight,keepaspectratio,alt={图4-1　五个拉格朗日点的空间分布}]{../figures/question-04.pdf}
+\caption*{图4-1　五个拉格朗日点的空间分布}
+\end{figure}
+
+\newpage
+
+\section{第 5 题}\label{ux7b2c-5-ux9898}
+
+边长为 \(l\) 的正四面体 \(ABCD\) 的每条棱上均接电阻 \(R\)。四面体体心为
+\(H\)，从 \(H\) 到四个顶点分别接一个电容 \(C\)。底面中心为坐标原点
+\(O\)，坐标方向如图。\(t<0\) 时存在沿 \(x\)
+方向的恒定均匀磁场，电容均不带电。\(t>0\) 后磁场变为 \[
+\bm B=B_0(\cos\omega t\,\hat{\bm x}+\sin\omega t\,\hat{\bm y}).
+\]
+
+（1）求 \(t\) 略大于零时棱 \(AD\)、\(AB\) 上的电流大小；
+
+（2）求足够长时间后，\(AD\)、\(AB\) 上电阻的平均发热功率。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.748\linewidth,height=\textheight,keepaspectratio,alt={图5-1　正四面体电阻---电容网络及坐标系}]{../figures/question-05.pdf}
+\caption*{图5-1　正四面体电阻---电容网络及坐标系}
+\end{figure}
+
+\newpage
+
+\section{第 6 题}\label{ux7b2c-6-ux9898}
+
+一定量理想气体初态为 \((V_0,p_0,T_0)\)，定容摩尔热容量
+\(C_V=5R/2\)。过程 \(a\) 定容升温至 \(2T_0\)；过程 \(b\) 定压升温至
+\(4T_0\)；过程 \(c\) 保持压强与体积之比 \(p/V\) 不变，降温至
+\(T_0\)，构成循环。
+
+（1）过程 \(a\) 吸热为 \(\alpha p_0V_0\)，求 \(\alpha\)；
+
+（2）过程 \(b\) 吸热为 \(\beta p_0V_0\)，求 \(\beta\)；
+
+（3）过程 \(c\) 放热为 \(\gamma p_0V_0\)，求 \(\gamma\)；
+
+（4）求循环效率。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\linewidth,height=\textheight,keepaspectratio,alt={图6-1　由定容、定压和 p/V 恒定过程组成的循环}]{../figures/question-06.pdf}
+\caption*{图6-1　由定容、定压和 \(p/V\) 恒定过程组成的循环}
+\end{figure}
+
+\newpage
+
+\section{第 7 题}\label{ux7b2c-7-ux9898}
+
+平面曲线以参数 \(\varphi\) 表示为 \[
+x=\cos^3\varphi,
+\qquad
+y=\sin^3\varphi.
+\] 这里 \(\varphi\) 只是参数，不是极角。研究曲线左下象限从 \(A=(-1,0)\)
+到 \(B=(0,-1)\) 的一段。质点从 \(A\) 静止释放，在光滑曲线外侧滑动，并在
+\(C\) 点脱离。
+
+（1）求曲线 \(AB\) 任一点的斜率 \(dy/dx\)；
+
+（2）求曲率半径 \(\rho\)；
+
+（3）重力加速度为 \(g\)，方向沿 \(y\) 轴负向，求从 \(A\) 到 \(C\) 的时间
+\(t_{AC}\)；
+
+（4）整条曲线在四个象限均为理想镜面。从原点 \(O\)
+发出一束激光，初始方向限于第三象限，要求经过不超过两次光滑反射后返回原点。求所有可能的发射极角
+\(i\)，用 \(180^\circ\) 至 \(270^\circ\) 间的角表示。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\linewidth,height=\textheight,keepaspectratio,alt={图7-1　星形线、滑动弧段与分离点}]{../figures/question-07.pdf}
+\caption*{图7-1　星形线、滑动弧段与分离点}
+\end{figure}
+
+\newpage
+
+\section{第 8 题}\label{ux7b2c-8-ux9898}
+
+采用一个带有限模数截断的一维模型讨论两平行板间的真空零点能。两板间距为
+\(d\)，每一模能量为 \[
+E_n=\hbar ck_n,
+\] 总零点能取 \[
+E=\frac12\sum_{n<p}E_n,
+\] 其中 \(p=2000\) 是给定的大整数。
+
+（1）理想气体温度趋于零时，压强趋于多少；
+
+（2）电磁振动形式为 \(\sin k_nx\)，在两板处均满足振幅为零：
+
+a）求允许的 \(k_n\)；
+
+b）证明两板间作用力具有 \(a/d^2\) 的形式并求 \(a\)；
+
+c）取 \(d=1.0\,\mathrm{mm}\)，求力的大小。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.466\linewidth,height=\textheight,keepaspectratio,alt={图8-1　两平行板间的驻波边界条件}]{../figures/question-08.pdf}
+\caption*{图8-1　两平行板间的驻波边界条件}
+\end{figure}
+\end{document}

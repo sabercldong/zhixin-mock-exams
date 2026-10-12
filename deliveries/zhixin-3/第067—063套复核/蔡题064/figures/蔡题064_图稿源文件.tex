@@ -1,0 +1,329 @@
+\documentclass[multi=tikzpicture,border=7pt]{standalone}
+\usepackage{ctex,amsmath,amssymb,bm}
+\usepackage{tikz,pgfplots}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{arrows.meta,calc,angles,quotes,patterns,positioning,decorations.pathmorphing,3d,intersections}
+\tikzset{wire/.style={brown!70!black,very thick},guide/.style={dashed,gray!60},force/.style={->,>=Stealth,thick,red!70!black},velocity/.style={->,>=Stealth,thick,blue!70!black},axis/.style={->,>=Stealth,thick},dim/.style={<->,>=Stealth,thin},body/.style={draw,thick,fill=blue!7},panel/.style={anchor=west,font=\bfseries},hidden/.style={dashed,gray!58,thick},orbit/.style={very thick,blue!70!black}}
+\tikzset{charge/.style={circle,draw,fill=blue!12,minimum size=5.5mm,inner sep=0pt},resistor/.style={decorate,decoration={zigzag,segment length=4pt,amplitude=2pt},thick}}
+\tikzset{vec/.style={->,>=Stealth,very thick},wall/.style={pattern=north east lines,pattern color=gray},nodept/.style={circle,fill=white,draw,inner sep=1.5pt}}
+\tikzset{flow/.style={->,>=Stealth,very thick,blue!70!black},current/.style={->,>=Stealth,very thick,red!70!black},terminal/.style={circle,draw,fill=white,inner sep=1.5pt}}
+\begin{document}
+% 1 question-01
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+\draw[thick](-4,0)--(4,0);\draw[body](-3.8,0)rectangle(3.8,1.1);\node at(0,.55){$C,m$};
+\draw[body](-3.5,1.1)rectangle(-2.5,2.85);\node at(-3,1.9){$A,m$};
+\draw[body](2.5,1.1)rectangle(3.5,2.7);\node at(3,1.9){$B,m$};
+\draw[thick](-2.5,2.5)--(-2,2.5) (2,1.9)--(2.5,1.9);\draw[thick](-2,2.5)circle(.3);\draw[thick](2,1.9)circle(.3);
+\draw[wire](-2.5,1.6)--(2,1.6)arc(-90:90:.3)--(-2,2.2)arc(-90:-270:.3)--(1.2,2.8);
+\fill(-2.5,1.6)circle(2pt);\draw[force](1.2,2.8)--(2.4,2.8)node[right]{$F$};
+\node[below]at(-3.0,1.1){$\mu_1$};\node[below]at(3,1.1){$\mu_2$};\node[below]at(0,0){$\mu_3$};
+\node[align=left,anchor=west]at(4.2,1.8){绳固定于 $A$ 的下结点\\绕 $B$ 右半轮，再绕 $A$ 左半轮\\三股拉 $A$ 向右，两股拉 $B$ 向左};
+
+\end{tikzpicture}
+
+% 2 solution-01
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+\begin{scope}[shift={(-4,0)},x=.36cm,y=.36cm]
+\draw[axis](0,0)--(14,0)node[right]{$x$};\draw[axis](0,0)--(0,11)node[above]{$y$};
+\fill[blue!7](0,0)--(9,6)--(9,11)--(0,11)--cycle;\fill[orange!10](0,0)--(9,6)--(14,6)--(14,0)--cycle;
+\draw[very thick](0,0)--(9,6)--(9,11);\draw[very thick](9,6)--(14,6);
+\fill(9,6)circle(3pt)node[above right]{$(9,6)$};\node at(3,7){$A$先滑};\node at(6,2){$B$先滑};\node at(11,8){地面先滑};
+\node[below]at(9,0){9};\node[left]at(0,6){6};
+\end{scope}
+\begin{scope}[shift={(2,0)},x=.36cm,y=.36cm]
+\draw[axis](0,0)--(13,0)node[right]{$x$};\draw[axis](0,0)--(0,11)node[above]{$y$};
+\draw[orbit](0,3)--(8,11);\draw[orbit](3,0)--(13,10);\node at(3,9){向左受力占优};\node at(9,2){向右受力占优};\node[rotate=38]at(6,6){$|x-y|\le3$};
+\end{scope}
+\node[align=center]at(1,-1.2){左：首次启动的有效边界段；右：上层两处均滑后的受力条件\\中带允许静止；已经运动的底块先减速，不能瞬时停下};
+
+\end{tikzpicture}
+
+% 3 question-02
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+% 两图共用斜投影 (X,Y)=(x-0.55y,,0.55z+0.28y)。
+  \begin{scope}[shift={(-4.05,0)},scale=.72]
+    % 前三问：两个主方向都向上弯曲的抛物面。
+    \foreach \yy in {-2,-1.5,...,2}{
+      \draw[blue!35,thin,domain=-2.3:2.3,samples=44]
+        plot ({\x-.55*\yy},
+              {.55*(.36*\x*\x+.36*\yy*\yy)+.28*\yy});
+    }
+    \foreach \xx in {-2,-1.5,...,2}{
+      \draw[blue!48,thin,domain=-2.3:2.3,samples=44]
+        plot ({\xx-.55*\x},
+              {.55*(.36*\xx*\xx+.36*\x*\x)+.28*\x});
+    }
+    \draw[very thick,blue!75!black,domain=-2.4:2.4,samples=64]
+      plot (\x,{.55*.36*\x*\x});
+    \draw[very thick,blue!75!black,domain=-2.3:2.3,samples=64]
+      plot ({-.55*\x},{.55*.36*\x*\x+.28*\x});
+    \draw[->] (-3.1,0)--(3.25,0) node[right] {$x$};
+    \draw[->] (1.5,-.76)--(-1.5,.76) node[above left] {$y$};
+    \draw[->] (0,-.95)--(0,3.35) node[above] {$z$};
+    \filldraw[fill=orange!75] (.60,.22) circle (.17) node[right=3pt] {$m$};
+    \draw[force] (.60,.22)--(.60,-.86) node[right] {$mg$};
+    \draw[current] (1.0,2.72) arc (25:155:1.0);
+    \node[red!75!black,fill=white,inner sep=1pt] at (-1.15,2.55) {$\omega_1$};
+    \node[fill=white,inner sep=2pt] at (0,3.9)
+      {$z=\dfrac a2(x^2+y^2)$};
+    \node at (0,-1.55) {旋转抛物面};
+  \end{scope}
+  \begin{scope}[shift={(4.05,0)},scale=.72]
+    % 第四问：沿 x 方向上弯、沿 y 方向下弯的马鞍面。
+    \foreach \yy in {-2,-1.5,...,2}{
+      \draw[blue!35,thin,domain=-2.3:2.3,samples=44]
+        plot ({\x-.55*\yy},
+              {.55*(.48*\x*\x-.24*\yy*\yy)+.28*\yy});
+    }
+    \foreach \xx in {-2,-1.5,...,2}{
+      \draw[blue!48,thin,domain=-2.3:2.3,samples=44]
+        plot ({\xx-.55*\x},
+              {.55*(.48*\xx*\xx-.24*\x*\x)+.28*\x});
+    }
+    \draw[very thick,blue!75!black,domain=-2.4:2.4,samples=64]
+      plot (\x,{.55*.48*\x*\x});
+    \draw[very thick,blue!75!black,domain=-2.3:2.3,samples=64]
+      plot ({-.55*\x},{.55*(-.24*\x*\x)+.28*\x});
+    \draw[->] (-3.1,0)--(3.25,0) node[right] {$x$};
+    \draw[->] (1.5,-.76)--(-1.5,.76) node[above left] {$y$};
+    \draw[->] (0,-1.1)--(0,3.35) node[above] {$z$};
+    \filldraw[fill=orange!75] (.63,.33) circle (.17) node[right=3pt] {$m$};
+    \draw[force] (.63,.33)--(.63,-.86) node[right] {$mg$};
+    \draw[current] (1.0,2.72) arc (25:155:1.0);
+    \node[red!75!black,fill=white,inner sep=1pt] at (-1.15,2.55) {$\omega_2$};
+    \node[fill=white,inner sep=2pt] at (0,3.9)
+      {$z=\dfrac a2x^2-\dfrac a4y^2$};
+    \node at (0,-1.55) {旋转马鞍面};
+  \end{scope}
+
+\end{tikzpicture}
+
+% 4 solution-02
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+\begin{scope}[shift={(-4.6,0)}]
+    \draw[->] (-2.4,0)--(2.5,0) node[right] {$x$};
+    \draw[->] (0,-.4)--(0,3.1) node[above] {$z$};
+    \draw[thick,domain=-2:2,samples=50] plot (\x,{.5*\x*\x});
+    \fill (1,.5) circle (.12);
+    \draw[force] (1,.5)--(.1,.05) node[below right] {$-mga\,x$};
+    \node at (0,-.9) {稳定抛物面：$\omega_0^2=ag$};
+  \end{scope}
+  \begin{scope}[shift={(3.3,0)}]
+    \draw[->] (-2.6,0)--(2.7,0) node[right] {$x'$};
+    \draw[->] (0,-2.2)--(0,2.5) node[above] {$y'$};
+    \draw[thick,blue!65!black] (-2.2,1.3)..controls(-.7,.2)and(.7,-.2)..(2.2,-1.3);
+    \draw[thick,blue!65!black] (-2.2,-1.3)..controls(-.7,-.2)and(.7,.2)..(2.2,1.3);
+    \fill (1.1,.6) circle (.12);
+    \draw[force] (1.1,.6)--(2.1,1.15) node[above] {$m\Omega^2\bm r$};
+    \draw[force] (1.1,.6)--(.55,1.6) node[left] {$-2m\bm\Omega\!\times\!\bm v'$};
+    \draw[current] (1.6,-1.7) arc (-30:70:1.2) node[right] {$\Omega$};
+    \node at (0,-2.65) {$z=\dfrac a2x'^2-\dfrac a4y'^2$};
+    \node at (0,-3.2) {稳定下确界：$\Omega_c^2=ag$};
+  \end{scope}
+
+\node at(2,-3.6){严格稳定 $\Omega>\sqrt{ga}$；等号允许 $x\propto t$};
+\end{tikzpicture}
+
+% 5 question-03
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+% 固定几何：两桌边与两圆柱顶点等高，相邻间距均为 l
+  \draw[very thick] (-7,1.15)--(-3,1.15) (-3,1.15)--(-3,.25);
+  \draw[very thick] (3,.25)--(3,1.15) (3,1.15)--(6.2,1.15);
+  \draw[thick,fill=gray!18] (-1,.47) circle (.68);
+  \draw[thick,fill=gray!18] (1,.47) circle (.68);
+  % 初始位置：板右端恰在左桌边
+  \draw[very thick,fill=blue!7] (-7,1.35) rectangle (-3,1.58);
+  \node[above] at (-5,1.58) {匀质薄板，长度 $2l$};
+  \draw[force] (-3.05,1.82)--(-1.95,1.82) node[right] {$v_0$};
+  % 两圆柱顶面相向运动
+  \draw[current] (-1,.47) ++(145:.45) arc (145:-35:.45);
+  \draw[current] (1,.47) ++(35:.45) arc (35:215:.45);
+  \draw[->,thick,red!70!black] (-1.42,1.22)--(-.58,1.22);
+  \draw[->,thick,red!70!black] (1.42,1.22)--(.58,1.22);
+  \node at (0,-.42) {$\omega$};
+  \foreach \x in {-3,-1,1,3}{\draw[guide] (\x,1.25)--(\x,2.63);}
+  \draw[<->] (-3,2.35)--(-1,2.35) node[midway,fill=white] {$l$};
+  \draw[<->] (-1,2.35)--(1,2.35) node[midway,fill=white] {$l$};
+  \draw[<->] (1,2.35)--(3,2.35) node[midway,fill=white] {$l$};
+
+\end{tikzpicture}
+
+% 6 solution-03
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+% 两圆柱同时支承时的受力图
+  \begin{scope}[shift={(-3.9,1.9)}]
+    \draw[very thick,fill=blue!7] (-2.35,.2) rectangle (2.35,.43);
+    \fill (0,.315) circle (2pt) node[above=5pt] {$C$};
+    \draw[dashed] (0,-1.15)--(0,.75);
+    \draw[force] (-1.2,.2)--(-1.2,1.55) node[above] {$N_L$};
+    \draw[force] (1.2,.2)--(1.2,1.75) node[above] {$N_R$};
+    \draw[force] (-1.2,-.05)--(-.25,-.05);
+    \node[below] at (-.72,-.12) {$\mu N_L$};
+    \draw[force] (1.2,-.05)--(.25,-.05);
+    \node[below] at (.72,-.12) {$\mu N_R$};
+    \draw[dim] (-1.2,-.82)--(0,-.82) node[midway,below=2pt] {$l/2+x$};
+    \draw[dim] (0,-.82)--(1.2,-.82) node[midway,below=2pt] {$l/2-x$};
+    \node at (0,-1.55) {$N_R-N_L=2mgx/l$};
+  \end{scope}
+  % 合力—位移关系
+  \begin{scope}[shift={(3.7,1.75)}]
+    \draw[->] (-2.35,0)--(2.65,0) node[right] {$x$};
+    \draw[->] (0,-2.0)--(0,2.15) node[above] {$F_x$};
+    \draw[very thick,blue!70!black] (-2.05,1.65)--(2.05,-1.65);
+    \node[below right] at (.45,-.45) {$F_x=-\dfrac{2\mu mg}{l}x$};
+    \node[below left] at (0,0) {$O$};
+  \end{scope}
+  % 整块薄板横跨缝隙时的五个运动区间
+  \begin{scope}[shift={(0,-2.35)},xscale=1.35]
+    \draw[->] (-5.7,0)--(5.75,0) node[right] {$X$};
+    \foreach \x/\lab in {-5/{-5l/2},-3/{-3l/2},-1/{-l/2},1/{l/2},3/{3l/2},5/{5l/2}}{
+      \draw (\x,.12)--(\x,-.12) node[below=3pt] {$\lab$};
+    }
+    \draw[very thick,blue!70!black,->] (-5,.55)--(-3.08,.55);
+    \draw[very thick,red!70!black,->] (-3,.55)--(-1.08,.55);
+    \draw[very thick,green!50!black,->] (-1,.55)--(.92,.55);
+    \draw[very thick,red!70!black,->] (1,.55)--(2.92,.55);
+    \draw[very thick,blue!70!black,->] (3,.55)--(4.92,.55);
+    \node[scale=.78] at (-4,1.03) {无摩擦};
+    \node[scale=.78] at (-2,1.03) {桌边--圆柱};
+    \node[scale=.78] at (0,1.03) {两圆柱};
+    \node[scale=.78] at (2,1.03) {圆柱--桌边};
+    \node[scale=.78] at (4,1.03) {无摩擦};
+  \end{scope}
+
+\node[align=center]at(1,-4.4){速度事件另分段：$v>u$、$0<v<u$、$v=u$\\$v=u$ 且 $X\le0$ 可有静摩擦恒速平台};
+\end{tikzpicture}
+
+% 7 question-04
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+\draw[->] (-6,0)--(6,0) node[right] {主轴};
+  \draw[very thick,blue!70!black] (0,-2.2)..controls(-.38,-1)and(-.38,1)..(0,2.2);
+  \draw[very thick,blue!70!black] (0,-2.2)..controls(.38,-1)and(.38,1)..(0,2.2);
+  \node[below] at (0,-2.3) {薄凸透镜};
+  \coordinate (A) at (-4.8,0);
+  \coordinate (C) at (-4.8,2.6);
+  \coordinate (B) at (-2.55,1.3);
+  \draw[very thick] (A)--(C)--(B)--cycle;
+  \fill (A) circle (2pt) node[below] {$A$};
+  \fill (C) circle (2pt) node[left] {$C$};
+  \fill (B) circle (2pt) node[above right] {$B$};
+  \draw[dim] (-4.8,-.65)--(0,-.65) node[midway,fill=white] {$u$};
+  \draw[dim] (-5.35,0)--(-5.35,2.6) node[midway,left] {$l$};
+
+\end{tikzpicture}
+
+% 8 solution-04
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+\begin{scope}[shift={(0.0,0)},scale=3]\draw[orbit](0.00000,0.00000)--(0.33333,-0.57735)--(0.00000,-0.57735)--(0.00000,0.00000);\node[above]at(0,0){$A^{\prime}$};\node[below]at(0.00000,-0.57735){$C^{\prime}$};\node[right]at(0.33333,-0.57735){$B^{\prime}$};\end{scope}\node[align=center]at(0.6,-2.7){$u/f=4$\\$l/f=1.7321$};\begin{scope}[shift={(4.3,0)},scale=3]\draw[orbit](0.00000,0.00000)--(1.00000,-0.57735)--(0.00000,-0.57735)--(0.00000,0.00000);\node[above]at(0,0){$A^{\prime}$};\node[below]at(0.00000,-0.57735){$C^{\prime}$};\node[right]at(1.00000,-0.57735){$B^{\prime}$};\end{scope}\node[align=center]at(4.8999999999999995,-2.7){$u/f=2$\\$l/f=0.5774$};\begin{scope}[shift={(8.6,0)},scale=3]\draw[orbit](0.00000,0.00000)--(0.16667,-0.28868)--(0.00000,-0.38490)--(0.00000,0.00000);\node[above]at(0,0){$A^{\prime}$};\node[below]at(0.00000,-0.38490){$C^{\prime}$};\node[right]at(0.16667,-0.28868){$B^{\prime}$};\end{scope}\node[align=center]at(9.2,-2.7){$u/f=4$\\$l/f=1.1547$};\node at(4.7,1){三组逐点薄透镜像坐标；同组横、纵比例相同};
+\end{tikzpicture}
+
+% 9 question-05
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+\draw[axis](0,0)--(5,0)node[right]{$x$};\draw[axis](0,0)--(0,4)node[above]{$y$};\draw[velocity](0,0)--(3.6,0)node[below]{$\bm v'=\beta c\,\hat{\bm x}$};\draw[force](0,0)--(2.8,2.8)node[right]{$\bm v''=\beta c\,\bm n$};\draw[guide](0,0)--(-2,2)node[left]{$\bm n_\perp$};\draw[thick](1,0)arc(0:45:1)node[midway,right]{$\theta$};\node[align=center]at(2,-1){两速度均从 $S$ 指定；先分别作标准洛伦兹推动\\再复合 $\Lambda''(\Lambda')^{-1}$ 求相对变换};
+
+\end{tikzpicture}
+
+% 10 solution-05
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+\draw[->,thick] (0,0)--(6,0) node[right] {$\bm v(t)$};
+  \draw[->,thick] (0,0)--(5.5,1.8) node[above right] {$\bm v(t+dt)$};
+  \draw[force] (3.8,.1)--(3.8,2.6) node[above] {$\bm a\,dt$};
+  \draw (2,0) arc (0:18:2); \node at (2.35,.33) {$d\theta$};
+  \draw[current] (0,-1.5) arc (-90:35:1.5) node[right] {$d\varphi$};
+  \node[align=left] at (7.25,-1) {$\displaystyle d\varphi=(\gamma-1)d\theta$\\[3pt]
+  低速：$\displaystyle\bm\omega_t\simeq\frac{\bm v\times\bm a}{2c^2}$};
+
+\end{tikzpicture}
+
+% 11 question-06
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+\draw[->] (0,0)--(6.2,0) node[right] {$T$};
+  \draw[->] (0,0)--(0,4.5) node[above] {$p$};
+  \fill (1.2,1.2) circle (2.5pt) node[below left] {$(T_0,p_0,S_0)$};
+  \fill (5,3.5) circle (2.5pt) node[above right] {$(T,p,S)$};
+  \draw[vec,blue!70!black] (1.2,1.2)--(5,1.2) node[midway,below] {等压};
+  \draw[vec,blue!70!black] (5,1.2)--(5,3.5) node[midway,right] {等温};
+  \node[align=center] at (8.2,2.4) {$n\rightleftharpoons p+e^-+\bar\nu$\\$\mu_n=\mu_p+\mu_e+\mu_{\bar\nu}$};
+
+\end{tikzpicture}
+
+% 12 solution-06
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+\node[draw,rounded corners,minimum width=2.4cm,minimum height=1.2cm] (n) at (0,0) {中子 $\mu_n$};
+  \node[draw,rounded corners,minimum width=2.4cm,minimum height=1.2cm] (p) at (4.2,1.5) {质子 $\mu_p$};
+  \node[draw,rounded corners,minimum width=2.4cm,minimum height=1.2cm] (e) at (4.2,0) {电子 $N_A m_ec^2$};
+  \node[draw,rounded corners,minimum width=2.4cm,minimum height=1.2cm] (v) at (4.2,-1.5) {反中微子 $\simeq0$};
+  \draw[vec] (n)--(p); \draw[vec] (n)--(e); \draw[vec] (n)--(v);
+  \node[align=left] at (8,0) {$\displaystyle RT\ln\frac{1-x_p}{x_p}=N_A m_ec^2$\\[6pt]
+  $\displaystyle x_p=\frac{1}{1+e^{N_A m_ec^2/(RT)}}$};
+
+\end{tikzpicture}
+
+% 13 question-07
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+\draw[thick](-2.7,-2.7)rectangle++(5.4,5.4);\draw[thick](-2.7,-2.7)rectangle++(1.8,1.8);\draw[thick](-2.7,-2.7)rectangle++(0.6,0.6);\draw[thick](-2.7,-2.7)rectangle++(0.19999999999999998,0.19999999999999998);\draw[thick](-2.3000000000000003,-2.7)rectangle++(0.19999999999999998,0.19999999999999998);\draw[thick](-2.7,-2.3000000000000003)rectangle++(0.19999999999999998,0.19999999999999998);\draw[thick](-2.3000000000000003,-2.3000000000000003)rectangle++(0.19999999999999998,0.19999999999999998);\draw[thick](-1.5000000000000002,-2.7)rectangle++(0.6,0.6);\draw[thick](-1.5000000000000002,-2.7)rectangle++(0.19999999999999998,0.19999999999999998);\draw[thick](-1.1000000000000003,-2.7)rectangle++(0.19999999999999998,0.19999999999999998);\draw[thick](-1.5000000000000002,-2.3000000000000003)rectangle++(0.19999999999999998,0.19999999999999998);\draw[thick](-1.1000000000000003,-2.3000000000000003)rectangle++(0.19999999999999998,0.19999999999999998);\draw[thick](-2.7,-1.5000000000000002)rectangle++(0.6,0.6);\draw[thick](-2.7,-1.5000000000000002)rectangle++(0.19999999999999998,0.19999999999999998);\draw[thick](-2.3000000000000003,-1.5000000000000002)rectangle++(0.19999999999999998,0.19999999999999998);\draw[thick](-2.7,-1.1000000000000003)rectangle++(0.19999999999999998,0.19999999999999998);\draw[thick](-2.3000000000000003,-1.1000000000000003)rectangle++(0.19999999999999998,0.19999999999999998);\draw[thick](-1.5000000000000002,-1.5000000000000002)rectangle++(0.6,0.6);\draw[thick](-1.5000000000000002,-1.5000000000000002)rectangle++(0.19999999999999998,0.19999999999999998);\draw[thick](-1.1000000000000003,-1.5000000000000002)rectangle++(0.19999999999999998,0.19999999999999998);\draw[thick](-1.5000000000000002,-1.1000000000000003)rectangle++(0.19999999999999998,0.19999999999999998);\draw[thick](-1.1000000000000003,-1.1000000000000003)rectangle++(0.19999999999999998,0.19999999999999998);\draw[thick](0.8999999999999999,-2.7)rectangle++(1.8,1.8);\draw[thick](0.8999999999999999,-2.7)rectangle++(0.6,0.6);\draw[thick](0.8999999999999999,-2.7)rectangle++(0.19999999999999998,0.19999999999999998);\draw[thick](1.2999999999999998,-2.7)rectangle++(0.19999999999999998,0.19999999999999998);\draw[thick](0.8999999999999999,-2.3000000000000003)rectangle++(0.19999999999999998,0.19999999999999998);\draw[thick](1.2999999999999998,-2.3000000000000003)rectangle++(0.19999999999999998,0.19999999999999998);\draw[thick](2.0999999999999996,-2.7)rectangle++(0.6,0.6);\draw[thick](2.0999999999999996,-2.7)rectangle++(0.19999999999999998,0.19999999999999998);\draw[thick](2.4999999999999996,-2.7)rectangle++(0.19999999999999998,0.19999999999999998);\draw[thick](2.0999999999999996,-2.3000000000000003)rectangle++(0.19999999999999998,0.19999999999999998);\draw[thick](2.4999999999999996,-2.3000000000000003)rectangle++(0.19999999999999998,0.19999999999999998);\draw[thick](0.8999999999999999,-1.5000000000000002)rectangle++(0.6,0.6);\draw[thick](0.8999999999999999,-1.5000000000000002)rectangle++(0.19999999999999998,0.19999999999999998);\draw[thick](1.2999999999999998,-1.5000000000000002)rectangle++(0.19999999999999998,0.19999999999999998);\draw[thick](0.8999999999999999,-1.1000000000000003)rectangle++(0.19999999999999998,0.19999999999999998);\draw[thick](1.2999999999999998,-1.1000000000000003)rectangle++(0.19999999999999998,0.19999999999999998);\draw[thick](2.0999999999999996,-1.5000000000000002)rectangle++(0.6,0.6);\draw[thick](2.0999999999999996,-1.5000000000000002)rectangle++(0.19999999999999998,0.19999999999999998);\draw[thick](2.4999999999999996,-1.5000000000000002)rectangle++(0.19999999999999998,0.19999999999999998);\draw[thick](2.0999999999999996,-1.1000000000000003)rectangle++(0.19999999999999998,0.19999999999999998);\draw[thick](2.4999999999999996,-1.1000000000000003)rectangle++(0.19999999999999998,0.19999999999999998);\draw[thick](-2.7,0.8999999999999999)rectangle++(1.8,1.8);\draw[thick](-2.7,0.8999999999999999)rectangle++(0.6,0.6);\draw[thick](-2.7,0.8999999999999999)rectangle++(0.19999999999999998,0.19999999999999998);\draw[thick](-2.3000000000000003,0.8999999999999999)rectangle++(0.19999999999999998,0.19999999999999998);\draw[thick](-2.7,1.2999999999999998)rectangle++(0.19999999999999998,0.19999999999999998);\draw[thick](-2.3000000000000003,1.2999999999999998)rectangle++(0.19999999999999998,0.19999999999999998);\draw[thick](-1.5000000000000002,0.8999999999999999)rectangle++(0.6,0.6);\draw[thick](-1.5000000000000002,0.8999999999999999)rectangle++(0.19999999999999998,0.19999999999999998);\draw[thick](-1.1000000000000003,0.8999999999999999)rectangle++(0.19999999999999998,0.19999999999999998);\draw[thick](-1.5000000000000002,1.2999999999999998)rectangle++(0.19999999999999998,0.19999999999999998);\draw[thick](-1.1000000000000003,1.2999999999999998)rectangle++(0.19999999999999998,0.19999999999999998);\draw[thick](-2.7,2.0999999999999996)rectangle++(0.6,0.6);\draw[thick](-2.7,2.0999999999999996)rectangle++(0.19999999999999998,0.19999999999999998);\draw[thick](-2.3000000000000003,2.0999999999999996)rectangle++(0.19999999999999998,0.19999999999999998);\draw[thick](-2.7,2.4999999999999996)rectangle++(0.19999999999999998,0.19999999999999998);\draw[thick](-2.3000000000000003,2.4999999999999996)rectangle++(0.19999999999999998,0.19999999999999998);\draw[thick](-1.5000000000000002,2.0999999999999996)rectangle++(0.6,0.6);\draw[thick](-1.5000000000000002,2.0999999999999996)rectangle++(0.19999999999999998,0.19999999999999998);\draw[thick](-1.1000000000000003,2.0999999999999996)rectangle++(0.19999999999999998,0.19999999999999998);\draw[thick](-1.5000000000000002,2.4999999999999996)rectangle++(0.19999999999999998,0.19999999999999998);\draw[thick](-1.1000000000000003,2.4999999999999996)rectangle++(0.19999999999999998,0.19999999999999998);\draw[thick](0.8999999999999999,0.8999999999999999)rectangle++(1.8,1.8);\draw[thick](0.8999999999999999,0.8999999999999999)rectangle++(0.6,0.6);\draw[thick](0.8999999999999999,0.8999999999999999)rectangle++(0.19999999999999998,0.19999999999999998);\draw[thick](1.2999999999999998,0.8999999999999999)rectangle++(0.19999999999999998,0.19999999999999998);\draw[thick](0.8999999999999999,1.2999999999999998)rectangle++(0.19999999999999998,0.19999999999999998);\draw[thick](1.2999999999999998,1.2999999999999998)rectangle++(0.19999999999999998,0.19999999999999998);\draw[thick](2.0999999999999996,0.8999999999999999)rectangle++(0.6,0.6);\draw[thick](2.0999999999999996,0.8999999999999999)rectangle++(0.19999999999999998,0.19999999999999998);\draw[thick](2.4999999999999996,0.8999999999999999)rectangle++(0.19999999999999998,0.19999999999999998);\draw[thick](2.0999999999999996,1.2999999999999998)rectangle++(0.19999999999999998,0.19999999999999998);\draw[thick](2.4999999999999996,1.2999999999999998)rectangle++(0.19999999999999998,0.19999999999999998);\draw[thick](0.8999999999999999,2.0999999999999996)rectangle++(0.6,0.6);\draw[thick](0.8999999999999999,2.0999999999999996)rectangle++(0.19999999999999998,0.19999999999999998);\draw[thick](1.2999999999999998,2.0999999999999996)rectangle++(0.19999999999999998,0.19999999999999998);\draw[thick](0.8999999999999999,2.4999999999999996)rectangle++(0.19999999999999998,0.19999999999999998);\draw[thick](1.2999999999999998,2.4999999999999996)rectangle++(0.19999999999999998,0.19999999999999998);\draw[thick](2.0999999999999996,2.0999999999999996)rectangle++(0.6,0.6);\draw[thick](2.0999999999999996,2.0999999999999996)rectangle++(0.19999999999999998,0.19999999999999998);\draw[thick](2.4999999999999996,2.0999999999999996)rectangle++(0.19999999999999998,0.19999999999999998);\draw[thick](2.0999999999999996,2.4999999999999996)rectangle++(0.19999999999999998,0.19999999999999998);\draw[thick](2.4999999999999996,2.4999999999999996)rectangle++(0.19999999999999998,0.19999999999999998);\node[fill=white]at(0,0){$\otimes\ B=kt$};\draw[dim](-2.7,-3.2)--(2.7,-3.2)node[midway,below]{$l$};\node at(0,3.2){仅画有限层；重合边为同一导线};
+\end{tikzpicture}
+
+% 14 solution-07
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+\begin{scope}[shift={(-3.5,0)}]
+\draw[thick](-1.2,-1.2)rectangle(1.2,1.2);
+\foreach\x/\y/\xx/\yy/\lab in{-1.2/-1.2/-2/-2/A,1.2/-1.2/2/-2/B,1.2/1.2/2/2/C,-1.2/1.2/-2/2/D}{\draw[thick](\x,\y)--(\xx,\yy);\fill(\xx,\yy)circle(2pt)node[above]{$\lab$};}
+\node[above]at(0,1.2){$qR_0$};\node[below right]at(-1.8,-1.8){$pR_0$};
+\node[align=center]at(0,-2.9){$p=2x-y=1/14$\\$q=4(y-x)=4/7$\\无源四端口等效};
+\end{scope}
+\begin{scope}[shift={(2.7,0)}]
+\draw[thick](-2,-2)rectangle(2,2);
+\foreach\x/\y in{-2/-2,.66667/-2,-2/.66667,.66667/.66667}{\draw[body](\x,\y)rectangle++(1.33333,1.33333);}
+\draw[current](-.66667,-2)--(.66667,-2);\draw[current](2,-.66667)--(2,.66667);\draw[current](.66667,2)--(-.66667,2);\draw[current](-2,.66667)--(-2,-.66667);
+\node at(0,0){$I_c$逆时针};\node[align=center]at(0,-2.9){$R_{\rm top}=16R_0/7$\\$\mathcal E_{\rm eff}=7kl^2/9$\\每角子网络独立证明功率正交};
+\end{scope}
+
+\end{tikzpicture}
+
+% 15 question-08
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+\fill[gray!12](-.4,-.4)rectangle(6.4,3.4);\fill[white](.4,.2)rectangle(2.6,2.8);\fill[white](3.4,.2)rectangle(5.6,2.8);
+\draw[thick](-.4,-.4)rectangle(6.4,3.4);\draw[thick](.4,.2)rectangle(2.6,2.8) (3.4,.2)rectangle(5.6,2.8);
+\foreach\x/\n in{0/1,3/2,6/3}{\draw[decorate,decoration={coil,segment length=3mm,amplitude=2mm},thick](\x,.25)--(\x,2.75);\node[below]at(\x,0){$N_\n$};}
+\draw[thick](0,2.75)--(-1,2.75);\draw[thick](-1,2.75)--(-2.35,2.75) (-1.65,2.75)--(-3,2.75);\draw[body](-2.35,2.57)rectangle(-1.65,2.93);\node at(-2.0,2.75){$r_1'$};\draw[thick](-3,2.75)--(-3,1.85);\draw[thick](-3,1.5)circle(.35)node{$\sim$};\draw[thick](-3,1.15)--(-3,.25)--(0,.25);\node[left]at(-3.4,1.5){$U_0\cos\omega t$};
+\draw[thick](3,2.75)--(3,3.9)--(6,3.9)--(6,2.75);\draw[thick](4.5,3.9)--(7.1,3.9);\draw[thick](7.1,3.9)--(7.1,0.9499999999999998) (7.1,1.65)--(7.1,-1.3);\draw[body](6.92,0.9499999999999998)rectangle(7.279999999999999,1.65);\node[right]at(7.319999999999999,1.2999999999999998){$r_1$};\draw[thick](3,.25)--(3,-1.3);\draw[thick](3,-1.3)--(3.4,-1.3) (4.1,-1.3)--(4.5,-1.3);\draw[body](3.4,-1.48)rectangle(4.1,-1.12);\node at(3.75,-1.3){$r_2$};\draw[thick](4.5,-1.3)--(4.9,-1.3) (5.6,-1.3)--(6,-1.3);\draw[body](4.9,-1.48)rectangle(5.6,-1.12);\node at(5.25,-1.3){$r_3$};\draw[thick](6,-1.3)--(6,.25);\draw[thick](4.5,-1.3)--(4.5,-2.1)--(7.1,-2.1)--(7.1,-1.3);\fill(4.5,-1.3)circle(2pt);
+\draw[velocity](-.75,.5)--(-.75,2.5)node[midway,left]{$\Phi_1$};\draw[velocity](2.35,2.5)--(2.35,.5)node[midway,left]{$\Phi_2$};\draw[velocity](6.65,2.5)--(6.65,.5)node[midway,right]{$\Phi_3$};
+\node at(3,-2.85){三连续绕组、次级上端共结点；下端经 $r_2,r_3$ 汇入 $r_1$};
+
+\fill(4.5,3.9)circle(2pt);
+\end{tikzpicture}
+
+% 16 solution-08
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+\node[draw,minimum width=2.3cm,minimum height=1.3cm] (p) at (0,0) {原边 $N_1$};
+  \node[draw,minimum width=2.3cm,minimum height=1.3cm] (s2) at (4,1.7) {中柱 $N_2$};
+  \node[draw,minimum width=2.3cm,minimum height=1.3cm] (s3) at (4,-1.7) {右柱 $N_3$};
+  \draw[vec] (p)--node[above left] {$a=N_1/N_2$}(s2);
+  \draw[vec] (p)--node[below left] {$b=N_1/N_3$}(s3);
+  \node[draw,minimum width=1.6cm,minimum height=.8cm] (r2) at (8,1.7) {$r_2$};
+  \node[draw,minimum width=1.6cm,minimum height=.8cm] (r3) at (8,-1.7) {$r_3$};
+  \node[draw,minimum width=1.6cm,minimum height=.8cm] (r1) at (8,0) {$r_1$};
+  \draw[current] (s2)--node[above] {$I_2=aI_1$}(r2);
+  \draw[current] (s3)--node[below] {$I_3=bI_1$}(r3);
+  \draw[current] (s2.east)--(r1.north west) node[midway,right] {$I_2+I_3$};
+  \node[align=left] at (4,-4) {$D=r_1'+a^2r_2+b^2r_3+(a+b)^2r_1$\\[3pt]
+  $P_2=\dfrac12r_2a^2\left(\dfrac{U_0}{D}\right)^2$};
+
+\end{tikzpicture}
+
+\end{document}

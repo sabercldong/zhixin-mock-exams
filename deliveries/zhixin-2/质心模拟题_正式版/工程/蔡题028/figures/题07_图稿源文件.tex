@@ -1,0 +1,43 @@
+\documentclass[tikz,border=5pt]{standalone}
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath,amssymb}
+\usetikzlibrary{arrows.meta,calc,angles,quotes,decorations.pathmorphing,patterns}
+\definecolor{ink}{HTML}{243447}\definecolor{blue}{HTML}{2765A2}
+\definecolor{green}{HTML}{3F7D5B}\definecolor{red}{HTML}{B74739}
+\tikzset{body/.style={draw=ink,thick},vec/.style={draw=blue,thick,-{Latex}},guide/.style={gray!65,dashed},dim/.style={ink,{Latex}-{Latex}},line cap=round,line join=round}
+\begin{document}
+
+\begin{tikzpicture}
+\draw[vec](-.4,0)--(4.3,0)node[right]{$x$};\draw[vec](0,-.4)--(0,4.3)node[above]{$y$};
+\draw[guide](0,0)--(0,2.6)--(2.6,2.6)--(2.6,0);
+\foreach \x/\y/\lab in {0/0/A,0/2.6/B,2.6/2.6/C,2.6/0/D}{\draw[body,fill=white](\x,\y)circle(.06);\node[below left]at(\x,\y){$\lab$};}
+\draw[vec](0,2.6)--(1.55,2.6)node[midway,above]{$\beta c$};
+\draw[vec](2.6,2.6)--(2.6,4)node[right]{$\beta c$};
+\draw[dim](0,-.85)--(2.6,-.85)node[midway,below]{$l$};
+\node at(1.4,1.3){$t=0$};
+\end{tikzpicture}
+\begin{tikzpicture}
+\draw[vec](-.3,0)--(5.2,0)node[right]{$x$};\draw[vec](0,-.4)--(0,3.7)node[above]{$ct$};
+\draw[body](0,0)--(0,3.2);\draw[body](3.5,0)--(3.5,3.2);
+\node[left]at(-.15,3){$A$};\node[above]at(3.5,3.2){$D$};
+\draw[red,thick](0,0)--(4.5,2.7)node[right]{$t'=0$};
+\fill[blue](0,0)circle(.055);\fill[blue](3.5,2.1)circle(.055);
+\draw[guide](0,2.1)--(3.5,2.1);\node[left]at(0,2.1){$\beta l$};
+\node[below]at(3.5,0){$l$};
+\node[below]at(1.8,-.7){两条竖线为地面静止端点的世界线};
+\end{tikzpicture}
+\begin{tikzpicture}
+\draw[vec](-.3,0)--(5.7,0)node[right]{$x'$};
+\draw[vec](0,-2.3)--(0,3.4)node[above]{$ct'$};
+\draw[guide](0,-1.7)--(4.9,-1.7);
+\fill[blue](4.1,-1.7)circle(.055)node[right]{$E_C$};
+\draw[blue,thick](4.1,-1.7)--(0,2.4);
+\fill[blue](0,2.4)circle(.055)node[left]{接收};
+\node[left]at(0,-1.7){$-\gamma\beta l$};
+\node[below]at(4.1,-.1){$\gamma l$};
+\node at(3,2.8){$C$事件：$y'=0$};
+\node at(3,1.85){光线斜率绝对值为 $1$};
+\node[red,right,align=left]at(2.1,1.05){$E_D$同一时刻\\但 $y'=-l$};
+\node at(2,-2.3){图示 $x'$—$ct'$ 截面，横向距离另计};
+\end{tikzpicture}
+\end{document}

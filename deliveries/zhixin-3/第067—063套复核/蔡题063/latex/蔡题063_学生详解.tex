@@ -1,0 +1,3142 @@
+\documentclass[12pt,a4paper,UTF8]{ctexart}
+\usepackage[a4paper,top=22mm,bottom=22mm,left=22mm,right=22mm,headheight=15pt]{geometry}
+\newcommand{\Needspace}[1]{\par\begingroup\dimen0=#1\relax\dimen2=\pagegoal\advance\dimen2 by-\pagetotal\ifdim\dimen0>\dimen2\newpage\fi\endgroup}
+\newcommand{\needspace}[1]{\par\begingroup\skip0=\lastskip\vskip-\skip0\dimen0=#1\relax\advance\dimen0 by\skip0\vskip\dimen0\penalty-100\vskip-\dimen0\vskip\skip0\penalty9999\endgroup}
+\usepackage{amsmath,amssymb,mathtools,bm}
+\usepackage{graphicx,xcolor,booktabs,longtable,array,enumitem,fancyhdr,caption,float,microtype,setspace}
+\usepackage[hidelinks,unicode]{hyperref}
+\usepackage[most]{tcolorbox}
+\definecolor{ContestBlue}{HTML}{17365D}
+\hypersetup{pdftitle={第063套},pdfauthor={}}
+\setstretch{1.24}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.35em}
+\setlength{\emergencystretch}{2em}
+\setlist{itemsep=0.35em,topsep=0.4em}
+\captionsetup{font=small,labelfont=bf,justification=centering}
+\setcounter{secnumdepth}{0}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small 第063套}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\ctexset{
+  section={format=\Large\bfseries\color{ContestBlue},beforeskip=1.2em,afterskip=0.7em},
+  subsection={format=\large\bfseries\color{ContestBlue},beforeskip=1.0em,afterskip=0.5em},
+  subsubsection={format=\normalsize\bfseries,beforeskip=0.8em,afterskip=0.35em}
+}
+\usepackage{calc}
+\newcounter{none}
+\let\originalsubsection\subsection
+\renewcommand{\subsection}{\needspace{6\baselineskip}\originalsubsection}
+\makeatletter
+\newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\newcommand{\maxwidth}{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\newcommand{\maxheight}{\ifdim\Gin@nat@height>0.72\textheight 0.72\textheight\else\Gin@nat@height\fi}
+\newcommand{\pandocbounded}[1]{\begingroup\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}#1\endgroup}
+\makeatother
+\begin{document}
+\begin{titlepage}
+  \centering
+  \vspace*{58mm}
+  {\Huge\bfseries\color{ContestBlue} 第063套\par}
+  \vfill
+  \vspace*{28mm}
+\end{titlepage}
+\section{第 1 题}\label{ux7b2c-1-ux9898}
+
+（1）一辆后轮驱动汽车的质量为
+\(m=1000\,\mathrm{kg}\)，从静止开始，以恒定切向加速度
+\(a=2\,\mathrm{m/s^2}\) 在半径 \(R=500\,\mathrm m\)
+的水平圆形车道上行驶。轮胎与路面之间的摩擦因数为
+\(\mu=0.5\)。汽车质心位于前、后轮轴的中点，且质心很低，可忽略汽车俯仰和侧倾引起的轮荷转移。求汽车保持在车道上的最长时间。取
+\(g=9.8\,\mathrm{m/s^2}\)。
+
+（2）汽车沿圆形轨道做匀速圆周运动。为消除内、外侧车轮压力差，在车上安装一个轮轴与汽车轮轴平行的陀螺轮。陀螺轮角速度与车速成正比，即
+\(\omega=kv\)。已知汽车质量为 \(m\)，陀螺轮绕自身轴的转动惯量为
+\(I\)，汽车质心离地高度为 \(h\)，求比例系数
+\(k\)；同时说明陀螺轮的自转方向应如何选择。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.53\linewidth,height=\textheight,keepaspectratio,alt={图1-1　汽车在水平圆形车道上的运动几何}]{../figures/question-01.pdf}
+\caption*{图1-1　汽车在水平圆形车道上的运动几何}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d}
+
+后轴同时提供切向驱动和部分向心力，要在同一个摩擦圆内比较。陀螺题还要区分轮子受到的力矩与轮子传给车身的反作用力矩。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  曲线运动的加速度可正交分解为切向分量 \(a_\tau=a\) 和法向分量
+  \(a_n=v^2/R\)。
+\item
+  低质心、质心位于轴距中点时，前、后轴的总支持力均为 \(mg/2\)。
+\item
+  在题设对称近似下，法向加速度由前、后轴等量分担；后轴还单独承担驱动所需的切向力。
+\item
+  库仑摩擦极限约束的是接触面内合力：\(\sqrt{f_\tau^2+f_n^2}\leq\mu N\)。
+\item
+  陀螺轮角动量为 \(\bm L=I\bm\omega\)，其方向改变率产生力矩
+  \(\bm\tau=\mathrm d\bm L/\mathrm dt=\bm\Omega\times\bm L\)。
+\item
+  汽车沿半径 \(R\) 的圆轨道行驶时，车身偏航角速度为 \(\Omega=v/R\)。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf}
+
+图 1-1
+中汽车速度沿圆周切线，切向加速度也沿切线；向心加速度指向圆心。这两个加速度互相垂直。由于只有后轮是主动轮，切向驱动力全部来自后轴；而横向力由前、后轴共同提供。于是前轴只承受横向摩擦，后轴承受``切向驱动
++ 横向转弯''的合成摩擦。
+
+第二问中，质心处所需向心力作用线位于地面之上。由地面横向力与质心惯性效应形成的侧翻力矩大小为
+\(mhv^2/R\)。陀螺轮的自转轴平行于轮轴，当车辆转向时该轴绕竖直方向以
+\(v/R\) 进动；进动力矩的大小为 \(I\omega(v/R)\)。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3}
+
+第一问先写前、后轴在横向上的分担，再分别检查摩擦极限。由对称性，前、后轴横向摩擦力均为
+
+\[
+f_{n,\mathrm f}=f_{n,\mathrm r}=\frac12m\frac{v^2}{R}.
+\]
+
+后轴切向摩擦力为
+
+\[
+f_{\tau,\mathrm r}=ma.
+\]
+
+因此最关键的一步是对后轴写摩擦圆条件。第二问则直接把陀螺力矩与侧翻力矩配平，并在最后检查
+\(k\) 的量纲。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图1-2　后轴摩擦圆与陀螺力矩平衡}]{../figures/solution-01.pdf}
+\caption*{图1-2　后轴摩擦圆与陀螺力矩平衡}
+\end{figure}
+
+图1-2分开后轮牵引和两轮横向支撑力；摩擦圆约束只作用于驱动后轮。陀螺力矩先算车轮，再取反作用到车身，不能换转弯方向时同时把自转方向也反过来。
+
+图 1-2
+左侧把后轴接触面内的两个摩擦分量画在同一平面内；右侧给出陀螺角动量方向改变所对应的力矩。以下方程中的
+\(ma\)、\(mv^2/(2R)\) 和 \(I\omega v/R\) 均直接取自该图。
+
+\needspace{3\baselineskip}
+\textbf{（一）最长留在车道上的时间}
+
+在竖直方向上没有加速度。忽略轮荷转移，前、后轴支持力分别为
+
+\[
+N_{\mathrm f}=N_{\mathrm r}=\frac{mg}{2}.
+\]
+
+汽车横向合力应为
+\(mv^2/R\)。质心在轴距中点且几何、轮胎条件对称，所以前、后轴各承担一半：
+
+\[
+f_{n,\mathrm f}=f_{n,\mathrm r}=\frac{mv^2}{2R}. \tag{1}
+\]
+
+前轴是从动轮，没有题设方向上的驱动力，其摩擦极限条件为
+
+\[
+\frac{mv^2}{2R}\leq \mu\frac{mg}{2}.
+\]
+
+约去 \(m/2\)：
+
+\[
+\frac{v^2}{R}\leq\mu g.
+\]
+
+由于 \(v=at\)，若仅由前轴决定，则临界时刻为
+
+\[
+t_{\mathrm f}=\frac{\sqrt{\mu gR}}{a}
+=\frac{\sqrt{0.5\times9.8\times500}}{2}
+\approx24.75\,\mathrm s. \tag{2}
+\]
+
+后轴还必须提供切向驱动力。因为汽车切向加速度恒为 \(a\)，故
+
+\[
+f_{\tau,\mathrm r}=ma. \tag{3}
+\]
+
+式（1）和式（3）互相垂直，后轴所需合摩擦力为
+
+\[
+f_{\mathrm r}
+=\sqrt{f_{\tau,\mathrm r}^2+f_{n,\mathrm r}^2}
+=\sqrt{(ma)^2+\left(\frac{mv^2}{2R}\right)^2}. \tag{4}
+\]
+
+后轴最多能提供的摩擦力为
+
+\[
+f_{\mathrm r,max}=\mu N_{\mathrm r}=\frac{\mu mg}{2}. \tag{5}
+\]
+
+临界时式（4）等于式（5）：
+
+\[
+(ma)^2+\left(\frac{mv^2}{2R}\right)^2
+=\left(\frac{\mu mg}{2}\right)^2. \tag{6}
+\]
+
+将等式两边除以 \(m^2\)：
+
+\[
+a^2+\frac{v^4}{4R^2}=\frac{\mu^2g^2}{4}. \tag{7}
+\]
+
+乘以 \(4\)，把含 \(v\) 的项单独留下：
+
+\[
+\frac{v^4}{R^2}=\mu^2g^2-4a^2. \tag{8}
+\]
+
+题给数值满足
+\(\mu g=4.9\,\mathrm{m/s^2}>2a=4.0\,\mathrm{m/s^2}\)，故右边为正，汽车起步时确实有剩余摩擦能力用于转弯。由式（8）取正根：
+
+\[
+v^2=R\sqrt{\mu^2g^2-4a^2}. \tag{9}
+\]
+
+再用 \(v=at\)：
+
+\[
+a^2t^2=R\sqrt{\mu^2g^2-4a^2},
+\]
+
+从而
+
+\[
+t_{\mathrm r}
+=\frac1a\sqrt{R\sqrt{\mu^2g^2-4a^2}}. \tag{10}
+\]
+
+代入数值，逐项计算
+
+\[
+\begin{aligned}
+\mu^2g^2-4a^2
+&=0.5^2\times9.8^2-4\times2^2\\
+&=24.01-16\\
+&=8.01\,\mathrm{m^2/s^4},\\
+\sqrt{8.01}&=2.830\,\mathrm{m/s^2},\\
+R\sqrt{8.01}&=500\times2.830=1415.0\,\mathrm{m^2/s^2},\\
+t_{\mathrm r}&=\frac{\sqrt{1415.0}}{2}=18.81\,\mathrm s.
+\end{aligned}
+\]
+
+比较式（2）与式（10），\(t_{\mathrm r}<t_{\mathrm f}\)，所以后轴先达到摩擦极限。答案为
+
+\[
+\boxed{t_{\max}\approx18.8\,\mathrm s}.
+\]
+
+\needspace{3\baselineskip}
+\textbf{（二）陀螺轮所需的比例系数}
+
+汽车的横向地面作用力大小为
+\(mv^2/R\)。该力的作用线在地面，而质心离地高度为
+\(h\)，因而关于汽车纵向轴的侧翻力矩大小为
+
+\[
+\tau_{\mathrm{roll}}=\frac{mv^2}{R}h. \tag{11}
+\]
+
+陀螺轮角动量大小为
+
+\[
+L_g=I\omega=Ikv. \tag{12}
+\]
+
+汽车沿圆轨道行驶时，陀螺轮轴随车身绕竖直轴转动，其进动角速度为
+
+\[
+\Omega=\frac{v}{R}. \tag{13}
+\]
+
+由于角动量大小不变而方向转动，陀螺力矩大小为
+
+\[
+\tau_g=\Omega L_g
+=\frac{v}{R}Ikv
+=\frac{Ikv^2}{R}. \tag{14}
+\]
+
+为使内、外轮压力相等，令式（14）与式（11）大小相等：
+
+\[
+\frac{Ikv^2}{R}=\frac{mhv^2}{R}. \tag{15}
+\]
+
+约去非零公共因子 \(v^2/R\)：
+
+\[
+Ik=mh,
+\]
+
+所以
+
+\[
+\boxed{k=\frac{mh}{I}}. \tag{16}
+\]
+
+量纲检查：\(mh/I\) 的量纲为
+\(\mathrm{kg\,m}/(\mathrm{kg\,m^2})=\mathrm{m^{-1}}\)；而 \(\omega/v\)
+的量纲也是 \(\mathrm{m^{-1}}\)，一致。车身受到轮子的反作用力矩是
+\(-\bm\Omega\times\bm L\)，须与地面横向力关于质心产生的侧倾力矩相反。取车身前方为
+\(\bm e_x\)、左方为 \(\bm e_y\)、竖直向上为
+\(\bm e_z\)，补偿所需角动量指向车身右方，即
+\(\bm L=-L\bm e_y\)。转弯方向改变时，地面侧倾力矩和陀螺反作用力矩一起反号，保持同一车身相对自转方向即可，无须另反转陀螺。
+
+\needspace{3\baselineskip}
+\textbf{等分向心力所用的附加近似}
+
+题面没有给出轴距 \(d\) 和车身绕竖直轴的转动惯量
+\(I_z\)，参考解忽略了偏航角加速度所需的力矩。严格说，恒切向加速度使偏航角加速度为
+\(a/R\)，所以
+
+\[
+f_{n,\mathrm f}+f_{n,\mathrm r}=\frac{mv^2}{R},\qquad
+\frac d2(f_{n,\mathrm f}-f_{n,\mathrm r})=\frac{I_za}{R}.
+\]
+
+后轴横向力应为 \(mv^2/(2R)-I_za/(Rd)\)。因此 \(18.8\,\mathrm s\)
+是参考解的准稳态、忽略偏航惯性近似值；低质心只帮助忽略轮荷转移，并不自动令
+\(I_z=0\)。图1-2注明该近似，避免把等分误当无条件结果。
+
+\needspace{3\baselineskip}
+\textbf{补充推导与适用条件}
+
+第二问中 \(v^2/R\) 同时出现在侧翻力矩和陀螺力矩中，因此比例系数 \(k\)
+与车速、弯道半径无关。这不是巧合，而是设定 \(\omega\propto v\)
+后，陀螺力矩自然也与 \(v^2/R\) 成正比。
+
+还可以从``摩擦利用率''反看第一问。定义后轴利用率
+
+\[
+\chi_r^2=\frac{(ma)^2+[mv^2/(2R)]^2}{(\mu mg/2)^2}
+=\frac{4a^2}{\mu^2g^2}+\frac{v^4}{\mu^2g^2R^2}.
+\]
+
+起步时第二项为零，但第一项已经等于
+\(4a^2/(\mu^2g^2)\approx0.666\)，即后轴在 \(t=0\) 已使用约 \(81.6\%\)
+的合摩擦幅值。速度增加只是把剩余很小的摩擦圆半径逐渐用完。这个数值解释了为什么汽车虽在半径很大的
+\(500\,\mathrm m\) 车道上，仍在不到 \(19\,\mathrm s\) 时先由后轴失稳。
+
+也可检查临界速度：由 \(v=at\) 得
+\(v_*\approx37.62\,\mathrm{m/s}\)。此时向心加速度
+\(v_*^2/R\approx2.83\,\mathrm{m/s^2}\)，后轴横向分量相当于
+\(m(1.415\,\mathrm{m/s^2})\)；与切向 \(2.00m\,\mathrm{m/s^2}\)
+正交合成后为
+\(2.45m\,\mathrm{m/s^2}=\mu mg/2\)。把三个数字重新代回摩擦圆，可独立核验式（10）。
+
+陀螺补偿只处理左右轮荷差，并不会减小汽车所需的总向心力，也不会提升轮胎---地面的总附着极限。若把``轮压相等''误解成``不会侧滑''，就混淆了侧翻稳定性与平面内附着稳定性。课堂上应把这两个判据分别列出。
+
+\newpage
+
+\section{第 2 题}\label{ux7b2c-2-ux9898}
+
+质量为 \(m\) 的小球位于质量为 \(M=m\)
+的山体轨道上。山体左右两侧为直斜面，斜面与竖直方向的夹角均为
+\(\alpha=\pi/4\)，每段斜面的竖直高度均为
+\(h=1\,\mathrm m\)；底部由一段光滑小圆弧连接，圆弧曲率半径为
+\(\rho=10\,\mathrm m\)，圆心角为 \(2\theta=0.02\)。
+
+（1）小球视为质点，山体固定，轨道处处光滑。小球从斜面与圆弧的连接点由静止释放，求往复运动周期。
+
+（2）小球视为质点，山体固定，轨道处处光滑。小球从图示斜面顶端由静止释放，求往复运动周期。
+
+（3）小球视为质点，山体可在光滑水平面上自由平移。小球从图示斜面顶端由静止释放，求系统往复运动周期。
+
+（4）小球改为半径 \(r\ll\rho,h\) 的均质球，绕直径的转动惯量为
+\(J=\frac25mr^2\)，运动中始终纯滚动。山体可在光滑水平面上自由平移。均质球从图示斜面顶端由静止释放，求系统往复运动周期。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.76\linewidth,height=\textheight,keepaspectratio,alt={图2-1　斜面与小圆弧组成的可移动山体轨道}]{../figures/question-02.pdf}
+\caption*{图2-1　斜面与小圆弧组成的可移动山体轨道}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-1}
+
+直斜面和小圆弧的时间要分别计算。山体能移动时，水平动量守恒改变有效惯性；进入圆弧后还必须重新核对相对速度，不能把直斜面末速直接沿用。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-1}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  对称势阱中的周期可由四倍``四分之一行程时间''得到。
+\item
+  固定斜面上沿斜面方向的重力分量为 \(mg\cos\alpha\)，因为 \(\alpha\)
+  是斜面与竖直方向的夹角。
+\item
+  圆弧最低点附近，切向重力 \(mg\sin\varphi\simeq mg\varphi=mgx/\rho\)。
+\item
+  可移动约束系统无水平外力，水平质心速度恒定；用拉格朗日量或水平动量守恒可消去山体坐标。
+\item
+  纯滚动动能为 \(\frac12m v^2+\frac12J(v/r)^2\)，相当于沿轨道增加
+  \(J/r^2\) 的惯性质量。
+\item
+  进入圆弧时初速度一般不为零，圆弧行程时间需要用简谐振子相位，而不是固定取四分之一周期。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-1}
+
+直斜面段将重力势能转化为相对运动动能。圆弧段的高度相对最低点近似为
+\(x^2/(2\rho)\)，所以势能是关于弧长坐标 \(x\) 的二次函数。图 2-1
+中虚线半径标出圆弧圆心，连接点的弧长近似为 \(x_0=\rho\theta\)。
+
+山体可动时，小球沿斜面向下的同时，山体沿水平方向反冲。山体运动不改变重力势能，却占用一部分总动能；把整体平移消去后，相对坐标的有效质量反映了这种耦合。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-1}
+
+统一记从连接点到最低点的弧长为
+\(x_0=\rho\theta\)。在圆弧小角近似下，方程写成
+
+\[
+m_{\rm eff,c}\ddot x+\frac{mg}{\rho}x=0,
+\]
+
+故
+
+\[
+\omega_c^2=\frac{mg}{\rho m_{\rm eff,c}}.
+\]
+
+若进入圆弧时 \(x=x_0\)、速度指向最低点且大小为 \(u_1\)，取
+
+\[
+x=x_0\cos\omega_ct-\frac{u_1}{\omega_c}\sin\omega_ct.
+\]
+
+到达最低点时 \(x=0\)，从而
+
+\[
+t_c=\frac1{\omega_c}\arctan\frac{x_0\omega_c}{u_1}.
+\]
+
+这个相位公式可统一处理第二至第四问。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-1}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图2-2　直斜面与小圆弧段的等效惯性模型}]{../figures/solution-02.pdf}
+\caption*{图2-2　直斜面与小圆弧段的等效惯性模型}
+\end{figure}
+
+图2-2把直斜面和短圆弧分别作为局部模型。两者的有效质量不同，进入圆弧的速度由同一能量重算；分段周期需要另加无损短过渡的条件。
+
+图 2-2 左侧用 \(X\) 表示山体水平坐标、用 \(s\)
+表示小球相对斜面的位移；右侧用 \(x=\rho\varphi\)
+表示圆弧弧长。以下有效质量均由这两个坐标模型得到。
+
+\needspace{3\baselineskip}
+\textbf{（一）从圆弧连接点静止释放，山体固定}
+
+此问运动完全发生在小圆弧上。取最低点为
+\(x=0\)，向右为正。圆弧上小球的角位移为 \(\varphi=x/\rho\)。切向重力为
+
+\[
+F_t=-mg\sin\varphi.
+\]
+
+由于 \(|\varphi|\leq\theta=0.01\ll1\)，使用一阶小角近似
+
+\[
+\sin\varphi\simeq\varphi=\frac{x}{\rho}.
+\]
+
+于是运动方程为
+
+\[
+m\ddot x=-\frac{mg}{\rho}x,
+\]
+
+即
+
+\[
+\ddot x+\frac g\rho x=0. \tag{1}
+\]
+
+角频率与周期为
+
+\[
+\omega_1=\sqrt{\frac g\rho},\\qquad
+T_1=\frac{2\pi}{\omega_1}=2\pi\sqrt{\frac\rho g}. \tag{2}
+\]
+
+代入 \(\rho=10\,\mathrm m\)、\(g=9.8\,\mathrm{m/s^2}\)：
+
+\[
+\boxed{T_1=2\pi\sqrt{\frac{10}{9.8}}\approx6.35\,\mathrm s}. \tag{3}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（二）从斜面顶端释放，山体固定}
+
+一个周期由四段``斜面顶端到最低点''的运动拼成。因此先求一侧顶端到连接点的时间
+\(t_s\)，再求连接点到最低点的时间 \(t_c\)。
+
+斜面与竖直方向夹角为 \(\alpha\)，沿斜面向下的重力分量为
+\(mg\cos\alpha\)，所以加速度
+
+\[
+a_s=g\cos\alpha. \tag{4}
+\]
+
+斜面竖直高度为 \(h\)，斜面长度为
+
+\[
+s=\frac h{\cos\alpha}. \tag{5}
+\]
+
+由 \(s=\frac12a_st_s^2\)：
+
+\[
+\frac h{\cos\alpha}=\frac12g\cos\alpha\,t_s^2.
+\]
+
+整理得
+
+\[
+t_s=\sqrt{\frac{2h}{g\cos^2\alpha}}. \tag{6}
+\]
+
+到达连接点的速度既可由 \(u_1=a_st_s\) 求出，也可由机械能守恒求出：
+
+\[
+mgh=\frac12mu_1^2,
+\]
+
+故
+
+\[
+u_1=\sqrt{2gh}. \tag{7}
+\]
+
+圆弧段仍有 \(\omega_1=\sqrt{g/\rho}\)。令连接点处
+\(x(0)=\rho\theta\)，并令向最低点的速度为负，即
+\(\dot x(0)=-u_1\)。简谐运动解为
+
+\[
+x(t)=\rho\theta\cos\omega_1t-\frac{u_1}{\omega_1}\sin\omega_1t. \tag{8}
+\]
+
+到最低点时 \(x(t_c)=0\)：
+
+\[
+\rho\theta\cos\omega_1t_c
+=\frac{u_1}{\omega_1}\sin\omega_1t_c.
+\]
+
+两边除以 \(\cos\omega_1t_c\)，得到
+
+\[
+\tan\omega_1t_c=\frac{\rho\theta\omega_1}{u_1},
+\]
+
+所以
+
+\[
+t_c=\frac1{\omega_1}\arctan\frac{\rho\theta\omega_1}{u_1}. \tag{9}
+\]
+
+完整周期为
+
+\[
+T_2=4(t_s+t_c). \tag{10}
+\]
+
+代入
+\(h=1\,\mathrm m\)、\(\alpha=\pi/4\)、\(\rho=10\,\mathrm m\)、\(\theta=0.01\)：
+
+\[
+\begin{aligned}
+t_s&=\sqrt{\frac2{9.8\times(1/2)}}=0.6389\,\mathrm s,\\
+u_1&=\sqrt{19.6}=4.427\,\mathrm{m/s},\\
+\omega_1&=\sqrt{0.98}=0.9899\,\mathrm{s^{-1}},\\
+t_c&=\frac1{0.9899}\arctan\frac{10\times0.01\times0.9899}{4.427}
+=0.02258\,\mathrm s.
+\end{aligned}
+\]
+
+因此
+
+\[
+\boxed{T_2=4(0.6389+0.02258)\approx2.646\,\mathrm s}. \tag{11}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（三）山体可动，小球视为质点}
+
+先保留一般质量 \(M\)，最后取 \(M=m\)。令山体水平位移为
+\(X\)，令小球沿斜面向下的相对位移为 \(s\)。小球相对地面的速度分量为
+
+\[
+v_x=\dot X+\dot s\sin\alpha,\qquad
+v_y=-\dot s\cos\alpha. \tag{12}
+\]
+
+总动能为
+
+\[
+\begin{aligned}
+K&=\frac12M\dot X^2+\frac12m(v_x^2+v_y^2)\\
+&=\frac12(M+m)\dot X^2+m\dot X\dot s\sin\alpha+\frac12m\dot s^2.
+\end{aligned} \tag{13}
+\]
+
+系统无水平外力，初始水平总动量为零：
+
+\[
+(M+m)\dot X+m\dot s\sin\alpha=0. \tag{14}
+\]
+
+解出
+
+\[
+\dot X=-\frac{m\sin\alpha}{M+m}\dot s. \tag{15}
+\]
+
+将式（15）代回式（13），逐项合并：
+
+\[
+\begin{aligned}
+K
+&=\frac12m\dot s^2-\frac12\frac{m^2\sin^2\alpha}{M+m}\dot s^2\\
+&=\frac12m\frac{M+m-m\sin^2\alpha}{M+m}\dot s^2\\
+&=\frac12\frac{m(M+m\cos^2\alpha)}{M+m}\dot s^2.
+\end{aligned} \tag{16}
+\]
+
+因此直斜面段的有效质量为
+
+\[
+m_{\mathrm{eff},s}=\frac{m(M+m\cos^2\alpha)}{M+m}. \tag{17}
+\]
+
+沿相对坐标 \(s\) 的势能下降率为 \(mg\cos\alpha\)，运动方程为
+
+\[
+m_{\mathrm{eff},s}\ddot s=mg\cos\alpha. \tag{18}
+\]
+
+斜面段时间为
+
+\[
+t_s=\sqrt{\frac{2(h/\cos\alpha)m_{\mathrm{eff},s}}{mg\cos\alpha}}
+=\sqrt{\frac{2h(M+m\cos^2\alpha)}{g\cos^2\alpha(M+m)}}. \tag{19}
+\]
+
+能量守恒给出连接点相对速度
+
+\[
+mgh=\frac12m_{\mathrm{eff},s}u_1^2,
+\]
+
+即
+
+\[
+u_1=\sqrt{\frac{2mgh}{m_{\mathrm{eff},s}}}
+=\sqrt{\frac{2gh(M+m)}{M+m\cos^2\alpha}}. \tag{20}
+\]
+
+在圆弧最低点附近，切线近似水平。小球相对山体的水平速度为
+\(\dot x\)。由与式（13）---（16）相同的消元过程，只需令
+\(\sin\alpha=1\)，得到圆弧段有效质量
+
+\[
+m_{\mathrm{eff},c}=\frac{mM}{M+m}. \tag{21}
+\]
+
+势能近似为 \(mgx^2/(2\rho)\)，故
+
+\[
+m_{\mathrm{eff},c}\ddot x+\frac{mg}{\rho}x=0,
+\]
+
+从而
+
+\[
+\omega_c^2=\frac{mg}{\rho m_{\mathrm{eff},c}}
+=\frac{(M+m)g}{M\rho}. \tag{22}
+\]
+
+连接点到最低点时间仍由相位式给出：
+
+\[
+t_c=\frac1{\omega_c}\arctan\frac{\rho\theta\omega_c}{u_c},\qquad u_c=\sqrt{\frac{2mgh}{m_{\mathrm{eff},c}}}. \tag{23}
+\]
+
+取 \(M=m\)、\(\alpha=\pi/4\)：
+
+\[
+m_{\mathrm{eff},s}=\frac34m,\qquad
+m_{\mathrm{eff},c}=\frac12m,\qquad
+\omega_c=\sqrt{\frac{2g}{\rho}}=1.400\,\mathrm{s^{-1}}.
+\]
+
+进一步得到
+
+\[
+t_s=0.5533\,\mathrm s,\qquad
+u_1=5.112\,\mathrm{m/s},\qquad
+u_c=6.261\,\mathrm{m/s},\qquad t_c=0.01597\,\mathrm s.
+\]
+
+所以
+
+\[
+\boxed{T_3=4(t_s+t_c)\approx2.277\,\mathrm s}. \tag{24}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（四）山体可动，均质球纯滚动}
+
+纯滚动条件给出自转角速度 \(\omega_r=\dot s/r\)。转动动能为
+
+\[
+K_{\mathrm{rot}}=\frac12J\omega_r^2
+=\frac12\left(\frac25mr^2\right)\frac{\dot s^2}{r^2}
+=\frac12\frac25m\dot s^2. \tag{25}
+\]
+
+因此无论在直线段还是小圆弧段，均应在相应平动有效质量上增加 \(2m/5\)：
+
+\[
+m_{\mathrm{eff},s}^{(r)}
+=\frac{m(M+m\cos^2\alpha)}{M+m}+\frac25m, \tag{26}
+\]
+
+\[
+m_{\mathrm{eff},c}^{(r)}
+=\frac{mM}{M+m}+\frac25m. \tag{27}
+\]
+
+于是
+
+\[
+t_s^{(r)}=\sqrt{\frac{2h m_{\mathrm{eff},s}^{(r)}}{mg\cos^2\alpha}}, \tag{28}
+\]
+
+\[
+u_1^{(r)}=\sqrt{\frac{2mgh}{m_{\mathrm{eff},s}^{(r)}}}, \tag{29}
+\]
+
+\[
+\omega_c^{(r)}=\sqrt{\frac{mg}{\rho m_{\mathrm{eff},c}^{(r)}}}, \tag{30}
+\]
+
+\[
+t_c^{(r)}=\frac1{\omega_c^{(r)}}
+\arctan\frac{\rho\theta\omega_c^{(r)}}{u_c^{(r)}}. \tag{31}
+\]
+
+取 \(M=m\)、\(\alpha=\pi/4\)：
+
+\[
+m_{\mathrm{eff},s}^{(r)}=\left(\frac34+\frac25\right)m=\frac{23}{20}m,
+\]
+
+\[
+m_{\mathrm{eff},c}^{(r)}=\left(\frac12+\frac25\right)m=\frac9{10}m.
+\]
+
+数值为
+
+\[
+\begin{aligned}
+t_s^{(r)}&=0.6851\,\mathrm s,\\
+u_1^{(r)}&=4.128\,\mathrm{m/s},\\
+\omega_c^{(r)}&=1.0435\,\mathrm{s^{-1}},\\
+u_c^{(r)}&=\sqrt{2gh/(9/10)}=4.667\,\mathrm{m/s},\\
+t_c^{(r)}&=0.02143\,\mathrm s.
+\end{aligned}
+\]
+
+所以
+
+\[
+\boxed{T_4=4\left(t_s^{(r)}+t_c^{(r)}\right)\approx2.826\,\mathrm s}. \tag{32}
+\]
+
+\needspace{3\baselineskip}
+\textbf{连接处的几何矛盾及结果的条件}
+
+原图直斜面与竖直夹角 \(\alpha=\pi/4\)，圆弧端点半径与竖直夹角却为
+\(\theta=0.01\)。圆弧切线与竖直夹角为
+\(\pi/2-\theta\)，所以这两段并不相切。``光滑''表示无摩擦，不能替代连接处的冲击或过渡规则。严格按折角轨道理解，第（2）---（4）问缺少过渡的动力学条件，无法得到唯一精确周期。
+
+本文给出的是补充``极短、无能量损失的平滑过渡''后的分段近似。过渡到近水平圆弧时，以同一能量
+\(mgh\) 计算 \(u_c\)，使
+\(m_{\rm eff,s}u_1^2=m_{\rm eff,c}u_c^2\)；滚动情形同理。在山体固定的质点模型中两个有效质量都是
+\(m\)，所以速度连续，原第二问不受这一消元错误影响。运动山体时有效质量改变，沿用
+\(u_1\) 会丢失机械能。
+
+修正后的条件近似值为
+\(T_2\simeq2.646\,\mathrm s,T_3\simeq2.277\,\mathrm s,T_4\simeq2.826\,\mathrm s\)。第（1）问完全位于圆弧上，没有连接问题；精确单摆周期为
+\(4\sqrt{\rho/g}\,K(\sin(\theta/2))\)，小角值 \(6.35\,\mathrm s\)
+的相对修正约
+\(\theta^2/16=6.25\times10^{-6}\)。图2-2把斜面和圆弧画成两个局部模型并标出过渡假设，不伪造相切几何。
+
+\needspace{3\baselineskip}
+\textbf{补充推导与适用条件}
+
+圆弧段很短，\(t_c\) 只有约
+\(0.02\,\mathrm s\)，但不能直接删除。题目特意给出 \(\rho\) 与
+\(2\theta\)，正是要求把连接段的相位补入周期。另一方面，圆弧段不是从振幅端静止释放，因此也不能取
+\(\pi/(2\omega)\)。
+
+有效质量公式可用三个极限逐项审计。第一，\(M\to\infty\) 时，式（17）给出
+\(m_{\mathrm{eff},s}\to m\)、式（21）给出
+\(m_{\mathrm{eff},c}\to m\)，回到固定山体。第二，\(\alpha\to0\)
+时斜面近于竖直，小球运动没有水平分量，式（17）也回到
+\(m\)。第三，圆弧最低点切线水平，相当于
+\(\sin\alpha=1\)，水平反冲最强，有效质量降为约化质量
+\(mM/(M+m)\)。这三条检查同时通过，说明坐标消元没有漏项。
+
+第四问中摩擦力虽参与维持纯滚动，却不直接出现在能量式中，因为接触点相对山体瞬时静止，静摩擦不产生相对滑动功。山体本身运动时仍可用总动能处理：球心相对地面的平动、球绕质心转动、山体平动三部分都已包含。若学生质疑``山体动了，静摩擦是否做功''，应指出对单个球与对整个系统的功判断不同；对整个理想系统，接触内力的功在两物体之间转移而不改变总机械能。
+
+周期排序也能提供物理检查。固定山体质点为
+\(T_2\approx2.646\,\mathrm s\)；山体可动后相对运动有效质量减小，质点周期降为
+\(T_3\approx2.277\,\mathrm s\)；加入滚动转动惯性后周期增为
+\(T_4\approx2.826\,\mathrm s\)。若算出的顺序与此相反，应优先检查有效质量和滚动能量。
+
+\newpage
+
+\section{第 3 题}\label{ux7b2c-3-ux9898}
+
+如图，两根细杆的质量均为 \(m\)、长度均为 \(l\)。上杆质心到左端 \(A\)
+的距离为 \(l_1\)，绕质心且垂直纸面的转动惯量为 \(ma^2\)；下杆质心到左端
+\(C\) 的距离为 \(l_2\)，绕质心且垂直纸面的转动惯量为 \(mb^2\)。上杆的
+\(A\) 点通过轻质细杆与天花板连接，\(B\)
+点通过轻质细绳与天花板连接；上、下两杆之间，\(AC\) 为细绳，\(BD\)
+为细杆，各连接点均为铰接。系统初始静止且两杆水平。现剪断 \(B\)
+点与天花板之间的细绳，求剪断瞬间 \(BD\) 杆中的轴向作用力。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.72\linewidth,height=\textheight,keepaspectratio,alt={图3-1　两水平杆与单侧绳---杆约束系统}]{../figures/question-03.pdf}
+\caption*{图3-1　两水平杆与单侧绳---杆约束系统}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-2}
+
+剪断瞬间角速度为零，约束只需比较端点的竖直加速度。先假定左绳绷紧，检查张力；若需要绳受压，就改用松绳模型。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-2}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  平行轴定理：上杆绕 \(A\) 的转动惯量 \(I_A=m(a^2+l_1^2)\)。
+\item
+  刚体初始角速度为零时，距转轴 \(r\) 的点切向加速度为 \(r\alpha\)，没有
+  \(\omega^2r\) 项。
+\item
+  绳约束是单边约束：张力必须满足 \(T_{AC}\geq0\)。
+\item
+  细杆 \(BD\) 可受拉也可受压，计算结果的正负号用来解释真实方向。
+\item
+  当 \(AC\) 绷紧时，四边形 \(ABDC\)
+  在瞬时保持平行四边形，上、下杆角加速度相同。
+\item
+  当 \(AC\) 松弛时，只剩 \(BD\) 的长度约束，必须使用端点 \(B\)、\(D\)
+  沿杆方向的加速度相等。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-2}
+
+剪断天花板到 \(B\) 的细绳后，上杆可绕固定铰点 \(A\) 开始顺时针转动。若
+\(AC\) 仍绷紧，\(C\) 点不能沿竖直方向向下运动，\(BD\) 又使 \(D\) 与
+\(B\) 的竖直加速度相同，于是下杆与上杆具有同一顺时针角加速度。
+
+但若维持该几何运动需要 \(AC\) 向上``推''下杆，绳无法实现，\(AC\)
+将松弛。此时下杆既平动又转动，\(BD\)
+内力需由上杆转动方程、下杆质心平动方程、下杆绕质心转动方程以及
+\(a_{D,y}=a_{B,y}\) 联立求出。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-2}
+
+先假设 \(AC\) 绷紧，求出共同角加速度 \(\beta\) 和 \(BD\) 的有符号力
+\(T\)，再回代求 \(AC\) 张力并检查其非负性。若检查失败，切换到 \(AC\)
+松弛模型。
+
+统一规定：\(T>0\) 表示 \(BD\) 受拉，即它对上杆 \(B\)
+点施加竖直向下的力、对下杆 \(D\) 点施加竖直向上的力。若计算得
+\(T<0\)，则 \(BD\) 受压，实际方向与上述约定相反。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-2}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图3-2　AC 松弛时两杆的受力与端点加速度约束}]{../figures/solution-03.pdf}
+\caption*{图3-2　\(AC\) 松弛时两杆的受力与端点加速度约束}
+\end{figure}
+
+图3-2中的杆张力沿各杆方向，连接绳仅能拉而不能推。列瞬时角加速度前，先检查所求绳力是否为正以及固定点条件如何得到。
+
+图 3-2 采用顺时针角加速度为正。上杆 \(B\) 点的初始竖直向下加速度为
+\(l\alpha_1\)；下杆 \(D\) 点加速度由质心平动和绕质心转动叠加。\(BD\)
+长度不变要求二者相等。
+
+\needspace{3\baselineskip}
+\textbf{（一）先假设 \(AC\) 仍绷紧}
+
+记两杆共同的顺时针角加速度为 \(\beta\)。由于 \(A\) 固定、\(AC\)
+长度不变，剪断瞬间 \(C\) 点竖直加速度为零。又因 \(BD\) 长度不变，\(D\)
+与 \(B\) 沿竖直方向的加速度相等。上杆 \(B\) 点向下加速度为
+\(l\beta\)；若下杆绕 \(C\) 顺时针角加速度也是 \(\beta\)，\(D\)
+点向下加速度同样为 \(l\beta\)。故两杆确实以相同 \(\beta\) 启动。
+
+取 \(\beta\) 为广义加速度。上杆质心向下加速度为
+\(l_1\beta\)，下杆质心向下加速度为
+\(l_2\beta\)。在虚功或拉格朗日方程中，各理想约束力不做广义功，重力的广义力为
+
+\[
+Q=mg l_1+mg l_2=mg(l_1+l_2). \tag{1}
+\]
+
+两杆关于各自左端的转动惯量分别为
+
+\[
+I_A=ma^2+ml_1^2=m(a^2+l_1^2), \tag{2}
+\]
+
+\[
+I_C=mb^2+ml_2^2=m(b^2+l_2^2). \tag{3}
+\]
+
+总广义惯性系数为 \(I_A+I_C\)，所以
+
+\[
+[I_A+I_C]\beta=mg(l_1+l_2). \tag{4}
+\]
+
+代入式（2）、（3），约去 \(m\)：
+
+\[
+\boxed{\beta=
+\frac{g(l_1+l_2)}{a^2+b^2+l_1^2+l_2^2}}. \tag{5}
+\]
+
+为简化书写，定义
+
+\[
+D=a^2+b^2+l_1^2+l_2^2. \tag{6}
+\]
+
+下面求 \(BD\) 内力。对下杆列竖直方向平动方程。取向下为正；\(BD\)
+受拉时在 \(D\) 点对下杆施加向上力 \(T\)，\(AC\) 张力记为 \(S\)，在 \(C\)
+点对下杆也向上。因此
+
+\[
+mg-S-T=m l_2\beta. \tag{7}
+\]
+
+对下杆质心列顺时针方向力矩方程。\(C\) 位于质心左侧，向上的 \(S\)
+对质心产生顺时针力矩 \(Sl_2\)；\(D\) 位于质心右侧，向上的 \(T\)
+产生逆时针力矩 \(-T(l-l_2)\)：
+
+\[
+S l_2-T(l-l_2)=mb^2\beta. \tag{8}
+\]
+
+由式（7）解出
+
+\[
+S=mg-T-ml_2\beta. \tag{9}
+\]
+
+代入式（8）：
+
+\[
+(mg-T-ml_2\beta)l_2-T(l-l_2)=mb^2\beta. \tag{10}
+\]
+
+展开左边：
+
+\[
+mgl_2-Tl_2-ml_2^2\beta-Tl+Tl_2=mb^2\beta. \tag{11}
+\]
+
+\(-Tl_2\) 与 \(+Tl_2\) 抵消，得到
+
+\[
+mgl_2-Tl=m(b^2+l_2^2)\beta. \tag{12}
+\]
+
+因此
+
+\[
+T=\frac m l\left[gl_2-(b^2+l_2^2)\beta\right]. \tag{13}
+\]
+
+将式（5）代入：
+
+\[
+T=\frac{mg}{l}
+\left[l_2-\frac{(b^2+l_2^2)(l_1+l_2)}D\right]. \tag{14}
+\]
+
+通分并展开分子：
+
+\[
+\begin{aligned}
+l_2D-(b^2+l_2^2)(l_1+l_2)
+={}&l_2(a^2+b^2+l_1^2+l_2^2)\\
+&-l_1(b^2+l_2^2)-l_2(b^2+l_2^2)\\
+={}&l_2(a^2+l_1^2)-l_1(b^2+l_2^2).
+\end{aligned} \tag{15}
+\]
+
+所以绳绷紧假设下
+
+\[
+\boxed{
+T_{BD}^{(1)}=
+mg\frac{l_2(a^2+l_1^2)-l_1(b^2+l_2^2)}
+{l(a^2+b^2+l_1^2+l_2^2)} }. \tag{16}
+\]
+
+接下来必须检查 \(AC\) 张力。由式（9）：
+
+\[
+\boxed{S=mg-T_{BD}^{(1)}-ml_2\beta}. \tag{17}
+\]
+
+若式（17）计算结果满足
+\(S\geq0\)，绳能够提供所需的拉力，式（16）就是答案。等号 \(S=0\)
+是两种运动模式的分界。
+
+\needspace{3\baselineskip}
+\textbf{（二）若式（17）给出 \(S<0\)，则 \(AC\) 立即松弛}
+
+此时上杆绕固定点 \(A\) 运动。设其顺时针角加速度为 \(\alpha_1\)。上杆关于
+\(A\) 的转动方程为
+
+\[
+m(a^2+l_1^2)\alpha_1=mgl_1+Tl. \tag{18}
+\]
+
+注意式（18）右侧为加号：按约定 \(T>0\) 时，\(BD\) 在 \(B\)
+点向下拉上杆，与重力产生同向的顺时针力矩。由式（18）得
+
+\[
+\alpha_1=\frac{gl_1+(T/m)l}{a^2+l_1^2}. \tag{19}
+\]
+
+因此上杆端点 \(B\) 的向下加速度为
+
+\[
+a_{B,y}=l\alpha_1
+=l\frac{gl_1+(T/m)l}{a^2+l_1^2}. \tag{20}
+\]
+
+对下杆，仍取竖直向下为正。质心平动方程为
+
+\[
+ma_G=mg-T,
+\]
+
+即
+
+\[
+a_G=g-\frac Tm. \tag{21}
+\]
+
+设下杆顺时针角加速度为 \(\alpha_2\)。\(D\) 点受到向上的力
+\(T\)，关于质心产生逆时针力矩，故
+
+\[
+mb^2\alpha_2=-T(l-l_2). \tag{22}
+\]
+
+因此
+
+\[
+\alpha_2=-\frac{T(l-l_2)}{mb^2}. \tag{23}
+\]
+
+在初始角速度为零的瞬间，\(D\)
+点向下加速度等于质心向下加速度加上转动切向加速度：
+
+\[
+a_{D,y}=a_G+(l-l_2)\alpha_2. \tag{24}
+\]
+
+代入式（21）、（23）：
+
+\[
+a_{D,y}=g-\frac Tm-
+\frac{T(l-l_2)^2}{mb^2}. \tag{25}
+\]
+
+\(BD\) 是刚性细杆且初始竖直、初始相对速度为零，所以两端沿 \(BD\)
+方向的加速度必须相等：
+
+\[
+a_{D,y}=a_{B,y}. \tag{26}
+\]
+
+将式（20）和式（25）代入：
+
+\[
+g-\frac Tm\left[1+\frac{(l-l_2)^2}{b^2}\right]
+=l\frac{gl_1+(T/m)l}{a^2+l_1^2}. \tag{27}
+\]
+
+令 \(A_0=a^2+l_1^2\)，并令 \(t=T/m\)。式（27）变为
+
+\[
+g-t\left[1+\frac{(l-l_2)^2}{b^2}\right]
+=\frac{lgl_1+tl^2}{A_0}. \tag{28}
+\]
+
+两边乘 \(A_0\)：
+
+\[
+gA_0-tA_0\left[1+\frac{(l-l_2)^2}{b^2}\right]
+=lgl_1+tl^2. \tag{29}
+\]
+
+把含 \(t\) 的项移到右边，其余项留在左边：
+
+\[
+g(A_0-ll_1)
+=t\left\{A_0\left[1+\frac{(l-l_2)^2}{b^2}\right]+l^2\right\}. \tag{30}
+\]
+
+因此
+
+\[
+t=
+\frac{g(A_0-ll_1)}
+{A_0[1+(l-l_2)^2/b^2]+l^2}. \tag{31}
+\]
+
+分子、分母同乘 \(b^2\)，再恢复 \(T=mt\) 和 \(A_0=a^2+l_1^2\)：
+
+\[
+\boxed{
+T_{BD}^{(2)}=
+mg\frac{b^2(a^2+l_1^2-ll_1)}
+{b^2(a^2+l_1^2+l^2)+(l-l_2)^2(a^2+l_1^2)} }. \tag{32}
+\]
+
+因此最终答案是分情况的：先用式（16）、（5）代入式（17）检查；若
+\(S\geq0\)，取式（16）；若 \(S<0\)，取式（32）。两式中的 \(T\)
+都是有符号量，负值表示 \(BD\) 实际受压。
+
+\needspace{3\baselineskip}
+\textbf{约束方向与分界复核}
+
+天花板到 \(A\) 的连接是轻杆，并非直接把 \(A\)
+焊死。初始该杆竖直且速度为零，长度约束给出
+\(a_{A,y}=0\)；此刻各外力和连接杆轴力均竖直，水平动力学又给出
+\(a_{A,x}=0\)，所以本瞬间可按固定 \(A\)
+求解，不能外推为有限时间后永远绕固定 \(A\) 转动。
+
+若两杆的质量确实分布在线段内，还应满足
+\(a^2\le l_1(l-l_1),b^2\le l_2(l-l_2)\)。均匀两杆取
+\(l_1=l_2=l/2,a^2=b^2=l^2/12\)
+时，\(\beta=3g/(2l),T_{BD}=0,S=mg/4>0\)，应选绷紧分支。式（32）的结果只有在试算
+\(S<0\) 后才能采用。
+
+\needspace{3\baselineskip}
+\textbf{补充推导与适用条件}
+
+``剪断瞬间''带来的简化非常重要：所有角速度仍为零，端点加速度只含
+\(\alpha r\)。若在有限时间后求解，就会额外出现指向质心或转轴的
+\(\omega^2r\) 项，约束方程会复杂得多。
+
+可用量纲和对称极限检查两个 \(T\) 公式。式（16）的分子量纲为
+\(l^3\)，分母也是 \(l^3\)，故括号外仅剩
+\(mg\)；式（32）同理。若令上下杆的质量分布完全相同，即
+\(a=b\)、\(l_1=l_2\)，式（16）给出
+\(T_{BD}^{(1)}=0\)。此时两杆在重力下的自然角加速度相同，右侧连接杆无需传递轴力，结果具有清楚的对称解释。
+
+式（17）的判据还可以理解成``下杆左端自然加速度的方向''。在四边形模式中，\(C\)
+被强制保持竖直加速度为零；若不加 \(AC\)，下杆按重力与 \(BD\) 内力算出的
+\(C\) 点倾向向下运动，绳需要向上拉它，\(S>0\)，约束可维持；若 \(C\)
+点反而倾向向上，维持 \(a_C=0\) 需要绳向下推，数学上出现
+\(S<0\)，于是绳松弛。
+
+负的 \(T\) 不等于错误。按照本解的正号约定，\(T<0\) 表示 \(BD\)
+对上杆向上推、对下杆向下推，即细杆受压。把符号解释写在方程之前，可以避免解到最后才临时改变力的方向，导致式（18）或式（22）符号混乱。
+
+\newpage
+
+\section{第 4 题}\label{ux7b2c-4-ux9898}
+
+薄凸透镜 \(L_1\) 与薄凹透镜 \(L_2\) 的焦距分别为 \(f\) 与
+\(-2f\)（\(f>0\)），口径半径均为 \(R\)。两透镜平行共轴放置，间距为
+\(D=2f\)。
+
+（1）不设光阑，在凸透镜左侧光轴上距 \(L_1\) 为 \(u\)
+处放置发光点。光线依次通过两透镜后成实像，求 \(u\) 的最大允许值
+\(u_1\)。
+
+（2）在同一条件下，求 \(u\) 的最小允许值 \(u_2\)。
+
+（3）仍在同一条件下，要求最终实像到凹透镜的距离等于发光点到凸透镜的距离，求物距
+\(u_3\)。
+
+（4）采用第三问的物距。各透镜均视为理想薄透镜，发光点在三维空间中各向均匀发光。在凸透镜左侧距其
+\(f/3\) 处共轴放置圆形光阑，使最终像的亮度为未放光阑时的一半，求光阑半径
+\(r\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.78\linewidth,height=\textheight,keepaspectratio,alt={图4-1　凸透镜---凹透镜共轴组合}]{../figures/question-04.pdf}
+\caption*{图4-1　凸透镜---凹透镜共轴组合}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-3}
+
+凸透镜的中间会聚点位于凹透镜右侧时，凹透镜面对的是虚物。先用带符号物距确定实像区间，再沿两镜光路核对孔径是否截光。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-3}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  薄透镜公式采用实正虚负约定：\(1/f=1/u+1/v\)。
+\item
+  第一片凸透镜的像距为 \(v_1=fu/(u-f)\)。
+\item
+  第二片透镜的物距是 \(u_2'=D-v_1=2f-v_1\)；当 \(v_1>2f\)
+  时，中间像位于凹透镜右侧，对凹透镜是虚物，\(u_2'<0\)。
+\item
+  焦距为 \(-2f\) 的凹透镜要形成右侧实像，虚物距离必须落在合适区间。
+\item
+  圆盘半径为 \(a\)、距点源轴向距离为 \(d\) 时，所张立体角为
+  \(\Omega=2\pi(1-d/\sqrt{d^2+a^2})\)。
+\item
+  近轴、小口径极限下，立体角比约等于张角平方比。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-3}
+
+第一片凸透镜先把左侧实物成像在其右侧。若中间像落在两镜之间，凹透镜面对实物通常仍给虚像；本题要求最终为实像，因此中间会聚点必须落到凹透镜右侧，使到达凹透镜的光线已经会聚，凹透镜只是削弱会聚程度。
+
+第四问中，光阑位于点源和凸透镜之间。未放光阑时，透镜口径半径 \(R\)
+决定可进入系统的光锥；放置光阑后，半径 \(r\)
+决定新的光锥。理想系统不吸收光，像亮度比例由这两个光锥的立体角比例决定。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-3}
+
+先求 \(v_1\)，再把第二片凹透镜的成实像条件直接写成对 \(u_2'=2f-v_1\)
+的不等式。求出 \(v_1\) 的区间后，再反解 \(u\)。第三问将第二片像距设为
+\(v_2=u\)。第四问先求点源到光阑的距离
+
+\[
+d=u_3-\frac f3,
+\]
+
+再令 \(\Omega(r,d)=\frac12\Omega(R,u_3)\)。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-3}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图4-2　两级成像光路与圆形光阑所截光锥}]{../figures/solution-04.pdf}
+\caption*{图4-2　两级成像光路与圆形光阑所截光锥}
+\end{figure}
+
+图4-2两透镜符号相反，红线经过实际交点后会聚成最终实像。光束在第二镜处更窄，亮度由第一镜允许的光束与光阑立体角决定。
+
+图 4-2 中红色边缘光线依次穿过光阑和两片透镜。第四问中的
+\(r\)、\(d\)、\(R\)、\(u_3\)
+均由图中两个相似方向的光锥定义，但精确计算使用立体角而非平面三角形面积。
+
+\needspace{3\baselineskip}
+\textbf{（一）第一片透镜成像}
+
+对凸透镜 \(L_1\)：
+
+\[
+\frac1f=\frac1u+\frac1{v_1}. \tag{1}
+\]
+
+移项得
+
+\[
+\frac1{v_1}=\frac1f-\frac1u=\frac{u-f}{fu},
+\]
+
+所以
+
+\[
+v_1=\frac{fu}{u-f}. \tag{2}
+\]
+
+为使第一片透镜后的光束会聚，需 \(u>f\)，此时 \(v_1>0\)。
+
+凹透镜位于凸透镜右侧 \(2f\) 处。按实物为正的符号约定，凹透镜的物距为
+
+\[
+u_2'=2f-v_1. \tag{3}
+\]
+
+第二片透镜焦距 \(f_2=-2f\)，透镜公式为
+
+\[
+-\frac1{2f}=\frac1{u_2'}+\frac1{v_2}. \tag{4}
+\]
+
+要求最终像为实像，即 \(v_2>0\)。由式（4）可知，必须先有
+\(u_2'<0\)；进一步
+
+\[
+\frac1{v_2}=-\frac1{2f}-\frac1{u_2'}>0. \tag{5}
+\]
+
+令 \(u_2'=-s\)，其中 \(s>0\)，则式（5）成为
+
+\[
+-\frac1{2f}+\frac1s>0,
+\]
+
+所以
+
+\[
+0<s<2f.
+\]
+
+恢复 \(u_2'=-s\)：
+
+\[
+-2f<u_2'<0. \tag{6}
+\]
+
+代入 \(u_2'=2f-v_1\)：
+
+\[
+-2f<2f-v_1<0. \tag{7}
+\]
+
+左半不等式给出 \(v_1<4f\)，右半给出 \(v_1>2f\)，故
+
+\[
+2f<v_1<4f. \tag{8}
+\]
+
+将式（2）代入。先解 \(v_1>2f\)：
+
+\[
+\frac{fu}{u-f}>2f.
+\]
+
+因 \(u>f\)，分母为正，可安全交叉相乘：
+
+\[
+u>2(u-f)=2u-2f,
+\]
+
+所以
+
+\[
+u<2f. \tag{9}
+\]
+
+再解 \(v_1<4f\)：
+
+\[
+\frac{fu}{u-f}<4f,
+\]
+
+约去 \(f\) 并乘正数 \(u-f\)：
+
+\[
+u<4u-4f,
+\]
+
+即
+
+\[
+u>\frac{4f}{3}. \tag{10}
+\]
+
+综合得
+
+\[
+\frac{4f}{3}<u<2f. \tag{11}
+\]
+
+在严格``有限距离实像''意义下端点不包含；题目问最大、最小允许边界，通常写为
+
+\[
+\boxed{u_1=2f},\qquad
+\boxed{u_2=\frac{4f}{3}}. \tag{12}
+\]
+
+\(u\to2f^-\)
+时，\(v_1\to2f^+\)，凹透镜面对刚越过镜面的虚物，最终实像趋近凹透镜；\(u\to(4f/3)^+\)
+时，\(v_1\to4f^-\)，最终像趋于无穷远。这说明两个边界的物理意义不同。
+
+\needspace{3\baselineskip}
+\textbf{（二）最终像距等于初始物距}
+
+要求
+
+\[
+v_2=u. \tag{13}
+\]
+
+把式（2）、（3）、（13）代入凹透镜公式（4）：
+
+\[
+\frac1{2f-\dfrac{fu}{u-f}}+\frac1u=-\frac1{2f}. \tag{14}
+\]
+
+先化简第一项分母：
+
+\[
+\begin{aligned}
+2f-\frac{fu}{u-f}
+&=\frac{2f(u-f)-fu}{u-f}\\
+&=\frac{2fu-2f^2-fu}{u-f}\\
+&=\frac{f(u-2f)}{u-f}.
+\end{aligned} \tag{15}
+\]
+
+因此
+
+\[
+\frac{u-f}{f(u-2f)}+\frac1u=-\frac1{2f}. \tag{16}
+\]
+
+两边同乘 \(2fu(u-2f)\)：
+
+\[
+2u(u-f)+2f(u-2f)=-u(u-2f). \tag{17}
+\]
+
+逐项展开：
+
+\[
+2u^2-2fu+2fu-4f^2=-u^2+2fu. \tag{18}
+\]
+
+左侧中间两项抵消，移项得到
+
+\[
+3u^2-2fu-4f^2=0. \tag{19}
+\]
+
+由求根公式
+
+\[
+u=\frac{2f\pm\sqrt{4f^2+48f^2}}6
+=\frac{2f\pm2\sqrt{13}f}{6}
+=\frac{1\pm\sqrt{13}}3f. \tag{20}
+\]
+
+负根不符合 \(u>0\)，故
+
+\[
+\boxed{u_3=\frac{1+\sqrt{13}}3f}. \tag{21}
+\]
+
+数值上 \((1+\sqrt{13})/3\approx1.535\)，确实落在式（11）的允许区间内。
+
+\needspace{3\baselineskip}
+\textbf{（三）半亮度圆形光阑}
+
+点源到凸透镜的距离为 \(u_3\)。光阑位于凸透镜左侧
+\(f/3\)，所以点源到光阑的轴向距离为
+
+\[
+d=u_3-\frac f3
+=\frac{1+\sqrt{13}}3f-\frac13f
+=\frac{\sqrt{13}}3f. \tag{22}
+\]
+
+半径为 \(a\) 的圆盘在轴线上距点源 \(d\) 处所张立体角为
+
+\[
+\Omega(a,d)=2\pi\left(1-\frac d{\sqrt{d^2+a^2}}\right). \tag{23}
+\]
+
+未放光阑时，半径 \(R\) 的凸透镜从点源处张开的立体角为
+
+\[
+\Omega_0=2\pi\left(1-\frac{u_3}{\sqrt{u_3^2+R^2}}\right). \tag{24}
+\]
+
+放光阑后，通光立体角为
+
+\[
+\Omega_r=2\pi\left(1-\frac d{\sqrt{d^2+r^2}}\right). \tag{25}
+\]
+
+像亮度减半要求 \(\Omega_r=\Omega_0/2\)。约去 \(2\pi\)：
+
+\[
+1-\frac d{\sqrt{d^2+r^2}}
+=\frac12\left(1-\frac{u_3}{\sqrt{u_3^2+R^2}}\right). \tag{26}
+\]
+
+定义
+
+\[
+c_0=\frac12\left(1+\frac{u_3}{\sqrt{u_3^2+R^2}}\right). \tag{27}
+\]
+
+式（26）等价于
+
+\[
+\frac d{\sqrt{d^2+r^2}}=c_0. \tag{28}
+\]
+
+平方并解出 \(r\)：
+
+\[
+d^2=c_0^2(d^2+r^2),
+\]
+
+\[
+r^2=d^2\left(\frac1{c_0^2}-1\right),
+\]
+
+所以精确结果为
+
+\[
+\boxed{r=d\sqrt{c_0^{-2}-1}}, \tag{29}
+\]
+
+其中 \(d\)、\(c_0\) 分别由式（22）、（27）给出。
+
+在竞赛近轴条件 \(R\ll u_3\)、\(r\ll d\) 下，立体角可展开为
+
+\[
+\Omega(a,d)\simeq\pi\frac{a^2}{d^2}. \tag{30}
+\]
+
+于是半亮度条件变为
+
+\[
+\pi\frac{r^2}{d^2}
+=\frac12\pi\frac{R^2}{u_3^2}. \tag{31}
+\]
+
+取正根：
+
+\[
+r=\frac R{\sqrt2}\frac d{u_3}. \tag{32}
+\]
+
+代入 \(d=u_3-f/3\)：
+
+\[
+\boxed{
+r\simeq\frac R{\sqrt2}
+\frac{u_3-f/3}{u_3}
+=\frac R{\sqrt2}\frac{\sqrt{13}}{1+\sqrt{13}}}. \tag{33}
+\]
+
+式（29）是三维立体角精确式，式（33）是通常薄透镜、近轴条件下的答案。
+
+\needspace{3\baselineskip}
+\textbf{第二片透镜是否成为孔径限制}
+
+在第三问的物距下，光线穿过第一镜时的高度为 \(y_1\)，到第二镜时为
+
+\[
+y_2=y_1\left(1-\frac{2f}{v_1}\right)=y_1\left(\frac{2f}{u_3}-1\right).
+\]
+
+系数约为 \(0.303<1\)，所以第一镜内 \(|y_1|\le R\) 的全部近轴光线也满足
+\(|y_2|<R\)。两镜同半径时，确实由第一镜决定未加光阑的通光量；不能不检查第二镜就直接写
+\(\Omega_0\)。图4-2的边缘光线按这一系数折转。
+
+允许实像的物距区间是开区间，\(2f\) 与 \(4f/3\)
+分别为上确界和下确界，不是可达到的最大、最小有限实像物距。立体角公式对给定圆盘几何是精确的，成像部分仍使用理想薄透镜近轴模型；不能把式（29）解释为任意大口径真实透镜的精确光学结果。
+
+\needspace{3\baselineskip}
+\textbf{补充推导与适用条件}
+
+第四问若只按面积比写
+\(\pi r^2=\frac12\pi R^2\)，就忽略了光阑和透镜到点源的距离不同。真正保持的量是立体角；只有两圆盘距离相同且小角时，面积比才直接等于通光比。
+
+可用光线会聚程度核对区间端点。中间像在 \(v_1=2f\)
+时恰落在凹透镜面上，第二镜后像距趋零；中间像在 \(v_1=4f\)
+时位于凹透镜右侧
+\(2f\)，正好处于凹透镜的右焦点，出射光平行，像距趋无穷。因
+\(v_1=fu/(u-f)\) 随 \(u\) 在 \((f,\infty)\) 上单调递减，所以
+\(2f<v_1<4f\) 必然反向映射为
+\(4f/3<u<2f\)。单调性检查能发现不等号方向错误。
+
+第三问的根也要与这个区间交叉核验。正根 \(u_3/f\approx1.535\)
+合法；负根不仅物距为负，也不在允许区间。把代数根代回式（3）可得
+\(u_2'<0\)，再代回式（4）得 \(v_2=u_3>0\)，形成完整符号闭环。
+
+精确立体角式还有两个极限值得讲：当 \(R/u_3\to0\) 时，展开式（23）得到
+\(\Omega_0\simeq\pi R^2/u_3^2\)；当 \(R/u_3\to\infty\)
+时，圆盘覆盖近半个空间，\(\Omega_0\to2\pi\)。这说明式（23）的几何含义正确，而平面面积近似只适用于第一个极限。
+
+\newpage
+
+\section{第 5 题}\label{ux7b2c-5-ux9898}
+
+如图，一个由电阻和电容构成的无限周期网络以速度 \(u_0\) 沿 \(x\)
+轴正方向匀速运动。相邻竖直支路间距、两水平导轨间距均为
+\(L\)；每一水平线段的电阻为 \(r\)，每一竖直支路由电阻 \(r\) 与电容 \(C\)
+串联组成。空间中存在磁场
+
+\[
+\bm B=B_0\cos(\omega t-kx)\,\hat{\bm z}.
+\]
+
+\(AC\) 在初始时刻位于 \(x=0\)，随网络运动到
+\(x=u_0t\)。原图未画出左侧延伸，且 \(AC\)
+画作导线；参考解采用双向无限周期网络的内部支路模型。两种边界解释须分别处理。电容初始电荷趋于零，求暂态衰减后
+\(AC\) 支路中的稳态周期电流。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.867\linewidth,height=\textheight,keepaspectratio,alt={图5-1　平移无限阻容网络与行波磁场}]{../figures/question-05.pdf}
+\caption*{图5-1　平移无限阻容网络与行波磁场}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-4}
+
+运动网格看到的频率是 \(\Omega=\omega-ku_0\)。但原图把 \(AC\)
+画在左端，参考解却把它当作周期网络内部支路；先说明边界模型，再计算相应电流。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-4}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  运动闭合回路的感应电动势可由随体磁通的全导数写为
+  \(\mathcal E=-\mathrm d\Phi/\mathrm dt\)。
+\item
+  行波相位代入运动坐标 \(x=X+u_0t\) 后，时间因子变为
+  \(e^{i(\omega-ku_0)t}\)。
+\item
+  稳态中电容阻抗为 \(1/(i\Omega C)\)。
+\item
+  相邻网孔电流取 \(i_n=\Re\{\tilde I e^{i(\Omega t-nq)}\}\)，其中
+  \(q=kL\)。
+\item
+  共享支路电流是相邻网孔电流之差。
+\item
+  无限电阻网络的初始暂态因焦耳耗散而衰减，最后只保留与外场同频的受迫响应。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-4}
+
+把第 \(n\) 个小矩形定义为左边界随网络运动到 \(x=nL+u_0t\) 的单元。磁场沿
+\(x\) 方向每跨越一个格长 \(L\)，相位减少 \(q=kL\)；因此第 \(n+1\)
+个回路的电动势是第 \(n\) 个的 \(e^{-iq}\) 倍。
+
+每一网孔包含上下两段不共享的电阻和左右两条共享竖直支路。竖直支路中的电阻与电容承受的电流均为相邻网孔电流之差。正是这一结构产生
+\(4i_n-i_{n-1}-i_{n+1}\) 的电阻项和 \(2i_n-i_{n-1}-i_{n+1}\) 的电容项。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-4}
+
+先用复数表示磁场
+
+\[
+B_z=\Re\{B_0e^{i(\omega t-kx)}\}.
+\]
+
+对第 \(n\) 个单元积分得到磁通，再求随体导数得到
+\(\tilde{\mathcal E}_n\)。随后设网孔电流具有相同空间相位
+\(e^{-inq}\)，将 \(i_{n\pm1}\) 替换为 \(i_ne^{\mp iq}\)。最后由
+\(I_{AC}=i_{-1}-i_0\) 得到所求支路电流。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-4}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图5-2　网孔电流的空间相位与 AC 支路电流}]{../figures/solution-05.pdf}
+\caption*{图5-2　网孔电流的空间相位与 \(AC\) 支路电流}
+\end{figure}
+
+图5-2并列周期内部支路与原图半无限导线端两种边界。内部支路电流为相邻网孔之差，端部导线电流就是首个网孔电流，不能使用同一表达式。
+
+先按图5-2左侧的周期内部支路模型推导，各网孔取逆时针为正，此时
+\(I_{AC}=i_{-1}-i_0\)。原图半无限导线端的解在后文单列。若采用相反的支路正方向，最终表达式整体变号，振幅不变。
+
+\needspace{3\baselineskip}
+\textbf{（一）运动单元中看到的频率}
+
+第 \(n\) 个单元左边界的实验室坐标为
+
+\[
+x_n(t)=nL+u_0t. \tag{1}
+\]
+
+磁场相位在该点为
+
+\[
+\omega t-kx_n
+=(\omega-ku_0)t-nkL. \tag{2}
+\]
+
+定义
+
+\[
+\boxed{\Omega=\omega-ku_0},\qquad
+\boxed{q=kL}. \tag{3}
+\]
+
+则相位为 \(\Omega t-nq\)。当 \(\Omega=0\)
+时，网络与磁场行波同速，任一随体单元内磁通恒定，故没有感应电流；这一极限将在最终结果中自动出现。
+
+\needspace{3\baselineskip}
+\textbf{（二）单元磁通与感应电动势}
+
+使用复数磁场。第 \(n\) 个矩形高度为 \(L\)，宽度也为 \(L\)，其复磁通为
+
+\[
+\tilde\Phi_n
+=LB_0e^{i\omega t}
+\int_{x_n}^{x_n+L}e^{-ikx}\,\mathrm dx. \tag{4}
+\]
+
+积分为
+
+\[
+\int_{x_n}^{x_n+L}e^{-ikx}\,\mathrm dx
+=\left.\frac{e^{-ikx}}{-ik}\right|_{x_n}^{x_n+L}
+=\frac{e^{-ikx_n}(1-e^{-ikL})}{ik}. \tag{5}
+\]
+
+代入 \(x_n=nL+u_0t\) 及式（3）：
+
+\[
+\tilde\Phi_n
+=\frac{LB_0}{ik}(1-e^{-iq})e^{i(\Omega t-nq)}. \tag{6}
+\]
+
+取网孔正方向与图 5-2 一致，复感应电动势为
+
+\[
+\tilde{\mathcal E}_n=-\frac{\mathrm d\tilde\Phi_n}{\mathrm dt}. \tag{7}
+\]
+
+式（6）只有 \(e^{i\Omega t}\) 随时间变化，故
+
+\[
+\begin{aligned}
+\tilde{\mathcal E}_n
+&=-i\Omega\frac{LB_0}{ik}(1-e^{-iq})e^{i(\Omega t-nq)}\\
+&=\frac{LB_0\Omega}{k}(e^{-iq}-1)e^{i(\Omega t-nq)}.
+\end{aligned} \tag{8}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（三）第 \(n\) 个网孔的复阻抗方程}
+
+设
+
+\[
+i_n(t)=\Re\{\tilde I e^{i(\Omega t-nq)}\}. \tag{9}
+\]
+
+于是
+
+\[
+i_{n+1}=i_ne^{-iq},\qquad
+i_{n-1}=i_ne^{iq} \tag{10}
+\]
+
+在复振幅意义下成立。
+
+第 \(n\) 个网孔的上下水平电阻各流过 \(i_n\)，产生总压降
+\(2ri_n\)。左竖直支路电流为 \(i_n-i_{n-1}\)，右竖直支路电流为
+\(i_n-i_{n+1}\)。两条竖直支路中的电阻压降之和为
+
+\[
+r(i_n-i_{n-1})+r(i_n-i_{n+1}). \tag{11}
+\]
+
+因此全部电阻压降为
+
+\[
+\begin{aligned}
+U_R
+&=2ri_n+r(i_n-i_{n-1})+r(i_n-i_{n+1})\\
+&=r(4i_n-i_{n-1}-i_{n+1}).
+\end{aligned} \tag{12}
+\]
+
+两条电容的复压降之和为
+
+\[
+U_C=\frac{(i_n-i_{n-1})+(i_n-i_{n+1})}{i\Omega C}
+=\frac{2i_n-i_{n-1}-i_{n+1}}{i\Omega C}. \tag{13}
+\]
+
+故网孔方程为
+
+\[
+\mathcal E_n
+=r(4i_n-i_{n-1}-i_{n+1})
++\frac{2i_n-i_{n-1}-i_{n+1}}{i\Omega C}. \tag{14}
+\]
+
+代入式（10），利用
+
+\[
+e^{iq}+e^{-iq}=2\cos q, \tag{15}
+\]
+
+得到等效复阻抗
+
+\[
+\begin{aligned}
+Z(q,\Omega)
+&=r(4-2\cos q)+\frac{2-2\cos q}{i\Omega C}\\
+&=4r-2r\cos q-\frac{i}{\Omega C}(2-2\cos q).
+\end{aligned} \tag{16}
+\]
+
+比较式（8）与式（9），网孔电流振幅为
+
+\[
+\tilde I
+=\frac{LB_0\Omega}{k}
+\frac{e^{-iq}-1}{Z(q,\Omega)}. \tag{17}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（四）\(AC\) 支路电流}
+
+按图 5-2 的方向
+
+\[
+I_{AC}=i_{-1}-i_0. \tag{18}
+\]
+
+由式（9），\(i_{-1}\) 的复振幅相对 \(i_0\) 多一个 \(e^{iq}\)，所以
+
+\[
+\tilde I_{AC}=(e^{iq}-1)\tilde I. \tag{19}
+\]
+
+将式（17）代入，并使用
+
+\[
+(e^{iq}-1)(e^{-iq}-1)
+=2-e^{iq}-e^{-iq}
+=2-2\cos q, \tag{20}
+\]
+
+得到
+
+\[
+\boxed{
+\tilde I_{AC}(t)=
+\frac{LB_0\Omega}{k}
+\frac{2-2\cos q}
+{4r-2r\cos q-\dfrac{i}{\Omega C}(2-2\cos q)}
+e^{i\Omega t}}. \tag{21}
+\]
+
+实际电流取式（21）的实部。
+
+若希望写成振幅---相位形式，定义
+
+\[
+A=4r-2r\cos q,\qquad
+X=\frac{2-2\cos q}{\Omega C}. \tag{22}
+\]
+
+则
+
+\[
+\frac1{A-iX}=\frac{A+iX}{A^2+X^2}
+=\frac1{\sqrt{A^2+X^2}}e^{i\phi}, \tag{23}
+\]
+
+其中
+
+\[
+\tan\phi=\frac XA. \tag{24}
+\]
+
+因此可写为
+
+\[
+\boxed{
+I_{AC}(t)=
+\frac{LB_0\Omega}{k}
+\frac{2-2\cos q}{\sqrt{A^2+X^2}}
+\cos(\Omega t+\phi)}. \tag{25}
+\]
+
+若只报告非负振幅，则把式（25）前的 \(\Omega/k\) 换成
+\(|\Omega/k|\)，相应的符号并入相位。\(q=2\pi n\)
+时相邻单元磁通完全同相，\(2-2\cos q=0\)，共享支路电流为零；\(\Omega\to0\)
+时式（21）也趋于零，均符合物理预期。
+
+\needspace{3\baselineskip}
+\textbf{原图左端边界与参考解的区别}
+
+式（21）要求 \(AC\) 是与其余竖直支路相同的 \(r,C\)
+串联支路，且左右均有周期网格。原图若确实表示向右延伸的半无限网络、\(AC\)
+为零电阻导线，则 \(I_{AC}\) 只有右侧网孔的贡献，不能写 \(i_{-1}-i_0\)。
+
+以下给出该边界解释的稳态解。取网孔逆时针、\(AC\) 电流从 \(C\) 向 \(A\)
+为正，记
+
+\[
+s=e^{-iq},\quad Z_v=r+\frac1{i\Omega C},\quad
+E_0=\frac{LB_0\Omega}{k}(s-1),\quad
+Z_b=2r+Z_v(2-s-s^{-1}).
+\]
+
+内部网孔满足
+\((2r+2Z_v)I_n-Z_v(I_{n-1}+I_{n+1})=E_0s^n\)；第零网孔左支路为导线，所以边界方程是
+\((2r+Z_v)I_0-Z_vI_1=E_0\)。令 \(\zeta\) 是
+
+\[
+\zeta+\zeta^{-1}=2+\frac{2r}{Z_v},\qquad |\zeta|<1
+\]
+
+的根。将 \(I_n=(E_0/Z_b)s^n+H\zeta^n\) 代入边界式，得
+
+\[
+\boxed{I_{AC}(t)=\Re\left\{\frac{E_0}{Z_b}\frac{s-\zeta}{s(1-\zeta)}e^{i\Omega t}\right\}}.
+\]
+
+这一式子含端部衰减模，与式（21）不同。特别是 \(k\to0\) 时
+\(E_0\to-i\Omega B_0L^2\)，半无限导线端电流一般不为零；周期内部支路电流则因左右对称趋零。图5-1保留原图的端部，图5-2并列画参考周期解释和半无限边界，避免把补充条件静默改进题面。\(\Omega=0\)
+时随体磁通不变，零初始电荷下感应电流为零；相量中的 \(1/\Omega\)
+应以极限处理。
+
+\needspace{3\baselineskip}
+\textbf{补充推导与适用条件}
+
+多普勒组合 \(\Omega=\omega-ku_0\)
+同时包含变压器电动势与运动电动势。若只在固定区域求
+\(-\partial\Phi/\partial t\)，会漏掉边界运动带来的
+\(-ku_0\)，也就无法得到网络与磁场同速时电流为零的正确极限。
+
+式（16）中的电阻实部始终非负：\(4r-2r\cos q=2r(2-\cos q)\geq2r\)。因此每个非零频率模都存在焦耳耗散，初始电荷所激发的自由响应会衰减，这正是题目可以只问长期稳态的原因。电容虚部的符号随
+\(\Omega\) 改变，反映行波相对网络传播方向反转后相位超前、滞后互换。
+
+长波极限下 \(2-2\cos q\simeq q^2\)，而电阻项
+\(4r-2r\cos q\simeq2r+rq^2\)。在保持 \(\Omega\) 有限时，周期模型的分子有
+\((2-2\cos q)/k\sim kL^2\)，所以支路电流随 \(k\) 一次趋零，而非整体按
+\(q^2\)
+趋零：空间上几乎均匀的磁场使相邻网孔电流几乎相同，共享支路中只剩它们的微小差。若答案在
+\(kL\to0\) 时仍给出有限支路电流，就与网络对称性矛盾。
+
+\Needspace{7\baselineskip}
+
+相位式应结合正方向理解。若 \(\Omega<0\)，把振幅强制写成正数会额外引入
+\(\pi\)
+相位；最稳妥的表达是先保留式（21）的有符号复振幅，最后取实部。课堂计算中可先假定
+\(\Omega>0\)，再说明负频率由复共轭关系得到。
+
+\newpage
+
+\section{第 6 题}\label{ux7b2c-6-ux9898}
+
+以地心为原点，以从地磁北极指向地磁南极的方向为极轴建立球坐标系。把地球磁场视为磁偶极矩
+
+\[
+M=8.1\times10^{22}\,\mathrm{A\,m^2}
+\]
+
+产生的偶极子场。
+
+（1）求通过 \(r=R\)、\(\theta=\pi/2\) 点的磁感线方程。
+
+（2）能量 \(E=10\,\mathrm{MeV}\) 的电子在 \(r=R\)、\(\theta=\pi/2\)
+附近做回旋运动，求回旋半径 \(a\) 与角频率 \(\omega\) 的数值。已知
+\(m_ec^2=0.511\,\mathrm{MeV}\)，\(R=3\times10^7\,\mathrm m\)；按
+\(E/(m_ec^2)\approx20\gg1\) 处理。
+
+（3）在第二问运动上叠加沿磁感线方向的小扰动。电子的导引中心将在赤道附近沿磁感线作小振动。求振动角频率
+\(\Omega\)，用 \(a\)、\(R\)、\(\omega\)
+表示并给出数值。可使用缓变磁场中的第一绝热不变量，即轨道磁矩守恒。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.536\linewidth,height=\textheight,keepaspectratio,alt={图6-1　地磁偶极场与赤道附近电子回旋}]{../figures/question-06.pdf}
+\caption*{图6-1　地磁偶极场与赤道附近电子回旋}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-5}
+
+先求穿过赤道的偶极场线，再沿这条场线展开磁场。电子回旋用相对论动量；慢振动用
+\(p_\perp^2/B\) 守恒，不能把相对论横向能量直接说成与磁场成正比。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-5}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  偶极场球坐标分量为
+  \(B_r=2K\cos\theta/r^3\)、\(B_\theta=K\sin\theta/r^3\)，其中
+  \(K=\mu_0M/(4\pi)\)。
+\item
+  磁感线切向满足 \(\mathrm dr/(r\mathrm d\theta)=B_r/B_\theta\)。
+\item
+  相对论回旋频率为 \(\omega=|e|B/(\gamma m_e)\)，半径为 \(a=p/(|e|B)\)。
+\item
+  高度相对论极限下 \(pc\simeq E\)、\(a\omega=v_\perp\simeq c\)。
+\item
+  偶极磁场在赤道处最弱，沿同一磁感线离开赤道后按位移平方增加。
+\item
+  第一绝热不变量等价于 \(p_\perp^2/B\)
+  近似不变；总能量固定时可写为横向速度平方与 \(B\) 成正比。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-5}
+
+电子同时具有两个时间尺度：以角频率 \(\omega\)
+绕局部磁感线作快速小圆周运动；其导引中心以远小于 \(\omega\) 的角频率
+\(\Omega\) 沿弯曲磁感线在赤道两侧往复。图 6-1
+中小圆表示回旋，蓝色曲线表示导引中心所在的偶极场线。
+
+赤道处 \(B\) 最小。导引中心离开赤道后，\(B\)
+增大；磁矩守恒迫使横向动能增加，在总能量不变的条件下，平行动能减少，最终反向。这就是磁镜回复机制。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-5}
+
+先由场线微分方程积分出 \(r=C\sin^2\theta\)，再由通过点确定
+\(C=R\)。第三问沿这条场线令
+
+\[
+\delta=\frac\pi2-\theta,\qquad x\simeq R\delta,
+\]
+
+把 \(r/R=\sin^2\theta\) 与 \(B=K r^{-3}\sqrt{1+3\cos^2\theta}\)
+同时展开到 \(\delta^2\)，得到 \(B(x)\)
+的二次项。这个二次项直接给出简谐回复势能。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-5}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.82\linewidth,height=\textheight,keepaspectratio,alt={图6-2　赤道附近磁场强度的二次展开与磁镜回复}]{../figures/solution-06.pdf}
+\caption*{图6-2　赤道附近磁场强度的二次展开与磁镜回复}
+\end{figure}
+
+图6-2按赤道附近 \(B/B_0=1+9x^2/(2R^2)\) 绘制恢复势形。它只在
+\(|x|\ll R\) 适用；总能量不变，而横向动量随局部磁场改变。
+
+图 6-2 横轴 \(x\) 是沿磁感线、以赤道为原点的局部弧长坐标。曲线最低点对应
+\(B_0\)；电子离开赤道后横向回旋能量增加，平行动能减少。
+
+\needspace{3\baselineskip}
+\textbf{（一）磁感线方程}
+
+令
+
+\[
+K=\frac{\mu_0M}{4\pi}. \tag{1}
+\]
+
+磁偶极子场的两个分量为
+
+\[
+B_r=\frac{2K\cos\theta}{r^3},\\qquad
+B_\theta=\frac{K\sin\theta}{r^3}. \tag{2}
+\]
+
+磁感线上微元位移
+\(\mathrm d\bm l=\mathrm dr\,\hat{\bm e}_r+r\mathrm d\theta\,\hat{\bm e}_\theta\)
+与 \(\bm B\) 平行，因此
+
+\[
+\frac{\mathrm dr}{r\mathrm d\theta}
+=\frac{B_r}{B_\theta}
+=2\cot\theta. \tag{3}
+\]
+
+分离变量：
+
+\[
+\frac{\mathrm dr}{r}=2\cot\theta\,\mathrm d\theta. \tag{4}
+\]
+
+积分：
+
+\[
+\ln r=2\ln\sin\theta+\ln C, \tag{5}
+\]
+
+即
+
+\[
+r=C\sin^2\theta. \tag{6}
+\]
+
+该场线通过 \(r=R\)、\(\theta=\pi/2\)，代入得 \(R=C\)，所以
+
+\[
+\boxed{r=R\sin^2\theta}. \tag{7}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（二）赤道磁场、相对论回旋频率和回旋半径}
+
+在赤道 \(\theta=\pi/2\) 处，\(B_r=0\)，\(B_\theta=K/R^3\)，故磁场大小
+
+\[
+B_0=\frac{\mu_0M}{4\pi R^3}. \tag{8}
+\]
+
+代入 \(\mu_0/(4\pi)=10^{-7}\,\mathrm{N/A^2}\)：
+
+\[
+\begin{aligned}
+B_0
+&=10^{-7}\frac{8.1\times10^{22}}{(3\times10^7)^3}\\
+&=10^{-7}\frac{8.1\times10^{22}}{27\times10^{21}}\\
+&=3.0\times10^{-7}\,\mathrm T.
+\end{aligned} \tag{9}
+\]
+
+按题意把 \(E=10\,\mathrm{MeV}\) 作为总能量尺度，洛伦兹因子为
+
+\[
+\gamma=\frac{E}{m_ec^2}
+=\frac{10}{0.511}=19.57. \tag{10}
+\]
+
+相对论动量满足
+
+\[
+p^2c^2=E^2-m_e^2c^4, \tag{11}
+\]
+
+所以
+
+\[
+p=\frac1c\sqrt{E^2-m_e^2c^4}. \tag{12}
+\]
+
+回旋半径由洛伦兹力提供向心作用，写成动量形式最直接：
+
+\[
+a=\frac{p}{|e|B_0}. \tag{13}
+\]
+
+把 \(E=10\times10^6\,\mathrm{eV}\) 换成焦耳：
+
+\[
+E=10^7\times1.602\times10^{-19}
+=1.602\times10^{-12}\,\mathrm J. \tag{14}
+\]
+
+因 \(E\gg m_ec^2\)，\(pc\simeq E\)，先作数量估算：
+
+\[
+a\simeq\frac{E}{|e|B_0c}. \tag{15}
+\]
+
+代入：
+
+\[
+\begin{aligned}
+a
+&\simeq\frac{1.602\times10^{-12}}
+{(1.602\times10^{-19})(3.0\times10^{-7})(2.998\times10^8)}\\
+&\approx1.11\times10^5\,\mathrm m.
+\end{aligned} \tag{16}
+\]
+
+使用式（12）的精确相对论动量，末位数仍为
+
+\[
+\boxed{a\approx1.11\times10^5\,\mathrm m}. \tag{17}
+\]
+
+相对论回旋角频率为
+
+\[
+\omega=\frac{|e|B_0}{\gamma m_e}. \tag{18}
+\]
+
+利用 \(\gamma m_ec^2=E\)，也可写为
+
+\[
+\omega=\frac{|e|B_0c^2}{E}. \tag{19}
+\]
+
+数值为
+
+\[
+\boxed{\omega\approx2.70\times10^3\,\mathrm{s^{-1}}}. \tag{20}
+\]
+
+检查：\(a/R\approx3.70\times10^{-3}\ll1\)，局部均匀场近似成立；同时
+\(a\omega\approx2.99\times10^8\,\mathrm{m/s}\)，与高度相对论电子速度接近
+\(c\) 一致。
+
+\needspace{3\baselineskip}
+\textbf{（三）沿磁感线的小振动}
+
+偶极场大小由式（2）得
+
+\[
+B(r,\theta)
+=\frac K{r^3}\sqrt{4\cos^2\theta+\sin^2\theta}
+=\frac K{r^3}\sqrt{1+3\cos^2\theta}. \tag{21}
+\]
+
+在所求场线上 \(r=R\sin^2\theta\)。令
+
+\[
+\delta=\frac\pi2-\theta,\qquad |\delta|\ll1. \tag{22}
+\]
+
+有
+
+\[
+\sin\theta=\cos\delta\simeq1-\frac{\delta^2}{2},\qquad
+\cos\theta=\sin\delta\simeq\delta. \tag{23}
+\]
+
+因此
+
+\[
+\frac rR=\sin^2\theta\simeq1-\delta^2. \tag{24}
+\]
+
+对径向因子展开：
+
+\[
+\left(\frac Rr\right)^3
+=(1-\delta^2)^{-3}
+\simeq1+3\delta^2. \tag{25}
+\]
+
+对角向因子展开：
+
+\[
+\sqrt{1+3\cos^2\theta}
+\simeq\sqrt{1+3\delta^2}
+\simeq1+\frac32\delta^2. \tag{26}
+\]
+
+将式（25）、（26）相乘并只保留二阶项：
+
+\[
+\frac B{B_0}
+\simeq(1+3\delta^2)\left(1+\frac32\delta^2\right)
+\simeq1+\frac92\delta^2. \tag{27}
+\]
+
+赤道附近沿场线弧长 \(x\simeq R\delta\)，所以
+
+\[
+\boxed{B(x)\simeq B_0\left(1+\frac{9x^2}{2R^2}\right)}. \tag{28}
+\]
+
+第一绝热不变量给出 \(p_\perp^2/B\)
+守恒。静磁场不做功，所以总能量、\(\gamma\) 不变；因
+\(p=\gamma m_ev\)，这里可写 \(v_\perp^2/B\) 守恒。设赤道处横向速度为
+\(v_{\perp0}\)，则在小振幅近似下
+
+\[
+\frac12v_\parallel^2
++\frac12v_{\perp0}^2\frac{B(x)}{B_0}
+=\text{常量}. \tag{29}
+\]
+
+代入式（28）：
+
+\[
+\frac12v_\parallel^2
++\frac12v_{\perp0}^2
++\frac94\frac{v_{\perp0}^2}{R^2}x^2
+=\text{常量}. \tag{30}
+\]
+
+去掉与 \(x\) 无关的常量项：
+
+\[
+\frac12\dot x^2
++\frac94\frac{v_{\perp0}^2}{R^2}x^2
+=\text{常量}. \tag{31}
+\]
+
+与简谐振子能量
+
+\[
+\frac12\dot x^2+\frac12\Omega^2x^2=\text{常量} \tag{32}
+\]
+
+比较，得到
+
+\[
+\Omega^2=\frac92\frac{v_{\perp0}^2}{R^2}. \tag{33}
+\]
+
+由于赤道回旋有
+
+\[
+v_{\perp0}=a\omega, \tag{34}
+\]
+
+故
+
+\[
+\boxed{\Omega=\frac3{\sqrt2}\frac{a\omega}{R}}. \tag{35}
+\]
+
+代入
+\(a=1.11\times10^5\,\mathrm m\)、\(\omega=2.70\times10^3\,\mathrm{s^{-1}}\)、\(R=3.0\times10^7\,\mathrm m\)：
+
+\[
+\boxed{\Omega\approx21.2\,\mathrm{s^{-1}}}. \tag{36}
+\]
+
+比值
+\(\Omega/\omega\approx7.9\times10^{-3}\ll1\)，说明导引中心振动远慢于回旋运动，符合使用绝热不变量的时间尺度条件。
+
+\needspace{3\baselineskip}
+\textbf{数值和相对论不变量的独立检查}
+
+按原提示将 \(10\,\mathrm{MeV}\) 作为总能量，得
+\(\gamma=19.57,v/c=\sqrt{1-(0.511/10)^2}=0.998694\)。于是
+\(a\omega=v\)，\(\Omega=(3/\sqrt2)v/R\simeq21.17\,\mathrm{s^{-1}}\)，用
+\(v=c\) 的近似误差约
+\(0.13\%\)。若把题中能量解释为动能，需先加静能，\(a,\omega\)
+会改变；两种约定不可交叉使用。
+
+相对论轨道磁矩可写 \(\mu=p_\perp^2/(2\gamma m_eB)\)。本题 \(\gamma\)
+固定，磁矩与 \(p_\perp^2/B\)
+两种表述等价；式（29）只是速度平方的守恒关系，未把 \(\frac12mv^2\)
+当作相对论能量。
+
+\needspace{3\baselineskip}
+\textbf{补充推导与适用条件}
+
+最终 \(\Omega\sim c/R\)，而不显含电荷、质量和磁矩，这是高度相对论极限下
+\(a\omega\simeq c\) 的结果。磁场强度决定快回旋的 \(a\) 与
+\(\omega\)，但它们的乘积就是速度。
+
+绝热条件可以定量检查。粒子在一个回旋周期内沿磁感线移动的距离数量级为
+
+\[
+\Delta s\sim v_\parallel\frac{2\pi}{\omega}.
+\]
+
+该距离远小于磁场变化尺度 \(R\)；同时
+\(\Omega/\omega\approx7.9\times10^{-3}\)。
+
+因此磁场对单次回旋而言近似不变，第一绝热不变量可用。若这两个尺度没有明显分离，式（29）所用的绝热动量分配就不可靠。
+
+式（28）也可从镜力公式复核。相对论形式中沿场方向平均力满足
+\(F_\parallel=-\mu\,\mathrm dB/\mathrm dx\)。因 \(B-B_0\propto x^2\)，故
+\(F_\parallel\propto-x\)，必为简谐回复力。把
+\(\mu=p_\perp^2/(2\gamma m_eB)\) 代入，再以纵向惯性 \(\gamma m_e\)
+求加速度，可得到同一慢振动频率。该平均力表达式不需要追踪快速回旋相位。
+
+数值结果包含两个明显尺度：回旋半径约
+\(111\,\mathrm{km}\)，而场线赤道半径为
+\(3.0\times10^4\,\mathrm{km}\)；回旋周期约
+\(2.33\,\mathrm{ms}\)，导引中心小振动周期约
+\(0.297\,\mathrm s\)。把长度、时间尺度同时列出，有助于学生理解``局部快速回旋叠加整体慢漂移''的近似层次。
+
+\newpage
+
+\section{第 7 题}\label{ux7b2c-7-ux9898}
+
+如图，一根质量为 \(M=Nm\)、左端开口而右端封闭的一维钢管中有 \(N\)
+个质量均为 \(m\)
+的钢球。钢管初始静止在光滑水平地面上，所有碰撞均为一维完全弹性碰撞，钢球初速度均沿管轴方向，不计摩擦。
+
+（1）\(N=4\)，钢球初速度大小均为
+\(v_0\)，其中一半向左、一半向右。求末态钢管稳定速度 \(v_{f1}/v_0\)。
+
+（2）保持同样的初始速度分布，令 \(N\to\infty\)，求末态钢管稳定速度
+\(v_{f2}/v_0\)。
+
+（3）令 \(N\to\infty\)，把每个钢球换成能量满足 \(h\nu=m_0c^2\)
+的光子，其中一半向左、一半向右；光子被钢管封闭端完全弹性反射。求末态钢管稳定速度
+\(v_{f3}/c\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.82\linewidth,height=\textheight,keepaspectratio,alt={图7-1　一端开口钢管中的一维弹性碰撞}]{../figures/question-07.pdf}
+\caption*{图7-1　一端开口钢管中的一维弹性碰撞}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-6}
+
+同质量钢球碰撞只交换速度标签，因此端壁有效碰撞次数可直接数出。换成光子后，用能量加动量消去反射频率，钢管的快速度指数便成为等差数列。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-6}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  一维同质量完全弹性碰撞等价于交换速度。
+\item
+  质量 \(m\) 的小球以速度 \(u\) 撞上质量 \(Nm\)、速度 \(U\)
+  的钢管时，钢管末速度为 \[
+  U'=\frac{N-1}{N+1}U+\frac{2}{N+1}u.
+  \]
+\item
+  一阶线性递推可通过减去不动点化成等比数列。
+\item
+  极限 \(\lim_{N\to\infty}(1-2/(N+1))^{N/2}=e^{-1}\)。
+\item
+  相对论快速度定义为
+  \(\beta=\tanh\eta\)、\(\gamma=\cosh\eta\)、\(\gamma\beta=\sinh\eta\)。
+\item
+  恒等式 \(\gamma(1+\beta)=\cosh\eta+\sinh\eta=e^\eta\)。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-6}
+
+初始向左的钢球直接从开口端离开；即便它们与向右钢球相撞，因为质量相同，碰撞后只是速度归属交换，所以从``速度标签''角度看，左行标签仍向左离开，右行标签仍到达封闭端。每个右行标签撞端壁一次后，相对钢管向左离开，最终也从开口端逸出。
+
+钢管每受一次撞击速度都增大，但增量逐次减小，因为钢管已具有向右速度。第二问的连续极限由这种``离目标速度
+\(v_0\)
+还差多少，就消去固定比例多少''的过程产生。光子情形则是钢管快速度指数等差增加。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-6}
+
+前两问先写单次小球---钢管碰撞公式。设第 \(n\)
+个右行速度标签撞击后钢管速度为 \(U_n\)，并令 \(U_0=0\)，则
+
+\[
+U_n=\frac{N-1}{N+1}U_{n-1}+\frac{2}{N+1}v_0.
+\]
+
+把等式两边减去不动点 \(v_0\)，即可直接迭代。第三问设钢管在第 \(n\)
+次反射后的快速度为 \(\eta_n\)，对单次反射的能量、动量方程作``能量除以
+\(c\) 加动量''的组合。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-6}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图7-2　钢球碰撞递推与光子反射的快速度变量}]{../figures/solution-07.pdf}
+\caption*{图7-2　钢球碰撞递推与光子反射的快速度变量}
+\end{figure}
+
+图7-2用A参数记录每次反射前后的相对论速度，钢珠与光子采用不同的单次更新式。取多次极限前，先检查每次光子能量是否保持为正。
+
+图 7-2
+左侧给出钢球碰撞前后的速度符号；右侧显示右行光子反射为左行光子。相对论推导中选取能量---动量的正号组合，正是为了消去图中左行反射光子的贡献。
+
+\needspace{3\baselineskip}
+\textbf{（一）单次钢球碰撞公式}
+
+设碰撞前钢球速度为 \(u\)，钢管速度为 \(U\)；碰撞后分别为
+\(u'\)、\(U'\)。动量守恒：
+
+\[
+mu+NmU=mu'+NmU'. \tag{1}
+\]
+
+动能守恒：
+
+\[
+\frac12mu^2+\frac12NmU^2
+=\frac12mu'^2+\frac12NmU'^2. \tag{2}
+\]
+
+由式（1）得到
+
+\[
+u-u'=N(U'-U). \tag{3}
+\]
+
+把式（2）乘 \(2/m\) 并作平方差分解：
+
+\[
+(u-u')(u+u')=N(U'-U)(U'+U). \tag{4}
+\]
+
+用式（3）约去非零碰撞因子 \(N(U'-U)\)：
+
+\[
+u+u'=U'+U. \tag{5}
+\]
+
+联立式（1）、（5）。由式（5）有 \(u'=U'+U-u\)，代入式（1）：
+
+\[
+u+NU=U'+U-u+NU'. \tag{6}
+\]
+
+整理：
+
+\[
+2u+(N-1)U=(N+1)U'. \tag{7}
+\]
+
+所以
+
+\[
+\boxed{U'=\frac{N-1}{N+1}U+\frac{2}{N+1}u}. \tag{8}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（二）\(N=4\)}
+
+共有两个初始向右的速度标签撞击封闭端。两次入射前，这两个标签相对地面的速度都仍为
+\(v_0\)。令钢管初速 \(U_0=0\)。
+
+第一次碰撞后，由式（8）：
+
+\[
+U_1=\frac35U_0+\frac25v_0=\frac25v_0. \tag{9}
+\]
+
+第二次碰撞后：
+
+\[
+\begin{aligned}
+U_2
+&=\frac35U_1+\frac25v_0\\
+&=\frac35\cdot\frac25v_0+\frac25v_0\\
+&=\frac6{25}v_0+\frac{10}{25}v_0\\
+&=\frac{16}{25}v_0.
+\end{aligned} \tag{10}
+\]
+
+所有球最终从左端离开，钢管不再受撞击，故
+
+\[
+\boxed{\frac{v_{f1}}{v_0}=\frac{16}{25}}. \tag{11}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（三）\(N\to\infty\) 的钢球极限}
+
+总共有 \(N/2\) 个右行速度标签。令第 \(n\) 次碰撞后钢管速度为
+\(U_n\)，则式（8）给出
+
+\[
+U_n=\frac{N-1}{N+1}U_{n-1}+\frac{2}{N+1}v_0,\qquad U_0=0. \tag{12}
+\]
+
+注意 \(v_0\) 是递推不动点，因为
+
+\[
+v_0=\frac{N-1}{N+1}v_0+\frac{2}{N+1}v_0. \tag{13}
+\]
+
+式（12）减去式（13）：
+
+\[
+U_n-v_0=\frac{N-1}{N+1}(U_{n-1}-v_0). \tag{14}
+\]
+
+迭代 \(n\) 次：
+
+\[
+U_n-v_0
+=\left(\frac{N-1}{N+1}\right)^n(U_0-v_0). \tag{15}
+\]
+
+使用 \(U_0=0\)：
+
+\[
+U_n=v_0\left[1-\left(\frac{N-1}{N+1}\right)^n\right]. \tag{16}
+\]
+
+取 \(n=N/2\)：
+
+\[
+\frac{v_{f2}}{v_0}
+=1-\left(\frac{N-1}{N+1}\right)^{N/2}. \tag{17}
+\]
+
+将底数写成
+
+\[
+\frac{N-1}{N+1}=1-\frac{2}{N+1}. \tag{18}
+\]
+
+取对数计算极限：
+
+\[
+\begin{aligned}
+\ln\left(1-\frac{2}{N+1}\right)^{N/2}
+&=\frac N2\ln\left(1-\frac{2}{N+1}\right)\\
+&\longrightarrow\frac N2\left(-\frac{2}{N+1}\right)\\
+&\longrightarrow-1.
+\end{aligned} \tag{19}
+\]
+
+所以
+
+\[
+\lim_{N\to\infty}
+\left(\frac{N-1}{N+1}\right)^{N/2}=e^{-1}. \tag{20}
+\]
+
+最终
+
+\[
+\boxed{\frac{v_{f2}}{v_0}=1-\frac1e}. \tag{21}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（四）光子反射与相对论快速度}
+
+钢管静质量仍为 \(Nm\)。只有初始向右的 \(N/2\)
+个光子撞击封闭端；每个入射光子在实验室系中的能量为
+
+\[
+E_\gamma=m_0c^2. \tag{22}
+\]
+
+设某次碰撞前钢管快速度为 \(\eta\)、碰撞后为
+\(\eta'\)。钢管能量和向右动量分别为
+
+\[
+E_T=Nmc^2\cosh\eta,\qquad
+p_T=Nmc\sinh\eta. \tag{23}
+\]
+
+入射光子向右，动量为 \(+m_0c\)；反射光子向左，设其能量为
+\(E'\!_\gamma=h\nu'\)，动量为 \(-E'\!_\gamma/c\)。能量守恒为
+
+\[
+Nmc^2\cosh\eta+m_0c^2
+=Nmc^2\cosh\eta'+E'\!_\gamma. \tag{24}
+\]
+
+向右为正的动量守恒为
+
+\[
+Nmc\sinh\eta+m_0c
+=Nmc\sinh\eta'-\frac{E'\!_\gamma}{c}. \tag{25}
+\]
+
+把式（24）除以 \(c\) 后与式（25）相加。反射光子的 \(+E'\!_\gamma/c\) 与
+\(-E'\!_\gamma/c\) 正好抵消：
+
+\[
+Nmc(\cosh\eta+\sinh\eta)+2m_0c
+=Nmc(\cosh\eta'+\sinh\eta'). \tag{26}
+\]
+
+使用
+
+\[
+\cosh\eta+\sinh\eta=e^\eta, \tag{27}
+\]
+
+并除以 \(Nmc\)：
+
+\[
+\boxed{e^{\eta'}=e^\eta+\frac{2m_0}{Nm}}. \tag{28}
+\]
+
+设第 \(n\) 次反射后快速度为 \(\eta_n\)。钢管初始静止，\(\eta_0=0\)，故
+\(e^{\eta_0}=1\)。式（28）是等差递推：
+
+\[
+e^{\eta_n}=1+n\frac{2m_0}{Nm}. \tag{29}
+\]
+
+取 \(n=N/2\)：
+
+\[
+e^{\eta_f}=1+\frac{m_0}{m}. \tag{30}
+\]
+
+令
+
+\[
+A=1+\frac{m_0}{m}. \tag{31}
+\]
+
+由 \(\beta=\tanh\eta\) 及 \(e^{\eta_f}=A\)：
+
+\[
+\tanh\eta_f
+=\frac{e^{\eta_f}-e^{-\eta_f}}{e^{\eta_f}+e^{-\eta_f}}
+=\frac{A-A^{-1}}{A+A^{-1}}. \tag{32}
+\]
+
+分子分母同乘 \(A\)：
+
+\[
+\beta_f=\frac{A^2-1}{A^2+1}. \tag{33}
+\]
+
+因此
+
+\[
+\boxed{
+\frac{v_{f3}}c=
+\frac{\left(1+\dfrac{m_0}{m}\right)^2-1}
+{\left(1+\dfrac{m_0}{m}\right)^2+1}}. \tag{34}
+\]
+
+当 \(m_0/m\ll1\) 时，式（34）展开为
+\(v_{f3}/c\simeq m_0/m\)，与总入射光子动量引起的小速度结果同阶；当
+\(m_0/m\to\infty\) 时，\(v_{f3}/c\to1\) 而不超过光速。
+
+\needspace{3\baselineskip}
+\textbf{反射后的光子频率和末态自洽性}
+
+单次反射取 \(A=e^\eta,A'=A+2m_0/(Nm)\)。再用能量减动量，有
+
+\[
+E_\gamma'=\frac{E_\gamma}{AA'}>0.
+\]
+
+钢管向右运动时
+\(A,A'\ge1\)，光子反射后红移，损失的能量进入钢管动能。前两问小球的末速度标签可能在实验室系仍向右，但总小于当时管速，所以相对管子向开口移动；``离开''不等于每个球对地速度均负。
+
+若钢管质量为 \(\alpha Nm\)、初始右行占比为 \(\lambda\)，钢球连续极限为
+\(v_f/v_0=1-e^{-2\lambda/\alpha}\)；光子结果为
+\(e^{\eta_f}=1+2\lambda m_0/(\alpha m)\)。取 \(\alpha=1,\lambda=1/2\)
+回到正文。
+
+\needspace{3\baselineskip}
+\textbf{补充推导与适用条件}
+
+使用能量加动量的光锥分量 \(E/c+p\) 是第三问的核心。右行光子的该分量为
+\(2E/c\)，左行光子的该分量为零，所以反射后未知频率自动消去。
+
+钢球递推还可由相对速度反向的性质快速得到。完全弹性碰撞满足
+
+\[
+u'-U'=-(u-U).
+\]
+
+与动量守恒联立即得到式（8）。这一路径适合课堂快速板书；正文使用动量与动能展开，是为了让每一步都可审计。两种方法相互校验，可以发现质量比系数是否把
+\(N-1\) 与 \(1-N\) 写反。
+
+第二问中钢管末速小于
+\(v_0\)，保证后续右行速度标签能够追上封闭端；每次反射后的球相对钢管向左，最终能到达开口端。若递推算出某一步
+\(U_n\geq v_0\)，就意味着碰撞序列的物理前提失效。式（16）始终给出
+\(U_n<v_0\)，所以序列自洽。
+
+第三问的式（28）是严格有限质量结果，并未忽略单个光子的反冲。连续极限只在把反射次数取为
+\(N/2\)
+时使用。若先把钢管视作无限重反射镜并令光子频率不变，再累计动量，会丢失钢管达到相对论速度时的多普勒反馈，也无法自动保证
+\(v<c\)。
+
+\newpage
+
+\section{第 8 题}\label{ux7b2c-8-ux9898}
+
+两条光滑、足够长的水平导轨间距为 \(l\)，空间中存在竖直向下的匀强磁场
+\(B\)。一根质量为 \(m\)、等效电感为 \(L\)
+的金属杆垂直搭在导轨上，初始静止。电路中串联一个初始电压为
+\(\lambda U_0\) 的电容器 \(C\)，并接有两个反向并联、阈值电压均为 \(U_0\)
+的理想二极管。闭合开关并等待足够长时间，求金属杆的末态速度。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.86\linewidth,height=\textheight,keepaspectratio,alt={图8-1　含电感杆、电容与双阈值二极管的磁耦合电路}]{../figures/question-08.pdf}
+\caption*{图8-1　含电感杆、电容与双阈值二极管的磁耦合电路}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-7}
+
+先把杆的惯性并入等效电容，再逐个追踪二极管导通的半周期。恒阈值二极管会吸收能量；残余广义电压是三角波，杆的末速本身并不周期重复。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-7}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  载流杆的安培力为 \(F=Bil\)，运动电动势为 \(Blv\)。
+\item
+  电感杆方程为 \(L\dot i=U_C-Blv-U_D\)。
+\item
+  电容放电约定下 \(C\dot U_C=-i\)，杆运动满足 \(m\dot v=Bil\)。
+\item
+  广义电压 \(y=U_C-Blv\) 满足 \(\dot y=-i/C'\)，其中
+  \(1/C'=1/C+B^2l^2/m\)。
+\item
+  二极管导通时 \(U_D=U_0\operatorname{sgn}i\)；截止时 \(i=0\) 且
+  \(|y|\leq U_0\)。
+\item
+  无电阻时每个导通区间是绕 \(y=\pm U_0\) 的半周期简谐振荡。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-7}
+
+若初始 \(\lambda U_0\)
+不超过阈值，二极管不导通，电流和杆速度始终为零。若
+\(\lambda>1\)，正向二极管先导通，电容推动电流，安培力使杆运动；杆的运动电动势反过来削弱驱动。电流在半个等效振荡周期后回到零，此时广义电压相对于
+\(+U_0\) 被``镜面反射''。
+
+若反射后的广义电压低于
+\(-U_0\)，反向二极管立即接管，电流反向再持续半周期，相对于 \(-U_0\)
+再反射一次。不断反射直至落入死区，形成图 8-2 的折线映射。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-7}
+
+第一步不是直接解 \(v(t)\)，而是构造
+
+\[
+y=U_C-Blv.
+\]
+
+由电容方程和机械方程求 \(\dot y\)，把机电耦合降为等效 \(LC'\)
+振荡器。第二步只追踪每个半周期结束时的
+\(y\)，无需写出所有时间段。第三步由电荷转移量或 \(y_f\) 反求末速度。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-7}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图8-2　末态广义电压的三角波映射与等效 LC\textquotesingle{} 模型}]{../figures/solution-08.pdf}
+\caption*{图8-2　末态广义电压的三角波映射与等效 \(LC'\) 模型}
+\end{figure}
+
+图8-2画出的三角波是末态广义电压F，杆末速还含累积转移项。每次导通按阈值中心作半周期反射，并消耗
+\(U_0|i|\) 的功率。
+
+图 8-2 左侧的 \(F(\lambda)\) 定义为 \(y_f/U_0\)；右侧表明机械惯性已并入
+\(C'\)。最终速度公式直接使用图中的纵坐标差 \(\lambda-F(\lambda)\)。
+
+\needspace{3\baselineskip}
+\textbf{（一）建立机电耦合方程}
+
+规定电容初始正极到回路的放电电流为
+\(i>0\)，杆的正速度方向取安培力方向。杆的动力学方程为
+
+\[
+m\dot v=Bil. \tag{1}
+\]
+
+电感回路的电压方程为
+
+\[
+L\dot i=U_C-Blv-U_D. \tag{2}
+\]
+
+其中 \(Blv\) 是运动电动势，方向按楞次定律阻碍电流。电容放电满足
+
+\[
+C\dot U_C=-i. \tag{3}
+\]
+
+定义广义电压
+
+\[
+y=U_C-Blv. \tag{4}
+\]
+
+对时间求导：
+
+\[
+\dot y=\dot U_C-Bl\dot v. \tag{5}
+\]
+
+代入式（1）、（3）：
+
+\[
+\dot y=-\frac iC-Bl\frac{Bil}{m}. \tag{6}
+\]
+
+所以
+
+\[
+\dot y=-\left(\frac1C+\frac{B^2l^2}{m}\right)i. \tag{7}
+\]
+
+定义等效电容 \(C'\)：
+
+\[
+\boxed{\frac1{C'}=\frac1C+\frac{B^2l^2}{m}}, \tag{8}
+\]
+
+则
+
+\[
+\dot y=-\frac i{C'}. \tag{9}
+\]
+
+同时式（2）变为
+
+\[
+L\dot i=y-U_D. \tag{10}
+\]
+
+式（9）、（10）就是等效电感 \(L\) 与等效电容 \(C'\) 的状态方程。
+
+\needspace{3\baselineskip}
+\textbf{（二）一次正向导通半周期}
+
+先设 \(\lambda>1\)。初始
+\(y(0)=\lambda U_0\)，正向二极管导通，\(U_D=+U_0\)。式（10）为
+
+\[
+L\dot i=y-U_0. \tag{11}
+\]
+
+对式（11）求导，并用式（9）：
+
+\[
+L\ddot i=\dot y=-\frac i{C'}. \tag{12}
+\]
+
+因此
+
+\[
+\ddot i+\frac1{LC'}i=0. \tag{13}
+\]
+
+定义
+
+\[
+\omega_0=\frac1{\sqrt{LC'}}. \tag{14}
+\]
+
+初始 \(i(0)=0\)，由式（11）
+
+\[
+\dot i(0)=\frac{(\lambda-1)U_0}{L}. \tag{15}
+\]
+
+所以第一段电流为
+
+\[
+i(t)=(\lambda-1)U_0\sqrt{\frac{C'}L}\sin\omega_0t. \tag{16}
+\]
+
+在 \(0<t<\pi/\omega_0\) 内电流为正。半周期末
+
+\[
+t_1=\frac\pi{\omega_0}=\pi\sqrt{LC'},\qquad i(t_1)=0. \tag{17}
+\]
+
+由式（11）和简谐相位，也可写
+
+\[
+y(t)-U_0=(\lambda-1)U_0\cos\omega_0t. \tag{18}
+\]
+
+因此半周期末
+
+\[
+y_1-U_0=-(\lambda-1)U_0,
+\]
+
+即
+
+\[
+\boxed{y_1=(2-\lambda)U_0}. \tag{19}
+\]
+
+这表示 \(y\) 关于导通中心 \(+U_0\) 反射。
+
+若 \(1\leq\lambda\leq3\)，则
+
+\[
+-U_0\leq(2-\lambda)U_0\leq U_0. \tag{20}
+\]
+
+电流回零后两个二极管均截止，系统停止，故
+
+\[
+y_f=(2-\lambda)U_0,qquad1\leq\lambda\leq3. \tag{21}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（三）反向导通与周期映射}
+
+若 \(\lambda>3\)，式（19）给出 \(y_1<-U_0\)，反向二极管导通，此时
+\(U_D=-U_0\)。新的振荡中心为 \(-U_0\)。经过另一个半周期，\(y\) 关于
+\(-U_0\) 反射：
+
+\[
+y_2+U_0=-(y_1+U_0). \tag{22}
+\]
+
+所以
+
+\[
+y_2=-2U_0-y_1. \tag{23}
+\]
+
+代入 \(y_1=(2-\lambda)U_0\)：
+
+\[
+y_2=-2U_0-(2-\lambda)U_0
+=(\lambda-4)U_0. \tag{24}
+\]
+
+对 \(3\leq\lambda\leq5\)，式（24）落入死区，系统停止。继续增大
+\(\lambda\)
+时，同样的正、负半周期成对重复；每经历两个半周期，初始无量纲电压等效减少
+\(4\)。因此定义
+
+\[
+F(\lambda)=\frac{y_f}{U_0}, \tag{25}
+\]
+
+在一个基本区间 \(0\leq\lambda<4\) 内有
+
+\[
+\boxed{
+F(\lambda)=
+\begin{cases}
+\lambda, & 0\leq\lambda\leq1,\\
+2-\lambda, & 1\leq\lambda\leq3,\\
+\lambda-4, & 3\leq\lambda<4,
+\end{cases}} \tag{26}
+\]
+
+并满足周期延拓
+
+\[
+\boxed{F(\lambda+4)=F(\lambda)}. \tag{27}
+\]
+
+若允许 \(\lambda<0\)，电路具有反向对称性，可取
+\(F(-\lambda)=-F(\lambda)\)。
+
+\needspace{3\baselineskip}
+\textbf{（四）由末态广义电压求杆速}
+
+设电容电荷从 \(q_0=C\lambda U_0\) 变为 \(q_f=CU_{C,f}\)。由
+\(i=-\dot q\) 和式（1）：
+
+\[
+v_f=\frac{Bl}{m}\int_0^\infty i\,\mathrm dt. \tag{28}
+\]
+
+而
+
+\[
+\int_0^\infty i\,\mathrm dt=q_0-q_f
+=C(\lambda U_0-U_{C,f}). \tag{29}
+\]
+
+所以
+
+\[
+v_f=\frac{BlC}{m}(\lambda U_0-U_{C,f}). \tag{30}
+\]
+
+末态广义电压定义给出
+
+\[
+y_f=U_{C,f}-Blv_f. \tag{31}
+\]
+
+由式（30）解出
+
+\[
+U_{C,f}=\lambda U_0-\frac{m}{BlC}v_f. \tag{32}
+\]
+
+代入式（31）：
+
+\[
+y_f=\lambda U_0-\left(\frac{m}{BlC}+Bl\right)v_f. \tag{33}
+\]
+
+因此
+
+\[
+v_f=\frac{BlC}{m+B^2l^2C}(\lambda U_0-y_f). \tag{34}
+\]
+
+由式（8）
+
+\[
+C'=\frac{C}{1+B^2l^2C/m}
+=\frac{mC}{m+B^2l^2C}. \tag{35}
+\]
+
+故式（34）可写成
+
+\[
+v_f=\frac{BlC'}m(\lambda U_0-y_f). \tag{36}
+\]
+
+最后代入 \(y_f=U_0F(\lambda)\)：
+
+\[
+\boxed{
+v_f=\frac{BlC'U_0}{m}\,[\lambda-F(\lambda)]},
+\qquad
+\boxed{\frac1{C'}=\frac1C+\frac{B^2l^2}{m}}, \tag{37}
+\]
+
+其中 \(F\) 由式（26）、（27）给出。
+
+在 \(0\leq\lambda\leq1\) 时 \(F=\lambda\)，故
+\(v_f=0\)；这与二极管从未导通一致。\(L\)
+不出现在末速度中，因为电感只控制每一半周期的持续时间和瞬时电流峰值，不改变每次恒阈值状态反射后的电荷转移总量。
+
+\needspace{3\baselineskip}
+\textbf{二极管吸收的能量与导通次数}
+
+``理想''在这里表示截止时不漏电、导通压降固定为阈值
+\(U_0\)，不表示零压降。真实储能
+
+\[
+E=\frac12CU_C^2+\frac12Li^2+\frac12mv^2
+\]
+
+满足
+
+\[
+\boxed{\dot E=-U_Di=-U_0|i|\le0}.
+\]
+
+导通区间围绕 \(y=\pm U_0\)
+的平移状态变量作简谐运动，但整机能量减少。若用完全零压降且无阈值的二极管替代，停止机制和三角波都需重算。
+
+对有限初始 \(\lambda\)，非零导通半周期数为
+\(N_h=\max\{0,\lceil(|\lambda|-1)/2\rceil\}\)，总导通时间为
+\(N_h\pi\sqrt{LC'}\)。初值正好等于阈值时电流仍为零，不额外计一个零振幅半周期。
+
+\needspace{3\baselineskip}
+\textbf{补充推导与适用条件}
+
+三角波 \(F(\lambda)\) 是``关于 \(+1\) 与 \(-1\)
+交替镜面反射，直至落入死区''的结果。周期 \(4\) 来自连续两次反射中心相距
+\(2\)：关于 \(+1\) 反射再关于 \(-1\) 反射，净效果是自变量平移 \(4\)。
+
+可以从能量角度检查等效电容。由式（35）有
+\(C'<C\)，说明同一广义电压变化对应的``有效储能容量''变小；这是因为一部分能量同时进入杆的机械运动。两个极限也正确：\(B\to0\)
+时 \(C'\to C\)，但速度前因子 \(BlC'/m\to0\)；\(m\to\infty\) 时
+\(C'\to C\) 且速度同样趋零。
+
+末速度不随 \(L\) 改变并不意味着电感无作用。由式（16），电流峰值正比于
+\(\sqrt{C'/L}\)，半周期正比于
+\(\sqrt{LC'}\)，二者乘积即每段转移电荷，恰与 \(L\) 无关。较大的 \(L\)
+使过程更慢、峰值更小，却保持相同的电荷冲量和机械冲量。
+
+还可直接核验几个分段值。\(\lambda=2\) 时一次正向半周期后 \(F=0\)，故
+\(v_f=2BlC'U_0/m\)；\(\lambda=4\)
+时先正向、再反向，各一半周期，\(F=0\)，但净速度为
+\(4BlC'U_0/m\)；\(\lambda=6\) 与 \(\lambda=2\) 有相同的
+\(F\)，却因式（37）中的显式 \(\lambda\) 多 \(4\)
+而获得更多末速度。周期性只属于残余广义电压，不属于末速度。
+\end{document}

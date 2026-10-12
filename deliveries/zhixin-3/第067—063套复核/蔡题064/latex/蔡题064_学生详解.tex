@@ -1,0 +1,3193 @@
+\documentclass[12pt,a4paper,UTF8]{ctexart}
+\usepackage[a4paper,top=22mm,bottom=22mm,left=22mm,right=22mm,headheight=15pt]{geometry}
+\newcommand{\Needspace}[1]{\par\begingroup\dimen0=#1\relax\dimen2=\pagegoal\advance\dimen2 by-\pagetotal\ifdim\dimen0>\dimen2\newpage\fi\endgroup}
+\newcommand{\needspace}[1]{\par\begingroup\skip0=\lastskip\vskip-\skip0\dimen0=#1\relax\advance\dimen0 by\skip0\vskip\dimen0\penalty-100\vskip-\dimen0\vskip\skip0\penalty9999\endgroup}
+\usepackage{amsmath,amssymb,mathtools,bm}
+\usepackage{graphicx,xcolor,booktabs,longtable,array,enumitem,fancyhdr,caption,float,microtype,setspace}
+\usepackage[hidelinks,unicode]{hyperref}
+\usepackage[most]{tcolorbox}
+\definecolor{ContestBlue}{HTML}{17365D}
+\hypersetup{pdftitle={第064套},pdfauthor={}}
+\setstretch{1.24}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.35em}
+\setlength{\emergencystretch}{2em}
+\setlist{itemsep=0.35em,topsep=0.4em}
+\captionsetup{font=small,labelfont=bf,justification=centering}
+\setcounter{secnumdepth}{0}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small 第064套}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\ctexset{
+  section={format=\Large\bfseries\color{ContestBlue},beforeskip=1.2em,afterskip=0.7em},
+  subsection={format=\large\bfseries\color{ContestBlue},beforeskip=1.0em,afterskip=0.5em},
+  subsubsection={format=\normalsize\bfseries,beforeskip=0.8em,afterskip=0.35em}
+}
+\usepackage{calc}
+\newcounter{none}
+\let\originalsubsection\subsection
+\renewcommand{\subsection}{\needspace{6\baselineskip}\originalsubsection}
+\makeatletter
+\newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\newcommand{\maxwidth}{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\newcommand{\maxheight}{\ifdim\Gin@nat@height>0.72\textheight 0.72\textheight\else\Gin@nat@height\fi}
+\newcommand{\pandocbounded}[1]{\begingroup\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}#1\endgroup}
+\makeatother
+\begin{document}
+\begin{titlepage}
+  \centering
+  \vspace*{58mm}
+  {\Huge\bfseries\color{ContestBlue} 第064套\par}
+  \vfill
+  \vspace*{28mm}
+\end{titlepage}
+\section{第 1 题}\label{ux7b2c-1-ux9898}
+
+如图，\(A\)、\(B\)、\(C\) 三个物体的质量均为 \(m\)。\(A\) 与
+\(C\)、\(B\) 与 \(C\) 之间的摩擦因数分别为 \(\mu_1\)、\(\mu_2\)，\(C\)
+与地面之间的摩擦因数为 \(\mu_3\)。轻绳绕过安装在 \(A\)、\(B\)
+上的光滑滑轮，绳的自由端受水平拉力 \(F\)，且 \(A\)、\(B\) 相距足够远。
+
+（1）从 \(F=0\) 开始缓慢增大拉力，直至有物体开始运动。以
+\(x=\mu_1/\mu_3\) 为横轴、\(y=\mu_2/\mu_3\)
+为纵轴，划分最先发生各种运动的参数区域，并给出边界方程。
+
+（2）在首次运动发生后继续增大
+\(F\)，讨论各摩擦因数组合下可能出现的运动状态。只需说明哪些物体运动以及
+\(C\) 的运动方向。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.76\linewidth,height=\textheight,keepaspectratio,alt={图1-1　三物体、滑轮与轻绳的连接关系}]{../figures/question-01.pdf}
+\caption*{图1-1　三物体、滑轮与轻绳的连接关系}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d}
+
+先沿绳路数清张力：\(A\) 受 \(3F\) 向右，\(B\) 受 \(2F\)
+向左。首次启动由三处静摩擦临界的先后决定；启动以后，还要区分相对滑动、对地运动和加速度方向。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  理想轻绳和光滑滑轮中，同一根绳上的张力处处为 \(F\)。
+\item
+  动滑轮受到相邻两段绳张力的矢量合力；结合绳端受力后，\(A\)、\(B\) 对
+  \(C\) 的相对滑动趋势分别对应 \(3F\)、\(2F\) 的切向需求。
+\item
+  静摩擦在临界前是被动力，必须写成不等式
+  \(|f_s|\leq\mu N\)；只有临界或滑动后才能取极限值。
+\item
+  \(C\) 对地面的正压力为三物体总重 \(3mg\)。
+\item
+  参数分区边界由 \(F_A=F_B\)、\(F_A=F_C\)、\(F_B=F_C\) 给出。
+\item
+  两个上接触面均滑动后，\(C\) 的受力方向由 \(\mu_1-\mu_2\) 的符号决定。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf}
+
+图 1-1 中绳端拉力为 \(F\)，理想绳张力也为 \(F\)。沿绳路逐段观察，安装在
+\(A\) 上的滑轮及绳端共同使 \(A\) 相对 \(C\) 的水平驱动力大小为
+\(3F\)；安装在 \(B\) 上的滑轮受到两段张力，合力大小为
+\(2F\)。因此若系统仍静止，上表面两处所需静摩擦力的大小分别是
+
+\[
+f_{1,\mathrm{req}}=3F,\qquad f_{2,\mathrm{req}}=2F.
+\]
+
+把 \(A+B+C\)
+看成整体，绳与滑轮之间的力均为内力，系统所受水平外力只有绳自由端的 \(F\)
+与地面对 \(C\) 的摩擦力，所以
+
+\[
+f_{3,\mathrm{req}}=F.
+\]
+
+这三个``所需摩擦力''与三个极限值比较，便得到第一问全部边界。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3}
+
+先不要令摩擦力等于 \(\mu N\)。在静止阶段依次写出
+
+\[
+3F\leq\mu_1mg,\qquad
+2F\leq\mu_2mg,\qquad
+F\leq 3\mu_3mg.
+\]
+
+于是三处接触面单独达到临界时的外力为
+
+\[
+F_A=\frac{\mu_1mg}{3},\qquad
+F_B=\frac{\mu_2mg}{2},\qquad
+F_C=3\mu_3mg.
+\]
+
+最小者决定谁先动。再把两两相等条件除以
+\(\mu_3\)，就得到参数平面中的三条边界。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图1-2　三处接触面的所需摩擦力与临界比较}]{../figures/solution-01.pdf}
+\caption*{图1-2　三处接触面的所需摩擦力与临界比较}
+\end{figure}
+
+图1-2左侧只保留首次启动的有效边界段，右侧另画两处上层接触均滑动时的受力带。底块已运动时需要速度历史，不能用受力带直接判定立即停下。
+
+图 1-2 将 \(A\)、\(B\) 和整体分别隔离。图中的 \(3F\)、\(2F\)、\(F\)
+是由同一绳张力沿实际绳路合成后得到的三个切向需求，后续分区与第二阶段受力均使用这些量。
+
+\needspace{3\baselineskip}
+\textbf{（一）静止阶段的三个临界外力}
+
+\(A\) 与 \(C\) 之间的正压力为
+
+\[
+N_1=mg.
+\]
+
+保持相对静止所需的摩擦力大小为 \(3F\)，所以静止条件为
+
+\[
+3F\leq \mu_1mg.
+\]
+
+等号成立时 \(A\) 相对 \(C\) 达到滑动临界：
+
+\[
+F_A=\frac{\mu_1mg}{3}. \tag{1}
+\]
+
+同理，\(B\) 与 \(C\) 之间有 \(N_2=mg\)，所需摩擦力为 \(2F\)：
+
+\[
+2F\leq\mu_2mg,
+\]
+
+故
+
+\[
+F_B=\frac{\mu_2mg}{2}. \tag{2}
+\]
+
+地面承担三个物体的总重，因此
+
+\[
+N_3=3mg.
+\]
+
+把三个物体和滑轮、轻绳视为整体，静止时地面摩擦力平衡水平外力 \(F\)：
+
+\[
+f_3=F.
+\]
+
+地面临界条件为
+
+\[
+F=\mu_3N_3=3\mu_3mg,
+\]
+
+即
+
+\[
+F_C=3\mu_3mg. \tag{3}
+\]
+
+式（1）---（3）的量纲均为力，这是第一层检查；当任一摩擦因数趋于零时，对应临界外力也趋于零，极限行为正确。
+
+\needspace{3\baselineskip}
+\textbf{（二）两两临界相等所给出的边界}
+
+定义
+
+\[
+x=\frac{\mu_1}{\mu_3},\qquad
+y=\frac{\mu_2}{\mu_3}.
+\]
+
+令 \(F_A=F_B\)：
+
+\[
+\frac{\mu_1mg}{3}=\frac{\mu_2mg}{2}.
+\]
+
+约去公共因子 \(mg\)，交叉相乘：
+
+\[
+2\mu_1=3\mu_2.
+\]
+
+两边除以 \(3\mu_3\)：
+
+\[
+\boxed{y=\frac{2}{3}x}. \tag{4}
+\]
+
+令 \(F_A=F_C\)：
+
+\[
+\frac{\mu_1mg}{3}=3\mu_3mg.
+\]
+
+约去 \(mg\)，再乘以 \(3\)：
+
+\[
+\mu_1=9\mu_3,
+\]
+
+所以
+
+\[
+\boxed{x=9}. \tag{5}
+\]
+
+令 \(F_B=F_C\)：
+
+\[
+\frac{\mu_2mg}{2}=3\mu_3mg,
+\]
+
+得到
+
+\[
+\mu_2=6\mu_3,
+\]
+
+所以
+
+\[
+\boxed{y=6}. \tag{6}
+\]
+
+三条边界交于
+
+\[
+(x,y)=(9,6),
+\]
+
+且式（4）在 \(x=9\) 时确有 \(y=6\)，说明三处临界可同时出现。
+
+\needspace{3\baselineskip}
+\textbf{（三）最先运动区域}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(A\) 先相对 \(C\) 滑动要求 \(F_A<F_B\) 且 \(F_A<F_C\)。
+\end{enumerate}
+
+由 \(F_A<F_B\)：
+
+\[
+\frac{\mu_1}{3}<\frac{\mu_2}{2}
+\Longleftrightarrow
+y>\frac23x.
+\]
+
+由 \(F_A<F_C\)：
+
+\[
+\frac{\mu_1}{3}<3\mu_3
+\Longleftrightarrow x<9.
+\]
+
+因此
+
+\[
+\boxed{A\text{ 先滑： }x<9,\quad y>\frac23x}. \tag{7}
+\]
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  \(B\) 先相对 \(C\) 滑动要求 \(F_B<F_A\) 且 \(F_B<F_C\)：
+\end{enumerate}
+
+\[
+\boxed{B\text{ 先滑： }y<6,\quad y<\frac23x}. \tag{8}
+\]
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  \(C\) 先相对地面滑动要求 \(F_C<F_A\) 且 \(F_C<F_B\)：
+\end{enumerate}
+
+\[
+\boxed{C\text{ 先滑： }x>9,\quad y>6}. \tag{9}
+\]
+
+首次启动的有效边界只有三段：\(y=2x/3\) 且 \(0\le x\le9\)；\(x=9\) 且
+\(y\ge6\)；\(y=6\) 且
+\(x\ge9\)。其余延长线上虽有两个临界力相等，却已有第三处先滑，不能画作首次启动的区域边界。交点
+\((9,6)\) 为三处同时临界。这里要求
+\(\mu_3>0\)；无地面摩擦的情形须直接比较原始力，不能除以 \(\mu_3\)。
+
+\needspace{3\baselineskip}
+\textbf{（四）启动后的中间状态}
+
+以下按题目的单一摩擦因数模型，取最大静摩擦与滑动摩擦均为
+\(\mu_jN_j\)。令 \(f=F/(\mu_3mg)\)，各加速度以 \(\mu_3g\) 为单位。用
+\(f_1,f_2\) 表示 \(C\) 从上层受到的向右、向左摩擦力，力也按 \(\mu_3mg\)
+归一化。牛顿方程为
+
+\[
+a_A=3f-f_1,\qquad a_B=-2f+f_2,\qquad a_C=f_1-f_2-f_3.
+\]
+
+静摩擦满足
+\(|f_1|\le x,|f_2|\le y,|f_3|\le3\)；摩擦方向须由当前相对速度确定。刚开始通常有以下三种状态。
+
+\begin{itemize}
+\tightlist
+\item
+  \(A\) 先向右滑、\(B,C\) 暂时静止：\(f_1=x,f_2=2f\)，所以 \(C\)
+  仍静止的条件是 \(|x-2f|\le3\)，且 \(2f\le y\)。
+\item
+  \(B\) 先向左滑、\(A,C\) 暂时静止：\(f_1=3f,f_2=y\)，条件是
+  \(|3f-y|\le3\)，且 \(3f\le x\)。
+\item
+  地面先滑、三块暂时无相对滑动：令 \(d=\operatorname{sgn}v_C\)，则
+  \(a=(f-3d)/3\)，接触摩擦为
+  \(f_1=3f-a,f_2=2f+a\)，须仍满足两个上层静摩擦上限。首次地面启动时
+  \(d=1\)。
+\end{itemize}
+
+当其中某一不等式达到边界，重新检查接触状态。例如 \(A\) 已滑而 \(B,C\)
+对地一起运动时，
+
+\[
+a_{BC}=\frac{x-2f-3d}{2},\qquad f_2=2f+a_{BC},\qquad |f_2|\le y.
+\]
+
+若 \(B\) 已滑而 \(A,C\) 一起运动，则
+
+\[
+a_{AC}=\frac{3f-y-3d}{2},\qquad f_1=3f-a_{AC},\qquad |f_1|\le x.
+\]
+
+这些式子把``只有上层滑''\,``整组滑''\,``上层滑且底块也动''的中间阶段补齐。不能用大外力下的最终分类代替启动后的全部过程。
+
+\needspace{3\baselineskip}
+\textbf{（五）两处上接触均滑后的方向}
+
+在 \(A\) 相对 \(C\) 向右、\(B\) 相对 \(C\)
+向左滑动时，\(f_1=x,f_2=y\)。若 \(C\) 尚静止，地面可保持静止当且仅当
+
+\[
+\boxed{|x-y|\le3}.
+\]
+
+若 \(C\) 已在运动，则应使用滑动摩擦：
+
+\[
+\boxed{a_C=x-y-3\operatorname{sgn}v_C}.
+\]
+
+因此 \(x-y>3\) 对应最终向右加速，\(y-x>3\) 对应最终向左加速。\(|x-y|<3\)
+时，已在运动的 \(C\)
+会先减速，再停住；不是一进入此区就立即静止。等号时同向运动的 \(C\)
+可保持非零恒速，而静止的 \(C\) 也能处于临界。
+
+第二问没有给出 \(F(t)\) 和各阶段持续时间，因而仅凭 \(x,y\)
+不能确定每一时刻的对地速度。上式和接触不等式给出可判定的运动状态；若要画完整时间轨迹，必须再给拉力的时间变化。图1-2分别画首次启动的有效边界和两处均滑时的受力分类，后者不作为完整运动历史图。
+
+\newpage
+
+\section{第 2 题}\label{ux7b2c-2-ux9898}
+
+在光滑的一个抛物面 \(z=\dfrac a2(x^2+y^2)\) 上放一个质量为 \(m\)
+的质点，重力加速度 \(g\) 沿着 \(z\)
+轴负方向。任意给定初态后质点开始振动，振动的幅度远小于 \(1/a\)，其中
+\(a>0\)。
+
+（1）计算两个方向独立的简谐振动的角频率 \(\omega_0\)。
+
+（2）换到一个以恒定角速度 \(\omega_1\) 绕 \(z\)
+轴转动的参照系中，新的水平坐标轴记为 \(X',Y'\)，写下 \(X'\)、\(Y'\)
+应当满足的微分方程。
+
+（3）解出（2）中的微分方程，并解释这个结果如何和（1）中的结果对应。
+
+（4）我们把抛物面改为马鞍面
+\(z=\dfrac a2x^2-\dfrac a4y^2\)，这样显然振动是不稳定的，但是如果让这个面绕着
+\(z\) 轴以恒定的角速度 \(\omega_2\)
+转动起来，则会得到稳定的运动（质点不会跑到无穷远处，而是在一个范围内振动）。求出
+\(\omega_2\) 的最小值。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.88\linewidth,height=\textheight,keepaspectratio,alt={图2-1　旋转抛物面与旋转马鞍面的空间结构}]{../figures/question-02.pdf}
+\caption*{图2-1　旋转抛物面与旋转马鞍面的空间结构}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-1}
+
+抛物面底部的两个水平坐标各作简谐运动。换到转动坐标后，离心项和科里奥利项共同改变方程；旋转马鞍面的稳定条件须从完整特征根和临界解判断。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-1}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  小振动近似：在势能极小点附近展开到二阶，等效为简谐运动。
+\item
+  曲面高度 \(z\simeq\frac a2r^2\) 给出水平方向重力势能
+  \(U=\frac12 mga\,r^2\)。
+\item
+  转动参考系中的惯性力：离心力 \(m\omega^2r\) 与科里奥利力
+  \(-2m\omega\,\bm e_z\times\bm v'\)。
+\item
+  复坐标把两个二阶实方程合并成一个二阶复方程。
+\item
+  特征方程法解常系数线性微分方程。
+\item
+  线性有界稳定要求特征根为纯虚数且无产生世俗项的 Jordan
+  块；零频临界必须另查。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-1}
+
+在抛物面底部，曲面沿水平方向的高度变化近似为
+\(z\simeq\frac a2(x^2+y^2)\)。质点沿 \(x\)
+方向微移时重力沿切向的分量正比于位移，指向平衡点，因此 \(x\)、\(y\)
+两个方向各自是简谐运动，且对称性使两个方向的频率相同。
+
+换到绕 \(z\)
+轴转动的参考系后，质点额外感受到离心力（把质点向外推）与科里奥利力（垂直于相对速度）。科里奥利力不做功，只改变运动方向；离心力与恢复力共同决定径向本征频率。最后用复坐标解出运动，会发现它等于惯性系中的简谐运动再整体叠加一个旋转，频率不变。
+
+马鞍面 \(z=\frac a2x^2-\frac a4y^2\) 的势能为
+
+\[
+U=\frac12mga\,x^2-\frac14mga\,y^2.
+\]
+
+沿 \(x\) 方向的稳定曲率为 \(ag\)，沿 \(y\) 方向的不稳定曲率大小只有
+\(ag/2\)。旋转参考系中的离心力单独看是向外的，并不能被理解成一个``向内的势能井''；真正的稳定化来自离心项与科里奥利速度耦合共同改变特征根。因而必须保留两个方程中的
+\(\pm2\omega_2\dot q\)，再由完整特征方程判断稳定性。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-1}
+
+第（1）问对抛物面写 \(U=\frac12mga(x^2+y^2)\)，由 \(m\ddot x=-mga x\)
+读出 \(\omega_0^2=ga\)。
+
+第（2）问分别写出转动系中的三类力：恢复力为 \(-mga\,\bm r\)，离心力为
+\(m\omega_1^2\bm r\)，科里奥利力为
+\(2m\omega_1(\dot y',-\dot x')\)。将三者分量相加，得到两个耦合方程。
+
+第（3）问令 \(w=X'+iY'\)
+把两个方程合并，解特征方程，把解写回惯性系比较。
+
+第（4）问对马鞍面重复第（2）问步骤，写出 \(x'\)、\(y'\) 方程，设解
+\(\propto e^{\lambda t}\)，令 \(\lambda\) 为纯虚（或频率平方非负）求得
+\(\omega_2\) 的下限。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-1}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图2-2　抛物面小振动与马鞍面旋转稳定化的力平衡}]{../figures/solution-02.pdf}
+\caption*{图2-2　抛物面小振动与马鞍面旋转稳定化的力平衡}
+\end{figure}
+
+图2-2把离心项和科里奥利项分开，稳定条件由完整特征根决定。等号处另检验重根解，避免把有线性漂移的状态画成稳定振动。
+
+图 2-2 左侧画出抛物面底部 \(x\)、\(y\)
+两个方向的恢复力，右侧保留马鞍面上重力曲率、离心项和科里奥利速度耦合，不能把稳定化解释为两个位置力直接抵消。下文
+\(\omega_0,\omega_1,\omega_2\) 与图中标注一致。
+
+\needspace{3\baselineskip}
+\textbf{（一）第（1）问：抛物面的两个独立简谐频率}
+
+质点在曲面上的势能近似为
+
+\[
+U(x,y)=mgz\simeq\frac12mga(x^2+y^2). \tag{1}
+\]
+
+沿 \(x\) 方向的运动方程为
+
+\[
+m\ddot x=-\frac{\partial U}{\partial x}=-mga\,x. \tag{2}
+\]
+
+因此
+
+\[
+\ddot x=-ga\,x,
+\]
+
+同理 \(\ddot y=-ga\,y\)。两个方向独立、频率相同：
+
+\[
+\boxed{\omega_0^2=ga}. \tag{3}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（二）第（2）问：匀速转动系中的方程}
+
+设转动系绕 \(z\) 轴以角速度 \(\omega_1\) 旋转，\(X',Y'\)
+为转动系中的水平坐标。质点在转动系中的绝对加速度等于相对加速度加牵连加速度加科里奥利加速度。等效地，在转动系中列牛顿方程时需加入惯性力：
+
+\begin{itemize}
+\tightlist
+\item
+  离心力 \(m\omega_1^2(X',Y')\)；
+\item
+  科里奥利力 \(2m\omega_1(\dot Y',-\dot X')\)（因为
+  \(\bm\omega_1=\omega_1\bm e_z\)）。
+\end{itemize}
+
+恢复力仍为 \(-mga(X',Y')\)。于是
+
+\[
+m\ddot X'=-mga\,X'+m\omega_1^2X'+2m\omega_1\dot Y', \tag{4}
+\]
+
+\[
+m\ddot Y'=-mga\,Y'+m\omega_1^2Y'-2m\omega_1\dot X'. \tag{5}
+\]
+
+约去 \(m\)：
+
+\[
+\boxed{
+\ddot X'=-(ga-\omega_1^2)X'+2\omega_1\dot Y',
+}
+\]
+
+\[
+\boxed{
+\ddot Y'=-(ga-\omega_1^2)Y'-2\omega_1\dot X'.
+} \tag{6}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（三）第（3）问：解方程并与（1）对应}
+
+令
+
+\[
+w=X'+iY'. \tag{7}
+\]
+
+式（6）的第一式加 \(i\) 倍第二式：
+
+\[
+\ddot X'+i\ddot Y'
+=-(ga-\omega_1^2)(X'+iY')+2\omega_1(\dot Y'-i\dot X').
+\]
+
+注意到 \(\dot Y'-i\dot X'=-i(\dot X'+i\dot Y')=-i\dot w\)，于是
+
+\[
+\ddot w+2i\omega_1\dot w+(ga-\omega_1^2)w=0. \tag{8}
+\]
+
+设 \(w=e^{\lambda t}\)，特征方程为
+
+\[
+\lambda^2+2i\omega_1\lambda+(ga-\omega_1^2)=0,
+\]
+
+解得
+
+\[
+\lambda=-i\omega_1\pm\sqrt{-ga}
+=-i\omega_1\pm i\sqrt{ga}. \tag{9}
+\]
+
+因此转动系中的通解为
+
+\[
+w(t)=e^{-i\omega_1t}\left(Ae^{i\sqrt{ga}\,t}+Be^{-i\sqrt{ga}\,t}\right). \tag{10}
+\]
+
+回到惯性系时，把转动系坐标再乘
+\(e^{i\omega_1t}\)（逆旋转），得到惯性系中的运动为
+
+\[
+w_{\rm lab}(t)=e^{i\omega_1t}w(t)
+=Ae^{i\sqrt{ga}\,t}+Be^{-i\sqrt{ga}\,t}. \tag{11}
+\]
+
+这正是频率为 \(\sqrt{ga}=\omega_0\)
+的简谐运动。结论：\textbf{匀速转动参考系不改变本征频率}，只相当于在解上叠乘一个整体旋转因子
+\(e^{i\omega_1t}\)，这与第（1）问的 \(\omega_0\)
+完全对应。注意式（10）中频率 \(\sqrt{ga}\) 前的 \(\pm\)
+对应两个方向的圆偏振简正模式，它们的频率在转动系中表现为
+\(\sqrt{ga}\pm\omega_1\) 的拍频，但惯性系观者仍看到单一的 \(\omega_0\)。
+
+\needspace{3\baselineskip}
+\textbf{（四）第（4）问：马鞍面的旋转稳定化}
+
+马鞍面
+
+\[
+z=\frac a2x^2-\frac a4y^2
+\]
+
+给出势能
+
+\[
+U=\frac12mga\,x^2-\frac14mga\,y^2. \tag{12}
+\]
+
+沿 \(x\) 方向是稳定简谐（频率平方 \(ga\)），沿 \(y\)
+方向是不稳定（``频率平方'' \(-ga/2\)）。在绕 \(z\) 轴以角速度
+\(\omega_2\) 转动的参考系中，加入离心力 \(m\omega_2^2(x',y')\)
+与科里奥利力 \(2m\omega_2(\dot y',-\dot x')\)，运动方程为
+
+\[
+\ddot x'=-(ga-\omega_2^2)x'+2\omega_2\dot y', \tag{13}
+\]
+
+\[
+\ddot y'=\left(\frac{ga}{2}+\omega_2^2\right)y'-2\omega_2\dot x'. \tag{14}
+\]
+
+注意 \(y'\) 方程中位移项符号为``+''，因为 \(y\)
+方向势能开口向下；同时其重力项系数是 \(ga/2\)，不能误写成 \(ga\)。
+
+设解为 \((x',y')=(X,Y)e^{\lambda t}\)。代入后得线性齐次方程组：
+
+\[
+(\lambda^2+ga-\omega_2^2)X-2\omega_2\lambda Y=0, \tag{15}
+\]
+
+\[
+2\omega_2\lambda X+
+\left(\lambda^2-\frac{ga}{2}-\omega_2^2\right)Y=0. \tag{16}
+\]
+
+有非零解要求行列式为零：
+
+\[
+(\lambda^2+ga-\omega_2^2)
+\left(\lambda^2-\frac{ga}{2}-\omega_2^2\right)
++4\omega_2^2\lambda^2=0.
+\]
+
+令 \(q=\lambda^2\)，并记 \(A=ga\)、\(W=\omega_2^2\)。逐项展开：
+
+\[
+\begin{aligned}
+0
+&=(q+A-W)\left(q-\frac A2-W\right)+4Wq\\
+&=q^2+\left(\frac A2+2W\right)q
++W^2-\frac{AW}{2}-\frac{A^2}{2}\\
+&=q^2+\left(\frac A2+2W\right)q
++(W-A)\left(W+\frac A2\right).
+\end{aligned}
+\tag{17}
+\]
+
+这个关于 \(q\) 的二次方程比直接求四个 \(\lambda\)
+更容易判断稳定性。两根之和与积分别为
+
+\[
+\begin{aligned}
+q_1+q_2&=-\left(\frac A2+2W\right)<0,\\
+q_1q_2&=(W-A)\left(W+\frac A2\right). 
+\end{aligned}
+\tag{18}
+\]
+
+判别式为
+
+\[
+\begin{aligned}
+\Delta_q
+&=\left(\frac A2+2W\right)^2
+-4(W-A)\left(W+\frac A2\right)\\
+&=\frac94A^2+4AW>0. 
+\end{aligned}
+\tag{19}
+\]
+
+所以 \(q_1,q_2\) 总是实数。要求四个 \(\lambda\) 都为纯虚数，就要两个
+\(q\) 都为负；由于根和已经为负，只需再要求根积为正：
+
+\[
+(W-A)\left(W+\frac A2\right)>0. \tag{20}
+\]
+
+又因 \(W+A/2>0\)，故 \(\omega_2^2>ga\)。临界角速度的下界仍为
+
+\[
+\boxed{\omega_{2,c}=\sqrt{ga}=\omega_0}. \tag{21}
+\]
+
+但题干要求任意给定初态下质点始终在有限范围内振动，临界点必须单独检查。令
+\(W=A\)，式（17）化为
+
+\[
+q\left(q+\frac52A\right)=0.
+\]
+
+\(q=0\)
+对应零频模，一般初态会含线性随时间增长的世俗项，不能保证有界。因此严格条件是
+
+\[
+\boxed{\omega_2>\sqrt{ga}}. \tag{22}
+\]
+
+这里的 \(\sqrt{ga}\)
+是稳定区间的下确界，通常称为最小临界角速度。稳定机制是旋转造成的动态耦合，而不是把离心力误当成静态回复力。
+
+\needspace{3\baselineskip}
+\textbf{特征根与坐标变换的逐项复核}
+
+第（3）问容易在``本征频率不变''这句话上产生歧义。式（10）在转动坐标中包含两个指数因子
+
+\[
+e^{-i(\omega_1-\omega_0)t},\qquad
+e^{-i(\omega_1+\omega_0)t},
+\]
+
+所以转动系坐标分量实际出现的角频率是 \(|\omega_0-\omega_1|\) 与
+\(\omega_0+\omega_1\)。这并不表示物理系统多出了新的弹性常量，而是同一惯性系运动又乘上了坐标轴反向转动因子
+\(e^{-i\omega_1t}\)。乘回 \(e^{i\omega_1t}\) 后，两支都恢复为
+\(\pm\omega_0\)。因此严谨表述应是：\textbf{曲面的物理小振动频率仍为
+\(\omega_0\)，但它在旋转坐标中的分量频率发生了坐标频移。}
+
+还可直接从能量复核科里奥利项的符号。将式（6）第一式乘
+\(\dot X'\)、第二式乘 \(\dot Y'\) 后相加，两个速度耦合项为
+
+\[
+2\omega_1\dot X'\dot Y'-2\omega_1\dot Y'\dot X'=0,
+\]
+
+说明科里奥利力瞬时功率恒为零。若两式的科里奥利项写成同号，这一抵消立即失败，方程必错。离心项则可并入转动系有效势
+
+\[
+U_{\rm eff}=U-\frac12m\omega_1^2(X'^2+Y'^2),
+\]
+
+注意这里是减号，正好说明``离心势能把曲率翻正''的说法不成立。
+
+对第（4）问，令 \(\omega_2^2=ga+\varepsilon\)，其中 \(\varepsilon>0\)
+很小。式（17）的常数项为
+
+\[
+(W-A)\left(W+\frac A2\right)
+=\varepsilon\left(\frac32A+\varepsilon\right)>0,
+\]
+
+而根和为负，所以两根均为负。随着 \(\varepsilon\to0^+\)，其中一个 \(q\)
+趋于零，相应慢模频率趋于零，这正是临界点出现世俗漂移的前兆；当
+\(\varepsilon<0\) 时根积变负，必有一个
+\(q>0\)，于是出现实指数增长。这个极限检验同时核对了临界值、严格不等号和稳定性的物理含义。
+
+\needspace{3\baselineskip}
+\textbf{临界转速并不产生一般的有界解}
+
+严格稳定条件是
+\(\omega_2>\sqrt{ga}\)，所以题问的``最小值''应理解为下确界
+\(\sqrt{ga}\)。在等号处令 \(\Omega=\sqrt{ga}\)，转动系方程允许
+
+\[
+x'=vt+x_0,\qquad y'=\frac{4v}{3\Omega},
+\]
+
+其中 \(v\) 任意。代回两方程即可核对，然而 \(x'\)
+随时间增长。因此只检查特征频率平方非负会错误地把临界也归入稳定区。曲面线性化还要求振幅远小于
+\(1/a\)，结论是底部附近的线性稳定，不是任意振幅的全局稳定保证。
+
+\newpage
+
+\section{第 3 题}\label{ux7b2c-3-ux9898}
+
+如图，质量 \(m\)、长度 \(2l\)
+的匀质薄板在光滑桌面上，两桌面之间有两个以角速度 \(\omega\)
+匀速转动的半径为 \(r\) 的圆柱，摩擦系数都为
+\(\mu\)，桌面边缘和两圆柱上顶点比桌面稍高一点点，使得薄板总是点接触。
+
+（1）若将匀质薄板放在两圆柱上，并使得薄板中心稍微偏离两圆柱中心，求证当
+\(\omega>0\) 时薄板将做简谐运动，并求其周期；
+
+（2）当 \(\omega=0\) 时，求匀质板右侧能顺利到达右侧桌面的最小初始速度
+\(v_{10}\)；
+
+（3）接（1），求这种情况下匀质板右侧到达左桌面边缘，到匀质板右侧到达右桌面边缘的时间；
+
+（4）此问不是考题不计分。\(\omega>0\) 且初始速度为
+\(v_0=2\omega r\)，令无量纲参量
+\(\beta=\dfrac{\mu gl}{\omega^2r^2}\)，在 \(\beta\)
+取各种可能值的情况下，求匀质板右侧到达左桌面边缘，到匀质板左侧到达右桌面边缘的时间。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.66\linewidth,height=\textheight,keepaspectratio,alt={图3-1　薄板搭在两转动圆柱上}]{../figures/question-03.pdf}
+\caption*{图3-1　薄板搭在两转动圆柱上}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-2}
+
+板心位置决定支持力，板速与圆柱表面速度的大小决定摩擦方向。两类事件都要分段；在相对速度为零时，还可能出现静摩擦维持的恒速区间。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-2}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  动摩擦力方向与相对滑动速度反向，大小 \(\mu N\)。
+\item
+  力矩平衡求两支撑点法向力随板心位移的变化。
+\item
+  线性恢复力 \(F=-kx\) 与简谐运动周期 \(T=2\pi\sqrt{m/k}\)。
+\item
+  恒力做功与动能定理。
+\item
+  简谐运动的相位积分 \(t=\int dx/\sqrt{...}\) 或
+  \(x(t)=A\sin(\omega_0 t+\varphi)\)。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-2}
+
+固定在空间中的四个关键位置依次是左桌边、左圆柱顶点、右圆柱顶点和右桌边，相邻间距均为
+\(l\)；两圆柱中心的水平距离是 \(l\)，而薄板长度是
+\(2l\)。板心在两圆柱中点右侧 \(x\)
+处时，右支撑力增大、左支撑力减小。两顶点的表面速度相向，因而左接触处摩擦向右、右接触处摩擦向左；右侧较大的摩擦力使合力指回平衡位置。
+
+薄板从左桌面向右运动时，支承状态按``无摩擦---左桌边与左圆柱---两圆柱---右圆柱与右桌边---无摩擦''依次切换。第（2）至第（4）问的路程、摩擦功和时间必须按这些区间分别计算。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-2}
+
+第（1）问先由力矩平衡写 \(N_L,N_R\)，再由两摩擦力之差证明
+\(F_x=-2\mu mgx/l\)。第（2）问不能把全程都当作摩擦力 \(\mu mg\)
+的匀减速：第一段过渡区的圆柱支持力从 \(0\) 线性增到
+\(mg\)，必须先积分求功。第（3）问按无摩擦、单圆柱过渡和两圆柱支承三段求时间。第（4）问则用
+\(v=\omega r\) 作为摩擦换向的事件界面，对五个空间区间分段积分。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-2}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.891\linewidth,height=\textheight,keepaspectratio,alt={图3-2　两圆柱支承时的受力关系、线性回复力以及整板横跨缝隙时的五个运动区间。}]{../figures/solution-03.pdf}
+\caption*{图3-2　两圆柱支承时的受力关系、线性回复力以及整板横跨缝隙时的五个运动区间。}
+\end{figure}
+
+图3-2的支撑长度给出 \(N_L,N_R\)，摩擦方向还由 \(v-u\)
+的符号决定。下面的分段按接触区域和速度事件一起切换。
+
+图 3-2 左上图给出板心偏离 \(x\) 时两支撑力 \(N_L,N_R\)
+的分配，右上图把两块动摩擦合成线性净力；下方横轴使用板心坐标
+\(X\)，第（2）至第（4）问将直接按这五个区间列式。
+
+\needspace{3\baselineskip}
+\textbf{（一）第（1）问：支撑力分配与简谐运动}
+
+设板心相对两圆柱中点向右偏离 \(x\)，两圆柱位于
+\(x=\pm l/2\)。左、右支撑点到板心的水平力臂分别为
+\(l/2+x\)、\(l/2-x\)。竖直平衡与绕板心取矩：
+
+\[
+N_L+N_R=mg, \tag{1}
+\]
+
+\[
+N_L\left(\frac l2+x\right)=N_R\left(\frac l2-x\right). \tag{2}
+\]
+
+解得
+
+\[
+N_L=\frac{mg}{l}\left(\frac l2-x\right),\qquad
+N_R=\frac{mg}{l}\left(\frac l2+x\right). \tag{3}
+\]
+
+两圆柱反向转动，且 \(|v|<\omega r\)
+时：左圆柱顶部向右运动，板相对左接触点向左滑，动摩擦对板向右
+\(\mu N_L\)；右圆柱顶部向左运动，板相对右接触点向右滑，动摩擦对板向左
+\(\mu N_R\)。水平方向：
+
+\[
+m\ddot x=\mu N_L-\mu N_R
+=-\frac{2\mu mg}{l}x. \tag{4}
+\]
+
+这是线性恢复力，角频率
+
+\[
+\omega_0=\sqrt{\frac{2\mu g}{l}}, \tag{5}
+\]
+
+周期
+
+\[
+\boxed{T=2\pi\sqrt{\frac{l}{2\mu g}}}. \tag{6}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（二）第（2）问：\(\omega=0\) 时的最小初速度}
+
+以两圆柱中点为原点，用 \(X\)
+表示板心坐标。左桌边、左圆柱、右圆柱、右桌边分别位于
+
+\[
+X=-\frac{3l}{2},\quad-\frac l2,\quad\frac l2,\quad\frac{3l}{2}.
+\]
+
+初始时板右端在左桌边，板心在 \(X=-5l/2\)。板先在光滑左桌面上前进
+\(l\)，这一段无摩擦功。
+
+当 \(X\) 从 \(-3l/2\) 增至 \(-l/2\)
+时，板由左桌边与左圆柱共同支承。记左圆柱的支持力为
+\(N_1\)。竖直力平衡及力矩平衡给出
+
+\[
+N_1=mg\frac{X+3l/2}{l}.
+\]
+
+因此这一过渡段需克服的摩擦功为
+
+\[
+\begin{aligned}
+W_1
+&=\int_{-3l/2}^{-l/2}\mu N_1\,dX\\
+&=\frac{\mu mg}{l}\int_{-3l/2}^{-l/2}
+\left(X+\frac{3l}{2}\right)dX\\
+&=\frac{\mu mg}{l}
+\left[\frac12\left(X+\frac{3l}{2}\right)^2\right]_{-3l/2}^{-l/2}\\
+&=\frac12\mu mgl. 
+\end{aligned}
+\tag{7}
+\]
+
+接着，板心从 \(X=-l/2\) 运动到
+\(X=l/2\)，两圆柱同时支承薄板。两支持力之和恒为
+\(mg\)，因而摩擦力总大小为 \(\mu mg\)，这段距离为 \(l\)：
+
+\[
+W_2=\mu mg\,l. \tag{8}
+\]
+
+``刚好到达''的临界情形中，终速度为零。初动能等于两段摩擦功：
+
+\[
+\begin{aligned}
+\frac12mv_{10}^{2}
+&=W_1+W_2\\
+&=\frac12\mu mgl+\mu mgl\\
+&=\frac32\mu mgl.
+\end{aligned}
+\]
+
+约去 \(m/2\) 后得
+
+\[
+\boxed{v_{10}=\sqrt{3\mu gl}}. \tag{9}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（三）第（3）问：一般初速的事件积分}
+
+本问的终点为板右端到达右桌边，对应板心从 \(X=-5l/2\) 到 \(X=l/2\)。令
+\(u=\omega r>0\)，在向右运动的区间，把 \(w=v^2\) 作为位置函数，有
+\(dw/dX=2a(X,v)\)。
+
+在 \(-5l/2<X<-3l/2\)，无摩擦，\(w=v_0^2\)。在左过渡区 \(-3l/2<X<-l/2\)，
+
+\[
+a=-\frac{\mu g}{l}(X+3l/2)\operatorname{sgn}(v-u).
+\]
+
+在两圆柱区 \(-l/2<X<l/2\)，
+
+\[
+a=\begin{cases}-\mu g,&v>u,\\-2\mu gX/l,&0<v<u.\end{cases}
+\]
+
+若 \(v=u\) 且
+\(X\le0\)，左接触的静摩擦可以平衡右接触的滑动摩擦，板可保持 \(v=u\)；到
+\(X=0\) 后静摩擦不足，才进入 \(v<u\)
+的简谐减速段。这里按静摩擦上限不小于给定滑动摩擦处理，若另给不同静摩擦因数，应重新核对恒速区间。
+
+从 \(w(-5l/2)=v_0^2\) 积分，每遇支撑变化、\(w=u^2\) 或 \(w=0\)
+都重新选分支。到达终点且沿途 \(w>0\) 时，所求时间是
+
+\[
+\boxed{t=\int_{-5l/2}^{l/2}\frac{dX}{\sqrt{w(X)}}}.
+\]
+
+各段 \(w\)
+为常数、一次或二次多项式，积分分别为匀速、反三角或反双曲函数。若轨迹在终点前折返，第一次向右穿越不存在，应继续按反向滑动的方程判断，而不能对负的
+\(w\) 开方。
+
+例如 \(v_0^2\ge u^2+3\mu gl\) 时，全程保持 \(v\ge u\)，左过渡区末速
+\(v_1=\sqrt{v_0^2-\mu gl}\)，双圆柱区为匀减速。此时可直接写
+
+\[
+\boxed{t=\frac l{v_0}+\sqrt{\frac l{\mu g}}\arcsin\frac{\sqrt{\mu gl}}{v_0}
++\frac{\sqrt{v_0^2-\mu gl}-\sqrt{v_0^2-3\mu gl}}{\mu g}}.
+\]
+
+原整理稿把第二段的 \(v>u\) 减速解与第三段的 \(v<u\)
+简谐解直接相接，未检查换向事件，所得单一公式不能用于一般
+\(v_0\)。上面的事件积分给出一般解的确定步骤。
+
+\needspace{3\baselineskip}
+\textbf{（四）第（4）问：\(v_0=2\omega r\) 时的完整分段结果}
+
+记 \(u=\omega r\)，则 \(v_0=2u\)，且
+
+\[
+\beta=\frac{\mu gl}{u^2},\qquad \beta>0. \tag{17}
+\]
+
+本问的起点是板右端在左桌边，即 \(X=-5l/2\)；终点是板左端在右桌边，即
+\(X=5l/2\)。图 3-2 下方的五个区间恰好是必须累加的五段时间。
+
+第 1 段无摩擦，速度为 \(2u\)：
+
+\[
+t_1=\frac{l}{2u}. \tag{18}
+\]
+
+先考虑 \(\beta<3\)。第 2 段仍用 \(y=X+3l/2\)，由于 \(\beta<3\)，到达
+\(y=l\) 时的速度
+
+\[
+v_1=u\sqrt{4-\beta}>u,
+\]
+
+因此这一整段中薄板始终比左圆柱顶面更快，摩擦向左，式（11）可用。令
+\(A_1=2l/\sqrt\beta\)，得
+
+\[
+t_2=\frac{l}{u\sqrt\beta}
+\arcsin\frac{\sqrt\beta}{2}. \tag{19}
+\]
+
+第 3 段刚进入两圆柱区时 \(v_1>u\)，两个接触点的摩擦都向左，所以暂时有
+\(\ddot X=-\mu g\)。从 \(X=-l/2\) 量起位移 \(s\)，
+
+\[
+\frac{v^2}{u^2}=4-\beta-2\beta\frac{s}{l}. \tag{20}
+\]
+
+若 \(0<\beta<1\)，在 \(s=l\) 时仍有
+
+\[
+v_2=u\sqrt{4-3\beta}>u,
+\]
+
+因而第 3 段全程为匀减速，
+
+\[
+t_3=\frac{v_1-v_2}{\mu g}
+=\frac{l}{\beta u}
+\left(\sqrt{4-\beta}-\sqrt{4-3\beta}\right). \tag{21}
+\]
+
+第 4 段令 \(z=X-3l/2\)，则 \(z\) 从 \(-l\) 增至 \(0\)。右圆柱的支持力为
+\(mg(-z/l)\)，摩擦向左，故
+
+\[
+\ddot z=\frac{\mu g}{l}z=\omega_1^2z. \tag{22}
+\]
+
+以进入该段的时刻为新的 \(t=0\)，\(z(0)=-l, \dot z(0)=v_2\)，解为
+
+\[
+z=-l\cosh\omega_1t
++\frac{v_2}{\omega_1}\sinh\omega_1t. \tag{23}
+\]
+
+令 \(z=0\)，得
+
+\[
+t_4=\frac1{\omega_1}
+\operatorname{artanh}\frac{\omega_1l}{v_2}
+=\frac{l}{u\sqrt\beta}
+\operatorname{artanh}\frac{\sqrt\beta}{\sqrt{4-3\beta}}. \tag{24}
+\]
+
+根号内比较可见，只有 \(\beta<1\) 时
+\(v_2>\omega_1l\)，薄板才能穿过这一段。由式（23）或动能定理，到达
+\(z=0\) 时的速度为
+
+\[
+v_3=\sqrt{v_2^2-\omega_1^2l^2}
+=2u\sqrt{1-\beta}. \tag{25}
+\]
+
+第 5 段薄板已离开圆柱，再以恒速 \(v_3\) 前进 \(l\)：
+
+\[
+t_5=\frac{l}{2u\sqrt{1-\beta}}. \tag{26}
+\]
+
+因此，当 \(0<\beta<1\) 时，
+
+\[
+\boxed{
+\begin{aligned}
+t=\frac{l}{u}\Bigg[&\frac12
++\frac1{\sqrt\beta}\arcsin\frac{\sqrt\beta}{2}\\
+&+\frac{\sqrt{4-\beta}-\sqrt{4-3\beta}}{\beta}\\
+&+\frac1{\sqrt\beta}\operatorname{artanh}
+\frac{\sqrt\beta}{\sqrt{4-3\beta}}
++\frac1{2\sqrt{1-\beta}}\Bigg].
+\end{aligned}} \tag{27}
+\]
+
+当 \(\beta=1\)
+时，薄板到达右桌边附近时速度趋于零，不能再走完最后的光滑段，式（27）也显示时间发散。
+
+当 \(1<\beta<3\) 时，双圆柱区内首次达到 \(v=u\) 的位置为
+
+\[
+X_*=\frac{3-2\beta}{2\beta}l.
+\]
+
+必须按 \(X_*\) 的正负再分段。
+
+\begin{itemize}
+\tightlist
+\item
+  \(1<\beta<3/2\)：\(X_*>0\)，立即进入 \(v<u\)
+  的简谐减速，右圆柱位置的速度满足
+  \(v_R^2/u^2=(3\beta^2-10\beta+9)/(2\beta)\)。右过渡区所需能量对应
+  \(\mu gl=\beta u^2\)，而
+  \(v_R^2-\beta u^2=u^2(\beta-1)(\beta-9)/(2\beta)<0\)，不能穿过。
+\item
+  \(3/2\le\beta<2\)：\(X_*\le0\)，先由静摩擦维持 \(v=u\) 到
+  \(X=0\)，再作简谐减速。于是
+  \(v_R^2/u^2=1-\beta/2\)，仍不足以通过右过渡区。
+\item
+  \(\beta\ge2\)：若 \(\beta<3\)，先在双圆柱区达到 \(v=u\)；若
+  \(\beta\ge3\)，更早在左过渡区达到 \(v=u\)，位置为
+  \(X+3l/2=l\sqrt{3/\beta}\)。均可保持恒速到 \(X=0\)，此后转向位置为
+  \(X_{\rm turn}=l/\sqrt{2\beta}\le l/2\)，连右过渡区都不能完整进入。
+\end{itemize}
+
+在
+\(\beta=1\)，右过渡区末端只在无限时间极限达到，最后光滑段无法走完。因此
+
+\[
+\boxed{0<\beta<1\text{ 时式（27）给出有限通过时间；}\quad\beta\ge1\text{ 时不能完成穿越。}}
+\]
+
+折返后圆柱虽能向板输入能量，却不会把进入右过渡区的右行速度提高到 \(u\)
+以上；\(\beta>1\) 时通过该区需要速度大于
+\(\sqrt\beta\,u>u\)，故以后也不能完成穿越。
+
+\needspace{3\baselineskip}
+\textbf{（五）结果复核}
+
+第一，将式（3）相加得 \(N_L+N_R=mg\)，相减得
+\(N_R-N_L=2mgx/l\)；竖直平衡和合力斜率同时被满足。周期的量纲为
+
+\[
+\left[\sqrt{\frac{l}{g}}\right]=\mathrm s,
+\]
+
+且质量 \(m\) 消去，与动摩擦和惯性都正比于 \(m\) 一致。
+
+第二，第（2）问的总摩擦功是
+
+\[
+W_1+W_2=\frac32\mu mgl.
+\]
+
+若误把全部有接触的 \(2l\) 都乘以 \(\mu mg\)，会得到
+\(2\mu mgl\)，这与过渡段支持力从零递增的事实冲突。
+
+第三，式（27）在 \(\beta\to0\) 时的五项依次趋于
+\(1/2,1/2,1/2,1/2,1/2\)，因而
+
+\[
+\lim_{\beta\to0}t
+=\frac{5l}{2u}.
+\]
+
+这正是无摩擦极限下以恒速 \(2u\) 走完总路程 \(5l\)
+所需的时间，说明五段路程没有遗漏。当 \(\beta\to1^-\)
+时，式（24）和式（26）同时发散，与薄板在临界状态下无法完成穿越的物理图像一致。
+
+\needspace{3\baselineskip}
+\textbf{简谐周期的条件}
+
+第一问 \(T=2\pi\sqrt{l/(2\mu g)}\)
+仅在板一直搭在两圆柱上且两摩擦方向相反时成立。若振幅为 \(A\)，应有
+\(A<l/2\) 和
+\(A\sqrt{2\mu g/l}<u\)。图3-2把支持区间和速度分支分开标出；恒速平台是静摩擦阶段，不能画成瞬间反向的动摩擦。
+
+\newpage
+
+\section{第 4 题}\label{ux7b2c-4-ux9898}
+
+焦距为 \(f\) 的理想薄凸透镜对一个正三角形 \(ABC\) 成像。正三角形的边
+\(AC\) 垂直于主轴，顶点 \(A\) 位于主轴上，顶点 \(B\) 位于 \(AC\)
+与透镜之间。要求三个顶点的像 \(A'B'C'\) 构成内角为
+\(30^\circ\)、\(60^\circ\)、\(90^\circ\) 的直角三角形。
+
+（1）当像三角形的一条直角边垂直于主轴时，求 \(A\) 点物距的较大值
+\(u_1\)；
+
+（2）求（1）所对应的正三角形边长 \(l_1\)；
+
+（3）仍令像三角形的一条直角边垂直于主轴，求 \(A\) 点物距的较小值
+\(u_2\)；
+
+（4）求（3）所对应的正三角形边长 \(l_2\)；
+
+（5）当像三角形的斜边垂直于主轴时，求 \(A\) 点物距 \(u_3\)；
+
+（6）求（5）所对应的正三角形边长 \(l_3\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.72\linewidth,height=\textheight,keepaspectratio,alt={图4-1　正三角形各顶点相对薄凸透镜与主轴的位置关系。}]{../figures/question-04.pdf}
+\caption*{图4-1　正三角形各顶点相对薄凸透镜与主轴的位置关系。}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-3}
+
+三个顶点的物距不同，必须逐点成像。先求各像点坐标，再用直角和边长比约束像三角形，不能把原三角形按一个倍率缩放。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-3}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  薄透镜成像公式 \[
+  \frac1p+\frac1q=\frac1f,
+  \qquad
+  q=\frac{fp}{p-f}.
+  \]
+\item
+  实物、实像情况下的横向放大率绝对值 \[
+  m=\frac qp=\frac{f}{p-f}.
+  \]
+\item
+  正三角形的水平投影与竖直坐标： \[
+  s=\frac{\sqrt3}{2}l,
+  \qquad
+  y_B=\frac l2.
+  \]
+\item
+  直角判据 \(\bm a\cdot\bm b=0\)，以及
+  \(30^\circ\)-\(60^\circ\)-\(90^\circ\) 三角形的边长比 \(1:\sqrt3:2\)。
+\item
+  物理根筛选：所有物点均位于焦点外侧，且图像的顶点顺序与题设相符。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-3}
+
+取透镜光心为原点，主轴为 \(x\) 轴，物方在左侧。令
+
+\[
+A=(-u,0),\qquad
+C=(-u,l),\qquad
+B=(-u+s,l/2),
+\qquad
+s=\frac{\sqrt3}{2}l.
+\]
+
+因为 \(A,C\) 位于同一物平面，它们的像 \(A',C'\) 位于同一像平面，所以
+\(A'C'\) 必垂直于主轴。\(B\) 比 \(A,C\) 更靠近透镜，物距为
+\(u-s\)，其像距和放大率均与 \(A,C\) 不同。题目两种情形实质上是：
+
+\begin{itemize}
+\tightlist
+\item
+  \(A'C'\) 是直角边；
+\item
+  \(A'C'\) 是斜边。
+\end{itemize}
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-3}
+
+把 \(A'\) 作为像方坐标原点，只保留三个几何量：
+
+\[
+h_A=|A'C'|,\qquad
+h_B=\text{$B'$ 到主轴的距离},\qquad
+d=\text{$B'$ 与 $A'C'$ 的水平距离}.
+\]
+
+先由薄透镜公式把 \(h_A,h_B,d\) 写成 \(u,l,f\)，再分别使用``\(B'\) 与
+\(C'\)
+等高''或``\(A'B'\perp C'B'\)''。这样可把光学问题变成一个清晰的平面几何问题。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-3}
+
+图4-2按三组解绘制像三角形。下面先计算物方投影 \(s\)，再求像方的
+\(h_A,h_B,d\)；这些量决定图中的三条边和直角位置。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图4-2　三组按薄透镜坐标绘制的像三角形}]{../figures/solution-04.pdf}
+\caption*{图4-2　三组按薄透镜坐标绘制的像三角形}
+\end{figure}
+
+图4-2的三组像三角形按逐点薄透镜坐标绘制，同一小图横纵比例一致。前两组的竖直像边都是直角边，分别较长和较短；第三组竖直像边为斜边，直角在B点。
+
+\needspace{3\baselineskip}
+\textbf{（一）建立三个像点的坐标}
+
+记
+
+\[
+a=u-f.
+\]
+
+则 \(A,C\) 的物距均为 \(u\)，像距为
+
+\[
+q_A=\frac{fu}{u-f}=f+\frac{f^2}{a}. \tag{1}
+\]
+
+\(A\) 在主轴上，所以可取
+
+\[
+A'=(q_A,0).
+\]
+
+\(C\) 的物高为 \(l\)，故其倒立像位于主轴下方，像高绝对值为
+
+\[
+h_A=\frac{fl}{u-f}=\frac{fl}{a}. \tag{2}
+\]
+
+于是
+
+\[
+C'=(q_A,-h_A).
+\]
+
+点 \(B\) 比 \(A\) 靠近透镜的水平距离为
+
+\[
+s=\frac{\sqrt3}{2}l,
+\]
+
+所以 \(B\) 的物距为 \(u-s\)。为保证 \(B\) 也成实像，需有 \(u-s>f\)，即
+\(a>s\)。其像距为
+
+\[
+q_B=\frac{f(u-s)}{u-s-f}
+=f+\frac{f^2}{a-s}. \tag{3}
+\]
+
+\(B\) 的物高为 \(l/2\)，所以
+
+\[
+h_B=\frac{fl}{2(a-s)}. \tag{4}
+\]
+
+因此
+
+\[
+B'=(q_B,-h_B).
+\]
+
+\(B'\) 到直线 \(A'C'\) 的水平距离为
+
+\[
+\begin{aligned}
+d
+&=q_B-q_A\\
+&=\frac{f^2}{a-s}-\frac{f^2}{a}\\
+&=\frac{f^2s}{a(a-s)}.
+\end{aligned}
+\tag{5}
+\]
+
+式（2）、（4）、（5）是全题的共同基础。
+
+\needspace{3\baselineskip}
+\textbf{（二）\(A'C'\) 为直角边时的几何条件}
+
+\(A'C'\) 已经垂直主轴。若它是直角边，则另一条直角边必须水平。\(B'\)
+不可能落在主轴上，因此直角只能位于 \(C'\)，即 \(B'\) 与 \(C'\) 等高：
+
+\[
+h_B=h_A. \tag{6}
+\]
+
+将式（2）、（4）代入：
+
+\[
+\frac{fl}{2(a-s)}=\frac{fl}{a}.
+\]
+
+约去非零的 \(fl\)：
+
+\[
+\frac1{2(a-s)}=\frac1a.
+\]
+
+交叉相乘：
+
+\[
+a=2(a-s),
+\]
+
+所以
+
+\[
+a=2s. \tag{7}
+\]
+
+由 \(a=u-f\)、\(s=\sqrt3l/2\) 得
+
+\[
+u-f=\sqrt3l,
+\qquad
+u=f+\sqrt3l. \tag{8}
+\]
+
+在条件（7）下，竖直直角边长度为
+
+\[
+h_A=\frac{fl}{2s}
+=\frac{fl}{\sqrt3l}
+=\frac f{\sqrt3}. \tag{9}
+\]
+
+水平直角边长度为
+
+\[
+\begin{aligned}
+d
+&=\frac{f^2s}{(2s)(s)}\\
+&=\frac{f^2}{2s}\\
+&=\frac{f^2}{\sqrt3l}.
+\end{aligned}
+\tag{10}
+\]
+
+因此两条直角边之比为
+
+\[
+\frac d{h_A}
+=
+\frac{f^2/(\sqrt3l)}{f/\sqrt3}
+=\frac fl. \tag{11}
+\]
+
+要成为 \(30^\circ\)-\(60^\circ\)-\(90^\circ\) 三角形，\(d/h_A\) 只能等于
+\(\sqrt3\) 或 \(1/\sqrt3\)。
+
+\needspace{3\baselineskip}
+\textbf{（三）第（1）（2）问：较大物距}
+
+较大物距对应 \(l\) 较大。令竖直边为长直角边，即
+
+\[
+\frac d{h_A}=\frac1{\sqrt3}.
+\]
+
+由式（11）：
+
+\[
+\frac fl=\frac1{\sqrt3},
+\]
+
+所以
+
+\[
+\boxed{l_1=\sqrt3f}. \tag{12}
+\]
+
+代入式（8）：
+
+\[
+u_1=f+\sqrt3(\sqrt3f)=4f.
+\]
+
+故
+
+\[
+\boxed{u_1=4f}. \tag{13}
+\]
+
+复核像边长：
+
+\[
+h_A=\frac f{\sqrt3},
+\qquad
+d=\frac f3,
+\qquad
+\frac{h_A}{d}=\sqrt3.
+\]
+
+三角形确为 \(30^\circ\)-\(60^\circ\)-\(90^\circ\)。
+
+\needspace{3\baselineskip}
+\textbf{（四）第（3）（4）问：较小物距}
+
+较小物距对应 \(l\) 较小。令水平边为长直角边，即
+
+\[
+\frac d{h_A}=\sqrt3.
+\]
+
+由式（11）：
+
+\[
+\frac fl=\sqrt3,
+\]
+
+所以
+
+\[
+\boxed{l_2=\frac f{\sqrt3}=\frac{\sqrt3}{3}f}. \tag{14}
+\]
+
+代入式（8）：
+
+\[
+u_2=f+\sqrt3\cdot\frac f{\sqrt3}=2f.
+\]
+
+故
+
+\[
+\boxed{u_2=2f}. \tag{15}
+\]
+
+此时
+
+\[
+h_A=\frac f{\sqrt3},
+\qquad
+d=f,
+\qquad
+\frac d{h_A}=\sqrt3,
+\]
+
+同样满足要求。
+
+\needspace{3\baselineskip}
+\textbf{（五）\(A'C'\) 为斜边时确定几何比例}
+
+当像三角形的斜边垂直于主轴时，斜边只能是 \(A'C'\)，直角位于 \(B'\)。相对
+\(A'\) 写出两个向量：
+
+\[
+\overrightarrow{B'A'}=(-d,h_B),
+\qquad
+\overrightarrow{B'C'}=(-d,h_B-h_A).
+\]
+
+直角条件为
+
+\[
+\overrightarrow{B'A'}\cdot\overrightarrow{B'C'}=0,
+\]
+
+即
+
+\[
+d^2+h_B(h_B-h_A)=0,
+\]
+
+所以
+
+\[
+d^2=h_B(h_A-h_B). \tag{16}
+\]
+
+对一个以 \(A'C'\) 为斜边的 \(30^\circ\)-\(60^\circ\)-\(90^\circ\)
+三角形，直角顶点在斜边上的投影把斜边分成 \(1:3\) 的两段。因此
+
+\[
+\frac{h_B}{h_A}=\frac14
+\quad\text{或}\quad
+\frac34. \tag{17}
+\]
+
+而由式（2）、（4）直接得到
+
+\[
+\frac{h_B}{h_A}
+=
+\frac{a}{2(a-s)}. \tag{18}
+\]
+
+由于 \(a>s>0\)，式（18）恒大于 \(1/2\)，所以 \(1/4\)
+分支不符合本题像点顺序，只能取
+
+\[
+\frac{h_B}{h_A}=\frac34. \tag{19}
+\]
+
+代入式（18）：
+
+\[
+\frac{a}{2(a-s)}=\frac34.
+\]
+
+交叉相乘：
+
+\[
+4a=6(a-s),
+\]
+
+整理得
+
+\[
+a=3s. \tag{20}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（六）第（5）（6）问：斜边垂直于主轴}
+
+在 \(a=3s\) 时，\(a-s=2s\)。由式（2）、（5）：
+
+\[
+h_A=\frac{fl}{3s}
+=\frac{2f}{3\sqrt3}, \tag{21}
+\]
+
+\[
+d=\frac{f^2s}{(3s)(2s)}
+=\frac{f^2}{6s}. \tag{22}
+\]
+
+对于 \(h_B/h_A=3/4\) 的分支，\(A'\) 处锐角为 \(30^\circ\)，所以
+
+\[
+d=\frac{\sqrt3}{4}h_A. \tag{23}
+\]
+
+将式（21）代入式（23）：
+
+\[
+d=\frac{\sqrt3}{4}\cdot\frac{2f}{3\sqrt3}
+=\frac f6. \tag{24}
+\]
+
+比较式（22）与式（24）：
+
+\[
+\frac{f^2}{6s}=\frac f6,
+\]
+
+于是
+
+\[
+s=f. \tag{25}
+\]
+
+因为 \(s=\sqrt3l/2\)，
+
+\[
+\boxed{l_3=\frac{2f}{\sqrt3}=\frac{2\sqrt3}{3}f}. \tag{26}
+\]
+
+又由 \(a=3s=3f\)、\(u=a+f\)，
+
+\[
+\boxed{u_3=4f}. \tag{27}
+\]
+
+最后把结果代回完整坐标进行复核：
+
+\[
+h_A=\frac{2f}{3\sqrt3},
+\qquad
+h_B=\frac f{2\sqrt3},
+\qquad
+d=\frac f6.
+\]
+
+两条直角边长度分别为
+
+\[
+\begin{aligned}
+|A'B'|
+&=\sqrt{d^2+h_B^2}
+=\frac f3,\\
+|B'C'|
+&=\sqrt{d^2+(h_A-h_B)^2}
+=\frac f{3\sqrt3}.
+\end{aligned}
+\]
+
+而
+
+\[
+|A'C'|=h_A=\frac{2f}{3\sqrt3}.
+\]
+
+因此
+
+\[
+|A'B'|:|B'C'|:|A'C'|
+=\sqrt3:1:2,
+\]
+
+直角、边比与斜边方向三项条件全部满足。
+
+\needspace{3\baselineskip}
+\textbf{结果汇总与物理条件检查}
+
+三组解为
+
+\[
+\boxed{
+\begin{aligned}
+u_1&=4f,& l_1&=\sqrt3f,\\
+u_2&=2f,& l_2&=\frac f{\sqrt3},\\
+u_3&=4f,& l_3&=\frac{2f}{\sqrt3}.
+\end{aligned}}
+\]
+
+还需检查离透镜最近的点 \(B\) 是否仍在焦点外。其物距为 \(p_B=u-s\)：
+
+\begin{itemize}
+\tightlist
+\item
+  第一组：\(p_B=4f-\frac32f=\frac52f>f\)；
+\item
+  第二组：\(p_B=2f-\frac12f=\frac32f>f\)；
+\item
+  第三组：\(p_B=4f-f=3f>f\)。
+\end{itemize}
+
+所以三组均为实物成实像，所用成像公式和图中像点顺序自洽。
+
+\needspace{3\baselineskip}
+\textbf{逐点核对第三组解}
+
+取 \(f=1\)，第三组物点条件为 \(u=4,l=2/\sqrt3\)。像点可取
+\(A'=(0,0)\)、\(B'=(1/6,-1/(2\sqrt3))\)、\(C'=(0,-2/(3\sqrt3))\)。两条从
+\(B'\) 出发的边的点积为 \(1/36-1/36=0\)；边长为
+\(1/3,1/(3\sqrt3),2/(3\sqrt3)\)，比为
+\(\sqrt3:1:2\)。图4-2保留三个物点的不同物距，用这些坐标检查直角，而不凭示意图上的角度读数。
+
+\newpage
+
+\section{第 5 题}\label{ux7b2c-5-ux9898}
+
+如图所示，有一惯性系 \(S\)，另一惯性系 \(S'\) 相对 \(S\) 以
+\(\beta c\,\bm i\) 运动，\(S''\) 相对 \(S\) 以
+\(\beta c(\cos\theta\,\bm i+\sin\theta\,\bm j)\) 运动，设
+\(0\le\beta<1\)；比较相邻随动系时取
+\(|\theta|\ll1\)。这些惯性系采用标准对时方式，即设三个惯性系的原点同时相遇，并各自在自己的参考系中将各处时钟同时调为
+\(0\)。
+
+（1）将 \(x'',y'',t''\) 用 \(x',y',t'\) 表示。为简化，可引入
+\(\gamma=\dfrac1{\sqrt{1-\beta^2}}\)。（提示：可作坐标变换
+\(\begin{cases}\xi=\cos\theta\,x+\sin\theta\,y\\ \eta=-\sin\theta\,x+\cos\theta\,y\end{cases}\)，\(\begin{cases}\xi''=\cos\theta\,x''+\sin\theta\,y''\\ \eta''=-\sin\theta\,x''+\cos\theta\,y''\end{cases}\)，则
+\((\xi,\eta,t)\) 与 \((\xi'',\eta'',t'')\) 满足常规形式的洛伦兹变换。）
+
+（2）在 \(t'=t''=0\) 的同时面上，\(S''\) 系的坐标架相对 \(S'\)
+系转过一小角度 \(d\varphi\)（逆时针为正）。设 \(S',S''\)
+分别为一粒子在时刻 \(t\) 和 \(t+dt\)
+的``随动系''，即粒子的``随动系''坐标架以 \(\bm\omega_t\) 旋转，且
+\(\bm\omega_t\) 的正方向与 \(d\varphi\) 一致。用粒子的 \(\bm a,\bm v\)
+表示 \(\bm\omega_t\)，已知 \(|\bm v|\ll c\) 且
+\(\bm a\perp\bm v\)。这一现象称为托马斯旋进，对电子的自旋---轨道相互作用有重要影响。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\linewidth,height=\textheight,keepaspectratio,alt={图5-1　惯性系 S\textquotesingle{} 与 S\textquotesingle\textquotesingle{} 相对同一惯性系 S 的等速、不同方向运动。}]{../figures/question-05.pdf}
+\caption*{图5-1　惯性系 \(S'\) 与 \(S''\) 相对同一惯性系 \(S\)
+的等速、不同方向运动。}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-4}
+
+两次速度都相对实验室系 \(S\)
+给出。先复合标准洛伦兹变换，再取速度方向的小角变化，才能读出相邻随动坐标轴的转角及其方向约定。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-4}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  沿任意单位方向 \(\bm n\) 的标准洛伦兹变换。
+\item
+  平面坐标的``旋转---沿轴 boost---旋回''分解。
+\item
+  由 \(S\to S'\) 的逆变换把 \(x,y,t\) 消去。
+\item
+  同时性条件 \(t'=t''=0\) 与空间轴转角的读取。
+\item
+  低速展开 \(\gamma-1\simeq v^2/(2c^2)\)。
+\item
+  \(\bm a\perp\bm v\) 时速度方向转率 \(d\theta/dt=a/v\)，以及向量方向
+  \(\bm v\times\bm a\)。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-4}
+
+在时刻 \(t\)，粒子速度沿 \(x\) 轴，其标准随动系是 \(S'\)；经过 \(dt\)
+后，速度方向在实验室系中转过 \(d\theta\)，新的标准随动系是
+\(S''\)。两套坐标都由实验室系按``无额外空间转动''的标准 boost
+定义，但把二者直接比较时，空间轴之间出现
+
+\[
+d\varphi=(\gamma-1)d\theta.
+\]
+
+这个小转角是非共线 boost 不可交换的结果。题目规定的正方向与 \(d\varphi\)
+相同，因此低速时 \(\bm\omega_t\) 沿 \(\bm v\times\bm a\)。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-4}
+
+先写 \(S\to S'\) 的标准变换及其逆变换。再把 \(S''\) 相对 \(S\)
+的速度方向记为 \(\bm n=(\cos\theta,\sin\theta)\)，沿 \(\bm n\) 与垂直
+\(\bm n\) 方向分解坐标，得到 \(x'',y'',t''\) 关于 \(x,y,t\)
+的式子。最后代入逆变换
+\(x=\gamma(x'+\beta ct')\)、\(ct=\gamma(ct'+\beta x')\)、\(y=y'\)。
+
+第（2）问只保留 \(\theta\) 的一阶小量，在 \(t'=t''=0\) 时比较
+
+\[
+x''=x'+d\varphi\,y',\qquad
+y''=y'-d\varphi\,x',
+\]
+
+即可读出 \(d\varphi\)；再用 \(d\theta/dt=a/v\) 与
+\(\gamma-1\simeq v^2/(2c^2)\) 转成题目所要的向量角速度。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-4}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图5-2　相邻时刻的速度方向变化、随动系轴转角与加速度方向。}]{../figures/solution-05.pdf}
+\caption*{图5-2　相邻时刻的速度方向变化、随动系轴转角与加速度方向。}
+\end{figure}
+
+图5-2用于逐项读取相对变换矩阵，两次标准推动的速度都相对于S给定；空间子块不直接等同旋转矩阵，后面另检查洛伦兹度规。
+
+图 5-2
+以实验室系观察粒子在相邻时刻的速度：\(\bm v(t+dt)-\bm v(t)=\bm a\,dt\)，速度方向转过
+\(d\theta\)；由两套标准随动坐标的空间部分读取坐标架转角 \(d\varphi\)。
+
+\needspace{3\baselineskip}
+\textbf{（一）第（1）问：分别从 \(S\) 建立两个标准洛伦兹变换}
+
+\(S'\) 相对 \(S\) 沿 \(x\) 轴以 \(\beta c\) 运动，标准洛伦兹变换为
+
+\[
+x'=\gamma(x-\beta ct),\qquad y'=y,\qquad
+ct'=\gamma(ct-\beta x). \tag{1}
+\]
+
+\(S''\) 相对 \(S\) 的速度方向为
+
+\[
+\bm n=(\cos\theta,\sin\theta).
+\]
+
+先在 \(S\) 系中把坐标分解到平行、垂直于 \(\bm n\) 的方向：
+
+\[
+\xi=\cos\theta\,x+\sin\theta\,y,\qquad
+\eta=-\sin\theta\,x+\cos\theta\,y. \tag{2}
+\]
+
+于是 \(S''\) 相对 \(S\) 沿 \(\xi\) 轴以 \(\beta c\) 运动。对
+\((\xi,\eta,t)\) 应用标准洛伦兹变换：
+
+\[
+\xi''=\gamma(\xi-\beta ct),\qquad
+\eta''=\eta,\qquad
+ct''=\gamma(ct-\beta\xi). \tag{3}
+\]
+
+再把 \(S''\) 中沿速度方向与垂直速度方向的坐标旋回 \(x'',y''\)：
+
+\[
+x''=\cos\theta\,\xi''-\sin\theta\,\eta'',\qquad
+y''=\sin\theta\,\xi''+\cos\theta\,\eta''. \tag{4}
+\]
+
+为缩短书写，记
+
+\[
+C=\cos\theta,\qquad S_\theta=\sin\theta.
+\]
+
+把式（2）（3）代入式（4），先得到 \(S''\) 关于实验室系 \(S\) 的变换：
+
+\[
+\begin{aligned}
+ct''&=\gamma\left(ct-\beta Cx-\beta S_\theta y\right),\\
+x''&=(\gamma C^2+S_\theta^2)x
++(\gamma-1)CS_\theta y-\gamma\beta C\,ct,\\
+y''&=(\gamma-1)CS_\theta x
++(\gamma S_\theta^2+C^2)y-\gamma\beta S_\theta\,ct.
+\end{aligned}
+\tag{5}
+\]
+
+现在由式（1）的逆变换消去 \(S\) 的坐标：
+
+\[
+x=\gamma(x'+\beta ct'),\qquad
+ct=\gamma(ct'+\beta x'),\qquad
+y=y'. \tag{6}
+\]
+
+代入式（5），得到题目要求的完整关系：
+
+\[
+\begin{aligned}
+ct''
+&=\gamma^2(1-\beta^2C)\,ct'
++\gamma^2\beta(1-C)\,x'
+-\gamma\beta S_\theta\,y',\\[3pt]
+x''
+&=(\gamma C^2+S_\theta^2)\gamma(x'+\beta ct')
++(\gamma-1)CS_\theta\,y'\\
+&\quad-\gamma^2\beta C(ct'+\beta x'),\\[3pt]
+y''
+&=(\gamma-1)CS_\theta\,\gamma(x'+\beta ct')
++(\gamma S_\theta^2+C^2)y'\\
+&\quad-\gamma^2\beta S_\theta(ct'+\beta x').
+\end{aligned}
+\tag{7}
+\]
+
+这里保留因式形式，是为了让每一项都能追溯到式（5）的空间旋转或
+boost。可用两个极限复核：
+
+\begin{itemize}
+\tightlist
+\item
+  \(\theta=0\) 时 \(S''\) 与 \(S'\) 完全相同，式（7）给出
+  \(x''=x',y''=y',t''=t'\)；
+\item
+  \(\beta=0\) 时 \(\gamma=1\)，三个系都静止，同样退化为恒等变换。
+\end{itemize}
+
+\needspace{3\baselineskip}
+\textbf{（二）第（2）问：从空间变换中读出小转角}
+
+对相邻两个随动系，速度方向只改变一个小角 \(d\theta\)。在式（7）中取
+
+\[
+C=1+O(d\theta^2),\qquad
+S_\theta=d\theta+O(d\theta^3).
+\]
+
+只保留 \(d\theta\) 的一阶项，逐项化简：
+
+\[
+\begin{aligned}
+ct''&=ct'-\gamma\beta\,d\theta\,y',\\
+x''&=x'+(\gamma-1)d\theta\,y',\\
+y''&=y'-(\gamma-1)d\theta\,x'
+-\gamma\beta\,d\theta\,ct'.
+\end{aligned}
+\tag{8}
+\]
+
+式（8）的纯空间部分与小角坐标旋转
+
+\[
+\begin{pmatrix}x''\\y''\end{pmatrix}
+=
+\begin{pmatrix}1&d\varphi\\-d\varphi&1\end{pmatrix}
+\begin{pmatrix}x'\\y'\end{pmatrix}
+\]
+
+同形，因此在题目规定的正方向下
+
+\[
+\boxed{d\varphi=(\gamma-1)d\theta}. \tag{9}
+\]
+
+时间式中的 \(-\gamma\beta\,d\theta\,y'\)
+表明两个随动系的同时面并不重合；这正是不能把问题当作普通欧氏旋转的原因。读取空间轴方向时必须同时保留式（8）的时间关系，不能先假定所有空间点都满足
+\(t'=t''=0\)。
+
+\needspace{3\baselineskip}
+\textbf{（三）用 \(\bm a,\bm v\) 表示角速度}
+
+因为 \(\bm a\perp\bm v\)，在 \(dt\)
+内速度大小不变，只有方向改变。速度矢量端点走过的小弧长为
+\(a\,dt\)，而速度圆的半径为 \(v\)，故
+
+\[
+\frac{d\theta}{dt}=\frac av. \tag{10}
+\]
+
+由式（9）（10），随动坐标架按题目定义的旋进角速度大小为
+
+\[
+\omega_t=(\gamma-1)\frac av. \tag{11}
+\]
+
+方向由速度方向转向加速度方向的右手定则确定，即沿
+\(\bm v\times\bm a\)。于是向量形式为
+
+\[
+\bm\omega_t
+=\frac{\gamma-1}{v^2}\,\bm v\times\bm a. \tag{12}
+\]
+
+题设 \(v\ll c\)，所以
+
+\[
+\gamma
+=\frac1{\sqrt{1-v^2/c^2}}
+=1+\frac12\frac{v^2}{c^2}
++O\!\left(\frac{v^4}{c^4}\right).
+\]
+
+代入式（12）：
+
+\[
+\boxed{\bm\omega_t
+\simeq\frac{1}{2c^2}\,\bm v\times\bm a}. \tag{13}
+\]
+
+量纲检查：\(va/c^2\) 的单位为 \(\mathrm{s^{-1}}\)，正是角速度。且
+\(v/c\to0\) 时结果按 \(v^2/c^2\) 的阶数消失，不会出现一阶相对论效应。
+
+\needspace{3\baselineskip}
+\textbf{（四）变换结构与符号复核}
+
+二维洛伦兹变换最稳妥的写法是先把空间位置分解为平行、垂直于速度方向的分量：
+
+\[
+\bm r'=\bm r_\perp+\gamma(\bm r_\parallel-\bm vt),
+\qquad
+ct'=\gamma\left(ct-\frac{\bm v\cdot\bm r}{c}\right).
+\]
+
+取 \(\bm n=(\cos\theta,\sin\theta)\)，就有
+\(\bm r_\parallel=(\bm n\cdot\bm r)\bm n\)。展开后，\(x''\) 与 \(y''\)
+的交叉项必同时含
+\((\gamma-1)\sin\theta\cos\theta\)。这个结构检验比逐项背公式可靠。
+
+还要区分两种常见符号约定。本题把``\(S''\) 坐标架相对 \(S'\)
+的转角''定义为正，所以式（13）沿
+\(\bm v\times\bm a\)。若改问``无力矩自旋轴相对轨道方向的进动''，常用的托马斯角速度写成沿
+\(\bm a\times\bm v\)，即整体差一个负号。批改时必须先核对被比较的坐标架和正方向。
+
+\needspace{3\baselineskip}
+\textbf{时空间隔与转角约定}
+
+令 \(X=(ct,x,y)\)，标准变换矩阵为 \(\Lambda(\bm\beta)\)，则两系间矩阵是
+\(\Lambda(\bm\beta'')\Lambda(-\bm\beta')\)。每个因子满足
+\(\Lambda^{\mathsf T}\eta\Lambda=\eta\)，其中
+\(\eta=\operatorname{diag}(1,-1,-1)\)，所以式（7）也必须保持
+\((ct)^2-x^2-y^2\)。这给出独立于展开步骤的检查。
+
+本文正转角表示坐标轴沿 \(\bm v\times\bm a\) 的方向转动，对应被动坐标式
+\(x''=x'+d\varphi y',y''=y'-d\varphi x'\)。若讨论保持无转矩的自旋相对这些坐标轴的转动，符号约定改变；不能把两种角速度混写。
+
+\newpage
+
+\section{第 6 题}\label{ux7b2c-6-ux9898}
+
+（1）\(n\) 摩尔理想气体的摩尔定容热容为 \(C_V\)。已知在
+\(p=p_0\)、\(T=T_0\) 时熵为 \(S_0\)，求 \(S(p,T)\)。
+
+（2）化学势定义为
+
+\[
+\mu=\frac{U+pV-TS}{n}.
+\]
+
+取 \(U|_{T=0}=0\)，求 \(\mu(p,T)\)。
+
+（3）对反应
+\(n\to p+e^-+\bar\nu\)，平衡条件为两侧反应物化学势之和相等。取
+\(\mu_e\simeq N_A m_ec^2\)、\(\mu_{\bar\nu}\simeq0\)；质子、中子均视作理想气体，二者的
+\(C_V,p_0,T_0,S_0/n\) 相同。求平衡时质子分压比 \(x_p=p_p/p\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.66\linewidth,height=\textheight,keepaspectratio,alt={图6-1　理想气体状态与反应组分}]{../figures/question-06.pdf}
+\caption*{图6-1　理想气体状态与反应组分}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-5}
+
+先由理想气体的全微分求熵，再除以物质的量求摩尔化学势。反应平衡式必须统一每摩尔与每粒子的能量，指数才能无量纲。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-5}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  可逆过程有 \(T\,dS=dU+p\,dV\)。
+\item
+  理想气体满足 \(dU=nC_VdT\)、\(pV=nRT\)。
+\item
+  \(C_p=C_V+R\)。
+\item
+  摩尔吉布斯自由能等于化学势：\(\mu=(U+pV-TS)/n\)。
+\item
+  化学平衡条件为化学计量数加权后的化学势之和为零。
+\item
+  同温理想混合气体中，组分化学势含 \(RT\ln p_i\)。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-5}
+
+从参考态 \((p_0,T_0)\) 到任意态
+\((p,T)\)，可选一条``先等压改变温度，再等温改变压强''的可逆路径。熵是状态函数，因此积分值与路径无关。第三问中，中子与质子的热学参数相同，二者化学势的公共部分相消，只留下
+\(RT\ln(p_n/p_p)\)；电子静能给出偏向中子一侧的能量代价。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-5}
+
+把 \(V=nRT/p\) 微分，代入
+
+\[
+dS=\frac{nC_VdT+p\,dV}{T},
+\]
+
+化为只含 \(dT/T\) 和 \(dp/p\) 的全微分。得到 \(S\)
+后直接代入化学势定义。第三问写
+
+\[
+\mu_n=\mu_p+\mu_e+\mu_{\bar\nu},
+\]
+
+并使用 \(p_n=(1-x_p)p\)、\(p_p=x_pp\)。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-5}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图6-2　参考态积分路径与化学势平衡}]{../figures/solution-06.pdf}
+\caption*{图6-2　参考态积分路径与化学势平衡}
+\end{figure}
+
+图6-2由总量自由能转到每摩尔化学势，反应静能也乘阿伏伽德罗常数。这样
+指数为每摩尔能量与 \(RT\) 的比值。等价的两种写法是
+
+\[\frac{N_A m_ec^2}{RT}=\frac{m_ec^2}{k_BT}.\]
+
+图 6-2 左图给出熵积分路径，右图表示中子衰变反应两侧的化学势守恒。
+
+\needspace{3\baselineskip}
+\textbf{（一）熵的全微分}
+
+由热力学第一、第二定律的可逆形式
+
+\[
+T\,dS=dU+p\,dV. \tag{1}
+\]
+
+理想气体内能只依赖温度：
+
+\[
+dU=nC_VdT. \tag{2}
+\]
+
+由状态方程 \(V=nRT/p\) 得
+
+\[
+\begin{aligned}
+dV
+&=nR\,d\!\left(\frac{T}{p}\right)\\
+&=nR\left(\frac{dT}{p}-\frac{T}{p^2}dp\right).
+\end{aligned} \tag{3}
+\]
+
+将式（2）、（3）代入式（1）：
+
+\[
+\begin{aligned}
+T\,dS
+&=nC_VdT+p\,nR\left(\frac{dT}{p}-\frac{T}{p^2}dp\right)\\
+&=n(C_V+R)dT-nRT\frac{dp}{p}.
+\end{aligned}
+\]
+
+两边除以 \(T\)：
+
+\[
+dS=n(C_V+R)\frac{dT}{T}-nR\frac{dp}{p}. \tag{4}
+\]
+
+从 \((p_0,T_0,S_0)\) 积分至 \((p,T,S)\)：
+
+\[
+S-S_0=n(C_V+R)\ln\frac{T}{T_0}-nR\ln\frac{p}{p_0}.
+\]
+
+所以
+
+\[
+\boxed{S(p,T)=S_0+n(C_V+R)\ln\frac{T}{T_0}-nR\ln\frac{p}{p_0}}. \tag{5}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（二）化学势}
+
+由 \(U(0)=0\) 与 \(dU=nC_VdT\)：
+
+\[
+U=nC_VT. \tag{6}
+\]
+
+又有
+
+\[
+pV=nRT. \tag{7}
+\]
+
+代入定义：
+
+\[
+\begin{aligned}
+\mu
+&=\frac{nC_VT+nRT-TS}{n}\\
+&=(C_V+R)T-\frac{T}{n}S.
+\end{aligned} \tag{8}
+\]
+
+再代入式（5）：
+
+\[
+\begin{aligned}
+\mu(p,T)
+={}&\left(C_V+R-\frac{S_0}{n}\right)T\\
+&-(C_V+R)T\ln\frac{T}{T_0}
++RT\ln\frac{p}{p_0}.
+\end{aligned}
+\]
+
+故
+
+\[
+\boxed{\mu(p,T)=\left(C_V+R-\frac{S_0}{n}\right)T-(C_V+R)T\ln\frac{T}{T_0}+RT\ln\frac{p}{p_0}}. \tag{9}
+\]
+
+量纲检查：每一项都是``每摩尔能量''，单位为 \(\mathrm{J\,mol^{-1}}\)。
+
+\needspace{3\baselineskip}
+\textbf{（三）反应平衡与质子分压比}
+
+平衡条件为
+
+\[
+\mu_n=\mu_p+\mu_e+\mu_{\bar\nu}. \tag{10}
+\]
+
+按题设
+
+\[
+\mu_e\simeq N_A m_ec^2,\qquad \mu_{\bar\nu}\simeq0. \tag{11}
+\]
+
+中子与质子的温度及参考态参数相同，因此式（9）中除压强对数项外的部分相消：
+
+\[
+\mu_n-\mu_p=RT\ln\frac{p_n}{p_p}. \tag{12}
+\]
+
+由式（10）---（12）：
+
+\[
+RT\ln\frac{p_n}{p_p}=N_A m_ec^2. \tag{13}
+\]
+
+指数化：
+
+\[
+\frac{p_n}{p_p}=\exp\!\left(\frac{N_A m_ec^2}{RT}\right). \tag{14}
+\]
+
+定义 \(x_p=p_p/p\)，则
+
+\[
+p_p=x_pp,\qquad p_n=(1-x_p)p. \tag{15}
+\]
+
+代入式（14）：
+
+\[
+\frac{1-x_p}{x_p}=\exp\!\left(\frac{N_A m_ec^2}{RT}\right).
+\]
+
+移项求解：
+
+\[
+\boxed{x_p=\frac{1}{1+\exp\!\left(N_A m_ec^2/RT\right)}}. \tag{16}
+\]
+
+当 \(T\to0\) 时指数趋于无穷，\(x_p\to0\)；当 \(T\to\infty\) 时指数趋于
+\(1\)，\(x_p\to1/2\)，这是本题简化化学势模型的形式极限；常热容经典气体的熵式不能一直外推到零温，真实反应平衡还需要各物种的统计权重和标准化学势。
+
+\needspace{3\baselineskip}
+\textbf{热力学微分与化学平衡的复核}
+
+第一问可从基本关系逐项核对。对理想气体
+
+\[
+dU=nC_V\,dT,
+\qquad
+p\,dV=nR\,dT-nRT\frac{dp}{p}.
+\]
+
+代入 \(TdS=dU+p\,dV\) 得
+
+\[
+dS=n(C_V+R)\frac{dT}{T}-nR\frac{dp}{p}.
+\]
+
+右侧是全微分，分别从 \((p_0,T_0)\) 积到
+\((p,T)\)，便得到式（5）。对结果求偏导可反向检验：
+
+\[
+\left(\frac{\partial S}{\partial T}\right)_p
+=\frac{n(C_V+R)}{T},
+\qquad
+\left(\frac{\partial S}{\partial p}\right)_T
+=-\frac{nR}{p}.
+\]
+
+前者正是定压热容
+\(nC_p/T\)，后者与理想气体热膨胀关系一致。对数的自变量均为比值
+\(T/T_0\)、\(p/p_0\)，所以无量纲；这是检查熵表达式时必须满足的条件。
+
+化学势由摩尔 Gibbs 自由能给出：
+
+\[
+\mu=\frac{G}{n}=\frac{U+pV-TS}{n}.
+\]
+
+把 \(U=nC_VT\)、\(pV=nRT\) 与 \(S(p,T)\) 全部代入时，要把参考熵项写成
+\(S_0/n\)，因为 \(S_0\) 是总熵而 \(\mu\) 是每摩尔量。代入后对 \(p\)
+求偏导应满足
+
+\[
+\left(\frac{\partial\mu}{\partial p}\right)_T
+=\frac{RT}{p}=V_m,
+\]
+
+这为式（9）提供独立校验。
+
+第三问能消去共同的温度项和参考态项，是因为中子、质子采用相同的理想气体参数；若二者参考化学势不同，方程右侧还应保留常量差。现有假设下
+
+\[
+RT\ln\frac{p_n}{p_p}=N_A m_ec^2
+\]
+
+这里 \(m_e\) 是单个电子质量、\(N_A\) 是阿伏伽德罗常数，故 \(N_A m_ec^2\)
+为每摩尔能量，分子、分母均采用每摩尔量，所得指数无量纲。原扫描和原整理稿的
+\(m_ec^2/(RT)\) 混用了单位，不能只在注释中说明而保留错误指数。
+
+\needspace{3\baselineskip}
+\textbf{模型和低温极限的边界}
+
+题设人为令中子、质子的参考化学势相同，本文比例是这一简化理想气体模型的结果，并未包含真实两种粒子的静能差与统计简并。\(U=nC_VT\)
+是给定常热容模型下的形式能量基准；熵中的 \(\ln T\)
+表明该经典模型不能一直外推到绝对零度。\(x_p\to0\) 和 \(1/2\)
+只检验给定数学公式的极限。
+
+\newpage
+
+\section{第 7 题}\label{ux7b2c-7-ux9898}
+
+边长为 \(l\) 的最大正方形的四个角上，各连接一个边长为原来 \(1/3\)
+的相似正方形；对每个小正方形重复此过程无限次，得到平面分形电阻网络。所有导线单位长度电阻为
+\(r\)。垂直纸面向内存在均匀随时间变化的磁场 \(B=kt\)。
+
+（1）计算最大正方形对角线两端之间的等效电阻；
+
+（2）计算最大正方形相邻两顶点之间的等效电阻；
+
+（3）求最外框中间一段长度为 \(l/3\) 的导线中的电流 \(I_c\)；
+
+（4）假设已知总功率可以拆分为四个角上每个相似子网络各自受磁场影响所产生的功率
+\(P_1\)，与仅由电流 \(I_c\) 在网络中流动所产生的功率 \(P_2\)
+之和，求整个电阻网络单位时间的焦耳热；
+
+（5）证明第（4）问中的总功率确实可以作上述分解。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.411\linewidth,height=\textheight,keepaspectratio,alt={图7-1　四角自相似正方形电阻网络}]{../figures/question-07.pdf}
+\caption*{图7-1　四角自相似正方形电阻网络}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-6}
+
+把每个角上的小网络缩放成四端口，再求外框中段的环流。功率不能随电流直接相加，须对各角部子网络证明交叉项为零。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-6}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  均匀导线电阻与长度成正比。
+\item
+  自相似网络缩小 \(1/3\) 后，所有等效电阻也缩小 \(1/3\)。
+\item
+  对称性可把对角端口、相邻端口问题化为有限个未知量。
+\item
+  法拉第定律 \(\mathcal E=-d\Phi/dt\)。
+\item
+  线性电阻网络满足叠加原理与互易性。
+\item
+  总焦耳功率是电流的正定二次型。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-6}
+
+任取一个角上的小网络，把它放大三倍后与整体完全相同。因此``无限深''的信息可以被压缩为有限个端口参数。磁场部分同样自相似：子网络线度缩为
+\(1/3\)，面积缩为 \(1/9\)，感应电动势缩为 \(1/9\)，电阻缩为
+\(1/3\)，电流与功率分别按 \(1/3\) 和 \(1/27\) 缩放。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-6}
+
+先把长度 \(l\) 对应的电阻尺度记为
+\(R_0=rl\)，以免把``单位长度电阻''与``某段导线的电阻''混淆。再令无量纲端口参数
+\(x,y\) 使对角等效电阻为 \(2yR_0\)、相邻等效电阻为
+\((x+y)R_0\)，利用自相似性求出 \(x,y\)。磁场部分则把 \(\mathcal E=kl^2\)
+作为最大回路的电动势尺度，分别列出顶层环流的等效电动势、等效电阻与功率递推。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-6}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.891\linewidth,height=\textheight,keepaspectratio,alt={图7-2　端口等效、自相似缩放与中段电流方向}]{../figures/solution-07.pdf}
+\caption*{图7-2　端口等效、自相似缩放与中段电流方向}
+\end{figure}
+
+图7-2左侧是无源四端口等效，右侧才包含变化磁通的顶层环流。计算端口电阻后，还须保留每个角部的含源电压修正，才能列总回路方程。
+
+\needspace{3\baselineskip}
+\textbf{（一）端口等效电阻的自洽方程}
+
+图7-2中，四端口以每个端点串联 \(pR_0\)、内部四边环各边 \(qR_0\)
+表示。对应
+\(R_{\rm diag}/R_0=2p+q=2y\)、\(R_{\rm adj}/R_0=2p+3q/4=x+y\)，所以
+\(p=2x-y,q=4(y-x)\)。这个二参数等效只用于无感应电动势的电阻端口问题。对角接入时，对称支路的等势点合并，得到
+
+\[
+2y=\frac23x+\left(\frac13+\frac23y\right). \tag{1}
+\]
+
+将括号展开：
+
+\[
+2y=\frac23x+\frac13+\frac23y.
+\]
+
+两边同减 \(2y/3\)：
+
+\[
+\frac43y=\frac23x+\frac13.
+\]
+
+乘以 \(3\)：
+
+\[
+4y=2x+1,
+\]
+
+即
+
+\[
+2x-4y=-1. \tag{2}
+\]
+
+相邻两点接入时，按电流分流比例合并外框与两个缩小网络，得到
+
+\[
+x+y=\frac23x+\frac34\left(\frac13+\frac23y\right). \tag{3}
+\]
+
+展开右边：
+
+\[
+x+y=\frac23x+\frac14+\frac12y.
+\]
+
+移项：
+
+\[
+\frac13x+\frac12y=\frac14.
+\]
+
+乘以 \(2\)：
+
+\[
+\frac23x+y=\frac12. \tag{4}
+\]
+
+联立式（2）、（4）。由式（2）有 \(x=2y-1/2\)，代入式（4）：
+
+\[
+\frac23\left(2y-\frac12\right)+y=\frac12.
+\]
+
+于是
+
+\[
+\frac73y=\frac56,
+\]
+
+故
+
+\[
+y=\frac5{14},\qquad x=\frac3{14}. \tag{5}
+\]
+
+因此
+
+\[
+\boxed{R_{\rm diag}=2yrl=\frac57rl}, \tag{6}
+\]
+
+\[
+\boxed{R_{\rm adj}=(x+y)rl=\frac47rl}. \tag{7}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（二）最外框中段电流}
+
+从本小节开始，记
+
+\[
+R_0=rl,
+\qquad
+\mathcal E=\left|\frac{d\Phi}{dt}\right|=kl^2. \tag{8}
+\]
+
+角部子网络的边长为 \(l/3\)，它的对角端口电阻由式（6）按长度缩放为
+
+\[
+R_{\rm diag}^{(1)}
+=\frac57r\frac l3
+=\frac5{21}R_0. \tag{9}
+\]
+
+子正方形的面积是最大正方形的 \(1/9\)，因而它自身的感应电动势为
+
+\[
+\mathcal E_1=\frac{\mathcal E}{9}. \tag{10}
+\]
+
+沿外框绕行时，每个角部子网络都是从一个端点进入、从对角端点流出，因而阻性压降为
+\(I_cR_{\rm diag}^{(1)}\)。子网络内的两条对称半路平分式（10）的电动势，故在选定的外框绕行路径上，每个角部对顶层驱动电动势的修正量为
+
+\[
+\frac{\mathcal E_1}{2}=\frac{\mathcal E}{18}. \tag{11}
+\]
+
+四个角部的修正与最大回路电动势反向，所以真正驱动顶层环流的等效电动势为
+
+\[
+\mathcal E_{\rm eff}
+=\mathcal E-4\times\frac{\mathcal E}{18}
+=\frac79\mathcal E. \tag{12}
+\]
+
+顶层环流每经过一边，先经过一段长为 \(l/3\)
+的直导线，再经过一个对角端口电阻。因此顶层环流的总电阻为
+
+\[
+\begin{aligned}
+R_{\rm top}
+&=4\left(\frac{R_0}{3}+\frac5{21}R_0\right)\\
+&=4R_0\left(\frac7{21}+\frac5{21}\right)\\
+&=\frac{16}{7}R_0. 
+\end{aligned}
+\tag{13}
+\]
+
+由欧姆定律，
+
+\[
+\begin{aligned}
+I_c
+&=\frac{\mathcal E_{\rm eff}}{R_{\rm top}}\\
+&=\frac{(7/9)\mathcal E}{(16/7)R_0}\\
+&=\frac{49}{144}\frac{\mathcal E}{R_0}\\
+&=\boxed{\frac{49}{144}\frac{kl}{r}}. 
+\end{aligned}
+\tag{14}
+\]
+
+为了与图 7-2
+中的对称半路直接对应，也可记沿选定外框路径每个角部半段的含源电压降为
+\(U_1\)，则
+
+\[
+U_1=\frac12I_cR_{\rm diag}^{(1)}+\frac14\mathcal E_1
+=\frac5{42}R_0I_c+\frac1{36}\mathcal E. \tag{15}
+\]
+
+最大回路方程为
+
+\[
+8U_1+4I_c\frac{R_0}{3}=\mathcal E. \tag{16}
+\]
+
+将式（15）逐项代入：
+
+\[
+8\left(\frac5{42}R_0I_c+\frac1{36}\mathcal E\right)
++\frac43R_0I_c=\mathcal E,
+\]
+
+\[
+\left(\frac{20}{21}+\frac43\right)R_0I_c
+=\left(1-\frac29\right)\mathcal E,
+\]
+
+\[
+\frac{16}{7}R_0I_c=\frac79\mathcal E,
+\]
+
+仍得式（14）。
+
+量纲检查：\(kl^2\) 的量纲是伏特，\(rl\) 的量纲是欧姆，故
+\(kl^2/(rl)=kl/r\) 的量纲是安培。
+
+\needspace{3\baselineskip}
+\textbf{（三）总焦耳功率}
+
+记整个网络的焦耳功率为 \(P(l)\)。对一个边长缩小为 \(l/3\)
+的子网络，电动势缩为 \(1/9\)，电阻缩为 \(1/3\)，所以其纯磁场功率相对于
+\(P(l)\) 的缩放因子为
+
+\[
+\frac{(1/9)^2}{1/3}=\frac1{27}. \tag{17}
+\]
+
+四个角部子网络的纯磁场功率之和因而是
+
+\[
+P_1=4P\!\left(\frac l3\right)=\frac4{27}P(l). \tag{18}
+\]
+
+再计算顶层环流 \(I_c\) 所产生的功率 \(P_2\)。每一边中段的电阻是
+\(R_0/3\)，每一角部子网络对环流呈现的对角端口电阻是
+\(5R_0/21\)。四组结构串联地通过同一电流 \(I_c\)，故
+
+\[
+\begin{aligned}
+P_2
+&=4I_c^2\left(\frac{R_0}{3}+\frac5{21}R_0\right)\\
+&=\frac{16}{7}I_c^2R_0. 
+\end{aligned}
+\tag{19}
+\]
+
+把式（14）先平方：
+
+\[
+I_c^2
+=\left(\frac{49}{144}\right)^2\frac{\mathcal E^2}{R_0^2}
+=\frac{2401}{20736}\frac{\mathcal E^2}{R_0^2}. \tag{20}
+\]
+
+代入式（19）：
+
+\[
+\begin{aligned}
+P_2
+&=\frac{16}{7}\cdot\frac{2401}{20736}
+\frac{\mathcal E^2}{R_0}\\
+&=\frac{16\times343}{20736}\frac{\mathcal E^2}{R_0}\\
+&=\frac{343}{1296}\frac{\mathcal E^2}{R_0}. 
+\end{aligned}
+\tag{21}
+\]
+
+由第（4）问给出的功率分解，
+
+\[
+P(l)=P_1+P_2
+=\frac4{27}P(l)+\frac{343}{1296}\frac{\mathcal E^2}{R_0}. \tag{22}
+\]
+
+把递归项移到左边：
+
+\[
+\frac{23}{27}P(l)
+=\frac{343}{1296}\frac{\mathcal E^2}{R_0}. \tag{23}
+\]
+
+因为 \(1296/27=48\)，所以
+
+\[
+\begin{aligned}
+P(l)
+&=\frac{343}{1296}\cdot\frac{27}{23}
+\frac{\mathcal E^2}{R_0}\\
+&=\frac{343}{48\times23}\frac{\mathcal E^2}{R_0}\\
+&=\frac{343}{1104}\frac{\mathcal E^2}{R_0}. 
+\end{aligned}
+\tag{24}
+\]
+
+最后代回 \(\mathcal E=kl^2\) 与 \(R_0=rl\)：
+
+\[
+\boxed{P(l)=\frac{343}{1104}\frac{k^2l^3}{r}}. \tag{25}
+\]
+
+量纲上，\(\mathcal E^2/R_0\) 的单位是
+\(\mathrm{V^2}/\Omega=\mathrm W\)；等价地，\(k^2l^3/r\) 也是功率。
+
+\needspace{3\baselineskip}
+\textbf{（四）功率可加性的证明}
+
+先对每一个角部子网络截断到有限层，在该子网络上分解电流。设关闭子网络内感应源、只由其端口电流
+\(I_c\) 产生的各支路电流为
+\(\bm i_I\)，该子网络外端口断开、只由其内部变化磁场产生的支路电流为
+\(\bm i_B\)。由线性网络的叠加原理，总电流为
+
+\[
+\bm i=\bm i_I+\bm i_B. \tag{26}
+\]
+
+设 \(\mathbf R\) 为以各支路电阻为对角元素的对角矩阵。总焦耳功率展开为
+
+\[
+\begin{aligned}
+P
+&=(\bm i_I+\bm i_B)^{\mathsf T}
+\mathbf R(\bm i_I+\bm i_B)\\
+&=P_I+P_B
++2\bm i_I^{\mathsf T}\mathbf R\bm i_B. 
+\end{aligned}
+\tag{27}
+\]
+
+因此问题的核心是证明交叉项为零。在纯端口激励问题中，内部没有感应电动势，第
+\(j\) 条支路的阻性电压为
+
+\[
+v_{I,j}=R_ji_{I,j}. \tag{28}
+\]
+
+将式（28）与纯磁场解的支路电流相乘并对这一个角部子网络求和：
+
+\[
+\sum_jR_ji_{I,j}i_{B,j}
+=\sum_jv_{I,j}i_{B,j}. \tag{29}
+\]
+
+右边可按结点重新归并。设纯端口激励下第 \(n\) 个结点电势为
+\(\varphi_{I,n}\)，则
+
+\[
+\sum_jv_{I,j}i_{B,j}
+=\sum_n\varphi_{I,n}
+\left(\sum_{j\in n}i_{B,j}\right). \tag{30}
+\]
+
+纯磁场解没有从外部端口注入的净电流，而每一个内部结点也满足电流守恒，所以括号中的和对每个结点都是零。因此
+
+\[
+\bm i_I^{\mathsf T}\mathbf R\bm i_B=0. \tag{31}
+\]
+
+代回式（27），得
+
+\[
+\boxed{P=P_I+P_B}. \tag{32}
+\]
+
+对任意有限截断层数上式均成立；同时，子网络功率的缩放系数为
+\(4/27<1\)，故当截断层数趋于无穷时功率级数收敛，式（32）仍然成立。
+
+\needspace{3\baselineskip}
+\textbf{自相似缩放与功率正交性的复核}
+
+端口参数 \(x,y\)
+本身必须是无量纲数，因为所有等效电阻都被写成``无量纲系数乘
+\(rl\)''。当子网络的边长由 \(l\) 缩为 \(l/3\) 时，单位长度电阻 \(r\)
+不变，任一对应导线电阻都乘 \(1/3\)，所以子网络端口电阻也整体乘
+\(1/3\)。若自洽方程中出现 \(x/9\) 或
+\(3x\)，便说明把长度缩放与面积缩放混淆了。
+
+解出的两个等效电阻满足
+
+\[
+R_{\rm diag}=\frac57rl,
+\qquad
+R_{\rm adj}=\frac47rl.
+\]
+
+二者均小于沿外框直接走一条或两条边的电阻，符合大量并联支路会降低等效电阻的直觉；同时对角端口路径整体较长，因此
+\(R_{\rm diag}>R_{\rm adj}\)。这两个不等式是无需重算网络即可完成的数量级检查。
+
+磁场部分要分开记录长度、面积、电动势、电阻、电流和功率的缩放。边长乘
+\(1/3\)，面积乘 \(1/9\)，故感应电动势
+
+\[
+\mathcal E\sim k l^2
+\]
+
+乘 \(1/9\)；电阻乘 \(1/3\)，所以对应电流乘
+
+\[
+\frac{1/9}{1/3}=\frac13.
+\]
+
+功率既可按 \(I^2R\) 计算，也可按 \(\mathcal E^2/R\)
+计算，两种方法都给出单个子网络的缩放因子
+
+\[
+\left(\frac13\right)^2\left(\frac13\right)=\frac1{27}.
+\]
+
+四个子网络总系数是 \(4/27<1\)，因而功率递推级数收敛。若缩放比一般为
+\(s\)，单个子网络功率按 \(s^3\) 缩放；有四个子网络时，有限总功率至少要求
+\(4s^3<1\)。
+
+最后解释交叉项为何恰好为零。对纯端口激励解，内部每个独立回路的外加电动势为零；对纯磁场激励解，外端口的净注入电流为零。把第一组回路电压方程乘第二组回路电流并求和，再把第二组结点电流方程与第一组结点电势配对，边界项均消失，得到
+
+\[
+\sum_j R_j i_{I,j}i_{B,j}=0.
+\]
+
+因此
+
+\[
+\sum_jR_j(i_{I,j}+i_{B,j})^2
+=\sum_jR_ji_{I,j}^2+
+\sum_jR_ji_{B,j}^2.
+\]
+
+这里可相加的是这两组特殊激励的总功率，并不是说任意两组电流叠加后功率都可直接相加。只有交叉二次型为零时才成立。
+
+\needspace{3\baselineskip}
+\textbf{把局部正交分解拼成全网络}
+
+式（26）---（32）的证明应分别应用于四个角部。纯磁场分量在该子网络每个外端口的净电流为零；纯端口分量在其内部没有非保守源，因而
+\(R_ji_{I,j}\) 可写为结点势差。四条顶层连接段没有子网络纯磁场分量，只含
+\(I_c\)，功率直接为
+\(4I_c^2R_0/3\)。把四个局部正交分解和这四段相加，才得到式（22）。不能把整个闭合网络凭空说成一个外端口供电、无内部感应源的网络。
+
+若 \(k>0\) 且磁场向纸内增长，\(I_c\)
+绕外框逆时针；图7-2的顶边箭头应向左。相似图只画有限层，点线表示继续递归；相互重合的导线为同一条导线，不能重复计电阻。
+
+\needspace{3\baselineskip}
+\textbf{用有限网络核对无限极限}
+
+取
+\(r=l=k=1\)，从单个外框开始，按原图四角不断缩小三分之一。把所有重合线段合并后，在实际结点列基尔霍夫方程；一条连续导线不能因同时属于两层正方形而被重复并联。
+
+有限层得到下列值，层数0表示只有外框：
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}lllll@{}}
+\toprule\noalign{}
+层数 & 对角电阻 & 相邻电阻 & 外框中段电流 & 总功率 \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+0 & 1.000000 & 0.750000 & 0.250000 & 0.250000 \\
+1 & 0.833333 & 0.666667 & 0.291667 & 0.263889 \\
+2 & 0.777778 & 0.625000 & 0.318182 & 0.286569 \\
+3 & 0.750000 & 0.601852 & 0.328125 & 0.297663 \\
+5 & 0.725823 & 0.581276 & 0.336299 & 0.306508 \\
+无限层 & \(5/7\) & \(4/7\) & \(49/144\) & \(343/1104\) \\
+\end{longtable}
+}
+
+有限值逐层向正文的四个极限收敛。这个检查直接使用几何导线图、每段长度和感应电动势，没有把无限层答案先塞进每个角部。
+
+每条有向线段从 \((x_a,y_a)\) 到 \((x_b,y_b)\) 的感应电动势可取
+\((k/2)(x_ay_b-y_ax_b)\)，其各回路和等于面积乘k。改变感应电场的梯度规范只改变结点势，不改变电流、热功率与上述极限。
+
+\newpage
+
+\section{第 8 题}\label{ux7b2c-8-ux9898}
+
+交流电源 \(U(t)=U_0\cos\omega t\)
+接在``日''字形理想变压器的左侧线圈上。三根铁芯柱上的线圈匝数为
+\(N_1,N_2,N_3\)；输入回路串联电阻为 \(r_1'\)，右侧负载含
+\(r_1,r_2,r_3\)。忽略漏磁、铁损和线圈电阻。求稳定工作时 \(r_2\)
+上的平均功率 \(P_2\)，并在 \(N_1:N_2:N_3=4:2:1\) 时化简。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.84\linewidth,height=\textheight,keepaspectratio,alt={图8-1　日字形铁芯、三线圈与负载连接}]{../figures/question-08.pdf}
+\caption*{图8-1　日字形铁芯、三线圈与负载连接}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-7}
+
+三柱磁通先分流，再通过安匝平衡约束电流。公共电阻流过两个次级电流之和，平方折算后出现交叉项；最后用峰值转有效值求平均功率。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-7}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  铁芯磁导率趋于无穷时，铁芯内磁场强度 \(H\to0\)。
+\item
+  安培环路定律给出磁动势平衡。
+\item
+  法拉第定律给出绕组电压 \(u_j=N_j\dot\Phi_j\)。
+\item
+  磁通在铁芯分叉处满足连续性 \(\Phi_1=\Phi_2+\Phi_3\)。
+\item
+  正弦电流若峰值为 \(I_0\)，则电阻平均功率为 \(I_0^2R/2\)。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-7}
+
+左柱磁通进入上横轭后分成中柱磁通和右柱磁通。理想铁芯不需要有限磁场强度维持磁通，因此各窗口上的绕组磁动势必须互相抵消。右侧中点电阻
+\(r_1\) 同时承受两个次级支路电流之和，因而在折算到原边时出现交叉耦合项。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-7}
+
+先用安培环路定律把次级电流写成原边电流的匝数比倍数；再写三个绕组的电压方程。利用
+\(\dot\Phi_1=\dot\Phi_2+\dot\Phi_3\) 消去磁通，只留下原边电流，最后求
+\(r_2\) 的电流有效值。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-7}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.727\linewidth,height=\textheight,keepaspectratio,alt={图8-2　三柱磁通方向、绕组电流与负载支路}]{../figures/solution-08.pdf}
+\caption*{图8-2　三柱磁通方向、绕组电流与负载支路}
+\end{figure}
+
+图8-2按三个磁柱的通量和两个次级共结点列约束，公共电阻流过两次级电流之和。阻值折算的交叉项来自这个实际连接。
+
+\needspace{3\baselineskip}
+\textbf{（一）磁通与磁动势关系}
+
+按图 8-2 取磁通正方向。分叉处磁通连续：
+
+\[
+\Phi_1=\Phi_2+\Phi_3. \tag{1}
+\]
+
+理想铁芯中 \(H\to0\)。分别沿两个窗口应用安培环路定律，按选定方向可写成
+
+\[
+N_1I_1=N_2I_2=N_3I_3. \tag{2}
+\]
+
+定义匝数折算系数
+
+\[
+a=\frac{N_1}{N_2},\qquad b=\frac{N_1}{N_3}. \tag{3}
+\]
+
+于是
+
+\[
+I_2=aI_1,\qquad I_3=bI_1. \tag{4}
+\]
+
+公共电阻 \(r_1\) 中电流为
+
+\[
+I_a=I_2+I_3=(a+b)I_1. \tag{5}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（二）三个绕组的电压方程}
+
+以下均用同一相位的峰值相量表示。原边满足
+
+\[
+N_1\dot\Phi_1=U_0-I_1r_1'. \tag{6}
+\]
+
+中柱次级回路：
+
+\[
+N_2\dot\Phi_2=r_2I_2+r_1(I_2+I_3). \tag{7}
+\]
+
+右柱次级回路：
+
+\[
+N_3\dot\Phi_3=r_3I_3+r_1(I_2+I_3). \tag{8}
+\]
+
+由式（1）：
+
+\[
+N_1\dot\Phi_1
+=\frac{N_1}{N_2}N_2\dot\Phi_2
++\frac{N_1}{N_3}N_3\dot\Phi_3. \tag{9}
+\]
+
+将式（7）、（8）代入式（9），再用式（4）、（5）：
+
+\[
+\begin{aligned}
+N_1\dot\Phi_1
+={}&a\left[r_2(aI_1)+r_1(a+b)I_1\right]\\
+&+b\left[r_3(bI_1)+r_1(a+b)I_1\right].
+\end{aligned}
+\]
+
+提取 \(I_1\)：
+
+\[
+N_1\dot\Phi_1
+=I_1\left[a^2r_2+b^2r_3+(a+b)^2r_1\right]. \tag{10}
+\]
+
+联立式（6）、（10）：
+
+\[
+U_0-I_1r_1'=I_1\left[a^2r_2+b^2r_3+(a+b)^2r_1\right].
+\]
+
+因此原边电流峰值为
+
+\[
+I_1=\frac{U_0}{r_1'+a^2r_2+b^2r_3+(a+b)^2r_1}. \tag{11}
+\]
+
+记
+
+\[
+D=r_1'+a^2r_2+b^2r_3+(a+b)^2r_1. \tag{12}
+\]
+
+则 \(r_2\) 中的电流峰值为
+
+\[
+I_2=aI_1=\frac{aU_0}{D}. \tag{13}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（三）\(r_2\) 的平均功率}
+
+正弦电流有效值为峰值的 \(1/\sqrt2\)，故
+
+\[
+P_2=\left(\frac{I_2}{\sqrt2}\right)^2r_2.
+\]
+
+代入式（13）：
+
+\[
+\boxed{P_2=\frac12r_2a^2\left(\frac{U_0}{D}\right)^2}. \tag{14}
+\]
+
+写回匝数：
+
+\[
+\boxed{
+P_2=\frac12r_2\left(\frac{N_1}{N_2}\right)^2
+\left[
+\frac{U_0}{
+r_1'+\left(\frac{N_1}{N_2}\right)^2r_2
++\left(\frac{N_1}{N_3}\right)^2r_3
++\left(\frac{N_1}{N_2}+\frac{N_1}{N_3}\right)^2r_1}
+\right]^2}. \tag{15}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（四）匝数比 \(4:2:1\)}
+
+此时
+
+\[
+a=2,\qquad b=4,\qquad a+b=6.
+\]
+
+所以
+
+\[
+D=r_1'+4r_2+16r_3+36r_1. \tag{16}
+\]
+
+且式（14）中的系数为 \((1/2)a^2=2\)，最终
+
+\[
+\boxed{P_2=\frac{2r_2U_0^2}{\left(r_1'+36r_1+4r_2+16r_3\right)^2}}. \tag{17}
+\]
+
+若所有负载趋于无穷大，则 \(I_1,I_2\to0\)，功率趋于零；若
+\(r_2\to0\)，式（17）也给出 \(P_2\to0\)，两个极限均合理。
+
+\needspace{3\baselineskip}
+\textbf{磁通拓扑与折算阻抗的复核}
+
+``日''字形铁芯的三个柱并不是三个互不相关的理想变压器。先选定各柱磁通正方向，由结点处磁通连续性得到
+
+\[
+\Phi_1=\Phi_2+\Phi_3.
+\]
+
+对时间求导并乘相应匝数，才得到各线圈感应电动势之间的关系。若某个次级线圈反接，改变的是电动势与电流的参考方向，公共支路中的和会相应变成差；不能只在最后公式随意改号。
+
+折算到原边时，每个次级电流先按安匝平衡换算：
+
+\[
+I_2=\frac{N_1}{N_2}I_1=aI_1,
+\qquad
+I_3=\frac{N_1}{N_3}I_1=bI_1.
+\]
+
+因此单独流过 \(r_2\)、\(r_3\) 的功率分别为
+\(a^2I_1^2r_2\)、\(b^2I_1^2r_3\)。公共电阻 \(r_1\) 中流过的是
+\(I_2+I_3=(a+b)I_1\)，故其折算电阻必为 \((a+b)^2r_1\)，不是
+\((a^2+b^2)r_1\)。从功率等价
+
+\[
+I_1^2R_{\rm eq}=I_2^2r_2+I_3^2r_3+(I_2+I_3)^2r_1
+\]
+
+也能不依赖电路图直接复原分母 \(D\)。
+
+题给 \(U_0\) 是电压峰值，故原边电流峰值为 \(I_{1m}=U_0/D\)，\(r_2\)
+电流峰值为 \(aU_0/D\)。正弦稳态平均功率应使用有效值：
+
+\[
+P_2=r_2\left(\frac{aU_0}{\sqrt2D}\right)^2,
+\]
+
+这正好给出式（14）中的 \(1/2\)。量纲上，\(r_2U_0^2/D^2\) 为
+\(\Omega\cdot\mathrm{V^2}/\Omega^2=\mathrm W\)。
+
+最后做两个互补极限：\(r_2\to0\)
+时该支路虽有电流但电阻为零，\(P_2\to0\)；\(r_2\to\infty\)
+时电流被抑制，亦有 \(P_2\to0\)。所以在其余参数固定时必存在有限的最佳
+\(r_2\)。这也说明若推导所得功率随 \(r_2\)
+单调增大，分母中的折算项一定有遗漏。
+
+\needspace{3\baselineskip}
+\textbf{原图符号与最大功率的补充}
+
+原扫描中输入串联电阻和右侧公共电阻均标为 \(r_1\)。整理时以 \(r_1'\)
+区分输入电阻；若原题要求两处取同一个值，则式（17）应写成
+
+\[
+P_2=\frac{2r_2U_0^2}{(37r_1+4r_2+16r_3)^2}.
+\]
+
+图8-2分别标出两电阻的位置及次级共同结点，以免仅凭撇号猜连接。设
+\(C=r_1'+b^2r_3+(a+b)^2r_1>0\)，最大功率条件为 \(r_2=C/a^2\)，相应
+\(P_{2,\max}=U_0^2/(8C)\)。源输入平均功率 \(U_0I_1/2\)
+等于全部电阻平均耗散，另给一个总体检查。
+\end{document}

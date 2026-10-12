@@ -1,0 +1,4045 @@
+\documentclass[12pt,a4paper,UTF8]{ctexart}
+\usepackage[a4paper,top=22mm,bottom=22mm,left=22mm,right=22mm,headheight=15pt]{geometry}
+\newcommand{\Needspace}[1]{\par\begingroup\dimen0=#1\relax\dimen2=\pagegoal\advance\dimen2 by-\pagetotal\ifdim\dimen0>\dimen2\newpage\fi\endgroup}
+\newcommand{\needspace}[1]{\par\begingroup\skip0=\lastskip\vskip-\skip0\dimen0=#1\relax\advance\dimen0 by\skip0\vskip\dimen0\penalty-100\vskip-\dimen0\vskip\skip0\penalty9999\endgroup}
+\usepackage{amsmath,amssymb,mathtools,bm}
+\usepackage{graphicx,xcolor,booktabs,longtable,array,enumitem,fancyhdr,caption,float,microtype,setspace}
+\usepackage[hidelinks,unicode]{hyperref}
+\usepackage[most]{tcolorbox}
+\definecolor{ContestBlue}{HTML}{17365D}
+\hypersetup{pdftitle={第073套},pdfauthor={}}
+\setstretch{1.24}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.35em}
+\setlength{\emergencystretch}{2em}
+\setlist{itemsep=0.35em,topsep=0.4em}
+\captionsetup{font=small,labelfont=bf,justification=centering}
+\setcounter{secnumdepth}{0}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small 第073套}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\ctexset{
+  section={format=\Large\bfseries\color{ContestBlue},beforeskip=1.2em,afterskip=0.7em},
+  subsection={format=\large\bfseries\color{ContestBlue},beforeskip=1.0em,afterskip=0.5em},
+  subsubsection={format=\normalsize\bfseries,beforeskip=0.8em,afterskip=0.35em}
+}
+\usepackage{calc}
+\newcounter{none}
+\let\originalsubsection\subsection
+\renewcommand{\subsection}{\needspace{6\baselineskip}\originalsubsection}
+\makeatletter
+\newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\newcommand{\maxwidth}{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\newcommand{\maxheight}{\ifdim\Gin@nat@height>0.72\textheight 0.72\textheight\else\Gin@nat@height\fi}
+\newcommand{\pandocbounded}[1]{\begingroup\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}#1\endgroup}
+\makeatother
+\begin{document}
+\begin{titlepage}
+  \centering
+  \vspace*{58mm}
+  {\Huge\bfseries\color{ContestBlue} 第073套\par}
+  \vfill
+  \vspace*{28mm}
+\end{titlepage}
+\section{第 1 题}\label{ux7b2c-1-ux9898}
+
+两块大接地金属板构成二面角 \(\theta\)。一根长 \(L\)、均匀带电总量 \(Q\)
+的细杆平行于二面角棱线，位于角平分面内，距顶点（棱线）为 \(r\)，且
+\(L\gg r\)。求杆所受静电力，分别讨论 \(\theta=180^\circ\) 与
+\(\theta=18^\circ\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.76\linewidth,height=\textheight,keepaspectratio,alt={图1-1　接地金属二面角内沿棱线方向的长带电杆}]{../figures/question-01.pdf}
+\caption*{图1-1　接地金属二面角内沿棱线方向的长带电杆}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d}
+
+先把长杆的截面看成线电荷，再用镜像满足接地边界。十八度楔角需要十九条像线；径向投影把各项距离中的三角函数约掉，剩下带符号的求和。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  接地平面的像电荷。
+\item
+  无限长线电荷电场。
+\item
+  楔形导体的多重电像。
+\item
+  对称性消去切向分量。
+\item
+  像电荷力只作用于真实电荷。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf}
+
+因 \(L\gg r\)，忽略端部效应，把杆看成线密度 \(\lambda=Q/L\)
+的无限长线电荷。截面问题变成点阵：真实线与若干像线位于同半径圆周上。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3}
+
+先做半平面：真实线与负像线相距
+\(2r\)。窄楔中将截面绕顶点连续反射，\(\pi/10\) 恰好在一周生成 \(20\)
+个等角位置。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.88\linewidth,height=\textheight,keepaspectratio,alt={图1-2　半平面负像线与十八度楔形的二十线像系}]{../figures/solution-01.pdf}
+\caption*{图1-2　半平面负像线与十八度楔形的二十线像系}
+\end{figure}
+
+线电荷密度
+
+\[
+\lambda=\frac QL.
+\tag{1}
+\]
+
+无限长线电荷在距离 \(s\) 处产生
+
+\[
+E=\frac{|\lambda|}{2\pi\varepsilon_0s}.
+\tag{2}
+\]
+
+式（2）可由高斯定律直接得到。以线电荷为轴作半径 \(s\)、长度 \(a\)
+的圆柱形高斯面。电场沿侧面法向且大小处处相等，端面通量为零，所以
+
+\[
+E(2\pi sa)=\frac{\lambda a}{\varepsilon_0}.
+\]
+
+约去 \(a\)，即得
+\(E=\lambda/(2\pi\varepsilon_0s)\)。因此两条平行线电荷间的力是``单位长度力''
+
+\[
+\frac FL=\lambda_{\rm test}E,
+\]
+
+最后才乘实际有效长度 \(L\)；这与点电荷的 \(1/s^2\) 定律不同。
+
+对杆中部而言，无限线场的误差为
+\(O(r^2/L^2)\)；但题目求的是整根杆的合力，靠近两端的贡献还需积分，整体误差一般从
+\(O(r/L)\) 起步。先按 \(L\gg r\)
+求领先结果，有限长度修正放在解析末尾核对。
+
+当 \(\theta=180^\circ\)，两板合成一个接地平面。像线电荷为
+\(-\lambda\)，距真实线 \(2r\)：
+
+\[
+E_{\rm image}
+=\frac{\lambda}{2\pi\varepsilon_0(2r)}
+=\frac{\lambda}{4\pi\varepsilon_0r}.
+\tag{3}
+\]
+
+故真实杆所受吸力
+
+\[
+\boxed{
+F=\lambda L E_{\rm image}
+=\frac{Q^2}{4\pi\varepsilon_0Lr}
+}.
+\tag{4}
+\]
+
+当 \(\theta=18^\circ=\pi/10\)，反射生成 \(2n=20\)
+条等角线，符号交替。把真实线所在径向取为零角，第 \(j\) 条像线位于
+
+\[
+\phi_j=\frac{j\pi}{10},
+\qquad
+j=1,\ldots,19,
+\tag{5}
+\]
+
+符号为 \((-1)^j\lambda\)。每条像线到真实线距离
+
+\[
+s_j=2r\sin\frac{\phi_j}{2}.
+\tag{6}
+\]
+
+图1-2把真实线放在角平分线上，两个导体边界在其左右各偏转
+\(\pi/20\)。编号角 \(\phi_j\)
+从真实线所在径向起算，与题面的楔角不是同一条角标。
+
+这里的``二十条''包含真实线本身：\(j=0\) 是真实线，\(j=1,\ldots,19\)
+才是用于求场的十九条像线。之所以反射到二十个位置后闭合，是因为相邻位置的角间隔为
+\(\pi/10\)，走完 \(20(\pi/10)=2\pi\)
+恰回到原方向。每跨越一次接地边界，像线符号翻转；走完一周翻转二十次又回到正号，符号也闭合。
+
+还可检查边界条件。对任一金属面，圆周点阵关于该面成镜面对称；成对位置到金属面上任一点的距离相等，而线电荷符号相反。因此两项电势
+
+\[
+\varphi_++\varphi_-
+=-\frac{\lambda}{2\pi\varepsilon_0}\ln s
++\frac{\lambda}{2\pi\varepsilon_0}\ln s=0
+\]
+
+逐对抵消，使该面电势为零。像系满足拉普拉斯方程的边界条件后，由唯一性定理可知楔内电势就是所求物理解。
+
+其作用力沿角平分线径向的分量恰为
+
+\[
+\frac{F_{r,j}}L
+=(-1)^j\frac{\lambda^2}{4\pi\varepsilon_0r}.
+\tag{7}
+\]
+
+下面推导式（7）的几何来源。像线与真实线的连线是圆内弦，与真实线处径向方向的夹角为
+\(\pi/2-\phi_j/2\)，故径向投影因子为
+
+\[
+\cos\left(\frac\pi2-\frac{\phi_j}{2}\right)
+=\sin\frac{\phi_j}{2}.
+\]
+
+两条平行线电荷之间单位长度作用力大小为
+
+\[
+\frac{|F_j|}{L}
+=\frac{\lambda^2}{2\pi\varepsilon_0s_j}.
+\]
+
+代入 \(s_j=2r\sin(\phi_j/2)\) 后，
+
+\[
+\begin{aligned}
+\frac{|F_{r,j}|}{L}
+&=\frac{\lambda^2}{2\pi\varepsilon_0
+\,[2r\sin(\phi_j/2)]}
+\sin\frac{\phi_j}{2}\\
+&=\frac{\lambda^2}{4\pi\varepsilon_0r}.
+\end{aligned}
+\]
+
+角度依赖完全约去；像线的正负只决定这一径向分量指向顶点还是背离顶点。
+
+关于角平分线成对的像线使切向分量抵消。径向符号和
+
+\[
+\sum_{j=1}^{19}(-1)^j=-1.
+\tag{8}
+\]
+
+可以把求和写得更直观。\(j=1\) 到 \(19\)
+中有十个奇数和九个偶数；奇数像线带负电，给出指向顶点的径向分量，偶数像线带正电，给出背离顶点的径向分量。若规定背离顶点为径向正方向，则
+
+\[
+\sum_{j=1}^{19}(-1)^j
+=9-10=-1.
+\]
+
+切向方向则把 \(j\) 与 \(20-j\)
+配对：两条像线电荷符号相同、距真实线相等，切向投影大小相等而方向相反。因此十九项中除
+\(j=10\) 位于反径向方向外，其余十八项两两消去切向分量；\(j=10\)
+本身也没有切向分量。
+
+所以合力仍指向顶点，大小
+
+\[
+\boxed{
+F=\frac{Q^2}{4\pi\varepsilon_0Lr}
+}.
+\tag{9}
+\]
+
+两问大小相同是有限像系交替符号求和的结果，并非一般楔角都如此简单。
+
+力方向应写清楚。若
+\(Q>0\)，负像线多出一个有效径向分量，真实杆受力沿角平分面指向楔顶；若
+\(Q<0\)，全部像线符号同时翻转，但真实电荷本身也翻转，最终力仍与 \(Q^2\)
+成正比并指向楔顶。因此答案与 \(Q\) 的正负无关。
+
+半平面结果还可以由每单位长度相互作用能检查系数。两平行线电荷的电势差含
+\(\ln s\)，对距离求导产生 \(1/s\)；接地导体的电像能量要乘
+\(1/2\)，但再对真实线到平面的距离 \(r\) 求导时像线间距是
+\(2r\)，两者共同给出与直接计算像场相同的 \(1/(4\pi\varepsilon_0r)\)
+系数。直接求力时则不额外乘 \(1/2\)。
+
+最后检查量纲：
+
+\[
+\left[\frac{Q^2}{\varepsilon_0Lr}\right]
+=\frac{\mathrm C^2}
+{\mathrm{C^2\,N^{-1}m^{-2}}\cdot\mathrm m^2}
+=\mathrm N.
+\]
+
+\(L\gg r\) 的作用是保证杆中部可按无限线电荷处理。若 \(L\) 与 \(r\)
+同量级，靠近两端的电场不再具有平移对称性，答案会依赖 \(L/r\)
+的具体函数。
+
+\needspace{3\baselineskip}
+\textbf{有限长度的总力核验}
+
+令 \(k_e=1/(4\pi\varepsilon_0)\)。两条长度均为 \(L\)、端点齐平、间距为
+\(s\) 的平行均匀线段，其横向作用力大小为
+
+\[F_s=k_e\lambda^2\int_0^L\!\int_0^L
+\frac{s\,dz\,dz'}{[s^2+(z-z')^2]^{3/2}}.\]
+
+按 \(u=|z-z'|\) 分组，
+
+\[\begin{aligned}F_s&=2k_e\lambda^2\int_0^L
+\frac{(L-u)s\,du}{(s^2+u^2)^{3/2}}\\
+&=2k_e\lambda^2\left(\frac{\sqrt{L^2+s^2}}s-1\right).
+\end{aligned}\]
+
+乘弦的径向投影 \(s/(2r)\)，第 \(j\) 条像段给出
+
+\[F_{r,j}=(-1)^j\frac{k_e\lambda^2}{r}
+\left(\sqrt{L^2+s_j^2}-s_j\right).\]
+
+半平面只有间距 \(2r\) 的一条负像段，故吸力为
+
+\[F_{\pi}=\frac{k_eQ^2}{Lr}
+\left[\sqrt{1+\frac{4r^2}{L^2}}-\frac{2r}{L}\right].\]
+
+十八度楔形则求十九项之和。它们的领先项仍为
+\(-k_eQ^2/(Lr)\)，有限项含各个
+\(s_j\)，通常不再与半平面完全相同。这给出整体相对误差
+\(O(r/L)\)，也说明两问相同的结论是在长杆近似内成立。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf}
+
+圆周上任一像线对真实线的径向力分量与角距无关；角距只改变总力方向分解中的切向部分。于是十九项求和退化为符号计数。
+
+像电荷法的逻辑顺序是``先用虚拟源满足边界条件，再只计算虚拟源对真实电荷的场''。像线之间的力不是物理导体对带电杆的额外作用；真实线自身的发散自场也不能计入合力。
+
+对于 \(\theta=\pi/n\) 且真实线位于角平分面，连续镜像在转满 \(2\pi\)
+后闭合，像系有限。\(n=10\) 时共有 \(2n=20\)
+个等角位置，其中一个是真实线，其余十九个是像线。符号必须在每次跨越接地面反射时翻转，这正是导体面上电势相消的保证。
+
+两种角度得到相同大小并不意味着导体形状不影响静电力。这里依赖真实线在角平分面、像系等角闭合以及交替符号和为
+\(-1\)；不要求 \(n\)
+为偶数。真实线偏离角平分面后，像系的角间距改变，切向分量不再抵消，会出现把杆拉向较近导体面的横向分量。
+
+另一个有用的检查是取最近的一对负像线。它们都吸引真实线，径向分量均指向顶点；较远的正像线给出反向分量。十九项交替后负号比正号多一项，合力理应仍指向顶点。若求和得到背离顶点，应优先检查像电荷起始符号或径向正方向。
+
+结果中的 \(1/L\) 不是``杆越长越容易受力''，而是题目固定总电荷 \(Q\)。当
+\(L\) 增大时线密度按 \(1/L\) 减小，单位长度力按 \(1/L^2\)
+减小，再乘长度后留下 \(1/L\)。若另题固定的是线密度 \(\lambda\)，总力则与
+\(L\) 成正比。
+
+可以把符号计数推广到
+\(\theta=\pi/n\)。角平分面上的真实线经镜像后在圆周上形成 \(2n\)
+个位置，像线编号为 \(1\) 到 \(2n-1\)。由于
+
+\[
+\sum_{j=1}^{2n-1}(-1)^j=-1,
+\]
+
+且每项径向分量的大小仍为
+\(\lambda^2/(4\pi\varepsilon_0r)\)，所以这一对称构型的合力大小对所有整数
+\(n\) 都与半平面相同。真正特殊的不是 \(n=10\) 本身，而是``楔角为
+\(\pi/n\)、电荷在线性对称面上、有限像系闭合''这组三个条件同时成立。
+
+若楔角不是
+\(\pi/n\)，连续反射一般不会在有限步后闭合，不能照搬有限项交替和。若真实线不在角平分面，即使楔角仍为
+\(\pi/n\)，像线仍与真实线共圆，径向项仍可同法求和，但切向项不再抵消，须另行计算；不能把径向求和直接当成总力。课堂上应把这两个失效条件分别说清，而不是笼统地说``其他情况不能用像电荷法''。
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  把长杆当点电荷，得到 \(r^{-2}\)。
+\item
+  像线距离写成 \(r\) 而非 \(2r\)。
+\item
+  计算真实杆与所有像电荷的能量后再忘记电像能量的 \(1/2\)。
+\item
+  窄楔中把所有像线取同号。
+\item
+  将像线之间的相互作用计入真实杆受力。
+\item
+  把截面圆上 \(20\)
+  个位置全部当作像线，忘记其中一个位置是真实电荷，实际只应求其余 \(19\)
+  项的场。
+\item
+  投影力时使用
+  \(\cos(\phi_j/2)\)，未画出弦与径向的互余角，因而不能约去距离中的正弦因子。
+\item
+  用点电荷库仑力乘杆长。无限线电荷场已包含沿杆方向的积分，单位长度力再乘
+  \(L\) 即可。
+\item
+  看到 \(L\gg r\) 就令 \(L\to\infty\) 后仍保留固定总电荷 \(Q\)。应先用
+  \(\lambda=Q/L\)，最终力随 \(1/L\) 变化。
+\item
+  验证导体面电势时只检查最近一个像线。楔形有两块边界，必须由完整闭合像系同时保证两面电势为零。
+\item
+  把像电荷的受力也拿来与真实电荷力作第三定律配对。像电荷只是边界条件的数学构造，不是可参与整体动量平衡的真实物体。
+\end{enumerate}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae}
+
+先在截面画半平面像线，再反复镜像生成 20
+个位置。让学生单独计算一个像线力的径向分量，观察三角函数完全约掉。
+
+板书时先保持一般角距 \(\phi\)：写出弦长
+\(2r\sin(\phi/2)\)、线电荷力和径向投影三行；确认角度消去后再代入离散像系。这样学生会理解``每项等大''来自几何，而非凭对称性猜测。
+
+随后把圆周像点按 \(+,-,+,-\) 标号，从 \(j=1\) 数到
+\(19\)。先由关于角平分线的成对点说明切向分量相消，再单独处理径向符号和。最后用
+\(\theta=\pi\) 的单像结果作系数检验。
+
+为高一入门学生讲解时，可把每条长线电荷的截面先画成点，明确``截面中的点并不是点电荷''。然后用圆柱高斯面重新得到
+\(E\propto1/s\)。只有这一层模型转换建立后，后续弦长和投影的
+\(\sin(\phi/2)\) 才不会与点电荷公式混淆。
+
+讲完总和后，让学生独立完成三项自检：力的方向是否朝导体、量纲是否为牛顿、固定
+\(Q\) 时 \(L\) 加倍结果是否减半。三项都能从物理直觉发现常见代数错误。
+
+若学生对十九个像线无从下手，可先只画 \(j=1,2,18,19\)
+四个位置。让他们分别判断电荷符号、切向分量配对关系和径向方向，再把结论推广到其余编号。最后单独标出
+\(j=10\)
+的反径向像线。这样求和顺序固定为``先成对消切向，再数奇偶求径向''，不需要在十九个矢量上逐项做三角运算。
+
+还应强调唯一性定理在像电荷法中的作用：画出一个看似对称的像系只是猜测；验证两块金属面电势均为零、区域内除真实线外无额外奇点后，才有理由断言这个构造等价于真实导体感应电荷。把这一逻辑讲清，可避免学生以后把像电荷法当作只凭图形对称任意摆放虚电荷的技巧。
+
+\Needspace{22\baselineskip}
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3}
+
+推广到 \(\theta=\pi/n\)
+且真实线在角平分线上；若真实线偏离角平分线，说明切向力为何不再为零。
+
+当总电荷固定而杆长加倍时，\(\lambda\) 减半，单位长度力按 \(\lambda^2\)
+降为四分之一，再乘总长后合力降为二分之一。可用这一缩放关系检验最终答案中的
+\(1/L\)。
+
+\Needspace{12\baselineskip}
+
+若杆与棱线不平行，问题失去沿棱线方向的平移对称性，不能再用二维点像阵列；即便局部距离相同，杆不同部分到导体面的距离也不同，需回到三维电势积分。
+
+用有限线段场检查杆中部，再用两段之间的双重积分检查总力。两种误差阶次不同，不能把中点场的二次修正直接当作整杆合力的误差。
+
+\newpage
+
+\section{第 2 题}\label{ux7b2c-2-ux9898}
+
+若干等长轻质刚杆铰接成图示可变形支架，左端固定，右端由支撑脚支起；顶点和左侧指定位置分别受竖直负载
+\(G,P\)。图示中央下横杆的轴力记为 \(N\)。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  支撑脚与地面无摩擦，求 \(N\)。
+\item
+  支撑脚与地面摩擦因数 \(\mu\le1\)，求 \(N\) 的允许范围。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.695\linewidth,height=\textheight,keepaspectratio,alt={图2-1　铰接杆支架、两处负载与中央横杆}]{../figures/question-02.pdf}
+\caption*{图2-1　铰接杆支架、两处负载与中央横杆}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-1}
+
+假想切开中央横杆，使它伸长一点，其余杆保持原长。由相容位移得到两个负载的下降量，再写虚功；拉力在伸长位移上做负功，这是本题拉压判断的关键。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-1}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  理想铰接轻杆。
+\item
+  几何约束微分。
+\item
+  虚功原理。
+\item
+  库仑静摩擦区间。
+\item
+  杆力正负号与拉压。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-1}
+
+令中央横杆长度产生虚增量 \(\delta x\)。机构几何迫使顶点 \(G\) 和负载
+\(P\) 的高度均下降 \(\delta x/2\)；右支脚水平位移与 \(\delta x\) 相同。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-1}
+
+只求四个虚位移比：中央杆、顶点 \(G\)、负载
+\(P\)、右支脚。杆内其余理想约束力虚功为零。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-1}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.796\linewidth,height=\textheight,keepaspectratio,alt={图2-2　机构虚位移、负载高度变化与支脚摩擦}]{../figures/solution-02.pdf}
+\caption*{图2-2　机构虚位移、负载高度变化与支脚摩擦}
+\end{figure}
+
+先推导图 2-2 所用的虚位移比。令中央下横杆长度由平衡值 \(l\) 变为
+
+\[
+x=l+\delta x.
+\]
+
+取中央交叉格的一条定长斜杆。由余弦定理可写成
+
+\[
+(\sqrt2l)^2=l^2+x^2-2lx\cos\theta.
+\tag{1}
+\]
+
+平衡位置 \(x=l,\theta=\pi/2\)。对上式微分：
+
+\[
+0=2x\,\delta x
+-2l\cos\theta\,\delta x
++2lx\sin\theta\,\delta\theta.
+\tag{2}
+\]
+
+代入平衡值：
+
+\[
+0=2l\,\delta x+2l^2\delta\theta,
+\qquad
+\delta\theta=-\frac{\delta x}{l}.
+\tag{3}
+\]
+
+再令中央上横向几何量为 \(y\)、相邻菱形夹角为
+\(\phi\)。另一条定长斜杆给出
+
+\[
+(\sqrt2l)^2=l^2+y^2-2ly\cos(\pi-\theta).
+\tag{4}
+\]
+
+对式（4）微分：
+
+\[
+\begin{aligned}
+0={}&2y\,\delta y
+-2l\cos(\pi-\theta)\,\delta y\\
+&-2ly\sin(\pi-\theta)\,\delta\theta.
+\end{aligned}
+\]
+
+在平衡位置 \(y=l,\theta=\pi/2\)，上式化为
+
+\[
+0=2l\,\delta y-2l^2\delta\theta,
+\]
+
+所以
+
+\[
+\delta y=l\delta\theta=-\delta x.
+\]
+
+中央菱形的宽度还可由其两条边写成
+
+\[
+y=2\cdot\frac{\sqrt2}{2}l\sin\frac\phi2
+=\sqrt2l\sin\frac\phi2.
+\]
+
+对此式微分并代入 \(\phi=\pi/2\)：
+
+\[
+\delta y
+=\frac{\sqrt2l}{2}\cos\frac\phi2\,\delta\phi
+=\frac l2\delta\phi.
+\]
+
+因此
+
+\[
+\delta y=-\delta x,
+\qquad
+\delta\phi=-\frac{2\delta x}{l}.
+\tag{5}
+\]
+
+这一步同时给出两个方向判断：\(\delta x>0\) 时
+\(\delta y<0\)，中央上部收窄；\(\delta\phi<0\)，菱形夹角也减小。若图上画出的虚变形与这两个符号不一致，就应在进入虚功前修正几何关系。
+
+负号说明中央横杆伸长时支架整体变矮。负载 \(P\) 所在铰点的高度变化为
+
+\[
+\begin{aligned}
+\delta h_P
+&=\frac{\sqrt2}{2}l
+\left[
+\sin\left(\frac\pi4+\delta\theta\right)
+-\sin\frac\pi4
+\right]\\
+&\simeq\frac{\sqrt2}{2}l
+\cos\frac\pi4\,\delta\theta\\
+&=-\frac12\delta x.
+\end{aligned}
+\tag{6}
+\]
+
+顶点高度由外侧杆组和中央菱形两部分组成。分别作一阶展开：
+
+\[
+\begin{aligned}
+\delta h_G
+&=\sqrt2l\cos\frac\pi4\,\delta\theta
+-\frac{\sqrt2}{4}l\sin\frac\pi4\,\delta\phi\\
+&=l\delta\theta-\frac l4\delta\phi\\
+&=-\delta x+\frac12\delta x\\
+&=-\frac12\delta x.
+\end{aligned}
+\tag{7}
+\]
+
+因此
+
+\[
+\delta h_G=-\frac12\delta x,
+\qquad
+\delta h_P=-\frac12\delta x,
+\tag{8}
+\]
+
+右支脚水平虚位移
+
+\[
+\delta x_f=\delta x.
+\tag{9}
+\]
+
+三个虚位移比都只依赖同一个自由参数 \(\delta x\)：
+
+\[
+\frac{\delta h_G}{\delta x}=-\frac12,
+\qquad
+\frac{\delta h_P}{\delta x}=-\frac12,
+\qquad
+\frac{\delta x_f}{\delta x}=1.
+\]
+
+这说明机构在当前构型附近只有一个自由度。若计算中还残留彼此独立的
+\(\delta\theta\) 或
+\(\delta\phi\)，说明几何约束尚未消元完毕，不能直接写最终虚功式。
+
+规定 \(N>0\)
+表示中央杆受拉。假想切开该杆后，拉力作用在左节点上向右、右节点上向左；两节点分离
+\(\delta x>0\) 时，轴力所做总虚功是
+\(-N\delta x\)。图2-2红箭头画的是这对作用于剩余支架的力。
+
+其余未切开的杆保持原长，轴力虚功逐杆相消；左支点不动，右支点只作水平虚位移，竖直支反力也不做功。
+
+\needspace{3\baselineskip}
+\textbf{（一）无摩擦时的中央杆力}
+
+用前面得到的位移比，外力虚功为
+
+\[-N\delta x-G\delta h_G-P\delta h_P=0.\]
+
+代入 \(\delta h_G=\delta h_P=-\delta x/2\)，约去任意非零 \(\delta x\)，
+
+\[-N+\frac G2+\frac P2=0,\]
+
+因此
+
+\[\boxed{N=\frac{G+P}{2}\quad\text{（拉力）}}.\]
+
+中央杆伸长会使负载下降，重力做正功；必须由阻止伸长的拉力做负功来平衡。把目标杆虚功写成
+\(+N\delta x\) 却又规定正号为拉力，会把拉压意义颠倒。
+
+\needspace{3\baselineskip}
+\textbf{（二）右支脚有静摩擦时}
+
+设右支脚对支架的水平摩擦力为
+\(f\)，向右为正。整体对左支点取矩，图示水平力臂分别为 \(3a,a,6a\)，故
+
+\[R(6a)=G(3a)+P(a),\qquad R=\frac G2+\frac P6.\]
+
+接触点在地面上，水平摩擦对此地面支点的力矩为零。静摩擦只限定
+
+\[-\mu R\le f\le\mu R,\]
+
+不能在未判断临界滑动时直接令 \(f=\mu R\)。
+
+由 \(\delta x_f=\delta x\)，虚功式成为
+
+\[-N\delta x-G\delta h_G-P\delta h_P+f\delta x=0,\]
+
+即
+
+\[\boxed{N=\frac{G+P}{2}+f}.\]
+
+所以允许轴力范围为
+
+\[\begin{aligned}
+\left(\frac12-\frac\mu2\right)G
++\left(\frac12-\frac\mu6\right)P
+\le N\\
+\le\left(\frac12+\frac\mu2\right)G
++\left(\frac12+\frac\mu6\right)P.
+\end{aligned}\]
+
+因
+\(0\le\mu\le1\)、\(G,P\ge0\)，下界非负，整段都是拉力或零轴力。无摩擦时两端收拢到
+\((G+P)/2\)；若 \(\mu=1\)，下界为
+\(P/3\)。静摩擦向左时可减轻中央杆拉力，向右时则加重它。
+
+\needspace{3\baselineskip}
+\textbf{用节点平衡独立检查拉压}
+
+可在图2-1设底部节点沿地面排列为
+
+\[ (0,0),\ (a,0),\ (2a,0),\ (4a,0),\ (5a,0),\ (6a,0). \]
+
+上部节点为
+
+\[ (a,a),\ (2a,2a),\ (3a,3a),\ (4a,2a),\ (5a,a). \]
+
+交叉斜杆的交点不是铰接节点。
+
+先用整体平衡得到左、右竖直反力。随后每个节点都按``未知杆力离开节点为正''列水平、竖直分量；无摩擦的十九杆节点解中，中央
+\((2a,0)\)---\((4a,0)\) 杆的结果为
+\(+(G+P)/2\)，与虚功一致。这个正号是拉力，不能根据原图上一根孤立的 \(N\)
+箭头把它解释成压力。
+
+\needspace{3\baselineskip}
+\textbf{从杆长约束独立求三个位移比}
+
+上述角变量也可改用节点坐标微分。令图中节点的虚位移为
+\((u_i,w_i)\)，每条连接 \(i,j\) 的未切开刚杆满足
+
+\[(x_j-x_i)(u_j-u_i)+(y_j-y_i)(w_j-w_i)=0.\]
+
+把中央杆的虚伸长单位化为
+\(u_{(4a,0)}-u_{(2a,0)}=1\)，再令左支点两分量为零、右支点竖直分量为零。逐杆消元得到负载和支点的位移：
+
+\[\delta\boldsymbol r_P=(1/2,-1/2),\qquad
+\delta\boldsymbol r_G=(1/2,-1/2),\qquad
+\delta\boldsymbol r_{\rm right}=(1,0).\]
+
+例如左外侧45°斜杆约束给
+\(u_P+w_P=0\)；左下两段横杆使两个左内底点的水平虚位移均为零。上左内节点由与下节点相连的竖杆、斜杆约束得到
+\((1,-1)\)；跨中央的两根斜杆再确定右内底节点为 \((1,-1)\)、右上内节点为
+\((0,-1)\)。顶点与这两个上内节点相连，因而顶点的两分量都是它们的相应平均约束，得到
+\((1/2,-1/2)\)。
+
+在任意 \(\delta x\) 下把以上结果乘回
+\(\delta x\)，便恢复式（8）、（9）。这个坐标方法不用把图上的交叉点误当节点，也能检查角度微分的符号。左、右底部中间节点可以有竖直虚位移，只有真实支点受地面约束。
+
+再从平衡方程看，设某杆方向单位矢量为 \(\boldsymbol t_{ij}\)，拉力
+\(T_{ij}>0\) 时它在节点 \(i\) 上的力为
+\(T_{ij}\boldsymbol t_{ij}\)。对每个节点列
+
+\[\sum_jT_{ij}\boldsymbol t_{ij}+\boldsymbol F_i=0.\]
+
+将这一组方程与相容位移点乘并相加，未切杆的力项逐根为零，中央杆项恰为
+\(-N\delta x\)，这也从节点法推出了虚功式的负号。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf-1}
+
+未切开的刚杆没有伸长虚位移，其内力不进入总虚功；目标杆被切开后允许伸长，拉力的虚功为负。位移方向、作用于哪一部分的力以及拉压定义必须一起检查。
+
+摩擦使右支脚成为多一个未知水平反力的支点。缺少弹性变形和装配条件时，刚体平衡只能给允许区间，不会唯一选出其中某个值。这个区间是静力平衡的容许范围。
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9-1}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  正号定义为拉力，却把切杆力的虚功写成 \(+N\delta x\)。
+\item
+  在交叉斜杆的相交点添加原题没有的铰链。
+\item
+  默认静摩擦已达到 \(\mu R\)。
+\item
+  把 \(P\) 的水平力臂误读成半跨，漏掉右反力中的 \(P/6\)。
+\item
+  只改变虚位移的正方向，没有同时改变所有虚功项。
+\item
+  没有检查轴力区间是否过零，就统一解释为拉力或压力。
+\end{enumerate}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae-1}
+
+先在中央杆两端画向内的拉力，再让两个切口向外分离，直接判断虚功符号。随后用三个位移比列一行方程，最后用节点法检查
+\((G+P)/2\) 的正号。
+
+摩擦部分先对整架取矩求 \(R\)，把 \(f\) 画成区间，再用斜率为 \(1\) 的关系
+\(N=(G+P)/2+f\)
+映射。课堂应区分``平衡允许范围''和``给定弹性、装配条件后的实际轴力''。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3-1}
+
+把负载 \(P\)
+移到相邻铰点，重新计算虚位移系数；若左右支脚均有摩擦，讨论杆力区间是否仍唯一有界。
+
+若中央杆改为可伸长弹簧，刚度为 \(k_s\)、原长为 \(l\)，则还要满足
+\(N=k_s\Delta x\)。虚功给出的平衡关系与材料关系联立后，静不定轴力才变成确定值。
+
+若把 \(P\) 移到总跨距的 \(\alpha\) 处，右支脚法向力中的贡献变成
+\(\alpha P\)；但 \(P\)
+点的竖直虚位移系数还需由机构几何重新求出，不能只替换力矩分配系数。
+
+另一个变式是给右支脚施加已知水平力 \(H\)
+而取消摩擦，此时只需在虚功式中令 \(f=H\)，立即得到
+\(N=(G+P)/2+H\)。这个变式可检验学生是否理解式（16）是一般化的力---位移共轭关系，而不只是为摩擦题临时拼出的公式。
+
+\newpage
+
+\section{第 3 题}\label{ux7b2c-3-ux9898}
+
+厚度为 \(l\) 的均匀长板放在两根轴距 \(2l\)
+的高速反向滚筒上。两滚筒正上方各有固定柱，平衡时与板上表面虚接触。板与滚筒、固定柱间摩擦因数均为
+\(\mu=1/2\)。初始板质心在两滚筒中点，以速度 \(v_0\) 向右。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  板质心到右滚筒正上方 \(x=l\) 时恰静止，求 \(v_0\)。
+\item
+  求板第一次回到中点的速度 \(u_1\)。
+\item
+  求充分久后板从左向右回到中点的速度 \(u_2\)。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.84\linewidth,height=\textheight,keepaspectratio,alt={图3-1　反向滚筒、上方固定柱与横向运动长板}]{../figures/question-03.pdf}
+\caption*{图3-1　反向滚筒、上方固定柱与横向运动长板}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-2}
+
+先检查各接触力是否非负。左滚筒支持力在 \(x=3l/4\)
+降到零，随后改由左上柱和右滚筒夹住板；板反向时上柱摩擦也换向，因此去程与回程要分开算。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-2}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  法向力与力矩平衡。
+\item
+  高速滚筒给定摩擦方向。
+\item
+  分段线性微分方程。
+\item
+  简谐振子能量。
+\item
+  接触滞回耗散与渐近振幅。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-2}
+
+板向右偏时右滚筒支持力变大、左滚筒变小，反向摩擦合力把板拉回中心。偏移超过
+\(3l/4\) 后左侧上柱参与接触，运动方程切换。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-2}
+
+分别在两个接触区间列竖直力、绕质心力矩和水平摩擦合力。用各区间的等效振子能量连接边界
+\(x=3l/4\)。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-2}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.864\linewidth,height=\textheight,keepaspectratio,alt={图3-2　中央简谐区、柱接触区与速度能量连接}]{../figures/solution-03.pdf}
+\caption*{图3-2　中央简谐区、柱接触区与速度能量连接}
+\end{figure}
+
+中央区 \(|x|\le3l/4\)，两滚筒支持力
+
+\[
+N_1=\frac12mg\left(1-\frac{4x}{3l}\right),
+\qquad
+N_2=\frac12mg\left(1+\frac{4x}{3l}\right).
+\tag{1}
+\]
+
+下面推导法向力的来由。竖直方向无加速度：
+
+\[
+N_1+N_2=mg.
+\tag{2}
+\]
+
+左滚筒高速转动使板受向右摩擦 \(\mu N_1\)，右滚筒使板受向左摩擦
+\(\mu N_2\)。板在滚筒与上柱约束下保持水平，对质心取矩：
+
+\[
+N_1(l+x)+\mu N_2\frac l2
+=N_2(l-x)+\mu N_1\frac l2.
+\tag{3}
+\]
+
+整理为
+
+\[
+\left(1-\frac\mu2\right)l(N_2-N_1)=mgx.
+\tag{4}
+\]
+
+代入 \(\mu=1/2\)，得
+
+\[
+N_2-N_1=\frac{4mgx}{3l}.
+\tag{5}
+\]
+
+与式（2）联立便得到式（1）。当 \(x=3l/4\) 时
+\(N_1=0\)；再向右移动，左滚筒若仍接触就需要``负支持力''，物理上不可能，所以接触集合必须切换：左滚筒脱离、左上固定柱开始压住板。
+
+水平合力
+
+\[
+m\ddot x=\mu N_1-\mu N_2
+=-\frac{2mg}{3l}x,
+\tag{6}
+\]
+
+故
+
+\[
+\ddot x+\omega_0^2x=0,
+\qquad
+\omega_0^2=\frac{2g}{3l}.
+\tag{7}
+\]
+
+向右进入柱接触区 \(3l/4<x\le l\) 时，左上柱向下作用
+\(N_1\)，右滚筒向上作用 \(N_2\)。竖直平衡为
+
+\[
+N_2-N_1=mg.
+\tag{8}
+\]
+
+按图 3-1 的作用点对质心取矩，并保持当前滑动摩擦方向，可解得
+
+\[
+N_1=mg\left(\frac{x}{2l}-\frac38\right),
+\qquad
+N_2=mg\left(\frac{x}{2l}+\frac58\right).
+\tag{9}
+\]
+
+分别列出这组方程。板向右时，左上固定柱和右下滚筒对板的滑动摩擦均向左。对质心取矩，法向力矩和摩擦力矩满足
+
+\[
+\mu N_2\frac l2
+=N_2(l-x)+\mu N_1\frac l2+N_1(l+x).
+\]
+
+将 \(N_2-N_1=mg\) 代入并解二元一次方程，便得到式（9）。
+
+具体消元如下。取 \(\mu=1/2\)，力矩方程成为
+
+\[
+(N_2-N_1)\frac l4
+=N_2(l-x)+N_1(l+x).
+\]
+
+由竖直平衡 \(N_2=N_1+mg\)，代入上式：
+
+\[
+\begin{aligned}
+mg\frac l4
+&=(N_1+mg)(l-x)+N_1(l+x)\\
+&=2lN_1+mg(l-x).
+\end{aligned}
+\]
+
+因此
+
+\[
+2lN_1=mg\left(x-\frac{3l}{4}\right),
+\]
+
+即
+
+\[
+N_1=mg\left(\frac{x}{2l}-\frac38\right),
+\qquad
+N_2=N_1+mg
+=mg\left(\frac{x}{2l}+\frac58\right).
+\]
+
+这不仅复现式（9），还验证了 \(x=3l/4\) 时新接触力 \(N_1\) 从零连续出现。
+
+两个接触面的水平摩擦力同向，故
+
+\[
+\begin{aligned}
+m\ddot x
+&=-\mu(N_1+N_2)\\
+&=-\frac12mg\left(\frac xl+\frac14\right)\\
+&=-\frac{mg}{2l}\left(x+\frac l4\right).
+\end{aligned}
+\]
+
+整理得到向右运动支路
+
+\[
+\ddot x+\omega_1^2\left(x+\frac l4\right)=0,
+\qquad
+\omega_1^2=\frac g{2l}.
+\tag{10}
+\]
+
+这是以 \(x=-l/4\)
+为形式平衡点的简谐方程；该平衡点不在当前接触区内，但仍可用来写这一支路的等效能量。
+
+设越过 \(x=3l/4\) 时向右速度为 \(v_1\)。中央区能量给出
+
+\[
+v_0^2=v_1^2+\omega_0^2\left(\frac{3l}{4}\right)^2
+=v_1^2+\frac38gl.
+\tag{11}
+\]
+
+式（11）来自中央简谐方程的单位质量能量
+
+\[
+\frac12\dot x^2+\frac12\omega_0^2x^2=\text{常量}.
+\]
+
+在 \(x=0\) 时速度为 \(v_0\)，在 \(x=3l/4\) 时速度为 \(v_1\)，所以
+
+\[
+\frac12v_0^2
+=\frac12v_1^2
++\frac12\omega_0^2\left(\frac{3l}{4}\right)^2.
+\]
+
+两边乘 \(2\)
+就是式（11）。这里所谓``能量''是由线性回复力积分得到的等效能量；滚筒与板之间虽有滑动摩擦，但在中央区合力恰为单值位置函数，仍可用该积分处理质心运动。
+
+柱接触区以 \(x=-l/4\) 为平衡点；从 \(3l/4\) 到 \(l\) 并在 \(l\) 停止：
+
+\[
+v_1^2+\omega_1^2l^2
+=\omega_1^2\left(\frac{5l}{4}\right)^2.
+\tag{12}
+\]
+
+所以
+
+\[
+v_1^2=\frac{9}{32}gl.
+\tag{13}
+\]
+
+代数展开为
+
+\[
+\begin{aligned}
+v_1^2
+&=\omega_1^2
+\left[\left(\frac{5l}{4}\right)^2-l^2\right]\\
+&=\frac g{2l}\left(\frac{25}{16}-1\right)l^2\\
+&=\frac g{2l}\cdot\frac9{16}l^2\\
+&=\frac9{32}gl.
+\end{aligned}
+\]
+
+代入式（11）：
+
+\[
+\boxed{
+v_0=\sqrt{\frac{21}{32}gl}
+}.
+\tag{14}
+\]
+
+其中
+
+\[
+v_0^2
+=\frac9{32}gl+\frac38gl
+=\frac9{32}gl+\frac{12}{32}gl
+=\frac{21}{32}gl.
+\]
+
+这补全了第一问中两个接触区间的速度衔接：初态动能的一部分用于克服中央区回复力，剩余的边界动能再用于进入外区直至
+\(x=l\) 停下。
+
+板在 \(x=l\)
+停下后开始向左，滑动摩擦方向随板相对固定柱的运动方向改变，因此不能沿用向右支路的等效势能。此时竖直平衡仍给
+\(N_2-N_1=mg\)，而水平合力为
+
+\[
+m\ddot x=-\mu(N_2-N_1)=-\frac12mg.
+\tag{15}
+\]
+
+这里左上柱摩擦改为向右，而右滚筒因自身高速转动仍使板受向左摩擦，所以两项相减；正是这一符号变化，使返回段的加速度成为常量，而不是式（10）的线性函数。
+
+从 \(x=l\) 由静止向左运动到 \(x=3l/4\)，用匀加速关系
+
+\[
+v_2^2=2\left(\frac g2\right)\left(l-\frac{3l}{4}\right)
+=\frac14gl.
+\tag{16}
+\]
+
+故返回中央区的速度大小为
+
+\[
+v_2=\frac12\sqrt{gl}.
+\tag{17}
+\]
+
+再由中央区从 \(3l/4\) 到 \(0\)：
+
+\[
+u_1^2=v_2^2+\omega_0^2\left(\frac{3l}{4}\right)^2
+=\frac14gl+\frac38gl.
+\tag{18}
+\]
+
+从外侧回到中央区时，中央回复力指向
+\(x=0\)，因此板继续加速。把两项统一成三十二分之一：
+
+\[
+u_1^2
+=\frac8{32}gl+\frac{12}{32}gl
+=\frac{20}{32}gl
+=\frac58gl.
+\]
+
+故第一次回中点的速度大小
+
+\[
+\boxed{
+u_1=\sqrt{\frac58gl}
+}.
+\tag{19}
+\]
+
+每次进入 \(|x|>3l/4\)
+的柱接触区都会因滑动摩擦耗散。外区越界幅度逐次减小，极限振幅趋于
+\(3l/4\)；下文的递推式说明它是在无限往返后的极限。所以中点最大速度
+
+\[
+\boxed{
+u_2=\omega_0\frac{3l}{4}
+=\sqrt{\frac38gl}
+}.
+\tag{20}
+\]
+
+最后一步同样可从中央简谐能量写出：极限轨道在 \(x=\pm3l/4\)
+处速度为零，在 \(x=0\) 处速度为 \(u_2\)，故
+
+\[
+\frac12u_2^2
+=\frac12\omega_0^2\left(\frac{3l}{4}\right)^2,
+\]
+
+从而
+
+\[
+u_2^2
+=\frac{2g}{3l}\cdot\frac{9l^2}{16}
+=\frac38gl.
+\]
+
+三个速度满足
+
+\[
+u_1^2=\frac58gl>\frac38gl=u_2^2.
+\]
+
+第一次回中点仍具有足够能量再次进入另一侧柱接触区；以后每次外区往返都因摩擦支路不同而损失机械能，使振幅渐近趋于
+\(3l/4\)。
+
+三个结果还可作量纲和次序检查：
+
+\[
+v_0^2=\frac{21}{32}gl,
+\qquad
+u_1^2=\frac{20}{32}gl,
+\qquad
+u_2^2=\frac{12}{32}gl.
+\]
+
+它们满足 \(v_0>u_1>u_2\)。第一次往返已有能量耗散，故
+\(u_1<v_0\)；长期极限只保留刚能到达接触切换点的中央简谐能量，故又有
+\(u_2<u_1\)。
+
+\needspace{3\baselineskip}
+\textbf{为什么振幅从上方趋近 \(3l/4\)}
+
+设某次外区最远点为
+\(a=3l/4+\delta\)。向外支路从边界出发至停下，所需边界动能为
+
+\[E_c=\frac{mg}{4l}\left[(l+\delta)^2-l^2\right]
+=\frac{mg}{4l}(2l\delta+\delta^2).\]
+
+回程由 \(\ddot x=-g/2\) 得回到边界时的动能
+\(E'_c=mg\delta/2\)。一次外区往返净损失
+
+\[E_c-E'_c=\frac{mg\delta^2}{4l}>0.\]
+
+中央区内的等效能量不变，另一侧下次越界量 \(\delta'\) 满足
+
+\[2l\delta'+\delta'^2=2l\delta,\]
+
+所以
+
+\[\delta'=\sqrt{l^2+2l\delta}-l,\qquad0<\delta'<\delta.\]
+
+正的递减序列只有零这一不动点，故 \(\delta\to0\)。有限次往返仍有
+\(\delta>0\)，不会突然落到边界内更小的振幅；这才支持
+\(u_2=\sqrt{3gl/8}\) 的长期极限。
+
+\needspace{3\baselineskip}
+\textbf{返回支路的法向力也要重算}
+
+外区向左返回时，上柱摩擦向右、右滚筒摩擦向左。绕板质心取矩，
+
+\[\mu(N_1+N_2)\frac l2=N_2(l-x)+N_1(l+x).\]
+
+结合 \(N_2-N_1=mg\)、\(\mu=1/2\)，左侧为 \((2N_1+mg)l/4\)，右侧为
+\(2lN_1+mg(l-x)\)。所以
+
+\[N_1=mg\left(\frac{2x}{3l}-\frac12\right),\qquad
+N_2=mg\left(\frac{2x}{3l}+\frac12\right).\]
+
+这与向外支路的式（9）不同，但在 \(x=3l/4\) 都连续回到
+\(N_1=0,N_2=mg\)。两式在 \(3l/4<x\le l\)
+都满足法向力非负，所选接触组合因此成立。
+
+\Needspace{26\baselineskip}
+
+返回时水平力为
+\(\mu N_1-\mu N_2=-mg/2\)，它只依赖法向力之差，因此加速度恰为常数；若为省事沿用去程的法向力却改一个摩擦号，虽然可能偶然得到同一合力，力矩平衡仍不成立。
+
+一次完整外区往返的耗散可直接由图3-2两支合力的面积算出：
+
+\[\begin{aligned}\Delta E&=-\int_{3l/4}^{3l/4+\delta}
+[F_{\rm out}(x)-F_{\rm back}(x)]\,dx\\
+&=\frac{mg}{2l}\int_0^\delta u\,du
+=\frac{mg\delta^2}{4l}.
+\end{aligned}\]
+
+它与越界量递推中的能量差一致；于是分段方程、功积分和长期极限三种描述互相核对。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf-2}
+
+固定柱不是``补一个标签''，而是改变接触集合，使运动方程的平衡点从 \(0\)
+移到 \(-l/4\)。必须分段求解。
+
+这是一类带有接触切换和摩擦滞回的系统。中央区内滚筒的转向固定，水平合力始终为
+\(-m\omega_0^2x\)，可由单值等效势能描述；柱接触区内，板向右与向左时摩擦方向不同，同一位置的合力不同，所以不存在覆盖两支运动的单一势能函数。
+
+\(x=3l/4\)
+的来源不是几何上``板碰到柱''，因为初态柱已与板虚接触；它来自原接触解中左滚筒支持力降到零。超过临界点后若仍使用两滚筒模型，就会得到负法向力，正是提醒模型必须换支路的数学信号。
+
+在分段动力学中，速度与位置在切换点连续，但加速度可以突变。这里接触力组合发生改变；只要没有冲量，速度就不能跳变，而摩擦合力可以立即换成另一表达式。计算中用同一个边界速度
+\(v_1\) 连接两段，正是这一连续条件的体现。
+
+长期状态不是通常黏性阻尼下的静止点。中央区内滚筒持续供能与取能，但一个周期净功为零，形成无耗散简谐运动；只有轨迹越入外区，固定柱摩擦的滞回回线才产生净耗散。因此这道题给定的初态渐近趋向振幅
+\(3l/4\) 的闭轨。任何初始振幅小于 \(3l/4\)
+的中央简谐轨道也能保持，不能把边界闭轨说成所有初态的唯一极限环。
+
+对一般 \(0<\mu<2\)，中央区的式（4）直接给出
+
+\[
+N_2-N_1=\frac{mgx}{(1-\mu/2)l}.
+\]
+
+结合 \(N_1+N_2=mg\)，
+
+\[
+N_1=\frac{mg}{2}
+\left[1-\frac{x}{(1-\mu/2)l}\right].
+\]
+
+令 \(N_1=0\) 得右侧接触切换位置
+
+\[
+x_c=\left(1-\frac\mu2\right)l.
+\]
+
+水平运动方程则为
+
+\[
+\ddot x+\frac{2\mu g}{(2-\mu)l}x=0.
+\]
+
+代入 \(\mu=1/2\)，分别恢复 \(x_c=3l/4\) 和
+\(\omega_0^2=2g/(3l)\)。这一推广同时验证了临界位置与频率，而不是只核对其中一个系数。
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9-2}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  全程使用同一个简谐频率。
+\item
+  把接触切换位置误认为 \(x=l\)，实际为 \(3l/4\)。
+\item
+  在柱接触区仍以 \(x=0\) 写势能。
+\item
+  把充分久后的速度误判为零；系统在中央无耗散区保持周期运动。
+\item
+  板在 \(x=l\)
+  反向后仍沿用向右运动的简谐``能量''。摩擦方向已改变，返回段应重新列力，得到
+  \(\ddot x=-g/2\)。
+\item
+  只凭板与柱``虚接触''就认为柱始终有支持力。单边接触力只能为压，不可为拉；是否实际作用要由法向力符号判断。
+\item
+  对质心取矩时漏掉摩擦力作用线与质心相差的竖直距离
+  \(l/2\)，会把临界位置算错。
+\item
+  把滚筒摩擦当普通阻尼
+  \(-kv\)。滚筒表面速度足够大，摩擦方向由滚筒转向决定，在中央区形成位置回复力。
+\item
+  向右外区把两个摩擦力相减。图 3-2
+  显示此时上柱与右滚筒的摩擦都向左，应写 \(-\mu(N_1+N_2)\)。
+\item
+  认为切换点加速度必须连续。接触集合突变可以使有限合力突变，但在无冲量条件下速度仍连续。
+\item
+  求出 \(u_2\)
+  后说``充分久后停在中点''。\(u_2\ne0\)；它是本题初态从左向右过中点速度的长期极限。
+\end{enumerate}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae-2}
+
+画出分段等效势能：中央抛物线中心在 \(0\)，外侧抛物线中心在
+\(\mp l/4\)。速度连接就是同一段抛物线上的能量差。
+
+课堂上先做``接触审计''：列出板可能受到的四个法向力，并强调每个法向力都必须非负。先假设只有两滚筒接触，求出
+\(N_1,N_2\)；当 \(N_1\) 在 \(x=3l/4\)
+变为零时，再切换到左上柱---右滚筒组合。
+
+图 3-2
+的回复力图要按运动方向读取。中央蓝线可双向使用；外区应分别标出向外和返回支路。计算
+\(u_1\) 时明确分成``\(l\to3l/4\) 匀加速''和``\(3l/4\to0\)
+中央简谐''两段，避免错误地跨越摩擦换向点守恒能量。
+
+最后用相图解释长期状态：外区回线包围的面积对应每周期耗散能量；在每次往返中外区回线面积缩小，轨道渐近触及
+\(\pm3l/4\)；中央区本身仍是简谐运动。
+
+板书末尾可把右半程的方程并列为
+
+\[
+\ddot x=
+\begin{cases}
+-\dfrac{2g}{3l}x,
+&0\le x\le\dfrac{3l}{4},\\[6pt]
+-\dfrac{g}{2l}\left(x+\dfrac l4\right),
+&\dfrac{3l}{4}<x\le l, \dot x>0,\\[6pt]
+-\dfrac g2,
+&\dfrac{3l}{4}<x\le l, \dot x<0.
+\end{cases}
+\]
+
+让学生逐行指出接触组合与摩擦方向。这个分段式直观显示：位置相同但速度方向不同，外区加速度可以不同；因此不能寻找覆盖全过程的单值势能。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3-2}
+
+把摩擦因数改为任意
+\(\mu\)，求中央区频率和接触切换位置；若滚筒速度不足以始终保持滑动，说明还需增加哪些状态判断。
+
+利用上一部分得到的一般结果检查两个极限：\(\mu\to0\) 时
+\(\omega\to0\)、\(x_c\to l\)，滚筒几乎不给水平驱动力；\(\mu\to2^-\)
+时形式频率增大而
+\(x_c\to0\)，说明极小偏移就会触发接触切换。后一极限附近理想高速滑动和刚体接触假设会变得敏感，不能把公式无条件外推到
+\(\mu\ge2\)。
+
+进入外区后，还需针对新的 \(\mu\)
+重新列上柱与滚筒的力矩方程和两个运动方向的摩擦符号；中央区的
+\(\omega(\mu)\) 与 \(x_c(\mu)\) 不能自动给出外区动力学。
+
+若滚筒表面速度有限，板与滚筒的相对速度可能在运动中变号，摩擦方向就不能只由滚筒转向预先固定。此时状态划分至少要增加``左接触相对速度符号、右接触相对速度符号''两个条件。
+
+还可让学生画 \(F_x\)---\(x\)
+分段图，并用一次外区往返所围成的滞回面积估算每周期能量损失。该图能解释为什么振幅每次越界后下降，却在刚好不越界时停止衰减，是理解干摩擦极限环的直观入口。
+
+\newpage
+
+\section{第 4 题}\label{ux7b2c-4-ux9898}
+
+两根平行光滑导轨间距 \(l\)，导轨面倾角
+\(\theta=\pi/6\)，底部以导线连接。空间有竖直向下匀强磁场 \(B\)。质量
+\(m\) 的水平导体棒与导轨构成零电阻回路，自感
+
+\[
+L(x)=kx,\qquad
+k=\frac{B^2l^2}{4mg}.
+\]
+
+初态棒静止于 \(x_0\)，电流为零，且运动区间内
+\(x\gg l\)。沿斜面向上给瞬时冲量 \(I_0\)。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  求瞬时速度。
+\item
+  要使棒此后始终贴在导轨上运动，求 \(I_0\) 范围。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.72\linewidth,height=\textheight,keepaspectratio,alt={图4-1　倾斜超导导轨、水平导体棒与竖直磁场}]{../figures/question-04.pdf}
+\caption*{图4-1　倾斜超导导轨、水平导体棒与竖直磁场}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-3}
+
+总磁通决定电流，法向支持力限制接触位置，能量决定实际转折点。这里自感随位置变化，沿轨磁力必须包含自感梯度项，才能与磁能守恒一致。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-3}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  冲量定理。
+\item
+  零电阻闭合回路的总磁通守恒。
+\item
+  变自感磁能 \(Li^2/2\)。
+\item
+  安培力法向分量与支持力。
+\item
+  转折点的能量上界。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-3}
+
+棒上移使外磁通增加，超导电流产生反向自磁通。电流随 \(1-x_0/x\)
+增大，棒所受法向安培力也增大；若上移过远，支持力会降为零并脱轨。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-3}
+
+冲量阶段忽略重力和电磁力的有限冲量。随后先由总磁通守恒求
+\(i(x)\)，再由法向力条件得到允许位置
+\(x\le2x_0\)，最后用能量保证转折点不越界。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-3}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图4-2　超导磁通、电流、法向安培力与临界转折点}]{../figures/solution-04.pdf}
+\caption*{图4-2　超导磁通、电流、法向安培力与临界转折点}
+\end{figure}
+
+瞬时冲量给出
+
+\[
+\boxed{v_0=\frac{I_0}{m}}.
+\tag{1}
+\]
+
+冲量作用时间极短，重力与安培力在这一小段时间内产生的冲量可忽略。由于冲量沿斜面向上，棒获得的初速度也沿
+\(+x\) 方向。
+
+外磁通为
+
+\[
+\Phi_{\rm ext}=Blx\cos\theta.
+\tag{2}
+\]
+
+面积 \(lx\) 位于倾斜导轨平面内，磁场与该平面法线夹角为
+\(\theta\)，所以穿过回路的有效磁场分量是 \(B\cos\theta\)。
+
+初态总磁通 \(Blx_0\cos\theta\)。运动中
+
+\[
+Blx\cos\theta-kxi
+=Blx_0\cos\theta.
+\tag{3}
+\]
+
+零电阻回路为何守恒总磁通，可由回路方程说明。法拉第定律给感应电动势
+
+\[
+\mathcal E=-\frac{d\Phi_{\rm total}}{dt},
+\]
+
+而理想超导回路沿线电场为零，闭合积分 \(\mathcal E=0\)，故
+
+\[
+\frac{d\Phi_{\rm total}}{dt}=0.
+\]
+
+式（3）把电流正方向选为自磁通反抗外磁通增加的方向，因此总磁通写成
+\(\Phi_{\rm ext}-Li\)。若改选反向为电流正方向，式中应写加号，同时求得的
+\(i\) 整体变号；只要安培力方向也随之统一，物理结果不变。
+
+所以
+
+\[
+i(x)=\frac{Bl\cos\theta}{k}
+\left(1-\frac{x_0}{x}\right).
+\tag{4}
+\]
+
+当 \(x>x_0\) 时 \(i>0\)，其自磁通 \(L i\) 抵消外磁通的增加；当 \(x<x_0\)
+时 \(i<0\)，方向自动反转。式（4）同时给出了大小与方向。
+
+式（4）还有两个边界特征：在 \(x=x_0\) 时 \(i=0\)，与初态一致；当
+\(x\to\infty\) 时 \(i\) 趋近有限值 \(Bl\cos\theta/k\)；当 \(x\to0^+\) 时
+\(i\sim-x_0/x\)
+发散。最后一个发散反映在磁能势垒中，阻止有限能量轨迹把回路面积压缩到零。
+
+导体棒安培力法向分量为 \(Bil\sin\theta\)。不脱离条件
+
+\[
+Bil\sin\theta\le mg\cos\theta.
+\tag{5}
+\]
+
+若取离开导轨平面为正法向，支持力为
+
+\[
+N=mg\cos\theta-Bil\sin\theta.
+\tag{6}
+\]
+
+单边接触要求
+\(N\ge0\)。固定导轨所受外磁力由支架承受，不直接进入棒的平动方程。在理想共面回路模型中，自磁场垂直回路面，棒的自磁力沿斜面，因此式（6）的法向项来自外磁场。
+
+两个投影因子必须区分。外磁通使用磁场在导轨平面法线上的分量
+\(B\cos\theta\)；导体棒方向水平且与导轨垂直，\(i\boldsymbol l\times\boldsymbol B\)
+的合力再投影到导轨法线，得到
+\(Bil\sin\theta\)。两侧导轨的电流元沿斜面方向，它们与竖直磁场叉乘后的作用方向位于导轨平面内，所以不改变法向支持力。
+
+代入式（4）、\(\theta=\pi/6\) 和题给 \(k=B^2l^2/(4mg)\)：
+
+\[
+1-\frac{x_0}{x}\le\frac12,
+\tag{7}
+\]
+
+中间代数如下。由 \(N\ge0\)，
+
+\[
+\frac{B^2l^2\cos\theta\sin\theta}{k}
+\left(1-\frac{x_0}{x}\right)
+\le mg\cos\theta.
+\]
+
+约去非零的 \(\cos\theta\)，并代入 \(k=B^2l^2/(4mg)\)：
+
+\[
+4mg\sin\theta
+\left(1-\frac{x_0}{x}\right)
+\le mg.
+\]
+
+再用 \(\sin(\pi/6)=1/2\)，得到
+
+\[
+2\left(1-\frac{x_0}{x}\right)\le1,
+\]
+
+即式（7）。
+
+即
+
+\[
+x\le2x_0.
+\tag{8}
+\]
+
+在 \(x<x_0\)
+区域电流反向，安培力法向分量使棒更压紧导轨，不会导致脱离；因此只需限制上行转折点不超过
+\(2x_0\)。
+
+系统机械能加磁能守恒：
+
+\[
+\frac12mv^2+mgx\sin\theta+\frac12L(x)i^2
+=\frac12mv_0^2+mgx_0\sin\theta.
+\tag{9}
+\]
+
+也可以先把磁能完全写成位置函数。由式（4）和 \(L=kx\)，
+
+\[
+\begin{aligned}
+U_B(x)
+&=\frac12kx
+\left[\frac{Bl\cos\theta}{k}
+\left(1-\frac{x_0}{x}\right)\right]^2\\
+&=\frac{B^2l^2\cos^2\theta}{2k}
+\frac{(x-x_0)^2}{x}.
+\end{aligned}
+\tag{10}
+\]
+
+于是棒的运动可视为在有效势能
+
+\[
+U_{\rm eff}(x)
+=mgx\sin\theta
++\frac{B^2l^2\cos^2\theta}{2k}
+\frac{(x-x_0)^2}{x}
+\tag{11}
+\]
+
+中运动。上行最远点由
+\(\tfrac12mv_0^2+U_{\rm eff}(x_0)=U_{\rm eff}(x_t)\)
+决定。接触条件又限制 \(x_t\le2x_0\)，所以临界轨迹取 \(x_t=2x_0\)。
+
+把题给参数与 \(\theta=\pi/6\)
+代入式（10），可把势能增量写成完全无量纲的形式。令 \(y=x/x_0\)，则
+
+\[
+\begin{aligned}
+\frac{U_{\rm eff}(x)-U_{\rm eff}(x_0)}{mgx_0}
+&=(y-1)\sin\theta
++\frac{B^2l^2\cos^2\theta}{2kmg}
+\frac{(y-1)^2}{y}\\
+&=\frac{y-1}{2}
++\frac32\frac{(y-1)^2}{y}.
+\end{aligned}
+\tag{12}
+\]
+
+对 \(y>1\)，右端导数为
+
+\[
+\frac12+\frac32\left(1-\frac1{y^2}\right)>0,
+\]
+
+所以向上区域的有效势能严格增加，转折点随初速度单调右移。接触边界 \(y=2\)
+处
+
+\[
+\frac{\Delta U}{mgx_0}
+=\frac12+\frac32\cdot\frac12
+=\frac54,
+\]
+
+这直接给出临界初动能 \(mv_0^2/2=5mgx_0/4\)。
+
+磁场本身不做功，但运动导体中的电磁作用在机械能与回路磁能之间交换能量。回路无电阻，所以没有焦耳热，系统的``动能
++ 重力势能 + 自磁能''守恒。
+
+允许的最大初速对应棒恰在 \(x=2x_0\)
+处转折，\(v=0\)。代入式（4）、\(L=kx\)：
+
+\[
+\frac12mv_0^2
+=\frac54mgx_0.
+\tag{13}
+\]
+
+具体地，在 \(x=2x_0\)，
+
+\[
+i=\frac{Bl\cos\theta}{2k},
+\qquad
+\frac12Li^2
+=\frac12(2kx_0)
+\left(\frac{Bl\cos\theta}{2k}\right)^2
+=\frac34mgx_0,
+\]
+
+而重力势能增加
+
+\[
+mg(2x_0-x_0)\sin\theta
+=\frac12mgx_0.
+\]
+
+二者相加就是 \(5mgx_0/4\)。
+
+所以
+
+\[
+v_{0,\max}=\sqrt{\frac52gx_0}.
+\tag{14}
+\]
+
+由 \(I_0=mv_0\)：
+
+\[
+\boxed{
+0<I_0\le m\sqrt{\frac52gx_0}
+}.
+\tag{15}
+\]
+
+若允许零冲量也计入，则左端可写 \(0\le I_0\)。
+
+\needspace{3\baselineskip}
+\textbf{变自感项的受力检查}
+
+记 \(a=Bl\cos\theta\)，电流正方向沿用式（3）。磁通约束为
+\(L(x)i=a(x-x_0)\)，磁能可写为
+
+\[U_B(x)=\frac{[a(x-x_0)]^2}{2L(x)}.\]
+
+对实际运动位置求导，
+
+\[\frac{dU_B}{dx}=ai-\frac12L'(x)i^2.\]
+
+因此棒的沿轨方程必须是
+
+\[m\ddot x=-mg\sin\theta-ai+\frac12ki^2.\]
+
+最后一项是自磁场在变形回路中的广义力。用磁通关系微分还可检查能量：
+
+\[\frac{d}{dt}\left(\frac12Li^2\right)
+=\left(ai-\frac12ki^2\right)\dot x,\]
+
+它正好抵消磁力对棒的机械功。漏掉梯度项会得到原手写参考中的另一冲量系数；那套受力式与给定
+\(L(x)=kx\) 的能量模型不一致。
+
+在本题能量归一化下，\(U_{\rm eff}/(mgx_0)=2y-3+3/(2y)\)。临界能量对应转折根
+\(y=2\) 和 \(y=3/8\)；所以整段往复都满足
+\(0<x\le2x_0\)。原有长回路近似还要求
+\((3/8)x_0\gg l\)，不能只检查上行位置。
+
+\Needspace{30\baselineskip}
+
+\needspace{3\baselineskip}
+\textbf{沿轨积分与势能法的同一结果}
+
+取 \(a=Bl\cos\theta\)、\(L=kx\)，代入
+\(i=(a/k)(1-x_0/x)\)，沿轨的电磁力可化简为
+
+\[\begin{aligned}F_{B,x}
+&=-\frac{a^2}{k}\left(1-\frac{x_0}{x}\right)
++\frac{a^2}{2k}\left(1-\frac{x_0}{x}\right)^2\\
+&=-\frac{a^2}{2k}\left(1-\frac{x_0^2}{x^2}\right).
+\end{aligned}\]
+
+从 \(x_0\) 积分到任意 \(x\)，
+
+\[\int_{x_0}^xF_{B,x'}\,dx'
+=-\frac{a^2}{2k}\left(x-2x_0+\frac{x_0^2}{x}\right)
+=-U_B(x).\]
+
+用功---能定理，再加重力功
+\(-mg(x-x_0)\sin\theta\)，立即恢复式（9）。在接触上界
+\(x=2x_0\)，电磁负功为 \(-a^2x_0/(4k)=-3mgx_0/4\)，重力负功为
+\(-mgx_0/2\)，临界初动能共为 \(5mgx_0/4\)。
+
+若仅积分 \(-ai\)，会多出一个含 \(\ln(x/x_0)\)
+的负功项；这就是原参考另一个系数的来源。它不是能量法失效，而是变自感系统的牛顿方程漏项。
+
+在接触边界，速度为零且沿轨加速度向下，随后棒回到接触更紧的区域。因此
+\(N=0\)
+的等号轨迹可包含在允许冲量范围内；不能仅见法向力等于零就宣布已经脱离。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf-3}
+
+磁通守恒只决定电流，不能替代受力检查。能量方程本身不会告诉系统是否在到达某位置前已经失去接触。
+
+本题必须按``可达性''和``合法性''两层判断。能量守恒决定给定 \(v_0\)
+能到达多远；法向支持力决定该位置是否仍属于原接触模型。临界初速恰使能量转折点与接触边界
+\(x=2x_0\) 重合。
+
+不能只对导体棒孤立地写一个遗漏部分电磁力的沿斜面牛顿方程。计算顺序可取：磁通守恒求
+\(i(x)\)；只在法向方向使用受力方程检查接触；沿运动方向的整体变化用守恒能量处理。沿轨受力也可直接列出，但须保留下面的
+\(L\,^{\prime}(x)i^2/2\)
+自磁力；固定导轨上的力本身不能直接算到移动棒上。
+
+两个极限可以复核结论。\(I_0\to0\)
+时上行最大位移趋近零，显然不脱离；\(I_0\) 增大时转折点单调上移，首先在
+\(2x_0\) 触及 \(N=0\)，所以安全冲量集合应是从零开始的连续区间。
+
+式（10）还说明 \(x\to0^+\)
+时磁能发散。这意味着在理想零电阻模型下，回路面积若被压缩到零，需要无限磁能；棒不会穿过
+\(x=0\)。另一方面 \(x\to\infty\)
+时重力势能和磁能都增长，故任意有限初始能量都有上行转折点。接触条件只是要求这个转折点在
+\(2x_0\) 之前出现。
+
+在临界点
+\(N=0\)，导轨刚好不再需要提供法向推力，但切向速度也为零。若初速再大，能量允许棒越过
+\(2x_0\)，而维持既定轨迹却需要
+\(N<0\)，这与单边接触矛盾，所以必然脱离。等号因而属于允许区间的闭端点。
+
+若暂不代入题给的 \(k\) 和 \(\theta\)，支持力条件可写成
+
+\[
+1-\frac{x_0}{x}
+\le
+\alpha,
+\qquad
+\alpha=\frac{kmg}{B^2l^2\sin\theta}.
+\]
+
+当 \(0<\alpha<1\) 时，接触上界为
+
+\[
+x\le x_c=\frac{x_0}{1-\alpha}.
+\]
+
+本题 \(\alpha=1/2\)，所以 \(x_c=2x_0\)。若 \(\alpha\ge1\)，则上行时
+\(1-x_0/x<1\le\alpha\)，理想模型中不存在有限的法向脱离上界；若
+\(\alpha\le0\)，则参数符号或电流方向需要重新审查。这个通式说明接触边界由自感系数、磁场强度与斜角共同决定。
+
+冲量上界的质量依赖也值得注意：\(I_{0,\max}=m\sqrt{5gx_0/2}\) 与 \(m\)
+成正比，而对应速度上界与质量无关。这是因为题给 \(k\) 本身含
+\(m^{-1}\)，使电磁势垒与重力势垒都正比于 \(m\)；若 \(k\)
+是与质量无关的固定几何参数，速度上界通常会保留质量依赖。
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9-3}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  把``电阻为零''误解成``电流为零''。
+\item
+  只守恒外磁通，漏掉自感磁通。
+\item
+  磁能仍写成常量电感形式却不代入 \(L(x)\)。
+\item
+  忽略导体棒安培力的法向分量。
+\item
+  沿斜面只保留外场安培力 \(-Bil\cos\theta\)，漏掉 \(ki^2/2\)
+  自感梯度力。
+\item
+  认为磁场不做功就可以删去磁能。洛伦兹力对单个电荷不做功，但机械能可经感应电流与回路磁能交换。
+\item
+  在式（3）中把自磁通写成
+  \(+L i\)，却仍沿用式（4）的电流方向，造成符号前后不一致。
+\item
+  只令 \(x=2x_0\)，没有再加转折条件
+  \(v=0\)；临界轨迹必须同时满足接触边界与能量边界。
+\item
+  把支持力等于零直接判成已经脱离。临界状态可作为安全区间端点；超过它才要求负支持力并必然失去接触。
+\item
+  认为变电感系统的磁能不能写成
+  \(Li^2/2\)。在线性磁介质和准静态条件下，瞬时磁能仍为该式，只是
+  \(L=L(x)\) 必须随位置一起代入。
+\item
+  把外磁通投影写成 \(Blx\sin\theta\)，又把安培力法向投影也写成
+  \(Bil\sin\theta\)；两者对应不同几何角，必须由俯视和侧视分别确认。
+\item
+  只求 \(N\ge0\) 得到 \(x\le2x_0\)
+  就直接给冲量答案。还需用能量把位置上界转成初速度、再转成冲量上界。
+\end{enumerate}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae-3}
+
+把解题顺序固定为``冲量---磁通---接触---能量''。先用法向受力得到空间禁区，再用能量判断轨迹是否进入禁区。
+
+图 4-1 要同时从俯视和侧视读取。俯视图确定回路面积
+\(lx\)，侧视图确定磁通的 \(\cos\theta\) 与安培力法向投影的
+\(\sin\theta\)。若两个三角函数来源说不清，后续系数通常会错。
+
+课堂中可把 \(i(x)\) 与支持力画成图 4-2：\(i\) 从 \(x_0\)
+处的零单调增大，支持力随之下降，在 \(2x_0\)
+归零。再在同一横轴上讨论能量转折点随 \(I_0\) 移动，临界即两点重合。
+
+最后让学生分别说出三条物理约束的角色：磁通守恒给电流，接触不等式给允许位置，能量守恒给实际可达位置。三者不能互相替代。
+
+可要求学生把式（10）的 \(U_B(x)\) 画出定性曲线：在 \(x=x_0\)
+处为零，两侧均上升，左侧在 \(x\to0^+\)
+发散。再叠加线性的重力势能，便能直接看出上行转折点随初始动能增加向右移动。
+
+讲临界状态时，把``允许区域
+\(x\le2x_0\)''画成横轴上的阴影区，把能量水平线与有效势能交点画成转折点。这样``接触边界与转折点重合''比只代公式更容易迁移到弯轨、绳张力和法向力约束题。
+
+可安排一次反向检查：先假设临界位置为 \(2x_0\)，分别计算该处重力势能增量
+\(mgx_0/2\) 与磁能 \(3mgx_0/4\)，再问两项为何不是相等。学生若能从
+\(L=2kx_0\) 和 \(i=Bl\cos\theta/(2k)\) 重新算出
+\(3/4\)，说明已把位置相关自感代入，而非只记住总系数 \(5/4\)。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3-3}
+
+若回路有小电阻 \(R\)，写出磁通演化微分方程；若
+\(L(x)\propto x^\alpha\)，讨论接触临界位置如何改变。
+
+有电阻时回路方程可写成
+
+\[
+\frac{d}{dt}\bigl[L(x)i-\Phi_{\rm ext}(x)\bigr]+Ri=0.
+\]
+
+此时总磁通不再严格常量，且有焦耳热
+\(i^2R\)，机械能加磁能也不再守恒，必须联立 \(x(t),i(t)\)。
+
+若磁场方向改为垂直导轨平面，则外磁通不再含
+\(\cos\theta\)，棒的安培力全部沿斜面而无法向分量；接触判据会显著改变。这个变式可检验学生是否真正理解两个投影因子的几何来源。
+
+还可令冲量方向沿斜面向下。初始时棒先进入 \(x<x_0\)
+区域，电流反向并使接触更紧；但有效势能在 \(x\to0^+\)
+发散，棒仍会出现下行转折。要求学生只写能量方程并判断是否存在脱离风险，可训练其区分``运动方向改变''和``法向约束变危险''这两件事。
+
+\newpage
+
+\section{第 5 题}\label{ux7b2c-5-ux9898}
+
+光滑水平面上，一根长 \(2l\) 的轻杆两端固定质量均为 \(m\)
+的小球，电量分别为 \(\pm q\)。匀强磁场 \(B\) 竖直向下。初始杆中心速度
+\(v_0\) 垂直于杆，角速度 \(\omega_0\)。以初始杆中心为原点，初始杆从
+\(-q\) 指向 \(+q\) 为 \(y\) 轴，\(v_0\) 方向为 \(x\) 轴。杆从 \(-q\)
+指向 \(+q\) 的方向从 \(+y\) 轴逆时针转过的有向角为
+\(\theta\)，\(\omega=\dot\theta\)，初态 \(v_0,\omega_0\ge0\)。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  求杆中心速度 \(v_x(\theta),v_y(\theta)\) 与 \(\omega(\theta)\)。
+\item
+  求杆扫过区域的最小带宽 \(\Delta h(\omega_0)\)。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.74\linewidth,height=\textheight,keepaspectratio,alt={图5-1　异号带电双球刚性杆在垂直磁场中的初态}]{../figures/question-05.pdf}
+\caption*{图5-1　异号带电双球刚性杆在垂直磁场中的初态}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-4}
+
+磁力不做功，却会在杆的平动与转动之间交换动能。先固定角度的正方向，逐端求磁力；带宽要取两端点全过程的纵坐标极值，并单独处理临界轨道。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-4}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  两端洛伦兹力合力与合力矩。
+\item
+  \(d\theta/dt=\omega\) 的变量代换。
+\item
+  磁场不做功。
+\item
+  角运动的转动/摆动分区。
+\item
+  扫掠包络的竖直宽度。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-4}
+
+两球总电量为零，但速度不同，洛伦兹力不相消。杆转动使质心速度沿一条圆形参数曲线变化；角速度可能始终不为零而连续转动，也可能在某角度降为零后往返摆动。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-4}
+
+定义
+
+\[
+K=\frac{Bql}{m}.
+\]
+
+先把 \(\dot v_x,\dot v_y\) 除以 \(\dot\theta=\omega\)，对 \(\theta\)
+积分。角速度用总动能守恒最简洁。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-4}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.79\linewidth,height=\textheight,keepaspectratio,alt={图5-2　速度参数曲线、转动与摆动两类扫掠带宽}]{../figures/solution-05.pdf}
+\caption*{图5-2　速度参数曲线、转动与摆动两类扫掠带宽}
+\end{figure}
+
+先明确两个端点的运动学。以从负电荷指向正电荷的单位矢量为
+
+\[
+\boldsymbol e=(-\sin\theta,\cos\theta),
+\]
+
+则两球相对质心的位置分别为
+\(\pm l\boldsymbol e\)。两端除共同的质心速度外，还有大小为
+\(l\omega\)、方向垂直于杆的转动速度；正端点初始转动速度向左。把两端的洛伦兹力
+\(q\boldsymbol v\times\boldsymbol B\)
+分别写出后相加，共同的平动速度部分因两球电荷异号而抵消，而转动速度部分因``电荷符号''和``速度方向''同时反向而相加。因此杆虽总电荷为零，合磁力并不为零。
+
+若取 \(\boldsymbol B=-B\boldsymbol k\)，从负电荷指向正电荷的杆单位矢量为
+\(\boldsymbol e\)，则与杆垂直的单位矢量可取
+
+\[
+\boldsymbol e_\perp=(-\cos\theta,-\sin\theta).
+\]
+
+正、负电荷的速度分别为
+
+\[
+\boldsymbol v_+=\boldsymbol v_C+l\omega\boldsymbol e_\perp,
+\qquad
+\boldsymbol v_-=\boldsymbol v_C-l\omega\boldsymbol e_\perp.
+\]
+
+两球磁力之和为
+
+\[
+\begin{aligned}
+\boldsymbol F_++\boldsymbol F_-
+&=q\boldsymbol v_+\times\boldsymbol B
+-q\boldsymbol v_-\times\boldsymbol B\\
+&=2ql\omega\boldsymbol e_\perp\times\boldsymbol B.
+\end{aligned}
+\]
+
+把最后一式投影到 \(x,y\)
+轴，就得到式（1）、（2）。这个向量推导还说明：质心平动速度不影响合力，但会影响两端磁力关于质心的合力矩，平动与转动仍通过能量发生耦合。
+
+沿图 5-1 的 \(x,y\) 轴投影，两端受力求和得到
+
+\[
+2m\dot v_x=2Bql\,\omega\sin\theta,
+\tag{1}
+\]
+
+\[
+2m\dot v_y=-2Bql\,\omega\cos\theta.
+\tag{2}
+\]
+
+这里左端的质量是两球总质量 \(2m\)。令 \(K=Bql/m\)，并用
+\(d\theta=\omega\,dt\) 把时间微分改成角度微分。只要
+\(\omega\ne0\)，式（1）、（2）分别除以 \(2m\omega\)，便有
+
+\[
+dv_x=K\sin\theta\,d\theta,
+\qquad
+dv_y=-K\cos\theta\,d\theta.
+\tag{3}
+\]
+
+在转向点可由连续性延拓同一结果。结合 \(v_x(0)=v_0,v_y(0)=0\)，逐项积分：
+
+\[
+\begin{aligned}
+v_x-v_0
+&=K\int_0^\theta\sin\theta'\,d\theta'\\
+&=K[-\cos\theta']_0^\theta\\
+&=K(1-\cos\theta),
+\end{aligned}
+\]
+
+\[
+\begin{aligned}
+v_y
+&=-K\int_0^\theta\cos\theta'\,d\theta'\\
+&=-K[\sin\theta']_0^\theta\\
+&=-K\sin\theta.
+\end{aligned}
+\]
+
+故
+
+\[
+\boxed{v_x=v_0+K(1-\cos\theta)},
+\tag{4}
+\]
+
+\[
+\boxed{v_y=-K\sin\theta}.
+\tag{5}
+\]
+
+由式（4）、（5）还可立即得到
+
+\[
+(v_x-v_0-K)^2+v_y^2=K^2,
+\]
+
+即质心速度矢量的端点在速度平面上沿半径为 \(K\)
+的圆运动。这也是检查积分符号的办法：\(\theta\)
+很小时，\(v_y\simeq-K\theta<0\)，应与图示磁力方向一致。
+
+磁场对每个带电粒子均不做功，轻杆内力也不改变系统总机械能，所以总动能守恒。两球质心平动动能之和为
+
+\[
+2\times\frac12m(v_x^2+v_y^2)=m(v_x^2+v_y^2),
+\]
+
+两球相对质心的转动动能之和为
+
+\[
+2\times\frac12m(l\omega)^2=ml^2\omega^2.
+\]
+
+因此总动能为
+
+\[
+T=m(v_x^2+v_y^2)+ml^2\omega^2
+\tag{6}
+\]
+
+守恒。代入式（4）、（5），并展开每一步代数运算：
+
+\[
+\begin{aligned}
+v_x^2+v_y^2
+&=[v_0+K(1-\cos\theta)]^2+K^2\sin^2\theta\\
+&=v_0^2+2Kv_0(1-\cos\theta)
+  +K^2[(1-\cos\theta)^2+\sin^2\theta]\\
+&=v_0^2+2Kv_0(1-\cos\theta)+2K^2(1-\cos\theta)\\
+&=v_0^2+2K(K+v_0)(1-\cos\theta).
+\end{aligned}
+\tag{7}
+\]
+
+初态 \(\theta=0\) 时动能为
+\(mv_0^2+ml^2\omega_0^2\)。令任意时刻的式（6）等于初值，约去 \(m\)：
+
+\[
+l^2\omega^2
+=l^2\omega_0^2-2K(K+v_0)(1-\cos\theta).
+\]
+
+所以在初始转动方向尚未反转的支路上
+
+\[
+\boxed{
+\omega(\theta)=
+\sqrt{
+\omega_0^2+
+\frac{2K(K+v_0)}{l^2}(\cos\theta-1)
+}
+}.
+\tag{8}
+\]
+
+根号内的最小值出现在 \(\theta=\pi\)。若
+
+\[
+\omega_0^2l^2\ge4K(K+v_0),
+\tag{9}
+\]
+
+则角速度在 \(0\le\theta\le\pi\) 内不变号；严格大于时杆越过 \(\pi\)
+后连续转动，等号时以越来越慢的速度渐近趋近
+\(\theta=\pi\)，是转动与摆动之间的分界轨道。
+
+下面求质心的竖直位移。记质心纵坐标为 \(Y\)，则
+\(\dot Y=v_y\)。由式（5）和 \(dt=d\theta/\omega\)，
+
+\[
+dY=v_y\,dt
+=-K\sin\theta\,\frac{d\theta}{\omega(\theta)}
+\tag{10}
+\]
+
+直接积分根式也能完成，但对式（8）的平方形式求微分更清楚：
+
+\[
+2\omega\,d\omega
+=-\frac{2K(K+v_0)}{l^2}\sin\theta\,d\theta.
+\]
+
+于是
+
+\[
+-\frac{K\sin\theta}{\omega}\,d\theta
+=\frac{l^2}{K+v_0}\,d\omega.
+\tag{11}
+\]
+
+比较式（10）、（11），得到
+
+\[
+dY=\frac{l^2}{K+v_0}\,d\omega.
+\tag{12}
+\]
+
+从 \(\theta=0\) 积分到 \(\theta=\pi\)。记
+
+\[
+\omega_\pi
+=\sqrt{\omega_0^2-\frac{4K(K+v_0)}{l^2}},
+\]
+
+则质心向下移动的距离为
+
+\[
+Y(0)-Y(\pi)
+=\frac{l^2}{K+v_0}(\omega_0-\omega_\pi).
+\tag{13}
+\]
+
+连续转动时，杆方向遍历整圆，两个端点相对质心的竖直坐标合起来覆盖
+\([-l,l]\)。因此扫掠区域总带宽等于质心轨迹的竖直跨度再加 \(2l\)，即
+
+\[
+\boxed{
+\Delta h
+=l\left[
+2+\frac{\omega_0l-
+\sqrt{\omega_0^2l^2-4K(K+v_0)}}
+{K+v_0}
+\right]
+}.
+\tag{14}
+\]
+
+式（14）中的根式具有速度量纲：\(\omega_0l\)、\(K\) 和 \(v_0\)
+都是速度。若磁场趋于零，即
+\(K\to0\)，连续转动条件自然满足，质心没有竖直漂移，根式差趋于零，带宽退化为
+\(2l\)，正是匀速质心加匀速转杆扫过的最小条带宽度。
+
+若
+
+\[
+\omega_0^2l^2<4K(K+v_0),
+\tag{15}
+\]
+
+则杆尚未到达 \(\theta=\pi\)，便在 \(\theta=\theta_0\) 处满足
+\(\omega=0\) 并反向。由式（8）可求转角上限
+
+\[
+\cos\theta_0
+=1-\frac{\omega_0^2l^2}{2K(K+v_0)}.
+\tag{16}
+\]
+
+在 \(0\to\theta_0\) 的单程中，式（12）给出质心下降量
+
+\[
+Y(0)-Y(\theta_0)
+=\frac{l^2}{K+v_0}(\omega_0-0)
+=\frac{\omega_0l^2}{K+v_0}.
+\tag{17}
+\]
+
+返回时角速度变号，系统沿对称支路运动。经过完整摆动，端点包络的上下边界由两次对称极限位置给出；把质心的两倍单程位移与杆本身的竖直直径
+\(2l\) 相加，得到
+
+\[
+\boxed{
+\Delta h
+=2l\left(1+\frac{\omega_0l}{K+v_0}\right)
+}.
+\tag{18}
+\]
+
+临界等号必须单独理解：此时杆渐近趋近倒置位置，而不是在有限时间内越过或折返。若把``扫过区域''定义为任意有限时刻实际到达的点集，应取相应极限；不能因为两个分支公式形式相近就武断声称在临界点连续。
+
+到达时间确实发散。临界条件下令 \(\psi=\pi-\theta\)，在 \(\psi\ll1\) 时
+
+\[
+1+\cos\theta
+=1-\cos\psi\simeq\frac{\psi^2}{2}.
+\]
+
+由式（8）可得 \(\omega\propto|\psi|\)，于是
+
+\[
+t=\int\frac{d\theta}{\omega}
+\sim\int\frac{d\psi}{|\psi|},
+\]
+
+积分呈对数发散。杆可以无限接近倒置方向，却不能在有限时间到达并穿过它。
+
+还可检查小角速度极限。\(\omega_0\to0\) 时属于摆动支路，式（18）给
+\(\Delta h\to2l\)；此时杆几乎保持初始方向，只发生极小摆动，扫掠条带至少仍需容纳长为
+\(2l\) 的杆，结果合理。
+
+带宽的几何含义也可从端点纵坐标写出。若质心坐标为 \(Y\)，两球纵坐标是
+
+\[
+y_+=Y+l\cos\theta,
+\qquad
+y_-=Y-l\cos\theta.
+\]
+
+扫掠带宽是全过程中 \(y_+,y_-\)
+的最大值与最小值之差，而不是固定时刻两球的距离。连续转动使
+\(\cos\theta\) 遍历
+\([-1,1]\)；摆动只遍历有限角区间，但往返支路上的质心漂移又使上下包络来自不同时间，所以必须使用图
+5-2 的包络关系。
+
+\needspace{3\baselineskip}
+\textbf{向量符号与包络极值的检查}
+
+图5-1的正角从 \(+y\) 向左转。对 \(\boldsymbol B=-B\boldsymbol k\)，有
+
+\[\boldsymbol e_\perp\times\boldsymbol B
+=(B\sin\theta,-B\cos\theta),\]
+
+与式（1）、（2）一致。若把杆的 \(x\) 分量写成
+\(+\sin\theta\)，这两个投影便不能同时成立。
+
+令
+\(A=K+v_0\)、\(s=l\omega\)、\(s_0=l\omega_0\)。关系（12）可继续延拓到返回支路：
+
+\[\frac Yl=\frac{s-s_0}{A},\qquad
+\cos\theta=1+\frac{s^2-s_0^2}{2KA}.\]
+
+于是两端点的纵坐标为
+
+\[\frac{y_\pm}{l}=\frac{s-s_0}{A}
+\ \pm\left(1+\frac{s^2-s_0^2}{2KA}\right).\]
+
+连续转动时 \(s\) 在 \([\sqrt{s_0^2-4KA},s_0]\)
+之间变化；分别检查两个二次函数的端点和驻点，最高纵坐标是初始
+\(+l\)，最低纵坐标是 \(\theta=\pi\) 时的
+\(Y-l\)。这证明式（14），而不只是因为杆方向遍历整圆就把两个独立跨度相加。
+
+摆动时，完整返回支路包含 \(s=-s_0\)、\(\theta=0\)。此时
+\(Y=-2ls_0/A\)，最低端点是 \(Y-l\)；最高端点仍是初始
+\(+l\)。二次函数中可能存在的驻点均位于这两个总边界之间，得到式（18）。
+
+临界 \(s_0=2\sqrt{KA}\) 的轨道只渐近到
+\(s=0,\theta=\pi\)，不会在有限时刻进入负角速度支路。因此临界带宽应取
+
+\[\Delta h_{\rm crit}=2l+2l\sqrt{\frac K A},\]
+
+从摆动侧取极限则为
+\(2l+4l\sqrt{K/A}\)，两者确实不同。这里的最小条带允许用全过程的上、下确界定义。\(B=0\)
+需直接用无磁场运动处理，不能除以 \(K\)；若同时
+\(\omega_0=0\)，杆恒竖直且带宽仍为 \(2l\)。
+
+\needspace{3\baselineskip}
+\textbf{把包络检查具体化为二次函数}
+
+仍取 \(A=K+v_0\)、\(s_0=l\omega_0\)。记
+
+\[f_+(s)=\frac{s-s_0}{A}+1+\frac{s^2-s_0^2}{2KA},\]
+
+\[f_-(s)=\frac{s-s_0}{A}-1-\frac{s^2-s_0^2}{2KA}.\]
+
+它们就是两端点的 \(y/l\)，导数分别为
+
+\[f'_+=\frac{K+s}{KA},\qquad
+f'_- =\frac{K-s}{KA}.\]
+
+转动支路只含非负 \(s\)。\(f_+\) 随 \(s\) 增大，最低值在
+\(s_{\min}=\sqrt{s_0^2-4KA}\)，此时为 \(-1+(s_{\min}-s_0)/A\)。\(f_-\)
+为凹函数，若驻点 \(s=K\) 位于区间内，其值是
+
+\[f_-(K)=-1+\frac{(s_0-K)^2}{2KA}.\]
+
+驻点属于转动区间要求 \(s_0^2\le4KA+K^2\)、\(s_0\ge K\)，故
+\((s_0-K)^2\le4KA\)，该值不超过 \(1\)。两个端点的值也不超过初始上端的
+\(1\)，因此总最高点确在初态。
+
+摆动支路有 \(-s_0\le s\le s_0\)。\(f_-\) 的最低值在 \(s=-s_0\)，为
+\(-1-2s_0/A\)。\(f_+\) 的可能驻点 \(s=-K\) 若在区间内，必须
+\(s_0\ge K\)；其值与这个最低界之差为
+
+\[2-\frac{(s_0-K)^2}{2KA}>0,\]
+
+其中用到摆动条件
+\(s_0^2<4KA\)。于是局部驻点不会突破总包络，完整返回时的端点给出最低界。
+
+这也说明带宽计算为何不能只取第一次达到 \(\omega=0\)
+的位置：在后续返回中角速度变负，\(Y=l(s-s_0)/A\) 还会继续下降。
+
+\needspace{3\baselineskip}
+\textbf{反求磁场的允许范围}
+
+给定 \(v_0,\omega_0>0\)，完整转动需要严格满足
+
+\[4K(K+v_0)<\omega_0^2l^2.\]
+
+令两端相等，关于 \(K\) 的正根是
+
+\[K_c=\frac{\sqrt{v_0^2+\omega_0^2l^2}-v_0}{2}.\]
+
+因此 \(B_c=mK_c/(ql)\)，连续完整转动发生于
+\(0\le B<B_c\)，等号是渐近倒置的分界轨道。磁场越强，转动动能向平动转移的量越大，因此这里求的是磁场上界，不是``需要至少多强的磁场''。
+
+若 \(v_0\gg\omega_0l\)，可将根式有理化，
+
+\[K_c=\frac{\omega_0^2l^2}
+{2(\sqrt{v_0^2+\omega_0^2l^2}+v_0)}
+\simeq\frac{\omega_0^2l^2}{4v_0}.\]
+
+这个形式也避免数值相减损失精度。若 \(v_0=0\)，则
+\(K_c=\omega_0l/2\)，恢复临界式 \(s_0=2K\)。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf-4}
+
+先判断角运动能否越过
+\(\theta=\pi\)，再谈扫掠边界。若不分连续转动与摆动，积分上限就会错误。临界量
+\(4K(K+v_0)\) 的本质，是质心速度在速度圆上从 \(\theta=0\) 走到 \(\pi\)
+时所增加的平动能对应量；初始转动能必须足以补偿这部分增加。
+
+关系 \(dY=l^2d\omega/(K+v_0)\)
+把看似复杂的轨迹积分化成角速度端点差。它不是额外的守恒律，而是平动方程与总能量关系共同导出的积分捷径。
+
+``带宽''不是质心轨迹宽度。必须取两个端点在全过程中的位置并集；连续转动时杆方向遍历整圆，摆动时则要结合往返两支轨迹判断上下包络。
+
+本题含有两个不同的``圆''：真实空间中杆端相对质心转动形成半径 \(l\)
+的圆，速度空间中质心速度端点形成半径 \(K\) 的圆。前者决定几何加宽
+\(2l\)，后者决定平动动能随 \(\theta\)
+的变化。把二者混在同一图中是许多推导错误的根源。
+
+把式（8）改写为
+
+\[
+\frac12ml^2\omega^2
++mK(K+v_0)(1-\cos\theta)
+=\frac12ml^2\omega_0^2,
+\]
+
+可把角运动看成在周期有效势能
+
+\[
+U_\theta(\theta)=mK(K+v_0)(1-\cos\theta)
+\]
+
+中运动。\(\theta=0\) 是势阱底，\(\theta=\pi\) 是势垒顶，势垒高度为
+\(2mK(K+v_0)\)。初始转动能大于势垒时连续转动，小于势垒时摆动，等于势垒时位于分界轨道。这与单摆的``摆动---圆周运动---分离曲线''结构完全对应。
+
+不过这里的有效势能不是外部保守势能，而是消去质心速度后对角自由度得到的等效描述。原系统中磁场不做功，总动能恒定；角动能的减少对应质心平动能的增加。说明这一点可以避免学生误以为磁场为杆提供了普通位置势能。
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9-4}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  认为总电量为零便没有磁力。
+\item
+  合力矩中漏掉质心平动速度。
+\item
+  用 \(\theta\) 积分时忘记 \(dt=d\theta/\omega\)。
+\item
+  直接把质心跨度加 \(2l\)，却不检查两端点极值能否在相应时刻达到。
+\item
+  两种角运动使用同一个公式。
+\item
+  把两球质心平动能误写成 \(\tfrac12m(v_x^2+v_y^2)\)，漏掉第二个小球。
+\item
+  把每个小球到质心的距离写成 \(2l\)，导致转动动能多四倍。
+\item
+  在 \(\omega=0\) 的转向点直接用 \(dt=d\theta/\omega\)
+  后宣布公式失效；应先在开区间推导，再用连续性取极限。
+\item
+  只检查某个局部角度的 \(\omega^2\ge0\)，没有检查它在 \([0,\pi]\)
+  上的最小值。
+\item
+  把临界等号当作有限时间到达并穿过
+  \(\theta=\pi\)；分界轨道的到达时间发散。
+\item
+  只因总电荷为零就把合磁力和合力矩都设为零。异号电荷的转动速度也反向，洛伦兹力相加关系必须逐端计算。
+\item
+  在带宽公式中把 \(K=Bql/m\) 当作角频率。\(K\) 的量纲是速度，只有
+  \(K/l\) 才具有角频率量纲。
+\end{enumerate}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae-4}
+
+先在速度平面画 \((v_x-v_0-K)^2+v_y^2=K^2\)，让学生检查
+\(\theta=0,\pi/2,\pi\)
+三个位置的速度方向。再问：磁场不做功，质心平动动能增加的能量来自哪里？由此自然引出角动能减少。
+
+第二步只比较 \(\theta=\pi\)
+处所需的能量，不急于积分轨迹，使学生先建立``越过势垒''和``未越过势垒''的两类图像。第三步再从式（8）微分，现场推出式（12），突出变量代换的来龙去脉。
+
+讲带宽时，用图 5-2 分别描出质心轨迹与两端点包络，要求学生说清 \(2l\)
+是哪两个几何边界之差，而不是把它当作经验修正项。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3-4}
+
+把两端电量改成
+\(q_1,q_2\)，讨论质心是否仍有简单速度圆；若初速度不垂直于杆，重写初始条件。
+
+可进一步令两球质量为
+\(m_1,m_2\)，先重新确定质心和转动惯量，再判断速度参数曲线是否仍为圆。另一个适合课堂完成的变式是给定
+\(\omega_0\)，反求允许完整转动的磁场上界 \(B\)，并讨论 \(B\to0\)
+时带宽公式如何退化为无磁场的匀速平动与匀速转动。
+
+还可规定给定磁场与初始速度，要求画出 \(\omega^2\) 随 \(\cos\theta\)
+的直线，并在图上读出转向角
+\(\theta_0\)。这种图解能把判别式、转向点和临界等号统一在一张图中，适合用来检查学生是否真正理解式（8）的取值域。
+
+\newpage
+
+\section{第 6 题}\label{ux7b2c-6-ux9898}
+
+土豆大炮的炮管截面积为 \(A\)。发射瞬间土豆静止，土豆与封闭端之间气体体积
+\(V_0\)、压强
+\(P_0>P_{\rm atm}\)。气体为二原子理想气体，快速绝热膨胀，无摩擦、无泄漏。炮管总长度
+\(L\) 从封闭端量到管口，忽略土豆自身的纵向长度。改变 \(L\)：
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  求土豆出管最大动能。
+\item
+  求实现最大动能的 \(L\)。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.82\linewidth,height=\textheight,keepaspectratio,alt={图6-1　绝热气体推动土豆并克服外界大气压}]{../figures/question-06.pdf}
+\caption*{图6-1　绝热气体推动土豆并克服外界大气压}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-5}
+
+每增加一段炮管，土豆多得到的功由内外压差决定。先求净功最大的出管体积，再把它换成从封闭端量起的全管长度；初始气室长度也在
+\(L\) 内。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-5}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  二原子气体 \(\gamma=7/5\)。
+\item
+  \(PV^\gamma=\) 常量。
+\item
+  净功积分。
+\item
+  极值条件 \(dK/dV=P-P_{\rm atm}=0\)。
+\item
+  出管时体积与总管长 \(V=AL\)，土豆行程为 \(L-V_0/A\)。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-5}
+
+炮管太短，气体出管时仍有较高压强，膨胀能未充分利用；太长则后段管内压强低于大气压，土豆反而被减速。最优点位于两者交界。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-5}
+
+把终体积 \(V\) 当变量，写气体对土豆的功减大气压的负功。先求最优
+\(V_*\)，最后换算 \(L\)。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-5}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.832\linewidth,height=\textheight,keepaspectratio,alt={图6-2　管内压强曲线、净功面积与最优终体积}]{../figures/solution-06.pdf}
+\caption*{图6-2　管内压强曲线、净功面积与最优终体积}
+\end{figure}
+
+绝热关系
+
+\[
+P(V)=P_0\left(\frac{V_0}{V}\right)^{7/5}.
+\tag{1}
+\]
+
+二原子理想气体在常温下平动和转动自由度参与能量交换，绝热指数为
+\(\gamma=7/5\)。快速膨胀使气体与外界来不及交换热量，故
+\(PV^\gamma=P_0V_0^\gamma\)，这正是式（1）的来源。
+
+设土豆向右移动 \(dx\)，气体体积增加
+
+\[
+dV=A\,dx.
+\]
+
+土豆左侧气体向右施力 \(PA\)，右侧大气向左施力
+\(P_{\rm atm}A\)，所以合力做元功
+
+\[
+dW=(P-P_{\rm atm})A\,dx
+=(P-P_{\rm atm})\,dV.
+\]
+
+土豆由静止出发，动能等于从 \(V_0\) 膨胀到出管体积 \(V\) 的净功：
+
+\[
+K(V)=\int_{V_0}^{V}
+[P(V')-P_{\rm atm}]\,dV'.
+\tag{2}
+\]
+
+把两项分别积分。气体做功为
+
+\[
+\begin{aligned}
+W_{\rm gas}
+&=P_0V_0^{7/5}\int_{V_0}^{V}(V')^{-7/5}\,dV'\\
+&=P_0V_0^{7/5}
+\left[-\frac52(V')^{-2/5}\right]_{V_0}^{V}\\
+&=\frac52P_0V_0
+\left[1-\left(\frac{V_0}{V}\right)^{2/5}\right].
+\end{aligned}
+\]
+
+大气压力做负功
+
+\[
+W_{\rm atm}=-P_{\rm atm}(V-V_0).
+\]
+
+两者相加，得到
+
+\[
+K(V)
+=\frac52P_0V_0
+\left[1-\left(\frac{V_0}{V}\right)^{2/5}\right]
+-P_{\rm atm}(V-V_0).
+\tag{3}
+\]
+
+气体做功还可由热力学第一定律复核。绝热过程中
+\(Q=0\)，气体对外做功等于内能减少：
+
+\[
+W_{\rm gas}=U_0-U.
+\]
+
+理想气体内能为 \(U=PV/(\gamma-1)\)。对 \(\gamma=7/5\)，有
+\(U=5PV/2\)。又由绝热关系
+
+\[
+PV=P_0V_0\left(\frac{V_0}{V}\right)^{2/5},
+\]
+
+所以
+
+\[
+\begin{aligned}
+U_0-U
+&=\frac52P_0V_0
+-\frac52P_0V_0
+\left(\frac{V_0}{V}\right)^{2/5}\\
+&=\frac52P_0V_0
+\left[1-\left(\frac{V_0}{V}\right)^{2/5}\right],
+\end{aligned}
+\]
+
+与直接积分完全一致。积分法给出净功最直接，内能法则能检查系数 \(5/2\)
+的来源。
+
+现在把 \(V\)
+看成可由炮管长度调节的终态变量。由积分上限求导公式，或者直接对式（3）求导：
+
+\[
+\frac{dK}{dV}=P(V)-P_{\rm atm}.
+\tag{4}
+\]
+
+若直接对炮管长度 \(L\) 求导，也应得到同一条件。因为 \(V=AL\)，
+
+\[
+\frac{dK}{dL}
+=\frac{dK}{dV}\frac{dV}{dL}
+=A[P(V)-P_{\rm atm}].
+\]
+
+\(A>0\)，所以 \(dK/dL=0\) 与 \(P(V)=P_{\rm atm}\)
+等价。截面积只改变达到某一终体积所需的长度，不改变最佳终态压强。
+
+极值满足 \(dK/dV=0\)，即出管瞬间内外压强恰好相等：
+
+\[
+P_0\left(\frac{V_0}{V_*}\right)^{7/5}
+=P_{\rm atm}.
+\tag{5}
+\]
+
+所以
+
+\[
+V_*=V_0\left(\frac{P_0}{P_{\rm atm}}\right)^{5/7}.
+\tag{6}
+\]
+
+因为 \(P_0>P_{\rm atm}\)，压强比大于 \(1\)，所以
+\(V_*>V_0\)，最佳管长为正。初始时净推力
+
+\[
+F_0=(P_0-P_{\rm atm})A>0,
+\]
+
+土豆确会从静止开始向前运动；达到 \(V_*\) 前始终有
+\(P>P_{\rm atm}\)，速度单调增加，不会提前停下。
+
+还要判断这是极大值。由
+
+\[
+\frac{d^2K}{dV^2}=\frac{dP}{dV}
+=-\frac75\frac{P(V)}{V}<0,
+\]
+
+可知 \(K(V)\) 在该处确为严格极大。代回式（3）时，先利用
+
+\[
+\left(\frac{V_0}{V_*}\right)^{2/5}
+=\left(\frac{P_{\rm atm}}{P_0}\right)^{2/7}
+\]
+
+和
+
+\[
+P_{\rm atm}V_*
+=P_{\rm atm}V_0
+\left(\frac{P_0}{P_{\rm atm}}\right)^{5/7}
+=P_0V_0
+\left(\frac{P_{\rm atm}}{P_0}\right)^{2/7}.
+\]
+
+于是
+
+\[
+\begin{aligned}
+K_{\max}
+&=\frac52P_0V_0
+\left[1-\left(\frac{P_{\rm atm}}{P_0}\right)^{2/7}\right]
+-P_{\rm atm}(V_*-V_0)\\
+&=V_0\left[
+\frac52P_0+P_{\rm atm}
+-\left(\frac52+1\right)P_0
+\left(\frac{P_{\rm atm}}{P_0}\right)^{2/7}
+\right],
+\end{aligned}
+\]
+
+从而
+
+\[
+\boxed{
+K_{\max}
+=V_0\left[
+\frac52P_0+P_{\rm atm}
+-\frac72P_0
+\left(\frac{P_{\rm atm}}{P_0}\right)^{2/7}
+\right]
+}.
+\tag{7}
+\]
+
+还可用无量纲压强比检查化简。令
+
+\[
+\rho=\frac{P_0}{P_{\rm atm}}>1,
+\]
+
+则
+
+\[
+\frac{K_{\max}}{P_{\rm atm}V_0}
+=\frac52\rho+1-\frac72\rho^{5/7}.
+\tag{8}
+\]
+
+函数
+
+\[
+f(\rho)=\frac52\rho+1-\frac72\rho^{5/7}
+\]
+
+满足 \(f(1)=0\)，且
+
+\[
+f'(\rho)=\frac52\left(1-\rho^{-2/7}\right)>0
+\qquad(\rho>1),
+\]
+
+因此
+\(K_{\max}>0\)。这既验证了结果符号，也说明初始压强越高，最大出管动能单调增加。
+
+最佳炮管总长度由 \(V_*=AL\)：
+
+\[
+\boxed{
+L=\frac{V_0}{A}
+\left(\frac{P_0}{P_{\rm atm}}\right)^{5/7}
+}.
+\tag{9}
+\]
+
+图6-1的 \(L\) 包括初始气室 \(V_0/A\)。若另定义土豆行程 \(s\)，才有
+\(V_*=V_0+As\)，最优行程为
+\(s_*=L_*-V_0/A\)。两种长度不得用同一个字母混写。
+
+把结果推广到任意绝热指数 \(\gamma>1\)，整个推导可写成便于检查的通式：
+
+\[
+P(V)=P_0\left(\frac{V_0}{V}\right)^\gamma,
+\]
+
+\[
+K(V)=\frac{P_0V_0}{\gamma-1}
+\left[1-\left(\frac{V_0}{V}\right)^{\gamma-1}\right]
+-P_{\rm atm}(V-V_0),
+\]
+
+\[
+V_*=V_0\left(\frac{P_0}{P_{\rm atm}}\right)^{1/\gamma}.
+\]
+
+令 \(\gamma=7/5\)，便出现 \(1/\gamma=5/7\) 和
+\((\gamma-1)/\gamma=2/7\)。两个分数指数都来自同一个绝热指数，不需要分别记忆。
+
+在 \(P\)---\(V\) 图上，\(K(V)\) 是从 \(V_0\) 到 \(V\) 的曲线 \(P(V)\)
+与水平线 \(P_{\rm atm}\) 之间的有符号面积。\(V<V_*\)
+时新增窄条面积为正，\(V>V_*\)
+时新增面积为负；交点因而给出全局最大值。随着
+\(V\to\infty\)，大气负功线性增长，\(K(V)\)
+最终会降到零，过长的炮管甚至会使土豆未到管口就停下。
+
+图6-2中的正面积只计算从 \(V_0\) 到 \(V_*\)
+的膨胀；图6-1的尺寸线则从封闭端覆盖整根炮管。两图因此分别对应做功行程和全长换算。
+
+快速过程只说明近似绝热，并不自动保证 \(PV^\gamma\)
+常量。本题还采用气体压强近似均匀、气体宏观动能和耗散忽略的理想活塞模型，才可沿膨胀路径使用这条状态关系。若计入冲击波和喷流，不能仅凭``没有传热''沿用同一功积分。
+
+\needspace{3\baselineskip}
+\textbf{一般绝热指数与一个数值例子}
+
+保留任意 \(\gamma>1\)，记 \(\rho=P_0/P_{\rm atm}>1\)。同一净功积分给出
+
+\[\frac{K_{\max}}{P_{\rm atm}V_0}
+=\frac{\rho}{\gamma-1}+1
+-\frac{\gamma}{\gamma-1}\rho^{1/\gamma},\]
+
+\[L_* =\frac{V_0}{A}\rho^{1/\gamma},\qquad
+s_* =\frac{V_0}{A}(\rho^{1/\gamma}-1).\]
+
+例如取 \(\rho=4\)、二原子气体 \(\gamma=7/5\)，有
+
+\[V_*/V_0=4^{5/7}\approx2.6918,\]
+
+\[K_{\max}/(P_{\rm atm}V_0)
+=11-\frac72\,4^{5/7}\approx1.5787.\]
+
+若 \(V_0/A=0.20\,\mathrm m\)，全管最优长度约
+\(0.538\,\mathrm m\)，土豆的最优行程约 \(0.338\,\mathrm m\)，相差的
+\(0.20\,\mathrm m\) 正是初始气室长度。
+
+若加入恒定阻力 \(f\)，令
+\(P_b=P_{\rm atm}+f/A\)。只需在上述积分中将反向压强改为
+\(P_b\)，最优体积变为 \(V_0(P_0/P_b)^{1/\gamma}\)。这个正行程解还要求
+\(P_0>P_b\)；不满足时初始净力就不能让土豆向前起动。
+
+\needspace{3\baselineskip}
+\textbf{弱压差时用面积核对二阶净功}
+
+令 \(P_0=P_{\rm atm}(1+\epsilon)\)，\(0<\epsilon\ll1\)，再写
+\(V=V_0(1+z)\)。在最优区间内 \(z=O(\epsilon)\)，对任意 \(\gamma>1\)，
+
+\[\frac{P(V)-P_{\rm atm}}{P_{\rm atm}}
+=(1+\epsilon)(1+z)^{-\gamma}-1
+=\epsilon-\gamma z+O(\epsilon^2).\]
+
+两线的交点满足
+\(z_* =\epsilon/\gamma+O(\epsilon^2)\)。于是图6-2的狭小正面积给出
+
+\[\begin{aligned}K_{\max}
+&=P_{\rm atm}V_0\int_0^{z_*}
+[\epsilon-\gamma z+O(\epsilon^2)]\,dz\\
+&=\frac{P_{\rm atm}V_0}{2\gamma}\epsilon^2
++O(P_{\rm atm}V_0\epsilon^3).
+\end{aligned}\]
+
+对二原子气体，\(1/(2\gamma)=5/14\)。图中的面积是一阶小底乘一阶小高，动能必从二阶起步；若代数结果出现一次项，应检查大气负功是否漏算。
+
+这时最优全长和新增行程分别为
+
+\[L_* =\frac{V_0}{A}\left[1+\frac\epsilon\gamma+O(\epsilon^2)\right],
+\qquad s_* =\frac{V_0}{A}\left[\frac\epsilon\gamma+O(\epsilon^2)\right].\]
+
+当压差趋于零，全长趋于初始气室长度，行程与出管速度才趋于零。若土豆质量为
+\(m\)，则
+
+\[v_{\max}=\epsilon\sqrt{\frac{P_{\rm atm}V_0}{\gamma m}}
+[1+O(\epsilon)].\]
+
+该展开既检查净功系数，也把两幅图中的全长、位移和面积联系起来。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf-5}
+
+最大动能条件可以直接从边际功看出：每再增加 \(dV\)，净增动能为
+\((P-P_{\rm atm})dV\)；在 \(P=P_{\rm atm}\) 后继续加长只会减少动能。
+
+这不是``气体把全部内能做完功''的状态。最优终态仍有压强和内能，只是再延长炮管时，气体额外做功已经小于土豆顶开大气所需的功。极值判断针对的是土豆动能，而不是气体能量利用率。
+
+量纲可以快速复核：\(P_0V_0\) 与 \(P_{\rm atm}V_0\) 都是能量，\(V_0/A\)
+是长度。极限 \(P_0\to P_{\rm atm}\) 时，式（6）给
+\(V_*\to V_0\)、式（9）给
+\(L\to V_0/A\)，新增行程趋于零，而式（7）也趋于零，符合没有初始压差便不能发射的直觉。
+
+更精细地看弱压差极限，令
+\(P_0=P_{\rm atm}(1+\epsilon)\)、\(0<\epsilon\ll1\)。最佳体积增量在一阶近似下为
+
+\[
+V_*-V_0\simeq\frac57V_0\epsilon,
+\]
+
+而最大动能的一阶项相消，主要从 \(\epsilon^2\)
+起步。这说明很小的表压只能产生二阶小的可用净功，与 \(P\)---\(V\)
+图中两曲线之间形成狭小三角形面积的图像一致。
+
+把展开做到二阶可以得到明确系数：
+
+\[
+(1+\epsilon)^{5/7}
+\simeq1+\frac57\epsilon-\frac5{49}\epsilon^2.
+\]
+
+代入式（8），常数项和一次项都抵消，留下
+
+\[
+K_{\max}
+\simeq\frac5{14}P_{\rm atm}V_0\epsilon^2.
+\]
+
+这个结果说明若初始表压减半，弱压差区的最大动能约降为四分之一。它也可由
+\(P\)---\(V\) 图中底和高都正比于 \(\epsilon\) 的小面积估计得到。
+
+最佳动能表达式不含土豆质量，是因为本题只问压力做功；质量只决定同一动能对应的出管速度
+\(v_{\max}=\sqrt{2K_{\max}/m}\)。若加入重力、摩擦或泄漏，质量和运动时间可能重新进入最佳长度条件。
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9-5}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  只算气体做功，漏掉大气压负功。
+\item
+  把绝热指数写成 \(5/3\)。
+\item
+  令终压强为零而非 \(P_{\rm atm}\)。
+\item
+  把原图从封闭端量的全管长度误当土豆行程，错写出管体积 \(V=V_0+AL\)。
+\item
+  误把土豆移动距离 \(dx\) 与气体体积变化 \(dV\) 直接相等，漏掉截面积
+  \(A\)；正确关系为 \(dV=A\,dx\)。
+\item
+  对 \(V^{-7/5}\) 积分时把幂次写成 \(V^{2/5}\)；积分后应为
+  \(V^{-2/5}\)。
+\item
+  只令一阶导数为零，没有用 \(dP/dV<0\) 或压强曲线判断极大值。
+\item
+  认为炮管越长动能一定越大，忽略 \(P<P_{\rm atm}\)
+  后大气对土豆的净减速。
+\item
+  把 \(P_0\)
+  当表压。题中若给的是绝对压强，应直接代入；若另题给的是表压，绝对初压应先加
+  \(P_{\rm atm}\)。
+\item
+  只看 \(P=P_{\rm atm}\)
+  就认为土豆在管口速度为零。该条件表示瞬时加速度为零、动能达到最大，速度本身通常非零。
+\item
+  把``最大出管动能''和``最大出管速度''当成不同的优化问题；土豆质量固定时二者的最优管长相同。
+\item
+  没有检查土豆是否能到达所选管口。最佳点以前净力始终向前，因此到达性成立；任意更长管道则可能在后续负功中减速甚至未出管。
+\end{enumerate}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae-5}
+
+把 \(P(V)\) 与水平线 \(P_{\rm atm}\)
+画在同一图上，先只比较一个很小的附加体积
+\(dV\)：曲线在水平线上方时面积为正，在下方时面积为负。学生由此可在积分前先判断最佳终点是两线交点。
+
+随后再从受力写 \(dK=(P-P_{\rm atm})A\,dx\)，用 \(dV=A\,dx\)
+消去截面积。这样能说明为什么最大动能只由初始气体状态和大气压决定，而最佳长度才显式含
+\(A\)。
+
+最后让学生分别做量纲检查和 \(P_0\to P_{\rm atm}\)
+的极限检查。两项检查都通过后，再进行代数化简，可显著减少
+\(5/7\)、\(2/7\) 指数混淆。
+
+还可以让学生先不积分，只在图 6-2 上标出三段：\(V_0\) 到 \(V_*\)
+的正面积、\(V_*\) 之后的负面积、以及任意终点
+\(V\)。随后再问``哪一个量的导数等于两曲线的竖直差''，由图像自然得到
+\(dK/dV=P-P_{\rm atm}\)。这样极值条件来自边际物理意义，而不是形式求导。
+
+完整板书可按四行主链组织：
+
+\[
+PV^{7/5}=P_0V_0^{7/5}
+\Longrightarrow P(V),
+\]
+
+\[
+dK=(P-P_{\rm atm})\,dV
+\Longrightarrow K(V),
+\]
+
+\[
+\frac{dK}{dV}=0
+\Longrightarrow P(V_*)=P_{\rm atm},
+\]
+
+\[
+V_*=AL
+\Longrightarrow L_*.
+\]
+
+每一箭头都对应一个独立物理关系：绝热状态方程、功---能定理、极值条件、几何体积关系。要求学生逐行说出依据，比直接抄最终公式更能暴露其究竟是在热学、力学还是代数化简处断裂。
+
+若学生质疑``压强相等时为何还有速度''，可比较速度和加速度：\(P=P_{\rm atm}\)
+只给合力与加速度为零；此前积累的正功已经转化为动能，所以该点恰是速度最大而非速度为零。之后若继续延长，合力转为反向，速度才逐渐减小。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3-5}
+
+加入恒定摩擦力 \(f\)，说明极值条件变为
+\((P-P_{\rm atm})A=f\)；将气体改为单原子气体。
+
+加入摩擦后
+
+\[
+dK=[(P-P_{\rm atm})A-f]\,dx,
+\]
+
+故最优终压强为 \(P_*=P_{\rm atm}+f/A\)。若改为一般绝热指数
+\(\gamma>1\)，可先保留符号推导
+
+\[
+W_{\rm gas}
+=\frac{P_0V_0}{\gamma-1}
+\left[1-\left(\frac{V_0}{V}\right)^{\gamma-1}\right],
+\]
+
+再令
+\(P(V_*)=P_{\rm atm}\)。这能区分``绝热指数只改变膨胀曲线''与``边际最优条件的结构不变''两件事。
+
+\newpage
+
+\section{第 7 题}\label{ux7b2c-7-ux9898}
+
+焦距 \(f\) 的凸透镜沿光轴切成上下两半，拉开后以厚度 \(\delta\)
+的不透光板填充中缝。轴上点光源距透镜 \(p>f\)，波长 \(\lambda\)。屏距透镜
+\(H\)。已知
+
+\[
+f=10\,\mathrm{cm},\quad p=20\,\mathrm{cm},\quad
+\delta=1\,\mathrm{mm},\quad
+\lambda=0.5\,\mu\mathrm m,\quad H=50\,\mathrm{cm}.
+\]
+
+求屏上可见干涉条纹数。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.72\linewidth,height=\textheight,keepaspectratio,alt={图7-1　分割并拉开的凸透镜形成双像干涉}]{../figures/question-07.pdf}
+\caption*{图7-1　分割并拉开的凸透镜形成双像干涉}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-6}
+
+两半透镜先把同一光源成两个相干实像，屏放在像后，条纹间距由像距和双像间距决定。还要用内边缘光线确定共同照明区，并按整数级次逐条计数。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-6}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  高斯成像公式。
+\item
+  横向放大与双像间距。
+\item
+  杨氏条纹间距。
+\item
+  两束有限光锥的重叠宽度。
+\item
+  边界条纹计数。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-6}
+
+每半透镜只接受点光源的一部分波前，但仍形成一个实像。两个实像相干，在像面之后发散并在屏上重叠；只有重叠区能看到条纹。
+
+把透镜切开并平移不会制造两个独立光源。两个半片接受的光都来自同一个单色点光源，因此形成的两个实像具有稳定相位关系；它们在屏上的公共照明区内才可作为相干双源。几何光学负责确定两个像点和光束边界，波动光学负责确定重叠区中的明暗间距。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-6}
+
+先求像距 \(q\)，再用相似三角形求双像间距 \(d\)、像面到屏距离 \(h\)
+和屏上重叠宽度 \(D\)。最后 \(N\simeq D/\Delta\)。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-6}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.778\linewidth,height=\textheight,keepaspectratio,alt={图7-2　两个实像、屏前传播距离与有限重叠区}]{../figures/solution-07.pdf}
+\caption*{图7-2　两个实像、屏前传播距离与有限重叠区}
+\end{figure}
+
+成像公式
+
+\[
+\frac1p+\frac1q=\frac1f
+\tag{1}
+\]
+
+给出
+
+\[
+q=\frac{pf}{p-f}.
+\tag{2}
+\]
+
+代入 \(p=20\,\mathrm{cm}\)、\(f=10\,\mathrm{cm}\)：
+
+\[
+q=\frac{20\times10}{20-10}\,\mathrm{cm}
+=20\,\mathrm{cm}.
+\tag{3}
+\]
+
+采用实物、实像距离均取正的薄透镜约定。因为
+\(p=2f\)，物点位于二倍焦距处，像也应落在另一侧二倍焦距处，所以
+\(q=20\,\mathrm{cm}\) 可作为成像公式的直观检查。横向放大率为
+
+\[
+M=-\frac qp=-1,
+\]
+
+负号表示像相对各半透镜自身光轴倒立，绝对值 \(1\) 表示横向位移等大。
+
+因此屏位于像面之后，像面到屏的距离为
+
+\[
+h=H-q=50\,\mathrm{cm}-20\,\mathrm{cm}
+=30\,\mathrm{cm}.
+\tag{4}
+\]
+
+切开并插入厚度为 \(\delta\) 的板后，两半透镜的光轴相距
+\(\delta\)。每半透镜形成的像相对其自身光轴具有横向放大率
+\(q/p\)；半片平移造成的像点移动既包含光轴本身的平移，又包含相对光轴的像高。因此两个像点的间距为
+
+\[
+d=\delta\left(1+\frac qp\right)
+=\delta\frac{p+q}{p}.
+\]
+
+这也可由图 7-2 中源点、透镜中心和像点组成的相似三角形写成
+
+\[
+\frac{d}{p+q}=\frac{\delta}{p},
+\tag{5}
+\]
+
+所以
+
+\[
+d=\frac{p\delta}{p-f}.
+\tag{6}
+\]
+
+也可用横向放大率复核。上半片相对原光轴上移 \(\delta/2\)
+后，物点相对该半片光轴下移 \(\delta/2\)。倒立实像相对半片光轴上移
+\((q/p)(\delta/2)\)，再加上光轴本身的 \(\delta/2\)，上方像点总位移为
+
+\[
+\frac\delta2\left(1+\frac qp\right).
+\]
+
+下方像点与之对称，故像点总间距是
+
+\[
+d=\delta\left(1+\frac qp\right),
+\]
+
+与式（5）、（6）相同。这个复核能防止只保留放大位移 \(q\delta/p\)
+而漏掉半片自身的平移。
+
+数值为
+
+\[
+d=\frac{20}{20-10}\times1\,\mathrm{mm}
+=2.00\,\mathrm{mm}.
+\tag{7}
+\]
+
+两个像点是相干次级光源，它们到屏的传播距离为
+\(h\)。在小角度近似下，杨氏条纹间距为
+
+\[
+\Delta=\frac{\lambda h}{d}
+=\frac{\lambda[H(p-f)-pf]}{p\delta}.
+\tag{8}
+\]
+
+具体地，取屏上距中央轴为 \(y_s\) 的点。两个相干像到该点的光程差在
+\(|y_s|\ll h\) 时为
+
+\[
+\Delta r\simeq d\sin\alpha
+\simeq d\frac{y_s}{h}.
+\]
+
+亮纹条件 \(\Delta r=n\lambda\) 给出
+
+\[
+y_n=n\frac{\lambda h}{d}.
+\]
+
+相邻整数级次相差 \(1\)，所以
+
+\[
+y_{n+1}-y_n=\frac{\lambda h}{d}=\Delta.
+\]
+
+这说明式（8）的传播距离必须从两个相干像所在的像面量到屏，而不是从透镜面量到屏。
+
+统一换成米后
+
+\[
+\begin{aligned}
+\Delta
+&=\frac{(0.5\times10^{-6})(0.30)}{2.00\times10^{-3}}\,\mathrm m\\
+&=7.50\times10^{-5}\,\mathrm m\\
+&=75.0\,\mu\mathrm m.
+\end{aligned}
+\tag{9}
+\]
+
+小角度条件可以用数量级检查。两相干像的张角约为
+
+\[
+\frac dh=\frac{2.00\times10^{-3}}{0.30}
+\approx6.7\times10^{-3}\ll1,
+\]
+
+重叠区半宽对应的观察角约为
+
+\[
+\frac{D/2}{h}
+=\frac{1.75\times10^{-3}}{0.30}
+\approx5.8\times10^{-3}\ll1.
+\]
+
+因此在整个可见重叠区内使用 \(\sin\alpha\simeq\tan\alpha\simeq y_s/h\)
+是自洽的。
+
+有条纹间距还不够，因为每个半片只输出有限截面的光束。两光锥在屏上的公共部分才是干涉区。由图
+7-2 中通过分割边缘的两条边界光线作相似三角形，
+
+\[
+\frac{D}{p+H}=\frac{\delta}{p}
+\tag{10}
+\]
+
+得到
+
+\[
+D=\frac{\delta(p+H)}p.
+\tag{11}
+\]
+
+代入数值：
+
+\[
+D=1.00\,\mathrm{mm}\times\frac{20+50}{20}
+=3.50\,\mathrm{mm}.
+\tag{12}
+\]
+
+式（10）的相似三角形可以这样读：从点光源到两半片内边缘的两条边界线，在透镜面相距
+\(\delta\)；从光源到屏的轴向距离为 \(p+H\)，从光源到透镜的轴向距离为
+\(p\)。横向间隔随轴向距离成比例放大，所以屏上的两条边界线相距
+
+\[
+D=\delta\frac{p+H}{p}.
+\]
+
+该 \(D\)
+是两束光共同覆盖的有效宽度，而不是每束光斑各自的直径。只有在这一区间内，来自两个像点的光场才同时非零。
+
+因此重叠区内包含的条纹间隔数为
+
+\[
+N\simeq\frac D\Delta
+=\frac{\delta^2(p+H)}
+{\lambda[H(p-f)-pf]}.
+\tag{13}
+\]
+
+逐项代入统一单位：
+
+\[
+\begin{aligned}
+\frac D\Delta
+&=\frac{3.50\times10^{-3}}
+{7.50\times10^{-5}}\\
+&=46.666\cdots.
+\end{aligned}
+\tag{14}
+\]
+
+若中央亮纹位于重叠区中心，条纹位置关于中心对称；按亮纹的整数级次计数，可见亮纹数为
+
+\[
+\boxed{47\ \text{条}}.
+\tag{15}
+\]
+
+若边界恰落在亮纹上，是否计入最外侧条纹应由``可见''或``完整''这一实验口径决定。本题比值不是整数，不存在这一退化歧义。
+
+还可以直接按级次核对。重叠区半宽为 \(D/2=1.75\,\mathrm{mm}\)，亮纹位置为
+\(y_n=n\Delta\)。因为
+
+\[
+\frac{D/2}{\Delta}
+=\frac{1.75\,\mathrm{mm}}{0.075\,\mathrm{mm}}
+=23.333\cdots,
+\]
+
+允许的整数级次是
+
+\[
+n=-23,-22,\ldots,0,\ldots,22,23.
+\]
+
+总数为 \(23+23+1=47\)。这种计数比简单对 \(46.7\)
+取整更严谨，也解释了为什么中央亮纹要单独多计一条。
+
+从符号公式还能看出各参数的作用。在满足 \(H>q\) 的区域内，增大波长
+\(\lambda\) 会增大条纹间距、减少条纹数；增大分离厚度 \(\delta\)
+一方面增大双像间距使条纹更密，另一方面还扩大重叠区，所以条纹数按
+\(\delta^2\) 增长。这个平方关系常被只考虑杨氏间距的解法漏掉。
+
+屏距 \(H\) 同时进入 \(h=H-q\) 和
+\(D=\delta(p+H)/p\)。因此不能仅凭``传播距离变长使条纹变宽''判断条纹数变化；必须把重叠宽度的变化也代入完整式（13）。
+
+\needspace{3\baselineskip}
+\textbf{相位和有限孔径的补充检查}
+
+两半片同材质、对称平移，轴上光源照明；屏上轴对称点的两条等效光路相位相同。两束都经过一次实像聚焦，聚焦相移相同，因此中心是亮纹，不能给其中一半凭空补一个
+\(\pi\) 相位。
+
+设透镜面光线高度为 \(\rho\)，上半片光轴在
+\(\delta/2\)。薄透镜近轴变换给出出射斜率
+
+\[u'=\frac\rho p-\frac{\rho-\delta/2}{f},\]
+
+屏上高度为
+
+\[y_s=\rho+Hu'=\left(1+\frac Hp-\frac Hf\right)\rho
++\frac{H\delta}{2f}.\]
+
+内边缘 \(\rho=\delta/2\) 给出上束的内界
+\(y_s=\delta(1+H/p)/2\)，下束关于轴对称，故共同区宽为
+\(D=\delta(1+H/p)\)。这说明图7-2的内界光线在半透镜局部光轴上不偏折，并非任意一条光线都可穿过透镜后按原方向延长。
+
+若半片径向可用孔径为 \(a\)，上片 \(\rho\in[\delta/2,\delta/2+a]\)。本题
+\(1+H/p-H/f=-1.5\)，若要上束覆盖整个宽 \(D\) 的共同区，需
+\(1.5a\ge D\)，即
+\(a\ge2.33\,\mathrm{mm}\)。题目未给孔径，47条是在孔径足够、忽略边缘衍射和有限像斑的理想模型下；孔径过小会减少实际可见亮纹。
+
+\needspace{3\baselineskip}
+\textbf{两半片不对称平移的已解检查}
+
+设上、下半片的局部光轴高度分别为
+\(b_1,b_2\)，并保持原光源在全局轴上。每个半片形成的像高是
+
+\[y_i=b_i\left(1+\frac qp\right),\qquad i=1,2.\]
+
+故双像间距只依赖 \(b_1-b_2=\delta\)，仍为
+\(d=\delta(1+q/p)\)。两个像点中点为
+\(\bar y=(b_1+b_2)(1+q/p)/2\)，不再必须落在全局轴上。
+
+内边缘光线在各自局部光轴上不偏折，屏上内界高度为
+\(b_i(1+H/p)\)；几何共同区的中心和宽度分别为
+
+\[Y_D=\frac{b_1+b_2}{2}\left(1+\frac Hp\right),\qquad
+D=\delta\left(1+\frac Hp\right).\]
+
+不对称平移时还需由两路从光源传播的相位求亮纹原点，不能仅把双像中点当作中央亮纹位置后照搬47条。原题采用
+\(b_1=-b_2\)，轴反射对称保证两路中心相位相同，几何共同区中心和中央亮纹都位于
+\(y_s=0\)。
+
+若额外在一半光束中插入相位板，使它多一个固定相位
+\(\phi_0\)，则亮纹位置改为
+
+\[y_n=\left(n-\frac{\phi_0}{2\pi}\right)\Delta.\]
+
+计数必须直接检查 \(|y_n|\le D/2\)。例如 \(\phi_0=\pi\)
+时中央是暗纹，亮纹为半整数级；本题允许
+\(n+1/2\in[-23.33,23.33]\)，共有46条。这个变式说明47条的结论同时用了共同区宽度和中心相位。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf-6}
+
+不能只算条纹间距；分割透镜的通光区域有限，可见条纹数还受两束光锥重叠宽度限制。
+
+图中的两个横向尺度分别是：\(d\)
+是两相干实像之间的距离，决定条纹间距；\(D\)
+是屏上两束光的重叠宽度，决定最多能容纳多少条纹。它们都由 \(\delta\)
+引起，却绝不能混用。
+
+还必须先检查 \(H>q\)。只有屏在像面之后，两个实像发出的光束才按图 7-2
+的方式重新发散并形成所述重叠区；若
+\(H\le q\)，几何光路与重叠公式必须重新分段讨论。
+
+条纹的存在与``实像是否清晰''并不矛盾。屏没有放在像面，而是位于像后
+\(h=30\,\mathrm{cm}\)
+处，两个实像在这里充当相干发散源。若屏恰放在像面，\(h=0\)，杨氏小角度条纹公式失效，屏上主要出现两个聚焦像斑。
+
+数值结果可交叉检查：\(d=2\,\mathrm{mm}\)
+远大于波长，\(h=0.30\,\mathrm m\)，所以 \(\Delta\) 应在
+\(10^{-4}\,\mathrm m\) 量级；\(D\) 是毫米量级，因而几十条条纹是合理的。
+
+由式（13）还能分析屏距影响：
+
+\[
+N(H)=\frac{\delta^2(p+H)}
+{\lambda[(p-f)H-pf]}.
+\]
+
+在 \(H>q\) 区域内，
+
+\[
+\frac{dN}{dH}
+=-\frac{\delta^2p^2}
+{\lambda[(p-f)H-pf]^2}<0.
+\]
+
+因此屏向后移时可见条纹数减少，并在 \(H\to\infty\) 时趋于
+
+\[
+N_\infty=\frac{\delta^2}{\lambda(p-f)}.
+\]
+
+靠近像面时公式形式上给出很大的条纹数，但此时 \(h\)
+很小，点像远场近似、有限像斑和衍射效应会限制实际可见度；竞赛模型只在其理想化假设内使用。
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9-6}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  把两个透镜半片当成两个狭缝，直接用 \(\delta\) 作源间距。
+\item
+  用 \(H\) 而非 \(H-q\) 作双源到屏距离。
+\item
+  忽略重叠区。
+\item
+  毫米、微米、厘米未统一。
+\item
+  把屏到透镜的距离 \(H\) 直接代入
+  \(\lambda H/d\)；相干源位于像面，传播距离应为 \(h=H-q\)。
+\item
+  求双像间距时只写成 \(q\delta/p\)，漏掉半透镜光轴本身已经平移的
+  \(\delta\)。
+\item
+  用几何光线相交就断言有干涉，却没有说明两个像来自同一单色点光源，因而保持相干。
+\item
+  在 \(D/\Delta\)
+  非整数时机械地向下取整，忘记亮纹计数与区间端点相位、中央亮纹位置有关。
+\item
+  未检查 \(H>q\) 就照搬像后双源模型。
+\item
+  看到 \(D/\Delta=46.7\) 就无条件向下取整为
+  \(46\)。中央亮纹在内时应按整数级次计数，本题为
+  \(2\lfloor D/(2\Delta)\rfloor+1=47\)。
+\item
+  把两个半透镜看成互不相干的光源。相干性来自它们截取同一入射波前，而不是来自透镜本身。
+\item
+  把 \(d\) 当作两半透镜中心间距
+  \(\delta\)。真正的等效双源位于像面，其间距还含成像放大因素。
+\end{enumerate}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae-6}
+
+依次在图上标出
+\(p,q,h,d,D\)，每写一个相似三角形就对应一组清晰线段。先遮住公式，让学生从图上回答``哪两个长度决定细密程度''\,``哪一个长度决定可见区域''，再分别导出
+\(\Delta\) 和 \(D\)。
+
+计算时把厘米、毫米和微米统一到米，并把 \(q,h,d,\Delta,D\)
+的数值按此顺序列在黑板一侧。这样最后的 \(N=D/\Delta\)
+只做一次无量纲除法，容易发现数量级错误。
+
+条纹计数可用一条长度为 \(D\) 的数轴演示：中央亮纹置于中心，以 \(\Delta\)
+向两侧标点。若端点恰好压在线上，再讨论实验上是否把边缘半明暗、刚好切边的条纹计入。
+
+课堂板书建议把五个长度分成两组：成像组 \(p,q,d\)，干涉组
+\(h,\Delta,D\)。先完整结束成像组，再以两个像点作为新起点进入干涉组。若在同一步同时使用透镜中心和相干像面，学生最容易把
+\(H\) 与 \(H-q\)、\(\delta\) 与 \(d\) 混为一谈。
+
+还可用两次独立估算保护最终答案。第一次在成像完成后检查 \(p=2f\) 应给
+\(q=2f\)、\(|M|=1\)，故
+\(d=2\delta=2\,\mathrm{mm}\)；第二次在干涉完成后检查
+\(D/2=1.75\,\mathrm{mm}\)、\(\Delta=0.075\,\mathrm{mm}\)，一侧应容纳约
+\(23\) 个间隔。若最终条纹数偏离 \(2\times23+1\)
+很多，就不必继续检查复杂代数，可直接回到对应阶段定位错误。
+
+图 7-2
+中的实线边界用于确定光束重叠，虚拟双源连到屏点的光程差用于确定条纹。课堂上宜用不同颜色区分这两类线：前者是几何通光边界，后者是波动叠加路径。两者都从图中出现，但承担的方程不同。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3-6}
+
+改变屏距
+\(H\)，求能观察到条纹的最小条件；若中缝透明而非不透光，讨论背景光如何影响可见度。
+
+还可将两半透镜不对称地移动
+\(\delta_1,\delta_2\)，要求分别求两像位置与重叠区中心。若光源具有有限谱宽
+\(\Delta\lambda\)，可进一步比较相干长度与两路最大光程差，讨论为什么几何上有重叠并不一定能观察到清晰条纹。
+
+若把屏向后移动到很远处，可让学生分别求
+\(D\propto H\)、\(\Delta\propto H\) 的渐近形式，再由二者比值恢复
+\(N_\infty\)。这个变式能纠正``重叠区变宽所以条纹必然更多''的单因素判断。
+
+\newpage
+
+\section{第 8 题}\label{ux7b2c-8-ux9898}
+
+静止离子可吸收波长 \(\lambda_0=580.000\,\mathrm{nm}\) 的光。离子以 \(0\)
+到 \(v_2=5000\,\mathrm{m\,s^{-1}}\) 朝激光光源运动。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  求激发全部离子所需激光波长范围，并画出荧光光子数的波长分布。
+\item
+  离子先经电压 \(V\) 加速，求速度区间宽度与 \(V\)
+  的关系，判断变宽或变窄。
+\item
+  荷质比 \(q/m=5.00\times10^6\,\mathrm{C\,kg^{-1}}\)，有两跃迁静止波长
+  \(580.000\,\mathrm{nm}\)、\(580.001\,\mathrm{nm}\)。求无预加速时两扫描范围；再求使两范围不重叠的最小加速电压。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.88\linewidth,height=\textheight,keepaspectratio,alt={图8-1　逆向激光吸收测量离子束速度分布}]{../figures/question-08.pdf}
+\caption*{图8-1　逆向激光吸收测量离子束速度分布}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-7}
+
+迎面运动使离子看到的频率升高，所以实验室激光要调到更长的波长。预加速给各离子增加相同动能，压缩速度端点差；最后比较两条扫描区间的相邻端点。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-7}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  迎面低速多普勒频移。
+\item
+  变量线性映射下的分布曲线。
+\item
+  静电加速 \(u^2=v^2+2(q/m)V\)。
+\item
+  速度带宽压缩。
+\item
+  两扫描区间不重叠条件。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-7}
+
+迎面运动离子在自身参考系看到激光蓝移，因此实验室需要使用比静止共振波长更长的光。预加速给所有离子增加近似相同的大速度，使原来
+\(0\) 到 \(5000\) 的差异在平方根映射下被压缩。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-7}
+
+非相对论近似下
+
+\[
+\lambda(v)\simeq\lambda_0\left(1+\frac vc\right).
+\]
+
+第二问只需对速度区间两个端点分别作能量变换。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-7}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图8-2　速度分布到波长分布的映射及预加速压缩}]{../figures/solution-08.pdf}
+\caption*{图8-2　速度分布到波长分布的映射及预加速压缩}
+\end{figure}
+
+迎面多普勒条件
+
+\[
+\lambda(v)=\lambda_0\left(1+\frac vc\right).
+\tag{1}
+\]
+
+其符号可从频率判断。离子朝光源运动时，在离子参考系中接收到的频率近似为
+
+\[
+f'=f\left(1+\frac vc\right).
+\]
+
+要使 \(f'=f_0=c/\lambda_0\)，实验室频率必须略低于
+\(f_0\)，即实验室波长略长于 \(\lambda_0\)；保留 \(v/c\)
+的一阶项便得到式（1）。若从完整相对论公式出发，迎面传播时
+
+\[
+f'=\gamma f(1+\beta),
+\qquad
+\beta=\frac vc,
+\]
+
+令 \(f'=c/\lambda_0\)、\(f=c/\lambda\)，可得
+
+\[
+\lambda
+=\lambda_0\gamma(1+\beta)
+=\lambda_0\sqrt{\frac{1+\beta}{1-\beta}}.
+\]
+
+在 \(\beta\ll1\) 时展开
+
+\[
+\sqrt{\frac{1+\beta}{1-\beta}}
+=1+\beta+O(\beta^2),
+\]
+
+便回到式（1）。这既固定了正负号，也说明被舍去项的相对量级是
+\((v/c)^2\)。
+
+因此低速端 \(v=0\) 对应
+
+\[
+\lambda_{\min}=580.000\,\mathrm{nm},
+\tag{2}
+\]
+
+\[
+\lambda_{\max}
+=580.000\left(1+\frac{5000}{c}\right)\mathrm{nm}
+\approx580.00967\,\mathrm{nm}.
+\tag{3}
+\]
+
+这里用 \(c=3.00\times10^8\,\mathrm{m\,s^{-1}}\)，波长增量为
+
+\[
+\Delta\lambda
+=580.000\,\mathrm{nm}\times\frac{5000}{3.00\times10^8}
+=0.00967\,\mathrm{nm}.
+\]
+
+扫描范围为
+
+\[
+\boxed{580.000\text{--}580.00967\,\mathrm{nm}}.
+\tag{4}
+\]
+
+由式（1）
+
+\[
+\frac{d\lambda}{dv}=\frac{\lambda_0}{c}
+\]
+
+为常量。若题图所给的离子数---速度分布在 \(0\le v\le v_2\)
+内为矩形分布，则单位波长区间内的荧光光子数
+
+\[
+\frac{dN}{d\lambda}
+=\frac{dN}{dv}\frac{dv}{d\lambda}
+=\frac{c}{\lambda_0}\frac{dN}{dv}
+\]
+
+也为常量。因此图 8-2 中的荧光谱仍是矩形，只把横轴从
+\(0\text{--}5000\,\mathrm{m\,s^{-1}}\)
+线性映射为式（4）的波长区间。端点外没有满足共振条件的离子，理想化信号为零。
+
+设 \(\eta=q/m\)。经电压 \(V\) 加速后
+
+\[
+u(v)=\sqrt{v^2+2\eta V}.
+\tag{5}
+\]
+
+式（5）来自静电场做功：
+
+\[
+qV=\frac12mu^2-\frac12mv^2.
+\]
+
+两边乘 \(2/m\)，并定义 \(\eta=q/m\)，便有
+\(u^2=v^2+2\eta V\)。同一电压给所有离子增加相同的速度平方，而不是增加相同速度。若离子电荷符号与电压方向相反，应把
+\(qV\) 理解为正的动能增量，或改用 \(|qV|\)。
+
+速度区间宽度
+
+\[
+\boxed{
+\Delta u(V)
+=\sqrt{v_2^2+2\eta V}
+-\sqrt{v_1^2+2\eta V}
+}.
+\tag{6}
+\]
+
+本题 \(v_1=0\)。对 \(V\) 求导可知 \(\Delta u\)
+单调减小，所以预加速使速度分布变窄。
+
+把单调性完整写出：
+
+\[
+\frac{d\Delta u}{dV}
+=\eta\left[
+\frac1{\sqrt{v_2^2+2\eta V}}
+-\frac1{\sqrt{v_1^2+2\eta V}}
+\right]<0,
+\tag{7}
+\]
+
+因为 \(v_2>v_1\)，第一项的分母更大。也可以将式（6）有理化：
+
+\[
+\Delta u
+=\frac{v_2^2-v_1^2}
+{\sqrt{v_2^2+2\eta V}+\sqrt{v_1^2+2\eta V}},
+\tag{8}
+\]
+
+分子不变而分母随 \(V\)
+增大，故带宽严格缩小。注意所有速度都增大，缩小的是``最大值与最小值之差''。
+
+在强预加速极限 \(2\eta V\gg v_2^2\)，令
+\(s=\sqrt{2\eta V}\)，作一阶展开：
+
+\[
+\sqrt{s^2+v^2}
+=s\sqrt{1+\frac{v^2}{s^2}}
+\simeq s+\frac{v^2}{2s}.
+\]
+
+于是
+
+\[
+\Delta u\simeq\frac{v_2^2-v_1^2}{2s}
+\propto V^{-1/2}.
+\]
+
+这给出了带宽压缩的数量级，也与式（8）在大 \(V\) 时分母约为 \(2s\)
+完全一致。
+
+两跃迁无加速时扫描范围分别为
+
+\[
+\boxed{
+\lambda_1:\ 580.000\text{--}580.00967\,\mathrm{nm}
+},
+\tag{9}
+\]
+
+\[
+\boxed{
+\lambda_2:\ 580.001\text{--}580.01067\,\mathrm{nm}
+}.
+\tag{10}
+\]
+
+第二条谱线的静止波长比第一条大
+\(0.001\,\mathrm{nm}\)，而无加速时每个扫描区间宽约
+\(0.00967\,\mathrm{nm}\)，所以两区间显著重叠。
+
+设预加速后的最小速度
+
+\[
+s=\sqrt{2\eta V},
+\tag{11}
+\]
+
+最大速度
+
+\[
+\sqrt{v_2^2+s^2}.
+\tag{12}
+\]
+
+加速后第一条跃迁的扫描区间右端是
+
+\[
+\lambda_1\left(1+\frac{\sqrt{v_2^2+s^2}}c\right),
+\]
+
+第二条跃迁的左端是
+
+\[
+\lambda_2\left(1+\frac sc\right).
+\]
+
+要使区间不重叠，前者必须不大于后者；最小电压对应两端刚好相等：
+
+\[
+\lambda_1\left(1+\frac{\sqrt{v_2^2+s^2}}c\right)
+=
+\lambda_2\left(1+\frac sc\right).
+\tag{13}
+\]
+
+为展示数值求根的来龙去脉，令
+\(\delta\lambda=\lambda_2-\lambda_1\)，把式（13）移项：
+
+\[
+\lambda_1\sqrt{v_2^2+s^2}
+-\lambda_2s
+=c\,\delta\lambda.
+\tag{14}
+\]
+
+两边平方并整理为关于 \(s\) 的二次方程：
+
+\[
+(\lambda_2^2-\lambda_1^2)s^2
++2c\lambda_2\delta\lambda\,s
++c^2(\delta\lambda)^2
+-\lambda_1^2v_2^2=0.
+\tag{15}
+\]
+
+取满足 \(s>0\) 且回代式（14）不改变符号的根，代入
+
+\[
+\lambda_1=580.000\,\mathrm{nm},\quad
+\lambda_2=580.001\,\mathrm{nm},\quad
+v_2=5000\,\mathrm{m\,s^{-1}},
+\]
+
+得到
+
+\[
+s\approx2.3906\times10^4\,\mathrm{m\,s^{-1}}.
+\tag{16}
+\]
+
+平方后必须回代，是因为式（14）右端
+\(c\delta\lambda>0\)，左端也必须为正；二次方程的另一个代数根不满足这一符号条件。保留物理解后，最大加速后速度为
+
+\[
+u_2=\sqrt{s^2+v_2^2}
+\approx2.4423\times10^4\,\mathrm{m\,s^{-1}},
+\]
+
+压缩后的速度宽度仅为
+
+\[
+u_2-s\approx5.17\times10^2\,\mathrm{m\,s^{-1}},
+\]
+
+约为原始 \(5000\,\mathrm{m\,s^{-1}}\) 宽度的十分之一。
+
+于是
+
+\[
+\boxed{
+V_{\min}=\frac{s^2}{2\eta}
+\approx57.2\,\mathrm V
+}.
+\tag{17}
+\]
+
+其中
+
+\[
+V_{\min}
+=\frac{(2.3906\times10^4)^2}
+{2(5.00\times10^6)}\,\mathrm V
+\approx57.2\,\mathrm V.
+\]
+
+回代检查，\(s/c\sim8\times10^{-5}\)，而最大加速后速度也远小于
+\(c\)，非相对论多普勒与经典动能近似均自洽。
+
+还可把临界波长端点直接回代。第一条跃迁的右端约为
+
+\[
+580.000\left(1+\frac{24423}{c}\right)\mathrm{nm}
+\approx580.04725\,\mathrm{nm},
+\]
+
+第二条跃迁的左端约为
+
+\[
+580.001\left(1+\frac{23906}{c}\right)\mathrm{nm}
+\approx580.04725\,\mathrm{nm}.
+\]
+
+两者在保留精度内相等，验证了``刚好不重叠''的端点条件；若 \(V\)
+再增大，第一段右端将落到第二段左端左侧，出现可分辨间隙。
+
+矩形荧光谱还假定每个共振离子的激发、收集效率相同，忽略自然线宽、仪器展宽和扫描饱和效应。它表示理想的
+\(dN/d\lambda\)，不是任意实验条件下直接测得的谱形。
+
+令 \(a=\lambda_2/\lambda_1\)、\(w=c(a-1)\)。式（14）也可写成
+
+\[\sqrt{s^2+v_2^2}=as+w.\]
+
+用正根回代这一未平方等式，再计算
+\(V=s^2/(2\eta)\)，可避免单位换算和平方伪根。完整多普勒与相对论动能复算给出的修正远小于本题约
+\(57.2\,\mathrm V\)
+的有效位数。若``完全不重叠''要求两闭区间连共同端点也不允许，则应取
+\(V>V_{\rm crit}\)；\(57.2\,\mathrm V\) 是刚相切的分辨阈值。
+
+\needspace{3\baselineskip}
+\textbf{预加速后的分布形状并不仍为矩形}
+
+设原来的均匀速度密度为 \(f(v)=N_0/v_2\)，\(0<v<v_2\)。记
+\(s=\sqrt{2\eta V}\)，则 \(u=\sqrt{v^2+s^2}\)。粒子数守恒要求
+
+\[f_u(u)\,du=f(v)\,dv.\]
+
+反函数和雅可比为
+
+\[v=\sqrt{u^2-s^2},\qquad
+\frac{dv}{du}=\frac{u}{\sqrt{u^2-s^2}},\]
+
+所以
+
+\[f_u(u)=\frac{N_0}{v_2}
+\frac{u}{\sqrt{u^2-s^2}},\qquad
+s<u<\sqrt{s^2+v_2^2}.\]
+
+此密度在低速端有可积的平方根尖峰，积分仍为
+\(N_0\)。因此第一问未加速的矩形谱可以直接线性换轴，第二问加速后的谱形则须再乘这一步雅可比；它虽然变窄，也会改变形状。
+
+在一阶多普勒近似中 \(u=c(\lambda/\lambda_0-1)\)，于是
+
+\[\frac{dN}{d\lambda}
+=\frac{c}{\lambda_0}\frac{N_0}{v_2}
+\frac{u}{\sqrt{u^2-s^2}}.\]
+
+有限线宽和仪器响应会把理想端点尖峰平滑。若使用完整迎面多普勒关系
+\(D=\lambda/\lambda_0\)，其反函数是
+
+\[\beta=\frac{D^2-1}{D^2+1},\qquad
+\frac{dv}{d\lambda}
+=\frac{4cD}{\lambda_0(D^2+1)^2}.\]
+
+令 \(D\to1\)，便恢复第一问的常量
+\(c/\lambda_0\)。因此变量变换、低速近似和粒子总数守恒可以在同一条推导中检查。
+
+\Needspace{33\baselineskip}
+
+\needspace{3\baselineskip}
+\textbf{完整相对论端点复算的方程}
+
+速度高到需要保留相对论项时，不能只替换多普勒式而仍沿用
+\(qV=m(u^2-v^2)/2\)。令 \(\eta=q/m\)，动能关系应改为
+
+\[\gamma_u=\gamma_v+\frac{\eta V}{c^2},\qquad
+u=c\sqrt{1-\gamma_u^{-2}}.\]
+
+对 \(v=0\) 与 \(v=v_2\) 分别求 \(u_1(V),u_2(V)\)。迎面多普勒因子为
+
+\[D(u)=\sqrt{\frac{1+u/c}{1-u/c}},\]
+
+精确相切条件为
+
+\[\lambda_1D(u_2)=\lambda_2D(u_1).\]
+
+因为本题
+\(u/c\sim8\times10^{-5}\)，两端的共同高阶位移大部分抵消，阈值电压修正很小。计算应对两端使用同一种近似；不能把其中一端用一阶式、另一端用完整式，再把差值称为相对论修正。复核脚本用高精度运算求这条方程，避免
+\(\gamma-1\) 太小时浮点相减。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf-7}
+
+预加速并非把每个速度都加同一常数，而是给每个离子增加同一动能；平方根映射
+\(u(v)\) 满足 \(du/dv=v/u<1\)，从而压缩原速度带宽。
+
+光谱分辨的本质不是让两个中心波长分开------它们的静止差值固定不变------而是先把每条谱线因速度分布产生的多普勒展宽压窄。临界条件比较的是短波长谱线的右端和长波长谱线的左端，不能只比较两个区间的宽度。
+
+式（1）保留了一阶低速项，所以速度分布到波长分布是线性映射；若使用完整相对论公式，矩形速度分布会出现很小的纵轴密度变化。当前最高速度与光速之比约
+\(10^{-4}\)，单个扫描端点的二阶相对修正约 \(10^{-8}\)，对应约
+\(2\times10^{-6}\,\mathrm{nm}\)，小于题给 \(0.001\,\mathrm{nm}\)
+的谱线间隔；若要提高末位精度，应使用完整公式。
+
+最小电压由区间``刚刚分离''而不是中心间距条件确定。设两个扫描区间为
+\([a_1,b_1]\)、\([a_2,b_2]\) 且 \(a_1<a_2\)，不重叠的必要条件是
+\(b_1\le a_2\)。中心间距大于某个平均半宽只在两区间等宽且对称时等价；本题两条静止波长不同，严格处理必须直接比较端点。
+
+可用近似分辨速度作独立估算。两条静止波长差
+\(\delta\lambda=0.001\,\mathrm{nm}\) 对应的一阶多普勒速度宽度约为
+
+\[
+w\simeq c\frac{\delta\lambda}{\lambda_1}
+\approx5.17\times10^2\,\mathrm{m\,s^{-1}}.
+\]
+
+若忽略 \(\lambda_1\) 与 \(\lambda_2\) 在系数上的极小差异，临界时应有
+\(u_2-s\simeq w\)。又因
+
+\[
+(u_2-s)(u_2+s)=v_2^2,
+\]
+
+令 \(u_2=s+w\)，可得
+
+\[
+s\simeq\frac{v_2^2-w^2}{2w}
+\approx2.39\times10^4\,\mathrm{m\,s^{-1}},
+\]
+
+进而
+\(V\simeq57.2\,\mathrm V\)。这一估算与严格二次方程一致，可用于发现纳米、米或荷质比单位输入错误。
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9-7}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  迎面运动的波长移动方向判断反。
+\item
+  把频率分布形状直接画到波长轴而不检查低速线性近似。
+\item
+  写成 \(u=v+\sqrt{2\eta V}\)。
+\item
+  不重叠条件比较错了两个区间端点。
+\item
+  将 \(580.001\,\mathrm{nm}\) 的差值误当 \(0.001\,\mathrm m\)。
+\item
+  只说``速度都变大''，据此误判速度区间也变宽；应比较平方根函数在两个端点的增量。
+\item
+  把荧光曲线高度直接等同于离子总数，没有使用
+  \(dN/d\lambda=(dN/dv)(dv/d\lambda)\) 检查变量变换。
+\item
+  平方式（14）后保留不满足原式符号的伪根。
+\item
+  用两谱线静止波长差直接除以 \(\lambda_0/c\)
+  得到允许速度宽度，却忽略两个区间起点也随预加速速度 \(s\)
+  发生轻微比例变化。
+\item
+  在计算 \(V=s^2/(2\eta)\) 时把荷质比 \(q/m\) 颠倒成 \(m/q\)。
+\item
+  平方解出 \(s\) 后不回代未平方方程，可能保留伪根。
+\item
+  忽略题图速度分布的纵轴含义。变量映射时既要变换横轴，也要用雅可比
+  \(dv/d\lambda\) 判断纵轴密度。
+\item
+  把预加速后的谱线宽度仍写成 \(\lambda_0v_2/c\)；应把 \(v_2\)
+  换成新的端点差 \(u_2-u_1\)。
+\end{enumerate}
+
+\Needspace{27\baselineskip}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae-7}
+
+先用单个速度箭头判断：离子迎向光束时``看到''的频率升高，为仍看到固有频率，实验室激光频率就要降低、波长要增大。这个口头判断完成后再写式（1），可避免死记符号。
+
+第二问先取两个简单数值比较 \(\sqrt{v^2+a}\)
+的端点差，再给出式（8）的有理化证明，使``整体右移但带宽压缩''成为可视化结论。
+
+第三问在同一波长数轴画两段区间，用不同颜色标出第一段右端与第二段左端。让学生先口述不等式，再写等号求临界值。求出
+\(s\) 后必须回代未平方的式（14），最后以 \(s/c\) 检查近似条件。
+
+数值计算可分三层校验：先由 \(0.001/580\) 估计所需相对分辨率约
+\(1.7\times10^{-6}\)；再把它乘 \(c\) 得允许速度宽度约
+\(5.2\times10^2\,\mathrm{m\,s^{-1}}\)；最后检查严格解得到的 \(u_2-s\)
+是否在这一量级。三层一致后，\(57.2\,\mathrm V\) 才是可信结果。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3-7}
+
+使用完整相对论多普勒公式复算并估计修正量；若速度分布为高斯，推导波长分布的标准差。
+
+还可把加速电压改成具有小涨落
+\(V\pm\Delta V\)，讨论电源不稳定给谱线引入的附加展宽。若离子束与激光并非严格反向，而夹角为
+\(\alpha\)，低速多普勒式中的 \(v\)
+应替换为沿光传播方向的投影，并可据此反求允许的准直角误差。
+
+另一变式是给定仪器本身的波长分辨率
+\(\Delta\lambda_{\rm inst}\)。此时不能只要求两个理想区间不重叠，还应让它们之间的间隙至少达到仪器分辨率；在式（13）的右侧加入相应余量后重新求
+\(V\)，可把理想数学分辨与真实实验分辨区分开。
+\end{document}

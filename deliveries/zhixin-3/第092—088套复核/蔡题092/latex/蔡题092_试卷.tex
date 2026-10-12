@@ -1,0 +1,307 @@
+\documentclass[12pt,a4paper,UTF8]{ctexart}
+\usepackage[a4paper,top=22mm,bottom=22mm,left=22mm,right=22mm,headheight=15pt]{geometry}
+\usepackage{amsmath,amssymb,mathtools,bm}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{booktabs,longtable,array}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{microtype}
+\usepackage{setspace}
+\usepackage[hidelinks,unicode]{hyperref}
+\usepackage[most]{tcolorbox}
+
+\definecolor{ContestBlue}{HTML}{17365D}
+\definecolor{SoftBlue}{HTML}{EEF4FA}
+\definecolor{SoftGray}{HTML}{F5F6F7}
+\hypersetup{pdftitle={第 092 套},pdfauthor={}}
+
+\setstretch{1.24}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.35em}
+\setlist{itemsep=0.35em,topsep=0.4em}
+\captionsetup{font=small,labelfont=bf,justification=centering}
+\setcounter{secnumdepth}{0}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small 第 092 套}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\ctexset{
+  section={format=\Large\bfseries\color{ContestBlue},beforeskip=1.2em,afterskip=0.7em},
+  subsection={format=\large\bfseries\color{ContestBlue},beforeskip=1.0em,afterskip=0.5em},
+  subsubsection={format=\normalsize\bfseries,beforeskip=0.8em,afterskip=0.35em}
+}
+
+\makeatletter
+\newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\newcommand{\maxwidth}{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\newcommand{\maxheight}{\ifdim\Gin@nat@height>0.72\textheight 0.72\textheight\else\Gin@nat@height\fi}
+\newcommand{\pandocbounded}[1]{\begingroup\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}#1\endgroup}
+\makeatother
+
+\begin{document}
+
+\begin{titlepage}
+  \centering
+  \vspace*{58mm}
+  {\Huge\bfseries\color{ContestBlue} 第 092 套\par}
+  \vfill
+  \vspace*{28mm}
+\end{titlepage}
+
+
+\section{第 1 题}\label{ux7b2c-1-ux9898}
+
+一个半径为 \(r\) 的自行车轮在水平地面上做纯滚动，角速度大小为
+\(\omega\)。轮内均匀分布着 \(12\)
+根轮辐，轮辐宽度可以忽略；除轮辐外，轮内为空。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  在高度
+
+  \[y=r(1-\lambda),\qquad -1<\lambda<1\]
+
+  处，沿垂直于轮面的方向射出一支箭，忽略重力造成的竖直位移。若入射点的横坐标可以合理选择，并要求无论箭速多小，箭都能避开轮辐穿过轮子，求
+  \(\lambda\) 应满足的条件。
+\item
+  若 \(\lambda\) 不满足第 1 问的条件，例如 \(\lambda=0.3\)，则长度为
+  \(l\) 的箭还必须具有足够大的速度。求箭的最小速度 \(v_m\)。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.858\linewidth,height=\textheight,keepaspectratio,alt={图 1-1　纯滚动车轮、固定射线高度及入射点的几何关系。}]{../figures/question-01.pdf}
+\caption*{图 1-1　纯滚动车轮、固定射线高度及入射点的几何关系。}
+\end{figure}
+
+\newpage
+
+\section{第 2 题}\label{ux7b2c-2-ux9898}
+
+利用液体表面张力可以使一枚硬币浮在水面上。水的密度为
+\(\rho_0\)，硬币的密度为 \(\rho\)，且 \(\rho>\rho_0\)；硬币半径为
+\(r\)、厚度为 \(h\)，水的表面张力系数为
+\(\sigma\)。在硬币边缘处，液面切线与水平面的夹角为 \(\theta_0\)。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  硬币上表面比远处水平液面低 \(l\)。只考虑硬币的受力平衡，用
+  \(\theta_0\)、\(\sigma\)、\(g\)、\(\rho\)、\(\rho_0\)、\(r\)、\(h\)
+  表示 \(l\)。
+\item
+  假设硬币较轻，使得 \(\theta_0\ll1\)。以竖直方向为 \(y\) 轴、水平方向为
+  \(x\) 轴，取远处水面为 \(y=0\)。由液体的受力平衡写出液面截线 \(y(x)\)
+  满足的微分方程。
+\item
+  联立前两问，求平衡液面 \(y(x)\) 以及 \(\theta_0\)，结果只含
+  \(\rho\)、\(\rho_0\)、\(g\)、\(\sigma\)、\(r\)、\(h\)。
+\end{enumerate}
+
+进一步讨论：硬币较重时，\(\theta_0\)
+最大只能达到固---液---气接触处的润湿角
+\(\alpha\)。求硬币能够浮起的参数条件。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图 2-1　硬币、下凹液面、浸没深度及边缘接触角。}]{../figures/question-02.pdf}
+\caption*{图 2-1　硬币、下凹液面、浸没深度及边缘接触角。}
+\end{figure}
+
+\newpage
+
+\section{第 3 题}\label{ux7b2c-3-ux9898}
+
+一数学摆由质量为 \(m\) 的金属小球和长度为 \(l\)
+的细导线组成，在水平均匀磁场中作小幅振动。磁感应强度为
+\(B\)，磁场方向垂直于摆的振动平面。摆偏离竖直线的初始最大角为
+\(\alpha_0\)。当摆球通过平衡位置时，借助柔软细导线把摆线与电容为 \(C\)
+的电容器短暂接通，并在很短的接触时间内使电容器完成充电。求充电后摆的最大偏角如何变化。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.734\linewidth,height=\textheight,keepaspectratio,alt={图 3-1　磁场中的导电摆线在平衡位置短暂接入电容器。}]{../figures/question-03.pdf}
+\caption*{图 3-1　磁场中的导电摆线在平衡位置短暂接入电容器。}
+\end{figure}
+
+\newpage
+
+\section{第 4 题}\label{ux7b2c-4-ux9898}
+
+一种发光体服从余弦发光定律。对面积为 \(\mathrm{d}S\) 的发光面元，在时间
+\(\mathrm{d}t\) 内向立体角 \(\mathrm{d}\Omega\) 中发出的能量为
+
+\[
+\mathrm{d}E=I_0\cos\theta\,\mathrm{d}\Omega\,\mathrm{d}S\,\mathrm{d}t,
+\]
+
+其中 \(\theta\) 为发光方向与面元法线的夹角，\(I_0\) 为常量。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  求单位发光面积在单位时间内发出的总功率 \(P_0\)。
+\item
+  一个无限大平面由上述面元构成。在距它 \(l_0\)
+  处放置一个与之平行的小接收面，求接收面单位面积得到的功率 \(P_1\)。
+\item
+  上述发光面构成一根足够长、半径为 \(r\) 的圆柱。在距圆柱轴线 \(x\)
+  处放置小接收面，并可任意选择其朝向。求单位接收面积所得最大功率
+  \(P_2(x)\)，取 \(x>r\)。
+\item
+  两根足够长、半径均为 \(r\) 的圆柱灯安装在天花板上，轴线均沿 \(y\)
+  方向，横坐标分别为 \(x=\pm h\)，且 \(h\gg r\)。桌面与天花板的距离为
+  \(\lambda h\)。要求桌面中心 \(x=0\) 附近的单位面积受光功率随 \(x\)
+  的变化尽可能平坦，求 \(\lambda\)。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.811\linewidth,height=\textheight,keepaspectratio,alt={图 4-1　余弦发光面元的法线、发光方向与微小立体角。}]{../figures/question-04.pdf}
+\caption*{图 4-1　余弦发光面元的法线、发光方向与微小立体角。}
+\end{figure}
+
+\newpage
+
+\section{第 5 题}\label{ux7b2c-5-ux9898}
+
+两个绝热刚性容器的体积均为
+\(V_0\)，中间由一根绝热细管相连，管内装有一台理想、缓慢转动的绝热汽轮机。初始时，左容器装有单原子理想气体，压强为
+\(p_0\)、温度为 \(T_0\)，定容摩尔热容为
+
+\[C_V=\frac32R,\]
+
+右容器为真空。汽轮机极缓慢地对外做功；气体从左侧流出时可视为经历准静态绝热膨胀，随后进入右容器并均匀混合。气体膨胀所做的功全部转化为汽轮机对外输出的功。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  当左容器中气体压强降为 \(\lambda p_0\) 时，求左侧温度
+  \(T_L(\lambda)\)。
+\item
+  在同一状态下，只对全部气体使用热力学第一定律。若汽轮机累计做功为
+  \(W\)，求右侧温度 \(T_R(\lambda)\) 和压强 \(p_R(\lambda)\)。
+\item
+  对通过汽轮机的一小团气体使用热力学第一定律，建立 \(W\) 关于
+  \(\lambda\) 的微分方程，并求出状态函数。
+\end{enumerate}
+
+进一步求系统达到力学平衡时汽轮机的总功 \(W_m\) 及气体的总熵变。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图 5-1　两个绝热刚性容器、缓慢绝热汽轮机与气体迁移过程。}]{../figures/question-05.pdf}
+\caption*{图 5-1　两个绝热刚性容器、缓慢绝热汽轮机与气体迁移过程。}
+\end{figure}
+
+\newpage
+
+\section{第 6 题}\label{ux7b2c-6-ux9898}
+
+两个半径均为 \(r\) 的同轴圆形线圈位于互相平行的 \(x\)---\(y\)
+平面内，圆心分别位于
+
+\[
+(0,0,+\lambda r),
+\qquad
+(0,0,-\lambda r).
+\]
+
+两线圈中均通有恒定电流 \(I\)，绕向相同，使它们在轴线上产生的磁场均沿
+\(+z\) 方向。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  求原点的磁感应强度 \(\bm B(0,0,0)\)。
+\item
+  求原点附近一点 \((x,y,z)\) 的磁场，保留到 \(x/r\)、\(y/r\)、\(z/r\)
+  的二阶小量。
+\item
+  在原点放置一个大小恒为 \(m_0\)、方向只能沿 \(+z\)
+  的磁偶极子。若它的中心只能在 \(x\)---\(y\)
+  平面内移动，求原点稳定平衡时 \(\lambda\) 应满足的条件。
+\item
+  若 \(\lambda\) 满足第 3 问条件，改为只允许磁偶极子沿 \(z\)
+  轴移动，判断原点平衡是否稳定。
+\item
+  保持第 3 问的 \(\lambda\)
+  条件和磁偶极子的轴向约束，把两恒流线圈改为闭合超导线圈。判断原点能否成为稳定平衡，并说明还需要哪些线圈参数；若忽略两线圈间的互感、每个线圈自感为
+  \(L\)，写出稳定条件。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.73\linewidth,height=\textheight,keepaspectratio,alt={图 6-1　同轴双圆环的坐标、间距和电流绕向。}]{../figures/question-06.pdf}
+\caption*{图 6-1　同轴双圆环的坐标、间距和电流绕向。}
+\end{figure}
+
+\newpage
+
+\section{第 7 题}\label{ux7b2c-7-ux9898}
+
+一束近似平行光沿 \(+y\) 方向入射到柱形透镜。透镜的一面为平面，位于
+\(x\)---\(z\) 平面；另一面在 \(x\)---\(y\) 截面内为半径
+
+\[r=5.00\ \mathrm{cm}\]
+
+的半圆弧。透镜折射率为
+\(n=1.56\)，外界为空气。平行光垂直入射平面，因此只在半圆弧面发生折射。弧面上方铺有与光路近似平行的粗糙白纸，可观察实际光路。透镜圆心取为原点。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  近轴光线会聚于焦点 \(F\)，求焦点到原点的距离 \(h_0\)。
+\item
+  忽略多次反射。入射平行光距 \(y\) 轴的最大横向距离 \(\xi_{\max}\)
+  为多少时，弧面处仍有折射光射出？
+\item
+  在过焦点 \(F\) 且垂直于 \(y\) 轴的截面上，实际光束沿 \(x\)
+  方向的几何宽度最大为多少？
+\item
+  求 \(y=10.0\ \mathrm{cm}\) 平面上被照亮区域沿 \(x\) 方向的宽度。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.53\linewidth,height=\textheight,keepaspectratio,alt={图 7-1　平行光垂直入射半圆柱透镜的截面光路。}]{../figures/question-07.pdf}
+\caption*{图 7-1　平行光垂直入射半圆柱透镜的截面光路。}
+\end{figure}
+
+\newpage
+
+\section{第 8 题}\label{ux7b2c-8-ux9898}
+
+一个半径为 \(R\)
+的半球形光滑碗固定在水平地面上，对称轴竖直。一个小球与碗的内表面接触，初始位置比碗底高
+
+\[\frac R3.\]
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  给小球一个与碗面相切、方向可任意选择的初速度。求小球能够越过碗沿所需的最小初速度，并说明达到该最小值的发射方向有几种。
+\item
+  若初速度限定在水平方向且与碗面相切，求小球能够越过碗沿所需的最小速度。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.892\linewidth,height=\textheight,keepaspectratio,alt={图 8-1　半球碗内小球的初始高度、任意切向速度与水平切向速度。}]{../figures/question-08.pdf}
+\caption*{图 8-1　半球碗内小球的初始高度、任意切向速度与水平切向速度。}
+\end{figure}
+
+\end{document}

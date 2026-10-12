@@ -1,0 +1,271 @@
+\documentclass[12pt,a4paper,UTF8]{ctexart}
+\usepackage[a4paper,top=22mm,bottom=22mm,left=22mm,right=22mm,headheight=15pt]{geometry}
+\newcommand{\Needspace}[1]{\par\begingroup\dimen0=#1\relax\dimen2=\pagegoal\advance\dimen2 by-\pagetotal\ifdim\dimen0>\dimen2\newpage\fi\endgroup}
+\newcommand{\needspace}[1]{\par\begingroup\skip0=\lastskip\vskip-\skip0\dimen0=#1\relax\advance\dimen0 by\skip0\vskip\dimen0\penalty-100\vskip-\dimen0\vskip\skip0\penalty9999\endgroup}
+\usepackage{amsmath,amssymb,mathtools,bm}
+\usepackage{graphicx,xcolor,booktabs,longtable,array,enumitem,fancyhdr,caption,float,microtype,setspace}
+\usepackage[hidelinks,unicode]{hyperref}
+\usepackage[most]{tcolorbox}
+\definecolor{ContestBlue}{HTML}{17365D}
+\hypersetup{pdftitle={第060套},pdfauthor={}}
+\setstretch{1.24}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.35em}
+\setlength{\emergencystretch}{2em}
+\setlist{itemsep=0.35em,topsep=0.4em}
+\captionsetup{font=small,labelfont=bf,justification=centering}
+\setcounter{secnumdepth}{0}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small 第060套}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\ctexset{
+  section={format=\Large\bfseries\color{ContestBlue},beforeskip=1.2em,afterskip=0.7em},
+  subsection={format=\large\bfseries\color{ContestBlue},beforeskip=1.0em,afterskip=0.5em},
+  subsubsection={format=\normalsize\bfseries,beforeskip=0.8em,afterskip=0.35em}
+}
+\usepackage{calc}
+\newcounter{none}
+\let\originalsubsection\subsection
+\renewcommand{\subsection}{\needspace{6\baselineskip}\originalsubsection}
+\makeatletter
+\newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\newcommand{\maxwidth}{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\newcommand{\maxheight}{\ifdim\Gin@nat@height>0.72\textheight 0.72\textheight\else\Gin@nat@height\fi}
+\newcommand{\pandocbounded}[1]{\begingroup\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}#1\endgroup}
+\makeatother
+\begin{document}
+\begin{titlepage}
+  \centering
+  \vspace*{58mm}
+  {\Huge\bfseries\color{ContestBlue} 第060套\par}
+  \vfill
+  \vspace*{28mm}
+\end{titlepage}
+\section{第 1 题}\label{ux7b2c-1-ux9898}
+
+如图，一根细绳穿过两个质量均为 \(m\)
+的小铁环。上环水平放置，绳从其左右两侧接触点 \(D,E\) 穿过，再绕下方的环
+\(C\)；左右结构对称，绳与小环间的静摩擦因数为
+\(\mu\)。调整上环的位置，使侧视图中绳与上方两个小环的接触点 \(D,E\)
+位于同一水平面，\(AD,BE\) 与竖直方向的夹角均为 \(\alpha\)，\(DC,EC\)
+近似竖直。系统保持静止。
+
+把绳与小环的局部接触简化为绳绕圆环的问题，并以接触弧一端的张力为
+\(T(0)=T_0\)，另一端张力为 \(T(\alpha)\)。
+
+（1）若小环固定，求绳不发生相对滑动时 \(T(\alpha)\) 的最小值
+\(T_{\min}\) 和最大值 \(T_{\max}\)。
+
+（2）取 \(\mu=1.5\)，求系统能够静止时 \(\alpha\) 的取值范围。
+
+（3）求系统存在静止平衡所需的最小静摩擦因数 \(\mu_c\)，以及相应的平衡角
+\(\alpha_c\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图1-1　对称悬挂结构与绳元在圆环接触区的受力关系}]{../figures/question-01.pdf}
+\caption*{图1-1　对称悬挂结构与绳元在圆环接触区的受力关系}
+\end{figure}
+
+\newpage
+
+\section{第 2 题}\label{ux7b2c-2-ux9898}
+
+两块水平木板平行放置，间距为 \(2r\)。下板固定，上板以恒定角速度
+\(\Omega\bm e_z\) 绕过 \(O\) 点的竖直轴旋转。两板之间夹有一半径为 \(r\)
+的球，球在上下接触点都不滑动，并且球的角速度始终没有竖直分量。以 \(O\)
+为原点建立水平坐标系 \(xOy\)，球心初始坐标为 \((l,0)\)。
+
+（1）上板旋转一周后，求球心在水平面内的位置。
+
+（2）初始时球面最高点记为 \(A\)。上板转一周后，若矢量
+\(\overrightarrow{CA}\) 恰好再次指向 \(+z\) 方向，求 \(r/l\)
+的所有可能值。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.821\linewidth,height=\textheight,keepaspectratio,alt={图2-1　旋转上板、固定下板与夹持球的三维几何关系}]{../figures/question-02.pdf}
+\caption*{图2-1　旋转上板、固定下板与夹持球的三维几何关系}
+\end{figure}
+
+\newpage
+
+\section{第 3 题}\label{ux7b2c-3-ux9898}
+
+如图为无限角点相接三角电阻网络，每条小三角形边的电阻均为 \(r\)。节点
+\(A,B,C\)
+是同一个小三角形的三个顶点，由三重旋转对称互相对应。原图是四配位的角共享三角网络：每个节点属于两个三角形，周围另有六边形空隙；它不是六配位的完整三角晶格。
+
+（1）求相邻节点 \(A,B\) 间的等效电阻 \(r_{AB}\)。
+
+（2）在 \(A,B,C\) 接入三相交流电源
+
+\[
+u_A=u_0\cos\omega t,\quad
+u_B=u_0\cos\left(\omega t+\frac{2\pi}{3}\right),\quad
+u_C=u_0\cos\left(\omega t+\frac{4\pi}{3}\right),
+\]
+
+无穷远接地。求从 \(A\) 端流入网络的电流 \(I_A(t)\)。
+
+（3）把无限网络视为 \(ABC\) 三端网络并等效成星形网络，求 \(Z_A\)。
+
+（4）若直接连接 \(A,B\) 的那一条电阻断开，求新的星形等效阻抗
+\(Z_A',Z_C'\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图3-1　角点相接无限三角网络与三端星形等效表示}]{../figures/question-03.pdf}
+\caption*{图3-1　角点相接无限三角网络与三端星形等效表示}
+\end{figure}
+
+\newpage
+
+\section{第 4 题}\label{ux7b2c-4-ux9898}
+
+如图（a），质量为 \(m\)、半径为 \(R\) 的均匀绝缘圆环铰接于环上一点
+\(A\)，可在圆环所在的水平面内自由转动。质量为 \(m\)、电荷量为 \(q\)
+的小珠套在圆环上，与圆环间无摩擦。空间中存在竖直向下的匀强磁场
+\(\bm B\)。
+
+（1）若小珠相对圆环静止，并随圆环绕 \(A\) 做圆周运动，求共同角速度
+\(\omega_1\)。小珠到 \(A\) 的距离记为 \(r_1\)，其中 \(0<r_1<2R\)。
+
+（2）使小珠起初位于 \(A\)，圆环以角速度 \(\omega_0\) 转动，且
+\(\omega_0\)
+大于第（1）问所得角速度。给小珠一个微小扰动后，小珠沿环滑动。若小珠能够第一次再次与圆环相对静止，求此时小珠到
+\(A\) 的距离 \(r\) 和圆环角速度 \(\omega_2\)。
+
+（3）如图（b），把小珠固定在质量同为 \(m\)、半径为 \(R/2\)
+的均匀小绝缘环上；小环在大环内无阻力地纯滚动。初始时两环在 \(A\)
+点相切并相对静止，小珠也位于 \(A\)。大环初角速度为
+
+\[
+\omega_0'=0.53\frac{qB}{m}.
+\]
+
+给小环微小扰动，使其圆心相对大环圆心顺时针运动。若两环能够第一次再次相对静止，求小环圆心转过的角度
+\(\alpha\) 以及此时两环的共同角速度 \(\omega_2\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图4-1　铰接圆环上的带电小珠及内滚小环的几何关系}]{../figures/question-04.pdf}
+\caption*{图4-1　铰接圆环上的带电小珠及内滚小环的几何关系}
+\end{figure}
+
+\newpage
+
+\section{第 5 题}\label{ux7b2c-5-ux9898}
+
+将一个线性分子简化为固定在同一直线上的三个点电荷，依次为
+\(-q,2q,-q\)，相邻电荷间距均为 \(l\)。分子总质量为
+\(m\)，绕质心且垂直于分子轴的转动惯量为 \(I=\lambda ml^2\)。以远处点电荷
+\(Q\) 到分子质心的位移为 \(\bm r=r\hat{\bm r}\)，分子轴方向为
+\(\hat{\bm n}\)，二者夹角为 \(\theta\)，且 \(r\gg l\)。
+
+（1）保留最低非零阶，求该分子在点电荷 \(Q\) 的电场中受到的合力。
+
+（2）求分子受到的合力矩，精确到相对量级 \((l/r)^2\)。
+
+（3）若把分子置于圆形区域中心，区域内磁场均匀但随时间变化，且
+\(\partial\bm B/\partial t=\bm b\)，求感生电场对分子产生的合力矩。用
+\(\bm b,\hat{\bm n},l,q\) 表示。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.86\linewidth,height=\textheight,keepaspectratio,alt={图5-1　线性三电荷分子的取向及其与远处点电荷的位置关系}]{../figures/question-05.pdf}
+\caption*{图5-1　线性三电荷分子的取向及其与远处点电荷的位置关系}
+\end{figure}
+
+\newpage
+
+\section{第 6 题}\label{ux7b2c-6-ux9898}
+
+浅水波的波速近似为 \(v=\sqrt{gh}\)，其中 \(h\) 是水深。取岸线为 \(x\)
+轴，海面位于 \(y>0\)。水深随 \(y\) 变化：
+
+\[
+h(y)=\frac{4h_0}{5-y^2/y_0^2},
+\]
+
+其中 \(h_0,y_0\) 为常量。一艘船沿 \(y=y_0\) 以速度 \(v_b=2\sqrt{gh_0}\)
+向 \(+x\) 方向匀速航行，\(t=0\) 时船位于
+\(A(0,y_0)\)。岸边观察者位于原点 \(O\)。
+
+（1）船在 \(A\) 处激发的一束水波射线到达岸边 \(B\)，记 \(x_1=|OB|\)，求
+\(x_1/y_0\)。
+
+（2）观察者第一次接收到船激发的水波的时刻为 \(t_r\)，求
+\(t_r\sqrt{gh_0}/y_0\)。
+
+（3）\(t=0\) 时水面上的波前可写为 \(y=f(x)\)。若 \(f(x_s)=y_0/2\)，求
+\(x_s/y_0\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.88\linewidth,height=\textheight,keepaspectratio,alt={图6-1　变水深海域中的运动波源、岸线与弯曲水波射线}]{../figures/question-06.pdf}
+\caption*{图6-1　变水深海域中的运动波源、岸线与弯曲水波射线}
+\end{figure}
+
+\newpage
+
+\section{第 7 题}\label{ux7b2c-7-ux9898}
+
+一根截面均匀、足够细的长玻璃管弯成图示形状。左端封闭，右端开口通大气。各段长度为
+
+\[
+l_1=100\,\mathrm{cm},\qquad
+l_2=5\,\mathrm{cm},\qquad
+l_3=50\,\mathrm{cm}.
+\]
+
+在左侧竖直管中、\(A\) 点下方有长度
+
+\[
+l_4=10\,\mathrm{cm}
+\]
+
+的水银柱。忽略表面张力、弯角处体积以及水银与管壁的阻力。大气压为
+\(p_0=76\,\mathrm{cmHg}\)，初始环境温度为
+\(T_0=300\,\mathrm K\)。管壁导热足够快，封闭气体各处始终均匀且与环境同温。
+
+（1）判断初始平衡是否稳定。
+
+（2）缓慢升温到多少温度 \(T_1\) 时，水银开始自发快速流动？
+
+（3）承接第（2）问，当水银柱后端第一次到达 \(A\) 点时，求水银柱速度
+\(v_1\)。
+
+（4）此时求 \(B\) 点处水银内部的压强。
+
+（5）水银继续运动，是否会从右端管口溢出？一旦溢出便不再讨论后续回流。
+
+（6）待水银缓慢停下并再次达到平衡后，继续缓慢升温。若要使水银全部流出，至少应升温到多少？
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.64\linewidth,height=\textheight,keepaspectratio,alt={图7-1　封闭气体、水银柱与弯折细管各段长度的定义}]{../figures/question-07.pdf}
+\caption*{图7-1　封闭气体、水银柱与弯折细管各段长度的定义}
+\end{figure}
+
+\newpage
+
+\section{第 8 题}\label{ux7b2c-8-ux9898}
+
+在实验室参考系中，一个正电子静止，静质量为
+\(m\)；一个电子沿直线飞来，其总能量为 \(\gamma mc^2\)，其中
+\(\gamma\geq1\)。二者碰撞后湮灭，产生频率分别为 \(\nu_1,\nu_2\)
+的两个光子。两光子在实验室系中的夹角为 \(\theta\)，普朗克常量为 \(h\)。
+
+（1）当 \(\nu_1,\nu_2\) 满足什么关系时，夹角 \(\theta\) 取得最小值？
+
+（2）求最小夹角 \(\theta_{\min}(\gamma)\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.82\linewidth,height=\textheight,keepaspectratio,alt={图8-1　实验室系中电子---正电子湮灭为两个光子的动量几何}]{../figures/question-08.pdf}
+\caption*{图8-1　实验室系中电子---正电子湮灭为两个光子的动量几何}
+\end{figure}
+\end{document}

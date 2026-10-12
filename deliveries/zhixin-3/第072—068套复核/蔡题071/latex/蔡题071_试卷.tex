@@ -1,0 +1,197 @@
+\documentclass[12pt,a4paper,UTF8]{ctexart}
+\usepackage[a4paper,top=22mm,bottom=22mm,left=22mm,right=22mm,headheight=15pt]{geometry}
+\newcommand{\Needspace}[1]{\par\begingroup\dimen0=#1\relax\dimen2=\pagegoal\advance\dimen2 by-\pagetotal\ifdim\dimen0>\dimen2\newpage\fi\endgroup}
+\newcommand{\needspace}[1]{\par\begingroup\skip0=\lastskip\vskip-\skip0\dimen0=#1\relax\advance\dimen0 by\skip0\vskip\dimen0\penalty-100\vskip-\dimen0\vskip\skip0\penalty9999\endgroup}
+\usepackage{amsmath,amssymb,mathtools,bm}
+\usepackage{graphicx,xcolor,booktabs,longtable,array,enumitem,fancyhdr,caption,float,microtype,setspace}
+\usepackage[hidelinks,unicode]{hyperref}
+\usepackage[most]{tcolorbox}
+\definecolor{ContestBlue}{HTML}{17365D}
+\hypersetup{pdftitle={第071套},pdfauthor={}}
+\setstretch{1.24}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.35em}
+\setlength{\emergencystretch}{2em}
+\setlist{itemsep=0.35em,topsep=0.4em}
+\captionsetup{font=small,labelfont=bf,justification=centering}
+\setcounter{secnumdepth}{0}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small 第071套}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\ctexset{
+  section={format=\Large\bfseries\color{ContestBlue},beforeskip=1.2em,afterskip=0.7em},
+  subsection={format=\large\bfseries\color{ContestBlue},beforeskip=1.0em,afterskip=0.5em},
+  subsubsection={format=\normalsize\bfseries,beforeskip=0.8em,afterskip=0.35em}
+}
+\usepackage{calc}
+\newcounter{none}
+\let\originalsubsection\subsection
+\renewcommand{\subsection}{\needspace{6\baselineskip}\originalsubsection}
+\makeatletter
+\newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\newcommand{\maxwidth}{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\newcommand{\maxheight}{\ifdim\Gin@nat@height>0.72\textheight 0.72\textheight\else\Gin@nat@height\fi}
+\newcommand{\pandocbounded}[1]{\begingroup\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}#1\endgroup}
+\makeatother
+\begin{document}
+\begin{titlepage}
+  \centering
+  \vspace*{58mm}
+  {\Huge\bfseries\color{ContestBlue} 第071套\par}
+  \vfill
+  \vspace*{28mm}
+\end{titlepage}
+\section{第 1 题}\label{ux7b2c-1-ux9898}
+
+半径为 \(r\)、质量为 \(m\) 的刚性薄壁圆筒平放在半径为 \(2r\)
+的水平圆柱形槽中。圆筒上放置一质量也为 \(m\) 的刚性均匀板，板厚为
+\(0.5r\)，相对质心的转动惯量为
+\(I_P=\frac{3}{16}mr^2\)。板与圆筒、圆筒与槽之间均无相对滑动。平衡时圆筒位于槽底，板水平且板的质心在圆筒圆心正上方。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  判断该平衡的稳定性。
+\item
+  求系统微幅振动的简正角频率。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.76\linewidth,height=\textheight,keepaspectratio,alt={图1-1　圆筒在圆柱形槽内滚动并支承均匀板}]{../figures/question-01.pdf}
+\caption*{图1-1　圆筒在圆柱形槽内滚动并支承均匀板}
+\end{figure}
+
+\newpage
+
+\section{第 2 题}\label{ux7b2c-2-ux9898}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  在半径为 \(R\) 的圆环上取 \(N\) 个等分点，依次放置
+  \(q,2q,\ldots,Nq\)，求圆心电场大小。
+\item
+  半径为 \(R\) 的绝缘圆环上线电荷密度为 \[
+  \lambda(\theta)=\frac{\theta}{2\pi}\lambda_0,
+  \qquad 0\le\theta<2\pi,
+  \] 求圆心电场大小。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.526\linewidth,height=\textheight,keepaspectratio,alt={图2-1　离散递增点电荷与连续角向线密度}]{../figures/question-02.pdf}
+\caption*{图2-1　离散递增点电荷与连续角向线密度}
+\end{figure}
+
+\newpage
+
+\section{第 3 题}\label{ux7b2c-3-ux9898}
+
+长为 \(l\) 的不可伸长轻绳悬挂一根长为 \(2l\)、质量为 \(m\)
+的均匀刚性细杆。系统初始静止平衡。一刚性小球质量为 \(M\)，且
+\(M\ll m\)，以速度 \(v_0=\sqrt{gl}\) 水平撞击细杆中点。记碰撞时刻为
+\(t=0\)，求此后轻绳相对竖直方向的摆角 \(\theta(t)\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.524\linewidth,height=\textheight,keepaspectratio,alt={图3-1　轻绳悬挂细杆及小球水平撞击杆中点}]{../figures/question-03.pdf}
+\caption*{图3-1　轻绳悬挂细杆及小球水平撞击杆中点}
+\end{figure}
+
+\newpage
+
+\section{第 4 题}\label{ux7b2c-4-ux9898}
+
+两个等体积 \(V\)
+的绝热容器装有同种单原子理想气体，以很细的绝热管相连。细管体积和管内热传导均可忽略。初始阀门关闭，左容器有
+\(2n_0\)、温度 \(2T_0\) 的气体，右容器有 \(n_0\)、温度 \(T_0\)
+的气体。\(t=0\) 打开阀门，气体缓慢流动。求充分长时间后两容器的温度
+\(T_1,T_2\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.76\linewidth,height=\textheight,keepaspectratio,alt={图4-1　等体积绝热容器通过细管缓慢交换气体}]{../figures/question-04.pdf}
+\caption*{图4-1　等体积绝热容器通过细管缓慢交换气体}
+\end{figure}
+
+\newpage
+
+\section{第 5 题}\label{ux7b2c-5-ux9898}
+
+三个完全相同的宽电磁铁线圈绕在细铁环上，并将铁环三等分。线圈欧姆电阻忽略。线圈
+1 接理想交流电源，线圈 2 经开关 \(S\) 形成开路，线圈 3
+接高内阻交流电压表。开关断开时，电压表有效值为电源有效值的一半。闭合
+\(S\) 将线圈 2 短路。铁环磁导率与磁通无关，求闭合后电压表读数。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.498\linewidth,height=\textheight,keepaspectratio,alt={图5-1　均匀铁环上的三个等间隔宽线圈}]{../figures/question-05.pdf}
+\caption*{图5-1　均匀铁环上的三个等间隔宽线圈}
+\end{figure}
+
+\newpage
+
+\section{第 6 题}\label{ux7b2c-6-ux9898}
+
+\(\pi^+\) 介子静质量为电子静质量的 \(273\)
+倍，可衰变为正电子和电子中微子：
+
+\[
+\pi^+\longrightarrow e^++\nu_e.
+\]
+
+中微子静质量取零，满足
+\(E_\nu=p_\nu c\)。要使实验室系中正电子与中微子的速度方向互相垂直，求
+\(\pi^+\) 介子的最小速度。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.663\linewidth,height=\textheight,keepaspectratio,alt={图6-1　实验室系中介子衰变为相互垂直的两粒子}]{../figures/question-06.pdf}
+\caption*{图6-1　实验室系中介子衰变为相互垂直的两粒子}
+\end{figure}
+
+\newpage
+
+\section{第 7 题}\label{ux7b2c-7-ux9898}
+
+三个电量均为 \(q\)、质量均为 \(m\) 的质点位于边长为 \(a\)
+的等边三角形三个顶点。空间中有垂直纸面向内的匀强磁场
+\(B\)。三质点同时由静止释放，求它们最远能到达的位置。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.619\linewidth,height=\textheight,keepaspectratio,alt={图7-1　匀强磁场中三个同号电荷的等边三角形初态}]{../figures/question-07.pdf}
+\caption*{图7-1　匀强磁场中三个同号电荷的等边三角形初态}
+\end{figure}
+
+\newpage
+
+\section{第 8 题}\label{ux7b2c-8-ux9898}
+
+He--Ne 激光波长 \(\lambda=6.3\times10^2\,\mathrm{nm}\)，正入射顶角
+\(\alpha=5.7^\circ\)、折射率 \(n=1.80\) 的双棱镜。两束出射光在流体槽中
+相交形成干涉条纹。水槽距双棱镜 \(1.60\,\mathrm m\)，微粒沿垂直条纹方向
+漂移，散射光传感器读得脉冲频率 \(f_0=10\,\mathrm{kHz}\)。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  求微粒漂移速度。
+\item
+  微粒受电场力，流体阻力大小为 \(f=kv^2\)，方向与速度相反。
+  所有微粒的质量和电量相同。将恒定驱动电压改为
+  \(U=U_0\cos\omega t\)，求一维运动，保留初始条件，并讨论示波器波形。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.86\linewidth,height=\textheight,keepaspectratio,alt={图8-1　双棱镜内向偏折的光束在水槽中重叠形成条纹}]{../figures/question-08.pdf}
+\caption*{图8-1　双棱镜内向偏折的光束在水槽中重叠形成条纹}
+\end{figure}
+\end{document}

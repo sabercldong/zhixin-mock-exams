@@ -1,0 +1,3603 @@
+\documentclass[12pt,a4paper,UTF8]{ctexart}
+\usepackage[a4paper,top=22mm,bottom=22mm,left=22mm,right=22mm,headheight=15pt]{geometry}
+\newcommand{\Needspace}[1]{\par\begingroup\skip0=\lastskip\vskip-\skip0\dimen0=#1\relax\advance\dimen0 by\skip0\vskip\dimen0\penalty-100\vskip-\dimen0\vskip\skip0\penalty9999\endgroup}
+\usepackage{amsmath,amssymb,mathtools,bm}
+\usepackage{graphicx,xcolor,booktabs,longtable,array,enumitem,fancyhdr,caption,float,microtype,setspace}
+\usepackage[hidelinks,unicode]{hyperref}
+\usepackage[most]{tcolorbox}
+\definecolor{ContestBlue}{HTML}{17365D}
+\hypersetup{pdftitle={第080套},pdfauthor={物理竞赛教学资料}}
+\setstretch{1.24}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.35em}
+\setlength{\emergencystretch}{2em}
+\setlist{itemsep=0.35em,topsep=0.4em}
+\captionsetup{font=small,labelfont=bf,justification=centering}
+\setcounter{secnumdepth}{0}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small 第080套}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\ctexset{
+  section={format=\Large\bfseries\color{ContestBlue},beforeskip=1.2em,afterskip=0.7em},
+  subsection={format=\large\bfseries\color{ContestBlue},beforeskip=1.0em,afterskip=0.5em},
+  subsubsection={format=\normalsize\bfseries,beforeskip=0.8em,afterskip=0.35em}
+}
+\usepackage{calc}
+\newcounter{none}
+\let\originalsubsection\subsection
+\renewcommand{\subsection}{\Needspace{6\baselineskip}\originalsubsection}
+\makeatletter
+\newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\newcommand{\maxwidth}{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\newcommand{\maxheight}{\ifdim\Gin@nat@height>0.72\textheight 0.72\textheight\else\Gin@nat@height\fi}
+\newcommand{\pandocbounded}[1]{\begingroup\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}#1\endgroup}
+\makeatother
+\begin{document}
+\begin{titlepage}
+  \centering
+  \vspace*{58mm}
+  {\Huge\bfseries\color{ContestBlue} 第080套\par}
+  \vfill
+  \vspace*{28mm}
+\end{titlepage}
+\section{第 1 题}\label{ux7b2c-1-ux9898}
+
+空间中有两个固定点电荷 \(q\) 和 \(\alpha q\)，二者相距 \(2r\)。一质量为
+\(m\) 的自由空心均匀导体球，其外半径为 \(r\)、空腔半径为
+\(r/2\)。初始时，点电荷 \(q\) 位于空腔球心处。不计重力。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  导体球能够在初始位置保持静止平衡，求 \(\alpha\)。
+\item
+  在第 1 问条件下，使导体球沿两点电荷连线向右偏移 \(xr\)，其中
+  \(x\ll1\)。求导体球所受合力 \(F\) 至 \(x\)
+  的最低非零阶；规定向右为正。
+\item
+  判断初始平衡是否稳定；若稳定，求平衡位置附近的小振动周期。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.603\linewidth,height=\textheight,keepaspectratio,alt={图 1-1　带球形空腔的导体球及两个固定点电荷的初始位置。}]{../figures/question-01.pdf}
+\caption*{图 1-1　带球形空腔的导体球及两个固定点电荷的初始位置。}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d}
+
+导体移动而两点电荷固定。先用内腔与外球面各自的像电荷求力，再看位移的一次项是否指向平衡位置；合力为零还不能判定稳定。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9}
+
+\begin{itemize}
+\tightlist
+\item
+  球形等势边界的像电荷法。
+\item
+  导体所受合力与点电荷所受反作用力。
+\item
+  偏心球腔与外部球面两套像电荷的叠加。
+\item
+  泰勒展开及稳定平衡判据。
+\item
+  线性回复力与简谐振动周期。
+\end{itemize}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf}
+
+点电荷在球腔中心时，内表面感应电荷球对称，内表面感应作用对导体不给出净水平力；外部电荷使外表面极化。导体略向右移动后，球腔中心与点电荷分离，内表面作用随偏心量变化；外表面与外电荷的相互作用也随距离变化。两类作用的零阶项决定平衡条件，一阶项决定稳定性。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3}
+
+把所有长度除以 \(r\)，把力除以 \(kq^2/r^2\)，其中
+\(k=1/(4\pi\varepsilon_0)\)。以导体球心向右位移 \(xr\)
+后的位置为参考，分别建立：
+
+\begin{itemize}
+\tightlist
+\item
+  点电荷 \(q\) 对半径 \(r/2\) 的内球面的像电荷；
+\item
+  外部点电荷 \(\alpha q\) 对半径 \(r\) 的外球面的像电荷。
+\end{itemize}
+
+导体所受力可由``点电荷受到的感应电荷力''的反作用力求得，避免直接积分表面电荷。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790}
+
+偏心后的几何及像电荷位置如图
+1-2。图中只画出决定轴向合力的等效像电荷；实际导体仍满足内、外表面等势。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图 1-2　导体偏心后的轴向几何及内、外球面的等效像电荷。}]{../figures/solution-01.pdf}
+\caption*{图 1-2　导体偏心后的轴向几何及内、外球面的等效像电荷。}
+\end{figure}
+
+\Needspace{3\baselineskip}
+\textbf{1. 初始平衡条件}
+
+外半径取为单位 \(1\)，空腔半径为 \(1/2\)，外电荷到导体球心的距离为
+\(2\)。当导体球仍在初始位置时，点电荷 \(q\)
+位于球腔中心，内表面感应电荷对点电荷的合力为零。
+
+对半径为 \(1\) 的接地球面，距球心 \(a=2\) 的外电荷 \(\alpha q\)
+对应像电荷
+
+\[q'=-\frac{1}{a}\alpha q=-\frac{\alpha q}{2},\]
+
+位置距球心
+
+\[a'=\frac{1}{a}=\frac12.\]
+
+按参考解采用导体净电荷为零的条件，内表面总电荷为
+\(-q\)，外表面总电荷应为 \(+q\)。外球面像电荷 \(-\alpha q/2\)
+之外，须在球心补入
+\(q+\alpha q/2\)。内外两套像电荷分别用于对应区域的场，不能把它们当作同一组真实电荷。外电荷受到这两个等效电荷的作用力，反作用力即导体受到的外场力。无量纲化后，初始力为
+
+\[
+\frac{Fr^2}{kq^2}
+=\frac{7\alpha^2}{72}-\frac{\alpha}{4}.
+\]
+
+这里 \(-\alpha/4\) 来自外表面净电荷 \(+q\)
+的球心等效项；\(7\alpha^2/72\)
+来自外电荷引起的极化及相应球心补偿。固定内电荷与外电荷的直接相互作用属于两点电荷之间的力，不能重复计入导体受力。令
+\(F=0\)：
+
+\[
+\begin{aligned}
+\frac{7\alpha^2}{72}-\frac{\alpha}{4}&=0,\\
+\alpha(7\alpha-18)&=0.
+\end{aligned}
+\]
+
+舍去没有第二个点电荷的平凡解 \(\alpha=0\)，得到
+
+\[\boxed{\alpha=\frac{18}{7}}.\]
+
+\Needspace{3\baselineskip}
+\textbf{2. 偏心后的合力表达式}
+
+位移后，外电荷到导体球心的无量纲距离为
+
+\[a=2-x.\]
+
+内腔球面半径为 \(1/2\)，点电荷相对腔心的偏心距为
+\(x\)。像电荷公式给出内腔对应的等效参数；外球面的像电荷参数则由
+\(a=2-x\) 得到。把各项库仑力按向右为正相加，可整理为
+
+\[
+\frac{Fr^2}{kq^2}
+=\frac{8x}{(1-4x^2)^2}
++\frac{\alpha^2(2-x)}{\bigl[(2-x)^2-1\bigr]^2}
+-\frac{\alpha}{(2-x)^2}
+-\frac{\alpha^2}{(2-x)^3}. \tag{1}
+\]
+
+式（1）的四项依次来自：内腔偏心诱导力、外表面极化力、外表面净电荷 \(+q\)
+的中心项以及补偿外部反演像电荷的中心项。
+
+为了看清一次项的来源，分别展开：
+
+\[\frac{8x}{(1-4x^2)^2}=8x+O(x^3),\]
+
+\[\frac{\alpha^2(2-x)}{[(2-x)^2-1]^2}=\frac{2\alpha^2}{9}+\frac{13\alpha^2}{27}x+O(x^2),\]
+
+\[-\frac{\alpha}{(2-x)^2}=-\frac{\alpha}{4}-\frac{\alpha}{4}x+O(x^2),\]
+
+\[-\frac{\alpha^2}{(2-x)^3}=-\frac{\alpha^2}{8}-\frac{3\alpha^2}{16}x+O(x^2).\]
+
+把常数项与一次项分别合并，便得到下式。不能只展开某一个分母而把其余项仍按常量处理。
+
+在 \(x=0\) 附近展开至一阶：
+
+\[
+\frac{Fr^2}{kq^2}
+=\left(\frac{7\alpha^2}{72}-\frac{\alpha}{4}\right)
++\left(8-\frac{\alpha}{4}+\frac{127\alpha^2}{432}\right)x+O(x^2). \tag{2}
+\]
+
+第一括号正是第 1 问的平衡条件。代入 \(\alpha=18/7\)：
+
+\[
+\begin{aligned}
+8-\frac14\frac{18}{7}+\frac{127}{432}\left(\frac{18}{7}\right)^2
+&=8-\frac{9}{14}+\frac{381}{196}\\
+&=\frac{1823}{196}.
+\end{aligned}
+\]
+
+因此
+
+\[\boxed{F=\frac{1823}{196}\frac{kq^2}{r^2}x+O(x^2)}.\]
+
+\Needspace{3\baselineskip}
+\textbf{3. 稳定性与小振动}
+
+向右位移 \(x>0\) 后，所得 \(F>0\)，力与位移同向；向左位移 \(x<0\)
+后，力也向左。故该平衡是排斥型平衡：
+
+\[\boxed{\text{初始平衡不稳定}}.\]
+
+因为不存在回复力，不能在该位置发生小振动，所以不存在实数小振动周期。
+
+\Needspace{3\baselineskip}
+\textbf{4. 恢复量纲并核对运动方程}
+
+式（2）中的 \(x\) 是无量纲位移，实际位移记为 \(X=xr\)。因此
+
+\[
+F=\frac{1823}{196}\frac{kq^2}{r^2}\frac{X}{r}
+=\frac{1823}{196}\frac{kq^2}{r^3}X.
+\]
+
+系数 \(kq^2/r^3\) 的量纲是
+\(\mathrm{N,m^{-1}}\)，与``力除以位移''的刚度量纲一致。若误把 \(x\)
+当成有量纲位移，会少一个 \(r\)。
+
+导体球的线性化运动方程为
+
+\[m\ddot X=\frac{1823}{196}\frac{kq^2}{r^3}X.\]
+
+令
+
+\[\Omega^2=\frac{1823}{196}\frac{kq^2}{mr^3}>0,\]
+
+则
+
+\[\ddot X-\Omega^2X=0.\]
+
+通解不是正弦、余弦，而是
+
+\[X(t)=C_1e^{\Omega t}+C_2e^{-\Omega t}.\]
+
+任意微小扰动通常含有增长项
+\(e^{\Omega t}\)，因此``不稳定''不仅是力方向的定性判断，也直接体现在随时间指数偏离。若形式上把周期写成
+\(2\pi/\sqrt{-\Omega^2}\)，会得到虚数；物理上应表述为没有小振动周期，而增长时间尺度为
+
+\[\boxed{\tau_{\rm grow}=\Omega^{-1}
+=\sqrt{\frac{196mr^3}{1823kq^2}}}.\]
+
+\Needspace{3\baselineskip}
+\textbf{5. 平衡参数的符号检查}
+
+所得
+\(\alpha=18/7>0\)，说明两固定电荷同号。导体的外表面净电荷项给向左的力，外部极化项给向右的力，两者在初态抵消；不能把两固定点电荷的直接作用再计入导体受力。
+
+\Needspace{3\baselineskip}
+\textbf{适用范围与几何约束}
+
+像电荷构造要求点电荷始终位于球腔内部，即偏心距满足
+
+\[|x|r<\frac r2,\qquad |x|<\frac12.\]
+
+同时外电荷仍在导体外部，需要 \(2-x>1\)。小振动讨论只取
+\(|x|\ll1\)，两条件自然满足。式（1）在 \(x\to1/2\)
+附近出现发散，表示点电荷逼近内腔表面时感应力急剧增大；不能把一阶近似外推到该区域。
+
+\Needspace{3\baselineskip}
+\textbf{为什么导体受力可由反作用力求}
+
+导体表面感应电荷分布虽然复杂，但整个``导体---点电荷''系统内部的库仑力成对满足作用与反作用。对固定点电荷求出感应电荷产生的力后，取反即可得到对应导体部分所受力。外部点电荷所受外球面等效场已包含腔内电荷导致的外表面净电荷；直接的点电荷之间的力不再另加。内腔点电荷受内壁作用、外部点电荷受外壁作用，各取反作用力后相加，才是导体本身的合力。
+
+\Needspace{3\baselineskip}
+\textbf{若误判为稳定会发生什么}
+
+有人可能把线性式写成 \(F=-Kx\)，再给出
+
+\[T=2\pi\sqrt{\frac{m}{K}}.\]
+
+但本题实际系数为正。判断的最短方法是取 \(x>0\)：若计算所得
+\(F>0\)，球继续向右远离平衡点；这与回复力定义直接冲突。任何周期公式都必须在确认
+\(K=-F/X>0\) 后才能使用。
+
+\Needspace{3\baselineskip}
+\textbf{课堂板书展开顺序}
+
+第一行只写研究对象和正方向：导体球为研究对象，向右为正。第二行写长度和力的无量纲化：
+
+\[\xi=\frac{X}{r},\qquad \mathcal F=\frac{Fr^2}{kq^2}.\]
+
+第三行只写平衡点常数项
+
+\[\mathcal F(0)=\frac{7\alpha^2}{72}-\frac{\alpha}{4},\]
+
+先求出
+\(\alpha=18/7\)。第四行才写偏心后四项合力，避免学生在尚未理解平衡条件前被复杂分式淹没。最后用
+
+\[\mathcal F'(0)=\frac{1823}{196}>0\]
+
+作稳定性判断。这样的板书层次把``求平衡位置''和``判平衡性质''明确分离。
+
+\Needspace{3\baselineskip}
+\textbf{像电荷符号的检查方法}
+
+像电荷的符号可以用导体表面靠近实电荷一侧的感应电荷符号检查：同号外电荷靠近中性导体时，近侧必出现异号感应电荷，因而外电荷受到吸引；若列出的像电荷使外电荷受到排斥，符号必错。对内腔也一样：正点电荷偏向某侧内壁时，近侧内表面应有更多负感应电荷，点电荷被吸向近壁。由反作用力，导体受到相反方向的作用。
+
+\Needspace{3\baselineskip}
+\textbf{稳定性判据的三种等价说法}
+
+本题可以用三种语言表述同一结论：
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(X>0\) 时 \(F>0\)，力与位移同向；
+\item
+  \(F'(0)>0\)，线性刚度 \(K=-F'(0)<0\)；
+\item
+  \(U_{\rm eff}''(0)=-F'(0)<0\)，有效势取极大值。
+\end{enumerate}
+
+教师版应让学生至少掌握前两种，并能在能量法与受力法之间互相翻译。若学生只说``电荷排斥所以不稳定''，应追问导体极化为何不会改变结论；真正可靠的答案必须落到一次力系数。
+
+\Needspace{3\baselineskip}
+\textbf{参数改变后的定性预判}
+
+若外电荷离得更远，其场和极化作用迅速减弱，为维持零阶平衡通常需要更大的
+\(|\alpha|\)。但内腔偏心项的一次系数主要由空腔尺度决定，不会同步减弱，因此调平衡参数并不自动调出稳定性。这个观察说明：零阶平衡与一阶稳定是两个独立条件，仅有一个可调参数时一般不能同时满足。
+
+\Needspace{3\baselineskip}
+\textbf{净电荷条件与像电荷位置}
+
+原题扫描未明说导体的净电荷；参考答案实际上取中性导体。以下结果依此条件。若球的净电荷为
+\(Q=\zeta q\)，外球面中心补偿变为 \((1+\zeta)q+\alpha q/a\)，力中的
+\(-\alpha/a^2\) 应改为 \(-\alpha(1+\zeta)/a^2\)，非平凡平衡解变为
+\(\alpha=18(1+\zeta)/7\)。所以净电荷不能不加说明。
+
+以移动后的球心为坐标原点，实电荷 \(q\) 位于 \(-xr\)；内腔像电荷位于
+\(-r/(4x)\)，大小为
+\(-q/(2x)\)。它在腔内实电荷处产生向左的吸引力，导体的反作用力向右，正是式（1）的
+\(8x/(1-4x^2)^2\)。外部实电荷位于 \(ar\)，反演像电荷位于 \(r/a\)、大小
+\(-\alpha q/a\)。图 1-2 分开画两套构造，内腔像电荷在小 \(x\)
+时很远，不能随意画在腔内。
+
+\Needspace{3\baselineskip}
+\textbf{变式：一般外电荷距离}
+
+初始外电荷距离为 \(\beta r\)、\(\beta>1\) 时，中性球的平衡条件为
+
+\[\alpha^2\left[\frac{\beta}{(\beta^2-1)^2}-\frac1{\beta^3}\right]-\frac\alpha{\beta^2}=0.\]
+
+非零解为
+\(\alpha=\beta(\beta^2-1)^2/(2\beta^2-1)\)。代回力的导数后，内腔回复判断仍须重新进行，不能用这个零阶关系代替稳定性检查。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf}
+
+``合力为零''只说明是一处平衡点，不代表稳定。像电荷计算完成后必须继续看
+\(F'(0)\) 的符号。本题 \(F'(0)>0\)，等价于有效势能在平衡点取极大值。
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9}
+
+\begin{itemize}
+\tightlist
+\item
+  只令零阶力为零便直接声称稳定。
+\item
+  忘记孤立中性导体与接地导体的像电荷系统不同，必须补偿总电荷。
+\item
+  偏移量是 \(xr\)，最后的力要恢复因子 \(kq^2/r^2\)。
+\item
+  展开时漏掉分母随 \(x\) 变化的一阶项。
+\end{itemize}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae}
+
+先把第 1 问与第 2
+问分开：前者只需零阶平衡，后者才需要偏心像电荷。讲完式（2）后，要求学生不代具体数值，先说明一次项为正或负分别对应怎样的有效势曲率。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  若外电荷到初始球心的距离改为
+  \(\beta r\)，写出平衡条件并讨论是否存在稳定参数区间。
+\item
+  若导体球带有给定净电荷 \(Q\)，说明外球面像电荷系统应怎样修改。
+\end{enumerate}
+
+\Needspace{3\baselineskip}
+\textbf{教师备课补充：独立代数核验}
+
+\Needspace{3\baselineskip}
+\textbf{像电荷构造的来龙去脉}
+
+半径为 \(a\) 的球面、球心距为 \(d\) 的点电荷
+\(Q\)，接地球面的像电荷公式为
+
+\[Q'=-\frac{a}{d}Q,\qquad d'=\frac{a^2}{d}.\]
+
+本题内腔边界的法向方向与通常``球外点电荷---实心球''图像相反，但等势条件仍由同一反演几何保证。导体略偏心时，内腔像电荷给出的力在
+\(x=0\) 处没有常数项，却有很强的一次项
+\(8x\)；这正是平衡虽能调到零，却仍可能不稳定的根源。
+
+外球面的两项必须成对保留：一个反演像电荷保证球面等势，一个球心补偿电荷保证孤立导体的净电荷约束。若只保留接地球的反演像电荷，就会同时算错
+\(\alpha\) 和一次力系数。
+
+\Needspace{3\baselineskip}
+\textbf{有效势判断}
+
+由 \(F=-dU_{\rm eff}/dX\)，且 \(X=xr\)，在平衡点附近
+
+\[F\simeq \frac{1823}{196}\frac{kq^2}{r^3}X.\]
+
+积分得到
+
+\[U_{\rm eff}(X)\simeq U_0-
+\frac{1823}{392}\frac{kq^2}{r^3}X^2.\]
+
+二次项为负，故平衡点是有效势的局部极大值。这与直接看 \(F'(0)>0\)
+完全一致。
+
+令式（1）右侧为 \(f(x,\alpha)\)。直接计算
+
+\[f(0,\alpha)=\frac{\alpha(7\alpha-18)}{72},\]
+
+以及
+
+\[\left.\frac{\partial f}{\partial x}\right|_{x=0,\alpha=18/7}=\frac{1823}{196}>0.\]
+
+这两个结果分别核验平衡条件与稳定性。课堂上可把这两个导数作为最终验算，不必让学生重复完整像电荷构造。
+
+\Needspace{3\baselineskip}
+\textbf{课堂追问与答案评价节点}
+
+第 1 问完成后应追问：``调节 \(\alpha\)
+消去的是力展开中的哪一阶？''答案是常数项。第 2
+问再追问：``一次项为何不能也自动为零？''因为平衡条件只提供一个标量方程，已经用来确定
+\(\alpha\)；稳定性是新的独立条件。第 3
+问要求学生先说力方向，再写运动方程。
+
+评分时可分为四个关键节点：
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  正确建立孤立中性球的像电荷系统；
+\item
+  由 \(F(0)=0\) 得 \(\alpha=18/7\)；
+\item
+  得到一次力系数 \(1823/196\)；
+\item
+  由正号判断不稳定。
+\end{enumerate}
+
+若学生最后误写周期但前面已明确
+\(F'(0)>0\)，说明是结论表达错误；若一次项本身为负，则应回查像电荷与展开。
+
+\Needspace{3\baselineskip}
+\textbf{符号约定必须在开头固定}
+
+推荐统一写
+
+\[X=xr,\qquad x>0\text{ 表示导体球向 }\alpha q\text{ 移动},\]
+
+并规定 \(F>0\)
+向右。像电荷位置也用带符号轴坐标而非只写距离。对复杂静电题，许多``差一个负号''并非代数失误，而是中途改变了距离和坐标的定义。
+
+\newpage
+
+\section{第 2 题}\label{ux7b2c-2-ux9898}
+
+将一张长纸条的右端扭转 \(180^\circ\)
+后与左端粘合，可形成莫比乌斯带。现制作一个相同拓扑的电阻网络：先由
+\(n-1=4\) 个相邻矩形框及两条端边构成平面梯形网络，每条线段的电阻均为
+\(R\)；再将 \(A_0\) 与 \(B_5\) 粘合、\(B_0\) 与 \(A_5\) 粘合，得到
+\(n=5\) 个网格的莫比乌斯电阻网络。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  求 \(A_0\)、\(B_0\) 间的等效电阻。
+\item
+  求 \(A_1\)、\(B_1\) 间的等效电阻。
+\item
+  对一般很大的 \(n\)，求 \(A_0\)、\(B_0\) 间等效电阻的极限，并比较其与
+  \(n=5\) 的结果。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图 2-1　粘合前的五格梯形电阻网络及端点识别关系。}]{../figures/question-02.pdf}
+\caption*{图 2-1　粘合前的五格梯形电阻网络及端点识别关系。}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-1}
+
+先按端点识别关系重画电阻连接，再解节点电势。扭转的外形不进入计算；图中的交叉支路若没有节点，便不相连。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-1}
+
+\begin{itemize}
+\tightlist
+\item
+  电阻网络的拓扑同构。
+\item
+  节点电势法与基尔霍夫电流定律。
+\item
+  莫比乌斯粘合后的十边形---对径弦模型。
+\item
+  无限递推网络的自相似极限。
+\end{itemize}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-1}
+
+粘合后，原来的上下两条长边首尾交错连成一个含 \(2n\)
+条电阻的外环；每根横档成为连接一对对径顶点的电阻。对
+\(n=5\)，它就是十边形外环加五条对径支路。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-1}
+
+先把网络从``扭曲纸带''恢复为纯图论结构。由于每格完全相同，\(A_i\) 与
+\(B_i\) 的横档在任意 \(i\) 处具有相同局部环境；因此第 1、2
+问实际上相等。对 \(A_0\)、\(B_0\) 施加电势差
+\(V\)，利用关于该横档的反对称性，只需求半个网络的节点电势。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-1}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.565\linewidth,height=\textheight,keepaspectratio,alt={图 2-2　n=5 莫比乌斯网络等价为十边形外环加五条对径支路。}]{../figures/solution-02.pdf}
+\caption*{图 2-2　\(n=5\) 莫比乌斯网络等价为十边形外环加五条对径支路。}
+\end{figure}
+
+\Needspace{3\baselineskip}
+\textbf{1. \(n=5\) 时的节点方程}
+
+令
+
+\[V(A_0)=\frac{V}{2},\qquad V(B_0)=-\frac{V}{2}.\]
+
+按图 2-2 的反对称性，对与 \(A_i\) 相对的节点有相反电势。记半边依次电势为
+\(u_0,u_1,\ldots,u_5\)，其中
+
+\[u_0=\frac{V}{2},\qquad u_5=-\frac{V}{2}.\]
+
+内部节点连接两个相邻外环电阻和一根对径电阻；对径另一端电势为
+\(-u_i\)。基尔霍夫电流定律给出
+
+\[
+\frac{u_i-u_{i-1}}R+\frac{u_i-u_{i+1}}R+\frac{u_i-(-u_i)}R=0,
+\]
+
+即
+
+\[4u_i-u_{i-1}-u_{i+1}=0,\qquad i=1,2,3,4. \tag{1}
+\]
+
+解线性方程组：
+
+\[
+(u_0,u_1,u_2,u_3,u_4,u_5)
+=\frac{V}{38}(19,5,1,-1,-5,-19).
+\]
+
+例如第一个内部节点满足 \(4u_1-u_0-u_2=0\)，代入上面的电势，左边为
+\((20-19-1)V/38=0\)。从 \(A_0\) 经直接横档流出的电流为
+
+\[I_0=\frac{u_0-(-u_0)}R=\frac{V}{R}.\]
+
+经两条外环边流出的电流相等，每条为
+
+\[I_s=\frac{u_0-u_1}{R}=\frac{7V}{19R}.\]
+
+因此
+
+\[I=I_0+2I_s=\left(1+\frac{14}{19}\right)\frac{V}{R}=\frac{33}{19}\frac{V}{R}.\]
+
+从 \(A_0\)
+流出的总电流包括：流向相邻两个外环节点的电流，以及经过横档直接流向
+\(B_0\) 的电流。代入电势可得
+
+\[I=\frac{33}{19}\frac{V}{R}.\]
+
+因此
+
+\[\boxed{R_{A_0B_0}=\frac{V}{I}=\frac{19}{33}R}.\]
+
+\Needspace{3\baselineskip}
+\textbf{2. \(A_1\)、\(B_1\) 间电阻}
+
+把所有下标同时加 \(1\)，网络在拓扑上完全不变。也就是说，图 2-2
+绕中心旋转 \(36^\circ\) 后，\(A_0B_0\) 横档映到 \(A_1B_1\)
+横档，元件连接关系保持不变。因此
+
+\[\boxed{R_{A_1B_1}=\frac{19}{33}R}.\]
+
+\Needspace{3\baselineskip}
+\textbf{3. 大 \(n\) 极限}
+
+当 \(n\)
+很大时，测量横档左右各有一条半无限梯形支路。记其中一侧的等效电阻为
+\(Y\)；剥去最靠近端点的一对边电阻后，余下的横档与下一段 \(Y\) 并联：
+
+\[Y=2R+(R\parallel Y),\qquad Y^2-2RY-2R^2=0.\]
+
+正根为 \(Y=(1+\sqrt3)R\)。左右两支路先并联成 \(Y/2\)，再与测量横档 \(R\)
+并联：
+
+\[R_\infty=R\parallel\frac Y2
+=R\frac{1+\sqrt3}{3+\sqrt3}=\boxed{\frac R{\sqrt3}}.\]
+
+图 2-2
+按十节点重画有限网络；上述极限拆出测量横档和左右两条半无限支路。原稿把一侧
+\(Y\) 当成两侧总电阻，却直接写成
+\(R/\sqrt3\)；中间代数并不成立，必须保留左右支路。
+
+有限值 \(19R/33\simeq0.575758R\)，极限值
+\(R/\sqrt3\simeq0.577350R\)，相差约 \(0.276\%\)。
+
+\Needspace{3\baselineskip}
+\textbf{4. 节点电流的完整核对}
+
+对任一内部节点，三条实际支路分别通向相邻两个外环节点和对径节点。以
+\(u_2=V/38\) 为例，对径节点电势为
+\(-u_2=-V/38\)。三条支路电流按从该节点流出计：
+
+\[
+\begin{aligned}
+I_{21}&=\frac{u_2-u_1}{R}=-\frac{4V}{38R},\\
+I_{23}&=\frac{u_2-u_3}{R}=\frac{2V}{38R},\\
+I_{2\bar2}&=\frac{u_2-(-u_2)}{R}=\frac{2V}{38R}.
+\end{aligned}
+\]
+
+三者之和为零，验证节点方程。端点总电流为 \(33V/(19R)\)，因此网络总功率
+
+\[P=VI=\frac{33}{19}\frac{V^2}{R}.\]
+
+另一方面，对全部十五条电阻逐支路计算
+\(\sum(\Delta V)^2/R\)，也应得到相同结果。功率法是检查等效电阻和节点电流最稳妥的独立方法。
+
+\Needspace{3\baselineskip}
+\textbf{5. 为什么第 1、2 问必然相同}
+
+粘合后的图具有十阶旋转对称性。旋转一个顶点步长时，外环仍映到外环，对径支路仍映到对径支路。测量
+\(A_iB_i\) 都是在一条对径支路两端测量，因此所有 \(i\)
+的等效电阻相同。这个结论不依赖 \(n=5\)；一般 \(n\)
+格莫比乌斯梯形网络的各横档端点对在拓扑上也等价。
+
+\Needspace{3\baselineskip}
+\textbf{6. 有限结果与极限结果的误差}
+
+两者差值为
+
+\[
+\frac{R}{\sqrt3}-\frac{19R}{33}
+\simeq1.593\times10^{-3}R.
+\]
+
+相对误差约
+
+\[
+\frac{1/\sqrt3-19/33}{1/\sqrt3}
+\simeq2.76\times10^{-3},
+\]
+
+即不足
+\(0.3\%\)。所以远端的莫比乌斯闭合方式虽改变全局拓扑，对局部横档电阻的影响已经很小；但若测量跨越很远的两个节点，拓扑差别仍可能显著，不能把这一结论泛化为``拓扑完全没有作用''。
+
+\Needspace{3\baselineskip}
+\textbf{一般 \(n\) 的有限网络方程}
+
+对一般 \(n\)，反对称半链仍满足
+
+\[u_{i+1}-4u_i+u_{i-1}=0.\]
+
+特征方程
+
+\[\lambda^2-4\lambda+1=0\]
+
+有根
+
+\[\lambda_\pm=2\pm\sqrt3,
+\qquad \lambda_+\lambda_-=1.\]
+
+所以
+
+\[u_i=A\lambda_+^i+B\lambda_-^i.\]
+
+边界 \(u_0=V/2\)、\(u_n=-V/2\) 确定 \(A,B\)。当 \(n\to\infty\)
+时，远端影响按
+
+\[\lambda_-^n=(2-\sqrt3)^n\]
+
+衰减。因为 \(2-\sqrt3\simeq0.268\)，仅五格就已把远端影响压到约
+\(1.4\times10^{-3}\) 的量级，正好解释有限值与极限值的差别。
+
+\Needspace{3\baselineskip}
+\textbf{拓扑重画的检查清单}
+
+从平面梯形图变为十边形图时应逐项检查：
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  上边 \(A_iA_{i+1}\) 和下边 \(B_iB_{i+1}\) 合成一个长度 \(2n\) 的闭环；
+\item
+  端点交叉识别而非同名识别；
+\item
+  每根横档 \(A_iB_i\) 连接外环上的一对对径顶点；
+\item
+  交叉画线若无节点标记，不产生额外电连接。
+\end{enumerate}
+
+任何一项画错，所得网络都会变成圆柱梯形或轮辐网络，等效电阻完全不同。
+
+\Needspace{3\baselineskip}
+\textbf{能量最小原理视角}
+
+在端点电势固定时，真实内部节点电势使焦耳功率
+
+\[P=\sum_{\langle ij\rangle}\frac{(V_i-V_j)^2}{R}\]
+
+取极小值。对任一内部 \(V_i\) 求偏导：
+
+\[\frac{\partial P}{\partial V_i}
+=\frac{2}{R}\sum_j(V_i-V_j)=0,\]
+
+正好得到基尔霍夫节点方程。这提供了除电流守恒以外的第二种理论入口。
+
+\Needspace{3\baselineskip}
+\textbf{递推式与双曲函数写法}
+
+因为特征根满足 \(\lambda_\pm=e^{\pm\eta}\)，其中
+
+\[\cosh\eta=2,\]
+
+一般解也可写成
+
+\[u_i=C\cosh(i\eta)+D\sinh(i\eta).\]
+
+利用两端反对称边界，常可进一步写成以中点为中心的双曲正弦形式。这个表示直接显示电势扰动从测量横档向远处按
+\(e^{-i\eta}\) 衰减。对大 \(n\)，保留衰减根 \(2-\sqrt3\)
+即可得到半无限网络近似。
+
+\Needspace{3\baselineskip}
+\textbf{为什么横档对称性不等于等势}
+
+网络的旋转对称性只能说明``换一条横档测量，等效电阻相同''，不能说明某次测量中所有
+\(A_i\) 电势相同、所有 \(B_i\) 电势相同。外加电压选中了
+\(A_0B_0\)，破坏了大部分旋转对称性；真实电势序列是
+
+\[19:5:1:-1:-5:-19,\]
+
+显然并非常量。解电阻网络时必须区分``网络本身的对称''与``边界条件保留下来的对称''。
+
+\Needspace{3\baselineskip}
+\textbf{等效电阻上下界}
+
+直接横档 \(R\) 与其他支路并联，因此
+
+\[R_{\rm eq}<R.\]
+
+若删去所有对径支路，只剩两条各含五只电阻的路径并联，所得电阻为
+\(5R/2\)；恢复对径支路只会降低电阻。另一方面，仅保留直接横档给出
+\(R\)。虽然这些界限较宽，但能立即排除大于 \(R\)
+的错误答案。更细的下界可由节点割集或瑞利单调原理构造。
+
+\Needspace{3\baselineskip}
+\textbf{瑞利单调原理}
+
+任意支路电阻增大，端点等效电阻不会减小；任意增加导电支路，等效电阻不会增大。第
+3
+问中，远端闭合方式只相当于在很远处调整少数支路，且电势差已指数衰减，所以对局部等效电阻影响很小。这为``有限五格已接近无限值''提供了不依赖具体数值的物理解释。
+
+\Needspace{3\baselineskip}
+\textbf{板书核验顺序}
+
+建议按``拓扑重画---边界反对称---节点递推---端点三支路电流---无限固定点''五步展开。任何等效变换都先说清保留了哪些节点连接，避免学生把莫比乌斯带的视觉扭转误当成额外电学元件。
+
+\Needspace{3\baselineskip}
+\textbf{有限 \(n\) 的闭式与横档变式}
+
+记 \(s=2-\sqrt3\)。满足 \(u_0=V/2\)、\(u_n=-V/2\) 的解可写成
+
+\[u_i=\frac V2\frac{s^i-s^{n-i}}{1-s^n}.\]
+
+端点电流为 \(I=[2V-2u_1]/R\)，从而
+
+\[R_n=R\frac{1-s^n}{(2-s)(1+s^n)}
+=\frac R{\sqrt3}\frac{1-s^n}{1+s^n}.\]
+
+\(n=5\) 代入即 \(19R/33\)，且 \(R_n<R_\infty\)，按 \(s^n\) 逼近。注意
+\(2-s=\sqrt3\)。
+
+横档改为 \(\rho R\) 时，一侧支路满足
+\(Y=2R+(\rho R\parallel Y)\)，正根为
+\(Y=R[1+\sqrt{1+2\rho}]\)；三支路并联得到
+
+\[R_\infty(\rho)=\rho R\parallel\frac Y2
+=\frac{\rho R}{\sqrt{1+2\rho}}.\]
+
+当 \(\rho\to0\)，端点直接被横档短接，结果趋零；当
+\(\rho\to\infty\)，横档很弱，等效电阻发散。两个极限可检查支路计数。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf-1}
+
+不要在莫比乌斯带的三维外形上``绕线''。电阻只关心节点和支路；一旦改画成十边形加对径弦，对称性和递推结构就完全显现。
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9-1}
+
+\begin{itemize}
+\tightlist
+\item
+  把 \(A_5=B_0\)、\(B_5=A_0\) 识别关系漏掉，误当普通圆柱梯形网络。
+\item
+  只算一侧外环电流，漏掉另一侧以及直接横档电流。
+\item
+  无限网络递推时把待求总电阻与``去掉直接横档后的电阻''混为一谈。
+\end{itemize}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae-1}
+
+先让学生仅凭节点连接重画图 2-2，再写节点方程。第 3
+问可作为``有限线性代数---无限固定点''的连接案例，强调近似值接近不是偶然，而是局部格林函数快速趋于极限。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3-1}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  把每根横档电阻改为 \(\rho R\)，求大 \(n\) 极限。
+\item
+  比较无扭转圆柱梯形网络与莫比乌斯网络在有限 \(n\) 下的差别。
+\end{enumerate}
+
+\Needspace{3\baselineskip}
+\textbf{教师备课补充：数值核验}
+
+\Needspace{3\baselineskip}
+\textbf{有限网络逐步消元}
+
+递推式可写为
+
+\[u_{i+1}=4u_i-u_{i-1}.\]
+
+从 \(u_0=V/2\)、未知 \(u_1\) 出发：
+
+\[
+\begin{aligned}
+u_2&=4u_1-u_0,\\
+u_3&=15u_1-4u_0,\\
+u_4&=56u_1-15u_0,\\
+u_5&=209u_1-56u_0.
+\end{aligned}
+\]
+
+再用 \(u_5=-u_0\)：
+
+\[209u_1=55u_0,\]
+
+所以
+
+\[u_1=\frac{55}{209}\frac V2=\frac{5V}{38}.\]
+
+代回即可依次得到
+\(u_2=V/38\)、\(u_3=-V/38\)、\(u_4=-5V/38\)。这个递推比同时解四元方程更适合板书。
+
+\Needspace{3\baselineskip}
+\textbf{无限网络固定点的稳定性}
+
+令 \(y=Y/R\)，其中 \(Y\) 是一侧半无限支路，固定点方程为
+
+\[y=2+\frac{y}{1+y}.\]
+
+迭代映射 \(f(y)=2+y/(1+y)\) 在正固定点 \(y_*=1+\sqrt3\) 处的导数
+
+\[f'(y_*)=\frac{1}{(1+y_*)^2}<1.\]
+
+因此远端边界的影响随格数快速衰减，这也解释了 \(n=5\)
+已非常接近无限极限。
+
+直接对 \(n=5\) 的十节点拉普拉斯矩阵求解，得到
+
+\[R_{A_0B_0}/R=0.575757\ldots=19/33.\]
+
+对 \(n=10,20,100\) 数值求解依次得到
+\(0.577348\)、\(0.5773502692\)、\(0.5773502692\)，与 \(1/\sqrt3\) 一致。
+
+\Needspace{3\baselineskip}
+\textbf{课堂追问与答案评价节点}
+
+第一问先只问``粘合后外边界共有多少只电阻''，正确答案是
+\(2n=10\)；再问``横档连接哪两个点''，正确答案是外环对径点。若这两问不能回答，不能直接进入节点方程。
+
+完整得分节点为：重画十边形---对径弦网络；识别反对称电势；写出
+\(4u_i-u_{i-1}-u_{i+1}=0\)；正确统计端点三条支路电流；得到
+\(19R/33\)；大 \(n\) 时建立自相似方程并取正根。第 2
+问只写``由对称性相同''即可，但必须说明是哪一种旋转同构。
+
+\Needspace{3\baselineskip}
+\textbf{有限与无限的板书分界}
+
+有限 \(n=5\)
+用线性递推，边界条件在远端闭合；无限网络用固定点，边界条件是向无穷远电势扰动衰减。两种方法不可混用。尤其不能把有限网络的远端直接替换成开路或短路，再声称是``\(n\)
+很大近似''。
+
+\newpage
+
+\section{第 3 题}\label{ux7b2c-3-ux9898}
+
+某双星系统中，一颗带磁场的致密星体产生周期约 \(4.84\,\mathrm s\) 的 X
+射线脉冲。观测显示脉冲每隔 \(2.1\,\mathrm d\)
+隐遁约四分之一周期，说明双星轨道平面近似沿视线方向。可见伴星为红巨星，质量约
+\(18.4M_\odot\)、半径约 \(13.08R_\odot\)。设发生掩食时两星中心距可估为
+\(a\simeq\sqrt2R_\star\)。取
+\(M_\odot\simeq2.0\times10^{30}\,\mathrm{kg}\)，\(R_\odot\simeq7.0\times10^8\,\mathrm m\)。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  已知中子尺度约为 \(10^{-15}\,\mathrm m\)，估算中子星平均密度。
+\item
+  根据观测数据估算致密星质量，并由第 1 问密度估算其半径。
+\item
+  设一个氘核从红巨星表面出发，最终落到中子星表面。忽略广义相对论修正，以经典引力势估算到达表面时的速度。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.621\linewidth,height=\textheight,keepaspectratio,alt={图 3-1　红巨星与致密星构成的近侧视双星系统及估算轨道尺度。}]{../figures/question-03.pdf}
+\caption*{图 3-1　红巨星与致密星构成的近侧视双星系统及估算轨道尺度。}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-2}
+
+掩食重复时间用于求公转质量，脉冲周期只说明致密星自转。用核密度估半径后，再按题设的经典引力模型估算落速。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-2}
+
+\begin{itemize}
+\tightlist
+\item
+  数量级与量纲估算。
+\item
+  双星系统的开普勒第三定律。
+\item
+  质量密度与球体半径。
+\item
+  两天体引力势能与机械能守恒。
+\item
+  经典模型适用性检验。
+\end{itemize}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-2}
+
+中子星可粗略看成由中子紧密堆积形成的巨大原子核。掩食周期给出双星公转周期，红巨星半径给出轨道尺度，从而可反演系统总质量。落入中子星的物质跨越极深的引力势阱，会达到接近光速的速度，因此最后必须检查经典结果是否过于相对论化。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-2}
+
+先把中子质量 \(m_n\sim1.66\times10^{-27}\,\mathrm{kg}\) 除以体积尺度
+\((10^{-15}\,\mathrm m)^3\)。再取公转周期 \(T=2.1\,\mathrm d\)，用
+
+\[M_\star+M_n=\frac{4\pi^2a^3}{GT^2}.\]
+
+这里不能把 \(2.1\,\mathrm d\) 再乘
+\(4\)；``隐遁四分之一周期''描述的是每次掩食持续时间占比，不是公转周期的四分之一。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-2}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.693\linewidth,height=\textheight,keepaspectratio,alt={图 3-2　由轨道参数求质量、由核密度求半径并估算氘核落速的计算链。}]{../figures/solution-03.pdf}
+\caption*{图
+3-2　由轨道参数求质量、由核密度求半径并估算氘核落速的计算链。}
+\end{figure}
+
+\Needspace{3\baselineskip}
+\textbf{1. 中子星密度}
+
+每个中子占据的体积数量级为
+
+\[V_n\sim(10^{-15}\,\mathrm m)^3=10^{-45}\,\mathrm{m^3}.\]
+
+所以
+
+\[
+\rho_n\sim\frac{1.66\times10^{-27}}{10^{-45}}
+\simeq1.7\times10^{18}\,\mathrm{kg,m^{-3}}.
+\]
+
+考虑堆积系数只会改变一个数量级为 \(1\) 的因子，故
+
+\[\boxed{\rho_n\sim10^{18}\,\mathrm{kg,m^{-3}}}.\]
+
+\Needspace{3\baselineskip}
+\textbf{2. 致密星质量和半径}
+
+红巨星半径
+
+\[R_\star=13.08\times7.0\times10^8\simeq9.16\times10^9\,\mathrm m.\]
+
+轨道尺度
+
+\[a\simeq\sqrt2R_\star\simeq1.29\times10^{10}\,\mathrm m.\]
+
+公转周期
+
+\[T=2.1\times86400\simeq1.814\times10^5\,\mathrm s.\]
+
+开普勒第三定律给出
+
+\[
+\begin{aligned}
+M_{\rm tot}
+&=\frac{4\pi^2a^3}{GT^2}\\
+&\simeq\frac{4\pi^2(1.29\times10^{10})^3}
+{6.67\times10^{-11}(1.814\times10^5)^2}\\
+&\simeq3.90\times10^{31}\,\mathrm{kg}\\
+&\simeq19.5M_\odot.
+\end{aligned}
+\]
+
+因此致密星质量
+
+\[
+\boxed{M_n\simeq(19.5-18.4)M_\odot\simeq1.1M_\odot
+\simeq2.2\times10^{30}\,\mathrm{kg}}.
+\]
+
+由 \(M_n=(4\pi/3)\rho_nR_n^3\)：
+
+\[
+R_n=\left(\frac{3M_n}{4\pi\rho_n}\right)^{1/3}
+\simeq6.8\times10^3\,\mathrm m.
+\]
+
+考虑中子占据体积、轨道尺度等估算误差，可写为
+
+\[\boxed{R_n\sim10\,\mathrm{km}}.\]
+
+\Needspace{3\baselineskip}
+\textbf{3. 氘核落到中子星表面的速度}
+
+单位质量的总引力势为
+
+\[\Phi=-\frac{GM_n}{r_n}-\frac{GM_\star}{r_\star}.\]
+
+从红巨星表面到中子星表面，机械能守恒给出
+
+\[
+\frac12v^2
+=G M_n\left(\frac1{R_n}-\frac1{a-R_\star}\right)
++G M_\star\left(\frac1{a-R_n}-\frac1{R_\star}\right). \tag{1}
+\]
+
+式（1）取氘核从红巨星朝向致密星一侧出发。第一括号为致密星引力势下降；第二括号为离开红巨星时克服其引力势所付出的能量，因此第二项为负。由于
+\(R_n\ll a-R_\star\) 且 \(R_n\ll R_\star\)，致密星表面的 \(GM_n/R_n\)
+项远大于其余各项。
+
+由于 \(R_n\ll a\)，第一项中的 \(1/R_n\) 占绝对优势，故
+
+\[v\simeq\sqrt{\frac{2GM_n}{R_n}}
+\simeq2.1\times10^8\,\mathrm{m\,s^{-1}}
+\simeq0.70c.\]
+
+因此经典估算为
+
+\[\boxed{v\sim2\times10^8\,\mathrm{m\,s^{-1}}}.\]
+
+速度已达到光速的显著比例，说明广义相对论和相对论动能修正不可忽略；该结果只能作为题目要求的经典数量级估算。
+
+\Needspace{3\baselineskip}
+\textbf{4. 氘核质量为何不出现在落速中}
+
+若氘核质量为 \(m_D\)，机械能守恒的每一项均含 \(m_D\)：
+
+\[
+\frac12m_Dv^2+m_D\Phi_f=m_D\Phi_i.
+\]
+
+约去 \(m_D\)
+后，落速只取决于引力势差。因此题目给出的单位原子质量主要用于估算氘核携带的绝对能量，而不是速度。若进一步问释放能量，则
+
+\[
+\Delta E_D\simeq\frac12m_Dv^2,
+\qquad m_D\simeq2(1.66\times10^{-27})\,\mathrm{kg}.
+\]
+
+代入 \(v\simeq2.1\times10^8\,\mathrm{m,s^{-1}}\)：
+
+\[
+\Delta E_D\sim7\times10^{-11}\,\mathrm J
+\sim4\times10^8\,\mathrm{eV}.
+\]
+
+这说明单个原子核也可释放数百 MeV 量级能量，是吸积中子星产生强 X
+射线的直观原因。
+
+\Needspace{3\baselineskip}
+\textbf{5. 观测数据的敏感性}
+
+由开普勒关系
+
+\[M_{\rm tot}\propto\frac{a^3}{T^2}.\]
+
+若轨道尺度相对误差为 \(\delta a/a\)、周期相对误差为
+\(\delta T/T\)，一阶相对误差
+
+\[
+\frac{\delta M_{\rm tot}}{M_{\rm tot}}
+\simeq3\frac{\delta a}{a}-2\frac{\delta T}{T}.
+\]
+
+本题的 \(a\simeq\sqrt2R_\star\)
+本身只是几何估计，所以质量不应保留过多有效数字。进一步由
+\(R_n\propto(M_n/\rho_n)^{1/3}\)，半径对质量和密度误差只按三分之一次方敏感，因而``十千米量级''的结论比精确质量更稳健。
+
+\Needspace{3\baselineskip}
+\textbf{6. 经典落速的上限检查}
+
+经典公式给出 \(v<c\)，至少没有直接违反狭义相对论速度上限；但
+\(v/c\simeq0.70\) 已使
+
+\[\gamma=\frac1{\sqrt{1-v^2/c^2}}\simeq1.40.\]
+
+此时经典动能 \(mv^2/2\) 与相对论动能 \((\gamma-1)mc^2\)
+已有明显差别。正式答案仍按题设采用经典势能，但备课时应把这一偏差明确说明。
+
+\Needspace{3\baselineskip}
+\textbf{密度估算中的几何因子}
+
+若把中子看成半径 \(r_n\sim10^{-15}\,\mathrm m\) 的球，单粒子体积为
+\(4\pi r_n^3/3\)，还要考虑紧密堆积率约
+\(0.7\)。这些因素会把密度改变几倍，却不会改变
+\(10^{18}\,\mathrm{kg,m^{-3}}\)
+的数量级。竞赛估算题应保留对结论真正稳健的位数，而不是制造虚假的高精度。
+
+\Needspace{3\baselineskip}
+\textbf{双星开普勒关系的推导}
+
+设两星中心距为 \(a\)，到质心距离分别为 \(a_1,a_2\)。同一角速度
+\(\omega\) 下
+
+\[M_\star a_1=M_na_2,
+\qquad a_1+a_2=a.\]
+
+对任一星写向心力，例如
+
+\[M_\star\omega^2a_1
+=\frac{GM_\star M_n}{a^2}.\]
+
+利用 \(a_1=M_na/(M_\star+M_n)\)，约去 \(M_\star M_n\)：
+
+\[\omega^2=\frac{G(M_\star+M_n)}{a^3}.\]
+
+再用 \(\omega=2\pi/T\)，得到
+
+\[M_\star+M_n=\frac{4\pi^2a^3}{GT^2}.\]
+
+这说明双星公式中的质量一定是总质量，不是其中任意一颗的质量。
+
+\Needspace{3\baselineskip}
+\textbf{脉冲周期与公转周期不要混用}
+
+\(4.84\,\mathrm s\) 是致密星自转产生的 X
+射线脉冲周期；\(2.1\,\mathrm d\)
+是掩食重复周期，也就是双星公转周期。二者相差约四个数量级，服务于完全不同的物理过程。第
+2 问质量反演只使用公转周期；脉冲周期只是帮助识别磁化致密星。
+
+\Needspace{3\baselineskip}
+\textbf{掩食几何的估算性质}
+
+题目给出隐遁约四分之一周期，并指定轨道平面近似沿视线方向。严格掩食持续时间取决于两星半径、轨道倾角和相对轨道速度。在圆轨道、正侧视且致密星可视为点的模型中，掩食角半宽
+\(\psi\) 满足 \(R_\star/a=\sin\psi\)。持续时间占一周的 \(1/4\) 意味着
+\(2\psi/(2\pi)=1/4\)，所以
+\(\psi=\pi/4\)、\(a=\sqrt2R_\star\)。轨道倾角或偏心率改变后，这一关系才成为需要修正的估算。质量按
+\(a^3\) 放大误差，故最终只保留两位左右有效数字。
+
+\Needspace{3\baselineskip}
+\textbf{总质量必须先算再相减}
+
+开普勒公式首先给出
+
+\[M_{\rm tot}=M_\star+M_n.\]
+
+然后
+
+\[M_n=M_{\rm tot}-M_\star.\]
+
+本题两数 \(19.5M_\odot\) 与 \(18.4M_\odot\)
+很接近，相减会放大输入误差；因此 \(M_n\simeq1.1M_\odot\)
+只是粗估。若因四舍五入得到略低或略高的数值，只要过程、数量级和物理自洽检查正确，均应接受。
+
+\Needspace{3\baselineskip}
+\textbf{半径估算的计算细节}
+
+取
+\(M_n=2.2\times10^{30}\,\mathrm{kg}\)、\(\rho=1.7\times10^{18}\,\mathrm{kg\,m^{-3}}\)：
+
+\[
+\frac{3M_n}{4\pi\rho}
+\simeq\frac{6.6\times10^{30}}{2.14\times10^{19}}
+\simeq3.1\times10^{11}\,\mathrm{m^3}.
+\]
+
+立方根为
+
+\[R_n\simeq(3.1)^{1/3}\times10^{11/3}\,\mathrm m
+\simeq6.8\times10^3\,\mathrm m.\]
+
+把指数 \(11/3\) 拆成 \(3+2/3\)，可减少数量级计算错误。
+
+\Needspace{3\baselineskip}
+\textbf{落速的能量方向}
+
+从红巨星表面离开时要克服红巨星引力，因此红巨星项降低末态动能；落入致密星势阱则释放能量，是主正项。若把两项都机械地写成正号，虽然数量级可能仍被致密星主项掩盖，但物理方向错误。画出图
+3-2 并逐一问``靠近还是远离哪颗星''，能最有效地确定符号。
+
+\Needspace{3\baselineskip}
+\textbf{自转脉冲的角色}
+
+\(4.84\,\mathrm s\)
+脉冲表明辐射束随致密星自转周期扫过视线，类似宇宙灯塔。它不参与轨道质量计算，却支持``带强磁场的中子星''解释。教学中可以用这一信息训练学生区分题目中的背景识别数据与真正进入公式的数据。
+
+\Needspace{3\baselineskip}
+\textbf{保留输入数字的一次独立计算}
+
+取 \(G=6.67\times10^{-11}\)，不先舍入轨道尺度，得到
+\(M_{\rm tot}=19.5164M_\odot\)、\(M_n=1.1164M_\odot\)。再取
+\(\rho=1.7\times10^{18}\)，半径约 \(6.80\,\mathrm{km}\)，经典落速约
+\(2.09\times10^8\,\mathrm{m/s}\)。这些末位仅用于核算，答案仍是太阳质量、十千米和
+\(10^8\,\mathrm{m/s}\) 的量级。
+
+由图 3-1 的质心，红巨星质心轨道半径
+\(a_\star=aM_n/(M_n+M_\star)\)，比致密星轨道小约十六倍。图中将公转画成相对轨道，并把质心标在红巨星中心附近；不能把质心画成两星正中。
+
+相对论能量变式若只修正动能、仍用经典势差，设 \(\chi=GM_n/(R_nc^2)\)，则
+\(\gamma-1=\chi\)，给出
+\(v/c=\sqrt{1-(1+\chi)^{-2}}\)。它只比较两种动能公式；不能称为完整广义相对论落速。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf-2}
+
+三层尺度贯穿全题：飞米决定密度，恒星半径和天决定质量，千米决定最终势阱深度。每一步都应做量纲和数量级检查。
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9-2}
+
+\begin{itemize}
+\tightlist
+\item
+  把 \(2.1\,\mathrm d\) 误乘
+  \(4\)，会算出系统总质量小于红巨星已知质量，立即出现物理矛盾。
+\item
+  使用太阳半径而忘记乘 \(13.08\)。
+\item
+  用致密星质量直接等同总质量，漏减伴星质量。
+\item
+  得到 \(v\sim0.7c\) 后仍宣称经典计算精确。
+\end{itemize}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae-2}
+
+把本题训练为``每一步都验算''：密度应接近核密度；致密星质量应为太阳质量量级；半径应为十千米量级；逃逸速度应接近光速。任一项偏离这些经验尺度都要回查数据。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3-2}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  用相对论能量关系 \(\gamma mc^2-mc^2\simeq GMm/R\) 重新估算落速。
+\item
+  若轨道中心距为 \(2R_\star\)，讨论质量估算如何改变。
+\end{enumerate}
+
+\Needspace{3\baselineskip}
+\textbf{教师备课补充：数据自洽性校验}
+
+\Needspace{3\baselineskip}
+\textbf{经典落速的分项估算}
+
+取
+\(M_n\simeq2.2\times10^{30}\,\mathrm{kg}\)、\(R_n\simeq6.8\times10^3\,\mathrm m\)，致密星表面势深
+
+\[\frac{GM_n}{R_n}\simeq2.2\times10^{16}\,\mathrm{J,kg^{-1}}.\]
+
+红巨星表面势深约
+
+\[\frac{GM_\star}{R_\star}\simeq2.7\times10^{11}\,\mathrm{J,kg^{-1}},\]
+
+比前者小约五个数量级，所以忽略它只影响末位数量级。由
+\(v^2/2\simeq2.2\times10^{16}\) 得
+\(v\simeq2.1\times10^8\,\mathrm{m,s^{-1}}\)。
+
+\Needspace{3\baselineskip}
+\textbf{模型边界}
+
+经典逃逸参数
+
+\[\frac{2GM_n}{R_nc^2}\sim0.48\]
+
+并不远小于
+\(1\)，说明弱场近似已经不可靠。教师讲解时应把``题设要求经典估算''与``真实中子星需要相对论''明确分开。
+
+若错误采用 \(T=8.4\,\mathrm d\)，因为
+\(M\propto T^{-2}\)，所得总质量仅约 \(1.22M_\odot\)，远小于题给
+\(18.4M_\odot\) 红巨星质量，故该解释必错。这个反证比追究题干措辞更可靠。
+
+\Needspace{3\baselineskip}
+\textbf{课堂追问与答案评价节点}
+
+建议依次追问：``飞米决定哪个量？''\,``掩食重复时间决定哪个量？''\,``开普勒公式给出单星质量还是总质量？''\,``为什么氘核质量能约掉？''四问分别对应核密度、公转周期、总质量和等效原理。
+
+评分节点可设置为：\(\rho\sim10^{18}\,\mathrm{kg,m^{-3}}\)；\(a\sim1.3\times10^{10}\,\mathrm m\)；\(M_{\rm tot}\sim19.5M_\odot\)；\(M_n\sim1.1M_\odot\)；\(R_n\sim10\,\mathrm{km}\)；\(v\sim2\times10^8\,\mathrm{m,s^{-1}}\)。本题允许估算，不应苛求最后一位，但量纲、总质量减伴星质量和经典模型警示不可省略。
+
+\Needspace{3\baselineskip}
+\textbf{发现矛盾时的回退策略}
+
+若算出致密星质量为负，优先检查公转周期是否误乘
+\(4\)、中心距是否误用太阳半径而漏乘
+\(13.08\)、秒与天是否换算。若半径为千米以下或百千米以上，检查密度指数和立方根。若落速超过
+\(c\)，既要检查计算，也要指出经典引力势的失效。
+
+\newpage
+
+\section{第 4 题}\label{ux7b2c-4-ux9898}
+
+质量为 \(m\) 的小木块在半径为 \(r\)
+的水平圆形轨道内滑动，同时与水平底面和竖直圆壁保持接触。木块尺寸远小于
+\(r\)，底面和圆壁与木块之间的动摩擦因数均为 \(\mu\)，木块初速度为
+\(v_0\)。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  当木块已转过角度 \(\theta\)，其动能为 \(E\)。求 \(dE/d\theta\)。
+\item
+  若木块恰好转过一周后停止，求 \(v_0\)。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图 4-1　木块同时接触水平底面和竖直圆壁并沿圆周滑动。}]{../figures/question-04.pdf}
+\caption*{图 4-1　木块同时接触水平底面和竖直圆壁并沿圆周滑动。}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-3}
+
+圆壁给向心力，底面托住重量。两处摩擦都耗能，但圆壁摩擦随速度平方变化；改用转角描述动能可得到线性方程。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-3}
+
+\begin{itemize}
+\tightlist
+\item
+  水平圆周运动的向心力。
+\item
+  动摩擦力与支持力。
+\item
+  微元功与能量定理。
+\item
+  一阶线性微分方程。
+\end{itemize}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-3}
+
+底面对木块的支持力恒为 \(mg\)，故底面摩擦恒为 \(\mu mg\)。圆壁提供向心力
+\(N_r=mv^2/r\)，故圆壁摩擦为
+\(\mu mv^2/r\)。两摩擦力都沿切线反向，但第二项会随速度降低而减小。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-3}
+
+木块转过 \(d\theta\) 时路程 \(ds=r\,d\theta\)。写出两项摩擦力之和，再用
+
+\[dE=-f\,ds,\qquad E=\frac12mv^2.\]
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-3}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.627\linewidth,height=\textheight,keepaspectratio,alt={图 4-2　动能随转角变化；经平移后的量 2E+mgr 呈指数衰减。}]{../figures/solution-04.pdf}
+\caption*{图 4-2　动能随转角变化；经平移后的量 \(2E+mgr\) 呈指数衰减。}
+\end{figure}
+
+\Needspace{3\baselineskip}
+\textbf{1. 建立能量微分方程}
+
+底面支持力和摩擦力为
+
+\[N_g=mg,\qquad f_g=\mu mg.\]
+
+圆壁支持力提供向心力：
+
+\[N_r=\frac{mv^2}{r}.\]
+
+圆壁摩擦力
+
+\[f_r=\mu N_r=\mu\frac{mv^2}{r}.\]
+
+总摩擦力
+
+\[f=\mu mg+\mu\frac{mv^2}{r}.\]
+
+转过微小角 \(d\theta\) 时，\(ds=r\,d\theta\)，所以
+
+\[
+\begin{aligned}
+dE&=-f\,ds\\
+&=-\left(\mu mg+\mu\frac{mv^2}{r}\right)r\,d\theta\\
+&=-\mu\left(mgr+mv^2\right)d\theta.
+\end{aligned}
+\]
+
+又因 \(mv^2=2E\)，得到
+
+\[\boxed{\frac{dE}{d\theta}=-\mu(2E+mgr)}. \tag{1}\]
+
+\Needspace{3\baselineskip}
+\textbf{2. 求恰好一周停止的初速度}
+
+将式（1）分离变量：
+
+\[\frac{dE}{2E+mgr}=-\mu\,d\theta.\]
+
+初态 \(E_0=mv_0^2/2\)，终态在 \(\theta=2\pi\) 时 \(E=0\)。积分：
+
+\[
+\begin{aligned}
+\int_{E_0}^{0}\frac{dE}{2E+mgr}
+&=-\mu\int_0^{2\pi}d\theta,\\
+\frac12\ln\frac{mgr}{2E_0+mgr}&=-2\pi\mu.
+\end{aligned}
+\]
+
+指数化：
+
+\[\frac{mgr}{2E_0+mgr}=e^{-4\pi\mu}.\]
+
+于是
+
+\[2E_0+mgr=mgr\,e^{4\pi\mu}.\]
+
+代入 \(2E_0=mv_0^2\)：
+
+\[mv_0^2=mgr(e^{4\pi\mu}-1).\]
+
+故
+
+\[\boxed{v_0=\sqrt{gr\left(e^{4\pi\mu}-1\right)}}.\]
+
+全过程的显式解由积分常数确定：
+
+\[2E+mgr=(2E_0+mgr)e^{-2\mu\theta},\]
+
+所以
+
+\[\boxed{E(\theta)=\frac12\left[(mv_0^2+mgr)e^{-2\mu\theta}-mgr\right]},\]
+
+\[\boxed{v^2(\theta)=(v_0^2+gr)e^{-2\mu\theta}-gr}.\]
+
+一般停止角为
+
+\[\theta_s=\frac{1}{2\mu}\ln\left(1+\frac{v_0^2}{gr}\right).\]
+
+题设条件就是令 \(\theta_s=2\pi\)。
+
+\Needspace{3\baselineskip}
+\textbf{3. 直接从速度平方建立方程}
+
+由 \(E=mv^2/2\)，有
+
+\[\frac{dE}{d\theta}=\frac{m}{2}\frac{d(v^2)}{d\theta}.\]
+
+代入式（1）：
+
+\[
+\frac{m}{2}\frac{d(v^2)}{d\theta}
+=-\mu(mv^2+mgr).
+\]
+
+约去 \(m\)：
+
+\[
+\frac{d(v^2)}{d\theta}+2\mu v^2=-2\mu gr.
+\]
+
+令 \(y=v^2\)，积分因子为 \(e^{2\mu\theta}\)：
+
+\[
+\frac{d}{d\theta}\left(ye^{2\mu\theta}\right)
+=-2\mu gr e^{2\mu\theta}.
+\]
+
+从 \(0\) 积到 \(\theta\)：
+
+\[
+y e^{2\mu\theta}-v_0^2
+=-gr(e^{2\mu\theta}-1),
+\]
+
+从而再次得到
+
+\[v^2=(v_0^2+gr)e^{-2\mu\theta}-gr.\]
+
+这条推导不经过对数定积分，适合对微分方程更熟悉的学生。
+
+\Needspace{3\baselineskip}
+\textbf{4. 接触条件检查}
+
+圆壁支持力
+
+\[N_r=\frac{mv^2}{r}\ge0.\]
+
+在木块停止前 \(v^2>0\)，接触力始终非负；停止瞬间
+\(N_r=0\)。题设规定木块始终接触圆壁，在这一运动阶段与解一致。停止以后，若无其他约束，木块不再需要保持圆周运动，模型也不应继续外推到
+\(E<0\)。所以显式解只在 \(0\le\theta\le\theta_s\) 有物理意义。
+
+\Needspace{3\baselineskip}
+\textbf{5. 两项耗散的相对大小}
+
+底面摩擦功率与圆壁摩擦功率之比为
+
+\[
+\frac{P_r}{P_g}
+=\frac{(\mu mv^2/r)v}{(\mu mg)v}
+=\frac{v^2}{gr}.
+\]
+
+高速初段若 \(v^2\gg gr\)，圆壁摩擦占主导；接近停止时
+\(v^2\ll gr\)，底面摩擦占主导。这解释了能量衰减并非简单的匀减速过程。
+
+\Needspace{3\baselineskip}
+\textbf{用时间变量求减速度为何更麻烦}
+
+若直接写切向运动方程
+
+\[m\frac{dv}{dt}=-\mu mg-\mu\frac{mv^2}{r},\]
+
+同时还有
+
+\[\frac{d\theta}{dt}=\frac vr.\]
+
+要消去时间，需要
+
+\[\frac{dv}{dt}=\frac{dv}{d\theta}\frac{v}{r},\]
+
+从而
+
+\[v\frac{dv}{d\theta}=-\mu(gr+v^2).\]
+
+再令 \(y=v^2\) 才回到前面的线性方程。因此题目直接要求
+\(dE/d\theta\)，实际上已经提示以转角为自变量会最简洁。
+
+\Needspace{3\baselineskip}
+\textbf{停止条件的极限检验}
+
+当 \(\mu\to0\)：
+
+\[v_0^2=gr(e^{4\pi\mu}-1)\to0.\]
+
+无摩擦时，只能以零初速度才会在任意位置``停止''，符合结果。当 \(\mu\)
+增大时，为克服一周的强耗散，所需 \(v_0\)
+指数增大；这也说明不能把总摩擦简单视为常力，否则只会得到 \(v_0^2\) 与
+\(\mu\) 线性关系。
+
+\Needspace{3\baselineskip}
+\textbf{停止前的总耗散核验}
+
+从 \(0\) 到停止角 \(\theta_s\)，摩擦总功应等于初动能：
+
+\[
+\int_0^{\theta_s}\mu(2E+mgr)d\theta=E_0.
+\]
+
+利用 \(2E+mgr=(2E_0+mgr)e^{-2\mu\theta}\)：
+
+\[
+\begin{aligned}
+W_f
+&=\mu(2E_0+mgr)
+\frac{1-e^{-2\mu\theta_s}}{2\mu}\\
+&=\frac12(2E_0+mgr)
+\left(1-\frac{mgr}{2E_0+mgr}\right)\\
+&=E_0.
+\end{aligned}
+\]
+
+能量账目闭合。
+
+\Needspace{3\baselineskip}
+\textbf{受力图的文字版检查}
+
+竖直方向没有加速度，所以底面支持力严格为
+
+\[N_z=mg.\]
+
+水平方向的径向加速度为 \(v^2/r\)，只有圆壁支持力提供，因此
+
+\[N_r=mv^2/r.\]
+
+两个支持力对应两处接触面，必须分别乘各自摩擦因数。本题恰好都为
+\(\mu\)，才可在最后写成
+
+\[f=\mu mg+\mu mv^2/r.\]
+
+若两摩擦因数不同，绝不能先把支持力相加再乘一个 \(\mu\)。
+
+\Needspace{3\baselineskip}
+\textbf{为什么摩擦力都沿切向}
+
+木块相对底面的速度沿水平圆周切线，所以底面摩擦反切向。木块相对圆壁也沿圆周切线滑动；圆壁法线沿径向，接触面的切向方向包含竖直和圆周切线，而实际相对速度没有竖直分量，故圆壁摩擦同样沿反圆周切线。两摩擦力因此对动能都做负功。
+
+\Needspace{3\baselineskip}
+\textbf{从功率形式推导}
+
+瞬时耗散功率
+
+\[\frac{dE}{dt}=-fv.\]
+
+又 \(d\theta/dt=v/r\)，所以
+
+\[
+\frac{dE}{d\theta}
+=\frac{dE/dt}{d\theta/dt}
+=\frac{-fv}{v/r}
+=-fr.
+\]
+
+代入 \(f\) 后立即得到式（1）。这一推导把微元功 \(dE=-f r\,d\theta\)
+与链式法则联系起来。
+
+\Needspace{3\baselineskip}
+\textbf{停止点附近的行为}
+
+当 \(v\to0\)，圆壁支持力和圆壁摩擦趋于零，但底面摩擦仍保持
+\(\mu mg\)。因此动能对转角的斜率趋于
+
+\[\left.\frac{dE}{d\theta}\right|_{E=0}=-\mu mgr,\]
+
+不是零。数学解若继续延伸会进入负动能区，说明必须在首次达到 \(E=0\)
+时截断。
+
+\Needspace{3\baselineskip}
+\textbf{指数解的物理分解}
+
+定义平移动能变量
+
+\[Y=E+\frac12mgr.\]
+
+则
+
+\[\frac{dY}{d\theta}=-2\mu Y,\]
+
+所以 \(Y=Y_0e^{-2\mu\theta}\)。常量平移 \(mgr/2\)
+正是把恒定底面摩擦项吸收入齐次方程所需的量；这是解一阶线性方程时寻找合适变量的典型技巧。
+
+\Needspace{3\baselineskip}
+\textbf{两接触面不同摩擦因数的答案}
+
+底面为 \(\mu_1\)、圆壁为 \(\mu_2\) 时，
+
+\[\frac{d(v^2)}{d\theta}+2\mu_2v^2=-2\mu_1gr.\]
+
+对 \(\mu_2>0\)，
+
+\[v^2=\left(v_0^2+\frac{\mu_1gr}{\mu_2}\right)e^{-2\mu_2\theta}
+-\frac{\mu_1gr}{\mu_2}.\]
+
+一周停下需 \(v_0^2=(\mu_1gr/\mu_2)(e^{4\pi\mu_2}-1)\)。当 \(\mu_2\to0\)
+时，极限为 \(4\pi\mu_1gr\)，恰是底面常摩擦做功的结果；若 \(\mu_1=0\) 而
+\(\mu_2>0\)，速度只指数趋零，非零初速不能在有限转角恰好停止。
+
+停止时间也能独立求出。由 \(dv/dt=-\mu(g+v^2/r)\)，
+
+\[t_s=\frac1\mu\sqrt{\frac rg}\arctan\frac{v_0}{\sqrt{gr}}.\]
+
+转角解在 \(2\pi\) 截断，图 4-2 同时画出 \(E\)
+与平移量，并标出不同的停止阈值。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf-3}
+
+圆壁摩擦不是常量，因为圆壁支持力正比于 \(v^2\)。把 \(2E+mgr\)
+看成整体，微分方程立即化为纯指数衰减。
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9-3}
+
+\begin{itemize}
+\tightlist
+\item
+  漏掉底面或圆壁中的任一摩擦力。
+\item
+  把圆壁支持力误写成 \(mg\)。
+\item
+  把圆周路程微元写成 \(d\theta\) 而漏掉 \(r\)。
+\item
+  积分后指数中的系数漏掉 \(2\)，得到错误的 \(e^{2\pi\mu}\)。
+\end{itemize}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae-3}
+
+先让学生判断两项摩擦中哪一项随速度变化，再写功率或微元功。最后用
+\(\mu\to0\) 检验：此时 \(v_0\to0\) 才能``恰好一周停下''，与结果一致。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3-3}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  若底面与圆壁摩擦因数分别为 \(\mu_1,\mu_2\)，重做全题。
+\item
+  求木块的速度 \(v(\theta)\) 和停止角度。
+\end{enumerate}
+
+\Needspace{3\baselineskip}
+\textbf{教师备课补充：显式解}
+
+\Needspace{3\baselineskip}
+\textbf{受力方向核对}
+
+圆壁对木块的支持力水平指向圆心，大小
+\(mv^2/r\)。圆壁摩擦沿竖直壁面的切向、与速度相反；底面摩擦也与速度相反。两者在切向上同向相加，但两个支持力本身互相垂直，不能先合成支持力再统一乘
+\(\mu\)。
+
+\Needspace{3\baselineskip}
+\textbf{小摩擦极限}
+
+当 \(\mu\ll1\) 时
+
+\[e^{4\pi\mu}-1\simeq4\pi\mu,\]
+
+故
+
+\[v_0\simeq\sqrt{4\pi\mu gr}.\]
+
+这与把速度依赖的圆壁摩擦视为较小修正后的数量级一致，也能检查指数符号必须为正。
+
+由式（1）直接得
+
+\[E(\theta)=\left(E_0+\frac{mgr}{2}\right)e^{-2\mu\theta}-\frac{mgr}{2}.\]
+
+令 \(E=0\) 即可得到停止角；该式也清楚显示图 4-2 中真正指数衰减的是
+\(E+mgr/2\)。
+
+\Needspace{3\baselineskip}
+\textbf{课堂追问与答案评价节点}
+
+先让学生列出两处支持力，不允许直接写总摩擦。随后追问：``圆壁支持力为什么随速度变？''\,``转过
+\(d\theta\) 的路程是多少？''这两问决定式（1）的两项和因子 \(r\)。
+
+评分节点为：\(N_z=mg\)、\(N_r=mv^2/r\)；总摩擦
+\(\mu mg+\mu mv^2/r\)；\(dE/d\theta=-\mu(2E+mgr)\)；正确积分上下限；指数
+\(e^{4\pi\mu}\)；最终速度。若只漏最后开方，可视为代数失误；若得到线性的
+\(v_0^2=4\pi\mu gr\) 而未说明小 \(\mu\)
+近似，则是把速度相关摩擦误当常量。
+
+\Needspace{3\baselineskip}
+\textbf{图像辅助讲解}
+
+画 \(Y=2E+mgr\) 随 \(\theta\) 的指数曲线比直接画 \(E\) 更清楚。\(Y\)
+始终为正，而物理解在 \(E=0\) 即 \(Y=mgr\) 处终止。图 4-2 的虚线 \(2\pi\)
+应与曲线首次达到停止阈值对应。
+
+\newpage
+
+\section{第 5 题}\label{ux7b2c-5-ux9898}
+
+一绝缘介质流体被限制在矩形环形凹槽中均匀流动，泵控制流速；恒定磁场
+\(\bm B\) 垂直流体运动平面。两块固定金属板 \(A,B\) 浸入流体，面积均为
+\(S\)、相距 \(d\)，并通过外部负载相连。介质相对介电常数为
+\(\varepsilon_r\)，忽略边缘效应和回路电流产生的磁场，介质中无自由移动电荷。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  流体以恒速 \(v_0\)
+  运动。空载时求介质两侧的极化电荷面密度和正负号。若外接电阻 \(R\)，且
+  \(t=0\) 时两金属板无自由电荷，求 \(U_{AB}(t)\)、\(U_{AB}(\infty)\)
+  及电阻消耗总能量 \(W\)。
+\item
+  系统先在泵持续工作且外电流为零的状态。\(t'=0\)
+  时关泵，流速缓慢线性下降：\(v(t')=v_0-at'\)，直至 \(t'_0=v_0/a\)
+  后为零。求 \(U_{AB}(t')\) 并作图。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图 5-1　介质流体环路、金属板、磁场方向和外接负载。}]{../figures/question-05.pdf}
+\caption*{图 5-1　介质流体环路、金属板、磁场方向和外接负载。}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-4}
+
+运动介质中的束缚电荷先极化，随后板上自由电荷经电阻重新分布。每一段都用同一个端电压定义和电荷守恒，才能确定正负号及初值。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-4}
+
+\begin{itemize}
+\tightlist
+\item
+  运动电荷的洛伦兹力 \(q\bm v\times\bm B\)。
+\item
+  极化强度与介质内部合场的关系
+  \(\bm P=\varepsilon_0(\varepsilon_r-1)\bm E\)。
+\item
+  平行板电容 \(C=\varepsilon_r\varepsilon_0S/d\)。
+\item
+  一阶线性受迫微分方程。
+\item
+  电阻耗散能量积分。
+\end{itemize}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-4}
+
+在介质随流体运动的参考图像中，束缚电荷受到等效场
+\(\bm v\times\bm B\)，形成极化。空载时金属板无自由电流，极化场与运动作用共同决定端电压；接入电阻后，板上自由电荷逐渐积累，电容电压抵消部分运动电动势。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-4}
+
+规定图示运动和磁场方向使正束缚电荷偏向 \(A\) 侧，因此
+\(U_{AB}=V_A-V_B\)。介质极化强度的大小为
+
+\[P=\frac{\varepsilon_r-1}{\varepsilon_r}\varepsilon_0vB.\]
+
+两板间由极化产生的等效开路电压为
+
+\[U_0=\frac{P}{\varepsilon_0}d
+=\frac{\varepsilon_r-1}{\varepsilon_r}vBd.\]
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-4}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.849\linewidth,height=\textheight,keepaspectratio,alt={图 5-2　关泵后的受迫电压响应及流体停止后的 RC 自由衰减。}]{../figures/solution-05.pdf}
+\caption*{图 5-2　关泵后的受迫电压响应及流体停止后的 RC 自由衰减。}
+\end{figure}
+
+\Needspace{3\baselineskip}
+\textbf{1. 空载极化电荷}
+
+正束缚电荷受 \(q\bm v\times\bm B\) 向 \(A\) 板一侧偏移，故
+
+\[\boxed{\sigma_{p,A}=+\frac{\varepsilon_r-1}{\varepsilon_r}\varepsilon_0v_0B},\]
+
+\[\boxed{\sigma_{p,B}=-\frac{\varepsilon_r-1}{\varepsilon_r}\varepsilon_0v_0B}.\]
+
+相应空载电压
+
+\[\boxed{U_0=\frac{\varepsilon_r-1}{\varepsilon_r}v_0Bd}.\]
+
+\Needspace{3\baselineskip}
+\textbf{2. 接入电阻后的充电过程}
+
+平行板等效电容
+
+\[C=\frac{\varepsilon_r\varepsilon_0S}{d},\]
+
+时间常数
+
+\[\tau=RC=\frac{\varepsilon_r\varepsilon_0SR}{d}.\]
+
+设 \(q_f\) 为金属板上的自由电荷，规定 \(B\) 板带正自由电荷时
+\(q_f>0\)。它产生的反向电压大小为 \(q_f/C\)，故
+
+\[U=U_0-\frac{q_f}{C}. \tag{1}\]
+
+电阻电流使 \(q_f\) 增加：
+
+\[\frac{dq_f}{dt}=\frac{U}{R}. \tag{2}\]
+
+对式（1）求导并代入式（2）：
+
+\[\frac{dU}{dt}=-\frac1C\frac{dq_f}{dt}=-\frac{U}{RC}=-\frac{U}{\tau}.\]
+
+这一步同时确定了指数衰减的符号。
+
+端电压可写成运动极化电压减去金属板自由电荷形成的反向电压。由于 \(t=0\)
+时两板没有自由电荷，极化已经建立，所以初始端电压不是零，而是
+\(U(0)=U_0\)。自由电荷经电阻流动，逐渐抵消极化电压。电荷守恒给出
+
+\[\tau\frac{dU}{dt}+U=0,\qquad U(0)=U_0.\]
+
+解得
+
+\[\boxed{U_{AB}(t)=U_0e^{-t/\tau}}.\]
+
+因此
+
+\[\boxed{U_{AB}(\infty)=0}.\]
+
+电阻电流
+
+\[I(t)=\frac{U(t)}R.\]
+
+于是电阻耗散为
+
+\[
+\begin{aligned}
+W&=\int_0^\infty I^2R\,dt\\
+&=\frac{U_0^2}{R}\int_0^\infty e^{-2t/\tau}dt\\
+&=\frac{U_0^2\tau}{2R}\\
+&=\frac12CU_0^2.
+\end{aligned}
+\]
+
+代入 \(C,U_0\)：
+
+\[\boxed{W=\frac{(\varepsilon_r-1)^2\varepsilon_0SB^2d}{2\varepsilon_r}v_0^2}.\]
+
+\Needspace{3\baselineskip}
+\textbf{3. 关泵后的线性减速阶段}
+
+系统关泵前处于外电流为零的稳态。此时板上自由电荷已经把运动极化电压完全抵消，故
+
+\[U(0)=0,\qquad
+K=\frac{\varepsilon_r-1}{\varepsilon_r}Bd.\]
+
+对 \(0<t'<t'_0=v_0/a\)，运动源为
+
+\[U_s(t')=K(v_0-at').\]
+
+总端电压等于瞬时运动极化电压减去板上自由电荷电压。对这一关系求导并用
+\(I=U/R\)，得到
+
+\[\frac{dU}{dt'}+\frac{U}{\tau}=-Ka.\]
+
+乘积分因子 \(e^{t'/\tau}\)：
+
+\[\frac{d}{dt'}\left(Ue^{t'/\tau}\right)=-Ka e^{t'/\tau}.\]
+
+结合 \(U(0)=0\)，得到
+
+\[\boxed{U(t')=Ka\tau\left(e^{-t'/\tau}-1\right)},
+\quad0<t'<t'_0.\]
+
+在 \(t'_0=v_0/a\) 时
+
+\[U(t'_0)=Ka\tau\left(e^{-t'_0/\tau}-1\right)<0.\]
+
+流体停止后运动源为零，电压自由衰减：
+
+\[\boxed{U(t')=U(t'_0)e^{-(t'-t'_0)/\tau}},\qquad t'>t'_0.\]
+
+图像先由零下降为负值；流体停止后再从该负值指数回升到零。电压连续，但在
+\(t'_0\) 处驱动项的斜率改变。
+
+\Needspace{3\baselineskip}
+\textbf{4. 符号方向的逐步检查}
+
+取 \(U=V_A-V_B\)。空载时正束缚电荷靠近 \(A\)，故
+\(U_0>0\)。接入电阻后，正电流由 \(A\) 经电阻流向 \(B\)，最终在 \(B\)
+板积累正自由电荷、在 \(A\) 板积累负自由电荷。定义 \(q_f>0\) 为 \(B\)
+板所带正自由电荷的大小，则它产生的电压方向与 \(U_0\) 相反：
+
+\[U=U_0-\frac{q_f}{C}.\]
+
+因此应有 \(dq_f/dt=U/R\)。这一定义消除了电荷符号与电流方向的歧义。稳态
+\(q_f=CU_0\) 时，端电压恰为零。
+
+关泵后速度下降，瞬时极化电压 \(Kv\) 变小，但 \(q_f\)
+来不及同步减小，于是反向自由电荷电压暂时更大，故
+\(U<0\)。负电压使电流反向，逐渐释放原先积累的自由电荷；这与图 5-2
+的负谷完全一致。
+
+\Needspace{3\baselineskip}
+\textbf{5. 分段解的连续性和导数}
+
+在 \(t'_0\) 左侧
+
+\[
+U_- =Ka\tau(e^{-t'_0/\tau}-1).
+\]
+
+在右侧自由衰减解的初值就是同一个 \(U_-\)，所以 \(U\)
+连续。左右导数分别为
+
+\[
+\left.\frac{dU}{dt'}\right|_-=-Ka e^{-t'_0/\tau},
+\]
+
+\[
+\left.\frac{dU}{dt'}\right|_+=-\frac{U_-}{\tau}
+=Ka(1-e^{-t'_0/\tau}).
+\]
+
+两者一般不相等，因为题设让流速斜率在 \(t'_0\) 从 \(-a\) 突然变为
+\(0\)。所以图像应连续但有折弯，不能强求导数连续。
+
+\Needspace{3\baselineskip}
+\textbf{6. 第一阶段耗能的两种计算}
+
+直接积分给出
+
+\[W=\int_0^\infty\frac{U_0^2}{R}e^{-2t/\tau}dt
+=\frac12CU_0^2.\]
+
+也可把初始极化状态看成端口等效电容具有电压 \(U_0\)，其可释放场能为
+\(CU_0^2/2\)；最后端电压为零，全部这部分端口能量在电阻中耗散。两种算法相互核验。
+
+\Needspace{3\baselineskip}
+\textbf{极化强度公式的自洽推导}
+
+在介质静止参考图像中，运动作用提供等效场
+\(\bm E_m=\bm v\times\bm B\)。束缚电荷产生的反向极化场为
+
+\[\bm E_p=-\frac{\bm P}{\varepsilon_0}.\]
+
+线性介质的本构关系要对介质内部合场使用：
+
+\[\bm P=\varepsilon_0(\varepsilon_r-1)(\bm E_m+\bm E_p).\]
+
+代入 \(\bm E_p\)：
+
+\[
+\bm P=\varepsilon_0(\varepsilon_r-1)
+\left(\bm E_m-\frac{\bm P}{\varepsilon_0}\right).
+\]
+
+移项：
+
+\[\varepsilon_r\bm P
+=\varepsilon_0(\varepsilon_r-1)\bm E_m.\]
+
+因此
+
+\[\boxed{\bm P=\frac{\varepsilon_r-1}{\varepsilon_r}
+\varepsilon_0\bm v\times\bm B}.\]
+
+这解释了束缚面电荷密度为何含 \(1/\varepsilon_r\)。
+
+\Needspace{3\baselineskip}
+\textbf{时间常数的来源}
+
+金属板与介质构成平行板电容
+
+\[C=\frac{\varepsilon_r\varepsilon_0S}{d}.\]
+
+电阻改变板自由电荷的时间尺度就是 \(RC\)：
+
+\[\tau=\frac{\varepsilon_r\varepsilon_0SR}{d}.\]
+
+增大 \(R\) 或 \(S\) 会延缓屏蔽，增大 \(d\)
+会减小电容并加快响应。用这些单调关系可检查时间常数是否把 \(d\)
+写在了正确位置。
+
+\Needspace{3\baselineskip}
+\textbf{关泵解的短时展开}
+
+当 \(t'\ll\tau\)：
+
+\[e^{-t'/\tau}\simeq1-\frac{t'}\tau,
+\]
+
+所以
+
+\[U(t')\simeq-Kat'.\]
+
+初始斜率恰为运动极化电压的变化率
+\(d(Kv)/dt'=-Ka\)，因为板自由电荷在极短时间内尚未来得及改变。这个结果可作为微分方程符号的快速检查。
+
+\Needspace{3\baselineskip}
+\textbf{场、电压与面电荷的方向表}
+
+规定 \(\bm v\) 向右、\(\bm B\) 垂直纸面向里，则 \(\bm v\times\bm B\)
+指向上方。正束缚电荷向上偏，靠近 \(A\) 侧；负束缚电荷靠近 \(B\) 侧。于是
+
+\[\sigma_{p,A}>0,
+\qquad
+\sigma_{p,B}<0,
+\qquad
+U_{AB}>0.\]
+
+接入电阻后，传统电流从 \(A\) 经外电阻流向 \(B\)，使 \(B\)
+板积累正自由电荷，形成反向场。把这一方向链完整写出，可避免只凭图中``叉号''猜正负。
+
+\Needspace{3\baselineskip}
+\textbf{为什么开路电压为 \(Pd/\varepsilon_0\)}
+
+两侧束缚面电荷相当于面电荷密度 \(\pm P\)
+的平行板。在板间产生的极化场大小为
+
+\[E_p=\frac{P}{\varepsilon_0}.\]
+
+因此端电压大小
+
+\[U_0=E_pd=\frac{Pd}{\varepsilon_0}.\]
+
+代入 \(P=[(\varepsilon_r-1)/\varepsilon_r]\varepsilon_0vB\) 后，得到
+
+\[U_0=\frac{\varepsilon_r-1}{\varepsilon_r}vBd.\]
+
+若在 \(P/\varepsilon_0\) 外再除一次
+\(\varepsilon_r\)，会重复计算介质屏蔽。
+
+\Needspace{3\baselineskip}
+\textbf{第一问终态的电荷分布}
+
+\(t\to\infty\)
+时端电压为零，但介质束缚电荷并未消失，流体也仍在运动。此时板自由电荷与改变后的束缚电荷恰好相消：
+
+\[q_f(\infty)=CU_0.\]
+
+自由面电荷密度
+
+\[\sigma_f=\frac{q_f}{S}
+=\varepsilon_r\varepsilon_0\frac{U_0}{d}
+=(\varepsilon_r-1)\varepsilon_0v_0B.\]
+
+它不同于开路的束缚电荷密度；与这一终态的束缚面电荷密度恰好相等。
+
+\Needspace{3\baselineskip}
+\textbf{两段驱动的统一写法}
+
+任意流速 \(v(t)\) 下，若定义
+\(K=(\varepsilon_r-1)Bd/\varepsilon_r\)，总电压满足
+
+\[\frac{dU}{dt}+\frac{U}{\tau}=K\frac{dv}{dt}.\]
+
+恒速阶段 \(dv/dt=0\)，得到自由衰减；线性减速阶段
+\(dv/dt=-a\)，得到常量负驱动；完全停流后再次回到自由衰减。一个统一方程即可覆盖全题。
+
+\Needspace{3\baselineskip}
+\textbf{图像检查的四个关键点}
+
+第二问图像必须满足：\(U(0)=0\)；初始斜率 \(-Ka\)；\(0<t'<t'_0\)
+始终为负；\(t'>t'_0\)
+从负值指数趋近零。若图像在减速阶段画成正值，说明自由电荷的滞后方向判断反了。
+
+\Needspace{3\baselineskip}
+\textbf{极化量随自由电荷改变}
+
+开路时的 \(P_0\) 不能在接入电阻后一直保持不变。取由 \(B\) 指向 \(A\)
+为正，金属板自由电荷面密度 \(\sigma_f=q_f/S\)，介质内电场满足
+\(\varepsilon_0E=\sigma_f-P\)。本构关系
+\(P=\varepsilon_0(\varepsilon_r-1)(E+vB)\) 给出
+
+\[P=\frac{\varepsilon_r-1}{\varepsilon_r}(\sigma_f+\varepsilon_0vB),\qquad
+U_{AB}=-Ed=Kv-\frac{q_f}{C}.\]
+
+稳态 \(U=0\) 时 \(E=0\)，因此
+\(P=(\varepsilon_r-1)\varepsilon_0vB=\sigma_f\)。此时束缚电荷与板自由电荷互相补偿；它们并非分别保持开路值。这一表达式也说明电容为何含
+\(\varepsilon_r\)。
+
+\Needspace{3\baselineskip}
+\textbf{指数停流变式}
+
+若初态已屏蔽、\(v=v_0e^{-bt}\)，则 \(U(0)=0\)，统一方程给出
+
+\[U(t)=-\frac{Kb v_0}{1/\tau-b}(e^{-bt}-e^{-t/\tau}).\]
+
+当 \(b=1/\tau\) 时取连续极限
+\(U=-Kb v_0t e^{-t/\tau}\)。两式均先负后归零，与关泵时板电荷滞后一致。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf-4}
+
+本题最重要的是区分三个对象：束缚极化电荷、金属板自由电荷和端电压。符号与初始条件必须始终围绕同一
+\(U_{AB}\) 定义书写。
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9-4}
+
+\begin{itemize}
+\tightlist
+\item
+  把极化电荷写成自由电荷。
+\item
+  漏掉介质中的 \(\varepsilon_r\)，把端电压误写成 \(vBd\)。
+\item
+  第一问把初始电压误设为零；此时金属板虽无自由电荷，介质极化电压已经存在。
+\item
+  第二问把关泵初态误设为开路电压；关泵前板上自由电荷已抵消极化电压，所以端电压为零。
+\item
+  两段解在 \(t'_0\) 处不连续。
+\item
+  不说明恒速泵持续供能时``总耗能''定义的物理口径。
+\end{itemize}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae-4}
+
+先画等效电路：时间变化的运动源 \(Kv(t)\)、电容 \(C\) 和电阻
+\(R\)。随后每一段只变驱动 \(v(t)\)，不重新猜公式。把 \(t'_0\)
+处的电压连续性作为强制检查。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3-4}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  令流速按 \(v_0e^{-bt}\) 衰减，求端电压。
+\item
+  加入外接电容或电感，讨论微分方程阶数如何变化。
+\end{enumerate}
+
+\Needspace{3\baselineskip}
+\textbf{教师备课补充：为什么不是普通电池模型}
+
+\Needspace{3\baselineskip}
+\textbf{第一阶段自由电荷的显式表达}
+
+由 \(U=U_0-q_f/C\) 和 \(U=U_0e^{-t/\tau}\)：
+
+\[q_f(t)=CU_0\left(1-e^{-t/\tau}\right).\]
+
+极限自由电荷 \(CU_0\) 恰好产生与极化电压等大反向的电场。电阻耗散为
+\(CU_0^2/2\)，是端口等效电容在固定流速下可释放的能量。不能再说``只耗散一半的初始等效场能''；这本身就是全部初始端口等效场能。若要分拆真实介质内能与泵的机械功，还须另建能量模型，单凭端口关系不能给出另一半。
+
+\Needspace{3\baselineskip}
+\textbf{第二阶段极限检查}
+
+若减速极慢，\(a\to0\)，在固定时刻有
+\(U\to0\)，体系几乎随时保持屏蔽平衡。若电阻很大，\(\tau\to\infty\)，则
+
+\[U(t')\simeq-Kat',\]
+
+表示金属板自由电荷来不及调整，总电压直接跟随运动极化电压的变化量。这两个极限都与物理直觉一致。
+
+本题明确介质中没有自由移动电荷，运动只造成束缚电荷极化。金属板上的自由电荷重新分布后，可以把极化造成的端电压抵消，因此恒速状态最终电流为零。这与含自由载流子的磁流体发电机持续供电不同。有限的
+\(W=CU_0^2/2\) 正是这一模型的直接后果。
+
+\Needspace{3\baselineskip}
+\textbf{课堂追问与答案评价节点}
+
+本题先问三次``什么电荷''：介质两侧是束缚极化电荷，金属板上可移动的是自由电荷，电阻中流动的是外电路自由电荷。再问两次初始条件：第一问接入电阻时板无自由电荷，所以
+\(U(0)=U_0\)；第二问关泵前外电流已为零，所以
+\(U(0)=0\)。这两个初值恰好不同。
+
+评分节点为：\(P=[(\varepsilon_r-1)/\varepsilon_r]\varepsilon_0vB\)；束缚电荷正负；\(U_0\)；\(C\)
+与 \(\tau\)；第一段指数衰减和 \(W=CU_0^2/2\)；关泵后的统一方程；在
+\(t'_0\) 连续拼接。若学生的图像方向与公式一致但 \(U_{AB}\)
+定义相反，可以按其自洽约定评分；若公式与图像互相矛盾，则必须扣除方向判断分。
+
+\Needspace{3\baselineskip}
+\textbf{模型边界的表述}
+
+这是一种只有束缚极化、没有体内自由载流子的理想介质。不能把它与导电磁流体的
+\(\bm j=\sigma(\bm E+\bm v\times\bm B)\)
+模型混用。后者可维持稳态电流，本题模型最终端电压和电流均可被板自由电荷屏蔽到零。
+
+\newpage
+
+\section{第 6 题}\label{ux7b2c-6-ux9898}
+
+不透明薄片上打有许多圆孔，孔心按正方形格点排列，晶格常数为
+\(d\)。用波长为 \(\lambda\) 的单色激光垂直照射，在薄片后方距离 \(L\)
+处放置平行光屏。已知 \(L\gg d\gg\lambda\)。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  描述光屏上的夫琅禾费衍射图样及主极大位置。
+\item
+  若薄片沿 \(x\) 轴方向压缩，压缩比例为 \(N\)，衍射图样如何变化？
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.898\linewidth,height=\textheight,keepaspectratio,alt={图 6-1　正方形孔阵及横、纵晶格周期 d。}]{../figures/question-06.pdf}
+\caption*{图 6-1　正方形孔阵及横、纵晶格周期 \(d\)。}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-5}
+
+相邻孔的两组相位差共同决定亮点位置，圆孔只调制强度包络。先明确远场与压缩倍率，再把孔距的变化换算成屏上峰距。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-5}
+
+\begin{itemize}
+\tightlist
+\item
+  夫琅禾费衍射与光程差。
+\item
+  二维晶格的相干叠加。
+\item
+  正方格点的倒易格点。
+\item
+  实空间缩放与频谱反向缩放。
+\end{itemize}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-5}
+
+屏上任一点接收所有孔发出的相干波。相邻孔在 \(x,y\)
+方向的光程差分别决定两组独立相位条件；两条件同时为整数倍 \(\lambda\)
+时出现主极大，构成正方形亮点阵列。每个亮点强度还受圆孔艾里斑包络调制。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-5}
+
+取屏上坐标 \((X,Y)\)。在小角度和 \(L\gg d\) 条件下，相邻孔的光程差近似为
+
+\[\Delta_x\simeq d\frac{X}{L},\qquad
+\Delta_y\simeq d\frac{Y}{L}.\]
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-5}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图 6-2　远场主极大形成正方形点阵；实空间压缩导致对应方向峰间距增大。}]{../figures/solution-06.pdf}
+\caption*{图
+6-2　远场主极大形成正方形点阵；实空间压缩导致对应方向峰间距增大。}
+\end{figure}
+
+设孔心坐标为
+
+\[x_{mn}=md,\qquad y_{mn}=nd.\]
+
+到屏上 \((X,Y)\) 的相位相对中心孔为
+
+\[\phi_{mn}=\frac{2\pi}{\lambda L}(mdX+ndY).\]
+
+所有孔同相的条件是
+
+\[\frac{dX}{\lambda L}=h,\qquad
+\frac{dY}{\lambda L}=k,\qquad h,k\in\mathbb Z.\]
+
+若沿两方向分别有 \(N_x,N_y\) 个孔，阵列因子为
+
+\[
+\mathcal A(X,Y)\propto
+\frac{\sin(N_x\phi_x/2)}{\sin(\phi_x/2)}
+\frac{\sin(N_y\phi_y/2)}{\sin(\phi_y/2)},
+\]
+
+其中
+
+\[\phi_x=\frac{2\pi dX}{\lambda L},\qquad
+\phi_y=\frac{2\pi dY}{\lambda L}.\]
+
+主极大对应
+\(\phi_x=2\pi h\)、\(\phi_y=2\pi k\)。孔数越多，主峰越窄；孔径只改变单孔包络，不改变主峰中心位置。
+
+因此主极大位置
+
+\[\boxed{X_h=h\frac{\lambda L}{d},\qquad
+Y_k=k\frac{\lambda L}{d}}.\]
+
+相邻主极大间距均为
+
+\[\boxed{\Delta X=\Delta Y=\frac{\lambda L}{d}}.\]
+
+因为每个孔为圆孔，亮点阵列外还乘有单圆孔衍射包络；越远离中心，亮点通常越弱，某些晶格峰可能落在单孔包络零点附近而消失。
+
+若沿 \(x\) 方向压缩，按题意取新周期
+
+\[d_x'=\frac{d}{N},\qquad d_y'=d.\]
+
+则
+
+\[
+X_h'=h\frac{\lambda L}{d/N}=Nh\frac{\lambda L}{d}=NX_h,
+\]
+
+而
+
+\[Y_k'=Y_k.\]
+
+故
+
+\[\boxed{\text{衍射点阵沿 }X\text{ 方向放大 }N\text{ 倍，沿 }Y\text{ 方向不变。}}\]
+
+\Needspace{3\baselineskip}
+\textbf{3. 主极大、次极大与单孔包络的层次}
+
+``看到正方形亮点阵列''只描述了主极大位置。真实强度由三层结构组成：
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  正方形晶格决定亮点中心的二维周期；
+\item
+  有限孔数决定每个主峰的宽度和峰间的次极大；
+\item
+  单个圆孔直径决定最外层艾里包络。
+\end{enumerate}
+
+若孔阵在每个方向的尺度分别为 \(N_xd,N_yd\)，主峰角宽数量级为
+
+\[\delta\theta_x\sim\frac{\lambda}{N_xd},
+\qquad
+\delta\theta_y\sim\frac{\lambda}{N_yd}.\]
+
+屏上线宽约为 \(L\delta\theta\)。孔数增加时亮点变窄，但亮点中心间距
+\(\lambda L/d\) 不变。
+
+\Needspace{3\baselineskip}
+\textbf{4. 压缩时哪些量改变}
+
+若只沿 \(x\) 压缩而圆孔本身不变：
+
+\begin{itemize}
+\tightlist
+\item
+  \(X\) 方向晶格峰间距增为 \(N\lambda L/d\)；
+\item
+  \(Y\) 方向峰间距保持 \(\lambda L/d\)；
+\item
+  单圆孔包络保持圆对称且尺度不变；
+\item
+  同一艾里包络中能容纳的 \(X\) 方向晶格峰数减少。
+\end{itemize}
+
+若实际压缩同时把圆孔也压成椭圆，单孔包络还会沿倒空间相反方向变形。题目通常只问晶格常数压缩，应明确采用前一种理想化。
+
+\Needspace{3\baselineskip}
+\textbf{5. 光程展开的符号不影响峰位}
+
+不同坐标约定可能把相位写成
+
+\[\phi_{mn}=\pm\frac{2\pi}{\lambda L}(mdX+ndY).\]
+
+整体变号只把复振幅取共轭，强度 \(|\mathcal A|^2\)
+不变；主极大条件仍是相位差为 \(2\pi\)
+的整数倍。因此无需在最终亮点位置中纠结该整体符号。
+
+\Needspace{3\baselineskip}
+\textbf{从倒易矢量统一表示}
+
+正方晶格的两个基矢可取
+
+\[\bm a_1=d\hat{\bm x},
+\qquad
+\bm a_2=d\hat{\bm y}.\]
+
+对应倒易基矢
+
+\[\bm b_1=\frac{2\pi}{d}\hat{\bm x},
+\qquad
+\bm b_2=\frac{2\pi}{d}\hat{\bm y}.\]
+
+远场横向波矢
+
+\[\bm k_\perp\simeq\frac{2\pi}{\lambda L}(X,Y).\]
+
+衍射峰条件就是
+
+\[\bm k_\perp=h\bm b_1+k\bm b_2.\]
+
+由此立即得到 \(X=h\lambda L/d\)、\(Y=k\lambda L/d\)。压缩 \(x\) 周期使
+\(\bm b_1\) 放大 \(N\) 倍，而 \(\bm b_2\) 不变。
+
+\Needspace{3\baselineskip}
+\textbf{中心峰与峰标号}
+
+\((h,k)=(0,0)\) 是中央主极大；\((\pm1,0)\)、\((0,\pm1)\)
+是最近的四个轴向峰；\((\pm1,\pm1)\) 距中心为
+
+\[R_{11}=\sqrt2\frac{\lambda L}{d}.\]
+
+一般峰到中心的距离
+
+\[R_{hk}=\frac{\lambda L}{d}\sqrt{h^2+k^2}.\]
+
+不同整数对可能具有相同
+\(h^2+k^2\)，形成简并的同半径亮点组，但它们仍是离散点而不是连续圆环。
+
+\Needspace{3\baselineskip}
+\textbf{有限屏幕的可见峰数}
+
+若屏幕半宽为 \(X_{\max}\)，可见的 \(x\) 方向级次大致满足
+
+\[|h|\le\frac{dX_{\max}}{\lambda L}.\]
+
+压缩后右端再除以
+\(N\)，故可见级次数减少。图样尺度放大并不意味着出现更多亮点，恰恰可能有更多高阶峰落到屏幕外。
+
+\Needspace{3\baselineskip}
+\textbf{远场近似成立的两层条件}
+
+\(L\gg d\)
+保证相邻孔到屏点的方向差很小，可使用小角度光程差；严格的夫琅禾费条件还与孔阵总尺度
+\(D_{\rm array}\) 有关，通常要求
+
+\[L\gg\frac{D_{\rm array}^2}{\lambda}.\]
+
+仅 \(L\gg d\gg\lambda\)
+不足以推出这一条件：总孔阵可能远大于一格。因此本题给出的点阵结论须另取夫琅禾费远场，或在透镜后焦平面观察；若不满足，不能把近场图样直接画成等间距点阵。\(d\gg\lambda\)
+则说明相邻衍射级次角度 \(\lambda/d\) 很小，屏上位置可取
+\(X\simeq L\theta_x\)。
+
+\Needspace{3\baselineskip}
+\textbf{相邻孔相位差的逐步推导}
+
+相邻两孔横向坐标相差 \(d\)。远场观察方向与轴线夹角为
+\(\theta_x\)，光程差
+
+\[\Delta_x=d\sin\theta_x\simeq d\theta_x.\]
+
+又
+
+\[\theta_x\simeq\frac XL,\]
+
+所以
+
+\[\Delta_x\simeq\frac{dX}{L}.\]
+
+主极大要求 \(\Delta_x=h\lambda\)，于是 \(X_h=h\lambda L/d\)。\(y\)
+方向完全相同，两条件同时满足才出现二维亮点。
+
+\Needspace{3\baselineskip}
+\textbf{圆孔包络的尺度}
+
+若圆孔直径为 \(a\)，单孔第一暗环角半径约
+
+\[\theta_A\simeq1.22\frac{\lambda}{a},\]
+
+屏上半径
+
+\[R_A\simeq1.22\frac{\lambda L}{a}.\]
+
+在该包络内，横向可容纳的晶格峰数数量级为
+\(R_A/(\lambda L/d)\sim d/a\)。孔越小，包络越宽，可见衍射级次越多。
+
+\Needspace{3\baselineskip}
+\textbf{压缩比例的定义检查}
+
+题目说``压缩比例为 \(N\)''通常指长度缩为原来的 \(1/N\)，即
+\(d_x'=d/N\)。若某资料把``压缩到原来的 \(N\) 倍''定义为
+\(d_x'=Nd\)，结论会相反。正式解答应先明确采用的定义，再写倒数尺度关系。
+
+\Needspace{3\baselineskip}
+\textbf{亮点是否连续成线}
+
+只有当一个方向完全没有周期限制，或孔列数极少导致峰很宽时，图样才可能近似条纹。二维大量正方孔阵在两个方向都有离散相位条件，因此主极大是点阵，不是连续横线与竖线的简单叠加。
+
+\Needspace{3\baselineskip}
+\textbf{不作小角近似的级次限制}
+
+远场方向余弦满足 \(s_x=h\lambda/d_x\)、\(s_y=k\lambda/d_y\)，且
+\(s_x^2+s_y^2<1\) 才能射向前方有限光屏。屏上位置为
+
+\[X=L\frac{s_x}{\sqrt{1-s_x^2-s_y^2}},\quad
+Y=L\frac{s_y}{\sqrt{1-s_x^2-s_y^2}}.\]
+
+低级次才化成等间距近轴点阵。压缩后
+\(d_x'=d/N\)，必须同时要求所讨论级次的 \(Nh\lambda/d\)
+仍很小。若薄片整体真的压缩，圆孔会变椭圆，包络也沿 \(X\) 扩大 \(N\)
+倍；若仅改变孔心间距、孔保持圆形，包络才不变。图 6-2
+展示峰位，并注明包络依孔是否随形变而改变。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf-5}
+
+衍射屏看到的是孔阵的空间频谱：实空间周期越小，对应倒空间峰间距越大。``压缩---放大''是傅里叶变换的反向尺度关系。
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9-5}
+
+\begin{itemize}
+\tightlist
+\item
+  把屏上亮点间距仍写成 \(d\)。
+\item
+  实空间压缩后误判衍射图也压缩。
+\item
+  只描述单孔圆形衍射，而忽略周期孔阵的离散主极大。
+\item
+  忽略图样还受单孔包络调制。
+\end{itemize}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae-5}
+
+先用一维光栅条件 \(d\sin\theta=m\lambda\)，再分别应用到 \(x,y\)
+两方向。最后用``窄结构对应宽频谱''的直觉解释压缩后的变化。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3-5}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  若 \(x,y\) 周期分别为 \(d_x,d_y\)，写出亮点位置。
+\item
+  若孔阵整体旋转角 \(\varphi\)，衍射点阵怎样旋转？
+\end{enumerate}
+
+\Needspace{3\baselineskip}
+\textbf{教师备课补充：相位推导}
+
+\Needspace{3\baselineskip}
+\textbf{从振幅到强度}
+
+总强度可写成
+
+\[I(X,Y)=I_{\rm hole}(X,Y)
+\left|\frac{\sin(N_x\phi_x/2)}{\sin(\phi_x/2)}\right|^2
+\left|\frac{\sin(N_y\phi_y/2)}{\sin(\phi_y/2)}\right|^2.\]
+
+其中 \(I_{\rm hole}\) 是单圆孔艾里包络。主极大处两个比值的极限分别为
+\(N_x,N_y\)，所以中央主峰强度随孔数平方增长，而峰宽随孔数增大而减小。
+
+\Needspace{3\baselineskip}
+\textbf{压缩后的相位条件}
+
+将 \(d_x\) 换成 \(d/N\)：
+
+\[\phi_x'=\frac{2\pi dX}{N\lambda L}.\]
+
+要仍满足 \(\phi_x'=2\pi h\)，必须有
+\(X'=NX\)。这是``实空间压缩---倒空间伸展''的直接代数证明。
+
+从孔 \((x,y)\) 到屏点 \((X,Y)\) 的距离
+
+\[s=\sqrt{L^2+(X-x)^2+(Y-y)^2}.\]
+
+在 \(L\) 最大时展开：
+
+\[s\simeq L+\frac{X^2+Y^2}{2L}-\frac{Xx+Yy}{L}+\frac{x^2+y^2}{2L}.\]
+
+前两项与孔位置无关。只有在总阵列远场条件下，才可忽略最后的孔位置二次项；剩下的
+\(-(Xx+Yy)/L\)
+给出傅里叶相位。这一步是从几何光程到二维傅里叶相位的桥梁。
+
+\Needspace{3\baselineskip}
+\textbf{课堂追问与答案评价节点}
+
+先让学生只考虑一排孔，写
+\(X_h=h\lambda L/d\)；再增加第二方向，得到二维整数对
+\((h,k)\)。随后追问：``圆孔形状决定峰位置还是包络？''正确答案是孔阵周期决定峰位置，单孔形状决定包络。
+
+评分节点包括：正确的小角光程差；两个独立整数条件；正方形离散亮点阵列；峰间距
+\(\lambda L/d\)；圆孔包络；压缩后 \(X\) 方向放大 \(N\) 倍、\(Y\)
+不变。只写``图样变宽''而不给方向和倍率不算完整。
+
+\Needspace{3\baselineskip}
+\textbf{绘图要求}
+
+题图必须明确标出实空间孔距 \(d\)；解答图必须在屏坐标中标出峰间距
+\(\lambda L/d\)。若表现压缩，应用不同的横、纵间距画成矩形点阵，而不是把所有亮点整体等比例放大。圆孔包络可用淡色圆形或文字说明，不应把离散峰画成连续圆环。
+
+\newpage
+
+\section{第 7 题}\label{ux7b2c-7-ux9898}
+
+真空中有一均匀球形薄膜，内部封有 \(1\,\mathrm{mol}\)
+单原子理想气体。薄膜各向同性，单位长度张力恒为 \(\sigma_0\)，面密度为
+\(\lambda\)；初始气体温度为 \(T_0\)，系统处于平衡。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  求初始半径 \(r_0\)。
+\item
+  薄膜绝热，通过内部电阻丝向系统输入热量 \(Q\)，求达到新平衡后的半径
+  \(r_1\)。
+\item
+  在初态附近给予薄膜整体径向各向同性微扰，判断平衡稳定性；若稳定，求小振动周期。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.558\linewidth,height=\textheight,keepaspectratio,alt={图 7-1　真空中的球形薄膜及内部一摩尔单原子理想气体。}]{../figures/question-07.pdf}
+\caption*{图 7-1　真空中的球形薄膜及内部一摩尔单原子理想气体。}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-6}
+
+平衡半径由气压和膜张力决定，加热后要把气体内能与膜表面能一起计入。小振动沿绝热过程偏离平衡，恢复刚度来自这一过程的势能曲率。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-6}
+
+\begin{itemize}
+\tightlist
+\item
+  球面的拉普拉斯压强 \(\Delta p=2\sigma_0/r\)。
+\item
+  理想气体状态方程。
+\item
+  单原子理想气体内能。
+\item
+  表面张力功与总能量。
+\item
+  绝热关系 \(pV^{5/3}=\text{常量}\)。
+\item
+  平衡线性化与有效质量。
+\end{itemize}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-6}
+
+内气压推动球膜膨胀，膜张力试图收缩。平衡时二者相等。均匀径向运动中，整张膜的每个面元具有相同径向速度，因此有效质量就是膜的总质量
+\(4\pi r^2\lambda\)。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-6}
+
+先写力学平衡
+
+\[p=\frac{2\sigma_0}{r},\]
+
+再与一摩尔理想气体方程
+
+\[p\frac{4\pi r^3}{3}=RT\]
+
+联立。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-6}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图 7-2　球膜半径的有效势在 r\_0 处取极小值，故存在径向小振动。}]{../figures/solution-07.pdf}
+\caption*{图 7-2　球膜半径的有效势在 \(r_0\)
+处取极小值，故存在径向小振动。}
+\end{figure}
+
+\Needspace{3\baselineskip}
+\textbf{1. 初始半径}
+
+由拉普拉斯压强
+
+\[p_0=\frac{2\sigma_0}{r_0}.\]
+
+这也可由半球受力推出：气压对投影圆面的合力为
+\(F_p=p_0\pi r_0^2\)，赤道圆周张力的合力为
+\(F_\sigma=2\pi r_0\sigma_0\)。令二者相等，立即得到
+\(p_0=2\sigma_0/r_0\)。
+
+由理想气体方程
+
+\[p_0\frac{4\pi r_0^3}{3}=RT_0.\]
+
+代入：
+
+\[\frac{2\sigma_0}{r_0}\frac{4\pi r_0^3}{3}=RT_0.\]
+
+所以
+
+\[\frac{8\pi\sigma_0r_0^2}{3}=RT_0,\]
+
+\[\boxed{r_0=\sqrt{\frac{3RT_0}{8\pi\sigma_0}}}.\]
+
+\Needspace{3\baselineskip}
+\textbf{2. 输入热量后的新平衡半径}
+
+平衡状态下，由同样关系
+
+\[RT=\frac{8\pi\sigma_0r^2}{3}.\]
+
+单原子理想气体内能
+
+\[U_g=\frac32RT=4\pi\sigma_0r^2.\]
+
+球膜表面能
+
+\[U_s=\sigma_0A=4\pi\sigma_0r^2.\]
+
+故平衡态总能量
+
+\[U_{\rm tot}=U_g+U_s=8\pi\sigma_0r^2.\]
+
+向系统输入热量 \(Q\)：
+
+\[Q=U_{\rm tot,1}-U_{\rm tot,0}
+=8\pi\sigma_0(r_1^2-r_0^2).\]
+
+所以
+
+\[
+\boxed{r_1=\sqrt{r_0^2+\frac{Q}{8\pi\sigma_0}}}.
+\]
+
+代入 \(r_0\) 也可写成
+
+\[\boxed{r_1=\sqrt{\frac{3RT_0+Q}{8\pi\sigma_0}}}.\]
+
+\Needspace{3\baselineskip}
+\textbf{3. 稳定性与小振动周期}
+
+小振动过程薄膜绝热。单原子理想气体 \(\gamma=5/3\)，故
+
+\[pV^\gamma=\text{常量}.\]
+
+因 \(V\propto r^3\)，有
+
+\[p(r)=p_0\left(\frac{r_0}{r}\right)^5.\]
+
+以半径 \(r\) 为广义坐标，气压对应的广义力为
+
+\[F_p=4\pi r^2p(r)
+=4\pi p_0\frac{r_0^5}{r^3}.\]
+
+利用 \(p_0=2\sigma_0/r_0\)：
+
+\[F_p=8\pi\sigma_0\frac{r_0^4}{r^3}.\]
+
+膜张力向内的广义力
+
+\[F_\sigma=8\pi\sigma_0r.\]
+
+净外向力
+
+\[F(r)=8\pi\sigma_0\left(\frac{r_0^4}{r^3}-r\right).\]
+
+令 \(r=r_0+x\)，\(|x|\ll r_0\)。展开
+
+\[\frac{r_0^4}{(r_0+x)^3}
+=r_0\left(1+\frac{x}{r_0}\right)^{-3}
+\simeq r_0-3x.\]
+
+于是
+
+\[F\simeq8\pi\sigma_0[(r_0-3x)-(r_0+x)]
+=-32\pi\sigma_0x.\]
+
+回复力与位移反向，因此平衡稳定。
+
+膜总质量
+
+\[M_m=4\pi r_0^2\lambda.\]
+
+运动方程
+
+\[4\pi r_0^2\lambda\,\ddot x=-32\pi\sigma_0x.\]
+
+所以
+
+\[\omega^2=\frac{8\sigma_0}{\lambda r_0^2},\]
+
+\[\boxed{t_0=\frac{2\pi}{\omega}
+=2\pi r_0\sqrt{\frac{\lambda}{8\sigma_0}}}.\]
+
+代入 \(r_0\)：
+
+\[\boxed{t_0=\sqrt{\frac{3\pi\lambda RT_0}{16\sigma_0^2}}}.\]
+
+\Needspace{3\baselineskip}
+\textbf{4. 新平衡温度}
+
+由新平衡关系
+
+\[RT_1=\frac{8\pi\sigma_0r_1^2}{3},\]
+
+以及
+
+\[r_1^2=r_0^2+\frac{Q}{8\pi\sigma_0},\]
+
+得到
+
+\[
+RT_1=RT_0+\frac{Q}{3},
+\]
+
+所以
+
+\[\boxed{T_1=T_0+\frac{Q}{3R}}.\]
+
+这并不意味着气体吸收了全部热量。气体内能增加
+
+\[
+\Delta U_g=\frac32R(T_1-T_0)=\frac Q2,
+\]
+
+膜表面能也增加 \(Q/2\)，二者之和才是输入热量 \(Q\)。
+
+\Needspace{3\baselineskip}
+\textbf{5. 小振动方程从径向动能推导}
+
+径向均匀运动时，可以把整张球膜的动能写成
+
+\[T_m=\frac12(4\pi r^2\lambda)\dot r^2.\]
+
+在平衡点附近 \(r=r_0+x\)，保留二阶能量时可把前因子取为
+\(4\pi r_0^2\lambda\)。净力展开已经得到
+
+\[F=-32\pi\sigma_0x.\]
+
+故
+
+\[
+(4\pi r_0^2\lambda)\ddot x+32\pi\sigma_0x=0.
+\]
+
+除以有效质量，得到
+
+\[
+\ddot x+\frac{8\sigma_0}{\lambda r_0^2}x=0.
+\]
+
+这一步明确显示，气体在题设模型中只提供弹性恢复力，不计气体整体径向流动的惯性；若把气体流体动力学惯性纳入，频率会改变。
+
+\Needspace{3\baselineskip}
+\textbf{6. 稳定性的直接判据}
+
+若半径略增大，绝热气压按 \(r^{-5}\) 下降，压力总推力按
+\(r^2p\propto r^{-3}\) 下降；膜张力合力却按 \(r\)
+增大。因此净力向内。若半径略减小，压力推力迅速增大而张力合力减小，净力向外。所以平衡稳定，这一物理判断应在代数展开前先建立。
+
+\Needspace{3\baselineskip}
+\textbf{拉普拉斯压强的几何来源}
+
+球面薄膜单位长度张力为
+\(\sigma_0\)。取上半球，赤道圆周每一小段张力沿球面切向；其竖直分量沿整圈积分后得到
+\(2\pi r\sigma_0\)。内压在半球曲面上的合力等于对投影圆面的压力
+\(p\pi r^2\)。平衡给出
+
+\[p\pi r^2=2\pi r\sigma_0,
+\]
+
+即
+\(p=2\sigma_0/r\)。如果是肥皂泡的双层液膜，表面能和张力计数会多一个因子；本题明确是一张球形薄膜，只计一层。
+
+\Needspace{3\baselineskip}
+\textbf{有效势的构造}
+
+绝热过程中气体内能满足
+
+\[U_g\propto T\propto V^{1-\gamma}\propto r^{-2}.\]
+
+写成
+
+\[U_g(r)=\frac{C}{r^2}.\]
+
+膜表面能
+
+\[U_s(r)=4\pi\sigma_0r^2.\]
+
+有效势
+
+\[U_{\rm eff}(r)=\frac{C}{r^2}+4\pi\sigma_0r^2.\]
+
+一项在小 \(r\) 发散，一项在大 \(r\) 增长，因此必有极小值。求导
+
+\[-\frac{2C}{r^3}+8\pi\sigma_0r=0\]
+
+确定平衡；二阶导数
+
+\[\frac{d^2U_{\rm eff}}{dr^2}
+=\frac{6C}{r^4}+8\pi\sigma_0>0\]
+
+直接证明稳定。图 7-2 正是这一势能结构。
+
+\Needspace{3\baselineskip}
+\textbf{周期表达式的两种形式核对}
+
+由
+
+\[\omega^2=\frac{8\sigma_0}{\lambda r_0^2}\]
+
+有
+
+\[t_0=2\pi r_0\sqrt{\frac{\lambda}{8\sigma_0}}.\]
+
+代入 \(r_0^2=3RT_0/(8\pi\sigma_0)\)：
+
+\[
+\begin{aligned}
+t_0^2
+&=4\pi^2\frac{3RT_0}{8\pi\sigma_0}
+\frac{\lambda}{8\sigma_0}\\
+&=\frac{3\pi\lambda RT_0}{16\sigma_0^2}.
+\end{aligned}
+\]
+
+所以两种 boxed 结果完全等价。
+
+\Needspace{3\baselineskip}
+\textbf{第一问的量纲与单调性}
+
+由
+
+\[r_0^2=\frac{3RT_0}{8\pi\sigma_0},\]
+
+\(RT_0\) 的量纲为焦耳，即牛顿米；\(\sigma_0\)
+为牛顿每米，所以比值量纲为平方米。温度越高，气压越强，平衡半径越大；张力越大，平衡半径越小，均与公式一致。
+
+\Needspace{3\baselineskip}
+\textbf{第二问为何可用平衡态总能量差}
+
+电阻丝输入热量后，系统最终达到新平衡。若过程足够缓慢或中间振动最终耗散，初末态宏观动能均为零。真空外界不做压强功，能量只储存在气体内能和膜表面能中。因此
+
+\[Q=\Delta U_g+\Delta U_s.\]
+
+不需要知道中间的温度---半径路径；只需比较两个平衡态的状态函数。
+
+\Needspace{3\baselineskip}
+\textbf{热量为负时的范围}
+
+数学式
+
+\[r_1^2=r_0^2+\frac{Q}{8\pi\sigma_0}\]
+
+也允许 \(Q<0\)，表示从系统抽热。要保持实数半径和理想气体温度为正，必须
+
+\[Q>-8\pi\sigma_0r_0^2=-3RT_0.\]
+
+题目给的是输入热量，通常
+\(Q>0\)，无需讨论该边界；教师备课可用它检查公式的物理定义域。
+
+\Needspace{3\baselineskip}
+\textbf{绝热指数的作用}
+
+一般理想气体绝热指数为 \(\gamma\)
+时，\(p\propto r^{-3\gamma}\)，压力总推力
+\(F_p\propto r^{2-3\gamma}\)。在平衡点线性化，恢复刚度与 \(3\gamma-1\)
+有关。只有当
+
+\[3\gamma-1>0\]
+
+时气压推力随半径增大下降得足够快，平衡具有恢复趋势。单原子气体
+\(\gamma=5/3\) 显然满足。
+
+\Needspace{3\baselineskip}
+\textbf{面密度恒定的模型解释}
+
+题设把膜面密度记为
+\(\lambda\)。严格说，若膜质量守恒且面积变化，面密度会随 \(r\)
+改变；题解的小振动只需在平衡点使用
+\(\lambda\)，一阶频率仍以平衡面密度表示。对有限幅度膨胀，若研究膜质量，应另外说明
+\(M_m=4\pi r_0^2\lambda\) 固定，而不能把 \(4\pi r^2\lambda\)
+在所有半径都当成恒定质量。
+
+\Needspace{3\baselineskip}
+\textbf{为什么整张膜可用非零径向广义力}
+
+球面压力各方向的矢量合力为零，但均匀膨胀的虚功为
+\(\delta W=p\,\delta V=4\pi r^2p\,\delta r\)。因此半径广义力是
+\(4\pi r^2p\)，与质心受力不同。膜的虚功为
+\(-\sigma_0\delta A=-8\pi\sigma_0r\,\delta r\)。图 7-2 按归一化势
+\(u=\tfrac12[(r/r_0)^{-2}+(r/r_0)^2]\) 绘制，极小点准确在 \(r/r_0=1\)。
+
+一般绝热指数 \(\gamma\) 的刚度为 \(8\pi\sigma_0(3\gamma-1)\)，从而
+
+\[\omega^2=\frac{2\sigma_0(3\gamma-1)}{\lambda r_0^2}.\]
+
+双原子气体 \(\gamma=7/5\) 时
+\(\omega^2=32\sigma_0/(5\lambda r_0^2)\)。若恒温扰动，\(\gamma\)
+换成过程指数 \(1\)，得到
+\(4\sigma_0/(\lambda r_0^2)\)；不同过程即使同一平衡半径也有不同频率。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf-6}
+
+第 2 问输入的热量不只增加气体内能，还增加膜的表面能；第 3
+问则不是准静态平衡过程，而是绝热快速扰动，必须用 \(pV^\gamma=\) 常量。
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9-6}
+
+\begin{itemize}
+\tightlist
+\item
+  拉普拉斯压强漏掉系数 \(2\)。
+\item
+  第 2 问只写 \(Q=\Delta U_g\)，漏掉表面能。
+\item
+  第 3 问误用等温关系 \(pV=\) 常量。
+\item
+  有效质量漏掉球面积，写成 \(\lambda\)。
+\end{itemize}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae-6}
+
+把三问分别标成``静力平衡---平衡态能量---动态线性化''。虽然都使用 \(p\)
+和 \(r\)，物理过程不同，状态关系不能混用。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3-6}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  若内部为双原子理想气体，重求小振动周期。
+\item
+  若膜张力随面积变化，讨论稳定性判据如何修改。
+\end{enumerate}
+
+\Needspace{3\baselineskip}
+\textbf{教师备课补充：量纲核验}
+
+\Needspace{3\baselineskip}
+\textbf{热量分配的微分解释}
+
+准静态平衡膨胀时
+
+\[dU_g=\frac32R\,dT,\]
+
+而平衡关系 \(RT=8\pi\sigma_0r^2/3\) 给出
+
+\[dU_g=8\pi\sigma_0r\,dr.\]
+
+表面能变化
+
+\[dU_s=\sigma_0d(4\pi r^2)=8\pi\sigma_0r\,dr.\]
+
+所以输入的微小热量在任一平衡态附近恰好一半进入气体内能、一半进入膜表面能：
+
+\[dQ=dU_g+dU_s=16\pi\sigma_0r\,dr.\]
+
+积分便得到 \(Q=8\pi\sigma_0(r_1^2-r_0^2)\)。
+
+\Needspace{3\baselineskip}
+\textbf{振动推导中的近似层次}
+
+质量 \(M_m=4\pi r_0^2\lambda\) 在一阶线性化中取平衡值即可；若把
+\(r=r_0+x\) 代入质量变化，其修正乘上 \(\ddot x\)
+后属于二阶小量，不影响线性频率。
+
+\(\sigma_0\) 的量纲为 \(\mathrm{N,m^{-1}}\)，\(\lambda\) 为
+\(\mathrm{kg,m^{-2}}\)，故
+
+\[\frac{\sigma_0}{\lambda r_0^2}\]
+
+的量纲为 \(\mathrm{s^{-2}}\)，与 \(\omega^2\) 一致。
+
+\Needspace{3\baselineskip}
+\textbf{课堂追问与答案评价节点}
+
+第 1 问追问拉普拉斯压强中的系数为何为 \(2\)；第 2
+问追问热量去了哪两处；第 3
+问追问扰动过程为什么绝热而不是沿平衡态等温。三问分别对应几何、能量和过程条件。
+
+评分节点为：\(p=2\sigma_0/r\)；\(r_0\)；气体内能和膜表面能各为
+\(4\pi\sigma_0r^2\)；\(r_1\)；绝热关系 \(p\propto r^{-5}\)；净力线性化
+\(-32\pi\sigma_0x\)；有效质量；周期。若只给稳定性而无频率推导，不应给满分。
+
+\Needspace{3\baselineskip}
+\textbf{近似假设清单}
+
+薄膜始终保持球形；张力在过程中恒为
+\(\sigma_0\)；外界真空；气体均匀且可用准静态压强描述；径向小振动时忽略气体流动惯性和热传导；面密度
+\(\lambda\)
+取平衡值。教师备课中列出这些假设，有助于解释真实球膜为何可能出现非球形模态或阻尼。
+
+\Needspace{3\baselineskip}
+\textbf{图像与解析融合}
+
+图 7-2 左侧画出半径的两个广义力，右侧为总势能曲线。总势能中的 \(C/r^2\)
+来自绝热气体内能，\(4\pi\sigma_0r^2\)
+来自膜表面能。先用极小点定位平衡半径，再由该点曲率与膜的总质量求小振动频率。
+
+\newpage
+
+\section{第 8 题}\label{ux7b2c-8-ux9898}
+
+一静质量为 \(m_0\) 的粒子在地面系中以 \(\beta c=0.8c\)
+运动。它突然从外界获得能量而动量不变，裂变成两个静质量均为 \(m_0\)
+的粒子；在地面系中，两末态粒子的速度方向相互垂直。求在与初始粒子同速运动的参考系，即初态零动量系中，外界输入能量
+\(\Delta E'\) 的允许范围。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.564\linewidth,height=\textheight,keepaspectratio,alt={图 8-1　地面系中两末态动量相互垂直且矢量和等于初始总动量。}]{../figures/question-08.pdf}
+\caption*{图 8-1　地面系中两末态动量相互垂直且矢量和等于初始总动量。}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-7}
+
+垂直速度条件只在地面系给出。先在该系求固定总动量下的两体总能量，再变换输入的四动量；端点有静止粒子，要单独判断能否取到。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-7}
+
+\begin{itemize}
+\tightlist
+\item
+  相对论能量和动量。
+\item
+  四动量洛伦兹变换。
+\item
+  两垂直向量的分量约束。
+\item
+  单变量函数极值。
+\item
+  能量输入在不同惯性系中的变换。
+\end{itemize}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-7}
+
+爆炸前后地面系总动量不变，但总能量增加。末态两动量互相垂直，它们的矢量和固定为初态动量，因此动量三角形只有一个连续自由度。末态总能量随动量在两粒子间如何分配而变化。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-7}
+
+初态速度 \(\beta=4/5\)，洛伦兹因子
+
+\[\gamma=\frac1{\sqrt{1-\beta^2}}=\frac53.\]
+
+因此地面系初态
+
+\[E_0=\frac53m_0c^2,\qquad P_0=\gamma m_0\beta c=\frac43m_0c.\]
+
+爆炸外界只输入能量，故 \(\Delta P=0\)。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-7}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图 8-2　固定总动量下末态总能量随动量分配变化；端点最小、对称分配最大。}]{../figures/solution-08.pdf}
+\caption*{图
+8-2　固定总动量下末态总能量随动量分配变化；端点最小、对称分配最大。}
+\end{figure}
+
+\Needspace{3\baselineskip}
+\textbf{1. 地面系中的末态参数化}
+
+取初始动量沿 \(x\) 轴。设两末态动量为
+
+\[\bm p_1=(p_{1x},p_y),\qquad
+\bm p_2=(P_0-p_{1x},-p_y).\]
+
+垂直条件
+
+\[\bm p_1\cdot\bm p_2=0\]
+
+给出
+
+\[p_y^2=p_{1x}(P_0-p_{1x}). \tag{1}\]
+
+因此
+
+\[0\le p_{1x}\le P_0.\]
+
+由相对论能量关系
+
+\[E_i^2=m_0^2c^4+p_i^2c^2.\]
+
+利用式（1）：
+
+\[
+\begin{aligned}
+p_1^2
+&=p_{1x}^2+p_y^2\\
+&=p_{1x}^2+p_{1x}(P_0-p_{1x})\\
+&=P_0p_{1x},
+\end{aligned}
+\]
+
+故
+
+\[E_1=c\sqrt{m_0^2c^2+P_0p_{1x}}.\]
+
+同理
+
+\[E_2=c\sqrt{m_0^2c^2+P_0(P_0-p_{1x})}.\]
+
+总末态能量
+
+\[E_f(p_{1x})=E_1+E_2.\]
+
+一旦选定 \(p_{1x}\)，垂直条件就确定 \(p_y^2\)，同时
+\(p_{2x}=P_0-p_{1x}\)，所以末态只剩这一个连续自由度。
+
+\Needspace{3\baselineskip}
+\textbf{2. 求地面系末态总能量范围}
+
+函数关于 \(p_{1x}=P_0/2\) 对称，并在中点取最大值，在端点取最小值。
+
+端点 \(p_{1x}=0\) 或 \(P_0\) 时：
+
+\[E_{f,\min}=m_0c^2+\sqrt{m_0^2c^4+P_0^2c^2}.\]
+
+代入 \(P_0=4m_0c/3\)：
+
+\[
+E_{f,\min}
+=m_0c^2+\frac53m_0c^2
+=\frac83m_0c^2.
+\]
+
+中点 \(p_{1x}=P_0/2\) 时，两粒子能量相等：
+
+\[
+\begin{aligned}
+E_{f,\max}
+&=2c\sqrt{m_0^2c^2+\frac{P_0^2}{2}}\\
+&=2m_0c^2\sqrt{1+\frac89}\\
+&=\frac{2\sqrt{17}}3m_0c^2.
+\end{aligned}
+\]
+
+所以地面系输入能量
+
+\[\Delta E=E_f-E_0\]
+
+满足
+
+\[m_0c^2<\Delta E\le\frac{2\sqrt{17}-5}{3}m_0c^2.\]
+
+\Needspace{3\baselineskip}
+\textbf{3. 变换到初态零动量系}
+
+外界输入的四动量增量在地面系为
+
+\[\Delta P^\mu=\left(\frac{\Delta E}{c},0,0,0\right),\]
+
+因为题设动量不变。向速度 \(\beta c\) 的初态共动系变换：
+
+\[\Delta E'=\gamma(\Delta E-\beta c\Delta p_x)=\gamma\Delta E.\]
+
+又 \(\gamma=5/3\)，故
+
+\[
+\boxed{
+\frac53m_0c^2
+<\Delta E'
+\le\frac{5(2\sqrt{17}-5)}9m_0c^2
+}.
+\]
+
+数值上，上限约为 \(1.804m_0c^2\)。
+
+下界取严格不等号，因为端点对应一个末态粒子静止，静止粒子没有确定的``速度方向''，不满足``两速度方向垂直''的严格表述；它只给出可无限逼近的下确界。上界对应对称分配，两粒子速度均非零，可以取到。
+
+\Needspace{3\baselineskip}
+\textbf{4. 极值的显式导数核验}
+
+令 \(x=p_{1x}/(m_0c)\)，则 \(0\le x\le4/3\)，总能量除以 \(m_0c^2\) 为
+
+\[
+f(x)=\sqrt{1+\frac43x}
++\sqrt{1+\frac43\left(\frac43-x\right)}.
+\]
+
+一阶导数
+
+\[
+f'(x)=\frac{2/3}{\sqrt{1+4x/3}}
+-\frac{2/3}{\sqrt{1+\frac43(\frac43-x)}}.
+\]
+
+令 \(f'(x)=0\)，两分母相等，得到
+
+\[x=\frac23.\]
+
+二阶导数在区间内部恒为负，因此该驻点是唯一最大值。最小值只能出现在两个端点，由对称性端点值相等。
+
+\Needspace{3\baselineskip}
+\textbf{5. 零动量系中爆炸前后的总四动量}
+
+爆炸前在初态共动系中
+
+\[P_i'^\mu=(m_0c,0,0,0).\]
+
+爆炸后总能量
+
+\[E_f'=m_0c^2+\Delta E',\]
+
+但总动量不是零，而是外界输入的
+
+\[P_{fx}'=-\gamma\beta\frac{\Delta E}{c}.
+\]
+
+末态系统不变量质量满足
+
+\[M_f^2c^4=E_f'^2-P_{fx}'^{2}c^2.\]
+
+它必须至少等于两个静质量之和对应的阈值
+\((2m_0c^2)^2\)。把边界能量代入可验证这一条件，提供另一条四矢量层面的自洽检查。
+
+\Needspace{3\baselineskip}
+\textbf{6. 为什么不能先在零动量系画直角三角形}
+
+地面系中的两末态速度垂直，是一个同时性和空间方向都依赖参考系的条件。沿
+\(x\) 方向洛伦兹变换后，两个速度的 \(x\)
+分量按速度合成公式非线性变化，夹角一般不再为
+\(90^\circ\)。所以正确顺序必须是：先在题设给出垂直性的地面系完成几何约束，再把总四动量差变换到初态共动系。
+
+\Needspace{3\baselineskip}
+\textbf{地面系输入能量范围的完整减法}
+
+初态能量为 \(E_0=5m_0c^2/3\)。末态最小能量
+\(8m_0c^2/3\)，故地面系输入能量下确界
+
+\[\Delta E_{\inf}
+=\left(\frac83-\frac53\right)m_0c^2
+=m_0c^2.\]
+
+末态最大能量 \(2\sqrt{17}m_0c^2/3\)，故
+
+\[
+\Delta E_{\max}
+=\left(\frac{2\sqrt{17}}3-\frac53\right)m_0c^2
+=\frac{2\sqrt{17}-5}{3}m_0c^2.
+\]
+
+乘 \(\gamma=5/3\)
+后得到零动量系范围。分步写清初、末态能量，可以避免把末态总能量直接误当成输入能量。
+
+\Needspace{3\baselineskip}
+\textbf{上限构形的动量几何}
+
+对称点 \(p_{1x}=p_{2x}=P_0/2\)。由
+
+\[p_y^2=\frac{P_0^2}{4}\]
+
+得 \(|p_y|=P_0/2\)。于是
+
+\[\bm p_1=\left(\frac{P_0}{2},\frac{P_0}{2}\right),
+\qquad
+\bm p_2=\left(\frac{P_0}{2},-\frac{P_0}{2}\right).\]
+
+两向量点积为零，夹角严格为 \(90^\circ\)；它们关于总动量方向对称，各与
+\(x\) 轴成 \(45^\circ\)。这就是上限能够取到的具体构形。
+
+\Needspace{3\baselineskip}
+\textbf{下界为何只有下确界}
+
+当 \(p_{1x}\to0^+\) 时，由 \(p_y^2=p_{1x}(P_0-p_{1x})\)，有
+\(p_y\to0\)，第一粒子速度趋于零；第二粒子承担几乎全部总动量。任意正的
+\(p_{1x}\)
+都能构成非零且垂直的两速度，所以能量可任意接近端点值；但端点本身没有第一粒子的速度方向，严格条件下不能取到。
+
+\Needspace{3\baselineskip}
+\textbf{速度垂直与动量垂直}
+
+相对论中单粒子动量
+
+\[\bm p=\gamma m\bm v\]
+
+始终与速度同向，因此两个非零速度垂直等价于两个动量垂直。这里可以在动量空间使用直角条件。但速度大小与动量大小并不成简单比例，能量仍必须用
+
+\[E=\sqrt{m^2c^4+p^2c^2}\]
+
+计算，不能套非相对论 \(p^2/2m\)。
+
+\Needspace{3\baselineskip}
+\textbf{动量直角条件的几何推导}
+
+由 \(\bm p_1+\bm p_2=\bm P_0\) 且 \(\bm p_1\perp\bm p_2\)，有
+
+\[P_0^2=p_1^2+p_2^2.\]
+
+把总动量取为 \(x\) 轴，设 \(p_{1x}=x\)，便有
+\(p_{2x}=P_0-x\)。纵向动量守恒要求 \(p_{2y}=-p_{1y}\)。点积为零：
+
+\[x(P_0-x)-p_y^2=0,\]
+
+得到
+
+\[p_y^2=x(P_0-x).\]
+
+右端非负正好给出 \(0\le x\le P_0\) 的定义域。
+
+\Needspace{3\baselineskip}
+\textbf{洛伦兹变换方向的检查}
+
+初粒子在地面系沿 \(+x\) 运动。要变到与它同速的参考系，应使用沿 \(+x\)
+运动的坐标系：
+
+\[E'=\gamma(E-\beta cp_x).\]
+
+对爆炸前四动量，代入 \(E_0=\gamma m_0c^2\)、\(p_0=\gamma m_0\beta c\)：
+
+\[E_0'=\gamma(E_0-\beta cp_0)=m_0c^2,\]
+
+验证初粒子确实静止。这个检查可防止洛伦兹变换符号写反。
+
+\Needspace{3\baselineskip}
+\textbf{为什么输入能量在共动系更大}
+
+地面系输入四动量只有时间分量；共动系相对地面向 \(+x\)
+运动，变换后输入四动量出现负 \(x\) 动量。其时间分量变为
+\(\gamma\Delta E/c\)，所以
+\(\Delta E'=\gamma\Delta E>\Delta E\)。这不违反能量守恒，只是外界``暗物质''在不同参考系中的能量---动量分账不同。
+
+\Needspace{3\baselineskip}
+\textbf{答案区间的数值检查}
+
+下确界为
+
+\[\frac53m_0c^2\simeq1.667m_0c^2,\]
+
+上界为
+
+\[\frac{5(2\sqrt{17}-5)}9m_0c^2
+\simeq1.804m_0c^2.\]
+
+区间较窄，说明直角动量几何对末态能量施加了很强约束。若计算得到上界低于下界，通常是漏减初态能量或漏乘
+\(\gamma=5/3\)。
+
+\Needspace{3\baselineskip}
+\textbf{一般初速度的结果}
+
+对 \(0<\beta<1\)，记
+\(\gamma=(1-\beta^2)^{-1/2}\)、\(p=P_0/(m_0c)=\gamma\beta\)。两动量垂直时
+
+\[E_{f,\inf}=(1+\gamma)m_0c^2,\qquad
+E_{f,\max}=2\sqrt{1+p^2/2}\,m_0c^2.\]
+
+输入能量在初态共动系满足
+
+\[\gamma m_0c^2<\Delta E'\le
+\gamma\left(2\sqrt{1+\gamma^2\beta^2/2}-\gamma\right)m_0c^2.\]
+
+下界是下确界。\(\beta=0\)
+时总动量为零，两非零动量只能相反，无法相互垂直，所以不能直接把退化端点当作满足原条件的运动状态。图
+8-1 以两个等长、夹角严格 \(90^\circ\) 的向量画可达上限；图 8-2
+的两端用空心点表示不可取。
+
+\subsection{六、关键洞察}\label{ux516dux5173ux952eux6d1eux5bdf-7}
+
+外界输入``能量而不输入动量''只是在地面系中的描述。变换到零动量系后，外界输入四动量一般同时具有能量和动量分量；能量增量按
+\(\Delta E'=\gamma\Delta E\) 变换。
+
+\subsection{七、易错点}\label{ux4e03ux6613ux9519ux70b9-7}
+
+\begin{itemize}
+\tightlist
+\item
+  把两速度垂直与两动量垂直区别开；同一粒子动量与速度同向，因此这里二者等价。
+\item
+  直接在零动量系强加两末态速度垂直；垂直性不具有洛伦兹不变性。
+\item
+  认为能量输入是洛伦兹不变量。
+\item
+  求极值时只检查对称点，漏查端点。
+\end{itemize}
+
+\subsection{八、课堂讲解建议}\label{ux516bux8bfeux5802ux8bb2ux89e3ux5efaux8bae-7}
+
+先固定地面系动量三角形，再做一维极值。最后把``输入能量''视为四动量差，强调不同参考系测得的输入能量不同。
+
+\subsection{九、变式训练}\label{ux4e5dux53d8ux5f0fux8badux7ec3-7}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  若初态速度为一般 \(\beta c\)，写出允许范围的参数表达式。
+\item
+  若两末态速度夹角为给定 \(\varphi\)，建立相应约束。
+\end{enumerate}
+
+\Needspace{3\baselineskip}
+\textbf{教师备课补充：中点为何为最大值}
+
+\Needspace{3\baselineskip}
+\textbf{四动量增量的进一步检查}
+
+地面系中输入四动量为
+
+\[\Delta P^\mu=(\Delta E/c,0,0,0).\]
+
+变到初态共动系后
+
+\[\Delta P'^0=\gamma\Delta E/c,
+\qquad
+\Delta P'^x=-\gamma\beta\Delta E/c.\]
+
+所以暗物质在零动量系不仅输入能量，也输入负 \(x\)
+方向动量。这不与``零动量系''名称矛盾：该名称只表示爆炸前粒子静止，爆炸后的体系可获得净动量。
+
+\Needspace{3\baselineskip}
+\textbf{端点与上界验算}
+
+在端点，一个粒子静止，另一个承担全部 \(P_0\)，末态能量为
+
+\[m_0c^2+\sqrt{m_0^2c^4+P_0^2c^2}=\frac83m_0c^2.\]
+
+在对称点，两粒子 \(x\) 动量均为 \(2m_0c/3\)，由垂直条件
+\(|p_y|=2m_0c/3\)，故每个动量大小为 \(2\sqrt2m_0c/3\)，每个能量为
+\(\sqrt{17}m_0c^2/3\)。两条路径给出的上界完全一致。
+
+令 \(x=p_{1x}/P_0\)。总能量是两个凹函数
+
+\[\sqrt{A+Bx}+\sqrt{A+B(1-x)}\]
+
+之和，关于 \(x=1/2\)
+对称。由凹性，中点取最大值，闭区间端点取最小值；无需进行冗长二阶导数计算。
+
+\Needspace{3\baselineskip}
+\textbf{课堂追问与答案评价节点}
+
+第一问先问：``在哪个参考系给出了垂直条件？''答案是地面系。第二问：``爆炸输入四动量在地面系有哪些分量？''答案是只有能量增量、动量增量为零。第三问：``变到初态共动系后仍只有能量吗？''答案是否定的。
+
+评分节点为：\(\gamma=5/3\)、\(E_0=5m_0c^2/3\)、\(P_0=4m_0c/3\)；动量参数化和
+\(p_y^2=p_{1x}(P_0-p_{1x})\)；末态总能量函数；端点与中点极值；减去初态能量；乘
+\(\gamma\) 变换；下界严格性。漏掉最后参考系变换是核心错误。
+
+\Needspace{3\baselineskip}
+\textbf{图解使用顺序}
+
+图 8-1 用于建立直角动量三角形，不承担能量极值结论；图 8-2
+用于说明固定总动量下能量随分配变化。课堂上应在两图之间写出
+\(E_i=\sqrt{m_0^2c^4+p_i^2c^2}\)，使几何约束与相对论能量真正连接。
+
+\Needspace{3\baselineskip}
+\textbf{答案范围的表达}
+
+正式结果建议写成
+
+\[\boxed{\frac53m_0c^2<\Delta E'\le
+\frac{5(2\sqrt{17}-5)}9m_0c^2}.\]
+
+随后注明左端是下确界。若采用允许零速度极限的宽松约定，可把左端写成等号，但必须解释静止粒子速度方向不确定这一细节。
+\end{document}

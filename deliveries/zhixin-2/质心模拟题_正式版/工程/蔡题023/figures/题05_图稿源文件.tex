@@ -1,0 +1,73 @@
+\documentclass[tikz,border=5pt]{standalone}
+\usepackage[UTF8]{ctex}\usepackage{amsmath}
+\usetikzlibrary{arrows.meta,calc}
+\definecolor{blue}{RGB}{45,98,142}\definecolor{green}{RGB}{60,117,87}\definecolor{red}{RGB}{175,67,51}
+\tikzset{vec/.style={thick,-{Stealth}},aux/.style={gray!60,dashed}}
+\begin{document}
+\begin{tikzpicture}[scale=1.2]
+\draw[fill=blue!10](8:1.15)arc(8:352:1.15)--(352:.88)arc(352:8:.88)--cycle;
+\foreach \a in{94,102,110,118,126,134,142}{\draw[red,thick](\a:.83)--(\a:1.22);}
+\draw[red,vec](-.95,.75)--(-1.3,1.3)node[above]{$I,N$};
+\draw[<->](1.45,-.16)--(1.45,.16)node[right]{$x$};
+\node at(0,-1.6){铁环：铁材长度 $L$，截面 $A$};
+\begin{scope}[shift={(4,0)}]
+\draw[fill=blue!10](0,-.3)--(0,2.1)--(2.5,2.1)--(2.5,-.3)--(1.9,-.3)--(1.9,1.5)--(.6,1.5)--(.6,-.3)--cycle;
+\draw[fill=orange!40](0,-.45)rectangle(.6,-.3);
+\draw[fill=orange!40](1.9,-.45)rectangle(2.5,-.3);
+\draw[fill=blue!10](-.1,-.95)rectangle(2.6,-.45);
+\foreach \x in{.7,.85,1,1.15,1.3,1.45,1.6,1.75}{\draw[red,thick](\x,1.45)--++(.1,.72);}
+\draw[red,vec](.7,2.17)--(.7,2.65)node[above]{$NI$};
+\draw[gray](2.5,-.36)--(3.0,.15)node[right]{铜片，各厚 $d$};
+\node at(1.25,-1.25){铁块};
+\end{scope}
+\end{tikzpicture}
+\begin{tikzpicture}[scale=1.1]
+\draw(0,0)--(0,2.0)--(1,2);
+\draw[fill=blue!8](1,1.75)rectangle(2.7,2.25);\node at(1.85,2){$\mathcal R_{\rm Fe}$};
+\draw(2.7,2)--(4,2)--(4,1.4);
+\draw[fill=orange!15](3.75,.3)rectangle(4.25,1.4);\node[right]at(4.3,.85){$\mathcal R_g=x/(\mu_0A)$};
+\draw(4,.3)--(4,0)--(0,0);
+\draw[fill=white](0,1)circle(.35);\node at(0,1){$NI$};
+\draw[blue,vec](2.8,0)--(1.8,0)node[midway,below]{$\Phi$};
+\node at(2,-.7){单间隙：$\mathcal R_{\rm tot}=\mathcal R_{\rm Fe}+\mathcal R_g$};
+\node at(2,-1.2){双铜片：$\mathcal R_{\rm tot}=\mathcal R_{\rm Fe}+2d/(\mu_0A)$};
+\end{tikzpicture}
+\begin{tikzpicture}[scale=1.15]
+\draw[fill=blue!8](-2,.7)rectangle(-.35,1.3);
+\draw[fill=blue!8](.35,.7)rectangle(2,1.3);
+\foreach \y in{.8,1,1.2}{\draw[blue,vec](-.4,\y)--(.4,\y);}
+\draw[red,vec](-1,.4)--(-.2,.4)node[midway,below]{$F_m$};
+\draw[red,vec](1,.4)--(.2,.4)node[midway,below]{$F_m$};
+\node at(0,1.65){同一间隙，两端的相互作用力};
+\draw[fill=blue!8](-1.5,-1.2)rectangle(1.5,-.7);
+\draw[green,vec](-1,-.7)--(-1,.0)node[left]{$AB^2/(2\mu_0)$};
+\draw[green,vec](1,-.7)--(1,.0)node[right]{$AB^2/(2\mu_0)$};
+\draw[red,vec](0,-1.2)--(0,-2.0)node[right]{$m_{\rm block}g$};
+\node at(0,-2.35){同一铁块，两处向上吸力相加};
+\end{tikzpicture}
+\begin{tikzpicture}[x={(1cm,0cm)},y={(.5cm,.35cm)},z={(0cm,1cm)}]
+\coordinate(A)at(0,0,0);\coordinate(B)at(2.5,0,0);
+\coordinate(C)at(2.5,1.2,0);\coordinate(D)at(0,1.2,0);
+\coordinate(E)at(0,0,1.0);\coordinate(F)at(2.5,0,1.0);
+\coordinate(G)at(2.5,1.2,1.0);\coordinate(H)at(0,1.2,1.0);
+\draw[fill=blue!10](A)--(B)--(F)--(E)--cycle;
+\draw[fill=blue!15](B)--(C)--(G)--(F)--cycle;
+\draw[fill=blue!5](E)--(F)--(G)--(H)--cycle;
+\draw[aux](A)--(D)--(C);\draw[aux](D)--(H);
+\foreach \y in{.2,.45,.7,.95}{
+\draw[green,thick](-.15,\y,-.15)--(2.65,\y,-.15)--(2.65,\y,1.15)--(-.15,\y,1.15)--cycle;}
+\draw[<->](0,0,-.65)--(2.5,0,-.65)node[midway,below]{$b_c=0.50\,\mathrm m$};
+\draw[<->](3.5,0,0)--(3.5,0,1.0)node[midway,right]{$a_c=0.20\,\mathrm m$};
+\draw[blue,vec](1.25,.2,1.45)--(1.25,1.15,1.45)node[above]{$\Phi$};
+\node[align=center]at(1.3,.4,-2.0){铜线绕截面，磁通沿铁芯\\背侧虚线、线径及匝距均为示意};
+\end{tikzpicture}
+\begin{tikzpicture}[scale=1.25]
+\draw(0,0)--(0,1)--(0,2)--(1.2,2);
+\draw[fill=red!8](1.2,1.75)rectangle(3.2,2.25);\node at(2.2,2){$R_e$};
+\draw(3.2,2)--(4.2,2)--(4.2,0)--(0,0);
+\draw[fill=white](0,1)circle(.36);\node at(0,1){$U$};
+\draw[green,vec](.4,2)--(1.05,2)node[midway,above]{$I$};
+\node[align=center]at(2.2,.85){稳态：$U=IR_e$\\$P=I^2R_e$};
+\node at(2.2,-.45){磁路激励由同一绕组的 $NI$ 决定};
+\end{tikzpicture}
+\end{document}

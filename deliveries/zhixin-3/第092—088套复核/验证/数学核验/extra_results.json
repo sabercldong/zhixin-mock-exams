@@ -1,0 +1,98 @@
+[
+  {
+    "set": 92,
+    "question": 1,
+    "check": "10000相位、三单调支与轮缘边界的独立事件扫描",
+    "actual": "0.9499445535261648",
+    "expected": "0.9499530486167007",
+    "passed": true
+  },
+  {
+    "set": 92,
+    "question": 1,
+    "check": "单侧极限下确界",
+    "actual": "1.0526836052120434",
+    "expected": "1.05268360521",
+    "passed": true
+  },
+  {
+    "set": 92,
+    "question": 6,
+    "check": "亥姆霍兹临界轴向四阶",
+    "actual": "-144/125",
+    "expected": "-144/125",
+    "passed": true
+  },
+  {
+    "set": 92,
+    "question": 6,
+    "check": "无源区径向四阶重构",
+    "actual": "-54/125",
+    "expected": "-54/125",
+    "passed": true
+  },
+  {
+    "set": 92,
+    "question": 3,
+    "check": "充电电阻耗散积分",
+    "actual": "0.888888888888889",
+    "expected": "0.888888888888889",
+    "passed": true
+  },
+  {
+    "set": 89,
+    "question": 4,
+    "check": "四维汉明距离1节点方程",
+    "actual": "15/32",
+    "expected": "15/32",
+    "passed": true
+  },
+  {
+    "set": 89,
+    "question": 4,
+    "check": "四维汉明距离2节点方程",
+    "actual": "7/12",
+    "expected": "7/12",
+    "passed": true
+  },
+  {
+    "set": 89,
+    "question": 5,
+    "check": "线性密度杆逐元力矩平衡",
+    "actual": "-8.532632065432078e-16",
+    "expected": "0",
+    "passed": true
+  },
+  {
+    "set": 89,
+    "question": 6,
+    "check": "像顶点误差放大x2=2.0",
+    "actual": "-0.0033333333333334103",
+    "expected": "-0.0033333333333333335",
+    "passed": true
+  },
+  {
+    "set": 89,
+    "question": 6,
+    "check": "像顶点误差放大x2=-1.01",
+    "actual": "-0.49751243781093457",
+    "expected": "-0.4975124378109451",
+    "passed": true
+  },
+  {
+    "set": 90,
+    "question": 7,
+    "check": "解析导数根与数值优化交叉核验",
+    "actual": "18.32802560561155",
+    "expected": "18.328025536718002",
+    "passed": true
+  },
+  {
+    "set": 88,
+    "question": 2,
+    "check": "r^(-s)势能对应r^(-s-1)力",
+    "actual": "0.9501757742280681",
+    "expected": "0.9501757742924206",
+    "passed": true
+  }
+]

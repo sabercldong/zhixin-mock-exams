@@ -1,0 +1,113 @@
+\documentclass[tikz,border=5pt]{standalone}
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath}
+\usetikzlibrary{arrows.meta,calc,angles,quotes}
+\definecolor{ink}{HTML}{243447}
+\definecolor{blue}{HTML}{2765A2}
+\definecolor{red}{HTML}{B74739}
+\definecolor{green}{HTML}{3F7D5B}
+\tikzset{
+  line cap=round,line join=round,
+  body/.style={draw=ink,thick},
+  guide/.style={draw=gray!75,dashed},
+  path/.style={draw=red,thick,dashed,-{Latex[length=2mm]}},
+  vec/.style={draw=blue,thick,-{Latex[length=2mm]}},
+  force/.style={draw=red,thick,-{Latex[length=2mm]}}
+}
+\begin{document}
+
+% 第1页：题图
+\begin{tikzpicture}[scale=.92]
+  \fill[gray!10] (-2.1,-.18) rectangle (13.9,0);
+  \draw[body] (-2.1,0)--(13.9,0);
+
+  \begin{scope}[xshift=0cm]
+    \draw[body] (0,2.4) ellipse[x radius=1.5,y radius=2.4];
+    \fill[ink] (0,2.4) circle(1.7pt) node[left=3pt] {$O$};
+    \fill[red] (0,4.275) circle(3pt) node[right=3pt] {$C$};
+    \fill[ink] (0,0) circle(2pt) node[below left=2pt] {$P$};
+    \draw[guide] (0,0)--(0,4.8);
+    \node at (.75,-.55) {状态I};
+  \end{scope}
+
+  \begin{scope}[xshift=5.6cm]
+    \draw[body] (0,1.5) ellipse[x radius=2.4,y radius=1.5];
+    \fill[ink] (0,1.5) circle(1.7pt) node[above left=2pt] {$O$};
+    \fill[red] (1.875,1.5) circle(3pt) node[above=3pt] {$C$};
+    \fill[ink] (0,0) circle(2pt) node[below left=2pt] {$P$};
+    \draw[guide] (0,0)--(0,1.5)--(1.875,1.5);
+    \draw[vec] (-.75,3.25) arc[start angle=135,end angle=35,radius=.9];
+    \node at (.9,-.55) {状态II};
+  \end{scope}
+
+  \begin{scope}[xshift=11.2cm]
+    \draw[body] (0,2.4) ellipse[x radius=1.5,y radius=2.4];
+    \fill[ink] (0,2.4) circle(1.7pt) node[left=3pt] {$O$};
+    \fill[red] (0,.525) circle(3pt) node[right=3pt] {$C$};
+    \fill[ink] (0,0) circle(2pt) node[below left=2pt] {$P$};
+    \draw[guide] (0,0)--(0,4.8);
+    \node at (.85,-.55) {状态III};
+  \end{scope}
+
+  \draw[vec] (3.9,5.15)--(7.3,5.15) node[midway,above] {滚动方向};
+  \node at (5.6,-1.18) {$P$为瞬时接触点};
+\end{tikzpicture}
+
+% 第2页：解答几何与受力图
+\begin{tikzpicture}
+  % 状态III：运动学几何
+  \begin{scope}
+    \fill[gray!10] (-1.75,-.14) rectangle (1.75,0);
+    \draw[body] (-1.75,0)--(1.75,0);
+    \draw[body] (0,2.2) ellipse[x radius=1.35,y radius=2.2];
+    \fill[ink] (0,2.2) circle(1.7pt) node[left=3pt] {$O$};
+    \fill[ink] (0,0) circle(2.2pt) node[below] {$P$};
+    \fill[red] (0,.55) circle(3pt) node[below left=2pt] {$C$};
+    \fill[green] (0,1.88) circle(2pt) node[left=3pt] {$K$};
+    \draw[guide] (0,0)--(0,2.2);
+    \draw[<->,green,thick] (-1.05,0)--(-1.05,.55)
+      node[midway,left] {$a-c$};
+    \draw[green,dashed] (-1.05,0)--(0,0) (-1.05,.55)--(0,.55);
+    \draw[green,dashed,thick,<->] (.72,.60)--(.72,1.83)
+      node[midway,right=3pt] {$\rho_{\rm III}$};
+    \draw[green,dashed] (0,.55)--(.72,.55) (0,1.88)--(.72,1.88);
+    \draw[vec] (0,.55)--(1.18,.55) node[right] {$\boldsymbol v_C$};
+    \draw[vec] (0,.55)--(0,1.35) node[right=4pt] {$\boldsymbol a_C$};
+    \node[font=\bfseries] at (0,-1.15) {状态III运动学};
+  \end{scope}
+
+  % 状态III：单列外力，细线指明作用点
+  \begin{scope}[xshift=4.15cm]
+    \draw[body] (0,0)--(0,1.35);
+    \fill[ink] (0,0) circle(2.2pt) node[below] {$P$};
+    \fill[red] (0,.55) circle(3pt) node[left=3pt] {$C$};
+    \draw[guide] (0,0)--(-.35,0);
+    \draw[force] (-.35,0)--(-.35,1.05) node[left] {$\boldsymbol N$};
+    \draw[guide] (0,.55)--(.35,.55);
+    \draw[force] (.35,.55)--(.35,-.62) node[below] {$m\boldsymbol g$};
+    \node[font=\bfseries] at (0,-1.15) {状态III受力};
+  \end{scope}
+
+  % 状态II：几何、速度方向及外力
+  \begin{scope}[xshift=9.2cm]
+    \fill[gray!10] (-2.45,-.14) rectangle (2.55,0);
+    \draw[body] (-2.45,0)--(2.55,0);
+    \draw[body] (0,1.38) ellipse[x radius=2.25,y radius=1.38];
+    \fill[ink] (0,1.38) circle(1.7pt) node[above left=2pt] {$O$};
+    \fill[ink] (0,0) circle(2.2pt) node[below] {$P$};
+    \fill[red] (1.76,1.38) circle(3pt) node[above right=2pt] {$C$};
+    \draw[guide] (0,0)--(0,1.38)--(1.76,1.38);
+    \draw[<->,green,thick] (.52,0)--(.52,1.38) node[midway,right] {$b$};
+    \draw[<->,green,thick] (0,1.08)--(1.76,1.08) node[midway,below] {$c$};
+    \draw[vec] (1.76,1.38)--(2.78,.58) node[right] {$\boldsymbol v_C\parallel\boldsymbol a_C$};
+    \draw[force] (1.76,1.38)--(1.76,.25) node[right=2pt] {$m\boldsymbol g$};
+    \draw[force] (0,.02)--(0,1.0) node[left=3pt] {$\boldsymbol N$};
+    \draw[force] (0,.08)--(1.0,.08) node[above] {$\boldsymbol f$};
+    \draw[vec] (-2.05,.18)--(-1.1,.18) node[above] {$+x$};
+    \draw[vec] (-2.05,.18)--(-2.05,1.08) node[above] {$+y$};
+    \node[green] at (0,2.95) {$\kappa_C=0$};
+    \node[font=\bfseries] at (0,-1.15) {状态II};
+  \end{scope}
+\end{tikzpicture}
+
+\end{document}

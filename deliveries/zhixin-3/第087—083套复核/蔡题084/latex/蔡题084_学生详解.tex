@@ -1,0 +1,3968 @@
+\documentclass[12pt,a4paper,UTF8]{ctexart}
+\usepackage[a4paper,top=22mm,bottom=22mm,left=22mm,right=22mm,headheight=15pt]{geometry}
+\usepackage{amsmath,amssymb,mathtools,bm}
+\usepackage{graphicx,xcolor,booktabs,longtable,array,enumitem,fancyhdr,caption,float,microtype,setspace}
+\usepackage[hidelinks,unicode]{hyperref}
+\usepackage[most]{tcolorbox}
+\definecolor{ContestBlue}{HTML}{17365D}
+\hypersetup{pdftitle={第084套},pdfauthor={}}
+\setstretch{1.24}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.35em}
+\setlength{\emergencystretch}{2em}
+\setlist{itemsep=0.35em,topsep=0.4em}
+\captionsetup{font=small,labelfont=bf,justification=centering}
+\setcounter{secnumdepth}{0}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small 第084套}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\ctexset{
+  section={format=\Large\bfseries\color{ContestBlue},beforeskip=1.2em,afterskip=0.7em},
+  subsection={format=\large\bfseries\color{ContestBlue},beforeskip=1.0em,afterskip=0.5em},
+  subsubsection={format=\normalsize\bfseries,beforeskip=0.8em,afterskip=0.35em}
+}
+\makeatletter
+\newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\newcommand{\maxwidth}{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\newcommand{\maxheight}{\ifdim\Gin@nat@height>0.72\textheight 0.72\textheight\else\Gin@nat@height\fi}
+\newcommand{\pandocbounded}[1]{\begingroup\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}#1\endgroup}
+\makeatother
+\begin{document}
+\begin{titlepage}
+  \centering
+  \vspace*{58mm}
+  {\Huge\bfseries\color{ContestBlue} 第084套\par}
+  \vfill
+  \vspace*{28mm}
+\end{titlepage}
+\section{第 1 题}\label{ux7b2c-1-ux9898}
+
+如图，一只轻质桶内装有密度为 \(\rho_0\) 的液体。液体中有一密度为
+\(\rho\)、体积为 \(V\)
+的物块，物块通过理想滑轮和轻绳与桶相连。静止时物块部分浸入液体，既未完全浸没也未离开液面，并且与桶底、桶壁均不接触。已知浸入液体中的物块体积为
+
+\[
+V_1=\alpha V.
+\]
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  求桶内液体体积与物块体积之比 \(V_0/V\)；
+\item
+  在竖直方向给系统一个小振动。忽略液体流动的动能，桶的横截面积很大；物块为边长
+  \(l\) 的立方体。求系统的小振动周期。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.548\linewidth,height=\textheight,keepaspectratio,alt={图 1-1　液体桶、固定滑轮、动滑轮与部分浸入物块的平衡状态。}]{../figures/question-01.pdf}
+\caption*{图 1-1　液体桶、固定滑轮、动滑轮与部分浸入物块的平衡状态。}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d}
+
+物块下移时，桶按滑轮约束上移，浸入深度增加得比物块位移更快。先消去静态平衡力，再由浮力增量和两体动能求振动周期。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  动滑轮的绳长约束；
+\item
+  阿基米德浮力；
+\item
+  内、外系统受力的区分；
+\item
+  浮力反作用力；
+\item
+  浸没体积对相对位移的线性响应；
+\item
+  线性化与简谐振动；
+\item
+  忽略液体流动动能后的等效质量。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf}
+
+桶由动滑轮支承，受到两段绳的向上拉力
+\(2T\)；物块由绳的另一端悬挂，受到向上的张力与浮力。物块受到液体浮力的同时，也对液体施加等大向下作用力。因此研究桶和液体整体时，必须把这项作用力计入。
+
+取物块向下位移为 \(x>0\)。理想绳总长不变，物块一端增加
+\(x\)，动滑轮两侧绳段总共必须缩短 \(x\)，故桶上升
+\(x/2\)。物块相对桶下降
+
+\[
+x+\frac x2=\frac32x.
+\]
+
+这正是浸没深度和浮力变化所对应的相对位移。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3}
+
+先在静止状态列两组平衡方程，消去绳张力 \(T\)，得到
+\(V_0/V\)。振动时只写相对平衡位置的增量方程：恒定重力、平衡浮力和静态张力已经互相抵消，只保留张力增量
+\(\Delta T\)、浮力增量和加速度。最后消去 \(\Delta T\)，把方程化成
+
+\[
+\ddot x+\omega^2x=0.
+\]
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.774\linewidth,height=\textheight,keepaspectratio,alt={图 1-2　物块和桶的增量受力及绳长位移约束。}]{../figures/solution-01.pdf}
+\caption*{图 1-2　物块和桶的增量受力及绳长位移约束。}
+\end{figure}
+
+图 1-2 左图 中取物块向下位移为 \(x\)；图 1-2 右图
+中，动滑轮的两段绳同时缩短，因此桶只能上移
+\(x/2\)。物块相对桶底的下降量不是 \(x\)，而是
+\(x+x/2=3x/2\)，这正是后文浮力增量中的几何因子
+\(3/2\)。两幅增量受力图只保留随位移改变的力，恒定的重力与静态浮力已由初始平衡相互抵消。
+
+\textbf{（1）物块的静力平衡}
+
+物块质量为
+
+\[
+m=\rho V.
+\tag{1}
+\]
+
+静止时浸入液体的体积是 \(V_1=\alpha V\)，浮力大小
+
+\[
+F_{b0}=\rho_0gV_1=\alpha\rho_0Vg.
+\tag{2}
+\]
+
+对物块取竖直向上为正。平衡方程为
+
+\[
+T+F_{b0}-\rho Vg=0.
+\tag{3}
+\]
+
+因此
+
+\[
+T=(\rho-\alpha\rho_0)Vg.
+\tag{4}
+\]
+
+张力必须为正，所以平衡状态还要求
+
+\[
+\rho>\alpha\rho_0.
+\tag{5}
+\]
+
+\textbf{（2）桶与液体整体的静力平衡}
+
+桶为轻质，质量忽略。液体质量为 \(\rho_0V_0\)，重力为 \(\rho_0V_0g\)。
+
+物块受到液体向上的浮力
+\(F_{b0}\)，由牛顿第三定律，物块对液体施加大小相同、方向向下的作用力。动滑轮由两段张力支承，所以桶与液体整体的平衡方程为
+
+\[
+2T-\rho_0V_0g-F_{b0}=0.
+\tag{6}
+\]
+
+代入式（2）、（4）：
+
+\[
+2(\rho-\alpha\rho_0)Vg
+-\rho_0V_0g
+-\alpha\rho_0Vg=0.
+\]
+
+约去 \(g\)，整理：
+
+\[
+\rho_0V_0
+=2\rho V-3\alpha\rho_0V.
+\]
+
+故
+
+\[
+\boxed{
+\frac{V_0}{V}
+=\frac{2\rho-3\alpha\rho_0}{\rho_0}
+}.
+\tag{7}
+\]
+
+液体体积必须为正，因此还要求
+
+\[
+2\rho>3\alpha\rho_0.
+\tag{8}
+\]
+
+这一条件比式（5）更严格。
+
+\textbf{（3）绳长约束与相对浸入量}
+
+从平衡位置起，令物块竖直向下位移 \(x\)。设桶向上位移为
+\(y\)。物块一侧绳段增长 \(x\)；动滑轮两侧绳段各缩短 \(y\)，绳长不变给出
+
+\[
+x-2y=0.
+\]
+
+所以
+
+\[
+\boxed{y=\frac x2}.
+\tag{9}
+\]
+
+物块相对桶的向下位移为
+
+\[
+x_{\rm rel}=x+y=\frac32x.
+\tag{10}
+\]
+
+桶横截面积很大，液面自身升降可忽略。立方体横截面积为
+\(l^2\)，故浸没体积增量
+
+\[
+\Delta V_{\rm sub}
+=l^2x_{\rm rel}
+=\frac32l^2x.
+\tag{11}
+\]
+
+浮力增量
+
+\[
+\boxed{
+\Delta F_b
+=\rho_0g\Delta V_{\rm sub}
+=\frac32\rho_0l^2gx
+}.
+\tag{12}
+\]
+
+当 \(x>0\) 时浮力增大，方向向上，确实具有回复作用。
+
+\textbf{（4）物块的增量动力学方程}
+
+取物块向下为正。设绳张力从平衡值增加
+\(\Delta T\)。平衡状态的恒力项已经抵消，新增的张力和浮力都向上，因此
+
+\[
+\rho l^3\ddot x
+=-\Delta T-\Delta F_b.
+\tag{13}
+\]
+
+代入式（12）：
+
+\[
+\boxed{
+\rho l^3\ddot x
+=-\Delta T-\frac32\rho_0l^2gx
+}.
+\tag{14}
+\]
+
+\textbf{（5）桶与液体的增量动力学方程}
+
+桶向上位移 \(x/2\)，向上加速度为
+\(\ddot x/2\)。忽略液体相对桶流动的动能后，可把液体视为与桶共同平动，惯性质量为
+\(\rho_0V_0\)。
+
+相对于平衡状态，向上的两段绳拉力总增量为
+\(2\Delta T\)；物块对液体的浮力反作用力向下增加 \(\Delta F_b\)。故
+
+\[
+\rho_0V_0\frac{\ddot x}{2}
+=2\Delta T-\Delta F_b.
+\tag{15}
+\]
+
+即
+
+\[
+\boxed{
+\frac12\rho_0V_0\ddot x
+=2\Delta T-\frac32\rho_0l^2gx
+}.
+\tag{16}
+\]
+
+\textbf{（6）消去张力增量}
+
+将式（14）乘以 \(2\)：
+
+\[
+2\rho l^3\ddot x
+=-2\Delta T-3\rho_0l^2gx.
+\tag{17}
+\]
+
+由式（16）
+
+\[
+2\Delta T
+=\frac12\rho_0V_0\ddot x
++\frac32\rho_0l^2gx.
+\tag{18}
+\]
+
+代入式（17）：
+
+\[
+2\rho l^3\ddot x
+=-\frac12\rho_0V_0\ddot x
+-\frac32\rho_0l^2gx
+-3\rho_0l^2gx.
+\]
+
+把加速度项移到左边：
+
+\[
+\left(
+2\rho l^3+\frac12\rho_0V_0
+\right)\ddot x
+=-\frac92\rho_0l^2gx.
+\tag{19}
+\]
+
+因此
+
+\[
+\omega^2
+=\frac{(9/2)\rho_0l^2g}
+{2\rho l^3+(1/2)\rho_0V_0}
+=\frac{9\rho_0l^2g}
+{4\rho l^3+\rho_0V_0}.
+\tag{20}
+\]
+
+物块是边长 \(l\) 的立方体，所以 \(V=l^3\)。由式（7）
+
+\[
+\rho_0V_0
+=(2\rho-3\alpha\rho_0)l^3.
+\tag{21}
+\]
+
+代入式（20）的分母：
+
+\[
+\begin{aligned}
+4\rho l^3+\rho_0V_0
+&=4\rho l^3+(2\rho-3\alpha\rho_0)l^3\\
+&=3(2\rho-\alpha\rho_0)l^3.
+\end{aligned}
+\]
+
+故
+
+\[
+\boxed{
+\omega^2
+=\frac{3\rho_0g}
+{(2\rho-\alpha\rho_0)l}
+}.
+\tag{22}
+\]
+
+小振动周期为
+
+\[
+\boxed{
+T=2\pi
+\sqrt{
+\frac{(2\rho-\alpha\rho_0)l}
+{3\rho_0g}
+}
+}.
+\tag{23}
+\]
+
+\textbf{（7）等效质量与等效劲度核验}
+
+式（19）可写成
+
+\[
+M_{\rm eff}\ddot x+k_{\rm eff}x=0,
+\]
+
+其中
+
+\[
+M_{\rm eff}
+=2\rho l^3+\frac12\rho_0V_0,
+\]
+
+\[
+k_{\rm eff}=\frac92\rho_0l^2g.
+\]
+
+两者分别具有质量和劲度量纲，且均为正。由
+\(\omega^2=k_{\rm eff}/M_{\rm eff}\) 可重新得到式（20）。
+
+\textbf{等效质量与模型范围}
+
+取物块向下位移 \(x\)，桶的速度为
+\(-\dot x/2\)。在忽略液体相对桶流动动能的原模型里，系统动能为
+
+\[K=\frac12\left(m+\frac{M_{\text{液}}}4\right)\dot x^2.\]
+
+所以物理上的等效质量是
+\(m+M_{\text{液}}/4\)；若把运动方程整体乘2，得到的系数
+\(2m+M_{\text{液}}/2\) 不能仍称为由动能定义的等效质量。浸没深度增加
+\(3x/2\)，截面积为 \(l^2\) 时，等效回复系数为
+\(9\rho_0l^2g/4\)。两者同时乘2不改变频率，但质量的定义要保持一致。
+
+本题还沿用准静水压近似；若要计入真实液体流动的惯性和自由液面振动，需另给桶的几何和流动模型。解析图画的是平衡附近的增量力，故标成
+\(\Delta T,\Delta F_b\)，恒定重力已被平衡方程消去。
+
+\newpage
+
+\section{第 2 题}\label{ux7b2c-2-ux9898}
+
+正八面体的每条棱均接入一个阻值为 \(R\)
+的电阻，构成如图所示的六节点电阻网络。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  求顶点 \(A\)、\(B\) 之间的等效电阻；
+\item
+  求相邻顶点 \(A\)、\(C\) 之间的等效电阻；
+\item
+  从 \(A\) 点注入电流 \(I\)，从 \(C\) 点注入电流 \(2I\)，并从 \(B\)
+  点流出电流 \(3I\)。求电势差 \(U_{AD}\)。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图 2-1　正八面体十二条棱组成的空间电阻网络。}]{../figures/question-02.pdf}
+\caption*{图 2-1　正八面体十二条棱组成的空间电阻网络。}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-1}
+
+八面体共有十二条棱，对顶点之间没有电阻。按真实连接列节点方程，先求对顶点的等效电阻，再用电流叠加求指定两点的电势差。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-1}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  正八面体的顶点连接关系；
+\item
+  对称等势点；
+\item
+  串、并联化简；
+\item
+  节点电势法；
+\item
+  电阻网络的线性叠加；
+\item
+  电势差方向与符号。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-1}
+
+\(A\)、\(B\) 是一对对顶点，网络关于轴 \(AB\)
+旋转对称，另外四个顶点电势相同。\(A\)、\(C\)
+是相邻顶点，剩余四点不再全部等势，但仍可按``源点的对顶点、汇点的对顶点、其余一对对顶点''分成三类。
+
+第三问的外部电流满足 \(I+2I-3I=0\)，稳恒电流条件成立。可将它拆为：
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  从 \(A\) 注入 \(I\)、从 \(B\) 流出 \(I\)；
+\item
+  从 \(C\) 注入 \(2I\)、从 \(B\) 流出 \(2I\)。
+\end{enumerate}
+
+两个子问题的节点电势逐点相加。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-1}
+
+第一问把中间四个等势点合并；第二问令
+\(V_A=U\)、\(V_C=0\)，用节点方程求其余电势。第三问不要重新解一个三端网络，而是直接调用前两问的对称结果，分别求两种激励下的
+\(U_{AD}\)。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-1}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.777\linewidth,height=\textheight,keepaspectratio,alt={图 2-2　对顶点等势化简与两组注入电流的叠加。}]{../figures/solution-02.pdf}
+\caption*{图 2-2　对顶点等势化简与两组注入电流的叠加。}
+\end{figure}
+
+图 2-2 左图 对应第一问：从对顶点 \(A\)、\(B\)
+通电时，中间四点因对称而等势，可先并联、再串联。图 2-2 右框
+对应第三问：把``\(A\) 流入 \(I\)、\(C\) 流入 \(2I\)、\(B\) 流出
+\(3I\)''拆成两个以 \(B\)
+为汇点的线性子问题，分别求电势后再叠加；后文计算 \(U_{AD}\)
+时采用的正负号均按图中列出的注入方向确定。
+
+\textbf{（1）明确八面体的连接关系}
+
+三对对顶点为
+
+\[
+(A,B),\qquad(C,D),\qquad(E,F).
+\]
+
+每个顶点与除自身及其对顶点以外的四个顶点相连，所以每个节点的度数均为
+\(4\)，总棱数
+
+\[
+\frac{6\times4}{2}=12,
+\]
+
+与正八面体的棱数一致。
+
+\textbf{（2）求 \(A\)、\(B\) 间等效电阻}
+
+在 \(A\)、\(B\) 间接入电源。由于网络关于轴 \(AB\)
+旋转对称，\(C\)、\(D\)、\(E\)、\(F\)
+四点电势相同。等势点之间即使原来有电阻，也没有电流，可以将四点并为一个节点
+\(X\)。
+
+\(A\) 到 \(X\) 有四个阻值均为 \(R\) 的电阻并联：
+
+\[
+R_{AX}=\frac R4.
+\tag{1}
+\]
+
+\(X\) 到 \(B\) 同理：
+
+\[
+R_{XB}=\frac R4.
+\tag{2}
+\]
+
+两部分串联：
+
+\[
+\boxed{
+R_{AB}=R_{AX}+R_{XB}=\frac R2
+}.
+\tag{3}
+\]
+
+\textbf{（3）求 \(A\)、\(C\) 间等效电阻：设置节点电势}
+
+\(A\)、\(C\) 是相邻顶点。令
+
+\[
+V_A=U,\qquad V_C=0.
+\tag{4}
+\]
+
+\(B\) 是 \(A\) 的对顶点，\(D\) 是 \(C\) 的对顶点；\(E\)、\(F\)
+在交换对称下等势。记
+
+\[
+V_B=x,\qquad V_D=y,\qquad V_E=V_F=z.
+\tag{5}
+\]
+
+将整个网络同时交换
+
+\[
+A\leftrightarrow C,\qquad B\leftrightarrow D,
+\]
+
+并把电势 \(V\) 替换为 \(U-V\)，网络和边界条件均不变。因此
+
+\[
+x+y=U,
+\qquad
+z=\frac U2.
+\tag{6}
+\]
+
+\textbf{（4）对节点 \(B\) 列基尔霍夫方程}
+
+\(B\) 不与 \(A\) 相连，但与 \(C\)、\(D\)、\(E\)、\(F\) 相连。节点 \(B\)
+没有外接电流，故
+
+\[
+\frac{x-0}{R}
++\frac{x-y}{R}
++\frac{x-z}{R}
++\frac{x-z}{R}=0.
+\]
+
+乘以 \(R\)：
+
+\[
+4x-y-2z=0.
+\tag{7}
+\]
+
+代入 \(y=U-x\)、\(z=U/2\)：
+
+\[
+4x-(U-x)-U=0,
+\]
+
+\[
+5x=2U.
+\]
+
+所以
+
+\[
+\boxed{
+V_B=\frac{2U}{5},
+\qquad
+V_D=\frac{3U}{5},
+\qquad
+V_E=V_F=\frac U2
+}.
+\tag{8}
+\]
+
+\textbf{（5）求从 \(A\) 流出的总电流}
+
+\(A\) 与 \(C\)、\(D\)、\(E\)、\(F\) 相连。由 \(A\) 流出的总电流
+
+\[
+\begin{aligned}
+I_A
+&=\frac{U-0}{R}
++\frac{U-3U/5}{R}
++2\frac{U-U/2}{R}\\
+&=\frac1R
+\left(
+U+\frac{2U}{5}+U
+\right)\\
+&=\frac{12U}{5R}.
+\end{aligned}
+\tag{9}
+\]
+
+因此
+
+\[
+\boxed{
+R_{AC}=\frac{U}{I_A}=\frac{5R}{12}
+}.
+\tag{10}
+\]
+
+\textbf{（6）第一组电流：\(A\) 注入 \(I\)，\(B\) 流出 \(I\)}
+
+\(A\)、\(B\) 为对顶点，故
+
+\[
+U_{AB}^{(1)}=IR_{AB}=\frac{IR}{2}.
+\tag{11}
+\]
+
+\(C\)、\(D\)、\(E\)、\(F\) 四点等势，电势都位于 \(V_A\) 与 \(V_B\)
+的中点。于是
+
+\[
+V_D^{(1)}=\frac{V_A^{(1)}+V_B^{(1)}}2.
+\]
+
+所以
+
+\[
+\begin{aligned}
+U_{AD}^{(1)}
+&=V_A^{(1)}-V_D^{(1)}\\
+&=\frac12\left(V_A^{(1)}-V_B^{(1)}\right)\\
+&=\frac12U_{AB}^{(1)}\\
+&=\frac{IR}{4}.
+\end{aligned}
+\tag{12}
+\]
+
+\textbf{（7）第二组电流：\(C\) 注入 \(2I\)，\(B\) 流出 \(2I\)}
+
+\(C\)、\(B\) 是相邻顶点，故
+
+\[
+U_{CB}^{(2)}
+=2I\,R_{CB}
+=2I\frac{5R}{12}
+=\frac{5IR}{6}.
+\tag{13}
+\]
+
+把第（3）---（5）步的相邻节点结果重新映射到``源点 \(C\)、汇点 \(B\)''：
+
+\begin{itemize}
+\tightlist
+\item
+  \(D\) 是源点 \(C\) 的对顶点，其电势为总电势差的 \(2/5\)；
+\item
+  \(A\) 是汇点 \(B\) 的对顶点，其电势为总电势差的 \(3/5\)。
+\end{itemize}
+
+若取 \(V_B^{(2)}=0\)，则
+
+\[
+V_D^{(2)}=\frac25U_{CB}^{(2)},
+\qquad
+V_A^{(2)}=\frac35U_{CB}^{(2)}.
+\]
+
+所以
+
+\[
+\begin{aligned}
+U_{AD}^{(2)}
+&=V_A^{(2)}-V_D^{(2)}\\
+&=\frac15U_{CB}^{(2)}\\
+&=\frac{IR}{6}.
+\end{aligned}
+\tag{14}
+\]
+
+\textbf{（8）叠加两组电势差}
+
+电阻网络是线性系统，因此
+
+\[
+U_{AD}=U_{AD}^{(1)}+U_{AD}^{(2)}.
+\]
+
+代入式（12）、（14）：
+
+\[
+\boxed{
+U_{AD}
+=\frac{IR}{4}+\frac{IR}{6}
+=\frac{5IR}{12}
+}.
+\tag{15}
+\]
+
+结果为正，表示 \(A\) 点电势高于 \(D\) 点。
+
+\textbf{（9）功率校验}
+
+相邻点等效电阻必须小于单条直接支路电阻 \(R\)，式（10）的 \(5R/12<R\)
+合理；对顶点之间没有直接支路，但有四条对称通道，式（3）的 \(R/2\) 也小于
+\(R\)。
+
+\textbf{十二条边的功率校验}
+
+对相邻端点 \(A,C\) 施加电压 \(U\)，取 \(V_C=0\)、\(V_A=U\)，有
+\(V_B=2U/5\)、\(V_D=3U/5\)、\(V_E=V_F=U/2\)。只对除 \(AB,CD,EF\)
+外的十二对节点求和：
+
+\[P=\frac1R\sum_{ij\in\text{棱}}(V_i-V_j)^2=\frac{12U^2}{5R}=\frac{U^2}{R_{AC}}.\]
+
+这才是功率校验。对 \(A,B\) 通电时 \(C,D,E,F\)
+全部等势，删去其中实际存在的棱 \(CE\) 不改变 \(R_{AB}\)；\(EF\)
+本来就是对顶点连线，不能作为``删棱''变式。图中等效电路只画两段 \(R/4\)
+串联，不再额外连接 \(A,B\)。
+
+\newpage
+
+\section{第 3 题}\label{ux7b2c-3-ux9898}
+
+本题只考虑纸面内的二维近轴成像，并假定即使入射角较大，球面折射仍可使用近轴球面折射公式。
+
+如图，\(OA\)、\(OB\) 为两面平面镜，\(OA=OB=l\)。圆弧 \(ACB\) 的半径为
+
+\[
+R=\alpha l,\qquad \alpha\gg1,
+\]
+
+扇形区域 \(AOB\) 内充满折射率为 \(n\) 的介质。光源 \(S\) 位于
+\(\angle AOB\) 的角平分线上，且
+
+\[
+OS=\sqrt2\,l.
+\]
+
+计算时保留 \(1/\alpha\) 的一阶项。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  当 \(OA\perp OB\) 时，求光线经圆弧折射、\(OA\)、\(OB\)
+  反射并再次折射后的像；
+\item
+  当 \(\angle AOB=120^\circ\) 时，求光线经折射、\(OA\)
+  反射并再次折射后的像；
+\item
+  当 \(\angle AOB=120^\circ\) 时，求经 \(OA\)、\(OB\)
+  两次反射再折射后形成的像。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.56\linewidth,height=\textheight,keepaspectratio,alt={图 3-1　圆弧折射面、双平面镜与角平分线上的光源。}]{../figures/question-03.pdf}
+\caption*{图 3-1　圆弧折射面、双平面镜与角平分线上的光源。}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-2}
+
+两个平面镜的连续反射先决定虚光源位置，浅圆弧界面再参与折射。按题设的形式近轴展开分别处理两种镜角，并保留弓高的一阶项。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-2}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  球面折射公式；
+\item
+  有符号物距和像距；
+\item
+  平面镜反射的展开法；
+\item
+  圆弧弓高的渐近展开；
+\item
+  横向放大率；
+\item
+  复合光学系统的逐次成像；
+\item
+  一阶小量运算与交叉项舍弃。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-2}
+
+光源 \(S\)、圆弧中点 \(C\) 和顶点 \(O\)
+共线。第一次穿过圆弧时，光从空气进入折射率为 \(n\)
+的介质。由于物距远小于曲率半径，像距为负，先形成一个虚像。
+
+光在平面镜上反射后，可把镜后光路关于镜面展开为直线传播。这样，虚像的位置只需按几何距离平移或镜像，不需要为平面镜另写成像公式。最后光从介质射回空气，再使用一次球面折射公式。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-2}
+
+统一采用沿每一段中央光线传播方向为正的符号约定。空气到介质的第一次折射写为
+
+\[
+\frac1u+\frac n v=\frac{n-1}{R}.
+\tag{1}
+\]
+
+介质到空气的最后一次折射写为
+
+\[
+\frac n u+\frac1v=\frac{n-1}{R}.
+\tag{2}
+\]
+
+这里曲率符号已经按展开后的传播方向并入右端。每一次计算都先保留精确几何量，最后统一展开到
+\(1/\alpha\) 一阶。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-2}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.53\linewidth,height=\textheight,keepaspectratio,alt={图 3-2　用反射展开确定各次球面折射的物距。}]{../figures/solution-03.pdf}
+\caption*{图 3-2　用反射展开确定各次球面折射的物距。}
+\end{figure}
+
+图 3-2
+把两次平面镜反射沿镜面展开为直线传播。这样，反射只负责把上一阶段的像点搬到镜像位置；每当光线再次穿过圆弧边界时，仍必须以该次入射侧的曲率中心和光轴方向重新判定球面折射公式中的物距、像距与曲率半径符号。后文各次折射的共轭距离，均由图中的镜像点到相应圆弧顶点的轴向距离取得。
+
+\textbf{（1）一阶展开的基本规则}
+
+记
+
+\[
+\varepsilon=\frac1\alpha.
+\tag{3}
+\]
+
+只保留 \(O(\varepsilon)\)。常用展开为
+
+\[
+\sqrt{1-x}=1-\frac x2+O(x^2),
+\tag{4}
+\]
+
+\[
+\frac1{A+\varepsilon B}
+=\frac1A
+\left(
+1-\varepsilon\frac BA
+\right)
++O(\varepsilon^2).
+\tag{5}
+\]
+
+两个一阶修正相乘属于 \(O(\varepsilon^2)\)，应舍去。
+
+\textbf{（2）直角情形的圆弧几何}
+
+当 \(\angle AOB=90^\circ\) 时，弦中点 \(C\) 到 \(O\) 的基准距离为
+\(l/\sqrt2\)。圆弧相对弦的弓高为
+
+\[
+\delta
+=R-\sqrt{R^2-\left(\frac l{\sqrt2}\right)^2}.
+\tag{6}
+\]
+
+代入 \(R=\alpha l\)：
+
+\[
+\begin{aligned}
+\delta
+&=\alpha l
+\left[
+1-\sqrt{1-\frac1{2\alpha^2}}
+\right]\\
+&\simeq\alpha l\frac1{4\alpha^2}\\
+&=\frac l{4\alpha}.
+\end{aligned}
+\tag{7}
+\]
+
+所以
+
+\[
+\boxed{
+OC=\frac l{\sqrt2}+\frac l{4\alpha}
+}.
+\tag{8}
+\]
+
+又 \(OS=\sqrt2l\)，故
+
+\[
+\boxed{
+SC=OS-OC
+=\frac l{\sqrt2}-\frac l{4\alpha}
+}.
+\tag{9}
+\]
+
+\textbf{（3）直角情形的第一次折射}
+
+第一次折射的物距
+
+\[
+u_1=SC.
+\]
+
+由式（1）
+
+\[
+\frac1{SC}+\frac n{v_1}
+=\frac{n-1}{\alpha l}.
+\tag{10}
+\]
+
+解出
+
+\[
+v_1
+=\frac n{(n-1)/(\alpha l)-1/SC}.
+\tag{11}
+\]
+
+把式（9）代入，并展开到一阶：
+
+\[
+\boxed{
+v_1
+\simeq
+-\frac{nl}{\sqrt2}
+\left[
+1+\frac{2n-3}{2\sqrt2\,\alpha}
+\right]
+}.
+\tag{12}
+\]
+
+\(v_1<0\)，说明第一次折射形成虚像。
+
+\textbf{（4）直角情形反射展开后的第二次物距}
+
+光线先后在相互垂直的 \(OA\)、\(OB\) 上反射。两次反射等效于传播方向旋转
+\(180^\circ\)，中央光线重新沿角平分线返回圆弧。展开反射光路后，最后一次折射的物距为
+
+\[
+u_4=2OC+|v_1|=2OC-v_1.
+\tag{13}
+\]
+
+代入式（8）、（12）：
+
+\[
+\boxed{
+u_4
+\simeq
+\frac{(n+2)l}{\sqrt2}
++\frac l{4\alpha}
+\left[n(2n-3)+2\right]
+}.
+\tag{14}
+\]
+
+\textbf{（5）直角情形的最后一次折射与像位置}
+
+由式（2）
+
+\[
+\frac n{u_4}+\frac1{v_4}
+=\frac{n-1}{\alpha l}.
+\tag{15}
+\]
+
+像距
+
+\[
+v_4
+=\frac1{(n-1)/(\alpha l)-n/u_4}.
+\tag{16}
+\]
+
+题目所求像相对于 \(O\) 的有符号轴向坐标为
+
+\[
+h_1=OC+v_4,
+\tag{17}
+\]
+
+取从 \(O\) 指向 \(C\) 为正。逐项展开可得
+
+\[
+\boxed{
+h_1
+=-\frac{\sqrt2\,l}{n}
+-\frac l\alpha
+\frac{(n-1)(2n^2+3n+4)}{2n^2}
+}.
+\tag{18}
+\]
+
+对通常的 \(n>1\)，\(h_1<0\)，像位于 \(O\)
+的下方、角平分线的反向延长线上。像到 \(O\) 的距离为
+
+\[
+\boxed{
+OH_1
+=\frac{\sqrt2\,l}{n}
++\frac l\alpha
+\frac{(n-1)(2n^2+3n+4)}{2n^2}
+}.
+\tag{19}
+\]
+
+\textbf{（6）\(120^\circ\) 情形的圆弧几何}
+
+当 \(\angle AOB=120^\circ\) 时，弦半长为
+
+\[
+\frac{AB}{2}=l\sin60^\circ=\frac{\sqrt3}{2}l.
+\]
+
+弦中点到 \(O\) 的距离为
+
+\[
+l\cos60^\circ=\frac l2.
+\]
+
+圆弧弓高
+
+\[
+\begin{aligned}
+\delta_{120}
+&=\alpha l
+-\sqrt{(\alpha l)^2-\left(\frac{\sqrt3}{2}l\right)^2}\\
+&\simeq\frac{3l}{8\alpha}.
+\end{aligned}
+\tag{20}
+\]
+
+所以
+
+\[
+\boxed{
+OC=\frac l2+\frac{3l}{8\alpha}
+},
+\tag{21}
+\]
+
+\[
+\boxed{
+SC
+=\left(\sqrt2-\frac12\right)l
+-\frac{3l}{8\alpha}
+}.
+\tag{22}
+\]
+
+为使后续一阶表达清楚，定义无量纲常量
+
+\[
+A=\sqrt2-\frac12.
+\tag{23}
+\]
+
+则 \(SC=l(A-3\varepsilon/8)\)。
+
+\textbf{（7）\(120^\circ\) 情形的第一次折射}
+
+仍使用式（1）。由
+
+\[
+u_1=l\left(A-\frac38\varepsilon\right)
+\]
+
+可得
+
+\[
+\boxed{
+v_1
+=-nlA
+\left[
+1+\varepsilon q
+\right]
+},
+\tag{24}
+\]
+
+其中
+
+\[
+\boxed{
+q=(n-1)A-\frac{3}{8A}
+}.
+\tag{25}
+\]
+
+式（24）只是把较长的 \(n\) 系数集中记为 \(q\)，并未省略任何一阶项。
+
+\textbf{（8）经 \(OA\) 反射后的几何物距和物高}
+
+令第一次折射虚像经镜面展开后的距离为
+
+\[
+OS_2=OC+|v_1|=OC-v_1.
+\tag{26}
+\]
+
+将式（21）、（24）代入，写成
+
+\[
+\frac{OS_2}{l}=B_0+\varepsilon B_1,
+\tag{27}
+\]
+
+其中
+
+\[
+B_0=\frac12+nA,
+\qquad
+B_1=\frac38+nAq.
+\tag{28}
+\]
+
+几何投影给出最后一次折射的轴向物距
+
+\[
+u_3=OC+\frac12OS_2,
+\tag{29}
+\]
+
+以及相对于该中央轴的物高
+
+\[
+y_3=\frac{\sqrt3}{2}OS_2.
+\tag{30}
+\]
+
+因此
+
+\[
+\frac{u_3}{l}=U_0+\varepsilon U_1,
+\tag{31}
+\]
+
+\[
+\frac{y_3}{l}=Y_0+\varepsilon Y_1,
+\tag{32}
+\]
+
+其中
+
+\[
+U_0=\frac34+\frac{nA}{2},
+\qquad
+U_1=\frac9{16}+\frac{nAq}{2},
+\tag{33}
+\]
+
+\[
+Y_0=\frac{\sqrt3}{2}B_0,
+\qquad
+Y_1=\frac{\sqrt3}{2}B_1.
+\tag{34}
+\]
+
+\textbf{（9）最后一次折射的像距与放大率}
+
+由式（2）
+
+\[
+\frac n{u_3}+\frac1{v_3}
+=\frac{n-1}{\alpha l}.
+\tag{35}
+\]
+
+展开得到
+
+\[
+\boxed{
+\frac{v_3}{l}
+=-\frac{U_0}{n}
+\left[
+1+\varepsilon
+\left(
+\frac{U_0(n-1)}n+\frac{U_1}{U_0}
+\right)
+\right]
+}.
+\tag{36}
+\]
+
+球面折射的横向放大率为
+
+\[
+\beta=-\frac{nv_3}{u_3}.
+\tag{37}
+\]
+
+代入式（31）、（36）并舍去 \(\varepsilon^2\)：
+
+\[
+\boxed{
+\beta
+=1+\varepsilon\frac{U_0(n-1)}n
+}.
+\tag{38}
+\]
+
+因此像的横向坐标
+
+\[
+\boxed{
+\frac{y_3'}l
+=Y_0
++\varepsilon
+\left[
+Y_1+Y_0\frac{U_0(n-1)}n
+\right]
+}.
+\tag{39}
+\]
+
+像的轴向坐标取从 \(O\) 指向 \(C\) 为正：
+
+\[
+h_2=OC+v_3.
+\]
+
+由式（21）、（36）
+
+\[
+\boxed{
+\frac{h_2}{l}
+=\frac12-\frac{U_0}{n}
++\varepsilon
+\left[
+\frac38-\frac{U_0^2(n-1)}{n^2}-\frac{U_1}{n}
+\right]
+}.
+\tag{40}
+\]
+
+式（39）、（40）共同给出经 \(OA\) 反射后的二维像位置。它一般不在 \(OS\)
+轴上。
+
+\textbf{（10）经 \(OA\)、\(OB\) 两次反射的像}
+
+第3问原稿要求两次反射，不能改写为两个单次反射问题。采用二维近轴的形式模型，第一次折射的虚像在角平分线上，坐标为
+\((0,D)\)，其中 \(D=OS_2\)。两镜轴与水平的夹角分别为 \(150^\circ\) 和
+\(30^\circ\)。关于角度 \(\gamma\) 的直线反射矩阵是
+
+\[M(\gamma)=\begin{pmatrix}\cos2\gamma&\sin2\gamma\\\sin2\gamma&-\cos2\gamma\end{pmatrix}.\]
+
+先经 \(OA\) 再经 \(OB\)，虚物点变为
+
+\[M(30^\circ)M(150^\circ)\binom0D=\binom{-\sqrt3D/2}{-D/2}.\]
+
+这个点恰在 \(OB\)
+的反向延长线上，第二次镜像不再改变该点的位置。因此只对镜像点进行代数变换时，最后一次折射的形式物距、物高与第2问相同，式（39）、（40）仍给出同一组形式共轭位置。它们还不能证明存在题目所说的双反射光束。若交换反射次序，得到关于
+\(OS\) 对称的
+\((h_2,-y_3')\)。两种次序应分开标出，不能把它们称为各自单次反射。
+
+\textbf{第3问还存在可达光路的矛盾。}
+在所用虚点模型内，第一次反射后的虚光源 \(S_3\) 已落在 \(OB\)
+的反向延长线上。从 \(OA\) 上任意非顶点出发、背离 \(S_3\)
+的反射光线不会再与 \(OB\)
+相交。因此题述双反射分支没有实际光束，不能把同一镜像点的代数变换称为形成了一个新的实际像。允许大入射角使用近轴折射公式，并不取消平面镜的交点与正向传播要求。
+
+所以第3问应分开答：若只求形式镜像共轭位置，则与第2问相同；若按所给传播路径求实际成像，这一路径在该模型中不能实现，题问条件不自洽。反射次序互换也须同样检查，不能仅依靠镜像矩阵补出一条光路。
+
+\textbf{（11）平面界面极限检查}
+
+令 \(\alpha\to\infty\)，所有 \(\varepsilon\)
+修正消失。第一次折射退化为平面界面
+
+\[
+v_1=-nu_1,
+\]
+
+最后一次折射退化为
+
+\[
+v=-\frac un.
+\]
+
+式（12）、（36）均满足这一极限，说明曲率项和折射率因子的符号一致。
+
+\newpage
+
+\section{第 4 题}\label{ux7b2c-4-ux9898}
+
+一根轻绳的一端固定在质量为 \(M=\alpha m\)、半径为 \(R\)
+的匀质圆盘边缘，并在圆盘上缠绕若干圈。轻绳的另一端绕过固定在墙上的圆柱后，与质量为
+\(m\) 的物体相连。开始时物体 \(m\)
+与圆盘的最低点等高，它们各自正下方距离 \(H\)
+处分别有一位老师午睡。现将系统由静止释放。除第（6）问外，绳与固定圆柱之间光滑无摩擦，且圆盘上的绳足够长。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  在任何物体碰到下方老师以前，求绳中的张力；
+\item
+  圆盘质心是否可能向上运动；
+\item
+  要使左侧物体 \(m\) 向上运动，\(\alpha\) 应满足什么条件；
+\item
+  已知 \(\alpha\) 的取值能使两位老师最终都被碰到，判断哪一位先被碰到；
+\item
+  承接第（4）问，若认为圆盘一侧先发生的碰撞不影响物体 \(m\)
+  的后续运动，求左侧老师经过多长时间被碰到；
+\item
+  若绳与固定圆柱之间的动摩擦因数为 \(\mu\)，求使物体 \(m\)
+  向上运动所需的 \(\alpha\) 的范围。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.562\linewidth,height=\textheight,keepaspectratio,alt={图 4-1　悬挂物体、定滑轮与绕绳圆盘组成的动力学系统。}]{../figures/question-04.pdf}
+\caption*{图 4-1　悬挂物体、定滑轮与绕绳圆盘组成的动力学系统。}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-3}
+
+两位老师都在物体下方，因此先后相撞取决于物体向下运动的分支。先求平动与转动加速度，再比较两侧下降时间，并检查摩擦是否足够。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-3}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  不可伸长轻绳的加速度约束；
+\item
+  刚体质心平动方程；
+\item
+  绕质心的转动方程；
+\item
+  匀质圆盘的转动惯量 \(I_C=MR^2/2\)；
+\item
+  平动加速度与角加速度的符号统一；
+\item
+  初速度为零的匀加速运动；
+\item
+  欧拉绳摩擦公式 \(T_2/T_1=e^{\mu\theta}\)；
+\item
+  临界状态法。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-3}
+
+固定圆柱光滑时，绳上张力处处等于 \(T\)。取物体 \(m\)
+向下为正，设其加速度为 \(a\)；取圆盘质心向下为正，设其加速度为
+\(a_M\)；取圆盘沿放绳方向的角加速度为 \(\beta\)。
+
+圆盘不是普通的``悬挂重物''。它下落时，绳与圆盘接触点的加速度由质心平动与绕质心转动共同决定。正是这两个运动的叠加，使
+\(a_M\)、\(a\)、\(\beta\) 之间出现
+
+\[
+a_M=\beta R-a.
+\]
+
+因此，圆盘质心向下的加速度并不等于物体 \(m\)
+的加速度，也不能直接套用阿特伍德机公式。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-3}
+
+先画出物体 \(m\)
+与圆盘的受力图，再写三类方程：物体的平动方程、圆盘的平动方程、圆盘绕质心的转动方程。第四个关系来自绳长与无滑动条件。四式联立即可一次得到
+\(T\)、\(a\)、\(\beta\)、\(a_M\)。
+
+加入摩擦后，优先寻找``左侧物体刚好不再向下加速''的临界状态。临界时左侧张力由
+\(T_1=mg\) 确定，右侧张力由圆盘的平动---转动方程确定，再由张力比求临界
+\(\alpha\)。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-3}
+
+图 4-2 中，圆盘质心受张力与重力，张力的作用线又与盘心相隔
+\(R\)，因此同一个 \(T\) 同时进入 \(Ma_M=Mg-T\) 与
+\(I\beta=TR\)。绳接触点加速度由 \(a_M\) 与 \(R\beta\)
+合成。上方固定滑轮的接触包角为
+\(\pi\)；摩擦问沿这段接触弧的微元列切向平衡，积分得到
+\(T_2/T_1=e^{\mu\pi}\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.522\linewidth,height=\textheight,keepaspectratio,alt={图 4-2　圆盘的平动---转动耦合与绳摩擦张力关系。}]{../figures/solution-04.pdf}
+\caption*{图 4-2　圆盘的平动---转动耦合与绳摩擦张力关系。}
+\end{figure}
+
+\textbf{（1）建立光滑固定圆柱条件下的运动学约束}
+
+物体 \(m\)
+向下运动时，跨过固定圆柱后的右侧竖直绳段向上运动。按照前述正方向，右侧绳的向下加速度因此是
+\(-a\)。
+
+圆盘与绳的接触点在竖直方向上的加速度由两部分组成：
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  圆盘质心向下的平动加速度 \(a_M\)；
+\item
+  圆盘转动使该接触点产生向上的切向加速度 \(\beta R\)。
+\end{enumerate}
+
+在开始释放的瞬间角速度为零，所以接触点尚无 \(\omega^2R\)
+的法向加速度；沿绳方向只需比较切向分量。无相对滑动给出
+
+\[
+a_M-\beta R=-a.
+\tag{1}
+\]
+
+移项可得
+
+\[
+\boxed{a_M=\beta R-a}.
+\tag{2}
+\]
+
+式（2）是本题的核心约束。它同时说明：即使左侧物体向上，即
+\(a<0\)，圆盘仍可能向下。
+
+\textbf{（2）物体 \(m\) 的平动方程}
+
+对物体 \(m\) 取向下为正。它受到向下的重力 \(mg\) 和向上的张力 \(T\)，故
+
+\[
+mg-T=ma.
+\tag{3}
+\]
+
+由此
+
+\[
+T=m(g-a).
+\tag{4}
+\]
+
+\textbf{（3）圆盘质心的平动方程}
+
+圆盘受到向下的重力 \(Mg\) 和绳的向上拉力 \(T\)。取向下为正：
+
+\[
+Mg-T=Ma_M.
+\tag{5}
+\]
+
+使用式（2）代换 \(a_M\)：
+
+\[
+Mg-T=M(\beta R-a).
+\tag{6}
+\]
+
+\textbf{（4）圆盘绕质心的转动方程}
+
+重力通过圆盘质心，不产生绕质心力矩。张力对质心的力臂为 \(R\)，力矩大小为
+\(TR\)。匀质圆盘的转动惯量为
+
+\[
+I_C=\frac12MR^2.
+\tag{7}
+\]
+
+因此
+
+\[
+TR=I_C\beta
+=\frac12MR^2\beta.
+\tag{8}
+\]
+
+约去一个 \(R\)：
+
+\[
+\boxed{\beta R=\frac{2T}{M}}.
+\tag{9}
+\]
+
+\textbf{（5）逐步消元求张力与各加速度}
+
+把式（9）代入圆盘平动方程（6）：
+
+\[
+Mg-T=M\left(\frac{2T}{M}-a\right).
+\]
+
+右边展开为
+
+\[
+M\left(\frac{2T}{M}-a\right)=2T-Ma.
+\]
+
+所以
+
+\[
+Mg-T=2T-Ma.
+\]
+
+把含 \(T\) 的项移到同一侧：
+
+\[
+Mg+Ma=3T.
+\tag{10}
+\]
+
+即
+
+\[
+T=\frac{M(g+a)}3.
+\tag{11}
+\]
+
+另一方面，由式（4）有 \(T=m(g-a)\)。代入 \(M=\alpha m\)：
+
+\[
+m(g-a)=\frac{\alpha m(g+a)}3.
+\]
+
+约去 \(m\)，再乘以 \(3\)：
+
+\[
+3g-3a=\alpha g+\alpha a.
+\]
+
+把加速度项移到右边，重力项留在左边：
+
+\[
+(3-\alpha)g=(3+\alpha)a.
+\]
+
+因此
+
+\[
+\boxed{a=\frac{3-\alpha}{\alpha+3}g}.
+\tag{12}
+\]
+
+将式（12）代回式（4）：
+
+\[
+\begin{aligned}
+T
+&=m\left[g-\frac{3-\alpha}{\alpha+3}g\right]\\
+&=mg\frac{\alpha+3-3+\alpha}{\alpha+3}\\
+&=\frac{2\alpha}{\alpha+3}mg.
+\end{aligned}
+\]
+
+故第（1）问答案为
+
+\[
+\boxed{T=\frac{2\alpha}{\alpha+3}mg}.
+\tag{13}
+\]
+
+再由式（9）及 \(M=\alpha m\)：
+
+\[
+\begin{aligned}
+\beta R
+&=\frac{2T}{M}
+=\frac{2}{\alpha m}\cdot
+\frac{2\alpha}{\alpha+3}mg\\
+&=\frac{4g}{\alpha+3}.
+\end{aligned}
+\]
+
+所以
+
+\[
+\boxed{\beta=\frac{4g}{(\alpha+3)R}}.
+\tag{14}
+\]
+
+最后由式（2）求圆盘质心加速度：
+
+\[
+\begin{aligned}
+a_M
+&=\beta R-a\\
+&=\frac{4g}{\alpha+3}
+-\frac{3-\alpha}{\alpha+3}g\\
+&=\frac{4-3+\alpha}{\alpha+3}g\\
+&=\frac{\alpha+1}{\alpha+3}g.
+\end{aligned}
+\]
+
+即
+
+\[
+\boxed{a_M=\frac{\alpha+1}{\alpha+3}g}.
+\tag{15}
+\]
+
+\textbf{（6）判断圆盘质心能否向上运动}
+
+质量比满足 \(\alpha>0\)，因此
+
+\[
+\alpha+1>0,
+\qquad
+\alpha+3>0.
+\]
+
+由式（15）可知
+\(a_M>0\)。圆盘从静止释放，且取向下为正，所以圆盘质心始终先向下运动，不可能向上运动。
+
+故第（2）问应选
+
+\[
+\boxed{\text{B．不可能}}.
+\tag{16}
+\]
+
+\textbf{（7）物体 \(m\) 向上运动的条件}
+
+物体 \(m\) 的正方向取向下，因此它向上运动要求
+
+\[
+a<0.
+\]
+
+由式（12），分母 \(\alpha+3>0\)，所以只需分子为负：
+
+\[
+3-\alpha<0.
+\]
+
+于是
+
+\[
+\boxed{\alpha>3}.
+\tag{17}
+\]
+
+\(\alpha=3\) 是临界值，此时物体 \(m\)
+保持静止，但圆盘仍向下加速；只有严格满足
+\(\alpha>3\)，物体才从静止开始向上运动。
+
+\textbf{（8）比较两位老师被碰到的先后}
+
+两位老师都在物体正下方，故两边都能撞到老师要求
+\(0<\alpha<3\)，而不是第3问物体向上运动的区间。右侧圆盘最低轮廓下降
+\(H\) 与质心下降 \(H\)
+同时发生，自转不改变圆盘的最低高度。两边从静止开始，因而
+
+\[t_R=\sqrt{\frac{2(\alpha+3)H}{(\alpha+1)g}},\qquad t_L=\sqrt{\frac{2(\alpha+3)H}{(3-\alpha)g}}.\]
+
+比较两个正分母：\(\alpha+1>3-\alpha\) 当且仅当 \(\alpha>1\)。因此
+\(1<\alpha<3\) 时右侧杜楠老师先被碰到；\(0<\alpha<1\)
+时左侧唐鹏老师先被碰到；\(\alpha=1\)
+时同时被碰到。不能只由``两人都能被碰到''推出右侧必先。
+
+\textbf{（9）左侧唐鹏老师被碰到的时间}
+
+若按题设继续理想化，认为右側圆盘碰撞不影响物体 \(m\)
+后续运动，则从释放计时，唐鹏老师被碰到的时刻为
+
+\[\boxed{t_L=\sqrt{\frac{2(\alpha+3)H}{(3-\alpha)g}}},\qquad0<\alpha<3.\]
+
+对 \(1<\alpha<3\)，这使用了碰撞后的附加假设；对
+\(0<\alpha\le1\)，唐鹏先被碰到或同时被碰到，求他的时刻不依赖之后圆盘碰撞的影响。\(\alpha\to3^-\)
+时左物体加速度趋零，\(t_L\to\infty\)，与临界静止一致。
+
+\textbf{（10）有摩擦固定圆柱上的张力关系}
+
+绳与固定圆柱接触半周，包角为
+
+\[
+\theta=\pi.
+\tag{23}
+\]
+
+把物体 \(m\) 一侧张力记为 \(T_1\)，圆盘一侧张力记为 \(T_2\)。要让物体
+\(m\) 有向上运动趋势，圆盘一侧是紧边，故
+\(T_2>T_1\)。动摩擦条件下欧拉绳摩擦公式为
+
+\[
+\boxed{\frac{T_2}{T_1}=e^{\mu\pi}}.
+\tag{24}
+\]
+
+\textbf{（11）确定有摩擦时的临界质量比}
+
+临界状态是物体 \(m\) 的初始加速度恰好为零。对物体 \(m\)：
+
+\[
+mg-T_1=0,
+\]
+
+所以
+
+\[
+\boxed{T_1=mg}.
+\tag{25}
+\]
+
+物体瞬时加速度为零时，右侧绳段沿竖直方向的加速度也为零。圆盘接触点的运动学约束因此化为
+
+\[
+a_M=\beta R.
+\tag{26}
+\]
+
+圆盘平动方程为
+
+\[
+Mg-T_2=Ma_M=M\beta R.
+\tag{27}
+\]
+
+圆盘转动方程为
+
+\[
+T_2R=\frac12MR^2\beta.
+\tag{28}
+\]
+
+由式（28）
+
+\[
+M\beta R=2T_2.
+\tag{29}
+\]
+
+代入式（27）：
+
+\[
+Mg-T_2=2T_2.
+\]
+
+因此
+
+\[
+\boxed{T_2=\frac13Mg=\frac\alpha3mg}.
+\tag{30}
+\]
+
+将式（25）、（30）代入式（24）：
+
+\[
+\frac{\alpha mg/3}{mg}=e^{\mu\pi}.
+\]
+
+约去 \(mg\)：
+
+\[
+\frac\alpha3=e^{\mu\pi}.
+\]
+
+所以临界质量比为
+
+\[
+\alpha_c=3e^{\mu\pi}.
+\tag{31}
+\]
+
+要使物体 \(m\) 真正向上运动，必须超过临界值；同时令 \(\mu=0\)
+应退化到光滑情形：
+
+\[
+\boxed{\alpha>3e^{\mu\pi}}
+\quad\xrightarrow{\,\mu=0\,}\quad
+\boxed{\alpha>3}.
+\tag{32}
+\]
+
+\newpage
+
+\section{第 5 题}\label{ux7b2c-5-ux9898}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  有一条均匀带电无限长直线，线电荷密度为 \(\lambda\)，求距直线为 \(r\)
+  处的电场 \(\boldsymbol E_1(r)\)；
+\item
+  半径为 \(R\) 的均匀带电圆环位于 \(xOy\)
+  平面内，圆心在原点，线电荷密度为
+  \(\lambda\)。空间中无其他带电体。求轴线上 \((0,0,z)\) 处的电场
+  \(\boldsymbol E_2(z)\)，并在 \(|z|\ll R\) 时保留关于 \(z/R\)
+  的最低非零阶；
+\item
+  半径为 \(r\)、线电荷密度为 \(\lambda\) 的均匀带电圆环位于 \(xOy\)
+  平面内，圆心在原点。另有一条与 \(z\) 轴平行、通过 \((a,0,0)\)
+  的无限长直线，线电荷密度也为 \(\lambda\)。在 \(a>0\) 且 \(a\ne r\)
+  时，求直线对圆环的总静电力。可以使用围道积分，也可以利用系统沿 \(z\)
+  方向的平移对称性化简。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图 5-1　带电圆环与平行于其轴线的无限长直线电荷。}]{../figures/question-05.pdf}
+\caption*{图 5-1　带电圆环与平行于其轴线的无限长直线电荷。}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-4}
+
+无限直线电荷与圆环相互作用，场强要按圆环微元到直线的距离计算。积分水平分力后区分环内、环外和相交位置，不能跨过奇点沿用同一公式。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-4}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  柱面对称与高斯定律；
+\item
+  带电圆环轴线场；
+\item
+  小参数展开；
+\item
+  矢量元电场与元受力；
+\item
+  周期积分中的对数技巧；
+\item
+  复数模长恒等式；
+\item
+  分区间讨论与奇点判断；
+\item
+  静电力的方向和量纲检查。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-4}
+
+无限长直线电荷的电场在垂直于直线的平面内沿径向分布。圆环轴线上，各电荷元的横向场分量两两抵消，只留下
+\(z\) 分量。
+
+第三问中，直线电荷在圆环平面内的投影位于
+\((a,0)\)。当直线位于圆环外部，即 \(a>r\)
+时，圆环受到指向直线反方向的合力；当直线穿过圆环内部但不与圆环相交，即
+\(0<a<r\) 时，各方向分力的积分恰好相消，总力为零。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-4}
+
+第一问选择与直线同轴的高斯柱面。第二问直接写出任一电荷元到轴上点的距离，并只积
+\(z\) 分量。第三问把圆环参数化为
+
+\[
+(x,y)=(r\cos\varphi,r\sin\varphi),
+\]
+
+先由对称性判定 \(F_y=0\)，再把 \(F_x\) 中的分式识别为某个对数积分对参数
+\(a\) 的导数。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-4}
+
+图 5-2 左图 先用高斯定律确定线电荷在距离 \(s\) 处的电场；图 5-2 右图
+再取圆环微元 \(\mathrm dq=\lambda r\,\mathrm d\varphi\)。微元受力
+\(\mathrm d\boldsymbol F=\mathrm dq\,\boldsymbol E\)
+的横向分量成对抵消，只有沿圆心到直线穿过点所定 \(+x\)
+方向的带符号分量需要在 \(0\leqslant\varphi<2\pi\) 上积分。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图 5-2　直线电荷对圆环电荷元的电场与受力分解。}]{../figures/solution-05.pdf}
+\caption*{图 5-2　直线电荷对圆环电荷元的电场与受力分解。}
+\end{figure}
+
+\textbf{（1）无限长直线电荷的电场方向}
+
+取线电荷为正，即
+\(\lambda>0\)。由于系统绕直线旋转不变，也沿直线平移不变，电场只能垂直于直线并沿径向：
+
+\[
+\boldsymbol E_1(r)=E_1(r)\,\hat{\boldsymbol e}_r.
+\tag{1}
+\]
+
+若 \(\lambda<0\)，最后公式中的符号会自动使电场反向。
+
+\textbf{（2）用高斯定律求 \(E_1(r)\)}
+
+选择半径为 \(r\)、长度为
+\(L\)、与直线电荷同轴的圆柱形高斯面。电场与两个端面平行，所以端面电通量为零。侧面上电场大小处处相同，并与外法线同向，故总电通量为
+
+\[
+\Phi_E=E_1(r)\cdot 2\pi rL.
+\tag{2}
+\]
+
+高斯面内电荷为
+
+\[
+Q_{\rm in}=\lambda L.
+\tag{3}
+\]
+
+由高斯定律
+
+\[
+E_1(r)\,2\pi rL=\frac{\lambda L}{\varepsilon_0}.
+\]
+
+约去 \(L\)，得到
+
+\[
+\boxed{
+\boldsymbol E_1(r)
+=\frac{\lambda}{2\pi\varepsilon_0r}
+\hat{\boldsymbol e}_r
+}.
+\tag{4}
+\]
+
+\textbf{（3）圆环轴线上电场的精确表达式}
+
+圆环上任一电荷元到场点 \(P(0,0,z)\) 的距离均为
+
+\[
+s=\sqrt{R^2+z^2}.
+\tag{5}
+\]
+
+电荷元为
+
+\[
+\mathrm dq=\lambda R\,\mathrm d\varphi.
+\tag{6}
+\]
+
+它产生的元电场大小为
+
+\[
+\mathrm dE
+=\frac1{4\pi\varepsilon_0}
+\frac{\mathrm dq}{R^2+z^2}.
+\tag{7}
+\]
+
+横向分量对称抵消。电场方向与 \(z\) 轴夹角满足
+
+\[
+\cos\theta=\frac{z}{\sqrt{R^2+z^2}}.
+\tag{8}
+\]
+
+所以
+
+\[
+\begin{aligned}
+\mathrm dE_z
+&=\mathrm dE\cos\theta\\
+&=\frac1{4\pi\varepsilon_0}
+\frac{\lambda R\,\mathrm d\varphi}{R^2+z^2}
+\frac{z}{\sqrt{R^2+z^2}}\\
+&=\frac{\lambda Rz}{4\pi\varepsilon_0(R^2+z^2)^{3/2}}
+\,\mathrm d\varphi.
+\end{aligned}
+\]
+
+从 \(0\) 积分到 \(2\pi\)：
+
+\[
+\begin{aligned}
+E_{2z}(z)
+&=\int_0^{2\pi}\mathrm dE_z\\
+&=\frac{\lambda Rz}{4\pi\varepsilon_0(R^2+z^2)^{3/2}}
+\int_0^{2\pi}\mathrm d\varphi\\
+&=\frac{\lambda Rz}{2\varepsilon_0(R^2+z^2)^{3/2}}.
+\end{aligned}
+\]
+
+故
+
+\[
+\boxed{
+\boldsymbol E_2(z)
+=\frac{\lambda Rz}{2\varepsilon_0(R^2+z^2)^{3/2}}
+\hat{\boldsymbol z}
+}.
+\tag{9}
+\]
+
+当 \(z<0\) 时，式（9）自然给出沿 \(-\hat{\boldsymbol z}\) 的电场。
+
+\textbf{（4）\(|z|\ll R\) 时的一阶近似}
+
+把分母提出 \(R^3\)：
+
+\[
+(R^2+z^2)^{3/2}
+=R^3\left(1+\frac{z^2}{R^2}\right)^{3/2}.
+\tag{10}
+\]
+
+于是
+
+\[
+\boldsymbol E_2(z)
+=\frac{\lambda z}{2\varepsilon_0R^2}
+\left(1+\frac{z^2}{R^2}\right)^{-3/2}
+\hat{\boldsymbol z}.
+\tag{11}
+\]
+
+利用二项式展开
+
+\[
+(1+x)^{-3/2}
+=1-\frac32x+O(x^2),
+\tag{12}
+\]
+
+取 \(x=z^2/R^2\)：
+
+\[
+\boldsymbol E_2(z)
+=\frac{\lambda z}{2\varepsilon_0R^2}
+\left[
+1-\frac32\frac{z^2}{R^2}
++O\!\left(\frac{z^4}{R^4}\right)
+\right]\hat{\boldsymbol z}.
+\tag{13}
+\]
+
+保留最低非零阶：
+
+\[
+\boxed{
+\boldsymbol E_2(z)
+\simeq\frac{\lambda z}{2\varepsilon_0R^2}
+\hat{\boldsymbol z}
+\qquad(|z|\ll R)
+}.
+\tag{14}
+\]
+
+\textbf{（5）第三问的几何参数化}
+
+圆环上一点记为
+
+\[
+P(\varphi)
+=(r\cos\varphi,r\sin\varphi,0).
+\tag{15}
+\]
+
+与 \(P\) 同高的直线电荷最近点为
+
+\[
+Q=(a,0,0).
+\]
+
+从直线指向圆环点的横向位移矢量是
+
+\[
+\boldsymbol s
+=(r\cos\varphi-a)\hat{\boldsymbol x}
++r\sin\varphi\hat{\boldsymbol y}.
+\tag{16}
+\]
+
+其平方为
+
+\[
+s^2
+=a^2+r^2-2ar\cos\varphi.
+\tag{17}
+\]
+
+由式（4），直线电荷在 \(P\) 点产生的电场可写成矢量形式
+
+\[
+\boldsymbol E(P)
+=\frac{\lambda}{2\pi\varepsilon_0}
+\frac{\boldsymbol s}{s^2}.
+\tag{18}
+\]
+
+圆环电荷元为
+
+\[
+\mathrm dq=\lambda r\,\mathrm d\varphi.
+\tag{19}
+\]
+
+所以元受力
+
+\[
+\mathrm d\boldsymbol F
+=\mathrm dq\,\boldsymbol E(P).
+\tag{20}
+\]
+
+\textbf{（6）先由对称性消去 \(y\) 分量}
+
+参数为 \(\varphi\) 与 \(-\varphi\) 的两个电荷元，\(x\) 坐标相同、\(y\)
+坐标相反。它们的 \(y\) 方向受力等大反向，因此
+
+\[
+\boxed{F_y=0}.
+\tag{21}
+\]
+
+总力只能沿 \(x\) 轴。
+
+由式（16）～（20），\(x\) 分量为
+
+\[
+\mathrm dF_x
+=\frac{\lambda^2r}{2\pi\varepsilon_0}
+\frac{r\cos\varphi-a}
+{a^2+r^2-2ar\cos\varphi}
+\,\mathrm d\varphi.
+\tag{22}
+\]
+
+因此
+
+\[
+F_x
+=\frac{\lambda^2r}{2\pi\varepsilon_0}
+\int_0^{2\pi}
+\frac{r\cos\varphi-a}
+{a^2+r^2-2ar\cos\varphi}
+\,\mathrm d\varphi.
+\tag{23}
+\]
+
+\textbf{（7）把分式积分化成对数积分的导数}
+
+定义
+
+\[
+J(a)=\int_0^{2\pi}
+\ln\!\left(a^2+r^2-2ar\cos\varphi\right)
+\,\mathrm d\varphi.
+\tag{24}
+\]
+
+对参数 \(a\) 求导：
+
+\[
+\begin{aligned}
+J'(a)
+&=\int_0^{2\pi}
+\frac{2a-2r\cos\varphi}
+{a^2+r^2-2ar\cos\varphi}
+\,\mathrm d\varphi\\
+&=-2\int_0^{2\pi}
+\frac{r\cos\varphi-a}
+{a^2+r^2-2ar\cos\varphi}
+\,\mathrm d\varphi.
+\end{aligned}
+\tag{25}
+\]
+
+故式（23）可改写为
+
+\[
+\boxed{
+F_x=-\frac{\lambda^2r}{4\pi\varepsilon_0}J'(a)
+}.
+\tag{26}
+\]
+
+\textbf{（8）计算 \(a>r\) 时的 \(J(a)\)}
+
+注意
+
+\[
+a^2+r^2-2ar\cos\varphi
+=|a-re^{i\varphi}|^2.
+\tag{27}
+\]
+
+当 \(a>r\) 时，提出 \(a^2\)：
+
+\[
+\ln|a-re^{i\varphi}|^2
+=2\ln a
++2\operatorname{Re}\ln\!\left(1-\frac rae^{i\varphi}\right).
+\tag{28}
+\]
+
+因为 \(r/a<1\)，可以使用收敛级数
+
+\[
+\ln(1-w)=-\sum_{k=1}^{\infty}\frac{w^k}{k}.
+\tag{29}
+\]
+
+每个 \(e^{ik\varphi}\) 在 \(0\) 到 \(2\pi\)
+上的积分都为零，所以第二项的周平均为零。于是
+
+\[
+J(a)=\int_0^{2\pi}2\ln a\,\mathrm d\varphi
+=4\pi\ln a,
+\qquad a>r.
+\tag{30}
+\]
+
+从而
+
+\[
+J'(a)=\frac{4\pi}{a}.
+\tag{31}
+\]
+
+代入式（26）：
+
+\[
+\boxed{
+F_x=-\frac{\lambda^2r}{\varepsilon_0a},
+\qquad a>r
+}.
+\tag{32}
+\]
+
+负号表示总力沿 \(-x\) 方向，即正圆环被右侧同号直线电荷排斥而远离它。
+
+\textbf{（9）计算 \(0<a<r\) 时的 \(J(a)\)}
+
+此时应提出 \(r^2\)：
+
+\[
+\ln|a-re^{i\varphi}|^2
+=2\ln r
++2\operatorname{Re}\ln\!\left(e^{i\varphi}-\frac ar\right).
+\tag{33}
+\]
+
+后一个复数因子的模长周平均不依赖 \(a\)；等价地，也可把它写成
+\(|1-(a/r)e^{-i\varphi}|\) 并再次使用式（29）。因此
+
+\[
+J(a)=4\pi\ln r,
+\qquad 0<a<r.
+\tag{34}
+\]
+
+这是与 \(a\) 无关的常量，所以
+
+\[
+J'(a)=0.
+\tag{35}
+\]
+
+代入式（26）：
+
+\[
+\boxed{F_x=0,\qquad 0<a<r}.
+\tag{36}
+\]
+
+\textbf{（10）汇总第三问并讨论奇点}
+
+因此直线电荷对圆环的总静电力为
+
+\[
+\boxed{
+\boldsymbol F=
+\begin{cases}
+\boldsymbol 0, & 0<a<r,\\[4pt]
+-\dfrac{\lambda^2r}{\varepsilon_0a}\hat{\boldsymbol x}, & a>r.
+\end{cases}
+}
+\tag{37}
+\]
+
+题目排除
+\(a=r\)，原因是此时无限长直线与圆环相交，理想线电荷之间的距离在交点处为零，完整力积分不绝对收敛，不能沿用式（37）。
+
+\textbf{（11）量纲与远场检查}
+
+当 \(a\gg r\) 时，直线电荷在整个小圆环处的电场近似均匀：
+
+\[
+E\simeq\frac{\lambda}{2\pi\varepsilon_0a}.
+\]
+
+圆环总电荷为 \(Q=2\pi r\lambda\)，故均匀场近似给出
+
+\[
+F\simeq QE
+=2\pi r\lambda\cdot
+\frac{\lambda}{2\pi\varepsilon_0a}
+=\frac{\lambda^2r}{\varepsilon_0a},
+\]
+
+与式（32）的大小一致。方向应远离直线，即 \(-x\)，也完全一致。
+
+\textbf{相交位置不能直接代入外侧结果}
+
+当
+\(a=r\)，理想无限细线与带电圆环相交，局部场出现奇性。某些轴向投影可具有有限主值，但另一分量在交点附近不绝对可积；因此不能据此外侧公式的有限极限声称完整力积分有定义。实际导线半径、绝缘间隙或电荷重新分布会决定结果，原理想模型应排除这一位置。若在积分中写对数势，宜写
+\(\ln(|a-re^{i\varphi}|/\ell_*)\)，使对数自变量无量纲；参考长度
+\(\ell_*\) 不影响求力时的导数。
+
+\newpage
+
+\section{第 6 题}\label{ux7b2c-6-ux9898}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  一电子在相互正交的匀强电场 \(\boldsymbol E\) 和匀强磁场
+  \(\boldsymbol B\)
+  中运动。稳定后，电子所受洛伦兹力的时间平均值为零。求漂移速度的时间平均值
+  \(\overline{\boldsymbol V}_{D1}\)，并约定
+  \(\overline{\boldsymbol V}_{D1}\perp\boldsymbol B\)；
+\item
+  空间中只有大小为 \(B\) 的磁场，磁感线弯曲且曲率半径为 \(R\)。电荷量为
+  \(-e\)、质量为 \(m\) 的电子在其中运动，沿磁场方向的速度为
+  \(V_{\parallel}\)，垂直磁场方向的速度为 \(V_{\perp}\)，且
+  \(V_{\parallel},V_{\perp}\ll eBR/m\)，相应回旋尺度远小于
+  \(R\)。求磁场曲率引起的漂移速度；
+\item
+  已知在非均匀磁场
+
+  \[
+  \boldsymbol B=B_0(1+\alpha x)\hat{\boldsymbol z}
+  \]
+
+  中，以半径 \(r_L\) 做圆周运动的电子具有梯度漂移
+
+  \[
+  \overline{\boldsymbol V}_{D2}
+  =-\frac{\alpha eB_0r_L^2}{2m}\hat{\boldsymbol y},
+  \qquad r_L\ll\frac1{|\alpha|}.
+  \]
+
+  若弯曲磁场的大小随到曲率中心的距离 \(\rho\) 按
+
+  \[
+  B(\rho)=\frac{BR}{\rho}
+  \]
+
+  变化，求包括曲率漂移和梯度漂移在内的总漂移速度；
+\item
+  电子处于温度为 \(T\) 的热平衡状态，求总漂移速度的热平均值。取
+\end{enumerate}
+
+\[
+m=9.11\times10^{-31}\,\mathrm{kg},\quad
+e=1.60\times10^{-19}\,\mathrm C,
+\]
+
+\[
+B=0.10\,\mathrm T,\quad
+R=1.0\,\mathrm m,\quad
+T=\frac{1\,\mathrm{eV}}{k_B},
+\]
+
+给出数值结果。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.44\linewidth,height=\textheight,keepaspectratio,alt={图 6-1　弯曲磁场中的电子回旋运动与导引中心漂移。}]{../figures/question-06.pdf}
+\caption*{图 6-1　弯曲磁场中的电子回旋运动与导引中心漂移。}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-5}
+
+电子沿弯曲场线运动时，有曲率漂移和梯度漂移。先固定局部坐标与电荷符号，再求两种漂移的方向和速度，用穿越曲率尺度所需时间估计位移。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-5}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  洛伦兹力与时间平均；
+\item
+  三重矢积公式；
+\item
+  \(\boldsymbol E\times\boldsymbol B\) 漂移；
+\item
+  曲率漂移；
+\item
+  磁场梯度漂移；
+\item
+  局部坐标系与方向判定；
+\item
+  回旋半径 \(r_L=mV_\perp/(eB)\)；
+\item
+  能量均分定理；
+\item
+  电子伏特与焦耳的换算。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-5}
+
+在均匀正交电磁场中，电子的快速回旋叠加一个缓慢导引中心漂移。漂移速度方向由
+\(\boldsymbol E\times\boldsymbol B\) 决定，并不因电荷正负改变。
+
+在弯曲磁场中，电子沿磁感线的平行运动需要持续改变方向。从随导引中心弯曲运动的局部参考系看，可以引入向曲率外侧的惯性离心力。该力对电子等效成一个横向电场，从而产生曲率漂移。若磁场外弱内强，回旋轨道两侧所受磁力不等，还会产生同向的梯度漂移。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-5}
+
+第一问从平均洛伦兹力为零出发，并把等式两边与 \(\boldsymbol B\)
+做叉乘。第二问建立局部右手坐标系：\(\hat{\boldsymbol x}\)
+沿曲率半径向外，\(\hat{\boldsymbol y}\)
+垂直纸面向外，\(\hat{\boldsymbol z}=\hat{\boldsymbol x}\times\hat{\boldsymbol y}\)，题图处的磁场沿
+\(-\hat{\boldsymbol z}\)。方向一旦固定，所有负号都通过叉乘决定。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-5}
+
+图 6-2 取曲率中心在 \(-x\) 侧，红色离心力沿
+\(+x\)；电子的等效电场因电荷为 \(-e\) 而沿 \(-x\)。磁场沿
+\(-z\)，图中用圆点与圆叉区分朝纸外的 \(+y\) 和朝纸内的漂移
+\(-y\)。梯度漂移再由 \(\boldsymbol B\times\boldsymbol\nabla B\)
+与电荷符号判向，两种漂移同向，速度应相加。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.716\linewidth,height=\textheight,keepaspectratio,alt={图 6-2　曲率漂移、梯度漂移及其矢量叠加。}]{../figures/solution-06.pdf}
+\caption*{图 6-2　曲率漂移、梯度漂移及其矢量叠加。}
+\end{figure}
+
+\textbf{（1）平均洛伦兹力为零的条件}
+
+电子电荷为 \(q=-e\)。瞬时洛伦兹力为
+
+\[
+\boldsymbol F
+=-e\left(\boldsymbol E+\boldsymbol v\times\boldsymbol B\right).
+\tag{1}
+\]
+
+匀强电场和磁场不随时间改变，因此对一个回旋周期取平均：
+
+\[
+\overline{\boldsymbol F}
+=-e\left(
+\boldsymbol E+\overline{\boldsymbol v}\times\boldsymbol B
+\right).
+\tag{2}
+\]
+
+电子的快速回旋速度在一个周期内平均为零，剩下的平均速度就是漂移速度：
+
+\[
+\overline{\boldsymbol v}=\overline{\boldsymbol V}_{D1}.
+\tag{3}
+\]
+
+题设给出稳定后平均力为零，故
+
+\[
+\boldsymbol E+\overline{\boldsymbol V}_{D1}\times\boldsymbol B
+=\boldsymbol 0.
+\tag{4}
+\]
+
+\textbf{（2）用三重矢积解出漂移速度}
+
+将式（4）两边从右侧叉乘 \(\boldsymbol B\)：
+
+\[
+\boldsymbol E\times\boldsymbol B
++\left(
+\overline{\boldsymbol V}_{D1}\times\boldsymbol B
+\right)\times\boldsymbol B
+=\boldsymbol 0.
+\tag{5}
+\]
+
+使用三重矢积恒等式
+
+\[
+(\boldsymbol A\times\boldsymbol B)\times\boldsymbol C
+=\boldsymbol B(\boldsymbol A\cdot\boldsymbol C)
+-\boldsymbol A(\boldsymbol B\cdot\boldsymbol C).
+\tag{6}
+\]
+
+令
+\(\boldsymbol A=\overline{\boldsymbol V}_{D1}\)、\(\boldsymbol C=\boldsymbol B\)，并使用题设
+
+\[
+\overline{\boldsymbol V}_{D1}\cdot\boldsymbol B=0,
+\]
+
+得到
+
+\[
+\left(
+\overline{\boldsymbol V}_{D1}\times\boldsymbol B
+\right)\times\boldsymbol B
+=-B^2\overline{\boldsymbol V}_{D1}.
+\tag{7}
+\]
+
+式（5）因此化为
+
+\[
+\boldsymbol E\times\boldsymbol B
+-B^2\overline{\boldsymbol V}_{D1}=\boldsymbol 0.
+\]
+
+所以
+
+\[
+\boxed{
+\overline{\boldsymbol V}_{D1}
+=\frac{\boldsymbol E\times\boldsymbol B}{B^2}
+}.
+\tag{8}
+\]
+
+推导过程中电荷量 \(-e\) 已约去，因此相同
+\(\boldsymbol E\)、\(\boldsymbol B\) 下，正负电荷的
+\(\boldsymbol E\times\boldsymbol B\) 漂移方向相同。
+
+\textbf{（3）弯曲磁感线所需的向心加速度}
+
+电子沿磁场方向以速度 \(V_{\parallel}\) 运动。磁感线曲率半径为
+\(R\)，故导引中心沿弯曲磁感线运动所需的向心加速度大小为
+
+\[
+a_c=\frac{V_{\parallel}^2}{R}.
+\tag{9}
+\]
+
+取 \(\hat{\boldsymbol x}\) 沿曲率半径向外，则向心方向为
+\(-\hat{\boldsymbol x}\)。在随弯曲轨道运动的局部参考系中，对应的惯性离心力为
+
+\[
+\boldsymbol F_{\rm cf}
+=\frac{mV_{\parallel}^2}{R}
+\hat{\boldsymbol x}.
+\tag{10}
+\]
+
+把这项横向力等效为电场力 \(q\boldsymbol E_{\rm eff}\)。由于 \(q=-e\)：
+
+\[
+-e\boldsymbol E_{\rm eff}
+=\frac{mV_{\parallel}^2}{R}
+\hat{\boldsymbol x}.
+\]
+
+因此
+
+\[
+\boxed{
+\boldsymbol E_{\rm eff}
+=-\frac{mV_{\parallel}^2}{eR}
+\hat{\boldsymbol x}
+}.
+\tag{11}
+\]
+
+\textbf{（4）由等效电场求曲率漂移}
+
+在图示位置，磁场方向为
+
+\[
+\boldsymbol B=-B\hat{\boldsymbol z}.
+\tag{12}
+\]
+
+将式（11）、（12）代入式（8）：
+
+\[
+\begin{aligned}
+\overline{\boldsymbol V}_{\rm curv}
+&=\frac{\boldsymbol E_{\rm eff}\times\boldsymbol B}{B^2}\\
+&=\frac{
+\left(-\dfrac{mV_{\parallel}^2}{eR}\hat{\boldsymbol x}\right)
+\times\left(-B\hat{\boldsymbol z}\right)
+}{B^2}\\
+&=\frac{mV_{\parallel}^2}{eRB}
+(\hat{\boldsymbol x}\times\hat{\boldsymbol z}).
+\end{aligned}
+\]
+
+在右手坐标系中
+
+\[
+\hat{\boldsymbol x}\times\hat{\boldsymbol z}
+=-\hat{\boldsymbol y}.
+\tag{13}
+\]
+
+于是
+
+\[
+\boxed{
+\overline{\boldsymbol V}_{\rm curv}
+=-\frac{mV_{\parallel}^2}{eBR}
+\hat{\boldsymbol y}
+}.
+\tag{14}
+\]
+
+\textbf{（5）把弯曲磁场局部展开为线性梯度}
+
+设研究点到曲率中心的距离为 \(R\)，局部向外坐标为 \(x\)，则
+
+\[
+\rho=R+x.
+\tag{15}
+\]
+
+磁场大小
+
+\[
+B(\rho)=\frac{BR}{R+x}
+=B\left(1+\frac xR\right)^{-1}.
+\tag{16}
+\]
+
+当 \(|x|\ll R\) 时，用
+
+\[
+(1+u)^{-1}=1-u+O(u^2)
+\]
+
+得到
+
+\[
+B(\rho)
+\simeq B\left(1-\frac xR\right).
+\tag{17}
+\]
+
+又因为磁场方向是 \(-\hat{\boldsymbol z}\)：
+
+\[
+\boldsymbol B(x)
+\simeq -B\left(1-\frac xR\right)
+\hat{\boldsymbol z}.
+\tag{18}
+\]
+
+与题目给出的标准形式
+
+\[
+\boldsymbol B=B_0(1+\alpha x)\hat{\boldsymbol z}
+\]
+
+比较，可识别出
+
+\[
+B_0=-B,
+\qquad
+\alpha=-\frac1R.
+\tag{19}
+\]
+
+这里 \(B_0\) 是带方向的 \(z\) 分量，不是磁场大小；若把它直接写成
+\(+B\)，梯度漂移的方向就会出错。
+
+\textbf{（6）梯度漂移的大小与方向}
+
+电子的拉莫尔半径为
+
+\[
+r_L=\frac{mV_\perp}{eB}.
+\tag{20}
+\]
+
+把式（19）代入题给梯度漂移公式：
+
+\[
+\begin{aligned}
+\overline{\boldsymbol V}_{\rm grad}
+&=-\frac{\alpha eB_0r_L^2}{2m}
+\hat{\boldsymbol y}\\
+&=-\frac{
+\left(-\dfrac1R\right)e(-B)r_L^2
+}{2m}\hat{\boldsymbol y}\\
+&=-\frac{eBr_L^2}{2mR}
+\hat{\boldsymbol y}.
+\end{aligned}
+\]
+
+代入式（20）的平方
+
+\[
+r_L^2=\frac{m^2V_\perp^2}{e^2B^2},
+\]
+
+得
+
+\[
+\begin{aligned}
+\overline{\boldsymbol V}_{\rm grad}
+&=-\frac{eB}{2mR}
+\frac{m^2V_\perp^2}{e^2B^2}
+\hat{\boldsymbol y}\\
+&=\boxed{
+-\frac{mV_\perp^2}{2eBR}
+\hat{\boldsymbol y}
+}.
+\end{aligned}
+\tag{21}
+\]
+
+\textbf{（7）叠加曲率漂移与梯度漂移}
+
+两项均沿 \(-\hat{\boldsymbol y}\)，所以可以直接相加：
+
+\[
+\begin{aligned}
+\overline{\boldsymbol V}_{D}
+&=\overline{\boldsymbol V}_{\rm curv}
++\overline{\boldsymbol V}_{\rm grad}\\
+&=-\frac{mV_{\parallel}^2}{eBR}\hat{\boldsymbol y}
+-\frac{mV_\perp^2}{2eBR}\hat{\boldsymbol y}\\
+&=-\frac{m}{2eBR}
+\left(2V_{\parallel}^2+V_\perp^2\right)
+\hat{\boldsymbol y}.
+\end{aligned}
+\]
+
+故
+
+\[
+\boxed{
+\overline{\boldsymbol V}_{D}
+=-\frac{m(2V_{\parallel}^2+V_\perp^2)}{2eBR}
+\hat{\boldsymbol y}
+}.
+\tag{22}
+\]
+
+\textbf{（8）热平衡下的速度平方平均}
+
+平行磁场方向只有一个平动自由度。由能量均分定理：
+
+\[
+\frac12m\langle V_{\parallel}^2\rangle
+=\frac12k_BT.
+\tag{23}
+\]
+
+所以
+
+\[
+m\langle V_{\parallel}^2\rangle=k_BT.
+\tag{24}
+\]
+
+垂直磁场方向有两个相互独立的平动自由度，因此
+
+\[
+\frac12m\langle V_\perp^2\rangle
+=2\cdot\frac12k_BT
+=k_BT.
+\tag{25}
+\]
+
+故
+
+\[
+m\langle V_\perp^2\rangle=2k_BT.
+\tag{26}
+\]
+
+对式（22）取热平均：
+
+\[
+\begin{aligned}
+\langle\overline{\boldsymbol V}_D\rangle
+&=-\frac{1}{2eBR}
+\left[
+2m\langle V_{\parallel}^2\rangle
++m\langle V_\perp^2\rangle
+\right]\hat{\boldsymbol y}\\
+&=-\frac{1}{2eBR}
+\left(2k_BT+2k_BT\right)
+\hat{\boldsymbol y}\\
+&=\boxed{
+-\frac{2k_BT}{eBR}
+\hat{\boldsymbol y}
+}.
+\end{aligned}
+\tag{27}
+\]
+
+\textbf{（9）数值计算}
+
+题给
+
+\[
+k_BT=1\,\mathrm{eV}.
+\]
+
+根据电子伏特定义
+
+\[
+1\,\mathrm{eV}=e\times1\,\mathrm V,
+\]
+
+所以
+
+\[
+\frac{k_BT}{e}=1\,\mathrm V.
+\tag{28}
+\]
+
+代入 \(B=0.10\,\mathrm T\)、\(R=1.0\,\mathrm m\)：
+
+\[
+\begin{aligned}
+\left|\langle\overline{\boldsymbol V}_D\rangle\right|
+&=\frac{2(k_BT/e)}{BR}\\
+&=\frac{2\times1}{0.10\times1.0}\,\mathrm{m/s}\\
+&=20\,\mathrm{m/s}.
+\end{aligned}
+\]
+
+因此
+
+\[
+\boxed{
+\langle\overline{\boldsymbol V}_D\rangle
+=-20\,\mathrm{m/s}\,\hat{\boldsymbol y}
+}.
+\tag{29}
+\]
+
+\textbf{局部坐标与力的符号}
+
+曲率中心在 \(-x\) 侧，所以随场线运动的参考系中离心力沿 \(+x\)。对电子
+\(q=-e\)，等效电场 \(\bm E_{\rm eff}=\bm F_{\rm cf}/q\) 才沿
+\(-x\)；不能把这两个箭头画成同向。取 \(\bm B=-B\hat z\)，则
+\((-\hat x)\times(-\hat z)=-\hat y\)，曲率漂移和梯度漂移都指向 \(-y\)。
+
+图中 \(+y\) 朝纸外，用点表示；漂移 \(-y\) 朝纸内，用叉表示。跨越距离
+\(R\) 的漂移时间为 \(R/|V_d|\)，而回旋周期为
+\(2\pi m/(eB)\)，两个时间对应不同运动。这里的漂移不是在所画截面内绕圆心一周。
+
+\newpage
+
+\section{第 7 题}\label{ux7b2c-7-ux9898}
+
+如图，连通器的 \(A\)、\(B\) 两个上部容器横截面积分别为 \(4S\) 和
+\(S\)，底部水平容器的横截面积为 \(S\)。连通器中装有密度为 \(\rho_1\)
+的液体甲。初始时，甲液面到 \(A\) 容器口的距离为
+\(H\)，且两侧液面到底部的距离足够大。装置处于恒温环境，外界大气压为
+
+\[
+p_0=\rho_1gh_0,
+\qquad h_0<H.
+\]
+
+已知容器体积变化所引起的气体压强变化必须计入。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  从 \(B\) 端缓慢注入与甲不相溶、密度为 \(\rho_2=\rho_1/2\)
+  的液体乙，乙的总体积为 \(SH\)，液体均不溢出。求稳定后 \(A\)、\(B\)
+  两边上表面的高度差 \(h_1\)；
+\item
+  若先将 \(A\) 容器口封闭，再从 \(B\)
+  端完成同样的注液，求稳定后两边上表面的高度差 \(h_2\)；
+\item
+  若初始时 \(A\)、\(B\) 两端甲液体的深度均为
+  \(H/4\)，底部水平容器足够长，重复第（1）问，求高度差 \(h_3\)；
+\item
+  在第（3）问的浅液初态下，先封闭 \(A\)
+  容器口，再重复第（2）问，求高度差 \(h_4\)。
+\end{enumerate}
+
+取
+
+\[
+h_0=2.82\,\mathrm m,
+\qquad
+H=3.51\,\mathrm m.
+\]
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.723\linewidth,height=\textheight,keepaspectratio,alt={图 7-1　上部截面积不同、底部相连的连通器。}]{../figures/question-07.pdf}
+\caption*{图 7-1　上部截面积不同、底部相连的连通器。}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-6}
+
+新增液体在深管中占竖直段，在浅管中可能进入底部水平段，体积公式因此不同。开口与封闭又对应不同气体条件，四种状态须分别列压强和体积关系。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-6}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  同一静止液体内等高点压强相等；
+\item
+  不相溶液体界面处压强连续；
+\item
+  体积守恒与截面积比；
+\item
+  等温气体的玻意耳定律；
+\item
+  深液与浅液两种几何状态的区分；
+\item
+  二次方程的物理解筛选；
+\item
+  高度差的方向约定；
+\item
+  数值代入与结果检查。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-6}
+
+深液情形中，注入体积为 \(SH\)、所在直管面积为 \(S\)，所以乙液柱高度恒为
+\(H\)。两侧上表面高度差若记为 \(h\)，则从 \(A\)
+侧甲液面下降到甲乙界面的竖直距离是 \(H-h\)。
+
+封闭 \(A\) 端后，甲液面上升会压缩上方气体，使 \(A\) 侧表面压强大于
+\(p_0\)。面积比 \(4S:S\) 决定：\(A\) 侧上升 \(x\) 时，\(B\)
+侧甲乙界面下降 \(4x\)，故表面高度差减少 \(5x\)。
+
+浅液情形中，乙液不仅占据 \(B\) 竖直管，还沿底部水平容器推进距离
+\(x\)。此时必须同时计算``被挤出 \(B\)
+竖直段的甲液体积''和``底部被乙液占据的体积''。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-6}
+
+每一问都先完成几何体积关系，再写压强关系。不要在几何关系未确定以前直接列液柱压强式。封闭情形中，按以下顺序最稳妥：
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  用体积守恒求 \(A\) 侧液面位移；
+\item
+  用气体体积求 \(p_A\)；
+\item
+  在甲乙界面或底部同一水平面写压强相等；
+\item
+  解方程并剔除不符合容器几何的根。
+\end{enumerate}
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-6}
+
+图 7-2 中橙色液柱的体积固定为
+\(SH\)，它给出乙液所在支管的高度约束；蓝色区域为原连通液体，对其同一水平面上的两点列压强相等。后文每一种边界情形都同时使用``体积守恒''和``等高面等压''，不能只列其中一个条件。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.501\linewidth,height=\textheight,keepaspectratio,alt={图 7-2　注液后的体积约束与同一水平面压强平衡。}]{../figures/solution-07.pdf}
+\caption*{图 7-2　注液后的体积约束与同一水平面压强平衡。}
+\end{figure}
+
+\textbf{（1）深液、两端开放时乙液柱的高度}
+
+注入乙液的体积为
+
+\[
+V_2=SH.
+\tag{1}
+\]
+
+乙液位于横截面积为 \(S\) 的 \(B\)
+直管中。由于甲液初始深度足够大，乙液尚未进入底部水平容器，所以乙液柱高度为
+
+\[
+\frac{V_2}{S}=H.
+\tag{2}
+\]
+
+\textbf{（2）深液、两端开放时的压强平衡}
+
+设 \(B\) 侧乙液上表面比 \(A\) 侧甲液上表面高 \(h_1\)。乙液柱总高为
+\(H\)，因此甲乙界面比 \(A\) 侧甲液面低
+
+\[
+H-h_1.
+\tag{3}
+\]
+
+从 \(A\) 侧自由面沿甲液下降到界面，压强为
+
+\[
+p_0+\rho_1g(H-h_1).
+\tag{4}
+\]
+
+从 \(B\) 侧自由面沿乙液下降高度 \(H\)，压强为
+
+\[
+p_0+\rho_2gH.
+\tag{5}
+\]
+
+界面两侧压强相等：
+
+\[
+p_0+\rho_1g(H-h_1)
+=p_0+\rho_2gH.
+\tag{6}
+\]
+
+消去 \(p_0\) 与 \(g\)，再用 \(\rho_2=\rho_1/2\)：
+
+\[
+\rho_1(H-h_1)=\frac{\rho_1}{2}H.
+\]
+
+约去 \(\rho_1\)：
+
+\[
+H-h_1=\frac H2.
+\]
+
+所以
+
+\[
+\boxed{h_1=\frac H2}.
+\tag{7}
+\]
+
+数值为
+
+\[
+\boxed{h_1=1.755\,\mathrm m}.
+\tag{8}
+\]
+
+\textbf{（3）深液、\(A\) 端封闭时的体积约束}
+
+设 \(A\) 侧甲液面相对初态上升 \(x\)。由于甲液总体积不变，\(A\)
+侧增加的体积为
+
+\[
+4Sx.
+\]
+
+这必须等于 \(B\) 侧甲乙界面下降所释放的体积。\(B\) 管面积为
+\(S\)，故界面下降距离为
+
+\[
+4x.
+\tag{9}
+\]
+
+乙液上表面相对初始甲液面的位置是``向下 \(4x\) 后再向上 \(H\)''，即高度
+\(H-4x\)；\(A\) 侧表面高度为 \(x\)。两者高度差为
+
+\[
+h_2=(H-4x)-x=H-5x.
+\tag{10}
+\]
+
+因此
+
+\[
+\boxed{x=\frac{H-h_2}{5}}.
+\tag{11}
+\]
+
+\textbf{（4）封闭气体的等温压强}
+
+初态 \(A\) 侧气柱高度为 \(H\)，横截面积为 \(4S\)，体积为
+
+\[
+V_{g0}=4SH.
+\tag{12}
+\]
+
+甲液面上升 \(x\) 后，气柱高度变成 \(H-x\)，体积为
+
+\[
+V_g=4S(H-x).
+\tag{13}
+\]
+
+恒温条件下由玻意耳定律
+
+\[
+p_0V_{g0}=p_AV_g.
+\tag{14}
+\]
+
+所以
+
+\[
+\boxed{
+p_A=p_0\frac{H}{H-x}
+}.
+\tag{15}
+\]
+
+\textbf{（5）深液封闭情形的压强方程}
+
+甲乙界面比 \(A\) 侧甲液面低 \(H-h_2\)，所以从 \(A\) 侧到界面的压强为
+
+\[
+p_A+\rho_1g(H-h_2).
+\tag{16}
+\]
+
+\(B\) 侧仍与大气相通，乙液柱高度仍为 \(H\)，界面压强为
+
+\[
+p_0+\rho_2gH.
+\tag{17}
+\]
+
+令两式相等：
+
+\[
+p_A+\rho_1g(H-h_2)
+=p_0+\rho_2gH.
+\tag{18}
+\]
+
+使用
+
+\[
+p_0=\rho_1gh_0,
+\qquad
+\rho_2=\frac12\rho_1,
+\]
+
+并整体除以 \(\rho_1g\)：
+
+\[
+h_0\frac{H}{H-x}+H-h_2
+=h_0+\frac H2.
+\tag{19}
+\]
+
+由式（11）
+
+\[
+H-x
+=H-\frac{H-h_2}{5}
+=\frac{4H+h_2}{5}.
+\tag{20}
+\]
+
+代入式（19）：
+
+\[
+\frac{5h_0H}{4H+h_2}+H-h_2
+=h_0+\frac H2.
+\tag{21}
+\]
+
+\textbf{（6）逐步整理并求 \(h_2\)}
+
+把式（21）两边乘以 \(4H+h_2\)：
+
+\[
+5h_0H+(H-h_2)(4H+h_2)
+=\left(h_0+\frac H2\right)(4H+h_2).
+\tag{22}
+\]
+
+分别展开：
+
+\[
+(H-h_2)(4H+h_2)
+=4H^2-3Hh_2-h_2^2,
+\tag{23}
+\]
+
+\[
+\left(h_0+\frac H2\right)(4H+h_2)
+=4Hh_0+h_0h_2+2H^2+\frac12Hh_2.
+\tag{24}
+\]
+
+代回式（22）并移项，得到
+
+\[
+2h_2^2+(7H+2h_0)h_2
+-4H^2-2Hh_0=0.
+\tag{25}
+\]
+
+使用求根公式：
+
+\[
+h_2
+=\frac{-(7H+2h_0)
+\pm\sqrt{(7H+2h_0)^2+8(4H^2+2Hh_0)}}{4}.
+\tag{26}
+\]
+
+根号内化简：
+
+\[
+\begin{aligned}
+&(7H+2h_0)^2+8(4H^2+2Hh_0)\\
+&=49H^2+28Hh_0+4h_0^2
++32H^2+16Hh_0\\
+&=81H^2+44Hh_0+4h_0^2.
+\end{aligned}
+\tag{27}
+\]
+
+带负号的根给出负高度差，不符合本题几何，因此取正根：
+
+\[
+\boxed{
+h_2
+=\frac{-7H-2h_0
++\sqrt{81H^2+44Hh_0+4h_0^2}}{4}
+}.
+\tag{28}
+\]
+
+代入数值：
+
+\[
+\boxed{h_2\simeq2.017\,\mathrm m\approx2.02\,\mathrm m}.
+\tag{29}
+\]
+
+封闭后 \(A\) 侧气压增大，因此需要更大的液面高差参与平衡，确有
+\(h_2>h_1\)。
+
+\textbf{（7）浅液开放情形的几何体积关系}
+
+初始时两侧甲液深度都是 \(H/4\)。注入乙液后，乙液充满原来 \(B\)
+竖直管中的一段，并沿底部水平容器向左推进。设乙液在底部推进的水平长度为
+\(x\)。由于底部截面积也是 \(S\)，底部乙液体积为 \(Sx\)。
+
+乙液总体积 \(SH\) 等于 \(B\)
+竖直段体积与底部水平段体积之和。若乙液上表面到底部的高度为 \(h_B\)，则
+
+\[
+Sh_B+Sx=SH.
+\]
+
+所以
+
+\[
+\boxed{h_B=H-x}.
+\tag{30}
+\]
+
+乙液挤出的甲液包括：
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(B\) 侧初始深度 \(H/4\) 的竖直液柱，体积为 \(S(H/4)\)；
+\item
+  底部被乙液占据的长度 \(x\)，体积为 \(Sx\)。
+\end{enumerate}
+
+这些甲液全部进入面积为 \(4S\) 的 \(A\) 容器，使 \(A\) 侧液面上升
+
+\[
+\Delta h_A
+=\frac{S(H/4+x)}{4S}
+=\frac H{16}+\frac x4.
+\tag{31}
+\]
+
+因此 \(A\) 侧甲液总深度为
+
+\[
+\boxed{
+h_A=\frac H4+\Delta h_A
+=\frac{5H}{16}+\frac x4
+}.
+\tag{32}
+\]
+
+\textbf{（8）浅液开放情形的压强方程}
+
+在底部甲乙界面所在的同一水平面，左侧由甲液柱产生的表压为
+\(\rho_1gh_A\)，右侧由乙液柱产生的表压为
+\(\rho_2gh_B\)。两端都与大气相通，所以
+
+\[
+\rho_1gh_A=\rho_2gh_B.
+\tag{33}
+\]
+
+代入 \(\rho_2=\rho_1/2\)、式（30）、（32）：
+
+\[
+\rho_1g\left(\frac{5H}{16}+\frac x4\right)
+=\frac{\rho_1}{2}g(H-x).
+\]
+
+约去 \(\rho_1g\)，两边乘以 \(16\)：
+
+\[
+5H+4x=8H-8x.
+\]
+
+所以
+
+\[
+12x=3H,
+\]
+
+即
+
+\[
+\boxed{x=\frac H4}.
+\tag{34}
+\]
+
+于是
+
+\[
+h_B=H-\frac H4=\frac{3H}{4},
+\tag{35}
+\]
+
+\[
+h_A=\frac{5H}{16}+\frac1{4}\frac H4
+=\frac{6H}{16}=\frac{3H}{8}.
+\tag{36}
+\]
+
+两边上表面的高度差为
+
+\[
+\boxed{
+h_3=h_B-h_A
+=\frac{3H}{8}
+}.
+\tag{37}
+\]
+
+数值为
+
+\[
+\boxed{h_3=1.31625\,\mathrm m\approx1.32\,\mathrm m}.
+\tag{38}
+\]
+
+\textbf{（9）浅液封闭情形的气体体积}
+
+仍令乙液在底部推进距离为 \(x'\)。几何关系与式（30）、（32）同型：
+
+\[
+h_B'=H-x',
+\tag{39}
+\]
+
+\[
+h_A'=\frac{5H}{16}+\frac{x'}4.
+\tag{40}
+\]
+
+\(A\) 侧甲液面相对初态上升量为
+
+\[
+\Delta h_A'
+=\frac H{16}+\frac{x'}4.
+\tag{41}
+\]
+
+初态封闭气柱高度为 \(H\)，故末态气柱高度为
+
+\[
+H-\Delta h_A'
+=H-\frac H{16}-\frac{x'}4
+=\frac{15H}{16}-\frac{x'}4.
+\tag{42}
+\]
+
+等温状态方程给出
+
+\[
+\boxed{
+p_A'
+=p_0\frac{H}{15H/16-x'/4}
+}.
+\tag{43}
+\]
+
+\textbf{（10）浅液封闭情形的压强方程}
+
+在底部同一水平面列压强平衡：
+
+\[
+p_A'+\rho_1gh_A'
+=p_0+\rho_2gh_B'.
+\tag{44}
+\]
+
+代入式（39）、（40）、（43），再用
+\(p_0=\rho_1gh_0\)、\(\rho_2=\rho_1/2\)，并除以 \(\rho_1g\)：
+
+\[
+h_0\frac{H}{15H/16-x'/4}
++\frac{5H}{16}+\frac{x'}4
+=h_0+\frac{H-x'}2.
+\tag{45}
+\]
+
+把气柱高度通分：
+
+\[
+\frac{15H}{16}-\frac{x'}4
+=\frac{15H-4x'}{16}.
+\tag{46}
+\]
+
+于是式（45）的第一项为
+
+\[
+h_0\frac{H}{(15H-4x')/16}
+=\frac{16h_0H}{15H-4x'}.
+\tag{47}
+\]
+
+将式（45）整体整理为二次方程，可得
+
+\[
+48x'^2-(192H+64h_0)x'
++45H^2-16Hh_0=0.
+\tag{48}
+\]
+
+除以 \(16\) 也可写成
+
+\[
+3x'^2-(12H+4h_0)x'
++\frac{45}{16}H^2-Hh_0=0.
+\tag{49}
+\]
+
+使用求根公式并化简：
+
+\[
+x'
+=2H+\frac{2h_0}{3}
+\pm\frac1{12}
+\sqrt{441H^2+432Hh_0+64h_0^2}.
+\tag{50}
+\]
+
+带正号的根大于可用容器尺度，会使气体体积或液柱几何不成立，故取负号：
+
+\[
+\boxed{
+x'
+=2H+\frac{2h_0}{3}
+-\frac1{12}
+\sqrt{441H^2+432Hh_0+64h_0^2}
+}.
+\tag{51}
+\]
+
+\textbf{（11）求浅液封闭时的高度差 \(h_4\)}
+
+由式（39）、（40）：
+
+\[
+\begin{aligned}
+h_4
+&=h_B'-h_A'\\
+&=(H-x')-\left(\frac{5H}{16}+\frac{x'}4\right)\\
+&=\frac{11H}{16}-\frac{5x'}4.
+\end{aligned}
+\tag{52}
+\]
+
+代入式（51）：
+
+\[
+\boxed{
+h_4
+=-\frac{5h_0}{6}-\frac{29H}{16}
++\frac5{48}
+\sqrt{441H^2+432Hh_0+64h_0^2}
+}.
+\tag{53}
+\]
+
+数值计算先得
+
+\[
+x'\simeq0.4763\,\mathrm m,
+\]
+
+再得
+
+\[
+\boxed{h_4\simeq1.8178\,\mathrm m\approx1.82\,\mathrm m}.
+\tag{54}
+\]
+
+\textbf{（12）四个结果的物理比较}
+
+四个高度差为
+
+\[
+h_1\approx1.755\,\mathrm m,
+\quad
+h_2\approx2.017\,\mathrm m,
+\]
+
+\[
+h_3\approx1.316\,\mathrm m,
+\quad
+h_4\approx1.818\,\mathrm m.
+\]
+
+同一几何初态下，封闭 \(A\) 端均使高度差增大：
+
+\[
+h_2>h_1,
+\qquad
+h_4>h_3.
+\]
+
+这是因为被压缩气体在 \(A\) 侧液面上额外施加了大于大气压的压力。
+
+\newpage
+
+\section{第 8 题}\label{ux7b2c-8-ux9898}
+
+一种理想化轮子输送机的轨道由直线段 \(AB\)、半圆弧段 \(BC\) 和直线段
+\(CD\) 组成，三段均位于纸面内，半圆弧半径为 \(r\)。沿轨道 \(ABCD\)
+密排着 \(N\)
+个轻轮子，每个轮子的轮轴固定，轮子可以绕自身轮轴无摩擦转动。重力方向垂直纸面向里。
+
+在 \(A\) 处给一个质量为 \(m\)、绕质心转动惯量为 \(I\) 的小物体沿 \(AB\)
+指向 \(B\) 的初速度
+\(v_0\)。小物体与轮子之间的滑动摩擦因数很大；小物体尺寸很小，任一时刻至多与两个轮子接触。最终小物体沿
+\(ABCD\) 从 \(A\) 到达 \(D\)。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  判断小物体到达 \(D\) 点时速度的方向；
+\item
+  求小物体到达 \(D\) 点时的速度大小。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.664\linewidth,height=\textheight,keepaspectratio,alt={图 8-1　直线---半圆---直线组成的轮子输送轨道。}]{../figures/question-08.pdf}
+\caption*{图 8-1　直线---半圆---直线组成的轮子输送轨道。}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-7}
+
+长方体进弯时，轨道姿态约束使它从平动变成平动加转动；出弯时还要去除转动。分别说明两次作用的冲量条件，再用角动量关系和质量几何求速度。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-7}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  曲线运动的切向速度方向；
+\item
+  冲量作用阶段的角动量守恒；
+\item
+  质心轨道角动量 \(mvr\)；
+\item
+  绕质心自转角动量 \(I\omega\)；
+\item
+  半径为 \(r\) 的轨道上切线转角速率 \(\omega=v/r\)；
+\item
+  强摩擦建立运动学约束；
+\item
+  机械能不守恒与角动量守恒的并存；
+\item
+  曲线段进入直线段时切向速度的连续性。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-7}
+
+在 \(AB\) 上，小物体沿直线运动，速度为
+\(v_0\)，其姿态方向不需要随路径转动，因此绕质心角速度为零。进入半圆段时，物体的运动方向开始连续转过角度。若它无滑动地顺着半圆轨道转向，物体姿态的角速度等于轨道切线方向的转动角速度，即
+
+\[
+\omega=\frac vr.
+\]
+
+这部分自转角动量必须来自进入弯道前的轨道角动量，所以平动速度减小。到达
+\(C\) 后，轨道转为竖直直线，物体不再需要继续改变姿态；其速度方向沿
+\(CD\) 指向 \(D\)。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-7}
+
+把运动分为三个阶段：
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(A\to B\)：直线运动，\(v=v_0\)、\(\omega=0\)；
+\item
+  刚进入 \(BC\)：强摩擦冲量迅速建立 \(v=\omega r\)，关于半圆圆心 \(O\)
+  写角动量守恒；
+\item
+  \(B\to C\to D\)：曲线段速度大小保持，进入直线段时切向分量保持不变。
+\end{enumerate}
+
+关键是不能在进入弯道的摩擦冲量阶段使用机械能守恒。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-7}
+
+图 8-2 左图 表示进入前只有质心平动，姿态角速度为零；图 8-2 中图
+表示进入圆弧后满足贴轨姿态关系
+\(v=\omega r\)。按原参考解使用的贴轨姿态约束，进入瞬间各接触冲量对 \(O\)
+的总角冲量为零；单个冲量未必通过
+\(O\)，因此后文直接把图中两种状态代入关于 \(O\) 的角动量守恒式
+\(mv_0r=mvr+I\omega\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.775\linewidth,height=\textheight,keepaspectratio,alt={图 8-2　小物体进入半圆段前后的轨道角动量关系。}]{../figures/solution-08.pdf}
+\caption*{图 8-2　小物体进入半圆段前后的轨道角动量关系。}
+\end{figure}
+
+\textbf{（1）\(AB\) 直线段上的初始运动状态}
+
+重力垂直纸面向里，在轨道平面内没有分量。轮子的轮轴固定，轮子又可无摩擦转动；在理想化模型中，物体沿直线段
+\(AB\) 到达 \(B\) 前的质心速度保持为
+
+\[
+v_B^-=v_0.
+\tag{1}
+\]
+
+直线轨道的切线方向不转动，所以物体绕质心的姿态角速度为
+
+\[
+\omega_B^-=0.
+\tag{2}
+\]
+
+上标``\(-\)''表示进入半圆段以前的瞬间。
+
+\textbf{（2）刚进入半圆段后的运动学约束}
+
+进入 \(BC\)
+后，路径切线方向随物体位置转动。设物体刚建立稳定约束后的质心速度为
+\(v\)，其绕质心角速度为 \(\omega\)。
+
+当物体沿半径为 \(r\) 的圆弧走过弧长 \(\mathrm ds\) 时，圆心角变化为
+
+\[
+\mathrm d\theta=\frac{\mathrm ds}{r}.
+\tag{3}
+\]
+
+两边同时除以 \(\mathrm dt\)：
+
+\[
+\frac{\mathrm d\theta}{\mathrm dt}
+=\frac1r\frac{\mathrm ds}{\mathrm dt}.
+\tag{4}
+\]
+
+其中
+
+\[
+\frac{\mathrm ds}{\mathrm dt}=v,
+\qquad
+\frac{\mathrm d\theta}{\mathrm dt}=\omega.
+\]
+
+所以
+
+\[
+\boxed{\omega=\frac vr}
+\qquad\Longleftrightarrow\qquad
+\boxed{v=\omega r}.
+\tag{5}
+\]
+
+式（5）中的 \(r\) 是半圆轨道的半径，不是某个小轮子的半径。
+
+\textbf{（3）进入弯道瞬间为什么不用机械能守恒}
+
+物体初始没有自转，而进入弯道后必须具有角速度
+\(\omega=v/r\)。这个约束由很大的摩擦力在很短时间内建立，接触处存在瞬时相对滑动，故摩擦会耗散机械能。
+
+因此不能写
+
+\[
+\frac12mv_0^2
+=\frac12mv^2+\frac12I\omega^2.
+\]
+
+但冲量阶段时间很短，可以忽略重力等有限力的冲量；在题目理想轮系的几何约束下，接触冲量对半圆圆心
+\(O\) 的合力矩为零，所以系统关于 \(O\) 的角动量守恒。
+
+\textbf{（4）进入弯道前关于 \(O\) 的角动量}
+
+在 \(B\) 点，物体速度沿半圆切线，质心到圆心 \(O\) 的距离为
+\(r\)，且速度与半径垂直。故质心轨道角动量大小为
+
+\[
+L_O^-=m v_0 r.
+\tag{6}
+\]
+
+此时物体不自转，绕质心角动量为
+
+\[
+I\omega_B^-=0.
+\]
+
+所以总角动量就是式（6）。
+
+\textbf{（5）进入弯道后关于 \(O\) 的角动量}
+
+建立约束后，物体的角动量包含两部分。
+
+质心轨道角动量：
+
+\[
+L_{\rm orb}=mvr.
+\tag{7}
+\]
+
+绕质心自转角动量：
+
+\[
+L_{\rm spin}=I\omega.
+\tag{8}
+\]
+
+二者方向相同，因此
+
+\[
+L_O^+=mvr+I\omega.
+\tag{9}
+\]
+
+\textbf{（6）用角动量守恒求弯道速度}
+
+由 \(L_O^-=L_O^+\)：
+
+\[
+mv_0r=mvr+I\omega.
+\tag{10}
+\]
+
+代入 \(\omega=v/r\)：
+
+\[
+mv_0r=mvr+I\frac vr.
+\tag{11}
+\]
+
+两边同乘 \(r\)：
+
+\[
+mv_0r^2=mvr^2+Iv.
+\tag{12}
+\]
+
+右边提出 \(v\)：
+
+\[
+mv_0r^2=(mr^2+I)v.
+\tag{13}
+\]
+
+因此
+
+\[
+\boxed{
+v=\frac{mr^2}{I+mr^2}v_0
+}.
+\tag{14}
+\]
+
+因为 \(I>0\)，有
+
+\[
+0<v<v_0,
+\]
+
+与进入弯道时摩擦耗能的判断一致。
+
+\textbf{（7）检查进入弯道时的机械能损失}
+
+进入弯道后的机械能为
+
+\[
+K^+
+=\frac12mv^2+\frac12I\omega^2.
+\tag{15}
+\]
+
+用 \(\omega=v/r\)：
+
+\[
+K^+
+=\frac12\left(m+\frac I{r^2}\right)v^2.
+\tag{16}
+\]
+
+再代入式（14）：
+
+\[
+\begin{aligned}
+K^+
+&=\frac12\frac{mr^2+I}{r^2}
+\left(\frac{mr^2}{I+mr^2}\right)^2v_0^2\\
+&=\frac12
+\frac{m^2r^2}{I+mr^2}v_0^2.
+\end{aligned}
+\tag{17}
+\]
+
+初态机械能为
+
+\[
+K^-=\frac12mv_0^2.
+\tag{18}
+\]
+
+二者之比为
+
+\[
+\frac{K^+}{K^-}
+=\frac{mr^2}{I+mr^2}<1.
+\tag{19}
+\]
+
+这再次说明角动量守恒并不意味着机械能守恒。
+
+\textbf{（8）半圆段 \(BC\) 上的运动}
+
+建立式（5）的约束以后，密排轻轮在理想情况下只维持运动方向连续变化。重力在纸面内无分量，约束力不对允许的瞬时运动做功，因此
+\(BC\) 段上的速度大小保持为式（14）的 \(v\)。
+
+在任一点，速度方向均沿圆弧切线。到达 \(C\) 点时，圆弧切线恰与直线段
+\(CD\) 重合，并指向 \(D\)。
+
+\textbf{（9）从圆弧段进入直线段}
+
+经过 \(C\) 后，路径曲率从 \(1/r\)
+变为零，物体不再需要随轨道转动方向，其姿态角速度最终降为零。过渡轮组的冲量用于消除这部分转动状态；按题目理想轮系的约束，沿
+\(CD\) 的切向线动量分量不变。
+
+因此进入 \(CD\) 后的平动速度大小仍为
+
+\[
+v_D=v.
+\tag{20}
+\]
+
+把式（14）代入：
+
+\[
+\boxed{
+v_D=\frac{mr^2}{I+mr^2}v_0
+}.
+\tag{21}
+\]
+
+\textbf{（10）确定 \(D\) 点速度方向}
+
+\(CD\) 是竖直直线段，运动顺序为 \(C\to D\)。所以小物体到达 \(D\)
+时的速度沿 \(CD\) 向下，即
+
+\[
+\boxed{\text{方向沿 }\overrightarrow{CD}}.
+\tag{22}
+\]
+
+若以纸面向上为正，则可写成
+
+\[
+\boxed{
+\boldsymbol v_D
+=-\frac{mr^2}{I+mr^2}v_0\,\hat{\boldsymbol y}
+}.
+\tag{23}
+\]
+
+\textbf{（11）极限检查}
+
+当 \(I\to0\) 时，物体几乎不需要角动量来改变姿态，式（21）给出
+
+\[
+v_D\to v_0.
+\]
+
+当 \(I\gg mr^2\) 时，大量初始轨道角动量用于建立自转，故
+
+\[
+v_D\simeq\frac{mr^2}{I}v_0\ll v_0.
+\]
+
+两个极限都符合物理直觉。
+
+\textbf{原参考结果依赖的轮系约束}
+
+正文按原参考的理想贴轨姿态模型计算：物体姿态随轨道切线转向，进入弯道立即满足
+\(\omega=v/r\)，退出弯道时消除自转而保持直线段切向速度。仅说``滚轮很小、摩擦很大''不足以从一般自由滚轮模型推出这些条件，故把它们明确列为本题的附加理想约束。
+
+入口处的速度投影也可用动量关系求得。可容许速度形如
+\((v,\omega)=(v,v/r)\)，将原速度 \((v_0,0)\) 以质量度量
+\(\operatorname{diag}(m,I)\) 投影到这条约束线上：
+
+\[\min_v\left[m(v-v_0)^2+I(v/r)^2\right]\quad\Rightarrow\quad v=\frac{mr^2}{mr^2+I}v_0.\]
+
+这与关于 \(O\)
+的总角动量关系一致。耗散冲量允许合力不为零、允许单个接触力有转矩；应检查总角冲量是否为零，不能声称全部接触冲量均径向。实际轮组若提供另一种姿态自由度，需要重新建立约束。
+\end{document}

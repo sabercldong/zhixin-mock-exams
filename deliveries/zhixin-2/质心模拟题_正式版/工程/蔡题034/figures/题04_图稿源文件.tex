@@ -1,0 +1,104 @@
+\documentclass[tikz,border=5pt]{standalone}
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath}
+\usetikzlibrary{arrows.meta,calc}
+\definecolor{ink}{HTML}{243447}
+\definecolor{blue}{HTML}{2765A2}
+\definecolor{red}{HTML}{B74739}
+\tikzset{line cap=round,line join=round,
+vec/.style={thick,-{Latex[length=2mm]}},
+dim/.style={thin,{Latex[length=1.4mm]}-{Latex[length=1.4mm]}},
+guide/.style={gray,dashed}}
+\begin{document}
+\begin{tikzpicture}[x={(1cm,0cm)},y={(0cm,1cm)},z={(.8cm,.4cm)}]
+ \filldraw[fill=gray!10,draw=gray](-3,0,-1)--(3,0,-1)--(3,0,4.8)--(-3,0,4.8)--cycle;
+ \path[fill=blue!10,draw=ink,thick]
+ (2.2,0,0)--(2.2,0,3.5)
+ --plot[domain=0:116.565051,samples=80]({2.2*cos(\x)},{2.2*sin(\x)},3.5)
+ --({2.2*cos(116.565051)},{2.2*sin(116.565051)},0)
+ --plot[domain=116.565051:0,samples=80]({2.2*cos(\x)},{2.2*sin(\x)},0)--cycle;
+ \path[fill=gray!15,draw=ink,thick]
+ (-2.2,0,0)--plot[domain=180:0,samples=80]({2.2*cos(\x)},{2.2*sin(\x)},0)--cycle;
+ \draw[gray,thin](0,2.2,0)--(0,2.2,3.5);
+ \draw[dim](0,0,0)--(-1.5556,1.5556,0)node[midway,above right]{$R$};
+ \node at(.6,.7,0){$\rho$};
+ \fill[ink](0,0,0)circle(1.5pt)node[below]{$O$};
+ \draw[dim](2.7,-.2,0)--(2.7,-.2,3.5)node[midway,below right]{$L\gg R$};
+ \foreach \xx/\yy in {-2.7/2.8,.3/4,3.6/4}{
+  \draw[red,vec](\xx,\yy,0)--(\xx,{\yy+1.2},0);
+ }
+ \node[red,right]at(3.6,5,0){$E_0$};
+ \draw[ink](-2.6,0,-.5)--(-2.6,-.9,-.5);
+ \draw[ink](-2.85,-.9,-.5)--(-2.35,-.9,-.5);
+ \draw[ink](-2.78,-1.02,-.5)--(-2.42,-1.02,-.5);
+ \draw[ink](-2.7,-1.14,-.5)--(-2.5,-1.14,-.5);
+ \node[below]at(.6,-.7,0){接地平板：$\Phi=0$};
+\end{tikzpicture}
+\begin{tikzpicture}
+ \begin{scope}
+  \fill[blue!6](2,0)arc(0:180:2)--cycle;
+  \draw[ink,thick](-2.7,0)--(2.7,0);
+  \draw[ink,thick](2,0)arc(0:180:2);
+  \draw[guide](2,0)arc(0:-180:2);
+  \draw[guide](0,-2.35)--(0,2.7);
+  \foreach \a in {25,55,85,115,145}{
+   \node[red]at({2.2*cos(\a)},{2.2*sin(\a)}){$+$};
+   \node[blue]at({2.2*cos(\a)},{-2.2*sin(\a)}){$-$};
+  }
+  \node[fill=white]at(0,-1.1){对称延拓};
+  \node at(0,1){真实上半圆};
+  \draw[red,vec](-2.8,.7)--(-2.8,1.8)node[above]{$E_0$};
+  \node at(0,-2.75){$\Phi(x,-y)=-\Phi(x,y)$};
+ \end{scope}
+ \begin{scope}[xshift=7.4cm]
+  \fill[red!9](0,.23)circle(1.7);
+  \fill[blue!9](0,-.23)circle(1.7);
+  \begin{scope}
+   \clip(0,.23)circle(1.7);
+   \fill[white](0,-.23)circle(1.7);
+  \end{scope}
+  \draw[red,thick](0,.23)circle(1.7);
+  \draw[blue,thick](0,-.23)circle(1.7);
+  \fill[red](0,.23)circle(1.6pt)node[left=3pt]{$O_+$};
+  \fill[blue](0,-.23)circle(1.6pt)node[left=3pt]{$O_-$};
+  \draw[guide](0,.23)--(2.2,.23);
+  \draw[guide](0,-.23)--(2.2,-.23);
+  \draw[dim](2.15,-.23)--(2.15,.23)node[right]{$\delta$};
+  \node[red,above]at(0,2.1){$+\rho_e$};
+  \node[blue,below]at(0,-2.1){$-\rho_e$};
+  \node[align=center]at(0,-3.4){$\delta\ll R$，错位放大示意\\保持 $\rho_e\delta=2\varepsilon_0E_0$};
+ \end{scope}
+\end{tikzpicture}
+\begin{tikzpicture}
+ \begin{scope}
+  \fill[blue!5](2.1,0)arc(0:180:2.1)--cycle;
+  \draw[ink,thick](-2.6,0)--(2.6,0);
+  \draw[ink,thick](2.1,0)arc(0:180:2.1);
+  \draw[guide](0,0)--(0,3.1);
+  \coordinate(P)at({2.1*sin(35)},{2.1*cos(35)});
+  \coordinate(T)at({3.1*sin(35)},{3.1*cos(35)});
+  \draw[ink](0,0)--(P)node[pos=.65,below right]{$R$};
+  \draw[red,vec](P)--(T)node[above right]{$\mathrm d\boldsymbol F$};
+  \draw[blue,vec](P)--({2.1*sin(35)},{3.1*cos(35)})node[midway,left]{$\mathrm dF_y$};
+  \draw[guide]({2.1*sin(35)},{3.1*cos(35)})--(T);
+  \draw(0,.65)arc(90:55:.65);
+  \node at(.26,.93){$\theta$};
+  \draw[red,line width=2pt]({2.1*cos(52)},{2.1*sin(52)})arc(52:58:2.1);
+  \fill[ink](0,0)circle(1.5pt)node[below]{$O$};
+  \node[align=center]at(0,-1.15){$\mathrm dS=LR\,\mathrm d\theta$\\$\mathrm dF_y=p_e\,\mathrm dS\cos\theta$};
+ \end{scope}
+ \begin{scope}[xshift=7.8cm,yshift=1cm]
+  \fill[gray!12](-2,-1.55)rectangle(2,0);
+  \draw[ink,thick](-2,0)--(2,0);
+  \foreach \xx in {-1.7,-1.2,-.7,-.2,.3,.8,1.3,1.8}{\node[red,above=-1pt]at(\xx,0){$+$};}
+  \draw[red,vec](-.8,.35)--(-.8,1.45);
+  \draw[red,vec](-.8,-.2)--(-.8,-1.3);
+  \draw[blue,vec](.8,.35)--(.8,1.45);
+  \draw[blue,vec](.8,-1.3)--(.8,-.2);
+  \node[red,align=center]at(-.9,2.0){面元自场\\$\sigma/(2\varepsilon_0)$};
+  \node[blue,align=center]at(.95,2.0){其余系统\\$E_{\text{余}}$};
+  \node at(0,-1.95){内侧：$E_{\text{余}}-\sigma/(2\varepsilon_0)=0$};
+  \node at(0,-2.6){外侧：$E_{\text{外}}=\sigma/\varepsilon_0$};
+ \end{scope}
+\end{tikzpicture}
+\end{document}

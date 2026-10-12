@@ -1,0 +1,197 @@
+{
+  "passed": true,
+  "set": 58,
+  "rebuild_directory": "/Users/dongxingxi/Documents/Codex/2026-10-08/q/work/batch062_058/portable_verify/蔡题058",
+  "command": "python3 重新生成.py 58 --figures --documents",
+  "script_sha256": "6b54ad578e11960ec43cfc2737a51cd6a630963c32e2e748c274be4ae7888316",
+  "source": "交付目录复制后的教师Markdown和TikZ",
+  "versions": 3,
+  "figures": 16,
+  "figure_master_pages": 16,
+  "document_pages": 140,
+  "warnings": [],
+  "records": [
+    {
+      "file": "PDF/蔡题058_学生详解.pdf",
+      "pages": 59,
+      "delivery_sha256": "8b069ecdd5624a9deebfe6076d99530e218d25e0b185590f17f31c40e026e10c",
+      "rebuilt_sha256": "cff3bb349f1389de4e6158ca9fab1d3bcd285938fa85abac6c5a88af1240c6b1",
+      "text": "identical",
+      "page_render": "identical",
+      "qpdf": "pass"
+    },
+    {
+      "file": "PDF/蔡题058_教师备课.pdf",
+      "pages": 72,
+      "delivery_sha256": "010ff9d96d0db8636abc3fd47f1730546c0d6b836f9d0e8e05aae80762e2a0cd",
+      "rebuilt_sha256": "2be464c5db5eeb4c8ea2305943963aca0c8b61f100b7f3e5194e6fcd1960b8e8",
+      "text": "identical",
+      "page_render": "identical",
+      "qpdf": "pass"
+    },
+    {
+      "file": "PDF/蔡题058_试卷.pdf",
+      "pages": 9,
+      "delivery_sha256": "4cb8dfdf37946d2e362fb28d4930ac7f92576074cf8d8d419409a662378a5ed7",
+      "rebuilt_sha256": "6cc040fa4968538511c774beed69be4e64b6319b33df08a0783866d63486efe3",
+      "text": "identical",
+      "page_render": "identical",
+      "qpdf": "pass"
+    },
+    {
+      "file": "figures/question-01.pdf",
+      "pages": 1,
+      "delivery_sha256": "848551728202502a8c6b2d6229ecb09cab7a8721fead07615a0b6e308dbbc756",
+      "rebuilt_sha256": "05584f7660e651f93d5966b3d5f784a885fdb3b9bbdf8b0ca388ee2d2edecb29",
+      "text": "identical",
+      "page_render": "identical",
+      "qpdf": "pass"
+    },
+    {
+      "file": "figures/question-02.pdf",
+      "pages": 1,
+      "delivery_sha256": "d33fe5deb1fe7e7e3ba2012cadd4dc6ba0c2ff2d91580ac68ab3f0ca55b7a7d9",
+      "rebuilt_sha256": "c485dea4e361cc10cc214a00cacc9d2d339eb62b25c165392c94b2a333106a8b",
+      "text": "identical",
+      "page_render": "identical",
+      "qpdf": "pass"
+    },
+    {
+      "file": "figures/question-03.pdf",
+      "pages": 1,
+      "delivery_sha256": "4505e7e834bb6077151ea0f0ce2f13fc850ab01ea22b7bc8b065c5f071577615",
+      "rebuilt_sha256": "e4f39a463e2bfc824ab8da29b91dc8bec6f5ea2f3b4d596f6fa4f9193dd47153",
+      "text": "identical",
+      "page_render": "identical",
+      "qpdf": "pass"
+    },
+    {
+      "file": "figures/question-04.pdf",
+      "pages": 1,
+      "delivery_sha256": "c81640caf5afa904cef46c371966a4d92146d3ee8ce6a7bdf442298f005d2f4b",
+      "rebuilt_sha256": "fe3f17dbbe02138e4f19e530128ac2f98581040f78d6efb187d3d7d75e488cd7",
+      "text": "identical",
+      "page_render": "identical",
+      "qpdf": "pass"
+    },
+    {
+      "file": "figures/question-05.pdf",
+      "pages": 1,
+      "delivery_sha256": "52d50f206d089040f9ecd4656198cf49e56dde54158117d653dbdce205091530",
+      "rebuilt_sha256": "6baccef9d411042766a1b9703c31964df663e10275a1ad29b61903cd63b06cc3",
+      "text": "identical",
+      "page_render": "identical",
+      "qpdf": "pass"
+    },
+    {
+      "file": "figures/question-06.pdf",
+      "pages": 1,
+      "delivery_sha256": "e29b741b10f6076c127737655c1eaae9432097ccd45bb23a72293883617e9599",
+      "rebuilt_sha256": "6709ae8514df06f7a05cf41f0c8e64d33218c5eab2c2da9b400af68ca138d24e",
+      "text": "identical",
+      "page_render": "identical",
+      "qpdf": "pass"
+    },
+    {
+      "file": "figures/question-07.pdf",
+      "pages": 1,
+      "delivery_sha256": "2c8dd9833ebf28678d9ad32f7e225a9313f53a2696c7218642705a69b4c33b68",
+      "rebuilt_sha256": "4f0aec769fe3b92a2747c9d3c8cf25b2b6cb1ae59f5d26e3e658619968122ec7",
+      "text": "identical",
+      "page_render": "identical",
+      "qpdf": "pass"
+    },
+    {
+      "file": "figures/question-08.pdf",
+      "pages": 1,
+      "delivery_sha256": "6ba4cf7b2619e3e7c003b0f56156243d7c7905bcca7d001fe9bbbf4b0082c098",
+      "rebuilt_sha256": "cdaef10ecf32b3afeaee77153e23d2d926e91348bd38fc7fa7aa8563504a02ee",
+      "text": "identical",
+      "page_render": "identical",
+      "qpdf": "pass"
+    },
+    {
+      "file": "figures/solution-01.pdf",
+      "pages": 1,
+      "delivery_sha256": "ce95c82b490aa06dc5f53f03fbbc404d0a5140bbb225ce2cc9a7e54eab5b22c3",
+      "rebuilt_sha256": "3bfef033881cf81d47d2f3d65bb4fcc7f913a9b738d27de39b4d248e7f8cb165",
+      "text": "identical",
+      "page_render": "identical",
+      "qpdf": "pass"
+    },
+    {
+      "file": "figures/solution-02.pdf",
+      "pages": 1,
+      "delivery_sha256": "77f2bab2cc50fbffa31cd91634899311db7bd44605151a279a70866f98684af4",
+      "rebuilt_sha256": "637e6165bd7d45e6ffcfe865dc3bb5bd79c2b0e0331427b6cf443b0593faf437",
+      "text": "identical",
+      "page_render": "identical",
+      "qpdf": "pass"
+    },
+    {
+      "file": "figures/solution-03.pdf",
+      "pages": 1,
+      "delivery_sha256": "eb0c3ea52e4b2cedb6062a3f855f4f489442df14b112a36d0edc58ff6a59cced",
+      "rebuilt_sha256": "3d626b7a6ecc627a03f5e8843f8768539a5470716d4b077b0e80a34781255f95",
+      "text": "identical",
+      "page_render": "identical",
+      "qpdf": "pass"
+    },
+    {
+      "file": "figures/solution-04.pdf",
+      "pages": 1,
+      "delivery_sha256": "384343043fbb2e65934d54ed8abda66d7dc5ea824e11317a5454c64feae4c6ce",
+      "rebuilt_sha256": "6b9b69c7e0dabc5d82c3f06edbc5fa27e5db953726fb5794f5df65babd4a445e",
+      "text": "identical",
+      "page_render": "identical",
+      "qpdf": "pass"
+    },
+    {
+      "file": "figures/solution-05.pdf",
+      "pages": 1,
+      "delivery_sha256": "61f91d66aae048eaeacf95161661855c7d3584eff8a54fc3d3c999eb820d1f3f",
+      "rebuilt_sha256": "6c69dbfb190e7292e6e67129f3841cb654a1ccd5217b3ee8b10368becf4531f8",
+      "text": "identical",
+      "page_render": "identical",
+      "qpdf": "pass"
+    },
+    {
+      "file": "figures/solution-06.pdf",
+      "pages": 1,
+      "delivery_sha256": "38a08627b6110f5e4ae86aeaec1816da91d7fb706aeba4acfa74bac90e7a4f00",
+      "rebuilt_sha256": "874322efd5140c9b81e8d09520a099263af48778db35dfe02a181e684c770bc8",
+      "text": "identical",
+      "page_render": "identical",
+      "qpdf": "pass"
+    },
+    {
+      "file": "figures/solution-07.pdf",
+      "pages": 1,
+      "delivery_sha256": "d30f66a4b1ef48c0a4aa693bf48c8ed6f8d399209a3b3406fb9a92cbde9c5567",
+      "rebuilt_sha256": "70d8e0a60ff5528da8e08b9b4e5857eafbc6cdb05510400c6441bc1c946e6586",
+      "text": "identical",
+      "page_render": "identical",
+      "qpdf": "pass"
+    },
+    {
+      "file": "figures/solution-08.pdf",
+      "pages": 1,
+      "delivery_sha256": "ae8e73b23eaf212b7366887d53462b1013473e0133975f8d48e83cd582498d83",
+      "rebuilt_sha256": "5ffcb3f62615b8b6c0970a9a5df42d162437dd7d5e1482341ab55c573cf20e93",
+      "text": "identical",
+      "page_render": "identical",
+      "qpdf": "pass"
+    },
+    {
+      "file": "figures/蔡题058_图稿源文件.pdf",
+      "pages": 16,
+      "delivery_sha256": "10a9487a3a9b09abfc564039960c0a115a730d7b8e02e65dab4ab9a8ca01df09",
+      "rebuilt_sha256": "fe0b2cfbd6c8d7dac239db21913b6afb3c2f8cef48c3cff924e50944964024f7",
+      "text": "identical",
+      "page_render": "identical",
+      "qpdf": "pass"
+    }
+  ],
+  "markdown": "identical",
+  "latex": "identical"
+}

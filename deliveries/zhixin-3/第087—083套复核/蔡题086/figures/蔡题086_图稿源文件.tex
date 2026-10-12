@@ -1,0 +1,239 @@
+\documentclass[multi=tikzpicture,border=7pt]{standalone}
+\usepackage{ctex,amsmath,bm}
+\usepackage{tikz,pgfplots}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{arrows.meta,calc,angles,quotes,patterns,positioning,decorations.pathmorphing,3d}
+\tikzset{axis/.style={->,>=Stealth,thick},force/.style={->,>=Stealth,very thick,red!72!black},velocity/.style={->,>=Stealth,very thick,blue!72!black},dim/.style={<->,>=Stealth,thin},body/.style={draw=black,fill=blue!7,thick},guide/.style={dashed,gray!65},hidden/.style={dashed,gray!58,thick},rope/.style={brown!72!black,very thick},panel/.style={font=\bfseries,anchor=west}}
+\tikzset{wire/.style={brown!70!black,very thick},guide/.style={dashed,gray!60},force/.style={->,>=Stealth,thick,red!70!black},velocity/.style={->,>=Stealth,thick,blue!70!black},axis/.style={->,>=Stealth,thick},dim/.style={<->,>=Stealth,thin},body/.style={draw,thick,fill=blue!7},panel/.style={anchor=west,font=\bfseries}}
+\begin{document}
+
+% 1 question-01
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+\node[panel]at(-6.3,3.5){中心小孔到斜面物块的直绳截面};
+\coordinate(O)at(-2,2);\coordinate(A)at(0,2);\coordinate(H)at(-1.5,1.134);\coordinate(B)at(-5.7426,-1.3155);
+\draw[very thick](-4,2)--(A);\draw[very thick](A)--(-6,-1.464);\draw[wire](O)--(B);
+\draw[guide](O)--(H);\draw[dim](O)--(A)node[above,midway]{$d/2$};
+\fill(O)circle(2pt)node[above]{$O$};\node[above]at(A){$A$};\fill(H)circle(1.5pt)node[below right]{$H$};\draw[body](B)circle(.18)node[above left]{$B,2m$};
+\node at(-4.6,1.3){$OB=3d/2-r$};\node at(-.3,.2){$OH=d/4$};
+\draw[dim](-.8,2)arc[start angle=180,end angle=210,radius=.8];\node at(-1,1.8){$30^\circ$};\draw[velocity](B)--++(-.8,-.462)node[below]{$v'$};
+\begin{scope}[shift={(-2,-3.6)}]
+\draw[gray](-2,0)--(2,0);\fill(0,0)circle(2pt)node[below]{$O$};\draw[wire](0,0)--(1.5,0);\draw[body](1.5,0)circle(.16)node[above]{$m$};
+\draw[velocity](1.5,0)--(1.5,.9)node[right]{$v_\theta$};\draw[velocity](1.5,0)--(.7,0)node[below]{$v_r$};\node at(-1,.65){平台俯视};
+\end{scope}
+\end{tikzpicture}
+
+% 2 solution-01
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+\node[panel]at(-6.3,3.5){中心小孔到斜面物块的直绳截面};
+\coordinate(O)at(-2,2);\coordinate(A)at(0,2);\coordinate(H)at(-1.5,1.134);\coordinate(B)at(-5.7426,-1.3155);
+\draw[very thick](-4,2)--(A);\draw[very thick](A)--(-6,-1.464);\draw[wire](O)--(B);
+\draw[guide](O)--(H);\draw[dim](O)--(A)node[above,midway]{$d/2$};
+\fill(O)circle(2pt)node[above]{$O$};\node[above]at(A){$A$};\fill(H)circle(1.5pt)node[below right]{$H$};\draw[body](B)circle(.18)node[above left]{$B,2m$};
+\node at(-4.6,1.3){$OB=3d/2-r$};\node at(-.3,.2){$OH=d/4$};
+\draw[dim](-.8,2)arc[start angle=180,end angle=210,radius=.8];\node at(-1,1.8){$30^\circ$};\draw[velocity](B)--++(-.8,-.462)node[below]{$v'$};
+\begin{scope}[shift={(-2,-3.6)}]
+\draw[gray](-2,0)--(2,0);\fill(0,0)circle(2pt)node[below]{$O$};\draw[wire](0,0)--(1.5,0);\draw[body](1.5,0)circle(.16)node[above]{$m$};
+\draw[velocity](1.5,0)--(1.5,.9)node[right]{$v_\theta$};\draw[velocity](1.5,0)--(.7,0)node[below]{$v_r$};\node at(-1,.65){平台俯视};
+\end{scope}
+\end{tikzpicture}
+
+% 3 question-02
+\begin{tikzpicture}[x=.95cm,y=.95cm]
+  \node[panel] at (-5.2,3.7){非线性导电介质中的平行板电容器};
+  \fill[blue!8] (-3.6,-1.6) rectangle (3.6,1.6);
+  \draw[very thick] (-4.2,1.6)--(4.2,1.6) (-4.2,-1.6)--(4.2,-1.6);
+  \foreach \x in {-3.6,-2.8,...,3.6}{\draw[->,orange!75!black,thick] (\x,1.2)--(\x,-1.2);}
+  \draw[dim] (4.6,-1.6)--(4.6,1.6) node[midway,right]{$d$};
+  \draw[thick] (-4.2,1.6)--(-5.2,1.6)--(-5.2,0); \draw[thick] (-4.2,-1.6)--(-5.2,-1.6)--(-5.2,0);
+  \draw[fill=white,thick] (-5.2,0) circle(.55) node{$U$};
+  \node at (0,0){$\rho=\rho_0+AE^2$}; \node[right] at (4.2,1.6){面积 $S$};
+\end{tikzpicture}
+
+% 4 solution-02
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+\node[panel]at(-.2,3.4){同一材料的三种不同函数};
+\foreach\x/\name in{0/$\frac{I}{I_{\max}}$,4.5/$\frac{P}{P_\infty}$,9/$\frac{P}{P_{\max}}$}{
+\begin{scope}[shift={(\x,0)}]\draw[axis](0,0)--(3.7,0);\draw[axis](0,0)--(0,2.6)node[above]{\name};\draw[guide](0,2)--(3.5,2);\draw[guide](1,0)--(1,2);\node[below]at(1,0){1};\end{scope}}
+\draw[blue,thick]plot[domain=0:3.5,samples=80](\x,{4*\x/(1+\x*\x)});
+\draw[blue,thick]plot[domain=0:3.5,samples=80]({4.5+\x},{2*\x*\x/(1+\x*\x)});
+\draw[blue,thick]plot[domain=0:3.5,samples=80]({9+\x},{4*\x/(1+\x*\x)});
+\node at(1.7,-.8){$x=E/E_*$};\node at(6.2,-.8){$x=U/(dE_*)$};\node at(10.7,-.8){$y=d/d_*$};
+\node at(6.2,-1.5){中图仅在 $U\to\infty$ 时趋近上限};
+\end{tikzpicture}
+
+% 5 question-03
+\begin{tikzpicture}[x=.95cm,y=.95cm]
+  \node[panel] at (-5.2,3.6){线密度不均匀的绳子越过光滑桌角};
+  \draw[very thick] (-4.8,1.7)--(3.0,1.7)--(3.0,-2.8);
+  \foreach \x in {-4.6,-4.2,...,2.8}{\draw[gray!55] (\x,1.7)--++(-.2,-.2);}
+  \draw[rope] (-4.2,1.98)--(2.72,1.98) arc[start angle=90,end angle=0,radius=.28]--(3.0,-1.7);
+  \fill (-4.2,1.98) circle(2pt) node[above]{$P$};
+  \draw[dim] (3.55,1.98)--(3.55,-1.7) node[midway,right]{$l_0$};
+  \draw[dim] (-4.2,2.55)--(3.0,2.55) node[midway,above]{$L-l_0$};
+  \node at (-.7,.55){$\lambda(x)=kx$};
+\end{tikzpicture}
+
+% 6 solution-03
+\begin{tikzpicture}[x=.92cm,y=.92cm]
+  \node[panel] at (-6.0,4.0){位移 $s$ 时的在桌绳段与重力势能参考};
+  \begin{scope}[shift={(-3.6,.2)}]
+    \draw[very thick] (-2.6,1.5)--(2.4,1.5)--(2.4,-2.4);
+    \draw[rope] (-1.8,1.75)--(2.15,1.75) arc[start angle=90,end angle=0,radius=.25]--(2.4,-1.75);
+    \draw[dim] (-1.8,2.35)--(2.4,2.35) node[midway,above]{$L-l_0-s$};
+    \draw[force] (0,1.75)--++(-1.2,0) node[above]{$f=\mu N$};
+    \node at (0,-2.8){摩擦功随在桌绳长递减};
+  \end{scope}
+  \begin{scope}[shift={(3.8,.2)}]
+    \draw[thick] (-2.4,2.2)--(.5,2.2)--(.5,-2.4);
+    \draw[rope] (.5,2.2)--(.5,-2.2);
+    \draw[axis] (1.3,2.2)--(1.3,-2.5) node[below]{$z$};
+    \draw[dim] (.8,2.2)--(.8,-2.2) node[midway,right]{$L$};
+    \node at (0,-2.8){刚离桌时全部竖直};
+  \end{scope}
+\end{tikzpicture}
+
+% 7 question-04
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+\node[panel]at(-5.4,8.4){绳与内轴相切，外轮与山坡相切};
+\draw[very thick](-5,-1.464)--(0,-.1244)--(5,-1.464);
+\foreach\s in{-1,1}{\begin{scope}[xscale=\s]
+\draw[body](3.4,0)circle(1);\draw[thick](3.4,0)circle(.5);\fill(3.4,0)circle(2pt);
+\draw[wire](3.833,.25)--(0,6.889);\fill(3.833,.25)circle(1.5pt);
+\end{scope}}
+\fill(0,6.889)circle(2pt)node[left]{$P$};\draw[velocity](0,6.889)--(0,7.8)node[right]{$v$};
+\draw[dim](-.5,6.023)arc[start angle=240,end angle=300,radius=1];\node at(0,5.55){$2\alpha$};
+\node at(0,-.6){$150^\circ$};\node at(0,-1.8){$R=2r$};
+\end{tikzpicture}
+
+% 8 solution-04
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+\node[panel]at(-3,3.6){线轴速度分解：只比较绳方向投影};
+\coordinate(C)at(0,0);\coordinate(A)at(.518,-1.932);\coordinate(B)at(-.866,.5);
+\draw[thick](C)circle(2);\draw[thick](C)circle(1);\draw[very thick](-3,-2.875)--(3,-1.268);
+\draw[wire](B)--++(1.75,3.031);\fill(B)circle(2pt)node[left]{$B$};\fill(A)circle(2pt)node[below]{$A$};\fill(C)circle(2pt)node[below left]{$C$};
+\draw[velocity](C)--(1.7,.455)node[right]{$v_C$};
+\draw[velocity](B)--++(.7,1.212)node[right]{$\omega r$};
+\draw[guide](C)--(B);\draw[guide](-2.2,0)--(2.6,0);
+\draw[velocity](1.6,1.3)arc[start angle=39,end angle=-35,radius=2.061];\node[right]at(2.5,1.2){$\omega$};
+\node at(-2.8,2.7){绳向 $60^\circ$};\node at(1.7,-2.7){坡面 $15^\circ$};
+\node at(0,-3.6){$v_B\cdot\hat t=v_C\cos45^\circ+\omega r,\quad \omega=v_C/(2r)$};
+\end{tikzpicture}
+
+% 9 question-05
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+\node[panel]at(-3.8,3.5){交替电荷正方形：初速度均为顺时针切向};
+\draw[guide](0,0)circle(2);\draw[thick](0,2)--(2,0)--(0,-2)--(-2,0)--cycle;
+\foreach\x/\y/\q in{0/2/{+q},2/0/{-q},0/-2/{+q},-2/0/{-q}}{\draw[body](\x,\y)circle(.15);\node[above left]at(\x,\y){$\q$};}
+\draw[velocity](0,2)--(1.1,2);\draw[velocity](2,0)--(2,-1.1);\draw[velocity](0,-2)--(-1.1,-2);\draw[velocity](-2,0)--(-2,1.1);
+\fill(0,0)circle(2pt)node[below left]{$O$};\draw[dim](0,0)--(2,0)node[above,midway]{$R_0$};
+\end{tikzpicture}
+
+% 10 solution-05
+\begin{tikzpicture}[x=.9cm,y=.9cm]
+  \node[panel] at (-6.0,3.9){径向合力与远场多极展开};
+  \begin{scope}[shift={(-3.6,.2)}]
+    \draw[guide] (0,0) circle(2.3); \coordinate (Q) at (0,2.3); \shade[ball color=orange!55] (Q) circle(.22) node[above]{$+q$};
+    \shade[ball color=blue!35] (-2.3,0) circle(.22) node[left]{$-q$}; \shade[ball color=blue!35] (2.3,0) circle(.22) node[right]{$-q$}; \shade[ball color=orange!55] (0,-2.3) circle(.22) node[below]{$+q$};
+    \draw[force] (Q)--++(0,-1.45) node[right]{$F_r$}; \draw[dim] (0,0)--(Q) node[midway,right]{$R$};
+  \end{scope}
+  \begin{scope}[shift={(3.8,.1)}]
+    \draw[axis] (-2.2,0)--(3.8,0) node[right]{$x$}; \fill (0,0) circle(2pt) node[below]{$O$}; \fill (3.0,0) circle(2pt) node[above]{$P$};
+    \draw[dim] (0,-.5)--(3,-.5) node[midway,below]{$l\gg R_0$};
+    \draw[guide] (0,0) circle(1.05); \node at (0,1.45){净电荷与偶极矩均为零};
+    \draw[force] (3,0)--++(-1.2,0) node[above]{$E\sim l^{-4}$};
+  \end{scope}
+\end{tikzpicture}
+
+% 11 question-06
+\begin{tikzpicture}[x=.95cm,y=.95cm]
+  \node[panel] at (-5.2,3.8){冥王星自转与海洋等势面};
+  \fill[blue!9] (0,0) ellipse(3.7 and 2.9); \fill[gray!18] (0,0) circle(2.75);
+  \draw[thick] (0,0) circle(2.75); \draw[blue!65!black,very thick,dashed] (0,0) ellipse(3.7 and 2.9);
+  \draw[axis] (-4.5,0)--(4.6,0) node[right]{$x$}; \draw[axis] (0,-3.5)--(0,3.6) node[above]{$y$};
+  \draw[->,very thick] (.45,3.25) arc[start angle=35,end angle=330,x radius=.45,y radius=.2]; \node at (1.1,3.25){$\omega$};
+  \draw[dim] (0,0)--(3.7,0) node[midway,below]{$a$}; \draw[dim] (0,0)--(0,2.9) node[midway,left]{$b$};
+\end{tikzpicture}
+
+% 12 solution-06
+\begin{tikzpicture}[x=.95cm,y=.95cm]
+  \node[panel] at (-5.4,3.9){旋转参考系中的等效势与海面法向};
+  \draw[blue!12,fill=blue!5,thick] (0,0) ellipse(4.0 and 2.75);
+  \draw[axis] (-4.8,0)--(4.9,0) node[right]{$x$}; \draw[axis] (0,-3.4)--(0,3.5) node[above]{$y$};
+  \coordinate (P) at (2.65,2.05); \fill (P) circle(2pt) node[above right]{$P$}; \draw[guide] (0,0)--(P);
+  \draw[force] (P)--++(-1.25,-.97) node[below]{$\bm F_g$}; \draw[force] (P)--++(1.35,0) node[right]{$m\omega^2x$}; \draw[force] (P)--++(.7,1.2) node[above]{$\bm N$};
+  \node at (0,-2.05){$-\dfrac{GM}{\sqrt{x^2+y^2}}-\dfrac12\omega^2x^2=\text{常量}$};
+\end{tikzpicture}
+
+% 13 question-07
+\begin{tikzpicture}[x=.95cm,y=.95cm]
+  \node[panel] at (-5.2,4.0){水火箭的充气与喷射阶段};
+  \begin{scope}[shift={(-3.2,.1)}]
+    \draw[body,rounded corners=.5cm] (-1.5,-2.4) rectangle (1.5,2.6);
+    \fill[blue!30] (-1.45,-2.35) rectangle (1.45,-.35); \draw[thick] (-1.45,-.35)--(1.45,-.35);
+    \node at (0,1.0){$P_2=\beta P_1$}; \node at (0,-1.3){$(1-\alpha)V_0$};
+    \draw[thick] (1.5,1.4)--(2.6,1.4); \draw[velocity] (2.6,1.4)--++(-1.0,0) node[above]{$P_1,T_0$};
+  \end{scope}
+  \begin{scope}[shift={(3.7,.1)}]
+    \draw[body,rounded corners=.5cm] (-1.3,-1.9) rectangle (1.3,2.6); \fill[blue!30] (-1.25,-1.85) rectangle (1.25,.15);
+    \draw[thick] (-.45,-1.9)--(-.45,-2.5) (.45,-1.9)--(.45,-2.5);
+    \draw[velocity] (0,-2.25)--++(0,-1.15) node[right]{$v_1$}; \draw[velocity] (0,2.6)--++(0,1.0) node[above]{$v_2$};
+    \node at (0,1.2){绝热膨胀};
+  \end{scope}
+\end{tikzpicture}
+
+% 14 solution-07
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+\node[panel]at(-4.5,3.4){充气压强初值与整体两体模型};
+\begin{scope}[shift={(-3,0)}]\draw[axis](0,0)--(4,0)node[right]{$t$};\draw[axis](0,0)--(0,2.6)node[above]{$P$};\draw[guide](0,2.2)--(3.8,2.2)node[right]{$P_1$};\node[left]at(0,.7){$P_0$};\draw[blue,thick]plot[domain=0:3.5,samples=60](\x,{2.2-1.5*exp(-\x)});\end{scope}
+\begin{scope}[shift={(3.5,0)}]\draw[body](-.4,-.3)rectangle(.4,.6);\draw[velocity](0,.6)--(0,1.8)node[right]{$Mv_2$};\draw[velocity](0,-.3)--(0,-1.4)node[right]{$m_wv_1$};\node at(0,-2){$Mv_2=m_wv_1$};\end{scope}
+\node at(0,-2.8){原参考忽略外压功；计入时 $W=\Delta U-P_0(1-\alpha)V_0$};
+\end{tikzpicture}
+
+% 15 question-08
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+\node[panel]at(-5,3.5){平凸透镜与刚性板、液面的接触};
+\begin{scope}[shift={(-3,0)}]
+\draw[body]plot[domain=-1.8:1.8,samples=60](\x,{.25*\x*\x})--(1.8,1.8)--(-1.8,1.8)--cycle;
+\draw[thick](-2.1,0)--(2.1,0);\draw[guide](0,-.4)--(0,2.3);\node at(0,1.2){透镜};
+\node at(0,-.75){刚性板上的接触};
+\end{scope}
+\begin{scope}[shift={(3,0)}]
+\draw[body]plot[domain=-1.8:1.8,samples=60](\x,{.25*\x*\x})--(1.8,1.8)--(-1.8,1.8)--cycle;
+\draw[blue!70!black,thick](-2,.69)--(-.7,.1225) plot[domain=-.7:.7,samples=30](\x,{.25*\x*\x}) --(2,.69);
+\draw[guide](0,-.5)--(0,2.4);\fill(-.7,.1225)circle(1.5pt);\fill(.7,.1225)circle(1.5pt);
+\draw[dim](0,-.3)--(.7,-.3)node[midway,below]{$c$};
+\draw[force](.7,.1225)--(1.5,.4025)node[right]{$\sigma\,dl$};\draw[force](-.7,.1225)--(-1.5,.4025);
+\node at(0,-1){液面上的接触圆};
+\end{scope}
+\begin{scope}[shift={(0,-2.5)}]\draw[guide](0,0)circle(.45);\draw[blue](0,0)circle(.75)(0,0)circle(1);\fill(0,0)circle(1pt);\node[right]at(1.4,0){俯视：接触圆与亮环始终同心};\end{scope}
+\end{tikzpicture}
+
+% 16 solution-08
+\begin{tikzpicture}[x=1cm,y=1cm,font=\small]
+
+\node[panel]at(-5,3.5){凸面局部抛物线与圆锥液面};
+\begin{scope}[shift={(-3,0)}]
+\draw[body]plot[domain=-1.8:1.8,samples=60](\x,{.25*\x*\x})--(1.8,1.8)--(-1.8,1.8)--cycle;
+\draw[thick](-2.1,0)--(2.1,0);\draw[guide](0,-.4)--(0,2.3);\node at(0,1.2){透镜};
+\node at(0,-.75){刚性板：$h=r^2/(2\rho)$};
+\end{scope}
+\begin{scope}[shift={(3,0)}]
+\draw[body]plot[domain=-1.8:1.8,samples=60](\x,{.25*\x*\x})--(1.8,1.8)--(-1.8,1.8)--cycle;
+\draw[blue!70!black,thick](-2,.69)--(-.7,.1225) plot[domain=-.7:.7,samples=30](\x,{.25*\x*\x}) --(2,.69);
+\draw[guide](0,-.5)--(0,2.4);\fill(-.7,.1225)circle(1.5pt);\fill(.7,.1225)circle(1.5pt);
+\draw[dim](0,-.3)--(.7,-.3)node[midway,below]{$c$};
+\draw[force](.7,.1225)--(1.5,.4025)node[right]{$\sigma\,dl$};\draw[force](-.7,.1225)--(-1.5,.4025);
+\node at(0,-1){$r\ge c:\ h=(r-c)^2/(2\rho)$};
+\end{scope}
+\begin{scope}[shift={(0,-2.5)}]\draw[guide](0,0)circle(.45);\draw[blue](0,0)circle(.75)(0,0)circle(1);\fill(0,0)circle(1pt);\node[right]at(1.4,0){俯视：接触圆与亮环始终同心};\end{scope}
+\end{tikzpicture}
+
+\end{document}

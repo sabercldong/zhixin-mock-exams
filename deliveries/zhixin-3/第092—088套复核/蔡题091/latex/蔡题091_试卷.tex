@@ -1,0 +1,314 @@
+\documentclass[12pt,a4paper,UTF8]{ctexart}
+\usepackage[a4paper,top=22mm,bottom=22mm,left=22mm,right=22mm,headheight=15pt]{geometry}
+\usepackage{amsmath,amssymb,mathtools,bm}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{booktabs,longtable,array}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{microtype}
+\usepackage{setspace}
+\usepackage[hidelinks,unicode]{hyperref}
+\usepackage[most]{tcolorbox}
+
+\definecolor{ContestBlue}{HTML}{17365D}
+\definecolor{SoftBlue}{HTML}{EEF4FA}
+\definecolor{SoftGray}{HTML}{F5F6F7}
+\hypersetup{pdftitle={第 091 套},pdfauthor={}}
+
+\setstretch{1.24}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.35em}
+\setlist{itemsep=0.35em,topsep=0.4em}
+\captionsetup{font=small,labelfont=bf,justification=centering}
+\setcounter{secnumdepth}{0}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small 第 091 套}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\ctexset{
+  section={format=\Large\bfseries\color{ContestBlue},beforeskip=1.2em,afterskip=0.7em},
+  subsection={format=\large\bfseries\color{ContestBlue},beforeskip=1.0em,afterskip=0.5em},
+  subsubsection={format=\normalsize\bfseries,beforeskip=0.8em,afterskip=0.35em}
+}
+
+\makeatletter
+\newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\newcommand{\maxwidth}{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\newcommand{\maxheight}{\ifdim\Gin@nat@height>0.72\textheight 0.72\textheight\else\Gin@nat@height\fi}
+\newcommand{\pandocbounded}[1]{\begingroup\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}#1\endgroup}
+\makeatother
+
+\begin{document}
+
+\begin{titlepage}
+  \centering
+  \vspace*{58mm}
+  {\Huge\bfseries\color{ContestBlue} 第 091 套\par}
+  \vfill
+  \vspace*{28mm}
+\end{titlepage}
+
+
+\section{第 1 题}\label{ux7b2c-1-ux9898}
+
+两面墙之间水平固定一根光滑杆，杆上套有一个质量为 \(m\)
+的小环。小环通过一根长为 \(l\)、不可伸长且质量不计的细线连接一个质量为
+\(2m\)
+的小球。小球可在杆与竖直方向所确定的平面内摆动，两面墙之间的距离足够大。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  若小球偏离竖直方向的最大角度为
+  \(30^\circ\)，求小球到达最大摆角时小环的加速度大小以及小球相对地面的加速度大小。
+\item
+  若摆角很小，求系统的振动周期。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图 1-1　可沿水平光滑杆移动的悬点与摆球系统。}]{../figures/question-01.pdf}
+\caption*{图 1-1　可沿水平光滑杆移动的悬点与摆球系统。}
+\end{figure}
+
+\newpage
+
+\section{第 2 题}\label{ux7b2c-2-ux9898}
+
+一条均匀、柔软且不可伸长的长链可视作``贪吃蛇''，总长为 \(L\)、总质量为
+\(m\)。长链在前端附近平滑地折回：后端沿直线以速度 \(v\)
+运动，前端沿相反方向以恒定速度 \(u\)
+被拉动。忽略重力以及弯折区的尺寸。为了维持这一稳定运动，作用在前端的拉力
+\(F\) 应为多大？
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图 2-1　均匀柔软长链在移动弯折处改变运动方向。}]{../figures/question-02.pdf}
+\caption*{图 2-1　均匀柔软长链在移动弯折处改变运动方向。}
+\end{figure}
+
+\newpage
+
+\section{第 3 题}\label{ux7b2c-3-ux9898}
+
+两根电阻均为 \(r\)、质量分别为 \(m\) 和 \(2m\)
+的光滑导体棒，垂直放置在间距为 \(l\)
+的两条水平光滑导轨之间。整个装置处在垂直纸面向里、磁感应强度为 \(B\)
+的匀强磁场中。两棒所在支路各接有一个电容均为 \(C\)
+的电容器。初始时两棒静止，两电容器均不带电。自 \(t=0\) 起，对质量为
+\(2m\) 的右棒施加水平外力
+
+\[F(t)=F_0\cos\omega t.\]
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  求两棒质心速度 \(v_C(t)\)。
+\item
+  求回路电动势 \(\mathcal E(t)\)。
+\item
+  求右棒、左棒的速度 \(v_1(t)\)、\(v_2(t)\)。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图 3-1　匀强磁场中的双导体棒、电容支路及简谐外力。}]{../figures/question-03.pdf}
+\caption*{图 3-1　匀强磁场中的双导体棒、电容支路及简谐外力。}
+\end{figure}
+
+\newpage
+
+\section{第 4 题}\label{ux7b2c-4-ux9898}
+
+一个质量为 \(M\)、半径为 \(r\) 的中性孤立导体球固定在 \(x\)--\(y\)
+平面的原点。一个质量为 \(m\ll M\)、电荷量为 \(q\) 的点电荷，从 \(x\)
+轴负方向的远处以速度 \(v_0\) 沿直线 \(y=l\) 入射，其中
+\(r\ll l\)。忽略感应电荷移动造成的能量损失，忽略相对论、电磁辐射以及万有引力。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  当点电荷到球心的距离为 \(h\) 时，求点电荷所受静电力大小 \(F(h)\)。
+\item
+  当 \(v_0\) 很大、轨迹只发生小角度偏转时，保留最低阶近似，求偏转角
+  \(\alpha\)。
+\item
+  当 \(v_0\) 较小时，点电荷可能被导体球俘获。求临界入射速度 \(v_c\)。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.79\linewidth,height=\textheight,keepaspectratio,alt={图 4-1　点电荷掠过中性孤立导体球的散射与俘获。}]{../figures/question-04.pdf}
+\caption*{图 4-1　点电荷掠过中性孤立导体球的散射与俘获。}
+\end{figure}
+
+\newpage
+
+\section{第 5 题}\label{ux7b2c-5-ux9898}
+
+水平面上固定一个半径为 \(R\)
+的光滑圆筒。圆筒中心固定一根质量和原长均可忽略、劲度系数为 \(k\)
+的轻弹簧，弹簧另一端连接质量为 \(m\)
+的光滑质点。质点只能在圆筒内部运动。碰撞均为完全弹性碰撞。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  将质点置于 \(x_0=12R/13\)、\(y_0=0\) 处，并给它沿 \(+y\)
+  方向的初速度。若要求质点始终不与圆筒碰撞，最大初速度写成
+
+  \[v_{\max}=\alpha_1\sqrt{\frac{kR^2}{m}},\]
+
+  求 \(\alpha_1\)。
+\item
+  若初速度大于
+  \(v_{\max}\)，并要求碰撞后轨迹闭合，且各条轨迹``边''除公共``顶点''外不相交，所有可能轨迹中顶点数最多为多少？
+\item
+  若闭合轨迹有 \(4\) 个顶点，初速度写成
+
+  \[v_4=\alpha_4\sqrt{\frac{kR^2}{m}},\]
+
+  求 \(\alpha_4\)。
+\item
+  在第 3 问条件下，运动周期写成
+
+  \[T=\beta_1\sqrt{\frac{m}{k}},\]
+
+  求 \(\beta_1\)。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.45\linewidth,height=\textheight,keepaspectratio,alt={图 5-1　圆筒内由中心弹簧约束的二维质点运动。}]{../figures/question-05.pdf}
+\caption*{图 5-1　圆筒内由中心弹簧约束的二维质点运动。}
+\end{figure}
+
+\newpage
+
+\section{第 6 题}\label{ux7b2c-6-ux9898}
+
+以下各问均在非相对论框架内讨论，并取
+
+\[\frac{1}{\varepsilon_0\mu_0}=c^2.\]
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  基础场分布：
+
+  \begin{enumerate}
+  \def\labelenumii{\arabic{enumii}.}
+  \tightlist
+  \item
+    真空中有一无限大均匀带电平面，面电荷密度为 \(\sigma\)，平面为
+    \(x\)--\(y\) 平面。求电场分布。
+  \item
+    真空中有一沿 \(z\) 轴的无限长均匀带电直线，线电荷密度为
+    \(\lambda\)。求距导线 \(r\) 处的电场强度。
+  \item
+    上述无限大带电平面以速度 \(\bm v=v\hat{\bm x}\)
+    运动。求电场和磁场分布，并用 \(\bm E\) 表示 \(\bm B\)。
+  \end{enumerate}
+\item
+  静止参考系中存在
+
+  \[\bm E=E_x\hat{\bm x}+E_y\hat{\bm y}+E_z\hat{\bm z},\]
+
+  且 \(\bm B=0\)。另一参考系以速度 \(\bm v=v\hat{\bm z}\)
+  运动。求低速近似下该系中的 \(\bm E'\) 与 \(\bm B'\)。
+\item
+  沿 \(z\) 轴放置线电荷密度为 \(+\lambda\)
+  的静止正电荷，同时线电荷密度为 \(-\lambda\) 的负电荷以速度
+  \(\bm v=v\hat{\bm z}\) 运动。
+
+  \begin{enumerate}
+  \def\labelenumii{\arabic{enumii}.}
+  \tightlist
+  \item
+    求静止观察者看到的距轴线 \(r\) 处的 \(\bm E\) 与 \(\bm B\)。
+  \item
+    另一观察者以 \(\bm v=v\hat{\bm z}\)
+    运动。若仍按经典速度叠加，求其看到的 \(\bm E'\) 与 \(\bm B'\)。
+  \item
+    有一电荷量为 \(q\)
+    的质点与运动观察者共同运动。为了使两个参考系计算出的质点受力相同，设只在运动参考系中额外出现线电荷密度
+    \(\Delta\lambda\)。求 \(\Delta\lambda/\lambda\)。
+  \end{enumerate}
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图 6-1　带电平面、带电直线与运动参考系中的电磁场。}]{../figures/question-06.pdf}
+\caption*{图 6-1　带电平面、带电直线与运动参考系中的电磁场。}
+\end{figure}
+
+\newpage
+
+\section{第 7 题}\label{ux7b2c-7-ux9898}
+
+低压氢灯产生的可见光谱中有一条波长为 \(486.1\,\mathrm{nm}\)
+的蓝绿色谱线。试求：
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  一个该谱线光子的能量，用电子伏特表示。
+\item
+  放出该光子时，氢原子初态、末态分别处在第 \(i\) 激发态和第 \(f\)
+  激发态，求 \(i,f\)。基态记为第 \(0\) 激发态。
+\item
+  电子从初态跃迁到末态的过程约持续
+  \(1.5\times10^{-8}\,\mathrm{s}\)。根据能量---时间不确定关系，估算谱线的最小频宽。
+\item
+  为估计热运动造成的多普勒展宽，设一群氢原子只沿光线进入分光计的方向作一维运动，速率最大为
+  \(700\,\mathrm{m/s}\)。求观察到的该蓝绿色谱线总频宽。
+\item
+  静止氢原子的谱线频率为
+  \(\nu_0\)。若氢原子沿观测方向的速度满足一维麦克斯韦分布，热力学温度为
+  \(T\)，求频偏 \(\Delta\nu\) 的方均根值 \(\Delta\nu_{\mathrm{rms}}\)。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图 7-1　低压氢灯可见光谱中的 486.1\textbackslash,\textbackslash mathrm\{nm\} 巴耳末线。}]{../figures/question-07.pdf}
+\caption*{图 7-1　低压氢灯可见光谱中的 \(486.1\,\mathrm{nm}\) 巴耳末线。}
+\end{figure}
+
+\newpage
+
+\section{第 8 题}\label{ux7b2c-8-ux9898}
+
+在光滑水平地面上有一个倒扣的箱子，内部长度为 \(l\)，质量为
+\(M\)。箱内有一个质量为 \(m\)
+的小球，初始时小球位于箱内右壁处，箱与小球均静止。小球与箱壁之间的碰撞均为完全弹性碰撞。自
+\(t=0\) 起，对箱子施加恒定水平外力 \(F\)。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  求在
+
+  \[t=5\sqrt{\frac{Ml}{F}}\]
+
+  时，小球与箱壁已经发生的碰撞次数。
+\item
+  求该时刻小球相对地面的位移。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.826\linewidth,height=\textheight,keepaspectratio,alt={图 8-1　恒力推动的箱体与内部弹性碰撞小球。}]{../figures/question-08.pdf}
+\caption*{图 8-1　恒力推动的箱体与内部弹性碰撞小球。}
+\end{figure}
+
+\end{document}

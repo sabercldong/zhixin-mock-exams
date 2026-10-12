@@ -1,0 +1,668 @@
+{
+  "papers": [
+    {
+      "set": 77,
+      "passed": true,
+      "questions": [
+        {
+          "question": 1,
+          "check": "六段线性速度损失、五次碰撞与严格可达阈值",
+          "passed": true,
+          "values": {
+            "threshold_example": 18.194489258818376,
+            "final_speed": 0.20730715929999977
+          }
+        },
+        {
+          "question": 2,
+          "check": "受约束谐振轨道最小初速",
+          "passed": true,
+          "values": {
+            "v2_over_omega2l2": 0.6180339887498949,
+            "tau": 1.1788736513480182
+          }
+        },
+        {
+          "question": 3,
+          "check": "内外轨道能量、周期和辐射漂移边界",
+          "passed": true,
+          "values": {
+            "energy_slope_ratio": 4,
+            "Tin": 11.371234635113522
+          }
+        },
+        {
+          "question": 4,
+          "check": "明确回路线形下交叉磁链及被动性近似检查",
+          "passed": true,
+          "values": {
+            "M": 0.45,
+            "L1": 4.0,
+            "L2": 6.25,
+            "ratio": 0.1125
+          }
+        },
+        {
+          "question": 5,
+          "check": "弱速远距下磁吸引不能超过电斥力",
+          "passed": true,
+          "values": {
+            "magnetic_electric_ratio": 1.6666666666666674e-05
+          }
+        },
+        {
+          "question": 6,
+          "check": "逆流换热边值解与四个端温",
+          "passed": true,
+          "values": {
+            "hot_out": 333.54838709677415,
+            "cold_out": 336.4516129032258,
+            "constant_delta": 43.5483870967742
+          }
+        },
+        {
+          "question": 7,
+          "check": "梯度折射率精确轨道与近轴像高",
+          "passed": true,
+          "values": {
+            "h_exit": 2.995975849700301,
+            "sin_air": 0.005600015114171372
+          }
+        },
+        {
+          "question": 8,
+          "check": "质量为零两体动量三角形的角度下界",
+          "passed": true,
+          "values": {
+            "minimum_angle": 0.6768659738864304
+          }
+        }
+      ]
+    },
+    {
+      "set": 76,
+      "passed": true,
+      "questions": [
+        {
+          "question": 1,
+          "check": "引力装配积分与黑体功率、质量门槛",
+          "passed": true,
+          "values": {
+            "W_J": 2.297142857142857e+41,
+            "years": 16013844.100440856,
+            "T_K": 114857142.85714284,
+            "mass_ratio": 0.07266210588694781
+          }
+        },
+        {
+          "question": 2,
+          "check": "三电荷构型动能、张力正性与周期积分",
+          "passed": true,
+          "values": {
+            "period_integral_transformed": 5.365302402957842,
+            "period_coefficient": 6.195317573262913
+          }
+        },
+        {
+          "question": 3,
+          "check": "零间距圆盘电压力平衡唯一根",
+          "passed": true,
+          "values": {
+            "u": 0.34185525784119475,
+            "radius_ratio": 1.158384762434829,
+            "diameter_cm": 5.7919238121741445
+          }
+        },
+        {
+          "question": 4,
+          "check": "七节点电路R_AB与有载滤波半功率两根",
+          "passed": true,
+          "values": {
+            "node_potentials": [
+              0.8333333333333333,
+              1.0,
+              0.6666666666666665,
+              0.49999999999999994,
+              0.33333333333333326,
+              0.0,
+              0.16666666666666663
+            ],
+            "Req_over_R": 0.9999999999999998,
+            "omega_minus": 1.7035225891672545,
+            "omega_plus": 5.870189255833922
+          }
+        },
+        {
+          "question": 5,
+          "check": "铰链转杆的支持力、力矩与无可行域",
+          "passed": true,
+          "values": {
+            "max_contact_bound_coefficient": -1.869604401089358
+          }
+        },
+        {
+          "question": 6,
+          "check": "四态路径的独立功积分、内能变化、熵变及效率",
+          "passed": true,
+          "values": {
+            "V0": 0.04906083168316832,
+            "T3": 274.94746912014665,
+            "P3": 304788.4344353199,
+            "P4": 93186.89389642555,
+            "Qin": 6869.2881857370585,
+            "work": 493.3307251835861,
+            "eta": 0.07181686251101035,
+            "entropy_cycle": -3.552713678800501e-15
+          }
+        },
+        {
+          "question": 7,
+          "check": "固定总电荷的轴向能量导数与正模量偏差",
+          "passed": true,
+          "values": {
+            "U": "A/ell",
+            "electric_tension": "A/ell^2",
+            "added_tangent_stiffness": "2A/ell^3"
+          }
+        },
+        {
+          "question": 8,
+          "check": "平移谐振子基态能及不确定关系等号",
+          "passed": true,
+          "values": {
+            "E0": "hbar*omega/2-q²E²/(2m omega²)",
+            "variance": "hbar/(2m omega)"
+          }
+        }
+      ]
+    },
+    {
+      "set": 75,
+      "passed": true,
+      "questions": [
+        {
+          "question": 1,
+          "check": "环的冲量、接触冲量与停止滑动后的返回",
+          "passed": true,
+          "values": {
+            "V0": 0.33853466691964795,
+            "omegaR0": -1.2296313798049074,
+            "V_roll": -0.44554835644262974,
+            "roll_time": 2.6669490590553666
+          }
+        },
+        {
+          "question": 2,
+          "check": "复合弦两族模态的位移和斜率匹配",
+          "passed": true,
+          "values": {
+            "frequency_coefficient": "3n/8",
+            "second_mode_B_over_A": -2
+          }
+        },
+        {
+          "question": 3,
+          "check": "球面压力的轴向面积投影及壳定理交叉力",
+          "passed": true,
+          "values": {
+            "projection_over_R2": 3.141592653589793,
+            "force": "Qq/(8 pi epsilon0 R²)"
+          }
+        },
+        {
+          "question": 4,
+          "check": "实际轴外场线、场峰与损失锥；角积分交叉检查",
+          "passed": true,
+          "values": {
+            "B0_unit_muI_R": 0.028119382440826596,
+            "Bpath_peak": 0.9084557901049218,
+            "point": [
+              0.713581543952011,
+              -1.004348668423676
+            ],
+            "critical_degrees": 10.13304432774171
+          }
+        },
+        {
+          "question": 5,
+          "check": "六种径迹身份及质量比筛选",
+          "passed": true,
+          "values": {
+            "six_cases": [
+              [
+                0,
+                1,
+                2,
+                0.5773502691896254,
+                1.1547005383792512,
+                1.9999999999999978,
+                true
+              ],
+              [
+                0,
+                2,
+                1,
+                1.1547005383792512,
+                0.5773502691896254,
+                -1.000000000000001,
+                false
+              ],
+              [
+                1,
+                0,
+                2,
+                1.7320508075688783,
+                2.000000000000001,
+                -1.9999999999999982,
+                false
+              ],
+              [
+                1,
+                2,
+                0,
+                2.0000000000000004,
+                1.7320508075688783,
+                -1.0000000000000007,
+                false
+              ],
+              [
+                2,
+                0,
+                1,
+                0.8660254037844388,
+                0.4999999999999998,
+                1.0000000000000004,
+                true
+              ],
+              [
+                2,
+                1,
+                0,
+                0.4999999999999998,
+                0.8660254037844388,
+                1.0000000000000002,
+                true
+              ]
+            ]
+          }
+        },
+        {
+          "question": 6,
+          "check": "全反射允许区、严格单调相位与21根",
+          "passed": true,
+          "values": {
+            "count": 21,
+            "angles_deg": [
+              88.91318740710798,
+              87.53848388557033,
+              86.16210910391719,
+              84.78324716762219,
+              83.40106859279328,
+              82.01472565218927,
+              80.62334744026103,
+              79.22603457375752,
+              77.82185343299352,
+              76.40982983358211,
+              74.9889419999758,
+              73.55811268626394,
+              72.11620025904799,
+              70.66198851601312,
+              69.1941749615649,
+              67.71135719287626,
+              66.2120169608152,
+              64.69450135306451,
+              63.15700039080017,
+              61.59752012046413,
+              60.01384999656999
+            ]
+          }
+        },
+        {
+          "question": 7,
+          "check": "粒子数守恒的非均匀温度气体压强和质心",
+          "passed": true,
+          "values": {
+            "pressure_ratio": 1.0524325764764273,
+            "gas_com_m": 4.915554044665062,
+            "boat_displacement_m": 0.037531535704416856
+          }
+        },
+        {
+          "question": 8,
+          "check": "不同运动模型的同时性与局部周长极限",
+          "passed": true,
+          "values": {
+            "circumference_over_2piR": 1.4002800840280099
+          }
+        }
+      ]
+    },
+    {
+      "set": 74,
+      "passed": true,
+      "questions": [
+        {
+          "question": 1,
+          "check": "真实悬臂刚度与固支自由最低模态",
+          "passed": true,
+          "values": {
+            "EI": 333.33333333333337,
+            "critical_N": 822.4670334241133,
+            "quoted_arc_estimate_N": 3000
+          }
+        },
+        {
+          "question": 2,
+          "check": "非45度接触、贴地冲量和首次碰后峰值",
+          "passed": true,
+          "values": {
+            "tau": 1.1107399565300995,
+            "normal": [
+              0.7223150108674752,
+              0.6915641872418782
+            ],
+            "angle_degrees": 43.75405573402756,
+            "highest_center_R": 2.4072911940933817,
+            "vertical_velocity_post": 0.21983093326293113
+          }
+        },
+        {
+          "question": 3,
+          "check": "线电荷势与真实中心势轨迹的第一次远点",
+          "passed": true,
+          "values": {
+            "beta": 0.14080980534671023,
+            "radius_ratio": 7.101778157689873,
+            "sweep_rad": 2.078140315932157
+          }
+        },
+        {
+          "question": 4,
+          "check": "固定Q能量梯度、电荷分配与液面高度",
+          "passed": true,
+          "values": {
+            "new_voltage": 571.4285714285714,
+            "height_m": 2.7657226155768426e-06
+          }
+        },
+        {
+          "question": 5,
+          "check": "真实质心惯量及B严格静止的有限质量限制",
+          "passed": true,
+          "values": {
+            "VB": [
+              -0.0002317770929954231,
+              0.0033725848312986632
+            ],
+            "leading_b_over_R": 0.5
+          }
+        },
+        {
+          "question": 6,
+          "check": "透镜射线区间、CCD交集及安全区域下确界",
+          "passed": true,
+          "values": {
+            "minimum_boundary_radius_cm": 4.000000134979175,
+            "axial_z_cm": 29.99999595062476
+          }
+        },
+        {
+          "question": 7,
+          "check": "氮气绝热弹簧、离散色散及相速度误解",
+          "passed": true,
+          "values": {
+            "gamma": 1.4,
+            "first_phase_over_c0": 0.9958927352435614,
+            "highest_k_phase_over_c0": 0.6366197723675814
+          }
+        },
+        {
+          "question": 8,
+          "check": "固有时衰变与回旋周期抵消",
+          "passed": true,
+          "values": {
+            "B_T": 0.004841448344484702,
+            "one_turn_survival": 0.5
+          }
+        }
+      ]
+    },
+    {
+      "set": 73,
+      "passed": true,
+      "questions": [
+        {
+          "question": 1,
+          "check": "真实镜像矢量和与有限线段双重积分",
+          "passed": true,
+          "values": {
+            "image_sums": [
+              [
+                -0.5,
+                3.061616997868383e-17
+              ],
+              [
+                -0.5,
+                2.220446049250313e-16
+              ],
+              [
+                -0.5,
+                -2.220446049250313e-16
+              ],
+              [
+                -0.5000000000000004,
+                2.6645352591003757e-15
+              ]
+            ],
+            "finite_segment_integral": 8.198039027185569
+          }
+        },
+        {
+          "question": 2,
+          "check": "十九杆节点力与切杆相容位移同时核验拉压",
+          "passed": true,
+          "values": {
+            "target_tension_G3_P2": 2.4999999999999996,
+            "virtual_P_G_right": [
+              [
+                0.5,
+                -0.5
+              ],
+              [
+                0.5,
+                -0.5
+              ],
+              [
+                1.0,
+                0.0
+              ]
+            ]
+          }
+        },
+        {
+          "question": 3,
+          "check": "分支功积分与渐近越界量",
+          "passed": true,
+          "values": {
+            "v02_over_gl": 0.65625,
+            "u12_over_gl": 0.625,
+            "u22_over_gl": 0.375,
+            "delta_after_2000_l": 0.000998734143458968
+          }
+        },
+        {
+          "question": 4,
+          "check": "自感梯度受力、功积分和两侧临界转折",
+          "passed": true,
+          "values": {
+            "v02_over_gx0": 2.5,
+            "turning_roots": [
+              0.375,
+              2.0
+            ]
+          }
+        },
+        {
+          "question": 5,
+          "check": "两端点全过程包络，转动和返回分支",
+          "passed": true,
+          "values": {
+            "examples": [
+              [
+                1,
+                2,
+                3.5,
+                2.7192235935955846
+              ],
+              [
+                1,
+                2,
+                2,
+                4.0
+              ],
+              [
+                1,
+                1,
+                0.5,
+                3.0
+              ],
+              [
+                1,
+                3,
+                3,
+                4.0
+              ]
+            ]
+          }
+        },
+        {
+          "question": 6,
+          "check": "绝热净功面积及全管长度、行程之差",
+          "passed": true,
+          "values": {
+            "Vstar_V0": 2.6918003852647123,
+            "Kmax_PatmV0": 1.578698651573507,
+            "total_length_V0_A": 2.6918003852647123,
+            "stroke_V0_A": 1.6918003852647123,
+            "weak_pressure_linear": 0,
+            "weak_pressure_quadratic": "1/(2γ)",
+            "gamma_7_5_quadratic": "5/14"
+          }
+        },
+        {
+          "question": 7,
+          "check": "半片光线变换、共同区及相位相关整数条纹计数",
+          "passed": true,
+          "values": {
+            "q_cm": 20.0,
+            "d_cm": 0.2,
+            "overlap_cm": 0.35000000000000003,
+            "spacing_cm": 0.0075,
+            "bright_count": 47
+          }
+        },
+        {
+          "question": 8,
+          "check": "多普勒端点相切、正根与速度密度雅可比",
+          "passed": true,
+          "values": {
+            "critical_V": 57.15016053427186,
+            "s": 23906.099751793863,
+            "u2": 24423.382348534746,
+            "common_nm": 580.0472185392072
+          }
+        }
+      ]
+    }
+  ],
+  "extra": [
+    {
+      "check": "077.1阈值等号末段速度零意味着线性阻力到达时间发散",
+      "passed": true,
+      "values": {
+        "at_threshold_final": 0,
+        "strict_inequality": true
+      }
+    },
+    {
+      "check": "077.4小匝数线性分解不得作为任意几何精确公式",
+      "passed": true,
+      "values": {
+        "N1_N2_1_approx_M2_over_L1L2": 4,
+        "passivity_violation_flags_missing_terms": true
+      }
+    },
+    {
+      "check": "077.5形式磁力平衡需ωr/c>1，超出推导域",
+      "passed": true,
+      "values": {
+        "for_d_over_r_10_required": 12.24744871391589
+      }
+    },
+    {
+      "check": "075.4缩步后的场线峰值与BiotSavart起点一致",
+      "passed": true,
+      "values": {
+        "peak": 0.9084557901049218,
+        "angle": 0.00019607843018718736
+      }
+    },
+    {
+      "check": "074.2第二次碰撞能量和水平动量均守恒；地面竖直冲量非零",
+      "passed": true,
+      "values": {
+        "energy_residual": 6.661338147750939e-16,
+        "floor_impulse": 13.139719557595685
+      }
+    },
+    {
+      "check": "074.6边界能被CCD探测；4cm为安全半径下确界",
+      "passed": true,
+      "values": {
+        "strict_safe_radius": "R>4 cm"
+      }
+    },
+    {
+      "check": "073.1有限线段合力误差是一阶端部项",
+      "passed": true,
+      "values": {
+        "ratio_L10_s2": 0.8198039027185569
+      }
+    },
+    {
+      "check": "073.3返回接触法向力与外行不同，均非负",
+      "passed": true,
+      "values": {
+        "return_N1_mg_at_x_l": 0.16666666666666666,
+        "out_N1_mg_at_x_l": 0.125
+      }
+    },
+    {
+      "check": "073.5临界轨道与摆动侧的无限时宽度不连续",
+      "passed": true,
+      "values": {
+        "critical_over_l": 3.414213562373095,
+        "oscillation_limit_over_l": 4.82842712474619
+      }
+    },
+    {
+      "check": "073.7额外π相位时46条，原对称两路无额外相位差",
+      "passed": true,
+      "values": {
+        "bright_with_extra_pi": 46,
+        "original": 47
+      }
+    },
+    {
+      "check": "073.8相对论动能和完整多普勒式高精度一致复算",
+      "passed": true,
+      "values": {
+        "exact_V": "57.1595668561508750430097630828960550178751173674913687938605",
+        "first_order_V": 57.15016053427186,
+        "rounding_one_decimal": "57.2 V"
+      }
+    }
+  ],
+  "method": "每题独立关键关系组；公式、原扫描、图稿及全文另行审读。",
+  "script_sha256": "272740459268dd1773ddce11f0ea694e8a5ce1078af4b9363df6b817c41d7aa7"
+}

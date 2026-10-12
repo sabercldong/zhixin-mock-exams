@@ -1,0 +1,342 @@
+{
+  "papers": [
+    {
+      "set": 92,
+      "questions": [
+        {
+          "question": 1,
+          "check": "finite spokes, not only their rim endpoints.",
+          "passed": true
+        },
+        {
+          "question": 2,
+          "check": "force balance closes with the exponential capillary profile.",
+          "passed": true
+        },
+        {
+          "question": 3,
+          "check": "terminal voltage and angular impulse give the same charge.",
+          "passed": true
+        },
+        {
+          "question": 4,
+          "check": "plane integral and double-lamp second-order coefficient.",
+          "passed": true
+        },
+        {
+          "question": 5,
+          "check": "analytic pressure, work and entropy at mechanical equilibrium.",
+          "passed": true
+        },
+        {
+          "question": 6,
+          "check": "Maxwell reconstruction and superconducting force factor.",
+          "passed": true
+        },
+        {
+          "question": 7,
+          "check": "critical ray widths at the paraxial focus and y=10 cm.",
+          "passed": true
+        },
+        {
+          "question": 8,
+          "check": "energy and axial-angular-momentum thresholds.",
+          "passed": true
+        }
+      ],
+      "script_sha256": "9a675c67381687d887db15c5f68b4dfdbcf0dc6273a79b1b09ff5d6c369c9433",
+      "output": "All eight sets of independent numerical and algebraic checks passed",
+      "passed": true
+    },
+    {
+      "set": 91,
+      "questions": [
+        {
+          "question": 1,
+          "check": "force projections and vector acceleration.",
+          "passed": true
+        },
+        {
+          "question": 2,
+          "check": "moving fold and momentum flux.",
+          "passed": true
+        },
+        {
+          "question": 3,
+          "check": "coefficients satisfy the forced first-order equation and initial data.",
+          "passed": true
+        },
+        {
+          "question": 4,
+          "check": "exact force is the derivative of the interaction potential; threshold limit.",
+          "passed": true
+        },
+        {
+          "question": 5,
+          "check": "ellipse through square vertex and phase period.",
+          "passed": true
+        },
+        {
+          "question": 6,
+          "check": "magnetic and electric force matching gives v^2/c^2.",
+          "passed": true
+        },
+        {
+          "question": 7,
+          "check": "photon energy, natural width and full Doppler width.",
+          "passed": true
+        },
+        {
+          "question": 8,
+          "check": "collision count and coordinate reconstruction.",
+          "passed": true
+        }
+      ],
+      "script_sha256": "6bb77acdb54dc00011cd31484a80ebdd1c62d798849fcd2caaa8d710ef3d57f0",
+      "output": "All eight questions passed independent algebraic and numerical checks",
+      "passed": true
+    },
+    {
+      "set": 90,
+      "questions": [
+        {
+          "question": 1,
+          "check": "recurrence and friction-cone critical eccentricity.",
+          "passed": true
+        },
+        {
+          "question": 2,
+          "check": "collision recurrences.",
+          "passed": true
+        },
+        {
+          "question": 3,
+          "check": "field derivative and induced-dipole force.",
+          "passed": true
+        },
+        {
+          "question": 4,
+          "check": "CM/relative motion and second collision.",
+          "passed": true
+        },
+        {
+          "question": 5,
+          "check": "standard integral and focal length.",
+          "passed": true
+        },
+        {
+          "question": 6,
+          "check": "latitude projection and the equivalent modulo-2pi holonomy.",
+          "passed": true
+        },
+        {
+          "question": 7,
+          "check": "reproduce the flux, flag the extrapolation roots, and optimize only on the liquid-water interval.",
+          "passed": true
+        },
+        {
+          "question": 8,
+          "check": "angular contraction and the observed receding clock.",
+          "passed": true
+        }
+      ],
+      "script_sha256": "353399a7af69ffcfb905e2ecd30fff73704456e92f7baec44a6aac8a51b7f21f",
+      "output": "All eight questions passed independent algebraic and numerical checks; Q7 max is restricted to 0–20 K",
+      "passed": true
+    },
+    {
+      "set": 89,
+      "questions": [
+        {
+          "question": 1,
+          "check": "limiting angle and rubber friction.",
+          "passed": true
+        },
+        {
+          "question": 2,
+          "check": "C height cancels for arbitrary admissible configurations.",
+          "passed": true
+        },
+        {
+          "question": 3,
+          "check": "mechanical gain equals negative field loss.",
+          "passed": true
+        },
+        {
+          "question": 4,
+          "check": "independent nodal solution for the three networks.",
+          "passed": true
+        },
+        {
+          "question": 5,
+          "check": "analytic rod integral and compact formula agree numerically.",
+          "passed": true
+        },
+        {
+          "question": 6,
+          "check": "two sample image points recover h=2f and p=f.",
+          "passed": true
+        },
+        {
+          "question": 7,
+          "check": "static limit is Snell's law; layer expansion yields the stated curvature.",
+          "passed": true
+        },
+        {
+          "question": 8,
+          "check": "initial rate, steady heat-flux equality, and mass conservation.",
+          "passed": true
+        }
+      ],
+      "script_sha256": "e7fba176653ac410dd504915dc5e2fa76e4ebcd1a13a0f9f086d364b0e90762d",
+      "output": "蔡题089：8 题关键结果独立验算通过。",
+      "passed": true
+    },
+    {
+      "set": 88,
+      "questions": [
+        {
+          "question": 1,
+          "check": "solve the dimensionless energy and angular-momentum equations at theta=30 deg.",
+          "passed": true
+        },
+        {
+          "question": 2,
+          "check": "triangle, unequal triangle, square, and N-gon checks.",
+          "passed": true
+        },
+        {
+          "question": 3,
+          "check": "impossible pre-bottom equilibrium, boundary state, and corrected modified geometry.",
+          "passed": true
+        },
+        {
+          "question": 4,
+          "check": "endpoints and the constant-proper-power integral.",
+          "passed": true
+        },
+        {
+          "question": 5,
+          "check": "nodal potentials, equivalent resistance, and spatial angle.",
+          "passed": true
+        },
+        {
+          "question": 6,
+          "check": "a sample point satisfies both the semicubical trajectory and slope law.",
+          "passed": true
+        },
+        {
+          "question": 7,
+          "check": "acceleration, maximum-tension point, tension, speed, and pressure.",
+          "passed": true
+        },
+        {
+          "question": 8,
+          "check": "phase-change mass, curve-fit parameters, and P1=300 W time.",
+          "passed": true
+        }
+      ],
+      "script_sha256": "f2cca736399a68c59367b31c7734fce433db24f3046e50d54301988718129841",
+      "output": "蔡题088：8题关键结果独立验算通过。",
+      "passed": true
+    }
+  ],
+  "extra": [
+    {
+      "set": 92,
+      "question": 1,
+      "check": "10000相位、三单调支与轮缘边界的独立事件扫描",
+      "actual": "0.9499445535261648",
+      "expected": "0.9499530486167007",
+      "passed": true
+    },
+    {
+      "set": 92,
+      "question": 1,
+      "check": "单侧极限下确界",
+      "actual": "1.0526836052120434",
+      "expected": "1.05268360521",
+      "passed": true
+    },
+    {
+      "set": 92,
+      "question": 6,
+      "check": "亥姆霍兹临界轴向四阶",
+      "actual": "-144/125",
+      "expected": "-144/125",
+      "passed": true
+    },
+    {
+      "set": 92,
+      "question": 6,
+      "check": "无源区径向四阶重构",
+      "actual": "-54/125",
+      "expected": "-54/125",
+      "passed": true
+    },
+    {
+      "set": 92,
+      "question": 3,
+      "check": "充电电阻耗散积分",
+      "actual": "0.888888888888889",
+      "expected": "0.888888888888889",
+      "passed": true
+    },
+    {
+      "set": 89,
+      "question": 4,
+      "check": "四维汉明距离1节点方程",
+      "actual": "15/32",
+      "expected": "15/32",
+      "passed": true
+    },
+    {
+      "set": 89,
+      "question": 4,
+      "check": "四维汉明距离2节点方程",
+      "actual": "7/12",
+      "expected": "7/12",
+      "passed": true
+    },
+    {
+      "set": 89,
+      "question": 5,
+      "check": "线性密度杆逐元力矩平衡",
+      "actual": "-8.532632065432078e-16",
+      "expected": "0",
+      "passed": true
+    },
+    {
+      "set": 89,
+      "question": 6,
+      "check": "像顶点误差放大x2=2.0",
+      "actual": "-0.0033333333333334103",
+      "expected": "-0.0033333333333333335",
+      "passed": true
+    },
+    {
+      "set": 89,
+      "question": 6,
+      "check": "像顶点误差放大x2=-1.01",
+      "actual": "-0.49751243781093457",
+      "expected": "-0.4975124378109451",
+      "passed": true
+    },
+    {
+      "set": 90,
+      "question": 7,
+      "check": "解析导数根与数值优化交叉核验",
+      "actual": "18.32802560561155",
+      "expected": "18.328025536718002",
+      "passed": true
+    },
+    {
+      "set": 88,
+      "question": 2,
+      "check": "r^(-s)势能对应r^(-s-1)力",
+      "actual": "0.9501757742280681",
+      "expected": "0.9501757742924206",
+      "passed": true
+    }
+  ]
+}

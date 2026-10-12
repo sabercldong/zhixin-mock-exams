@@ -1,0 +1,3442 @@
+\documentclass[12pt,a4paper,UTF8]{ctexart}
+\usepackage[a4paper,top=22mm,bottom=22mm,left=22mm,right=22mm,headheight=15pt]{geometry}
+\newcommand{\Needspace}[1]{\par\begingroup\dimen0=#1\relax\dimen2=\pagegoal\advance\dimen2 by-\pagetotal\ifdim\dimen0>\dimen2\newpage\fi\endgroup}
+\newcommand{\needspace}[1]{\par\begingroup\skip0=\lastskip\vskip-\skip0\dimen0=#1\relax\advance\dimen0 by\skip0\vskip\dimen0\penalty-100\vskip-\dimen0\vskip\skip0\penalty9999\endgroup}
+\usepackage{amsmath,amssymb,mathtools,bm}
+\usepackage{graphicx,xcolor,booktabs,longtable,array,enumitem,fancyhdr,caption,float,microtype,setspace}
+\usepackage[hidelinks,unicode]{hyperref}
+\usepackage[most]{tcolorbox}
+\definecolor{ContestBlue}{HTML}{17365D}
+\hypersetup{pdftitle={第071套},pdfauthor={}}
+\setstretch{1.24}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.35em}
+\setlength{\emergencystretch}{2em}
+\setlist{itemsep=0.35em,topsep=0.4em}
+\captionsetup{font=small,labelfont=bf,justification=centering}
+\setcounter{secnumdepth}{0}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small 第071套}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\ctexset{
+  section={format=\Large\bfseries\color{ContestBlue},beforeskip=1.2em,afterskip=0.7em},
+  subsection={format=\large\bfseries\color{ContestBlue},beforeskip=1.0em,afterskip=0.5em},
+  subsubsection={format=\normalsize\bfseries,beforeskip=0.8em,afterskip=0.35em}
+}
+\usepackage{calc}
+\newcounter{none}
+\let\originalsubsection\subsection
+\renewcommand{\subsection}{\needspace{6\baselineskip}\originalsubsection}
+\makeatletter
+\newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\newcommand{\maxwidth}{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\newcommand{\maxheight}{\ifdim\Gin@nat@height>0.72\textheight 0.72\textheight\else\Gin@nat@height\fi}
+\newcommand{\pandocbounded}[1]{\begingroup\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}#1\endgroup}
+\makeatother
+\begin{document}
+\begin{titlepage}
+  \centering
+  \vspace*{58mm}
+  {\Huge\bfseries\color{ContestBlue} 第071套\par}
+  \vfill
+  \vspace*{28mm}
+\end{titlepage}
+\section{第 1 题}\label{ux7b2c-1-ux9898}
+
+半径为 \(r\)、质量为 \(m\) 的刚性薄壁圆筒平放在半径为 \(2r\)
+的水平圆柱形槽中。圆筒上放置一质量也为 \(m\) 的刚性均匀板，板厚为
+\(0.5r\)，相对质心的转动惯量为
+\(I_P=\frac{3}{16}mr^2\)。板与圆筒、圆筒与槽之间均无相对滑动。平衡时圆筒位于槽底，板水平且板的质心在圆筒圆心正上方。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  判断该平衡的稳定性。
+\item
+  求系统微幅振动的简正角频率。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.76\linewidth,height=\textheight,keepaspectratio,alt={图1-1　圆筒在圆柱形槽内滚动并支承均匀板}]{../figures/question-01.pdf}
+\caption*{图1-1　圆筒在圆柱形槽内滚动并支承均匀板}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d}
+
+圆筒在槽内滚动，上方板也与圆筒保持无滑动。两处接触的速度约束决定板质心的位置；由此展开动能、势能，再判断平衡稳定性和两个振动频率。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  圆内滚动的位移约束。
+\item
+  刚体接触点速度相等。
+\item
+  二自由度系统的拉格朗日方程。
+\item
+  广义特征值问题 \(\det(K-\omega^2M)=0\)。
+\item
+  负的 \(\omega^2\) 对应指数增长模态。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf}
+
+取圆筒心偏离槽底的角位移为 \(\theta\)，板相对水平的转角为
+\(\varphi\)。圆筒心沿半径 \(2r-r=r\) 的圆弧运动。板质心位于上接触点上方
+\(r/4\)，板一旦倾斜，重力会同时改变其平动和转动；两个滚动约束使
+\(\theta,\varphi\) 强烈耦合。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3}
+
+先写两个接触点的速度约束。将圆筒自转角和板质心坐标全部表示为
+\(\theta,\varphi\)，再把动能展开到二阶、势能展开到二阶。稳定性不能只看几何高度，而要由两个广义坐标共同决定。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.88\linewidth,height=\textheight,keepaspectratio,alt={图1-2　两广义坐标、接触速度与板的受力关系}]{../figures/solution-01.pdf}
+\caption*{图1-2　两广义坐标、接触速度与板的受力关系}
+\end{figure}
+
+取 \(\theta\) 为圆筒心从槽底向右偏转的角度，\(\varphi\)
+为板逆时针转角，\(\psi\)
+为圆筒顺时针自转角。三者的正向见图1-2。圆筒心沿半径 \(r\)
+的轨道运动，其切向速度为 \(r\dot\theta\)。下接触点对槽无滑动：
+
+\[
+r\dot\theta-r\dot\psi=0,
+\tag{1}
+\]
+
+所以
+
+\[
+\dot\psi=\dot\theta.
+\tag{2}
+\]
+
+圆筒上接触点的切向速度等于圆心平动与自转贡献之和：
+
+\[
+v_{\rm top}=r\dot\theta+r\dot\psi=2r\dot\theta.
+\tag{3}
+\]
+
+板下表面接触点到板质心的法向距离为
+\(r/4\)。微幅条件下，板质心水平速度可写成
+
+\[
+\dot x_P=2r\dot\theta-\frac r4\dot\varphi.
+\tag{4}
+\]
+
+这是上接触无滑动约束。竖直速度为二阶小量，对二阶动能无贡献。
+
+圆筒平动动能
+
+\[
+T_{c,\rm tr}=\frac12m(r\dot\theta)^2.
+\tag{5}
+\]
+
+薄壁圆筒相对圆心的转动惯量为 \(I_c=mr^2\)，故自转动能
+
+\[
+T_{c,\rm rot}=\frac12mr^2\dot\psi^2
+=\frac12mr^2\dot\theta^2.
+\tag{6}
+\]
+
+板的平动与转动动能分别为
+
+\[
+T_{P,\rm tr}
+=\frac12m\left(2r\dot\theta-\frac r4\dot\varphi\right)^2,
+\tag{7}
+\]
+
+\[
+T_{P,\rm rot}
+=\frac12\frac{3}{16}mr^2\dot\varphi^2.
+\tag{8}
+\]
+
+合并并整理：
+
+\[
+\begin{aligned}
+T
+&=mr^2\dot\theta^2
++\frac12mr^2
+\left(4\dot\theta^2-\dot\theta\dot\varphi
++\frac1{16}\dot\varphi^2\right)
++\frac{3}{32}mr^2\dot\varphi^2\\
+&=\frac12mr^2
+\left(6\dot\theta^2-\dot\theta\dot\varphi
++\frac14\dot\varphi^2\right).
+\end{aligned}
+\tag{9}
+\]
+
+势能由圆筒心和板质心高度决定。令
+
+\[
+k=\frac14,
+\qquad
+\lambda=\frac{I_P}{mr^2}=\frac3{16}.
+\tag{10}
+\]
+
+其中 \(kr=r/4\) 是板质心到下表面的法向距离。圆筒心由槽底偏转 \(\theta\)
+时上升
+
+\[
+\Delta y_C=r(1-\cos\theta)
+\simeq\frac r2\theta^2.
+\]
+
+板的质心高度还受上接触点位置和板转角的共同影响。将几何关系展开到二阶：
+
+\[
+\Delta y_P
+\simeq\frac r2
+\left[\theta^2+2\theta\varphi+(1-k)\varphi^2\right].
+\]
+
+圆筒和板质量相同，所以总重力势能增量为
+
+\[
+U=U_0+\frac12mgr
+\left(2\theta^2+2\theta\varphi+(1-k)\varphi^2\right).
+\tag{11}
+\]
+
+由式（9）读取质量矩阵，由式（11）读取刚度矩阵。令
+
+\[
+\boldsymbol q=
+\begin{pmatrix}\theta\\ \varphi\end{pmatrix},
+\qquad
+T=\frac12\dot{\boldsymbol q}^{\mathsf T}M\dot{\boldsymbol q},
+\qquad
+U=U_0+\frac12\boldsymbol q^{\mathsf T}K\boldsymbol q.
+\tag{12}
+\]
+
+由动能和势能二次型逐项读出
+
+\[
+M=mr^2
+\begin{pmatrix}
+6&-2k\\
+-2k&\lambda+k^2
+\end{pmatrix},
+\qquad
+K=mgr
+\begin{pmatrix}
+2&1\\
+1&1-k
+\end{pmatrix}.
+\]
+
+拉格朗日方程给出
+
+\[
+M\ddot{\boldsymbol q}+K\boldsymbol q=0.
+\tag{13}
+\]
+
+具体写为
+
+\[
+\begin{cases}
+6\ddot\theta-2k\ddot\varphi
++\omega_0^2(2\theta+\varphi)=0,\\
+-2k\ddot\theta+(\lambda+k^2)\ddot\varphi
++\omega_0^2[\theta+(1-k)\varphi]=0.
+\end{cases}
+\tag{14}
+\]
+
+令试探解为 \(\boldsymbol q=\boldsymbol q_0e^{i\omega t}\)，并取
+
+\[
+\omega_0^2=\frac gr,
+\tag{15}
+\]
+
+简正频率满足
+
+\[
+\det(K-\omega^2M)=0.
+\tag{16}
+\]
+
+令 \(x=\omega^2/\omega_0^2\)，约去行列式中的公共量纲因子：
+
+\[
+\begin{aligned}
+0
+&=\det
+\begin{pmatrix}
+2-6x&1+2kx\\
+1+2kx&1-k-(\lambda+k^2)x
+\end{pmatrix}\\
+&=(2-6x)[1-k-(\lambda+k^2)x]-(1+2kx)^2\\
+&=(6\lambda+2k^2)x^2
+-2(3-k+k^2+\lambda)x+(1-2k).
+\end{aligned}
+\]
+
+代入 \(k=1/4\)、\(\lambda=3/16\)，再将方程整体乘以 \(4\)，得
+
+\[
+5\omega^4-24\omega_0^2\omega^2+2\omega_0^4=0.
+\]
+
+令 \(z=\omega^2/\omega_0^2\)，则
+
+\[
+5z^2-24z+2=0.
+\tag{17}
+\]
+
+求根：
+
+\[
+\begin{aligned}
+z
+&=\frac{24\pm\sqrt{24^2-4\cdot5\cdot2}}{10}\\
+&=\frac{24\pm\sqrt{536}}{10}\\
+&=\frac{12\pm\sqrt{134}}5.
+\end{aligned}
+\tag{18}
+\]
+
+因此两根均为正：
+
+\[
+\boxed{
+\omega_{1,2}
+=\sqrt{\frac{12\mp\sqrt{134}}5}\sqrt{\frac gr}
+}.
+\tag{19}
+\]
+
+其中 \(12-\sqrt{134}>0\)，故两个模态均为振荡模态，平衡为
+
+\[
+\boxed{\text{稳定平衡}}.
+\tag{20}
+\]
+
+还可不先求根，直接检查两个二次型。质量矩阵的两个顺序主子式为
+
+\[
+6>0,
+\qquad
+6(\lambda+k^2)-4k^2
+=6\lambda+2k^2>0,
+\]
+
+故 \(M\) 正定。刚度矩阵的顺序主子式为
+
+\[
+2>0,
+\qquad
+2(1-k)-1=1-2k=\frac12>0,
+\]
+
+故 \(K\) 正定。两个广义本征值 \(\omega^2\)
+必均为正数，这与式（19）相互校验。
+
+两个频率的数值大小为
+
+\[
+\frac{\omega_1}{\omega_0}\approx0.291,
+\qquad
+\frac{\omega_2}{\omega_0}\approx2.171.
+\]
+
+实际模态的同向或反向应由本征矢量判断，不应只根据频率高低猜测。
+
+量纲检查：根号前系数无量纲，\(\sqrt{g/r}\) 具有角频率量纲。
+
+\needspace{3\baselineskip}
+\textbf{板质心高度的几何推导}
+
+图1-2中，槽圆心记为 \(O\)，以它为原点。板的单位切向、法向分别为
+
+\[
+\boldsymbol t=(\cos\varphi,\sin\varphi),\qquad
+\boldsymbol n=(-\sin\varphi,\cos\varphi).
+\]
+
+圆筒心 \(C=(r\sin\theta,-r\cos\theta)\)，接触点
+\(A=C+r\boldsymbol n\)。令 \(s\) 是板质心沿板方向相对 \(A\)
+的偏移，\(d=kr=r/4\)。板质心为
+
+\[
+G=C+(r+d)\boldsymbol n+s\boldsymbol t.
+\]
+
+无滑动条件投影到 \(\boldsymbol t\)，圆筒接触材料点的速度为
+\(\dot C\cdot\boldsymbol t+r\dot\psi\)，板接触材料点速度为
+\(\dot G\cdot\boldsymbol t+d\dot\varphi\)。从上述位置式算出
+
+\[
+\dot G\cdot\boldsymbol t
+=\dot C\cdot\boldsymbol t+\dot s-(r+d)\dot\varphi.
+\]
+
+两者相等，且 \(\dot\psi=\dot\theta\)，因此
+
+\[
+\dot s=r(\dot\theta+\dot\varphi),\qquad
+s=r(\theta+\varphi).
+\]
+
+取平衡时 \(s=0\)。逐项展开 \(G\) 的两个分量：
+
+\[
+\begin{aligned}
+x_G&=r\sin\theta-(r+d)\sin\varphi
+       +r(\theta+\varphi)\cos\varphi\\
+   &=2r\theta-d\varphi+O(|\boldsymbol q|^3),\\
+y_G&=-r\cos\theta+(r+d)\cos\varphi
+       +r(\theta+\varphi)\sin\varphi\\
+   &=d+\frac r2\theta^2+r\theta\varphi
+       +\frac{r-d}{2}\varphi^2+O(|\boldsymbol q|^4).
+\end{aligned}
+\]
+
+这同时给出式（4）的水平速度和式（11）的势能，交叉项 \(r\theta\varphi\)
+来自接触位置沿板移动，不能省去。图中 \(CA=r\)、\(AG\) 的法向分量 \(d\)
+和切向分量 \(s\) 分别对应这三个几何项。
+
+\needspace{3\baselineskip}
+\textbf{代回本征方程}
+
+两根之和为 \(24/5\)、之积为 \(2/5\)。将任一根 \(z\) 和
+\(\Phi/\Theta=(6z-2)/(1+z/2)\) 代入矩阵两行，都应得到零；本征矢量还满足
+\(\boldsymbol q_1^{\mathsf T}M\boldsymbol q_2=0\)。这里是关于质量矩阵的正交，而不是要求两个实际角坐标的振幅向量在普通平面中垂直。
+
+\needspace{3\baselineskip}
+\textbf{补充推导与适用条件}
+
+\textbf{约束的作用是减少坐标，不是合并物体。}
+原本可以分别用圆筒心位置、圆筒自转角、板质心位置和板转角描述系统。下接触约束消去圆筒自转角，上接触约束消去板的水平位移，最后仍留下
+\(\theta,\varphi\)
+两个独立坐标。静摩擦力只负责实现这两个速度约束，在理想纯滚动中不做功，因而能量法可直接使用。
+
+\textbf{模态方向的定量判断。} 对某一无量纲本征值
+\(x=\omega^2/\omega_0^2\)，特征方程第一行给出
+
+\[
+(2-6x)\Theta+(1+2kx)\Phi=0,
+\]
+
+故模态振幅比为
+
+\[
+\frac\Phi\Theta
+=\frac{6x-2}{1+2kx}.
+\]
+
+对慢模 \(x_1=(12-\sqrt{134})/5\approx0.0848\)，有
+\(\Phi/\Theta\approx-1.43\)，板与圆筒心的角坐标反向；对快模
+\(x_2\approx4.715\)，有
+\(\Phi/\Theta\approx7.83\)，板转角的振幅占主导。这比``慢模同向、快模反向''之类口诀更可靠。
+
+\textbf{稳定性的几何阈值。} 对一般的
+\(k,\lambda\)，只要转动惯量为正，质量矩阵就正定。刚度矩阵的行列式却为
+
+\[
+\det\frac{K}{mgr}=1-2k.
+\]
+
+因此 \(k<1/2\) 时是稳定平衡，\(k=1/2\) 时出现零频软模，\(k>1/2\)
+时有一个 \(\omega^2<0\) 的失稳模态。本题板厚 \(0.5r\)，其半厚对应
+\(k=1/4\)，明显落在稳定区。
+
+\needspace{3\baselineskip}
+\textbf{模态振幅比、质量归一化与初值分解}
+
+以圆柱心位置角 \(\theta\) 和逆时针板角 \(\varphi\) 为坐标，线性矩阵为
+
+\[
+M_0=\begin{pmatrix}6&-1/2\\-1/2&1/4\end{pmatrix},\qquad
+K_0=\begin{pmatrix}2&1\\1&3/4\end{pmatrix}.
+\]
+
+令频率平方 \(z=\omega^2r/g\)，本征矢量取
+\(\boldsymbol e=(1,s)\)，第一行给
+
+\[
+s=\frac{6z-2}{1+z/2}.
+\]
+
+将两根 \(z_\pm=(12\pm\sqrt{134})/5\) 代入，可得不同的板、柱振幅比。用
+\(M_0\) 作内积，两个模态满足
+
+\[
+\boldsymbol e_-^{\mathsf T}M_0\boldsymbol e_+=0,
+\]
+
+而一般欧氏点积不为零。其证明来自对称矩阵关系：左乘另一模态，分别写
+\(K_0\boldsymbol e_\pm=z_\pm M_0\boldsymbol e_\pm\)，相减后有
+\((z_+-z_-)\boldsymbol e_-^{\mathsf T}M_0\boldsymbol e_+=0\)。
+
+若取质量归一化向量
+\(\boldsymbol u_j=\boldsymbol e_j/\sqrt{\boldsymbol e_j^{\mathsf T}M_0\boldsymbol e_j}\)，任意小位移和初速可分解为
+
+\[
+q_j(0)=\boldsymbol u_j^{\mathsf T}M_0\boldsymbol q(0),\qquad
+\dot q_j(0)=\boldsymbol u_j^{\mathsf T}M_0\dot{\boldsymbol q}(0).
+\]
+
+每个模态独立演化：
+
+\[
+q_j(t)=q_j(0)\cos\omega_jt+
+\frac{\dot q_j(0)}{\omega_j}\sin\omega_jt,
+\qquad \boldsymbol q(t)=\sum_j\boldsymbol u_jq_j(t).
+\]
+
+这样可以将图1-2的慢模、快模箭头实际用于初值问题。快模角坐标同号、慢模角坐标反号；板的逆时针角与柱的顺时针自转角约定使实际转向还需分别判断；读图时应以所定义角正向为准。质量矩阵归一化只改变模态坐标的尺度，不改变物理频率。
+
+\newpage
+
+\section{第 2 题}\label{ux7b2c-2-ux9898}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  在半径为 \(R\) 的圆环上取 \(N\) 个等分点，依次放置
+  \(q,2q,\ldots,Nq\)，求圆心电场大小。
+\item
+  半径为 \(R\) 的绝缘圆环上线电荷密度为 \[
+  \lambda(\theta)=\frac{\theta}{2\pi}\lambda_0,
+  \qquad 0\le\theta<2\pi,
+  \] 求圆心电场大小。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.526\linewidth,height=\textheight,keepaspectratio,alt={图2-1　离散递增点电荷与连续角向线密度}]{../figures/question-02.pdf}
+\caption*{图2-1　离散递增点电荷与连续角向线密度}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-1}
+
+离散电荷的电量按编号增加，圆心场可用单位根的加权和计算。连续分布则把同一径向叠加改写成积分；两问都要保留电场与电荷位置相反的方向。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-1}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  圆心处场强方向与电荷位置径向相反。
+\item
+  \(N\) 次单位根求和。
+\item
+  等比数列对公比求导。
+\item
+  连续电荷元 \(dq=\lambda(\theta)R\,d\theta\)。
+\item
+  正交分量积分。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-1}
+
+若所有等分点电荷相等，圆心场严格相消。电量依次增加等价于在相消的均匀背景上叠加一个``沿圆周线性增长''的非均匀部分，合场沿某一固定方向。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-1}
+
+用复数 \(e^{i\theta}\) 表示径向单位矢量。第一问需要计算
+\(\sum n z^n\)，第二问直接计算
+\(\int\theta e^{i\theta}d\theta\)。最后取模，不必逐个画平行四边形。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-1}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.691\linewidth,height=\textheight,keepaspectratio,alt={图2-2　单位根加权矢量和及连续电荷分量积分}]{../figures/solution-02.pdf}
+\caption*{图2-2　单位根加权矢量和及连续电荷分量积分}
+\end{figure}
+
+\needspace{3\baselineskip}
+\textbf{（一）离散电荷}
+
+以下取 \(q>0\)、\(\lambda_0>0\)，且
+\(N\ge2\)；负电荷分布的合场反向，大小公式取绝对值。图2-1以 \(N=6\)
+展示编号，\(Nq\) 位于极角零点，其余电荷沿逆时针方向依次为
+\(q,2q,\ldots\)。设相邻等分点的圆心角
+
+\[
+\Delta=\frac{2\pi}{N},
+\qquad
+z=e^{i\Delta}.
+\tag{1}
+\]
+
+把第 \(n\) 个电荷的位置方向表示为
+\(z^n\)。圆心处电场方向与位置矢量相反，因此复电场为
+
+\[
+\mathcal E
+=-\frac{kq}{R^2}\sum_{n=1}^{N}n z^n.
+\tag{2}
+\]
+
+从有限等比和
+
+\[
+S(z)=\sum_{n=0}^{N-1}z^n
+=\frac{1-z^N}{1-z}
+\tag{3}
+\]
+
+出发，对 \(z\) 求导后乘 \(z\)：
+
+\[
+zS'(z)=\sum_{n=1}^{N-1}n z^n.
+\tag{4}
+\]
+
+本题需要的和式包含第 \(N\) 项，故应在上式后加上 \(Nz^N=N\)。由 \(z^N=1\)
+且 \(z\ne1\)：
+
+\[
+\sum_{n=1}^{N}n z^n
+=-\frac{Nz}{1-z}.
+\tag{5}
+\]
+
+故场强大小
+
+\[
+E
+=\frac{kqN}{R^2|1-z|}.
+\tag{6}
+\]
+
+又
+
+\[
+|1-e^{i\Delta}|
+=2\sin\frac{\Delta}{2}
+=2\sin\frac{\pi}{N},
+\tag{7}
+\]
+
+所以
+
+\[
+\boxed{
+E=\frac{kNq}{2R^2\sin(\pi/N)}
+}.
+\tag{8}
+\]
+
+若还要写出方向，则由式（2）、（5）
+
+\[
+\mathcal E
+=\frac{kqN}{R^2}\frac{z}{1-z}.
+\]
+
+利用
+
+\[
+1-e^{i\Delta}
+=-2i e^{i\Delta/2}\sin\frac\Delta2,
+\]
+
+可得
+
+\[
+\frac{z}{1-z}
+=\frac{i e^{i\Delta/2}}{2\sin(\Delta/2)}.
+\]
+
+因而在当前编号约定下，合电场相对极角零方向的方位角为
+
+\[
+\arg\mathcal E=\frac\pi2+\frac\pi N.
+\]
+
+电荷编号的起点整体旋转，只会使此方向同角度旋转，不改变式（8）的大小。
+
+\needspace{3\baselineskip}
+\textbf{（二）连续线电荷}
+
+取极角为 \(\theta\) 的微元，弧长
+
+\[
+dl=R\,d\theta,
+\tag{9}
+\]
+
+电量
+
+\[
+dq=\lambda(\theta)R\,d\theta
+=\frac{\lambda_0\theta}{2\pi}R\,d\theta.
+\tag{10}
+\]
+
+圆心处场元
+
+\[
+d\boldsymbol E
+=-\frac{k\,dq}{R^2}
+(\cos\theta\,\boldsymbol e_x+\sin\theta\,\boldsymbol e_y).
+\tag{11}
+\]
+
+于是
+
+\[
+E_x
+=-\frac{k\lambda_0}{2\pi R}
+\int_0^{2\pi}\theta\cos\theta\,d\theta.
+\tag{12}
+\]
+
+分部积分：
+
+\[
+\begin{aligned}
+\int_0^{2\pi}\theta\cos\theta\,d\theta
+&=\left[\theta\sin\theta\right]_0^{2\pi}
+-\int_0^{2\pi}\sin\theta\,d\theta\\
+&=0,
+\end{aligned}
+\tag{13}
+\]
+
+故 \(E_x=0\)。
+
+同理
+
+\[
+E_y
+=-\frac{k\lambda_0}{2\pi R}
+\int_0^{2\pi}\theta\sin\theta\,d\theta.
+\tag{14}
+\]
+
+再次分部积分：
+
+\[
+\begin{aligned}
+\int_0^{2\pi}\theta\sin\theta\,d\theta
+&=\left[-\theta\cos\theta\right]_0^{2\pi}
++\int_0^{2\pi}\cos\theta\,d\theta\\
+&=-2\pi.
+\end{aligned}
+\tag{15}
+\]
+
+所以
+
+\[
+E_y=\frac{k\lambda_0}{R}.
+\tag{16}
+\]
+
+场强大小为
+
+\[
+\boxed{E=\frac{k\lambda_0}{R}}.
+\tag{17}
+\]
+
+方向取决于极角零点与正方向的约定；在上述约定下沿 \(+y\) 方向。
+
+还可用复数积分一步完成连续情形。定义 \(\mathcal E=E_x+iE_y\)，则
+
+\[
+\begin{aligned}
+\mathcal E
+&=-\frac{k\lambda_0}{2\pi R}
+\int_0^{2\pi}\theta e^{i\theta}d\theta\\
+&=-\frac{k\lambda_0}{2\pi R}
+\left[
+\frac{\theta e^{i\theta}}i+e^{i\theta}
+\right]_0^{2\pi}\\
+&=i\frac{k\lambda_0}{R}.
+\end{aligned}
+\]
+
+该结果同时给出 \(E_x=0\)、\(E_y=k\lambda_0/R\)。离散情形的方位角在
+\(N\to\infty\) 时趋于 \(\pi/2\)，与连续结果的方向一致。
+
+\needspace{3\baselineskip}
+\textbf{单位根求导的顺序与低阶核验}
+
+必须先把 \(z\) 当作一般变量求导，再代入 \(z^N=1\)。若先把 \(S(z)\)
+在单位根处设为零后求导，会把非零的加权和一并抹去。直接使用
+\(\sum_{n=1}^N z^n=z(1-z^N)/(1-z)\) 求导，也给出
+\(\sum nz^n=-Nz/(1-z)\)。
+
+取 \(N=3\)，三个位置为 \(120^\circ,240^\circ,0^\circ\)，直接相加得
+
+\[
+\sum nz^n=\frac32-\frac{\sqrt3}{2}i,\qquad
+\mathcal E=\frac{kq}{R^2}
+\left(-\frac32+\frac{\sqrt3}{2}i\right).
+\]
+
+合场大小为 \(\sqrt3kq/R^2\)，方向为 \(150^\circ\)，与式（8）及
+\(\pi/2+\pi/N\) 同时相符。图2-2把两个分量画到同一坐标系；连续极限中的
+\(E_x=0\)、\(E_y>0\) 则来自两个积分的不同边界项。
+
+若离散变式只含 \(q_0+A\cos\theta_n+B\sin\theta_n\)，且 \(N\ge3\)，
+正交和给出
+
+\[
+\mathcal E=-\frac{kN}{2R^2}(A+iB).
+\]
+
+\(N=2\) 时采样点上的正弦恒为零，余弦和的系数也不同，必须单独计算。
+
+\needspace{3\baselineskip}
+\textbf{补充推导与适用条件}
+
+\textbf{编号的常量平移不改变合场。} 若把每个点电荷都同时增加
+\(q_0\)，新增的 \(N\) 个等量电荷在圆心的场严格相消。因而将序列
+\(q,2q,\ldots,Nq\) 改写成
+\(0,q,\ldots,(N-1)q\)，场强大小不变；只要同时保持电荷与空间位置的配对关系即可。这一观察能帮助检查单位根求和中是否多出了一项。
+
+\textbf{只有一阶傅里叶谐波能在圆心产生场。} 对任意周期线密度
+\(\lambda(\theta)\)，复场强可写成
+
+\[
+\mathcal E
+=-\frac{k}{R}
+\int_0^{2\pi}\lambda(\theta)e^{i\theta}d\theta.
+\]
+
+若
+
+\[
+\lambda(\theta)=a_0
++\sum_{n=1}^{\infty}
+[a_n\cos(n\theta)+b_n\sin(n\theta)],
+\]
+
+利用正交性，除 \(n=1\) 外的所有项都为零，因而
+
+\[
+\boxed{
+\mathcal E=-\frac{k\pi}{R}(a_1+ib_1)
+}.
+\]
+
+均匀项 \(a_0\)
+和二阶以上谐波虽然会改变总电荷或局部密度，却不改变圆心电场。两问均只取电荷分布的一阶谐波。
+
+\textbf{小 \(N\) 校验。} 当 \(N=2\) 时，直接相减得场强大小
+\(kq/R^2\)，式（8）也给出
+
+\[
+\frac{2kq}{2R^2\sin(\pi/2)}=\frac{kq}{R^2}.
+\]
+
+当 \(N\) 很大时，\(\sin(\pi/N)\simeq\pi/N\)，有
+\(E\sim kqN^2/(2\pi R^2)\)。这个 \(N^2\)
+增长并不奇怪，因为本题总电荷本身就按 \(N(N+1)q/2\) 增长；不能在保持
+\(q\) 不变时把它误解为固定总电荷的连续极限。
+
+\newpage
+
+\section{第 3 题}\label{ux7b2c-3-ux9898}
+
+长为 \(l\) 的不可伸长轻绳悬挂一根长为 \(2l\)、质量为 \(m\)
+的均匀刚性细杆。系统初始静止平衡。一刚性小球质量为 \(M\)，且
+\(M\ll m\)，以速度 \(v_0=\sqrt{gl}\) 水平撞击细杆中点。记碰撞时刻为
+\(t=0\)，求此后轻绳相对竖直方向的摆角 \(\theta(t)\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.524\linewidth,height=\textheight,keepaspectratio,alt={图3-1　轻绳悬挂细杆及小球水平撞击杆中点}]{../figures/question-03.pdf}
+\caption*{图3-1　轻绳悬挂细杆及小球水平撞击杆中点}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-2}
+
+小球先把水平速度传给细杆，绳和杆随后做耦合小振动。先确定碰后两个角速度，再分解为两个简正模态，最后还原题目所求的绳摆角。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-2}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(M\ll m\) 时的刚性正碰速度传递。
+\item
+  复摆的平动---转动耦合动能。
+\item
+  二次型正交变换。
+\item
+  简正频率和模态叠加。
+\item
+  由广义速度初值确定振幅。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-2}
+
+碰撞发生在杆中点，即杆质心，因此初始冲量只给杆质心平动速度，不直接给杆绕质心的角速度。碰撞后绳和杆形成两个相连摆动自由度：一个模态中两者大体同向，另一个模态中二者相对摆动。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-2}
+
+先由一维弹性碰撞得到杆质心速度 \(V\)。再取 \(\theta,\varphi\)
+为小角，把杆质心坐标写出并构造二阶拉格朗日量。对二次型作旋转变换，消去唯一的交叉速度项。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-2}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.538\linewidth,height=\textheight,keepaspectratio,alt={图3-2　绳角、杆角及两个简正模态的组合}]{../figures/solution-03.pdf}
+\caption*{图3-2　绳角、杆角及两个简正模态的组合}
+\end{figure}
+
+\needspace{3\baselineskip}
+\textbf{（一）碰撞后的初始条件}
+
+轻球撞击重杆质心。碰撞时间极短，绳中张力沿竖直方向，不向水平方向提供冲量。参考解按理想弹性正碰处理。原题只写``刚性''，这本身不能确定恢复系数；以下先取
+\(e=1\)，末尾再给出一般 \(e\) 的振幅修正。设碰后小球速度为 \(v'\)
+、杆质心速度为 \(V\)，则
+
+\[
+Mv_0=Mv'+mV,
+\]
+
+\[
+\frac12Mv_0^2
+=\frac12Mv'^2+\frac12mV^2.
+\]
+
+由第一式得 \(M(v_0-v')=mV\)，由第二式因式分解得
+\(M(v_0-v')(v_0+v')=mV^2\)。两式相除：
+
+\[
+v_0+v'=V.
+\]
+
+与动量方程联立，杆质心速度为
+
+\[
+V=\frac{2M}{M+m}v_0.
+\tag{1}
+\]
+
+因 \(M\ll m\)，
+
+\[
+V\simeq\frac{2M}{m}v_0
+=\frac{2M}{m}\sqrt{gl}.
+\tag{2}
+\]
+
+碰撞冲量通过杆质心，所以碰撞后瞬间杆绕质心角速度为零：
+
+\[
+\theta(0)=0,\quad
+\varphi(0)=0,\quad
+\dot\theta(0)=\frac Vl,\quad
+\dot\varphi(0)=0.
+\tag{3}
+\]
+
+式（3）中 \(\dot\theta(0)=V/l\) 来自杆质心的瞬时水平速度
+
+\[
+\dot x_C(0)=l[\dot\theta(0)+\dot\varphi(0)]=V.
+\]
+
+因 \(\dot\varphi(0)=0\)，才有 \(\dot\theta(0)=V/l\)。不能只凭``绳长为
+\(l\)''直接写出这一初值。
+
+\needspace{3\baselineskip}
+\textbf{（二）小振动拉格朗日量}
+
+悬点到绳下端距离为 \(l\)，绳下端到杆质心距离也为 \(l\)。杆质心坐标
+
+\[
+x_C=l\sin\theta+l\sin\varphi,
+\qquad
+y_C=-l\cos\theta-l\cos\varphi.
+\tag{4}
+\]
+
+速度平方
+
+\[
+\begin{aligned}
+v_C^2
+&=l^2(\cos\theta\,\dot\theta
++\cos\varphi\,\dot\varphi)^2\\
+&\quad+l^2(\sin\theta\,\dot\theta
++\sin\varphi\,\dot\varphi)^2.
+\end{aligned}
+\tag{5}
+\]
+
+均匀细杆长 \(2l\)，绕质心转动惯量
+
+\[
+I_C=\frac1{12}m(2l)^2=\frac13ml^2.
+\tag{6}
+\]
+
+总机械能
+
+\[
+E
+=-mgl(\cos\theta+\cos\varphi)
++\frac12mv_C^2+\frac12I_C\dot\varphi^2.
+\tag{7}
+\]
+
+在 \(\theta,\varphi\ll1\) 下，
+
+\[
+\sin\theta\simeq\theta,\qquad
+\cos\theta\simeq1-\frac{\theta^2}{2},
+\tag{8}
+\]
+
+只保留二阶量：
+
+\[
+T
+=\frac16ml^2
+\left(3\dot\theta^2+6\dot\theta\dot\varphi
++4\dot\varphi^2\right),
+\tag{9}
+\]
+
+\[
+U
+=-2mgl+\frac12mgl(\theta^2+\varphi^2).
+\tag{10}
+\]
+
+抛去势能常数 \(-2mgl\)，二次型可写成
+
+\[
+T=\frac12ml^2
+\begin{pmatrix}\dot\theta&\dot\varphi\end{pmatrix}
+\begin{pmatrix}
+1&1\\
+1&4/3
+\end{pmatrix}
+\begin{pmatrix}\dot\theta\\\dot\varphi\end{pmatrix},
+\]
+
+\[
+U_2=\frac12mgl
+\begin{pmatrix}\theta&\varphi\end{pmatrix}
+\begin{pmatrix}1&0\\0&1\end{pmatrix}
+\begin{pmatrix}\theta\\\varphi\end{pmatrix}.
+\]
+
+势能矩阵已是单位阵，因而只需用一个正交变换对角化动能矩阵，势能不会重新产生交叉项。
+
+\needspace{3\baselineskip}
+\textbf{（三）简正坐标}
+
+作正交变换
+
+\[
+\eta=\cos\alpha\,\theta+\sin\alpha\,\varphi,
+\tag{11}
+\]
+
+\[
+\zeta=-\sin\alpha\,\theta+\cos\alpha\,\varphi.
+\tag{12}
+\]
+
+选择 \(\alpha\) 使动能的 \(\dot\eta\dot\zeta\) 项消失。交叉项系数正比于
+
+\[
+6\cos2\alpha+\sin2\alpha,
+\]
+
+因而
+
+\[
+\tan2\alpha=-6.
+\tag{13}
+\]
+
+因此
+
+\[
+\cos2\alpha=\frac1{\sqrt{37}},
+\qquad
+\sin2\alpha=-\frac6{\sqrt{37}}.
+\tag{14}
+\]
+
+动能矩阵的两个本征值为
+
+\[
+\mu_1=\frac{7-\sqrt{37}}6,
+\qquad
+\mu_2=\frac{7+\sqrt{37}}6.
+\]
+
+因此在简正坐标下
+
+\[
+T=\frac12ml^2
+(\mu_1\dot\eta^2+\mu_2\dot\zeta^2),
+\qquad
+U_2=\frac12mgl(\eta^2+\zeta^2).
+\]
+
+每个坐标都满足 \(\mu_i\ddot q_i+(g/l)q_i=0\)，因此两个简正角频率为
+
+\[
+\boxed{
+\omega_1=\sqrt{\frac{6g}{(7-\sqrt{37})l}}
+},
+\tag{15}
+\]
+
+\[
+\boxed{
+\omega_2=\sqrt{\frac{6g}{(7+\sqrt{37})l}}
+}.
+\tag{16}
+\]
+
+两者均为实数，符合稳定小振动。
+
+\needspace{3\baselineskip}
+\textbf{（四）由初始条件叠加两个模态}
+
+由式（3）、（11）、（12）：
+
+\[
+\eta(0)=\zeta(0)=0,
+\tag{17}
+\]
+
+\[
+\dot\eta(0)=\frac Vl\cos\alpha,
+\qquad
+\dot\zeta(0)=-\frac Vl\sin\alpha.
+\tag{18}
+\]
+
+因此
+
+\[
+\eta(t)=\frac{V\cos\alpha}{l\omega_1}\sin\omega_1t,
+\tag{19}
+\]
+
+\[
+\zeta(t)=-\frac{V\sin\alpha}{l\omega_2}\sin\omega_2t.
+\tag{20}
+\]
+
+由逆变换
+
+\[
+\theta=\cos\alpha\,\eta-\sin\alpha\,\zeta,
+\tag{21}
+\]
+
+得到绳摆角
+
+\[
+\boxed{
+\theta(t)=\frac Vl
+\left[
+\frac{\cos^2\alpha}{\omega_1}\sin\omega_1t
++\frac{\sin^2\alpha}{\omega_2}\sin\omega_2t
+\right]
+}.
+\tag{22}
+\]
+
+其中
+
+\[
+V\simeq\frac{2M}{m}\sqrt{gl},
+\quad
+\cos^2\alpha=\frac12\left(1+\frac1{\sqrt{37}}\right),
+\quad
+\sin^2\alpha=\frac12\left(1-\frac1{\sqrt{37}}\right).
+\tag{23}
+\]
+
+检查 \(t=0\)：
+
+\[
+\dot\theta(0)
+=\frac Vl(\cos^2\alpha+\sin^2\alpha)
+=\frac Vl,
+\tag{24}
+\]
+
+与碰撞初值一致。
+
+同理，杆的摆角可写成
+
+\[
+\varphi(t)
+=\frac{V\sin\alpha\cos\alpha}{l}
+\left(
+\frac{\sin\omega_1t}{\omega_1}
+-\frac{\sin\omega_2t}{\omega_2}
+\right).
+\]
+
+将 \(t=0\) 代入，有
+\(\dot\varphi(0)=0\)；这是对两个模态相对符号的另一次独立检查。初始机械能为
+
+\[
+E(0)=\frac12mV^2,
+\]
+
+与``杆瞬时只有质心平动、没有自转''的碰后状态一致。
+
+\needspace{3\baselineskip}
+\textbf{恢复系数与方程的独立核验}
+
+质心正碰的一般恢复系数条件是 \(V-v'=ev_0\)。与水平动量守恒联立：
+
+\[
+V=\frac{(1+e)M}{M+m}v_0.
+\]
+
+若碰后球与杆分离，把这个 \(V\)
+代入式（22）即可，两个频率由杆和绳的运动决定。\(M\ll m\) 使角振幅为
+\(O(M/m)\)，而不是使刚性碰撞自动成为弹性碰撞。
+
+从能量二次型直接得到运动方程：
+
+\[
+\ddot\theta+\ddot\varphi+\frac gl\theta=0,\qquad
+\ddot\theta+\frac43\ddot\varphi+\frac gl\varphi=0.
+\]
+
+令 \(y=\omega^2l/g\)，行列式为
+
+\[
+(1-y)(1-\tfrac43y)-y^2=0
+\quad\Longleftrightarrow\quad y^2-7y+3=0.
+\]
+
+其根 \((7\pm\sqrt{37})/2\) 与式（15）、（16）一致。进一步将式（22）
+和对应的 \(\varphi(t)\) 代回两行微分方程，每个正弦项都分别相消，
+四个位置、速度初值也全部恢复。
+
+图3-2用同一个固定悬点画绳和杆的实际位置：杆角从杆上端的竖直线量起，
+不是相对绳的夹角。右侧两列模态振幅比分别来自
+\(\Phi/\Theta=(1-y)/y\)，快模为负、慢模为正；它们只是相对角坐标的方向示意。
+
+在偏心弹性正碰中，碰撞点获得的速度为 \(J(1/m+b^2/I_C)\)，因而
+
+\[
+J=\frac{(1+e)v_0}{1/M+1/m+b^2/I_C}.
+\]
+
+用它求 \(V,\Omega\) 后，再组合两个模态，不能直接沿用质心碰撞的 \(V\)。
+
+\needspace{3\baselineskip}
+\textbf{补充推导与适用条件}
+
+\textbf{碰撞与小振动是两个时间尺度。}
+碰撞阶段只需处理冲量和能量，重力在极短时间内的冲量可忽略；碰撞结束后，球与杆分离，才使用重力势能和小振动方程。把这两段合成一个``全程机械能守恒''会把碰撞能量传递与后续保守运动混在一起。
+
+\textbf{正交变换为何可行。}
+本题的势能矩阵恰与单位阵成比，因而任意正交旋转都不改变
+\(\theta^2+\varphi^2\)。可以自由选择旋转角对角化动能矩阵。一般的耦合小振动未必有这种便利，那时应直接解
+\(\det(K-\omega^2M)=0\)，本征矢量也不一定在普通欧氏内积下正交。
+
+\textbf{两个频率不是近频拍。} 本题
+\(\omega_1/\omega_2=\sqrt{(7+\sqrt{37})/(7-\sqrt{37})}\approx3.78\)，两频率相差较大。绳角是两个频率的叠加，通常呈准周期变化，不能把它称作近频振动形成的慢拍包络；振幅的变化也不代表能量耗散。
+
+\textbf{小振幅假设的自洽性。} 由
+\(V\simeq2(M/m)\sqrt{gl}\)，角振幅的数量级为
+
+\[
+\frac{V}{l\omega_i}\sim\frac Mm.
+\]
+
+题设 \(M\ll m\) 不仅用来简化碰撞速度，也保证后续
+\(\theta,\varphi\ll1\)，因而线性化与碰撞近似在同一小参数 \(M/m\)
+下是自洽的。
+
+\needspace{3\baselineskip}
+\textbf{补充核验与模型推广}
+
+对偏心碰撞，设水平冲量为 \(J\)。杆的质心平动和绕质心转动分别满足
+
+\[
+mV=J,
+\qquad
+I_C\Omega=Jb.
+\]
+
+这里 \(b\) 取碰撞点在质心下方的有向距离，水平冲量向右为正，因此角冲量为
+\(Jb\)。于是
+
+\[
+\dot\varphi(0)=\Omega=\frac{Jb}{I_C},
+\]
+
+\[
+\dot\theta(0)
+=\frac Vl-\dot\varphi(0)
+=\frac{J}{ml}-\frac{Jb}{I_C}.
+\]
+
+此时两个简正坐标的初速都是 \(\dot\theta(0)\)、\(\dot\varphi(0)\)
+的线性组合，仍可按正文方法叠加两个模态。冲量 \(J\)
+则由碰撞点的法向恢复系数条件确定，不能再直接把杆当成质量 \(m\) 的质点。
+
+若恢复系数为零而球随后脱离，初速为
+\(V=Mv_0/(M+m)\)，后续杆的频率不变。若球黏在杆上，球的质量和惯量会进入后续小振动矩阵；只有在
+\(M/m\to0\) 的领先阶，才能说振幅约减半而频率近似不变。
+
+碰撞初值还可在不使用 \(M\ll m\) 时保留精确形式。对质心弹性碰撞，
+
+\[
+V=\frac{2M}{M+m}v_0,
+\qquad
+v_0=\sqrt{gl},
+\]
+
+所以
+
+\[
+\dot\theta(0)=\frac{2M}{M+m}\sqrt{\frac gl},
+\qquad
+\dot\varphi(0)=0.
+\]
+
+将这个精确初速直接代入两模叠加式，频率不变，只是所有振幅乘上
+\(m/(M+m)\)。题设近似的相对误差为
+
+\[
+1-\frac{m}{M+m}
+=\frac{M}{M+m}
+\simeq\frac Mm.
+\]
+
+这个结果能让学生看出：\(M\ll m\)
+只简化了振幅，没有参与后续系统的简正频率。
+
+能量初值是检查速度几何的另一条强约束。碰撞后一瞬间
+\(\theta=\varphi=0\)、\(\dot\varphi=0\)，将 \(\dot\theta=V/l\)
+代入二次型动能：
+
+\[
+T(0)
+=\frac16ml^2\left(3\frac{V^2}{l^2}\right)
+=\frac12mV^2.
+\]
+
+它正好等于碰后杆质心的平动动能，与``质心碰撞不产生杆的初始自转''一致。若这一回代多出或少了一项，通常是把杆质心速度误写成
+\(l\dot\theta\)，漏掉了 \(l\dot\varphi\)。
+
+在板书中可把``物理坐标''与``简正坐标''分成两列。\(\theta,\,\varphi\)
+直接描述绳和杆的角度，初始条件容易写，但方程耦合；\(\eta,\,\zeta\)
+不直接对应单一物体，但它们各自做单频振动。解题结构因而是
+
+\[
+\text{物理初值}
+\longrightarrow
+\text{简正坐标分解}
+\longrightarrow
+\text{两个单频运动}
+\longrightarrow
+\text{逆变换回题问量}.
+\]
+
+这条链条比直接记住最终的双频正弦式更重要。
+
+若学生对旋转对角化不熟悉，可以先用广义本征方程只求频率。从动能和势能直接读出
+
+\[
+M=ml^2
+\begin{pmatrix}
+1&1\\
+1&4/3
+\end{pmatrix},
+\qquad
+K=mgl
+\begin{pmatrix}
+1&0\\
+0&1
+\end{pmatrix}.
+\]
+
+令 \(y=\omega^2l/g\)，则
+
+\[
+\det(K-\omega^2M)=0
+\]
+
+等价于
+
+\[
+\begin{vmatrix}
+1-y&-y\\
+-y&1-\frac43y
+\end{vmatrix}=0.
+\]
+
+逐项展开：
+
+\[
+\begin{aligned}
+0
+&=(1-y)\left(1-\frac43y\right)-y^2\\
+&=1-\frac73y+\frac43y^2-y^2\\
+&=1-\frac73y+\frac13y^2.
+\end{aligned}
+\]
+
+两边乘 \(3\) 得
+
+\[
+y^2-7y+3=0,
+\]
+
+所以
+
+\[
+y_{1,2}=\frac{7\pm\sqrt{37}}2.
+\]
+
+于是
+
+\[
+\omega_{\rm high}^2
+=\frac{7+\sqrt{37}}2\frac gl
+=\frac{6g}{(7-\sqrt{37})l},
+\]
+
+\[
+\omega_{\rm low}^2
+=\frac{7-\sqrt{37}}2\frac gl
+=\frac{6g}{(7+\sqrt{37})l}.
+\]
+
+两种写法的等价性来自
+
+\[
+(7-\sqrt{37})(7+\sqrt{37})=12.
+\]
+
+这条路线适合先确定频率，但要写出题目所需的
+\(\theta(t)\)，仍必须求本征向量或做正文的正交旋转，再将初始速度投影到两个模态上。
+
+\newpage
+
+\section{第 4 题}\label{ux7b2c-4-ux9898}
+
+两个等体积 \(V\)
+的绝热容器装有同种单原子理想气体，以很细的绝热管相连。细管体积和管内热传导均可忽略。初始阀门关闭，左容器有
+\(2n_0\)、温度 \(2T_0\) 的气体，右容器有 \(n_0\)、温度 \(T_0\)
+的气体。\(t=0\) 打开阀门，气体缓慢流动。求充分长时间后两容器的温度
+\(T_1,T_2\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.76\linewidth,height=\textheight,keepaspectratio,alt={图4-1　等体积绝热容器通过细管缓慢交换气体}]{../figures/question-04.pdf}
+\caption*{图4-1　等体积绝热容器通过细管缓慢交换气体}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-3}
+
+左容器向右容器缓慢排气，流出气体带走内能和流动功。先求左侧温度随剩余摩尔数的变化，再用整体能量守恒与最终等压条件求两侧温度。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-3}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  单原子理想气体 \(C_V=3R/2\)。
+\item
+  流出气体携带焓而非仅携带内能。
+\item
+  开放系统微分能量平衡。
+\item
+  总物质的量和总内能守恒。
+\item
+  最终机械平衡条件 \(P_1=P_2\)。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-3}
+
+左侧初压强为右侧的四倍，气体从左流向右。左容器既失去粒子又因膨胀式流出而降温；右容器接收携带能量的气体。在参考解采用的宏观单向流动模型中，流动停止以压强相等为终点；管道热传导忽略，因此模型允许这一终点仍有温差。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-3}
+
+先把左容器看成非稳态控制体，推导它的温度与剩余摩尔数关系。再用总内能守恒和最终等压条件联立，不要预设
+\(T_1=T_2\)。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-3}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.831\linewidth,height=\textheight,keepaspectratio,alt={图4-2　左容器流出微元的能量账本与最终状态}]{../figures/solution-04.pdf}
+\caption*{图4-2　左容器流出微元的能量账本与最终状态}
+\end{figure}
+
+设任意时刻左容器物质的量为 \(n_1\)、温度为 \(T_1\)。有微量 \(-dn_1>0\)
+的气体流出。流出气体每摩尔携带焓
+
+\[
+h=C_PT_1=(C_V+R)T_1.
+\tag{1}
+\]
+
+左容器内能
+
+\[
+U_1=n_1C_VT_1.
+\tag{2}
+\]
+
+开放系统能量平衡
+
+\[
+dU_1=h\,dn_1,
+\tag{3}
+\]
+
+这里 \(dn_1<0\)，所以右端为负。展开：
+
+\[
+C_V(n_1\,dT_1+T_1\,dn_1)
+=(C_V+R)T_1\,dn_1.
+\tag{4}
+\]
+
+约去两边共同的 \(C_VT_1dn_1\)：
+
+\[
+n_1C_V\,dT_1=RT_1\,dn_1.
+\tag{5}
+\]
+
+分离变量：
+
+\[
+\frac{dT_1}{T_1}
+=\frac{R}{C_V}\frac{dn_1}{n_1}.
+\tag{6}
+\]
+
+单原子气体 \(R/C_V=2/3\)。由初态 \((2n_0,2T_0)\) 积分到终态
+\((n_1,T_1)\)：
+
+\[
+\ln\frac{T_1}{2T_0}
+=\frac23\ln\frac{n_1}{2n_0}.
+\tag{7}
+\]
+
+故
+
+\[
+T_1
+=2T_0\left(\frac{n_1}{2n_0}\right)^{2/3}.
+\tag{8}
+\]
+
+总物质的量守恒：
+
+\[
+n_1+n_2=3n_0.
+\tag{9}
+\]
+
+两个容器均绝热，整体无外功，总内能守恒：
+
+\[
+2n_0C_V(2T_0)+n_0C_VT_0
+=n_1C_VT_1+n_2C_VT_2.
+\tag{10}
+\]
+
+约去 \(C_V\)：
+
+\[
+n_1T_1+n_2T_2=5n_0T_0.
+\tag{11}
+\]
+
+最终无宏观流动，且两容器体积相同，压强相等：
+
+\[
+\frac{n_1RT_1}{V}
+=\frac{n_2RT_2}{V}.
+\tag{12}
+\]
+
+所以
+
+\[
+n_1T_1=n_2T_2.
+\tag{13}
+\]
+
+结合式（11）：
+
+\[
+n_1T_1=n_2T_2=\frac52n_0T_0.
+\tag{14}
+\]
+
+令
+
+\[
+x=\frac{n_1}{2n_0}.
+\tag{15}
+\]
+
+由式（8）、（14）：
+
+\[
+(2n_0x)(2T_0x^{2/3})
+=\frac52n_0T_0.
+\tag{16}
+\]
+
+消去 \(n_0T_0\)：
+
+\[
+4x^{5/3}=\frac52,
+\qquad
+x^{5/3}=\frac58.
+\tag{17}
+\]
+
+于是
+
+\[
+x=\left(\frac58\right)^{3/5}.
+\tag{18}
+\]
+
+左侧终温
+
+\[
+\boxed{
+T_1=2T_0\left(\frac58\right)^{2/5}
+\approx1.66T_0
+}.
+\tag{19}
+\]
+
+终态左侧摩尔数
+
+\[
+n_1=2n_0\left(\frac58\right)^{3/5}.
+\tag{20}
+\]
+
+右侧摩尔数
+
+\[
+n_2
+=3n_0-2n_0\left(\frac58\right)^{3/5}.
+\tag{21}
+\]
+
+由式（14）：
+
+\[
+\boxed{
+T_2
+=T_0\,
+\frac{5/2}
+{3-2(5/8)^{3/5}}
+\approx1.68T_0
+}.
+\tag{22}
+\]
+
+\(T_1\ne T_2\)，但 \(n_1T_1=n_2T_2\)，所以最终压强确实相等。
+
+\needspace{3\baselineskip}
+\textbf{过程模型与熵的回查}
+
+式（3）采用容器内均匀、局域平衡的连续介质模型，忽略管内储能及
+独立的热传导，流出的摩尔焓取上游温度 \(C_PT_1\)。这里的终态是
+宏观压差流动停止的状态；若考虑之后的热交换，温差会继续消失，
+那已是另一段过程。
+
+设 \(z=n_1/n_0\)，则
+
+\[
+\frac{n_1T_1}{n_0T_0}
+=2z(z/2)^{2/3},\qquad
+\frac{n_2T_2}{n_0T_0}
+=5-2z(z/2)^{2/3}.
+\]
+
+第一式随 \(z\) 单调增加。实际排气使 \(z\) 从 \(2\) 减小，左压强下降、
+右压强上升，等压交点唯一。图4-2把两条压力曲线与流出的焓一起画出，
+交点对应 \(z=2(5/8)^{3/5}\)。
+
+单原子气体熵差中，与总摩尔数成正比的常数项相消。令
+\(z_1=n_1/n_0\)、\(z_2=n_2/n_0\)、\(t_i=T_i/T_0\)，有
+
+\[
+\frac{\Delta S}{n_0R}
+=\sum_{i=1}^2 z_i\left(\frac32\ln t_i-\ln z_i\right)-\ln2.
+\]
+
+代入所得终态，熵增约 \(0.389\)。继续到共同温度 \(5T_0/3\)、两侧各
+\(3n_0/2\) 的热平衡时，
+
+\[
+\frac{\Delta S_{\rm eq}}{n_0R}
+=3\left[\frac32\ln\frac53-\ln\frac32\right]-\ln2,
+\]
+
+比前一状态略大，符合后续热交换继续产生熵。
+
+\needspace{3\baselineskip}
+\textbf{补充推导与适用条件}
+
+\textbf{为什么流出能量是焓。}
+容器内部每少一摩尔气体，不仅少掉该部分自身的内能
+\(C_VT\)，还要由容器内其余气体提供流动功
+\(PV_m=RT\)，把这一摩尔气体推入细管。因此穿过控制面的能量是
+
+\[
+C_VT+RT=C_PT.
+\]
+
+若只扣除 \(C_VT\)，会错误得到左箱温度不随流出变化。
+
+\textbf{终态数值的交叉检查。} 由解析结果
+
+\[
+\frac{n_1}{n_0}\approx1.50854,
+\qquad
+\frac{n_2}{n_0}\approx1.49146,
+\]
+
+\[
+\frac{T_1}{T_0}\approx1.65723,
+\qquad
+\frac{T_2}{T_0}\approx1.67621.
+\]
+
+相乘得
+
+\[
+n_1T_1=n_2T_2=2.5n_0T_0,
+\]
+
+因而共同终压强为
+
+\[
+P_f=\frac{5n_0RT_0}{2V}.
+\]
+
+它确实介于初始右侧压强 \(n_0RT_0/V\) 和左侧压强 \(4n_0RT_0/V\)
+之间。另外 \(n_1+n_2=3n_0\)、\(n_1T_1+n_2T_2=5n_0T_0\)
+同时成立，说明数值舍入没有破坏粒子数和总内能守恒。
+
+\textbf{温差很小却不是零。} 两侧终温只相差约
+\(1.9\%T_0\)，这会诱使人把它们强行设为相等。但细管中``绝热、忽略热传导''正是用来保留这一小温差的条件。在力学平衡后，若再允许缓慢热传导，系统还会继续向共同温度演化。
+
+\needspace{3\baselineskip}
+\textbf{补充核验与模型推广}
+
+对任意常量 \(C_V\)，令
+
+\[
+\sigma=\frac{R}{C_V}.
+\]
+
+左箱的流出关系为
+
+\[
+T_1=2T_0
+\left(\frac{n_1}{2n_0}\right)^\sigma.
+\]
+
+令 \(x=n_1/(2n_0)\)，内能守恒与等压条件仍给出 \(n_1T_1=5n_0T_0/2\)，故
+
+\[
+4x^{1+\sigma}=\frac52,
+\qquad
+x=\left(\frac58\right)^{1/(1+\sigma)}.
+\]
+
+从而
+
+\[
+\boxed{
+T_1=2T_0
+\left(\frac58\right)^{\sigma/(1+\sigma)}
+},
+\]
+
+\[
+\boxed{
+T_2=\frac{(5/2)T_0}
+{3-2(5/8)^{1/(1+\sigma)}}
+}.
+\]
+
+令 \(\sigma=2/3\) 即恢复单原子气体结果。
+
+若最终允许两侧完全热平衡，则同温、同压、等体积立即给出
+\(n_1=n_2=3n_0/2\)。由总内能守恒：
+
+\[
+3n_0C_VT_f=5n_0C_VT_0,
+\]
+
+故
+
+\[
+\boxed{T_f=\frac53T_0}.
+\]
+
+它恰介于绝热细管情形的 \(T_1\) 与 \(T_2\) 之间，可作为数值合理性检查。
+
+对开放系统微分式的符号，可以再做一次独立审核。令 \(dn_1<0\)
+表示左容器内物质的量减少，则流出的正物质的量是
+\(-dn_1\)。左容器内能的变化应为
+
+\[
+d(n_1C_VT_1)=C_PT_1\,dn_1.
+\]
+
+因为 \(dn_1<0\)，右边确实为负，表示左侧内能下降。展开左边：
+
+\[
+C_Vn_1\,dT_1+C_VT_1\,dn_1
+=C_PT_1\,dn_1,
+\]
+
+移项后才得
+
+\[
+C_Vn_1\,dT_1=RT_1\,dn_1.
+\]
+
+由于 \(dn_1<0\)，可见 \(dT_1<0\)：左侧气体从 \(2T_0\) 冷却到约
+\(1.657T_0\)。这一符号判断与物理直觉一致，能避免在``流出量取正''和``容器内
+\(dn_1\) 取负''两套记号之间混用。
+
+最终压强也提供了一个不依赖详细过程的快速检查。等压与总内能守恒给出
+
+\[
+2P_fV=5n_0RT_0,
+\]
+
+即 \(P_f=5n_0RT_0/(2V)\)。它与左侧初压 \(4n_0RT_0/V\) 及右侧初压
+\(n_0RT_0/V\) 的大小关系是
+
+\[
+P_{R,0}<P_f<P_{L,0},
+\]
+
+符合气体从左向右流动直至压强平衡的方向。
+
+本过程虽然对外绝热，却不是可逆过程。取 \(n_0=T_0=V=1\)
+作无量纲标度，单原子理想气体的状态函数可写为
+
+\[
+\frac SR
+=n\left[\frac32\ln T+\ln\left(\frac Vn\right)\right]
++\text{与总物质的量成正比的常数}.
+\]
+
+把初、末两侧状态分别代入，常数项因总物质的量不变而相消，得
+
+\[
+\frac{\Delta S}{n_0R}\approx0.389>0.
+\]
+
+熟悉熵的学生可用这一结果检查方向；刚入门时则只需知道，压差驱动的绝热流动仍会因不可逆性产生熵。
+
+\needspace{3\baselineskip}
+\textbf{排气过程的局部熵产生}
+
+终态熵增只能检查结果；还可以逐步检查单向流动模型。设从左侧流出 \(dn>0\)
+摩尔，两个容器的瞬时摩尔熵为 \(s_1,s_2\)，比热取
+\(C_P=5R/2,C_V=3R/2\)。左侧绝热排气满足
+\(dS_1=-s_1dn\)。右侧吸收的能量是上游气体的焓，因此
+
+\[
+dU_2=C_PT_1dn,
+\qquad C_Vn_2dT_2=(C_PT_1-C_VT_2)dn.
+\]
+
+对固定体积的理想气体，\(S_2=n_2s_2\)，而
+\(s_2=C_V\ln T_2-R\ln(n_2/V)+\text{常数}\)。直接微分可得
+
+\[
+dS_2=C_Vn_2\frac{dT_2}{T_2}+(s_2-R)dn
+=\left[s_2+C_P\left(\frac{T_1}{T_2}-1\right)\right]dn.
+\]
+
+将左、右相加，再使用 \(s_2-s_1=C_P\ln(T_2/T_1)-R\ln(P_2/P_1)\)，得到
+
+\[
+\frac{dS}{dn}
+=C_P(r-1-\ln r)+R\ln\frac{P_1}{P_2},
+\qquad r=T_1/T_2.
+\]
+
+在宏观气流尚由左向右时 \(P_1\ge P_2\)，第二项非负；第一项由
+\(r-1-\ln r\ge0\) 也非负。所以整段流动的熵产生方向正确，温度后来出现
+\(T_1<T_2\)
+也不违反第二定律。左侧温度降低来自气体带走焓，不能只按热传导方向判断它。
+
+积分从 \(n_1=2n_0\) 到等压终点，应恢复前面约 \(0.389n_0R\)
+的总熵增。终点若仍有温差，第一项仍非零；这再次表明等压只标记该单向压差流模型的终止，不是完全热力学平衡。
+
+\newpage
+
+\section{第 5 题}\label{ux7b2c-5-ux9898}
+
+三个完全相同的宽电磁铁线圈绕在细铁环上，并将铁环三等分。线圈欧姆电阻忽略。线圈
+1 接理想交流电源，线圈 2 经开关 \(S\) 形成开路，线圈 3
+接高内阻交流电压表。开关断开时，电压表有效值为电源有效值的一半。闭合
+\(S\) 将线圈 2 短路。铁环磁导率与磁通无关，求闭合后电压表读数。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.498\linewidth,height=\textheight,keepaspectratio,alt={图5-1　均匀铁环上的三个等间隔宽线圈}]{../figures/question-05.pdf}
+\caption*{图5-1　均匀铁环上的三个等间隔宽线圈}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-4}
+
+开关断开时的电压比先确定三个线圈的耦合程度。线圈2短路后出现感应电流，同时改变线圈1的输入电感和线圈3的感应电压，需要把两种变化一起计算。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-4}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  线性磁介质中的磁通叠加。
+\item
+  自感电动势与互感电动势。
+\item
+  理想短路线圈的端电压为零。
+\item
+  高内阻电压表使线圈 3 电流近似为零。
+\item
+  交流相量方程中共同的 \(i\omega\) 因子可约去。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-4}
+
+三个线圈和铁环几何完全对称，取自感均为 \(L\)，任意两线圈之间的互感均为
+\(M\)，并按绕向统一取正号。线圈 2
+短路后，其电流产生反向磁通，抵消一部分线圈 1 的磁通。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-4}
+
+先利用开路状态的电压比 \(U_3/U_1=1/2\) 得到 \(M/L=1/2\)。闭合后先由
+\(U_2=0\) 求 \(I_2\) 与 \(I_1\)，再分别计算电源电压与表头电压。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-4}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.88\linewidth,height=\textheight,keepaspectratio,alt={图5-2　三线圈自感与互感的相量关系}]{../figures/solution-05.pdf}
+\caption*{图5-2　三线圈自感与互感的相量关系}
+\end{figure}
+
+用相量表示正弦稳态量。线圈 3 接高内阻电压表，因此
+
+\[
+I_3\simeq0.
+\tag{1}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（一）开关断开}
+
+此时 \(I_2=I_3=0\)。线圈 1 端电压
+
+\[
+\underline U_1=i\omega L\underline I_1.
+\tag{2}
+\]
+
+线圈 3 感应电压
+
+\[
+\underline U_3=i\omega M\underline I_1.
+\tag{3}
+\]
+
+题给有效值关系
+
+\[
+U_3=\frac12U_1,
+\tag{4}
+\]
+
+故
+
+\[
+\frac ML=\frac12.
+\tag{5}
+\]
+
+\needspace{3\baselineskip}
+\textbf{（二）线圈 2 短路}
+
+线圈 2 端电压为零：
+
+\[
+0=i\omega(L\underline I_2+M\underline I_1).
+\tag{6}
+\]
+
+所以
+
+\[
+\underline I_2=-\frac ML\underline I_1
+=-\frac12\underline I_1.
+\tag{7}
+\]
+
+线圈 1 的电源电压为
+
+\[
+\begin{aligned}
+\underline U
+&=i\omega(L\underline I_1+M\underline I_2)\\
+&=i\omega\left(L-\frac{M^2}{L}\right)\underline I_1.
+\end{aligned}
+\tag{8}
+\]
+
+代入 \(M=L/2\)：
+
+\[
+\underline U
+=i\omega\frac{3L}{4}\underline I_1.
+\tag{9}
+\]
+
+线圈 3 同时受到线圈 1 与线圈 2 的互感：
+
+\[
+\begin{aligned}
+\underline U_3'
+&=i\omega M(\underline I_1+\underline I_2)\\
+&=i\omega M\left(1-\frac ML\right)\underline I_1\\
+&=i\omega\frac L4\underline I_1.
+\end{aligned}
+\tag{10}
+\]
+
+因此
+
+\[
+\frac{U_3'}{U}
+=\frac{L/4}{3L/4}
+=\frac13.
+\tag{11}
+\]
+
+闭合开关后电压表读数为
+
+\[
+\boxed{U_3'=\frac U3}.
+\tag{12}
+\]
+
+这里 \(U\) 是理想交流电源保持不变的有效值。
+
+\needspace{3\baselineskip}
+\textbf{绕向、电源条件和有限电阻核验}
+
+图5-1给三个线圈标上同名端，线圈电压和电流均按同名端流入约定取号；
+在此绕向下 \(M>0\)。题给有效值只给出 \(|M|/L=1/2\)，正号还需要线圈的
+几何绕向约定，不能由有效值独自判定。图5-2同时显示 \(I_2=-I_1/2\) 和
+\(L_{\rm eq}=3L/4\)，因此
+\(I_{1,\rm short}/I_{1,\rm open}=4/3\)。表头电压取模后为 \(U/3\)。
+
+若线圈2有串联电阻 \(R_2\)，记 \(Z_2=R_2+i\omega L\)，则
+
+\[
+\frac{I_2}{I_1}=-\frac{i\omega M}{Z_2},\qquad
+Z_{\rm in}=i\omega L+\frac{\omega^2M^2}{Z_2}.
+\]
+
+输入阻抗实部为
+
+\[
+\Re Z_{\rm in}
+=\frac{\omega^2M^2R_2}{R_2^2+\omega^2L^2}\ge0.
+\]
+
+电源有功功率 \(|I_1|^2\Re Z_{\rm in}\) 恰等于
+\(|I_2|^2R_2\)（电流相量均取有效值），这是独立的功率核验。 \(R_2=0\)
+时输入仍为纯电感，外加理想交流电源的平均功率为零。
+
+零电阻线圈还可能保留开关闭合时产生的直流磁链常数；它不产生
+交流感应电压。上述读数指正弦稳态交流分量，计算时不把该常数
+误写成一个额外的交流电流。
+
+\needspace{3\baselineskip}
+\textbf{补充推导与适用条件}
+
+\textbf{开路读数先标定耦合程度。} 线圈 2、3 都开路时，线圈 1
+只有自感电压，线圈 3 只有由线圈 1 产生的互感电压，所以比值 \(U_3/U_1\)
+直接等于
+\(M/L\)。这一步不需要知道铁环长度、截面积、磁导率或线圈匝数；所有几何信息都被实验读数吸收到无量纲耦合系数中。
+
+\textbf{短路线圈使输入等效电感降低。} 从式（8）可读出
+
+\[
+L_{\rm eq}=L-\frac{M^2}{L}
+=L\left(1-\frac{M^2}{L^2}\right).
+\]
+
+本题 \(M/L=1/2\)，所以
+\(L_{\rm eq}=3L/4\)。理想交流电源保持端电压不变，因而电源线圈电流由开路时的
+
+\[
+I_{1,\rm open}=\frac{U}{\omega L}
+\]
+
+增大为
+
+\[
+I_{1,\rm short}=\frac{U}{\omega(3L/4)}
+=\frac43I_{1,\rm open}.
+\]
+
+所以线圈 3 中虽然出现部分磁通抵消，其读数并不是简单地从 \(U/2\) 变成
+\(U/4\)。
+
+\textbf{一般耦合系数的简洁结果。} 令
+
+\[
+\rho=\frac ML.
+\]
+
+短路条件给出 \(I_2=-\rho I_1\)。因此
+
+\[
+U=i\omega L(1-\rho^2)I_1,
+\]
+
+\[
+U_3'=i\omega L\rho(1-\rho)I_1.
+\]
+
+两式相除：
+
+\[
+\boxed{
+\frac{U_3'}U
+=\frac{\rho(1-\rho)}{1-\rho^2}
+=\frac{\rho}{1+\rho}
+}.
+\]
+
+令 \(\rho=1/2\) 立即得
+\(U_3'/U=1/3\)。这个一般式清楚显示：短路后读数由``磁通抵消''与``源线圈电流增大''共同决定。
+
+\textbf{电感矩阵的物理范围。} 三个线圈的对称电感矩阵有一个本征值
+\(L+2M\) 和两个简并本征值 \(L-M\)。磁场能非负给出闭区间
+\(-1/2\le M/L\le1\)；若要求任意非零电流均有正磁能，则需要
+
+\[
+-\frac12<\frac ML<1.
+\]
+
+本题 \(M/L=1/2\)
+落在允许范围内。这一检查可排除由有效值比例或绕向符号读错导致的非物理互感系数。
+
+\newpage
+
+\section{第 6 题}\label{ux7b2c-6-ux9898}
+
+\(\pi^+\) 介子静质量为电子静质量的 \(273\)
+倍，可衰变为正电子和电子中微子：
+
+\[
+\pi^+\longrightarrow e^++\nu_e.
+\]
+
+中微子静质量取零，满足
+\(E_\nu=p_\nu c\)。要使实验室系中正电子与中微子的速度方向互相垂直，求
+\(\pi^+\) 介子的最小速度。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.663\linewidth,height=\textheight,keepaspectratio,alt={图6-1　实验室系中介子衰变为相互垂直的两粒子}]{../figures/question-06.pdf}
+\caption*{图6-1　实验室系中介子衰变为相互垂直的两粒子}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-5}
+
+题给直角发生在实验室系。用能量、动量守恒消去母粒子的动量，再以质量壳条件固定两个子粒子的能量乘积，由此求母粒子速度的最小值。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-5}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  相对论能量---动量关系。
+\item
+  四动量守恒与不变量。
+\item
+  零静质量粒子 \(E=pc\)。
+\item
+  垂直动量的矢量平方。
+\item
+  单变量极值。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-5}
+
+母介子动量是两个互相垂直的子动量之和。若母介子太慢，在实验室系中不可能把本来背对背的衰变产物``推''到直角；达到临界时两个子粒子在实验室系中的能量恰相等。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-5}
+
+设正电子总能量为 \(E_e\)、中微子能量为 \(E_\nu\)。利用母粒子不变量先得到
+\(E_eE_\nu\) 的固定乘积，再在此约束下极小化母粒子速度。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-5}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.82\linewidth,height=\textheight,keepaspectratio,alt={图6-2　垂直子动量合成与能量变量的极值条件}]{../figures/solution-06.pdf}
+\caption*{图6-2　垂直子动量合成与能量变量的极值条件}
+\end{figure}
+
+记电子静质量为 \(m_e\)，母介子静质量
+
+\[
+m_\pi=273m_e.
+\tag{1}
+\]
+
+能量守恒和动量守恒：
+
+\[
+E_\pi=E_e+E_\nu,
+\tag{2}
+\]
+
+\[
+\boldsymbol p_\pi=\boldsymbol p_e+\boldsymbol p_\nu.
+\tag{3}
+\]
+
+题设两子粒子方向垂直，故
+
+\[
+\boldsymbol p_e\cdot\boldsymbol p_\nu=0,
+\tag{4}
+\]
+
+以及
+
+\[
+p_\pi^2=p_e^2+p_\nu^2.
+\tag{5}
+\]
+
+对母粒子使用能量---动量关系：
+
+\[
+m_\pi^2c^4
+=E_\pi^2-p_\pi^2c^2.
+\tag{6}
+\]
+
+代入式（2）、（5）：
+
+\[
+\begin{aligned}
+m_\pi^2c^4
+&=(E_e+E_\nu)^2-c^2(p_e^2+p_\nu^2)\\
+&=(E_e^2-p_e^2c^2)
++(E_\nu^2-p_\nu^2c^2)+2E_eE_\nu.
+\end{aligned}
+\tag{7}
+\]
+
+正电子满足
+
+\[
+E_e^2-p_e^2c^2=m_e^2c^4,
+\tag{8}
+\]
+
+中微子满足
+
+\[
+E_\nu^2-p_\nu^2c^2=0.
+\tag{9}
+\]
+
+因此
+
+\[
+2E_eE_\nu=(m_\pi^2-m_e^2)c^4.
+\tag{10}
+\]
+
+定义无量纲变量
+
+\[
+x=\frac{E_e}{m_ec^2},
+\qquad
+y=\frac{E_\nu}{m_ec^2},
+\qquad
+\mu=\frac{m_\pi}{m_e}=273.
+\tag{11}
+\]
+
+式（10）化为
+
+\[
+xy=A,
+\qquad
+A=\frac{\mu^2-1}{2}.
+\tag{12}
+\]
+
+母介子速度满足
+
+\[
+\beta^2\equiv\frac{v_\pi^2}{c^2}
+=\frac{p_\pi^2c^2}{E_\pi^2}.
+\tag{13}
+\]
+
+由 \(p_e^2c^2=m_e^2c^4(x^2-1)\)、\(p_\nu c=E_\nu=m_ec^2y\)：
+
+\[
+\beta^2
+=\frac{x^2-1+y^2}{(x+y)^2}.
+\tag{14}
+\]
+
+利用 \(y=A/x\)：
+
+\[
+\beta^2(x)
+=\frac{x^2-1+A^2/x^2}{(x+A/x)^2}.
+\tag{15}
+\]
+
+对 \(x\) 求导并整理：
+
+\[
+\frac{d\beta^2}{dx}
+=\frac{2x(2A+1)(x^2-A)}
+{(A+x^2)^3}.
+\tag{16}
+\]
+
+\(x>1\) 对应正电子具有非零速度；所以本题物理域内唯一的驻点为
+
+\[
+x^2=A.
+\tag{17}
+\]
+
+此时
+
+\[
+x=y=\sqrt A,
+\tag{18}
+\]
+
+即两子粒子总能量相等。代入式（14）：
+
+\[
+\beta_{\min}^2
+=\frac{2A-1}{4A}
+=\frac{\mu^2-2}{2(\mu^2-1)}.
+\tag{19}
+\]
+
+所以
+
+\[
+\boxed{
+v_{\min}
+=c\sqrt{\frac{273^2-2}{2(273^2-1)}}
+\approx0.70710c
+}.
+\tag{20}
+\]
+
+因 \(\mu\gg1\)，结果接近 \(c/\sqrt2\)。
+
+\needspace{3\baselineskip}
+\textbf{动量图与极值可达性}
+
+图6-1把母粒子动量画成两子动量的对角线： \(\boldsymbol p_e\) 与
+\(\boldsymbol p_\nu\) 互相垂直，首尾相接后才得到
+\(\boldsymbol p_\pi\)。原图若把母粒子箭头单独画成水平方向，会与
+\(\boldsymbol p_\nu\ne0\) 矛盾。
+
+在等能点取 \(E_e=E_\nu=\sqrt A\,m_ec^2\)，令两个三维动量分别沿 \(x,y\)
+轴，大小为
+
+\[
+p_e=m_ec\sqrt{A-1},\qquad p_\nu=m_ec\sqrt A.
+\]
+
+它们的和与总能量自动满足
+
+\[
+(E_e+E_\nu)^2-c^2(p_e^2+p_\nu^2)
+=m_e^2c^4(2A+1)=m_\pi^2c^4.
+\]
+
+因此这个极小值不只是代数驻点，也确实构造出允许的两体末态。
+图6-2按真实函数 \(\beta^2(x)=1-\mu^2/(x+A/x)^2\) 绘制；
+在驻点左侧下降、右侧上升，远端均趋于1，而不是任意手绘一条U形曲线。
+
+一般质量的变式中，若等能点落在物理域外，边界处某个子粒子动量为零，
+其速度方向无法定义；对于严格的``两条非零速度垂直''，此时通常只有
+趋近边界的下确界，而不能把边界称作已达到的最小值。
+
+\needspace{3\baselineskip}
+\textbf{补充推导与适用条件}
+
+\textbf{可以不求导，直接用均值不等式。} 由式（10），\(E_eE_\nu\)
+是固定正数。母粒子能量为
+
+\[
+E_\pi=E_e+E_\nu.
+\]
+
+而
+
+\[
+\beta^2
+=1-\frac{m_\pi^2c^4}{E_\pi^2}.
+\]
+
+在 \(E_\pi>m_\pi c^2\) 的物理区间内，\(\beta\) 随 \(E_\pi\)
+单调增大，所以要使母粒子速度最小，就要使 \(E_e+E_\nu\)
+在乘积固定时最小。由
+
+\[
+E_e+E_\nu\ge2\sqrt{E_eE_\nu},
+\]
+
+等号恰在 \(E_e=E_\nu\) 时成立。这与正文导数得到的 \(x^2=A\) 完全一致。
+
+\textbf{等能不等于等动量或等速。} 在极值点
+\(E_e=E_\nu\)，但正电子有静质量，所以
+
+\[
+p_ec=\sqrt{E_e^2-m_e^2c^4}<E_e=E_\nu=p_\nu c.
+\]
+
+因而中微子动量大于正电子动量，且中微子速度仍为
+\(c\)。极值对称发生在``总能量''而不是其他物理量上。
+
+\textbf{母粒子洛伦兹因子的检查。} 极值时
+
+\[
+E_{\pi,\min}=2\sqrt A\,m_ec^2
+=c^2\sqrt{2(m_\pi^2-m_e^2)}.
+\]
+
+所以
+
+\[
+\gamma_{\pi,\min}
+=\frac{E_{\pi,\min}}{m_\pi c^2}
+=\sqrt{2\left(1-\frac{m_e^2}{m_\pi^2}\right)}
+\approx\sqrt2.
+\]
+
+由 \(\beta^2=1-1/\gamma^2\)
+再次得到式（19）。这条路线同时核对了速度公式中的分子和分母。
+
+\textbf{物理域与极小值。} 正电子必须满足 \(x=E_e/(m_ec^2)\ge1\)。本题
+
+\[
+\sqrt A=\sqrt{\frac{273^2-1}{2}}\gg1,
+\]
+
+因而等能驻点位于允许区间内。当
+\(x\to1^+\)（正电子方向在边界本身不再有定义）或 \(x\to\infty\)
+时，一个子粒子承担了极不均衡的能量分配，母粒子总能量增大，\(\beta\)
+都高于内部驻点值。因此该驻点确为全局最小。
+
+\needspace{3\baselineskip}
+\textbf{补充核验与模型推广}
+
+对两个子粒子都有静质量的一般衰变
+
+\[
+M\longrightarrow m_1+m_2,
+\]
+
+若实验室系中两动量仍垂直，则
+
+\[
+2E_1E_2
+=(M^2-m_1^2-m_2^2)c^4.
+\]
+
+令
+
+\[
+C=\frac12(M^2-m_1^2-m_2^2)c^4.
+\]
+
+若 \(\sqrt C\ge m_1c^2\) 且 \(\sqrt C\ge m_2c^2\)，等能点
+\(E_1=E_2=\sqrt C\) 在物理域内，仍给出最小母粒子速度：
+
+\[
+\boxed{
+\beta_{\min}^2
+=\frac{M^2-2m_1^2-2m_2^2}
+{2(M^2-m_1^2-m_2^2)}
+}.
+\]
+
+若等能点不满足某一子粒子的
+\(E_i\ge m_ic^2\)，则极值会落到物理域边界，不能再盲目使用等能结论。
+
+对任意夹角 \(\chi\)，不变量中的交叉项变为
+
+\[
+2(E_1E_2-p_1p_2c^2\cos\chi).
+\]
+
+当 \(\chi=90^\circ\) 时动量点积消失，才恢复正文的固定能量乘积结构。
+
+本题中质量比 \(\mu=m_\pi/m_e=273\)
+很大，可以把精确式展开成直观的近似式。由
+
+\[
+\beta_{\min}^2
+=\frac12\left(1-\frac{1}{\mu^2-1}\right),
+\]
+
+得
+
+\[
+\beta_{\min}
+=\frac1{\sqrt2}
+\left[1-\frac{1}{2(\mu^2-1)}
++O(\mu^{-4})\right].
+\]
+
+因此电子静质量带来的相对修正只有约 \(6.7\times10^{-6}\)，最小速度接近
+\(c/\sqrt2\)。这一展开可以检查计算器给出的
+\(0.70710c\)，也解释了为何最后数值对 \(273\) 的更高精度不敏感。
+
+四动量不变量的建立过程应在课堂上逐项对照。写成
+
+\[
+p_\pi^\mu=p_e^\mu+p_\nu^\mu
+\]
+
+后两边自乘：
+
+\[
+p_\pi^2=p_e^2+p_\nu^2+2p_e\cdot p_\nu.
+\]
+
+三个质量壳条件分别是
+
+\[
+p_\pi^2=m_\pi^2c^2,
+\qquad
+p_e^2=m_e^2c^2,
+\qquad
+p_\nu^2=0.
+\]
+
+而四矢量点积是
+
+\[
+p_e\cdot p_\nu
+=\frac{E_eE_\nu}{c^2}
+-\boldsymbol p_e\cdot\boldsymbol p_\nu.
+\]
+
+题设直角条件恰好使最后一项为零。把这四行全部写出，能清楚展示式
+\(2E_eE_\nu=(m_\pi^2-m_e^2)c^4\)
+的每一个来源，避免把``三维动量垂直''错当成``四动量点积为零''。
+
+还可用母粒子能量作数值回查。极值点有
+
+\[
+E_e=E_\nu
+=m_ec^2\sqrt{\frac{\mu^2-1}{2}},
+\]
+
+因而
+
+\[
+\frac{E_\pi}{m_\pi c^2}
+=\sqrt{2\left(1-\frac1{\mu^2}\right)}.
+\]
+
+以此求得的 \(\gamma_\pi\) 代入
+\(\beta^2=1-\gamma_\pi^{-2}\)，必须与动量合成路线得到的答案完全相同。两条独立路线相符，是相对论计算中比单纯查小数更有力的检验。
+
+把无量纲数值完整列出，还能检查``等能但不等动量''。以 \(m_ec^2\)
+为能量单位、\(m_ec\) 为动量单位，极值点有
+
+\[
+E_e=E_\nu
+=\sqrt{\frac{273^2-1}{2}}
+\approx193.038856,
+\]
+
+\[
+p_e=\sqrt{E_e^2-1}
+\approx193.036266,
+\qquad
+p_\nu=E_\nu\approx193.038856.
+\]
+
+两个动量垂直，所以母粒子动量为
+
+\[
+p_\pi=\sqrt{p_e^2+p_\nu^2}
+\approx272.996337,
+\]
+
+总能量为
+
+\[
+E_\pi=E_e+E_\nu
+\approx386.077712.
+\]
+
+因而
+
+\[
+\gamma_\pi=\frac{E_\pi}{273}
+\approx1.414204,
+\qquad
+\beta_\pi=\frac{p_\pi}{E_\pi}
+\approx0.707102.
+\]
+
+另外，\(E_\pi^2-p_\pi^2=273^2\)
+在舍入误差内成立。这个数值表把能量守恒、直角动量合成和母粒子质量壳条件同时串在一起，适合作为课堂计算的最后核对。
+
+\newpage
+
+\section{第 7 题}\label{ux7b2c-7-ux9898}
+
+三个电量均为 \(q\)、质量均为 \(m\) 的质点位于边长为 \(a\)
+的等边三角形三个顶点。空间中有垂直纸面向内的匀强磁场
+\(B\)。三质点同时由静止释放，求它们最远能到达的位置。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.619\linewidth,height=\textheight,keepaspectratio,alt={图7-1　匀强磁场中三个同号电荷的等边三角形初态}]{../figures/question-07.pdf}
+\caption*{图7-1　匀强磁场中三个同号电荷的等边三角形初态}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-6}
+
+三粒子的对称初态使等边三角形保持相似运动。库仑排斥增大尺度，磁场把径向速度转为切向速度；用能量和含磁场项的角动量求第一次外转折的最大尺度。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-6}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  等边三角形对称运动。
+\item
+  磁场不做功。
+\item
+  对称规范 \(\boldsymbol A=\frac12\boldsymbol B\times\boldsymbol r\)。
+\item
+  正则角动量守恒。
+\item
+  径向转折点条件 \(\dot r=0\)。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-6}
+
+三个同号电荷互相排斥，三角形扩大；磁场使每个粒子的径向运动向切向偏转，整个三角形同时旋转。对称性保证三角形始终等边，质心固定。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-6}
+
+以三角形质心为原点，令每个质点到质心距离为 \(r\)。初值
+\(r_0=a/\sqrt3\)。先由正则角动量求 \(\dot\phi(r)\)，再在最大 \(r\)
+处用能量守恒。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-6}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.84\linewidth,height=\textheight,keepaspectratio,alt={图7-2　等边三角形的相似膨胀、整体转动与正则角动量}]{../figures/solution-07.pdf}
+\caption*{图7-2　等边三角形的相似膨胀、整体转动与正则角动量}
+\end{figure}
+
+三粒子位置可写成
+
+\[
+\boldsymbol r_j
+=r\begin{pmatrix}
+\cos(\phi+2\pi j/3)\\
+\sin(\phi+2\pi j/3)
+\end{pmatrix},
+\qquad j=0,1,2.
+\tag{1}
+\]
+
+初始外接圆半径
+
+\[
+r_0=\frac a{\sqrt3}.
+\tag{2}
+\]
+
+任意时刻边长为
+
+\[
+s=\sqrt3\,r.
+\tag{3}
+\]
+
+三对电荷的静电势能
+
+\[
+U(r)=3\frac{kq^2}{s}
+=\frac{\sqrt3kq^2}{r}.
+\tag{4}
+\]
+
+三个粒子的总动能
+
+\[
+T=\frac32m(\dot r^2+r^2\dot\phi^2).
+\tag{5}
+\]
+
+磁场不做功，故机械能守恒。初态静止：
+
+\[
+E_0=\frac{\sqrt3kq^2}{r_0}
+=\frac{3kq^2}{a}.
+\tag{6}
+\]
+
+先用机械角动量直接看出守恒组合。某一粒子向外运动时，径向速度为
+\(\dot r\)，洛伦兹力的切向分量大小为 \(qB\dot r\)。以下取 \(q>0\)，\(B\)
+为向纸内磁场的正大小，\(\phi\) 正向为逆时针方向，对质心 \(O\) 的力矩给出
+
+\[
+\frac{d}{dt}(mr^2\dot\phi)
+=qB\dot r\,r
+=\frac{d}{dt}\left(\frac{qB}{2}r^2\right).
+\]
+
+因此
+
+\[
+mr^2\dot\phi-\frac{qB}{2}r^2
+=\text{常量}.
+\]
+
+同一结果也可由对称规范下的正则角动量得到。对垂直纸面向内的磁场，单粒子的正则角动量为
+
+\[
+p_\phi
+=mr^2\dot\phi-\frac{qB}{2}r^2.
+\tag{7}
+\]
+
+系统绕质心旋转对称，\(p_\phi\) 守恒。初态 \(\dot\phi=0\)：
+
+\[
+mr^2\dot\phi-\frac{qB}{2}r^2
+=-\frac{qB}{2}r_0^2.
+\tag{8}
+\]
+
+所以
+
+\[
+\dot\phi
+=\frac{qB}{2m}
+\left(1-\frac{r_0^2}{r^2}\right).
+\tag{9}
+\]
+
+达到最远位置 \(r=r_m\) 时，径向速度为零：
+
+\[
+\dot r=0.
+\tag{10}
+\]
+
+此时转动动能
+
+\[
+\begin{aligned}
+T_m
+&=\frac32mr_m^2\dot\phi_m^2\\
+&=\frac{3q^2B^2}{8m}
+\frac{(r_m^2-r_0^2)^2}{r_m^2}.
+\end{aligned}
+\tag{11}
+\]
+
+能量守恒给出
+
+\[
+\boxed{
+\frac{3kq^2}{a}
+=\frac{\sqrt3kq^2}{r_m}
++\frac{3q^2B^2}{8m}
+\frac{(r_m^2-a^2/3)^2}{r_m^2}
+}.
+\tag{12}
+\]
+
+为了把``最远位置''直接用三角形边长表示，令
+
+\[
+s_m=\sqrt3\,r_m.
+\tag{13}
+\]
+
+代入式（12）：
+
+\[
+\frac{3kq^2}{a}
+=\frac{3kq^2}{s_m}
++\frac{q^2B^2}{8m}
+\frac{(s_m^2-a^2)^2}{s_m^2}.
+\tag{14}
+\]
+
+非平凡转折点有 \(s_m>a\)。约去 \(q^2\)，并将
+\(s_m^2-a^2=(s_m-a)(s_m+a)\) 因式分解：
+
+\[
+\begin{aligned}
+3k\left(\frac1a-\frac1{s_m}\right)
+&=\frac{B^2}{8m}
+\frac{(s_m-a)^2(s_m+a)^2}{s_m^2},\\
+\frac{3k(s_m-a)}{as_m}
+&=\frac{B^2}{8m}
+\frac{(s_m-a)^2(s_m+a)^2}{s_m^2}.
+\end{aligned}
+\tag{15}
+\]
+
+约去非零因子 \(s_m-a\)，得
+
+\[
+\boxed{
+(s_m+a)^2(s_m-a)
+=\frac{24km}{aB^2}s_m,
+\qquad s_m>a
+}.
+\tag{16}
+\]
+
+这个方程在 \(s_m>a\) 上只有一个根。因而三个质点的最远位置唯一地由边长
+\(s_m\) 确定，其外接圆半径为
+
+\[
+\boxed{r_m=\frac{s_m}{\sqrt3}}.
+\tag{17}
+\]
+
+唯一性可以显式证明。令
+
+\[
+x=\frac{s_m}{a}>1,
+\qquad
+\chi=\frac{24km}{B^2a^3}>0,
+\]
+
+则式（16）化为
+
+\[
+\frac{(x+1)^2(x-1)}x=\chi.
+\]
+
+左端函数可写成
+
+\[
+F(x)=x^2+x-1-\frac1x,
+\]
+
+并且
+
+\[
+F'(x)=2x+1+\frac1{x^2}>0.
+\]
+
+又有 \(F(1)=0\)、\(F(x)\to\infty\)，所以对任意 \(B\ne0\) 恰有一个
+\(x>1\) 的转折根。
+
+两个极限还能检查方程的参数依赖。强磁场下 \(\chi\ll1\)，令
+\(x=1+\varepsilon\)，有 \(F(x)\simeq4\varepsilon\)，故
+
+\[
+s_m\simeq a\left(1+\frac{6km}{B^2a^3}\right).
+\]
+
+弱磁场下 \(\chi\gg1\)，\(F(x)\simeq x^2\)，因而
+
+\[
+s_m\simeq\sqrt{\frac{24km}{B^2a}}\longrightarrow\infty
+\qquad(B\to0).
+\]
+
+这与无磁场时三个同号电荷不断远离的图像一致。
+
+三角形相对初态还发生整体转动。若需要绝对方位，可由
+
+\[
+\frac{d\phi}{dr}=\frac{\dot\phi(r)}{\dot r(r)}
+\tag{18}
+\]
+
+结合能量方程积分得到；题目通常只要求最远尺度。
+
+极限检验：\(B\to0\) 时，转动能项消失，式（12）给出
+\(r_m\to\infty\)，符合无磁场时同号电荷无限分离。
+
+\needspace{3\baselineskip}
+\textbf{从最大尺度到三个实际位置}
+
+图7-2中的内、外三角形均为等边三角形，中心都是固定质心 \(O\)；
+外三角形还逆时针转过 \(\phi_m\)，每个顶点的速度沿外接圆切线。
+图只示意转角，实际 \(\phi_m\) 要由时间演化求出。
+
+从能量方程取向外运动的正根：
+
+\[
+\dot r=
+\sqrt{\frac{2}{3m}\left[
+\frac{\sqrt3kq^2}{r_0}-\frac{\sqrt3kq^2}{r}
+-\frac{3q^2B^2}{8m}\frac{(r^2-r_0^2)^2}{r^2}
+\right]}.
+\]
+
+于是首次外转折时的整体角度为
+
+\[
+\phi_m-\phi_0
+=\int_{r_0}^{r_m}
+\frac{\frac{qB}{2m}(1-r_0^2/r^2)}{\dot r}\,dr.
+\]
+
+上端的平方根奇性可积，下端分子也趋于零。给定初始方位 \(\phi_0\)，
+三个最远位置为
+
+\[
+\boldsymbol r_{j,m}
+=r_m\bigl(\cos(\phi_m+2\pi j/3),
+          \sin(\phi_m+2\pi j/3)\bigr).
+\]
+
+如果题意只问离质心的最大距离，回答 \(r_m\) 即可；若问绝对坐标，
+还需这一步角度积分。\(q=0\) 时三粒子始终静止，不能把约去 \(q^2\) 后的
+非零电荷转折公式直接延伸到零电荷。强场展开无二次项，
+\(x-1=\chi/4-\chi^3/256+O(\chi^4)\)，可进一步检验方程。
+
+\needspace{3\baselineskip}
+\textbf{补充推导与适用条件}
+
+\textbf{为什么三角形不会变形。} 初态在绕质心旋转 \(120^\circ\)
+后与自身完全重合，库仑力和匀强磁场的动力学方程也具有同一对称性。由微分方程解的唯一性，三个粒子在任意时刻必仍由
+\(120^\circ\) 旋转相互对应。因而系统可严格约化为``一个尺度
+\(r\)、一个整体方位角 \(\phi\)''，而非凭直观假定三角形不变形。
+
+\textbf{磁场不做功，但会建立有效势垒。} 将正则角动量给出的
+\(\dot\phi(r)\) 代入总能量，径向运动可写成
+
+\[
+E=\frac32m\dot r^2+U_{\rm eff}(r),
+\]
+
+其中
+
+\[
+U_{\rm eff}(r)
+=\frac{\sqrt3kq^2}{r}
++\frac{3q^2B^2}{8m}
+\frac{(r^2-r_0^2)^2}{r^2}.
+\]
+
+第一项是库仑势能，随 \(r\)
+增大而下降；第二项是必须伴随膨胀出现的旋转动能，在 \(r\to\infty\) 时按
+\(r^2\)
+增大。所以磁场虽不向系统输入或取出能量，却通过角动量约束使能量逐渐转入切向运动，最终阻止尺度继续增大。
+
+\textbf{转折点不是静止点。} 在 \(r=r_m\) 时只有 \(\dot r=0\)，由式（9）
+
+\[
+\dot\phi_m
+=\frac{qB}{2m}
+\left(1-\frac{r_0^2}{r_m^2}\right)\ne0.
+\]
+
+因此三个粒子仍沿外接圆切向运动，三角形仍在旋转。``最远''指径向坐标的最大值，不是速度为零。
+
+\textbf{为什么最远距离与电荷量 \(q\) 无关。} 库仑势能正比于
+\(q^2\)；由正则角动量得到的切向速度正比于 \(qB\)，因而转动动能也正比于
+\(q^2B^2\)。在转折点的能量方程中，公共因子 \(q^2\)
+完全约去。这不表示运动的时间尺度也与 \(q\)
+无关；只是几何转折尺度恰好不含 \(q\)。
+
+\newpage
+
+\section{第 8 题}\label{ux7b2c-8-ux9898}
+
+He--Ne 激光波长 \(\lambda=6.3\times10^2\,\mathrm{nm}\)，正入射顶角
+\(\alpha=5.7^\circ\)、折射率 \(n=1.80\) 的双棱镜。两束出射光在流体槽中
+相交形成干涉条纹。水槽距双棱镜 \(1.60\,\mathrm m\)，微粒沿垂直条纹方向
+漂移，散射光传感器读得脉冲频率 \(f_0=10\,\mathrm{kHz}\)。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  求微粒漂移速度。
+\item
+  微粒受电场力，流体阻力大小为 \(f=kv^2\)，方向与速度相反。
+  所有微粒的质量和电量相同。将恒定驱动电压改为
+  \(U=U_0\cos\omega t\)，求一维运动，保留初始条件，并讨论示波器波形。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.86\linewidth,height=\textheight,keepaspectratio,alt={图8-1　双棱镜内向偏折的光束在水槽中重叠形成条纹}]{../figures/question-08.pdf}
+\caption*{图8-1　双棱镜内向偏折的光束在水槽中重叠形成条纹}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-7}
+
+先由交叉光束的条纹间距求漂移速度。交流驱动部分按原卷的二次阻力建立
+非线性速度方程，在每段运动方向固定的区间求解，再把位移映射为散射光强。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-7}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  薄棱镜偏折角 \(\delta\simeq(n-1)\alpha\)。
+\item
+  干涉条纹间距 \(d=\lambda/(2\sin\delta)\)。
+\item
+  过纹频率给速率 \(|v|=f_0d\)。
+\item
+  二次阻力的有向形式 \(-kv|v|\)。
+\item
+  分段Riccati方程、初值与转向条件。
+\item
+  条纹相位 \(\Phi=2\pi x/d+\phi_0\) 与示波器光强。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-7}
+
+图8-1中，两束光向光轴偏折，进入重叠区后形成等距条纹。微粒匀速时，
+每跨过一条亮纹就产生一次散射强度峰。改用交流电场后，微粒速度随时间
+变化并可能反向，阻力的方向也必须同时反向。图8-2把速度过零、位移转向
+和光强峰的位置对应起来；光强周期不等于处处恒定的过纹频率。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-7}
+
+第一问先把角度换成弧度再算条纹间距。第二问先写
+\(m\dot v=F_0\cos\omega t-kv|v|\)，不可把原题 \(kv^2\) 换成 \(kv\)，
+也不可把反向运动时的阻力仍写作 \(-kv^2\)。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-7}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.482\linewidth,height=\textheight,keepaspectratio,alt={图8-2　二次阻力下的速度、位移及条纹光强示例}]{../figures/solution-08.pdf}
+\caption*{图8-2　二次阻力下的速度、位移及条纹光强示例}
+\end{figure}
+
+\needspace{3\baselineskip}
+\textbf{（一）条纹间距与漂移速率}
+
+设两束光在测量区的夹角为 \(2\delta\)，波矢大小为
+\(k_0=2\pi/\lambda\)。沿条纹法线的波矢差为
+
+\[
+|\Delta\boldsymbol k|=2k_0\sin\delta,\qquad
+d=\frac{2\pi}{|\Delta\boldsymbol k|}
+=\frac{\lambda}{2\sin\delta}.
+\tag{1}
+\]
+
+用薄棱镜近似：
+
+\[
+\alpha=5.7\frac{\pi}{180}=0.0994838,\qquad
+\delta\simeq0.8\alpha=0.0795870.
+\tag{2}
+\]
+
+代入波长，得
+
+\[
+d\simeq3.9622\times10^{-6}\,\mathrm m,\qquad
+\boxed{|v_{\rm DC}|=f_0d\simeq3.9622\times10^{-2}\,\mathrm{m\,s^{-1}}}.
+\tag{3}
+\]
+
+若同时把 \(\sin\delta\) 近似为 \(\delta\)，结果为
+\(3.9580\times10^{-2}\,\mathrm{m\,s^{-1}}\)；两者之差约 \(0.11\%\)。
+题给 \(1.60\,\mathrm m\) 决定重叠区域的位置和宽度，平面波模型下不直接
+进入条纹间距。这里按参考解把 \(n,\lambda,\delta\)
+用作同一光学模型的参数；
+若额外考虑水槽界面的折射，应先明确介质及入射面，再重算测量区波矢，
+不能只在式（1）中任意把波长除以水的折射率。
+
+\needspace{3\baselineskip}
+\textbf{（二）二次阻力的初值问题}
+
+设粒子质量 \(m\)，电量 \(q\)，电极间距 \(h\)，记
+
+\[
+F_0=\frac{qU_0}{h},\qquad b=\frac km>0,\qquad a=\frac{F_0}{m}.
+\]
+
+保留带符号的 \(q\) 和 \(F_0\)，运动方程及初值为
+
+\[
+\boxed{\dot x=v,\qquad \dot v=a\cos\omega t-bv|v|,
+\qquad x(0)=x_i,\quad v(0)=v_i.}
+\tag{4}
+\]
+
+\(kv^2\) 是阻力大小；向右运动时阻力向左，向左运动时阻力向右。
+这就是必须使用 \(v|v|\)
+的原因。对于给定参数与初值，式（4）唯一决定运动。 原题没有给出
+\(m,q,k,h,\omega,x_i,v_i\) 的具体数值，因此不能给唯一数值轨迹。
+
+\needspace{3\baselineskip}
+\textbf{（三）每段固定速度符号上的精确表示}
+
+在 \(t_j\le t<t_{j+1}\) 内，取 \(\sigma=\operatorname{sgn}v\) 为不变的
+\(+1\) 或 \(-1\)。式（4）化为
+
+\[
+\dot v=a\cos\omega t-\sigma bv^2.
+\tag{5}
+\]
+
+令
+
+\[
+v=\frac{\sigma}{b}\frac{\dot u}{u}.
+\tag{6}
+\]
+
+代入并消去 \(\dot u^2/u^2\) 项，得线性的二阶方程
+
+\[
+\boxed{\ddot u=\sigma ab\cos\omega t\,u.}
+\tag{7}
+\]
+
+在区间起点可设
+
+\[
+u(t_j)=1,\qquad
+\dot u(t_j)=\sigma b v(t_j).
+\tag{8}
+\]
+
+于是这一段的位移为
+
+\[
+\boxed{x(t)=x(t_j)+\frac{\sigma}{b}\ln u(t),\qquad
+v(t)=\frac{\sigma}{b}\frac{\dot u(t)}{u(t)}.}
+\tag{9}
+\]
+
+取由式（8）确定且保持正值的 \(u\)。下一次转向由 \(\dot u(t_{j+1})=0\)
+识别；到达时把 \(x,v\) 连续传给下一段，重新令 \(u(t_{j+1})=1\)，
+选取新的速度符号。若速度恰为零而外力非零，随后方向由
+\(\operatorname{sgn}[a\cos\omega t]\) 决定。
+
+式（7）是带周期系数的线性方程，一般不能用有限个初等正弦和指数
+写出；它与式（9）给出了可复算的精确分段表示。直接数值积分式（4）
+也可以，过零时保留 \(v|v|\)，无需人为截断速度。
+
+\needspace{3\baselineskip}
+\textbf{（四）常电压和无外力极限检查}
+
+若 \(a>0\) 为常数且 \(v_i=0\)，则
+
+\[
+v(t)=\sqrt{\frac ab}\tanh(\sqrt{ab}\,t),\qquad
+x(t)=x_i+\frac1b\ln\cosh(\sqrt{ab}\,t).
+\tag{10}
+\]
+
+终速为 \(\sqrt{F_0/k}\)。如果第一问测得的匀速确已达到该常电压的终速，
+就有 \(|F_0|=k v_{\rm DC}^2\)，可用于标定驱动与阻力。
+
+若关掉电场，式（4）给出
+
+\[
+v(t)=\frac{v_i}{1+b|v_i|t},\qquad
+x(t)=x_i+\frac{\operatorname{sgn}v_i}{b}
+\ln(1+b|v_i|t).
+\tag{11}
+\]
+
+速度按 \(1/t\) 衰减，而不是线性阻力模型的 \(e^{-kt/m}\)。对式（10）、
+（11）求导回代，均恢复原方程及两个初值，这是检查阻力模型的重要极限。
+
+\needspace{3\baselineskip}
+\textbf{（五）交流稳态与示波器信号}
+
+二次阻力总是耗能：
+
+\[
+\frac{d}{dt}\left(\frac12mv^2\right)
+=F_0v\cos\omega t-k|v|^3.
+\tag{12}
+\]
+
+暂态的衰减规律依赖速度，不能套用一个固定的指数时间常数。
+周期驱动下的稳定速度响应满足半周期反对称
+\(v(t+\pi/\omega)=-v(t)\)；其一个完整周期的平均速度为零，
+位移围绕由初值决定的中心往复。
+
+设 \(K=2\pi/d\)，理想散射信号为
+
+\[
+\boxed{I(t)=I_{\rm av}+\Delta I
+\cos[Kx(t)+\phi_0].}
+\tag{13}
+\]
+
+条纹相位变化率及局部过纹速率为
+
+\[
+\dot\Phi=Kv,\qquad
+f_{\rm inst}(t)=\frac{|v(t)|}{d}.
+\tag{14}
+\]
+
+因而速度较大处峰更密，转向点附近峰更疏，单路强度不能判断方向。
+稳态波形在驱动周期上重复，但一个周期中可能多次穿过条纹，
+示波器不能再用单一固定脉冲频率表示全部运动。
+
+设稳态位移为 \(x_c+\xi(t)\)，其中 \(\xi(t+\pi/\omega)=-\xi(t)\)。若
+\(K|\xi|\ll1\) 且工作点不在亮纹或暗纹 中心，光强的一阶变化为
+
+\[
+I(t)-I(x_c)\simeq
+-\Delta I K\sin(Kx_c+\phi_0)\,\xi(t).
+\]
+
+若恰在亮纹或暗纹中心，一阶项为零，二阶项占主导，信号可能以 \(2\omega\)
+重复。这说明``小振幅就一定只有驱动频率''也不成立。
+
+\needspace{3\baselineskip}
+\textbf{低频与高频的尺度}
+
+记 \(v_*=\sqrt{|F_0|/k}\)、\(\tau_Q=m/\sqrt{k|F_0|}\)。 当
+\(\omega\tau_Q\ll1\)，离转向区较远时近似有
+
+\[
+v(t)\simeq\operatorname{sgn}(F_0\cos\omega t)
+\sqrt{\frac{|F_0\cos\omega t|}{k}}.
+\]
+
+力接近零时该近似不均匀，应回到式（4）。当 \(\omega\tau_Q\gg1\)，
+领先阶惯性主导，稳态中
+
+\[
+v(t)\simeq\frac{F_0}{m\omega}\sin\omega t,\qquad
+x(t)-x_c\simeq-\frac{F_0}{m\omega^2}\cos\omega t.
+\]
+
+后者的阻力与驱动力之比约为 \((\omega\tau_Q)^{-2}\)，给出忽略阻力的
+自洽条件。图8-2用同一组无量纲参数积分式（4）后绘制三个面板， 并标注
+\(K\) 和初值，表示一个具体例子，不把示意线当成所有参数的解。
+
+\needspace{3\baselineskip}
+\textbf{数值求解的可复算步骤与功率检查}
+
+图8-2使用无量纲例 \(a=b=\omega=1\)，初值
+\(x(0)=v(0)=0\)。直接积分的方程是
+
+\[
+\dot x=v,\qquad \dot v=\cos t-v|v|.
+\]
+
+一个步长为 \(\Delta t\) 的四阶Runge--Kutta步骤可写为
+\(\boldsymbol y=(x,v)\)、\(\boldsymbol F(t,\boldsymbol y)=(v,\cos t-v|v|)\)，先算
+
+\[
+\begin{aligned}
+\boldsymbol k_1&=\boldsymbol F(t,\boldsymbol y),\\
+\boldsymbol k_2&=\boldsymbol F(t+\Delta t/2,\boldsymbol y+\Delta t\boldsymbol k_1/2),\\
+\boldsymbol k_3&=\boldsymbol F(t+\Delta t/2,\boldsymbol y+\Delta t\boldsymbol k_2/2),\\
+\boldsymbol k_4&=\boldsymbol F(t+\Delta t,\boldsymbol y+\Delta t\boldsymbol k_3).
+\end{aligned}
+\]
+
+再用
+\(\boldsymbol y_{\rm new}=\boldsymbol y+\Delta t(\boldsymbol k_1+2\boldsymbol k_2+2\boldsymbol k_3+\boldsymbol k_4)/6\)
+更新。此处在速度过零时 \(v|v|\) 连续，直接积分不需人为改号；若用正文的
+\(u\)
+方程，则必须在速度零点换支。两种方法数值相符，是检查换支符号的独立手段。
+
+把原方程乘以 \(v\)，得到
+
+\[
+\frac{d}{dt}\left(\frac12mv^2\right)
+=F_0v\cos\omega t-k|v|^3.
+\]
+
+图中速度曲线经过零点时，耗散功率平滑降至零，始终非负。周期稳态下平均动能变化为零，因此
+
+\[
+F_0\langle v\cos\omega t\rangle=k\langle|v|^3\rangle.
+\]
+
+若数值解出现驱动力平均做负功而阻力平均耗能为正，却仍称为稳定周期解，就违反这一式。该检查只依赖功率收支，不依赖特定积分算法。
+
+无量纲化还表明稳态不是简单的``指数暂态加正弦''。令
+\(\tau=\omega t\)、\(v=(F_0/m\omega)V\)，有
+
+\[
+V'=\cos\tau-\eta V|V|,\qquad
+\eta=\frac{kF_0}{m^2\omega^2}.
+\]
+
+只要两次实验的 \(\eta\) 相同，无量纲速度曲线就相同。\(\eta\ll1\)
+时惯性主导，速度接近 \(\sin\tau\)；\(\eta\gg1\) 时除转向附近外接近
+\(\operatorname{sgn}(\cos\tau)\sqrt{|\cos\tau|/\eta}\)。这给出数值曲线应满足的两个不同极限。
+
+最后把位移代入 \(I=I_b+I_c\cos(Kx+\phi_b)\)。即使 \(x\)
+已近似周期，也要保留
+\(\phi_b\)；亮纹中心的信号可能主要出现二倍频，工作在条纹斜率较大的位置则出现领先的一倍频。数值位移曲线和光强曲线应共享同一
+\(x(t)\)，不能各自另画一条任意正弦。
+
+\needspace{3\baselineskip}
+\textbf{定号区间内辅助方程与直接积分的比较}
+
+对图8-2无量纲例，在 \(v>0\) 的首个区间，辅助初值为
+\(u(0)=1,u'(0)=0\)，方程为 \(u''=u\cos t\)。同时直接求
+\(v'=\cos t-v^2\)、\(x'=v\)。两个表示应逐点满足
+
+\[
+v=u'/u,\qquad x=\ln u.
+\]
+
+从零初速做局部展开，直接方程给出
+
+\[
+v=t-\frac12t^3+\frac{5}{24}t^5+O(t^7),
+\qquad x=\frac12t^2-\frac18t^4+\frac5{144}t^6+O(t^8).
+\]
+
+辅助方程的展开为
+
+\[
+u=1+\frac12t^2+0\,t^4-\frac1{144}t^6+O(t^8),
+\]
+
+由 \(u'/u\) 和 \(\ln u\) 可恢复同样的
+\(v,x\)。这一局部计算能检查转换系数是否误写成
+\(1/(2b)\)，也能检查初始加速度应为 \(a\)。
+
+第一次 \(v\) 过零时，\(u'=0\)，随后改用 \(\sigma=-1\) 的辅助方程
+\(u''=-u\cos t\)，并把该段的 \(u\) 重新归一为1；位置要从新的 \(x_j\)
+继续累加，不能重置为零。若不换支，得到的是 \(v'=\cos t-v^2\)
+的继续解，阻力在负速度时仍指向负方向，会产生错误的加速。
+
+图中横坐标使用同一 \(t\)，速度极值满足 \(\cos t=v|v|\)，位置极值满足
+\(v=0\)；两种极值一般不在驱动力极值处。光强极值又可能来自条纹相位为整数倍
+\(\pi\)，不能用任意光强峰值直接当作位置转向时刻。
+
+\needspace{3\baselineskip}
+\textbf{周期速度的存在、唯一性与位移}
+
+设 \(a,b,\omega>0\)，方程为 \(\dot v=a\cos\omega t-bv|v|\)。在
+\(v=\sqrt{a/b}\) 处导数不大于零，在 \(v=-\sqrt{a/b}\)
+处导数不小于零，所以这个闭区间正向不变。经过一个驱动周期的映射连续地把该区间映回自身，存在一个固定点，也就存在周期速度。
+
+对两个速度解，令 \(\delta=v_1-v_2\)。由 \(F(v)=v|v|\) 单调增加，
+
+\[
+\dot\delta=-b\,[F(v_1)-F(v_2)].
+\]
+
+当
+\(\delta\ne0\)，其符号保持且绝对值严格减小。两个不同周期解的差经过一周不可能既减小又恢复原值，因此周期解唯一。沿该周期解
+\(v_*(t)\) 的线性扰动满足
+
+\[
+\dot\eta=-2b|v_*(t)|\eta,
+\qquad
+\eta(T)=\eta(0)\exp\left[-2b\int_0^T|v_*(t)|dt\right].
+\]
+
+驱动力非零使 \(v_*\)
+不恒为零，指数因子严格小于1，给出周期速度的局部吸引性。任意初速的暂态衰减由这个非线性耗散控制，不能套用一个与振幅无关的线性阻尼指数。
+
+再定义
+\(\widehat v(t)=-v_*(t+T/2)\)。驱动力在半周期后反号，而阻力函数为奇函数，所以
+\(\widehat v\) 也是同一方程的周期解。由唯一性，\(\widehat v=v_*\)，即
+
+\[
+v_*(t+T/2)=-v_*(t),\qquad
+\int_0^T v_*(t)dt=0.
+\]
+
+因此稳态位移无长期漂移，但位置中心由此前运动和任意加法常数决定。图8-2使用给定零初速的暂态，尚未进入稳态时一个周期内的位移不必为零。\(b=0\)
+时不存在上述收缩证明，可能叠加常值速度造成漂移；这也是线性无阻力极限不能从``唯一稳态''直接套出的原因。
+\end{document}

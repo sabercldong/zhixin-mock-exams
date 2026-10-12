@@ -1,0 +1,722 @@
+{
+  "papers": [
+    {
+      "set": 82,
+      "passed": true,
+      "questions": [
+        {
+          "set": 82,
+          "question": 1,
+          "scope": "两焦点距离和、b²=a²−c²、有效奇数周期分支",
+          "passed": true,
+          "values": {
+            "a_R": 0.7424048101231685,
+            "b_R": 0.5999374917979934,
+            "L_m": [
+              68425235.11859915,
+              26280175.157899804,
+              15018119.95183266
+            ]
+          }
+        },
+        {
+          "set": 82,
+          "question": 2,
+          "scope": "四边动生线积分、总电阻与C/D局部电势",
+          "passed": true,
+          "values": {
+            "emf_edges": [
+              0.21650635094610968,
+              0.8660254037844387,
+              0.21650635094610965,
+              -0.0
+            ],
+            "I": 0.5196152422706632,
+            "U_C": -0.043301270189221946,
+            "U_D": 0.5629165124598852
+          }
+        },
+        {
+          "set": 82,
+          "question": 3,
+          "scope": "牵引段净力积分、剩余滑行和到达动能",
+          "passed": true,
+          "values": {
+            "K0_J": 4.4337567297406455,
+            "KB_J": 1.7670900630739794,
+            "vB": 1.8799415220022029
+          }
+        },
+        {
+          "set": 82,
+          "question": 4,
+          "scope": "四段PV路径积分、热流和面积效率",
+          "passed": true,
+          "values": {
+            "W": [
+              0.0,
+              4.0,
+              -1.5,
+              -1.0
+            ],
+            "Q": [
+              2.5,
+              14.0,
+              -11.5,
+              -3.5
+            ],
+            "efficiency": 0.09090909090909091
+          }
+        },
+        {
+          "set": 82,
+          "question": 5,
+          "scope": "60°零张力、摩擦锥和分段能量",
+          "passed": true,
+          "values": {
+            "TA_over_T": 1.0,
+            "theta_deg": 71.3099324740202,
+            "v0sq_gl": 1.7182048691049163
+          }
+        },
+        {
+          "set": 82,
+          "question": 6,
+          "scope": "追平高度、下一入射速率、级数滑距",
+          "passed": true,
+          "values": {
+            "ys": 0.09375,
+            "Vnext": 0.5,
+            "slide": 0.25,
+            "total_slide_H": 0.6666666666666666,
+            "work_mgH": -2.6666666666666665
+          }
+        },
+        {
+          "set": 82,
+          "question": 7,
+          "scope": "剩余球面库仑积分，固定σ口径的曲率修正",
+          "passed": true,
+          "values": {
+            "E_over_sigma_epsilon": 0.4900006666533333,
+            "theta0": 0.04
+          }
+        },
+        {
+          "set": 82,
+          "question": 8,
+          "scope": "20个逐体分量方程及全部接触非负LP：原下界不可行、修正值可行",
+          "passed": true,
+          "values": {
+            "floor_inner": [
+              1.9999999999999998,
+              1.9999999999999996
+            ],
+            "side_normal": [
+              3.214550253664318,
+              3.2145502536643185
+            ],
+            "height_R": 0.06674347474261721,
+            "old_bound": "infeasible"
+          }
+        }
+      ]
+    },
+    {
+      "set": 81,
+      "passed": true,
+      "questions": [
+        {
+          "set": 81,
+          "question": 1,
+          "scope": "通常碰撞编号、互素余数序列",
+          "passed": true,
+          "values": {
+            "second_2_3": 0.2,
+            "second_4_7": 0.6363636363636364,
+            "residues": [
+              11,
+              8,
+              5,
+              2,
+              13,
+              10,
+              7,
+              4,
+              1,
+              12,
+              9,
+              6,
+              3,
+              0
+            ]
+          }
+        },
+        {
+          "set": 81,
+          "question": 2,
+          "scope": "RL与RLC复阻抗、独立电流与电容电压",
+          "passed": true,
+          "values": {
+            "R": 150.0,
+            "L": 0.013783222385544804,
+            "C": 4.594407461848267e-07,
+            "U": 17.320508075688775,
+            "IV": 0.05773502691896258,
+            "phase_A_deg": 30,
+            "phase_V_deg": -60
+          }
+        },
+        {
+          "set": 81,
+          "question": 3,
+          "scope": "两工作曲线独立找根、位形与变式存在条件",
+          "passed": true,
+          "values": {
+            "A": 30.416000000000004,
+            "omega": 2.073553741094569,
+            "h": 7.074105107041515,
+            "variant_required_k": 14751.760000000002
+          }
+        },
+        {
+          "set": 81,
+          "question": 4,
+          "scope": "光锥相似和半径Rayleigh判据、薄透镜与像点采样",
+          "passed": true,
+          "values": {
+            "v": 0.023076923076923078,
+            "f": 0.020000000000000004,
+            "rb": 0.00016,
+            "min_after_shrink": 0.00025,
+            "normal_min_m": 2.0833333333333333e-05
+          }
+        },
+        {
+          "set": 81,
+          "question": 5,
+          "scope": "真实六节点矩阵投影去等势方向后的广义本征值",
+          "passed": true,
+          "values": {
+            "omega2LC": [
+              2.4460001776643024e-16,
+              1.0000000000000002,
+              1.0000000000000004,
+              3.0,
+              3.000000000000001
+            ]
+          }
+        },
+        {
+          "set": 81,
+          "question": 6,
+          "scope": "刚杆二阶长度约束的符号消元与第三杆角加速度",
+          "passed": true,
+          "values": {
+            "alpha3": "(l*(27*a + sqrt(3)*l*w**2 + 27*l*w**2 - 18*v*w) + 3*sqrt(3)*v**2)/(81*l**2)"
+          }
+        },
+        {
+          "set": 81,
+          "question": 7,
+          "scope": "均匀实心球理想滚动的形式N=0根与非零摩擦冲突",
+          "passed": true,
+          "values": {
+            "s_formal": 0.42712277991550585,
+            "friction_BC_at_Nzero": -3.2471527827544246,
+            "finite_mu_separation": "不可由纯滚动N=0外推"
+          }
+        },
+        {
+          "set": 81,
+          "question": 8,
+          "scope": "三事件Lorentz变换、零间隔和接收点世界线",
+          "passed": true,
+          "values": {
+            "events": [
+              [
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                1.4380929814216588,
+                1.0334947620642474,
+                1.0
+              ],
+              [
+                2.8761859628433175,
+                2.066989524128495,
+                0.0
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "set": 80,
+      "passed": true,
+      "questions": [
+        {
+          "set": 80,
+          "question": 1,
+          "scope": "中性导体四项合力的零阶与一次导数",
+          "passed": true,
+          "values": {
+            "alpha": "18/7",
+            "Fprime": "1823/196",
+            "stability": "unstable"
+          }
+        },
+        {
+          "set": 80,
+          "question": 2,
+          "scope": "10节点15边Möbius图独立单位电流解",
+          "passed": true,
+          "values": {
+            "R_over_R": 0.5757575757575756,
+            "Rinf": 0.5773502691896258
+          }
+        },
+        {
+          "set": 80,
+          "question": 3,
+          "scope": "掩食角与双星Kepler质量、密度半径、经典落速量级",
+          "passed": true,
+          "values": {
+            "total_solar": 19.516421011456917,
+            "neutron_solar": 1.116421011456917,
+            "r_m": 6793.707149109756,
+            "v_classical": 209388826.18115783
+          }
+        },
+        {
+          "set": 80,
+          "question": 4,
+          "scope": "直接数值积分v²转角ODE至一周",
+          "passed": true,
+          "values": {
+            "initial_v2_gr": 2.5135856242857333,
+            "final_v2_gr": 1.3046673116856589e-12
+          }
+        },
+        {
+          "set": 80,
+          "question": 5,
+          "scope": "RC减速阶段数值初值解与停车后自由衰减",
+          "passed": true,
+          "values": {
+            "Ustop_Katau": -0.8646647167620592,
+            "Ufinal": 0
+          }
+        },
+        {
+          "set": 80,
+          "question": 6,
+          "scope": "七孔阵列独立相位和的整数级次峰、孔距压缩映射",
+          "passed": true,
+          "values": {
+            "X_after_over_before": 2,
+            "phase_peak_amplitude": 7,
+            "farfield_condition": "L >> D_array²/λ"
+          }
+        },
+        {
+          "set": 80,
+          "question": 7,
+          "scope": "绝热气体与膜总势能直接二阶求导",
+          "passed": true,
+          "values": {
+            "stiffness": "32πσ",
+            "dimensionless_potential": "(q^-2+q²)/2"
+          }
+        },
+        {
+          "set": 80,
+          "question": 8,
+          "scope": "垂直两动量约束后的能量凹函数全区间采样与boost",
+          "passed": true,
+          "values": {
+            "lower_input_comoving": 1.6666666666666667,
+            "upper_input_comoving": 1.803450695130734,
+            "endpoints": "strict lower"
+          }
+        }
+      ]
+    },
+    {
+      "set": 79,
+      "passed": true,
+      "questions": [
+        {
+          "set": 79,
+          "question": 1,
+          "scope": "两实际截面弯矩平方的独立积分",
+          "passed": true,
+          "values": {
+            "Ja": 0.7853981633974483,
+            "Jb": 0.35619449019234495,
+            "ratio": 2.2049699953902526
+          }
+        },
+        {
+          "set": 79,
+          "question": 2,
+          "scope": "放电径向积分与撤场两筒力矩之和",
+          "passed": true,
+          "values": {
+            "deltaL": "-B*Q*(R**2 - b**2)/2",
+            "thick_gap_ratio": 0.8656170245333781
+          }
+        },
+        {
+          "set": 79,
+          "question": 3,
+          "scope": "一般惯量冲量式的能量差、空心球系数",
+          "passed": true,
+          "values": {
+            "deltaK": "-k*m*(-R*w + v)**2/(2*(k + 1))",
+            "shell_coefficients": [
+              0.6,
+              0.4
+            ]
+          }
+        },
+        {
+          "set": 79,
+          "question": 4,
+          "scope": "圆弧约束族的虚功求导；点接触边界另行审读",
+          "passed": true,
+          "values": {
+            "formal_force": "πYI/(2R²)",
+            "point_contact": "M(endpoint)=0 ≠ YI/R"
+          }
+        },
+        {
+          "set": 79,
+          "question": 5,
+          "scope": "交流位移的两次微分与单调性，剪线非零初速分支另核",
+          "passed": true,
+          "values": {
+            "displacement": "a*(t*w - sin(t*w))/w**2",
+            "zero_amplitude_voltage": "Mgd²/[q(2L+h)]"
+          }
+        },
+        {
+          "set": 79,
+          "question": 6,
+          "scope": "0—6层真实节点支路求电阻和磁通源功率、极限解析对照",
+          "passed": true,
+          "values": {
+            "layers": [
+              {
+                "depth": 0,
+                "nodes": 3,
+                "R": 0.6666666666664556,
+                "P": 0.3333333333330801
+              },
+              {
+                "depth": 1,
+                "nodes": 9,
+                "R": 0.5925925925923331,
+                "P": 0.4000000000003067
+              },
+              {
+                "depth": 2,
+                "nodes": 27,
+                "R": 0.5514403292177192,
+                "P": 0.4242894056851963
+              },
+              {
+                "depth": 3,
+                "nodes": 81,
+                "R": 0.5285779606763665,
+                "P": 0.4370636917019923
+              },
+              {
+                "depth": 4,
+                "nodes": 243,
+                "R": 0.5158766448199764,
+                "P": 0.44431495068871035
+              },
+              {
+                "depth": 5,
+                "nodes": 729,
+                "R": 0.5088203582332831,
+                "P": 0.4484365987934951
+              },
+              {
+                "depth": 6,
+                "nodes": 2187,
+                "R": 0.5049001990193908,
+                "P": 0.4507608786844363
+              }
+            ],
+            "limit": 0.4537037037037037
+          }
+        },
+        {
+          "set": 79,
+          "question": 7,
+          "scope": "有限热源总熵约束及开放气体的对数积分",
+          "passed": true,
+          "values": {
+            "Tf": 346.41016151377545,
+            "W_per_C": 7.179676972449101,
+            "open_heat_integral": 0.333585629315137
+          }
+        },
+        {
+          "set": 79,
+          "question": 8,
+          "scope": "带自由振动的完整初值解直接代入ODE",
+          "passed": true,
+          "values": {
+            "mean": "-F0/k",
+            "drive_frequency": "2ω",
+            "undamped_free_mode": "persists"
+          }
+        }
+      ]
+    },
+    {
+      "set": 78,
+      "passed": true,
+      "questions": [
+        {
+          "set": 78,
+          "question": 1,
+          "scope": "一般位置感应势能梯度独立求两个力分量",
+          "passed": true,
+          "values": {
+            "Fx_kQ2R2": -0.09660592786043881,
+            "Fz_kQ2R2": -0.1812533195916132
+          }
+        },
+        {
+          "set": 78,
+          "question": 2,
+          "scope": "移动基底法向条件消去能量后的单调判据与三次根",
+          "passed": true,
+          "values": {
+            "s_critical": 0.43351314390250256,
+            "h_critical": 0.5664868560974974,
+            "velocity_squared_bounds_gr": [
+              0.45454545454545453,
+              1.3719512195121952
+            ]
+          }
+        },
+        {
+          "set": 78,
+          "question": 3,
+          "scope": "连续弹簧形函数代ODE及固定、自由两边界",
+          "passed": true,
+          "values": {
+            "length": "-r0 + r0/cos(beta) + l0*tan(beta)/beta",
+            "critical_beta": 1.5707963267948966
+          }
+        },
+        {
+          "set": 78,
+          "question": 4,
+          "scope": "完整区间直接积分与首半区间的累计极限停角",
+          "passed": true,
+          "values": {
+            "delta_omega": -0.6282341553013281,
+            "psi_limit": 24.989061191738514,
+            "Qtotal": 50
+          }
+        },
+        {
+          "set": 78,
+          "question": 5,
+          "scope": "200匝切向偶极矢势中心和的幅值、质子电力",
+          "passed": true,
+          "values": {
+            "E": 3.999999999999999e-06,
+            "acceleration": 383.02450687387915,
+            "Bforce_initial": 0
+          }
+        },
+        {
+          "set": 78,
+          "question": 6,
+          "scope": "一阶有向面积定律、地球角速率单位与拍频",
+          "passed": true,
+          "values": {
+            "deltaL_m": 1.7453292519943294e-07,
+            "beat_Hz": 11.492106853102149,
+            "accuracy": "first order"
+          }
+        },
+        {
+          "set": 78,
+          "question": 7,
+          "scope": "冷热库熵、热漏平衡与绝对温标最低功率",
+          "passed": true,
+          "values": {
+            "COP": 19.876666666666665,
+            "power_W": 130.55508971993964
+          }
+        },
+        {
+          "set": 78,
+          "question": 8,
+          "scope": "总线流Lorentz不变量、消去密度与电流速度",
+          "passed": true,
+          "values": {
+            "uE": "j/a",
+            "uB": "c²a/j",
+            "null_and_zero_cases": "classified separately"
+          }
+        }
+      ]
+    }
+  ],
+  "extra": [
+    {
+      "name": "082最佳轨道第二焦点OM",
+      "passed": true,
+      "values": {
+        "OM_R": 0.8746197071393957
+      }
+    },
+    {
+      "name": "082两极椭圆短轴",
+      "passed": true,
+      "values": {
+        "b": 1.1543396380615196
+      }
+    },
+    {
+      "name": "082三绳初态垂直杆且AC=CD",
+      "passed": true,
+      "values": {
+        "AC": 2,
+        "CD": 2,
+        "OC": 4
+      }
+    },
+    {
+      "name": "078圆环与角点真实相切",
+      "passed": true,
+      "values": {
+        "r": 1,
+        "h": 0.25
+      }
+    },
+    {
+      "name": "079一层电阻精确值",
+      "passed": true,
+      "values": {
+        "RAB_R0": 0.5925925925925926
+      }
+    },
+    {
+      "name": "081余数周期只有一次回原点",
+      "passed": true,
+      "values": {
+        "period": 14
+      }
+    },
+    {
+      "name": "081近视像平面在视网膜前",
+      "passed": true,
+      "values": {
+        "v_mm": 23.076923,
+        "d_mm": 24
+      }
+    },
+    {
+      "name": "081功率变式给定参数没有非退化工作点",
+      "passed": true,
+      "values": {
+        "k": 350,
+        "required": 14751.76
+      }
+    },
+    {
+      "name": "079空心与实心球不同惯量系数",
+      "passed": true,
+      "values": {
+        "shell": [
+          0.6,
+          0.4
+        ],
+        "solid": [
+          0.7142857142857143,
+          0.2857142857142857
+        ]
+      }
+    },
+    {
+      "name": "079可逆温度低于直接混合温度",
+      "passed": true,
+      "values": {
+        "reversible": 346.41016151377545,
+        "direct": 350
+      }
+    },
+    {
+      "name": "078严格速度区间有非空内部",
+      "passed": true,
+      "values": {
+        "lower": 0.45454545454545453,
+        "upper": 1.3719512195121952
+      }
+    },
+    {
+      "name": "080膜势能曲率使用q负二次幂",
+      "passed": true,
+      "values": {
+        "potential": "(q^-2+q²)/2",
+        "minimum_q": 1
+      }
+    },
+    {
+      "name": "078端点附加质量混合边界与无端点质量极限",
+      "passed": true,
+      "values": {
+        "boundary": "identical",
+        "critical": "cotβ=ηβ"
+      }
+    },
+    {
+      "name": "078零棒电阻对数阻尼解直接微分",
+      "passed": true,
+      "values": {
+        "divergence": "logarithmic",
+        "stop": "before_ground_contact"
+      }
+    },
+    {
+      "name": "079交流初相和初速两支初值解",
+      "passed": true,
+      "values": {
+        "cosine_max": "2A/ω",
+        "sine_extrema": "cosωt=1+u0/A"
+      }
+    },
+    {
+      "name": "082替换等温循环的熵闭合和效率",
+      "passed": true,
+      "values": {
+        "efficiency": 0.1529067699649305,
+        "entropy_cycle": 0
+      }
+    },
+    {
+      "name": "082临界以上带正地面反力的显式可行解",
+      "passed": true,
+      "values": {
+        "direction_ratio": 0.40490017945975054,
+        "epsilon": 0.05,
+        "floor_outer": 0.12318467129369193,
+        "total_support": 10
+      }
+    }
+  ],
+  "passed": true
+}

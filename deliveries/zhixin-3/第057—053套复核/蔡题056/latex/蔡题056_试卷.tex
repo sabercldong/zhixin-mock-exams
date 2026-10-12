@@ -1,0 +1,236 @@
+\documentclass[12pt,a4paper,UTF8]{ctexart}
+\usepackage[a4paper,top=22mm,bottom=22mm,left=22mm,right=22mm,headheight=15pt]{geometry}
+\newcommand{\Needspace}[1]{\par\begingroup\dimen0=#1\relax\dimen2=\pagegoal\advance\dimen2 by-\pagetotal\ifdim\dimen0>\dimen2\newpage\fi\endgroup}
+\newcommand{\needspace}[1]{\par\begingroup\skip0=\lastskip\vskip-\skip0\dimen0=#1\relax\advance\dimen0 by\skip0\vskip\dimen0\penalty-100\vskip-\dimen0\vskip\skip0\penalty9999\endgroup}
+\usepackage{amsmath,amssymb,mathtools,bm}
+\usepackage{graphicx,xcolor,booktabs,longtable,array,enumitem,fancyhdr,caption,float,microtype,setspace}
+\usepackage[hidelinks,unicode]{hyperref}
+\usepackage[most]{tcolorbox}
+\definecolor{ContestBlue}{HTML}{17365D}
+\hypersetup{pdftitle={第056套},pdfauthor={}}
+\setstretch{1.24}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.35em}
+\setlength{\emergencystretch}{2em}
+\setlist{itemsep=0.35em,topsep=0.4em}
+\captionsetup{font=small,labelfont=bf,justification=centering}
+\setcounter{secnumdepth}{0}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small 第056套}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\ctexset{
+  section={format=\Large\bfseries\color{ContestBlue},beforeskip=1.2em,afterskip=0.7em},
+  subsection={format=\large\bfseries\color{ContestBlue},beforeskip=1.0em,afterskip=0.5em},
+  subsubsection={format=\normalsize\bfseries,beforeskip=0.8em,afterskip=0.35em}
+}
+\usepackage{calc}
+\newcounter{none}
+\let\originalsubsection\subsection
+\renewcommand{\subsection}{\needspace{6\baselineskip}\originalsubsection}
+\makeatletter
+\newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\newcommand{\maxwidth}{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\newcommand{\maxheight}{\ifdim\Gin@nat@height>0.72\textheight 0.72\textheight\else\Gin@nat@height\fi}
+\newcommand{\pandocbounded}[1]{\begingroup\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}#1\endgroup}
+\makeatother
+\begin{document}
+\begin{titlepage}
+  \centering
+  \vspace*{58mm}
+  {\Huge\bfseries\color{ContestBlue} 第056套\par}
+  \vfill
+  \vspace*{28mm}
+\end{titlepage}
+\section{第 1 题}\label{ux7b2c-1-ux9898}
+
+混沌摆可抽象为两根具有相同线密度的均匀细杆组成的复合摆。长摆臂 \(AB\) 在
+\(O\) 点与固定支架铰接，\(OB=l_1\)、\(OA=2l_1\)。短摆臂 \(CD\) 总长为
+\(l_3\)，其距端点 \(D\) 为 \(l_3/3\) 的位置与长摆臂端点 \(B\) 铰接，因此
+\(BD=l_3/3\)、\(BC=2l_3/3\)。两杆夹角为 \(\theta\)。
+
+（1）为尽量减小支架处的摩擦影响，当 \(\theta=90^\circ\)
+且长摆臂水平时，要求系统能够静力平衡，求 \(l_3\)；
+
+（2）当 \(\theta=90^\circ\)
+时，在地面参考系中，长摆臂和短摆臂分别以恒定角速度
+\(\omega_1\)、\(\omega_2\) 顺时针转动，求 \(C\)、\(D\)
+两点的速度大小和加速度大小。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.76\linewidth,height=\textheight,keepaspectratio,alt={图1-1　复合摆两根均匀摆臂的长度、铰点与夹角}]{../figures/question-01.pdf}
+\caption*{图1-1　复合摆两根均匀摆臂的长度、铰点与夹角}
+\end{figure}
+
+\newpage
+
+\section{第 2 题}\label{ux7b2c-2-ux9898}
+
+一定量理想气体经历如下 Brayton 循环：\(1\to2\) 为绝热压缩，\(2\to3\)
+为等压膨胀，\(3\to4\) 为绝热膨胀，\(4\to1\) 为等压压缩。气体物质的量为
+\(\nu\)，定容摩尔热容为 \(C_V=5R/2\)。求：
+
+（1）循环中气体吸收的热量 \(Q_1\)；
+
+（2）循环中气体放出的热量 \(Q_2\)；
+
+（3）循环效率 \(\eta\)；
+
+（4）\(T_1\)、\(T_2\) 与压强比 \(P_2/P_1\) 的关系；
+
+（5）把效率写成 \(T_1\)、\(T_2\) 或压强比的函数。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.601\linewidth,height=\textheight,keepaspectratio,alt={图2-1　Brayton 循环在 P-V 图上的四个过程}]{../figures/question-02.pdf}
+\caption*{图2-1　Brayton 循环在 \(P\)-\(V\) 图上的四个过程}
+\end{figure}
+
+\newpage
+
+\section{第 3 题}\label{ux7b2c-3-ux9898}
+
+有 \(5\) 个彼此相邻的相同矩形木块，每块长为 \(l\)、质量为
+\(m\)，置于光滑水平桌面上。质量均为 \(5m\) 的物体 \(A\)、\(B\)
+由轻绳跨过桌边光滑定滑轮连接。\(A\)视为质点，起初位于最左侧木块的左端，木块与桌面间光滑，\(A\)
+与木块间的动、静摩擦系数均取为
+\(\mu\)，木块右侧有足够长的桌面。系统由静止释放。求：
+
+（1）最终 \(A\) 与 \(5\) 个木块以共同加速度运动时，\(\mu\) 的范围；
+
+（2）最终 \(A\) 与 \(4\) 个木块以共同加速度运动时，\(\mu\) 的范围；
+
+（3）最终 \(A\) 与 \(3\) 个木块以共同加速度运动时，\(\mu\) 的范围；
+
+（4）推广到 \(N\) 个木块，\(A\)、\(B\) 的质量均为 \(Nm\)。当
+\(N\)、最终共同运动的木块数 \(K\) 都很大时，求 \(\mu\)
+的近似条件。可使用 \(\sum_{i=1}^{n}1/i\simeq\ln n\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.88\linewidth,height=\textheight,keepaspectratio,alt={图3-1　物体 A 依次越过相邻木块并由悬挂物体 B 牵引}]{../figures/question-03.pdf}
+\caption*{图3-1　物体 \(A\) 依次越过相邻木块并由悬挂物体 \(B\) 牵引}
+\end{figure}
+
+\newpage
+
+\section{第 4 题}\label{ux7b2c-4-ux9898}
+
+边长为 \(a\) 的等边三角形 \(ABC\) 的重心为
+\(O\)，三个顶点分别固定电荷量均为 \(Q\)
+的同号点电荷，只考虑三角形所在平面内的问题。
+
+（1）与 \(Q\) 同号、质量为 \(m\) 的试探电荷 \(q\) 位于中线 \(AD\)
+上、\(O\) 下方 \(x=\delta a\) 处。其合力写为
+\(F=\alpha kQq/a^2\)，规定向上为正，求 \(\alpha\)；
+
+（2）当 \(\delta\ll1\) 时证明 \(q\) 作小振动，并在
+\(T=\beta\sqrt{ma^3/(kqQ)}\) 中求 \(\beta\)；
+
+（3）把 \(q\) 放在底边中点 \(D\)，若
+\(F_D=\alpha'kQq/a^2\)，向上为正，求 \(\alpha'\)；
+
+（4）在整个平面内，\(q\) 共有多少个平衡位置；
+
+（5）把 \(q\) 限制在过 \(O\) 且平行于 \(BC\) 的直线 \(PQ\) 上运动，判断
+\(O\) 点平衡的稳定性；
+
+（6）若四个等量同号电荷位于正方形四个顶点，平面内共有多少个平衡位置；
+
+（7）若 \(2020\) 个等量同号电荷位于正 \(2020\)
+边形顶点，平面内共有多少个平衡位置。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.535\linewidth,height=\textheight,keepaspectratio,alt={图4-1　等边三角形顶点电荷与中线上的试探电荷}]{../figures/question-04.pdf}
+\caption*{图4-1　等边三角形顶点电荷与中线上的试探电荷}
+\end{figure}
+
+\newpage
+
+\section{第 5 题}\label{ux7b2c-5-ux9898}
+
+用紧绕硬币的线圈与充电电容器构成放电回路，可在极短时间内使金属硬币受到很大的径向电磁力。建立如下理想模型：线圈与硬币的每一环形细分所产生的磁场在其内部均匀、外部为零；忽略硬币本身的自感。电容为
+\(C\)，初始电荷量为 \(Q_0\)；线圈半径为 \(R\)、匝数为 \(N\)、轴向厚度为
+\(d\)；硬币电阻率为 \(\rho\)、半径也为 \(R\)，相对磁导率
+\(\mu_r\simeq1\)；放电回路的等效电阻为
+\(R_0\)。若回路方程出现高阶特征方程，可以用其根表示结果。求时刻 \(t\)
+硬币内部单位体积所受线圈磁场力随半径 \(r\) 的分布。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.67\linewidth,height=\textheight,keepaspectratio,alt={图5-1　电容、线圈和金属硬币组成的脉冲放电装置}]{../figures/question-05.pdf}
+\caption*{图5-1　电容、线圈和金属硬币组成的脉冲放电装置}
+\end{figure}
+
+\newpage
+
+\section{第 6 题}\label{ux7b2c-6-ux9898}
+
+在地面惯性系 \(S\) 中，猎人静止在原点 \(O\)，小猪起初静止在 \(A\)
+点，\(OA=x_1\)。\(t=0\) 时猎人沿 \(+x\) 方向发射激光，小猪同时以恒定速度
+\(v\) 沿 \(+x\) 方向逃跑。激光在事件 \(E_2(t_2,x_2)\)
+追上小猪，随后反射光返回并在事件 \(E_3(t_3,0)\) 到达猎人。另一惯性系
+\(S'\) 以速度 \(u\) 沿 \(+x\) 方向相对 \(S\) 运动，且两坐标系原点在
+\(t=t'=0\) 重合。求：
+
+（1）地面系中的 \(t_3\)；
+
+（2）事件 \(E_3\) 在 \(S'\) 中的时刻 \(t_3'\)；
+
+（3）事件 \(E_3\) 在 \(S'\) 中的位置 \(x_3'\)；
+
+（4）小猪起跑事件 \(E_1(0,x_1)\) 在 \(S'\) 中的时刻 \(t_1'\)；
+
+（5）小猪被击中事件在 \(S'\) 中的位置 \(x_2'\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.78\linewidth,height=\textheight,keepaspectratio,alt={图6-1　地面系中猎人、激光与匀速逃跑小猪的初始关系}]{../figures/question-06.pdf}
+\caption*{图6-1　地面系中猎人、激光与匀速逃跑小猪的初始关系}
+\end{figure}
+
+\newpage
+
+\section{第 7 题}\label{ux7b2c-7-ux9898}
+
+两个焦距均为\(f\)的理想薄凸透镜共用光心O。图中的\(f_1,f_2\)表示透镜所在的直线，夹角为\(60^\circ\)；\(f_1\)沿y轴，\(f_2\)与正x轴成\(30^\circ\)。\(A=(-f,f/\sqrt3)\)，故\(OA=2f/\sqrt3\)；\(B=(-\sqrt3f,0)\)位于第一透镜的主光轴上。按原题的理想连续成像模型求：
+
+（1）（2）A先经\(f_1\)再经\(f_2\)的终像横、纵坐标\(x_1,y_1\)；
+
+（3）（4）A先经\(f_2\)再经\(f_1\)的终像横、纵坐标\(x_1',y_1'\)；
+
+（5）（6）B先经\(f_1\)再经\(f_2\)的终像横、纵坐标\(x_2,y_2\)；
+
+（7）（8）B先经\(f_2\)再经\(f_1\)的终像横、纵坐标\(x_2',y_2'\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.587\linewidth,height=\textheight,keepaspectratio,alt={图7-1　两条透镜平面、法向与原题物点}]{../figures/question-07.pdf}
+\caption*{图7-1　两条透镜平面、法向与原题物点}
+\end{figure}
+
+\newpage
+
+\section{第 8 题}\label{ux7b2c-8-ux9898}
+
+用均匀电阻丝制作无限阶指尖陀螺网络。第 \(1\) 阶是边长为 \(l\)
+的正三角形框；第 \(2\) 阶在第 \(1\)
+阶三边的循环三等分点处内接一个正三角形框；第 \(3\) 阶再在第 \(2\)
+阶中按同样规则内接，依次无限进行。电阻丝单位长度质量为
+\(\lambda\)，单位长度电阻为 \(r\)。求：
+
+（1）无限阶网络绕共同重心且垂直于三角形平面的轴转动时的转动惯量 \(J\)；
+
+（2）第 \(2\) 阶网络端点 \(A\)、\(B\) 间的等效电阻 \(R_2\)；
+
+（3）无限阶网络端点 \(A\)、\(B\) 间的等效电阻 \(R_\infty\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.566\linewidth,height=\textheight,keepaspectratio,alt={图8-1　三等分点内接生成的前三级正三角形电阻丝网络}]{../figures/question-08.pdf}
+\caption*{图8-1　三等分点内接生成的前三级正三角形电阻丝网络}
+\end{figure}
+\end{document}

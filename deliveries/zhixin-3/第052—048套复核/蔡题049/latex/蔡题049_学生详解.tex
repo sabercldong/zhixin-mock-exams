@@ -1,0 +1,2223 @@
+\documentclass[12pt,a4paper,UTF8]{ctexart}
+\usepackage[a4paper,top=22mm,bottom=22mm,left=22mm,right=22mm,headheight=15pt]{geometry}
+\usepackage{amsmath,amssymb,mathtools,bm}
+\usepackage{graphicx,xcolor,booktabs,longtable,array,enumitem,fancyhdr,caption,float,microtype,setspace}
+\newcommand{\Needspace}[1]{\par\begingroup\dimen0=#1\relax\dimen2=\pagegoal\advance\dimen2 by-\pagetotal\ifdim\dimen0>\dimen2\newpage\fi\endgroup}
+\newcommand{\needspace}[1]{\par\begingroup\skip0=\lastskip\vskip-\skip0\dimen0=#1\relax\advance\dimen0 by\skip0\vskip\dimen0\penalty-100\vskip-\dimen0\vskip\skip0\penalty9999\endgroup}
+\usepackage[hidelinks,unicode]{hyperref}
+\usepackage[most]{tcolorbox}
+\definecolor{ContestBlue}{HTML}{17365D}
+\hypersetup{pdftitle={第 049 套},pdfauthor={}}
+\setstretch{1.24}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.35em}
+\setlength{\emergencystretch}{2em}
+\setlist{itemsep=0.35em,topsep=0.4em}
+\captionsetup{font=small,labelfont=bf,justification=centering}
+\setcounter{secnumdepth}{0}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small 第 049 套}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\ctexset{
+  section={format=\Large\bfseries\color{ContestBlue},beforeskip=1.2em,afterskip=0.7em},
+  subsection={format=\large\bfseries\color{ContestBlue},beforeskip=1.0em,afterskip=0.5em},
+  subsubsection={format=\normalsize\bfseries,beforeskip=0.8em,afterskip=0.35em}
+}
+\makeatletter
+\newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\newcommand{\maxwidth}{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\newcommand{\maxheight}{\ifdim\Gin@nat@height>0.72\textheight 0.72\textheight\else\Gin@nat@height\fi}
+\newcommand{\pandocbounded}[1]{\begingroup\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}#1\endgroup}
+\makeatother
+\begin{document}
+\begin{titlepage}
+  \centering
+  \vspace*{58mm}
+  {\Huge\bfseries\color{ContestBlue} 第 049 套\par}
+  \vfill
+  \vspace*{28mm}
+\end{titlepage}
+\section{第 1 题}\label{ux7b2c-1-ux9898}
+
+某汽车前轮可以转向、后轮不可转向，四个车轮均不能侧向滑动。左右轮间距为
+\(2l\)，前后轮轴距为 \(3l\)，车身在前、后轮轴外各伸出
+\(l\)。转弯时内侧前轮转角为 \(\alpha\)，外侧前轮转角为 \(\beta\)。
+
+（1）求 \(\alpha\) 与 \(\beta\) 的关系；
+
+（2）已知内轮最大转角为 \(45^\circ\)，求汽车能安全通过的最小直角道路宽度
+\(d\)。原题没有指定转向随时间的策略。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.82\linewidth,height=\textheight,keepaspectratio,alt={图1-1　汽车尺寸、转向轮和直角道路}]{../figures/question-01.pdf}
+\caption*{图1-1　汽车尺寸、转向轮和直角道路}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d}
+
+无侧滑要求四轮的轴线交于同一瞬心。最大转角给出最紧转弯半径，车身扫掠则还依赖瞬心位置和转向策略；外前角半径只能直接给出一种充分宽度。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  平面刚体的瞬时转动中心；
+\item
+  Ackermann 转向几何；
+\item
+  直角三角形与余切关系；
+\item
+  车身扫掠圆的外包络；
+\item
+  轮轴距与车身前后悬的区别。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf}
+
+后轮不能转向，所以瞬心 \(I\)
+必在后轮轴的延长线上。内、外前轮的轮平面分别与半径 \(I\)
+到该轮接地点的连线垂直。设后轴中点到瞬心的距离为
+\(R\)，则内、外前轮到瞬心的横向距离分别为 \(R-l\) 与 \(R+l\)。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3}
+
+由前轮接地点、后轮轴线和瞬心构成的两个直角三角形， \[
+\tan\alpha=\frac{3l}{R-l},\qquad
+\tan\beta=\frac{3l}{R+l}. \tag{1}
+\] 把两式改写成余切即可消去未知的转弯半径 \(R\)。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790}
+
+由式（1） \[
+\cot\alpha=\frac{R-l}{3l},\qquad
+\cot\beta=\frac{R+l}{3l}.
+\] 两式相减： \[
+\begin{aligned}
+\cot\beta-\cot\alpha
+&=\frac{R+l-(R-l)}{3l}\\
+&=\frac{2l}{3l}=\frac23.
+\end{aligned}
+\] 故 \[
+\boxed{\cot\beta-\cot\alpha=\frac23}. \tag{2}
+\] 由于转弯时 \(\alpha>\beta\)，余切函数在 \((0,90^\circ)\)
+上递减，所以式（2）的正号与几何直觉一致。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.78\linewidth,height=\textheight,keepaspectratio,alt={图1-2　瞬时转动中心与车身最外角的扫掠半径}]{../figures/solution-01.pdf}
+\caption*{图1-2　瞬时转动中心与车身最外角的扫掠半径}
+\end{figure}
+
+当内轮达到最大转角 \(\alpha=45^\circ\) 时，由式（1） \[
+1=\tan45^\circ=\frac{3l}{R-l},
+\] 所以 \[
+R-l=3l,\qquad R=4l. \tag{3}
+\] 汽车转过直角时，车身外侧最前角离瞬心最远。它相对瞬心的横向距离为 \[
+R+l=5l,
+\] 纵向距离不是轮轴距 \(3l\)，还要加前悬 \(l\)，故为 \[
+3l+l=4l.
+\] 于是外包络半径 \[
+r_{\rm out}
+=\sqrt{(5l)^2+(4l)^2}
+=l\sqrt{41}. \tag{4}
+\]
+若将瞬心布置在道路内角，由完整外包络圆构造一条足够宽的道路，因此可给出充分宽度
+\[
+\boxed{d_{\rm sufficient}=l\sqrt{41}}. \tag{5}
+\]
+
+内侧车身最后角离瞬心的半径为 \[
+r_{\rm in}=\sqrt{(R-l)^2+l^2}=l\sqrt{10}>0,
+\]
+说明它围绕内角留下空区，不会扫过道路内角。这只核查以凹角为瞬心的充分构造，不能证明其道路宽度最小。
+
+\textbf{一般转角下的扫掠半径。} 由内轮转角可先求 \[
+R=l+\frac{3l}{\tan\alpha}. \tag{6}
+\] 车身四个角相对后轴中点的坐标可取 \[
+(\pm l,4l),\qquad(\pm l,-l).
+\] 相对瞬心 \(I\) 的距离平方分别是 \[
+\begin{aligned}
+\rho_{\rm of}^2&=(R+l)^2+(4l)^2,\\
+\rho_{\rm if}^2&=(R-l)^2+(4l)^2,\\
+\rho_{\rm or}^2&=(R+l)^2+l^2,\\
+\rho_{\rm ir}^2&=(R-l)^2+l^2.
+\end{aligned} \tag{7}
+\] 其中下标依次表示外侧/内侧、前端/后端。因为 \(R>l\)， \[
+\rho_{\rm of}>\rho_{\rm if},\quad
+\rho_{\rm of}>\rho_{\rm or},
+\] 所以外侧前角在任意允许转角下都是最外点。式（4）正是把
+\(\alpha=45^\circ\) 代入一般式 \[
+\rho_{\rm out}(\alpha)
+=l\sqrt{
+\left(2+\frac{3}{\tan\alpha}\right)^2+16
+}. \tag{8}
+\]
+
+\textbf{四轮速度为何可以不同。} 刚体绕瞬心转动时，各点速率满足
+\(v_i=\Omega\rho_i\)。后内、后外轮的半径分别为
+\(R-l,R+l\)；前轮半径分别是 \[
+\rho_{fi}=\sqrt{(R-l)^2+9l^2},\qquad
+\rho_{fo}=\sqrt{(R+l)^2+9l^2}.
+\]
+因此四轮角速度若轮半径相同，也按这些轨迹半径成比例。题面所说``四个轮子可以不同速转动''正是无侧滑转向的必要结果，而不是额外无关信息。
+
+\textbf{道路模型的边界说明。}
+直角道路由两条互相垂直的等宽通道组成。以道路凹角作为瞬心时，车身每一点走同心圆弧；只要最外点圆半径不超过
+\(d\) 且内侧角点扫掠区不覆盖凹角，整车在 \(90^\circ\)
+转动过程中均不越界。式（7）已验证这两个条件。若瞬心偏离凹角或转角随时间改变，需把各时刻旋转矩形与道路边界做包络优化，不能再把式（5）作为最优宽度。原题允许前轮转向，未要求全程保持最大转角。
+
+\textbf{把转角关系写成显式形式。} 由式（2） \[
+\cot\beta=\cot\alpha+\frac23.
+\] 所以 \[
+\boxed{
+\beta=\arctan\frac{1}
+{\cot\alpha+2/3}
+}. \tag{9}
+\] 在 \(0<\alpha<90^\circ\) 内分母为正，且大于 \(\cot\alpha\)，因此
+\(\tan\beta<\tan\alpha\)，再次得到
+\(\beta<\alpha\)。若要设计转向机构，式（9）给出了外轮应随内轮联动的函数。
+
+\textbf{轮速比例的具体值。} 在 \(\alpha=45^\circ,R=4l\)
+时，后内、后外轮轨迹半径为 \(3l,5l\)；前内、前外轮轨迹半径为 \[
+\sqrt{(3l)^2+(3l)^2}=3\sqrt2\,l,
+\qquad
+\sqrt{(5l)^2+(3l)^2}=\sqrt{34}\,l.
+\] 若四轮半径相同，瞬时轮速比为 \[
+\omega_{ri}:\omega_{ro}:\omega_{fi}:\omega_{fo}
+=3:5:3\sqrt2:\sqrt{34}.
+\]
+这项并非题目所求，却完整说明了无侧滑转弯时差速器需要实现的运动学约束。
+
+\textbf{可行道路宽度要检查整个矩形。} 图1-2取入口水平通道
+\(0\le y\le d\)、出口竖直通道
+\(0\le x\le d\)。在两通道并集内，车身任一点须满足 \[
+y\ge0,\qquad x\le d,\qquad x\ge0\ \text{或}\ y\le d.
+\] 第三个条件排除了左上方的道路内角禁区。用 \(l\) 为单位，最大转角对应
+\(R=4\)，相对瞬心的车身矩形可取 \(u\in[-1,4],v\in[-5,-3]\)。转过
+\(\vartheta\) 后坐标为 \[
+x=-a+u\cos\vartheta-v\sin\vartheta,
+\] \[
+y=d+b+u\sin\vartheta+v\cos\vartheta.
+\] 其中 \(0\le\vartheta\le\pi/2\)。对所有角点取极值，最外前角给
+\(x_{\max}=-a+\sqrt{41}\)，最外后角给 \(y_{\min}=d+b-\sqrt{26}\)。故需
+\[
+d+a\ge\sqrt{41},\qquad d+b\ge\sqrt{26}.
+\] 矩形内侧长边离瞬心为 \(3\)；道路凹角相对瞬心为 \((a,-b)\)。取
+\(a^2+b^2\le9\) 可把凹角留在内侧扫掠空区内。当两项外界条件同时取等号且
+\(a^2+b^2=9\)， \[
+(\sqrt{41}-d)^2+(\sqrt{26}-d)^2=9.
+\] 选择较小的可行根便得到图示 \(d_{\rm arc}\simeq3.732l\)。这比
+\(\sqrt{41}l\) 明显小，所以外角半径不可能就是一般道路最小宽度。
+
+数值核查对每条边取点并遍历整个四分之一圆周，逐点检查上述三个通道条件；它可发现画图漏掉的扫掠碰撞，但有限采样本身不是一般最优性的证明。原题允许前轮转向；要证明更一般策略的最优宽度，还须对后轴中心轨迹、曲率上限与车身边界作连续优化。本文交付已验证的可行构造，并保留全局最优未证的范围。
+
+\textbf{矩形扫掠的解析界限。}
+将车身边界写成四条线段，而不是只画四个角。对给定转角，横、纵坐标都是
+\(u,v\)
+的线性函数，因此单项坐标极值确实在角点取得。不过道路禁区条件同时包含两个不等式，只看横纵极值各自安全仍不充分。
+
+取图示凹角相对瞬心的矢量 \((a,-b)\)，其中
+\(a^2+b^2=9\)。任一车身点相对瞬心满足
+\(v\le-3\)。转到任意角时，车身始终位于一条离瞬心至少三的切线外侧，而凹角留在半径三的内圆上。道路凹角的两条边与车身扫掠的接触，发生在内侧长边与这个圆相切的角度附近。
+
+外侧两项最紧条件分别由函数 \[
+4\cos\vartheta+5\sin\vartheta
+\] 与 \[
+\sin\vartheta+5\cos\vartheta
+\] 的极值给出。其最大值是 \(\sqrt{41}\) 与
+\(\sqrt{26}\)，不是都取外前角半径。第二个函数控制车辆后端的下边界，正是以凹角为瞬心的粗构造没有优化的余量。
+
+给定 \(a,b\) 后所需宽度为 \[
+d(a,b)=\max(\sqrt{41}-a,\sqrt{26}-b).
+\] 在 \(a,b\ge0\)、\(a^2+b^2\le9\)
+的这类圆弧布置中，降低较大的那一项直到二者相等，可得到正文构造。这个最优性只针对已经限制的恒曲率布置，不能把量词扩展到所有变曲率驾驶策略。
+
+还可直接排除整个凹角禁区。转角为 \(\vartheta\) 时，车身的内侧法向量取
+\(\bm n=(-\sin\vartheta,\cos\vartheta)\)，瞬心为
+\(I=(-a,d+b)\)。车身满足 \[
+\bm n\cdot(X-I)\le-3.
+\] 对于禁区中的任一点 \(Q=(q_x,q_y)\)，有 \(q_x\le0,q_y\ge d\)，所以 \[
+\bm n\cdot(Q-I)\ge-a\sin\vartheta-b\cos\vartheta\ge-\sqrt{a^2+b^2}=-3.
+\]
+两区域只能在边界相切，不发生内部交叠。这项连续不等式覆盖所有转角和整个车身。数值边界扫掠检查覆盖四边和
+\(1801\)
+个转角，作为交叉核验。若需要全局最小的严格证明，应先界定是否允许倒车、转向速率有无上限以及入出口直行姿态，再建立路径空间的上下界；本文明确保留这一未证部分。
+
+\textbf{改变恒曲率半径的构造族。} 原车身相对后轴中心的纵向范围为
+\(u\in[-1,4]\)，半宽为一。若后轴中心转弯半径为
+\(R\ge4\)，相对瞬心横向范围变为
+\(v\in[-R-1,-R+1]\)。同一连续分离证明使用的内侧半径为 \(R-1\)。
+
+两项外侧包络极值为 \[
+A_R=\sqrt{16+(R+1)^2},
+\qquad B_R=\sqrt{1+(R+1)^2}.
+\] 对这个指定的四分之一圆族，取偏置参数使 \[
+d+a=A_R,\quad d+b=B_R,\quad a^2+b^2=(R-1)^2.
+\] 可行较小根为 \[
+d(R)=\frac{A_R+B_R-\sqrt{2(R-1)^2-(A_R-B_R)^2}}2.
+\] 代入 \(R=4\)
+恢复正文构造；代入其他合法半径可以比较道路宽度和转弯曲率。每个值还须有
+\(a,b\ge0\)，并按入口、出口直线姿态检查。
+
+它是一个明确参数化的构造族，而非所有驾驶路径。即使在若干 \(R\)
+上作数值比较，也不能据此证明任意变曲率、允许倒车的策略都不更好。全局最优的证明须先规定完整驾驶规则，再给道路下界。
+
+此式在 \(R\) 很大时宽度按 \((1-1/\sqrt2)R\)
+增加，说明``大半径转弯一定更省道路宽度''也不成立。半径增大会减小车身相对瞬心的姿态变化率，却增加整个转弯包络，两种几何影响需要一起计算。
+
+\textbf{更窄的可行构造，直接否定原来的``最小值''。} 用 \(l\)
+为长度单位，把入口取为 \(y\in[0,d]\)、出口取为
+\(x\in[0,d]\)，可行道路是二者构成的直角通道。最大内轮转角对应
+\(R=4\)。车辆初始相对瞬心的矩形为 \(u\in[-1,4],v\in[-5,-3]\)，转角从
+\(0\) 增至 \(\pi/2\)。外侧前角的最大横坐标为
+\(A=\sqrt{41}\)，外侧后角的最小纵坐标为 \(-B=-\sqrt{26}\)。
+
+将瞬心放在 \(I=(-a,d+b)\)，\(a,b\ge0\)，则外墙条件是
+\(d\ge A-a\)、\(d\ge B-b\)。内侧边的扫掠圆半径为
+\(3\)，道路凹角相对瞬心的距离不超过 \(3\) 就不会穿入车身包络，即
+\(a^2+b^2\le9\)。令两外墙同时相切，得到可行宽度 \[
+\boxed{d_{\rm arc}=
+\frac{\sqrt{41}+\sqrt{26}-
+\sqrt{18-(\sqrt{41}-\sqrt{26})^2}}2\,l
+\approx3.732l}.
+\] 对应
+\(a\approx2.671l,b\approx1.367l\)。旋转矩形的全部边界都可逐角检查；入口与出口前后的直行段也在道路内。这个严格的可行反例已说明
+\(\sqrt{41}l\) 不是最小道路宽度。\(d_{\rm arc}\)
+是上述恒定最大转角、连续四分之一圆弧构造的结果；若允许任意变转角或倒车，原题的全局最优仍需指定操作范围并另作路径优化，不能凭外角半径直接断言。
+
+\newpage
+
+\section{第 2 题}\label{ux7b2c-2-ux9898}
+
+要把质量为 \(m\) 的货物送出，使用两级火箭。第二级连同货物的初始总质量为
+\(nm\)，两级火箭连同货物的初始总质量为 \(Nm\)。燃气相对火箭的喷射速度为
+\(V\)。每一级的壳体与燃料质量之比均为 \[
+r:(1-r).
+\]
+每一级燃料燃尽后立即抛弃壳体，抛壳不改变剩余部分速度。忽略重力和空气阻力。
+
+（1）求第一级燃烧完成时的速度 \(v\)；
+
+（2）求第二级提供的速度增量 \(u\)；
+
+（3）总末速度 \(w=u+v\)。固定 \(r,N\)，求使 \(w\) 最大的 \(n\)；
+
+（4）在最优分级时求 \(u/v\)；
+
+（5）若改用初始总质量为 \(Nm\) 的单级火箭，求末速度 \(w_s\)；
+
+（6）取
+\(w=10\ {\rm km\,s^{-1}}\)、\(V=2.5\ {\rm km\,s^{-1}}\)、\(r=0.1\)，按最优分级求
+\(N\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.486\linewidth,height=\textheight,keepaspectratio,alt={图2-1　两级火箭的质量分层}]{../figures/question-02.pdf}
+\caption*{图2-1　两级火箭的质量分层}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-1}
+
+每一级燃烧的速度增量由质量比决定，抛壳本身不增加速度。最优分级要求各级有效质量比相等，可以用对数函数的凹性检验这一点。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-1}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  火箭方程 \(\Delta v=V\ln(M_i/M_f)\)；
+\item
+  壳体、燃料和上面级质量拆分；
+\item
+  无冲量抛壳不改变速度；
+\item
+  对数函数求极值；
+\item
+  最优分级的等质量比原则；
+\item
+  数值反解。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-1}
+
+第一级自有质量是 \((N-n)m\)，其中壳体质量 \(r(N-n)m\)、燃料质量
+\((1-r)(N-n)m\)。燃尽瞬间还没有抛壳，故第一级末质量等于``第二级和货物''加``第一级壳体''。第二级同理。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-1}
+
+第一级燃烧前后质量为 \[
+M_{1i}=Nm,\qquad
+M_{1f}=nm+r(N-n)m.
+\] 第二级燃烧前后质量为 \[
+M_{2i}=nm,\qquad
+M_{2f}=m+r(n-1)m.
+\] 把这四个质量准确写出，后续只需火箭方程。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-1}
+
+第一级末质量整理为 \[
+M_{1f}=m[rN+(1-r)n].
+\] 所以 \[
+\boxed{
+v=V\ln\frac{N}{rN+(1-r)n}
+}. \tag{1}
+\] 抛掉第一级壳体后，第二级以质量 \(nm\) 开始燃烧。第二级末质量为 \[
+M_{2f}=m[1+r(n-1)]=m(rn+1-r),
+\] 故 \[
+\boxed{
+u=V\ln\frac{n}{rn+1-r}
+}. \tag{2}
+\] 总速度 \[
+\frac wV
+=\ln\frac{N}{rN+(1-r)n}
++\ln\frac{n}{rn+1-r}. \tag{3}
+\]
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.78\linewidth,height=\textheight,keepaspectratio,alt={图2-2　中间级质量 n 对总速度的影响}]{../figures/solution-02.pdf}
+\caption*{图2-2　中间级质量 \(n\) 对总速度的影响}
+\end{figure}
+
+对 \(n\) 求导： \[
+\begin{aligned}
+\frac1V\frac{dw}{dn}
+={}&-\frac{1-r}{rN+(1-r)n}
++\frac1n-\frac{r}{rn+1-r}\\
+={}&-(1-r)\frac{1}{rN+(1-r)n}
++(1-r)\frac{1}{n(rn+1-r)}.
+\end{aligned}
+\] 令导数为零。因 \(0<r<1\)，可约去 \(1-r\)： \[
+\frac{1}{n(rn+1-r)}
+=\frac{1}{rN+(1-r)n}.
+\] 交叉相乘： \[
+\begin{aligned}
+n(rn+1-r)&=rN+(1-r)n,\\
+rn^2+(1-r)n&=rN+(1-r)n,\\
+n^2&=N.
+\end{aligned}
+\] 取正根 \[
+\boxed{n_{\rm opt}=\sqrt N}. \tag{4}
+\] 当 \(n\to1\) 或 \(n\to N\) 时其中一级退化；内部驻点给出最大值。代入
+\(n=\sqrt N\) 可验证两级有效质量比相同： \[
+\frac{N}{rN+(1-r)\sqrt N}
+=\frac{\sqrt N}{r\sqrt N+1-r}.
+\] 因此两级速度增量相等， \[
+\boxed{\frac uv=1}. \tag{5}
+\]
+
+单级火箭初始质量 \(Nm\)，燃尽后质量为 \[
+m+r(N-1)m=m[1+r(N-1)].
+\] 所以 \[
+\boxed{
+w_s=V\ln\frac{N}{1+r(N-1)}
+}. \tag{6}
+\]
+
+数值题中最优两级各提供 \(5\ {\rm km\,s^{-1}}\)。令 \(s=\sqrt N\)，则 \[
+\frac{w}{2V}
+=\ln\frac{s}{rs+1-r}.
+\] 代入 \(w/(2V)=10/5=2\) 与 \(r=0.1\)： \[
+\frac{s}{0.1s+0.9}=e^2.
+\] 解得 \[
+\begin{aligned}
+s(1-0.1e^2)&=0.9e^2,\\
+s&=\frac{0.9e^2}{1-0.1e^2}\simeq25.47,\\
+N&=s^2\simeq648.70.
+\end{aligned}
+\] 故 \[
+\boxed{N\simeq6.5\times10^2}. \tag{7}
+\]
+
+\textbf{极值确为最大值。} 把式（3）写成 \[
+\frac wV=\ln N+\ln n
+-\ln[rN+(1-r)n]
+-\ln(rn+1-r).
+\] 在驻点 \(n=\sqrt N\) 处计算二阶导数： \[
+\begin{aligned}
+\frac1V\frac{d^2w}{dn^2}
+={}&\frac{(1-r)^2}{[rN+(1-r)n]^2}
+-\frac1{n^2}
++\frac{r^2}{(rn+1-r)^2}.
+\end{aligned}
+\] 也可不直接化简二阶导数，而观察导数的符号。由前面的整理 \[
+\frac1{V(1-r)}\frac{dw}{dn}
+=\frac{r(N-n^2)}
+{n(rn+1-r)[rN+(1-r)n]}.
+\tag{8}
+\] 分母在 \(1<n<N\) 内为正，因此 \(n<\sqrt N\) 时导数为正，\(n>\sqrt N\)
+时导数为负，驻点必为全局最大值。
+
+\textbf{最优速度的显式式子。} 令 \(s=\sqrt N\)。第一级分母 \[
+rN+(1-r)s=s(rs+1-r),
+\] 故 \[
+v_{\rm opt}
+=V\ln\frac{s}{rs+1-r}.
+\] 第二级增量完全相同。于是 \[
+\boxed{
+w_{\max}=2V\ln\frac{\sqrt N}
+{r\sqrt N+1-r}
+}. \tag{9}
+\] 这一式直接用于第（6）问，也便于和单级式（6）比较。
+
+\textbf{分级优势的来源。} 当 \(N\) 很大时，单级火箭速度趋于有限上限 \[
+w_s\to V\ln\frac1r,
+\] 因为壳体质量随初始质量同步增加。最优两级的上限则为 \[
+w_{\max}\to2V\ln\frac1r,
+\] 相当于把同一结构质量惩罚分摊到两次质量比中。若
+\(r\to0\)，壳体消失，分级与单级的理想总质量比效果重新趋于一致。
+
+\textbf{数值反算的逐步检查。} \(e^2\simeq7.389\)，所以 \[
+0.1e^2\simeq0.7389<1,
+\] 分母为正，方案在该结构系数下可实现。进一步 \[
+\sqrt N\simeq25.47,\qquad
+0.1\sqrt N+0.9\simeq3.447,
+\] 两者比值约 \(7.389\)，取自然对数确为 \(2\)。两级各给出
+\(2.5\times2=5\ {\rm km\,s^{-1}}\)。
+
+\textbf{火箭方程的来源提醒。} 在火箭瞬时质量为 \(M\)、速度为 \(v\)
+时，喷出质量 \(-dM>0\) 的燃气。忽略二阶小量，动量守恒给出 \[
+M\,dv=-V\,dM.
+\] 从初质量 \(M_i\) 积分到末质量 \(M_f\)： \[
+\Delta v=-V\int_{M_i}^{M_f}\frac{dM}{M}
+=V\ln\frac{M_i}{M_f}.
+\] 这里的 \(V\)
+是相对火箭的喷气速度。把它误当成燃气对地速度，便无法得到对数质量比。
+
+\textbf{单级和两级在 \(r\to1\) 的极限。} 当 \(r\to1\) 时几乎没有燃料，
+\[
+rN+(1-r)n\to N,\qquad rn+1-r\to n,
+\] 所以 \(v,u,w\)
+全部趋于零。式（1）、（2）正确反映这一极限。若推导结果在 \(r=1\)
+时仍有非零速度，说明燃料与壳体比例解释错误。另一方面，\(\int dM/M=\ln M\)，火箭方程必须使用自然对数；误用常用对数会使速度少算为
+\(1/\ln 10\)。
+
+\textbf{质量定义与最优分级的独立核查。} 原题 \(nm\)
+已经包括货物，不能再在第二级质量上另加 \(m\)。因此两级初、末质量比为 \[
+\mathcal R_1=\frac{N}{rN+(1-r)n},\qquad
+\mathcal R_2=\frac{n}{rn+1-r}.
+\] 令 \(n=\sqrt N\)，第一比值分母可因式分解为 \[
+rN+(1-r)\sqrt N=\sqrt N(r\sqrt N+1-r).
+\] 于是 \(\mathcal R_1=\mathcal R_2\)，两个增速相等。若把 \(nm\)
+误当成不含货物的上级质量，两比值都发生变化，极值也不再位于 \(\sqrt N\)。
+
+一般 \(k\) 级可用相邻总质量之比 \(s_i\) 表示，满足 \(\prod_i s_i=N\)。第
+\(i\) 级的增速函数为 \[
+\Delta v_i/V=\ln\frac{s_i}{rs_i+1-r}.
+\] 设 \(x_i=\ln s_i\)，则 \[
+f(x)=x-\ln(re^x+1-r),\qquad \sum_i x_i=\ln N.
+\] 二阶导数为 \[
+f''(x)=-\frac{r(1-r)e^x}{(re^x+1-r)^2}<0.
+\] 故在级数固定、各级结构比相同的模型中，总速度由各 \(x_i\)
+相等取得全局最大值，即 \[
+s_i=N^{1/k}.
+\] 这项凹性证明比只看一个驻点更完整。两级情形恢复 \(n=\sqrt N\)。
+
+数值反解还须检查可达上限：最优两级总速度满足 \(w<2V\ln(1/r)\)。题给
+\(w/V=4\) 小于 \(2\ln10\)，因此分母 \(1-re^2\) 为正，得到有限
+\(N\simeq648.7\)。接近上限时分母趋零，所需初始质量急剧增大，不能把速度对质量的对数关系误看成线性。
+
+\textbf{三级与单级的数值对照。} 固定 \(r=0.1,N=1000\)。单级末速度为 \[
+w_s/V=\ln\frac{1000}{100.9}\simeq2.2936.
+\] 最优两级的相邻总质量比为 \(\sqrt{1000}\)，故 \[
+w_2/V=2\ln\frac{\sqrt{1000}}{0.1\sqrt{1000}+0.9}\simeq4.1043.
+\] 最优三级相邻总质量比为十，每级有效质量比都是 \(10/(1+0.9)\)，所以 \[
+w_3/V=3\ln(10/1.9)\simeq4.9822.
+\]
+初始总质量相同、喷速相同，但更早抛弃不再有用的壳体使后续燃料推动的质量减少。
+
+如果某一级结构比不同，凹性函数也不同。最优条件应为边际增速相等， \[
+f_i'(x_i)=\frac{1-r_i}{r_ie^{x_i}+1-r_i}=\Lambda_*.
+\] 解得 \[
+e^{x_i}=\frac{1-r_i}{r_i}\left(\frac1{\Lambda_*}-1\right).
+\] 再由 \(\prod_i e^{x_i}=N\)
+求共同乘子。由此可见，结构比不同的各级总质量比一般不相等；``等质量比最优''依赖各级使用相同结构比的题设。
+
+分级的现实性能还受发动机质量、级间结构与燃烧时序影响，原题刻意忽略这些项。上述数值只比较所给理想火箭模型，不能当作真实运载火箭的直接设计数据。
+
+\textbf{级数趋多的理想上限。} 最优 \(k\) 级、相同结构比 \(r\) 的速度为
+\[
+w_k/V=k\ln\frac{N^{1/k}}{rN^{1/k}+1-r}.
+\] 保持初始质量比 \(N\) 固定，令 \(x=\ln N/k\)。当 \(k\)
+很大时，每一级只提供很小的对数质量变化，展开给 \[
+\ln\frac{e^x}{re^x+1-r}
+=(1-r)x-\frac12r(1-r)x^2+O(x^3).
+\] 所以 \[
+w_k/V=(1-r)\ln N-
+\frac{r(1-r)(\ln N)^2}{2k}+O(k^{-2}).
+\] 理想模型的上限为 \((1-r)V\ln N\)，并非无穷速度。对
+\(r=0.1,N=1000\)，上限约为 \(6.2170V\)；三级速度约
+\(4.9822V\)，仍低于这一上限。
+
+这个极限把每一级的可抛结构质量连续分散。原式假设级间连接、发动机和分离机构没有额外固定质量。若每加一级都要增加独立结构质量，保持
+\(N\) 固定时就不能任意增加 \(k\)，上述上限仅是原理想模型的数学极限。
+
+比较两级与一级还能给严格的分级优势。令
+\(s=\sqrt N>1\)，两级有效质量比乘积与一级之比为 \[
+\frac{\mathcal R_1\mathcal R_2}{\mathcal R_s}
+=\frac{rs^2+1-r}{(rs+1-r)^2}.
+\] 分子减去分母为 \[
+r(1-r)(s-1)^2>0.
+\] 因此对 \(0<r<1,N>1\)，理想两级末速度严格大于一级。\(r=0\)
+时无结构需要抛弃，二者同为 \(V\ln N\)；\(r=1\)
+时没有可喷燃料，速度均为零。两个端点可检查推导的物理方向。
+
+\newpage
+
+\section{第 3 题}\label{ux7b2c-3-ux9898}
+
+在无穷大二维理想流体中，点涡的环量定义为 \[
+\oint\bm u\cdot d\bm l=\Gamma.
+\]
+
+（1）单个环量为 \(\Gamma\) 的点涡，求距涡心 \(r\) 处的流速大小 \(v_0\)；
+
+（2）两个间距为 \(d\)、环量大小相等而方向相反的点涡相距保持为
+\(d\)。求连线中点 \(A\) 的流速 \(v_1\)，以及连线延长线上、距中点为 \(d\)
+的点 \(B\) 的流速 \(v_2\)；
+
+（3）用液面高度差产生的压强作用平衡涡旋间吸引效应。流体密度为
+\(\rho\)，求 \(A\)、\(B\) 两点液面高度差 \(h\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.78\linewidth,height=\textheight,keepaspectratio,alt={图3-1　反向点涡对及中点、外点位置}]{../figures/question-03.pdf}
+\caption*{图3-1　反向点涡对及中点、外点位置}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-2}
+
+反向点涡的实验室瞬时速度可直接叠加，但自由涡对会整体平移。第三问使用伯努利式时必须先决定涡心是否固定，或者改在随动系中计算。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-2}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  环量定义；
+\item
+  轴对称点涡速度 \(v\propto1/r\)；
+\item
+  矢量速度场叠加；
+\item
+  伯努利方程；
+\item
+  动压差与自由液面高度差。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-2}
+
+单个点涡的流线是同心圆。两个反向点涡之间，中点处两者诱导速度同向，因而相加；在涡对外侧，两者诱导速度相反，只能相减。速度较大处静压较低，自由液面相应较低。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-2}
+
+以涡心为圆心取半径 \(r\) 的圆周。圆周上速度大小处处相同且沿切线： \[
+\oint\bm u\cdot d\bm l=v_0(2\pi r)=\Gamma.
+\]
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-2}
+
+由环量定义 \[
+\boxed{v_0(r)=\frac{|\Gamma|}{2\pi r}}. \tag{1}
+\]
+
+中点 \(A\) 到两涡心距离均为 \(d/2\)。每个点涡在 \(A\) 处诱导速度大小 \[
+\frac{|\Gamma|}{2\pi(d/2)}
+=\frac{|\Gamma|}{\pi d}.
+\] 由于两涡旋方向相反，中点处的两个切向速度同向，所以 \[
+\boxed{v_1=\frac{2|\Gamma|}{\pi d}}. \tag{2}
+\]
+
+点 \(B\) 距较近涡心 \(d/2\)，距较远涡心 \(3d/2\)。两速度方向相反： \[
+\begin{aligned}
+v_2
+&=\frac{|\Gamma|}{2\pi}
+\left(\frac{1}{d/2}-\frac{1}{3d/2}\right)\\
+&=\frac{|\Gamma|}{2\pi}
+\left(\frac2d-\frac{2}{3d}\right)\\
+&=\boxed{\frac{2|\Gamma|}{3\pi d}}.
+\end{aligned} \tag{3}
+\] 因此 \(v_2=v_1/3\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.76\linewidth,height=\textheight,keepaspectratio,alt={图3-2　涡对速度差与自由液面高度差}]{../figures/solution-03.pdf}
+\caption*{图3-2　涡对速度差与自由液面高度差}
+\end{figure}
+
+沿自由液面应用伯努利方程。两点均与大气接触，压强同为 \(p_{\rm atm}\)：
+\[
+\frac12\rho v_1^2+\rho gz_A
+=\frac12\rho v_2^2+\rho gz_B.
+\] 故 \[
+h=z_B-z_A=\frac{v_1^2-v_2^2}{2g}. \tag{4}
+\] 代入式（2）、（3）： \[
+\begin{aligned}
+h
+&=\frac{1}{2g}
+\left[
+\frac{4\Gamma^2}{\pi^2d^2}
+-\frac{4\Gamma^2}{9\pi^2d^2}
+\right]\\
+&=\boxed{\frac{16\Gamma^2}{9\pi^2gd^2}}.
+\end{aligned} \tag{5}
+\] \(A\) 点速度较大，液面较低，因此 \(B\) 点比 \(A\) 点高 \(h\)。
+
+\textbf{用坐标逐项核对速度方向。} 令两涡心位于 \[
+x=-\frac d2,\qquad x=\frac d2,
+\] 左涡取逆时针 \(+\Gamma\)，右涡取顺时针 \(-\Gamma\)。在中点
+\(A=(0,0)\)，左涡的速度向上，右涡的速度也向上，因此式（2）相加。在
+\(B=(d,0)\)，左涡诱导速度向上，大小 \[
+\frac{\Gamma}{2\pi(3d/2)}
+=\frac{\Gamma}{3\pi d};
+\] 右涡诱导速度向下，大小 \[
+\frac{\Gamma}{2\pi(d/2)}
+=\frac{\Gamma}{\pi d}.
+\] 合速度向下，大小为两者之差
+\(2\Gamma/(3\pi d)\)。正文只求大小，但方向核验能防止把外点也误作相加。
+
+\textbf{点涡对的平移速度。}
+每个点涡会被另一个点涡的速度场携带。两涡心相距
+\(d\)，所以彼此诱导速率均为 \[
+U_{\rm pair}=\frac{|\Gamma|}{2\pi d}.
+\]
+对反向点涡，两涡获得同方向速度，整体平移而间距保持不变。这解释了题面``两个手拉手向前走''的现象；中点流速
+\(v_1=4U_{\rm pair}\) 并不是涡对自身的平移速度。
+
+\textbf{伯努利式的适用范围。}
+理想、定常、不可压缩且无旋区域中，沿同一流线有 \[
+\frac p\rho+\frac{v^2}{2}+gz=\text{常量}.
+\]
+点涡核心处速度发散，真实流体会以有限涡核、黏性和自由面曲率消除奇点。本题的
+\(A\)、\(B\) 均不在涡心，可在理想点涡模型内比较动压。自由面上
+\(p=p_{\rm atm}\)，所以密度严格约去，而不是被人为忽略。
+
+\textbf{高度差数值系数的复算。} 先使用比值 \(v_2=v_1/3\)： \[
+h=\frac{v_1^2}{2g}\left(1-\frac19\right)
+=\frac{4v_1^2}{9g}.
+\] 再代入 \(v_1=2\Gamma/(\pi d)\)： \[
+h=\frac4{9g}\frac{4\Gamma^2}{\pi^2d^2}
+=\frac{16\Gamma^2}{9\pi^2gd^2}.
+\] 这条两步路线比一次展开更容易检查系数。
+
+\textbf{点涡速度的矢量公式。} 位于 \(\bm r_i\)、环量为 \(\Gamma_i\)
+的点涡在 \(\bm r\) 处产生 \[
+\bm u_i(\bm r)
+=\frac{\Gamma_i}{2\pi}
+\frac{\bm k\times(\bm r-\bm r_i)}
+{|\bm r-\bm r_i|^2}. \tag{6}
+\] 其大小立即给出式（1），方向由 \(\Gamma_i\) 的符号自动处理。把 \[
+\bm r_1=(-d/2,0),\quad
+\bm r_2=(d/2,0),\quad
+\Gamma_1=-\Gamma_2=\Gamma
+\] 代入式（6），在 \(A=(0,0)\) 与 \(B=(d,0)\)
+分别求和，可直接得到式（2）、（3）。这提供了一条不依赖手画旋向的代数复核。
+
+\textbf{高度差的符号写法。} 若定义 \[
+h=z_B-z_A,
+\]
+则式（4）给出正值；若题目只说``两点高度差''，答案可给绝对值，但解析应说明
+\(z_B>z_A\)。自由面高速区凹下的方向判断与日常观察杯中旋涡液面相符。
+
+\textbf{实验室瞬时速率与随动稳态速率。} 左涡取 \(+\Gamma\)、右涡取
+\(-\Gamma\)，中心间距 \(d\)。在中点 \(A\) 两贡献同向，实验室有向速度为
+\[
+v_A=\frac{2\Gamma}{\pi d}=4U,
+\qquad U=\frac\Gamma{2\pi d}.
+\] 左外侧距左涡 \(d/2\) 的点 \(B\)，两贡献反向， \[
+v_B=-\frac{2\Gamma}{3\pi d}=-\frac43U.
+\] 正号取向上。图3-1的涡旋箭头是切向，\(A\) 向上而 \(B\)
+向下；只写速度大小会掩盖随动变换中的符号。
+
+自由涡对的每个涡心受到另一涡产生的速度
+\(U\)，因此二者保持间距并共同平移。随动系速度为 \[
+v_A'=v_A-U=3U,\qquad v_B'=v_B-U=-\frac73U.
+\] 在相同 Bernoulli 常数、忽略自由面反作用的估算下， \[
+z_B-z_A=\frac{(v_A')^2-(v_B')^2}{2g}
+=\frac{4\Gamma^2}{9\pi^2gd^2}.
+\] 若涡心由外部机制固定，才可用实验室稳态速度，得到大四倍的形式结果。
+
+参照系变化为何影响这个差值，可由展开平方看清： \[
+(v_A-U)^2-(v_B-U)^2=v_A^2-v_B^2-2U(v_A-v_B).
+\]
+两点速度方向不同，交叉项不会抵消。自由平移的实验室势函数还随时间变化，非定常
+Bernoulli 中 \(\partial\Phi/\partial t\)
+项不能删去；随动计算正包含了这种变化。
+
+点涡模型中的运动方程是由另一涡的速度场决定位置变化，反向等强涡对不因低压示意而自动互相靠近。图3-2只对比两个指定点的高度差，没有声称给出了包含涡核和自由面反馈的完整流场。
+
+\textbf{在涡对对称轴上的速度例子。} 取涡心为 \((\pm d/2,0)\)，环量分别为
+\(+\Gamma,-\Gamma\)。对称轴上的点
+\(P=(0,y)\)，两个水平速度分量相消，竖直分量相加： \[
+v_y(P)=\frac{\Gamma d}{2\pi(y^2+d^2/4)}.
+\] 在 \(y=0\) 恢复 \(v_A=2\Gamma/(\pi d)=4U\)。在 \(y=d/2\)，有
+\(v_y=2U\)；在 \(|y|\gg d\)，速度按 \(1/y^2\) 衰减。
+
+单个点涡速度按 \(1/r\) 衰减，涡对远场却按 \(1/r^2\)
+衰减，这是两涡总环量为零、首阶远场相消的结果。把两涡速率直接相加而不保留方向，会错误地留下
+\(1/r\) 远场。
+
+随动系在远处不是静止流体，而具有匀速背景 \(-U\bm e_y\)。在原点相对速度为
+\(3U\)，在远处为 \(-U\)。同一随动 Bernoulli 常数下，原点自由面比远处低
+\[
+z_\infty-z_A=\frac{(3U)^2-U^2}{2g}=\frac{4U^2}{g}.
+\]
+这个高度比较仍是忽略自由面反馈的点涡估算。若两涡强度大小不相等，涡心不再同速平移，而会绕某点转动；此时应使用相应旋转系，并额外包含离心势，不能只减去同一个匀速背景。
+
+\textbf{在实验室系保留非定常势能项。} 自由涡对以 \(U\)
+向上移动时，速度势可写成 \(\Phi(x,y-Ut)\)，所以 \[
+\frac{\partial\Phi}{\partial t}=-U\frac{\partial\Phi}{\partial y}=-Uv_y.
+\] 非定常 Bernoulli 方程为 \[
+\frac p\rho+gz+\frac12v^2+\partial_t\Phi=C(t).
+\] 于是实验室式中的速度部分是 \[
+\frac12v^2-Uv_y=\frac12|\bm v-U\bm e_y|^2-\frac12U^2.
+\]
+最后常量在两点比较时消去，正好恢复随动速度平方的结果。这项变换说明两个参考系在保留全部项后并不产生物理矛盾；不同高度系数来自删掉非定常项、等价于改变了涡心是否固定的模型。
+
+该推导在远离点涡核的无旋区域局部使用速度势。点涡周围速度势可多值，但同一连通分支上的两点压强比较仍可按相同约定处理。显著自由面变形反过来改变流场时，还要重新解边界问题。
+
+\textbf{压强比较的模型条件。}
+式（5）按``涡心固定、稳态动压差由静水压抵消''的估算得到。自由的反向理想点涡对实际会整体平移，且不会因所谓吸引自动靠近；不能把式（5）作为自由点涡动力学的严格力平衡结论。
+
+若取随涡对以 \(U=\Gamma/(2\pi d)\)
+平移的参考系，远离涡核的速度场才定常。按正文旋向，\(v_A=4U\)、\(v_B=-4U/3\)
+是实验室有向速度，随动系速度分别为 \(3U,-7U/3\)。同一 Bernoulli
+常数下的液面高度差则为 \[
+z_B-z_A=\frac{(3U)^2-(7U/3)^2}{2g}
+=\frac{4\Gamma^2}{9\pi^2gd^2}.
+\]
+因此原题第三问若按自由平移涡对理解，应采用此随动结果；若按外力固定涡心的静压补偿示意理解，才采用式（5）。原稿缺少该区别，不能只用两点实验室瞬时速率套定常
+Bernoulli。
+
+\newpage
+
+\section{第 4 题}\label{ux7b2c-4-ux9898}
+
+一个表面近似刚性的偏心球半径为 \(r\)，质心 \(G\) 到几何球心 \(C\)
+的距离为 \[
+r_c=0.5r,
+\] 球绕质心的转动惯量为 \(I=mr^2\)。碰撞前球不自转，质心以速度 \(v_0\)
+竖直向下运动。\(CG\) 与竖直向上方向夹角为
+\(\theta\)。地面对接触点的法向碰撞完全弹性，即接触点法向速度在碰后恰好反向。
+
+（1）地面光滑，求碰后质心速度大小；
+
+（2）地面摩擦因数为 \(\mu\)，求碰后质心速度方向。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.58\linewidth,height=\textheight,keepaspectratio,alt={图4-1　偏心球的质心位置与竖直碰撞}]{../figures/question-04.pdf}
+\caption*{图4-1　偏心球的质心位置与竖直碰撞}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-3}
+
+法向冲量不通过质心，会同时改变平动和转动。摩擦分支由接触点末态滑速检验：持续滑动用库仑冲量比，黏着则用切向速度为零。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-3}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  刚体冲量动量定理；
+\item
+  角冲量与角速度；
+\item
+  接触点速度 \(\bm v_P=\bm v_G+\bm\omega\times\bm r_{GP}\)；
+\item
+  恢复系数条件；
+\item
+  库仑摩擦冲量；
+\item
+  滑动---黏着分段判据。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-3}
+
+设接触点为 \(P\)。从质心指向接触点的矢量写成 \[
+\bm r_{GP}=(a,-b),
+\] 其中 \[
+a=r_c\sin\theta,\qquad
+b=r+r_c\cos\theta. \tag{1}
+\] 法向冲量 \(J_y\) 对质心有力臂 \(a\)，会激发转动；切向冲量 \(J_x\)
+的力臂为 \(b\)。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-3}
+
+碰撞前 \[
+\bm v_G^-=(0,-v_0),\qquad \omega^-=0.
+\] 碰撞后 \[
+v_x^+=\frac{J_x}{m},\qquad
+v_y^+=-v_0+\frac{J_y}{m}, \tag{2}
+\] 以及 \[
+\omega^+=\frac{aJ_y+bJ_x}{I}. \tag{3}
+\] 完全弹性的法向条件为 \[
+v_{Py}^+=-v_{Py}^-=v_0. \tag{4}
+\]
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-3}
+
+接触点转动速度的 \(y\) 分量为 \(a\omega^+\)，故由式（2）---（4） \[
+-v_0+\frac{J_y}{m}
++a\frac{aJ_y+bJ_x}{I}=v_0. \tag{5}
+\]
+
+地面光滑时 \(J_x=0\)。取 \(I=mr^2\)，定义 \[
+A=\frac ar=\frac{r_c}{r}\sin\theta=\frac12\sin\theta.
+\] 式（5）变为 \[
+\frac{J_y}{m}(1+A^2)=2v_0.
+\] 所以 \[
+\frac{J_y}{m}=\frac{2v_0}{1+A^2}.
+\] 碰后质心仍竖直运动， \[
+\begin{aligned}
+v_G^+
+&=v_y^+
+=-v_0+\frac{2v_0}{1+A^2}\\
+&=v_0\frac{1-A^2}{1+A^2}.
+\end{aligned}
+\] 由于 \(A^2\le1/4\)，其方向向上，大小为 \[
+\boxed{
+v_G^+=v_0
+\frac{1-\frac14\sin^2\theta}
+{1+\frac14\sin^2\theta}
+}. \tag{6}
+\]
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.78\linewidth,height=\textheight,keepaspectratio,alt={图4-2　法向、切向冲量及其对质心的力臂}]{../figures/solution-04.pdf}
+\caption*{图4-2　法向、切向冲量及其对质心的力臂}
+\end{figure}
+
+有摩擦时，法向冲量先使接触点产生向右的切向速度，因此摩擦冲量指向左。再定义
+\[
+B=\frac br=1+\frac12\cos\theta.
+\]
+
+若碰撞全过程保持滑动， \[
+J_x=-\mu J_y. \tag{7}
+\] 将式（7）代入式（5）： \[
+\frac{J_y}{m}[1+A^2-\mu AB]=2v_0.
+\] 记 \[
+D=1+A^2-\mu AB,
+\] 则 \[
+\begin{aligned}
+v_x^+&=-\frac{2\mu v_0}{D},\\
+v_y^+&=v_0\frac{2-D}{D}.
+\end{aligned} \tag{8}
+\] 所以碰后方向可用 \[
+\boxed{
+\psi=\operatorname{atan2}(2-D,-2\mu)
+}
+\tag{9}
+\] 表示，其中 \(\psi\) 从 \(+x\) 轴逆时针计。
+
+必须检查滑动是否会在碰撞结束前停止。碰后接触点切向速度为 \[
+v_{Px}^+
+=\frac{J_x}{m}+b\omega^+
+=\frac{J_y}{m}
+\left[AB-\mu(1+B^2)\right].
+\] 持续向右滑动要求 \[
+\mu\le\mu_c,\qquad
+\boxed{\mu_c=\frac{AB}{1+B^2}}. \tag{10}
+\]
+
+若 \(\mu\ge\mu_c\)，接触点达到黏着，不能继续使用
+\(J_x=-\mu J_y\)，而应令 \[
+v_{Px}^+=0.
+\] 联立式（5）得到 \[
+\begin{aligned}
+\frac{J_y}{m}
+&=\frac{2v_0(1+B^2)}{1+A^2+B^2},\\
+\frac{J_x}{m}
+&=-\frac{2v_0AB}{1+A^2+B^2}.
+\end{aligned} \tag{11}
+\] 于是 \[
+\boxed{
+\begin{aligned}
+v_x^+&=-\frac{2v_0AB}{1+A^2+B^2},\\
+v_y^+&=v_0\frac{1+B^2-A^2}{1+A^2+B^2},
+\end{aligned}
+}\qquad \mu\ge\mu_c. \tag{12}
+\] 速度方向同样由 \(\operatorname{atan2}(v_y^+,v_x^+)\) 给出。
+
+\textbf{光滑碰撞中的角速度。} 虽然质心仍竖直反弹，球已经获得自转。由
+\(J_x=0\) 和式（3） \[
+\omega^+
+=\frac{aJ_y}{mr^2}
+=\frac{2Av_0}{r(1+A^2)}. \tag{13}
+\] 接触点碰后法向速度为 \[
+v_{Py}^+
+=v_y^++a\omega^+.
+\] 把式（6）、（13）代入： \[
+\begin{aligned}
+v_{Py}^+
+&=v_0\frac{1-A^2}{1+A^2}
++v_0\frac{2A^2}{1+A^2}\\
+&=v_0,
+\end{aligned}
+\] 精确满足恢复条件。这是对冲量系数的独立复算。
+
+\textbf{为什么光滑碰撞仍可能损失质心动能。}
+接触点法向碰撞完全弹性并不意味着质心平动动能单独守恒。光滑时碰后总动能
+\[
+K^+=\frac12m(v_G^+)^2+\frac12I(\omega^+)^2.
+\] 代入式（6）、（13）并整理： \[
+K^+
+=\frac12mv_0^2
+\frac{(1-A^2)^2+4A^2}{(1+A^2)^2}
+=\frac12mv_0^2.
+\] 总动能守恒，但其中一部分由平动转入转动。这也说明式（6）小于 \(v_0\)
+完全合理。
+
+\textbf{滑动区判据的推导。} 假设 \(J_x=-\mu J_y\)
+后，接触点末态切向速度为 \[
+v_{Px}^+
+=\frac{J_y}{m}[AB-\mu(1+B^2)].
+\]
+若括号仍为正，接触点在整个冲量过程中尚未停止向右滑动，库仑等号成立。若括号为负，说明按恒定滑动方向计算会``穿过零速后继续反向滑动''，与实际不符；正确过程应在零速处转入黏着。因此令括号为零得到临界式（10）。
+
+\textbf{黏着冲量不超过摩擦锥。} 由式（11） \[
+\left|\frac{J_x}{J_y}\right|
+=\frac{AB}{1+B^2}
+=\mu_c.
+\] 当材料摩擦因数 \(\mu\ge\mu_c\)
+时，该所需冲量位于允许的摩擦锥内，黏着解可实现；若
+\(\mu<\mu_c\)，所需切向冲量超过上限，只能采用滑动解。这个检查把两个分段严密地接合起来。
+
+\textbf{把方向改写为斜率。}
+若只要求碰后质心速度与水平轴的锐角，可先给绝对斜率。在滑动区 \[
+\left|\tan\psi_{\rm line}\right|
+=\left|\frac{v_y^+}{v_x^+}\right|
+=\frac{|2-D|}{2\mu}. \tag{14}
+\] 在黏着区 \[
+\left|\tan\psi_{\rm line}\right|
+=\frac{1+B^2-A^2}{2AB}. \tag{15}
+\] 但这两式丢失象限信息，所以正式方向仍应结合 \(v_x^+<0\)、\(v_y^+>0\)
+使用 \(\operatorname{atan2}\)。
+
+\textbf{参数范围检查。} 因 \[
+A=\frac12\sin\theta,\qquad
+B=1+\frac12\cos\theta,
+\] 图示 \(0<\theta<90^\circ\) 时有 \(0<A<1/2\)、\(1<B<3/2\)。于是 \[
+0<\mu_c=\frac{AB}{1+B^2}<\frac12.
+\]
+这说明中等大小摩擦因数就可能使接触点进入黏着，而不是必须取无限大摩擦。
+
+\textbf{用冲量能量式检查两种摩擦分支。} 以 \(r\)
+归一化力臂，\(A=a/r\)、\(B=b/r\)，转动惯量为
+\(mr^2\)。接触点速度变化满足 \[
+\begin{pmatrix}\Delta v_{Px}\\\Delta v_{Py}\end{pmatrix}
+=\frac1m\begin{pmatrix}1+B^2&AB\\AB&1+A^2\end{pmatrix}
+\begin{pmatrix}J_x\\J_y\end{pmatrix}.
+\] 该矩阵行列式为
+\(1+A^2+B^2>0\)，所以给定法向恢复条件和切向末速度可唯一解出冲量。
+
+碰前 \(v_{Px}^-=0\)、\(v_{Py}^-=-v_0\)。取法向恢复系数一，要求
+\(\Delta v_{Py}=2v_0\)。先用滑动关系 \(J_x=-\mu J_y\)，得到 \[
+v_{Px}^+=\frac{J_y}{m}[AB-\mu(1+B^2)].
+\] 持续右滑分支须有此值非负，从而
+\(\mu\le AB/(1+B^2)\)。超过临界值时，不应继续使用同一滑动式，而应令
+\(v_{Px}^+=0\)。
+
+刚体冲量导致的动能变化可直接写为 \[
+\Delta K=\frac12\bm J\cdot(\bm v_P^-+\bm v_P^+).
+\]
+法向速度和为零。黏着分支的切向速度和也为零，所以本题该分支的总动能变化为零。持续滑动分支有
+\(J_x<0\)、\(v_{Px}^+\ge0\)，因此 \[
+\Delta K=\frac12J_xv_{Px}^+\le0.
+\]
+这与正文的平动、转动能量逐项计算一致。它还说明``有摩擦必耗散''和``法向完全弹性必总能量守恒''都是过强表述，必须结合实际接触速度判断。
+
+图4-2的法向冲量向上、摩擦冲量向左，角速度由 \(aJ_y+bJ_x\)
+的符号确定。解完后应把这两个冲量代回接触点速度，而不是只检查质心飞出方向；恢复条件作用在接触点，质心竖直速度不必等于
+\(v_0\)。
+
+\textbf{指定姿态的碰撞数值。} 取 \(\theta=30^\circ\)、\(v_0=r=m=1\)。则
+\[
+A=1/4,\qquad B=1+\sqrt3/4,
+\] 临界摩擦系数为 \[
+\mu_c=\frac{AB}{1+B^2}\simeq0.1173.
+\] 先取 \(\mu=0.05<\mu_c\)。令 \(D=1+A^2-\mu AB\)，可求
+\(J_y=2/D\)、\(J_x=-\mu J_y\)，并由 \(\omega=AJ_y+BJ_x\)
+得末角速度。随后代回 \[
+v_{Px}^+=J_x+B\omega,
+\qquad v_{Py}^+=-1+J_y+A\omega.
+\] 应分别得到正切向速度和法向速度一，验证持续右滑假设。
+
+再取 \(\mu=0.2>\mu_c\)，黏着冲量为 \[
+J_y=\frac{2(1+B^2)}{1+A^2+B^2},\qquad
+J_x=-\frac{2AB}{1+A^2+B^2}.
+\] 其比值 \(|J_x|/J_y=\mu_c\)
+小于可用摩擦系数，说明约束可实现；不是一定要把摩擦冲量比取为
+\(0.2\)。代回接触速度得到 \(v_{Px}^+=0,v_{Py}^+=1\)。
+
+能量再检查
+\(v_x^2+v_y^2+\omega^2=1\)，与该初态的黏着分支总动能守恒一致。若把末质心速度强行设为法向反向初速，则会漏掉角动量，既不满足接触恢复条件，也不满足上述能量检查。
+
+\textbf{法向恢复系数改变后的带解变式。} 将完全弹性的法向恢复系数一改为
+\(0\le e\le1\)，其余初态不变。接触法向速度仍要求 \[
+v_{Py}^+=ev_0,\qquad
+\Delta v_{Py}=(1+e)v_0.
+\] 黏着分支解得 \[
+J_y=\frac{m(1+e)v_0(1+B^2)}{1+A^2+B^2},
+\] \[
+J_x=-\frac{m(1+e)v_0AB}{1+A^2+B^2}.
+\] 两冲量共同乘 \(1+e\)，其比值仍为
+\(AB/(1+B^2)\)。所以在这个冲量模型中，黏着与持续滑动的临界摩擦系数不随
+\(e\) 改变；末速度和能量则改变。
+
+由冲量能量式，黏着的动能变化为 \[
+\Delta K=\frac12J_y(e-1)v_0
+=-\frac{mv_0^2(1-e^2)(1+B^2)}{2(1+A^2+B^2)}.
+\] \(e=1\) 恢复前面零动能损失；\(e<1\) 时损失严格为正。\(e=0\)
+不意味着整个刚体都静止，因为法向、切向接触速度为零后，刚体仍可能以瞬时接触点为中心转动。
+
+取原数值姿态 \(A=1/4,B=1+\sqrt3/4\)，并令
+\(e=1/2\)、摩擦足够大。末动能与初动能之比为 \[
+\frac{K_+}{K_-}=1-
+\frac34\frac{1+B^2}{1+A^2+B^2}\simeq0.2650.
+\] 可由质心速度与角速度逐项重算验证。若只把法向速度乘
+\(e\)、角速度仍沿用 \(e=1\) 的结果，将同时破坏冲量方程和能量式。
+
+持续滑动分支中，\(J_x=-\mu J_y\)
+仍须在算完后检查切向速度符号。法向恢复与摩擦耗散的贡献在冲量能量式中分别出现，不能把
+\(e^2\) 直接当成整块刚体的能量保留比例。
+
+\newpage
+
+\section{第 5 题}\label{ux7b2c-5-ux9898}
+
+两面平面镜的夹角为 \(72^\circ\)，以下先把角平分线取为 \(0^\circ\)
+方向、两镜取为
+\(\pm36^\circ\)，并明确这是一种展开角约定。一段弧形发光标尺位于两镜之间，刻度角
+\(\varphi\) 的范围为 \(-36^\circ\le\varphi\le36^\circ\)。观察者从角度为
+\(\phi\) 的方向观察，在图示角 \(\theta\)
+的位置看到标尺像；扫描图中该角的起点与眼睛位置未给出完整定义。求该像对应的标尺刻度
+\(\varphi(\theta,\phi)\)，分别讨论 \[
+36^\circ<\theta<108^\circ,\quad
+108^\circ<\theta<180^\circ,\quad
+180^\circ<\theta<252^\circ,\quad
+252^\circ<\theta<324^\circ.
+\]
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.68\linewidth,height=\textheight,keepaspectratio,alt={图5-1　夹角为 72\^{}\textbackslash circ 的双镜与弧形标尺}]{../figures/question-05.pdf}
+\caption*{图5-1　夹角为 \(72^\circ\) 的双镜与弧形标尺}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-4}
+
+两次镜面反射等价于角坐标转动。镜像展开可给出候选分段，但观察角还用于筛选真实光路；原图未完整定义观察几何，条件性结果须保留这一限制。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-4}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  平面镜镜像对称；
+\item
+  角坐标反射 \(\varphi'\!=2\gamma-\varphi\)；
+\item
+  两次反射等价于转动两倍夹角；
+\item
+  分段函数；
+\item
+  像的左右反转与刻度方向。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-4}
+
+关于上镜 \(\gamma=36^\circ\) 反射一次，像角为 \[
+\theta=72^\circ-\varphi.
+\] 连续在两镜反射两次，相当于把像整体转过
+\(144^\circ\)。因此圆周上的像区每隔 \(72^\circ\) 交替改变刻度方向。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-4}
+
+镜像角的一般集合可写为 \[
+\theta=\varphi+144^\circ k,
+\qquad
+\theta=72^\circ-\varphi+144^\circ k,
+\quad k\in\mathbb Z. \tag{1}
+\] 先指定下文的展开顺序，再反解
+\(\varphi\)。仅凭刻度区间不能从所有形式像中选出唯一实光路。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-4}
+
+当 \(36^\circ<\theta<108^\circ\) 时，取一次上镜反射分支 \[
+\theta=72^\circ-\varphi,
+\] 所以 \[
+\boxed{\varphi=72^\circ-\theta}. \tag{2}
+\]
+
+当 \(108^\circ<\theta<180^\circ\) 时，取转动 \(144^\circ\) 的同向分支 \[
+\theta=\varphi+144^\circ,
+\] 所以 \[
+\boxed{\varphi=\theta-144^\circ}. \tag{3}
+\]
+
+当 \(180^\circ<\theta<252^\circ\) 时，取 \[
+\theta=216^\circ-\varphi,
+\] 所以 \[
+\boxed{\varphi=216^\circ-\theta}. \tag{4}
+\]
+
+当 \(252^\circ<\theta<324^\circ\) 时，取 \[
+\theta=\varphi+288^\circ,
+\] 所以 \[
+\boxed{\varphi=\theta-288^\circ}. \tag{5}
+\]
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.82\linewidth,height=\textheight,keepaspectratio,alt={图5-2　像方位角与标尺刻度的分段对应}]{../figures/solution-05.pdf}
+\caption*{图5-2　像方位角与标尺刻度的分段对应}
+\end{figure}
+
+在上述四条指定展开分支中，几何对应写成 \[
+\boxed{
+\varphi(\theta,\phi)=
+\begin{cases}
+72^\circ-\theta,&36^\circ<\theta<108^\circ,\\
+\theta-144^\circ,&108^\circ<\theta<180^\circ,\\
+216^\circ-\theta,&180^\circ<\theta<252^\circ,\\
+\theta-288^\circ,&252^\circ<\theta<324^\circ.
+\end{cases}}
+\tag{6}
+\] 在无限长理想平面镜的镜像模型中，观察方向 \(\phi\)
+只决定某一虚像是否能由实际反射光路被观察到，不改变虚像与标尺刻度的几何对应，因此式（6）对
+\(\phi\) 无显式依赖。若题意把 \(\theta\)
+定义为相对观察方向的角而非绝对方位角，则只需在式（6）中统一以 \[
+\theta_{\rm abs}=\theta+\phi
+\] 替代 \(\theta\)。
+
+\textbf{镜像角集合的逐次生成。} 关于上镜 \(M_+\) 的反射算符为 \[
+M_+(\varphi)=72^\circ-\varphi,
+\] 关于下镜 \(M_-\) 的反射算符为 \[
+M_-(\varphi)=-72^\circ-\varphi.
+\] 连续两次反射 \[
+M_+M_-(\varphi)
+=72^\circ-(-72^\circ-\varphi)
+=144^\circ+\varphi
+\] 是转动 \(144^\circ\)；交换顺序则得到
+\(\varphi-144^\circ\)。因此所有像必属于式（1）的两族，没有遗漏其他形式。
+
+\textbf{四段端点检查。} 对第一段， \[
+\theta\to36^\circ+\Rightarrow\varphi\to36^\circ,
+\qquad
+\theta\to108^\circ-\Rightarrow\varphi\to-36^\circ.
+\] 第二段从 \(-36^\circ\) 增至 \(36^\circ\)；第三段再次从 \(36^\circ\)
+降至
+\(-36^\circ\)；第四段再升。每段像刻度恰好覆盖完整标尺一次，且相邻段在镜面边界处以反向刻度衔接。
+
+\textbf{观察角的角色。}
+镜像法先在镜后确定虚像位置，任何能接收到相应反射光线的观察者都把光线反向延长到同一虚像。有限镜面时，\(\phi\)
+会决定某条光线的反射点是否落在镜面范围内；无限理想镜面下，不同 \(\phi\)
+只改变可见的像集合。正文同时给出绝对角和相对角两种约定，是为了消除题面图中
+\(\theta,\phi\) 起点可能引起的歧义。
+
+\textbf{分段式的程序化核验。} 每一段选取中点： \[
+\theta=72^\circ,144^\circ,216^\circ,288^\circ.
+\] 式（6）均给出
+\(\varphi=0^\circ\)，表示标尺中央刻度的四组像。再取每段两端附近，所得
+\(\varphi\) 始终落在
+\([-36^\circ,36^\circ]\)。这两项检查可排除指定分支的整体偏移或符号翻转；它们没有验证实际可见性。
+
+\textbf{反射次数与像的正倒。} 一次反射使角刻度方向反转，对应分段函数斜率
+\(-1\)；偶数次反射使方向恢复，对应斜率
+\(+1\)。因此无需完整追踪每条光线，只要知道某个角区的像经历奇数还是偶数次反射，就能先预判分段斜率，再用一个基准刻度确定截距。
+
+\textbf{指定形式像的位置与观察点无关。}
+对给定物点，镜像位置由镜面反射变换唯一确定，式（1）只含 \(\varphi\)
+与镜面角 \(\pm36^\circ\)。观察点坐标从未参与镜像变换，所以解出
+\(\varphi(\theta)\) 时不可能出现 \(\phi\)。\(\phi\)
+只有在``从观察点到虚像的连线是否穿过有效镜面''这一附加问题中才进入。
+
+\textbf{相对角约定的换元。} 若图中的 \(\theta\)
+是从观察方向起算，则虚像绝对方位为 \[
+\Theta=\phi+\theta.
+\] 例如第一像区应满足 \[
+36^\circ<\Theta<108^\circ,\qquad
+\varphi=72^\circ-\Theta
+=72^\circ-\phi-\theta.
+\] 其余三段同理。先统一角度起点，再使用镜像分段，可避免把 \(\phi\)
+强行塞入绝对角答案。
+
+\textbf{这张分段图不是完整可见性答案。} 原题要求
+\(\varphi(\theta,\phi)\)，但现有扫描没有明确眼睛坐标、镜面有效范围以及
+\(\theta\)
+的起算线。上面四式只描述指定展开序号的像，不能据此断言对任意观察角都看见同一刻度。
+
+尤其 \(72^\circ\) 镜角生成的转动阶数为 \(5\)，一般物点的反射群有 \(10\)
+个形式像。例如 \(\theta=144^\circ+\varphi\) 与
+\(\theta=144^\circ-\varphi\)
+都来自群变换，同一方位可能对应不同刻度；实际光路的最后镜面、反射顺序和可见侧负责筛选它们。仅规定
+\(\varphi\in[-36^\circ,36^\circ]\) 并不能保证唯一分支。
+
+若取得完整观察几何，先由眼睛到候选虚像的直线逐次反射回去，检验每个交点是否在镜面有效侧，再按实光路选取分段。图5-2现标明``指定展开分支''，不把尚缺的可见性判据藏在一句``观察角只影响能否看到''中。
+
+\textbf{候选像的集合与实光路的筛选。}
+以角平分线为绝对零角，两镜反射算符为 \[
+M_+(\varphi)=72^\circ-\varphi,\qquad
+M_-(\varphi)=-72^\circ-\varphi.
+\] 复合两次得到 \[
+M_+M_-(\varphi)=\varphi+144^\circ.
+\] 反复操作产生两族形式像角： \[
+\Theta=\varphi+144^\circ k,
+\qquad
+\Theta=72^\circ-\varphi+144^\circ k.
+\] 因为 \(144^\circ\times5\)
+是整周角，一般物点生成十个形式角，其中包含原物点。镜像集合只由镜面决定，并不使用观察点位置。
+
+下文四个指定展开分支的斜率交替为
+\(-1,+1,-1,+1\)，这只说明反射次数的奇偶。另一组合法群变换也可能使同一方位落入标尺角范围，所以刻度范围本身不能充当完整的分支选择证明。
+
+要检验观察者 \(E\) 是否看见某候选像 \(P'\)，需把直线 \(EP'\)
+与最后一面镜求交，确认交点位于有效镜段和反射侧；再将此前各段按相反顺序折回，逐次检验。若一处交点落在镜背或延长线，形式像没有对应的可见光路。
+
+如果 \(\theta\) 从观察方向起算，绝对像角应为 \[
+\Theta=\phi+\theta,
+\] 而不是直接用 \(\theta\)
+代入展开式。即使完成这个换元，仍需眼睛的位置与镜面的实际有效范围来检验可见性。原扫描保留了角度示意，但没有给出完整的这些定义；本文不把``\(\phi\)
+未出现在形式像变换中''误当成已完成原题要求的观察角讨论。
+
+图5-2因此明确标为指定展开顺序的四条分支。课堂可用它练反射角代数，但若要求原题的完整
+\(\varphi(\theta,\phi)\)，需补全观察几何后再追光路。
+
+\textbf{有限镜段的可见性检验示例。}
+用单面镜演示形式像为何需要有效镜段。镜面取 \(x=0\)、有效范围
+\(0\le y\le1\)。物点 \(P=(1,0.5)\)，其形式像为 \(P'=(-1,0.5)\)。
+
+观察点取 \(E=(2,h)\)。直线 \(EP'\) 与镜面的参数交点满足 \[
+x(s)=2-3s=0,\qquad s=2/3.
+\] 所以反射点纵坐标为 \[
+y_M=h+(2/3)(0.5-h)=h/3+1/3.
+\] 要落在镜段内，必须有 \[
+-1\le h\le2.
+\] 形式像位置始终不变，但当 \(h>2\) 或 \(h<-1\)
+时，同一形式像没有通过这段镜面的真实反射路径。
+
+双镜问题对每个候选像做同样的检查，只是需要多个按顺序检验的镜面交点。两个候选像角相同也不意味着观察者看见同一刻度，因为反射序列、有效侧和最后反射点可以不同。若用无限直线代替只在一个扇形边界上的镜面射线，会纳入本来在镜背的路径。
+
+因此，本文四段形式式可以单独核验角变换与斜率，但不能用单镜``像不随观察点移动''这个事实跳过双镜可见性。补全原题的角起点和观察位置后，才可把这个例子的线段求交方法用于完整分段答案。
+
+\textbf{一条已定义双镜几何中的实光路。}
+作为补全几何的示例，仍取镜面射线为绝对角 \(\pm36^\circ\)，物点
+\(P=(1,0)\)、眼睛 \(E=(2,0)\)，只检查上镜的一次反射。形式像为 \[
+P'=(\cos72^\circ,\sin72^\circ).
+\] 沿 \(EP'\) 写参数直线，镜面方程为 \(y=x\tan36^\circ\)，交点参数为 \[
+s=\frac{2\tan36^\circ}{\sin72^\circ+(2-\cos72^\circ)\tan36^\circ}.
+\] 交点约为 \(M=(0.873,0.634)\)，位于上镜有效射线上。再把 \(P\to M\) 与
+\(M\to E\) 的方向代回切线反射公式，可以检验入射、出射角一致。
+
+这里使用了明确的物点、眼睛位置与一次反射序列，因而能说明一条真实可见路径。原题完整分段答案还需要其观察角起点和各反射序列的有效范围；本示例不替代那一未完成的定义。
+
+有限镜段也必须包含该交点。若只保留距顶点小于 \(0.5\)
+的镜段，形式像仍在原处，但交点不在有效镜段内，该路径消失。图5-2的角分支只表达形式反射关系，真实可见性应按这类交点约束筛选。
+
+\newpage
+
+\section{第 6 题}\label{ux7b2c-6-ux9898}
+
+一摩尔理想气体在可逆循环热机中工作，摩尔定容热容量 \[
+C_V=\frac32R.
+\] 横轴 \(W\) 记录气体对外做功，纵轴 \(Q\)
+记录气体从热源吸热，放热和外界对气体做功分别记为负。\(O\)
+为初态，过程依次为 \(O\to A\to B\to C\to O_1\)，其中 \[
+A=(2W_0,5W_0),\qquad B=(5W_0,5W_0),
+\] \(OA\parallel BC\)，\(AB\parallel CO_1\)，气体在 \(O_1\)
+回到初态。热机效率为 \(\eta=2/3\)。
+
+（1）若 \(C=(C_xW_0,C_yW_0)\)，求 \(C_x\)；
+
+（2）求 \(C_y\)；
+
+（3）同一循环再运行一次，第二次的 \(B\) 点记为
+\(B_1=(B_{1x}W_0,B_{1y}W_0)\)，求 \(B_{1x}\)；
+
+（4）求 \(B_{1y}\)；
+
+（5）初态温度为 \(T_0\)，一个循环内气体最大熵与最小熵之差为
+\(\Delta S\)，求 \(T_0\Delta S/W_0\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.68\linewidth,height=\textheight,keepaspectratio,alt={图6-1　累计吸热---做功平面中的可逆循环}]{../figures/question-06.pdf}
+\caption*{图6-1　累计吸热---做功平面中的可逆循环}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-5}
+
+累计热量与累计功不是状态量。循环回到初态只要求累计热量减累计功回到零，图上的终点仍可向右上方移动。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-5}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  热力学第一定律 \(\Delta U=Q-W\)；
+\item
+  理想气体内能 \(U=C_VT\)；
+\item
+  可逆循环效率；
+\item
+  平行线参数化；
+\item
+  可逆熵变 \(dS=\delta Q_{\rm rev}/T\)；
+\item
+  有效过程热容量。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-5}
+
+\(OA\) 段同时吸热并做功；\(AB\) 水平，表示绝热做功；\(BC\) 与 \(OA\)
+反向平行，表示按相同比例放热和受功；\(CO_1\)
+水平，为绝热压缩。回到初态要求 \(O_1\) 落在 \(Q=W\) 直线上。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-5}
+
+令 \[
+\overrightarrow{BC}=-\lambda\overrightarrow{OA}
+=-\lambda(2,5)W_0.
+\] 则 \[
+C=(5-2\lambda,5-5\lambda)W_0. \tag{1}
+\] 由于 \(CO_1\)
+水平，\(Q_{O_1}=Q_C\)；又因回到初态，\(Q_{O_1}=W_{O_1}\)。
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-5}
+
+一周正吸热只发生在 \(OA\)，大小为 \[
+Q_{\rm in}=5W_0.
+\] 一周净功是终点 \(O_1\) 的累计功。由效率 \[
+\eta=\frac{W_{\rm net}}{Q_{\rm in}}=\frac23,
+\] 得到 \[
+W_{\rm net}=\frac{10}{3}W_0.
+\] 回到初态有 \(Q_{\rm net}=W_{\rm net}\)，所以 \[
+O_1=\left(\frac{10}{3}W_0,\frac{10}{3}W_0\right). \tag{2}
+\] 于是 \(C\) 的纵坐标 \[
+\boxed{C_y=\frac{10}{3}}. \tag{3}
+\] 由式（1） \[
+5-5\lambda=\frac{10}{3},
+\] 解得 \[
+\lambda=\frac13.
+\] 故 \[
+\boxed{
+C_x=5-\frac23=\frac{13}{3}
+}. \tag{4}
+\]
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.78\linewidth,height=\textheight,keepaspectratio,alt={图6-2　循环终点、第二循环和状态回归线}]{../figures/solution-06.pdf}
+\caption*{图6-2　循环终点、第二循环和状态回归线}
+\end{figure}
+
+第二次循环从同一热力学初态开始，所有过程增量与第一次相同，只是累计坐标整体平移
+\(O_1\)。第一次 \[
+B=(5,5)W_0,
+\] 因此 \[
+B_1=O_1+B
+=\left(\frac{25}{3},\frac{25}{3}\right)W_0.
+\] 所以 \[
+\boxed{B_{1x}=B_{1y}=\frac{25}{3}}. \tag{5}
+\]
+
+下面计算熵幅。任一点相对 \(O\) 的温度由 \[
+C_V(T-T_0)=Q-W
+\] 得到。于是 \[
+\begin{aligned}
+T_A&=T_0+\frac{5W_0-2W_0}{(3/2)R}
+=T_0+\frac{2W_0}{R},\\
+T_B&=T_0,\\
+T_C&=T_0+\frac{(10/3-13/3)W_0}{(3/2)R}
+=T_0-\frac{2W_0}{3R}.
+\end{aligned} \tag{6}
+\]
+
+在 \(OA\) 上 \(Q=(5/2)W\)，故 \[
+dQ=\frac52dW.
+\] 第一定律给出 \[
+C_VdT=dQ-dW=\frac32dW.
+\] 因 \(C_V=3R/2\)，有 \(dW=R\,dT\)，所以 \[
+dQ=\frac52R\,dT.
+\] 该段有效热容量为 \(5R/2\)，熵增 \[
+\Delta S_{OA}
+=\frac52R\ln\frac{T_A}{T_0}. \tag{7}
+\] \(AB\) 与 \(CO_1\) 均有 \(dQ=0\)，可逆条件下熵不变。\(BC\) 与 \(OA\)
+平行，具有相同有效热容量。完整循环回到初态，总熵变为零，因此 \[
+\ln\frac{T_A}{T_0}
++\ln\frac{T_C}{T_0}=0,
+\] 即 \[
+T_AT_C=T_0^2. \tag{8}
+\] 令 \[
+x=\frac{W_0}{RT_0}.
+\] 由式（6）、（8） \[
+(1+2x)\left(1-\frac{2x}{3}\right)=1.
+\] 除去无循环的 \(x=0\) 根，得到 \[
+x=1,\qquad W_0=RT_0. \tag{9}
+\] 于是 \(T_A=3T_0\)，最大熵出现在 \(A\)、\(B\) 段，最小熵为初态值： \[
+\Delta S=\frac52R\ln3.
+\] 最终 \[
+\boxed{
+\frac{T_0\Delta S}{W_0}
+=\frac52\ln3
+}. \tag{10}
+\]
+
+\textbf{四段状态量表。} 将每个顶点的坐标和无量纲内能差列出： \[
+\begin{array}{c|c|c|c}
+\text{点}&W/W_0&Q/W_0&(Q-W)/W_0\\ \hline
+O&0&0&0\\
+A&2&5&3\\
+B&5&5&0\\
+C&13/3&10/3&-1\\
+O_1&10/3&10/3&0
+\end{array}
+\] 由 \(\Delta U=(3/2)R(T-T_0)\)，最后一列直接转成式（6）。表中可看出
+\(AB\) 做功使温度从 \(T_A\) 降至 \(T_0\)，而 \(CO_1\) 受外界做功使温度从
+\(T_C\) 升回 \(T_0\)。
+
+\textbf{效率分母的逐段核验。} \(OA\) 段吸热 \(+5W_0\)；\(AB\) 与
+\(CO_1\) 段热量为零；\(BC\) 段 \[
+\Delta Q_{BC}=-\lambda(5W_0)=-\frac53W_0.
+\] 所以 \[
+Q_{\rm net}=5W_0-\frac53W_0=\frac{10}{3}W_0,
+\] 而正吸热量仍是 \(Q_{\rm in}=5W_0\)。于是 \[
+\eta=\frac{W_{\rm net}}{Q_{\rm in}}
+=\frac{10/3}{5}=\frac23.
+\] 不能把 \(Q_{\rm net}\) 放在效率分母，否则会错误得到 \(1\)。
+
+\textbf{熵在各段的变化方向。} \(OA\) 上 \(dQ>0\)，熵单调增加；\(AB\)
+绝热可逆，熵保持最大值；\(BC\) 上 \(dQ<0\)，熵单调减少；\(CO_1\)
+绝热可逆，熵保持最小值。因此最大最小差就是式（7）的正熵增，不需要在斜线内部另求极值。
+
+\textbf{由闭合熵求温标尺度。} 图的几何和效率只确定以 \(W_0\)
+为单位的热量、功，尚未确定 \(W_0\) 与 \(RT_0\)
+的比例。可逆循环熵回到初值提供额外关系式（8），最终得到
+\(W_0=RT_0\)。若漏掉状态熵闭合，只能把答案写成含未知 \(W_0/(RT_0)\)
+的形式。
+
+\textbf{第二循环坐标的逐项复算。} 第一次循环的累计增量是 \[
+\Delta(W,Q)=\left(\frac{10}{3},\frac{10}{3}\right)W_0.
+\] 第二循环中与第一次 \(B\) 对应的状态，过程增量仍为
+\((5,5)W_0\)。两者相加得到 \[
+\left(\frac{10}{3}+5,\frac{10}{3}+5\right)W_0
+=\left(\frac{25}{3},\frac{25}{3}\right)W_0.
+\] 这不是因为 \(B_1\) 恰好落在 \(Q=W\) 线上，而是因为本题 \(B\) 本身满足
+\(Q_B=W_B\)。
+
+\textbf{各段做功的符号。} 从坐标差读取 \[
+\begin{aligned}
+W_{OA}&=+2W_0,\\
+W_{AB}&=+3W_0,\\
+W_{BC}&=-\frac23W_0,\\
+W_{CO_1}&=-W_0.
+\end{aligned}
+\] 总和 \[
+2+3-\frac23-1=\frac{10}{3}
+\] 正好等于终点横坐标。后两段含负功，表示外界对气体做功；这与
+\(BC\)、\(CO_1\) 箭头向左一致。
+
+\textbf{有效热容量的符号。} 两条斜线满足 \(dQ=(5/2)dW\) 且
+\(dU=(3/2)dW\)，所以 \[
+\frac{dQ}{dT}=\frac52R
+\] 在正向或反向运动中都是同一常数。\(BC\) 上 \(dT<0\)，故
+\(dQ<0\)；热容量本身仍为正，不能因放热就写成负热容量。
+
+\textbf{熵幅的无量纲性。} \(T_0\Delta S\) 与能量同量纲，除以 \(W_0\)
+后应为纯数。式（10）只含 \(\ln3\)，满足要求。如果结果还含
+\(R,T_0,W_0\)，说明式（9）尚未使用完。
+
+\textbf{累计坐标的平移与熵闭合。} 图6-2中第一次循环终点为
+\(O_1=(10/3,10/3)W_0\)，它在 \(Q=W\) 线上。这说明
+\(\Delta U=0\)，并非累计坐标回到原点。第二次同样循环的每个点都整体平移
+\(O_1\)： \[
+A_1=O_1+A,\quad B_1=O_1+B,\quad C_1=O_1+C.
+\] 因此 \(B_{1x}=B_{1y}=25/3\)，第二次终点是
+\(O_2=2O_1\)。把重复循环画成闭合平行四边形，会错误地抹掉每周的净热与净功。
+
+内能仍是状态函数。各点温度由 \[
+T-T_0=(Q-W)/C_V
+\] 求得，累计坐标平移相同的 \(Q,W\)
+不改变其差，所以各周温度循环完全相同。
+
+沿 \(OA\) 与反向平行的 \(BC\)，有 \(dQ=(5/2)dW\)，从第一定律得
+\(dW=R\,dT\)，故过程热容为
+\(5R/2\)。两绝热段熵不变。完整循环的熵闭合要求 \[
+\frac52R\ln\frac{T_A}{T_0}+\frac52R\ln\frac{T_C}{T_0}=0,
+\] 所以 \(T_AT_C=T_0^2\)。将温度的线性表达代入，仅非退化解 \(W_0=RT_0\)
+可构成这一可逆闭合循环。
+
+于是
+\(T_A=3T_0,T_B=T_0,T_C=T_0/3\)。熵在吸热斜段增加、在放热斜段减少，绝热段保持不变，因此
+\[
+S_A=S_B=S_O+\frac52R\ln3,
+\qquad S_C=S_{O_1}=S_O.
+\] 最大最小熵差为
+\(5R\ln3/2\)。不同坐标图中的闭合规则在此并不相同：\(p,V\) 是状态坐标，而
+\(Q,W\) 是沿路径累积的量，必须先核对坐标定义再解释面积或平移。
+
+\textbf{把累计路径还原成温度与体积。} \(OA\) 的过程热容为
+\(C_p=5R/2\)，所以它可实现为等压加热。原循环一致性给
+\(T_A/T_O=3\)，故等压段体积也增为三倍： \[
+V_A=3V_O.
+\] \(AB\) 为绝热，气体绝热指数 \(\gamma=5/3\)。由
+\(TV^{\gamma-1}=\mathrm{const}\)，\(T_B=T_O\)，得 \[
+V_B=V_A3^{3/2}=3^{5/2}V_O.
+\] \(BC\) 是反向等压冷却，\(T_C=T_O/3\)，因此 \[
+V_C=V_B/3=3^{3/2}V_O.
+\] \(CO_1\) 绝热压缩回到初态，温度升三倍、体积缩 \(3^{3/2}\)
+倍，确实恢复 \(V_O\)。这项体积闭合检验独立于累计坐标图。
+
+高温等压段功为 \(R(3T_0-T_0)=2RT_0=2W_0\)；低温等压段功为
+\(R(T_0/3-T_0)=-2W_0/3\)，与 \(C-B\) 的横坐标增量一致。
+
+这不是卡诺循环，因为等压段温度连续变化，吸放热并不各发生于一个固定温度。它的效率
+\(2/3\) 与 \(1-T_C/T_A=8/9\)
+不同。若实际只接两个固定温度热源，等压换热通常不可逆，原题可逆路径模型还需一系列匹配温度的热源才能实现。
+
+\textbf{反向运行时的累计坐标与制冷系数。}
+把原可逆循环逐段倒行，热量、功的各段增量均反号，并从新的累计零点开始。原正向每周净功、吸热、放热大小为
+\[
+W_{\rm out}=10W_0/3,
+\quad Q_{\rm in}=5W_0,
+\quad Q_{\rm out}=5W_0/3.
+\] 倒行后，需要外界输入 \(10W_0/3\) 的功，在原低温等压段吸收 \(5W_0/3\)
+的热量，在原高温等压段放出 \(5W_0\)。因此按低温段吸热定义的制冷系数为 \[
+\mathrm{COP}=\frac{5/3}{10/3}=\frac12.
+\] 热泵系数则为 \[
+\mathrm{COP}_{\rm heat}=\frac5{10/3}=\frac32=\mathrm{COP}+1.
+\] 两者相差一，是第一定律的直接结果。
+
+逐段读取坐标能够防止把功与热混淆。\(BC\) 的坐标变化为 \[
+\Delta(W,Q)=(-2/3,-5/3)W_0.
+\] 其热量大小是 \(5W_0/3\)，不是横坐标差 \(2W_0/3\)。横轴为
+\(W\)、纵轴为 \(Q\) 的定义应贯穿所有表格和图注。
+
+反向循环的终点累计坐标为 \((-10/3,-10/3)W_0\)，仍满足
+\(Q=W\)。所以状态回归线并不只位于第一象限，且状态闭合不要求累计原点闭合。若连续运行反向循环，整条路径会沿这条直线向左下方平移。
+
+低温等压段温度从 \(T_0/3\) 升到 \(T_0\)，高温放热段从 \(3T_0\) 降到
+\(T_0\)。吸热、放热都跨过一段温区，不能把该制冷系数套入两个固定温度的卡诺公式。可逆实现需要一系列相匹配的温度热源；实际只用两个固定热源时，换热不可逆，性能需要重新计算。
+
+\newpage
+
+\section{第 7 题}\label{ux7b2c-7-ux9898}
+
+质量为 \(m\)、电荷量为 \(q\) 的粒子在 \(x-y\)
+平面内运动，磁场垂直纸面向里，大小只依赖于到原点距离 \(r\)。已知
+\(B(r_0)=B_0\)。粒子轨迹为对数螺线 \[
+r=r_0e^{k\theta},
+\] 其中 \(\theta\) 是矢径与 \(x\) 轴正方向夹角。
+
+（1）求 \(B(r)\)；
+
+（2）粒子初态位于 \((r_0,0)\)，速率为 \(v_0\)，求初速度与 \(x\) 轴夹角；
+
+（3）若螺线上每一点的曲率中心也位于同一条螺线上，求参数应满足的条件。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.58\linewidth,height=\textheight,keepaspectratio,alt={图7-1　径向非均匀磁场中的对数螺线轨迹}]{../figures/question-07.pdf}
+\caption*{图7-1　径向非均匀磁场中的对数螺线轨迹}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-6}
+
+对数螺线的曲率半径正比于径向距离，因此恒速磁轨道要求磁场按 \(1/r\)
+变化。速度方向和曲率中心还要跟电荷符号、旋转方向保持一致。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-6}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  洛伦兹力与轨迹曲率 \(|q|vB=mv^2\kappa\)；
+\item
+  极坐标曲线曲率；
+\item
+  对数螺线的等角性质；
+\item
+  曲率中心位置；
+\item
+  极角相差 \(2\pi n\) 的同射线多圈条件。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-6}
+
+对数螺线每转过相同角度，半径按固定比例变化；切线与径向方向的夹角恒定。越靠近原点，曲率越大，因此维持该轨迹所需磁场也越强。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-6}
+
+极坐标曲线 \(r(\theta)\) 的曲率为 \[
+\kappa=
+\frac{r^2+2(r')^2-rr''}
+{[r^2+(r')^2]^{3/2}}. \tag{1}
+\] 对 \(r=r_0e^{k\theta}\)， \[
+r'=kr,\qquad r''=k^2r.
+\]
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-6}
+
+代入式（1）： \[
+\begin{aligned}
+\kappa
+&=\frac{r^2+2k^2r^2-k^2r^2}
+{[r^2+k^2r^2]^{3/2}}\\
+&=\frac{(1+k^2)r^2}
+{r^3(1+k^2)^{3/2}}\\
+&=\boxed{\frac{1}{r\sqrt{1+k^2}}}.
+\end{aligned} \tag{2}
+\] 磁场不做功，粒子速率保持 \(v_0\)。洛伦兹力提供法向力： \[
+|q|v_0B=mv_0^2\kappa.
+\] 所以 \[
+B(r)=\frac{mv_0}{|q|r\sqrt{1+k^2}}.
+\] 用 \(B(r_0)=B_0\) 消去常数： \[
+\boxed{B(r)=B_0\frac{r_0}{r}}. \tag{3}
+\] 同时参数必须满足尺度关系 \[
+\boxed{|q|B_0r_0\sqrt{1+k^2}=mv_0}. \tag{4}
+\]
+
+对 \(\theta\) 增大的运动方向，切向量 \[
+\frac{d\bm r}{d\theta}
+=kr\,\bm e_r+r\,\bm e_\theta.
+\] 在 \(\theta=0\) 处，\(\bm e_r\) 沿 \(+x\)，\(\bm e_\theta\) 沿
+\(+y\)，因此初速度与 \(+x\) 轴夹角为 \[
+\boxed{
+\alpha_0=\operatorname{atan2}(1,k)
+}. \tag{5}
+\] 若粒子沿参数减小方向运动，方向应再加 \(\pi\)；实际分支由 \(qB_0\)
+的符号和图示旋向决定。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.72\linewidth,height=\textheight,keepaspectratio,alt={图7-2　螺线切线、曲率中心与自渐屈条件}]{../figures/solution-07.pdf}
+\caption*{图7-2　螺线切线、曲率中心与自渐屈条件}
+\end{figure}
+
+对 \(k>0\) 且 \(\theta\) 增大的分支，单位左法线为 \[
+\bm n=\frac{-\bm e_r+k\bm e_\theta}{\sqrt{1+k^2}}.
+\] 曲率半径 \[
+\rho_\kappa=\frac1\kappa=r\sqrt{1+k^2}.
+\] 曲率中心位置 \[
+\begin{aligned}
+\bm r_C
+&=r\bm e_r+\rho_\kappa\bm n\\
+&=r\bm e_r+r(-\bm e_r+k\bm e_\theta)\\
+&=kr\,\bm e_\theta.
+\end{aligned} \tag{6}
+\] 所以曲率中心的极径为 \(r_C=kr\)，方位角与原点相差
+\(\pi/2\)。同一物理方位允许螺线参数相差 \(2\pi n\)。要使 \(C\)
+落回原螺线，需 \[
+kr_0e^{k\theta}
+=r_0e^{k(\theta+\pi/2-2\pi n)}.
+\] 约去公共因子： \[
+\boxed{
+k=\exp\left[k\left(\frac\pi2-2\pi n\right)\right],
+\qquad n=1,2,\ldots
+}. \tag{7}
+\]
+再与式（4）共同满足，才同时具有给定磁轨迹和``曲率中心仍在原螺线''性质。对
+\(k<0\)，曲率中心向量仍是 \(kr\bm e_\theta\)，其正极径为
+\(|k|r\)、方位为 \(\theta-\pi/2\)。统一条件可写为 \[
+\boxed{\ln|k|=k\left[\operatorname{sgn}(k)\frac\pi2+2\pi j\right]},
+\qquad j\in\mathbb Z,\quad k\ne0.
+\] \(k=0\) 是圆，其曲率中心是原点，不在该圆上。
+
+\textbf{极坐标曲率公式的分子检查。} 对圆 \(r=R\)，有
+\(r'=r''=0\)，式（1）给出 \(\kappa=1/R\)；对本题
+\(r'=kr,r''=k^2r\)，分子中的两个 \(k^2r^2\) 只抵消一个，留下
+\((1+k^2)r^2\)。若错误地全部抵消，会得到
+\(\kappa=1/[r(1+k^2)^{3/2}]\)，从而破坏后续曲率中心结果。
+
+\textbf{切线等角性质。} 单位切向量 \[
+\bm t=\frac{k\bm e_r+\bm e_\theta}{\sqrt{1+k^2}}
+\] 与径向的夹角 \(\chi\) 满足 \[
+\cos\chi=\frac{k}{\sqrt{1+k^2}},
+\qquad
+\tan\chi=\frac1k.
+\] 它与位置无关，所以对数螺线又称等角螺线。式（5）只是把 \(\theta=0\)
+时的这一性质写成直角坐标方向角。
+
+\textbf{磁场方向与曲率法线。} 式（3）给出磁场大小。若 \(q>0\)、\(\bm B\)
+指向纸内，则 \(\bm F=q\bm v\times\bm B\)
+的方向必须与所选曲率法线一致，粒子才沿 \(\theta\)
+增大的分支运动；否则应取反向参数分支。作答中把大小关系与方向条件分开，可避免把
+\(q\) 的正负错误藏进 \(B(r)\)。
+
+\textbf{自渐屈条件的根存在性。} 对 \(n\ge1\)，式（7）可写成 \[
+\ln k=-\left(2\pi n-\frac\pi2\right)k.
+\] 右侧为负，所以根满足 \(0<k<1\)。左侧从 \(-\infty\) 单调增至
+\(0\)，右侧从 \(0\) 单调减至负常数，故每个正整数 \(n\)
+有且只有一个根。\(n=0\) 时要求
+\(\ln k=(\pi/2)k\)，两曲线无正交点，不能得到自渐屈螺线。
+
+\textbf{量纲检查。} 式（4）左端 \(|q|B_0r_0\) 的单位为 \[
+\mathrm C\cdot\mathrm T\cdot\mathrm m
+=\mathrm{kg\,m\,s^{-1}},
+\] 与右端 \(mv_0\) 同为动量。式（3）的比值 \(r_0/r\)
+无量纲，故磁场单位保持不变。
+
+\textbf{用弧长再求一次曲率尺度。} 对数螺线的弧长微元 \[
+ds=\sqrt{dr^2+r^2d\theta^2}
+=r\sqrt{1+k^2}\,d\theta.
+\] 切线方向角等于 \(\theta+\chi\)，其中 \(\chi\) 为常量，因此 \[
+\frac{d(\theta+\chi)}{ds}
+=\frac{d\theta}{r\sqrt{1+k^2}\,d\theta}
+=\frac1{r\sqrt{1+k^2}}.
+\] 这正是式（2）的曲率，提供了比极坐标公式更直观的第二种推导。
+
+\textbf{速度大小为何固定。} 洛伦兹力始终与速度垂直： \[
+\frac{d}{dt}\left(\frac12mv^2\right)
+=\bm F\cdot\bm v
+=q(\bm v\times\bm B)\cdot\bm v=0.
+\] 因此轨迹半径改变不是因为粒子变快或变慢，而是因为 \(B(r)\)
+改变曲率。若在式（3）中引入一个随 \(r\) 变化的
+\(v(r)\)，就违背了这一能量结论。
+
+\textbf{渐屈线的相似性。} 式（6）说明曲率中心轨迹相对原轨迹旋转
+\(\pi/2\) 并把半径乘
+\(k\)。因此它总是一条与原螺线相似的对数螺线。第三问进一步要求这条相似螺线不仅形状相同，而且点集与原螺线重合，才产生离散条件式（7）。
+
+\textbf{曲率中心条件要保留多圈极角。} 对数螺线的位矢为
+\(\bm r=r\bm e_r\)，\(dr/d\theta=kr\)，所以弧长元为 \[
+ds=r\sqrt{1+k^2}\,d\theta.
+\] 沿极角增加方向的单位切线为 \[
+\bm t=\frac{k\bm e_r+\bm e_\theta}{\sqrt{1+k^2}}.
+\] 求导可得指向曲率中心的法线及曲率半径 \[
+\bm n=\frac{-\bm e_r+k\bm e_\theta}{\sqrt{1+k^2}},\qquad
+\rho=r\sqrt{1+k^2}.
+\] 于是曲率中心位矢为 \[
+\bm C=\bm r+\rho\bm n=kr\bm e_\theta.
+\] 它到原点距离为 \(|k|r\)，方向比原点到粒子的方向转过
+\(\operatorname{sgn}(k)\pi/2\)。角度还可加任意整数周角，故同一螺线条件是
+\[
+|k|r=r_0\exp\{k[\theta+\operatorname{sgn}(k)\pi/2+2\pi j]\}.
+\] 除以 \(r=r_0e^{k\theta}\) 得 \[
+\ln|k|=k[\operatorname{sgn}(k)\pi/2+2\pi j],\qquad j\in\mathbb Z.
+\] 正 \(k\) 的常用第一支取 \(j=-1\)，数值约
+\(0.2744106\)。只用主值极角会漏掉这条有效分支。
+
+磁力不做功，速率恒定。用 \(|q|vB=mv^2/\rho\) 得
+\(B(r)\propto1/r\)，且题给 \(B_0,v_0\) 还须满足
+\(|q|B_0r_0\sqrt{1+k^2}=mv_0\)。若这些给定量不相容，则不存在所假定的精确螺线轨道。图7-2的速度箭头取正电荷、磁场入纸面；负电荷须沿相反方向运动。
+
+\textbf{零螺距与电荷反号的极限。} 若 \(k=0\)，轨道退化为半径 \(r_0\)
+的圆。曲率中心位矢 \(kr\bm e_\theta\)
+为零，位于原点；原点不在这个圆上。因此``每个曲率中心仍在同一轨道上''的附加条件排除
+\(k=0\)，不能由对数式直接代入零。
+
+磁场轨道条件在圆极限成为 \[
+|q|B_0r_0=mv_0.
+\] 正电荷、磁场入纸面时，初态 \((r_0,0)\) 的速度沿
+\(+y\)，即极角增加方向。对于一般正 \(k\)，初速度方向为 \[
+\bm v_0/v_0=(k,1)/\sqrt{1+k^2}.
+\] 负电荷时整体取反，所以方向角应加
+\(180^\circ\)，而非只改变螺线的径向分量。磁场大小 \(B(r)=B_0r_0/r\)
+不随这一反号改变。
+
+若取 \(k<0\)，沿极角增加方向的半径下降，曲率中心方向相对径向转为
+\(-\pi/2\)，同轨道条件用 \(\ln|k|\) 而不是 \(\ln k\)。镜像一条正 \(k\)
+螺线会改变旋转方向，但每个曲率中心的几何关系仍由统一矢量式决定。
+
+图7-2标出的中心是指定点的曲率中心，不能把附近任意点标成中心后只配上正确公式；中心到粒子的连线必须垂直切线，长度必须为
+\(r\sqrt{1+k^2}\)。
+
+\textbf{多圈曲率中心条件的分支计数。} 对正 \(k\)，同轨道条件为
+\(\ln k=k(\pi/2+2\pi j)\)。若 \(k>1\)，左侧除以 \(k\) 的最大值为
+\(1/e\)，而 \(j\ge0\) 时右侧至少为 \(\pi/2\)，不可能相等；\(j<0\)
+时右侧为负，也不可能与正的 \(\ln k/k\) 相等。
+
+所以正 \(k\) 解必须在 \(0<k<1\)，并取 \(j=-m,m=1,2,\ldots\)。令
+\(A_m=2\pi m-\pi/2\)，方程为 \[
+\ln k+A_mk=0.
+\] 左侧导数为 \(1/k+A_m>0\)，且从负无穷增到正值，所以每个 \(m\)
+恰有一个正根。第一支是 \(m=1\)，后面的根依次更小。
+
+这说明曲率中心同轨道条件有无限多圈分支，而非只有单一数值。图7-2选择第一支绘图，需保留这个选择，不能把图示参数误称为所有轨道的唯一参数。
+
+还可不依赖特殊函数估计高圈根。令 \(y=A_mk\)，方程变成 \[
+y+\ln y=\ln A_m.
+\] 当 \(A_m\) 很大，先取 \(y_0=\ln A_m\)，再作一次迭代
+\(y_1=\ln A_m-\ln\ln A_m\)，给 \[
+k\simeq\frac{\ln A_m-\ln\ln A_m}{A_m}.
+\] 因此根趋零，但不等于简单的 \(1/m\)。这也是 \(k=0\)
+不能作为某个有限圈分支的原因。
+
+负 \(k=-h\) 的条件对应 \(j\ge1\)，化为相同的
+\(\ln h+A_jh=0\)，所以两旋向的绝对值成对。磁场方向、电荷符号与速度方向仍必须通过洛伦兹力检查；形式镜像关系不能单独决定力的方向。
+
+\textbf{电荷符号确定遍历方向。} 参数递增时曲线的有向曲率为正。对纸内磁场
+\(\bm B=-B\bm e_z\)，正电荷受力为速度左转 \(90^\circ\) 的方向，因此
+\(q>0\) 对应参数递增，\(q<0\) 对应参数递减。初速度方向可完整写为 \[
+\bm v(0)=\operatorname{sgn}(q)\frac{v_0}{\sqrt{1+k^2}}(k,1).
+\] 这比只给 \(\arctan(1/k)\) 更能保留象限和电荷信息。
+
+\textbf{沿螺线运动的时间参数。}
+曲率条件给出路径后，恒定速率还可确定粒子在图7-2上的位置怎样随时间改变。沿极角增加方向，
+\[
+v_0=r\sqrt{1+k^2}\,\dot\theta,
+\qquad \dot r=kr\dot\theta
+=\frac{kv_0}{\sqrt{1+k^2}}.
+\] 因此径向速率是常量，而角速度不是。取 \(t=0\) 时
+\(r=r_0,\theta=0\)，积分得到 \[
+r(t)=r_0+\frac{kv_0}{\sqrt{1+k^2}}t,
+\] \[
+\theta(t)=\frac1k\ln\left[1+
+\frac{kv_0t}{r_0\sqrt{1+k^2}}\right],\qquad k\ne0.
+\] 代回 \(r=r_0e^{k\theta}\)
+与速率式，两式同时成立。若电荷反号而取相反运动方向，上式中的 \(v_0\)
+参数方向应相应反号，不能只改变磁力符号却保留同一时间轨迹。
+
+对向外分支 \(k>0\)，旋转一周所需时间为 \[
+\Delta t_{2\pi}=\frac{r_0\sqrt{1+k^2}}{kv_0}(e^{2\pi k}-1).
+\] 下一周时间再乘 \(e^{2\pi k}\)，所以恒速并不意味着每圈用时相等。对
+\(k<0\) 的向内分支，形式上在有限时间 \(t_*=-r_0\sqrt{1+k^2}/(kv_0)\)
+趋近原点，极角却趋于正无穷。
+
+有限时间内无限绕行来自 \(B\propto1/r\)
+的奇异理想场，不是实际装置的无限转动预测。若只在 \(r_{\min}<r<r_{\max}\)
+保持给定磁场，时间参数也必须截在这一范围。图中选定的有限螺线段、运动箭头和磁场适用区应一起解释。
+
+\newpage
+
+\section{第 8 题}\label{ux7b2c-8-ux9898}
+
+在玻尔模型中，氢原子电子沿圆轨道运动，电子与原子核间只受库仑力，采用国际单位制。
+
+（1）主量子数为 \(n\)，角动量量子化为 \(L=n\hbar\)，求圆轨道半径
+\(r_n\)；
+
+（2）求电子速率 \(v_n\)；
+
+（3）求系统总能量 \(E_n\)；
+
+（4）在 Sommerfeld 椭圆轨道模型中，保持总能量为 \(E_n\)，角动量为
+\(\ell\hbar\)，求近核点距离 \(r_1\)；
+
+（5）求远核点距离 \(r_2\)；
+
+（6）求主量子数 \(n\)、方位量子数 \(\ell\) 与椭圆离心率 \(e\) 的关系；
+
+（7）相对论修正使相同 \(n\)、不同 \(\ell\) 的能量出现量级为 \(\Delta E\)
+的差异，从量纲与速度尺度估计 \(E/\Delta E\) 的量级。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.64\linewidth,height=\textheight,keepaspectratio,alt={图8-1　玻尔圆轨道与 Sommerfeld 椭圆轨道}]{../figures/question-08.pdf}
+\caption*{图8-1　玻尔圆轨道与 Sommerfeld 椭圆轨道}
+\end{figure}
+
+\subsection{一、题型定位}\label{ux4e00ux9898ux578bux5b9aux4f4d-7}
+
+圆轨道与椭圆轨道的共同能量固定半长轴。相对论修正通过沿椭圆的时间平均得到，比较不同角动量时应保留方位量子数的具体差值。
+
+\subsection{二、知识点}\label{ux4e8cux77e5ux8bc6ux70b9-7}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  库仑力提供向心力；
+\item
+  角动量量子化；
+\item
+  玻尔半径与氢能级；
+\item
+  库仑椭圆的半长轴和离心率；
+\item
+  近核点、远核点；
+\item
+  精细结构常数 \(\alpha\)；
+\item
+  相对论能量展开。
+\end{enumerate}
+
+\subsection{三、物理图像}\label{ux4e09ux7269ux7406ux56feux50cf-7}
+
+圆轨道是椭圆轨道的 \(e=0\) 特例。固定总能量等价于固定半长轴
+\(a\)；减小角动量会增大离心率，使近核点更近、远核点更远，但两者之和始终等于
+\(2a\)。
+
+\subsection{四、解题入口}\label{ux56dbux89e3ux9898ux5165ux53e3-7}
+
+记 \[
+\kappa=\frac{e^2}{4\pi\varepsilon_0}.
+\] 圆轨道满足 \[
+\frac{mv_n^2}{r_n}=\frac{\kappa}{r_n^2},
+\qquad
+mv_nr_n=n\hbar. \tag{1}
+\]
+
+\subsection{五、解析}\label{ux4e94ux89e3ux6790-7}
+
+由角动量式 \[
+v_n=\frac{n\hbar}{mr_n}.
+\] 代入向心力式： \[
+\frac{m}{r_n}
+\frac{n^2\hbar^2}{m^2r_n^2}
+=\frac{\kappa}{r_n^2}.
+\] 乘以 \(mr_n^3\)： \[
+n^2\hbar^2r_n=m\kappa r_n^2.
+\] 约去 \(r_n\)： \[
+\boxed{
+r_n=\frac{n^2\hbar^2}{m\kappa}
+=\frac{4\pi\varepsilon_0\hbar^2}{me^2}n^2
+=a_0n^2
+}. \tag{2}
+\] 再代回角动量式： \[
+\boxed{
+v_n=\frac{\kappa}{n\hbar}
+=\frac{e^2}{4\pi\varepsilon_0n\hbar}
+}. \tag{3}
+\]
+
+由向心条件 \[
+mv_n^2=\frac{\kappa}{r_n},
+\] 动能 \[
+K=\frac12mv_n^2=\frac{\kappa}{2r_n},
+\] 势能 \[
+U=-\frac{\kappa}{r_n}.
+\] 总能量 \[
+\boxed{
+E_n=-\frac{\kappa}{2r_n}
+=-\frac{m\kappa^2}{2n^2\hbar^2}
+=-\frac{me^4}
+{2(4\pi\varepsilon_0)^2n^2\hbar^2}
+}. \tag{4}
+\]
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.72\linewidth,height=\textheight,keepaspectratio,alt={图8-2　椭圆轨道的半长轴、近核点和远核点}]{../figures/solution-08.pdf}
+\caption*{图8-2　椭圆轨道的半长轴、近核点和远核点}
+\end{figure}
+
+库仑椭圆轨道半长轴与能量关系为 \[
+E=-\frac{\kappa}{2a}.
+\] 与式（4）比较： \[
+a=\frac{n^2\hbar^2}{m\kappa}=n^2a_0. \tag{5}
+\] 经典开普勒轨道的离心率满足 \[
+e^2=1+\frac{2EL^2}{m\kappa^2}. \tag{6}
+\] 代入 \[
+E=E_n=-\frac{m\kappa^2}{2n^2\hbar^2},
+\qquad
+L=\ell\hbar,
+\] 得到 \[
+\begin{aligned}
+e^2
+&=1+\frac{2[-m\kappa^2/(2n^2\hbar^2)]
+(\ell^2\hbar^2)}
+{m\kappa^2}\\
+&=1-\frac{\ell^2}{n^2}.
+\end{aligned}
+\] 故 \[
+\boxed{e=\sqrt{1-\frac{\ell^2}{n^2}}}. \tag{7}
+\] 近核点和远核点分别是 \[
+\boxed{
+r_1=a(1-e)
+=n^2a_0\left(1-\sqrt{1-\frac{\ell^2}{n^2}}\right)
+}, \tag{8}
+\] \[
+\boxed{
+r_2=a(1+e)
+=n^2a_0\left(1+\sqrt{1-\frac{\ell^2}{n^2}}\right)
+}. \tag{9}
+\] 立即有 \(r_1+r_2=2n^2a_0\)。
+
+相对论修正应在固定正则动量的 Hamilton 量中展开： \[
+H=\frac{p^2}{2m}-\frac\kappa r-\frac{p^4}{8m^3c^2}+\cdots.
+\] 在旧量子论椭圆上作时间平均，\(1\le\ell\le n\)，得 \[
+\delta E_{n\ell}=-\frac{mc^2\alpha^4}{2n^4}
+\left(\frac n\ell-\frac34\right).
+\] 同一 \(n\) 的两个不同角动量 \(\ell_1,\ell_2\) 的分裂为 \[
+\Delta E=\frac{mc^2\alpha^4}{2n^3}
+\left|\frac1{\ell_1}-\frac1{\ell_2}\right|,
+\qquad
+\boxed{\frac{|E_n|}{\Delta E}=
+\frac{n}{\alpha^2|1/\ell_1-1/\ell_2|}}. \tag{10}
+\] 只有两角动量都为 \(O(n)\) 且彼此相差 \(O(n)\)，才能简记为
+\(n^2/\alpha^2\)；若比较高角动量的相邻轨道，量级为 \(n^3/\alpha^2\)。低
+\(n\) 分裂的主尺度是 \(\alpha^{-2}\)，但 \(n=1\) 没有两个不同的允许
+\(\ell\)，不能谈本问的同主量子数分裂。
+
+\textbf{玻尔半径与速度的互相核验。} 由式（2）、（3） \[
+r_nv_n
+=\frac{n^2\hbar^2}{m\kappa}
+\frac{\kappa}{n\hbar}
+=\frac{n\hbar}{m},
+\] 因此 \(mr_nv_n=n\hbar\)，恢复角动量量子化条件。再由 \[
+mv_n^2r_n
+=m\frac{\kappa^2}{n^2\hbar^2}
+\frac{n^2\hbar^2}{m\kappa}
+=\kappa,
+\] 恢复向心条件
+\(mv_n^2/r_n=\kappa/r_n^2\)。两条原始方程均被最终结果满足。
+
+\textbf{椭圆离心率公式的来源。} 库仑轨道方程可写成 \[
+r(\phi)=\frac{p}{1+e\cos\phi},
+\qquad
+p=\frac{L^2}{m\kappa}.
+\] 近、远核点分别对应 \(\cos\phi=\pm1\)： \[
+r_1=\frac{p}{1+e},\qquad
+r_2=\frac{p}{1-e}.
+\] 半长轴 \[
+a=\frac{r_1+r_2}{2}=\frac{p}{1-e^2}.
+\] 所以 \[
+e^2=1-\frac{p}{a}
+=1-\frac{L^2}{m\kappa a}.
+\] 代入 \(a=n^2\hbar^2/(m\kappa)\) 与
+\(L=\ell\hbar\)，直接得到式（7）。这条推导不需要预先记忆式（6）。
+
+\textbf{近核点的极限。} 当 \(\ell=n\) 时 \(e=0\)， \[
+r_1=r_2=a=n^2a_0,
+\] 回到圆轨道。若 \(\ell/n\ll1\)，使用 \[
+\sqrt{1-\ell^2/n^2}
+\simeq1-\frac{\ell^2}{2n^2},
+\] 则 \[
+r_1\simeq\frac{\ell^2}{2}a_0,\qquad
+r_2\simeq2n^2a_0.
+\] 低角动量轨道会非常靠近原子核，这也是精细结构对 \(\ell\)
+敏感的经典图像。
+
+\textbf{轨道平均如何产生角动量依赖。} 对椭圆半长轴 \(a\)， \[
+\langle r^{-1}\rangle=a^{-1},\quad
+\langle r^{-2}\rangle=\frac1{a^2\sqrt{1-e^2}},\quad
+\sqrt{1-e^2}=\ell/n.
+\] 由 \(p^2/(2m)=E+\kappa/r\) 代入 \(-p^4/(8m^3c^2)\)
+的平均值，就得到上述 \(\delta E_{n\ell}\)。例如
+\(n=2,\ell_1=1,\ell_2=2\) 时
+\(|E_2|/\Delta E=4/\alpha^2\)；这给出明确比较对象，避免把典型圆轨道速率当成任意椭圆分裂的通式。
+
+\textbf{能量负号的物理含义。}
+以电子和原子核无穷远分离时能量为零，束缚轨道总能量必为负。圆轨道中 \[
+K=-\frac12U,\qquad E=K+U=\frac12U=-K.
+\] 若推导得到正的 \(E_n\)，说明库仑势能符号或维里关系出现错误。
+
+\textbf{半径、速度和能量的标度。} 从式（2）---（4） \[
+r_n\propto n^2,\qquad
+v_n\propto n^{-1},\qquad
+|E_n|\propto n^{-2}.
+\] 因此高激发态半径迅速增大、速度减小、能级逐渐挤向电离阈值
+\(E=0\)。三种标度彼此自洽： \[
+|E_n|\sim mv_n^2\sim\frac{\kappa}{r_n}.
+\]
+
+\textbf{近远核点乘积。} 由式（8）、（9） \[
+\begin{aligned}
+r_1r_2
+&=a^2(1-e^2)\\
+&=n^4a_0^2\frac{\ell^2}{n^2}\\
+&=n^2\ell^2a_0^2.
+\end{aligned}
+\] 加上 \[
+r_1+r_2=2n^2a_0,
+\] 可把 \(r_1,r_2\) 看成一个二次方程的两根。这是对根式答案的代数核验。
+
+\textbf{相对论修正的幂次。} 非相对论动能本身量级
+\(mv^2\)，第一项相对论修正量级 \(mv^4/c^2\)，所以 \[
+\frac{\Delta E}{E}\sim\frac{v^2}{c^2}
+\] 而不是
+\(v/c\)。修正从偶次幂开始，源于能量对速度反向不变。典型圆轨道相对修正可用
+\(v_n/c=\alpha/n\) 估计；同一 \(n\) 的具体分裂还需比较轨道平均中的
+\(\ell\) 项。
+
+\textbf{近远心距与能级劈裂的两项反查。} 同一库仑能量固定半长轴
+\(a=r_n\)，角动量 \(l\hbar\) 决定 \[
+1-e^2=\frac{l^2}{n^2}.
+\] 近、远心距必须满足 \[
+r_1+r_2=2a,\qquad r_1r_2=a^2(1-e^2)=a^2l^2/n^2.
+\] 所以它们是方程 \(r^2-2ar+a^2l^2/n^2=0\)
+的两根。用和与积核验，可避免从能量方程解根时漏掉离心势项。
+
+图8-2中原子核是焦点而不是椭圆中心；焦距应为 \(ae\)，短半轴应为
+\(a\sqrt{1-e^2}\)。将核画在任意偏心位置，只能得到外形相似的椭圆，不能对应库仑开普勒轨道。
+
+最低阶相对论修正采用固定正则动量展开， \[
+H=\frac{p^2}{2m}-\frac\kappa r-\frac{p^4}{8m^3c^2}+\cdots.
+\]
+其负号与直接在固定速度下展开动能的正号不同，因为二者固定的变量不同。平均后得到
+\[
+\delta E_{nl}=-\frac{mc^2\alpha^4}{2n^4}\left(\frac nl-\frac34\right).
+\] 圆轨道 \(l=n\) 给 \(\delta E=-mc^2\alpha^4/(8n^4)\)，可作为系数检查。
+
+同一 \(n=2\) 的 \(l=1,2\)，修正差的绝对值为
+\(mc^2\alpha^4/32\)，而非相对论能级绝对值为
+\(mc^2\alpha^2/8\)。两者之比正好是 \(4/\alpha^2\)。一般比例仍含
+\(|1/l_1-1/l_2|\)，所以不能把这个特例推广成所有比较都按 \(n^2\)
+变化。此题原文已从``答案''文件第3页补齐，补页实际保存题面，不是官方答案。
+
+\textbf{直接从转折方程求椭圆两端。} 径向转折点满足 \(p_r=0\)，所以 \[
+E_n=\frac{l^2\hbar^2}{2mr^2}-\frac\kappa r.
+\] 乘 \(r^2\)，写成 \[
+E_nr^2+\kappa r-\frac{l^2\hbar^2}{2m}=0.
+\] 代入 \(E_n=-m\kappa^2/(2n^2\hbar^2)\) 后，两根为 \[
+r_{1,2}=n^2a_0\left(1\mp\sqrt{1-l^2/n^2}\right).
+\] 取 \(n=3,l=2\)，有 \(e=\sqrt5/3\)，所以 \[
+r_1/a_0=9-3\sqrt5,\qquad r_2/a_0=9+3\sqrt5.
+\] 二者和为十八、积为三十六，与 \(a=9a_0\) 和 \(a^2l^2/n^2\) 一致。
+
+近心点速率由角动量给 \(v_1=l\hbar/(mr_1)\)，远心点同理。由于
+\(r_1<r_2\)，近心速率较大。核固定的库仑轨道在近心点更容易暴露非相对论近似的误差，故相对论修正的时间平均不能用圆轨道的均匀速率替代。
+
+若 \(l=n\)，根式为零，两转折点合并成同一圆半径；若形式取
+\(l=0\)，近心距为零，出现碰核轨道，原题采用的旧量子论 \(1\le l\le n\)
+排除了这一奇点分支。
+
+\textbf{径向作用量复查旧量子数。}
+除圆轨道之外，可用椭圆径向作用量检验能量。记角动量为
+\(L>0\)，径向动量满足 \[
+p_r^2=2mE+2m\kappa/r-L^2/r^2.
+\] 令 \(r=a(1-e\cos u)\)，\(0\le u\le\pi\) 表示从近心到远心的半周。由
+\(L^2=m\kappa a(1-e^2)\)，有 \[
+p_r=\sqrt{m\kappa/a}\frac{e\sin u}{1-e\cos u},
+\qquad dr=ae\sin u\,du.
+\] 径向闭合积分为 \[
+J_r=2\sqrt{m\kappa a}
+\int_0^\pi\frac{e^2\sin^2u}{1-e\cos u}\,du.
+\] 把分子分解成 \[
+e^2\sin^2u=(1-e\cos u)(1+e\cos u)-(1-e^2),
+\] 结合 \(\int_0^\pi du/(1-e\cos u)=\pi/\sqrt{1-e^2}\)，得到 \[
+J_r=2\pi(\sqrt{m\kappa a}-L).
+\] 旧量子条件取 \(J_r=n_rh,L=lh/(2\pi)\)，于是 \[
+\sqrt{m\kappa a}=(n_r+l)\hbar=n\hbar.
+\] 从而 \(a=n^2a_0\)、\(n_r=n-l\)，再恢复
+\(E_n=-m\kappa^2/(2n^2\hbar^2)\)。这项计算把总主量子数和径向、角向作用量联系起来，并解释
+\(l\le n\)。
+
+圆轨道 \(e=0\) 时 \(J_r=0\)，因此 \(n_r=0,l=n\)。若形式取
+\(l=0\)，近心点落在库仑奇点，前面要求的 \(L>0\)
+光滑椭圆积分不再适用。旧量子条件不能自动修复碰核轨道。
+
+上述作用量计算仍是旧量子论模型。现代氢原子径向量子数和角动量本征值有不同规则，不能把这里的整数等式直接当作现代算符量子数关系。
+
+\textbf{相对论椭圆的近心方向进动。} 作为相对论轨道的进一步核验，令
+\(u=1/r\)，总能量包含静质量能 \(\mathcal E\)，角动量为
+\(L\)。能量关系写成 \[
+(\mathcal E+\kappa u)^2=c^2(p_r^2+L^2u^2)+m^2c^4.
+\] 由轨道运动学 \(p_r=-L\,du/d\phi\)，对上式求导，得到 \[
+u''+\left(1-\frac{\kappa^2}{L^2c^2}\right)u
+=\frac{\mathcal E\kappa}{L^2c^2}.
+\] 因此径向振荡的角频率因子为 \[
+\chi=\sqrt{1-\kappa^2/(L^2c^2)}.
+\] 相邻近心点之间的方位角变化是 \(2\pi/\chi\)，相对一个整周的进动为 \[
+\Delta\phi=2\pi(\chi^{-1}-1)
+\simeq\pi\alpha^2/l^2.
+\] 其中旧量子条件用 \(L=l\hbar\)，且展开要求
+\(\alpha/l\ll1\)。进动方向为沿轨道前进；固定库仑非相对论椭圆则无这一进动。
+
+这项轨道计算与正文的能量修正都显示低角动量轨道更容易受相对论效应影响，但一个是几何进动角，一个是时间平均能量，不能互相替代数值。图8-2绘制的是最低阶非相对论椭圆，未把它误称为精确相对论闭合轨道。
+\end{document}

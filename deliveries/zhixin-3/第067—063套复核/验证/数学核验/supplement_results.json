@@ -1,0 +1,117 @@
+{
+  "passed": true,
+  "script_sha256": "dbe9e7748c553807386c22dfc13cb96a280cde6fefc77b944574f734501b6bfe",
+  "scope": "新增变式中列出的关系、初值和极限，共11组",
+  "groups": [
+    {
+      "set": 65,
+      "question": 2,
+      "check": "无量纲平均力导数与峰值",
+      "result": {
+        "peak_x": 0.3779644730092272
+      },
+      "passed": true
+    },
+    {
+      "set": 65,
+      "question": 4,
+      "check": "无阻尼突然接通的全初值解与共振解",
+      "result": {
+        "zero_initial_values": true
+      },
+      "passed": true
+    },
+    {
+      "set": 65,
+      "question": 5,
+      "check": "含常壁热容的冷却积分",
+      "result": {
+        "energy_balance_derivative": true
+      },
+      "passed": true
+    },
+    {
+      "set": 66,
+      "question": 1,
+      "check": "恒载势能曲率与悬绳积分样例",
+      "result": {
+        "length_ratio": 1.566678764152452
+      },
+      "passed": true
+    },
+    {
+      "set": 65,
+      "question": 3,
+      "check": "一般抛速四次方程、严格凸性和两支原题根",
+      "result": {
+        "tau": [
+          1.8526807554566997,
+          4.220737918547251
+        ],
+        "relative_angles_degrees": [
+          127.83706068386749,
+          29.1386962661686
+        ],
+        "critical_k": 0.6039936121418791
+      },
+      "passed": true
+    },
+    {
+      "set": 65,
+      "question": 7,
+      "check": "保留衰减模的到达时间",
+      "result": {
+        "sample_time": 1.5088400096630283
+      },
+      "passed": true
+    },
+    {
+      "set": 65,
+      "question": 8,
+      "check": "桥管长度推广、半段狭窄并联回代",
+      "result": {
+        "four_lengths_checked": true
+      },
+      "passed": true
+    },
+    {
+      "set": 63,
+      "question": 1,
+      "check": "四轮与后轴单独驱动的摩擦圆样例",
+      "result": {
+        "four_wheel_seconds": 23.646495113623626,
+        "rear_seconds": 18.808888655423605
+      },
+      "passed": true
+    },
+    {
+      "set": 63,
+      "question": 2,
+      "check": "移动山体沿任意轨道的惯性消元",
+      "result": {
+        "rolling_slope_effective_mass_over_m": 1.15
+      },
+      "passed": true
+    },
+    {
+      "set": 63,
+      "question": 7,
+      "check": "静止镜面单光子反射的数值能量回代",
+      "result": {
+        "A_final": 1.2,
+        "reflected_energy_fraction": 0.8333333333333334
+      },
+      "passed": true
+    },
+    {
+      "set": 63,
+      "question": 8,
+      "check": "lambda=4两半周期净电荷与总耗能",
+      "result": {
+        "net_charge": 24.0,
+        "dissipated_energy": 96.0
+      },
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,238 @@
+\documentclass[12pt,a4paper,UTF8]{ctexart}
+\usepackage[a4paper,top=22mm,bottom=22mm,left=22mm,right=22mm,headheight=15pt]{geometry}
+\usepackage{amsmath,amssymb,mathtools,bm}
+\usepackage{graphicx,xcolor,booktabs,longtable,array,enumitem,fancyhdr,caption,float,microtype,setspace}
+\newcommand{\Needspace}[1]{\par\begingroup\dimen0=#1\relax\dimen2=\pagegoal\advance\dimen2 by-\pagetotal\ifdim\dimen0>\dimen2\newpage\fi\endgroup}
+\newcommand{\needspace}[1]{\par\begingroup\skip0=\lastskip\vskip-\skip0\dimen0=#1\relax\advance\dimen0 by\skip0\vskip\dimen0\penalty-100\vskip-\dimen0\vskip\skip0\penalty9999\endgroup}
+\usepackage[hidelinks,unicode]{hyperref}
+\usepackage[most]{tcolorbox}
+\definecolor{ContestBlue}{HTML}{17365D}
+\hypersetup{pdftitle={第 049 套},pdfauthor={}}
+\setstretch{1.24}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.35em}
+\setlength{\emergencystretch}{2em}
+\setlist{itemsep=0.35em,topsep=0.4em}
+\captionsetup{font=small,labelfont=bf,justification=centering}
+\setcounter{secnumdepth}{0}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small 第 049 套}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\ctexset{
+  section={format=\Large\bfseries\color{ContestBlue},beforeskip=1.2em,afterskip=0.7em},
+  subsection={format=\large\bfseries\color{ContestBlue},beforeskip=1.0em,afterskip=0.5em},
+  subsubsection={format=\normalsize\bfseries,beforeskip=0.8em,afterskip=0.35em}
+}
+\makeatletter
+\newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\newcommand{\maxwidth}{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\newcommand{\maxheight}{\ifdim\Gin@nat@height>0.72\textheight 0.72\textheight\else\Gin@nat@height\fi}
+\newcommand{\pandocbounded}[1]{\begingroup\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}#1\endgroup}
+\makeatother
+\begin{document}
+\begin{titlepage}
+  \centering
+  \vspace*{58mm}
+  {\Huge\bfseries\color{ContestBlue} 第 049 套\par}
+  \vfill
+  \vspace*{28mm}
+\end{titlepage}
+\section{第 1 题}\label{ux7b2c-1-ux9898}
+
+某汽车前轮可以转向、后轮不可转向，四个车轮均不能侧向滑动。左右轮间距为
+\(2l\)，前后轮轴距为 \(3l\)，车身在前、后轮轴外各伸出
+\(l\)。转弯时内侧前轮转角为 \(\alpha\)，外侧前轮转角为 \(\beta\)。
+
+（1）求 \(\alpha\) 与 \(\beta\) 的关系；
+
+（2）已知内轮最大转角为 \(45^\circ\)，求汽车能安全通过的最小直角道路宽度
+\(d\)。原题没有指定转向随时间的策略。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.82\linewidth,height=\textheight,keepaspectratio,alt={图1-1　汽车尺寸、转向轮和直角道路}]{../figures/question-01.pdf}
+\caption*{图1-1　汽车尺寸、转向轮和直角道路}
+\end{figure}
+
+\newpage
+
+\section{第 2 题}\label{ux7b2c-2-ux9898}
+
+要把质量为 \(m\) 的货物送出，使用两级火箭。第二级连同货物的初始总质量为
+\(nm\)，两级火箭连同货物的初始总质量为 \(Nm\)。燃气相对火箭的喷射速度为
+\(V\)。每一级的壳体与燃料质量之比均为 \[
+r:(1-r).
+\]
+每一级燃料燃尽后立即抛弃壳体，抛壳不改变剩余部分速度。忽略重力和空气阻力。
+
+（1）求第一级燃烧完成时的速度 \(v\)；
+
+（2）求第二级提供的速度增量 \(u\)；
+
+（3）总末速度 \(w=u+v\)。固定 \(r,N\)，求使 \(w\) 最大的 \(n\)；
+
+（4）在最优分级时求 \(u/v\)；
+
+（5）若改用初始总质量为 \(Nm\) 的单级火箭，求末速度 \(w_s\)；
+
+（6）取
+\(w=10\ {\rm km\,s^{-1}}\)、\(V=2.5\ {\rm km\,s^{-1}}\)、\(r=0.1\)，按最优分级求
+\(N\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.486\linewidth,height=\textheight,keepaspectratio,alt={图2-1　两级火箭的质量分层}]{../figures/question-02.pdf}
+\caption*{图2-1　两级火箭的质量分层}
+\end{figure}
+
+\newpage
+
+\section{第 3 题}\label{ux7b2c-3-ux9898}
+
+在无穷大二维理想流体中，点涡的环量定义为 \[
+\oint\bm u\cdot d\bm l=\Gamma.
+\]
+
+（1）单个环量为 \(\Gamma\) 的点涡，求距涡心 \(r\) 处的流速大小 \(v_0\)；
+
+（2）两个间距为 \(d\)、环量大小相等而方向相反的点涡相距保持为
+\(d\)。求连线中点 \(A\) 的流速 \(v_1\)，以及连线延长线上、距中点为 \(d\)
+的点 \(B\) 的流速 \(v_2\)；
+
+（3）用液面高度差产生的压强作用平衡涡旋间吸引效应。流体密度为
+\(\rho\)，求 \(A\)、\(B\) 两点液面高度差 \(h\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.78\linewidth,height=\textheight,keepaspectratio,alt={图3-1　反向点涡对及中点、外点位置}]{../figures/question-03.pdf}
+\caption*{图3-1　反向点涡对及中点、外点位置}
+\end{figure}
+
+\newpage
+
+\section{第 4 题}\label{ux7b2c-4-ux9898}
+
+一个表面近似刚性的偏心球半径为 \(r\)，质心 \(G\) 到几何球心 \(C\)
+的距离为 \[
+r_c=0.5r,
+\] 球绕质心的转动惯量为 \(I=mr^2\)。碰撞前球不自转，质心以速度 \(v_0\)
+竖直向下运动。\(CG\) 与竖直向上方向夹角为
+\(\theta\)。地面对接触点的法向碰撞完全弹性，即接触点法向速度在碰后恰好反向。
+
+（1）地面光滑，求碰后质心速度大小；
+
+（2）地面摩擦因数为 \(\mu\)，求碰后质心速度方向。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.58\linewidth,height=\textheight,keepaspectratio,alt={图4-1　偏心球的质心位置与竖直碰撞}]{../figures/question-04.pdf}
+\caption*{图4-1　偏心球的质心位置与竖直碰撞}
+\end{figure}
+
+\newpage
+
+\section{第 5 题}\label{ux7b2c-5-ux9898}
+
+两面平面镜的夹角为 \(72^\circ\)，以下先把角平分线取为 \(0^\circ\)
+方向、两镜取为
+\(\pm36^\circ\)，并明确这是一种展开角约定。一段弧形发光标尺位于两镜之间，刻度角
+\(\varphi\) 的范围为 \(-36^\circ\le\varphi\le36^\circ\)。观察者从角度为
+\(\phi\) 的方向观察，在图示角 \(\theta\)
+的位置看到标尺像；扫描图中该角的起点与眼睛位置未给出完整定义。求该像对应的标尺刻度
+\(\varphi(\theta,\phi)\)，分别讨论 \[
+36^\circ<\theta<108^\circ,\quad
+108^\circ<\theta<180^\circ,\quad
+180^\circ<\theta<252^\circ,\quad
+252^\circ<\theta<324^\circ.
+\]
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.68\linewidth,height=\textheight,keepaspectratio,alt={图5-1　夹角为 72\^{}\textbackslash circ 的双镜与弧形标尺}]{../figures/question-05.pdf}
+\caption*{图5-1　夹角为 \(72^\circ\) 的双镜与弧形标尺}
+\end{figure}
+
+\newpage
+
+\section{第 6 题}\label{ux7b2c-6-ux9898}
+
+一摩尔理想气体在可逆循环热机中工作，摩尔定容热容量 \[
+C_V=\frac32R.
+\] 横轴 \(W\) 记录气体对外做功，纵轴 \(Q\)
+记录气体从热源吸热，放热和外界对气体做功分别记为负。\(O\)
+为初态，过程依次为 \(O\to A\to B\to C\to O_1\)，其中 \[
+A=(2W_0,5W_0),\qquad B=(5W_0,5W_0),
+\] \(OA\parallel BC\)，\(AB\parallel CO_1\)，气体在 \(O_1\)
+回到初态。热机效率为 \(\eta=2/3\)。
+
+（1）若 \(C=(C_xW_0,C_yW_0)\)，求 \(C_x\)；
+
+（2）求 \(C_y\)；
+
+（3）同一循环再运行一次，第二次的 \(B\) 点记为
+\(B_1=(B_{1x}W_0,B_{1y}W_0)\)，求 \(B_{1x}\)；
+
+（4）求 \(B_{1y}\)；
+
+（5）初态温度为 \(T_0\)，一个循环内气体最大熵与最小熵之差为
+\(\Delta S\)，求 \(T_0\Delta S/W_0\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.68\linewidth,height=\textheight,keepaspectratio,alt={图6-1　累计吸热---做功平面中的可逆循环}]{../figures/question-06.pdf}
+\caption*{图6-1　累计吸热---做功平面中的可逆循环}
+\end{figure}
+
+\newpage
+
+\section{第 7 题}\label{ux7b2c-7-ux9898}
+
+质量为 \(m\)、电荷量为 \(q\) 的粒子在 \(x-y\)
+平面内运动，磁场垂直纸面向里，大小只依赖于到原点距离 \(r\)。已知
+\(B(r_0)=B_0\)。粒子轨迹为对数螺线 \[
+r=r_0e^{k\theta},
+\] 其中 \(\theta\) 是矢径与 \(x\) 轴正方向夹角。
+
+（1）求 \(B(r)\)；
+
+（2）粒子初态位于 \((r_0,0)\)，速率为 \(v_0\)，求初速度与 \(x\) 轴夹角；
+
+（3）若螺线上每一点的曲率中心也位于同一条螺线上，求参数应满足的条件。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.58\linewidth,height=\textheight,keepaspectratio,alt={图7-1　径向非均匀磁场中的对数螺线轨迹}]{../figures/question-07.pdf}
+\caption*{图7-1　径向非均匀磁场中的对数螺线轨迹}
+\end{figure}
+
+\newpage
+
+\section{第 8 题}\label{ux7b2c-8-ux9898}
+
+在玻尔模型中，氢原子电子沿圆轨道运动，电子与原子核间只受库仑力，采用国际单位制。
+
+（1）主量子数为 \(n\)，角动量量子化为 \(L=n\hbar\)，求圆轨道半径
+\(r_n\)；
+
+（2）求电子速率 \(v_n\)；
+
+（3）求系统总能量 \(E_n\)；
+
+（4）在 Sommerfeld 椭圆轨道模型中，保持总能量为 \(E_n\)，角动量为
+\(\ell\hbar\)，求近核点距离 \(r_1\)；
+
+（5）求远核点距离 \(r_2\)；
+
+（6）求主量子数 \(n\)、方位量子数 \(\ell\) 与椭圆离心率 \(e\) 的关系；
+
+（7）相对论修正使相同 \(n\)、不同 \(\ell\) 的能量出现量级为 \(\Delta E\)
+的差异，从量纲与速度尺度估计 \(E/\Delta E\) 的量级。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.64\linewidth,height=\textheight,keepaspectratio,alt={图8-1　玻尔圆轨道与 Sommerfeld 椭圆轨道}]{../figures/question-08.pdf}
+\caption*{图8-1　玻尔圆轨道与 Sommerfeld 椭圆轨道}
+\end{figure}
+\end{document}

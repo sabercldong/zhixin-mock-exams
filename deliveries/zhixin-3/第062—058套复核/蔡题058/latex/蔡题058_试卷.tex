@@ -1,0 +1,265 @@
+\documentclass[12pt,a4paper,UTF8]{ctexart}
+\usepackage[a4paper,top=22mm,bottom=22mm,left=22mm,right=22mm,headheight=15pt]{geometry}
+\newcommand{\Needspace}[1]{\par\begingroup\dimen0=#1\relax\dimen2=\pagegoal\advance\dimen2 by-\pagetotal\ifdim\dimen0>\dimen2\newpage\fi\endgroup}
+\newcommand{\needspace}[1]{\par\begingroup\skip0=\lastskip\vskip-\skip0\dimen0=#1\relax\advance\dimen0 by\skip0\vskip\dimen0\penalty-100\vskip-\dimen0\vskip\skip0\penalty9999\endgroup}
+\usepackage{amsmath,amssymb,mathtools,bm}
+\usepackage{graphicx,xcolor,booktabs,longtable,array,enumitem,fancyhdr,caption,float,microtype,setspace}
+\usepackage[hidelinks,unicode]{hyperref}
+\usepackage[most]{tcolorbox}
+\definecolor{ContestBlue}{HTML}{17365D}
+\hypersetup{pdftitle={第058套},pdfauthor={}}
+\setstretch{1.24}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.35em}
+\setlength{\emergencystretch}{2em}
+\setlist{itemsep=0.35em,topsep=0.4em}
+\captionsetup{font=small,labelfont=bf,justification=centering}
+\setcounter{secnumdepth}{0}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small 第058套}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\ctexset{
+  section={format=\Large\bfseries\color{ContestBlue},beforeskip=1.2em,afterskip=0.7em},
+  subsection={format=\large\bfseries\color{ContestBlue},beforeskip=1.0em,afterskip=0.5em},
+  subsubsection={format=\normalsize\bfseries,beforeskip=0.8em,afterskip=0.35em}
+}
+\usepackage{calc}
+\newcounter{none}
+\let\originalsubsection\subsection
+\renewcommand{\subsection}{\needspace{6\baselineskip}\originalsubsection}
+\makeatletter
+\newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\newcommand{\maxwidth}{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\newcommand{\maxheight}{\ifdim\Gin@nat@height>0.72\textheight 0.72\textheight\else\Gin@nat@height\fi}
+\newcommand{\pandocbounded}[1]{\begingroup\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}#1\endgroup}
+\makeatother
+\begin{document}
+\begin{titlepage}
+  \centering
+  \vspace*{58mm}
+  {\Huge\bfseries\color{ContestBlue} 第058套\par}
+  \vfill
+  \vspace*{28mm}
+\end{titlepage}
+\section{第 1 题}\label{ux7b2c-1-ux9898}
+
+在水平地面上方有一根轴线与地面平行的圆柱形障碍物。圆柱半径为
+\(r\)，轴线距地面的高度为
+\(h\)。从地面上一点斜向抛出一个可视为质点的小球，要求小球越过圆柱并最终落回地面。忽略空气阻力。
+
+（1）若允许小球与圆柱接触，且圆柱表面光滑，求所需最小初速度。
+
+（2）若小球在运动过程中不能与圆柱接触，求所需最小初速度。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\linewidth,height=\textheight,keepaspectratio,alt={图1-1　圆柱形障碍物及小球越障运动的几何位置}]{../figures/question-01.pdf}
+\caption*{图1-1　圆柱形障碍物及小球越障运动的几何位置}
+\end{figure}
+
+\newpage
+
+\section{第 2 题}\label{ux7b2c-2-ux9898}
+
+（1）质量为 \(m_1=2.7\times10^{-3}\,\mathrm{kg}\)、半径为
+\(R=2.0\times10^{-2}\,\mathrm m\)
+的乒乓球可视为质量均匀分布在球壳上。求它绕任一直径的转动惯量 \(J_1\)。
+
+（2）一只质量为 \(m=5.0\times10^{-3}\,\mathrm{kg}\)、半径仍为
+\(R=2.0\times10^{-2}\,\mathrm m\) 的不合格空心球，其转动惯量实测为
+\(J=1.0\times10^{-6}\,\mathrm{kg\,m^2}\)。在动摩擦因数 \(\mu_1=0.628\)
+的水平球台上，球心初速度为
+\(v_1=15.6\,\mathrm{m/s}\)，球还具有沿水平直径的初始角速度。求使球经过滑动摩擦后能够反向滚回的最小角速度
+\(\omega_1\)。
+
+（3）第（2）问中的球 1 在光滑台面上原地自转，角速度为
+\(\omega_2\)，转轴沿竖直直径。另一只完全相同的球 2 以
+\(v_2=9.86\,\mathrm{m/s}\) 沿两球心连线撞向球
+1，并具有同方向、同大小的角速度 \(\omega_2\)。两球摩擦因数为
+\(\mu=0.719\)。已知碰撞前后接触点沿球心连线方向的相对速度分量大小相同。若
+\(\omega_2\le\omega_{20}\) 时碰后接触点不再相对滑动，求
+\(\omega_{20}\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.88\linewidth,height=\textheight,keepaspectratio,alt={图2-1　粗糙台面上的空心球及两球正碰中的切向摩擦}]{../figures/question-02.pdf}
+\caption*{图2-1　粗糙台面上的空心球及两球正碰中的切向摩擦}
+\end{figure}
+
+\newpage
+
+\section{第 3 题}\label{ux7b2c-3-ux9898}
+
+一个正八面体的十二条棱长度均为 \(l\)，每条棱的电阻均为 \(r\)。
+
+（1）空间中有均匀随时间变化的磁场
+
+\[
+\frac{\partial\bm B}{\partial t}=b\,\hat{\bm z},
+\]
+
+求各棱中的感应电流大小。
+
+（2）某时刻磁场为 \(\bm B=B_0\hat{\bm z}\)，且
+
+\[
+\frac{\partial\bm B}{\partial t}
+=\frac b{\sqrt3}(0,\sqrt2,1).
+\]
+
+求正八面体所受合力与合力矩。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.583\linewidth,height=\textheight,keepaspectratio,alt={图3-1　正八面体的空间结构、坐标轴及赤道正方形}]{../figures/question-03.pdf}
+\caption*{图3-1　正八面体的空间结构、坐标轴及赤道正方形}
+\end{figure}
+
+\newpage
+
+\section{第 4 题}\label{ux7b2c-4-ux9898}
+
+一群带电粒子在 \(x-y\) 平面内以速度 \(v_0\) 沿 \(+x\) 方向入射，其初始
+\(y\) 坐标分布在 \(0\) 到 \(r\) 之间。某些区域存在沿 \(+z\)
+方向的匀强磁场
+
+\[
+B_0=\frac{mv_0}{rq},
+\]
+
+其余区域无磁场。粒子经过偏转后都从 \(C(r,0)\) 射出，出射方向与 \(x\)
+轴夹角 \(\theta\in[0,\pi/2]\)。
+
+（1）粒子先做直线运动，再沿圆弧到达 \(C\)，求磁场区域的最小面积。
+
+（2）粒子先沿圆弧运动，再做直线运动到达 \(C\)。以 \(\theta\)
+为参数写出磁场下边界的参数方程，并求面积。
+
+（3）粒子依次做直线、圆弧、直线运动到达 \(C\)。后一段直线长度为函数
+\(\ell(\theta)\)。它须满足入射高度范围、边界闭合和不自交要求。用
+\(\theta,\ell(\theta)\)
+写出磁场左边界和下边界的参数方程，求面积，并证明面积与 \(\ell(\theta)\)
+的具体形式无关。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio,alt={图4-1　三种由匀强磁场拼接直线与圆弧的粒子会聚方案}]{../figures/question-04.pdf}
+\caption*{图4-1　三种由匀强磁场拼接直线与圆弧的粒子会聚方案}
+\end{figure}
+
+\newpage
+
+\section{第 5 题}\label{ux7b2c-5-ux9898}
+
+一节长度为 \(l\)、电动势为 \(\varepsilon\)
+的电池两端各固定一个小磁体，两磁体的磁矩大小均为
+\(m\)、方向相反。电池和小磁体同轴，小磁体位于线圈中心轴线上；电池、小磁体和连接导线构成闭合回路。
+
+整个组件放入一只铜线螺线圈内。螺线圈单位长度匝数为 \(n\)、半径为
+\(r\)，铜线单位长度电阻为
+\(\lambda\)。组件在螺线圈内运动时受到与速度成正比的阻力
+
+\[
+f=kv.
+\]
+
+忽略电池、小磁体和连接导线的电阻，并把螺线圈视为很长的闭合环。求组件稳定运动时的速度大小。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.88\linewidth,height=\textheight,keepaspectratio,alt={图5-1　螺线圈内的电池与反向磁偶极子组件}]{../figures/question-05.pdf}
+\caption*{图5-1　螺线圈内的电池与反向磁偶极子组件}
+\end{figure}
+
+\newpage
+
+\section{第 6 题}\label{ux7b2c-6-ux9898}
+
+有两瓶等质量、比热容均视为常量的水。水 \(A\) 初温为
+\(100^\circ\mathrm C\)，水 \(B\) 初温为
+\(0^\circ\mathrm C\)。所有容器和工具均可理想保温，且两瓶水不能直接混合，只能通过热交换或理想热机改变状态。
+
+（1）把热水 \(A\) 分成 \(n\) 份，每份质量为原来的
+\(1/n\)。依次让每一份热水与整瓶冷水 \(B\)
+达到热平衡，随后移走该份热水。求 \(n\) 次后冷水温度 \(T_n\)。
+
+（2）求 \(n\to\infty\) 时的极限温度 \(T_0\)。
+
+（3）允许使用循环后恢复初态的理想热机，且热机不与环境交换热量。先在两瓶水之间可逆工作，直到温度相同为
+\(T_1\)；再把得到的功全部转化为热量加热 \(B\)。求 \(T_1\) 和 \(B\)
+的最终温度 \(T_2\)。
+
+（4）把第（3）问最后``功全部耗散为热''的步骤改成可逆过程：用所得功驱动反向理想热机，从
+\(A\) 吸热、向 \(B\) 放热。求 \(B\) 可达到的最高温度 \(T_3\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.84\linewidth,height=\textheight,keepaspectratio,alt={图6-1　两杯等质量水之间的热交换与可逆热机方案}]{../figures/question-06.pdf}
+\caption*{图6-1　两杯等质量水之间的热交换与可逆热机方案}
+\end{figure}
+
+\newpage
+
+\section{第 7 题}\label{ux7b2c-7-ux9898}
+
+折射率分别为 \(n_1,n_2\) 的两种透明介质以平面分界。从介质 \(n_1\)
+一侧入射的光可以在界面发生全反射。入射角为 \(\theta_1\)，临界角为
+\(\theta_c\)。
+
+（1）用 \(n_1,n_2\) 表示临界角 \(\theta_c\)。
+
+（2）两种介质均视为半无限大。建立界面内的 \(y\) 轴和垂直界面的 \(z\)
+轴，用平面波复数形式
+
+\[
+\bm E(\bm r,t)=\bm E_0e^{i(\omega t-\bm k\cdot\bm r)}
+\]
+
+证明全反射时介质 \(n_2\)
+中的透射场是沿界面传播、沿法向指数衰减的倏逝波，并求衰减系数
+\(\alpha\)。用 \(\theta_1,n_1,n_2\) 和真空波长 \(\lambda_0\) 表示。
+
+（3）求场振幅由界面处最大值降为原来的 \(1/e\) 所需的穿透深度
+\(\Delta z\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.82\linewidth,height=\textheight,keepaspectratio,alt={图7-1　全反射中的入射光、反射光及低折射率介质内的倏逝波}]{../figures/question-07.pdf}
+\caption*{图7-1　全反射中的入射光、反射光及低折射率介质内的倏逝波}
+\end{figure}
+
+\newpage
+
+\section{第 8 题}\label{ux7b2c-8-ux9898}
+
+在唐静止参考系 \(S\) 中，村庄 \(A,B\) 位于 \(x\) 轴上，相距
+
+\[
+l=14\ \text{光年}.
+\]
+
+取 \(A\) 为 \(x=0\)、\(B\) 为 \(x=l\)。当 \(t=0\) 时，蔡经过 \(A\) 并以
+\(0.6c\) 沿 \(+x\) 方向运动，黄经过 \(B\) 并以 \(0.8c\) 沿 \(-x\)
+方向运动。
+
+（1）黄测得蔡的速度为多少？
+
+（2）唐已将 \(A,B\) 两村的时钟与自己的时钟同步。在黄看来，当自己经过
+\(B\) 时，与该事件同时的 \(A\) 村时钟示数为多少？
+
+（3）黄的静止质量为
+\(m_0=100\,\mathrm{kg}\)。若黄认为蔡的相对论质量与自己相同，求蔡的静止质量。
+
+（4）蔡与黄发生完全非弹性碰撞，形成复合体，且没有辐射等能量损失。在黄看来，碰撞发生时与之同时的
+\(B\) 村时钟示数为多少？
+
+（5）求复合体的静止质量。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.84\linewidth,height=\textheight,keepaspectratio,alt={图8-1　唐参考系中的两村庄与蔡、黄的相向运动}]{../figures/question-08.pdf}
+\caption*{图8-1　唐参考系中的两村庄与蔡、黄的相向运动}
+\end{figure}
+\end{document}

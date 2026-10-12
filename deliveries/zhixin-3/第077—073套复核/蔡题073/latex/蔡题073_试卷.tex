@@ -1,0 +1,234 @@
+\documentclass[12pt,a4paper,UTF8]{ctexart}
+\usepackage[a4paper,top=22mm,bottom=22mm,left=22mm,right=22mm,headheight=15pt]{geometry}
+\newcommand{\Needspace}[1]{\par\begingroup\dimen0=#1\relax\dimen2=\pagegoal\advance\dimen2 by-\pagetotal\ifdim\dimen0>\dimen2\newpage\fi\endgroup}
+\newcommand{\needspace}[1]{\par\begingroup\skip0=\lastskip\vskip-\skip0\dimen0=#1\relax\advance\dimen0 by\skip0\vskip\dimen0\penalty-100\vskip-\dimen0\vskip\skip0\penalty9999\endgroup}
+\usepackage{amsmath,amssymb,mathtools,bm}
+\usepackage{graphicx,xcolor,booktabs,longtable,array,enumitem,fancyhdr,caption,float,microtype,setspace}
+\usepackage[hidelinks,unicode]{hyperref}
+\usepackage[most]{tcolorbox}
+\definecolor{ContestBlue}{HTML}{17365D}
+\hypersetup{pdftitle={第073套},pdfauthor={}}
+\setstretch{1.24}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.35em}
+\setlength{\emergencystretch}{2em}
+\setlist{itemsep=0.35em,topsep=0.4em}
+\captionsetup{font=small,labelfont=bf,justification=centering}
+\setcounter{secnumdepth}{0}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small 第073套}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\ctexset{
+  section={format=\Large\bfseries\color{ContestBlue},beforeskip=1.2em,afterskip=0.7em},
+  subsection={format=\large\bfseries\color{ContestBlue},beforeskip=1.0em,afterskip=0.5em},
+  subsubsection={format=\normalsize\bfseries,beforeskip=0.8em,afterskip=0.35em}
+}
+\usepackage{calc}
+\newcounter{none}
+\let\originalsubsection\subsection
+\renewcommand{\subsection}{\needspace{6\baselineskip}\originalsubsection}
+\makeatletter
+\newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\newcommand{\maxwidth}{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\newcommand{\maxheight}{\ifdim\Gin@nat@height>0.72\textheight 0.72\textheight\else\Gin@nat@height\fi}
+\newcommand{\pandocbounded}[1]{\begingroup\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}#1\endgroup}
+\makeatother
+\begin{document}
+\begin{titlepage}
+  \centering
+  \vspace*{58mm}
+  {\Huge\bfseries\color{ContestBlue} 第073套\par}
+  \vfill
+  \vspace*{28mm}
+\end{titlepage}
+\section{第 1 题}\label{ux7b2c-1-ux9898}
+
+两块大接地金属板构成二面角 \(\theta\)。一根长 \(L\)、均匀带电总量 \(Q\)
+的细杆平行于二面角棱线，位于角平分面内，距顶点（棱线）为 \(r\)，且
+\(L\gg r\)。求杆所受静电力，分别讨论 \(\theta=180^\circ\) 与
+\(\theta=18^\circ\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.76\linewidth,height=\textheight,keepaspectratio,alt={图1-1　接地金属二面角内沿棱线方向的长带电杆}]{../figures/question-01.pdf}
+\caption*{图1-1　接地金属二面角内沿棱线方向的长带电杆}
+\end{figure}
+
+\newpage
+
+\section{第 2 题}\label{ux7b2c-2-ux9898}
+
+若干等长轻质刚杆铰接成图示可变形支架，左端固定，右端由支撑脚支起；顶点和左侧指定位置分别受竖直负载
+\(G,P\)。图示中央下横杆的轴力记为 \(N\)。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  支撑脚与地面无摩擦，求 \(N\)。
+\item
+  支撑脚与地面摩擦因数 \(\mu\le1\)，求 \(N\) 的允许范围。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.695\linewidth,height=\textheight,keepaspectratio,alt={图2-1　铰接杆支架、两处负载与中央横杆}]{../figures/question-02.pdf}
+\caption*{图2-1　铰接杆支架、两处负载与中央横杆}
+\end{figure}
+
+\newpage
+
+\section{第 3 题}\label{ux7b2c-3-ux9898}
+
+厚度为 \(l\) 的均匀长板放在两根轴距 \(2l\)
+的高速反向滚筒上。两滚筒正上方各有固定柱，平衡时与板上表面虚接触。板与滚筒、固定柱间摩擦因数均为
+\(\mu=1/2\)。初始板质心在两滚筒中点，以速度 \(v_0\) 向右。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  板质心到右滚筒正上方 \(x=l\) 时恰静止，求 \(v_0\)。
+\item
+  求板第一次回到中点的速度 \(u_1\)。
+\item
+  求充分久后板从左向右回到中点的速度 \(u_2\)。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.84\linewidth,height=\textheight,keepaspectratio,alt={图3-1　反向滚筒、上方固定柱与横向运动长板}]{../figures/question-03.pdf}
+\caption*{图3-1　反向滚筒、上方固定柱与横向运动长板}
+\end{figure}
+
+\newpage
+
+\section{第 4 题}\label{ux7b2c-4-ux9898}
+
+两根平行光滑导轨间距 \(l\)，导轨面倾角
+\(\theta=\pi/6\)，底部以导线连接。空间有竖直向下匀强磁场 \(B\)。质量
+\(m\) 的水平导体棒与导轨构成零电阻回路，自感
+
+\[
+L(x)=kx,\qquad
+k=\frac{B^2l^2}{4mg}.
+\]
+
+初态棒静止于 \(x_0\)，电流为零，且运动区间内
+\(x\gg l\)。沿斜面向上给瞬时冲量 \(I_0\)。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  求瞬时速度。
+\item
+  要使棒此后始终贴在导轨上运动，求 \(I_0\) 范围。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.72\linewidth,height=\textheight,keepaspectratio,alt={图4-1　倾斜超导导轨、水平导体棒与竖直磁场}]{../figures/question-04.pdf}
+\caption*{图4-1　倾斜超导导轨、水平导体棒与竖直磁场}
+\end{figure}
+
+\newpage
+
+\section{第 5 题}\label{ux7b2c-5-ux9898}
+
+光滑水平面上，一根长 \(2l\) 的轻杆两端固定质量均为 \(m\)
+的小球，电量分别为 \(\pm q\)。匀强磁场 \(B\) 竖直向下。初始杆中心速度
+\(v_0\) 垂直于杆，角速度 \(\omega_0\)。以初始杆中心为原点，初始杆从
+\(-q\) 指向 \(+q\) 为 \(y\) 轴，\(v_0\) 方向为 \(x\) 轴。杆从 \(-q\)
+指向 \(+q\) 的方向从 \(+y\) 轴逆时针转过的有向角为
+\(\theta\)，\(\omega=\dot\theta\)，初态 \(v_0,\omega_0\ge0\)。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  求杆中心速度 \(v_x(\theta),v_y(\theta)\) 与 \(\omega(\theta)\)。
+\item
+  求杆扫过区域的最小带宽 \(\Delta h(\omega_0)\)。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.74\linewidth,height=\textheight,keepaspectratio,alt={图5-1　异号带电双球刚性杆在垂直磁场中的初态}]{../figures/question-05.pdf}
+\caption*{图5-1　异号带电双球刚性杆在垂直磁场中的初态}
+\end{figure}
+
+\newpage
+
+\section{第 6 题}\label{ux7b2c-6-ux9898}
+
+土豆大炮的炮管截面积为 \(A\)。发射瞬间土豆静止，土豆与封闭端之间气体体积
+\(V_0\)、压强
+\(P_0>P_{\rm atm}\)。气体为二原子理想气体，快速绝热膨胀，无摩擦、无泄漏。炮管总长度
+\(L\) 从封闭端量到管口，忽略土豆自身的纵向长度。改变 \(L\)：
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  求土豆出管最大动能。
+\item
+  求实现最大动能的 \(L\)。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.82\linewidth,height=\textheight,keepaspectratio,alt={图6-1　绝热气体推动土豆并克服外界大气压}]{../figures/question-06.pdf}
+\caption*{图6-1　绝热气体推动土豆并克服外界大气压}
+\end{figure}
+
+\newpage
+
+\section{第 7 题}\label{ux7b2c-7-ux9898}
+
+焦距 \(f\) 的凸透镜沿光轴切成上下两半，拉开后以厚度 \(\delta\)
+的不透光板填充中缝。轴上点光源距透镜 \(p>f\)，波长 \(\lambda\)。屏距透镜
+\(H\)。已知
+
+\[
+f=10\,\mathrm{cm},\quad p=20\,\mathrm{cm},\quad
+\delta=1\,\mathrm{mm},\quad
+\lambda=0.5\,\mu\mathrm m,\quad H=50\,\mathrm{cm}.
+\]
+
+求屏上可见干涉条纹数。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.72\linewidth,height=\textheight,keepaspectratio,alt={图7-1　分割并拉开的凸透镜形成双像干涉}]{../figures/question-07.pdf}
+\caption*{图7-1　分割并拉开的凸透镜形成双像干涉}
+\end{figure}
+
+\newpage
+
+\section{第 8 题}\label{ux7b2c-8-ux9898}
+
+静止离子可吸收波长 \(\lambda_0=580.000\,\mathrm{nm}\) 的光。离子以 \(0\)
+到 \(v_2=5000\,\mathrm{m\,s^{-1}}\) 朝激光光源运动。
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  求激发全部离子所需激光波长范围，并画出荧光光子数的波长分布。
+\item
+  离子先经电压 \(V\) 加速，求速度区间宽度与 \(V\)
+  的关系，判断变宽或变窄。
+\item
+  荷质比 \(q/m=5.00\times10^6\,\mathrm{C\,kg^{-1}}\)，有两跃迁静止波长
+  \(580.000\,\mathrm{nm}\)、\(580.001\,\mathrm{nm}\)。求无预加速时两扫描范围；再求使两范围不重叠的最小加速电压。
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.88\linewidth,height=\textheight,keepaspectratio,alt={图8-1　逆向激光吸收测量离子束速度分布}]{../figures/question-08.pdf}
+\caption*{图8-1　逆向激光吸收测量离子束速度分布}
+\end{figure}
+\end{document}
