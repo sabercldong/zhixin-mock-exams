@@ -1,0 +1,153 @@
+\documentclass[tikz,border=5pt]{standalone}
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath}
+\usetikzlibrary{arrows.meta,calc,angles,quotes}
+\definecolor{ink}{HTML}{243447}
+\definecolor{blue}{HTML}{2765A2}
+\definecolor{red}{HTML}{B74739}
+\definecolor{green}{HTML}{3F7D5B}
+\tikzset{
+  line cap=round,line join=round,
+  body/.style={draw=ink,thick},
+  vec/.style={draw=blue,thick,-{Latex[length=2mm]}},
+  force/.style={draw=red,thick,-{Latex[length=2mm]}},
+  guide/.style={draw=gray!75,dashed},
+  cone/.style={fill=blue!9,draw=blue!65}
+}
+\begin{document}
+
+% 第1页：题图，二维与三维摆动平面
+\begin{tikzpicture}
+  % 剖面内摆动：空心点表示初始水平位置，实心点表示一般位置
+  \begin{scope}
+    \fill[gray!10] (-3.25,.2)--(0,-3.05)--(3.25,.2)--(2.75,.2)--(0,-2.55)--(-2.75,.2)--cycle;
+    \draw[body] (-3.25,.2)--(0,-3.05)--(3.25,.2);
+    \draw[body,line width=3pt] (-2.82,.32)--(2.82,.32);
+    \fill[ink] (0,.32) circle(2.5pt) node[above] {$C$};
+    \draw[guide] (0,.32)--(0,-1.55);
+    \draw[guide] (0,.32)--(-1.65,.32);
+    \draw[red,dashed,-{Latex[length=2mm]}] (-1.65,.32)
+      arc[start angle=180,end angle=232,radius=1.65];
+    \draw[red,fill=white,thick] (-1.65,.32) circle(4pt);
+    \node[above left] at (-1.65,.32) {初始};
+    \draw[body] (0,.32)--(-1.015,-.98);
+    \fill[red] (-1.015,-.98) circle(4pt) node[below left] {$m$};
+    \draw (0,-.42) arc[start angle=-90,end angle=-128,radius=.74];
+    \node at (-.37,-.46) {$\theta$};
+    \node[below] at (0,-3.45) {摆动平面位于山沟剖面内};
+  \end{scope}
+
+  % 垂直剖面摆动：山沟沿 z 方向延伸，木棍沿 x 方向横跨沟壁
+  \begin{scope}[xshift=8.8cm]
+    \coordinate (FL) at (-2.8,0);
+    \coordinate (FV) at (0,-2.55);
+    \coordinate (FR) at (2.8,0);
+    \coordinate (BL) at (-1.45,1.0);
+    \coordinate (BV) at (1.35,-1.55);
+    \coordinate (BR) at (4.15,1.0);
+    \fill[blue!7] (FL)--(FV)--(BV)--(BL)--cycle;
+    \fill[green!7] (FV)--(FR)--(BR)--(BV)--cycle;
+    \draw[body] (FL)--(FV)--(FR);
+    \draw[body] (BL)--(BV)--(BR);
+    \draw[body] (FL)--(BL) (FV)--(BV) (FR)--(BR);
+    \fill[blue!10,draw=blue!55,dashed]
+      (-.28,.78)--(1.65,2.2)--(1.65,-1.3)--(-.28,-2.72)--cycle;
+    \node[blue] at (1.36,1.83) {$\Pi_\perp$};
+    \draw[body,line width=3pt] (-2.45,.12)--(2.45,.12);
+    \fill[ink] (0,.12) circle(2.5pt) node[above left=4pt] {$C$};
+    \draw[guide] (0,.12)--(1.48,1.22);
+    \draw[red,fill=white,thick] (1.48,1.22) circle(4pt);
+    \node[above right] at (1.48,1.22) {初始};
+    \draw[body] (0,.12)--(1.18,-1.03);
+    \fill[red] (1.18,-1.03) circle(4pt) node[below right] {$m$};
+    \draw[red,dashed,-{Latex[length=2mm]}] (1.48,1.22)
+      .. controls (1.9,.25) and (1.65,-.55) .. (1.18,-1.03);
+    \coordinate (A0) at (3.35,-2.55);
+    \draw[vec] (A0)--++(1.1,0) node[right] {$x$};
+    \draw[vec] (A0)--++(0,1.15) node[above] {$y$};
+    \draw[vec] (A0)--++(.9,.66) node[right] {$z$};
+    \node[below] at (.65,-3.3) {$\Pi_\perp$为垂直于剖面的竖直摆动平面};
+  \end{scope}
+\end{tikzpicture}
+
+% 第2页：剖面内摆动的合力方向与接触锥
+\begin{tikzpicture}
+  \begin{scope}
+    \fill[gray!10] (-2.7,.1)--(0,-2.6)--(2.7,.1)--(2.3,.1)--(0,-2.18)--(-2.3,.1)--cycle;
+    \draw[body] (-2.7,.1)--(0,-2.6)--(2.7,.1);
+    \draw[body,line width=3pt] (-2.32,.23)--(2.32,.23);
+    \fill[ink] (0,.23) circle(2.5pt) node[above left] {$C$};
+    \draw[body] (0,.23)--(-1.25,-.49);
+    \fill[red] (-1.25,-.49) circle(4pt) node[below] {$m$};
+    \draw[force] (0,.23)--(1.15,2.15) node[midway,right=6pt] {$\boldsymbol R$};
+    \draw[guide] (0,.23)--(0,2.3);
+    \draw[vec] (0,.23)--(1.15,.23) node[right] {$H$};
+    \draw[vec] (1.15,.23)--(1.15,2.15) node[right=3pt] {$V$};
+    \draw (0,1.25) arc[start angle=90,end angle=59,radius=1.02];
+    \node at (.26,1.35) {$\delta$};
+    \node[align=center] at (0,-3.25) {$\tan\delta=H/V$\\最不利时$\delta_{\max}=30^\circ$};
+  \end{scope}
+
+  \begin{scope}[xshift=7.7cm]
+    % 左：单个接触处，接触力位于以法线为轴的摩擦锥内
+    \draw[body] (-3.0,-1.15)--(-.25,1.60);
+    \coordinate (A) at (-1.62,.23);
+    \fill[ink] (A) circle(2.2pt) node[below left] {$A$};
+    \draw[guide] (A)--++(45:2.15) node[above] {$\boldsymbol n_A$};
+    \draw[cone] (A)--++(27:2.0) arc[start angle=27,end angle=63,radius=2.0]--cycle;
+    \draw[vec] (A)--++(34:1.8) node[right] {$\boldsymbol R_A$};
+    \node[blue] at (-.55,.77) {$\varphi$};
+
+    % 右：经两接触约束合成后，中心载荷允许的等效偏角
+    \coordinate (O) at (2.0,-1.05);
+    \draw[guide] (O)--++(90:3.0);
+    \fill[red!8,draw=red!65] (O)--++(90:2.7)
+      arc[start angle=90,end angle=58,radius=2.7]--cycle;
+    \draw[force] (O)--++(68:2.45) node[right] {$\boldsymbol R$};
+    \draw (O)++(90:1.35) arc[start angle=90,end angle=68,radius=1.35];
+    \node at (2.28,.1) {$\delta$};
+    \node[red,right] at (4.0,.45) {$\delta\le 2\varphi$};
+    \node[align=center] at (-1.62,-2.45) {$\varphi=\arctan\mu$\\单接触摩擦角};
+    \node[align=center] at (2.1,-2.45) {两接触共同约束\\中心载荷方向};
+  \end{scope}
+\end{tikzpicture}
+
+% 第3页：垂直剖面摆动时单个接触力的三维分解
+\begin{tikzpicture}
+  \begin{scope}
+    \coordinate (A) at (0,0);
+    \coordinate (Z) at (2.5,-.65);
+    \coordinate (S) at (1.4,1.4);
+    \fill[blue!7] (A)--(Z)--($(Z)+(S)$)--(S)--cycle;
+    \draw[blue!45] (A)--(Z)--($(Z)+(S)$)--(S)--cycle;
+    \fill[ink] (A) circle(2.5pt) node[left=4pt] {$A$};
+    \draw[vec] (A)--(Z) node[below right=4pt] {$\boldsymbol e_z$};
+    \draw[vec] (A)--(S) node[above right] {$\boldsymbol s$};
+    \draw[vec] (A)--(-1.75,1.75) node[above] {$\boldsymbol n$};
+    \draw[green,thick,-{Latex[length=2mm]}] (A)--(-1.4,1.4);
+    \node[green,left] at (-.8,1.05) {$N\boldsymbol n$};
+    % s取坡向向上为正；图示最优接触分配fs<0，实际分力反向。
+    \draw[force] (A)--(-.2,-.2);
+    \node[red,below] at (-.1,-.45) {$f_s\boldsymbol s\;(f_s<0)$};
+    \draw[force] (A)--(1.2,-.312);
+    \node[red,below] at (1.55,-.55) {$f_z\boldsymbol e_z$};
+    % 合力端点等于三个分力的矢量和。
+    \draw[force] (A)--(-.4,.888);
+    \node[red,above right] at (-.4,.888) {$\boldsymbol R_A$};
+    \node[blue] at (2.75,.95) {沟壁平面};
+  \end{scope}
+
+  \begin{scope}[xshift=8.2cm,x=.055cm,y=5cm]
+    \draw[vec] (0,0)--(96,0) node[right] {$\theta$};
+    \draw[vec] (0,0)--(0,.7) node[above] {$H/V$};
+    \draw[blue,very thick,samples=180,domain=.2:89.5]
+      plot(\x,{2*tan(\x)/(tan(\x)^2+3)});
+    \draw[guide] (60,0)--(60,{1/sqrt(3)})--(0,{1/sqrt(3)});
+    \fill[red] (60,{1/sqrt(3)}) circle(.06);
+    \node[below] at (60,0) {$60^\circ$};
+    \node[left] at (0,{1/sqrt(3)}) {$1/\sqrt3$};
+    \node[align=center] at (48,-.19) {$\dfrac HV=\dfrac{2\tan\theta}{\tan^2\theta+3}$};
+  \end{scope}
+\end{tikzpicture}
+
+\end{document}

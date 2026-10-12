@@ -1,0 +1,8 @@
+from pathlib import Path
+import sys
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[3]))
+from tools.document_pipeline import quality_check
+
+if __name__ == "__main__":
+    quality_check("036")

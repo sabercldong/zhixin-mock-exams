@@ -1,0 +1,144 @@
+\documentclass[tikz,border=5pt]{standalone}
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath}
+\usetikzlibrary{arrows.meta,calc,decorations.pathreplacing}
+\definecolor{ink}{HTML}{243447}
+\definecolor{blue}{HTML}{2765A2}
+\definecolor{red}{HTML}{B74739}
+\definecolor{green}{HTML}{3F7D5B}
+\tikzset{
+  line cap=round,line join=round,
+  body/.style={draw=ink,thick},
+  ray/.style={draw=red,thick,-{Latex[length=2mm]}},
+  rayback/.style={draw=red!65,dashed},
+  guide/.style={draw=gray!75,dashed},
+  measure/.style={draw=blue,thick,<->}
+}
+\newcommand{\eye}[1]{%
+  \draw[body] ($(#1)+(-.28,0)$) .. controls ($(#1)+(0,.16)$) .. ($(#1)+(.28,0)$)
+    .. controls ($(#1)+(0,-.16)$) .. cycle;
+  \fill[ink] (#1) circle(1.7pt);
+}
+\begin{document}
+
+% 第1页：题图，平面与球面上表面的三次观察
+\begin{tikzpicture}
+  \foreach \X in {0,5.3,10.6}{
+    \begin{scope}[xshift=\X cm]
+      \fill[blue!6] (-1.25,0) rectangle (1.25,.34);
+      \draw[body] (-1.25,0) rectangle (1.25,.34);
+      \node[left] at (-1.25,.17) {$n_0$};
+      \draw[measure] (1.52,0)--(1.52,.34) node[midway,right] {$d$};
+    \end{scope}
+  }
+
+  % (a) 平面上表面
+  \begin{scope}
+    \fill[green!7] (-1,.34) rectangle (1,2.65);
+    \draw[body] (-1,.34)--(-1,2.65)--(1,2.65)--(1,.34);
+    \node at (0,1.48) {$n$};
+    \draw[measure] (1.25,.34)--(1.25,2.65) node[midway,right] {$h$};
+    \coordinate (E) at (0,3.78);
+    \eye{E}
+    \node[right=9pt] at (E) {眼睛};
+    \draw[measure] (-1.45,2.65)--(-1.45,3.78) node[midway,left] {$b$};
+    \fill[red] (0,-.72) circle(2.5pt) node[below] {$S$};
+    \draw[measure] (-.95,-.72)--(-.95,0) node[midway,left] {$a$};
+    \node[below] at (0,-1.25) {(a) 平面上表面};
+  \end{scope}
+
+  % (b1) 球面，广告仍距玻璃 a
+  \begin{scope}[xshift=5.3cm]
+    \fill[green!7] (-1,.34)--(-1,2.42)
+      .. controls (-.55,2.42) and (-.38,2.72) .. (0,2.72)
+      .. controls (.38,2.72) and (.55,2.42) .. (1,2.42)--(1,.34)--cycle;
+    \draw[body] (-1,.34)--(-1,2.42)
+      .. controls (-.55,2.42) and (-.38,2.72) .. (0,2.72)
+      .. controls (.38,2.72) and (.55,2.42) .. (1,2.42)--(1,.34);
+    \node at (0,1.45) {$n$};
+    \draw[measure] (1.25,.34)--(1.25,2.72) node[midway,right] {$h$};
+    \coordinate (E) at (0,3.85);
+    \eye{E}
+    \node[right=9pt] at (E) {眼睛};
+    \draw[measure] (-1.45,2.72)--(-1.45,3.85) node[midway,left] {$b$};
+    \fill[red] (0,-.72) circle(2.5pt) node[below] {$S$};
+    \draw[measure] (-.95,-.72)--(-.95,0) node[midway,left] {$a$};
+    \node[below] at (0,-1.25) {(b) 第一次观测};
+  \end{scope}
+
+  % (b2) 球面，广告贴玻璃下表面
+  \begin{scope}[xshift=10.6cm]
+    \fill[green!7] (-1,.34)--(-1,2.42)
+      .. controls (-.55,2.42) and (-.38,2.72) .. (0,2.72)
+      .. controls (.38,2.72) and (.55,2.42) .. (1,2.42)--(1,.34)--cycle;
+    \draw[body] (-1,.34)--(-1,2.42)
+      .. controls (-.55,2.42) and (-.38,2.72) .. (0,2.72)
+      .. controls (.38,2.72) and (.55,2.42) .. (1,2.42)--(1,.34);
+    \node at (0,1.45) {$n$};
+    \draw[measure] (1.25,.34)--(1.25,2.72) node[midway,right] {$h$};
+    \coordinate (E) at (0,3.58);
+    \eye{E}
+    \node[right=9pt] at (E) {眼睛};
+    \draw[measure] (-1.45,2.72)--(-1.45,3.58) node[midway,left] {$c$};
+    \fill[red] (0,0) circle(2.5pt) node[below=4pt] {$S$};
+    \node[below] at (0,-1.25) {(c) 第二次观测};
+  \end{scope}
+\end{tikzpicture}
+
+% 第2页：折射像与反射像的统一像深
+\begin{tikzpicture}
+  % 广告的球面折射像
+  \begin{scope}
+    \fill[green!7] (-2.4,-.25)
+      .. controls (-1.0,-.25) and (-.65,0) .. (0,0)
+      .. controls (.65,0) and (1.0,-.25) .. (2.4,-.25)
+      --(2.4,-4.3)--(-2.4,-4.3)--cycle;
+    \draw[body] (-2.4,-.25)
+      .. controls (-1.0,-.25) and (-.65,0) .. (0,0)
+      .. controls (.65,0) and (1.0,-.25) .. (2.4,-.25);
+    \draw[guide] (0,1.65)--(0,-4.45);
+    \fill[ink] (0,0) circle(2pt) node[above left] {$V$};
+    \fill[ink] (0,-2.75) circle(2pt) node[right=3pt] {$O_D$};
+    \fill[red] (0,-3.65) circle(2.5pt) node[left] {$I_S$};
+    \coordinate (A) at (.55,-.03);
+    \fill[ink] (A) circle(2pt) node[below right] {$A$};
+    \draw[ray] (0,-2.75)--(A);
+    \draw[ray] (A)--(.85,1.94);
+    \draw[rayback] (A)--(0,-3.65);
+    \draw[guide] (0,-2.1)--(A) node[midway,below right] {法线};
+    \draw[measure] (-.55,0)--(-.55,-2.75) node[midway,left] {$D$};
+    \draw[measure] (1.05,0)--(1.05,-3.65) node[midway,right] {$q_S$};
+    \node at (0,-4.85) {小广告经球面折射};
+  \end{scope}
+
+  % 眼睛的球面反射像
+  \begin{scope}[xshift=7.2cm]
+    \fill[green!7] (-2.4,-.25)
+      .. controls (-1.0,-.25) and (-.65,0) .. (0,0)
+      .. controls (.65,0) and (1.0,-.25) .. (2.4,-.25)
+      --(2.4,-4.3)--(-2.4,-4.3)--cycle;
+    \draw[body] (-2.4,-.25)
+      .. controls (-1.0,-.25) and (-.65,0) .. (0,0)
+      .. controls (.65,0) and (1.0,-.25) .. (2.4,-.25);
+    \draw[guide] (0,2.8)--(0,-4.45);
+    \fill[ink] (0,0) circle(2pt) node[above left] {$V$};
+    \coordinate (E) at (0,2.45);
+    \eye{E}
+    \node[above=6pt] at (E) {$E$};
+    \fill[red] (0,-.72) circle(2.5pt) node[left] {$I_E$};
+    \coordinate (A) at (.45,-.03);
+    \fill[ink] (A) circle(2pt) node[below right] {$A$};
+    \draw[ray] (E)--(A);
+    \draw[ray] (A)--(1.26,1.21);
+    \draw[rayback] (A)--(0,-.72);
+    \draw[guide] (0,-2.05)--(A) node[midway,below right] {法线};
+    \draw[measure] (-.55,0)--(-.55,2.45) node[midway,left] {$s$};
+    \draw[measure] (.92,0)--(.92,-.72) node[midway,right] {$q_E$};
+    \node at (0,-4.85) {眼睛经凸球面反射};
+  \end{scope}
+
+  \node[blue,align=center] at (3.6,-5.75)
+    {像重合条件：$q_S=q_E$\\两种像深均从球面顶点$V$向下量取};
+\end{tikzpicture}
+
+\end{document}

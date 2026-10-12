@@ -1,0 +1,90 @@
+\documentclass[tikz,border=5pt]{standalone}
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath}
+\usetikzlibrary{arrows.meta,decorations.pathmorphing,calc}
+\definecolor{ink}{HTML}{243447}
+\definecolor{blue}{HTML}{2765A2}
+\definecolor{red}{HTML}{B74739}
+\definecolor{green}{HTML}{3F7D5B}
+\tikzset{
+  line cap=round,line join=round,
+  wire/.style={draw=ink,thick},
+  vec/.style={draw=blue,thick,-{Latex[length=2mm]}},
+  force/.style={draw=red,thick,-{Latex[length=2mm]}},
+  current/.style={draw=green,thick,-{Latex[length=2mm]}}
+}
+\newcommand{\bdot}[1]{\draw[ink] (#1) circle(3.2pt);\fill[ink] (#1) circle(1.2pt);}
+\begin{document}
+
+% 第1页：题图
+\begin{tikzpicture}
+  \draw[wire] (0,0)--(6.4,0) (0,2.6)--(6.4,2.6);
+  \draw[wire] (0,0)--(0,.75) (0,1.85)--(0,2.6);
+  \draw[wire,fill=white] (0,1.3) circle(.55);
+  \node at (0,1.3) {$U(t)$};
+  \draw[wire,line width=4pt] (4.55,0)--(4.55,2.6);
+  \node[right] at (4.55,2.25) {$m$};
+  \draw[<->,blue,thick] (5.05,0)--(5.05,2.6) node[midway,right] {$l$};
+  \draw[current] (4.28,.45)--(4.28,1.55) node[left] {$i$};
+  \draw[vec] (4.75,2.95)--(6.05,2.95) node[right] {$v$};
+  \draw[force] (4.35,1.85)--(3.15,1.85) node[left] {$kv$};
+  \foreach \x in {1.2,2.2,3.2,5.45}
+    \foreach \y in {.65,1.45,2.15}{\bdot{\x,\y}}
+  \node[above] at (2.7,2.75) {$\boldsymbol B$垂直纸面向外};
+  \node[below] at (2.8,-.45) {导轨理想；导体棒电阻忽略；回路自感为$L$};
+\end{tikzpicture}
+
+% 第2页：机电端口与等效电路
+\begin{tikzpicture}
+  % 左：机电端口
+  \begin{scope}
+    \draw[wire] (-2.4,0)--(2.4,0) (-2.4,2.4)--(2.4,2.4);
+    \draw[wire,line width=4pt] (1.25,0)--(1.25,2.4);
+    \draw[current] (.95,.45)--(.95,1.45) node[left] {$i$};
+    \draw[vec] (1.45,2.75)--(2.55,2.75) node[right] {$v$};
+    \draw[force] (1.05,1.75)--(.05,1.75) node[left] {$kv$};
+    \draw[force] (1.45,1.15)--(2.45,1.15) node[right] {$Bli$};
+    \draw[<->,blue,thick] (-2.05,.08)--(-2.05,2.32)
+      node[midway,left] {$u_m=Blv$};
+    \foreach \x in {-1.7,-.7,.3}
+      \foreach \y in {.6,1.4}{\bdot{\x,\y}}
+    \node[align=center] at (0,-.85)
+      {$i=\dfrac{m}{B^2l^2}\dot u_m+\dfrac{k}{B^2l^2}u_m$};
+  \end{scope}
+
+  % 箭头表示端口等效
+  \draw[vec] (3.15,1.2)--(4.45,1.2) node[midway,above] {端口等效};
+
+  % 右：L0 串联 (R0 || C0)
+  \begin{scope}[xshift=7.2cm]
+    \draw[wire] (-2.1,0)--(3.35,0);
+    \draw[wire] (-2.1,0)--(-2.1,.72) (-2.1,1.68)--(-2.1,2.4);
+    \draw[wire,fill=white] (-2.1,1.2) circle(.48);
+    \node at (-2.1,1.2) {$U$};
+    \draw[wire] (-2.1,2.4)--(-1.55,2.4);
+    \draw[wire,decorate,decoration={coil,aspect=.45,segment length=5pt,amplitude=4pt}]
+      (-1.55,2.4)--(.15,2.4);
+    \draw[wire] (.15,2.4)--(3.35,2.4);
+    \draw[current] (-1.95,2.78)--(-1.0,2.78) node[midway,above] {$i$};
+    \node[below] at (-.7,2.28) {$L_0=L$};
+
+    \draw[wire] (.65,2.4)--(.65,1.68);
+    \draw[wire] (.45,1.68) rectangle (.85,.72);
+    \node[left] at (.45,1.2) {$R_0$};
+    \draw[wire] (.65,.72)--(.65,0);
+
+    \draw[wire] (2.45,2.4)--(2.45,1.48);
+    \draw[wire] (2.15,1.48)--(2.75,1.48);
+    \draw[wire] (2.15,1.30)--(2.75,1.30);
+    \draw[wire] (2.45,1.30)--(2.45,0);
+    \node[right] at (2.75,1.39) {$C_0$};
+
+    \draw[<->,blue,thick] (3.65,.08)--(3.65,2.32)
+      node[midway,right] {$u_m$};
+    \node[align=center] at (.65,-.62) {$R_0=\dfrac{B^2l^2}{k}$};
+    \node[align=center] at (2.45,-1.28) {$C_0=\dfrac{m}{B^2l^2}$};
+    \node[below] at (1.35,-2.02) {$L_0$与$(R_0\parallel C_0)$串联};
+  \end{scope}
+\end{tikzpicture}
+
+\end{document}

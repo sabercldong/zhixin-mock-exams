@@ -1,0 +1,165 @@
+\documentclass[tikz,border=5pt]{standalone}
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath,amssymb}
+\usetikzlibrary{arrows.meta,calc}
+\definecolor{ink}{HTML}{243447}
+\definecolor{blue}{HTML}{2765A2}
+\definecolor{red}{HTML}{B74739}
+\definecolor{green}{HTML}{3F7D5B}
+\tikzset{body/.style={draw=ink,thick},guide/.style={draw=gray!60,dashed},
+  vec/.style={draw=blue,thick,-{Latex[length=2mm]}},
+  force/.style={draw=red,thick,-{Latex[length=2mm]}},
+  dim/.style={draw=ink,thin,{Latex[length=1.4mm]}-{Latex[length=1.4mm]}},
+  line cap=round,line join=round}
+\def\L{3.2}
+\def\rad{0.55}
+% 正交投影：屏幕横轴=(-1,0,1)/sqrt(2)，竖轴=(1,1,1)/sqrt(3)。
+\tikzset{space/.style={x={(-.70710678cm,.57735027cm)},
+  y={(0cm,.57735027cm)},z={(.70710678cm,.57735027cm)}}}
+\begin{document}
+
+% 1：题图，盒体透明表示，以显示球与三个内壁的关系。
+\begin{tikzpicture}
+  \begin{scope}[space]
+    \coordinate(O) at (0,0,0);
+    \coordinate(C) at (\rad,\rad,\rad);
+    \coordinate(P) at (0,\rad,\rad);
+    \coordinate(M) at (\rad,0,\rad);
+    \coordinate(N) at (\rad,\rad,0);
+    \fill[blue!8] (0,0,0)--(0,\L,0)--(0,\L,\L)--(0,0,\L)--cycle;
+    \fill[green!8] (0,0,0)--(\L,0,0)--(\L,\L,0)--(0,\L,0)--cycle;
+    \draw[guide] (\L,0,0)--(\L,0,\L)--(0,0,\L);
+    \draw[guide] (\L,0,\L)--(\L,\L,\L);
+    \draw[body] (0,0,0)--(\L,0,0)--(\L,\L,0)--(\L,\L,\L)
+      --(0,\L,\L)--(0,0,\L)--cycle;
+    \draw[body] (0,0,0)--(0,\L,0)--(\L,\L,0);
+    \draw[body] (0,\L,0)--(0,\L,\L);
+    \draw[guide] (O)--(\L,\L,\L);
+    \draw[blue,thick,fill=white] (C) circle (\rad cm);
+    \draw[blue!40] (C) ellipse[x radius=\rad cm,y radius=.16cm];
+    \draw[guide] (C)--(P) (C)--(M) (C)--(N);
+    \fill[ink] (C) circle(1.1pt);
+    \fill[ink] (P) circle(1.4pt) node[above right,xshift=1mm] {$P$};
+    \draw[ink,fill=white] (M) circle(1.4pt) node[below,yshift=-1mm] {$M$};
+    \fill[ink] (N) circle(1.4pt) node[above left,xshift=-1mm] {$N$};
+    \node[below] at (O) {$O$};
+    \node[above right] at (C) {$C$};
+  \end{scope}
+  \draw[body] (-2.75,-.05)--(2.75,-.05);
+  \foreach \x in {-2.6,-2.3,...,2.5}{\draw[gray!45] (\x,-.05)--(\x-.14,-.21);}
+  \draw[vec] (2.9,3.7)--(2.9,4.7) node[above] {竖直};
+  \node at (0,-.55) {体对角线竖直；盒体透明示意};
+  \begin{scope}[xshift=6.1cm,yshift=2.5cm]
+    \draw[body,fill=blue!4] (0,0) circle(1.3);
+    \draw[guide] (0,-1.55)--(0,1.65);
+    \draw[guide] (0,0)--(1.7,-.98) (0,0)--(-1.7,-.98);
+    \draw[vec] (0,1.3)--(0,1.75) node[above] {$+x$};
+    \node[right] at (1.7,-.98) {$+y$};
+    \node[left] at (-1.7,-.98) {$+z$};
+    \fill[ink] (0,0) circle(1.3pt) node[below right] {$C$};
+    \draw[red,fill=white] (0,.78) circle(.1);
+    \draw[red] (-.06,.72)--(.06,.84) (-.06,.84)--(.06,.72);
+    \node[left] at (-.12,.78) {$F$};
+    \draw[dim] (.45,0)--(.45,.78) node[midway,right] {$h=\lambda r$};
+    \draw[thin,gray!60] (.12,0)--(.6,0) (.12,.78)--(.6,.78);
+    \node at (0,-1.9) {俯视：$F$ 竖直向下，投影为入纸面};
+  \end{scope}
+\end{tikzpicture}
+
+% 2：局部三维几何及两个独立接触点的反力。
+\begin{tikzpicture}
+  \begin{scope}[space,scale=1.1]
+    \coordinate(C) at (1.1,1.1,1.1);
+    \coordinate(P) at (0,1.1,1.1);
+    \coordinate(M) at (1.1,0,1.1);
+    \coordinate(N) at (1.1,1.1,0);
+    \coordinate(H) at (1.1,.55,.55);
+    \fill[blue!5] (0,0,0)--(0,2.6,0)--(0,2.6,2.6)--(0,0,2.6)--cycle;
+    \fill[green!5] (0,0,0)--(2.6,0,0)--(2.6,2.6,0)--(0,2.6,0)--cycle;
+    \draw[guide] (0,0,0)--(0,2.6,0) (0,0,0)--(2.6,0,0) (0,0,0)--(0,0,2.6);
+    \draw[blue,thick] (C) circle(1.1cm);
+    \draw[blue!35] (C) ellipse[x radius=1.1cm,y radius=.3cm];
+    \draw[guide] (C)--(P) (C)--(M) (C)--(N);
+    \draw[green,very thick] (M)--(N);
+    \draw[dim] (C)--(H);
+    \fill[ink] (C) circle(1.5pt) node[above] {$C$};
+    \fill[ink] (P) circle(1.7pt) node[right] {$P$};
+    \draw[ink,fill=white] (M) circle(1.7pt) node[below right] {$M$};
+    \fill[ink] (N) circle(1.7pt) node[below left] {$N$};
+    \draw[thin,gray!55] (H)--++(0,-.65) node[below,ink] {$H$};
+  \end{scope}
+  \node at (0,-.45) {$H$ 为 $MN$ 中点，$CH=r/\sqrt2$};
+  \begin{scope}[xshift=4.5cm,yshift=2.8cm]
+    \node[above] at (.7,1.05) {$P$ 点};
+    \fill[ink] (0,0) circle(1.6pt);
+    \draw[force] (0,0)--(1.55,0) node[right] {$N_P\boldsymbol e_x$};
+    \draw[force] (0,0)--(0,-1.05);
+    \node[below,align=center] at (.25,-1.05) {$-p(\boldsymbol e_y+\boldsymbol e_z)/\sqrt2$};
+  \end{scope}
+  \begin{scope}[xshift=8.4cm,yshift=1.05cm]
+    \node[above,align=center] at (.5,1.5) {$M$ 点\\$N$ 点由 $y,z$ 互换};
+    \fill[ink] (0,0) circle(1.6pt);
+    \draw[force] (0,0)--(1.4,0) node[right] {$f\boldsymbol e_x$};
+    \draw[force] (0,0)--(-.6,1.05) node[left] {$N_0\boldsymbol e_y$};
+    \draw[force] (0,0)--(.55,.96) node[right] {$-s\boldsymbol e_z$};
+    \node[below] at (.45,-.4) {$|\boldsymbol f_M|=\sqrt{f^2+s^2}$};
+  \end{scope}
+\end{tikzpicture}
+
+% 3：运动学模式，只画实际参与速度约束的向量。
+\begin{tikzpicture}
+  \foreach \shift/\name in {0/固定球心打滑,6/两壁纯滚动}{
+    \begin{scope}[xshift=\shift cm]
+      \draw[body,fill=blue!3] (0,0) circle(1.18);
+      \draw[blue!30] (0,0) ellipse[x radius=1.18cm,y radius=.3cm];
+      \coordinate (C\shift) at (0,0);
+      \coordinate (P\shift) at (.834,-.681);
+      \coordinate (M\shift) at (0,-.681);
+      \coordinate (N\shift) at (-.834,-.681);
+      \fill[ink] (C\shift) circle(1.4pt) node[above right] {$C$};
+      \fill[ink] (P\shift) circle(1.6pt) node[right] {$P$};
+      \draw[ink,fill=white] (M\shift) circle(1.6pt) node[below right] {$M$};
+      \fill[ink] (N\shift) circle(1.6pt) node[below left] {$N$};
+      \draw[guide] (C\shift)--(P\shift) (C\shift)--(M\shift) (C\shift)--(N\shift);
+      \node[above] at (0,1.55) {\name};
+    \end{scope}
+  }
+  \draw[vec] (P0)--++(.55,.9) node[right] {$\boldsymbol v_P$};
+  \draw[vec] (M0)--++(.6,-.49);
+  \draw[vec] (N0)--++(.6,-.49);
+  \node[below] at (-.05,-1.65) {$\boldsymbol v_M,\boldsymbol v_N\parallel-\boldsymbol e_x$};
+  \draw[force] (-1.6,.4)--(-2.25,.4) node[left] {$\boldsymbol\omega\parallel\boldsymbol t$};
+  \node at (0,-2.65) {$\boldsymbol v_C=0$，摩擦与各点滑速反向};
+  \draw[green,very thick] (5.0,-.681)--(6.35,-.681);
+  \draw[vec] (C6)--++(-.85,.69) node[left] {$v\boldsymbol e_x$};
+  \draw[vec] (P6)--++(0,1.0) node[right] {$\boldsymbol v_P$};
+  \node[below] at (5.75,-1.3) {$\boldsymbol v_M=\boldsymbol v_N=0$};
+  \node at (6,-2.65) {$|\boldsymbol\omega|=\sqrt2v/r$，$P$ 接触分离};
+\end{tikzpicture}
+
+% 4：有限载荷门槛；不将可行模式标成互斥的“必然运动区”。
+\begin{tikzpicture}[x=10cm,y=5cm]
+  \draw[vec] (0,0)--(.79,0) node[right] {$\mu$};
+  \draw[vec] (0,0)--(0,.8) node[above] {$\lambda$};
+  \draw[blue,very thick,domain=0:.4472135955,samples=120]
+    plot(\x,{\x*(sqrt(1-\x*\x)+sqrt(2)-\x)/(sqrt(3)*(sqrt(1-\x*\x)+sqrt(2)*\x*\x))});
+  \draw[blue,very thick] (.4472135955,.40824829046)--(.7071067812,.40824829046);
+  \draw[red,thick,domain=0:.5,samples=120]
+    plot(\x,{\x*(1+sqrt(2)-\x)/(sqrt(3)*(1+sqrt(2)*\x*\x))});
+  \draw[guide] (0,.40824829046)--(.74,.40824829046);
+  \node[left] at (0,.40824829046) {$1/\sqrt6$};
+  \foreach \a/\lab in {.4472135955/{1/\sqrt5},.5/{1/2},.7071067812/{1/\sqrt2}}{
+    \draw[guide] (\a,0)--(\a,.40824829046);
+  }
+  \node[below] at (.43,-.015) {$1/\sqrt5$};
+  \draw[thin,gray!60] (.5,-.005)--(.53,-.07);
+  \node[below] at (.53,-.07) {$1/2$};
+  \node[below] at (.7071067812,-.015) {$1/\sqrt2$};
+  \fill[green] (.46,.6) circle(2pt);
+  \draw[guide] (.46,.6)--(.46,.45);
+  \node[above right,green] at (.46,.6) {$(0.46,0.6)$：两分支相容};
+  \draw[blue,very thick] (.06,.72)--(.13,.72) node[right,ink] {$k_s$：静态承载};
+  \draw[red,thick] (.06,.6)--(.13,.6) node[right,ink] {$k_d$：固定轴滑动};
+  \node[below,align=center] at (.39,-.2) {$\lambda$ 超过相应曲线，才可能在有限载荷到达该门槛\\$\mu>1/\sqrt2$ 另须检查静力自锁；未画成“必滚区”};
+\end{tikzpicture}
+\end{document}
