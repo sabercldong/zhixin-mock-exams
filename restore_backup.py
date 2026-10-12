@@ -35,6 +35,24 @@ def main():
     for name,sha in sums.items():
         p=assets/name
         if not p.is_file() or digest(p)!=sha:raise SystemExit('Checksum failed: '+name)
+    parts_index=assets/'archive-parts.json'
+    if parts_index.exists():
+        archives=[]
+        assembly=assets/'.assembled';assembly.mkdir(exist_ok=True)
+        for record in json.loads(parts_index.read_text())['archives']:
+            if record['parts']:
+                archive=assembly/record['name'];h=hashlib.sha256()
+                with archive.open('wb') as out:
+                    for name in record['parts']:
+                        with (assets/name).open('rb') as part:
+                            for b in iter(lambda:part.read(4*1024**2),b''):out.write(b);h.update(b)
+                actual_sha=h.hexdigest()
+            else:
+                archive=assets/record['name'];actual_sha=digest(archive)
+            if actual_sha!=record['sha256'] or archive.stat().st_size!=record['size']:
+                raise SystemExit('Archive reconstruction failed: '+record['name'])
+            archives.append(archive)
+            print('Verified archive:',record['name'],flush=True)
     manifest=json.loads((assets/'snapshot-manifest.json').read_text())
     records=manifest['files'];canonical={r['path']:r for r in records if r['path']==r['canonical']}
     extracted=set();dest.mkdir(parents=True,exist_ok=True)

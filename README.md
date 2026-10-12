@@ -24,14 +24,14 @@
 
 备份按文件内容去重，分成若干独立ZIP附件。路径映射保存于 `snapshot-manifest.json`；同一内容在多个目录中的副本会在恢复时补齐。
 
-1. 下载该备份中的全部 `backup-*.zip`、`snapshot-manifest.json`、`restore_backup.py` 和 `SHA256SUMS.txt`，放在同一目录。
+1. 下载该备份中的全部 `backup-*` 附件、`archive-parts.json`、`snapshot-manifest.json`、`restore_backup.py` 和 `SHA256SUMS.txt`，放在同一目录。
 2. 使用Python 3执行：
 
 ```sh
 python3 restore_backup.py --destination ../质心模拟题_完整恢复
 ```
 
-恢复程序校验每个ZIP、每份文件、全部副本和符号链接。目标目录必须为空。完成后可把恢复目录上传到百度网盘。
+恢复程序先合并较小的上传分片，再校验每个ZIP、每份文件、全部副本和符号链接。目标目录必须为空。完成后可把恢复目录上传到百度网盘。
 
 GitHub页面自动提供的“Source code”压缩包只包含Git跟踪的文件；完整备份应下载上述全部附件。
 
