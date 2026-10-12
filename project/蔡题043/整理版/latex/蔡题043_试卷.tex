@@ -1,0 +1,229 @@
+\documentclass[12pt,a4paper,UTF8]{ctexart}
+\usepackage[a4paper,top=22mm,bottom=22mm,left=22mm,right=22mm,headheight=15pt]{geometry}
+\usepackage{amsmath,amssymb,mathtools,bm}
+\usepackage{graphicx,xcolor,booktabs,longtable,array,enumitem,fancyhdr,caption,float,microtype,setspace}
+\newcommand{\Needspace}[1]{\par\begingroup\dimen0=#1\relax\dimen2=\pagegoal\advance\dimen2 by-\pagetotal\ifdim\dimen0>\dimen2\newpage\fi\endgroup}
+\newcommand{\needspace}[1]{\par\begingroup\skip0=\lastskip\vskip-\skip0\dimen0=#1\relax\advance\dimen0 by\skip0\vskip\dimen0\penalty-100\vskip-\dimen0\vskip\skip0\penalty9999\endgroup}
+\usepackage[hidelinks,unicode]{hyperref}
+\usepackage[most]{tcolorbox}
+\definecolor{ContestBlue}{HTML}{17365D}
+\hypersetup{pdftitle={第 043 套},pdfauthor={}}
+\setstretch{1.24}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.35em}
+\setlength{\emergencystretch}{2em}
+\setlist{itemsep=0.35em,topsep=0.4em}
+\captionsetup{font=small,labelfont=bf,justification=centering}
+\setcounter{secnumdepth}{0}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small 第 043 套}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\ctexset{
+  section={format=\Large\bfseries\color{ContestBlue},beforeskip=1.2em,afterskip=0.7em},
+  subsection={format=\large\bfseries\color{ContestBlue},beforeskip=1.0em,afterskip=0.5em},
+  subsubsection={format=\normalsize\bfseries,beforeskip=0.8em,afterskip=0.35em}
+}
+\makeatletter
+\newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\newcommand{\maxwidth}{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\newcommand{\maxheight}{\ifdim\Gin@nat@height>0.72\textheight 0.72\textheight\else\Gin@nat@height\fi}
+\newcommand{\pandocbounded}[1]{\begingroup\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}#1\endgroup}
+\makeatother
+\begin{document}
+\begin{titlepage}
+  \centering
+  \vspace*{58mm}
+  {\Huge\bfseries\color{ContestBlue} 第 043 套\par}
+  \vfill
+  \vspace*{28mm}
+\end{titlepage}
+\section{第 1 题}\label{ux7b2c-1-ux9898}
+
+一列汽车排队等红灯，初始车间距为
+\(2\,\mathrm m\)，这里的间距指前车尾到后车头的距离。汽车启动后以
+\(1\,\mathrm{m/s^2}\) 加速；后车等前车把间距拉到 \(7\,\mathrm m\)
+时才启动。每辆车加速到 \(10\,\mathrm{m/s}\) 后改为匀速。
+
+（1）车队全部匀速行驶时，车间距是多少？
+
+（2）前车以 \(1\,\mathrm{m/s^2}\)
+减速，后车延迟一段时间后以相同加速度减速。为使此后两车间距始终大于
+\(2\,\mathrm m\)，后车应在多少时间内开始减速？
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.86\linewidth,height=\textheight,keepaspectratio,alt={题1　启动延迟与前尾---后头间距}]{../figures/question-01.pdf}
+\caption{题1　启动延迟与前尾---后头间距}
+\end{figure}
+
+\newpage
+
+\section{第 2 题}\label{ux7b2c-2-ux9898}
+
+用德布罗意波和驻波条件研究受限制的电子，电子质量为 \(m\)，普朗克常量为
+\(h\)。
+
+（1）电子限制在间距为 \(L\) 的两堵理想硬墙之间，接触点为驻波节点。
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
+\tightlist
+\item
+  求量子化后的速度大小和能量；b.
+  求电子推一面墙的平均力；c.~求位移---动量相空间中的面积。
+\end{enumerate}
+
+（2）电子限制在半径为 \(R\) 的圆形硬墙内。分别求沿正三角形、正方形和正
+\(\ell\) 边形周期轨道运动时的能量 \(E_{3n},E_{4n},E_{\ell n}\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.88\linewidth,height=\textheight,keepaspectratio,alt={题2　硬墙驻波与圆内周期多边形}]{../figures/question-02.pdf}
+\caption{题2　硬墙驻波与圆内周期多边形}
+\end{figure}
+
+\newpage
+
+\section{第 3 题}\label{ux7b2c-3-ux9898}
+
+均匀膨胀满足 \(v(t)=H(t)r(t)\)。以当前距离 \(r_0\) 定义尺度因子
+\(a(t)=r(t)/r_0\)，当前时刻为 \(t_0\)，有 \(a(t_0)=1\)。把大爆炸时刻记为
+\(t=0\)，取极限 \(a(t)\to0\)。
+
+（1）用 \(a,\dot a\) 表示 \(H(t)\)。
+
+（2）只考虑均匀质量密度 \(\rho\) 的万有引力，求 \(\ddot a/a\)。
+
+（3）在膨胀与再坍缩的临界、总机械能为零的模型中，求 \(\dot a^2\)。
+
+（4）若共动球内总质量守恒，用当前密度 \(\rho_0\) 与 \(a(t)\) 表示
+\(\rho(t)\)。
+
+（5）若 \(a(t)=(t/t_0)^n\)，求 \(n\)。
+
+（6）给定
+\(H_0=72\,\mathrm{km\,s^{-1}\,Mpc^{-1}}\)，\(1\,\mathrm{Mpc}=10^6\,\mathrm{pc}\)，\(1\,\mathrm{pc}=3.09\times10^{16}\,\mathrm m\)，求本模型的当前年龄。
+
+（7）求当前密度 \(\rho_0\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.84\linewidth,height=\textheight,keepaspectratio,alt={题3　共动球与尺度因子}]{../figures/question-03.pdf}
+\caption{题3　共动球与尺度因子}
+\end{figure}
+
+\newpage
+
+\section{第 4 题}\label{ux7b2c-4-ux9898}
+
+无自旋、无电荷黑洞的史瓦西半径为
+\(R_S=2GM/c^2\)。设质子在黑洞外绕转，按类比波尔原子的简化模型，把它称为黑洞---质子原子（BHPA）。
+
+（1）求这种模型中最小可能的轨道半径 \(r_B\)。
+
+（2）求能组成这种模型的黑洞质量上限。
+
+（3）求基态电离能。
+
+（4）题给黑洞辐射温度估算式
+\(T_{\rm BH}=10^{23}\,\mathrm{K\cdot kg}/M\)。结合计算数据，讨论上述模型是否可靠。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.85\linewidth,height=\textheight,keepaspectratio,alt={题4　波尔轨道、视界与模型边界}]{../figures/question-04.pdf}
+\caption{题4　波尔轨道、视界与模型边界}
+\end{figure}
+
+\newpage
+
+\section{第 5 题}\label{ux7b2c-5-ux9898}
+
+一团平衡辐射气体体积为 \(V\)，单位体积内能为 \(u=\beta T^4\)，压强为
+\(P=u/3\)，其中 \(\beta\) 为常量，\(T\) 为热力学温度。
+
+（1）用热力学第一定律求 \(\delta Q\)，以 \(V,T\) 为变量。
+
+（2）由 \(dS=\delta Q_{\rm rev}/T\) 求熵。
+
+（3）把它放在绝热膨胀的球形容器中，半径满足
+\(\dot r=\alpha r\)，\(\alpha\) 为常量，初态 \(r=r_0,T=T_0\)。求
+\(T(t)\)。
+
+（4）给定
+\(\alpha=72\,\mathrm{km\,s^{-1}\,Mpc^{-1}}\)，\(1\,\mathrm{Mpc}=3.26\times10^6\,\mathrm{ly}\)，求
+\(\alpha\) 的量纲与SI数值。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.84\linewidth,height=\textheight,keepaspectratio,alt={题5　辐射气体绝热膨胀}]{../figures/question-05.pdf}
+\caption{题5　辐射气体绝热膨胀}
+\end{figure}
+
+\newpage
+
+\section{第 6 题}\label{ux7b2c-6-ux9898}
+
+两面半无限平面镜夹角为 \(72^\circ\)，关于零度方向对称，镜面方向分别为
+\(+36^\circ\) 与 \(-36^\circ\)。夹角内放置圆弧形发光标尺，刻度为
+\(-36^\circ\) 到 \(+36^\circ\)。观察者在角方向 \(\phi\)，其中
+\(-36^\circ<\phi<36^\circ\)。在绕镜面交点的角位置 \(\theta\)
+看见的像所对应的原标尺刻度记为 \(\varphi(\theta,\phi)\)。
+
+求以下四个角区间内的 \(\varphi(\theta,\phi)\)，必要时分段：
+
+（1）\(36^\circ<\theta<108^\circ\)；（2）\(108^\circ<\theta<180^\circ\)；（3）\(180^\circ<\theta<252^\circ\)；（4）\(252^\circ<\theta<324^\circ\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.86\linewidth,height=\textheight,keepaspectratio,alt={题6　72度双镜、标尺与角度基准}]{../figures/question-06.pdf}
+\caption{题6　72度双镜、标尺与角度基准}
+\end{figure}
+
+\newpage
+
+\section{第 7 题}\label{ux7b2c-7-ux9898}
+
+两根光滑平行导轨相距 \(\ell\)，左端接理想电容
+\(C\)。导轨区域有垂直纸面向里的匀强磁场
+\(B\)。两根导体棒横跨导轨，质量、电阻分别为 \(m_1,m_2\) 和
+\(r_1,r_2\)，初速度分别为
+\(v_{10},v_{20}\)，均以向右为正。电容初始不带电，并假定两棒在运动中不相碰。
+
+（1）\(m_1=m_2=m\)，\(r_1=r_2=r\) 时，求末态共同速度 \(v_{f1}\)。
+
+（2）求从初态到最终匀速后，第二根棒相对第一根棒的位移变化 \(S_1\)。
+
+（3）\(m_1=m/2,m_2=m,r_1=r,r_2=r/2\) 时，求末态共同速度 \(v_{f2}\)。
+
+（4）求此时的相对位移变化 \(S_2\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.86\linewidth,height=\textheight,keepaspectratio,alt={题7　两棒、电容与磁场的电路}]{../figures/question-07.pdf}
+\caption{题7　两棒、电容与磁场的电路}
+\end{figure}
+
+\newpage
+
+\section{第 8 题}\label{ux7b2c-8-ux9898}
+
+轻质刚性圆桌的桌面为单位半径的圆，在圆周 \(N\) 等分点处装有 \(N\)
+条等长桌腿。桌腿能被压缩、不能被拉伸，可视为劲度系数为 \(k\)
+的单向弹簧。在桌面放置重力为 \(G\) 的质点，并取小形变近似 \(G\ll kr\)。
+
+（1）\(N=4\) 时，求使恰好一条桌腿悬空的质点位置区域总面积 \(S_1\)。
+
+（2）\(N\ge5\)、\(m\le N-3\) 时，求使恰好 \(m\) 条桌腿悬空的区域总面积
+\(S_2\)。计算参数 \(N=21,m=15\)。
+
+原卷前文写单位半径，形变条件中又使用 \(r\)。以下先以一般桌面半径 \(r\)
+推导，原题结果令 \(r=1\)。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.88\linewidth,height=\textheight,keepaspectratio,alt={题8　单向弹簧腿与载荷位置}]{../figures/question-08.pdf}
+\caption{题8　单向弹簧腿与载荷位置}
+\end{figure}
+\end{document}
