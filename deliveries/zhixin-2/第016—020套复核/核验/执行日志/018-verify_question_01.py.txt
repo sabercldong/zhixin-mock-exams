@@ -1,0 +1,119 @@
+{
+  "question": 1,
+  "verified_math": true,
+  "document_complete": true,
+  "normalized_units": "a=g=m=1; theta clockwise; x right and y up",
+  "geometry": [
+    "sqrt(3)/2",
+    "-1/6",
+    "5*sqrt(3)/54",
+    "16*sqrt(3)/27"
+  ],
+  "expressions": {
+    "smooth": {
+      "w2": "9/2 - 9*sqrt(3)/4",
+      "alpha": "9/64 + 5*sqrt(3)/32",
+      "vx_over_w": "sqrt(3)/6",
+      "vy_over_w": "-2/3",
+      "ax": "-139/64 + 147*sqrt(3)/128",
+      "ay": "13/32 - 7*sqrt(3)/16",
+      "agx": "0",
+      "agy": "-83/128 + 25*sqrt(3)/64",
+      "friction": "0",
+      "normal": "45/128 + 25*sqrt(3)/64"
+    },
+    "rolling": {
+      "w2": "72/43 - 36*sqrt(3)/43",
+      "alpha": "-126/1849 + 256*sqrt(3)/1849",
+      "vx_over_w": "2*sqrt(3)/3",
+      "vy_over_w": "-2/3",
+      "ax": "-1552/1849 + 948*sqrt(3)/1849",
+      "ay": "428/1849 - 400*sqrt(3)/1849",
+      "agx": "-132/1849 + 195*sqrt(3)/1849",
+      "agy": "-409/1849 + 244*sqrt(3)/1849",
+      "friction": "-132/1849 + 195*sqrt(3)/1849",
+      "normal": "244*sqrt(3)/1849 + 1440/1849"
+    }
+  },
+  "values": {
+    "smooth": {
+      "w2": 0.6028856829700261,
+      "alpha": 0.4112579386826371,
+      "vx_over_w": 0.28867513459481287,
+      "vy_over_w": -0.6666666666666666,
+      "ax": -0.18272290068261748,
+      "ay": -0.3515222283113838,
+      "agx": 0.0,
+      "agy": 0.028144846706592692,
+      "friction": 0.0,
+      "normal": 1.0281448467065928,
+      "ode_w2": 0.6028856828937468,
+      "ode_relative_error": 1.2652368160581415e-10,
+      "cartesian_focus_v": [
+        0.22414386394775665,
+        -0.5176380870947073
+      ],
+      "cartesian_focus_a": [
+        -0.18272290347454145,
+        -0.3515222279926178
+      ]
+    },
+    "rolling": {
+      "w2": 0.22432955645396319,
+      "alpha": 0.171663064758049,
+      "vx_over_w": 1.1547005383792515,
+      "vy_over_w": -0.6666666666666666,
+      "ax": 0.048666395659976026,
+      "ay": -0.14322353868445156,
+      "agx": 0.11127631556296975,
+      "agy": 0.007366358597515446,
+      "friction": 0.11127631556296975,
+      "normal": 1.0073663585975154,
+      "ode_w2": 0.22432955642601002,
+      "ode_relative_error": 1.2460759964179358e-10,
+      "cartesian_focus_v": [
+        0.5469059096285811,
+        -0.3157562741412656
+      ],
+      "cartesian_focus_a": [
+        0.04866638203537832,
+        -0.14322353858453596
+      ],
+      "mu_at_60": 0.11046260837804019,
+      "mu_max_0_to_60": 0.12492002415805192,
+      "mu_max_theta_deg": 46.3480349921588,
+      "friction_table": [
+        {
+          "theta_deg": 0,
+          "mu_required": 0.0,
+          "normal_over_mg": 1.0
+        },
+        {
+          "theta_deg": 15,
+          "mu_required": 0.05935795654996379,
+          "normal_over_mg": 0.9900825616476598
+        },
+        {
+          "theta_deg": 30,
+          "mu_required": 0.10520368730343123,
+          "normal_over_mg": 0.9700202083641626
+        },
+        {
+          "theta_deg": 45,
+          "mu_required": 0.12477863006802499,
+          "normal_over_mg": 0.9659769678689212
+        },
+        {
+          "theta_deg": 60,
+          "mu_required": 0.11046260837804017,
+          "normal_over_mg": 1.0073663585975154
+        }
+      ]
+    }
+  },
+  "source_sha256": {
+    "scripts/verify_question_01.py": "c217748bcc3e21ac3f696c502377d89eec14207533e7a30816715cad3a4d291d",
+    "drafts/question-01.md": "16b7612232b70d633d5a0bbe01b51cc51cf6fef25c06b6bfc9bccb44daba253c",
+    "figures/题01_图稿源文件.tex": "3d0241c10e90d938ed9de3c351415b5c201b1ad5c453401a475e076ab7045568"
+  }
+}

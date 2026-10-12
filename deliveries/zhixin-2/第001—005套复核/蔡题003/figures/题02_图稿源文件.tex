@@ -1,0 +1,42 @@
+\documentclass[multi=tikzpicture,border=8pt]{standalone}
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath,amssymb,tikz}
+\usetikzlibrary{arrows.meta,calc,decorations.pathmorphing}
+\definecolor{blue}{HTML}{17365D}
+\definecolor{red}{HTML}{AC3931}
+\tikzset{every node/.style={font=\small},arrow/.style={-{Stealth[length=2.8mm]},thick},dim/.style={|<->|,thin},box/.style={draw,rounded corners,align=center,minimum width=2.5cm,minimum height=.9cm}}
+\begin{document}
+\begin{tikzpicture}
+
+\fill(0,0)circle(2pt)node[left]{$A$};\fill(7,0)circle(2pt)node[right]{$B$};
+\draw[very thick](0,0)--(1.6,2)--(5.4,2)--(7,0);\draw[very thick](0,0)--(7,0);\draw[very thick](0,0)--(1.6,-2)--(5.4,-2)--(7,0);
+\foreach \y/\j in {2/1,0/2,-2/3}{\draw[decorate,decoration={coil,aspect=.5,segment length=5pt,amplitude=4pt},thick](2.4,\y)--(4.5,\y);\node[above]at(3.45,\y+.2){$N_\j$};}
+\draw[arrow,blue](.9,1.4)--(1.6,2)node[left,midway]{$\Phi_1$};\draw[arrow,blue](.2,.35)--(1.4,.35)node[above,midway]{$\Phi_2$};\draw[arrow,red](1.6,-2)--(.9,-1.4)node[left,midway]{$\Phi_3$};
+\node[right]at(5.6,2){接$R_1$};\node[below]at(5.7,0){接$R_2$};\node[below]at(3.5,-2.7){第3绕组接$U_0\cos\omega t$};
+
+\end{tikzpicture}
+\begin{tikzpicture}
+
+\fill(0,0)circle(2pt);\fill(7,0)circle(2pt);\foreach \y in {-1.6,0,1.6}{\draw[thick](0,0)--(2,\y)--(5,\y)--(7,0);}
+\draw[arrow,blue](2,1.6)--(5,1.6)node[midway,above]{$\Phi_1$};\draw[arrow,blue](2,0)--(5,0)node[midway,above]{$\Phi_2$};\draw[arrow,red](5,-1.6)--(2,-1.6)node[midway,below]{$\Phi_3$};
+\node[align=center]at(3.5,3){节点：$\Phi_3=\Phi_1+\Phi_2$};\node[align=center]at(3.5,-3){回路：$N_3i_3=N_1i_1=N_2i_2$};
+
+\end{tikzpicture}
+\begin{tikzpicture}
+
+\node[box](a)at(0,0){$\dot\Phi_j$};\node[box](b)at(3,0){$u_j=N_j\dot\Phi_j$};\node[box](c)at(6,0){$i_j=u_j/R_j$};\node[box,fill=blue!8](d)at(9,0){磁动势$N_ji_j$};\draw[arrow](a)--(b);\draw[arrow](b)--(c);\draw[arrow](c)--(d);
+\node[below]at(4.5,-1.1){两次乘匝数：$N_ji_j=(N_j^2/R_j)\dot\Phi_j$};
+
+\end{tikzpicture}
+\begin{tikzpicture}
+
+\node[box,fill=red!8](a)at(0,0){交流电源\\$u_3i_3$};\node[box,fill=blue!8](b)at(5,1.5){$R_1$\\$u_1i_1$};\node[box,fill=blue!8](c)at(5,-1.5){$R_2$\\$u_2i_2$};\draw[arrow](a)--(b);\draw[arrow](a)--(c);\node[below]at(2.5,-3){$u_3i_3=u_1i_1+u_2i_2$};
+
+\end{tikzpicture}
+\begin{tikzpicture}
+\draw[arrow](0,0)--(7.4,0)node[right]{$\rho=R_1/R_2$};\draw[arrow](0,0)--(0,4.4)node[above]{$\Phi_{j0}/\Phi_{30}$};
+\draw[blue,very thick,domain=.05:6,samples=90]plot(\x,{4*\x/(1+\x)});\draw[red,very thick,domain=.05:6,samples=90]plot(\x,{4/(1+\x)});
+\draw[dashed](1,0)--(1,2);\fill(1,2)circle(2pt)node[above]{$1/2$};\node[blue]at(3.8,3.8){支路1：$\rho/(1+\rho)$};\node[red]at(4.4,1.5){支路2：$1/(1+\rho)$};\node[above]at(3.5,4.4){$N_1=N_2$};\node[left]at(0,4){1};\node[left]at(0,0){0};\foreach \x in {1,2,4,6}{\node[below]at(\x,0){$\x$};}
+
+\end{tikzpicture}
+\end{document}

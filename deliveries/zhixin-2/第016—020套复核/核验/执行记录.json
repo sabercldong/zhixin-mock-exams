@@ -1,0 +1,526 @@
+[
+  {
+    "set": 16,
+    "script": "verify_question_01.py",
+    "args": [],
+    "exit_code": 0,
+    "seconds": 0.62,
+    "log": "核验/执行日志/016-verify_question_01.py.txt"
+  },
+  {
+    "set": 16,
+    "script": "verify_question_02.py",
+    "args": [
+      "--complete"
+    ],
+    "exit_code": 0,
+    "seconds": 1.91,
+    "log": "核验/执行日志/016-verify_question_02.py.txt"
+  },
+  {
+    "set": 16,
+    "script": "verify_question_03.py",
+    "args": [
+      "--complete"
+    ],
+    "exit_code": 0,
+    "seconds": 1.7,
+    "log": "核验/执行日志/016-verify_question_03.py.txt"
+  },
+  {
+    "set": 16,
+    "script": "verify_question_04.py",
+    "args": [
+      "--complete"
+    ],
+    "exit_code": 0,
+    "seconds": 0.7,
+    "log": "核验/执行日志/016-verify_question_04.py.txt"
+  },
+  {
+    "set": 16,
+    "script": "verify_question_05.py",
+    "args": [
+      "--complete"
+    ],
+    "exit_code": 0,
+    "seconds": 1.68,
+    "log": "核验/执行日志/016-verify_question_05.py.txt"
+  },
+  {
+    "set": 16,
+    "script": "verify_question_06.py",
+    "args": [
+      "--complete"
+    ],
+    "exit_code": 0,
+    "seconds": 1.22,
+    "log": "核验/执行日志/016-verify_question_06.py.txt"
+  },
+  {
+    "set": 16,
+    "script": "verify_question_07.py",
+    "args": [
+      "--complete"
+    ],
+    "exit_code": 0,
+    "seconds": 0.69,
+    "log": "核验/执行日志/016-verify_question_07.py.txt"
+  },
+  {
+    "set": 16,
+    "script": "verify_question_08.py",
+    "args": [],
+    "exit_code": 1,
+    "seconds": 0.54,
+    "log": "核验/执行日志/016-verify_question_08.py.txt"
+  },
+  {
+    "set": 16,
+    "script": "verify_question_08.py",
+    "args": [],
+    "exit_code": 0,
+    "seconds": 1.01,
+    "log": "核验/执行日志/016-verify_question_08.py.txt"
+  },
+  {
+    "set": 16,
+    "script": "prepare_documents.py",
+    "args": [],
+    "exit_code": 0,
+    "seconds": 0.07,
+    "log": "核验/执行日志/016-prepare_documents.py.txt"
+  },
+  {
+    "set": 16,
+    "script": "build_documents.py",
+    "args": [],
+    "exit_code": 0,
+    "seconds": 15.04,
+    "log": "核验/执行日志/016-build_documents.py.txt"
+  },
+  {
+    "set": 17,
+    "script": "verify_question_01.py",
+    "args": [],
+    "exit_code": 0,
+    "seconds": 3.6,
+    "log": "核验/执行日志/017-verify_question_01.py.txt"
+  },
+  {
+    "set": 17,
+    "script": "verify_question_02.py",
+    "args": [],
+    "exit_code": 0,
+    "seconds": 1.01,
+    "log": "核验/执行日志/017-verify_question_02.py.txt"
+  },
+  {
+    "set": 17,
+    "script": "verify_question_03.py",
+    "args": [],
+    "exit_code": 0,
+    "seconds": 1.35,
+    "log": "核验/执行日志/017-verify_question_03.py.txt"
+  },
+  {
+    "set": 17,
+    "script": "verify_question_04.py",
+    "args": [],
+    "exit_code": 0,
+    "seconds": 0.81,
+    "log": "核验/执行日志/017-verify_question_04.py.txt"
+  },
+  {
+    "set": 17,
+    "script": "verify_question_05.py",
+    "args": [],
+    "exit_code": 0,
+    "seconds": 4.59,
+    "log": "核验/执行日志/017-verify_question_05.py.txt"
+  },
+  {
+    "set": 17,
+    "script": "verify_question_06.py",
+    "args": [],
+    "exit_code": 0,
+    "seconds": 0.71,
+    "log": "核验/执行日志/017-verify_question_06.py.txt"
+  },
+  {
+    "set": 17,
+    "script": "verify_question_07.py",
+    "args": [],
+    "exit_code": 0,
+    "seconds": 4.51,
+    "log": "核验/执行日志/017-verify_question_07.py.txt"
+  },
+  {
+    "set": 17,
+    "script": "verify_question_08.py",
+    "args": [],
+    "exit_code": 0,
+    "seconds": 0.83,
+    "log": "核验/执行日志/017-verify_question_08.py.txt"
+  },
+  {
+    "set": 17,
+    "script": "prepare_documents.py",
+    "args": [],
+    "exit_code": 0,
+    "seconds": 0.08,
+    "log": "核验/执行日志/017-prepare_documents.py.txt"
+  },
+  {
+    "set": 17,
+    "script": "build_documents.py",
+    "args": [],
+    "exit_code": 0,
+    "seconds": 15.49,
+    "log": "核验/执行日志/017-build_documents.py.txt"
+  },
+  {
+    "set": 18,
+    "script": "verify_question_01.py",
+    "args": [],
+    "exit_code": 0,
+    "seconds": 1.19,
+    "log": "核验/执行日志/018-verify_question_01.py.txt"
+  },
+  {
+    "set": 18,
+    "script": "verify_question_02.py",
+    "args": [],
+    "exit_code": 0,
+    "seconds": 0.54,
+    "log": "核验/执行日志/018-verify_question_02.py.txt"
+  },
+  {
+    "set": 18,
+    "script": "verify_question_03.py",
+    "args": [],
+    "exit_code": 0,
+    "seconds": 0.73,
+    "log": "核验/执行日志/018-verify_question_03.py.txt"
+  },
+  {
+    "set": 18,
+    "script": "verify_question_04.py",
+    "args": [],
+    "exit_code": 0,
+    "seconds": 0.51,
+    "log": "核验/执行日志/018-verify_question_04.py.txt"
+  },
+  {
+    "set": 18,
+    "script": "verify_question_05.py",
+    "args": [],
+    "exit_code": 0,
+    "seconds": 0.83,
+    "log": "核验/执行日志/018-verify_question_05.py.txt"
+  },
+  {
+    "set": 18,
+    "script": "verify_question_06.py",
+    "args": [],
+    "exit_code": 0,
+    "seconds": 0.94,
+    "log": "核验/执行日志/018-verify_question_06.py.txt"
+  },
+  {
+    "set": 18,
+    "script": "verify_question_07.py",
+    "args": [],
+    "exit_code": 0,
+    "seconds": 1.03,
+    "log": "核验/执行日志/018-verify_question_07.py.txt"
+  },
+  {
+    "set": 18,
+    "script": "verify_question_08.py",
+    "args": [],
+    "exit_code": 0,
+    "seconds": 2.55,
+    "log": "核验/执行日志/018-verify_question_08.py.txt"
+  },
+  {
+    "set": 18,
+    "script": "prepare_documents.py",
+    "args": [],
+    "exit_code": 0,
+    "seconds": 0.08,
+    "log": "核验/执行日志/018-prepare_documents.py.txt"
+  },
+  {
+    "set": 18,
+    "script": "build_documents.py",
+    "args": [],
+    "exit_code": 0,
+    "seconds": 15.98,
+    "log": "核验/执行日志/018-build_documents.py.txt"
+  },
+  {
+    "set": 19,
+    "script": "verify_question_01.py",
+    "args": [],
+    "exit_code": 0,
+    "seconds": 1.39,
+    "log": "核验/执行日志/019-verify_question_01.py.txt"
+  },
+  {
+    "set": 19,
+    "script": "verify_question_02.py",
+    "args": [],
+    "exit_code": 0,
+    "seconds": 0.64,
+    "log": "核验/执行日志/019-verify_question_02.py.txt"
+  },
+  {
+    "set": 19,
+    "script": "verify_question_03.py",
+    "args": [],
+    "exit_code": 0,
+    "seconds": 0.65,
+    "log": "核验/执行日志/019-verify_question_03.py.txt"
+  },
+  {
+    "set": 19,
+    "script": "verify_question_04.py",
+    "args": [],
+    "exit_code": 0,
+    "seconds": 1.25,
+    "log": "核验/执行日志/019-verify_question_04.py.txt"
+  },
+  {
+    "set": 19,
+    "script": "verify_question_05.py",
+    "args": [],
+    "exit_code": 0,
+    "seconds": 0.59,
+    "log": "核验/执行日志/019-verify_question_05.py.txt"
+  },
+  {
+    "set": 19,
+    "script": "verify_question_06.py",
+    "args": [],
+    "exit_code": 0,
+    "seconds": 0.66,
+    "log": "核验/执行日志/019-verify_question_06.py.txt"
+  },
+  {
+    "set": 19,
+    "script": "verify_question_07.py",
+    "args": [],
+    "exit_code": 0,
+    "seconds": 0.57,
+    "log": "核验/执行日志/019-verify_question_07.py.txt"
+  },
+  {
+    "set": 19,
+    "script": "verify_question_08.py",
+    "args": [],
+    "exit_code": 0,
+    "seconds": 0.57,
+    "log": "核验/执行日志/019-verify_question_08.py.txt"
+  },
+  {
+    "set": 19,
+    "script": "verify_added_variants.py",
+    "args": [],
+    "exit_code": 0,
+    "seconds": 0.48,
+    "log": "核验/执行日志/019-verify_added_variants.py.txt"
+  },
+  {
+    "set": 19,
+    "script": "prepare_documents.py",
+    "args": [],
+    "exit_code": 0,
+    "seconds": 0.08,
+    "log": "核验/执行日志/019-prepare_documents.py.txt"
+  },
+  {
+    "set": 19,
+    "script": "build_documents.py",
+    "args": [],
+    "exit_code": 1,
+    "seconds": 9.51,
+    "log": "核验/执行日志/019-build_documents.py.txt"
+  },
+  {
+    "set": 19,
+    "script": "verify_question_01.py",
+    "args": [],
+    "exit_code": 0,
+    "seconds": 0.82,
+    "log": "核验/执行日志/019-verify_question_01.py.txt"
+  },
+  {
+    "set": 19,
+    "script": "verify_question_02.py",
+    "args": [],
+    "exit_code": 0,
+    "seconds": 0.73,
+    "log": "核验/执行日志/019-verify_question_02.py.txt"
+  },
+  {
+    "set": 19,
+    "script": "verify_question_03.py",
+    "args": [],
+    "exit_code": 0,
+    "seconds": 0.52,
+    "log": "核验/执行日志/019-verify_question_03.py.txt"
+  },
+  {
+    "set": 19,
+    "script": "verify_question_04.py",
+    "args": [],
+    "exit_code": 0,
+    "seconds": 1.02,
+    "log": "核验/执行日志/019-verify_question_04.py.txt"
+  },
+  {
+    "set": 19,
+    "script": "verify_question_05.py",
+    "args": [],
+    "exit_code": 0,
+    "seconds": 0.5,
+    "log": "核验/执行日志/019-verify_question_05.py.txt"
+  },
+  {
+    "set": 19,
+    "script": "verify_question_06.py",
+    "args": [],
+    "exit_code": 0,
+    "seconds": 0.59,
+    "log": "核验/执行日志/019-verify_question_06.py.txt"
+  },
+  {
+    "set": 19,
+    "script": "verify_question_07.py",
+    "args": [],
+    "exit_code": 0,
+    "seconds": 0.5,
+    "log": "核验/执行日志/019-verify_question_07.py.txt"
+  },
+  {
+    "set": 19,
+    "script": "verify_question_08.py",
+    "args": [],
+    "exit_code": 0,
+    "seconds": 0.49,
+    "log": "核验/执行日志/019-verify_question_08.py.txt"
+  },
+  {
+    "set": 19,
+    "script": "verify_added_variants.py",
+    "args": [],
+    "exit_code": 0,
+    "seconds": 0.46,
+    "log": "核验/执行日志/019-verify_added_variants.py.txt"
+  },
+  {
+    "set": 19,
+    "script": "prepare_documents.py",
+    "args": [],
+    "exit_code": 0,
+    "seconds": 0.07,
+    "log": "核验/执行日志/019-prepare_documents.py.txt"
+  },
+  {
+    "set": 19,
+    "script": "build_documents.py",
+    "args": [],
+    "exit_code": 0,
+    "seconds": 6.93,
+    "log": "核验/执行日志/019-build_documents.py.txt"
+  },
+  {
+    "set": 20,
+    "script": "verify_question_01.py",
+    "args": [],
+    "exit_code": 0,
+    "seconds": 0.35,
+    "log": "核验/执行日志/020-verify_question_01.py.txt"
+  },
+  {
+    "set": 20,
+    "script": "verify_question_02.py",
+    "args": [],
+    "exit_code": 0,
+    "seconds": 0.64,
+    "log": "核验/执行日志/020-verify_question_02.py.txt"
+  },
+  {
+    "set": 20,
+    "script": "verify_question_03.py",
+    "args": [],
+    "exit_code": 0,
+    "seconds": 0.93,
+    "log": "核验/执行日志/020-verify_question_03.py.txt"
+  },
+  {
+    "set": 20,
+    "script": "verify_question_04.py",
+    "args": [],
+    "exit_code": 0,
+    "seconds": 0.9,
+    "log": "核验/执行日志/020-verify_question_04.py.txt"
+  },
+  {
+    "set": 20,
+    "script": "verify_question_05.py",
+    "args": [],
+    "exit_code": 0,
+    "seconds": 0.71,
+    "log": "核验/执行日志/020-verify_question_05.py.txt"
+  },
+  {
+    "set": 20,
+    "script": "verify_question_06.py",
+    "args": [],
+    "exit_code": 0,
+    "seconds": 0.5,
+    "log": "核验/执行日志/020-verify_question_06.py.txt"
+  },
+  {
+    "set": 20,
+    "script": "verify_question_07.py",
+    "args": [],
+    "exit_code": 0,
+    "seconds": 0.24,
+    "log": "核验/执行日志/020-verify_question_07.py.txt"
+  },
+  {
+    "set": 20,
+    "script": "verify_question_08.py",
+    "args": [],
+    "exit_code": 0,
+    "seconds": 1.18,
+    "log": "核验/执行日志/020-verify_question_08.py.txt"
+  },
+  {
+    "set": 20,
+    "script": "verify_added_variants.py",
+    "args": [],
+    "exit_code": 0,
+    "seconds": 0.49,
+    "log": "核验/执行日志/020-verify_added_variants.py.txt"
+  },
+  {
+    "set": 20,
+    "script": "prepare_documents.py",
+    "args": [],
+    "exit_code": 0,
+    "seconds": 0.07,
+    "log": "核验/执行日志/020-prepare_documents.py.txt"
+  },
+  {
+    "set": 20,
+    "script": "build_documents.py",
+    "args": [],
+    "exit_code": 0,
+    "seconds": 16.13,
+    "log": "核验/执行日志/020-build_documents.py.txt"
+  }
+]

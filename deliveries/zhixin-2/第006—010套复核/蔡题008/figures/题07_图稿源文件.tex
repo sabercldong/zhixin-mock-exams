@@ -1,0 +1,50 @@
+\documentclass[multi=tikzpicture,border=9pt]{standalone}
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath,amssymb}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc,patterns,decorations.pathmorphing}
+\definecolor{main}{HTML}{17365D}
+\definecolor{accent}{HTML}{AC3931}
+\tikzset{every picture/.style={font=\small,line width=.75pt},
+>={Stealth[length=2mm]},arr/.style={->},
+box/.style={draw=main,rounded corners=2pt,fill=main!4,text width=3cm,minimum height=1cm,align=center},
+note/.style={align=center,text width=9cm}}
+\begin{document}
+\begin{tikzpicture}
+\fill[main!5] (0,0) circle (1.732);\draw[arr] (-2.2,0)--(2.3,0) node[right]{$v_x/u$};\draw[arr] (0,-2)--(0,2.7) node[above]{$v_y/u$};
+\draw[main,thick] (0,0) circle (1.732);
+\coordinate (A) at (-.866,.5);\coordinate (B) at (0,2);\coordinate (C) at (-.866,1.5);
+\fill (A) circle (2pt);\fill (B) circle (2pt);\node[left] at (A){$A$};\node[right] at (B){$B$};\node at (1,-.8){$F$};\node at (2,1.5){$2F$};
+\draw[dashed] (0,0)--(1.225,-1.225);\node at (1.6,-2.05){$R_v/u=\sqrt3$};
+\node[note] at (0,-3){$A=(-\sqrt3/2,1/2)$，$B=(0,2)$\\初速在圆内，末速在圆外};
+\end{tikzpicture}
+\begin{tikzpicture}
+\node[box] (n0) at (0,0) {风系速度图\\先统一初、末速度};
+\node[box] (n1) at (5,0) {圈内加速度\\$a_1=F/m$};
+\node[box] (n2) at (5,-2.3) {圈外加速度\\$a_2=2F/m$};
+\node[box] (n3) at (0,-2.3) {时间加权弧长\\$T=m(2L_{\rm in}+L_{\rm out})/(2F)$};
+\draw[arr] (n0)--(n1);\draw[arr] (n1)--(n2);\draw[arr] (n2)--(n3);
+\node[note] at (2.5,-4.1) {速度弧长除以加速度才是时间};
+\end{tikzpicture}
+\begin{tikzpicture}
+\fill[main!5] (0,0) circle (1.732);\draw[arr] (-2.2,0)--(2.3,0) node[right]{$v_x/u$};\draw[arr] (0,-2)--(0,2.7) node[above]{$v_y/u$};
+\draw[main,thick] (0,0) circle (1.732);
+\coordinate (A) at (-.866,.5);\coordinate (B) at (0,2);\coordinate (C) at (-.866,1.5);
+\fill (A) circle (2pt);\fill (B) circle (2pt);\node[left] at (A){$A$};\node[right] at (B){$B$};\node at (1,-.8){$F$};\node at (2,1.5){$2F$};
+\draw[dashed] (0,0)--(1.225,-1.225);\node at (1.6,-2.05){$R_v/u=\sqrt3$};
+\draw[main,very thick,arr] (A)--(C);\draw[accent,very thick,arr] (C)--(B);\fill (C) circle (2pt);\node[left] at (C){$C$};\draw[dashed] (0,0)--(C);\draw[thin,dashed] (A)--(B);\node[main,left] at (-.866,1){$u$};\node[accent,above] at (-.4,1.8){$u$};\node[note] at (0,-3){$AC\parallel v_y$，$OC\perp CB$\\入射 $30^\circ$、出射 $90^\circ$：$2\sin i=\sin o$};
+\end{tikzpicture}
+\begin{tikzpicture}
+\draw[arr] (0,0)--(7,0) node[right]{$tF/(mu)$};\draw[main,very thick] (0,0)--(4,0);\draw[accent,very thick] (4,0)--(6,0);\draw (4,-.2)--(4,.2);\draw (6,-.2)--(6,.2);
+\node[above,align=center] at (2,.4){阶段一\\$F$ 向上\\$t_1=mu/F$};\node[above,align=center] at (5,.4){阶段二\\$2F$ 沿 $(\sqrt3/2,1/2)$\\$t_2=mu/(2F)$};\node[below] at (0,0){0};\node[below] at (4,0){1};\node[below] at (6,0){$3/2$};
+\node[note] at (3,-1.3){过界时速度连续，推力大小与方向均可切换};
+\end{tikzpicture}
+\begin{tikzpicture}
+\node[box] (n0) at (0,0) {风系初末点\\$A$ 圈内，$B$ 圈外};
+\node[box] (n1) at (5,0) {时间权重\\圈内2，圈外1};
+\node[box] (n2) at (5,-2.3) {临界折射切点\\$AC=CB=u$};
+\node[box] (n3) at (0,-2.3) {全局比较\\排除慢区再入};
+\draw[arr] (n0)--(n1);\draw[arr] (n1)--(n2);\draw[arr] (n2)--(n3);
+\node[note] at (2.5,-4.1) {$T_{\min}=3mu/(2F)$，直达时间系数约1.5731};
+\end{tikzpicture}
+\end{document}

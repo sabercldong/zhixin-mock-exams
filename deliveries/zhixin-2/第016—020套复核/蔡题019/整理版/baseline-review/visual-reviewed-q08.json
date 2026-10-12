@@ -1,0 +1,83 @@
+{
+  "question": 8,
+  "actual_reviewed": true,
+  "scope": "分题工作预览，整套合并后重新审读",
+  "reviewed_at": "2026-10-08 12:52 Asia/Shanghai",
+  "student": {
+    "pdf_sha256": "cb7205eeebe7e04846d75ea02609f6bcebe9d7304bc8129623d1441434c1abb1",
+    "total_pages": 14,
+    "body_pages": 13,
+    "extracted_body_nonspace": 8163,
+    "overview_pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "high_resolution_pages_reviewed": [
+      2,
+      4,
+      7,
+      10,
+      12,
+      14
+    ]
+  },
+  "teacher": {
+    "pdf_sha256": "90568ac1db5bdc4f3990cfc476905d81cf8ead7bd12d5172061866e0a4bb4488",
+    "total_pages": 17,
+    "body_pages": 16,
+    "extracted_body_nonspace": 11134,
+    "overview_pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "high_resolution_pages_reviewed": [
+      17
+    ]
+  },
+  "figures_reviewed": [
+    "question-08",
+    "weights-08",
+    "freeforces-08",
+    "rotation-08",
+    "geometry-08",
+    "restrictedforces-08"
+  ],
+  "repairs": [
+    "三幅题图的正三角形坐标与15度支架均按实值重绘",
+    "悬绳在光滑小孔处正确连接，后方板下绳段用遮挡虚线",
+    "移开O和孔位A文字，删除重复的旋转角标签，15度文字不遮挡边线",
+    "缩减过大的受力图并保持末段图、投影方程、反力结论完整同页"
+  ],
+  "layout_issues": [],
+  "qpdf_check_passed": true,
+  "physics_checks_passed": true,
+  "physics_note": "沿线单变量导数求根、直接距离和极小化及两角方程独立一致；三组非正三角形最优点、旋转长度、四个带解变式和反力分别核验",
+  "unresolved": []
+}

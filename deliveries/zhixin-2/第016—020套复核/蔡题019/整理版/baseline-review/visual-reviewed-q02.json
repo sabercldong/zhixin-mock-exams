@@ -1,0 +1,21 @@
+{
+  "question": 2, "actual_reviewed": true,
+  "scope": "分题工作预览；整套合并后重新验收",
+  "reviewed_at": "2026-10-08 10:34:38 Asia/Shanghai",
+  "student": {
+    "pdf_sha256": "fcfd6bed1b8a74728c6b3bc100f7815a7d9184bad6d1a24618623922f8744b05",
+    "total_pages": 11, "body_pages": 10, "extracted_body_nonspace": 5981,
+    "overview_pages_reviewed": [1,2,3,4,5,6,7,8,9,10,11],
+    "high_resolution_pages_reviewed": [5,7,10]
+  },
+  "teacher": {
+    "pdf_sha256": "ac590b1e676c7615a96099f83bc931dbd8ea89b4edef67b42cd05d3f440f2318",
+    "total_pages": 15, "body_pages": 14, "extracted_body_nonspace": 9358,
+    "overview_pages_reviewed": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15],
+    "high_resolution_pages_reviewed": [15]
+  },
+  "figures_reviewed": ["question-02","images-02","forces-02","effective-02"],
+  "repairs": ["镜像位置标签分两行避免相邻重叠", "摆角标签移离细线", "势能曲线横轴刻度移离曲线", "受力图缩小至正文宽度38%，未扩大间距"],
+  "layout_issues": [], "qpdf_check_passed": true, "physics_checks_passed": true,
+  "physics_note": "直接全镜像边界/力、能量有限差分、完整摆ODE、临界四次势能积分与完整ODE交叉检验通过"
+}

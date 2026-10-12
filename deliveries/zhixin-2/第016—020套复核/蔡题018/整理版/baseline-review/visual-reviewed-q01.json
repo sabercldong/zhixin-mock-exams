@@ -1,0 +1,85 @@
+{
+  "question": 1,
+  "scope": "第018套第1题工作预览，不是完整套卷",
+  "review_time": "2026-10-08 13:29 Asia/Shanghai",
+  "actual_visual_reviewed": true,
+  "originals_read": [
+    "paper-01",
+    "answer-01",
+    "answer-02"
+  ],
+  "pdfs": {
+    "student": {
+      "total_pages": 14,
+      "body_pages": 13,
+      "pdf_sha256": "08a03070f8b69019e1bdd715500519958cd62f3965ecef07369796bacff1a7c4",
+      "overview_pages_reviewed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "high_resolution_pages_reviewed": [
+        8,
+        9,
+        11,
+        12,
+        13,
+        14
+      ]
+    },
+    "teacher": {
+      "total_pages": 17,
+      "body_pages": 16,
+      "pdf_sha256": "e9e1e40315e6e81bd63482a0a2119f1aae995b08c99c9238692e40c883217eae",
+      "overview_pages_reviewed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "high_resolution_pages_reviewed": [
+        17
+      ]
+    }
+  },
+  "figures_reviewed": {
+    "contact-01": "4696c5c00155ccd63c03a35ee9bf519b962510eaadf9016e2fe7ac8344e1b3b7",
+    "forces-01": "6a991ae0b174ddb30e0dac25b3925238c83aad40cb4ed3736e01ebe81ac06b3f",
+    "question-01": "81fd6084a65c48e4b11c8f32e39372897084ffc67b8f24ff96e341227bcc7fce",
+    "support-01": "a0a60daf3f6aee78dc8575be207bc214fef907eb42ddb931e4caaec2d2f1d5ff",
+    "velocity-01": "ff84c6113f219665c2a347b7de1d0e744f812497313dffaee5c0c9958303ad24"
+  },
+  "checks": [
+    "五幅几何、力、速度及曲率图实际查看；接触点为椭圆最低点",
+    "支承图直角仅标在F2；删除不正确的Q角标",
+    "光滑角加速度正号、滚动角加速度−21项及焦点加速度中间代数高清查看",
+    "两版共31页实际总览审读；学生前五模块保持一致",
+    "自动检查捕获并修正两处裸写命令sqrt、qquad，重编译后再次查看"
+  ],
+  "remaining_visual_issues": [],
+  "set_accepted": false
+}

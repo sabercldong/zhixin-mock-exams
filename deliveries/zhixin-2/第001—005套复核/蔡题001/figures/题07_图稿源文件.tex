@@ -1,0 +1,91 @@
+\documentclass[multi=tikzpicture,border=8pt]{standalone}
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath,amssymb}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc,patterns}
+\definecolor{blue}{HTML}{17365D}
+\definecolor{red}{HTML}{AC3931}
+\tikzset{every node/.style={font=\small},vec/.style={-{Stealth[length=3mm]},thick,blue},force/.style={-{Stealth[length=3mm]},very thick,red},dim/.style={|<->|,thin}}
+\begin{document}
+
+\begin{tikzpicture}
+\draw[thick](-2,0)--(-2,1.7) (-2,2.3)--(-2,4)--(3,4);
+\draw[thick](-2,0)--(-1.3,0) (-.6,0)--(3,0);
+\draw[thick](-1.3,0)--(-.65,.32)node[midway,below]{开关};
+\draw[very thick](-2.35,2.2)--(-1.65,2.2) (-2.2,1.8)--(-1.8,1.8);
+\node[left]at(-2.5,2){$\varepsilon$};
+\draw[thick](0,4)--(0,3.4) (0,2.6)--(0,1.2) (0,.95)--(0,0);
+\draw[thick](-.16,2.6)rectangle(.16,3.4);
+\node[left]at(-.3,3){$R$};
+\draw[thick](-.38,1.2)--(.38,1.2) (-.38,.95)--(.38,.95);
+\node[left]at(-.5,1.05){$C_L=C$};
+\draw[thick](3,4)--(3,3.15) (3,2.9)--(3,1.4) (3,.6)--(3,0);
+\draw[thick](2.62,3.15)--(3.38,3.15) (2.62,2.9)--(3.38,2.9);
+\node[right]at(3.5,3){$C_R=C$};
+\draw[thick](2.84,.6)rectangle(3.16,1.4);
+\node[right]at(3.4,1){$R$};
+\draw[thick](0,2)--(1.35,2) (1.65,2)--(3,2);
+\draw[thick](1.35,1.65)--(1.35,2.35) (1.65,1.65)--(1.65,2.35);
+\node[below]at(1.5,1.55){$C_M=C$};
+\fill(0,2)circle(2pt)node[above left]{$A:a$};
+\fill(3,2)circle(2pt)node[above right]{$B:b$};
+\node[above]at(1.5,4.1){上导线：$\varepsilon$};
+\node[below]at(1.7,-.2){下导线：0};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\draw[thick](0,0)--(.85,0) (1.15,0)--(2.85,0) (3.15,0)--(4.85,0) (5.15,0)--(6,0);
+\foreach \x in{1,3,5}{\draw[thick](\x-.15,-.4)--(\x-.15,.4) (\x+.15,-.4)--(\x+.15,.4);}
+\fill(2,0)circle(2pt)node[above]{$B=2\varepsilon/3$};
+\fill(4,0)circle(2pt)node[above]{$A=\varepsilon/3$};
+\node[above]at(0,0){$\varepsilon$};
+\node[above]at(6,0){0};
+\node[below]at(1,-.5){$C_R$};
+\node[below]at(3,-.5){$C_M$};
+\node[below]at(5,-.5){$C_L$};
+\foreach \x in{1,3,5}{\node[below]at(\x,-1){$|q|=C\varepsilon/3$};}
+\node[below]at(3,-1.7){瞬时浮置节点：$Q_A=Q_B=0$};
+\node[below]at(3,-2.3){快速储能$C\varepsilon^2/6$；有限电阻无瞬时电荷输送};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\node[draw,rounded corners,align=center,minimum width=3.8cm,minimum height=1.8cm]at(0,0){共同模式$s=a+b$\\$C\dot s=(\varepsilon-s)/R$\\时间常数$RC$};
+\node[draw,rounded corners,align=center,minimum width=3.8cm,minimum height=1.8cm]at(5.7,0){差动模式$d=a-b$\\$3C\dot d=(\varepsilon-d)/R$\\时间常数$3RC$};
+\node[below,align=center]at(0,-1.3){原题$s_0=\varepsilon$\\无共同模式衰减};
+\node[below,align=center]at(5.7,-1.3){原题$d_0=-\varepsilon/3$\\$d=\varepsilon-\frac43\varepsilon e^{-t/(3RC)}$};
+\end{tikzpicture}
+
+\begin{tikzpicture}[x=3cm,y=4cm]
+\draw[vec](0,0)--(2.4,0)node[right]{$q_R/(C\varepsilon)$};
+\draw[vec](0,0)--(0,.9)node[above]{$u_R^{(\text{阻})}/\varepsilon$};
+\fill[blue!15](0,0)--(0,.66667)--(.585786,.471405)--(.585786,0)--cycle;
+\fill[red!10](.585786,0)--(.585786,.471405)--(2,0)--cycle;
+\draw[very thick,blue](0,.66667)--(2,0);
+\draw[dashed](.585786,0)--(.585786,.471405)--(0,.471405);
+\node[left]at(0,.66667){$2/3$};
+\node[left]at(0,.471405){$\sqrt2/3$};
+\node[below]at(2,0){$2$};
+\node[below]at(.585786,-.12){$2-\sqrt2$};
+\node[above]at(.3,.15){已产生};
+\node[above]at(1.3,.08){剩余};
+\node[below]at(1,-.4){两块面积各占总三角形一半};
+\end{tikzpicture}
+
+\begin{tikzpicture}[x=1.5cm,y=3cm]
+\draw[vec](0,0)--(4.4,0)node[right]{$t/\tau$};
+\draw[vec](0,-.45)--(0,1.25)node[above]{$u/\varepsilon$};
+\draw[blue,very thick,domain=0:4,samples=100]plot(\x,{1-2*exp(-\x)/3});
+\draw[red,very thick,domain=0:4,samples=100]plot(\x,{1-4*exp(-\x)/3});
+\draw[dashed](0,1)--(4.1,1);
+\draw[dashed](.287682,-.33)--(.287682,.4);
+\draw[dashed](.346574,-.33)--(.346574,.65);
+\fill(.346574,.528595)circle(1.5pt);
+\fill(.346574,.057191)circle(1.5pt);
+\draw[thin,blue](2.7,.955)--(3.2,1.15);\node[above]at(3.2,1.15){$u_L=u_R^{(C)}$};
+\node[right]at(2.7,.65){$u_M$};
+\node[below]at(2,-.72){反向：$t/\tau=\ln(4/3)$；半热量：$t/\tau=\frac12\ln2$};
+\node[left]at(0,-.33333){$-1/3$};
+\node[left]at(0,.33333){$1/3$};
+\node[left]at(0,1){$1$};
+\end{tikzpicture}
+\end{document}

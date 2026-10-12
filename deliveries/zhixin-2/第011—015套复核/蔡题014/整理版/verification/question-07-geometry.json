@@ -1,0 +1,341 @@
+{
+  "paper": "014",
+  "question": "07",
+  "geometry_passed": true,
+  "check_count": 71,
+  "checks": [
+    {
+      "test": "six genuine standalone vector pages",
+      "passed": true
+    },
+    {
+      "test": "standalone wrapper",
+      "passed": true
+    },
+    {
+      "test": "exact curved profile not a circular or conical replacement",
+      "passed": true
+    },
+    {
+      "test": "source uses actual left hyperbola branch",
+      "passed": true
+    },
+    {
+      "test": "ray endpoints lie on physical branch at height -0.6",
+      "passed": true
+    },
+    {
+      "test": "outgoing direction points to true F at height -0.6",
+      "passed": true
+    },
+    {
+      "test": "ray endpoints lie on physical branch at height 0.0",
+      "passed": true
+    },
+    {
+      "test": "outgoing direction points to true F at height 0.0",
+      "passed": true
+    },
+    {
+      "test": "ray endpoints lie on physical branch at height 0.6",
+      "passed": true
+    },
+    {
+      "test": "outgoing direction points to true F at height 0.6",
+      "passed": true
+    },
+    {
+      "test": "ray endpoints lie on physical branch at height 0.8",
+      "passed": true
+    },
+    {
+      "test": "outgoing direction points to true F at height 0.8",
+      "passed": true
+    },
+    {
+      "test": "medium fill on incident side only",
+      "passed": true
+    },
+    {
+      "test": "common incident wave plane distinct from projection foot",
+      "passed": true
+    },
+    {
+      "test": "optical path dimension connects Xa to actual P horizontal coordinate",
+      "passed": true
+    },
+    {
+      "test": "Snell normal is perpendicular to actual slope",
+      "passed": true
+    },
+    {
+      "test": "incidence measured with backward normal and incident segment",
+      "passed": true
+    },
+    {
+      "test": "transmission measured between outgoing direction and forward normal",
+      "passed": true
+    },
+    {
+      "test": "Snell curve tangent actual height .8",
+      "passed": true
+    },
+    {
+      "test": "3D contains curved meridians not straight generators",
+      "passed": true
+    },
+    {
+      "test": "depth basis retained in actual coordinates",
+      "passed": true
+    },
+    {
+      "test": "front and rear ring arcs visibly distinguished",
+      "passed": true
+    },
+    {
+      "test": "rear meridian hidden dash distinct from front",
+      "passed": true
+    },
+    {
+      "test": "spatial ring lies on exact rotated interface (-1.8, 0.0)",
+      "passed": true
+    },
+    {
+      "test": "spatial ring lies on exact rotated interface (-1.8, 1.5707963267948966)",
+      "passed": true
+    },
+    {
+      "test": "spatial ring lies on exact rotated interface (-1.8, 3.141592653589793)",
+      "passed": true
+    },
+    {
+      "test": "spatial ring lies on exact rotated interface (-1.8, 4.71238898038469)",
+      "passed": true
+    },
+    {
+      "test": "spatial ring lies on exact rotated interface (-1.4, 0.0)",
+      "passed": true
+    },
+    {
+      "test": "spatial ring lies on exact rotated interface (-1.4, 1.5707963267948966)",
+      "passed": true
+    },
+    {
+      "test": "spatial ring lies on exact rotated interface (-1.4, 3.141592653589793)",
+      "passed": true
+    },
+    {
+      "test": "spatial ring lies on exact rotated interface (-1.4, 4.71238898038469)",
+      "passed": true
+    },
+    {
+      "test": "spatial ring lies on exact rotated interface (-1.15, 0.0)",
+      "passed": true
+    },
+    {
+      "test": "spatial ring lies on exact rotated interface (-1.15, 1.5707963267948966)",
+      "passed": true
+    },
+    {
+      "test": "spatial ring lies on exact rotated interface (-1.15, 3.141592653589793)",
+      "passed": true
+    },
+    {
+      "test": "spatial ring lies on exact rotated interface (-1.15, 4.71238898038469)",
+      "passed": true
+    },
+    {
+      "test": "cross-ring radius corresponds to actual axial plane",
+      "passed": true
+    },
+    {
+      "test": "radius label moved outside the surface mesh",
+      "passed": true
+    },
+    {
+      "test": "moving comparison keeps equal transverse scale",
+      "passed": true
+    },
+    {
+      "test": "ground longitudinal shape scaled only by .6",
+      "passed": true
+    },
+    {
+      "test": "moving vertex and instantaneous focal distance .6 f",
+      "passed": true
+    },
+    {
+      "test": "ground focus explicitly time-labelled not a fixed arbitrary target",
+      "passed": true
+    },
+    {
+      "test": "event axis is normalized x and ct",
+      "passed": true
+    },
+    {
+      "test": "event figure identifies focal worldline",
+      "passed": true
+    },
+    {
+      "test": "central ray starts at actual moving vertex",
+      "passed": true
+    },
+    {
+      "test": "oblique ray starts at actual moving interface at y=f",
+      "passed": true
+    },
+    {
+      "test": "both hit events lie on focal worldline",
+      "passed": true
+    },
+    {
+      "test": "blue ray label is offset from focal worldline",
+      "passed": true
+    },
+    {
+      "test": "statement-07 single vector page",
+      "passed": true
+    },
+    {
+      "test": "statement-07 searchable math labels",
+      "passed": true
+    },
+    {
+      "test": "statement-07 legible at actual declared width",
+      "passed": true,
+      "min_printed_font_pt": 14.182329525126649
+    },
+    {
+      "test": "statement-07 labels inside figure bounds",
+      "passed": true
+    },
+    {
+      "test": "optical-07 single vector page",
+      "passed": true
+    },
+    {
+      "test": "optical-07 searchable math labels",
+      "passed": true
+    },
+    {
+      "test": "optical-07 legible at actual declared width",
+      "passed": true,
+      "min_printed_font_pt": 12.419318591124991
+    },
+    {
+      "test": "optical-07 labels inside figure bounds",
+      "passed": true
+    },
+    {
+      "test": "snell-07 single vector page",
+      "passed": true
+    },
+    {
+      "test": "snell-07 searchable math labels",
+      "passed": true
+    },
+    {
+      "test": "snell-07 legible at actual declared width",
+      "passed": true,
+      "min_printed_font_pt": 13.549220302750737
+    },
+    {
+      "test": "snell-07 labels inside figure bounds",
+      "passed": true
+    },
+    {
+      "test": "spatial-07 single vector page",
+      "passed": true
+    },
+    {
+      "test": "spatial-07 searchable math labels",
+      "passed": true
+    },
+    {
+      "test": "spatial-07 legible at actual declared width",
+      "passed": true,
+      "min_printed_font_pt": 10.443976240955775
+    },
+    {
+      "test": "spatial-07 labels inside figure bounds",
+      "passed": true
+    },
+    {
+      "test": "moving-07 single vector page",
+      "passed": true
+    },
+    {
+      "test": "moving-07 searchable math labels",
+      "passed": true
+    },
+    {
+      "test": "moving-07 legible at actual declared width",
+      "passed": true,
+      "min_printed_font_pt": 9.670296776029854
+    },
+    {
+      "test": "moving-07 labels inside figure bounds",
+      "passed": true
+    },
+    {
+      "test": "events-07 single vector page",
+      "passed": true
+    },
+    {
+      "test": "events-07 searchable math labels",
+      "passed": true
+    },
+    {
+      "test": "events-07 legible at actual declared width",
+      "passed": true,
+      "min_printed_font_pt": 10.07822151610451
+    },
+    {
+      "test": "events-07 labels inside figure bounds",
+      "passed": true
+    }
+  ],
+  "figures": [
+    {
+      "name": "statement-07",
+      "pdf_sha256": "d14bea33d504c9a3278a58db0c06c7aa55077e1b4c783162f95d146efd2c90ce",
+      "png_sha256": "ccf019d0ef5bfa277d3a7f3c89487a740450e19f6866a08588013e0e8ed65b89",
+      "width_fraction": 0.76
+    },
+    {
+      "name": "optical-07",
+      "pdf_sha256": "a5f6ec62bf12f94cc3490f6ececf2f93e5e4eb5714f6a0ec917e6d19302bfa25",
+      "png_sha256": "a405ab50d4e5b4f4a4fad3956ff415fefdc3d0a5504ff130903c54cf77cad044",
+      "width_fraction": 0.79
+    },
+    {
+      "name": "snell-07",
+      "pdf_sha256": "8efa3987f7404743f7edd6772494b539d124c8bdb6263229d8689ce83917a2c1",
+      "png_sha256": "42d4aaca5240ad42c3a0bf9a1ea0eceb5a5e187d27bd6c31e9e9b6b04d4b7a4b",
+      "width_fraction": 0.76
+    },
+    {
+      "name": "spatial-07",
+      "pdf_sha256": "58a0cb46ed9be2c96929f059911b09766839e7ae83052736dc3e047b7beef017",
+      "png_sha256": "6d378405a058f1a4c4d14d896fe2a8cb588cb6d63fb81432454f85c204358312",
+      "width_fraction": 0.64
+    },
+    {
+      "name": "moving-07",
+      "pdf_sha256": "8086d6f60559509eb3da8ed7f0433f10c9d95a173165e3f4142803711a170c46",
+      "png_sha256": "49d7cd66906cdad2673bf42b8a5f319ef0dd6839c0d5b8edd3f8bccde08d49be",
+      "width_fraction": 0.85
+    },
+    {
+      "name": "events-07",
+      "pdf_sha256": "1e625c3a0eba1726400202159cde43a0f78bbe5682723ebf7bac30d38669ea52",
+      "png_sha256": "645bebdb7deb97d1a2035202233f8f50bf6ebd811df74cb320138c2c074aaa49",
+      "width_fraction": 0.66
+    }
+  ],
+  "figure_source_sha256": "c6112befe6e0d3322d88055020c79653409d4a87948e2d99d6f25febf85dbf89",
+  "script_sha256": "5cc4b9f0ed95c4191519774db78356e3ce84264193346b2c7a9c7a8d6fe88f16",
+  "actual_visual_reviewed": false,
+  "question_accepted": false,
+  "set_accepted": false
+}

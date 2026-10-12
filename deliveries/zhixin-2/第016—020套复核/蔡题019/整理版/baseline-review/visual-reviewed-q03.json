@@ -1,0 +1,68 @@
+{
+  "question": 3,
+  "actual_reviewed": true,
+  "scope": "分题工作预览；整套合并后重新验收",
+  "reviewed_at": "2026-10-08 12:57 Asia/Shanghai",
+  "student": {
+    "pdf_sha256": "cb84df3170daaaa751f8fc3741f8f1097cb326040722e49688d064616160bf65",
+    "total_pages": 9,
+    "body_pages": 8,
+    "extracted_body_nonspace": 5127,
+    "overview_pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "high_resolution_pages_reviewed": [
+      2,
+      3,
+      8
+    ]
+  },
+  "teacher": {
+    "pdf_sha256": "789f4988030577062e87c855c288fe900ad92da21f7a5ac4c27c4fb63f66d047",
+    "total_pages": 13,
+    "body_pages": 12,
+    "extracted_body_nonspace": 8753,
+    "overview_pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "high_resolution_pages_reviewed": [
+      13
+    ]
+  },
+  "figures_reviewed": [
+    "core-03",
+    "independent-03",
+    "series-03",
+    "polarity-03"
+  ],
+  "repairs": [
+    "端点标注移离导线",
+    "绕组黑点与电路节点区别明确",
+    "欧姆单位改为独立数学符号，消除字体映射缺字",
+    "三幅题图40/55/80%宽度后同页呈现，单图标签可读；重新审读全部22页与4页高清。内容与版式参数不变"
+  ],
+  "layout_issues": [],
+  "qpdf_check_passed": true,
+  "physics_checks_passed": true,
+  "physics_note": "节点方程独立求解、9组瞬时发热与输入功率积分、端口能流、反求匝数及23组整数极值枚举均通过"
+}

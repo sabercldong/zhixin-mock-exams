@@ -1,0 +1,108 @@
+{
+  "question": 3,
+  "verified_math": true,
+  "document_complete": true,
+  "scope": "多匝主阶模型；不等于有限线径、重力动力修正及末端展开的精确解",
+  "coordinates": "x positive to left; y upwards; physical angular momentum counterclockwise positive",
+  "expressions": {
+    "radius": "R*sqrt(L - x)/sqrt(L)",
+    "mass": "M*(L - x)/L",
+    "speed": "sqrt(L)*v0*sqrt(1/(L - x))",
+    "acceleration": "L*v0**2/(2*(L - x)**2)",
+    "initial_holding_force": "3*M*R*g/(2*L)",
+    "Px": "M*v0*sqrt(L - x)/sqrt(L)",
+    "Py": "-3*M*R*v0/(2*L)",
+    "ground_friction_left_positive": "-M*v0**2/(2*(L - x))",
+    "normal_coil": "M*g*(L - x)/L",
+    "spin": "M*R*v0*(L - x)/(2*L)",
+    "angular_O": "3*M*R*v0/2",
+    "torque_O": "0",
+    "moving_center_correction": "M*R*v0**2/(sqrt(L)*sqrt(L - x))",
+    "wrong_zero_Py_derivative": "-3*M*R*v0**2/(2*sqrt(L)*sqrt(L - x))",
+    "minimum_mu_at_x": "L*v0**2/(2*g*(L - x)**2)",
+    "elapsed_time": "2*L*(1 - (L - x)**(3/2)/L**(3/2))/(3*v0)",
+    "quasistatic_holding": "3*M*R*g*sqrt(L - x)/(2*L**(3/2))",
+    "shifted_fixed_origin_angular": "3*M*R*v0*(L - d)/(2*L)"
+  },
+  "numerical": [
+    {
+      "x": 0.0,
+      "speed": 1.0,
+      "Px": 1.0,
+      "Py": -0.003,
+      "angular_O": 0.003,
+      "remaining_turn_lower_estimate": 79.57747154594766
+    },
+    {
+      "x": 0.19999999999999996,
+      "speed": 1.118033988749895,
+      "Px": 0.894427190999916,
+      "Py": -0.003,
+      "angular_O": 0.003,
+      "remaining_turn_lower_estimate": 71.17625434171771
+    },
+    {
+      "x": 0.5,
+      "speed": 1.414213562373094,
+      "Px": 0.707106781186547,
+      "Py": -0.0029999999999999983,
+      "angular_O": 0.0029999999999999983,
+      "remaining_turn_lower_estimate": 56.26976975981913
+    },
+    {
+      "x": 0.7999999999999957,
+      "speed": 2.2360679774997325,
+      "Px": 0.4472135954999561,
+      "Py": -0.002999999999999956,
+      "angular_O": 0.002999999999999956,
+      "remaining_turn_lower_estimate": 35.58812717085923
+    }
+  ],
+  "spatial_integral_finite_difference": [
+    {
+      "x": 0.2,
+      "momentum": [
+        0.8944271909866462,
+        -0.0030000000000255512
+      ],
+      "net_force": [
+        -0.6250011619357564,
+        0.0
+      ],
+      "momentum_error": 1.3269607634924796e-11,
+      "force_error": 1.1619357563885657e-06
+    },
+    {
+      "x": 0.5,
+      "momentum": [
+        0.7071067811420527,
+        -0.002999999999998446
+      ],
+      "net_force": [
+        -0.9999995276288586,
+        1.0842021724855042e-09
+      ],
+      "momentum_error": 4.449485224711225e-11,
+      "force_error": 4.723711414245102e-07
+    },
+    {
+      "x": 0.75,
+      "momentum": [
+        0.4999999997312709,
+        -0.0029999999999957357
+      ],
+      "net_force": [
+        -1.9999990552577172,
+        1.6263032587282564e-09
+      ],
+      "momentum_error": 2.687290945324605e-10,
+      "force_error": 9.447422828490204e-07
+    }
+  ],
+  "source_sha256": {
+    "scripts/verify_question_03.py": "3adc1d70f3ca071068ba4e3818ed6e87f352c60ef0d6e576197ff81d67e292da",
+    "drafts/question-03.md": "d69dd638bd4ca41bfa64520b540ddb3467777c512f8a336d29e537da12ae0d95",
+    "drafts/question-03-核验备忘.md": "41ffa676b2518a0bacf9ebb29c7d4ffd073461346a730d73be85808cb7366ca2",
+    "figures/题03_图稿源文件.tex": "556f5695fa4f1e178dadbdbce9ec73c3dae163b0afb314ae9eeef947f882e4b3"
+  }
+}

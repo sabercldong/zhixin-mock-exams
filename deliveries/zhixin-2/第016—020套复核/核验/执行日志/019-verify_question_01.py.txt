@@ -1,0 +1,134 @@
+{
+  "question": 1,
+  "verified_math": true,
+  "document_complete": true,
+  "eta": 0.15,
+  "velocity_ode": [
+    {
+      "y": 0,
+      "r": 0.0015,
+      "v": 0.8,
+      "ode_error": 0.0,
+      "bernoulli_residual": 0.0
+    },
+    {
+      "y": 0.01,
+      "r": 0.001405799427521344,
+      "v": 0.9108057859919539,
+      "ode_error": 2.5800050984514655e-10,
+      "bernoulli_residual": -5.648530532198492e-10
+    },
+    {
+      "y": 0.1,
+      "r": 0.0010606360994041548,
+      "v": 1.600072628563498,
+      "ode_error": -4.6984638402136625e-11,
+      "bernoulli_residual": -3.1377567211166024e-11
+    },
+    {
+      "y": 0.5,
+      "r": 0.0007481164401949586,
+      "v": 3.2161337961377656,
+      "ode_error": 2.2290924661660938e-10,
+      "bernoulli_residual": 4.9112713895738125e-11
+    },
+    {
+      "y": 1,
+      "r": 0.000633563540636846,
+      "v": 4.484274098890223,
+      "ode_error": 2.367830376215352e-10,
+      "bernoulli_residual": 2.1827872842550278e-11
+    },
+    {
+      "y": 2.7,
+      "r": 0.0004963868701553197,
+      "v": 7.305197032847215,
+      "ode_error": -1.0180354337308017e-09,
+      "bernoulli_residual": -3.637978807091713e-12
+    }
+  ],
+  "direct_area_root_y": 0.13510204081633156,
+  "closed_model_y": 0.13510204081632662,
+  "critical_radius": 0.001,
+  "critical_speed": 1.8,
+  "critical_segment": 0.0045,
+  "local_segment_relative_change": 0.00673076923076923,
+  "inferred_v0": 0.8000000000000153,
+  "inverse_without_capillarity": 0.8073508435713738,
+  "smaller_drop_y": 2.6220408163265323,
+  "uniform_drop_frequency": 400.00000000000006,
+  "perturbation_errors": [
+    {
+      "eta": 0.02,
+      "absolute_error": 1.7359860537968785e-07
+    },
+    {
+      "eta": 0.01,
+      "absolute_error": 4.336248982106383e-08
+    },
+    {
+      "eta": 0.005,
+      "absolute_error": 1.0835972230616164e-08
+    }
+  ],
+  "perturbation_error_ratios": [
+    4.003427988015585,
+    4.001716587880008
+  ],
+  "surface_integrals": [
+    {
+      "kr": 0.7,
+      "predicted": -0.1275,
+      "integrals": [
+        {
+          "epsilon": 0.03,
+          "area_quadratic_coefficient": -0.12753768757941172,
+          "volume_relative_error": 5.062500019192839e-08
+        },
+        {
+          "epsilon": 0.015,
+          "area_quadratic_coefficient": -0.12750942267134333,
+          "volume_relative_error": 3.164062567506676e-09
+        },
+        {
+          "epsilon": 0.0075,
+          "area_quadratic_coefficient": -0.12750235571346025,
+          "volume_relative_error": 1.9775381332465258e-10
+        }
+      ]
+    },
+    {
+      "kr": 1.4,
+      "predicted": 0.23999999999999994,
+      "integrals": [
+        {
+          "epsilon": 0.03,
+          "area_quadratic_coefficient": 0.23972783794339808,
+          "volume_relative_error": 5.062500019192839e-08
+        },
+        {
+          "epsilon": 0.015,
+          "area_quadratic_coefficient": 0.2399319303463759,
+          "volume_relative_error": 3.164062567506676e-09
+        },
+        {
+          "epsilon": 0.0075,
+          "area_quadratic_coefficient": 0.23998298075866842,
+          "volume_relative_error": 1.9775381332465258e-10
+        }
+      ]
+    }
+  ],
+  "plot_model_max_residual": 2.4929384778715757e-08,
+  "source_sha256": {
+    "drafts/question-01.md": "01dfe71222705d79949212daf031e7eb1bcc94953b54bf637ed3773d4326972e",
+    "figures/题01_图稿源文件.tex": "f429aab79b30175e49b8432c6439dc9cfc443ee92672b859f2bfa0cdfe10813f",
+    "scripts/verify_question_01.py": "a9343bfde18f922a120d38083bbd25b425f62590255fa9ef0c505604d3eb52e4",
+    "scripts/generate_question_01_curve.py": "861b71a205448950113b7f5a346bfa5a92893fef1c95bf5295a81bc2bbc9fd6f",
+    "figures/radius-01-coordinates.tex": "6e7f1fefcefd7bae0d970cf113a92c4b96ec892584c75a2ce55c270423c9d254"
+  },
+  "limitations": [
+    "能量阈值非动态断裂高度",
+    "小扰动稳定性不等于有限球滴终态比较"
+  ]
+}

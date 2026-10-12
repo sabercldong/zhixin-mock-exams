@@ -1,0 +1,85 @@
+{
+  "question": 4,
+  "scope": "第018套第4题分题工作预览，不代表整套交付",
+  "review_time": "2026-10-08 15:00 Asia/Shanghai",
+  "actual_visual_reviewed": true,
+  "source_sha256": "b32b50c5086313f41b50b4cbf64a8575fc01cda93d95fa81a6fd927060affd60",
+  "pdfs": {
+    "student": {
+      "total_pages": 13,
+      "body_pages": 12,
+      "pdf_sha256": "a43e59290c6a1625fc471eb9af512856418d10d48f1e5a05bad454b63db16925",
+      "overview_pages_reviewed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "high_resolution_pages_reviewed": [
+        2,
+        6,
+        8,
+        10,
+        11,
+        12,
+        13
+      ]
+    },
+    "teacher": {
+      "total_pages": 17,
+      "body_pages": 16,
+      "pdf_sha256": "178d7f90c1d571da53301d9a00b1b1ce57ea61b0cb9f2325782ba64f13157b0f",
+      "overview_pages_reviewed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "high_resolution_pages_reviewed": [
+        14,
+        17
+      ]
+    }
+  },
+  "figures_reviewed": {
+    "question-04": "d73f98edc2b822394b918dda80f09764908e288498f45956beb5be33678db149",
+    "polarity-04": "07eab82847cc49a122dd27bf49b16270c484414d0ce3a73b087aec1fb52894d7",
+    "symmetry-04": "47aeaf7c60b095b40b21b9f81bedcc32649bb025aaf4d4a4a97d1cd11c371af2",
+    "node-04": "84620a8ba6a0ad972a855d3224b6c3bee1c6775d1d956f4c727ac8469b5e03a7",
+    "terminal-04": "dad624040902e6383b67a29cd4db6712485436119448e6b0e58e7d03b4e9fbf6"
+  },
+  "checks": [
+    "按模7规则核对21条支路；题图用三组同名七节点展开，箭头为器件极性参考而非实际电流保证",
+    "节点6和端口0六支路连接、方向和电势均进入紧随的KCL与指数式",
+    "删除中心标注白底遮线，中央节点标签移入空隙，电势单列在无支路区域；A4节点完整显示，二极管尖端接负极横线",
+    "保留14步主解析、全偏导、前两次牛顿迭代数值消元、后续残差及端口六项求和",
+    "小电压检验前移为迭代初值的依据，F/G在同一aligned框内，牛顿表同页；全部节点按对称配对并列，消除孤立表尾",
+    "学生孤立低压尾页已消除；调整正常图幅和数学块组织，不改101模板、字号、行段距，不删中间计算",
+    "全5节点、60位对称求根、独立严格凸最小化、每支路及总功率、反接/半压/低压核验通过",
+    "当前两版共30页总览及9页高清实际查看，五单图和两版qpdf及日志检查通过"
+  ],
+  "remaining_visual_issues": [],
+  "set_accepted": false
+}

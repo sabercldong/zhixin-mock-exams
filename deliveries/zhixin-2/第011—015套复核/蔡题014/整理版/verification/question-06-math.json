@@ -1,0 +1,1034 @@
+{
+  "paper": "014",
+  "question": "06",
+  "phase": "independent physical checks before actual work-PDF acceptance",
+  "math_passed": true,
+  "question_accepted": false,
+  "set_accepted": false,
+  "symbolic_count": 45,
+  "numeric_count": 81,
+  "symbolic": [
+    {
+      "test": "full three-coordinate potential Hessian",
+      "passed": true
+    },
+    {
+      "test": "pair Taylor includes distance cubed",
+      "passed": true
+    },
+    {
+      "test": "translation leaves row sum zero 0",
+      "passed": true
+    },
+    {
+      "test": "translation leaves row sum zero 1",
+      "passed": true
+    },
+    {
+      "test": "translation leaves row sum zero 2",
+      "passed": true
+    },
+    {
+      "test": "orthonormal physical normal modes",
+      "passed": true
+    },
+    {
+      "test": "actual Hessian eigenvector 0",
+      "passed": true
+    },
+    {
+      "test": "actual Hessian eigenvector 1",
+      "passed": true
+    },
+    {
+      "test": "actual Hessian eigenvector 2",
+      "passed": true
+    },
+    {
+      "test": "normal mode potential diagonal",
+      "passed": true
+    },
+    {
+      "test": "kinetic energy normal coordinates",
+      "passed": true
+    },
+    {
+      "test": "hand constrained potential includes common c/2",
+      "passed": true
+    },
+    {
+      "test": "hand kinetic metric is not identity",
+      "passed": true
+    },
+    {
+      "test": "symmetric physical frequency uses mass 3m",
+      "passed": true
+    },
+    {
+      "test": "hand variables plus full CM energy",
+      "passed": true
+    },
+    {
+      "test": "full CM kinetic coefficient is 3m",
+      "passed": true
+    },
+    {
+      "test": "potential independent of COM",
+      "passed": true
+    },
+    {
+      "test": "direct exact Coulomb Hessian 00",
+      "passed": true
+    },
+    {
+      "test": "direct exact Coulomb Hessian 01",
+      "passed": true
+    },
+    {
+      "test": "direct exact Coulomb Hessian 02",
+      "passed": true
+    },
+    {
+      "test": "direct exact Coulomb Hessian 10",
+      "passed": true
+    },
+    {
+      "test": "direct exact Coulomb Hessian 11",
+      "passed": true
+    },
+    {
+      "test": "direct exact Coulomb Hessian 12",
+      "passed": true
+    },
+    {
+      "test": "direct exact Coulomb Hessian 20",
+      "passed": true
+    },
+    {
+      "test": "direct exact Coulomb Hessian 21",
+      "passed": true
+    },
+    {
+      "test": "direct exact Coulomb Hessian 22",
+      "passed": true
+    },
+    {
+      "test": "critical antisymmetric family exact zero energy",
+      "passed": true
+    },
+    {
+      "test": "critical family exact force zero 0",
+      "passed": true
+    },
+    {
+      "test": "critical family exact force zero 1",
+      "passed": true
+    },
+    {
+      "test": "critical family exact force zero 2",
+      "passed": true
+    },
+    {
+      "test": "exact antisymmetric restoring force above critical",
+      "passed": true
+    },
+    {
+      "test": "exact two-particle effective energy force factor",
+      "passed": true
+    },
+    {
+      "test": "cubic relative correction independent of softening parameter",
+      "passed": true
+    },
+    {
+      "test": "rationalized endpoint-free period integrand",
+      "passed": true
+    },
+    {
+      "test": "period integrand amplitude expansion",
+      "passed": true
+    },
+    {
+      "test": "integrated nonlinear period correction nine sixteenths",
+      "passed": true
+    },
+    {
+      "test": "unequal middle mass exact symmetric mode",
+      "passed": true
+    },
+    {
+      "test": "unequal middle mass exact antisymmetric mode",
+      "passed": true
+    },
+    {
+      "test": "common trap shifts physical eigenvalue 0",
+      "passed": true
+    },
+    {
+      "test": "common trap shifts physical eigenvalue 1",
+      "passed": true
+    },
+    {
+      "test": "common trap shifts physical eigenvalue 2",
+      "passed": true
+    },
+    {
+      "test": "infinite chain Hermitian two-site determinant",
+      "passed": true
+    },
+    {
+      "test": "infinite chain translational zero at theta 0",
+      "passed": true
+    },
+    {
+      "test": "even separation average charge product",
+      "passed": true
+    },
+    {
+      "test": "odd separation average charge product",
+      "passed": true
+    }
+  ],
+  "numerical": [
+    {
+      "test": "direct pair-energy fourth-order Taylor remainder",
+      "passed": true,
+      "lam": -0.5,
+      "amplitudes": [
+        0.02,
+        0.01,
+        0.005
+      ],
+      "absolute_remainders": [
+        4.654029953356838e-06,
+        2.916030310944886e-07,
+        1.8236574760146845e-08
+      ]
+    },
+    {
+      "test": "independent finite difference of actual Coulomb forces",
+      "passed": true,
+      "lam": -0.5,
+      "max_absolute_error": 1.5000001241105565e-10
+    },
+    {
+      "test": "exact global translation invariance",
+      "passed": true,
+      "lam": -0.5
+    },
+    {
+      "test": "direct pair-energy fourth-order Taylor remainder",
+      "passed": true,
+      "lam": 0.0,
+      "amplitudes": [
+        0.02,
+        0.01,
+        0.005
+      ],
+      "absolute_remainders": [
+        7.189731052641222e-10,
+        4.4937581930965486e-11,
+        2.808566004165863e-12
+      ]
+    },
+    {
+      "test": "independent finite difference of actual Coulomb forces",
+      "passed": true,
+      "lam": 0.0,
+      "max_absolute_error": 4.687500387845489e-12
+    },
+    {
+      "test": "exact global translation invariance",
+      "passed": true,
+      "lam": 0.0
+    },
+    {
+      "test": "direct pair-energy fourth-order Taylor remainder",
+      "passed": true,
+      "lam": 0.1,
+      "amplitudes": [
+        0.02,
+        0.01,
+        0.005
+      ],
+      "absolute_remainders": [
+        1.1033157582572616e-08,
+        6.897034819705047e-10,
+        4.310841097412968e-11
+      ]
+    },
+    {
+      "test": "independent finite difference of actual Coulomb forces",
+      "passed": true,
+      "lam": 0.1,
+      "max_absolute_error": 3.000000248221113e-11
+    },
+    {
+      "test": "exact global translation invariance",
+      "passed": true,
+      "lam": 0.1
+    },
+    {
+      "test": "direct pair-energy fourth-order Taylor remainder",
+      "passed": true,
+      "lam": 0.25,
+      "amplitudes": [
+        0.02,
+        0.01,
+        0.005
+      ],
+      "absolute_remainders": [
+        5.033281647666334e-08,
+        3.1474729921714736e-09,
+        1.967431742356889e-10
+      ]
+    },
+    {
+      "test": "independent finite difference of actual Coulomb forces",
+      "passed": true,
+      "lam": 0.25,
+      "max_absolute_error": 7.500000620552782e-11
+    },
+    {
+      "test": "exact global translation invariance",
+      "passed": true,
+      "lam": 0.25
+    },
+    {
+      "test": "direct pair-energy fourth-order Taylor remainder",
+      "passed": true,
+      "lam": 0.3,
+      "amplitudes": [
+        0.02,
+        0.01,
+        0.005
+      ],
+      "absolute_remainders": [
+        1.5979529581919364e-09,
+        9.988420352318098e-11,
+        6.242934600786213e-12
+      ]
+    },
+    {
+      "test": "independent finite difference of actual Coulomb forces",
+      "passed": true,
+      "lam": 0.3,
+      "max_absolute_error": 9.000000744663339e-11
+    },
+    {
+      "test": "exact global translation invariance",
+      "passed": true,
+      "lam": 0.3
+    },
+    {
+      "test": "direct pair-energy fourth-order Taylor remainder",
+      "passed": true,
+      "lam": 1.0,
+      "amplitudes": [
+        0.02,
+        0.01,
+        0.005
+      ],
+      "absolute_remainders": [
+        1.0847203218321754e-07,
+        6.781809209791489e-09,
+        4.238990508673016e-10
+      ]
+    },
+    {
+      "test": "independent finite difference of actual Coulomb forces",
+      "passed": true,
+      "lam": 1.0,
+      "max_absolute_error": 3.000000248221113e-10
+    },
+    {
+      "test": "exact global translation invariance",
+      "passed": true,
+      "lam": 1.0
+    },
+    {
+      "test": "direct pair-energy fourth-order Taylor remainder",
+      "passed": true,
+      "lam": 2.0,
+      "amplitudes": [
+        0.02,
+        0.01,
+        0.005
+      ],
+      "absolute_remainders": [
+        3.4186284722055246e-06,
+        2.139362334809252e-07,
+        1.3375271300838498e-08
+      ]
+    },
+    {
+      "test": "independent finite difference of actual Coulomb forces",
+      "passed": true,
+      "lam": 2.0,
+      "max_absolute_error": 6.000000496442226e-10
+    },
+    {
+      "test": "exact global translation invariance",
+      "passed": true,
+      "lam": 2.0
+    },
+    {
+      "test": "actual nonlinear Coulomb trajectory vs linear normal mode",
+      "passed": true,
+      "lam": 0.26,
+      "frequency_squared": 0.010000000000000009,
+      "relative_amplitude_error": 3.258797311861405e-09,
+      "COM_error": 0.0,
+      "absolute_energy_drift": 9.71445146547012e-17
+    },
+    {
+      "test": "actual nonlinear Coulomb trajectory vs linear normal mode",
+      "passed": true,
+      "lam": 0.26,
+      "frequency_squared": 0.78,
+      "relative_amplitude_error": 1.9517743981613007e-09,
+      "COM_error": 0.0,
+      "absolute_energy_drift": 1.457167719820518e-16
+    },
+    {
+      "test": "actual nonlinear Coulomb trajectory vs linear normal mode",
+      "passed": true,
+      "lam": 0.5,
+      "frequency_squared": 0.25,
+      "relative_amplitude_error": 1.857467189770017e-09,
+      "COM_error": 0.0,
+      "absolute_energy_drift": 5.551115123125783e-17
+    },
+    {
+      "test": "actual nonlinear Coulomb trajectory vs linear normal mode",
+      "passed": true,
+      "lam": 0.5,
+      "frequency_squared": 1.5,
+      "relative_amplitude_error": 1.7690048475279671e-09,
+      "COM_error": 0.0,
+      "absolute_energy_drift": 1.6653345369377348e-16
+    },
+    {
+      "test": "actual nonlinear Coulomb trajectory vs linear normal mode",
+      "passed": true,
+      "lam": 1.0,
+      "frequency_squared": 0.75,
+      "relative_amplitude_error": 1.4556448392846492e-09,
+      "COM_error": 0.0,
+      "absolute_energy_drift": 2.220446049250313e-16
+    },
+    {
+      "test": "actual nonlinear Coulomb trajectory vs linear normal mode",
+      "passed": true,
+      "lam": 1.0,
+      "frequency_squared": 3.0,
+      "relative_amplitude_error": 1.6086848040187775e-09,
+      "COM_error": 0.0,
+      "absolute_energy_drift": 2.220446049250313e-16
+    },
+    {
+      "test": "actual nonlinear Coulomb trajectory vs linear normal mode",
+      "passed": true,
+      "lam": 2.0,
+      "frequency_squared": 1.75,
+      "relative_amplitude_error": 1.1990031736290162e-09,
+      "COM_error": 0.0,
+      "absolute_energy_drift": 4.440892098500626e-16
+    },
+    {
+      "test": "actual nonlinear Coulomb trajectory vs linear normal mode",
+      "passed": true,
+      "lam": 2.0,
+      "frequency_squared": 6.0,
+      "relative_amplitude_error": 1.4870808577593928e-09,
+      "COM_error": 0.0,
+      "absolute_energy_drift": 4.440892098500626e-16
+    },
+    {
+      "test": "exact critical free-tilt family, not harmonic guess",
+      "passed": true,
+      "tilt": -3.0
+    },
+    {
+      "test": "exact critical free-tilt family, not harmonic guess",
+      "passed": true,
+      "tilt": -0.5
+    },
+    {
+      "test": "exact critical free-tilt family, not harmonic guess",
+      "passed": true,
+      "tilt": 0.0
+    },
+    {
+      "test": "exact critical free-tilt family, not harmonic guess",
+      "passed": true,
+      "tilt": 0.5
+    },
+    {
+      "test": "exact critical free-tilt family, not harmonic guess",
+      "passed": true,
+      "tilt": 3.0
+    },
+    {
+      "test": "direct matrix eigenvalues and instability signs",
+      "passed": true,
+      "lam": 0.0,
+      "eigenvalues": [
+        -0.25,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "test": "direct matrix eigenvalues and instability signs",
+      "passed": true,
+      "lam": 0.1,
+      "eigenvalues": [
+        -0.14999999999999997,
+        -3.06933129442319e-17,
+        0.30000000000000016
+      ]
+    },
+    {
+      "test": "direct matrix eigenvalues and instability signs",
+      "passed": true,
+      "lam": 0.25,
+      "eigenvalues": [
+        -9.728208770005847e-19,
+        0.0,
+        0.75
+      ]
+    },
+    {
+      "test": "direct matrix eigenvalues and instability signs",
+      "passed": true,
+      "lam": 1.0,
+      "eigenvalues": [
+        1.1814645315056314e-16,
+        0.7499999999999999,
+        3.0
+      ]
+    },
+    {
+      "test": "independent generalized mass eigenproblem",
+      "passed": true,
+      "middle_mass": 0.3,
+      "lam": 0.3,
+      "eigenvalues": [
+        7.3150432119621e-17,
+        0.05000000000000001,
+        2.3000000000000003
+      ]
+    },
+    {
+      "test": "independent generalized mass eigenproblem",
+      "passed": true,
+      "middle_mass": 0.3,
+      "lam": 1.0,
+      "eigenvalues": [
+        -3.1587110397115394e-16,
+        0.7500000000000002,
+        7.666666666666664
+      ]
+    },
+    {
+      "test": "independent generalized mass eigenproblem",
+      "passed": true,
+      "middle_mass": 1.0,
+      "lam": 0.3,
+      "eigenvalues": [
+        5.637112074902756e-17,
+        0.05,
+        0.9
+      ]
+    },
+    {
+      "test": "independent generalized mass eigenproblem",
+      "passed": true,
+      "middle_mass": 1.0,
+      "lam": 1.0,
+      "eigenvalues": [
+        1.1814645315056314e-16,
+        0.7499999999999999,
+        3.0
+      ]
+    },
+    {
+      "test": "independent generalized mass eigenproblem",
+      "passed": true,
+      "middle_mass": 3.0,
+      "lam": 0.3,
+      "eigenvalues": [
+        -1.2907247426046001e-17,
+        0.049999999999999996,
+        0.5000000000000002
+      ]
+    },
+    {
+      "test": "independent generalized mass eigenproblem",
+      "passed": true,
+      "middle_mass": 3.0,
+      "lam": 1.0,
+      "eigenvalues": [
+        -1.0268858433479135e-16,
+        0.75,
+        1.6666666666666665
+      ]
+    },
+    {
+      "test": "actual external confinement shifts all modes",
+      "passed": true,
+      "lam": 0.1,
+      "trap": 0.2,
+      "eigenvalues": [
+        0.04999999999999998,
+        0.19999999999999998,
+        0.49999999999999983
+      ]
+    },
+    {
+      "test": "actual external confinement shifts all modes",
+      "passed": true,
+      "lam": 0.25,
+      "trap": 0.1,
+      "eigenvalues": [
+        0.09999999999999987,
+        0.09999999999999999,
+        0.8499999999999996
+      ]
+    },
+    {
+      "test": "actual external confinement shifts all modes",
+      "passed": true,
+      "lam": 1.0,
+      "trap": 0.4,
+      "eigenvalues": [
+        0.39999999999999986,
+        1.1500000000000001,
+        3.4000000000000004
+      ]
+    },
+    {
+      "test": "fully evaluated SI variant frequencies",
+      "passed": true,
+      "stiffness_N_per_m": 8.999999999999996,
+      "omega_a": 14.999999999999996,
+      "omega_s": 36.74234614174767,
+      "period_a": 0.4188790204786392,
+      "period_s": 0.1710066440215819
+    },
+    {
+      "test": "genuine three-charge trajectory vs nonlinear energy period",
+      "passed": true,
+      "amplitude_over_l": 0.01,
+      "delta": 0.0001,
+      "period": 628.353873094058,
+      "quadrature_period_over_linear": 1.000056249150431,
+      "ODE_period_over_linear": 1.0000562491385683,
+      "relative_period_error": 1.1862733018119798e-11,
+      "second_order_truncation_error": 8.495689908069224e-10
+    },
+    {
+      "test": "genuine three-charge trajectory vs nonlinear energy period",
+      "passed": true,
+      "amplitude_over_l": 0.01,
+      "delta": 0.02,
+      "period": 44.431328465201794,
+      "quadrature_period_over_linear": 1.000056249150431,
+      "ODE_period_over_linear": 1.000056249143921,
+      "relative_period_error": 6.509903727192068e-12,
+      "second_order_truncation_error": 8.495689908069224e-10
+    },
+    {
+      "test": "genuine three-charge trajectory vs nonlinear energy period",
+      "passed": true,
+      "amplitude_over_l": 0.01,
+      "delta": 0.5,
+      "period": 8.88626569304781,
+      "quadrature_period_over_linear": 1.000056249150431,
+      "ODE_period_over_linear": 1.0000562491447595,
+      "relative_period_error": 5.67146329899515e-12,
+      "second_order_truncation_error": 8.495689908069224e-10
+    },
+    {
+      "test": "genuine three-charge trajectory vs nonlinear energy period",
+      "passed": true,
+      "amplitude_over_l": 0.1,
+      "delta": 0.0001,
+      "period": 631.8475095431041,
+      "quadrature_period_over_linear": 1.005616544242605,
+      "ODE_period_over_linear": 1.0056165442408853,
+      "relative_period_error": 1.7197354651443675e-12,
+      "second_order_truncation_error": 8.455757394953273e-06
+    },
+    {
+      "test": "genuine three-charge trajectory vs nonlinear energy period",
+      "passed": true,
+      "amplitude_over_l": 0.1,
+      "delta": 0.02,
+      "period": 44.678365867412694,
+      "quadrature_period_over_linear": 1.005616544242605,
+      "ODE_period_over_linear": 1.0056165442417095,
+      "relative_period_error": 8.955058916626513e-13,
+      "second_order_truncation_error": 8.455757394953273e-06
+    },
+    {
+      "test": "genuine three-charge trajectory vs nonlinear energy period",
+      "passed": true,
+      "amplitude_over_l": 0.1,
+      "delta": 0.5,
+      "period": 8.935673173483549,
+      "quadrature_period_over_linear": 1.005616544242605,
+      "ODE_period_over_linear": 1.0056165442418235,
+      "relative_period_error": 7.815970093361102e-13,
+      "second_order_truncation_error": 8.455757394953273e-06
+    },
+    {
+      "test": "genuine three-charge trajectory vs nonlinear energy period",
+      "passed": true,
+      "amplitude_over_l": 0.3,
+      "delta": 0.0001,
+      "period": 659.7123652532597,
+      "quadrature_period_over_linear": 1.0499648394889631,
+      "ODE_period_over_linear": 1.0499648394890222,
+      "relative_period_error": 5.906386491005833e-14,
+      "second_order_truncation_error": 0.0006601605110368655
+    },
+    {
+      "test": "genuine three-charge trajectory vs nonlinear energy period",
+      "passed": true,
+      "amplitude_over_l": 0.3,
+      "delta": 0.02,
+      "period": 46.648708710311844,
+      "quadrature_period_over_linear": 1.0499648394889631,
+      "ODE_period_over_linear": 1.0499648394888468,
+      "relative_period_error": 1.163513729807164e-13,
+      "second_order_truncation_error": 0.0006601605110368655
+    },
+    {
+      "test": "genuine three-charge trajectory vs nonlinear energy period",
+      "passed": true,
+      "amplitude_over_l": 0.3,
+      "delta": 0.5,
+      "period": 9.32974174206325,
+      "quadrature_period_over_linear": 1.0499648394889631,
+      "ODE_period_over_linear": 1.049964839488946,
+      "relative_period_error": 1.709743457922741e-14,
+      "second_order_truncation_error": 0.0006601605110368655
+    },
+    {
+      "test": "full interaction Bloch matrix vs actual pair energy",
+      "passed": true,
+      "theta": 0.15,
+      "lam": 0.5,
+      "cutoff": 12000,
+      "pair_matrix_error": 0.0,
+      "estimated_absolute_kernel_tail_bound": 2.7777777777777777e-08
+    },
+    {
+      "test": "full interaction Bloch matrix vs actual pair energy",
+      "passed": true,
+      "theta": 0.15,
+      "lam": 1.0,
+      "cutoff": 12000,
+      "pair_matrix_error": 0.0,
+      "estimated_absolute_kernel_tail_bound": 2.7777777777777777e-08
+    },
+    {
+      "test": "full interaction Bloch matrix vs actual pair energy",
+      "passed": true,
+      "theta": 0.15,
+      "lam": 2.0,
+      "cutoff": 12000,
+      "pair_matrix_error": 8.881784197001252e-16,
+      "estimated_absolute_kernel_tail_bound": 2.7777777777777777e-08
+    },
+    {
+      "test": "full interaction Bloch matrix vs actual pair energy",
+      "passed": true,
+      "theta": 0.9,
+      "lam": 0.5,
+      "cutoff": 12000,
+      "pair_matrix_error": 0.0,
+      "estimated_absolute_kernel_tail_bound": 2.7777777777777777e-08
+    },
+    {
+      "test": "full interaction Bloch matrix vs actual pair energy",
+      "passed": true,
+      "theta": 0.9,
+      "lam": 1.0,
+      "cutoff": 12000,
+      "pair_matrix_error": 4.440892098500626e-16,
+      "estimated_absolute_kernel_tail_bound": 2.7777777777777777e-08
+    },
+    {
+      "test": "full interaction Bloch matrix vs actual pair energy",
+      "passed": true,
+      "theta": 0.9,
+      "lam": 2.0,
+      "cutoff": 12000,
+      "pair_matrix_error": 8.881784197001252e-16,
+      "estimated_absolute_kernel_tail_bound": 2.7777777777777777e-08
+    },
+    {
+      "test": "full interaction Bloch matrix vs actual pair energy",
+      "passed": true,
+      "theta": 2.5,
+      "lam": 0.5,
+      "cutoff": 12000,
+      "pair_matrix_error": 8.881784197001252e-16,
+      "estimated_absolute_kernel_tail_bound": 2.7777777777777777e-08
+    },
+    {
+      "test": "full interaction Bloch matrix vs actual pair energy",
+      "passed": true,
+      "theta": 2.5,
+      "lam": 1.0,
+      "cutoff": 12000,
+      "pair_matrix_error": 1.7763568394002505e-15,
+      "estimated_absolute_kernel_tail_bound": 2.7777777777777777e-08
+    },
+    {
+      "test": "full interaction Bloch matrix vs actual pair energy",
+      "passed": true,
+      "theta": 2.5,
+      "lam": 2.0,
+      "cutoff": 12000,
+      "pair_matrix_error": 3.1086244689504383e-15,
+      "estimated_absolute_kernel_tail_bound": 2.7777777777777777e-08
+    },
+    {
+      "test": "full interaction Bloch matrix vs actual pair energy",
+      "passed": true,
+      "theta": 3.141592653589793,
+      "lam": 0.5,
+      "cutoff": 12000,
+      "pair_matrix_error": 3.3306690738754696e-16,
+      "estimated_absolute_kernel_tail_bound": 2.7777777777777777e-08
+    },
+    {
+      "test": "full interaction Bloch matrix vs actual pair energy",
+      "passed": true,
+      "theta": 3.141592653589793,
+      "lam": 1.0,
+      "cutoff": 12000,
+      "pair_matrix_error": 6.661338147750939e-16,
+      "estimated_absolute_kernel_tail_bound": 2.7777777777777777e-08
+    },
+    {
+      "test": "full interaction Bloch matrix vs actual pair energy",
+      "passed": true,
+      "theta": 3.141592653589793,
+      "lam": 2.0,
+      "cutoff": 12000,
+      "pair_matrix_error": 1.3322676295501878e-15,
+      "estimated_absolute_kernel_tail_bound": 2.7777777777777777e-08
+    },
+    {
+      "test": "equal-charge full-chain dispersion from exact log integral",
+      "passed": true,
+      "wave_number": 0.03,
+      "H": 0.0003119077936254088,
+      "independent_series_error": 3.755787456212467e-13,
+      "tail_bound": 1.3888888888888889e-08
+    },
+    {
+      "test": "equal-charge full-chain dispersion from exact log integral",
+      "passed": true,
+      "wave_number": 0.4,
+      "H": 0.055184392572549715,
+      "independent_series_error": 2.3869795029440866e-15,
+      "tail_bound": 1.3888888888888889e-08
+    },
+    {
+      "test": "equal-charge full-chain dispersion from exact log integral",
+      "passed": true,
+      "wave_number": 1.2,
+      "H": 0.4769189381927185,
+      "independent_series_error": 2.4591439995447217e-14,
+      "tail_bound": 1.3888888888888889e-08
+    },
+    {
+      "test": "equal-charge full-chain dispersion from exact log integral",
+      "passed": true,
+      "wave_number": 2.2,
+      "H": 1.4092357408374299,
+      "independent_series_error": 1.3455903058456897e-13,
+      "tail_bound": 1.3888888888888889e-08
+    },
+    {
+      "test": "equal-charge full-chain dispersion from exact log integral",
+      "passed": true,
+      "wave_number": 3.0,
+      "H": 2.06896643140125,
+      "independent_series_error": 1.3806733534238447e-12,
+      "tail_bound": 1.3888888888888889e-08
+    },
+    {
+      "test": "equal-charge full-chain dispersion from exact log integral",
+      "passed": true,
+      "wave_number": 3.141592653589793,
+      "H": 2.10359958052929,
+      "independent_series_error": 3.472222953604387e-09,
+      "tail_bound": 1.3888888888888889e-08
+    },
+    {
+      "test": "non-neutral infinite cell negative long-wave trial, full interactions",
+      "passed": true,
+      "lam": "0.2",
+      "k": "0.000001291661535617820233488707718747578939124419279170947334403806470866392448569627501695826538827720604",
+      "energy_divided_by_k_squared": "-2.160000000000014366687555675955504697073327125229892310631396627365259602671876420378971152626349174",
+      "F_divided_by_k_squared": "7.529790578129944266113561812316719742779683010985425028263905571917341753708050073765343227178007331",
+      "H_divided_by_k_squared": "0.3465735902799552756510890333136744730780158865075606922403516050670691090481938933693592778758516282",
+      "precision_decimal_digits": 100
+    },
+    {
+      "test": "non-neutral infinite cell negative long-wave trial, full interactions",
+      "passed": true,
+      "lam": "0.5",
+      "k": "0.00000001200041475259415968492638316172955529535935413064111909290723804003883511290915745267074933282857006",
+      "energy_divided_by_k_squared": "-0.8437500000000000017501209715971472742245754599781160240874841236215318776469559756383853850061585791",
+      "F_divided_by_k_squared": "9.869162312519753892877579109875265205192358462893499217496295033851259010263247317603146604870431262",
+      "H_divided_by_k_squared": "0.3465735902799726532085123707886763345995283092298412249773802272087782210097332791662292805356847366",
+      "precision_decimal_digits": 100
+    },
+    {
+      "test": "non-neutral infinite cell negative long-wave trial, full interactions",
+      "passed": true,
+      "lam": "0.8",
+      "k": "0.00000000000000000000000000000254118666904095412836424502247949379246408737908617536848683411871458618225410048117738891678479503",
+      "energy_divided_by_k_squared": "-0.1350000000000000000000000000000000000000000000000000000000001094209474726664009988749687272563785098",
+      "F_divided_by_k_squared": "34.82246081267778503139790091905615100705775544159033779188754040690476699154853782606922063008782129",
+      "H_divided_by_k_squared": "0.3465735902799726547086160607290882840377500671801276270603399374797209056571418257076640032996159976",
+      "precision_decimal_digits": 100
+    },
+    {
+      "test": "non-neutral infinite cell negative long-wave trial, full interactions",
+      "passed": true,
+      "lam": "1.2",
+      "k": "2.311195811708743466046366868321905524193505133631493089057434298151371133148223162768216677054438185e-42",
+      "energy_divided_by_k_squared": "-0.1350000000000000000000000000000000000000000000000000000000000000000000000000000000001350244370237399",
+      "F_divided_by_k_squared": "48.68540442387669121974254334821968236856775812879544287430114057435031412916653029415474983059610858",
+      "H_divided_by_k_squared": "0.346573590279972654708616060729088284037750067180127627060340004746696810984847357802876021559875385",
+      "precision_decimal_digits": 100
+    },
+    {
+      "test": "non-neutral infinite cell negative long-wave trial, full interactions",
+      "passed": true,
+      "lam": "2",
+      "k": "0.00000001200041475259415968492638316172955529535935413064111909290723804003883511290915745267074933282857006",
+      "energy_divided_by_k_squared": "-3.375000000000000007000483886388589096898301839912464096349936494486127510587823902553541540024634317",
+      "F_divided_by_k_squared": "9.869162312519753892877579109875265205192358462893499217496295033851259010263247317603146604870431262",
+      "H_divided_by_k_squared": "0.3465735902799726532085123707886763345995283092298412249773802272087782210097332791662292805356847366",
+      "precision_decimal_digits": 100
+    },
+    {
+      "test": "non-neutral infinite cell negative long-wave trial, full interactions",
+      "passed": true,
+      "lam": "5",
+      "k": "0.000001291661535617820233488707718747578939124419279170947334403806470866392448569627501695826538827720604",
+      "energy_divided_by_k_squared": "-54.00000000000035916718889189888761742683317813074730776578491568413149006679691050947427881565872934",
+      "F_divided_by_k_squared": "7.529790578129944266113561812316719742779683010985425028263905571917341753708050073765343227178007331",
+      "H_divided_by_k_squared": "0.3465735902799552756510890333136744730780158865075606922403516050670691090481938933693592778758516282",
+      "precision_decimal_digits": 100
+    }
+  ],
+  "actual_original_readings": [
+    {
+      "path": "preview/originals/paper-02.png",
+      "sha256": "601d2977836ad34395795f97b4fd6018dd377a69dc7a7b6342bd2f81a1503d5f",
+      "actual_displayed_and_read": true
+    },
+    {
+      "path": "preview/originals/answer-07.png",
+      "sha256": "9024df12aeee4b1afdd58090f29b65fb4217cca4d42ddfdd487dcc0c898356a4",
+      "actual_displayed_and_read": true
+    },
+    {
+      "path": "preview/originals/details/q06-paper.png",
+      "sha256": "7d4c23026bf064bf5aebe35113aaeca72d97ebd58dfc234a2be8e35a201d268e",
+      "actual_displayed_and_read": true
+    },
+    {
+      "path": "preview/originals/details/q06-answer-left.png",
+      "sha256": "e6a0393aa6e577c6e14352f5de0d7c5fcb303baeb4b05ffe1863c5b0179387bf",
+      "actual_displayed_and_read": true
+    }
+  ],
+  "source_sha256": {
+    "试卷.pdf": "3c8164d75b7f117095d26f554fb788867b2b781c9a642af12bee499d3b232cf0",
+    "答案.pdf": "111c13cd664b08f098076baed25c937368238953127045c5cfa8c8460471472a"
+  },
+  "script_sha256": "5b530398ef3bff26ae303795403a40319fe056d98c6bcd908d69d66566c50435",
+  "caveats": [
+    "Stability is internal relative stability after removing free COM translation.",
+    "Hand alpha,beta quadratic coefficients need c/2 and kinetic metric diag(m,3m).",
+    "Infinite-chain optional has no handwritten solution; independent derivation.",
+    "This program does not accept the draft, figures or current work PDFs."
+  ],
+  "draft_sha256": "57b91518a03d75f499ae564a65406b9ae34ce5f8e62709c373ed0701de3d6697",
+  "figure_source_sha256": "b56cfdea79da18e308a3da2d68f04c4e8557cbf3ed1e1e3394a4b777f7e031b8",
+  "working_pdf_checks": [
+    {
+      "question": "06",
+      "version": "student",
+      "total_pages": 14,
+      "body_pages": 13,
+      "body_nonspace": 8071,
+      "per_page_nonspace": [
+        679,
+        619,
+        554,
+        513,
+        673,
+        550,
+        487,
+        336,
+        698,
+        700,
+        729,
+        659,
+        874
+      ],
+      "layout_warnings": [],
+      "pdf_sha256": "b1eaa7ef81285ce6c08b2c49e82de8c64d61587f26a2362bb8713826922ce9c9",
+      "draft_sha256": "57b91518a03d75f499ae564a65406b9ae34ce5f8e62709c373ed0701de3d6697",
+      "actual_reviewed": false,
+      "accepted": false
+    },
+    {
+      "question": "06",
+      "version": "teacher",
+      "total_pages": 21,
+      "body_pages": 20,
+      "body_nonspace": 13532,
+      "per_page_nonspace": [
+        679,
+        619,
+        554,
+        513,
+        673,
+        550,
+        487,
+        336,
+        698,
+        700,
+        729,
+        659,
+        874,
+        873,
+        1067,
+        995,
+        619,
+        775,
+        715,
+        417
+      ],
+      "layout_warnings": [],
+      "pdf_sha256": "6e12d96801a8c9413310167b6f149164d517717f518ecdc96000b73a8030c405",
+      "draft_sha256": "57b91518a03d75f499ae564a65406b9ae34ce5f8e62709c373ed0701de3d6697",
+      "actual_reviewed": false,
+      "accepted": false
+    }
+  ]
+}

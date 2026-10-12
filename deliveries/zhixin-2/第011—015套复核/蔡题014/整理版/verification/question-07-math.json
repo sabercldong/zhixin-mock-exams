@@ -1,0 +1,911 @@
+{
+  "paper": "014",
+  "question": "07",
+  "math_passed": true,
+  "question_accepted": false,
+  "set_accepted": false,
+  "symbolic_count": 33,
+  "numeric_count": 55,
+  "symbolic": [
+    {
+      "test": "n2 exact unsquared path expansion",
+      "passed": true
+    },
+    {
+      "test": "hand hyperbola complete square",
+      "passed": true
+    },
+    {
+      "test": "physical left branch satisfies squared conic",
+      "passed": true
+    },
+    {
+      "test": "positive optical distance squared equals geometric distance",
+      "passed": true
+    },
+    {
+      "test": "vertex focal distance",
+      "passed": true
+    },
+    {
+      "test": "exact nonparaxial surface derivative",
+      "passed": true
+    },
+    {
+      "test": "paraxial curvature magnitude f",
+      "passed": true
+    },
+    {
+      "test": "surface sag expansion through quartic",
+      "passed": true
+    },
+    {
+      "test": "general index conic without small-angle approximation",
+      "passed": true
+    },
+    {
+      "test": "general hyperbola centers and axes",
+      "passed": true
+    },
+    {
+      "test": "general index derivative keeps correct optical weight",
+      "passed": true
+    },
+    {
+      "test": "general weighted normal denominator",
+      "passed": true
+    },
+    {
+      "test": "general incidence normalization gives exact critical bound denominator",
+      "passed": true
+    },
+    {
+      "test": "tangent Fermat equation implies exact vector Snell",
+      "passed": true
+    },
+    {
+      "test": "Lorentz simultaneity gives moving spatial slice",
+      "passed": true
+    },
+    {
+      "test": "beta .8 gamma five thirds",
+      "passed": true
+    },
+    {
+      "test": "hand moving curve coefficients",
+      "passed": true
+    },
+    {
+      "test": "moving vertex instantaneous focal separation",
+      "passed": true
+    },
+    {
+      "test": "velocity boost preserves vacuum speed",
+      "passed": true
+    },
+    {
+      "test": "actual moving ray hits focus worldline horizontally",
+      "passed": true
+    },
+    {
+      "test": "actual moving ray hits axis at same event",
+      "passed": true
+    },
+    {
+      "test": "moving incident speed thirteen fourteenths",
+      "passed": true
+    },
+    {
+      "test": "incident beam catches moving surface",
+      "passed": true
+    },
+    {
+      "test": "central future focus event time",
+      "passed": true
+    },
+    {
+      "test": "height f future focus event time",
+      "passed": true
+    },
+    {
+      "test": "central incident wavefront label",
+      "passed": true
+    },
+    {
+      "test": "off axis incident wavefront label",
+      "passed": true
+    },
+    {
+      "test": "simultaneous laboratory crossings have unequal incident phases",
+      "passed": true
+    },
+    {
+      "test": "same wavefront requires earlier off axis crossing",
+      "passed": true
+    },
+    {
+      "test": "earlier crossing cancels longer flight exactly",
+      "passed": true
+    },
+    {
+      "test": "rest geometric focal parameter coincides with optical position",
+      "passed": true
+    },
+    {
+      "test": "ground geometric focal parameter differs from optical separation",
+      "passed": true
+    },
+    {
+      "test": "geometric focal mismatch is strictly nonzero in moving slice",
+      "passed": true
+    }
+  ],
+  "numerical": [
+    {
+      "test": "exact physical branch equal path and actual refraction vector",
+      "passed": true,
+      "refractive_index": 1.25,
+      "height_over_f": 0.0,
+      "X_over_f": -1.0,
+      "optical_path_error": 0.0,
+      "snell_residual": 0.0,
+      "incoming_sine": 0.0,
+      "critical_sine": 0.8,
+      "transmitted_direction_error": 0.0
+    },
+    {
+      "test": "exact physical branch equal path and actual refraction vector",
+      "passed": true,
+      "refractive_index": 1.25,
+      "height_over_f": 0.05,
+      "X_over_f": -1.0049721870257042,
+      "optical_path_error": 0.0,
+      "snell_residual": 1.3877787807814457e-17,
+      "incoming_sine": 0.1940285000290664,
+      "critical_sine": 0.8,
+      "transmitted_direction_error": 1.1295700899707568e-16
+    },
+    {
+      "test": "exact physical branch equal path and actual refraction vector",
+      "passed": true,
+      "refractive_index": 1.25,
+      "height_over_f": 0.5,
+      "X_over_f": -1.356789172325331,
+      "optical_path_error": 0.0,
+      "snell_residual": 0.0,
+      "incoming_sine": 0.7427813527082076,
+      "critical_sine": 0.8,
+      "transmitted_direction_error": 1.6653345369377348e-16
+    },
+    {
+      "test": "exact physical branch equal path and actual refraction vector",
+      "passed": true,
+      "refractive_index": 1.25,
+      "height_over_f": 1.0,
+      "X_over_f": -1.9610122934081688,
+      "optical_path_error": 0.0,
+      "snell_residual": 0.0,
+      "incoming_sine": 0.7844645405527361,
+      "critical_sine": 0.8,
+      "transmitted_direction_error": 2.220446049250313e-16
+    },
+    {
+      "test": "exact physical branch equal path and actual refraction vector",
+      "passed": true,
+      "refractive_index": 1.25,
+      "height_over_f": 3.0,
+      "X_over_f": -4.580171172505519,
+      "optical_path_error": 0.0,
+      "snell_residual": 5.551115123125783e-17,
+      "incoming_sine": 0.7982281262852872,
+      "critical_sine": 0.8,
+      "transmitted_direction_error": 1.1102230246251565e-16
+    },
+    {
+      "test": "exact physical branch equal path and actual refraction vector",
+      "passed": true,
+      "refractive_index": 1.25,
+      "height_over_f": 20.0,
+      "X_over_f": -27.225925668759995,
+      "optical_path_error": 0.0,
+      "snell_residual": 2.220446049250313e-16,
+      "incoming_sine": 0.79996000299975,
+      "critical_sine": 0.8,
+      "transmitted_direction_error": 4.820209419629775e-15
+    },
+    {
+      "test": "exact physical branch equal path and actual refraction vector",
+      "passed": true,
+      "refractive_index": 1.5,
+      "height_over_f": 0.0,
+      "X_over_f": -1.0,
+      "optical_path_error": 0.0,
+      "snell_residual": 0.0,
+      "incoming_sine": 0.0,
+      "critical_sine": 0.6666666666666666,
+      "transmitted_direction_error": 0.0
+    },
+    {
+      "test": "exact physical branch equal path and actual refraction vector",
+      "passed": true,
+      "refractive_index": 1.5,
+      "height_over_f": 0.05,
+      "X_over_f": -1.0024922359499622,
+      "optical_path_error": 2.220446049250313e-16,
+      "snell_residual": 6.938893903907228e-18,
+      "incoming_sine": 0.09889363528682978,
+      "critical_sine": 0.6666666666666666,
+      "transmitted_direction_error": 1.1188630228279524e-16
+    },
+    {
+      "test": "exact physical branch equal path and actual refraction vector",
+      "passed": true,
+      "refractive_index": 1.5,
+      "height_over_f": 0.5,
+      "X_over_f": -1.2,
+      "optical_path_error": 2.220446049250313e-16,
+      "snell_residual": 0.0,
+      "incoming_sine": 0.554700196225229,
+      "critical_sine": 0.6666666666666666,
+      "transmitted_direction_error": 1.1102230246251565e-16
+    },
+    {
+      "test": "exact physical branch equal path and actual refraction vector",
+      "passed": true,
+      "refractive_index": 1.5,
+      "height_over_f": 1.0,
+      "X_over_f": -1.579795897113271,
+      "optical_path_error": 4.440892098500626e-16,
+      "snell_residual": 1.6653345369377348e-16,
+      "incoming_sine": 0.6324555320336759,
+      "critical_sine": 0.6666666666666666,
+      "transmitted_direction_error": 1.5700924586837752e-16
+    },
+    {
+      "test": "exact physical branch equal path and actual refraction vector",
+      "passed": true,
+      "refractive_index": 1.5,
+      "height_over_f": 3.0,
+      "X_over_f": -3.312931993250108,
+      "optical_path_error": 8.881784197001252e-16,
+      "snell_residual": 1.1102230246251565e-16,
+      "incoming_sine": 0.6625891564490792,
+      "critical_sine": 0.6666666666666666,
+      "transmitted_direction_error": 1.1102230246251565e-16
+    },
+    {
+      "test": "exact physical branch equal path and actual refraction vector",
+      "passed": true,
+      "refractive_index": 1.5,
+      "height_over_f": 20.0,
+      "X_over_f": -18.493015397076032,
+      "optical_path_error": 3.552713678800501e-15,
+      "snell_residual": 0.0,
+      "incoming_sine": 0.6665740933597333,
+      "critical_sine": 0.6666666666666666,
+      "transmitted_direction_error": 3.1441076983065966e-15
+    },
+    {
+      "test": "exact physical branch equal path and actual refraction vector",
+      "passed": true,
+      "refractive_index": 2.0,
+      "height_over_f": 0.0,
+      "X_over_f": -1.0,
+      "optical_path_error": 0.0,
+      "snell_residual": 0.0,
+      "incoming_sine": 0.0,
+      "critical_sine": 0.5,
+      "transmitted_direction_error": 0.0
+    },
+    {
+      "test": "exact physical branch equal path and actual refraction vector",
+      "passed": true,
+      "refractive_index": 2.0,
+      "height_over_f": 0.05,
+      "X_over_f": -1.0012476649980788,
+      "optical_path_error": 0.0,
+      "snell_residual": 0.0,
+      "incoming_sine": 0.04975185951049946,
+      "critical_sine": 0.5,
+      "transmitted_direction_error": 0.0
+    },
+    {
+      "test": "exact physical branch equal path and actual refraction vector",
+      "passed": true,
+      "refractive_index": 2.0,
+      "height_over_f": 0.5,
+      "X_over_f": -1.1076252185107651,
+      "optical_path_error": 0.0,
+      "snell_residual": 0.0,
+      "incoming_sine": 0.35355339059327373,
+      "critical_sine": 0.5,
+      "transmitted_direction_error": 5.551115123125783e-17
+    },
+    {
+      "test": "exact physical branch equal path and actual refraction vector",
+      "passed": true,
+      "refractive_index": 2.0,
+      "height_over_f": 1.0,
+      "X_over_f": -1.3333333333333333,
+      "optical_path_error": 2.220446049250313e-16,
+      "snell_residual": 1.1102230246251565e-16,
+      "incoming_sine": 0.4472135954999579,
+      "critical_sine": 0.5,
+      "transmitted_direction_error": 1.5700924586837752e-16
+    },
+    {
+      "test": "exact physical branch equal path and actual refraction vector",
+      "passed": true,
+      "refractive_index": 2.0,
+      "height_over_f": 3.0,
+      "X_over_f": -2.4305008740430605,
+      "optical_path_error": 0.0,
+      "snell_residual": 0.0,
+      "incoming_sine": 0.4931969619160719,
+      "critical_sine": 0.5,
+      "transmitted_direction_error": 1.5700924586837752e-16
+    },
+    {
+      "test": "exact physical branch equal path and actual refraction vector",
+      "passed": true,
+      "refractive_index": 2.0,
+      "height_over_f": 20.0,
+      "X_over_f": -12.218482300775639,
+      "optical_path_error": 0.0,
+      "snell_residual": 1.1102230246251565e-16,
+      "incoming_sine": 0.49984382320406134,
+      "critical_sine": 0.5,
+      "transmitted_direction_error": 2.248030287623391e-15
+    },
+    {
+      "test": "exact physical branch equal path and actual refraction vector",
+      "passed": true,
+      "refractive_index": 3.0,
+      "height_over_f": 0.0,
+      "X_over_f": -1.0,
+      "optical_path_error": 0.0,
+      "snell_residual": 0.0,
+      "incoming_sine": 0.0,
+      "critical_sine": 0.3333333333333333,
+      "transmitted_direction_error": 0.0
+    },
+    {
+      "test": "exact physical branch equal path and actual refraction vector",
+      "passed": true,
+      "refractive_index": 3.0,
+      "height_over_f": 0.05,
+      "X_over_f": -1.0006242206970428,
+      "optical_path_error": 0.0,
+      "snell_residual": 6.938893903907228e-18,
+      "incoming_sine": 0.02492998274721141,
+      "critical_sine": 0.3333333333333333,
+      "transmitted_direction_error": 1.1123893155135927e-16
+    },
+    {
+      "test": "exact physical branch equal path and actual refraction vector",
+      "passed": true,
+      "refractive_index": 3.0,
+      "height_over_f": 0.5,
+      "X_over_f": -1.0561862178478973,
+      "optical_path_error": 0.0,
+      "snell_residual": 0.0,
+      "incoming_sine": 0.2,
+      "critical_sine": 0.3333333333333333,
+      "transmitted_direction_error": 1.5700924586837752e-16
+    },
+    {
+      "test": "exact physical branch equal path and actual refraction vector",
+      "passed": true,
+      "refractive_index": 3.0,
+      "height_over_f": 1.0,
+      "X_over_f": -1.1830127018922192,
+      "optical_path_error": 2.220446049250313e-16,
+      "snell_residual": 0.0,
+      "incoming_sine": 0.27735009811261463,
+      "critical_sine": 0.3333333333333333,
+      "transmitted_direction_error": 1.5700924586837752e-16
+    },
+    {
+      "test": "exact physical branch equal path and actual refraction vector",
+      "passed": true,
+      "refractive_index": 3.0,
+      "height_over_f": 3.0,
+      "X_over_f": -1.8397247358851685,
+      "optical_path_error": 4.440892098500626e-16,
+      "snell_residual": 0.0,
+      "incoming_sine": 0.3253956867279842,
+      "critical_sine": 0.3333333333333333,
+      "transmitted_direction_error": 5.551115123125783e-16
+    },
+    {
+      "test": "exact physical branch equal path and actual refraction vector",
+      "passed": true,
+      "refractive_index": 3.0,
+      "height_over_f": 20.0,
+      "X_over_f": -7.825485849042453,
+      "optical_path_error": 3.552713678800501e-15,
+      "snell_residual": 1.1102230246251565e-16,
+      "incoming_sine": 0.33314830232638476,
+      "critical_sine": 0.3333333333333333,
+      "transmitted_direction_error": 3.4844027277880974e-15
+    },
+    {
+      "test": "independent ray intersection with moving optical focus",
+      "passed": true,
+      "beta": 0.0,
+      "height_over_f": 0.0,
+      "gamma": 1.0,
+      "actual_intersection_time_over_f_c": 1.0,
+      "analytic_time_error": 0.0,
+      "transverse_hit_error": 0.0,
+      "instantaneous_curve_residual": 2.220446049250313e-16,
+      "vacuum_speed_error": 0.0,
+      "incident_speed_over_c": 0.5
+    },
+    {
+      "test": "independent ray intersection with moving optical focus",
+      "passed": true,
+      "beta": 0.0,
+      "height_over_f": 0.1,
+      "gamma": 1.0,
+      "actual_intersection_time_over_f_c": 1.0099261043394812,
+      "analytic_time_error": 0.0,
+      "transverse_hit_error": 0.0,
+      "instantaneous_curve_residual": 2.220446049250313e-16,
+      "vacuum_speed_error": 2.220446049250313e-16,
+      "incident_speed_over_c": 0.5
+    },
+    {
+      "test": "independent ray intersection with moving optical focus",
+      "passed": true,
+      "beta": 0.0,
+      "height_over_f": 0.5,
+      "gamma": 1.0,
+      "actual_intersection_time_over_f_c": 1.2152504370215302,
+      "analytic_time_error": 0.0,
+      "transverse_hit_error": 0.0,
+      "instantaneous_curve_residual": 6.661338147750939e-16,
+      "vacuum_speed_error": 0.0,
+      "incident_speed_over_c": 0.5
+    },
+    {
+      "test": "independent ray intersection with moving optical focus",
+      "passed": true,
+      "beta": 0.0,
+      "height_over_f": 1.0,
+      "gamma": 1.0,
+      "actual_intersection_time_over_f_c": 1.6666666666666667,
+      "analytic_time_error": 0.0,
+      "transverse_hit_error": 0.0,
+      "instantaneous_curve_residual": 0.0,
+      "vacuum_speed_error": 1.1102230246251565e-16,
+      "incident_speed_over_c": 0.5
+    },
+    {
+      "test": "independent ray intersection with moving optical focus",
+      "passed": true,
+      "beta": 0.0,
+      "height_over_f": 3.0,
+      "gamma": 1.0,
+      "actual_intersection_time_over_f_c": 3.8610017480861205,
+      "analytic_time_error": 4.440892098500626e-16,
+      "transverse_hit_error": 4.440892098500626e-16,
+      "instantaneous_curve_residual": 1.0658141036401503e-14,
+      "vacuum_speed_error": 0.0,
+      "incident_speed_over_c": 0.5
+    },
+    {
+      "test": "independent ray intersection with moving optical focus",
+      "passed": true,
+      "beta": 0.3,
+      "height_over_f": 0.0,
+      "gamma": 1.0482848367219182,
+      "actual_intersection_time_over_f_c": 1.362770287738494,
+      "analytic_time_error": 2.220446049250313e-16,
+      "transverse_hit_error": 0.0,
+      "instantaneous_curve_residual": 2.220446049250313e-16,
+      "vacuum_speed_error": 0.0,
+      "incident_speed_over_c": 0.6956521739130436
+    },
+    {
+      "test": "independent ray intersection with moving optical focus",
+      "passed": true,
+      "beta": 0.3,
+      "height_over_f": 0.1,
+      "gamma": 1.0482848367219182,
+      "actual_intersection_time_over_f_c": 1.374736480105311,
+      "analytic_time_error": 0.0,
+      "transverse_hit_error": 0.0,
+      "instantaneous_curve_residual": 6.661338147750939e-16,
+      "vacuum_speed_error": 2.220446049250313e-16,
+      "incident_speed_over_c": 0.6956521739130436
+    },
+    {
+      "test": "independent ray intersection with moving optical focus",
+      "passed": true,
+      "beta": 0.3,
+      "height_over_f": 0.5,
+      "gamma": 1.0482848367219182,
+      "actual_intersection_time_over_f_c": 1.6222606223500453,
+      "analytic_time_error": 2.220446049250313e-16,
+      "transverse_hit_error": 5.551115123125783e-17,
+      "instantaneous_curve_residual": 6.661338147750939e-16,
+      "vacuum_speed_error": 2.220446049250313e-16,
+      "incident_speed_over_c": 0.6956521739130436
+    },
+    {
+      "test": "independent ray intersection with moving optical focus",
+      "passed": true,
+      "beta": 0.3,
+      "height_over_f": 1.0,
+      "gamma": 1.0482848367219182,
+      "actual_intersection_time_over_f_c": 2.1664553292252986,
+      "analytic_time_error": 8.881784197001252e-16,
+      "transverse_hit_error": 4.440892098500626e-16,
+      "instantaneous_curve_residual": 8.881784197001252e-16,
+      "vacuum_speed_error": 2.220446049250313e-16,
+      "incident_speed_over_c": 0.6956521739130436
+    },
+    {
+      "test": "independent ray intersection with moving optical focus",
+      "passed": true,
+      "beta": 0.3,
+      "height_over_f": 3.0,
+      "gamma": 1.0482848367219182,
+      "actual_intersection_time_over_f_c": 4.811786750645113,
+      "analytic_time_error": 8.881784197001252e-16,
+      "transverse_hit_error": 0.0,
+      "instantaneous_curve_residual": 3.552713678800501e-15,
+      "vacuum_speed_error": 0.0,
+      "incident_speed_over_c": 0.6956521739130436
+    },
+    {
+      "test": "independent ray intersection with moving optical focus",
+      "passed": true,
+      "beta": 0.6,
+      "height_over_f": 0.0,
+      "gamma": 1.25,
+      "actual_intersection_time_over_f_c": 2.0,
+      "analytic_time_error": 0.0,
+      "transverse_hit_error": 0.0,
+      "instantaneous_curve_residual": 4.440892098500626e-16,
+      "vacuum_speed_error": 0.0,
+      "incident_speed_over_c": 0.8461538461538461
+    },
+    {
+      "test": "independent ray intersection with moving optical focus",
+      "passed": true,
+      "beta": 0.6,
+      "height_over_f": 0.1,
+      "gamma": 1.25,
+      "actual_intersection_time_over_f_c": 2.0161299195516564,
+      "analytic_time_error": 4.440892098500626e-16,
+      "transverse_hit_error": 1.3877787807814457e-17,
+      "instantaneous_curve_residual": 4.440892098500626e-16,
+      "vacuum_speed_error": 2.220446049250313e-16,
+      "incident_speed_over_c": 0.8461538461538461
+    },
+    {
+      "test": "independent ray intersection with moving optical focus",
+      "passed": true,
+      "beta": 0.6,
+      "height_over_f": 0.5,
+      "gamma": 1.25,
+      "actual_intersection_time_over_f_c": 2.3497819601599863,
+      "analytic_time_error": 4.440892098500626e-16,
+      "transverse_hit_error": 1.1102230246251565e-16,
+      "instantaneous_curve_residual": 6.661338147750939e-16,
+      "vacuum_speed_error": 0.0,
+      "incident_speed_over_c": 0.8461538461538461
+    },
+    {
+      "test": "independent ray intersection with moving optical focus",
+      "passed": true,
+      "beta": 0.6,
+      "height_over_f": 1.0,
+      "gamma": 1.25,
+      "actual_intersection_time_over_f_c": 3.083333333333333,
+      "analytic_time_error": 4.440892098500626e-16,
+      "transverse_hit_error": 2.220446049250313e-16,
+      "instantaneous_curve_residual": 0.0,
+      "vacuum_speed_error": 0.0,
+      "incident_speed_over_c": 0.8461538461538461
+    },
+    {
+      "test": "independent ray intersection with moving optical focus",
+      "passed": true,
+      "beta": 0.6,
+      "height_over_f": 3.0,
+      "gamma": 1.25,
+      "actual_intersection_time_over_f_c": 6.649127840639944,
+      "analytic_time_error": 2.6645352591003757e-15,
+      "transverse_hit_error": 8.881784197001252e-16,
+      "instantaneous_curve_residual": 1.0658141036401503e-14,
+      "vacuum_speed_error": 0.0,
+      "incident_speed_over_c": 0.8461538461538461
+    },
+    {
+      "test": "independent ray intersection with moving optical focus",
+      "passed": true,
+      "beta": 0.8,
+      "height_over_f": 0.0,
+      "gamma": 1.666666666666667,
+      "actual_intersection_time_over_f_c": 2.9999999999999996,
+      "analytic_time_error": 8.881784197001252e-16,
+      "transverse_hit_error": 0.0,
+      "instantaneous_curve_residual": 0.0,
+      "vacuum_speed_error": 0.0,
+      "incident_speed_over_c": 0.9285714285714287
+    },
+    {
+      "test": "independent ray intersection with moving optical focus",
+      "passed": true,
+      "beta": 0.8,
+      "height_over_f": 0.1,
+      "gamma": 1.666666666666667,
+      "actual_intersection_time_over_f_c": 3.0231609101254553,
+      "analytic_time_error": 1.3322676295501878e-15,
+      "transverse_hit_error": 2.7755575615628914e-17,
+      "instantaneous_curve_residual": 2.220446049250313e-16,
+      "vacuum_speed_error": 0.0,
+      "incident_speed_over_c": 0.9285714285714287
+    },
+    {
+      "test": "independent ray intersection with moving optical focus",
+      "passed": true,
+      "beta": 0.8,
+      "height_over_f": 0.5,
+      "gamma": 1.666666666666667,
+      "actual_intersection_time_over_f_c": 3.502251019716904,
+      "analytic_time_error": 4.440892098500626e-16,
+      "transverse_hit_error": 1.6653345369377348e-16,
+      "instantaneous_curve_residual": 4.440892098500626e-16,
+      "vacuum_speed_error": 0.0,
+      "incident_speed_over_c": 0.9285714285714287
+    },
+    {
+      "test": "independent ray intersection with moving optical focus",
+      "passed": true,
+      "beta": 0.8,
+      "height_over_f": 1.0,
+      "gamma": 1.666666666666667,
+      "actual_intersection_time_over_f_c": 4.555555555555556,
+      "analytic_time_error": 0.0,
+      "transverse_hit_error": 1.1102230246251565e-16,
+      "instantaneous_curve_residual": 0.0,
+      "vacuum_speed_error": 1.1102230246251565e-16,
+      "incident_speed_over_c": 0.9285714285714287
+    },
+    {
+      "test": "independent ray intersection with moving optical focus",
+      "passed": true,
+      "beta": 0.8,
+      "height_over_f": 3.0,
+      "gamma": 1.666666666666667,
+      "actual_intersection_time_over_f_c": 9.675670745534278,
+      "analytic_time_error": 5.329070518200751e-15,
+      "transverse_hit_error": 1.7763568394002505e-15,
+      "instantaneous_curve_residual": 7.105427357601002e-15,
+      "vacuum_speed_error": 0.0,
+      "incident_speed_over_c": 0.9285714285714287
+    },
+    {
+      "test": "independent ray intersection with moving optical focus",
+      "passed": true,
+      "beta": 0.95,
+      "height_over_f": 0.0,
+      "gamma": 3.202563076101742,
+      "actual_intersection_time_over_f_c": 6.244997998398395,
+      "analytic_time_error": 1.7763568394002505e-15,
+      "transverse_hit_error": 0.0,
+      "instantaneous_curve_residual": 3.3306690738754696e-16,
+      "vacuum_speed_error": 0.0,
+      "incident_speed_over_c": 0.983050847457627
+    },
+    {
+      "test": "independent ray intersection with moving optical focus",
+      "passed": true,
+      "beta": 0.95,
+      "height_over_f": 0.1,
+      "gamma": 3.202563076101742,
+      "actual_intersection_time_over_f_c": 6.291886736887961,
+      "analytic_time_error": 9.769962616701378e-15,
+      "transverse_hit_error": 1.5265566588595902e-16,
+      "instantaneous_curve_residual": 8.881784197001252e-16,
+      "vacuum_speed_error": 2.220446049250313e-16,
+      "incident_speed_over_c": 0.983050847457627
+    },
+    {
+      "test": "independent ray intersection with moving optical focus",
+      "passed": true,
+      "beta": 0.95,
+      "height_over_f": 0.5,
+      "gamma": 3.202563076101742,
+      "actual_intersection_time_over_f_c": 7.261793823435257,
+      "analytic_time_error": 1.5987211554602254e-14,
+      "transverse_hit_error": 1.1657341758564144e-15,
+      "instantaneous_curve_residual": 2.220446049250313e-16,
+      "vacuum_speed_error": 2.220446049250313e-16,
+      "incident_speed_over_c": 0.983050847457627
+    },
+    {
+      "test": "independent ray intersection with moving optical focus",
+      "passed": true,
+      "beta": 0.95,
+      "height_over_f": 1.0,
+      "gamma": 3.202563076101742,
+      "actual_intersection_time_over_f_c": 9.394185023231735,
+      "analytic_time_error": 4.263256414560601e-14,
+      "transverse_hit_error": 4.218847493575595e-15,
+      "instantaneous_curve_residual": 0.0,
+      "vacuum_speed_error": 2.220446049250313e-16,
+      "incident_speed_over_c": 0.983050847457627
+    },
+    {
+      "test": "independent ray intersection with moving optical focus",
+      "passed": true,
+      "beta": 0.95,
+      "height_over_f": 3.0,
+      "gamma": 3.202563076101742,
+      "actual_intersection_time_over_f_c": 19.759742373045984,
+      "analytic_time_error": 5.684341886080802e-14,
+      "transverse_hit_error": 8.43769498715119e-15,
+      "instantaneous_curve_residual": 3.552713678800501e-15,
+      "vacuum_speed_error": 2.220446049250313e-16,
+      "incident_speed_over_c": 0.983050847457627
+    },
+    {
+      "test": "one incident wavefront transforms to one future focal event",
+      "passed": true,
+      "height_over_f": 0.0,
+      "rest_arrival_time": 9.0,
+      "lab_arrival_time": 15.0,
+      "lab_arrival_x": 12.0,
+      "interface_event_time": 12.0
+    },
+    {
+      "test": "one incident wavefront transforms to one future focal event",
+      "passed": true,
+      "height_over_f": 0.2,
+      "rest_arrival_time": 9.0,
+      "lab_arrival_time": 15.0,
+      "lab_arrival_x": 12.0,
+      "interface_event_time": 11.909310295337587
+    },
+    {
+      "test": "one incident wavefront transforms to one future focal event",
+      "passed": true,
+      "height_over_f": 0.7,
+      "rest_arrival_time": 9.0,
+      "lab_arrival_time": 15.0,
+      "lab_arrival_x": 12.0,
+      "interface_event_time": 11.110808099588624
+    },
+    {
+      "test": "one incident wavefront transforms to one future focal event",
+      "passed": true,
+      "height_over_f": 1.5,
+      "rest_arrival_time": 9.0,
+      "lab_arrival_time": 15.0,
+      "lab_arrival_x": 12.0,
+      "interface_event_time": 9.225072162243316
+    },
+    {
+      "test": "one incident wavefront transforms to one future focal event",
+      "passed": true,
+      "height_over_f": 3.0,
+      "rest_arrival_time": 9.0,
+      "lab_arrival_time": 15.0,
+      "lab_arrival_x": 12.0,
+      "interface_event_time": 5.3243292544657175
+    },
+    {
+      "test": "fully computed finite aperture variant",
+      "passed": true,
+      "f_m": 0.3,
+      "height_m": 0.15,
+      "X_m": -0.3322875655532295,
+      "r_m": 0.36457513110645906,
+      "incidence_degrees": 20.704811054635428,
+      "refraction_degrees": 44.99999999999999,
+      "exact_sag_m": 0.032287565553229536,
+      "paraxial_sag_m": 0.0375
+    }
+  ],
+  "source_sha256": {
+    "试卷.pdf": "3c8164d75b7f117095d26f554fb788867b2b781c9a642af12bee499d3b232cf0",
+    "答案.pdf": "111c13cd664b08f098076baed25c937368238953127045c5cfa8c8460471472a"
+  },
+  "actual_original_readings": [
+    {
+      "path": "preview/originals/paper-03.png",
+      "sha256": "6ca7b36db7e05c600ae3e5a5de869aed1becd4e0fc698cad263048a2c97aa1ca",
+      "actual_displayed_and_read": true
+    },
+    {
+      "path": "preview/originals/answer-07.png",
+      "sha256": "9024df12aeee4b1afdd58090f29b65fb4217cca4d42ddfdd487dcc0c898356a4",
+      "actual_displayed_and_read": true
+    },
+    {
+      "path": "preview/originals/details/q07-paper.png",
+      "sha256": "6e36d34110f8b7d07324b6204fd079f6a3b639fbe269303be6016537c5958282",
+      "actual_displayed_and_read": true
+    },
+    {
+      "path": "preview/originals/details/q07-answer.png",
+      "sha256": "7ff0fa7be0baa9442e9017db39caa73565eb0dfe94e1eca7cee06d0d9837b366",
+      "actual_displayed_and_read": true
+    }
+  ],
+  "script_sha256": "1ea4b20263f433c09b94de0ce4180a816658e18ac98a6475e9cbe6f90d673fc7",
+  "model_revision": "Explicit user approval: index, f and fixed focus in medium rest frame; ground focus moves.",
+  "caveats": [
+    "Squared hyperbola alone is insufficient: retain physical left branch.",
+    "Coordinates X,Y,T denote medium rest frame; x,y,t ground frame.",
+    "No fixed ground focus or ground isotropic c/n assumption is introduced."
+  ],
+  "draft_sha256": "4c6488426eee8755c52a8b6ce808752310c046d151a980c329e668862e0d1736",
+  "figure_source_sha256": "c6112befe6e0d3322d88055020c79653409d4a87948e2d99d6f25febf85dbf89",
+  "working_pdf_checks": [
+    {
+      "question": "07",
+      "version": "student",
+      "total_pages": 13,
+      "body_pages": 12,
+      "body_nonspace": 6225,
+      "per_page_nonspace": [
+        416,
+        817,
+        529,
+        370,
+        531,
+        396,
+        369,
+        369,
+        607,
+        538,
+        709,
+        574
+      ],
+      "layout_warnings": [],
+      "pdf_sha256": "97bb7b306e27e64e9bdad48167fc1827873fa2918d883727d27ecfe3ee64aea7",
+      "draft_sha256": "4c6488426eee8755c52a8b6ce808752310c046d151a980c329e668862e0d1736",
+      "actual_reviewed": false,
+      "accepted": false
+    },
+    {
+      "question": "07",
+      "version": "teacher",
+      "total_pages": 20,
+      "body_pages": 19,
+      "body_nonspace": 10927,
+      "per_page_nonspace": [
+        416,
+        817,
+        529,
+        370,
+        531,
+        396,
+        369,
+        369,
+        607,
+        538,
+        709,
+        885,
+        1171,
+        854,
+        586,
+        658,
+        444,
+        409,
+        269
+      ],
+      "layout_warnings": [],
+      "pdf_sha256": "0390da3e65b453a921edc401047e5bb6aefb0a6887104e71aeb042c04e1e9ac4",
+      "draft_sha256": "4c6488426eee8755c52a8b6ce808752310c046d151a980c329e668862e0d1736",
+      "actual_reviewed": false,
+      "accepted": false
+    }
+  ]
+}

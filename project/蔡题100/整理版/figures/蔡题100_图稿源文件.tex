@@ -1,0 +1,319 @@
+\documentclass[multi=tikzpicture,border=6pt]{standalone}
+\usepackage{ctex}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc,decorations.pathmorphing,patterns,positioning,angles,quotes}
+\tikzset{
+  axis/.style={->,>=Stealth,thick},
+  force/.style={->,>=Stealth,very thick},
+  flow/.style={->,>=Stealth,thick,blue!70!black},
+  dim/.style={<->,>=Stealth,thin},
+  body/.style={draw=black,fill=blue!10,thick},
+  current/.style={->,>=Stealth,very thick,purple!75!black}
+}
+\begin{document}
+
+% 01 question-01
+\begin{tikzpicture}[scale=1.05]
+  \coordinate (O) at (0,0);
+  \draw[very thick] (-3.2,0) arc[start angle=180,end angle=0,radius=3.2];
+  \draw[very thick] (-3.2,0)--(3.2,0);
+  \draw[fill=white,thick] (-.24,3.15) rectangle (.24,3.42);
+  \draw[dashed] (O)--(0,3.2);
+  \coordinate (T) at (0,3.2);
+  \coordinate (P) at (48:3.2);
+  \draw[dashed] (O)--(P);
+  \filldraw[fill=blue!35,thick] (P) circle(.16);
+  \draw[flow] (P)--++(138:1.25) node[above]{$v$};
+  \draw pic[draw,->,"$\theta$",angle radius=.75cm,angle eccentricity=1.35]
+    {angle=P--O--T};
+  \node at (1.35,1.15){$R$};
+  \node[above] at (0,3.45){小洞};
+  \node[below] at (0,-.2){光滑半球形山坡};
+\end{tikzpicture}
+
+% 02 solution-01
+\begin{tikzpicture}[x=1cm,y=1cm]
+  \begin{scope}
+    \coordinate (O) at (0,0);
+    \coordinate (T) at (0,2.5);
+    \draw[thick] (-2.5,0) arc[start angle=180,end angle=0,radius=2.5];
+    \coordinate (P) at (52:2.5);
+    \filldraw[fill=blue!25,thick] (P) circle(.15);
+    \draw[dashed] (O)--(P);
+    \draw[force,red!75!black] (P)--++(232:.9) node[left]{$mg\cos\varphi$};
+    \draw[force,orange!80!black] (P)--++(52:.8) node[right]{$N$};
+    \draw[force] (P)--++(0,-1.15) node[right]{$mg$};
+    \draw pic[draw,->,"$\varphi$",angle radius=.62cm,angle eccentricity=1.35]
+      {angle=P--O--T};
+    \node at (0,-.55){贴面上滑的径向受力};
+  \end{scope}
+  \begin{scope}[shift={(6.2,0)}]
+    \coordinate (O) at (0,0);
+    \draw[thick] (-2.5,0) arc[start angle=180,end angle=0,radius=2.5];
+    \coordinate (P) at (30:2.5);
+    \coordinate (H) at (0,2.5);
+    \filldraw[fill=blue!25,thick] (P) circle(.13);
+    \fill (H) circle(2pt) node[above]{洞};
+    \draw[dashed] (O)--(P) (O)--(H);
+    \draw[flow] (P)--++(120:1.15) node[above]{$v$};
+    \draw[blue!70!black,thick,domain=0:.8660254,samples=80] plot({2.5*(.8660254-\x)},{2.5*(.5+1.7320508*\x-\x*\x/.75)});
+    \draw[dim] (3,0)--(3,1.25) node[midway,right]{$R\cos\theta$};
+    \draw[dim] (0,-.1)--(2.165,-.1) node[midway,below]{$R\sin\theta$};
+    \node at (0,-1.05){切线抛射示例 $\theta=60^\circ$};
+  \end{scope}
+\end{tikzpicture}
+
+% 03 solution-02
+\begin{tikzpicture}[x=.9cm,y=.9cm]
+  \begin{scope}
+    \draw[axis] (-.2,0)--(6.2,0) node[right]{$x$};
+    \draw[axis] (0,-.5)--(0,3.7) node[above]{$y$};
+    \draw[green!55!black,very thick,domain=0:6,samples=80]
+      plot(\x,{2.15-.24*(\x-3)^2});
+    \draw[blue!70!black,very thick,domain=0:6,samples=80]
+      plot(\x,{1.433333*\x*(1-\x/6)});
+    \draw[orange!85!black,very thick,domain=0:6,samples=80]
+      plot(\x,{1.0*\x*(1-\x/6)});
+    \node[green!50!black] at (3,2.55){山体};
+    \node[blue!70!black] at (4.6,2.15){临界越山轨迹};
+    \node[orange!85!black] at (4.7,.75){$45^\circ$ 轨迹};
+    \node at (3,-.85){固定落点：比较二次函数的最小间隙};
+  \end{scope}
+  \begin{scope}[shift={(8.1,0)}]
+    \draw[axis] (-.2,0)--(5.8,0) node[right]{$x$};
+    \draw[axis] (0,-.5)--(0,3.7) node[above]{$y$};
+    \draw[green!55!black,very thick,domain=1.05:5.2,samples=80]
+      plot(\x,{2.05-.5*(\x-3.15)^2});
+    \draw[magenta!75!black,very thick,domain=0:5.2,samples=80]
+      plot(\x,{1.60657077*\x-0.29543377*\x*\x});
+    \filldraw[fill=red!70!black] (3.77244379,1.85628186) circle(2pt) node[above left]{相切点};
+    \draw[blue!70!black,dashed,domain=0:5.2,samples=80]
+      plot(\x,{\x-\x*\x/5.17484567});
+    \node[magenta!75!black] at (2.4,3.05){最优相切轨迹};
+    \node[blue!70!black] at (4.2,.55){$45^\circ$ 轨迹会穿山};
+    \node at (2.8,-.85){落点不固定：山脚约束或相切约束};
+  \end{scope}
+\begin{scope}[shift={(3.7,-5.6)},x=1.3cm,y=1.1cm]
+\draw[axis] (0,0)--(4.4,0) node[right]{$X=x_0/l$};\draw[axis] (0,0)--(0,2.5) node[above]{$Y=y_0/l$};
+\fill[blue!10,domain=1:4,samples=80] (1,0)--plot(\x,{min(.5,.5*(1-\x)^2)})--(4,0)--cycle;
+\fill[orange!12,domain=2:4,samples=80] (2,.5)--plot(\x,{min(2.3,.5*(1-\x)^2)})--(4,.5)--cycle;
+\draw[thick,domain=0:2.12,samples=65] plot(\x,{.5*\x*\x});\node[above left] at (2.12,2.2472){$Y=X^2/2$};
+\draw[thick,domain=0:3.14,samples=70] plot(\x,{.5*(1-\x)^2});\node[above right] at (3.14,2.2898){$Y=(1-X)^2/2$};
+\draw[red!70!black,thick] (0,.5)--(4,.5) node[right]{$Y=1/2$};
+\node at (3.2,.22){$45^\circ$ 分支};\node at (3.25,1.15){相切分支};
+\node[align=center] at (2,-.8){(c) 蓝、橙仅标出右侧有山的有效区域\\两条黑线以下并有 $Y>0$，其余区域另判};
+\end{scope}\end{tikzpicture}
+
+% 04 question-03
+\begin{tikzpicture}[x=1cm,y=1cm]
+  \draw[very thick] (-1.15,3.75)--(1.15,3.75);
+  \foreach \x in {-1,-.7,...,1}{\draw (\x,3.75)--++(.22,.22);}
+  \coordinate (A) at (0,3.75);
+  \coordinate (V) at (0,.9);
+  \coordinate (P) at (-2.598076,2.25);
+  \draw[very thick] (A)--(P) node[midway,left]{$l$};
+  \filldraw[fill=blue!25,thick] (P) circle(.16) node[left=.18cm]{$q,m$};
+  \draw[dashed] (A)--(0,.35);
+  \draw pic[draw,->,"$\alpha_0$",angle radius=.65cm,angle eccentricity=1.35]
+    {angle=P--A--V};
+  \draw[very thick] (-4,0)--(2.3,0);
+  \foreach \x in {-2.2,-1.8,...,2.2}{\draw (\x,0)--++(.2,-.13);}
+  \draw[dim] (-3.1,0)--(-3.1,2.25) node[midway,left]{$d=3l/4$};
+  \draw[force] (1.15,2.75)--++(0,-1) node[right]{$g$};
+  \node[below] at (0,-.25){接地金属板};
+\end{tikzpicture}
+
+% 05 solution-03
+\begin{tikzpicture}[x=.9cm,y=.9cm]
+  \begin{scope}
+    \draw[very thick] (-2.1,0)--(2.1,0);
+    \filldraw[fill=blue!30,thick] (0,1.35) circle(.16) node[right]{$q$};
+    \filldraw[fill=red!25,thick] (0,-1.35) circle(.16) node[right]{$-q$};
+    \draw[dashed] (0,1.35)--(0,-1.35);
+    \draw[dim] (.55,0)--(.55,1.35) node[midway,right]{$h$};
+    \draw[dim] (-.55,-1.35)--(-.55,1.35) node[midway,left]{$2h$};
+    \draw[force,red!75!black] (0,1.15)--++(0,-.8) node[right]{$F_e$};
+    \node at (0,-2.05){平板镜像电荷};
+  \end{scope}
+  \begin{scope}[shift={(5.3,.15)}]
+    \draw[very thick] (-1,3.4)--(1,3.4);
+    \draw[very thick] (0,3.4)--(0,.7);
+    \filldraw[fill=blue!30,thick] (0,.7) circle(.16);
+    \draw[force,red!75!black] (0,.55)--++(0,-1.25) node[right]{$mg+F_e$};
+    \draw[force,orange!80!black] (0,.85)--++(0,1.15) node[right]{$T$};
+    \draw[very thick] (-1.7,0)--(1.7,0);
+    \node at (0,-1.25){最低点径向受力};
+  \end{scope}
+  \begin{scope}[shift={(10.2,.1)}]
+    \coordinate (C) at (0,0);
+    \draw[thick,fill=gray!8] (C) circle(1.55);
+    \coordinate (A) at (0,4.65);
+    \coordinate (P) at (-.55,2.05);
+    \draw[very thick] (A)--(P);
+    \draw[dashed] (C)--(A) (C)--(P);
+    \fill (A) circle(2pt) node[above]{悬点};
+    \filldraw[fill=blue!30,thick] (P) circle(.14) node[left]{$q$};
+    \draw pic[draw,->,"$\alpha$",angle radius=.65cm,angle eccentricity=1.4]
+      {angle=P--A--C};
+    \node[right] at (0,2.4){$a=R+5l/4$};
+    \node[right] at (.15,1.05){$R$};
+    \node at (0,-2){接地球：$s^2=a^2+l^2-2al\cos\alpha$};
+  \end{scope}
+\end{tikzpicture}
+
+% 06 question-04
+\begin{tikzpicture}[x=.95cm,y=.95cm]\fill[gray!18] (1,0) rectangle (5,4);\draw[very thick] (0,0) rectangle (6,4);
+\foreach \y in {1,3}{\draw[very thick] (0,\y)--(6,\y);}\foreach \x in {1,5}{\draw[very thick] (\x,0)--(\x,4);}
+\node[left] at (0,3){$A$};\node[left] at (0,1){$B$};\node[below] at (1,0){$C$};\node[below] at (5,0){$D$};
+\draw[dashed] (0,3)--(-1,3)--(-1,-1.2)--(2.45,-1.2);\draw[dashed] (5,0)--(5,-1.2)--(3.55,-1.2);
+\draw (3,-1.2) circle(.55) node{$V$};\node[below] at (2.42,-1.15){$+$};\node[below] at (3.58,-1.15){$-$};
+\node at (3,2){$\otimes\ B=kt$};
+\draw[dim] (1,4.5)--(5,4.5) node[midway,fill=white]{$4l$};
+\draw[dim] (6.6,3)--(6.6,4) node[midway,right]{$l$};\draw[dim] (6.6,1)--(6.6,3) node[midway,right]{$2l$};\draw[dim] (6.6,0)--(6.6,1) node[midway,right]{$l$};
+\node at (3,-2.2){灰区 $4l\times4l$；两侧列宽各 $l$};\end{tikzpicture}
+
+% 07 solution-04
+\begin{tikzpicture}[x=.95cm,y=.95cm]\fill[gray!18] (1,0) rectangle (5,4);\draw[very thick] (0,0) rectangle (6,4);
+\foreach \y in {1,3}{\draw[very thick] (0,\y)--(6,\y);}\foreach \x in {1,5}{\draw[very thick] (\x,0)--(\x,4);}
+\node[left] at (0,3){$A$};\node[left] at (0,1){$B$};\node[below] at (1,0){$C$};\node[below] at (5,0){$D$};
+\draw[dashed] (0,3)--(-1,3)--(-1,-1.2)--(2.45,-1.2);\draw[dashed] (5,0)--(5,-1.2)--(3.55,-1.2);
+\draw (3,-1.2) circle(.55) node{$V$};\node[below] at (2.42,-1.15){$+$};\node[below] at (3.58,-1.15){$-$};
+\node[blue!70!black] at (3,2){$I_1$};
+\foreach \x in {.5,5.5}{\node at (\x,2){$I_2$};}
+\foreach \x in {.5,5.5}{\foreach \y in {.5,3.5}{\node at (\x,\y){$I_3$};}}
+\foreach \y in {.5,3.5}{\node at (3,\y){$I_4$};}
+\draw[current,blue!70!black] (3.7,2) arc(0:290:.7);\draw[current] (.82,2) arc(0:285:.3);\draw[current] (.81,3.5) arc(0:285:.3);\draw[current] (3.31,.5) arc(0:285:.3);
+\draw[flow] (-.25,2.8)--(-.25,1.2);\draw[flow] (1.3,-.25)--(4.7,-.25);
+\node[align=center] at (3,-2.35){九个网孔按反射对称归为四类，均取逆时针\\支路正方向：$A\to B$、$C\to D$};\end{tikzpicture}
+
+% 08 question-05
+\begin{tikzpicture}[x=1cm,y=1cm]
+  \draw[very thick] (-.3,3)--(7.2,3);
+  \draw[very thick] (-.3,0)--(7.2,0);
+  \draw[thick] (0,0)--(0,.45);
+  \draw[thick,decorate,decoration={coil,aspect=.45,segment length=5pt,amplitude=5pt}]
+    (0,.45)--(0,2.55);
+  \draw[thick] (0,2.55)--(0,3);
+  \node[left] at (-.2,1.5){$L$};
+  \draw[very thick] (5.4,-.65)--(5.4,3.65);
+  \node[above] at (5.4,3.65){$m$};
+  \draw[flow] (5.65,3.35)--++(1.05,0) node[midway,above]{$v_0$};
+  \draw[thick] (5.4,1.5)--(4.8,1.5);
+  \draw[thick,decorate,decoration={coil,aspect=.45,segment length=5pt,amplitude=4pt}]
+    (4.8,1.5)--(3.3,1.5);
+  \draw[very thick] (3.3,.9)--(3.3,2.1);
+  \foreach \y in {1.0,1.3,1.6,1.9}{\draw (3.3,\y)--++(-.25,.2);}
+  \node[fill=white,inner sep=1pt] at (4.15,2.55){反向弹簧 $k$};
+  \draw[thin,->,>=Stealth] (4.15,2.35)--(4.15,1.78);
+  \foreach \x in {1,2,3,4,5,6}{\node at (\x,2.25){$\times$};}
+  \foreach \x in {1.5,2.5,3.5,4.5,5.5,6.5}{\node at (\x,.75){$\times$};}
+  \node at (2.0,1.5){$B$};
+  \draw[dim] (7.65,0)--(7.65,3) node[midway,right]{$l$};
+\end{tikzpicture}
+
+% 09 solution-05
+\begin{tikzpicture}[x=1cm,y=1cm]
+  \draw[axis] (-4.6,0)--(4.6,0) node[right]{$x$};
+  \draw[axis] (0,-.5)--(0,3.5) node[above]{$U_{\rm eff}$};
+  \draw[blue!70!black,very thick,domain=-4:4,samples=80]
+    plot(\x,{.17*\x*\x});
+  \draw[dashed] (-2.2,0)--(-2.2,.82);
+  \fill (-2.2,0) circle(2pt) node[below]{$x_{\rm e}=-2LI_0/(Bl)$};
+  \draw[red!70!black,very thick,domain=-4:1.8,samples=80]
+    plot(\x,{.17*(\x+2.2)*(\x+2.2)+.15});
+  \node[blue!70!black] at (2.7,2.35){$I_0=0$};
+  \node[red!70!black] at (-2.8,2.65){$I_0>0$};
+  \draw[force,orange!85!black] (2.5,.25)--++(-1.2,0) node[midway,below]{$F_B$};
+  \node[align=center] at (0,5.9){磁场—电感产生回复力；初始电流只平移平衡位置};
+\end{tikzpicture}
+
+% 10 solution-06
+\begin{tikzpicture}[x=1cm,y=1cm]
+  \begin{scope}
+    \fill[blue!5] (0,0) circle(2.05);
+    \fill[blue!13] (0,0) circle(1.25);
+    \draw[very thick] (0,0) circle(2.05);
+    \draw[very thick,blue!65!black] (0,0) circle(1.25);
+    \draw[very thick,orange!85!black] (0,0) circle(1.45);
+    \draw[axis] (0,0)--(34:1.25) node[midway,above]{$r$};
+    \draw[dim] (34:1.25)--(34:1.45) node[midway,right=3pt]{$\mathrm dr$};
+    \node at (0,-.25){$m(r)$};
+    \node[orange!85!black,align=center] at (0,-1.7){薄壳 $\mathrm dm=4\pi r^2\rho\,\mathrm dr$};
+    \draw[flow] (-3.5,1.9)--(-1.75,1.15);
+    \node[align=left] at (-3.55,2.55){从无穷远缓慢装配\\释放的结合能增量\\$\mathrm dE_g=Gm(r)\mathrm dm/r>0$};
+  \end{scope}
+  \begin{scope}[shift={(6.4,0)}]
+    \node[draw,rounded corners,fill=blue!8,minimum width=3.2cm,minimum height=.8cm]
+      (Eg) at (0,2.1){$E_g=\dfrac{3GM^2}{5R}$};
+    \node[draw,rounded corners,fill=orange!10,minimum width=3.2cm,minimum height=.8cm]
+      (P) at (-2,-.1){$P=4\pi R^2\sigma T^4$};
+    \node[draw,rounded corners,fill=green!10,minimum width=3.2cm,minimum height=.8cm]
+      (U) at (2,-.1){$McT_s=E_g$};
+    \node[draw,rounded corners,fill=purple!8,minimum width=3.2cm,minimum height=.8cm]
+      (time) at (-2,-2){$t=E_g/P$};
+    \node[draw,rounded corners,fill=red!7,minimum width=3.2cm,minimum height=.8cm]
+      (scale) at (2,-2){$T_s\propto M/R\propto M^{2/3}$};
+    \draw[flow] (Eg)--(P) node[midway,above left]{辐射};
+    \draw[flow] (Eg)--(U) node[midway,above right]{升温};
+    \draw[flow] (P)--(time);
+    \draw[flow] (U)--(scale) node[midway,right]{同密度};
+  \end{scope}
+\end{tikzpicture}
+
+% 11 question-07
+\begin{tikzpicture}[x=1cm,y=1cm]
+  \draw[axis] (-.25,0)--(5.3,0) node[right]{$T/T_0$};
+  \draw[axis] (0,-.25)--(0,5.3) node[above]{$S/S_0$};
+  \draw[very thick] (2,2) circle(1);
+  \foreach \x in {1,2,3}{\draw[dashed] (\x,0)--(\x,3.3);\node[below] at (\x,0){$\x$};}
+  \foreach \y in {1,2,3}{\draw[dashed] (0,\y)--(3.3,\y);\node[left] at (0,\y){$\y$};}
+  \fill (2,2) circle(1.5pt);
+\end{tikzpicture}
+
+% 12 solution-07
+\begin{tikzpicture}[x=1.05cm,y=1.05cm]
+  \draw[axis] (-.25,0)--(5.1,0) node[right]{$x=T/T_0$};
+  \draw[axis] (0,-.25)--(0,5.1) node[above]{$y=S/S_0$};
+  \draw[line width=7pt,red!18] (2,1) arc[start angle=-90,end angle=90,radius=1];
+  \draw[very thick] (2,2) circle(1);
+  \draw[flow] ({2+cos(-45)},{2+sin(-45)}) arc[start angle=-45,end angle=40,radius=1];
+  \draw[flow] ({2+cos(135)},{2+sin(135)}) arc[start angle=135,end angle=220,radius=1];
+  \filldraw[fill=orange!80!black] (1.568649,2.902184) circle(2.2pt)
+    node[above left]{$V_{\max}$};
+  \node[red!70!black,right] at (3.15,2){$\mathrm dS>0$：吸热};
+  \node at (2,.65){逆时针：$W=\pi S_0T_0>0$};
+\end{tikzpicture}
+
+% 13 question-08
+\begin{tikzpicture}[x=1cm,y=1cm]
+  \draw[axis] (-.3,0)--(6.5,0) node[right]{$z$};
+  \draw[axis] (0,-.4)--(0,3.9) node[above]{$x$};
+  \fill (0,0) circle(2.4pt) node[below left]{$g_m$};
+  \draw[dashed,thick] (0,2)--(6,2);
+  \draw[flow] (4.7,2)--(5.9,2) node[midway,above]{$v$};
+  \filldraw[fill=blue!25,thick] (3.5,2) circle(.13) node[above=.2cm]{$q$};
+  \draw[dim] (-.55,0)--(-.55,2) node[midway,left]{$b$};
+  \draw[force,green!50!black] (0,0)--(3.35,1.9) node[midway,below]{$\boldsymbol r$};
+  \draw[force,red!75!black] (3.5,2)--++(.95,.54) node[above]{$\boldsymbol B$};
+  \node at (3,-.8){未偏转轨迹 $x=b,\ y=0$};
+\end{tikzpicture}
+
+% 14 solution-08
+\begin{tikzpicture}[x=1cm,y=1cm]
+  \draw[axis] (-.3,0)--(7,0) node[right]{$z$};
+  \draw[axis] (0,-.3)--(0,3.8) node[above]{$x$};
+  \fill (0,0) circle(2.3pt) node[below left]{$g_m$};
+  \draw[dashed,thick] (0,2)--(6.5,2);
+  \filldraw[fill=blue!25,thick] (3.8,2) circle(.13) node[below right]{$q$};
+  \draw[flow] (4.1,2)--++(1.2,0) node[midway,above]{$v\hat z$};
+  \draw[dashed] (0,0)--(3.8,2) node[midway,below]{$\boldsymbol r$};\draw[force,green!55!black] (3.8,2)--(4.94,2.6) node[above]{$\boldsymbol B\parallel\boldsymbol r$};
+  \draw[force,red!75!black] (3.8,2)--++(0,0) node[above=1.0cm]{$\boldsymbol F\parallel\hat y$};
+  \draw[fill=red!70!black] (3.8,2) circle(.04);
+  \node[draw,rounded corners,align=center] at (3.5,-1.15)
+    {$\displaystyle \Delta p_y=\frac{qg_m}{2\pi b}$\qquad
+     $\displaystyle \Delta L=b\Delta p_y=\frac{qg_m}{2\pi}$};
+  \node[align=center] at (7.6,2.0){$\hat y$ 垂直纸面向外\\用圆点表示横向力};
+\end{tikzpicture}
+
+\end{document}

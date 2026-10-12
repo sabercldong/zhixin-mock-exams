@@ -1,0 +1,455 @@
+{
+  "paper": "015",
+  "question": 7,
+  "review_saved_utc": "2026-10-09 12:04:27 UTC",
+  "scope": "Q7 current full ideal-model question work only; not whole-set acceptance",
+  "actual_visual_reviewed": true,
+  "model_condition_resolved": true,
+  "question_accepted": true,
+  "set_accepted": false,
+  "remaining_visual_issues": [],
+  "remaining_model_issues": [],
+  "source_sha256": "bdd5996beb398a933e97bbda5d570649a9194bd048a70e6f29f868ada0cd07c3",
+  "source_quality_sha256": "4c6b2e65a70e30224bf2fb727c10afe25220014fd8afc8ea13fb6b2a979ce492",
+  "verification_sha256": "f96019f776fa3b4996f53799acac713061d8338b66fb66aaa9c1886e0d5f5a94",
+  "geometry_sha256": "16f2c5c0e9553e05302cd75f1dfaea6f6c0d61a023456a908aa317e29254c9ca",
+  "template_sha256": "434e4734708ef9c12c4be4629709e370fa5fe9a67a4cc88709ee13ffa571673b",
+  "bound_sha256": {
+    "drafts/question-07.md": "bdd5996beb398a933e97bbda5d570649a9194bd048a70e6f29f868ada0cd07c3",
+    "figures/题07_图稿源文件.tex": "cf20285ffa2e5c3ab608ee01918d0122c95b9443ee01815ed489c939919ab126",
+    "figures/题07_图稿源文件.pdf": "94eb01e7b08a01586a6ef3ae765a7e1c84516918b4c015071e3d796b85877fd1",
+    "build/question-07-verification.json": "f96019f776fa3b4996f53799acac713061d8338b66fb66aaa9c1886e0d5f5a94",
+    "build/question-07-preverification.json": "f3084371d44b311deb556bbd4df67849efc38fb4aea145d87d528f806fbf433b",
+    "build/question-07-figure-geometry.json": "16f2c5c0e9553e05302cd75f1dfaea6f6c0d61a023456a908aa317e29254c9ca",
+    "build/source-quality-q07.json": "4c6b2e65a70e30224bf2fb727c10afe25220014fd8afc8ea13fb6b2a979ce492",
+    "preview/source-reviewed-q07.json": "58cac700b60832c32ec558b8b3e7f30744f7c6bc1591f37371da3f9816c62823",
+    "preview/originals/question-07-detail-manifest.json": "0108b6133f2df27bf142f708b04e88f8493f1d9579b29a52c09658e25fb6f083",
+    "preview/originals/source-manifest.json": "99d49989faaab0f49c3035eff5ceb550ba7a57a323803a8b1379c3b9eb5eab03",
+    "preview/working-draft-check-q07.json": "36686187678449938d04447edd7d9850c0ee4a795f4a994859fb5e1bfebde86c",
+    "preview/working-page-manifest-q07.json": "af3215aef30d4c4f535b0b04b9f0dde8130eb4cef6ed9268dc13d6967c4494f5",
+    "scripts/read_details_07.py": "6ba6d0d435269936d0f49f449b43806f333f380c5a08405e6840b6a75295eb3a",
+    "scripts/verify_question_07.py": "a2b2f559adcd5427d9ebc0f9e8c46667988fb15a46a805c65aa5b546144f23f1",
+    "scripts/check_figures_07.py": "b6d272e44a84e977edb176da150a727c34d56311f721ad889ceef83cb512c36d",
+    "scripts/finalize_question_07_math.py": "440993dc6a71b29f5d580b18225924cf3dd3bd5e4e5a95620eb6931677d75849",
+    "scripts/render_figures_07.py": "9127309deeba4449d36f9eec2fd51fd59a5103e7de57a6d9fb67eb65144ed15a",
+    "scripts/render_figures.py": "7b68a98640dbd00482c53d09865211d936014cae573552d22b1ff3df14789eb1",
+    "scripts/preview_drafts_07.py": "41243b6950e5ae3859cb76ca88ca8927324f9f388f6a92f0d6b9db6b08fe777d",
+    "scripts/preview_working_pages_07.py": "0cbeaafabeff516643ba495a4f93db3ae0483b66bf51755630003a5e0e45c3ed",
+    "scripts/collect_question_07_review_data.py": "cc4b2594e11e0644f79c948ac42be62d68612b715d2431718fe7aa89a7ddca1c",
+    "scripts/check_saved_reviews.py": "724463857ad73e82bf8a03f38e2ebe17c1b9597804e7cbcc3539688267e5a973",
+    "latex/template.tex": "434e4734708ef9c12c4be4629709e370fa5fe9a67a4cc88709ee13ffa571673b",
+    "preview/working-q07-student/working-q07-student.md": "2027423e01fcf02d4e79e7f3bcad9aec56f89f6be86eefded58ed7ab3d411639",
+    "preview/working-q07-student/working-q07-student.tex": "a5dae8ad75cdb450b4a8cd7e7495ca3bb2afdc1f894f6518729cfae919f10f24",
+    "preview/working-q07-student/working-q07-student.pdf": "aeb80ef051a9c2e586603928dd3b9f30e1c8114606b28bb766f609d726ad99a8",
+    "preview/working-q07-student/working-q07-student.log": "d2c18927bdf1bb596bc3275c464d422648d2e008e2b139d40115ba17ef291af7",
+    "preview/working-q07-teacher/working-q07-teacher.md": "b0ad48e697f752de460b609d5d00411200af3c9c0a24f540e3bd1c6d8fea6cf5",
+    "preview/working-q07-teacher/working-q07-teacher.tex": "c3870aa011eb450a7e4c282ed9868500ec15836a59bcabf350f2273a91f5af7d",
+    "preview/working-q07-teacher/working-q07-teacher.pdf": "d922920715e71451a3e29de1fcc1ea9a0f462c1a3dcafaeda82c7969f79fd047",
+    "preview/working-q07-teacher/working-q07-teacher.log": "eeee394e622f9ca4033de691ae09e9b124dbeb50e9cc18366987dd19c54e9c1f",
+    "figures/题07_图稿源文件.log": "267072ce1060f673605af9295265287d851bdaa0f462103e330b803b5124d9d9"
+  },
+  "original_images_actually_reviewed": {
+    "preview/originals/paper-03.png": "2a11d1d846b316eb2bb0dae0669fd397dbfed59afa02d66f4e8671c1bfd3de93",
+    "preview/originals/answer-06.png": "9a98df4406260d159c06ef55f1d4ad75638ba5bc1fd4e26ed89ecaa15471533b",
+    "preview/originals/q07-paper-text.png": "cd85885c85a93bde2050079dcadbb0fe22895c2151b9b84f6ec285a29f4d91c5",
+    "preview/originals/q07-answer-text.png": "0321b32df6e4b47594e3169db52b0b6bad7ee65bf4b5eac0b8dbded9043f320a",
+    "preview/originals/q07-answer-phases.png": "fb55dce008c117822de2b659bbc917f20f0063ede428658553e4ff2cdb42aafb",
+    "preview/originals/q07-answer-return.png": "6c06caffec9b724abef6eb2337f726bc0182fdfe202f14fe52618d0a9d00551c"
+  },
+  "figures_reviewed": {
+    "path-07": {
+      "pdf_sha256": "705990debcd96dec74ea813aca206895668458f7d6b05ef5fae63f9d61abb00b",
+      "png_sha256": "a33bfed3262e252aa91d5150aade384a16bfca68f842d5cf71e16aa7001da9a2"
+    },
+    "axes-07": {
+      "pdf_sha256": "d810e923aee854943668818990fd4353a772f25e6aba3c7fb7ec3f260f70fb3e",
+      "png_sha256": "1802b0fcd6a4bee7862b73bab9f20cc332af9442100a5ac232585a7e8407a27a"
+    },
+    "states-07": {
+      "pdf_sha256": "a3455184ac94e095998fb9327ad8fef9c6e4008fcd426cfcc084eed014bba95f",
+      "png_sha256": "34eac469653685b2aa6c45cc9e3528206d60b3f9c3efbb5800300d7da931a688"
+    },
+    "projectors-07": {
+      "pdf_sha256": "78839d395957b8602def1ed2d6183535572d06cb3de2a4068a3eca06146559f9",
+      "png_sha256": "d2e29dec41ab3787eb8469759c7b797772d8fd408ea1e533bbb537b7f4acd09d"
+    },
+    "leakage-07": {
+      "pdf_sha256": "1ab8112a79e23b483e3dbb8b23e2427536b2dc55f190e2ad122eef928440bd91",
+      "png_sha256": "6ce6d4d783286df919329700ed04785fafefc6ceb2204d38ecb006ebcd3931a2"
+    },
+    "order-07": {
+      "pdf_sha256": "d934674cdda7a35e8e24c68aa0cfccdaa2abb6c8b321167073fe183bc77bc6dc",
+      "png_sha256": "8702f266ce7d37ba79207b4b437987f933c8352e6a4be2e05e9e1d39ecdf11da"
+    }
+  },
+  "qpdf_checks": [
+    {
+      "path": "figures/题07_图稿源文件.pdf",
+      "sha256": "94eb01e7b08a01586a6ef3ae765a7e1c84516918b4c015071e3d796b85877fd1",
+      "passed": true
+    },
+    {
+      "path": "figures/path-07.pdf",
+      "sha256": "705990debcd96dec74ea813aca206895668458f7d6b05ef5fae63f9d61abb00b",
+      "passed": true
+    },
+    {
+      "path": "figures/axes-07.pdf",
+      "sha256": "d810e923aee854943668818990fd4353a772f25e6aba3c7fb7ec3f260f70fb3e",
+      "passed": true
+    },
+    {
+      "path": "figures/states-07.pdf",
+      "sha256": "a3455184ac94e095998fb9327ad8fef9c6e4008fcd426cfcc084eed014bba95f",
+      "passed": true
+    },
+    {
+      "path": "figures/projectors-07.pdf",
+      "sha256": "78839d395957b8602def1ed2d6183535572d06cb3de2a4068a3eca06146559f9",
+      "passed": true
+    },
+    {
+      "path": "figures/leakage-07.pdf",
+      "sha256": "1ab8112a79e23b483e3dbb8b23e2427536b2dc55f190e2ad122eef928440bd91",
+      "passed": true
+    },
+    {
+      "path": "figures/order-07.pdf",
+      "sha256": "d934674cdda7a35e8e24c68aa0cfccdaa2abb6c8b321167073fe183bc77bc6dc",
+      "passed": true
+    },
+    {
+      "path": "preview/working-q07-student/working-q07-student.pdf",
+      "sha256": "aeb80ef051a9c2e586603928dd3b9f30e1c8114606b28bb766f609d726ad99a8",
+      "passed": true
+    },
+    {
+      "path": "preview/working-q07-teacher/working-q07-teacher.pdf",
+      "sha256": "d922920715e71451a3e29de1fcc1ea9a0f462c1a3dcafaeda82c7969f79fd047",
+      "passed": true
+    }
+  ],
+  "identical_page_reuse": [
+    {
+      "student_page": 1,
+      "teacher_page": 1,
+      "png_sha256": "a23ca15655057fd10fa09aac25ef58eb4dd507441df30ef5390846f65e4e532b"
+    },
+    {
+      "student_page": 2,
+      "teacher_page": 2,
+      "png_sha256": "92997d65dfa8687747bf399c19f1a7b420ea6b4e97ee9d5bc8b3ef15827ff47b"
+    },
+    {
+      "student_page": 3,
+      "teacher_page": 3,
+      "png_sha256": "99f43500f72f08ac8cb5fdd4e37cb2ca24ad045359abdf2c4c9893698b84aaa3"
+    },
+    {
+      "student_page": 4,
+      "teacher_page": 4,
+      "png_sha256": "6be644475af65542eb494d8e66a4f722544070f744c9c94d45de5e90aa82e1c4"
+    },
+    {
+      "student_page": 5,
+      "teacher_page": 5,
+      "png_sha256": "59401f40674d009b74aef9f48f9b82c4e045d57e46da3f2f565fdf959ae532d4"
+    },
+    {
+      "student_page": 6,
+      "teacher_page": 6,
+      "png_sha256": "c0d431077a8641d6045ff858b608063092c113337d53309e45dd354269612530"
+    },
+    {
+      "student_page": 7,
+      "teacher_page": 7,
+      "png_sha256": "00b8da7099dc1a1aada09c763a6372b6b3a095e5a1b6ca5a78beb53c8720a374"
+    },
+    {
+      "student_page": 8,
+      "teacher_page": 8,
+      "png_sha256": "e7bb1189ec917ec3b57d56ed9bcdafbedbf522db45bff22734a55f06d99456f6"
+    },
+    {
+      "student_page": 9,
+      "teacher_page": 9,
+      "png_sha256": "bd72544977f0b2b68a0ad6b18a6a32cd0e9f19d97294e6fe6565bd939d249f01"
+    },
+    {
+      "student_page": 10,
+      "teacher_page": 10,
+      "png_sha256": "cda1d7621c04aa8c4cf175d47a799f5b741f144a05899176156cee14e2dbb32e"
+    },
+    {
+      "student_page": 11,
+      "teacher_page": 11,
+      "png_sha256": "e2b279456d7569c418e2fa593760d4d81f0ce38dc90cfb7e83d1eeeb137f2081"
+    },
+    {
+      "student_page": 12,
+      "teacher_page": 12,
+      "png_sha256": "d4d9165b131925f37fde61d666976dbe408e2e1b9f1dd446828c0dbf49bb9f7b"
+    },
+    {
+      "student_page": 13,
+      "teacher_page": 13,
+      "png_sha256": "939b7474ac8ab5ea780cf10d7fb42de82adbb76272d57bdc863e88218b1858da"
+    },
+    {
+      "student_page": 14,
+      "teacher_page": 14,
+      "png_sha256": "e49aeca4052cdbc2855ef61a8bbc7d3cfbcdbd0c0552bf421b3a2daeefa18e85"
+    },
+    {
+      "student_page": 15,
+      "teacher_page": 15,
+      "png_sha256": "bcdc0666ac480267eb9fa99d2dadafbcc2e9025cd0129f1ba6cef319f3a5cde8"
+    }
+  ],
+  "logs": {
+    "preview/working-q07-student/working-q07-student.log": {
+      "sha256": "d2c18927bdf1bb596bc3275c464d422648d2e008e2b139d40115ba17ef291af7",
+      "warnings": []
+    },
+    "preview/working-q07-teacher/working-q07-teacher.log": {
+      "sha256": "eeee394e622f9ca4033de691ae09e9b124dbeb50e9cc18366987dd19c54e9c1f",
+      "warnings": []
+    },
+    "figures/题07_图稿源文件.log": {
+      "sha256": "267072ce1060f673605af9295265287d851bdaa0f462103e330b803b5124d9d9",
+      "warnings": []
+    }
+  },
+  "pdfs": {
+    "student": {
+      "pdf_sha256": "aeb80ef051a9c2e586603928dd3b9f30e1c8114606b28bb766f609d726ad99a8",
+      "total_pages": 16,
+      "body_pages": 15,
+      "body_nonspace": 9121,
+      "per_page_nonspace": [
+        865,
+        977,
+        496,
+        733,
+        382,
+        654,
+        551,
+        603,
+        658,
+        607,
+        456,
+        490,
+        624,
+        532,
+        493
+      ],
+      "page_png_sha256": {
+        "page-001.png": "a23ca15655057fd10fa09aac25ef58eb4dd507441df30ef5390846f65e4e532b",
+        "page-002.png": "92997d65dfa8687747bf399c19f1a7b420ea6b4e97ee9d5bc8b3ef15827ff47b",
+        "page-003.png": "99f43500f72f08ac8cb5fdd4e37cb2ca24ad045359abdf2c4c9893698b84aaa3",
+        "page-004.png": "6be644475af65542eb494d8e66a4f722544070f744c9c94d45de5e90aa82e1c4",
+        "page-005.png": "59401f40674d009b74aef9f48f9b82c4e045d57e46da3f2f565fdf959ae532d4",
+        "page-006.png": "c0d431077a8641d6045ff858b608063092c113337d53309e45dd354269612530",
+        "page-007.png": "00b8da7099dc1a1aada09c763a6372b6b3a095e5a1b6ca5a78beb53c8720a374",
+        "page-008.png": "e7bb1189ec917ec3b57d56ed9bcdafbedbf522db45bff22734a55f06d99456f6",
+        "page-009.png": "bd72544977f0b2b68a0ad6b18a6a32cd0e9f19d97294e6fe6565bd939d249f01",
+        "page-010.png": "cda1d7621c04aa8c4cf175d47a799f5b741f144a05899176156cee14e2dbb32e",
+        "page-011.png": "e2b279456d7569c418e2fa593760d4d81f0ce38dc90cfb7e83d1eeeb137f2081",
+        "page-012.png": "d4d9165b131925f37fde61d666976dbe408e2e1b9f1dd446828c0dbf49bb9f7b",
+        "page-013.png": "939b7474ac8ab5ea780cf10d7fb42de82adbb76272d57bdc863e88218b1858da",
+        "page-014.png": "e49aeca4052cdbc2855ef61a8bbc7d3cfbcdbd0c0552bf421b3a2daeefa18e85",
+        "page-015.png": "bcdc0666ac480267eb9fa99d2dadafbcc2e9025cd0129f1ba6cef319f3a5cde8",
+        "page-016.png": "b1295467cb81a85d1c0212938a97ccb9eb96c389d0a4904da6e70ceff5fcff73"
+      },
+      "overview_sha256": {
+        "overview-01.jpg": "7f6c7f77c7e8e40e7588a410faa6d62d628ae22bd17dd6132ac8cd2ed73357a4",
+        "overview-02.jpg": "246100c60dafdfc3f649dfb2b4a5d00d174fbd0b4ec20a2af12a0a2185a5a9b6"
+      },
+      "overview_pages_reviewed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "high_resolution_pages_reviewed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "direct_high_resolution_pages_reviewed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ]
+    },
+    "teacher": {
+      "pdf_sha256": "d922920715e71451a3e29de1fcc1ea9a0f462c1a3dcafaeda82c7969f79fd047",
+      "total_pages": 23,
+      "body_pages": 22,
+      "body_nonspace": 14296,
+      "per_page_nonspace": [
+        865,
+        977,
+        496,
+        733,
+        382,
+        654,
+        551,
+        603,
+        658,
+        607,
+        456,
+        490,
+        624,
+        532,
+        894,
+        738,
+        816,
+        820,
+        616,
+        606,
+        685,
+        493
+      ],
+      "page_png_sha256": {
+        "page-001.png": "a23ca15655057fd10fa09aac25ef58eb4dd507441df30ef5390846f65e4e532b",
+        "page-002.png": "92997d65dfa8687747bf399c19f1a7b420ea6b4e97ee9d5bc8b3ef15827ff47b",
+        "page-003.png": "99f43500f72f08ac8cb5fdd4e37cb2ca24ad045359abdf2c4c9893698b84aaa3",
+        "page-004.png": "6be644475af65542eb494d8e66a4f722544070f744c9c94d45de5e90aa82e1c4",
+        "page-005.png": "59401f40674d009b74aef9f48f9b82c4e045d57e46da3f2f565fdf959ae532d4",
+        "page-006.png": "c0d431077a8641d6045ff858b608063092c113337d53309e45dd354269612530",
+        "page-007.png": "00b8da7099dc1a1aada09c763a6372b6b3a095e5a1b6ca5a78beb53c8720a374",
+        "page-008.png": "e7bb1189ec917ec3b57d56ed9bcdafbedbf522db45bff22734a55f06d99456f6",
+        "page-009.png": "bd72544977f0b2b68a0ad6b18a6a32cd0e9f19d97294e6fe6565bd939d249f01",
+        "page-010.png": "cda1d7621c04aa8c4cf175d47a799f5b741f144a05899176156cee14e2dbb32e",
+        "page-011.png": "e2b279456d7569c418e2fa593760d4d81f0ce38dc90cfb7e83d1eeeb137f2081",
+        "page-012.png": "d4d9165b131925f37fde61d666976dbe408e2e1b9f1dd446828c0dbf49bb9f7b",
+        "page-013.png": "939b7474ac8ab5ea780cf10d7fb42de82adbb76272d57bdc863e88218b1858da",
+        "page-014.png": "e49aeca4052cdbc2855ef61a8bbc7d3cfbcdbd0c0552bf421b3a2daeefa18e85",
+        "page-015.png": "bcdc0666ac480267eb9fa99d2dadafbcc2e9025cd0129f1ba6cef319f3a5cde8",
+        "page-016.png": "57fe4f8283c90063fff5958b1689ddba52de7392c39c705fee094c56646aea1e",
+        "page-017.png": "3f0869ecc18eec18df4b09b4643c9a92329e71072dd9c231a3bfe2db35f364a7",
+        "page-018.png": "c5fb55f563a7f1018241caab39da6bf8d3ab1afdbaa7d8651c24db0e3bfe553a",
+        "page-019.png": "e06e32408dafaaa5ad34fd7ea566b292d9d2dabc0014e55a8895fd81e75bfab7",
+        "page-020.png": "daec738aa7a9d892187dd29ee4a97c3f60ea60299f211f0b74c94195e2a315f4",
+        "page-021.png": "b7112502946dd168466d66e46b09c936a608235f3faa5e8f7b1e8f1aa6411c29",
+        "page-022.png": "90a543ed73d6dd88a88ca9966f274b6d3eb2101260dbbf73d2094e65c9b6a3e7",
+        "page-023.png": "12d2fb110c960f331efa24e0959b05203f810f2a3760f330b65fcf0b0857acba"
+      },
+      "overview_sha256": {
+        "overview-01.jpg": "159272452e2fcf5d4fd4581a1645a5563c24b9671263bede3753647c2e995f5e",
+        "overview-02.jpg": "d7cd4b026fdbe4cfae4fd667682a2da5684a304f6407ebd7a2a9fe1b8cdeed50"
+      },
+      "overview_pages_reviewed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "high_resolution_pages_reviewed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "direct_high_resolution_pages_reviewed": [
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ]
+    }
+  },
+  "actual_reading_notes": [
+    "All six current final figure PNGs directly viewed: both sources share receiverR; P/Q outward/inward order is correct; axes in transverse plane; the middle circle is a temporal field trajectory, not a ray circle.",
+    "Principal-axis component amplitude in the three state drawings was corrected to the same0.99 graphical scale, and all six final figures were reread. Phase curves have conserved same/cross sum and no label collision.",
+    "All four final current overview images actually read;39 page versions/37 body versions covered. Student1–16 and teacher16–23 directly read at high resolution. Teacher1–15 reused only after exact current PNG SHA equality.",
+    "Final reader review removed a student reference to a teacher-only solved-variant section, removed an unfulfilled head-rotation promise from the student entry, and corrected undefined QC_R to Q e_x in error11.",
+    "Last rebuild changed only student3/16, teacher3/16/18. Student3/16 and teacher16/18 were directly reread; teacher3 pixel-identical to student3. All final overview images reread. Other current pages retained their actual-read pixel SHA.",
+    "Variant4 now includes explicit left-channel +/-i projections, lossless propagation norms and separation contrast0 versus1, removing the earlier symmetric-handwave gap. Figure7-6 resized to75% for normal text-scale labels, without changing101 margins, spacing, font or pagination.",
+    "Teacher tail contains the complete left-source matrix, power and contrast proof; student tail contains complete scope and channel conclusion. Neither is blank or one/two-sentence filler. No formula clipping, missing glyphs or label/line occlusion observed.",
+    "All ordinary question formulas/signs in actualPDF match independently verified fixed-lab exp(+i omega t) convention, including inverse screen design versus real same-sign double propagation.",
+    "Two complete questions and valid handwritten main route retained. Ideal near-normal mirror and design-wavelength wave plate scope stated explicitly; no new human model change required. No reference links, TikZ source code, extra modules or added forced page breaks in body.",
+    "Only this question's working-file acceptance is true. Other question1/3/5/6 choices remain pending; paper015 has no formal whole-set deliverable."
+  ]
+}

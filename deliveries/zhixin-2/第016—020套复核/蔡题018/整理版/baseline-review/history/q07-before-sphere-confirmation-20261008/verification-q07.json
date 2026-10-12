@@ -1,0 +1,240 @@
+{
+  "question": 7,
+  "verified_math": true,
+  "document_complete": true,
+  "set_accepted": false,
+  "scope": "三问条件化球形主解与薄圆片区别；需确认原题形状，不能计整套验收",
+  "image_irradiance": "Ts**4*r**2*sigma/f**2",
+  "TB_fourth_power": "Ts**4*r**2/(4*f**2)",
+  "handwritten_TB_fourth_power": "Ts**4*r**2/(16*f**2)",
+  "handwritten_power_error_factor": 4,
+  "filled_cone_temperature_fourth_fraction": "1/2 - cos(alpha)/2",
+  "geometric_conditions": [
+    "b远小于太阳像半径",
+    "近轴r/f远小于1用于第一式",
+    "有限角度只给实际均匀填充锥，不将高斯像公式外推",
+    "忽略暗背景；灰体权重法不冒充任意频率滤光的常数式"
+  ],
+  "independent_sphere_surface_projection": [
+    {
+      "direction_radians": 0.0,
+      "projection_integral": 3.1416087624854976,
+      "relative_error": 5.12762075823631e-06
+    },
+    {
+      "direction_radians": 0.1,
+      "projection_integral": 3.1415916569926887,
+      "relative_error": 3.172267108716447e-07
+    },
+    {
+      "direction_radians": 0.4,
+      "projection_integral": 3.1415931701592537,
+      "relative_error": 1.6442916619058574e-07
+    },
+    {
+      "direction_radians": 0.8,
+      "projection_integral": 3.1415928208046116,
+      "relative_error": 5.32261298246633e-08
+    },
+    {
+      "direction_radians": 1.2,
+      "projection_integral": 3.141592782865161,
+      "relative_error": 4.1149627592955923e-08
+    },
+    {
+      "direction_radians": 1.5707963267948966,
+      "projection_integral": 3.141595171379494,
+      "relative_error": 8.014373530737403e-07
+    },
+    {
+      "direction_radians": 2.0,
+      "projection_integral": 3.1415921786719236,
+      "relative_error": 1.5117105297929217e-07
+    },
+    {
+      "direction_radians": 3.141592653589793,
+      "projection_integral": 3.1416087624854976,
+      "relative_error": 5.12762075823631e-06
+    }
+  ],
+  "independent_surface_and_cone_quadrature": [
+    {
+      "cone_half_angle": 0.03,
+      "numerical_surface_and_direction_integral": 0.008881970359070531,
+      "relative_error": 8.358046030801438e-07,
+      "TB_over_TS": 0.12247216515611568,
+      "exact_filled_cone_temperature_ratio": 0.12247219074682891
+    },
+    {
+      "cone_half_angle": 0.1,
+      "numerical_surface_and_direction_integral": 0.09861383495262346,
+      "relative_error": 1.037826158480288e-07,
+      "TB_over_TS": 0.223560219771234,
+      "exact_filled_cone_temperature_ratio": 0.2235602139708183
+    },
+    {
+      "cone_half_angle": 0.3,
+      "numerical_surface_and_direction_integral": 0.8816218227469771,
+      "relative_error": 6.173176707869486e-07,
+      "TB_over_TS": 0.38657222656082296,
+      "exact_filled_cone_temperature_ratio": 0.3865722862203126
+    },
+    {
+      "cone_half_angle": 0.7,
+      "numerical_surface_and_direction_integral": 4.641828538511812,
+      "relative_error": 1.3532236618498903e-07,
+      "TB_over_TS": 0.5855747469406268,
+      "exact_filled_cone_temperature_ratio": 0.5855747667509686
+    },
+    {
+      "cone_half_angle": 1.2,
+      "numerical_surface_and_direction_integral": 12.586553565219223,
+      "relative_error": 1.1102656334504342e-08,
+      "TB_over_TS": 0.7514269602094078,
+      "exact_filled_cone_temperature_ratio": 0.7514269581236991
+    },
+    {
+      "cone_half_angle": 1.55,
+      "numerical_surface_and_direction_integral": 19.32873854766607,
+      "relative_error": 1.6522022199435003e-07,
+      "TB_over_TS": 0.8364903664419715,
+      "exact_filled_cone_temperature_ratio": 0.8364903318906941
+    }
+  ],
+  "paraxial_comparison": [
+    {
+      "r_over_f": 0.001,
+      "paraxial": 0.022360679774997897,
+      "filled_cone": 0.022360675582777916,
+      "handwritten": 0.015811388300841896,
+      "paraxial_relative_error": 1.874818122971078e-07
+    },
+    {
+      "r_over_f": 0.01,
+      "paraxial": 0.07071067811865475,
+      "filled_cone": 0.07070935236661789,
+      "handwritten": 0.05,
+      "paraxial_relative_error": 1.8749316639032898e-05
+    },
+    {
+      "r_over_f": 0.03,
+      "paraxial": 0.1224744871391589,
+      "filled_cone": 0.1224538298322394,
+      "handwritten": 0.08660254037844387,
+      "paraxial_relative_error": 0.00016869465779723036
+    },
+    {
+      "r_over_f": 0.1,
+      "paraxial": 0.22360679774997896,
+      "filled_cone": 0.2231898337294055,
+      "handwritten": 0.15811388300841897,
+      "paraxial_relative_error": 0.0018682034643162648
+    }
+  ],
+  "passive_gray_exchange_examples": [
+    {
+      "C_BS": 0.1,
+      "C_BC": 0.0,
+      "TB": 6000.0
+    },
+    {
+      "C_BS": 0.1,
+      "C_BC": 0.3,
+      "TB": 4242.660574357675
+    },
+    {
+      "C_BS": 0.1,
+      "C_BC": 3.0,
+      "TB": 2542.9111294826603
+    },
+    {
+      "C_BS": 1.0,
+      "C_BC": 0.0,
+      "TB": 6000.0
+    },
+    {
+      "C_BS": 1.0,
+      "C_BC": 0.3,
+      "TB": 5619.085183172376
+    },
+    {
+      "C_BS": 1.0,
+      "C_BC": 3.0,
+      "TB": 4242.660574357675
+    },
+    {
+      "C_BS": 10.0,
+      "C_BC": 0.0,
+      "TB": 6000.0
+    },
+    {
+      "C_BS": 10.0,
+      "C_BC": 0.3,
+      "TB": 5955.8254960501245
+    },
+    {
+      "C_BS": 10.0,
+      "C_BC": 3.0,
+      "TB": 5619.085183172376
+    }
+  ],
+  "variants_checked": [
+    {
+      "number": 1,
+      "paraxial": 1341.6407864998737,
+      "filled_cone": 1339.1390023764257,
+      "handwritten": 948.6832980505138
+    },
+    {
+      "number": 2,
+      "beta": 0.02233175543719701,
+      "temperature": 2319.5923622094024
+    },
+    {
+      "number": 3,
+      "sphere": 948.6832980505138,
+      "plate": 1128.180927925918,
+      "ratio": 1.189207115002721
+    },
+    {
+      "number": 4,
+      "actual_work": 500,
+      "entropy_generation": 0.8333333333333334,
+      "radius_for_8000": 0.00041389885774521253,
+      "threshold_radius_for_6000": 0.0007358201915470445
+    }
+  ],
+  "perturbation_coefficient": "-16*pi*TB**3*b**2*sigma/Cb",
+  "shape_comparison_fourth_power_factor": "2",
+  "unresolved_critical_condition": "原题未指定小黑体形状，手写隐含球形；已向用户询问是否补充球形条件并注明修订",
+  "active_steady_example": {
+    "Ts": 6000.0,
+    "Th": 2000.0,
+    "Tc": 300.0,
+    "TB": 7000.0,
+    "Qh": 200.0,
+    "W": 140.0,
+    "Qc": 60.0,
+    "efficiency": 0.7,
+    "carnot_bound": 0.85,
+    "ball_radius": 0.0002860600020969881,
+    "emission_power": 140.00000000000003,
+    "engine_entropy_generation": 0.1,
+    "furnace_heat_boundary_entropy_generation": 0.02,
+    "device_state_and_entropy_constant": true
+  },
+  "figures_sha256": {
+    "question-07": "6d0dfaab729c859e3c0268d2c798fc7851ebe70e44c647f50b1795fd84ce0160",
+    "image-07": "c22480ca682cad85d7704a5905eccfb060ea7eeffcbd22d4f33ee9bfdcd86116",
+    "projection-07": "80df18f958670c5a9caa6b4f50af213faa2f09f5f90d3ce2e5b1780a8beec06e",
+    "cone-07": "5c4ea0d99c248d67bb1dd0ef05cf217bd978b03af5b46da5fbfed3e765c93105",
+    "passive-07": "332e0c5086852fb6496324b76eb461c80137f0914ba22c24b409a221cc9f22ef",
+    "engine-07": "1e16d0c928de27f3ad17ee339faefdf1d88b23134676019c901177ceb2868242"
+  },
+  "source_sha256": {
+    "scripts/verify_question_07.py": "cf4b59b6d88455d6918e57e2aa55a87ea9df173daf2535e012f3bd93f492c3e8",
+    "drafts/question-07-核验备忘.md": "58f6e7e78f5cd82254cc2a0e57e668f22fbb0b3ae404c6d3d767d18813447b83",
+    "drafts/question-07.md": "538e2cd330cc55cb32ec3be93f64ca1d6524e2234cd938ce681a1beff66b141e",
+    "figures/题07_图稿源文件.tex": "edc1a31fc0f9634d448c77f08b3906cfa7fb202c947912d1484909546ae92311"
+  }
+}

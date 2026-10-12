@@ -1,0 +1,53 @@
+\documentclass[multi=tikzpicture,border=9pt]{standalone}
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath,amssymb}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc,patterns,decorations.pathmorphing}
+\definecolor{main}{HTML}{17365D}
+\definecolor{accent}{HTML}{AC3931}
+\tikzset{every picture/.style={font=\small,line width=.75pt},
+>={Stealth[length=2mm]},arr/.style={->},
+box/.style={draw=main,rounded corners=2pt,fill=main!4,text width=3.6cm,minimum height=1cm,align=center},
+note/.style={align=center,text width=9cm}}
+\begin{document}
+
+\begin{tikzpicture}
+\draw[main,thick] (0,0) rectangle (6,.2);\node[below] at (3,0){木板质量 $m$，长度 $l$};\draw[main,thick] (-.2,3) rectangle (.2,3.4);\draw[arr,accent] (.3,3.2)--(1.6,3.2) node[midway,above]{$v_0$};\draw[<->] (-.8,.2)--(-.8,3.2) node[midway,left]{$h$};\draw[dashed] (0,3.2)..controls (1.2,3.2) and(2.2,2)..(2.8,.2);\node[right] at (4,2){$\mu=1/2$};\node[note] at (3,-1.2){首次飞行 $t_0$；以后竖直反弹间隔 $2t_0$};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\node[box] (n0) at (0,0) {竖直冲量\\$J_N=2mu$};
+\node[box] (n1) at (5,0) {切向上限\\$J_T\le2\mu mu$};
+\node[box] (n2) at (5,-2.3) {实际切向冲量\\$\min(2\mu mu,mw/2)$};
+\node[box] (n3) at (0,-2.3) {速度差更新\\$w_{\rm after}=\max(w-4\mu u,0)$};
+\draw[arr] (n0)--(n1);\draw[arr] (n1)--(n2);\draw[arr] (n2)--(n3);
+\node[note] at (2.5,-4.1) {共速时截断最大摩擦冲量，不能继续造成人为反向};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\draw[arr] (0,0)--(6,0) node[right]{$j$};
+\draw[arr] (0,0)--(0,4) node[above]{$w_j$};
+\draw[accent,thick] (0.00000,3.00000) -- (1.40000,1.80000) -- (2.80000,0.60000) -- (4.20000,0.00000);
+\fill[accent] (0.0,3.0) circle (2pt);
+\fill[accent] (1.4,1.7999999999999998) circle (2pt);
+\fill[accent] (2.8,0.6) circle (2pt);
+\fill[accent] (4.199999999999999,0.0) circle (2pt);
+\node[below] at (4.2,0){$3$};\node[left] at (0,3){$10$};\node[note] at (2.5,-1.2){示例 $u=2$、$v_0=10$：速度差 $10,6,2,0$};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\draw[arr] (0,0)--(6,0) node[right]{碰撞次数};
+\draw[arr] (0,0)--(0,4) node[above]{$s$};
+\draw[main,thick] (0.00000,0.00000) -- (1.50000,1.20000) -- (3.00000,2.64000) -- (4.50000,3.12000);
+\node[above] at (1.5,1.2){$2.0$};\node[above] at (3,2.64){$4.4$};\node[above] at (4.5,3.12){$5.2$};\node[below] at (1.5,0){$1$};\node[below] at (3,0){$2$};\node[below] at (4.5,0){$3$};\node[note] at (2.5,-1.2){先计初次路程，再累加 $w_j(2u/g)$；停滑后相对位置固定};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\node[box] (n0) at (0,0) {初次路程\\$s_0=v_0u/g$};
+\node[box] (n1) at (5,0) {后续速度差\\$w_j=(v_0-2ju)_+$};
+\node[box] (n2) at (5,-2.3) {有限等差和\\$N=\lceil v_0/(2u)\rceil$};
+\node[box] (n3) at (0,-2.3) {长度条件\\$l\ge s_{\max}$};
+\draw[arr] (n0)--(n1);\draw[arr] (n1)--(n2);\draw[arr] (n2)--(n3);
+\node[note] at (2.5,-4.1) {例 $g=10,h=.2,v_0=10$ 得 $l\ge5.20\,\mathrm m$};
+\end{tikzpicture}
+\end{document}

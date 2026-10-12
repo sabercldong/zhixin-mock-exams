@@ -1,0 +1,81 @@
+{
+  "question": 3,
+  "scope": "第018套第3题分题工作预览，不代表整套交付",
+  "review_time": "2026-10-08 14:24 Asia/Shanghai",
+  "actual_visual_reviewed": true,
+  "source_sha256": "d69dd638bd4ca41bfa64520b540ddb3467777c512f8a336d29e537da12ae0d95",
+  "pdfs": {
+    "student": {
+      "total_pages": 12,
+      "body_pages": 11,
+      "pdf_sha256": "a3487080a3e9ffb3a7a71f70e236811fbfafa99d4ec3954b70c0988560258fa1",
+      "overview_pages_reviewed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "high_resolution_pages_reviewed": [
+        4,
+        8,
+        9,
+        10,
+        12
+      ]
+    },
+    "teacher": {
+      "total_pages": 16,
+      "body_pages": 15,
+      "pdf_sha256": "fb422df1505596db6e83bee660bf4aea5412acb5609f250ac75a804c9d45a191",
+      "overview_pages_reviewed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "high_resolution_pages_reviewed": [
+        13,
+        16
+      ]
+    }
+  },
+  "figures_reviewed": {
+    "question-03": "00b2d9736e02d21a34c7659f68cc8b04d0e253f37bb4956bd9bfad4aa2db9561",
+    "geometry-03": "f8cf21b329b258bbc59e9b123002e5bcd4489c58d9d33e7a53bc2eaec6d2de29",
+    "forces-03": "58a99459ff7c47b32faef74183822db9fcb23750f0960716983669114011a6f0",
+    "moments-03": "c06b4ecd0721cb1e37ea8ee5a451d12009f8da684196dcde61a42b12611c682d",
+    "angular-03": "1c714956294cb493b6c2d12d21d74bda45b1ecdc8f48930efefc81ddc8b23870"
+  },
+  "checks": [
+    "单条连续螺线在外缘下方切向连接地面尾管，不用互不相连的同心圆代替",
+    "维持推力从圆心出发，支持与重力作用点正确且反向箭头不重叠",
+    "几何、一阶矩、地面合力与角动量图分别在建立关系处插入，图中符号实际进入随后方程",
+    "固定O与当前Q区分，x左正、物理逆时针角动量正，不遗漏Py项",
+    "保留16步推导及全部中间计算；量纲检查移到相应推导，删除仅重复已有框出结论的总结",
+    "图幅合理收紧、验算三行等号对齐，消除学生孤立尾段；未改变101固定排版参数",
+    "移动圆心核验保留在关键洞察，第四变式改为另一个固定参考点，避免重复",
+    "28页总览与7页高清实际查看；五单图和两版qpdf通过，零致命错误、缺字、公式溢出"
+  ],
+  "remaining_visual_issues": [],
+  "set_accepted": false
+}

@@ -1,0 +1,49 @@
+{
+  "set": 20,
+  "generated_files_removed_before_rebuild": true,
+  "steps": [
+    {
+      "script": "rebuild_sources.py",
+      "exit_code": 0,
+      "seconds": 0.04
+    },
+    {
+      "script": "portable_render_figures.py",
+      "exit_code": 0,
+      "seconds": 50.23
+    },
+    {
+      "script": "prepare_documents.py",
+      "exit_code": 0,
+      "seconds": 0.09
+    },
+    {
+      "script": "build_documents.py",
+      "exit_code": 0,
+      "seconds": 15.46
+    }
+  ],
+  "figure_png_count": 38,
+  "figure_png_sha256_equal": true,
+  "documents": [
+    {
+      "name": "蔡题020_学生详解.pdf",
+      "pages": 83,
+      "all_text_equal": true,
+      "all_72dpi_pixels_equal": true
+    },
+    {
+      "name": "蔡题020_教师备课.pdf",
+      "pages": 121,
+      "all_text_equal": true,
+      "all_72dpi_pixels_equal": true
+    },
+    {
+      "name": "蔡题020_试卷.pdf",
+      "pages": 9,
+      "all_text_equal": true,
+      "all_72dpi_pixels_equal": true
+    }
+  ],
+  "passed": true
+}

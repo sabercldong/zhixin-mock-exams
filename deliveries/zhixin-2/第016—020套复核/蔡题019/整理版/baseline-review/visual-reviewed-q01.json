@@ -1,0 +1,21 @@
+{
+  "question": 1, "actual_reviewed": true,
+  "scope": "分题工作预览；整套合并后须重新验收",
+  "student": {
+    "pdf_sha256": "f5fe3117bb1ecc09fa20bc3e3152dce85ea1bf1773417ab71c741dd69111b121",
+    "total_pages": 11, "body_pages": 10, "extracted_body_nonspace": 6452,
+    "overview_pages_reviewed": [1,2,3,4,5,6,7,8,9,10,11],
+    "high_resolution_pages_reviewed": [6,8,9,11]
+  },
+  "teacher": {
+    "pdf_sha256": "176773afaeb12f7b10634a4918da94fab50f58a34ab152145ef57957910da2a7", "total_pages": 15, "body_pages": 14,
+    "extracted_body_nonspace": 10058,
+    "overview_pages_reviewed": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15],
+    "high_resolution_pages_reviewed": [12,14,15]
+  },
+  "figures_reviewed": ["geometry-01","pressure-01","radius-01","droplet-01"],
+  "repairs": ["压力标注移离圆弧", "图例间距调整避免遮挡", "公式盒内错误对齐标记修正", "学生题末完整小结同页保留，消除63字符孤页，不改变字体间距"],
+  "layout_issues": [], "qpdf_check_passed": true,
+  "physics_checks_passed": true,
+  "physics_note": "Euler速度ODE、直接表面能求根、数值面积积分及带解变式通过；成滴结果明确仅为能量估算"
+}

@@ -1,0 +1,513 @@
+{
+  "paper": "015",
+  "question": 2,
+  "review_saved_utc": "2026-10-09 07:16:23 UTC",
+  "scope": "Completed Q2 source and current working PDFs only; not whole-set acceptance",
+  "actual_visual_reviewed": true,
+  "model_condition_resolved": true,
+  "question_accepted": true,
+  "set_accepted": false,
+  "remaining_visual_issues": [],
+  "remaining_model_issues": [],
+  "source_sha256": "e1bfbdf6ba21324244725104a9f7133ae44b4681f6928217bdb64049b114b4e9",
+  "source_quality_sha256": "8d68968bb228c94581547b11798e09e109303d39a22d61a565116f0687bd06ab",
+  "verification_sha256": "4a4e91feb42877f3aba6a4903360ad6d25be4b54661d10b753d6b464307824bf",
+  "geometry_sha256": "cbb00b45778d43ecd191cf6961f737ae9b58bc0496a847721bb308ae4e9af57c",
+  "template_sha256": "434e4734708ef9c12c4be4629709e370fa5fe9a67a4cc88709ee13ffa571673b",
+  "pdfs": {
+    "student": {
+      "pdf_sha256": "8ba21a499bf59898cdb1203e4f6ca98bbe6cf227cefe79bfb31ac787f0920e9c",
+      "total_pages": 20,
+      "body_pages": 19,
+      "body_nonspace": 9559,
+      "per_page_nonspace": [
+        864,
+        554,
+        162,
+        546,
+        553,
+        410,
+        546,
+        400,
+        404,
+        543,
+        565,
+        682,
+        580,
+        378,
+        519,
+        552,
+        434,
+        419,
+        448
+      ],
+      "page_png_sha256": {
+        "page-001.png": "a23ca15655057fd10fa09aac25ef58eb4dd507441df30ef5390846f65e4e532b",
+        "page-002.png": "3b3c8d991a1a0248c32876441a590ee468aecad53e1f2731541233a089ed6979",
+        "page-003.png": "698135bc07cb8569c6ba122c09b5e296ddfa7860bd464aa4e7cdb470974e25bf",
+        "page-004.png": "9186b2e04e854b0b2b51543671effc650747b304e9b824e45f596229e9d7f83c",
+        "page-005.png": "b2e07ab77ec47ea05b88139a268e2b35f49e11d796de020817ee9b9948551729",
+        "page-006.png": "08080127102f3048f392484bc274ea64fdb3ca4075ecdf614cb64fac145910f4",
+        "page-007.png": "c2fe6b64630107ac8bb9c0e06e15f9e8dde828f228a9cbcac791d75e4c3020b6",
+        "page-008.png": "8dbd972571133cfb7eec31a6e0b9238dc9638dc80bed7fcabdaa0f5c447093b7",
+        "page-009.png": "fa447c5517e0f59ab2d11de541bb7402f3da7b87f3874ebaf07a5c30960bbb69",
+        "page-010.png": "38b06c5bad26f75d48cf9f63db8176d9aeb373d951cae6d8d6b07313378b1b52",
+        "page-011.png": "1f0bd8faafd1ac2570a13597ebc829e54b93c8ec55bac6896f94b3ff0c933de1",
+        "page-012.png": "9e1a62ca2ddaa60ce5c7d4fd44fa892d56bcce7485aad194e54219c0ed6141b2",
+        "page-013.png": "2582bda8c1b061a9f7708e8bbd4bf0cccff05b410229f0149f12bc4b068ea063",
+        "page-014.png": "200b1636ddc268b654ae5740700197aa0a0f6b4ae3dd32fd8f96711d7235429d",
+        "page-015.png": "bbec696995e9dfea54d3d41e863a563fb448a7c95f58e6a1188ea21076ce0419",
+        "page-016.png": "261023f177c5c88286ec6e7de06c3c0b104cb0b0130f0635c9ce5ba63bf210de",
+        "page-017.png": "e02877ad49003afe0072b0d16f19c17581457dbb388cdd7563d56d049965f58a",
+        "page-018.png": "152c13b16db5aab7940df350d1b49adf307b347d99a8c2c9e1acabd705b7427d",
+        "page-019.png": "0a3c4cda52d43376b1fd831e86cf115b78fae842fb6f269dde844fa793425dc5",
+        "page-020.png": "accef7b55fefc210921930ff4449c8ef80e1e21ea10ca1eff5ea1cdd2d420e22"
+      },
+      "overview_sha256": {
+        "overview-01.jpg": "a524348bbdb8c972f11e092a897e126ed9fccf8213a86c31729cc248313430a9",
+        "overview-02.jpg": "6d0536abd932da8ca7bfd6ac4a1e6c02c7f71e9281d3e0f08f4f164c4690fef7"
+      },
+      "overview_pages_reviewed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "high_resolution_pages_reviewed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "direct_high_resolution_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "reused_high_resolution_pages": []
+    },
+    "teacher": {
+      "pdf_sha256": "8c2ef16f94400a9f3f2883e2fd53317480974c6f86bbb120272fd5f74293ccf0",
+      "total_pages": 28,
+      "body_pages": 27,
+      "body_nonspace": 15547,
+      "per_page_nonspace": [
+        864,
+        554,
+        162,
+        546,
+        553,
+        410,
+        546,
+        400,
+        404,
+        543,
+        565,
+        682,
+        580,
+        378,
+        519,
+        552,
+        434,
+        619,
+        650,
+        717,
+        586,
+        782,
+        865,
+        952,
+        738,
+        558,
+        388
+      ],
+      "page_png_sha256": {
+        "page-001.png": "a23ca15655057fd10fa09aac25ef58eb4dd507441df30ef5390846f65e4e532b",
+        "page-002.png": "3b3c8d991a1a0248c32876441a590ee468aecad53e1f2731541233a089ed6979",
+        "page-003.png": "698135bc07cb8569c6ba122c09b5e296ddfa7860bd464aa4e7cdb470974e25bf",
+        "page-004.png": "9186b2e04e854b0b2b51543671effc650747b304e9b824e45f596229e9d7f83c",
+        "page-005.png": "b2e07ab77ec47ea05b88139a268e2b35f49e11d796de020817ee9b9948551729",
+        "page-006.png": "08080127102f3048f392484bc274ea64fdb3ca4075ecdf614cb64fac145910f4",
+        "page-007.png": "c2fe6b64630107ac8bb9c0e06e15f9e8dde828f228a9cbcac791d75e4c3020b6",
+        "page-008.png": "8dbd972571133cfb7eec31a6e0b9238dc9638dc80bed7fcabdaa0f5c447093b7",
+        "page-009.png": "fa447c5517e0f59ab2d11de541bb7402f3da7b87f3874ebaf07a5c30960bbb69",
+        "page-010.png": "38b06c5bad26f75d48cf9f63db8176d9aeb373d951cae6d8d6b07313378b1b52",
+        "page-011.png": "1f0bd8faafd1ac2570a13597ebc829e54b93c8ec55bac6896f94b3ff0c933de1",
+        "page-012.png": "9e1a62ca2ddaa60ce5c7d4fd44fa892d56bcce7485aad194e54219c0ed6141b2",
+        "page-013.png": "2582bda8c1b061a9f7708e8bbd4bf0cccff05b410229f0149f12bc4b068ea063",
+        "page-014.png": "200b1636ddc268b654ae5740700197aa0a0f6b4ae3dd32fd8f96711d7235429d",
+        "page-015.png": "bbec696995e9dfea54d3d41e863a563fb448a7c95f58e6a1188ea21076ce0419",
+        "page-016.png": "261023f177c5c88286ec6e7de06c3c0b104cb0b0130f0635c9ce5ba63bf210de",
+        "page-017.png": "e02877ad49003afe0072b0d16f19c17581457dbb388cdd7563d56d049965f58a",
+        "page-018.png": "152c13b16db5aab7940df350d1b49adf307b347d99a8c2c9e1acabd705b7427d",
+        "page-019.png": "5b3c9413c2ce5236038fd4fe550ebee2ad90b0d86eb75bedc011e9b5d96591db",
+        "page-020.png": "6d66fffb5729f00eae0a26e85a86baa9aeb99fbef885c07c44d78b4c8533c37e",
+        "page-021.png": "2a2517c810f092f1b5eee638a88a6a18f6dab639c1213a5f2f3c052180f9c06e",
+        "page-022.png": "a404686b73aa5eddb664a0dc1db4e75e19b2212b5bf5d825f45b966e79f24256",
+        "page-023.png": "6b00aa9034e81d2ebb3343f7b433e656ec38c886dfa22fae59b073f61ebd9f6b",
+        "page-024.png": "f2f0a72de56817254dd8e5d46b61b969134f92fd5c289fe224645abd5c33b181",
+        "page-025.png": "3923beac6d1135d3567f706f94ce5f4f33e83624a6abd2f95244c99844f73d5b",
+        "page-026.png": "268d3d99c535a65dd11d2d4000b9e68ca0455a8a6060e12806f460af6d187d56",
+        "page-027.png": "b717165c3df7c3aa4d3d8bda40cbd87228a19564ec6eed1f5c5388cd2268f9e8",
+        "page-028.png": "30abe6990c4263c3920fb2014fba32777a45d31da075af9d2a8faa9d891a83b1"
+      },
+      "overview_sha256": {
+        "overview-01.jpg": "0fe45f2ee47da8b0231524c6226a96848ecd8fdbcb218774c13e785c4d166e14",
+        "overview-02.jpg": "6d08e1a76bcf4f4d7915cf32bcc7bf2f825fdc8a0662581f47ad5e8827b45cb0",
+        "overview-03.jpg": "dd654c8f905a73946f77e61eb6632f3c81f0467a4c8e1bae1fddc5ca128c1c7d"
+      },
+      "overview_pages_reviewed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28
+      ],
+      "high_resolution_pages_reviewed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28
+      ],
+      "direct_high_resolution_pages": [
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28
+      ],
+      "reused_high_resolution_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ]
+    }
+  },
+  "identical_page_reuse": [
+    {
+      "student_page": 1,
+      "teacher_page": 1,
+      "png_sha256": "a23ca15655057fd10fa09aac25ef58eb4dd507441df30ef5390846f65e4e532b"
+    },
+    {
+      "student_page": 2,
+      "teacher_page": 2,
+      "png_sha256": "3b3c8d991a1a0248c32876441a590ee468aecad53e1f2731541233a089ed6979"
+    },
+    {
+      "student_page": 3,
+      "teacher_page": 3,
+      "png_sha256": "698135bc07cb8569c6ba122c09b5e296ddfa7860bd464aa4e7cdb470974e25bf"
+    },
+    {
+      "student_page": 4,
+      "teacher_page": 4,
+      "png_sha256": "9186b2e04e854b0b2b51543671effc650747b304e9b824e45f596229e9d7f83c"
+    },
+    {
+      "student_page": 5,
+      "teacher_page": 5,
+      "png_sha256": "b2e07ab77ec47ea05b88139a268e2b35f49e11d796de020817ee9b9948551729"
+    },
+    {
+      "student_page": 6,
+      "teacher_page": 6,
+      "png_sha256": "08080127102f3048f392484bc274ea64fdb3ca4075ecdf614cb64fac145910f4"
+    },
+    {
+      "student_page": 7,
+      "teacher_page": 7,
+      "png_sha256": "c2fe6b64630107ac8bb9c0e06e15f9e8dde828f228a9cbcac791d75e4c3020b6"
+    },
+    {
+      "student_page": 8,
+      "teacher_page": 8,
+      "png_sha256": "8dbd972571133cfb7eec31a6e0b9238dc9638dc80bed7fcabdaa0f5c447093b7"
+    },
+    {
+      "student_page": 9,
+      "teacher_page": 9,
+      "png_sha256": "fa447c5517e0f59ab2d11de541bb7402f3da7b87f3874ebaf07a5c30960bbb69"
+    },
+    {
+      "student_page": 10,
+      "teacher_page": 10,
+      "png_sha256": "38b06c5bad26f75d48cf9f63db8176d9aeb373d951cae6d8d6b07313378b1b52"
+    },
+    {
+      "student_page": 11,
+      "teacher_page": 11,
+      "png_sha256": "1f0bd8faafd1ac2570a13597ebc829e54b93c8ec55bac6896f94b3ff0c933de1"
+    },
+    {
+      "student_page": 12,
+      "teacher_page": 12,
+      "png_sha256": "9e1a62ca2ddaa60ce5c7d4fd44fa892d56bcce7485aad194e54219c0ed6141b2"
+    },
+    {
+      "student_page": 13,
+      "teacher_page": 13,
+      "png_sha256": "2582bda8c1b061a9f7708e8bbd4bf0cccff05b410229f0149f12bc4b068ea063"
+    },
+    {
+      "student_page": 14,
+      "teacher_page": 14,
+      "png_sha256": "200b1636ddc268b654ae5740700197aa0a0f6b4ae3dd32fd8f96711d7235429d"
+    },
+    {
+      "student_page": 15,
+      "teacher_page": 15,
+      "png_sha256": "bbec696995e9dfea54d3d41e863a563fb448a7c95f58e6a1188ea21076ce0419"
+    },
+    {
+      "student_page": 16,
+      "teacher_page": 16,
+      "png_sha256": "261023f177c5c88286ec6e7de06c3c0b104cb0b0130f0635c9ce5ba63bf210de"
+    },
+    {
+      "student_page": 17,
+      "teacher_page": 17,
+      "png_sha256": "e02877ad49003afe0072b0d16f19c17581457dbb388cdd7563d56d049965f58a"
+    },
+    {
+      "student_page": 18,
+      "teacher_page": 18,
+      "png_sha256": "152c13b16db5aab7940df350d1b49adf307b347d99a8c2c9e1acabd705b7427d"
+    }
+  ],
+  "figures_reviewed": {
+    "ampere-02": {
+      "pdf_sha256": "eb50a60f6485a6849e1d48e1411ea38c9de67b535f02b2f648d5708f1e89e168",
+      "png_sha256": "111ec7feab17e6acb86410023e54b72d3285ab781cb28e00250d76f2c88bc90b"
+    },
+    "cap-02": {
+      "pdf_sha256": "5f7c198131a44992f3d723ca8451981b2cb99b85f39bdc16a000036063554dea",
+      "png_sha256": "f9fc0cb8b0664deea5c6f181468e8fe5da187a09edaf69c8800ecc91d866e607"
+    },
+    "jump-02": {
+      "pdf_sha256": "004960f5ff70a43c155f7a3d0c28be5f06568782a66825e5dbb48b962d6c1528",
+      "png_sha256": "5765c883624cffd065ec1d9adaa89ac26763b7d23d64ad1e19c252f8ba160ee7"
+    },
+    "network-02": {
+      "pdf_sha256": "d0767974546b97577b5f4223773d091551c10cc1a3690f5e8cc929e1131400d9",
+      "png_sha256": "19d9fb23f230528b8f0871123fb2b2613ff6c2823002268f087cd56a8e1e4db4"
+    },
+    "plane-02": {
+      "pdf_sha256": "4d673b7e44cfec9d9d1afa938648ebaf930e8b385b90c52fdf87321a8894f9c8",
+      "png_sha256": "2a29106629076cd94632f7102caae3a503b36307aebb0ac0232a8031cc841c40"
+    },
+    "sphere-02": {
+      "pdf_sha256": "86fb52f6f2046b69a9e5f93f1a4e2876201301e96a3c3b68ca8656183e7e12a2",
+      "png_sha256": "7927d94c2019027b435813c26709d93978660c7a016e11f5fbd0c5590511d76d"
+    },
+    "symmetry-02": {
+      "pdf_sha256": "654e7c6b5a556c0424f2609312c138ab0e057a4538afd0905f2ef0b301f95648",
+      "png_sha256": "15f33452ecf6cf5d3a34238ba3ddbd4024fd7b939a60f047ecfb03fc71b28764"
+    }
+  },
+  "qpdf_checks": [
+    {
+      "path": "figures/题02_图稿源文件.pdf",
+      "sha256": "1181c026473623ce331b5ca620e37533e4e7f9a37971304d06cc405ec41b281d",
+      "passed": true
+    },
+    {
+      "path": "figures/ampere-02.pdf",
+      "sha256": "eb50a60f6485a6849e1d48e1411ea38c9de67b535f02b2f648d5708f1e89e168",
+      "passed": true
+    },
+    {
+      "path": "figures/cap-02.pdf",
+      "sha256": "5f7c198131a44992f3d723ca8451981b2cb99b85f39bdc16a000036063554dea",
+      "passed": true
+    },
+    {
+      "path": "figures/jump-02.pdf",
+      "sha256": "004960f5ff70a43c155f7a3d0c28be5f06568782a66825e5dbb48b962d6c1528",
+      "passed": true
+    },
+    {
+      "path": "figures/network-02.pdf",
+      "sha256": "d0767974546b97577b5f4223773d091551c10cc1a3690f5e8cc929e1131400d9",
+      "passed": true
+    },
+    {
+      "path": "figures/plane-02.pdf",
+      "sha256": "4d673b7e44cfec9d9d1afa938648ebaf930e8b385b90c52fdf87321a8894f9c8",
+      "passed": true
+    },
+    {
+      "path": "figures/sphere-02.pdf",
+      "sha256": "86fb52f6f2046b69a9e5f93f1a4e2876201301e96a3c3b68ca8656183e7e12a2",
+      "passed": true
+    },
+    {
+      "path": "figures/symmetry-02.pdf",
+      "sha256": "654e7c6b5a556c0424f2609312c138ab0e057a4538afd0905f2ef0b301f95648",
+      "passed": true
+    },
+    {
+      "path": "preview/working-q02-student/working-q02-student.pdf",
+      "sha256": "8ba21a499bf59898cdb1203e4f6ca98bbe6cf227cefe79bfb31ac787f0920e9c",
+      "passed": true
+    },
+    {
+      "path": "preview/working-q02-teacher/working-q02-teacher.pdf",
+      "sha256": "8c2ef16f94400a9f3f2883e2fd53317480974c6f86bbb120272fd5f74293ccf0",
+      "passed": true
+    }
+  ],
+  "bound_sha256": {
+    "drafts/question-02.md": "e1bfbdf6ba21324244725104a9f7133ae44b4681f6928217bdb64049b114b4e9",
+    "figures/题02_图稿源文件.tex": "5723f22ee81065d1451d874f48e489cacc1d4d21892dabd4d289d97f940d3535",
+    "build/question-02-verification.json": "4a4e91feb42877f3aba6a4903360ad6d25be4b54661d10b753d6b464307824bf",
+    "build/question-02-preverification.json": "69358e75290be4386e227409a39b260f97717e54bf23fd15e6ea98ba5fb50554",
+    "build/question-02-figure-geometry.json": "cbb00b45778d43ecd191cf6961f737ae9b58bc0496a847721bb308ae4e9af57c",
+    "build/question-02-figure-data.json": "df727bc8eeb8a484d3a6c6d5917cf4127186c8a868b06699f89269d07d3439af",
+    "build/source-quality-q02.json": "8d68968bb228c94581547b11798e09e109303d39a22d61a565116f0687bd06ab",
+    "latex/template.tex": "434e4734708ef9c12c4be4629709e370fa5fe9a67a4cc88709ee13ffa571673b",
+    "scripts/preview_drafts_02.py": "14441a6a27a74a4f7081e2c2d8f1c2a731f48aab73e7eafa5bfecdb78252d368",
+    "scripts/preview_working_pages_02.py": "922141b71a9d1179ff14f02d924472a972a2cbd333f2a4c8a5405b614ec2d8be",
+    "scripts/verify_question_02.py": "47bb6d47c2568477ff59578af20930369c0b2b9060948ad18c4965197ffa3d1a",
+    "scripts/finalize_question_02_math.py": "ebc88918adb4c8905c9a29020473492f1fc6700f508bd075eb78b86ba84d73a6",
+    "scripts/draw_figures_02.py": "e638e35ee41ce2b85601a9262e77ca9580df33aa51ff1e61ffef7ae1591548d4",
+    "scripts/check_figures_02.py": "474f732c757e539bd422ca0a63f79bc100dd77fd7566204b099b4c85a62ada04",
+    "scripts/render_figures_02.py": "1d6f6e7ad0c2d6ae4ae0be1b7ea1469491a7475897d587661f197649ed29c797",
+    "scripts/render_figures.py": "7b68a98640dbd00482c53d09865211d936014cae573552d22b1ff3df14789eb1",
+    "preview/working-draft-check-q02.json": "80d84c6456b8f940c111a1905740905914703bbca10f98b7e7fa20773bfbd6e8",
+    "preview/working-page-manifest-q02.json": "6900b556b0806b4e8ebeacdb9c8e725df90ee8a422cbe6017e7f7bcec95bcf0a",
+    "preview/originals/source-manifest.json": "99d49989faaab0f49c3035eff5ceb550ba7a57a323803a8b1379c3b9eb5eab03",
+    "preview/originals/question-02-detail-manifest.json": "104569d1c01b0f85a358ca1bb5c983c8767569b2fc320df486747ff7eac4b581"
+  },
+  "original_images_actually_reviewed": {
+    "preview/originals/paper-01.png": "1af6ccc2174134a19d87b7f655953c9c5dc419443163236557f05f92e7e64481",
+    "preview/originals/answer-02.png": "4c82d7afdbb475b91354cc9c03e5a3658371d1fed124bc8783b20466dc079840",
+    "preview/originals/q02-paper-detail.png": "4430bb0892d1a3f50a012372e7ed643801a52218799f9510495a3acb539ec6ba",
+    "preview/originals/q02-answer-left-detail.png": "34842366630ba6a507382669a86ed0bed65010104498dae98f57af9df8ab6c46",
+    "preview/originals/q02-answer-right-detail.png": "dfa5b785dd085ec7cd5d3d040836c9b34b0fa6b6e7b6a6f9052e7b81a87f11ec"
+  },
+  "review_notes": [
+    "Manual image inspection: all seven figure PNGs were actually viewed; real 3D coordinates, front/back faces, radial contacts, cap curvature and local cross-product directions checked. Figure geometry scripts alone were not treated as visual review.",
+    "Manual current PDF reading: all five overview JPGs were actually viewed; student pages 1–20 and teacher pages 19–28 directly viewed at high resolution. Teacher pages 1–18 reuse student reading only after their current PNG SHA256 values were proven identical.",
+    "Core step 19 conclusion, four results and applicability remarks kept as one finite logical block only in student preview, with unchanged font, spacing, text and calculations. No forced page break or page expansion. Sparse seven-line tail removed; last page now contains full result block.",
+    "Teacher-only modules preserve the complete student core plus golden-ratio edge-integral route, planar field decomposition, surface potential, curl/continuity distinctions and four fully solved variants.",
+    "All 48 current working pages, 46 body-page versions covered; 30 distinct HD pages including cover (28 distinct body pages). No whole-set or batch completion inferred.",
+    "Point-current model, source/wire singularities and current-sheet one-sided fields explicitly stated. Radial semi-infinite sphere leads follow the handwritten geometry; arbitrary nonradial leads are not claimed to give the same field.",
+    "Original Q2 paper/detail and handwritten answer/detail actually read in the preceding drafting turn; source image hashes preserved here. No original files edited."
+  ]
+}

@@ -1,0 +1,257 @@
+{
+  "all_passed": true,
+  "set": "010",
+  "method": "迁移到新目录，删除全部图像和编译产物，由定稿源文件重建40幅图及三版PDF",
+  "source_generators_equal": true,
+  "stages": [
+    {
+      "script": "write_drafts",
+      "exit_code": 0
+    },
+    {
+      "script": "make_figures",
+      "exit_code": 0
+    },
+    {
+      "script": "render_figures",
+      "exit_code": 0
+    },
+    {
+      "script": "build_documents",
+      "exit_code": 0
+    }
+  ],
+  "documents": [
+    {
+      "file": "蔡题010_学生详解.pdf",
+      "pages": 58,
+      "text_equal": true,
+      "all_pages_raster_equal": true,
+      "raster_dpi": 72,
+      "delivered_sha256": "e94ce07ba7413d022288913df2e9bb32344525367907be126fc0f4961247bdd6",
+      "rebuilt_sha256": "fb6114102630d25256991c91439568e3d21ca8479fdfa21522bc44c23c8f977b"
+    },
+    {
+      "file": "蔡题010_教师备课.pdf",
+      "pages": 74,
+      "text_equal": true,
+      "all_pages_raster_equal": true,
+      "raster_dpi": 72,
+      "delivered_sha256": "8a926fcd6edfd912a66dfd3ca05a0556800b736a7bae133ec9d54048a187f6dc",
+      "rebuilt_sha256": "9aad5ea49555c4a8da61746bd5b37be4663c0cd79e16cc6ab3c3234dbf6378ac"
+    },
+    {
+      "file": "蔡题010_试卷.pdf",
+      "pages": 9,
+      "text_equal": true,
+      "all_pages_raster_equal": true,
+      "raster_dpi": 72,
+      "delivered_sha256": "1bf80d30e82bff234787a40ff2f0f7c231d72a66074db0116caad488460c720c",
+      "rebuilt_sha256": "f29529664de08f703573ffd6fbde6a930b89d8bc13dd341834b6d09e6cd4cfd7"
+    }
+  ],
+  "figures": [
+    {
+      "file": "approximation-04.png",
+      "png_identical": true,
+      "vector_pdf_text_and_raster_equal": true
+    },
+    {
+      "file": "axis-08.png",
+      "png_identical": true,
+      "vector_pdf_text_and_raster_equal": true
+    },
+    {
+      "file": "bernoulli-02.png",
+      "png_identical": true,
+      "vector_pdf_text_and_raster_equal": true
+    },
+    {
+      "file": "centres-07.png",
+      "png_identical": true,
+      "vector_pdf_text_and_raster_equal": true
+    },
+    {
+      "file": "check-01.png",
+      "png_identical": true,
+      "vector_pdf_text_and_raster_equal": true
+    },
+    {
+      "file": "check-02.png",
+      "png_identical": true,
+      "vector_pdf_text_and_raster_equal": true
+    },
+    {
+      "file": "check-03.png",
+      "png_identical": true,
+      "vector_pdf_text_and_raster_equal": true
+    },
+    {
+      "file": "check-04.png",
+      "png_identical": true,
+      "vector_pdf_text_and_raster_equal": true
+    },
+    {
+      "file": "check-05.png",
+      "png_identical": true,
+      "vector_pdf_text_and_raster_equal": true
+    },
+    {
+      "file": "check-06.png",
+      "png_identical": true,
+      "vector_pdf_text_and_raster_equal": true
+    },
+    {
+      "file": "check-08.png",
+      "png_identical": true,
+      "vector_pdf_text_and_raster_equal": true
+    },
+    {
+      "file": "contact-08.png",
+      "png_identical": true,
+      "vector_pdf_text_and_raster_equal": true
+    },
+    {
+      "file": "coupling-01.png",
+      "png_identical": true,
+      "vector_pdf_text_and_raster_equal": true
+    },
+    {
+      "file": "currents-01.png",
+      "png_identical": true,
+      "vector_pdf_text_and_raster_equal": true
+    },
+    {
+      "file": "deviation-05.png",
+      "png_identical": true,
+      "vector_pdf_text_and_raster_equal": true
+    },
+    {
+      "file": "dispersion-02.png",
+      "png_identical": true,
+      "vector_pdf_text_and_raster_equal": true
+    },
+    {
+      "file": "element-04.png",
+      "png_identical": true,
+      "vector_pdf_text_and_raster_equal": true
+    },
+    {
+      "file": "emf-08.png",
+      "png_identical": true,
+      "vector_pdf_text_and_raster_equal": true
+    },
+    {
+      "file": "energy-01.png",
+      "png_identical": true,
+      "vector_pdf_text_and_raster_equal": true
+    },
+    {
+      "file": "energy-07.png",
+      "png_identical": true,
+      "vector_pdf_text_and_raster_equal": true
+    },
+    {
+      "file": "focusing-05.png",
+      "png_identical": true,
+      "vector_pdf_text_and_raster_equal": true
+    },
+    {
+      "file": "frame-02.png",
+      "png_identical": true,
+      "vector_pdf_text_and_raster_equal": true
+    },
+    {
+      "file": "height-07.png",
+      "png_identical": true,
+      "vector_pdf_text_and_raster_equal": true
+    },
+    {
+      "file": "levels-06.png",
+      "png_identical": true,
+      "vector_pdf_text_and_raster_equal": true
+    },
+    {
+      "file": "momentum-07.png",
+      "png_identical": true,
+      "vector_pdf_text_and_raster_equal": true
+    },
+    {
+      "file": "phase-06.png",
+      "png_identical": true,
+      "vector_pdf_text_and_raster_equal": true
+    },
+    {
+      "file": "profile-04.png",
+      "png_identical": true,
+      "vector_pdf_text_and_raster_equal": true
+    },
+    {
+      "file": "question-01.png",
+      "png_identical": true,
+      "vector_pdf_text_and_raster_equal": true
+    },
+    {
+      "file": "question-02.png",
+      "png_identical": true,
+      "vector_pdf_text_and_raster_equal": true
+    },
+    {
+      "file": "question-03.png",
+      "png_identical": true,
+      "vector_pdf_text_and_raster_equal": true
+    },
+    {
+      "file": "question-04.png",
+      "png_identical": true,
+      "vector_pdf_text_and_raster_equal": true
+    },
+    {
+      "file": "question-05.png",
+      "png_identical": true,
+      "vector_pdf_text_and_raster_equal": true
+    },
+    {
+      "file": "question-06.png",
+      "png_identical": true,
+      "vector_pdf_text_and_raster_equal": true
+    },
+    {
+      "file": "question-07.png",
+      "png_identical": true,
+      "vector_pdf_text_and_raster_equal": true
+    },
+    {
+      "file": "question-08.png",
+      "png_identical": true,
+      "vector_pdf_text_and_raster_equal": true
+    },
+    {
+      "file": "roots-03.png",
+      "png_identical": true,
+      "vector_pdf_text_and_raster_equal": true
+    },
+    {
+      "file": "stability-03.png",
+      "png_identical": true,
+      "vector_pdf_text_and_raster_equal": true
+    },
+    {
+      "file": "symmetric-05.png",
+      "png_identical": true,
+      "vector_pdf_text_and_raster_equal": true
+    },
+    {
+      "file": "transfer-03.png",
+      "png_identical": true,
+      "vector_pdf_text_and_raster_equal": true
+    },
+    {
+      "file": "uncertainty-06.png",
+      "png_identical": true,
+      "vector_pdf_text_and_raster_equal": true
+    }
+  ],
+  "document_pages": 141,
+  "figure_count": 40
+}

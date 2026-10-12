@@ -1,0 +1,43 @@
+{
+  "paper": "015",
+  "question": 6,
+  "review_saved_utc": "2026-10-09 10:37:05 UTC",
+  "actual_source_reviewed": true,
+  "original_images_actually_reviewed": {
+    "preview/originals/paper-02.png": "529bbc61e2d16da349854173e8ead03c9b58f1f2230919825af29420fdeee832",
+    "preview/originals/answer-05.png": "45abaca8cebd5fe74e0e9220cd427f1c687cb0da7e0ef52c1376d12f86aa30cf",
+    "preview/originals/q06-paper-text.png": "e13876702afe2213efa489bb3ba1a7c25666942341f81f333f0a801b2da0eb49",
+    "preview/originals/q06-answer-text.png": "31467e9c0f25b9f740af2b985086adf1de67b18c25ed32ac678115b563cc727d",
+    "preview/originals/q06-answer-energy.png": "d7010b5239cafcd406561af86170b9686a3b86e9cd18f06f43b21eaa79db5744",
+    "preview/originals/q06-answer-result.png": "e5b374d9132ebf92039faecb6a8c1b07536c4c3c25a05e4fed94082a6b89b5b3"
+  },
+  "bound_sha256": {
+    "preview/originals/paper-02.png": "529bbc61e2d16da349854173e8ead03c9b58f1f2230919825af29420fdeee832",
+    "preview/originals/answer-05.png": "45abaca8cebd5fe74e0e9220cd427f1c687cb0da7e0ef52c1376d12f86aa30cf",
+    "preview/originals/question-06-detail-manifest.json": "1c793c04f2e4da9cdcb175d46e00324dcf461c732c0e607b4309588f41461307",
+    "preview/originals/source-manifest.json": "99d49989faaab0f49c3035eff5ceb550ba7a57a323803a8b1379c3b9eb5eab03",
+    "scripts/read_details_06.py": "8afbad039a997e34c0979bf95825b31d07d45be99871e9f96c49c52e1ca31b39",
+    "preview/originals/q06-paper-text.png": "e13876702afe2213efa489bb3ba1a7c25666942341f81f333f0a801b2da0eb49",
+    "preview/originals/q06-answer-text.png": "31467e9c0f25b9f740af2b985086adf1de67b18c25ed32ac678115b563cc727d",
+    "preview/originals/q06-answer-energy.png": "d7010b5239cafcd406561af86170b9686a3b86e9cd18f06f43b21eaa79db5744",
+    "preview/originals/q06-answer-result.png": "e5b374d9132ebf92039faecb6a8c1b07536c4c3c25a05e4fed94082a6b89b5b3"
+  },
+  "original_pdf_sha256": {
+    "试卷.pdf": "e74012ea35ebe38b9367a88ac99f9aa1f45483b4d2d44ebe5e36ed4315b6ec70",
+    "答案.pdf": "1fb790700698c4b474fa8d5e50a0a10e178e42ec98378c3572cab1d4e0cca35d"
+  },
+  "observations": [
+    "Original actual page2 lower section and handwritten actual page5 right section were directly reread, followed by all four 5x detail crops.",
+    "Printed original and answer both call H0 a standard molar formation enthalpy but define it as positive heat released per 1mol oxygen for the whole gas reaction at T0,p0.",
+    "Original repeats Cv2 for both species groups. Values are clearly Cv(N2H4,H2O)=3R and Cv(O2,N2)=2.5R.",
+    "Original assumes both liquids at T0=273.15K and saturation pressures px1,px2. These are real-phase/model problems, not OCR readings.",
+    "Handwritten W=RT0 ln(px1/p0)+RT0 ln(px2/p0), product Cv=8.5R, p0V0=3RT0, p0V=3RT1, and final -2RT0 sum(log) are legible and actually read.",
+    "Handwritten 8.5R plus 3R gives correct product Cp=11.5R; independently subtracting reversible isothermal work without its heat transfer is inconsistent.",
+    "Question has no supplied diagram. Necessary explanatory figures are to be drafted later, not claimed as original redraws."
+  ],
+  "source_complete": true,
+  "document_complete": false,
+  "model_condition_resolved": false,
+  "question_accepted": false,
+  "set_accepted": false
+}

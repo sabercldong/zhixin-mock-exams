@@ -1,0 +1,123 @@
+{
+  "question": 4,
+  "verified_math": true,
+  "document_complete": true,
+  "sphere": {
+    "alpha_N_per_m": 400,
+    "r0_m": 0.1,
+    "delta_p_Pa": 80,
+    "strain_radius": 0.005,
+    "strain_area": 0.01,
+    "relative_volume": 0.015,
+    "tension_N_per_m": 4
+  },
+  "hemisphere_pressure_integral": 3.141592653589793,
+  "principal_tests": [
+    {
+      "stress": [
+        [
+          4.0,
+          1.0
+        ],
+        [
+          1.0,
+          2.0
+        ]
+      ],
+      "eigenvalues": [
+        1.585786437626905,
+        4.414213562373095
+      ],
+      "principal_angles_deg": [
+        -67.5,
+        -157.5
+      ]
+    },
+    {
+      "stress": [
+        [
+          6.0,
+          2.0
+        ],
+        [
+          2.0,
+          3.0
+        ]
+      ],
+      "eigenvalues": [
+        2.0,
+        7.0
+      ],
+      "principal_angles_deg": [
+        -63.43494882292201,
+        -153.434948822922
+      ]
+    },
+    {
+      "stress": [
+        [
+          3.0,
+          0.0
+        ],
+        [
+          0.0,
+          3.0
+        ]
+      ],
+      "eigenvalues": [
+        3.0,
+        3.0
+      ],
+      "principal_angles_deg": [
+        0.0,
+        90.0
+      ]
+    },
+    {
+      "stress": [
+        [
+          0.0,
+          2.0
+        ],
+        [
+          2.0,
+          0.0
+        ]
+      ],
+      "eigenvalues": [
+        -2.0,
+        2.0
+      ],
+      "principal_angles_deg": [
+        135.0,
+        45.0
+      ]
+    }
+  ],
+  "material": {
+    "alpha": 400,
+    "poisson": 0.3,
+    "Y": 560,
+    "G": 215.38461538461536
+  },
+  "affine_strain_tensor_components": [
+    0.009107142857142857,
+    0.0021428571428571425,
+    0.004642857142857143
+  ],
+  "nonuniform_stress": [
+    "(4*a*alpha*x - nu*(4*a*alpha*x - p0) + p0)/(nu + 1)",
+    "(-4*a*alpha*x + nu*(4*a*alpha*x + p0) + p0)/(nu + 1)",
+    "4*a*alpha*y*(nu - 1)/(nu + 1)"
+  ],
+  "boundary_resultant_and_moment": [
+    "0",
+    "0",
+    "0"
+  ],
+  "source_sha256": {
+    "scripts/verify_question_04.py": "9a176df7850ba05aa51e5c9b4d651268face4182afe8230d3ed79598e514611b",
+    "drafts/question-04.md": "c367492e50258eed86eec9b6edd031f3bd3b5efe58de06558637351cbe1c169d",
+    "figures/题04_图稿源文件.tex": "635496c6dbc089b380b086d57a8bd0d6ee7c42ee36e17260f48ea4522bff1903"
+  }
+}

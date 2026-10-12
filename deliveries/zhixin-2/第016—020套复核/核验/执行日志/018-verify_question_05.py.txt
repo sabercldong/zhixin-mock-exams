@@ -1,0 +1,146 @@
+{
+  "question": 5,
+  "verified_math": true,
+  "document_complete": true,
+  "set_accepted": false,
+  "scope": "薄膜集总径向惯性、均匀等熵气体与球壳自场模型；分题核验不代表整套交付",
+  "assumptions": [
+    "m作泡膜有效径向惯性质量，气体惯性忽略",
+    "加电后的比较状态沿相同等熵气体常数，若存在额外加热需改写常数",
+    "连通管质量、体积、流动惯性及阻尼忽略；连通气体压强和温度均匀",
+    "只保留均匀带电独立球壳自场，忽略泡间静电相互作用",
+    "本核验只针对保持球形的径向微扰，不用其代替完整非球形稳定性证明"
+  ],
+  "symbolic_single_force_derivative": "4*pi*b/r**3 - 64*pi*sigma",
+  "symbolic_pair_jacobian": "Matrix([[-6*pi*R*(Pe + Ps)/m, 10*pi*R*(Pe - Ps)/m], [10*pi*R*(Pe - Ps)/m, -6*pi*R*(Pe + Ps)/m]])",
+  "symmetric_acceleration_eigenvalue": "4*pi*R*(Pe - 4*Ps)/m",
+  "antisymmetric_acceleration_eigenvalue": "4*pi*R*(-4*Pe + Ps)/m",
+  "charge_threshold_squared": "32*pi^2*epsilon0*sigma*r0^3*(4/3)^(3/4)",
+  "critical_r_over_r0": 1.074569931823542,
+  "critical_b_dimensionless": 1.2408064788027995,
+  "numerical_checks": [
+    {
+      "b_dimensionless": 0,
+      "r_over_r0": 1.0,
+      "electric_to_surface_pressure": 0.0,
+      "w_single_squared": 201.06192982974676,
+      "w_symmetric_squared": 201.06192982974676,
+      "w_antisymmetric_squared": -50.26548245743669,
+      "radial_pair_stable": false,
+      "independent_force_jacobian_max_error": 1.2347413758106995e-08,
+      "nonlinear_single_period_relative_error": 6.366156813930601e-06
+    },
+    {
+      "b_dimensionless": 0.5,
+      "r_over_r0": 1.0307624958736543,
+      "electric_to_surface_pressure": 0.11413903270566922,
+      "w_single_squared": 195.32467628357114,
+      "w_symmetric_squared": 195.32467628357114,
+      "w_antisymmetric_squared": -27.316468272734262,
+      "radial_pair_stable": false,
+      "independent_force_jacobian_max_error": 9.055298733073869e-09,
+      "nonlinear_single_period_relative_error": 6.179187700627864e-06
+    },
+    {
+      "b_dimensionless": 1.2395656723239967,
+      "r_over_r0": 1.0744982909624858,
+      "electric_to_surface_pressure": 0.24979995865932975,
+      "w_single_squared": 188.5056143898878,
+      "w_symmetric_squared": 188.5056143898878,
+      "w_antisymmetric_squared": -0.040220698000896345,
+      "radial_pair_stable": false,
+      "independent_force_jacobian_max_error": 4.128665409552923e-09,
+      "nonlinear_single_period_relative_error": 5.942153256555116e-06
+    },
+    {
+      "b_dimensionless": 1.2420472852816022,
+      "r_over_r0": 1.074641566953557,
+      "electric_to_surface_pressure": 0.2501999586740023,
+      "w_single_squared": 188.4855081961673,
+      "w_symmetric_squared": 188.4855081961673,
+      "w_antisymmetric_squared": 0.04020407688110561,
+      "radial_pair_stable": true,
+      "independent_force_jacobian_max_error": 3.579529561648087e-09,
+      "nonlinear_single_period_relative_error": 5.941439996437481e-06
+    },
+    {
+      "b_dimensionless": 2,
+      "r_over_r0": 1.1173490365925787,
+      "electric_to_surface_pressure": 0.358429236982041,
+      "w_single_squared": 183.04531130599358,
+      "w_symmetric_squared": 183.04531130599358,
+      "w_antisymmetric_squared": 21.800991637576107,
+      "radial_pair_stable": true,
+      "independent_force_jacobian_max_error": 1.3250911479190108e-09,
+      "nonlinear_single_period_relative_error": 5.739549840955149e-06
+    },
+    {
+      "b_dimensionless": 8,
+      "r_over_r0": 1.395336994467073,
+      "electric_to_surface_pressure": 0.7361946706788208,
+      "w_single_squared": 164.0567495254821,
+      "w_symmetric_squared": 164.0567495254821,
+      "w_antisymmetric_squared": 97.7552387596219,
+      "radial_pair_stable": true,
+      "independent_force_jacobian_max_error": 1.0496279401195352e-08,
+      "nonlinear_single_period_relative_error": 4.930207680331478e-06
+    },
+    {
+      "b_dimensionless": 100,
+      "r_over_r0": 2.937231288075821,
+      "electric_to_surface_pressure": 0.9865646984968197,
+      "w_single_squared": 151.47177928432856,
+      "w_symmetric_squared": 151.47177928432856,
+      "w_antisymmetric_squared": 148.09511972423616,
+      "radial_pair_stable": true,
+      "independent_force_jacobian_max_error": 1.8643191879164078e-08,
+      "nonlinear_single_period_relative_error": 4.281940982231447e-06
+    }
+  ],
+  "gas_inertia_fraction_of_mass": "3/5 for homogeneous affine radial flow",
+  "general_gamma_pair_jacobian": "Matrix([[2*pi*R*(-8*Pe + 2*Ps + 3*gamma*(Pe - Ps))/m, 6*pi*R*gamma*(Pe - Ps)/m], [6*pi*R*gamma*(Pe - Ps)/m, 2*pi*R*(-8*Pe + 2*Ps + 3*gamma*(Pe - Ps))/m]])",
+  "fixed_potential_acceleration_derivative": "4*pi*R*(3*Pe - 4*Ps)/m",
+  "solved_variants": {
+    "period_seconds": 0.002802495608198964,
+    "quadruple_mass_period_seconds": 0.005604991216397928,
+    "beta2_z": 1.1173490365925787,
+    "beta2_q": 0.3584292369820411,
+    "newton_steps": [
+      {
+        "z": 1.12,
+        "residual": 0.05407744000000214,
+        "derivative": 20.478848000000006,
+        "next": 1.1173593514635198
+      },
+      {
+        "z": 1.1173593514635198,
+        "residual": 0.00020959732022696187,
+        "derivative": 20.320225958034875,
+        "next": 1.1173490367494678
+      },
+      {
+        "z": 1.1173490367494678,
+        "residual": 3.1879272555102034e-09,
+        "derivative": 20.319607827557675,
+        "next": 1.1173490365925787
+      }
+    ],
+    "omega_plus_over_unit": 3.816580020394153,
+    "omega_minus_over_unit": 1.3171438006962861,
+    "mode_frequency_ratio": 0.34511101395962857,
+    "gamma7_over5_threshold_exponent": "15/16"
+  },
+  "figures_sha256": {
+    "question-05": "ef1cb845c757e172b66b35949c92aeb5b1c75c940679395d2fc1748a526c9a71",
+    "interfaces-05": "b0ef5f84d08ea43a130058b51eafd4a0a4f133160ab4dfccda5409fdb91adcee",
+    "element-05": "a6182a4bc15722ad78b407d0e078bdc2565dae574f058c5cc239a41b81a9c1aa",
+    "modes-05": "5d37c564c2c7290b2fa1357b67f75811b64ae5fd306e6de20c47fe9295b4194a",
+    "stability-05": "9382df77a3fe089f143b84d87a5f08f0b20c9fba5009b9e60fa2cb39f0308630"
+  },
+  "source_sha256": {
+    "scripts/verify_question_05.py": "f37168980adf5720aa0879e56a75b50bec5c4a9f8c113f66e14eef0035c51ebc",
+    "drafts/question-05-核验备忘.md": "995e01c78e0bdb3348b0dfeefaf40f5c5628b7a107542763fe30e0f7c68017b7",
+    "drafts/question-05.md": "c6cb6521ecf7a44e1925e25d2b5a3d4f1c2f2c848c594ae9bb47e86c6af42f04",
+    "figures/题05_图稿源文件.tex": "77198957a1c99e9f85d1a0c420399579acbe2214eb6d4759b2846132841bfe93"
+  }
+}

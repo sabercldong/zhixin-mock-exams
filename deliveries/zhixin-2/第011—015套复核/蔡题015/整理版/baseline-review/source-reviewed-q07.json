@@ -1,0 +1,42 @@
+{
+  "paper": "015",
+  "question": 7,
+  "review_saved_utc": "2026-10-09 11:17 UTC",
+  "actual_source_reviewed": true,
+  "original_images_actually_reviewed": {
+    "preview/originals/paper-03.png": "2a11d1d846b316eb2bb0dae0669fd397dbfed59afa02d66f4e8671c1bfd3de93",
+    "preview/originals/answer-06.png": "9a98df4406260d159c06ef55f1d4ad75638ba5bc1fd4e26ed89ecaa15471533b",
+    "preview/originals/q07-paper-text.png": "cd85885c85a93bde2050079dcadbb0fe22895c2151b9b84f6ec285a29f4d91c5",
+    "preview/originals/q07-answer-text.png": "0321b32df6e4b47594e3169db52b0b6bad7ee65bf4b5eac0b8dbded9043f320a",
+    "preview/originals/q07-answer-phases.png": "fb55dce008c117822de2b659bbc917f20f0063ede428658553e4ff2cdb42aafb",
+    "preview/originals/q07-answer-return.png": "6c06caffec9b724abef6eb2337f726bc0182fdfe202f14fe52618d0a9d00551c"
+  },
+  "bound_sha256": {
+    "preview/originals/paper-03.png": "2a11d1d846b316eb2bb0dae0669fd397dbfed59afa02d66f4e8671c1bfd3de93",
+    "preview/originals/answer-06.png": "9a98df4406260d159c06ef55f1d4ad75638ba5bc1fd4e26ed89ecaa15471533b",
+    "preview/originals/q07-paper-text.png": "cd85885c85a93bde2050079dcadbb0fe22895c2151b9b84f6ec285a29f4d91c5",
+    "preview/originals/q07-answer-text.png": "0321b32df6e4b47594e3169db52b0b6bad7ee65bf4b5eac0b8dbded9043f320a",
+    "preview/originals/q07-answer-phases.png": "fb55dce008c117822de2b659bbc917f20f0063ede428658553e4ff2cdb42aafb",
+    "preview/originals/q07-answer-return.png": "6c06caffec9b724abef6eb2337f726bc0182fdfe202f14fe52618d0a9d00551c",
+    "preview/originals/question-07-detail-manifest.json": "0108b6133f2df27bf142f708b04e88f8493f1d9579b29a52c09658e25fb6f083",
+    "preview/originals/source-manifest.json": "99d49989faaab0f49c3035eff5ceb550ba7a57a323803a8b1379c3b9eb5eab03",
+    "scripts/read_details_07.py": "6ba6d0d435269936d0f49f449b43806f333f380c5a08405e6840b6a75295eb3a"
+  },
+  "original_pdf_sha256": {
+    "paper": "e74012ea35ebe38b9367a88ac99f9aa1f45483b4d2d44ebe5e36ed4315b6ec70",
+    "answers": "1fb790700698c4b474fa8d5e50a0a10e178e42ec98378c3572cab1d4e0cca35d"
+  },
+  "observations": [
+    "Original actual paper3 upper section and actual handwritten answer6 left column directly reread, then all four current5x detail crops actually viewed.",
+    "Both original questions intact; Q7 has no supplied printed figure. Handwritten principal-axis diagram and four phase-pair stages are legible.",
+    "Original lens order is outside quarter-wave plate, inside linear polarizer; outward light from face passes P then Q, return passes Q then P. The two lens polarizer axes are orthogonal.",
+    "Hand first answer is opened eye. Q7 second handwritten route uses equal initial principal-axis amplitudes, extra y phase pi/2, common mirror phase pi, second plate y phase pi/2; final phasespi/2pi give orthogonal linear state and closed-eye image.",
+    "Correct conclusions can be retained. Use a single fixed transverse frame and a clear phase convention: reverse traversal of a reciprocal wave plate does not erase propagation phase, and mirror change of handedness is not a second untracked coordinate flip.",
+    "Right/left eye labels must follow the physical source eye and its image, not a verbal mirror-left-right permutation. Screen input and eye-to-mirror outbound states propagate in opposite directions and must not be silently identified.",
+    "Ideal nondepolarizing, near-normal mirror and designed monochromatic ideal-retarder approximation should be explicit; finite-angle Fresnel and broadband leakage treated as given-condition extensions, not a false exact real-world all-spectrum claim."
+  ],
+  "source_complete": true,
+  "document_complete": false,
+  "question_accepted": false,
+  "set_accepted": false
+}

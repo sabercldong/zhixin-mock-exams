@@ -1,0 +1,306 @@
+{
+  "all_passed": true,
+  "check_count": 50,
+  "checks": [
+    {
+      "name": "004-02 回返点 a=0.7,alpha=0.5235987755982988",
+      "residual": 1.4144166304048104e-10,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "004-02 高度独立于a a=0.7,alpha=0.5235987755982988",
+      "residual": 1.4210854715202004e-14,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "004-02 光程 a=0.7,alpha=0.5235987755982988",
+      "residual": -9.747225249157054e-11,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "004-02 回返点 a=2.8,alpha=0.5235987755982988",
+      "residual": 1.3573615247001482e-10,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "004-02 高度独立于a a=2.8,alpha=0.5235987755982988",
+      "residual": 7.105427357601002e-15,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "004-02 光程 a=2.8,alpha=0.5235987755982988",
+      "residual": -1.8700774262470077e-10,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "004-02 回返点 a=0.7,alpha=0.7853981633974483",
+      "residual": 7.367160687064322e-12,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "004-02 高度独立于a a=0.7,alpha=0.7853981633974483",
+      "residual": -1.7763568394002505e-15,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "004-02 光程 a=0.7,alpha=0.7853981633974483",
+      "residual": -5.6772364587232005e-12,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "004-02 回返点 a=2.8,alpha=0.7853981633974483",
+      "residual": 7.676784098783916e-12,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "004-02 高度独立于a a=2.8,alpha=0.7853981633974483",
+      "residual": 1.7763568394002505e-15,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "004-02 光程 a=2.8,alpha=0.7853981633974483",
+      "residual": -1.1851852832478471e-11,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "004-02 回返点 a=0.7,alpha=1.0471975511965976",
+      "residual": 2.923537931340886e-11,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "004-02 高度独立于a a=0.7,alpha=1.0471975511965976",
+      "residual": 0.0,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "004-02 光程 a=0.7,alpha=1.0471975511965976",
+      "residual": 2.0083490426259232e-11,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "004-02 回返点 a=2.8,alpha=1.0471975511965976",
+      "residual": 2.0212018179794213e-11,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "004-02 高度独立于a a=2.8,alpha=1.0471975511965976",
+      "residual": 8.881784197001252e-16,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "004-02 光程 a=2.8,alpha=1.0471975511965976",
+      "residual": 2.7144508862875227e-11,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "005-03 负粒子原极性速率 e=1.2",
+      "residual": -2.220446049250313e-16,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "005-03 切向守恒 e=1.2,y=0.1",
+      "residual": 0.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "005-03 非轴上距离 e=1.2,y=0.1",
+      "residual": 4.440892098500626e-16,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "005-03 切向守恒 e=1.2,y=1.2",
+      "residual": 0.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "005-03 非轴上距离 e=1.2,y=1.2",
+      "residual": 0.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "005-03 切向守恒 e=1.2,y=5.0",
+      "residual": 4.440892098500626e-16,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "005-03 非轴上距离 e=1.2,y=5.0",
+      "residual": 0.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "005-03 负粒子原极性速率 e=2",
+      "residual": -2.220446049250313e-16,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "005-03 切向守恒 e=2,y=0.1",
+      "residual": -1.3877787807814457e-17,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "005-03 非轴上距离 e=2,y=0.1",
+      "residual": 0.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "005-03 切向守恒 e=2,y=1.2",
+      "residual": -1.1102230246251565e-16,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "005-03 非轴上距离 e=2,y=1.2",
+      "residual": 0.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "005-03 切向守恒 e=2,y=5.0",
+      "residual": -2.220446049250313e-16,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "005-03 非轴上距离 e=2,y=5.0",
+      "residual": -8.881784197001252e-16,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "005-03 负粒子原极性速率 e=3.5",
+      "residual": -4.440892098500626e-16,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "005-03 切向守恒 e=3.5,y=0.1",
+      "residual": -1.734723475976807e-17,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "005-03 非轴上距离 e=3.5,y=0.1",
+      "residual": 0.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "005-03 切向守恒 e=3.5,y=1.2",
+      "residual": -1.6653345369377348e-16,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "005-03 非轴上距离 e=3.5,y=1.2",
+      "residual": 0.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "005-03 切向守恒 e=3.5,y=5.0",
+      "residual": -4.440892098500626e-16,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "005-03 非轴上距离 e=3.5,y=5.0",
+      "residual": 0.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "004-05 临界时间积分 cutoff=0.1",
+      "residual": 2.220446049250313e-16,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "004-05 临界时间积分 cutoff=0.01",
+      "residual": 8.881784197001252e-16,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "004-05 临界时间积分 cutoff=0.001",
+      "residual": 2.220446049250313e-14,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "004-05 超临界有限时间 excess=0.01",
+      "residual": 5.328182339781051e-12,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "004-05 超临界有限时间 excess=0.2",
+      "residual": 2.220446049250313e-16,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "004-05 超临界有限时间 excess=1.0",
+      "residual": 0.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "004-08 几何轨迹二阶差分",
+      "residual": 4.674732455887695e-08,
+      "tolerance": 2e-07,
+      "passed": true
+    },
+    {
+      "name": "004-08 切向加速度正交速度",
+      "residual": 5.551115123125783e-17,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "003-06 精确方向向量与净速度长度收缩",
+      "residual": 0.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "005-07 压缩曲线端点 P2/P1",
+      "residual": 3.816007865253823e-07,
+      "tolerance": 3e-05,
+      "passed": true
+    },
+    {
+      "name": "005-07 膨胀曲线端点 P4/P1",
+      "residual": 9.381317689793889e-06,
+      "tolerance": 3e-05,
+      "passed": true
+    }
+  ]
+}

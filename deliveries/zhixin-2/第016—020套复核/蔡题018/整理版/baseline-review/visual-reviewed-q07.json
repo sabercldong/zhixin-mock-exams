@@ -1,0 +1,136 @@
+{
+  "question": 7,
+  "scope": "第018套第7题球形修订主解与模型对照的分题工作预览；球形条件已获用户明确确认，不代表整套验收",
+  "review_time": "2026-10-08 22:47 Asia/Shanghai",
+  "actual_visual_reviewed": true,
+  "source_sha256": "e6095db9a7d121615b019a200d26c571de1e3e6010807e13a62e97d8a380b09b",
+  "verification_sha256": "16ae61423799ea024699d82a66ad95a4d2620a9d797ea5f2697b23a05d05e256",
+  "pdfs": {
+    "student": {
+      "total_pages": 12,
+      "body_pages": 11,
+      "pdf_sha256": "86eb1023d36f932582d5f5a83fa633c6158b879f90f1bd93bba8e93616831271",
+      "overview_pages_reviewed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "high_resolution_pages_reviewed": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "page_png_sha256": {
+        "page-001.png": "5c6a22497df7d7fdca785377ebb895fc1362838c82271310518565223258027a",
+        "page-002.png": "1cfc314a778e57906246fd3440f9de72b7adbd567c67f22636d5d314f3c0b34f",
+        "page-003.png": "fb9169e0b5c22674523f0af2d9c247db798cb65548d9ad2100dda15a3b952033",
+        "page-004.png": "62fa2c77e0ef3d4e87848eacb17962d10a1f01f7450e05659e8db806d940e901",
+        "page-005.png": "5f1bef2915c538a1eed45dd17a20df54f0070b85345a30d42a9ad07bb2a92688",
+        "page-006.png": "2a9e155332f55cdbcf8a17b0373ce16ee354a7053ad742b3c1c71ced7facb14f",
+        "page-007.png": "b4823be0e1bbb4cd6a0555f34c4947ce44a38d705329b2782bfdc68ac55455b8",
+        "page-008.png": "863102b186e4da920e6f620411eeab5e78fe9492d3cfbc547a9f7298652462a7",
+        "page-009.png": "864928b469f188525e9b7e65c581f5a96fb72a102d45e8bd441aa071f1dbfee8",
+        "page-010.png": "552a36b1ec907e4ddac396807ca0b60c74c1962a7099c557a5fd566637412556",
+        "page-011.png": "21780163dc26b4a0cd0da16b65dfe80207adddf5ff259eaf0b86c8eb2ef40334",
+        "page-012.png": "7a6336e94805aefac04a154970e0293fc9c4f0cf95015c041a5ceea2cd6ad48c"
+      }
+    },
+    "teacher": {
+      "total_pages": 16,
+      "body_pages": 15,
+      "pdf_sha256": "14b62f0370ac5d039867779d87b0d471b36d22375722b6f7e46144eaf335cfa0",
+      "overview_pages_reviewed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "high_resolution_pages_reviewed": [
+        13,
+        14,
+        16
+      ],
+      "page_png_sha256": {
+        "page-001.png": "5c6a22497df7d7fdca785377ebb895fc1362838c82271310518565223258027a",
+        "page-002.png": "1cfc314a778e57906246fd3440f9de72b7adbd567c67f22636d5d314f3c0b34f",
+        "page-003.png": "fb9169e0b5c22674523f0af2d9c247db798cb65548d9ad2100dda15a3b952033",
+        "page-004.png": "62fa2c77e0ef3d4e87848eacb17962d10a1f01f7450e05659e8db806d940e901",
+        "page-005.png": "5f1bef2915c538a1eed45dd17a20df54f0070b85345a30d42a9ad07bb2a92688",
+        "page-006.png": "2a9e155332f55cdbcf8a17b0373ce16ee354a7053ad742b3c1c71ced7facb14f",
+        "page-007.png": "b4823be0e1bbb4cd6a0555f34c4947ce44a38d705329b2782bfdc68ac55455b8",
+        "page-008.png": "863102b186e4da920e6f620411eeab5e78fe9492d3cfbc547a9f7298652462a7",
+        "page-009.png": "864928b469f188525e9b7e65c581f5a96fb72a102d45e8bd441aa071f1dbfee8",
+        "page-010.png": "552a36b1ec907e4ddac396807ca0b60c74c1962a7099c557a5fd566637412556",
+        "page-011.png": "21780163dc26b4a0cd0da16b65dfe80207adddf5ff259eaf0b86c8eb2ef40334",
+        "page-012.png": "7a6336e94805aefac04a154970e0293fc9c4f0cf95015c041a5ceea2cd6ad48c",
+        "page-013.png": "c97c2bed62a2c44f58d065f10fd7a5b53d79a3298f6fc939035b2bba0cdbca71",
+        "page-014.png": "3b0901a311b9e3e5eb0b4aeb4ab63709bf2504c8dd64fb9ba609af52985eb96a",
+        "page-015.png": "f597b446aa0bad952d66e1d669214842556c543abefd90c3461bc80b592f8093",
+        "page-016.png": "1fd0719b9cbf65dbc2e424a0dd01076403ee2e8dea264b5f340987a7154257d5"
+      }
+    }
+  },
+  "figures_reviewed": {
+    "question-07": "6d0dfaab729c859e3c0268d2c798fc7851ebe70e44c647f50b1795fd84ce0160",
+    "image-07": "c22480ca682cad85d7704a5905eccfb060ea7eeffcbd22d4f33ee9bfdcd86116",
+    "projection-07": "80df18f958670c5a9caa6b4f50af213faa2f09f5f90d3ce2e5b1780a8beec06e",
+    "cone-07": "5c4ea0d99c248d67bb1dd0ef05cf217bd978b03af5b46da5fbfed3e765c93105",
+    "passive-07": "332e0c5086852fb6496324b76eb461c80137f0914ba22c24b409a221cc9f22ef",
+    "engine-07": "1e16d0c928de27f3ad17ee339faefdf1d88b23134676019c901177ceb2868242"
+  },
+  "checks": [
+    "用户明确回复“是”，授权题干补充球形小黑体并注明修订；原始两PDF不改。球形主解已同步写入学生与教师当前源稿。",
+    "完整三问与16步解析保留；薄圆片改为物体形状改变后的模型对照，不再标为缺失条件或本题另一答案。教师完整包含学生核心，再补有限角度平面与球差别、凸物体投影界限及4个带解变式。",
+    "手写把平面太阳圆像面积误成4pi*a²，导致温度少sqrt(2)，由圆像功率、真实球面正余弦积分及方向光锥积分三者核验更正。",
+    "近轴条件、有限物距修正、b远小于像半径、暗背景、填充光锥、单侧半球与全方向覆盖分开；大角度不将平面辐照度乘球投影冒充完整方向积分。",
+    "6幅图包含太阳和透镜位置、有限角宽成像及真实平面圆像、前后可辨球面及面元法向、倾斜圆孔三维光锥、互易双向交换与太阳热机/冷端/电功/炉。5解答图符号实际进入随后的方程。",
+    "r标签从光线交叉处移开，RS移出球边缘，光锥前后母线不再与光轴重合；alpha移出蓝色母线，热机功标签缩至必要W，入熵标签移出框线遮挡。",
+    "独立8个来光方向的球面正余弦积分误差<5.2e-6，6个光锥的球面和方向双积分误差<8.4e-7；平面积分、Taylor展开、温度扰动ODE、9个灰体权重、257个角覆盖、热机能量/熵和4变式通过。",
+    "自身熵恒定与熵产生/排出明确分开，例子为有冷源的连续太阳供能，不依赖耗尽电池。7000K小球功率和球径数值独立复算；热边界熵未冒充远场光子熵精确公式。",
+    "本次重新构建后实际审读当前全部28页总览，另高清检查学生2/3/4/5/6/8/9/10/11/12页及教师13/14/16页；学生11正文/12总页，教师15正文/16总页。末页738/574非空白字符，完整计算和条件，不用孤立尾句或扩间距凑页。",
+    "当前图稿和两工作PDF通过日志/qpdf，标题、源稿、控制字符与禁用语扫描通过。A4/12pt/22mm/1.24/0.35em的101模板未变，原始两PDF未变。",
+    "六幅单图源稿和PDF没有改动，当前校验和与先前已实际审读记录一致；本次重新检查其在新PDF中的缩放、图注、连接、标注和紧邻方程，未发现新遮挡或重叠。"
+  ],
+  "model_scope_notes": [
+    "球形条件已由用户明确确认并在题干注明修订，不再有待确认的形状条件",
+    "近轴、小尺寸、暗背景与填充光锥等物理适用条件仍明确保留；薄圆片仅作模型拓展",
+    "第8题及018整套三版本尚未完成，本次第7题验收不等于整套验收"
+  ],
+  "remaining_visual_issues": [],
+  "unresolved_model_condition": false,
+  "set_accepted": false,
+  "condition_resolution": {
+    "explicit_human_approval": true,
+    "reply": "是",
+    "confirmed_date": "2026-10-08",
+    "approved_change": "题干补充球形小黑体并注明修订"
+  }
+}

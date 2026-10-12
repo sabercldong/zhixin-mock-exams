@@ -1,0 +1,379 @@
+{
+  "source_sha256": "a09596456e137b091c8d5e2adf2bc9373173fedcb2919c86da02ae4a0e69fa2e",
+  "source_quality_sha256": "7e2e283ce320db24bccca271b5d19e18b4dd3663281f3d1eeac3667ef7fb1e3a",
+  "verification_sha256": "7b7f0120ef374facd506cf4c42a04bdb10c05808c1af519939dae101e30b3324",
+  "template_sha256": "434e4734708ef9c12c4be4629709e370fa5fe9a67a4cc88709ee13ffa571673b",
+  "figures_reviewed": {
+    "question-05": "32a383870f630efd03ec4e2098017219d6f92ed0c27232799dbee5ff81ec5db6",
+    "forces-05": "501730b17478918505f4efe849820590ccebf8e08edd9fc754f0cfd06b7feb99",
+    "circuit-05": "f4ce2f752838c72ac69fb409191edaf42d2c6f77fc9650cf749175dec0e19b7b",
+    "motion-05": "4bb58b4cd42f02bc1e951c437c2a60196800a22575ea5a5371a7dd938b7f28c0",
+    "modes-05": "a8946278ae981b8669ce11d613b9007c569947fdab9ac91bb55db9fcbd9b85f6",
+    "energy-05": "406bcbd1de9fca89b946f2088c893cf7c210c131a116e92b8f2086dcc00fccae"
+  },
+  "figures_png_sha256": {
+    "question-05": "cbd1f664f00bb542891a49436c7a381d78b32bc25427d55be823ae5b9ee0b95c",
+    "forces-05": "91f1069907fd0d2d80e0180a0ee4a7f083eb509e50c137e27095c3328256f174",
+    "circuit-05": "3da13743160979262b972e067e87a25cb8e590fefa2bba3073bc7125f4ddc24a",
+    "motion-05": "fbb97af5f583700774f313513c252f0bcbdbfe7db1a523e43d3d83036be65001",
+    "modes-05": "f8a9d69610e024a0b216a8b903123987aa4b902b53a24c8962ea3c9b6f1fcd12",
+    "energy-05": "4870ae6eb86e993154f19f3b248555e94eb488606230141e42b5f8a122a68242"
+  },
+  "geometry_record_sha256": "060f798c4edae3ec65cc3103f9090ed5a8e1d812ce5c9224da3c6c0ecbfaa713",
+  "pdfs": {
+    "student": {
+      "pdf_sha256": "f85c40a50f7cb629e39b771431b588f91a370529e20de2ffe858e57c597139d3",
+      "total_pages": 14,
+      "body_pages": 13,
+      "page_png_sha256": {
+        "page-001.png": "b4bc153ec0311433a99a9fd0c0985ea5e38b80fe7a694dcb1589ee6f1c383403",
+        "page-002.png": "ef24987ce73fe9083f61e75c5ffca2e87268e198fbe7af48e6ff3c333169d41a",
+        "page-003.png": "f2ebd0ca411ae824cae521f8ea88e6e75a74226e50c6bd396401ff664a2af3ad",
+        "page-004.png": "9ffe44d5959e2a6b33834ee8becad6e0f2bb2d89d8cc18997803072d3cc60ac2",
+        "page-005.png": "8038a968583d31fa68bf91eff0504547c222710d853e0bb24c4d45f7bf131924",
+        "page-006.png": "6b785c15559f17a0739e4c0a28d588564af15938fb567e16492f8742c60aed46",
+        "page-007.png": "e6dfc73b896301bd2fd7823555bed5dbc2abc38992dbd4894c189b32b43a0447",
+        "page-008.png": "9265b78fbb02239eddfd2320f899675678eb9d27ef9479f2e329f9af33449646",
+        "page-009.png": "b9c20717c8d5d8f94a03b322ac7b76c6fa39d818c237f59f55a085941caef6a1",
+        "page-010.png": "bc93724f1477cef04b74057c529fdc0447c6cf43acea397c01409f1802824d64",
+        "page-011.png": "fd8d105a8fd87601eda947ae450508e11c95515756a16bc4fa8ceea764a55809",
+        "page-012.png": "0beddf915f66ab90542110ff7a2bf4b73ac2cc0db8fe3fd11e6d0571dfa53bc5",
+        "page-013.png": "e940b29a3ee1123ff65f4c20f0f73ccaaaca18b04f5950ef1376ac327b03b90f",
+        "page-014.png": "8acb26e59f20d1854d51a0fff813ce57b572ff43c53f2d583423234ef23f0691"
+      },
+      "overview_sha256": {
+        "overview-01.jpg": "9f9ae1fd92c4abf4a800f92325576a81c7063382b3bfe05ee87e897122e2f981",
+        "overview-02.jpg": "d94d2f336985348905fc141635a4b53026dbd2ba38037668ad7fc81d94c5306f"
+      },
+      "overview_pages_reviewed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "high_resolution_pages_reviewed": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "new_high_resolution_pages_reviewed": [
+        2
+      ],
+      "exact_previously_reviewed_png_reuse": [
+        {
+          "page": 1,
+          "old_page": "page-001.png",
+          "png_sha256": "b4bc153ec0311433a99a9fd0c0985ea5e38b80fe7a694dcb1589ee6f1c383403"
+        },
+        {
+          "page": 3,
+          "old_page": "page-003.png",
+          "png_sha256": "f2ebd0ca411ae824cae521f8ea88e6e75a74226e50c6bd396401ff664a2af3ad"
+        },
+        {
+          "page": 4,
+          "old_page": "page-004.png",
+          "png_sha256": "9ffe44d5959e2a6b33834ee8becad6e0f2bb2d89d8cc18997803072d3cc60ac2"
+        },
+        {
+          "page": 5,
+          "old_page": "page-005.png",
+          "png_sha256": "8038a968583d31fa68bf91eff0504547c222710d853e0bb24c4d45f7bf131924"
+        },
+        {
+          "page": 6,
+          "old_page": "page-006.png",
+          "png_sha256": "6b785c15559f17a0739e4c0a28d588564af15938fb567e16492f8742c60aed46"
+        },
+        {
+          "page": 7,
+          "old_page": "page-007.png",
+          "png_sha256": "e6dfc73b896301bd2fd7823555bed5dbc2abc38992dbd4894c189b32b43a0447"
+        },
+        {
+          "page": 8,
+          "old_page": "page-008.png",
+          "png_sha256": "9265b78fbb02239eddfd2320f899675678eb9d27ef9479f2e329f9af33449646"
+        },
+        {
+          "page": 9,
+          "old_page": "page-009.png",
+          "png_sha256": "b9c20717c8d5d8f94a03b322ac7b76c6fa39d818c237f59f55a085941caef6a1"
+        },
+        {
+          "page": 10,
+          "old_page": "page-010.png",
+          "png_sha256": "bc93724f1477cef04b74057c529fdc0447c6cf43acea397c01409f1802824d64"
+        },
+        {
+          "page": 11,
+          "old_page": "page-011.png",
+          "png_sha256": "fd8d105a8fd87601eda947ae450508e11c95515756a16bc4fa8ceea764a55809"
+        },
+        {
+          "page": 12,
+          "old_page": "page-012.png",
+          "png_sha256": "0beddf915f66ab90542110ff7a2bf4b73ac2cc0db8fe3fd11e6d0571dfa53bc5"
+        },
+        {
+          "page": 13,
+          "old_page": "page-013.png",
+          "png_sha256": "e940b29a3ee1123ff65f4c20f0f73ccaaaca18b04f5950ef1376ac327b03b90f"
+        },
+        {
+          "page": 14,
+          "old_page": "page-014.png",
+          "png_sha256": "8acb26e59f20d1854d51a0fff813ce57b572ff43c53f2d583423234ef23f0691"
+        }
+      ]
+    },
+    "teacher": {
+      "pdf_sha256": "29ca08c99baffd3402f124b4e10ea63bb0923b7643fcd17e06926856b7ee77b5",
+      "total_pages": 22,
+      "body_pages": 21,
+      "page_png_sha256": {
+        "page-001.png": "b4bc153ec0311433a99a9fd0c0985ea5e38b80fe7a694dcb1589ee6f1c383403",
+        "page-002.png": "ef24987ce73fe9083f61e75c5ffca2e87268e198fbe7af48e6ff3c333169d41a",
+        "page-003.png": "f2ebd0ca411ae824cae521f8ea88e6e75a74226e50c6bd396401ff664a2af3ad",
+        "page-004.png": "9ffe44d5959e2a6b33834ee8becad6e0f2bb2d89d8cc18997803072d3cc60ac2",
+        "page-005.png": "8038a968583d31fa68bf91eff0504547c222710d853e0bb24c4d45f7bf131924",
+        "page-006.png": "6b785c15559f17a0739e4c0a28d588564af15938fb567e16492f8742c60aed46",
+        "page-007.png": "e6dfc73b896301bd2fd7823555bed5dbc2abc38992dbd4894c189b32b43a0447",
+        "page-008.png": "9265b78fbb02239eddfd2320f899675678eb9d27ef9479f2e329f9af33449646",
+        "page-009.png": "b9c20717c8d5d8f94a03b322ac7b76c6fa39d818c237f59f55a085941caef6a1",
+        "page-010.png": "bc93724f1477cef04b74057c529fdc0447c6cf43acea397c01409f1802824d64",
+        "page-011.png": "fd8d105a8fd87601eda947ae450508e11c95515756a16bc4fa8ceea764a55809",
+        "page-012.png": "0beddf915f66ab90542110ff7a2bf4b73ac2cc0db8fe3fd11e6d0571dfa53bc5",
+        "page-013.png": "e940b29a3ee1123ff65f4c20f0f73ccaaaca18b04f5950ef1376ac327b03b90f",
+        "page-014.png": "f3297f49b862c2c6c73bb82ad0bfa7fbd713ec0295c6268d879f1df53a9f6b8f",
+        "page-015.png": "0877779654ba4afce97e8f09a94a4f811a4d592f7b8a604314ba37acf5496811",
+        "page-016.png": "bfe311a2f60f1232a835dc6c8d25538c5cfa95b673e475a3e394e6bc0e81e07a",
+        "page-017.png": "68284da15bf70f3efaf0e11fbd3e93f86a69c721eeed0106fc6986a4a682bff0",
+        "page-018.png": "23a6cb4c22c8aac678f09497a2f9ccdbf48a7be7c88c2ed63ef1bca073d1de78",
+        "page-019.png": "a926b821b8d37a411dc4d93ee68a78df3e4c1154f1d50128eff9d330db43d75a",
+        "page-020.png": "1bd556e799e5dbe6edf48aafa1fd635c0d247a1abd37dc791574962819150fac",
+        "page-021.png": "129b61f9172518d1069932116b861c6a7139807aa5eabe49b36b86a98ce7b190",
+        "page-022.png": "71b37fbbd50290d27101109a5cacb73bfd77a49116da23b5fee8c6758fb20235"
+      },
+      "overview_sha256": {
+        "overview-01.jpg": "22fe399dd6aa5dad5773f39d388fdc235ce45b23db9864494974a6f353c3da33",
+        "overview-02.jpg": "7cbfc4d24f4afe16321c0f17467a2c1143aef4a3223c746f06257407711f6c6e"
+      },
+      "overview_pages_reviewed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "high_resolution_pages_reviewed": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "new_high_resolution_pages_reviewed": [
+        2
+      ],
+      "exact_previously_reviewed_png_reuse": [
+        {
+          "page": 1,
+          "old_page": "page-001.png",
+          "png_sha256": "b4bc153ec0311433a99a9fd0c0985ea5e38b80fe7a694dcb1589ee6f1c383403"
+        },
+        {
+          "page": 3,
+          "old_page": "page-003.png",
+          "png_sha256": "f2ebd0ca411ae824cae521f8ea88e6e75a74226e50c6bd396401ff664a2af3ad"
+        },
+        {
+          "page": 4,
+          "old_page": "page-004.png",
+          "png_sha256": "9ffe44d5959e2a6b33834ee8becad6e0f2bb2d89d8cc18997803072d3cc60ac2"
+        },
+        {
+          "page": 5,
+          "old_page": "page-005.png",
+          "png_sha256": "8038a968583d31fa68bf91eff0504547c222710d853e0bb24c4d45f7bf131924"
+        },
+        {
+          "page": 6,
+          "old_page": "page-006.png",
+          "png_sha256": "6b785c15559f17a0739e4c0a28d588564af15938fb567e16492f8742c60aed46"
+        },
+        {
+          "page": 7,
+          "old_page": "page-007.png",
+          "png_sha256": "e6dfc73b896301bd2fd7823555bed5dbc2abc38992dbd4894c189b32b43a0447"
+        },
+        {
+          "page": 8,
+          "old_page": "page-008.png",
+          "png_sha256": "9265b78fbb02239eddfd2320f899675678eb9d27ef9479f2e329f9af33449646"
+        },
+        {
+          "page": 9,
+          "old_page": "page-009.png",
+          "png_sha256": "b9c20717c8d5d8f94a03b322ac7b76c6fa39d818c237f59f55a085941caef6a1"
+        },
+        {
+          "page": 10,
+          "old_page": "page-010.png",
+          "png_sha256": "bc93724f1477cef04b74057c529fdc0447c6cf43acea397c01409f1802824d64"
+        },
+        {
+          "page": 11,
+          "old_page": "page-011.png",
+          "png_sha256": "fd8d105a8fd87601eda947ae450508e11c95515756a16bc4fa8ceea764a55809"
+        },
+        {
+          "page": 12,
+          "old_page": "page-012.png",
+          "png_sha256": "0beddf915f66ab90542110ff7a2bf4b73ac2cc0db8fe3fd11e6d0571dfa53bc5"
+        },
+        {
+          "page": 13,
+          "old_page": "page-013.png",
+          "png_sha256": "e940b29a3ee1123ff65f4c20f0f73ccaaaca18b04f5950ef1376ac327b03b90f"
+        },
+        {
+          "page": 14,
+          "old_page": "page-014.png",
+          "png_sha256": "f3297f49b862c2c6c73bb82ad0bfa7fbd713ec0295c6268d879f1df53a9f6b8f"
+        },
+        {
+          "page": 15,
+          "old_page": "page-015.png",
+          "png_sha256": "0877779654ba4afce97e8f09a94a4f811a4d592f7b8a604314ba37acf5496811"
+        },
+        {
+          "page": 16,
+          "old_page": "page-016.png",
+          "png_sha256": "bfe311a2f60f1232a835dc6c8d25538c5cfa95b673e475a3e394e6bc0e81e07a"
+        },
+        {
+          "page": 17,
+          "old_page": "page-017.png",
+          "png_sha256": "68284da15bf70f3efaf0e11fbd3e93f86a69c721eeed0106fc6986a4a682bff0"
+        },
+        {
+          "page": 18,
+          "old_page": "page-018.png",
+          "png_sha256": "23a6cb4c22c8aac678f09497a2f9ccdbf48a7be7c88c2ed63ef1bca073d1de78"
+        },
+        {
+          "page": 19,
+          "old_page": "page-019.png",
+          "png_sha256": "a926b821b8d37a411dc4d93ee68a78df3e4c1154f1d50128eff9d330db43d75a"
+        },
+        {
+          "page": 20,
+          "old_page": "page-020.png",
+          "png_sha256": "1bd556e799e5dbe6edf48aafa1fd635c0d247a1abd37dc791574962819150fac"
+        },
+        {
+          "page": 21,
+          "old_page": "page-021.png",
+          "png_sha256": "129b61f9172518d1069932116b861c6a7139807aa5eabe49b36b86a98ce7b190"
+        },
+        {
+          "page": 22,
+          "old_page": "page-022.png",
+          "png_sha256": "71b37fbbd50290d27101109a5cacb73bfd77a49116da23b5fee8c6758fb20235"
+        }
+      ]
+    }
+  },
+  "question": 5,
+  "actual_visual_reviewed": true,
+  "set_accepted": false,
+  "question_accepted": true,
+  "model_condition_resolved": true,
+  "remaining_visual_issues": [],
+  "remaining_model_issues": [],
+  "actual_review_time_utc": "2026-10-09 04:22:11 UTC",
+  "reused_identical_core_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13
+  ],
+  "review_notes": [
+    "36个当前工作页面全部实际总览；34个正文版次高清，22个不同正文页。",
+    "两版第1—13页PNG逐一相同，教师前12个正文页复用同像素的学生高清证据；教师第14—22页均实际高清读取。",
+    "最终学生全部及教师第2—20页PNG与此前已实际审读页相同；教师21、22页已重新高清读，末次教师第二总览重看。",
+    "六图全部实际读取；最后变动的位置图和模式图重新看，连接关系、三维正方向、签名分量及相轨道方向正确。",
+    "修正两处行内数学溢出、过大位置图、裸步骤/洞察/变式标题及稀疏尾页；固定101模板不变，不删推导、不扩间距或强制分页。",
+    "技术与视觉通过不解决初值缺项；本题为完整条件解工作稿，尚未计入通过数，套卷未验收。",
+    "本轮五项授权明确包含左杆静止和两个支路电流分别为零；源稿题干修订说明、模型和计算全部更新。当前36页四总览实际查看，新题干第2页高清复审，两版本该页像素一致；其余34页PNG与已实际审读记录逐一同SHA，复用该证据。"
+  ],
+  "model_revision_current_evidence": {
+    "approval_sha256": "c405f67d0c6ee3bb81df42c27d0827cbbfa139d44681828111a662a90819adfe",
+    "comparison_sha256": "a2ff888cd563a162a2cea2cdb3a04cd80629eec20cab7063379738a88c91667f",
+    "previous_review_sha256": "ec66ca710717e81f55a53e3394e18a11d39abd0bb3587054b03b9f8b09063c9d",
+    "actual_reviewed": true
+  }
+}

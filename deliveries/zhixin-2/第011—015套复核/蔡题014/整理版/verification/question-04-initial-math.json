@@ -1,0 +1,2207 @@
+{
+  "paper": "014",
+  "question": 4,
+  "stage": "independent-initial-math",
+  "user_model_authorization": "四项均按建议修订并注明：第4题同比例快速建场、位置固定近似、随后局部径向场",
+  "startup_impulse": "pi^2*r^3*Br*Bz_bar/R; half the handwritten result",
+  "assumptions": [
+    "signed CCW current and upward z",
+    "axisymmetric rim field Br",
+    "Bz_bar is a spatial area average, not a temporal average",
+    "electrical L=0 in core; finite L extensions separated",
+    "startup displacement/gravity negligible only in the stated fast limit",
+    "afterward Br is locally constant; external flux still depends on height",
+    "AC fixed mean height, linear same-amplitude scaling and other parameters fixed"
+  ],
+  "original_manifest": {
+    "试卷.pdf": {
+      "pages": 3,
+      "sha256": "3c8164d75b7f117095d26f554fb788867b2b781c9a642af12bee499d3b232cf0"
+    },
+    "答案.pdf": {
+      "pages": 8,
+      "sha256": "111c13cd664b08f098076baed25c937368238953127045c5cfa8c8460471472a"
+    }
+  },
+  "script_sha256": "8f697a22d802070d816a88ad00dec9a846f48dc53c20216e662d20e239f8ce3d",
+  "originals_re_displayed_and_read": [
+    {
+      "path": "/Users/dongxingxi/Downloads/2026.6.22/竞赛/蔡题集萃/蔡题集萃_整理版_副本/蔡题014/整理版/preview/originals/paper-02.png",
+      "sha256": "601d2977836ad34395795f97b4fd6018dd377a69dc7a7b6342bd2f81a1503d5f",
+      "actual_read": true
+    },
+    {
+      "path": "/Users/dongxingxi/Downloads/2026.6.22/竞赛/蔡题集萃/蔡题集萃_整理版_副本/蔡题014/整理版/preview/originals/answer-05.png",
+      "sha256": "c4c4820c5a500789a37cc3c4ec59e524eb303f7c985eb02a39bddf5c23ab0f45",
+      "actual_read": true
+    },
+    {
+      "path": "/Users/dongxingxi/Downloads/2026.6.22/竞赛/蔡题集萃/蔡题集萃_整理版_副本/蔡题014/整理版/preview/originals/details/q04-paper.png",
+      "sha256": "fb7c2b4660ba9df88bef96e38e107833aa0fa8fb5e7c1c20551d2d2b25e90353",
+      "actual_read": true
+    },
+    {
+      "path": "/Users/dongxingxi/Downloads/2026.6.22/竞赛/蔡题集萃/蔡题集萃_整理版_副本/蔡题014/整理版/preview/originals/details/q04-answer.png",
+      "sha256": "516a3d38f73122fccc4e1e84a5ec24a6455f5df8bbd084e33a67a6bd34595d8a",
+      "actual_read": true
+    }
+  ],
+  "symbolic_count": 51,
+  "numeric_count": 200,
+  "symbolic": [
+    {
+      "name": "tangential wire crossed with outward radial field points downward",
+      "passed": true
+    },
+    {
+      "name": "vertical-field force horizontal x component",
+      "passed": true
+    },
+    {
+      "name": "vertical-field force horizontal y component",
+      "passed": true
+    },
+    {
+      "name": "horizontal forces around the full ring cancel 0",
+      "passed": true
+    },
+    {
+      "name": "horizontal forces around the full ring cancel 1",
+      "passed": true
+    },
+    {
+      "name": "total vertical force on signed counterclockwise current",
+      "passed": true
+    },
+    {
+      "name": "common ramp integral contains one half",
+      "passed": true
+    },
+    {
+      "name": "different power ramp histories have q/(p+q), not a universal half",
+      "passed": true
+    },
+    {
+      "name": "corrected startup impulse is a*Phi/(2R)",
+      "passed": true
+    },
+    {
+      "name": "damping time from actual motional circuit",
+      "passed": true
+    },
+    {
+      "name": "motion EMF orientation, upward velocity is positive CCW",
+      "passed": true
+    },
+    {
+      "name": "Gauss cylindrical flux relation yields consistent averaged vertical gradient",
+      "passed": true
+    },
+    {
+      "name": "a valid axisymmetric local example is divergence free",
+      "passed": true
+    },
+    {
+      "name": "linear mechanical ODE residual",
+      "passed": true
+    },
+    {
+      "name": "integrated height differentiates to the signed velocity",
+      "passed": true
+    },
+    {
+      "name": "initial velocity boundary",
+      "passed": true
+    },
+    {
+      "name": "initial height boundary",
+      "passed": true
+    },
+    {
+      "name": "initial acceleration is -g-v0/tau",
+      "passed": true
+    },
+    {
+      "name": "only finite turning time solves velocity zero",
+      "passed": true
+    },
+    {
+      "name": "turning height from integrated position",
+      "passed": true
+    },
+    {
+      "name": "height increases strictly with initial velocity",
+      "passed": true
+    },
+    {
+      "name": "post-switch mechanical power equals minus heat rate",
+      "passed": true
+    },
+    {
+      "name": "dimensionless height has exactly the stated derivative",
+      "passed": true
+    },
+    {
+      "name": "dimensionless turn is log(1+eta)",
+      "passed": true
+    },
+    {
+      "name": "ascent heat equals loss of mechanical energy",
+      "passed": true
+    },
+    {
+      "name": "dimensionless heat increases from zero",
+      "passed": true
+    },
+    {
+      "name": "weak damping ballistic limit for velocity",
+      "passed": true
+    },
+    {
+      "name": "weak damping ballistic limit for position",
+      "passed": true
+    },
+    {
+      "name": "weak damping limit of turn height",
+      "passed": true
+    },
+    {
+      "name": "AC current solves L di/dt+Ri=omega*A*sin",
+      "passed": true
+    },
+    {
+      "name": "mean AC lift from direct phase integration",
+      "passed": true
+    },
+    {
+      "name": "zero self inductance gives zero fixed-height mean force",
+      "passed": true
+    },
+    {
+      "name": "finite inductance mean lift has voltage-squared dependence",
+      "passed": true
+    },
+    {
+      "name": "sqrt-two voltage produces double mean lift at otherwise fixed parameters",
+      "passed": true
+    },
+    {
+      "name": "AC resistive heating from direct mean square current",
+      "passed": true
+    },
+    {
+      "name": "low-frequency lift vanishes quadratically",
+      "passed": true
+    },
+    {
+      "name": "high-frequency lift saturates for fixed field amplitudes",
+      "passed": true
+    },
+    {
+      "name": "pure-R average is zero even for nonsinusoidal periodic common field",
+      "passed": true
+    },
+    {
+      "name": "finite-L terminal circuit equation",
+      "passed": true
+    },
+    {
+      "name": "finite-L terminal mechanical equation",
+      "passed": true
+    },
+    {
+      "name": "finite-L characteristic polynomial from actual state matrix",
+      "passed": true
+    },
+    {
+      "name": "mechanical plus self-field energy loses exactly Ri^2",
+      "passed": true
+    },
+    {
+      "name": "inductive startup preserves total linked flux",
+      "passed": true
+    },
+    {
+      "name": "critical self-inductive mode solves the repeated-root ODE",
+      "passed": true
+    },
+    {
+      "name": "critical mode integrates to the full stated displacement",
+      "passed": true
+    },
+    {
+      "name": "critical mode initial velocity",
+      "passed": true
+    },
+    {
+      "name": "critical mode initial acceleration",
+      "passed": true
+    },
+    {
+      "name": "startup impulse has SI momentum dimension",
+      "passed": true
+    },
+    {
+      "name": "electromagnetic damping has mass/time dimension",
+      "passed": true
+    },
+    {
+      "name": "electrical time L/R has seconds",
+      "passed": true
+    },
+    {
+      "name": "motional EMF divided by resistance is current",
+      "passed": true
+    }
+  ],
+  "numeric": [
+    {
+      "name": "actual circular wire force quadrature",
+      "measured": 2.7107944868665535e-17,
+      "expected": 0.0,
+      "normalized_error": 2.7107944868665535e-17,
+      "tolerance": 2e-09,
+      "passed": true,
+      "component": 0
+    },
+    {
+      "name": "actual circular wire force quadrature",
+      "measured": 1.372470890470665e-17,
+      "expected": 0.0,
+      "normalized_error": 1.372470890470665e-17,
+      "tolerance": 2e-09,
+      "passed": true,
+      "component": 1
+    },
+    {
+      "name": "actual circular wire force quadrature",
+      "measured": -0.15079644737231007,
+      "expected": -0.15079644737231007,
+      "normalized_error": 0.0,
+      "tolerance": 2e-09,
+      "passed": true,
+      "component": 2
+    },
+    {
+      "name": "actual circular wire force quadrature",
+      "measured": -2.7107944868665535e-17,
+      "expected": 0.0,
+      "normalized_error": 2.7107944868665535e-17,
+      "tolerance": 2e-09,
+      "passed": true,
+      "component": 0
+    },
+    {
+      "name": "actual circular wire force quadrature",
+      "measured": -8.654552880764366e-18,
+      "expected": 0.0,
+      "normalized_error": 8.654552880764366e-18,
+      "tolerance": 2e-09,
+      "passed": true,
+      "component": 1
+    },
+    {
+      "name": "actual circular wire force quadrature",
+      "measured": 0.08796459430051422,
+      "expected": 0.08796459430051422,
+      "normalized_error": 0.0,
+      "tolerance": 2e-09,
+      "passed": true,
+      "component": 2
+    },
+    {
+      "name": "actual circular wire force quadrature",
+      "measured": 4.3821638145273784e-18,
+      "expected": 0.0,
+      "normalized_error": 4.3821638145273784e-18,
+      "tolerance": 2e-09,
+      "passed": true,
+      "component": 0
+    },
+    {
+      "name": "actual circular wire force quadrature",
+      "measured": 5.042036334914707e-18,
+      "expected": 0.0,
+      "normalized_error": 5.042036334914707e-18,
+      "tolerance": 2e-09,
+      "passed": true,
+      "component": 1
+    },
+    {
+      "name": "actual circular wire force quadrature",
+      "measured": 0.07539822368615504,
+      "expected": 0.07539822368615505,
+      "normalized_error": 1.3877787807814457e-17,
+      "tolerance": 2e-09,
+      "passed": true,
+      "component": 2
+    },
+    {
+      "name": "common-ramp impulse independent of time profile",
+      "measured": 0.5,
+      "expected": 0.5,
+      "normalized_error": 0.0,
+      "tolerance": 2e-09,
+      "passed": true,
+      "ramp": "linear"
+    },
+    {
+      "name": "ramp Joule heating depends on shape, unlike impulse",
+      "measured": 1.0,
+      "expected": 1.0,
+      "normalized_error": 0.0,
+      "tolerance": 2e-09,
+      "passed": true,
+      "ramp": "linear"
+    },
+    {
+      "name": "common-ramp impulse independent of time profile",
+      "measured": 0.5,
+      "expected": 0.5,
+      "normalized_error": 0.0,
+      "tolerance": 2e-09,
+      "passed": true,
+      "ramp": "quadratic"
+    },
+    {
+      "name": "ramp Joule heating depends on shape, unlike impulse",
+      "measured": 1.3333333333333333,
+      "expected": 1.3333333333333333,
+      "normalized_error": 0.0,
+      "tolerance": 2e-09,
+      "passed": true,
+      "ramp": "quadratic"
+    },
+    {
+      "name": "common-ramp impulse independent of time profile",
+      "measured": 0.5000000000000001,
+      "expected": 0.5,
+      "normalized_error": 1.1102230246251565e-16,
+      "tolerance": 2e-09,
+      "passed": true,
+      "ramp": "raised-cosine"
+    },
+    {
+      "name": "ramp Joule heating depends on shape, unlike impulse",
+      "measured": 1.2337005501361697,
+      "expected": 1.2337005501361697,
+      "normalized_error": 0.0,
+      "tolerance": 2e-09,
+      "passed": true,
+      "ramp": "raised-cosine"
+    },
+    {
+      "name": "different ramp histories directly integrated",
+      "measured": 0.75,
+      "expected": 0.75,
+      "normalized_error": 0.0,
+      "tolerance": 2e-09,
+      "passed": true,
+      "radial_power": 1.0,
+      "flux_power": 3.0
+    },
+    {
+      "name": "different ramp histories directly integrated",
+      "measured": 0.25,
+      "expected": 0.25,
+      "normalized_error": 0.0,
+      "tolerance": 2e-09,
+      "passed": true,
+      "radial_power": 3.0,
+      "flux_power": 1.0
+    },
+    {
+      "name": "different ramp histories directly integrated",
+      "measured": 0.5,
+      "expected": 0.5,
+      "normalized_error": 0.0,
+      "tolerance": 2e-09,
+      "passed": true,
+      "radial_power": 2.0,
+      "flux_power": 2.0
+    },
+    {
+      "name": "different ramp histories directly integrated",
+      "measured": 0.7999999999944591,
+      "expected": 0.8,
+      "normalized_error": 5.540901071299231e-12,
+      "tolerance": 2e-09,
+      "passed": true,
+      "radial_power": 0.5,
+      "flux_power": 2.0
+    },
+    {
+      "name": "actual table release and coupled ramp approaches corrected half impulse",
+      "ramp": "linear",
+      "small_parameter": 0.01,
+      "lift_fraction": 0.005,
+      "duration": 0.0003380414963064246,
+      "actual_height": 3.678573109426872e-05,
+      "actual_speed": 0.3278921975988508,
+      "ideal_speed": 0.3316187078766025,
+      "relative_error": 0.01123733429158158,
+      "bound": 0.03,
+      "passed": true
+    },
+    {
+      "name": "actual table release and coupled ramp approaches corrected half impulse",
+      "ramp": "linear",
+      "small_parameter": 0.001,
+      "lift_fraction": 0.0005000000000000001,
+      "duration": 3.380414963064246e-05,
+      "actual_height": 3.7308549491996716e-06,
+      "actual_speed": 0.3312447493345843,
+      "ideal_speed": 0.3316187078766025,
+      "relative_error": 0.0011276762532871354,
+      "bound": 0.003,
+      "passed": true
+    },
+    {
+      "name": "actual table release and coupled ramp approaches corrected half impulse",
+      "ramp": "linear",
+      "small_parameter": 0.0001,
+      "lift_fraction": 5.000000000000001e-05,
+      "duration": 3.380414963064246e-06,
+      "actual_height": 3.736111731818187e-07,
+      "actual_speed": 0.3315812989191479,
+      "ideal_speed": 0.3316187078766025,
+      "relative_error": 0.0001128071383371676,
+      "bound": 0.00030000000000000003,
+      "passed": true
+    },
+    {
+      "name": "independent cylindrical surface flux conservation",
+      "measured": 0.0,
+      "expected": 0.0,
+      "normalized_error": 0.0,
+      "tolerance": 2e-09,
+      "passed": true,
+      "ramp": "linear"
+    },
+    {
+      "name": "actual table release and coupled ramp approaches corrected half impulse",
+      "ramp": "quadratic",
+      "small_parameter": 0.01,
+      "lift_fraction": 0.13572088082974545,
+      "duration": 0.0003380414963064246,
+      "actual_height": 2.1959415015593697e-05,
+      "actual_speed": 0.32839672729914304,
+      "ideal_speed": 0.3316187078766025,
+      "relative_error": 0.00971591921966719,
+      "bound": 0.03,
+      "passed": true
+    },
+    {
+      "name": "actual table release and coupled ramp approaches corrected half impulse",
+      "ramp": "quadratic",
+      "small_parameter": 0.001,
+      "lift_fraction": 0.06299605249474366,
+      "duration": 3.380414963064246e-05,
+      "actual_height": 2.236845393935792e-06,
+      "actual_speed": 0.33127802370697274,
+      "ideal_speed": 0.3316187078766025,
+      "relative_error": 0.0010273370034254992,
+      "bound": 0.003,
+      "passed": true
+    },
+    {
+      "name": "actual table release and coupled ramp approaches corrected half impulse",
+      "ramp": "quadratic",
+      "small_parameter": 0.0001,
+      "lift_fraction": 0.02924017738212866,
+      "duration": 3.380414963064246e-06,
+      "actual_height": 2.2414731009254975e-07,
+      "actual_speed": 0.33158379545387284,
+      "ideal_speed": 0.3316187078766025,
+      "relative_error": 0.00010527880936883616,
+      "bound": 0.00030000000000000003,
+      "passed": true
+    },
+    {
+      "name": "independent cylindrical surface flux conservation",
+      "measured": 0.0,
+      "expected": 0.0,
+      "normalized_error": 0.0,
+      "tolerance": 2e-09,
+      "passed": true,
+      "ramp": "quadratic"
+    },
+    {
+      "name": "actual table release and coupled ramp approaches corrected half impulse",
+      "ramp": "raised-cosine",
+      "small_parameter": 0.01,
+      "lift_fraction": 0.07467028899707029,
+      "duration": 0.0003380414963064246,
+      "actual_height": 4.150706884764812e-05,
+      "actual_speed": 0.32797750339214243,
+      "ideal_speed": 0.3316187078766025,
+      "relative_error": 0.010980093697895432,
+      "bound": 0.03,
+      "passed": true
+    },
+    {
+      "name": "actual table release and coupled ramp approaches corrected half impulse",
+      "ramp": "raised-cosine",
+      "small_parameter": 0.001,
+      "lift_fraction": 0.034533951785061724,
+      "duration": 3.380414963064246e-05,
+      "actual_height": 4.19814983588678e-06,
+      "actual_speed": 0.33124408501250685,
+      "ideal_speed": 0.3316187078766025,
+      "relative_error": 0.001129679524096927,
+      "bound": 0.003,
+      "passed": true
+    },
+    {
+      "name": "actual table release and coupled ramp approaches corrected half impulse",
+      "ramp": "raised-cosine",
+      "small_parameter": 0.0001,
+      "lift_fraction": 0.016016900363855537,
+      "duration": 3.380414963064246e-06,
+      "actual_height": 4.2032045397356617e-07,
+      "actual_speed": 0.3315807795330975,
+      "ideal_speed": 0.3316187078766025,
+      "relative_error": 0.00011437335290243045,
+      "bound": 0.00030000000000000003,
+      "passed": true
+    },
+    {
+      "name": "independent cylindrical surface flux conservation",
+      "measured": 0.0,
+      "expected": 0.0,
+      "normalized_error": 0.0,
+      "tolerance": 2e-09,
+      "passed": true,
+      "ramp": "raised-cosine"
+    },
+    {
+      "name": "actual numerical ODE velocity at analytically derived apex",
+      "measured": -1.2647608654825504e-13,
+      "expected": 0.0,
+      "normalized_error": 1.2647608654825504e-13,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 0.02
+    },
+    {
+      "name": "actual numerical ODE ascent height",
+      "measured": 0.00018375398734521897,
+      "expected": 0.0001837539872566879,
+      "normalized_error": 8.853107049539011e-14,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 0.02
+    },
+    {
+      "name": "nonzero return root actually returns to launch height",
+      "measured": -3.2869181280838905e-15,
+      "expected": 0.0,
+      "normalized_error": 3.2869181280838905e-15,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 0.02
+    },
+    {
+      "name": "the nontrivial return root is on descending branch",
+      "eta": 0.02,
+      "return_u": 0.03973683754916803,
+      "return_speed": -0.02624999394038878,
+      "passed": true
+    },
+    {
+      "name": "coupled motion energy and directly accumulated heat",
+      "measured": 0.00035378,
+      "expected": 0.00035378,
+      "normalized_error": 0.0,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 0.02,
+      "fraction": 0.0
+    },
+    {
+      "name": "analytic velocity vs independent numerical integration",
+      "measured": 0.026599999999999957,
+      "expected": 0.0266,
+      "normalized_error": 4.163336342344337e-17,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 0.02,
+      "fraction": 0.0
+    },
+    {
+      "name": "analytic position vs independent numerical integration",
+      "measured": 0.0,
+      "expected": 0.0,
+      "normalized_error": 0.0,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 0.02,
+      "fraction": 0.0
+    },
+    {
+      "name": "coupled motion energy and directly accumulated heat",
+      "measured": 0.00035378000052340645,
+      "expected": 0.00035378,
+      "normalized_error": 5.234064592331278e-13,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 0.02,
+      "fraction": 0.1
+    },
+    {
+      "name": "analytic velocity vs independent numerical integration",
+      "measured": 0.021219996912772876,
+      "expected": 0.021219996912721497,
+      "normalized_error": 5.137903991148107e-14,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 0.02,
+      "fraction": 0.1
+    },
+    {
+      "name": "analytic position vs independent numerical integration",
+      "measured": 6.650258523146265e-05,
+      "expected": 6.650258526740626e-05,
+      "normalized_error": 3.5943605947511004e-14,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 0.02,
+      "fraction": 0.1
+    },
+    {
+      "name": "coupled motion energy and directly accumulated heat",
+      "measured": 0.0003537799996578988,
+      "expected": 0.00035378,
+      "normalized_error": 3.421011846201083e-13,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 0.02,
+      "fraction": 0.3
+    },
+    {
+      "name": "analytic velocity vs independent numerical integration",
+      "measured": 0.01052391415852183,
+      "expected": 0.010523914158497015,
+      "normalized_error": 2.4815219323848225e-14,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 0.02,
+      "fraction": 0.3
+    },
+    {
+      "name": "analytic position vs independent numerical integration",
+      "measured": 0.00015476136155202075,
+      "expected": 0.00015476136156945757,
+      "normalized_error": 1.7436816964269686e-14,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 0.02,
+      "fraction": 0.3
+    },
+    {
+      "name": "coupled motion energy and directly accumulated heat",
+      "measured": 0.00035378000011389136,
+      "expected": 0.00035378,
+      "normalized_error": 1.1389137246145542e-13,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 0.02,
+      "fraction": 0.7
+    },
+    {
+      "name": "analytic velocity vs independent numerical integration",
+      "measured": -0.010614915153754456,
+      "expected": -0.010614915153761716,
+      "normalized_error": 7.259817746962938e-15,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 0.02,
+      "fraction": 0.7
+    },
+    {
+      "name": "analytic position vs independent numerical integration",
+      "measured": 0.0001539435768352082,
+      "expected": 0.00015394357684040213,
+      "normalized_error": 5.193924717400433e-15,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 0.02,
+      "fraction": 0.7
+    },
+    {
+      "name": "coupled motion energy and directly accumulated heat",
+      "measured": 0.0003537800000036863,
+      "expected": 0.00035378,
+      "normalized_error": 3.686287386450715e-15,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 0.02,
+      "fraction": 1.0
+    },
+    {
+      "name": "analytic velocity vs independent numerical integration",
+      "measured": -0.026249993940393068,
+      "expected": -0.02624999394038878,
+      "normalized_error": 4.288236432614667e-15,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 0.02,
+      "fraction": 1.0
+    },
+    {
+      "name": "analytic position vs independent numerical integration",
+      "measured": -3.2612801348363973e-16,
+      "expected": -3.2869249043474685e-15,
+      "normalized_error": 2.9607968908638288e-15,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 0.02,
+      "fraction": 1.0
+    },
+    {
+      "name": "upward heat from independent force-ODE integration",
+      "measured": 4.6474248096658605e-06,
+      "expected": 4.64742421229299e-06,
+      "normalized_error": 5.973728701982807e-13,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 0.02
+    },
+    {
+      "name": "dissipation makes apex lower than ballistic height",
+      "eta": 0.02,
+      "passed": true
+    },
+    {
+      "name": "actual numerical ODE velocity at analytically derived apex",
+      "measured": -1.0516327392240399e-13,
+      "expected": 0.0,
+      "normalized_error": 1.0516327392240399e-13,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 0.2
+    },
+    {
+      "name": "actual numerical ODE ascent height",
+      "measured": 0.01645863062490183,
+      "expected": 0.01645863062482819,
+      "normalized_error": 7.363901155521546e-14,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 0.2
+    },
+    {
+      "name": "nonzero return root actually returns to launch height",
+      "measured": -2.0513538784294738e-14,
+      "expected": 0.0,
+      "normalized_error": 2.0513538784294738e-14,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 0.2
+    },
+    {
+      "name": "the nontrivial return root is on descending branch",
+      "eta": 0.2,
+      "return_u": 0.37643799724943605,
+      "return_speed": -0.2346625363417206,
+      "passed": true
+    },
+    {
+      "name": "coupled motion energy and directly accumulated heat",
+      "measured": 0.035377999999999986,
+      "expected": 0.035377999999999986,
+      "normalized_error": 0.0,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 0.2,
+      "fraction": 0.0
+    },
+    {
+      "name": "analytic velocity vs independent numerical integration",
+      "measured": 0.266,
+      "expected": 0.26599999999999996,
+      "normalized_error": 5.551115123125783e-17,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 0.2,
+      "fraction": 0.0
+    },
+    {
+      "name": "analytic position vs independent numerical integration",
+      "measured": 0.0,
+      "expected": 0.0,
+      "normalized_error": 0.0,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 0.2,
+      "fraction": 0.0
+    },
+    {
+      "name": "coupled motion energy and directly accumulated heat",
+      "measured": 0.03537799999974067,
+      "expected": 0.035377999999999986,
+      "normalized_error": 2.5931340408291703e-13,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 0.2,
+      "fraction": 0.1
+    },
+    {
+      "name": "analytic velocity vs independent numerical integration",
+      "measured": 0.2070372492562933,
+      "expected": 0.2070372492562902,
+      "normalized_error": 3.1086244689504383e-15,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 0.2,
+      "fraction": 0.1
+    },
+    {
+      "name": "analytic position vs independent numerical integration",
+      "measured": 0.006227547976672285,
+      "expected": 0.006227547976674384,
+      "normalized_error": 2.0990154059319366e-15,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 0.2,
+      "fraction": 0.1
+    },
+    {
+      "name": "coupled motion energy and directly accumulated heat",
+      "measured": 0.035377999999844985,
+      "expected": 0.035377999999999986,
+      "normalized_error": 1.5500101202547967e-13,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 0.2,
+      "fraction": 0.3
+    },
+    {
+      "name": "analytic velocity vs independent numerical integration",
+      "measured": 0.09556624521158286,
+      "expected": 0.09556624521159221,
+      "normalized_error": 9.353628982466944e-15,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 0.2,
+      "fraction": 0.3
+    },
+    {
+      "name": "analytic position vs independent numerical integration",
+      "measured": 0.01416449572012457,
+      "expected": 0.01416449572011799,
+      "normalized_error": 6.579806144380029e-15,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 0.2,
+      "fraction": 0.3
+    },
+    {
+      "name": "coupled motion energy and directly accumulated heat",
+      "measured": 0.03537799999998663,
+      "expected": 0.035377999999999986,
+      "normalized_error": 1.3357370765021415e-14,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 0.2,
+      "fraction": 0.7
+    },
+    {
+      "name": "analytic velocity vs independent numerical integration",
+      "measured": -0.10370932577104064,
+      "expected": -0.10370932577101384,
+      "normalized_error": 2.6798008256889716e-14,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 0.2,
+      "fraction": 0.7
+    },
+    {
+      "name": "analytic position vs independent numerical integration",
+      "measured": 0.01347188523227108,
+      "expected": 0.01347188523225226,
+      "normalized_error": 1.882001499087238e-14,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 0.2,
+      "fraction": 0.7
+    },
+    {
+      "name": "coupled motion energy and directly accumulated heat",
+      "measured": 0.03537800000003691,
+      "expected": 0.035377999999999986,
+      "normalized_error": 3.692185446269036e-14,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 0.2,
+      "fraction": 1.0
+    },
+    {
+      "name": "analytic velocity vs independent numerical integration",
+      "measured": -0.23466253634175582,
+      "expected": -0.2346625363417206,
+      "normalized_error": 3.522182545623309e-14,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 0.2,
+      "fraction": 1.0
+    },
+    {
+      "name": "analytic position vs independent numerical integration",
+      "measured": 4.107825191113079e-15,
+      "expected": -2.0518309273853674e-14,
+      "normalized_error": 2.4626134464966754e-14,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 0.2,
+      "fraction": 1.0
+    },
+    {
+      "name": "upward heat from independent force-ODE integration",
+      "measured": 0.004106601813341569,
+      "expected": 0.004106601812826426,
+      "normalized_error": 5.151434834260726e-13,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 0.2
+    },
+    {
+      "name": "dissipation makes apex lower than ballistic height",
+      "eta": 0.2,
+      "passed": true
+    },
+    {
+      "name": "actual numerical ODE velocity at analytically derived apex",
+      "measured": -4.215898463666434e-14,
+      "expected": 0.0,
+      "normalized_error": 4.215898463666434e-14,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 1.0
+    },
+    {
+      "name": "actual numerical ODE ascent height",
+      "measured": 0.2856799748987205,
+      "expected": 0.2856799748986909,
+      "normalized_error": 2.958744360626042e-14,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 1.0
+    },
+    {
+      "name": "nonzero return root actually returns to launch height",
+      "measured": -5.165009045460245e-14,
+      "expected": 0.0,
+      "normalized_error": 5.165009045460245e-14,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 1.0
+    },
+    {
+      "name": "the explicitly solved eta=1 positive return time",
+      "measured": 1.59362426004004,
+      "expected": 1.59362426004004,
+      "normalized_error": 0.0,
+      "tolerance": 2e-12,
+      "passed": true
+    },
+    {
+      "name": "the nontrivial return root is on descending branch",
+      "eta": 1.0,
+      "return_u": 1.59362426004004,
+      "return_speed": -0.7895202658531795,
+      "passed": true
+    },
+    {
+      "name": "coupled motion energy and directly accumulated heat",
+      "measured": 0.8844499999999998,
+      "expected": 0.8844499999999998,
+      "normalized_error": 0.0,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 1.0,
+      "fraction": 0.0
+    },
+    {
+      "name": "analytic velocity vs independent numerical integration",
+      "measured": 1.3299999999999998,
+      "expected": 1.3299999999999998,
+      "normalized_error": 0.0,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 1.0,
+      "fraction": 0.0
+    },
+    {
+      "name": "analytic position vs independent numerical integration",
+      "measured": 0.0,
+      "expected": 0.0,
+      "normalized_error": 0.0,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 1.0,
+      "fraction": 0.0
+    },
+    {
+      "name": "coupled motion energy and directly accumulated heat",
+      "measured": 0.8844499999990654,
+      "expected": 0.8844499999999998,
+      "normalized_error": 9.344747198269943e-13,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 1.0,
+      "fraction": 0.1
+    },
+    {
+      "name": "analytic velocity vs independent numerical integration",
+      "measured": 0.9381481300130556,
+      "expected": 0.93814813001304,
+      "normalized_error": 1.5654144647214707e-14,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 1.0,
+      "fraction": 0.1
+    },
+    {
+      "name": "analytic position vs independent numerical integration",
+      "measured": 0.12592989038113322,
+      "expected": 0.12592989038114433,
+      "normalized_error": 1.1102230246251565e-14,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 1.0,
+      "fraction": 0.1
+    },
+    {
+      "name": "coupled motion energy and directly accumulated heat",
+      "measured": 0.8844500000015048,
+      "expected": 0.8844499999999998,
+      "normalized_error": 1.5049073098793997e-12,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 1.0,
+      "fraction": 0.3
+    },
+    {
+      "name": "analytic velocity vs independent numerical integration",
+      "measured": 0.31911510620284544,
+      "expected": 0.3191151062027787,
+      "normalized_error": 6.672440377997191e-14,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 1.0,
+      "fraction": 0.3
+    },
+    {
+      "name": "analytic position vs independent numerical integration",
+      "measured": 0.2625201698288247,
+      "expected": 0.2625201698288716,
+      "normalized_error": 4.6906922790412864e-14,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 1.0,
+      "fraction": 0.3
+    },
+    {
+      "name": "coupled motion energy and directly accumulated heat",
+      "measured": 0.8844500000005581,
+      "expected": 0.8844499999999998,
+      "normalized_error": 5.582201367815287e-13,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 1.0,
+      "fraction": 0.7
+    },
+    {
+      "name": "analytic velocity vs independent numerical integration",
+      "measured": -0.4582136174589695,
+      "expected": -0.458213617458956,
+      "normalized_error": 1.3489209749195652e-14,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 1.0,
+      "fraction": 0.7
+    },
+    {
+      "name": "analytic position vs independent numerical integration",
+      "measured": 0.21318460195318445,
+      "expected": 0.21318460195317507,
+      "normalized_error": 9.381384558082573e-15,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 1.0,
+      "fraction": 0.7
+    },
+    {
+      "name": "coupled motion energy and directly accumulated heat",
+      "measured": 0.8844500000001856,
+      "expected": 0.8844499999999998,
+      "normalized_error": 1.857403120197887e-13,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 1.0,
+      "fraction": 1.0
+    },
+    {
+      "name": "analytic velocity vs independent numerical integration",
+      "measured": -0.7895202658532534,
+      "expected": -0.7895202658531795,
+      "normalized_error": 7.394085344003543e-14,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 1.0,
+      "fraction": 1.0
+    },
+    {
+      "name": "analytic position vs independent numerical integration",
+      "measured": -2.220446049250313e-16,
+      "expected": -5.165833039111334e-14,
+      "normalized_error": 5.143628578618831e-14,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 1.0,
+      "fraction": 1.0
+    },
+    {
+      "name": "upward heat from independent force-ODE integration",
+      "measured": 0.3416580476930901,
+      "expected": 0.3416580476924872,
+      "normalized_error": 6.029066135226913e-13,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 1.0
+    },
+    {
+      "name": "dissipation makes apex lower than ballistic height",
+      "eta": 1.0,
+      "passed": true
+    },
+    {
+      "name": "actual numerical ODE velocity at analytically derived apex",
+      "measured": 1.5765543709932162e-13,
+      "expected": 0.0,
+      "normalized_error": 1.5765543709932162e-13,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 3.0
+    },
+    {
+      "name": "actual numerical ODE ascent height",
+      "measured": 1.502359949797269,
+      "expected": 1.5023599497973814,
+      "normalized_error": 7.478538688895344e-14,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 3.0
+    },
+    {
+      "name": "nonzero return root actually returns to launch height",
+      "measured": -2.5091040356528538e-14,
+      "expected": 0.0,
+      "normalized_error": 2.5091040356528538e-14,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 3.0
+    },
+    {
+      "name": "the nontrivial return root is on descending branch",
+      "eta": 3.0,
+      "return_u": 3.9206903948728837,
+      "return_speed": -1.224518225180903,
+      "passed": true
+    },
+    {
+      "name": "coupled motion energy and directly accumulated heat",
+      "measured": 7.960049999999997,
+      "expected": 7.960049999999997,
+      "normalized_error": 0.0,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 3.0,
+      "fraction": 0.0
+    },
+    {
+      "name": "analytic velocity vs independent numerical integration",
+      "measured": 3.9899999999999993,
+      "expected": 3.9899999999999993,
+      "normalized_error": 0.0,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 3.0,
+      "fraction": 0.0
+    },
+    {
+      "name": "analytic position vs independent numerical integration",
+      "measured": 0.0,
+      "expected": 0.0,
+      "normalized_error": 0.0,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 3.0,
+      "fraction": 0.0
+    },
+    {
+      "name": "coupled motion energy and directly accumulated heat",
+      "measured": 7.960050000004578,
+      "expected": 7.960049999999997,
+      "normalized_error": 5.755270744295887e-13,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 3.0,
+      "fraction": 0.1
+    },
+    {
+      "name": "analytic velocity vs independent numerical integration",
+      "measured": 2.264497715424503,
+      "expected": 2.2644977154242882,
+      "normalized_error": 9.491693283830855e-14,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 3.0,
+      "fraction": 0.1
+    },
+    {
+      "name": "analytic position vs independent numerical integration",
+      "measured": 0.8428353234401822,
+      "expected": 0.8428353234403315,
+      "normalized_error": 1.4932499681208355e-13,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 3.0,
+      "fraction": 0.1
+    },
+    {
+      "name": "coupled motion energy and directly accumulated heat",
+      "measured": 7.960050000001787,
+      "expected": 7.960049999999997,
+      "normalized_error": 2.2483269774633991e-13,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 3.0,
+      "fraction": 0.3
+    },
+    {
+      "name": "analytic velocity vs independent numerical integration",
+      "measured": 0.31093497302653517,
+      "expected": 0.3109349730266059,
+      "normalized_error": 7.072120666862247e-14,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 3.0,
+      "fraction": 0.3
+    },
+    {
+      "name": "analytic position vs independent numerical integration",
+      "measured": 1.4802966915934288,
+      "expected": 1.480296691593377,
+      "normalized_error": 3.4950015926769205e-14,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 3.0,
+      "fraction": 0.3
+    },
+    {
+      "name": "coupled motion energy and directly accumulated heat",
+      "measured": 7.960050000000754,
+      "expected": 7.960049999999997,
+      "normalized_error": 9.506573621830353e-14,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 3.0,
+      "fraction": 0.7
+    },
+    {
+      "name": "analytic velocity vs independent numerical integration",
+      "measured": -0.9880223767170981,
+      "expected": -0.988022376717034,
+      "normalized_error": 6.417089082333405e-14,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 3.0,
+      "fraction": 0.7
+    },
+    {
+      "name": "analytic position vs independent numerical integration",
+      "measured": 0.9295017333633102,
+      "expected": 0.9295017333632638,
+      "normalized_error": 4.6407322429331543e-14,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 3.0,
+      "fraction": 0.7
+    },
+    {
+      "name": "coupled motion energy and directly accumulated heat",
+      "measured": 7.960050000000766,
+      "expected": 7.960049999999997,
+      "normalized_error": 9.662784925475452e-14,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 3.0,
+      "fraction": 1.0
+    },
+    {
+      "name": "analytic velocity vs independent numerical integration",
+      "measured": -1.2245182251809383,
+      "expected": -1.2245182251809033,
+      "normalized_error": 2.8650490337105417e-14,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 3.0,
+      "fraction": 1.0
+    },
+    {
+      "name": "analytic position vs independent numerical integration",
+      "measured": 2.220446049250313e-15,
+      "expected": -2.5087570909576584e-14,
+      "normalized_error": 2.7308016958826897e-14,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 3.0,
+      "fraction": 1.0
+    },
+    {
+      "name": "upward heat from independent force-ODE integration",
+      "measured": 5.105566095385913,
+      "expected": 5.105566095384972,
+      "normalized_error": 1.8422657329079401e-13,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 3.0
+    },
+    {
+      "name": "dissipation makes apex lower than ballistic height",
+      "eta": 3.0,
+      "passed": true
+    },
+    {
+      "name": "actual numerical ODE velocity at analytically derived apex",
+      "measured": 2.2044692460365667e-13,
+      "expected": 0.0,
+      "normalized_error": 2.2044692460365667e-13,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 10.0
+    },
+    {
+      "name": "actual numerical ODE ascent height",
+      "measured": 7.077559501024567,
+      "expected": 7.077559501024716,
+      "normalized_error": 2.1082687399239424e-14,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 10.0
+    },
+    {
+      "name": "nonzero return root actually returns to launch height",
+      "measured": 7.632783294297951e-15,
+      "expected": 0.0,
+      "normalized_error": 7.632783294297951e-15,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 10.0
+    },
+    {
+      "name": "the nontrivial return root is on descending branch",
+      "eta": 10.0,
+      "return_u": 10.99981624752944,
+      "return_speed": -1.3297556092141534,
+      "passed": true
+    },
+    {
+      "name": "coupled motion energy and directly accumulated heat",
+      "measured": 88.44499999999998,
+      "expected": 88.44499999999998,
+      "normalized_error": 0.0,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 10.0,
+      "fraction": 0.0
+    },
+    {
+      "name": "analytic velocity vs independent numerical integration",
+      "measured": 13.299999999999999,
+      "expected": 13.299999999999999,
+      "normalized_error": 0.0,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 10.0,
+      "fraction": 0.0
+    },
+    {
+      "name": "analytic position vs independent numerical integration",
+      "measured": 0.0,
+      "expected": 0.0,
+      "normalized_error": 0.0,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 10.0,
+      "fraction": 0.0
+    },
+    {
+      "name": "coupled motion energy and directly accumulated heat",
+      "measured": 88.44500000000201,
+      "expected": 88.44499999999998,
+      "normalized_error": 2.2976451176142087e-14,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 10.0,
+      "fraction": 0.1
+    },
+    {
+      "name": "analytic velocity vs independent numerical integration",
+      "measured": 3.5399934410133715,
+      "expected": 3.5399934410137988,
+      "normalized_error": 1.2068209362371386e-13,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 10.0,
+      "fraction": 0.1
+    },
+    {
+      "name": "analytic position vs independent numerical integration",
+      "measured": 5.8079216986456474,
+      "expected": 5.807921698645349,
+      "normalized_error": 5.1382915353154293e-14,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 10.0,
+      "fraction": 0.1
+    },
+    {
+      "name": "coupled motion energy and directly accumulated heat",
+      "measured": 88.44500000000579,
+      "expected": 88.44499999999998,
+      "normalized_error": 6.571586385344135e-14,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 10.0,
+      "fraction": 0.3
+    },
+    {
+      "name": "analytic velocity vs independent numerical integration",
+      "measured": -0.7903695142092846,
+      "expected": -0.7903695142091344,
+      "normalized_error": 1.5021317523178368e-13,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 10.0,
+      "fraction": 0.3
+    },
+    {
+      "name": "analytic position vs independent numerical integration",
+      "measured": 6.791009982011525,
+      "expected": 6.791009982011427,
+      "normalized_error": 1.4517399451313015e-14,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 10.0,
+      "fraction": 0.3
+    },
+    {
+      "name": "coupled motion energy and directly accumulated heat",
+      "measured": 88.44500000000563,
+      "expected": 88.44499999999998,
+      "normalized_error": 6.394844453219966e-14,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 10.0,
+      "fraction": 0.7
+    },
+    {
+      "name": "analytic velocity vs independent numerical integration",
+      "measured": -1.3233742861252686,
+      "expected": -1.3233742861252638,
+      "normalized_error": 3.691307409828501e-15,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 10.0,
+      "fraction": 0.7
+    },
+    {
+      "name": "analytic position vs independent numerical integration",
+      "measured": 3.0677817517727526,
+      "expected": 3.0677817517727566,
+      "normalized_error": 1.3028315610590487e-15,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 10.0,
+      "fraction": 0.7
+    },
+    {
+      "name": "coupled motion energy and directly accumulated heat",
+      "measured": 88.44500000000559,
+      "expected": 88.44499999999998,
+      "normalized_error": 6.346642108095192e-14,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 10.0,
+      "fraction": 1.0
+    },
+    {
+      "name": "analytic velocity vs independent numerical integration",
+      "measured": -1.3297556092141536,
+      "expected": -1.3297556092141534,
+      "normalized_error": 1.669815140364425e-16,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 10.0,
+      "fraction": 1.0
+    },
+    {
+      "name": "analytic position vs independent numerical integration",
+      "measured": 0.0,
+      "expected": 7.624109676918067e-15,
+      "normalized_error": 7.624109676918067e-15,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 10.0,
+      "fraction": 1.0
+    },
+    {
+      "name": "upward heat from independent force-ODE integration",
+      "measured": 74.99763694805887,
+      "expected": 74.99763694805301,
+      "normalized_error": 7.80674216004778e-14,
+      "tolerance": 2e-09,
+      "passed": true,
+      "eta": 10.0
+    },
+    {
+      "name": "dissipation makes apex lower than ballistic height",
+      "eta": 10.0,
+      "passed": true
+    },
+    {
+      "name": "actual steady RL circuit mean force over one complete period",
+      "measured": 0.11519999999923786,
+      "expected": 0.11520000000000002,
+      "normalized_error": 7.6216810640517e-13,
+      "tolerance": 8e-09,
+      "passed": true,
+      "resistance": 2.0,
+      "inductance": 0.5,
+      "omega": 3.0
+    },
+    {
+      "name": "actual steady RL circuit Joule heating",
+      "measured": 0.9215999999996313,
+      "expected": 0.9216000000000002,
+      "normalized_error": 3.689271110829395e-13,
+      "tolerance": 8e-09,
+      "passed": true,
+      "resistance": 2.0,
+      "inductance": 0.5,
+      "omega": 3.0
+    },
+    {
+      "name": "actual steady RL circuit mean force over one complete period",
+      "measured": 0.551724137925188,
+      "expected": 0.5517241379310347,
+      "normalized_error": 5.846656492280999e-12,
+      "tolerance": 8e-09,
+      "passed": true,
+      "resistance": 0.7,
+      "inductance": 0.04,
+      "omega": 7.0
+    },
+    {
+      "name": "actual steady RL circuit Joule heating",
+      "measured": 19.31034482741061,
+      "expected": 19.31034482758621,
+      "normalized_error": 9.093570341178746e-12,
+      "tolerance": 8e-09,
+      "passed": true,
+      "resistance": 0.7,
+      "inductance": 0.04,
+      "omega": 7.0
+    },
+    {
+      "name": "actual steady RL circuit mean force over one complete period",
+      "measured": 0.0008533196802181506,
+      "expected": 0.00085331968021845,
+      "normalized_error": 2.9934821982324777e-16,
+      "tolerance": 8e-09,
+      "passed": true,
+      "resistance": 3.0,
+      "inductance": 0.003,
+      "omega": 4.0
+    },
+    {
+      "name": "actual steady RL circuit Joule heating",
+      "measured": 1.7066393604367847,
+      "expected": 1.7066393604369,
+      "normalized_error": 6.752519168817805e-14,
+      "tolerance": 8e-09,
+      "passed": true,
+      "resistance": 3.0,
+      "inductance": 0.003,
+      "omega": 4.0
+    },
+    {
+      "name": "actual steady RL circuit mean force over one complete period",
+      "measured": 0.07998200404574059,
+      "expected": 0.07998200404908898,
+      "normalized_error": 3.3483910089060487e-12,
+      "tolerance": 8e-09,
+      "passed": true,
+      "resistance": 0.3,
+      "inductance": 2.0,
+      "omega": 10.0
+    },
+    {
+      "name": "actual steady RL circuit Joule heating",
+      "measured": 0.023994601213034917,
+      "expected": 0.023994601214726692,
+      "normalized_error": 1.6917751921585733e-12,
+      "tolerance": 8e-09,
+      "passed": true,
+      "resistance": 0.3,
+      "inductance": 2.0,
+      "omega": 10.0
+    },
+    {
+      "name": "finite-L actual force/circuit ODE vs independently diagonalized velocity",
+      "measured": 0.0,
+      "expected": 0.0,
+      "normalized_error": 0.0,
+      "tolerance": 3e-08,
+      "passed": true,
+      "fraction": 0.0,
+      "discriminant": 3.2
+    },
+    {
+      "name": "finite-L actual force/circuit ODE vs integrated eigenmode position",
+      "measured": 0.0,
+      "expected": 0.0,
+      "normalized_error": 0.0,
+      "tolerance": 3e-08,
+      "passed": true,
+      "fraction": 0.0,
+      "discriminant": 3.2
+    },
+    {
+      "name": "finite-L current field energy, mechanical energy and directly integrated heat",
+      "measured": 0.625,
+      "expected": 0.625,
+      "normalized_error": 0.0,
+      "tolerance": 3e-08,
+      "passed": true,
+      "fraction": 0.0,
+      "discriminant": 3.2
+    },
+    {
+      "name": "finite-L actual force/circuit ODE vs independently diagonalized velocity",
+      "measured": 0.07359803033018567,
+      "expected": 0.07359803032987666,
+      "normalized_error": 3.090028233287967e-13,
+      "tolerance": 3e-08,
+      "passed": true,
+      "fraction": 0.03,
+      "discriminant": 3.2
+    },
+    {
+      "name": "finite-L actual force/circuit ODE vs integrated eigenmode position",
+      "measured": 0.0016916763230544968,
+      "expected": 0.0016916763230871087,
+      "normalized_error": 3.2611933986625985e-14,
+      "tolerance": 3e-08,
+      "passed": true,
+      "fraction": 0.03,
+      "discriminant": 3.2
+    },
+    {
+      "name": "finite-L current field energy, mechanical energy and directly integrated heat",
+      "measured": 0.6249999999915622,
+      "expected": 0.625,
+      "normalized_error": 8.437806009453652e-12,
+      "tolerance": 3e-08,
+      "passed": true,
+      "fraction": 0.03,
+      "discriminant": 3.2
+    },
+    {
+      "name": "finite-L actual force/circuit ODE vs independently diagonalized velocity",
+      "measured": 0.1442683155752607,
+      "expected": 0.1442683155753397,
+      "normalized_error": 7.899236820207989e-14,
+      "tolerance": 3e-08,
+      "passed": true,
+      "fraction": 0.1,
+      "discriminant": 3.2
+    },
+    {
+      "name": "finite-L actual force/circuit ODE vs integrated eigenmode position",
+      "measured": 0.013330155042505036,
+      "expected": 0.013330155042496683,
+      "normalized_error": 8.352693536828326e-15,
+      "tolerance": 3e-08,
+      "passed": true,
+      "fraction": 0.1,
+      "discriminant": 3.2
+    },
+    {
+      "name": "finite-L current field energy, mechanical energy and directly integrated heat",
+      "measured": 0.6250000000032138,
+      "expected": 0.625,
+      "normalized_error": 3.2137625893824406e-12,
+      "tolerance": 3e-08,
+      "passed": true,
+      "fraction": 0.1,
+      "discriminant": 3.2
+    },
+    {
+      "name": "finite-L actual force/circuit ODE vs independently diagonalized velocity",
+      "measured": 0.05252469201948532,
+      "expected": 0.052524692019769836,
+      "normalized_error": 2.845154667419081e-13,
+      "tolerance": 3e-08,
+      "passed": true,
+      "fraction": 0.4,
+      "discriminant": 3.2
+    },
+    {
+      "name": "finite-L actual force/circuit ODE vs integrated eigenmode position",
+      "measured": 0.06205375697534314,
+      "expected": 0.06205375697531307,
+      "normalized_error": 3.007316617953393e-14,
+      "tolerance": 3e-08,
+      "passed": true,
+      "fraction": 0.4,
+      "discriminant": 3.2
+    },
+    {
+      "name": "finite-L current field energy, mechanical energy and directly integrated heat",
+      "measured": 0.625000000000586,
+      "expected": 0.625,
+      "normalized_error": 5.859757123971576e-13,
+      "tolerance": 3e-08,
+      "passed": true,
+      "fraction": 0.4,
+      "discriminant": 3.2
+    },
+    {
+      "name": "finite-L actual force/circuit ODE vs independently diagonalized velocity",
+      "measured": -0.18221655636364537,
+      "expected": -0.1822165563636451,
+      "normalized_error": 2.7755575615628914e-16,
+      "tolerance": 3e-08,
+      "passed": true,
+      "fraction": 1.0,
+      "discriminant": 3.2
+    },
+    {
+      "name": "finite-L actual force/circuit ODE vs integrated eigenmode position",
+      "measured": -6.938893903907228e-18,
+      "expected": -2.220446049250313e-16,
+      "normalized_error": 2.1510571102112408e-16,
+      "tolerance": 3e-08,
+      "passed": true,
+      "fraction": 1.0,
+      "discriminant": 3.2
+    },
+    {
+      "name": "finite-L current field energy, mechanical energy and directly integrated heat",
+      "measured": 0.6250000000005864,
+      "expected": 0.625,
+      "normalized_error": 5.864198016070077e-13,
+      "tolerance": 3e-08,
+      "passed": true,
+      "fraction": 1.0,
+      "discriminant": 3.2
+    },
+    {
+      "name": "finite-L actual force/circuit ODE vs independently diagonalized velocity",
+      "measured": 0.0,
+      "expected": 0.0,
+      "normalized_error": 0.0,
+      "tolerance": 3e-08,
+      "passed": true,
+      "fraction": 0.0,
+      "discriminant": -7.96
+    },
+    {
+      "name": "finite-L actual force/circuit ODE vs integrated eigenmode position",
+      "measured": 0.0,
+      "expected": 0.0,
+      "normalized_error": 0.0,
+      "tolerance": 3e-08,
+      "passed": true,
+      "fraction": 0.0,
+      "discriminant": -7.96
+    },
+    {
+      "name": "finite-L current field energy, mechanical energy and directly integrated heat",
+      "measured": 16.0,
+      "expected": 16.0,
+      "normalized_error": 0.0,
+      "tolerance": 3e-08,
+      "passed": true,
+      "fraction": 0.0,
+      "discriminant": -7.96
+    },
+    {
+      "name": "finite-L actual force/circuit ODE vs independently diagonalized velocity",
+      "measured": 2.1048953329301288,
+      "expected": 2.104895332935186,
+      "normalized_error": 2.402631543070763e-12,
+      "tolerance": 3e-08,
+      "passed": true,
+      "fraction": 0.03,
+      "discriminant": -7.96
+    },
+    {
+      "name": "finite-L actual force/circuit ODE vs integrated eigenmode position",
+      "measured": 12.317339405512344,
+      "expected": 12.317339405529129,
+      "normalized_error": 1.3626965388287054e-12,
+      "tolerance": 3e-08,
+      "passed": true,
+      "fraction": 0.03,
+      "discriminant": -7.96
+    },
+    {
+      "name": "finite-L current field energy, mechanical energy and directly integrated heat",
+      "measured": 15.999999999924226,
+      "expected": 16.0,
+      "normalized_error": 4.73587835614353e-12,
+      "tolerance": 3e-08,
+      "passed": true,
+      "fraction": 0.03,
+      "discriminant": -7.96
+    },
+    {
+      "name": "finite-L actual force/circuit ODE vs independently diagonalized velocity",
+      "measured": 1.786825542654539,
+      "expected": 1.7868255426664703,
+      "normalized_error": 6.67739771798681e-12,
+      "tolerance": 3e-08,
+      "passed": true,
+      "fraction": 0.1,
+      "discriminant": -7.96
+    },
+    {
+      "name": "finite-L actual force/circuit ODE vs integrated eigenmode position",
+      "measured": 9.517466306070865,
+      "expected": 9.517466306107146,
+      "normalized_error": 3.811971686690443e-12,
+      "tolerance": 3e-08,
+      "passed": true,
+      "fraction": 0.1,
+      "discriminant": -7.96
+    },
+    {
+      "name": "finite-L current field energy, mechanical energy and directly integrated heat",
+      "measured": 15.999999999831203,
+      "expected": 16.0,
+      "normalized_error": 1.0549783269198088e-11,
+      "tolerance": 3e-08,
+      "passed": true,
+      "fraction": 0.1,
+      "discriminant": -7.96
+    },
+    {
+      "name": "finite-L actual force/circuit ODE vs independently diagonalized velocity",
+      "measured": -0.1774044104315712,
+      "expected": -0.17740441044239863,
+      "normalized_error": 1.0827422292081224e-11,
+      "tolerance": 3e-08,
+      "passed": true,
+      "fraction": 0.4,
+      "discriminant": -7.96
+    },
+    {
+      "name": "finite-L actual force/circuit ODE vs integrated eigenmode position",
+      "measured": 5.067940910700471,
+      "expected": 5.067940910722702,
+      "normalized_error": 4.3866150447922095e-12,
+      "tolerance": 3e-08,
+      "passed": true,
+      "fraction": 0.4,
+      "discriminant": -7.96
+    },
+    {
+      "name": "finite-L current field energy, mechanical energy and directly integrated heat",
+      "measured": 15.999999999764697,
+      "expected": 16.0,
+      "normalized_error": 1.4706458273394674e-11,
+      "tolerance": 3e-08,
+      "passed": true,
+      "fraction": 0.4,
+      "discriminant": -7.96
+    },
+    {
+      "name": "finite-L actual force/circuit ODE vs independently diagonalized velocity",
+      "measured": -0.06874281179820653,
+      "expected": -0.06874281179879907,
+      "normalized_error": 5.925399060302539e-13,
+      "tolerance": 3e-08,
+      "passed": true,
+      "fraction": 1.0,
+      "discriminant": -7.96
+    },
+    {
+      "name": "finite-L actual force/circuit ODE vs integrated eigenmode position",
+      "measured": -3.183217578417441e-16,
+      "expected": -1.3349321648092882e-12,
+      "normalized_error": 1.3346138430514465e-12,
+      "tolerance": 3e-08,
+      "passed": true,
+      "fraction": 1.0,
+      "discriminant": -7.96
+    },
+    {
+      "name": "finite-L current field energy, mechanical energy and directly integrated heat",
+      "measured": 15.99999999976298,
+      "expected": 16.0,
+      "normalized_error": 1.4813705817573464e-11,
+      "tolerance": 3e-08,
+      "passed": true,
+      "fraction": 1.0,
+      "discriminant": -7.96
+    },
+    {
+      "name": "finite-L actual force/circuit ODE vs independently diagonalized velocity",
+      "measured": 0.0,
+      "expected": 0.0,
+      "normalized_error": 0.0,
+      "tolerance": 3e-08,
+      "passed": true,
+      "fraction": 0.0,
+      "discriminant": -2.816
+    },
+    {
+      "name": "finite-L actual force/circuit ODE vs integrated eigenmode position",
+      "measured": 0.0,
+      "expected": 0.0,
+      "normalized_error": 0.0,
+      "tolerance": 3e-08,
+      "passed": true,
+      "fraction": 0.0,
+      "discriminant": -2.816
+    },
+    {
+      "name": "finite-L current field energy, mechanical energy and directly integrated heat",
+      "measured": 6.666666666666667,
+      "expected": 6.666666666666667,
+      "normalized_error": 0.0,
+      "tolerance": 3e-08,
+      "passed": true,
+      "fraction": 0.0,
+      "discriminant": -2.816
+    },
+    {
+      "name": "finite-L actual force/circuit ODE vs independently diagonalized velocity",
+      "measured": 2.119455670728835,
+      "expected": 2.1194556707299803,
+      "normalized_error": 5.40377460128169e-13,
+      "tolerance": 3e-08,
+      "passed": true,
+      "fraction": 0.03,
+      "discriminant": -2.816
+    },
+    {
+      "name": "finite-L actual force/circuit ODE vs integrated eigenmode position",
+      "measured": 0.21200271395745182,
+      "expected": 0.21200271395860132,
+      "normalized_error": 1.1494971641212715e-12,
+      "tolerance": 3e-08,
+      "passed": true,
+      "fraction": 0.03,
+      "discriminant": -2.816
+    },
+    {
+      "name": "finite-L current field energy, mechanical energy and directly integrated heat",
+      "measured": 6.666666666661991,
+      "expected": 6.666666666666667,
+      "normalized_error": 7.014389069581739e-13,
+      "tolerance": 3e-08,
+      "passed": true,
+      "fraction": 0.03,
+      "discriminant": -2.816
+    },
+    {
+      "name": "finite-L actual force/circuit ODE vs independently diagonalized velocity",
+      "measured": 2.4382123408508947,
+      "expected": 2.4382123408365777,
+      "normalized_error": 5.871921734037262e-12,
+      "tolerance": 3e-08,
+      "passed": true,
+      "fraction": 0.1,
+      "discriminant": -2.816
+    },
+    {
+      "name": "finite-L actual force/circuit ODE vs integrated eigenmode position",
+      "measured": 1.3484486841568675,
+      "expected": 1.348448684160679,
+      "normalized_error": 2.826668699310252e-12,
+      "tolerance": 3e-08,
+      "passed": true,
+      "fraction": 0.1,
+      "discriminant": -2.816
+    },
+    {
+      "name": "finite-L current field energy, mechanical energy and directly integrated heat",
+      "measured": 6.666666666606683,
+      "expected": 6.666666666666667,
+      "normalized_error": 8.997602662930148e-12,
+      "tolerance": 3e-08,
+      "passed": true,
+      "fraction": 0.1,
+      "discriminant": -2.816
+    },
+    {
+      "name": "finite-L actual force/circuit ODE vs independently diagonalized velocity",
+      "measured": 0.015649081401551156,
+      "expected": 0.01564908140677944,
+      "normalized_error": 5.228283084246499e-12,
+      "tolerance": 3e-08,
+      "passed": true,
+      "fraction": 0.4,
+      "discriminant": -2.816
+    },
+    {
+      "name": "finite-L actual force/circuit ODE vs integrated eigenmode position",
+      "measured": 1.384183072167978,
+      "expected": 1.3841830721716946,
+      "normalized_error": 2.685036879842848e-12,
+      "tolerance": 3e-08,
+      "passed": true,
+      "fraction": 0.4,
+      "discriminant": -2.816
+    },
+    {
+      "name": "finite-L current field energy, mechanical energy and directly integrated heat",
+      "measured": 6.666666666585153,
+      "expected": 6.666666666666667,
+      "normalized_error": 1.2227152623722758e-11,
+      "tolerance": 3e-08,
+      "passed": true,
+      "fraction": 0.4,
+      "discriminant": -2.816
+    },
+    {
+      "name": "finite-L actual force/circuit ODE vs independently diagonalized velocity",
+      "measured": -0.08501295381469548,
+      "expected": -0.0850129538138061,
+      "normalized_error": 8.893857872394051e-13,
+      "tolerance": 3e-08,
+      "passed": true,
+      "fraction": 1.0,
+      "discriminant": -2.816
+    },
+    {
+      "name": "finite-L actual force/circuit ODE vs integrated eigenmode position",
+      "measured": 1.1590547654428118,
+      "expected": 1.1590547654422552,
+      "normalized_error": 4.802756876933672e-13,
+      "tolerance": 3e-08,
+      "passed": true,
+      "fraction": 1.0,
+      "discriminant": -2.816
+    },
+    {
+      "name": "finite-L current field energy, mechanical energy and directly integrated heat",
+      "measured": 6.666666666585746,
+      "expected": 6.666666666666667,
+      "normalized_error": 1.2138157146068805e-11,
+      "tolerance": 3e-08,
+      "passed": true,
+      "fraction": 1.0,
+      "discriminant": -2.816
+    },
+    {
+      "name": "critical repeated-root velocity vs actual two-variable ODE",
+      "measured": 0.0,
+      "expected": 0.0,
+      "normalized_error": 0.0,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "critical repeated-root height vs actual two-variable ODE",
+      "measured": 0.0,
+      "expected": 0.0,
+      "normalized_error": 0.0,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "critical repeated-root velocity vs actual two-variable ODE",
+      "measured": 0.06053131516624792,
+      "expected": 0.06053131516625043,
+      "normalized_error": 2.5118795932144167e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "critical repeated-root height vs actual two-variable ODE",
+      "measured": 0.0031800413870047687,
+      "expected": 0.003180041387002005,
+      "normalized_error": 2.763848178100048e-15,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "critical repeated-root velocity vs actual two-variable ODE",
+      "measured": 0.13341003847486999,
+      "expected": 0.13341003847490074,
+      "normalized_error": 3.0753177782116836e-14,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "critical repeated-root height vs actual two-variable ODE",
+      "measured": 0.02352627463889148,
+      "expected": 0.023526274638866078,
+      "normalized_error": 2.5403290582204363e-14,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "critical repeated-root velocity vs actual two-variable ODE",
+      "measured": 0.14984380872497371,
+      "expected": 0.14984380872502834,
+      "normalized_error": 5.46229728115577e-14,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "critical repeated-root height vs actual two-variable ODE",
+      "measured": 0.08459529634618297,
+      "expected": 0.08459529634613924,
+      "normalized_error": 4.3728909382423353e-14,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "critical repeated-root velocity vs actual two-variable ODE",
+      "measured": 0.0989709382256839,
+      "expected": 0.09897093822574043,
+      "normalized_error": 5.6538107529036097e-14,
+      "tolerance": 2e-09,
+      "passed": true
+    },
+    {
+      "name": "critical repeated-root height vs actual two-variable ODE",
+      "measured": 0.12278578825142893,
+      "expected": 0.12278578825138453,
+      "normalized_error": 4.439504319719845e-14,
+      "tolerance": 2e-09,
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "document_complete": false,
+  "tikz_complete": false,
+  "pdf_accepted": false,
+  "question_accepted": false,
+  "set_accepted": false,
+  "draft_sha256": "9ce3e2ef751d06a39da0861bda87cead020c340122de5b93adbdc18b7effff20",
+  "draft_text_exists": true,
+  "remaining": [
+    "draw and verify necessary TikZ",
+    "compile work PDFs",
+    "actual visual review and question acceptance"
+  ]
+}

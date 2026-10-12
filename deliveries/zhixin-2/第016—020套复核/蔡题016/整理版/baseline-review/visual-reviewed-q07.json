@@ -1,0 +1,159 @@
+{
+  "question": 7,
+  "actual_visual_reviewed": true,
+  "model_condition_resolved": true,
+  "question_accepted": true,
+  "set_accepted": false,
+  "remaining_visual_issues": [],
+  "remaining_model_issues": [],
+  "source_sha256": "69bf73b731abd082d122237d921768c7b08746fea367c0728972099788aa02ad",
+  "source_quality_sha256": "85158c27d701f3533fd9b4ee2c2c35aafca5675d7e37d87025982f05e4ac1923",
+  "verification_sha256": "70becad9491bb5b9ca7a3e9977c4867330c2278a542ce8f1591100104a61bcac",
+  "geometry_sha256": "5c7b577ba67af65f75013dba32c88a098171edfc8fdb07b31f735f176d72693f",
+  "template_sha256": "434e4734708ef9c12c4be4629709e370fa5fe9a67a4cc88709ee13ffa571673b",
+  "pdfs": {
+    "student": {
+      "pdf_sha256": "27253f01da4d4fec3bef1461bd9de74dc181b8547437c94e1ad567786d24a538",
+      "total_pages": 10,
+      "body_pages": 9,
+      "overview_pages_reviewed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "page_png_sha256": {
+        "page-001.png": "b4bc153ec0311433a99a9fd0c0985ea5e38b80fe7a694dcb1589ee6f1c383403",
+        "page-002.png": "de43806c350dc38e2e65791fadf78593179e38a734f15b33fca33b4720752ed4",
+        "page-003.png": "370f0b1db66e13df671b68e430c632e07964d2ef2163e6dc25491a3e71d47952",
+        "page-004.png": "b090b9dd582d168ffa0a7ac682655f9635f9f2f06c311373269db2e7aaec277a",
+        "page-005.png": "f06cb8b5754ac177296c20d4c8db869bb1b9ae3ab195a7b808ed24d77df3939a",
+        "page-006.png": "7991d39753d021c7272fc80b9bbe04193771f8e78ac8d510b1ae8e3caadccd47",
+        "page-007.png": "06cca72319e3749dfed4a6bf86ef810349c6f0a6f6fda624811f8eb412b7ad80",
+        "page-008.png": "1cc84f6158be2ee5b33b8cf6ce567cd6af8f23c8056fa9e3003a60b8c47841ad",
+        "page-009.png": "7a59dcecf7141f0a04bac4a9b4be69733d8abd0366d582722610492fa9f18485",
+        "page-010.png": "b4efff0076815408d1e6f43efad48f6c2336431e57bcd12eed82e8de29fa6a5e"
+      },
+      "overview_sha256": {
+        "overview-01.jpg": "eaca887d43ba0bf3694b88d127d57d6195dc985773159b8e094dac295d23311f"
+      },
+      "high_resolution_pages_reviewed": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    "teacher": {
+      "pdf_sha256": "9b43ac05dc51f8b71554f95d0e32187821fccb5e6f1ac2592fac9865e0538ca3",
+      "total_pages": 18,
+      "body_pages": 17,
+      "overview_pages_reviewed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "page_png_sha256": {
+        "page-001.png": "b4bc153ec0311433a99a9fd0c0985ea5e38b80fe7a694dcb1589ee6f1c383403",
+        "page-002.png": "de43806c350dc38e2e65791fadf78593179e38a734f15b33fca33b4720752ed4",
+        "page-003.png": "370f0b1db66e13df671b68e430c632e07964d2ef2163e6dc25491a3e71d47952",
+        "page-004.png": "b090b9dd582d168ffa0a7ac682655f9635f9f2f06c311373269db2e7aaec277a",
+        "page-005.png": "f06cb8b5754ac177296c20d4c8db869bb1b9ae3ab195a7b808ed24d77df3939a",
+        "page-006.png": "7991d39753d021c7272fc80b9bbe04193771f8e78ac8d510b1ae8e3caadccd47",
+        "page-007.png": "06cca72319e3749dfed4a6bf86ef810349c6f0a6f6fda624811f8eb412b7ad80",
+        "page-008.png": "1cc84f6158be2ee5b33b8cf6ce567cd6af8f23c8056fa9e3003a60b8c47841ad",
+        "page-009.png": "7a59dcecf7141f0a04bac4a9b4be69733d8abd0366d582722610492fa9f18485",
+        "page-010.png": "2095b40e483016a931a81e00f55ee67e1d1b1700c30aedafcd46db10760d1ea8",
+        "page-011.png": "ab33e66e775796c2475eb71d0ad9a98d6647006420d6251c9c371c1ae5982984",
+        "page-012.png": "bb91c3c819a9e66e906698361b13f4fba8ad02e885db882d57b47f79083c9e6e",
+        "page-013.png": "10b5a7f0727462adb4f7d981856c9419393895d926706c82ecee1cd89bce16d9",
+        "page-014.png": "07aeea7bd68697238e77094e24328a1a06c3d1a62988b44d69e555a9633f5c58",
+        "page-015.png": "59aed998f47a40757157c6833862f2712f745362a8811740f83bbce14a9e17a6",
+        "page-016.png": "848ccb268a1674555153676e8fbafebc76076c14ac096c0e4e48e1a22923d4b5",
+        "page-017.png": "4f45a271857c01dda97403520702e65b3b87b1e96175abbf9beb08ebc1c4e9fc",
+        "page-018.png": "0c8e4652bdab9b976132d1009389f56389ea1eca0fd1c6db4371a45d57813042"
+      },
+      "overview_sha256": {
+        "overview-01.jpg": "2b6fc808483c7799bd75fd778af283b90f54989e7c6dcba4a7adff3fce023122",
+        "overview-02.jpg": "6a9eb0acc709b2bb637814898166559370bf4acffdf78d843fd2e99538bcbc23"
+      },
+      "high_resolution_pages_reviewed": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ]
+    }
+  },
+  "figures_reviewed": {
+    "question-07": "019e4c94e414bd02301f482f954c66b3899d826d976a5509c7e6b625316a5f57",
+    "geometry-07": "2cdd8380bf9e85e50ee4d38db0e6c2d5d92e6b59c760f28c914ecd6e332bff1b",
+    "angles-07": "f1366af1b0a7348c83e34fc3847f4e7e21a3128d209350635f716e14d74991bb",
+    "path-07": "cf63d885718ee694003665d3711bf6f55278d45b6eee48403428314964050a58",
+    "phasors-07": "e2ff179d189dc6af615d4d3221e955358e887642c7d748b241a0eee4994242c5",
+    "peak-07": "094baba5ff51453bd37c6c9fec5b3fcdd5ba6247c89e90e097ac8db3a16f6f78"
+  },
+  "raw_metrics": {
+    "question": 7,
+    "issues": [],
+    "student": {
+      "raw_with_whitespace": 8213,
+      "raw_nonspace": 7603,
+      "body_net_characters": 4485
+    },
+    "teacher": {
+      "raw_with_whitespace": 17990,
+      "raw_nonspace": 16685,
+      "body_net_characters": 9459
+    },
+    "figures": 6,
+    "sha256": "69bf73b731abd082d122237d921768c7b08746fea367c0728972099788aa02ad"
+  },
+  "actual_read_notes": {
+    "source": "Actual paper page 3, hand page 9 left upper; two five-times crops inspected in this heartbeat.",
+    "figures": "All six current figure PNGs directly inspected; top cut label moved away from ray, layer label away from block outline, common-wavefront label away from dashed line.",
+    "overview": "All 28 current working PDF pages inspected in three overviews after final build.",
+    "high_resolution": "Student pages 2–10 and teacher pages 10–18 directly inspected. Teacher pages 2–9 reuse only byte-identical student PNGs; current first nine pages including cover byte-identical.",
+    "layout": "Step3 with figure, Step10 with angle formula, insight4/6 headings with first equations and finite-width conclusion kept in finite coherent blocks. No font/spacing change, padding or forced page breaks.",
+    "geometry": "Actual vector orthogonal foot, reflected direction and wavefront projection checked; finite curve 201 current vertices maximum error 1.469e-6. Rescaled physical curve coordinates to avoid PGF coordinate-rounding error."
+  }
+}

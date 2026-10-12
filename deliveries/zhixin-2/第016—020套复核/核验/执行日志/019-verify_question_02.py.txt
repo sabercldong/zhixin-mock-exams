@@ -1,0 +1,214 @@
+{
+  "question": 2,
+  "verified_math": true,
+  "document_complete": true,
+  "S3": 1.051799790264645,
+  "S5": 1.0045237627951396,
+  "boundary_potential": [
+    {
+      "charge_x": -0.4,
+      "plate_x": -1,
+      "transverse": 0,
+      "residual": 4.372813466879677e-08
+    },
+    {
+      "charge_x": -0.4,
+      "plate_x": -1,
+      "transverse": 0.7,
+      "residual": 4.372813422470756e-08
+    },
+    {
+      "charge_x": -0.4,
+      "plate_x": -1,
+      "transverse": 2.0,
+      "residual": 4.372813050546043e-08
+    },
+    {
+      "charge_x": -0.4,
+      "plate_x": 1,
+      "transverse": 0,
+      "residual": -1.6653345369377348e-16
+    },
+    {
+      "charge_x": -0.4,
+      "plate_x": 1,
+      "transverse": 0.7,
+      "residual": 0.0
+    },
+    {
+      "charge_x": -0.4,
+      "plate_x": 1,
+      "transverse": 2.0,
+      "residual": -2.7755575615628914e-17
+    },
+    {
+      "charge_x": 0,
+      "plate_x": -1,
+      "transverse": 0,
+      "residual": 3.123438152563551e-08
+    },
+    {
+      "charge_x": 0,
+      "plate_x": -1,
+      "transverse": 0.7,
+      "residual": 3.12343810815463e-08
+    },
+    {
+      "charge_x": 0,
+      "plate_x": -1,
+      "transverse": 2.0,
+      "residual": 3.1234378472522195e-08
+    },
+    {
+      "charge_x": 0,
+      "plate_x": 1,
+      "transverse": 0,
+      "residual": 2.7755575615628914e-17
+    },
+    {
+      "charge_x": 0,
+      "plate_x": 1,
+      "transverse": 0.7,
+      "residual": 0.0
+    },
+    {
+      "charge_x": 0,
+      "plate_x": 1,
+      "transverse": 2.0,
+      "residual": 0.0
+    },
+    {
+      "charge_x": 0.35,
+      "plate_x": -1,
+      "transverse": 0,
+      "residual": 2.0302347691902867e-08
+    },
+    {
+      "charge_x": 0.35,
+      "plate_x": -1,
+      "transverse": 0.7,
+      "residual": 2.030234741434711e-08
+    },
+    {
+      "charge_x": 0.35,
+      "plate_x": -1,
+      "transverse": 2.0,
+      "residual": 2.0302345804523725e-08
+    },
+    {
+      "charge_x": 0.35,
+      "plate_x": 1,
+      "transverse": 0,
+      "residual": -5.273559366969494e-16
+    },
+    {
+      "charge_x": 0.35,
+      "plate_x": 1,
+      "transverse": 0.7,
+      "residual": -2.7755575615628914e-16
+    },
+    {
+      "charge_x": 0.35,
+      "plate_x": 1,
+      "transverse": 2.0,
+      "residual": -1.1102230246251565e-16
+    }
+  ],
+  "image_forces": [
+    {
+      "x": 0.02,
+      "direct_coulomb": 0.02105209309999373,
+      "pair_sum": 0.02105207778264731,
+      "negative_energy_gradient": 0.021052077782792496
+    },
+    {
+      "x": 0.15,
+      "direct_coulomb": 0.1647854694113357,
+      "pair_sum": 0.16478545604297407,
+      "negative_energy_gradient": 0.16478545604393588
+    },
+    {
+      "x": 0.5,
+      "direct_coulomb": 0.9159656019858142,
+      "pair_sum": 0.9159655938647191,
+      "negative_energy_gradient": 0.9159655938797973
+    },
+    {
+      "x": 0.9,
+      "direct_coulomb": 24.98490924517038,
+      "pair_sum": 24.98490924304619,
+      "negative_energy_gradient": 24.98490925262331
+    }
+  ],
+  "small_displacement_stiffness": 1.0517997898405496,
+  "nonlinear_periods": [
+    {
+      "angle_amplitude": 0.04,
+      "nonlinear_T": 4.442744079290226,
+      "linear_T": 4.442882938158366,
+      "relative_error": -3.1254226157351184e-05
+    },
+    {
+      "angle_amplitude": 0.02,
+      "nonlinear_T": 4.442848237586253,
+      "linear_T": 4.442882938158366,
+      "relative_error": -7.810372813499278e-06
+    },
+    {
+      "angle_amplitude": 0.01,
+      "nonlinear_T": 4.44287426326423,
+      "linear_T": 4.442882938158366,
+      "relative_error": -1.9525371829365312e-06
+    }
+  ],
+  "error_ratios": [
+    4.001630511584807,
+    4.000114764397376
+  ],
+  "critical_quartic": [
+    {
+      "h_over_l": 0.2,
+      "quartic_coefficient": 13.237369359423452,
+      "sign": "stable_quartic"
+    },
+    {
+      "h_over_l": 0.8,
+      "quartic_coefficient": -0.35276703514413604,
+      "sign": "unstable_quartic"
+    }
+  ],
+  "critical_h_over_l": 0.5116305124441263,
+  "qcrit_C": 2.275151102784644e-07,
+  "Tneutral_s": 0.8975979010256552,
+  "Tcharged_s": 1.0364567795624102,
+  "S5_over_S3": 0.9550522562306176,
+  "critical_brackets": {
+    "0.2": 0.8471916390031011,
+    "0.8": -1.4449337759503815
+  },
+  "nonlinear_critical_periods": [
+    {
+      "horizontal_amplitude": 0.003,
+      "quartic_T": 339.73095491091937,
+      "full_equation_T": 339.7220052378121
+    },
+    {
+      "horizontal_amplitude": 0.0015,
+      "quartic_T": 679.4619098218387,
+      "full_equation_T": 679.4574352234673
+    }
+  ],
+  "quartic_integral": 1.3110287771460598,
+  "curve_error": 6.738448965482036e-10,
+  "variants": {
+    "q_over_qcrit": 0.8660254037844386,
+    "plate_distance_T_ratio": 0.4714045207910316
+  },
+  "source_sha256": {
+    "scripts/verify_question_02.py": "92c1b0ea889a6ac6009208ebbfdbda4763087356b912ce57ae958c39f2b18fbd",
+    "scripts/generate_question_02_curve.py": "ce35e932fdcacb26f8e23f93f1d5d99b77245cc301dd272663d5532a6c3d4e3b",
+    "figures/effective-02-coordinates.tex": "c3a460d8f0a924ea1250a21867336b272a271bb86e61647aef918064fb0ad3d3",
+    "drafts/question-02.md": "0f1b04091fe1b8e7a526664c9a2ca9c14528417fad0d28abddb4e11da59bec2d",
+    "figures/题02_图稿源文件.tex": "ff75d27a6d38f036b5c3664c5d7c829531295281eaa30fbb2be1c0c183bfe59f"
+  }
+}

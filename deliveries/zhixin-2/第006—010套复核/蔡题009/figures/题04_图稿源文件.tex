@@ -1,0 +1,42 @@
+\documentclass[multi=tikzpicture,border=9pt]{standalone}
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath,amssymb}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc,patterns,decorations.pathmorphing}
+\definecolor{main}{HTML}{17365D}
+\definecolor{accent}{HTML}{AC3931}
+\tikzset{every picture/.style={font=\small,line width=.75pt},
+>={Stealth[length=2mm]},arr/.style={->},
+box/.style={draw=main,rounded corners=2pt,fill=main!4,text width=3cm,minimum height=1cm,align=center},
+note/.style={align=center,text width=9cm}}
+\begin{document}
+\begin{tikzpicture}
+\fill[main!8] (-1.25,1.8) .. controls (-2.1,.8) and (-2.1,-.8) .. (-1.25,-1.8)--(1.25,-1.8) .. controls (2.1,-.8) and (2.1,.8) .. (1.25,1.8)--cycle;
+\draw[main,thick] (-1.25,1.8) .. controls (-2.1,.8) and (-2.1,-.8) .. (-1.25,-1.8);
+\draw[main,thick] (1.25,1.8) .. controls (2.1,.8) and (2.1,-.8) .. (1.25,-1.8);
+\draw[arr] (-4,0)--(4,0) node[right]{光轴};\node at (0,.7){$A:n_A,p_A$};\node at (-3,1){$B:p_L$};\node at (3,1){$B:p_R$};
+\draw[arr,accent] (0,2.5)--(0,1.9) node[pos=0,above]{$v_A$};\draw[arr,accent] (-2.8,2.5)--(-2.8,1.7) node[pos=0,above]{$v_L$};\draw[arr,accent] (2.8,2.5)--(2.8,1.7) node[pos=0,above]{$v_R$};
+\node[note] at (0,-2.8){示意双凸状态：$p_A>p_L,p_R$；图面外曲率忽略};
+\end{tikzpicture}
+\begin{tikzpicture}
+\draw[arr] (-4,0)--(4,0) node[right]{$x$};\draw[main,thick] (-1.6,1.4) to[out=250,in=110] (-1.6,-1.4);\draw[main,thick] (1.6,1.4) to[out=290,in=70] (1.6,-1.4);
+\fill (.6,0) circle (2pt);\fill (-.6,0) circle (2pt);\node[above] at (.6,.2){$C_L$};\node[below] at (-.6,-.2){$C_R$};\draw[arr,accent] (-1.95,0)--(.6,0);\draw[arr,accent] (1.95,0)--(-.6,0);
+\node[above] at (-1.7,1.5){$R_L>0$};\node[above] at (1.7,1.5){$R_R<0$};\node[note] at (0,-2.7){$1/R_L=(p_A-p_L)/\sigma$\\$1/R_R=-(p_A-p_R)/\sigma$};
+\end{tikzpicture}
+\begin{tikzpicture}
+\draw[arr] (-3.5,0)--(5,0);\draw[main,<->,very thick] (0,-1.4)--(0,1.4);\fill[accent] (3.5,0) circle (2pt);\node[below] at (3.5,0){$F$};
+\foreach \y in {-1.1,.6,1.1}{\draw[arr,accent] (-3,\y)--(0,\y);\draw[arr,accent] (0,\y)--(4.6,{-\y*1.1/3.5});}
+\draw[<->] (0,-2)--(3.5,-2) node[midway,below]{$f$};\node[above] at (-1.8,1.4){入射介质 $B$};\node[above] at (2.5,1.4){出射介质 $B$};\node[note] at (1,-3.4){$1/f=(n_A/n_B-1)(1/R_L-1/R_R)$};
+\end{tikzpicture}
+\begin{tikzpicture}
+\draw[arr] (-3.5,0)--(3.5,0) node[right]{$D$};\draw[arr] (0,-2.4)--(0,2.4) node[above]{$1/f$};\draw[main,thick] (-3,-1.8)--(3,1.8);\node[below] at (-2,0){发散};\node[below] at (2,0){会聚};\node[note] at (0,-3.5){$D=2p_A-p_L-p_R$\\$1/f=(n_A-n_B)D/(n_B\sigma)$};
+\end{tikzpicture}
+\begin{tikzpicture}
+\node[box] (n0) at (0,0) {速度变化\\$\rho(v_0^2-v^2)/2$};
+\node[box] (n1) at (5,0) {压差：Pa\\$p_A-p_B$};
+\node[box] (n2) at (5,-2.3) {曲率：$\mathrm{m^{-1}}$\\$\Delta p/\sigma$};
+\node[box] (n3) at (0,-2.3) {焦度：$\mathrm{m^{-1}}$\\$(n_A/n_B-1)\Delta\kappa$};
+\draw[arr] (n0)--(n1);\draw[arr] (n1)--(n2);\draw[arr] (n2)--(n3);
+\node[note] at (2.5,-4.1) {$\sigma$ 的单位为 $\mathrm{N/m}$；三维界面还需另一主曲率};
+\end{tikzpicture}
+\end{document}

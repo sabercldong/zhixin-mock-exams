@@ -1,0 +1,97 @@
+\documentclass[multi=tikzpicture,border=8pt]{standalone}
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath,amssymb}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc,patterns}
+\definecolor{blue}{HTML}{17365D}
+\definecolor{red}{HTML}{AC3931}
+\tikzset{every node/.style={font=\small},vec/.style={-{Stealth[length=3mm]},thick,blue},force/.style={-{Stealth[length=3mm]},very thick,red},dim/.style={|<->|,thin}}
+\begin{document}
+
+\begin{tikzpicture}
+\fill[blue!10](1.5,-1.323)--(1.5,1.323)arc(41.4096:-41.4096:2)--cycle;
+\draw[thick](1.5,-1.323)--(1.5,1.323)arc(41.4096:-41.4096:2)--cycle;
+\draw[vec](-.3,0)--(6.7,0)node[right]{$x$};
+\draw[red,very thick,-{Stealth}](-.5,1)--(1.732,1);
+\draw[red,very thick,-{Stealth}](1.732,1)--(5.9,-.701);
+\draw[red,very thick,-{Stealth}](-.5,-1)--(1.732,-1);
+\draw[red,very thick,-{Stealth}](1.732,-1)--(5.9,.701);
+\draw[dashed](0,0)--(1.732,1);
+\draw[dashed](5.448,-1.4)--(5.448,1.4)node[above]{近轴焦平面};
+\fill(0,0)circle(1.5pt)node[below]{$O$};
+\fill(2,0)circle(1.5pt)node[below]{$V$};
+\fill(5.448,0)circle(1.5pt)node[below left]{$F$};
+\node[above]at(1.6,1.6){$n=1.58$};
+\draw[dim](2,-1.7)--node[below]{$f=R/(n-1)$}(5.448,-1.7);
+\draw[dim](.8,0)--node[left]{$r$}(.8,1);
+\node[below]at(2.8,-2.15){平面先入射，球面后出射；边缘光线提前交轴};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\draw[blue!60,very thick](1.3,-1.52)arc(-49:49:2);
+\draw[vec](-.5,0)--(6,0)node[right]{光轴};
+\coordinate(P)at(1.732,1);
+\draw[red,very thick,->](-.5,1)--(P);
+\draw[red,very thick,->](P)--(5.5,-.536);
+\draw[dashed](-.4,-.231)--(3.8,2.194)node[above right]{法线};
+\draw[dim](-.85,0)--node[left]{$h=R\sin\alpha$}(-.85,1);
+\draw[thin](0,0)--(P);\node at(1.43,.35){$R$};
+\draw(0.6,0)arc(0:30:.6)node[midway,right]{$\alpha$};
+\draw(1.132,1)arc(180:210:.6);
+\node[left]at(1.15,.72){$\alpha$};
+\draw(2.425,1.4)arc(30:-22.2:.8);
+\node[right]at(2.5,1.2){$e$};
+\draw[dashed](P)--(3.4,1);
+\draw(2.932,1)arc(0:-22.2:1.2);
+\node[right]at(3,.73){$\beta$};
+\node[above left]at(P){$P$};
+\node[below]at(3,-1.5){$\sin e=n\sin\alpha,\qquad\beta=e-\alpha$};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\draw[vec](0,0)--(7.3,0)node[right]{$x$};
+\draw[dashed](5.5,-1.8)--(5.5,1.8)node[above]{近轴焦平面};
+\draw[thick,blue](1.5,-1.5)--(1.5,1.5);
+\draw[red,thick,->](1.5,1.3)--(6.8,-1.45);
+\draw[red,thick,->](1.5,-1.3)--(6.8,1.45);
+\draw[dashed](1.5,1.3)--(2.4,1.3);
+\draw[dim](.9,0)--node[left]{$h$}(.9,1.3);
+\draw[dim](1.5,-2.1)--node[below]{$f+R(1-\cos\alpha)$}(5.5,-2.1);
+\draw[dim](5.8,0)--node[right]{$d(h)$}(5.8,.775);
+\fill(5.5,0)circle(1.5pt)node[below left]{$F$};
+\node[above]at(2.3,1.6){球面出射点};
+\node[below]at(3.5,-2.7){$d=[f+R(1-\cos\alpha)]\tan\beta-h$};
+\end{tikzpicture}
+
+\begin{tikzpicture}[x=1.6cm,y=1cm]
+\draw[vec](0,0)--(3.5,0)node[right]{$r/r_*$};
+\draw[vec](0,0)--(0,4.4)node[above]{$\delta/\delta_{\mathrm g,*}$};
+\draw[blue,thick,domain=.75:1.58,samples=80]plot(\x,{\x^3});
+\draw[red,thick,domain=.72:3.2,samples=80]plot(\x,{3/\x});
+\draw[black,very thick,domain=.85:1.42,samples=80]plot(\x,{\x^3+3/\x});
+\draw[dashed](1,0)--(1,4)--(0,4);
+\fill(1,4)circle(2pt);\draw[thin](1,4)--(1.5,4.5);\node[right]at(1.5,4.5){最小总斑半径};
+\node[right]at(1.55,3.72){球差$\propto r^3$};
+\node[right]at(2.1,.7){衍射$\propto r^{-1}$};
+\node[below]at(1,0){$1$};
+\node[left]at(0,4){$4$};
+\node[left]at(0,3){$3$};
+\node[left]at(0,1){$1$};
+\node[below]at(1.6,-.65){最优时$\delta_{\mathrm d}=3\delta_{\mathrm g}$};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\coordinate(P)at(0,0);
+\fill[blue!12](-1,1.732)--(1,-1.732)--(-2,-2)--(-3,0)--cycle;
+\draw[thick,blue](-1,1.732)--(1,-1.732);
+\node[above left]at(-1.4,.65){玻璃};\node[above]at(1.7,1.6){空气};
+\draw[dashed](-2,-1.15)--(2,1.15)node[right]{$\hat{\boldsymbol n}$};
+\draw[vec](-2.3,0)--(0,0)node[midway,above]{$\hat{\boldsymbol k}_{i}$};
+\draw[force](0,0)--(2.2,-.9)node[right]{$\hat{\boldsymbol k}_{t}$};
+\draw[vec](0,0)--(1,-1.732)node[right]{$\hat{\boldsymbol t}$};
+\node[above left]at(0,0){$P$};
+\node[below]at(.1,-2.4){$n(\hat{\boldsymbol k}_{i}\cdot\hat{\boldsymbol t})=
+\hat{\boldsymbol k}_{t}\cdot\hat{\boldsymbol t}$};
+\node[below]at(.1,-3){法向透射分量取向空气的一支};
+\end{tikzpicture}
+\end{document}

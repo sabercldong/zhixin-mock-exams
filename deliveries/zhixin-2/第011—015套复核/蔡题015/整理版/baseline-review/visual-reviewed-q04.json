@@ -1,0 +1,416 @@
+{
+  "paper": "015",
+  "question": 4,
+  "review_saved_utc": "2026-10-09 09:08:09 UTC",
+  "scope": "Completed Q4 source and current working PDFs only; not whole-set acceptance",
+  "actual_visual_reviewed": true,
+  "model_condition_resolved": true,
+  "question_accepted": true,
+  "set_accepted": false,
+  "remaining_visual_issues": [],
+  "remaining_model_issues": [],
+  "source_sha256": "0809cd6a262b1d852c69b221103dc5a9c61607f48e52d446b823694c051d9889",
+  "source_quality_sha256": "3decc288ac1a89f91dfc5a7f649f429f610993dce5d5122c59226c3d4838cffb",
+  "verification_sha256": "fc365606140d9e0210d7da21c583ab9d7b4040303605b7e1673036de44e869f2",
+  "geometry_sha256": "c283445f3df7dbfefd7c5b09b40ce2b8197eb185602ac5e5d6ed1a89a1c57d35",
+  "template_sha256": "434e4734708ef9c12c4be4629709e370fa5fe9a67a4cc88709ee13ffa571673b",
+  "pdfs": {
+    "student": {
+      "pdf_sha256": "4053a96ff8b210a1aa1d60d88d4b0c4d41a77631e18692110a80b1ef3a3db74f",
+      "total_pages": 15,
+      "body_pages": 14,
+      "body_nonspace": 7699,
+      "per_page_nonspace": [
+        605,
+        948,
+        551,
+        410,
+        573,
+        467,
+        391,
+        543,
+        638,
+        401,
+        455,
+        433,
+        588,
+        696
+      ],
+      "page_png_sha256": {
+        "page-001.png": "a23ca15655057fd10fa09aac25ef58eb4dd507441df30ef5390846f65e4e532b",
+        "page-002.png": "496bf2e97db5dbf83c41a8bdff88edf7c2dc8039819fb73fe056e6b564426b86",
+        "page-003.png": "0fd65a550cb2d20ce3e69a4ee558323b98808b35b2deb0b1c309cf68f6e070b7",
+        "page-004.png": "a38b1fe7b4aec78b911e8653bf00147feba5f12cdbb5c7cd1e89111cf3807d4c",
+        "page-005.png": "f1de796ecc2372eee12690b7531a2da28f1b66e590d6bc34d08fb49da3a9c4ec",
+        "page-006.png": "ce5c24bb40e4424e033fb08ca10459ff58b40ebb629a1c51d0a8d63ae6ccd06b",
+        "page-007.png": "004be4f04f35a59fdb9594baae0bcc7d2561e11c3d6ab8247d66d9c75c0294d8",
+        "page-008.png": "d838b7f45567eea22e9f4989dd5822f1bc80504a5be2a1c29fc8882b1798347a",
+        "page-009.png": "b9b31843356846a5e5376d39c61adbee1647147ebfd032aa78f71322b8a44ddf",
+        "page-010.png": "b3e7df9c1dbb0dc6aa59528dd86cb25ee82a1a11b14ceb1ca160636a1743bc45",
+        "page-011.png": "84a66f3beb3d86f03d438d2817b07898f09585adddfa9d33abf9829498a07649",
+        "page-012.png": "8ffc5dc301cfa22a6979f44a7d6f017321241191afba7ca533224136c3ab8fd7",
+        "page-013.png": "80dc32d232e3466f84868befa3bd3794edb81fe7a083a6ccb93208c8d449de0e",
+        "page-014.png": "9747b62aac3dab7145adf5a373aeb924bb40bc700110b938e14e4bd9c620ea94",
+        "page-015.png": "f7c09684bba318c409d5166e63ed1372b5c3a408b885676be20e7a64229688e2"
+      },
+      "overview_sha256": {
+        "overview-01.jpg": "66e613158ad49b1963581a65d2836f04ac15e7c5cac814c12abeae5d70417b0b",
+        "overview-02.jpg": "529514b94d81740e61ad10c89633a28e27f0860426e7aff422630f1915305415"
+      },
+      "overview_pages_reviewed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "high_resolution_pages_reviewed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "direct_high_resolution_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    "teacher": {
+      "pdf_sha256": "e3c62d561313cf65f5e34e75721e45695759570d4b7110309f9fcddf028c22af",
+      "total_pages": 23,
+      "body_pages": 22,
+      "body_nonspace": 13075,
+      "per_page_nonspace": [
+        605,
+        948,
+        551,
+        410,
+        573,
+        467,
+        391,
+        543,
+        638,
+        401,
+        455,
+        433,
+        588,
+        696,
+        622,
+        677,
+        952,
+        829,
+        621,
+        505,
+        470,
+        700
+      ],
+      "page_png_sha256": {
+        "page-001.png": "a23ca15655057fd10fa09aac25ef58eb4dd507441df30ef5390846f65e4e532b",
+        "page-002.png": "496bf2e97db5dbf83c41a8bdff88edf7c2dc8039819fb73fe056e6b564426b86",
+        "page-003.png": "0fd65a550cb2d20ce3e69a4ee558323b98808b35b2deb0b1c309cf68f6e070b7",
+        "page-004.png": "a38b1fe7b4aec78b911e8653bf00147feba5f12cdbb5c7cd1e89111cf3807d4c",
+        "page-005.png": "f1de796ecc2372eee12690b7531a2da28f1b66e590d6bc34d08fb49da3a9c4ec",
+        "page-006.png": "ce5c24bb40e4424e033fb08ca10459ff58b40ebb629a1c51d0a8d63ae6ccd06b",
+        "page-007.png": "004be4f04f35a59fdb9594baae0bcc7d2561e11c3d6ab8247d66d9c75c0294d8",
+        "page-008.png": "d838b7f45567eea22e9f4989dd5822f1bc80504a5be2a1c29fc8882b1798347a",
+        "page-009.png": "b9b31843356846a5e5376d39c61adbee1647147ebfd032aa78f71322b8a44ddf",
+        "page-010.png": "b3e7df9c1dbb0dc6aa59528dd86cb25ee82a1a11b14ceb1ca160636a1743bc45",
+        "page-011.png": "84a66f3beb3d86f03d438d2817b07898f09585adddfa9d33abf9829498a07649",
+        "page-012.png": "8ffc5dc301cfa22a6979f44a7d6f017321241191afba7ca533224136c3ab8fd7",
+        "page-013.png": "80dc32d232e3466f84868befa3bd3794edb81fe7a083a6ccb93208c8d449de0e",
+        "page-014.png": "9747b62aac3dab7145adf5a373aeb924bb40bc700110b938e14e4bd9c620ea94",
+        "page-015.png": "f7c09684bba318c409d5166e63ed1372b5c3a408b885676be20e7a64229688e2",
+        "page-016.png": "8ce9c69be6ab57343980a54e10e384c85b72a77636a8700917e8c3516eea82d3",
+        "page-017.png": "6d6795e659262c7eb51f99e85553fb07980c8638bdef83f5717de2a7f780db4a",
+        "page-018.png": "c83ff7ec270790e2cc861c7c81ca6d5ea3db32365605f740450e72c026becd99",
+        "page-019.png": "cbaea2c2cd7f0c3396e43a223d31db9fb2a45a8280b24b229f6a7ef035b0b38b",
+        "page-020.png": "cef9affdef460241acf04c493fb4de5e4cc32a553e6667c3080762a9907db47f",
+        "page-021.png": "6bed5717464e1b0005a357a0c3b07a7675e19cd620a2b6e4a5c93af5fb53958e",
+        "page-022.png": "5008f11baf4c4f6e176945ec0d4921d9163cd2e13d9142dc0c2d47794f80b576",
+        "page-023.png": "1c21864eef0ad943f61c4d18d8fd3202dd90147f6df1e35cab1324ff57ba23da"
+      },
+      "overview_sha256": {
+        "overview-01.jpg": "582f9f7afdc0fbb133fbbac7b50543e07f54492ef28aedc70196a39d6ebd1783",
+        "overview-02.jpg": "a665f841372f501fe0e814145fb744f4f956a948e1534d40212a5e1a924f2be8"
+      },
+      "overview_pages_reviewed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "high_resolution_pages_reviewed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "direct_high_resolution_pages": [
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ]
+    }
+  },
+  "figures_reviewed": {
+    "question-04": {
+      "pdf_sha256": "3cba37d282b3f45a1427af2af0402b3a228ee90d9a8a75ecb2ee9993014ccf97",
+      "png_sha256": "905c3ebfa615ba50fac27d1aa423a6dc6207aaa15f7727786ad8fdad75cfe9ec"
+    },
+    "circuit-04": {
+      "pdf_sha256": "27d66745efe05d94cef7098952aee78874416f23538d98423f47a664f33549e1",
+      "png_sha256": "fee4ea62522ac04b82a9d74bdf31445b439bbeb444b75c00fb05205ad6232635"
+    },
+    "geometry-04": {
+      "pdf_sha256": "ee317a15c001ad93770c5fe34b64b56c184e862484e02113cee1b51c36dac73d",
+      "png_sha256": "148317858e9bfe74aeac3db0c0fbcf3685f886761c5cb18170e1ae976dd4abb7"
+    },
+    "forces-04": {
+      "pdf_sha256": "9f8021d84ac525ee88959a71eea3cecec15bd73d888b663dc2a885646324195e",
+      "png_sha256": "369e3c210e267e378d5d0523c57ae6bcede85dc354b1cac8f7d58a67168052c0"
+    },
+    "power-04": {
+      "pdf_sha256": "e7ce52f9d94605afa93065c2acfc70697ebe1f96950f87bf0e8a6966323102e9",
+      "png_sha256": "ae61e892b3029b201c11b8a490b18d6901c41c9f59109a59397259433602c8d0"
+    },
+    "regulation-04": {
+      "pdf_sha256": "14df6aa003286507d50f8a97b488157e87b3451cbb44484e47c653c7358b8e9d",
+      "png_sha256": "8fb95e7c962fa99df8a012bccd72fca9e1e4a3d79de8a85dc31cb9e709e73bdd"
+    }
+  },
+  "original_images_actually_reviewed": {
+    "preview/originals/paper-02.png": "529bbc61e2d16da349854173e8ead03c9b58f1f2230919825af29420fdeee832",
+    "preview/originals/answer-04.png": "da778ccd79b88e09a70d2879c7ec67280b625a636f851f8545cdb87dd2dcdcba",
+    "preview/originals/q04-paper-text.png": "3f1375e212ea72f95ddb6ae4f5326df0042d7fbd68774eb4acc757fb50226b39",
+    "preview/originals/q04-paper-diagram.png": "c9d36ed2f76f073506e0e6ee639ef4c3bdc90fe74f4718dcb8255e840686cf86",
+    "preview/originals/q04-answer-left.png": "caa8da105ed833b79e161225a31abc89946031d971505f951c08c2d9b24f3e69",
+    "preview/originals/q04-answer-right.png": "71d7ebb8da38af9b18f611fd6949a6cbe78e2e82e50e68d27eb75810c60de0ce"
+  },
+  "identical_page_reuse": [
+    {
+      "student_page": 1,
+      "teacher_page": 1,
+      "png_sha256": "a23ca15655057fd10fa09aac25ef58eb4dd507441df30ef5390846f65e4e532b"
+    },
+    {
+      "student_page": 2,
+      "teacher_page": 2,
+      "png_sha256": "496bf2e97db5dbf83c41a8bdff88edf7c2dc8039819fb73fe056e6b564426b86"
+    },
+    {
+      "student_page": 3,
+      "teacher_page": 3,
+      "png_sha256": "0fd65a550cb2d20ce3e69a4ee558323b98808b35b2deb0b1c309cf68f6e070b7"
+    },
+    {
+      "student_page": 4,
+      "teacher_page": 4,
+      "png_sha256": "a38b1fe7b4aec78b911e8653bf00147feba5f12cdbb5c7cd1e89111cf3807d4c"
+    },
+    {
+      "student_page": 5,
+      "teacher_page": 5,
+      "png_sha256": "f1de796ecc2372eee12690b7531a2da28f1b66e590d6bc34d08fb49da3a9c4ec"
+    },
+    {
+      "student_page": 6,
+      "teacher_page": 6,
+      "png_sha256": "ce5c24bb40e4424e033fb08ca10459ff58b40ebb629a1c51d0a8d63ae6ccd06b"
+    },
+    {
+      "student_page": 7,
+      "teacher_page": 7,
+      "png_sha256": "004be4f04f35a59fdb9594baae0bcc7d2561e11c3d6ab8247d66d9c75c0294d8"
+    },
+    {
+      "student_page": 8,
+      "teacher_page": 8,
+      "png_sha256": "d838b7f45567eea22e9f4989dd5822f1bc80504a5be2a1c29fc8882b1798347a"
+    },
+    {
+      "student_page": 9,
+      "teacher_page": 9,
+      "png_sha256": "b9b31843356846a5e5376d39c61adbee1647147ebfd032aa78f71322b8a44ddf"
+    },
+    {
+      "student_page": 10,
+      "teacher_page": 10,
+      "png_sha256": "b3e7df9c1dbb0dc6aa59528dd86cb25ee82a1a11b14ceb1ca160636a1743bc45"
+    },
+    {
+      "student_page": 11,
+      "teacher_page": 11,
+      "png_sha256": "84a66f3beb3d86f03d438d2817b07898f09585adddfa9d33abf9829498a07649"
+    },
+    {
+      "student_page": 12,
+      "teacher_page": 12,
+      "png_sha256": "8ffc5dc301cfa22a6979f44a7d6f017321241191afba7ca533224136c3ab8fd7"
+    },
+    {
+      "student_page": 13,
+      "teacher_page": 13,
+      "png_sha256": "80dc32d232e3466f84868befa3bd3794edb81fe7a083a6ccb93208c8d449de0e"
+    },
+    {
+      "student_page": 14,
+      "teacher_page": 14,
+      "png_sha256": "9747b62aac3dab7145adf5a373aeb924bb40bc700110b938e14e4bd9c620ea94"
+    },
+    {
+      "student_page": 15,
+      "teacher_page": 15,
+      "png_sha256": "f7c09684bba318c409d5166e63ed1372b5c3a408b885676be20e7a64229688e2"
+    }
+  ],
+  "qpdf_checks": [
+    {
+      "path": "preview/working-q04-student/working-q04-student.pdf",
+      "sha256": "4053a96ff8b210a1aa1d60d88d4b0c4d41a77631e18692110a80b1ef3a3db74f"
+    },
+    {
+      "path": "preview/working-q04-teacher/working-q04-teacher.pdf",
+      "sha256": "e3c62d561313cf65f5e34e75721e45695759570d4b7110309f9fcddf028c22af"
+    },
+    {
+      "path": "figures/question-04.pdf",
+      "sha256": "3cba37d282b3f45a1427af2af0402b3a228ee90d9a8a75ecb2ee9993014ccf97"
+    },
+    {
+      "path": "figures/circuit-04.pdf",
+      "sha256": "27d66745efe05d94cef7098952aee78874416f23538d98423f47a664f33549e1"
+    },
+    {
+      "path": "figures/geometry-04.pdf",
+      "sha256": "ee317a15c001ad93770c5fe34b64b56c184e862484e02113cee1b51c36dac73d"
+    },
+    {
+      "path": "figures/forces-04.pdf",
+      "sha256": "9f8021d84ac525ee88959a71eea3cecec15bd73d888b663dc2a885646324195e"
+    },
+    {
+      "path": "figures/power-04.pdf",
+      "sha256": "e7ce52f9d94605afa93065c2acfc70697ebe1f96950f87bf0e8a6966323102e9"
+    },
+    {
+      "path": "figures/regulation-04.pdf",
+      "sha256": "14df6aa003286507d50f8a97b488157e87b3451cbb44484e47c653c7358b8e9d"
+    },
+    {
+      "path": "figures/题04_图稿源文件.pdf",
+      "sha256": "07639786040d5498744f0667270d0386feaac8ec060dfa8d7cdd206c90f32cb1"
+    }
+  ],
+  "bound_sha256": {
+    "drafts/question-04.md": "0809cd6a262b1d852c69b221103dc5a9c61607f48e52d446b823694c051d9889",
+    "figures/题04_图稿源文件.tex": "b117ce8b2e66b87c04472179ac6faa1259838e743fa4a1446450a2ae441d2216",
+    "build/question-04-verification.json": "fc365606140d9e0210d7da21c583ab9d7b4040303605b7e1673036de44e869f2",
+    "build/question-04-figure-geometry.json": "c283445f3df7dbfefd7c5b09b40ce2b8197eb185602ac5e5d6ed1a89a1c57d35",
+    "build/source-quality-q04.json": "3decc288ac1a89f91dfc5a7f649f429f610993dce5d5122c59226c3d4838cffb",
+    "scripts/read_details_04.py": "a81cbef4f4c4df44c43f22c74f6a24ead450d59dff690965457c229cb6098c1e",
+    "scripts/verify_question_04.py": "a326017eedee377ce8bdc764be1f3395d986f8567c489cb173007eb97a1242ed",
+    "scripts/check_figures_04.py": "9ecfbe839189ba1823e4f8ecfdf30b70c1f15857d7d63678cf9728593f322065",
+    "scripts/finalize_question_04_math.py": "94136571865a49d42d4889370335153c76938c72ef2e43713bbe82da9b4b5432",
+    "scripts/render_figures_04.py": "a24043b1b90bd1312b6745882108b2574b6013f2e6cc02aaa27ef311af9f7893",
+    "scripts/render_figures.py": "7b68a98640dbd00482c53d09865211d936014cae573552d22b1ff3df14789eb1",
+    "scripts/preview_drafts_04.py": "94028ae107a6ac6b748af7c8336987020c2e6f3ba636ffb884ff0e001f3b8774",
+    "scripts/preview_working_pages_04.py": "a5aa6e4bb5340a89db9dded60dc4f332934a73f88bc7bbe6d6ad8abdfad9ea23",
+    "latex/template.tex": "434e4734708ef9c12c4be4629709e370fa5fe9a67a4cc88709ee13ffa571673b",
+    "build/question-04-preverification.json": "a8baca7e1e86674135cc2a5ef6a84c1921edaa73632dc6dfde83ff5860be3eff",
+    "preview/working-draft-check-q04.json": "157af4f2cf3bff961322c928ee012bbe65c373273202ad31b5a77f0a67f97b33",
+    "preview/working-page-manifest-q04.json": "00410cfe7c25575c4e229ba1eb486b82bdf9d4b014339eb0d664d8e61635ee7b",
+    "preview/originals/question-04-detail-manifest.json": "4e08e3522d81f35465c0f35698388d5eedc297cd00fb84b748a8951f7547d49d"
+  },
+  "actual_page_versions_reviewed": 38,
+  "actual_body_page_versions_reviewed": 36,
+  "distinct_high_resolution_pages": 23,
+  "distinct_high_resolution_body_pages": 22,
+  "overview_sheets_actually_read": 4,
+  "reader_review_notes": [
+    "原卷第2页上部、手写第4页左右栏及四幅5倍细节均实际重读；两整页加四细节绑定当前校验和。",
+    "六幅最终TikZ PNG均实际查看，题图接线按两个节点识别，Kt只控制箱外R并联支路；I0与R0标注、功率线说明文字、图中温度轴和几何参考线已修正。",
+    "学生实际1—15页，教师实际16—23页逐页高清查看；教师1—15与当前已读学生逐页PNG SHA完全相同，才复用证据。四张当前总览均实际查看。学生解析20步、所有代入消元、平方根筛根与三问结果完整；教师四个变式有完整运算和结果。",
+    "初次预览入口产生四位文件编号，已恢复兼容的三位编号；重渲染前后每页PNG和四总览的SHA完全相同，PDF未重建，实际已读图像内容没有变化。保留旧四位预览辅助文件，不删移。",
+    "图区居中，图注中性；节点、电流、两独立位移、净压力合力、损失线与温控曲线的图中符号均进入紧随的方程。没有标签遮挡、错误接点或公式溢出。",
+    "第4题是机械截面及电路关系图，不伪造空间导线；自由活塞和限位触点分别说明，触发条件不误称全过程恒容；未知有限间隙和滞后不猜造精确数值。",
+    "固定101主要版式参数；无需局部扩页命令，没有新添强制分页、空白或未解练习。当前学生/教师尾页696/700去空白字符，自然分页，无一两句稀疏尾页。三份日志无Warning、Underfull、Overfull、缺字和致命错误，九份PDF通过qpdf。",
+    "本题按题给极小初始间隙的教材极限完成，有限间隙与热容滞后仅在额外条件明确的变式中使用；本题通过不表示第1/3题待人工模型选择已经解决，也不表示整套015完成。"
+  ]
+}

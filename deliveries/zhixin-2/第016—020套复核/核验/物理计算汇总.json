@@ -1,0 +1,355 @@
+{
+  "question_script_count": 40,
+  "all_passed": true,
+  "sets": [
+    {
+      "set": 16,
+      "question_scripts_passed": 8,
+      "all_passed": true,
+      "records": [
+        "蔡题016/整理版/build/verification-q01.json",
+        "蔡题016/整理版/build/verification-q02.json",
+        "蔡题016/整理版/build/verification-q03.json",
+        "蔡题016/整理版/build/verification-q04.json",
+        "蔡题016/整理版/build/verification-q05.json",
+        "蔡题016/整理版/build/verification-q06.json",
+        "蔡题016/整理版/build/verification-q07.json",
+        "蔡题016/整理版/build/verification-q08.json"
+      ]
+    },
+    {
+      "set": 17,
+      "question_scripts_passed": 8,
+      "all_passed": true,
+      "records": [
+        "蔡题017/整理版/build/verification-q01.json",
+        "蔡题017/整理版/build/verification-q02.json",
+        "蔡题017/整理版/build/verification-q03.json",
+        "蔡题017/整理版/build/verification-q04.json",
+        "蔡题017/整理版/build/verification-q05.json",
+        "蔡题017/整理版/build/verification-q06.json",
+        "蔡题017/整理版/build/verification-q07.json",
+        "蔡题017/整理版/build/verification-q08.json"
+      ]
+    },
+    {
+      "set": 18,
+      "question_scripts_passed": 8,
+      "all_passed": true,
+      "records": [
+        "蔡题018/整理版/build/verification-q01.json",
+        "蔡题018/整理版/build/verification-q02.json",
+        "蔡题018/整理版/build/verification-q03.json",
+        "蔡题018/整理版/build/verification-q04.json",
+        "蔡题018/整理版/build/verification-q05.json",
+        "蔡题018/整理版/build/verification-q06.json",
+        "蔡题018/整理版/build/verification-q07.json",
+        "蔡题018/整理版/build/verification-q08.json"
+      ]
+    },
+    {
+      "set": 19,
+      "question_scripts_passed": 8,
+      "all_passed": true,
+      "records": [
+        "蔡题019/整理版/build/verification-q01.json",
+        "蔡题019/整理版/build/verification-q02.json",
+        "蔡题019/整理版/build/verification-q03.json",
+        "蔡题019/整理版/build/verification-q04.json",
+        "蔡题019/整理版/build/verification-q05.json",
+        "蔡题019/整理版/build/verification-q06.json",
+        "蔡题019/整理版/build/verification-q07.json",
+        "蔡题019/整理版/build/verification-q08.json"
+      ]
+    },
+    {
+      "set": 20,
+      "question_scripts_passed": 8,
+      "all_passed": true,
+      "records": [
+        "蔡题020/整理版/build/verification-q01.json",
+        "蔡题020/整理版/build/verification-q02.json",
+        "蔡题020/整理版/build/verification-q03.json",
+        "蔡题020/整理版/build/verification-q04.json",
+        "蔡题020/整理版/build/verification-q05.json",
+        "蔡题020/整理版/build/verification-q06.json",
+        "蔡题020/整理版/build/verification-q07.json",
+        "蔡题020/整理版/build/verification-q08.json"
+      ]
+    }
+  ],
+  "added_variant_checks": 15,
+  "added_variants_all_passed": true,
+  "added": [
+    {
+      "set": 19,
+      "all_passed": true,
+      "checks": [
+        {
+          "question": 1,
+          "variant": 4,
+          "passed": true,
+          "method": "Implicit roots and central finite differences at sixteen parameter pairs",
+          "values": {
+            "max_error": 9.077012579072896e-12,
+            "zero_tension_sensitivity": 0.0078125
+          },
+          "draft_sha256": "01dfe71222705d79949212daf031e7eb1bcc94953b54bf637ed3773d4326972e"
+        },
+        {
+          "question": 2,
+          "variant": 4,
+          "passed": true,
+          "method": "Direct 20,001-image Coulomb force derivative plus gravity and spring",
+          "values": {
+            "electric_slope": 1.199999999512702,
+            "stiffness": 0.10000000048729807,
+            "period_ratio": 3.1622776601683795
+          },
+          "draft_sha256": "0f1b04091fe1b8e7a526664c9a2ca9c14528417fad0d28abddb4e11da59bec2d"
+        },
+        {
+          "question": 3,
+          "variant": 4,
+          "passed": true,
+          "method": "Time integration of non-sinusoidal resistor power and input power",
+          "values": {
+            "independent": 2.7200000000000006,
+            "series_plus": 2.56,
+            "series_minus": 0.16,
+            "input_power": 2.7200000000000006
+          },
+          "draft_sha256": "459679dc315625450ee1672e48b759242f77fc18e25700b4b0008b82d8b1d2be"
+        },
+        {
+          "question": 4,
+          "variant": 4,
+          "passed": true,
+          "method": "Stress eigenvalues, boundary loading work and zero rigid-rotation strain",
+          "values": {
+            "shear_modulus": 215.3846153846154,
+            "principal_stresses": [
+              -2.1538461538461537,
+              2.1538461538461537
+            ],
+            "energy_density": 0.010769230769230769
+          },
+          "draft_sha256": "c367492e50258eed86eec9b6edd031f3bd3b5efe58de06558637351cbe1c169d"
+        },
+        {
+          "question": 5,
+          "variant": 4,
+          "passed": true,
+          "method": "Numerical solid-angle flux integral over five speeds",
+          "values": {
+            "integrals": [
+              {
+                "beta": 0,
+                "flux_over_2pi_kq": 2.0
+              },
+              {
+                "beta": 0.3,
+                "flux_over_2pi_kq": 2.000000000000001
+              },
+              {
+                "beta": 0.6,
+                "flux_over_2pi_kq": 2.0
+              },
+              {
+                "beta": 0.9,
+                "flux_over_2pi_kq": 1.9999999999999998
+              },
+              {
+                "beta": 0.99,
+                "flux_over_2pi_kq": 1.9999999999999998
+              }
+            ]
+          },
+          "draft_sha256": "8b79e40e08c31f8ee7376b3d894aef4f1b287086f354dbb370bd0189ffcd1786"
+        }
+      ]
+    },
+    {
+      "set": 20,
+      "all_passed": true,
+      "checks": [
+        {
+          "question": 1,
+          "variant": 3,
+          "passed": true,
+          "method": "Direct implicit arrival roots and small-speed asymptotics",
+          "values": {
+            "samples": [
+              {
+                "beta": 0.001,
+                "two": 3.9999980000021687,
+                "three": 5.193553699572618
+              },
+              {
+                "beta": 0.003,
+                "two": 3.9999820001754975,
+                "three": 5.188352418413978
+              },
+              {
+                "beta": 0.01,
+                "two": 3.9998000216636616,
+                "three": 5.17010928997435
+              }
+            ]
+          },
+          "draft_sha256": "bd08bfe1985e1c158ec4d99a31acc288dc83f7632d1347f2aa47de53f7662168"
+        },
+        {
+          "question": 1,
+          "variant": 4,
+          "passed": true,
+          "method": "Reflected chord direction projected onto moving receiver tangent",
+          "values": {
+            "tau": 3.9232856237568465,
+            "j": -0.19490861872023507,
+            "frequency_ratio": 1.038981723744047
+          },
+          "draft_sha256": "bd08bfe1985e1c158ec4d99a31acc288dc83f7632d1347f2aa47de53f7662168"
+        },
+        {
+          "question": 2,
+          "variant": 3,
+          "passed": true,
+          "method": "Symbolic barrier curvature and exact/local transit-time integration",
+          "values": {
+            "kappa_squared": 0.3950617283950617,
+            "samples": [
+              {
+                "excess_speed_squared": 1e-07,
+                "full_time": 6.646166851395298,
+                "local_time": 6.646164025232965
+              },
+              {
+                "excess_speed_squared": 1e-08,
+                "full_time": 10.265394770298844,
+                "local_time": 10.265390899063775
+              },
+              {
+                "excess_speed_squared": 1e-09,
+                "full_time": 13.924266643752212,
+                "local_time": 13.924262540781637
+              }
+            ]
+          },
+          "draft_sha256": "dfe5012250d22d17e5ee8c0e5dbd8d16451b1c2ec025f9ac8e116794a3ac43c0"
+        },
+        {
+          "question": 2,
+          "variant": 4,
+          "passed": true,
+          "method": "Two full Cartesian Lorentz integrations under the proposed similarity scaling",
+          "values": {
+            "max_position_error": 7.819345171355963e-11,
+            "original_vc": 0.3849001794597505,
+            "scaled_vc": 0.3849001794597505
+          },
+          "draft_sha256": "dfe5012250d22d17e5ee8c0e5dbd8d16451b1c2ec025f9ac8e116794a3ac43c0"
+        },
+        {
+          "question": 3,
+          "variant": 3,
+          "passed": true,
+          "method": "Nonlinear inverse and finite-difference logarithmic error sensitivities",
+          "values": {
+            "recovered_l": 1.0,
+            "sensitivity_R": 0.8333333333583186,
+            "sensitivity_range": 0.16666666666907023
+          },
+          "draft_sha256": "6713fb967abc95c6cdf1e9fc67b19c0e9609024e15d0242c3b5677edc5c53a95"
+        },
+        {
+          "question": 3,
+          "variant": 4,
+          "passed": true,
+          "method": "Explicit fast-signal sampling and phase reconstruction",
+          "values": {
+            "max_alias_identity_error": 2.58043586498502e-13,
+            "three_samples": [
+              0.7451744023448704,
+              -0.6668696350036978,
+              -0.7451744023448704
+            ]
+          },
+          "draft_sha256": "6713fb967abc95c6cdf1e9fc67b19c0e9609024e15d0242c3b5677edc5c53a95"
+        },
+        {
+          "question": 4,
+          "variant": 3,
+          "passed": true,
+          "method": "Exact nonlinear period by energy quadrature, compared with amplitude correction",
+          "values": {
+            "samples": [
+              {
+                "amplitude": 0.005,
+                "exact_period": 3.6274853666579054,
+                "asymptotic_period": 3.627485366008171
+              },
+              {
+                "amplitude": 0.01,
+                "exact_period": 3.6271452890190354,
+                "asymptotic_period": 3.627145278627377
+              },
+              {
+                "amplitude": 0.02,
+                "exact_period": 3.6257850953588284,
+                "asymptotic_period": 3.6257849291042015
+              }
+            ]
+          },
+          "draft_sha256": "4c5d9a0727c61a76942123db2ec66ae79bd2e6bad9732a4b275655fc71c61c66"
+        },
+        {
+          "question": 4,
+          "variant": 4,
+          "passed": true,
+          "method": "Equal-tension equilibrium and direct force linearization after unequal impulses",
+          "values": {
+            "r1": 1.2270235808713812,
+            "r2": 0.7729764191286188,
+            "frequency_squared": 6.848624648474971
+          },
+          "draft_sha256": "4c5d9a0727c61a76942123db2ec66ae79bd2e6bad9732a4b275655fc71c61c66"
+        },
+        {
+          "question": 7,
+          "variant": 4,
+          "passed": true,
+          "method": "Sequential mirror imaging, finite-difference axial derivative and inverse displacement",
+          "values": {
+            "M": 0.053601340033500845,
+            "derivative": -0.0028731036527673837,
+            "estimated_dx": 0.0034805566406249993,
+            "exact_dx": 0.0034822823087847787
+          },
+          "draft_sha256": "f3bea5ad004b9333495a07fafa1c44384c1e2687005db91e5ba0abb3e8f6a5d2"
+        },
+        {
+          "question": 8,
+          "variant": 4,
+          "passed": true,
+          "method": "Endpoint energy conservation and opposite nonzero momenta on the rest-frame sphere",
+          "values": {
+            "pstar": 1.7320508075688772,
+            "pmax": 1.9595917942265424,
+            "energies_at_rest": [
+              1,
+              1.9999999999999998,
+              1.9999999999999998
+            ],
+            "energies_at_endpoint": [
+              2.2,
+              1.4,
+              1.4
+            ]
+          },
+          "draft_sha256": "69fe4d721b4c1bd0b8cf3cd2a45c661481061edf56359d5ec700a74322831870"
+        }
+      ]
+    }
+  ]
+}

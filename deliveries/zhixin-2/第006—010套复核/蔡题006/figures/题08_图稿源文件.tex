@@ -1,0 +1,36 @@
+\documentclass[multi=tikzpicture,border=9pt]{standalone}
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath,amssymb}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc,patterns,decorations.pathmorphing}
+\definecolor{main}{HTML}{17365D}
+\definecolor{accent}{HTML}{AC3931}
+\tikzset{every picture/.style={font=\small,line width=.75pt},
+ >={Stealth[length=2mm]},arr/.style={->},box/.style={draw=main,rounded corners=2pt,
+ fill=main!4,text width=2.7cm,minimum height=.9cm,align=center},
+ note/.style={align=center,text width=8cm}}
+\begin{document}
+\begin{tikzpicture}
+\draw[very thick] (-1.6,0)--(-1.6,3.2);\draw[very thick] (1.6,0)--(1.6,3.2);\draw[very thick] (-1.6,0)--(1.6,0);\fill[main!8] (-1.5,.1) rectangle (1.5,2.5);\draw[very thick] (-1.6,2.5)--(1.6,2.5);\draw[arr,accent] (0,3.5)--(0,2.6) node[pos=0,right]{$P_0$};\node[align=center] at (0,1.3){过冷水蒸气\\$T_1=0.98T_0$\\$M_0,\ V_0$};\node[note] at (0,-.8){容器、活塞绝热，活塞质量忽略。$T_0=373.15\rm\,K$ 为该压力下的沸点。};
+\end{tikzpicture}
+\begin{tikzpicture}
+\node[box] (a) at (0,0){初态：全是蒸气\\$T_1<T_0$};\node[box] (b) at (5,1){终态液体\\质量 $xM_0$\\温度 $T_0$};\node[box] (c) at (5,-1){终态蒸气\\质量 $(1-x)M_0$\\温度 $T_0$};\draw[arr,accent] (a)--(b);\draw[arr,main] (a)--(c);\node[note] at (2.5,-2.6){少量凝结释放潜热，使全部物质升到饱和温度；$x\simeq0.006945$。};
+\end{tikzpicture}
+\begin{tikzpicture}
+\node[box] (b0) at (0,0) {绝热：$Q=0$};
+\node[box] (b1) at (5,0) {恒压功：$W=P_0(V_1-V_0)$};
+\node[box] (b2) at (5,-2) {第一定律：$\Delta U=-W$};
+\node[box] (b3) at (0,-2) {因此 $\Delta H=0$};
+\draw[arr] (b0)--(b1);\draw[arr] (b1)--(b2);\draw[arr] (b2)--(b3);\node[note] at (2.5,-3.25) {焓守恒给 $xL_0=c_{pg}(T_0-T_1)$；蒸气、液水均采用定压比热。};
+\end{tikzpicture}
+\begin{tikzpicture}
+\draw[arr] (-1.5,0)--(3.4,0) node[right]{相对变化(\%)};\draw[dashed] (0,.2)--(0,3.7);\fill[accent!20] (0,2.8) rectangle (-0.694483,3.2);\node[left] at (-1.55,3) {蒸气质量};\node[right] at (0.15,3) {-0.694\%};\fill[main!20] (0,1.8) rectangle (2.040816,2.2);\node[left] at (-1.55,2) {温度};\node[right] at (2.190816,2) {+2.041\%};\fill[main!20] (0,0.8) rectangle (1.33216,1.2);\node[left] at (-1.55,1) {气体体积};\node[right] at (1.48216,1) {+1.332\%};\draw (-1,0)--++(0,-.08) node[below]{-1};\draw (0,0)--++(0,-.08) node[below]{0};\draw (1,0)--++(0,-.08) node[below]{1};\draw (2,0)--++(0,-.08) node[below]{2};\draw (3,0)--++(0,-.08) node[below]{3};\node[note] at (.8,-1.1){体积比是质量比与温度比的乘积：$V_1/V_0=(1-x)/0.98>1$。凝结量小，升温效应更大。};
+\end{tikzpicture}
+\begin{tikzpicture}
+\node[box] (b0) at (0,0) {用 $c_{pg},c_{pl}$ 修正 $L_1$};
+\node[box] (b1) at (5,0) {用恒压绝热焓守恒};
+\node[box] (b2) at (5,-2) {$x=c_{pg}(T_0-T_1)/L_0$};
+\node[box] (b3) at (0,-2) {$V_1/V_0=(1-x)T_0/T_1$};
+\draw[arr] (b0)--(b1);\draw[arr] (b1)--(b2);\draw[arr] (b2)--(b3);\node[note] at (2.5,-3.25) {凝结质量约 $0.6945\%$，体积增加约 $1.3322\%$；熵增为正，符合闭合系统绝热过程。};
+\end{tikzpicture}
+\end{document}

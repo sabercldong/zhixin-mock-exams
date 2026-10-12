@@ -1,0 +1,87 @@
+\documentclass[multi=tikzpicture,border=9pt]{standalone}
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath,amssymb}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc,patterns,decorations.pathmorphing}
+\definecolor{main}{HTML}{17365D}
+\definecolor{accent}{HTML}{AC3931}
+\tikzset{every picture/.style={font=\small,line width=.75pt},
+>={Stealth[length=2mm]},arr/.style={->},
+box/.style={draw=main,rounded corners=2pt,fill=main!4,text width=3.6cm,minimum height=1cm,align=center},
+note/.style={align=center,text width=9cm}}
+\begin{document}
+
+\begin{tikzpicture}
+\draw[main] (-2.32500,-0.52500) -- (-1.50000,-1.50000);
+\draw[main] (-2.32500,-0.52500) -- (-1.50000,1.50000);
+\draw[main] (-2.32500,-0.52500) -- (-0.82500,-2.02500);
+\draw[main] (-2.32500,-0.52500) -- (-0.82500,0.97500);
+\draw[main] (-1.50000,-1.50000) -- (-0.67500,0.52500);
+\draw[main] (-1.50000,-1.50000) -- (-0.82500,-2.02500);
+\draw[main] (-1.50000,-1.50000) -- (0.82500,-0.97500);
+\draw[main] (-1.50000,1.50000) -- (-0.67500,0.52500);
+\draw[main] (-1.50000,1.50000) -- (-0.82500,0.97500);
+\draw[main] (-1.50000,1.50000) -- (0.82500,2.02500);
+\draw[main] (-0.67500,0.52500) -- (0.82500,-0.97500);
+\draw[main] (-0.67500,0.52500) -- (0.82500,2.02500);
+\draw[main] (-0.82500,-2.02500) -- (0.67500,-0.52500);
+\draw[main] (-0.82500,-2.02500) -- (1.50000,-1.50000);
+\draw[main] (-0.82500,0.97500) -- (0.67500,-0.52500);
+\draw[main] (-0.82500,0.97500) -- (1.50000,1.50000);
+\draw[main] (0.82500,-0.97500) -- (1.50000,-1.50000);
+\draw[main] (0.82500,-0.97500) -- (2.32500,0.52500);
+\draw[main] (0.82500,2.02500) -- (1.50000,1.50000);
+\draw[main] (0.82500,2.02500) -- (2.32500,0.52500);
+\draw[main] (0.67500,-0.52500) -- (1.50000,-1.50000);
+\draw[main] (0.67500,-0.52500) -- (1.50000,1.50000);
+\draw[main] (1.50000,-1.50000) -- (2.32500,0.52500);
+\draw[main] (1.50000,1.50000) -- (2.32500,0.52500);
+\fill (-2.325,-0.5249999999999999) circle (2pt);
+\fill (-1.5,-1.5) circle (2pt);
+\fill (-1.5,1.5) circle (2pt);
+\fill (-0.6749999999999999,0.5249999999999999) circle (2pt);
+\fill (-0.8250000000000001,-2.0250000000000004) circle (2pt);
+\fill (-0.8250000000000001,0.9750000000000001) circle (2pt);
+\fill (0.8250000000000001,-0.9750000000000001) circle (2pt);
+\fill (0.8250000000000001,2.0250000000000004) circle (2pt);
+\fill (0.6749999999999999,-0.5249999999999999) circle (2pt);
+\fill (1.5,-1.5) circle (2pt);
+\fill (1.5,1.5) circle (2pt);
+\fill (2.325,0.5249999999999999) circle (2pt);
+\fill[accent] (1.5,1.5) circle (3pt);\node[above] at (1.5,1.5){$ A $};
+\fill[accent] (0.8250000000000001,2.0250000000000004) circle (3pt);\node[above right] at (0.8250000000000001,2.0250000000000004){$ B $};
+\fill[accent] (1.5,-1.5) circle (3pt);\node[below] at (1.5,-1.5){$ C $};
+\node[note] at (0,-3){立方八面体：12顶点、24棱、14面；每棱1欧\\线段为三维网络投影，投影交叉处不新增节点};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\node[box] (n0) at (0,0) {坐标生成邻接\\$|\mathbf v_i-\mathbf v_j|^2=2$};
+\node[box] (n1) at (5,0) {每点度数4\\$L_{ii}=4,\ L_{ij}=-1$};
+\node[box] (n2) at (5,-2.3) {试验电流\\$\mathbf b=\mathbf e_A-\mathbf e_D$};
+\node[box] (n3) at (0,-2.3) {端点电阻\\$R_{AD}=(\phi_A-\phi_D)/I$};
+\draw[arr] (n0)--(n1);\draw[arr] (n1)--(n2);\draw[arr] (n2)--(n3);
+\node[note] at (2.5,-4.1) {固定汇点电势与伪逆法独立求解全部节点};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\node[box] (n0) at (0,0) {全部棱等价\\24条相同类型};
+\node[box] (n1) at (5,0) {Foster恒等式\\$\sum R_{ij}/R_e=11$};
+\node[box] (n2) at (5,-2.3) {相邻电阻\\$R_{AB}=11/24\,\Omega$};
+\node[box] (n3) at (0,-2.3) {方形对角\\$R_{AC}=7/12\,\Omega$};
+\draw[arr] (n0)--(n1);\draw[arr] (n1)--(n2);\draw[arr] (n2)--(n3);
+\node[note] at (2.5,-4.1) {只允许按保持源汇边界的对称并点；对角结果须另解节点方程};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\node[box] (n0) at (0,0) {直棱感应电动势\\$\mathcal E_{ij}=-\dot{\mathbf B}\cdot(\mathbf r_i\times\mathbf r_j)/2$};
+\node[box] (n1) at (5,0) {邻位置求和\\$\sum_{j\sim i}\mathbf r_j=2\mathbf r_i$};
+\node[box] (n2) at (5,-2.3) {节点驱动和零\\$\sum\mathcal E_{ij}=0$};
+\node[box] (n3) at (0,-2.3) {节点保守电势\\$\phi_i=\text{同一常数}$};
+\draw[arr] (n0)--(n1);\draw[arr] (n1)--(n2);\draw[arr] (n2)--(n3);
+\node[note] at (2.5,-4.1) {节点零差不阻止回路感应环流};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\fill[accent] (0,2) circle (3pt);\fill[accent] (0,-1) circle (3pt);\node[left] at (0,2){$A$};\node[left] at (0,-1){$C$};\draw[arr,main] (0,2)--(0,-1);\draw[arr,accent] (0,2)..controls(3,2) and(3,-1)..(0,-1);\node[right] at (2.4,.5){路径2};\node[left] at (0,.5){路径1};\node[note] at (1.3,-2.3){两路径读数差 $=-\dot{\mathbf B}\cdot\mathbf S$\\保守节点差为零，直线 $A\to C$ 积分为 $-al^2/4$};
+\end{tikzpicture}
+\end{document}

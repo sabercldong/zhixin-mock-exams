@@ -1,0 +1,29 @@
+{
+  "question": 6,
+  "actual_reviewed": true,
+  "scope": "分题工作预览；角部夹角未决，整套不计验收",
+  "reviewed_at": "2026-10-08 11:59 Asia/Shanghai",
+  "student": {
+    "pdf_sha256": "82a382eb88fdf274bff91b46b776961717af8365d830f2e5cbbd793051f2346c",
+    "total_pages": 11,
+    "body_pages": 10,
+    "extracted_body_nonspace": 6399,
+    "overview_pages_reviewed": [1,2,3,4,5,6,7,8,9,10,11],
+    "high_resolution_pages_reviewed": [2,6,7,9]
+  },
+  "teacher": {
+    "pdf_sha256": "10be462dc91fa743382972c2cb0c92d8d8146dc298e6d8b46b0a0966c90e6a74",
+    "total_pages": 15,
+    "body_pages": 14,
+    "extracted_body_nonspace": 9731,
+    "overview_pages_reviewed": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15],
+    "high_resolution_pages_reviewed": [15]
+  },
+  "figures_reviewed": ["corner-06","images-06","flux-06","disk-06","map-06"],
+  "repairs": ["薄板题图保留可见厚度及真实接触连线","圆盘电流标注移到箭头下侧，避免贴近电极字母","方框公式放在aligned外，消除跨对齐组错误"],
+  "layout_issues": [],
+  "qpdf_check_passed": true,
+  "conditional_physics_checks_passed": true,
+  "physics_note": "四镜像距离、保角映射、法向边界、接触电流、板内电场积分、独立电阻网格及四个完整变式通过",
+  "unresolved": ["原图没有明确实际夹角，已请求确认；直角与一般角度分支均保留"]
+}

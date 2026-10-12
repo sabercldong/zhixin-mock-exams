@@ -1,0 +1,257 @@
+{
+  "all_passed": true,
+  "set": "005",
+  "method": "迁移到新目录，删除全部图像和编译产物，由定稿源文件重建40幅图及三版PDF",
+  "source_generators_equal": true,
+  "stages": [
+    {
+      "script": "write_drafts",
+      "exit_code": 0
+    },
+    {
+      "script": "make_figures",
+      "exit_code": 0
+    },
+    {
+      "script": "render_figures",
+      "exit_code": 0
+    },
+    {
+      "script": "build_documents",
+      "exit_code": 0
+    }
+  ],
+  "documents": [
+    {
+      "file": "蔡题005_学生详解.pdf",
+      "pages": 60,
+      "text_equal": true,
+      "all_pages_raster_equal": true,
+      "raster_dpi": 72,
+      "delivered_sha256": "704ec6741a523a042adc52a6d122ef9c75aa8359c1e224ed33a3a8a104578d42",
+      "rebuilt_sha256": "27420a056bd6a6c5b9dfdf82d87a9b6b96df27938ed1ca47875f0f176a965872"
+    },
+    {
+      "file": "蔡题005_教师备课.pdf",
+      "pages": 72,
+      "text_equal": true,
+      "all_pages_raster_equal": true,
+      "raster_dpi": 72,
+      "delivered_sha256": "472c649ffb84dd6514fa4f2a5fbfa7ba7e7839e5ceaa1157bb4043ddf7731a83",
+      "rebuilt_sha256": "40e4eb4845cf05645a859a9fc0e52af6d88b1654b5369ad6e0ff524016b45773"
+    },
+    {
+      "file": "蔡题005_试卷.pdf",
+      "pages": 9,
+      "text_equal": true,
+      "all_pages_raster_equal": true,
+      "raster_dpi": 72,
+      "delivered_sha256": "b4bfd40c9d7ab118ed4ea704ba3730ea2eea6a1427319bdf533f14c89f048f96",
+      "rebuilt_sha256": "d0e9a8a514a22d4e60885685b7ff781132c53439a81df15c4e131a95b5ababb5"
+    }
+  ],
+  "figures": [
+    {
+      "file": "allowed-08.png",
+      "png_identical": true,
+      "vector_pdf_text_and_raster_equal": true
+    },
+    {
+      "file": "angular-08.png",
+      "png_identical": true,
+      "vector_pdf_text_and_raster_equal": true
+    },
+    {
+      "file": "check-01.png",
+      "png_identical": true,
+      "vector_pdf_text_and_raster_equal": true
+    },
+    {
+      "file": "check-02.png",
+      "png_identical": true,
+      "vector_pdf_text_and_raster_equal": true
+    },
+    {
+      "file": "check-03.png",
+      "png_identical": true,
+      "vector_pdf_text_and_raster_equal": true
+    },
+    {
+      "file": "check-04.png",
+      "png_identical": true,
+      "vector_pdf_text_and_raster_equal": true
+    },
+    {
+      "file": "check-06.png",
+      "png_identical": true,
+      "vector_pdf_text_and_raster_equal": true
+    },
+    {
+      "file": "cost-06.png",
+      "png_identical": true,
+      "vector_pdf_text_and_raster_equal": true
+    },
+    {
+      "file": "endpoint-08.png",
+      "png_identical": true,
+      "vector_pdf_text_and_raster_equal": true
+    },
+    {
+      "file": "energy-07.png",
+      "png_identical": true,
+      "vector_pdf_text_and_raster_equal": true
+    },
+    {
+      "file": "force-04.png",
+      "png_identical": true,
+      "vector_pdf_text_and_raster_equal": true
+    },
+    {
+      "file": "frequency-04.png",
+      "png_identical": true,
+      "vector_pdf_text_and_raster_equal": true
+    },
+    {
+      "file": "hyperbola-03.png",
+      "png_identical": true,
+      "vector_pdf_text_and_raster_equal": true
+    },
+    {
+      "file": "image-05.png",
+      "png_identical": true,
+      "vector_pdf_text_and_raster_equal": true
+    },
+    {
+      "file": "invariant-08.png",
+      "png_identical": true,
+      "vector_pdf_text_and_raster_equal": true
+    },
+    {
+      "file": "load-01.png",
+      "png_identical": true,
+      "vector_pdf_text_and_raster_equal": true
+    },
+    {
+      "file": "mapping-05.png",
+      "png_identical": true,
+      "vector_pdf_text_and_raster_equal": true
+    },
+    {
+      "file": "mass-06.png",
+      "png_identical": true,
+      "vector_pdf_text_and_raster_equal": true
+    },
+    {
+      "file": "phase-04.png",
+      "png_identical": true,
+      "vector_pdf_text_and_raster_equal": true
+    },
+    {
+      "file": "polarity-03.png",
+      "png_identical": true,
+      "vector_pdf_text_and_raster_equal": true
+    },
+    {
+      "file": "potential-02.png",
+      "png_identical": true,
+      "vector_pdf_text_and_raster_equal": true
+    },
+    {
+      "file": "question-01.png",
+      "png_identical": true,
+      "vector_pdf_text_and_raster_equal": true
+    },
+    {
+      "file": "question-02.png",
+      "png_identical": true,
+      "vector_pdf_text_and_raster_equal": true
+    },
+    {
+      "file": "question-03.png",
+      "png_identical": true,
+      "vector_pdf_text_and_raster_equal": true
+    },
+    {
+      "file": "question-04.png",
+      "png_identical": true,
+      "vector_pdf_text_and_raster_equal": true
+    },
+    {
+      "file": "question-05.png",
+      "png_identical": true,
+      "vector_pdf_text_and_raster_equal": true
+    },
+    {
+      "file": "question-06.png",
+      "png_identical": true,
+      "vector_pdf_text_and_raster_equal": true
+    },
+    {
+      "file": "question-07.png",
+      "png_identical": true,
+      "vector_pdf_text_and_raster_equal": true
+    },
+    {
+      "file": "question-08.png",
+      "png_identical": true,
+      "vector_pdf_text_and_raster_equal": true
+    },
+    {
+      "file": "refraction-03.png",
+      "png_identical": true,
+      "vector_pdf_text_and_raster_equal": true
+    },
+    {
+      "file": "refraction-05.png",
+      "png_identical": true,
+      "vector_pdf_text_and_raster_equal": true
+    },
+    {
+      "file": "residual-07.png",
+      "png_identical": true,
+      "vector_pdf_text_and_raster_equal": true
+    },
+    {
+      "file": "slope-01.png",
+      "png_identical": true,
+      "vector_pdf_text_and_raster_equal": true
+    },
+    {
+      "file": "stoichiometry-07.png",
+      "png_identical": true,
+      "vector_pdf_text_and_raster_equal": true
+    },
+    {
+      "file": "temperature-07.png",
+      "png_identical": true,
+      "vector_pdf_text_and_raster_equal": true
+    },
+    {
+      "file": "threshold-02.png",
+      "png_identical": true,
+      "vector_pdf_text_and_raster_equal": true
+    },
+    {
+      "file": "torque-02.png",
+      "png_identical": true,
+      "vector_pdf_text_and_raster_equal": true
+    },
+    {
+      "file": "velocity-06.png",
+      "png_identical": true,
+      "vector_pdf_text_and_raster_equal": true
+    },
+    {
+      "file": "wheel-01.png",
+      "png_identical": true,
+      "vector_pdf_text_and_raster_equal": true
+    },
+    {
+      "file": "width-05.png",
+      "png_identical": true,
+      "vector_pdf_text_and_raster_equal": true
+    }
+  ],
+  "document_pages": 141,
+  "figure_count": 40
+}

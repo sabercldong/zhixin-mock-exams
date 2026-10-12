@@ -1,0 +1,9 @@
+{
+  "set": 20,
+  "issue": "旧audit_sources.py主入口读取未随包交付的第101套字数参考文件，首次执行发生FileNotFoundError。",
+  "change": "去除跨套参考读取；保留相同的八题结构、公式书写、配图和正文指标算法。",
+  "rerun_exit_code": 0,
+  "all_eight_questions_passed": true,
+  "script_sha256": "0179cda104f19c3b6c6733abfe23464e51815ae931e84bbcd4c1172269447717",
+  "compilation_and_physics_records_unchanged": true
+}

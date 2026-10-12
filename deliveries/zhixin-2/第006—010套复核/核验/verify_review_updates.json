@@ -1,0 +1,84 @@
+{
+  "all_passed": true,
+  "check_count": 11,
+  "checks": [
+    {
+      "name": "007-05-场能微分恢复内膜向外应力",
+      "got": 0.0010554289962632789,
+      "expected": 0.0010554289962743518,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "007-05-场能微分恢复外膜向内应力",
+      "got": -0.0006754745575875157,
+      "expected": -0.0006754745576155852,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "008-03-两源路径差揭示互感对称条件",
+      "got": -0.6480000000000006,
+      "expected": -0.6479999999999999,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "008-05-物距灵敏度t=30.0",
+      "got": -0.2500000000793534,
+      "expected": -0.25,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "008-05-物距灵敏度t=50.0",
+      "got": -0.06250000001983835,
+      "expected": -0.0625,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "008-08-精确时差的高阶增量",
+      "got": 1.5844075595133977e-18,
+      "expected": 1.5844075595133977e-18,
+      "tolerance": 1e-34,
+      "passed": true
+    },
+    {
+      "name": "008-08-四阶相对贡献",
+      "got": 3.1688151190267955e-18,
+      "expected": 3.1688151190267955e-18,
+      "tolerance": 1e-60,
+      "passed": true
+    },
+    {
+      "name": "008-08-低高能超额时间之差",
+      "got": 0.5,
+      "expected": 0.5,
+      "tolerance": 1e-17,
+      "passed": true
+    },
+    {
+      "name": "010-06-半直线试探态归一化",
+      "got": 1.0,
+      "expected": 1.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "010-06-平均高度积分",
+      "got": 1.6509636244473134,
+      "expected": 1.6509636244473134,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "010-06-变分能量积分",
+      "got": 2.47644543667097,
+      "expected": 2.47644543667097,
+      "tolerance": 1e-12,
+      "passed": true
+    }
+  ],
+  "high_precision_digits": 65
+}

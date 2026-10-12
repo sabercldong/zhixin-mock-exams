@@ -1,0 +1,106 @@
+"""验收当前正式成品：独立计算、源稿、逐页视觉证据及文件校验和必须一致。"""
+from pathlib import Path
+import hashlib,json,re,subprocess
+import fitz
+from audit_sources import inspect,MODULES,metrics,BANNED
+ROOT=Path(__file__).resolve().parents[1]
+TEMPLATE_SHA='434e4734708ef9c12c4be4629709e370fa5fe9a67a4cc88709ee13ffa571673b'
+def sha(path):
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+def chunks(text):
+    parts=re.split(r'(?m)^# 第(\d+)题\n',text)[1:]
+    assert parts[::2]==list(map(str,range(1,9)))
+    return [re.sub(r'(?m)^\\newpage\s*$','',parts[i+1]).strip() for i in range(0,len(parts),2)]
+def main():
+    visual=json.loads((ROOT/'preview/visual-reviewed-full.json').read_text())
+    assert visual['actual_reviewed'] and not visual['unresolved']
+    qa=[]
+    for q in range(1,9):
+        key=f'{q:02}';row=inspect(key);assert not row['issues'];qa.append(row)
+        report=json.loads((ROOT/f'build/verification-q{key}.json').read_text())
+        assert report['verified_math'] and report['document_complete']
+        assert not report.get('unresolved_critical_condition')
+        for rel,digest in report['source_sha256'].items():
+            assert sha(ROOT/rel)==digest,('stale_math_source',rel)
+        assert sha(ROOT/f'build/verification-q{key}.json')==visual['verification_sha256'][key]
+        assert sha(ROOT/f'preview/visual-reviewed-q{key}.json')==visual['question_review_sha256'][key]
+        assert sha(ROOT/f'build/source-quality-q{key}.json')==visual['source_quality_sha256'][key]
+    subprocess.run(['python3',str(ROOT/'scripts/check_saved_reviews.py')],capture_output=True,check=True)
+    labels=[('paper','试卷'),('student','学生详解'),('teacher','教师备课')]
+    texts={kind:(ROOT/'markdown'/f'蔡题017_{version}.md').read_text() for kind,version in labels}
+    for text in texts.values():
+        assert text.count(r'\newpage')==7
+        assert not any(term in text for term in BANNED+['不把未求解的额外问题塞入','继续下一题'])
+        assert not re.search(r'\\(?:linespread|setstretch|fontsize|vspace|enlargethispage)\b',text)
+        for match in re.finditer(r'!\[[^\]]*\]\(([^)]+)\)',text):
+            assert (ROOT/'markdown'/match.group(1)).is_file(),match.group(1)
+    tc,sc,pc=map(chunks,[texts['teacher'],texts['student'],texts['paper']])
+    for q,(t,s,p) in enumerate(zip(tc,sc,pc),1):
+        assert t.split('## 六、关键洞察')[0].strip()==s
+        assert re.findall(r'(?m)^## (.*)$',s)==MODULES[:5]
+        assert re.findall(r'(?m)^## (.*)$',t)==MODULES
+        expected=re.search(r'<!-- question-start -->(.*?)<!-- question-end -->',t,re.S).group(1).strip()
+        if q==3:
+            expected=expected.replace('question-03.png){width=68%}','question-03.png){width=48%}')
+            expected=expected.replace('torus-03.png){width=92%}','torus-03.png){width=72%}')
+        assert expected==p,('question_text_mismatch',q)
+    compiled=json.loads((ROOT/'build/pdf-build-manifest.json').read_text())
+    documents=[]
+    for item,(kind,version) in zip(compiled['documents'],labels):
+        path=Path(item['path']);record=visual[kind];digest=sha(path)
+        assert digest==item['pdf_sha256']==record['pdf_sha256']==sha(ROOT/'build'/path.name)
+        assert record['source_sha256']==sha(ROOT/'markdown'/f'蔡题017_{version}.md')
+        subprocess.run(['qpdf','--check',str(path)],capture_output=True,check=True)
+        with fitz.open(path) as doc:
+            count=len(doc);assert record['overview_page_range']==[1,count]
+            assert set(record['page_png_sha256'])=={f'page-{p:03}.png' for p in range(1,count+1)}
+            assert set(record['overview_sha256'])=={f'overview-{i:02}.jpg' for i in range(1,(count+11)//12+1)}
+            assert record['overview_pages_reviewed']==list(range(1,count+1))
+            assert all(1<=p<=count for p in record['high_resolution_pages_reviewed'])
+            assert all(len(re.sub(r'\s','',p.get_text()))>20 for p in list(doc)[1:])
+            extracted='\n'.join(p.get_text() for p in doc)
+            assert '\ufffd' not in extracted and not any(term in extracted for term in BANNED)
+            for page in item['low_density_pages']:
+                if kind=='paper':
+                    assert count==9 and record['all_question_pages_high_resolution_reviewed']
+                else:
+                    note=visual['density_exceptions'][kind][str(page)]
+                    assert page in record['high_resolution_pages_reviewed']
+                    assert note['png_sha256']==record['page_png_sha256'][f'page-{page:03}.png']
+                    assert note['actual_checked'] and len(doc[page-1].get_xobjects())>0
+            if kind=='student':
+                assert count-1>=56 and item['pdf_extracted_body_nonspace']>=31218
+            if kind=='teacher':
+                assert count-1>=71 and item['pdf_extracted_body_nonspace']>=45411
+        folder=ROOT/'preview'/f'full-{kind}'
+        for mapping in ['page_png_sha256','overview_sha256']:
+            for name,digest in record[mapping].items():assert sha(folder/name)==digest,(kind,name)
+        assert not item['layout_errors']
+        log=(ROOT/'build'/path.with_suffix('.log').name).read_text(errors='replace')
+        assert not any(tag in log for tag in ['Overfull','Missing character','Undefined control sequence','! '])
+        documents.append({k:item[k] for k in ['version','total_pages','body_pages','pdf_extracted_body_nonspace','source_metrics','pdf_sha256','path']})
+    figures=list((ROOT/'figures').glob('*.pdf'))
+    singles=[p for p in figures if not p.stem.startswith('题')]
+    assert len(singles)==43 and len(figures)==51
+    assert {p.stem:sha(p) for p in singles}==visual['figures_sha256']
+    for path in figures:subprocess.run(['qpdf','--check',str(path)],capture_output=True,check=True)
+    originals=json.loads((ROOT/'preview/originals/source-manifest.json').read_text())
+    for name,item in originals.items():assert sha(ROOT.parent/name)==item['sha256']
+    assert sha(ROOT/'latex/template.tex')==TEMPLATE_SHA==visual['template_sha256']
+    template=(ROOT/'latex/template.tex').read_text()
+    for param in ['12pt,a4paper','top=22mm,bottom=22mm,left=22mm,right=22mm',r'\setstretch{1.24}',r'\setlength{\parskip}{0.35em}']:
+        assert param in template
+    benchmark=visual['benchmark101']
+    for version,kind in [('学生详解','student'),('教师备课','teacher')]:
+        ref=benchmark[version]
+        assert sha(Path(ref['markdown_path']))==ref['markdown_sha256']
+        assert sha(Path(ref['pdf_path']))==ref['pdf_sha256']
+        assert metrics(texts[kind])['body_net_characters']>=ref['source_metrics']['body_net_characters']
+    result=dict(technical_checks_passed=True,actual_visual_review=True,set_accepted=True,unresolved=[],
+        figures=43,figure_pdf_collections=8,qpdf_checked_files=54,question_count=8,
+        student_core_identical_to_teacher=True,originals_unchanged=True,template_identical_to101=True,
+        visual_record_sha256=sha(ROOT/'preview/visual-reviewed-full.json'),documents=documents,
+        per_question_depth=qa,benchmark101=benchmark,density_exceptions=visual['density_exceptions'])
+    (ROOT/'build/delivery-check.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
+    print(json.dumps(result,ensure_ascii=False,indent=2))
+if __name__=='__main__':main()

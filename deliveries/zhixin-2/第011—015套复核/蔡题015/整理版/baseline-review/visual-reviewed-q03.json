@@ -1,0 +1,1199 @@
+{
+  "paper": "015",
+  "question": 3,
+  "review_saved_utc": "2026-10-10T01:16:48.532871+00:00",
+  "scope": "Human-authorized revised question current actual-page review; not whole-set acceptance",
+  "actual_visual_reviewed": true,
+  "conditional_draft_reviewed": false,
+  "user_reply_received": true,
+  "model_condition_resolved": true,
+  "question_accepted": true,
+  "set_accepted": false,
+  "remaining_visual_issues": [],
+  "remaining_model_issues": [],
+  "source_sha256": "5ce5f060c07e0c6224f14487c93c66e8d04a9d441d537d51ec51a4ce5753d71e",
+  "source_quality_sha256": "056300110b8585b2e3202f13edc69eed3f055d1a03422a03988c803a755906ef",
+  "verification_sha256": "56f0d61f1d911fa2d218263ac5a74f30a0dfc92b8e5ec9a3f216a9d29cca3caf",
+  "geometry_sha256": "ad4bd615b0867295548fd52ec1e72ae53fa44b51cd98884d67c8dde787ed0ee6",
+  "template_sha256": "434e4734708ef9c12c4be4629709e370fa5fe9a67a4cc88709ee13ffa571673b",
+  "bound_sha256": {
+    "drafts/question-03.md": "5ce5f060c07e0c6224f14487c93c66e8d04a9d441d537d51ec51a4ce5753d71e",
+    "figures/题03_图稿源文件.tex": "148a5e6275216193f50b215996d4b72eade8393549b4feaf2e636792860112f4",
+    "build/question-03-verification.json": "56f0d61f1d911fa2d218263ac5a74f30a0dfc92b8e5ec9a3f216a9d29cca3caf",
+    "build/question-03-figure-geometry.json": "ad4bd615b0867295548fd52ec1e72ae53fa44b51cd98884d67c8dde787ed0ee6",
+    "build/source-quality-q03.json": "056300110b8585b2e3202f13edc69eed3f055d1a03422a03988c803a755906ef",
+    "build/question-03-模型审查.json": "e521c343adf87db151408ade832197be106b1aab2552fa70c269436191fecfb5",
+    "scripts/read_details_03.py": "900cf2c8649c25623ab8e81898c53422b1143f3c39d86e388cba176f4b96b311",
+    "scripts/verify_question_03.py": "b8368f3610c46b47e88a9a663c80a28f88481521867efb186be387e9fd7b5f3f",
+    "scripts/check_figures_03.py": "4f03a3022d059f86321f0f856c5e8cb687c65a5391ce8e265e432eb148e0b0ec",
+    "scripts/finalize_question_03_math.py": "90bc811395a059a804d42c91a8f8a182a31bd3693fe9a837a571a1afd283d36d",
+    "scripts/render_figures_03.py": "992f11c7bca34a9c0543c108a9b6976fbe6b9964b9eb66affa4c78eeb43fb63a",
+    "scripts/render_figures.py": "7b68a98640dbd00482c53d09865211d936014cae573552d22b1ff3df14789eb1",
+    "scripts/preview_drafts_03.py": "887f88a33dcd3648274f3687a62e96e398aaa3eb4d7502a28c9578e11f96af60",
+    "scripts/preview_working_pages_03.py": "7076d0e64ecc6b61191c6c836563e782597c2fb15e0cd7db0cb4c03c3ed221c3",
+    "latex/template.tex": "434e4734708ef9c12c4be4629709e370fa5fe9a67a4cc88709ee13ffa571673b",
+    "build/question-03-preverification.json": "060fdbf00f75679758c0390f85429563864647e0ff8429bb2fe39583c33c1a61",
+    "preview/working-draft-check-q03.json": "af8d00e08c2c0b27e28ce0aba6626018b7e6fc15716fd686d2b452590021387c",
+    "preview/working-page-manifest-q03.json": "102ddadddcc84da5563f012e45ab3a021e935d95baa096879f08e25d056ce905",
+    "preview/originals/question-03-detail-manifest.json": "fa26e31b1558c82175ad535b529491352d060f4f83e51b77bf9ad1ff11cb82ed",
+    "preview/originals/source-manifest.json": "99d49989faaab0f49c3035eff5ceb550ba7a57a323803a8b1379c3b9eb5eab03",
+    "scripts/check_saved_reviews.py": "724463857ad73e82bf8a03f38e2ebe17c1b9597804e7cbcc3539688267e5a973",
+    "preview/revision-actual-reading-ledger.json": "9272c606f91bf9b5cd9f8a0e021107fc79082fde8f9b758f3c11bdb0fd29fb67",
+    "build/model-revision-page-candidates.json": "d478784ce264db9c7898fab7c74806fc38d8b497370d639e5ac49d36a607c9da",
+    "build/model-revisions-015-2026-10-09.json": "490736331c245a19c0b1b617534caf373326562b25f7c7ea4e815f085e8acc4e",
+    "scripts/collect_revision_read_candidates.py": "c874c20b243af1ba8cb22759fff53fab85a84c583ade9b440b9b1d2267584da7",
+    "scripts/finalize_model_revision_reviews.py": "ec152452143a03f7c95100ebf5013223fb474205448479040f6ad9002997b4d3",
+    "revision-history/before-four-model-revisions-20261009/snapshot-manifest.json": "ce5724f61a19f6252d6fcf3a473d94c19e22e1f51991d0d7d0092a639eb1d7e8",
+    "revision-history/before-four-model-revisions-20261009/preview/visual-reviewed-q03.json": "50a08666762b68e626dfec478ddeaab707c0c3f690efea1b7dea0ed52949662a",
+    "preview/working-q03-student/working-q03-student.md": "3bda8e3176ebe91576d563cfb2a3df269e1ac84ae56585eccbe6d7bf8dd891f2",
+    "preview/working-q03-student/working-q03-student.tex": "8d780a0817442755c480a01ff23d0653c3c4dccfd17746aca46d495fb8bf0b5f",
+    "preview/working-q03-student/working-q03-student.pdf": "5fc7ce256fc6d9ab99be41165efc1e81f034d091d6db2ff70cfedbef99dbb43b",
+    "preview/working-q03-student/working-q03-student.log": "c950db23a2ff1001b63cf03e6c742e6beec373ad7244fc514472d0ceb5490f77",
+    "preview/working-q03-teacher/working-q03-teacher.md": "b106263b7a6a244cb85d7d7f716de4ca19605264b326579318e7be663bfdfa77",
+    "preview/working-q03-teacher/working-q03-teacher.tex": "e242776432616f6ee185cc8abe030ef97b3f9f97777caddc0de33a76c4761c3b",
+    "preview/working-q03-teacher/working-q03-teacher.pdf": "eac7241c1f1a75a3b395abf042333d875873f324fb287e9acbefc6a4c827395f",
+    "preview/working-q03-teacher/working-q03-teacher.log": "67a32f1ceda195a989b46dd89796459b539195cbb1c1ae5a3ffe3126e8dfb089"
+  },
+  "pdfs": {
+    "student": {
+      "pdf_sha256": "5fc7ce256fc6d9ab99be41165efc1e81f034d091d6db2ff70cfedbef99dbb43b",
+      "total_pages": 15,
+      "body_pages": 14,
+      "body_nonspace": 7996,
+      "per_page_nonspace": [
+        925,
+        679,
+        554,
+        543,
+        598,
+        315,
+        550,
+        565,
+        423,
+        444,
+        636,
+        788,
+        679,
+        297
+      ],
+      "page_png_sha256": {
+        "page-001.png": "a23ca15655057fd10fa09aac25ef58eb4dd507441df30ef5390846f65e4e532b",
+        "page-002.png": "15ab199afa7fc1df9c9088faea488e365f920639a16385c57597cfd04862b2e9",
+        "page-003.png": "a167f494bbadb8f90e9ff0e8d248d38a3a6b2e3934165058f26c0940e2610d97",
+        "page-004.png": "fff8d136f290c747d463b7da7b356edbc70db08ec97e2d740d57c2c90195b72e",
+        "page-005.png": "a980b90f89fcbf55d9cfe86ba9ba446935d3065d5aa5b9ae06de17cad8deeb0a",
+        "page-006.png": "b85033f574d50be0a78b2bffc91b062365d427236ade2f22e1e18635f5dc3c8e",
+        "page-007.png": "8dd9bd9234494d84b546dbc2feec8098156dc065d056227505b3613bc245eef5",
+        "page-008.png": "7a7ab6b0bd7e337696e7dbccf942aca929d4374fb69aea0eaca519aa820973eb",
+        "page-009.png": "73fab1d1918818c0a2eadb3c467fa83b86f73ea730c05d982d76f8883ea48237",
+        "page-010.png": "b8970b44be5ecc9516feea00b2a7cc395bc409460a9e5a459a86f36e6065bcd3",
+        "page-011.png": "f5e6e5d90aeb5900d8d22137af193bfa9fc538bea829226da7f7a732eecf9860",
+        "page-012.png": "5d9ed78a25466f00ee3db3635e40468ec0b7e5d9a0052d588515f663002f7154",
+        "page-013.png": "923916445b6dcfb343914152140a3e263658518df6e7dad1441916d6ac8c6b1a",
+        "page-014.png": "dd7b6a4af4432461a902965336961006baec73f1a7fe2f64dc618dc973806471",
+        "page-015.png": "056292f1781ad687b3a7018ac0ed87d696c53c17dfc6bccdfef46d1f95c830b4"
+      },
+      "overview_sha256": {
+        "overview-01.jpg": "c4fa6a52779837e5a92245a05a1c4d7041ad9cec0f8ef1c7a0a36c36b408f774",
+        "overview-02.jpg": "d578db36c075b12e60ce70298d03b9779e8054383182d5da36e806deae641d8c"
+      },
+      "overview_pages_reviewed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "high_resolution_pages_reviewed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    "teacher": {
+      "pdf_sha256": "eac7241c1f1a75a3b395abf042333d875873f324fb287e9acbefc6a4c827395f",
+      "total_pages": 23,
+      "body_pages": 22,
+      "body_nonspace": 13998,
+      "per_page_nonspace": [
+        925,
+        679,
+        554,
+        543,
+        598,
+        315,
+        550,
+        565,
+        423,
+        444,
+        636,
+        788,
+        679,
+        821,
+        948,
+        846,
+        844,
+        652,
+        723,
+        713,
+        459,
+        293
+      ],
+      "page_png_sha256": {
+        "page-001.png": "a23ca15655057fd10fa09aac25ef58eb4dd507441df30ef5390846f65e4e532b",
+        "page-002.png": "15ab199afa7fc1df9c9088faea488e365f920639a16385c57597cfd04862b2e9",
+        "page-003.png": "a167f494bbadb8f90e9ff0e8d248d38a3a6b2e3934165058f26c0940e2610d97",
+        "page-004.png": "fff8d136f290c747d463b7da7b356edbc70db08ec97e2d740d57c2c90195b72e",
+        "page-005.png": "a980b90f89fcbf55d9cfe86ba9ba446935d3065d5aa5b9ae06de17cad8deeb0a",
+        "page-006.png": "b85033f574d50be0a78b2bffc91b062365d427236ade2f22e1e18635f5dc3c8e",
+        "page-007.png": "8dd9bd9234494d84b546dbc2feec8098156dc065d056227505b3613bc245eef5",
+        "page-008.png": "7a7ab6b0bd7e337696e7dbccf942aca929d4374fb69aea0eaca519aa820973eb",
+        "page-009.png": "73fab1d1918818c0a2eadb3c467fa83b86f73ea730c05d982d76f8883ea48237",
+        "page-010.png": "b8970b44be5ecc9516feea00b2a7cc395bc409460a9e5a459a86f36e6065bcd3",
+        "page-011.png": "f5e6e5d90aeb5900d8d22137af193bfa9fc538bea829226da7f7a732eecf9860",
+        "page-012.png": "5d9ed78a25466f00ee3db3635e40468ec0b7e5d9a0052d588515f663002f7154",
+        "page-013.png": "923916445b6dcfb343914152140a3e263658518df6e7dad1441916d6ac8c6b1a",
+        "page-014.png": "dd7b6a4af4432461a902965336961006baec73f1a7fe2f64dc618dc973806471",
+        "page-015.png": "f575c2055429ee5941e372b06001f0790b5cfbce6074c937eca22e6720d91825",
+        "page-016.png": "7df7e488a193ab0bddebf7c152b6c1cc1a8abb958dbb20498ad8402e3415c5ac",
+        "page-017.png": "c51af82abaee98aa8ea64fe9902e63a756c43b553c86f51e82397c9419e5f732",
+        "page-018.png": "f398f8b8e235c035852191386260559651388eee8fb9070bacede935abe13138",
+        "page-019.png": "bd611728cb34d38be9395b506b3b7ae4def56e42c2d114bdfb4dbc5aaf7c672b",
+        "page-020.png": "66ab8ed38bcef235571f5eaf4feca1eba13c84725c3c161a8ebdb3a9f359d032",
+        "page-021.png": "14e7bbc839a11dd9d3fb6f3156992cf01d23b1fc861e24aab8e8254eaa1b119d",
+        "page-022.png": "7bd2e56dbdac4c0346b8c60ece70a5aa12319baa33b8741b89fbf3cab5d6b08f",
+        "page-023.png": "114d6047ffc31c1dfdb85319775f4e5ac33bfad9bd68b23d9f1be0aedf7bd695"
+      },
+      "overview_sha256": {
+        "overview-01.jpg": "4b1d9ca4569de2e19fc1f8359a2c5902f593760780d25357669e6bd365025539",
+        "overview-02.jpg": "ae11de12a870df2f66b9001833287b1761898ece3e9fa7bb784a8afd99f9ad61"
+      },
+      "overview_pages_reviewed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "high_resolution_pages_reviewed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ]
+    }
+  },
+  "identical_page_reuse": [
+    {
+      "student_page": 1,
+      "teacher_page": 1,
+      "png_sha256": "a23ca15655057fd10fa09aac25ef58eb4dd507441df30ef5390846f65e4e532b"
+    },
+    {
+      "student_page": 2,
+      "teacher_page": 2,
+      "png_sha256": "15ab199afa7fc1df9c9088faea488e365f920639a16385c57597cfd04862b2e9"
+    },
+    {
+      "student_page": 3,
+      "teacher_page": 3,
+      "png_sha256": "a167f494bbadb8f90e9ff0e8d248d38a3a6b2e3934165058f26c0940e2610d97"
+    },
+    {
+      "student_page": 4,
+      "teacher_page": 4,
+      "png_sha256": "fff8d136f290c747d463b7da7b356edbc70db08ec97e2d740d57c2c90195b72e"
+    },
+    {
+      "student_page": 5,
+      "teacher_page": 5,
+      "png_sha256": "a980b90f89fcbf55d9cfe86ba9ba446935d3065d5aa5b9ae06de17cad8deeb0a"
+    },
+    {
+      "student_page": 6,
+      "teacher_page": 6,
+      "png_sha256": "b85033f574d50be0a78b2bffc91b062365d427236ade2f22e1e18635f5dc3c8e"
+    },
+    {
+      "student_page": 7,
+      "teacher_page": 7,
+      "png_sha256": "8dd9bd9234494d84b546dbc2feec8098156dc065d056227505b3613bc245eef5"
+    },
+    {
+      "student_page": 8,
+      "teacher_page": 8,
+      "png_sha256": "7a7ab6b0bd7e337696e7dbccf942aca929d4374fb69aea0eaca519aa820973eb"
+    },
+    {
+      "student_page": 9,
+      "teacher_page": 9,
+      "png_sha256": "73fab1d1918818c0a2eadb3c467fa83b86f73ea730c05d982d76f8883ea48237"
+    },
+    {
+      "student_page": 10,
+      "teacher_page": 10,
+      "png_sha256": "b8970b44be5ecc9516feea00b2a7cc395bc409460a9e5a459a86f36e6065bcd3"
+    },
+    {
+      "student_page": 11,
+      "teacher_page": 11,
+      "png_sha256": "f5e6e5d90aeb5900d8d22137af193bfa9fc538bea829226da7f7a732eecf9860"
+    },
+    {
+      "student_page": 12,
+      "teacher_page": 12,
+      "png_sha256": "5d9ed78a25466f00ee3db3635e40468ec0b7e5d9a0052d588515f663002f7154"
+    },
+    {
+      "student_page": 13,
+      "teacher_page": 13,
+      "png_sha256": "923916445b6dcfb343914152140a3e263658518df6e7dad1441916d6ac8c6b1a"
+    },
+    {
+      "student_page": 14,
+      "teacher_page": 14,
+      "png_sha256": "dd7b6a4af4432461a902965336961006baec73f1a7fe2f64dc618dc973806471"
+    }
+  ],
+  "actual_page_coverage": {
+    "student": [
+      {
+        "page": 1,
+        "method": "historical actual-read exact full-page PNG",
+        "sha256": "a23ca15655057fd10fa09aac25ef58eb4dd507441df30ef5390846f65e4e532b",
+        "historical_evidence": [
+          {
+            "path": "/Users/dongxingxi/Downloads/2026.6.22/竞赛/蔡题集萃/蔡题集萃_整理版_副本/蔡题015/整理版/revision-history/before-four-model-revisions-20261009/preview/working-q01-student/page-001.png",
+            "old_actual_record_sha256": "b722bec071e00ec2565503688f2184261f7479d681fe3000119100c524f12418",
+            "question": 1,
+            "version": "student",
+            "page": 1
+          },
+          {
+            "path": "/Users/dongxingxi/Downloads/2026.6.22/竞赛/蔡题集萃/蔡题集萃_整理版_副本/蔡题015/整理版/revision-history/before-four-model-revisions-20261009/preview/working-q01-teacher/page-001.png",
+            "old_actual_record_sha256": "b722bec071e00ec2565503688f2184261f7479d681fe3000119100c524f12418",
+            "question": 1,
+            "version": "teacher",
+            "page": 1
+          },
+          {
+            "path": "/Users/dongxingxi/Downloads/2026.6.22/竞赛/蔡题集萃/蔡题集萃_整理版_副本/蔡题015/整理版/revision-history/before-four-model-revisions-20261009/preview/working-q03-student/page-001.png",
+            "old_actual_record_sha256": "50a08666762b68e626dfec478ddeaab707c0c3f690efea1b7dea0ed52949662a",
+            "question": 3,
+            "version": "student",
+            "page": 1
+          },
+          {
+            "path": "/Users/dongxingxi/Downloads/2026.6.22/竞赛/蔡题集萃/蔡题集萃_整理版_副本/蔡题015/整理版/revision-history/before-four-model-revisions-20261009/preview/working-q03-teacher/page-001.png",
+            "old_actual_record_sha256": "50a08666762b68e626dfec478ddeaab707c0c3f690efea1b7dea0ed52949662a",
+            "question": 3,
+            "version": "teacher",
+            "page": 1
+          },
+          {
+            "path": "/Users/dongxingxi/Downloads/2026.6.22/竞赛/蔡题集萃/蔡题集萃_整理版_副本/蔡题015/整理版/revision-history/before-four-model-revisions-20261009/preview/working-q05-student/page-001.png",
+            "old_actual_record_sha256": "eab823a7d457d1469584771f5037cc151a4dbb9a2ed1f8b6826776feaeebc551",
+            "question": 5,
+            "version": "student",
+            "page": 1
+          },
+          {
+            "path": "/Users/dongxingxi/Downloads/2026.6.22/竞赛/蔡题集萃/蔡题集萃_整理版_副本/蔡题015/整理版/revision-history/before-four-model-revisions-20261009/preview/working-q05-teacher/page-001.png",
+            "old_actual_record_sha256": "eab823a7d457d1469584771f5037cc151a4dbb9a2ed1f8b6826776feaeebc551",
+            "question": 5,
+            "version": "teacher",
+            "page": 1
+          },
+          {
+            "path": "/Users/dongxingxi/Downloads/2026.6.22/竞赛/蔡题集萃/蔡题集萃_整理版_副本/蔡题015/整理版/revision-history/before-four-model-revisions-20261009/preview/working-q06-student/page-001.png",
+            "old_actual_record_sha256": "8d43684c431fcf8d7fcb439136903e22060420d331cd8f0c9dca21288914a6e6",
+            "question": 6,
+            "version": "student",
+            "page": 1
+          },
+          {
+            "path": "/Users/dongxingxi/Downloads/2026.6.22/竞赛/蔡题集萃/蔡题集萃_整理版_副本/蔡题015/整理版/revision-history/before-four-model-revisions-20261009/preview/working-q06-teacher/page-001.png",
+            "old_actual_record_sha256": "8d43684c431fcf8d7fcb439136903e22060420d331cd8f0c9dca21288914a6e6",
+            "question": 6,
+            "version": "teacher",
+            "page": 1
+          }
+        ]
+      },
+      {
+        "page": 2,
+        "method": "current direct read or exact full-page duplicate",
+        "sha256": "15ab199afa7fc1df9c9088faea488e365f920639a16385c57597cfd04862b2e9",
+        "actually_read_path": "preview/working-q03-student/page-002.png"
+      },
+      {
+        "page": 3,
+        "method": "historical actual-read exact full-page PNG",
+        "sha256": "a167f494bbadb8f90e9ff0e8d248d38a3a6b2e3934165058f26c0940e2610d97",
+        "historical_evidence": [
+          {
+            "path": "/Users/dongxingxi/Downloads/2026.6.22/竞赛/蔡题集萃/蔡题集萃_整理版_副本/蔡题015/整理版/revision-history/before-four-model-revisions-20261009/preview/working-q03-student/page-003.png",
+            "old_actual_record_sha256": "50a08666762b68e626dfec478ddeaab707c0c3f690efea1b7dea0ed52949662a",
+            "question": 3,
+            "version": "student",
+            "page": 3
+          },
+          {
+            "path": "/Users/dongxingxi/Downloads/2026.6.22/竞赛/蔡题集萃/蔡题集萃_整理版_副本/蔡题015/整理版/revision-history/before-four-model-revisions-20261009/preview/working-q03-teacher/page-003.png",
+            "old_actual_record_sha256": "50a08666762b68e626dfec478ddeaab707c0c3f690efea1b7dea0ed52949662a",
+            "question": 3,
+            "version": "teacher",
+            "page": 3
+          }
+        ]
+      },
+      {
+        "page": 4,
+        "method": "historical actual-read exact full-page PNG",
+        "sha256": "fff8d136f290c747d463b7da7b356edbc70db08ec97e2d740d57c2c90195b72e",
+        "historical_evidence": [
+          {
+            "path": "/Users/dongxingxi/Downloads/2026.6.22/竞赛/蔡题集萃/蔡题集萃_整理版_副本/蔡题015/整理版/revision-history/before-four-model-revisions-20261009/preview/working-q03-student/page-004.png",
+            "old_actual_record_sha256": "50a08666762b68e626dfec478ddeaab707c0c3f690efea1b7dea0ed52949662a",
+            "question": 3,
+            "version": "student",
+            "page": 4
+          },
+          {
+            "path": "/Users/dongxingxi/Downloads/2026.6.22/竞赛/蔡题集萃/蔡题集萃_整理版_副本/蔡题015/整理版/revision-history/before-four-model-revisions-20261009/preview/working-q03-teacher/page-004.png",
+            "old_actual_record_sha256": "50a08666762b68e626dfec478ddeaab707c0c3f690efea1b7dea0ed52949662a",
+            "question": 3,
+            "version": "teacher",
+            "page": 4
+          }
+        ]
+      },
+      {
+        "page": 5,
+        "method": "historical actual-read exact full-page PNG",
+        "sha256": "a980b90f89fcbf55d9cfe86ba9ba446935d3065d5aa5b9ae06de17cad8deeb0a",
+        "historical_evidence": [
+          {
+            "path": "/Users/dongxingxi/Downloads/2026.6.22/竞赛/蔡题集萃/蔡题集萃_整理版_副本/蔡题015/整理版/revision-history/before-four-model-revisions-20261009/preview/working-q03-student/page-005.png",
+            "old_actual_record_sha256": "50a08666762b68e626dfec478ddeaab707c0c3f690efea1b7dea0ed52949662a",
+            "question": 3,
+            "version": "student",
+            "page": 5
+          },
+          {
+            "path": "/Users/dongxingxi/Downloads/2026.6.22/竞赛/蔡题集萃/蔡题集萃_整理版_副本/蔡题015/整理版/revision-history/before-four-model-revisions-20261009/preview/working-q03-teacher/page-005.png",
+            "old_actual_record_sha256": "50a08666762b68e626dfec478ddeaab707c0c3f690efea1b7dea0ed52949662a",
+            "question": 3,
+            "version": "teacher",
+            "page": 5
+          }
+        ]
+      },
+      {
+        "page": 6,
+        "method": "historical actual-read exact full-page PNG",
+        "sha256": "b85033f574d50be0a78b2bffc91b062365d427236ade2f22e1e18635f5dc3c8e",
+        "historical_evidence": [
+          {
+            "path": "/Users/dongxingxi/Downloads/2026.6.22/竞赛/蔡题集萃/蔡题集萃_整理版_副本/蔡题015/整理版/revision-history/before-four-model-revisions-20261009/preview/working-q03-student/page-006.png",
+            "old_actual_record_sha256": "50a08666762b68e626dfec478ddeaab707c0c3f690efea1b7dea0ed52949662a",
+            "question": 3,
+            "version": "student",
+            "page": 6
+          },
+          {
+            "path": "/Users/dongxingxi/Downloads/2026.6.22/竞赛/蔡题集萃/蔡题集萃_整理版_副本/蔡题015/整理版/revision-history/before-four-model-revisions-20261009/preview/working-q03-teacher/page-006.png",
+            "old_actual_record_sha256": "50a08666762b68e626dfec478ddeaab707c0c3f690efea1b7dea0ed52949662a",
+            "question": 3,
+            "version": "teacher",
+            "page": 6
+          }
+        ]
+      },
+      {
+        "page": 7,
+        "method": "historical actual-read exact full-page PNG",
+        "sha256": "8dd9bd9234494d84b546dbc2feec8098156dc065d056227505b3613bc245eef5",
+        "historical_evidence": [
+          {
+            "path": "/Users/dongxingxi/Downloads/2026.6.22/竞赛/蔡题集萃/蔡题集萃_整理版_副本/蔡题015/整理版/revision-history/before-four-model-revisions-20261009/preview/working-q03-student/page-007.png",
+            "old_actual_record_sha256": "50a08666762b68e626dfec478ddeaab707c0c3f690efea1b7dea0ed52949662a",
+            "question": 3,
+            "version": "student",
+            "page": 7
+          },
+          {
+            "path": "/Users/dongxingxi/Downloads/2026.6.22/竞赛/蔡题集萃/蔡题集萃_整理版_副本/蔡题015/整理版/revision-history/before-four-model-revisions-20261009/preview/working-q03-teacher/page-007.png",
+            "old_actual_record_sha256": "50a08666762b68e626dfec478ddeaab707c0c3f690efea1b7dea0ed52949662a",
+            "question": 3,
+            "version": "teacher",
+            "page": 7
+          }
+        ]
+      },
+      {
+        "page": 8,
+        "method": "historical actual-read exact full-page PNG",
+        "sha256": "7a7ab6b0bd7e337696e7dbccf942aca929d4374fb69aea0eaca519aa820973eb",
+        "historical_evidence": [
+          {
+            "path": "/Users/dongxingxi/Downloads/2026.6.22/竞赛/蔡题集萃/蔡题集萃_整理版_副本/蔡题015/整理版/revision-history/before-four-model-revisions-20261009/preview/working-q03-student/page-008.png",
+            "old_actual_record_sha256": "50a08666762b68e626dfec478ddeaab707c0c3f690efea1b7dea0ed52949662a",
+            "question": 3,
+            "version": "student",
+            "page": 8
+          },
+          {
+            "path": "/Users/dongxingxi/Downloads/2026.6.22/竞赛/蔡题集萃/蔡题集萃_整理版_副本/蔡题015/整理版/revision-history/before-four-model-revisions-20261009/preview/working-q03-teacher/page-008.png",
+            "old_actual_record_sha256": "50a08666762b68e626dfec478ddeaab707c0c3f690efea1b7dea0ed52949662a",
+            "question": 3,
+            "version": "teacher",
+            "page": 8
+          }
+        ]
+      },
+      {
+        "page": 9,
+        "method": "historical actual-read exact full-page PNG",
+        "sha256": "73fab1d1918818c0a2eadb3c467fa83b86f73ea730c05d982d76f8883ea48237",
+        "historical_evidence": [
+          {
+            "path": "/Users/dongxingxi/Downloads/2026.6.22/竞赛/蔡题集萃/蔡题集萃_整理版_副本/蔡题015/整理版/revision-history/before-four-model-revisions-20261009/preview/working-q03-student/page-009.png",
+            "old_actual_record_sha256": "50a08666762b68e626dfec478ddeaab707c0c3f690efea1b7dea0ed52949662a",
+            "question": 3,
+            "version": "student",
+            "page": 9
+          },
+          {
+            "path": "/Users/dongxingxi/Downloads/2026.6.22/竞赛/蔡题集萃/蔡题集萃_整理版_副本/蔡题015/整理版/revision-history/before-four-model-revisions-20261009/preview/working-q03-teacher/page-009.png",
+            "old_actual_record_sha256": "50a08666762b68e626dfec478ddeaab707c0c3f690efea1b7dea0ed52949662a",
+            "question": 3,
+            "version": "teacher",
+            "page": 9
+          }
+        ]
+      },
+      {
+        "page": 10,
+        "method": "historical actual-read exact full-page PNG",
+        "sha256": "b8970b44be5ecc9516feea00b2a7cc395bc409460a9e5a459a86f36e6065bcd3",
+        "historical_evidence": [
+          {
+            "path": "/Users/dongxingxi/Downloads/2026.6.22/竞赛/蔡题集萃/蔡题集萃_整理版_副本/蔡题015/整理版/revision-history/before-four-model-revisions-20261009/preview/working-q03-student/page-010.png",
+            "old_actual_record_sha256": "50a08666762b68e626dfec478ddeaab707c0c3f690efea1b7dea0ed52949662a",
+            "question": 3,
+            "version": "student",
+            "page": 10
+          },
+          {
+            "path": "/Users/dongxingxi/Downloads/2026.6.22/竞赛/蔡题集萃/蔡题集萃_整理版_副本/蔡题015/整理版/revision-history/before-four-model-revisions-20261009/preview/working-q03-teacher/page-010.png",
+            "old_actual_record_sha256": "50a08666762b68e626dfec478ddeaab707c0c3f690efea1b7dea0ed52949662a",
+            "question": 3,
+            "version": "teacher",
+            "page": 10
+          }
+        ]
+      },
+      {
+        "page": 11,
+        "method": "historical actual-read exact full-page PNG",
+        "sha256": "f5e6e5d90aeb5900d8d22137af193bfa9fc538bea829226da7f7a732eecf9860",
+        "historical_evidence": [
+          {
+            "path": "/Users/dongxingxi/Downloads/2026.6.22/竞赛/蔡题集萃/蔡题集萃_整理版_副本/蔡题015/整理版/revision-history/before-four-model-revisions-20261009/preview/working-q03-student/page-011.png",
+            "old_actual_record_sha256": "50a08666762b68e626dfec478ddeaab707c0c3f690efea1b7dea0ed52949662a",
+            "question": 3,
+            "version": "student",
+            "page": 11
+          },
+          {
+            "path": "/Users/dongxingxi/Downloads/2026.6.22/竞赛/蔡题集萃/蔡题集萃_整理版_副本/蔡题015/整理版/revision-history/before-four-model-revisions-20261009/preview/working-q03-teacher/page-011.png",
+            "old_actual_record_sha256": "50a08666762b68e626dfec478ddeaab707c0c3f690efea1b7dea0ed52949662a",
+            "question": 3,
+            "version": "teacher",
+            "page": 11
+          }
+        ]
+      },
+      {
+        "page": 12,
+        "method": "historical actual-read exact full-page PNG",
+        "sha256": "5d9ed78a25466f00ee3db3635e40468ec0b7e5d9a0052d588515f663002f7154",
+        "historical_evidence": [
+          {
+            "path": "/Users/dongxingxi/Downloads/2026.6.22/竞赛/蔡题集萃/蔡题集萃_整理版_副本/蔡题015/整理版/revision-history/before-four-model-revisions-20261009/preview/working-q03-student/page-012.png",
+            "old_actual_record_sha256": "50a08666762b68e626dfec478ddeaab707c0c3f690efea1b7dea0ed52949662a",
+            "question": 3,
+            "version": "student",
+            "page": 12
+          },
+          {
+            "path": "/Users/dongxingxi/Downloads/2026.6.22/竞赛/蔡题集萃/蔡题集萃_整理版_副本/蔡题015/整理版/revision-history/before-four-model-revisions-20261009/preview/working-q03-teacher/page-012.png",
+            "old_actual_record_sha256": "50a08666762b68e626dfec478ddeaab707c0c3f690efea1b7dea0ed52949662a",
+            "question": 3,
+            "version": "teacher",
+            "page": 12
+          }
+        ]
+      },
+      {
+        "page": 13,
+        "method": "current direct read or exact full-page duplicate",
+        "sha256": "923916445b6dcfb343914152140a3e263658518df6e7dad1441916d6ac8c6b1a",
+        "actually_read_path": "preview/working-q03-student/page-013.png"
+      },
+      {
+        "page": 14,
+        "method": "historical actual-read exact full-page PNG",
+        "sha256": "dd7b6a4af4432461a902965336961006baec73f1a7fe2f64dc618dc973806471",
+        "historical_evidence": [
+          {
+            "path": "/Users/dongxingxi/Downloads/2026.6.22/竞赛/蔡题集萃/蔡题集萃_整理版_副本/蔡题015/整理版/revision-history/before-four-model-revisions-20261009/preview/working-q03-student/page-014.png",
+            "old_actual_record_sha256": "50a08666762b68e626dfec478ddeaab707c0c3f690efea1b7dea0ed52949662a",
+            "question": 3,
+            "version": "student",
+            "page": 14
+          },
+          {
+            "path": "/Users/dongxingxi/Downloads/2026.6.22/竞赛/蔡题集萃/蔡题集萃_整理版_副本/蔡题015/整理版/revision-history/before-four-model-revisions-20261009/preview/working-q03-teacher/page-014.png",
+            "old_actual_record_sha256": "50a08666762b68e626dfec478ddeaab707c0c3f690efea1b7dea0ed52949662a",
+            "question": 3,
+            "version": "teacher",
+            "page": 14
+          }
+        ]
+      },
+      {
+        "page": 15,
+        "method": "current direct read or exact full-page duplicate",
+        "sha256": "056292f1781ad687b3a7018ac0ed87d696c53c17dfc6bccdfef46d1f95c830b4",
+        "actually_read_path": "preview/working-q03-student/page-015.png"
+      }
+    ],
+    "teacher": [
+      {
+        "page": 1,
+        "method": "historical actual-read exact full-page PNG",
+        "sha256": "a23ca15655057fd10fa09aac25ef58eb4dd507441df30ef5390846f65e4e532b",
+        "historical_evidence": [
+          {
+            "path": "/Users/dongxingxi/Downloads/2026.6.22/竞赛/蔡题集萃/蔡题集萃_整理版_副本/蔡题015/整理版/revision-history/before-four-model-revisions-20261009/preview/working-q01-student/page-001.png",
+            "old_actual_record_sha256": "b722bec071e00ec2565503688f2184261f7479d681fe3000119100c524f12418",
+            "question": 1,
+            "version": "student",
+            "page": 1
+          },
+          {
+            "path": "/Users/dongxingxi/Downloads/2026.6.22/竞赛/蔡题集萃/蔡题集萃_整理版_副本/蔡题015/整理版/revision-history/before-four-model-revisions-20261009/preview/working-q01-teacher/page-001.png",
+            "old_actual_record_sha256": "b722bec071e00ec2565503688f2184261f7479d681fe3000119100c524f12418",
+            "question": 1,
+            "version": "teacher",
+            "page": 1
+          },
+          {
+            "path": "/Users/dongxingxi/Downloads/2026.6.22/竞赛/蔡题集萃/蔡题集萃_整理版_副本/蔡题015/整理版/revision-history/before-four-model-revisions-20261009/preview/working-q03-student/page-001.png",
+            "old_actual_record_sha256": "50a08666762b68e626dfec478ddeaab707c0c3f690efea1b7dea0ed52949662a",
+            "question": 3,
+            "version": "student",
+            "page": 1
+          },
+          {
+            "path": "/Users/dongxingxi/Downloads/2026.6.22/竞赛/蔡题集萃/蔡题集萃_整理版_副本/蔡题015/整理版/revision-history/before-four-model-revisions-20261009/preview/working-q03-teacher/page-001.png",
+            "old_actual_record_sha256": "50a08666762b68e626dfec478ddeaab707c0c3f690efea1b7dea0ed52949662a",
+            "question": 3,
+            "version": "teacher",
+            "page": 1
+          },
+          {
+            "path": "/Users/dongxingxi/Downloads/2026.6.22/竞赛/蔡题集萃/蔡题集萃_整理版_副本/蔡题015/整理版/revision-history/before-four-model-revisions-20261009/preview/working-q05-student/page-001.png",
+            "old_actual_record_sha256": "eab823a7d457d1469584771f5037cc151a4dbb9a2ed1f8b6826776feaeebc551",
+            "question": 5,
+            "version": "student",
+            "page": 1
+          },
+          {
+            "path": "/Users/dongxingxi/Downloads/2026.6.22/竞赛/蔡题集萃/蔡题集萃_整理版_副本/蔡题015/整理版/revision-history/before-four-model-revisions-20261009/preview/working-q05-teacher/page-001.png",
+            "old_actual_record_sha256": "eab823a7d457d1469584771f5037cc151a4dbb9a2ed1f8b6826776feaeebc551",
+            "question": 5,
+            "version": "teacher",
+            "page": 1
+          },
+          {
+            "path": "/Users/dongxingxi/Downloads/2026.6.22/竞赛/蔡题集萃/蔡题集萃_整理版_副本/蔡题015/整理版/revision-history/before-four-model-revisions-20261009/preview/working-q06-student/page-001.png",
+            "old_actual_record_sha256": "8d43684c431fcf8d7fcb439136903e22060420d331cd8f0c9dca21288914a6e6",
+            "question": 6,
+            "version": "student",
+            "page": 1
+          },
+          {
+            "path": "/Users/dongxingxi/Downloads/2026.6.22/竞赛/蔡题集萃/蔡题集萃_整理版_副本/蔡题015/整理版/revision-history/before-four-model-revisions-20261009/preview/working-q06-teacher/page-001.png",
+            "old_actual_record_sha256": "8d43684c431fcf8d7fcb439136903e22060420d331cd8f0c9dca21288914a6e6",
+            "question": 6,
+            "version": "teacher",
+            "page": 1
+          }
+        ]
+      },
+      {
+        "page": 2,
+        "method": "current direct read or exact full-page duplicate",
+        "sha256": "15ab199afa7fc1df9c9088faea488e365f920639a16385c57597cfd04862b2e9",
+        "actually_read_path": "preview/working-q03-student/page-002.png"
+      },
+      {
+        "page": 3,
+        "method": "historical actual-read exact full-page PNG",
+        "sha256": "a167f494bbadb8f90e9ff0e8d248d38a3a6b2e3934165058f26c0940e2610d97",
+        "historical_evidence": [
+          {
+            "path": "/Users/dongxingxi/Downloads/2026.6.22/竞赛/蔡题集萃/蔡题集萃_整理版_副本/蔡题015/整理版/revision-history/before-four-model-revisions-20261009/preview/working-q03-student/page-003.png",
+            "old_actual_record_sha256": "50a08666762b68e626dfec478ddeaab707c0c3f690efea1b7dea0ed52949662a",
+            "question": 3,
+            "version": "student",
+            "page": 3
+          },
+          {
+            "path": "/Users/dongxingxi/Downloads/2026.6.22/竞赛/蔡题集萃/蔡题集萃_整理版_副本/蔡题015/整理版/revision-history/before-four-model-revisions-20261009/preview/working-q03-teacher/page-003.png",
+            "old_actual_record_sha256": "50a08666762b68e626dfec478ddeaab707c0c3f690efea1b7dea0ed52949662a",
+            "question": 3,
+            "version": "teacher",
+            "page": 3
+          }
+        ]
+      },
+      {
+        "page": 4,
+        "method": "historical actual-read exact full-page PNG",
+        "sha256": "fff8d136f290c747d463b7da7b356edbc70db08ec97e2d740d57c2c90195b72e",
+        "historical_evidence": [
+          {
+            "path": "/Users/dongxingxi/Downloads/2026.6.22/竞赛/蔡题集萃/蔡题集萃_整理版_副本/蔡题015/整理版/revision-history/before-four-model-revisions-20261009/preview/working-q03-student/page-004.png",
+            "old_actual_record_sha256": "50a08666762b68e626dfec478ddeaab707c0c3f690efea1b7dea0ed52949662a",
+            "question": 3,
+            "version": "student",
+            "page": 4
+          },
+          {
+            "path": "/Users/dongxingxi/Downloads/2026.6.22/竞赛/蔡题集萃/蔡题集萃_整理版_副本/蔡题015/整理版/revision-history/before-four-model-revisions-20261009/preview/working-q03-teacher/page-004.png",
+            "old_actual_record_sha256": "50a08666762b68e626dfec478ddeaab707c0c3f690efea1b7dea0ed52949662a",
+            "question": 3,
+            "version": "teacher",
+            "page": 4
+          }
+        ]
+      },
+      {
+        "page": 5,
+        "method": "historical actual-read exact full-page PNG",
+        "sha256": "a980b90f89fcbf55d9cfe86ba9ba446935d3065d5aa5b9ae06de17cad8deeb0a",
+        "historical_evidence": [
+          {
+            "path": "/Users/dongxingxi/Downloads/2026.6.22/竞赛/蔡题集萃/蔡题集萃_整理版_副本/蔡题015/整理版/revision-history/before-four-model-revisions-20261009/preview/working-q03-student/page-005.png",
+            "old_actual_record_sha256": "50a08666762b68e626dfec478ddeaab707c0c3f690efea1b7dea0ed52949662a",
+            "question": 3,
+            "version": "student",
+            "page": 5
+          },
+          {
+            "path": "/Users/dongxingxi/Downloads/2026.6.22/竞赛/蔡题集萃/蔡题集萃_整理版_副本/蔡题015/整理版/revision-history/before-four-model-revisions-20261009/preview/working-q03-teacher/page-005.png",
+            "old_actual_record_sha256": "50a08666762b68e626dfec478ddeaab707c0c3f690efea1b7dea0ed52949662a",
+            "question": 3,
+            "version": "teacher",
+            "page": 5
+          }
+        ]
+      },
+      {
+        "page": 6,
+        "method": "historical actual-read exact full-page PNG",
+        "sha256": "b85033f574d50be0a78b2bffc91b062365d427236ade2f22e1e18635f5dc3c8e",
+        "historical_evidence": [
+          {
+            "path": "/Users/dongxingxi/Downloads/2026.6.22/竞赛/蔡题集萃/蔡题集萃_整理版_副本/蔡题015/整理版/revision-history/before-four-model-revisions-20261009/preview/working-q03-student/page-006.png",
+            "old_actual_record_sha256": "50a08666762b68e626dfec478ddeaab707c0c3f690efea1b7dea0ed52949662a",
+            "question": 3,
+            "version": "student",
+            "page": 6
+          },
+          {
+            "path": "/Users/dongxingxi/Downloads/2026.6.22/竞赛/蔡题集萃/蔡题集萃_整理版_副本/蔡题015/整理版/revision-history/before-four-model-revisions-20261009/preview/working-q03-teacher/page-006.png",
+            "old_actual_record_sha256": "50a08666762b68e626dfec478ddeaab707c0c3f690efea1b7dea0ed52949662a",
+            "question": 3,
+            "version": "teacher",
+            "page": 6
+          }
+        ]
+      },
+      {
+        "page": 7,
+        "method": "historical actual-read exact full-page PNG",
+        "sha256": "8dd9bd9234494d84b546dbc2feec8098156dc065d056227505b3613bc245eef5",
+        "historical_evidence": [
+          {
+            "path": "/Users/dongxingxi/Downloads/2026.6.22/竞赛/蔡题集萃/蔡题集萃_整理版_副本/蔡题015/整理版/revision-history/before-four-model-revisions-20261009/preview/working-q03-student/page-007.png",
+            "old_actual_record_sha256": "50a08666762b68e626dfec478ddeaab707c0c3f690efea1b7dea0ed52949662a",
+            "question": 3,
+            "version": "student",
+            "page": 7
+          },
+          {
+            "path": "/Users/dongxingxi/Downloads/2026.6.22/竞赛/蔡题集萃/蔡题集萃_整理版_副本/蔡题015/整理版/revision-history/before-four-model-revisions-20261009/preview/working-q03-teacher/page-007.png",
+            "old_actual_record_sha256": "50a08666762b68e626dfec478ddeaab707c0c3f690efea1b7dea0ed52949662a",
+            "question": 3,
+            "version": "teacher",
+            "page": 7
+          }
+        ]
+      },
+      {
+        "page": 8,
+        "method": "historical actual-read exact full-page PNG",
+        "sha256": "7a7ab6b0bd7e337696e7dbccf942aca929d4374fb69aea0eaca519aa820973eb",
+        "historical_evidence": [
+          {
+            "path": "/Users/dongxingxi/Downloads/2026.6.22/竞赛/蔡题集萃/蔡题集萃_整理版_副本/蔡题015/整理版/revision-history/before-four-model-revisions-20261009/preview/working-q03-student/page-008.png",
+            "old_actual_record_sha256": "50a08666762b68e626dfec478ddeaab707c0c3f690efea1b7dea0ed52949662a",
+            "question": 3,
+            "version": "student",
+            "page": 8
+          },
+          {
+            "path": "/Users/dongxingxi/Downloads/2026.6.22/竞赛/蔡题集萃/蔡题集萃_整理版_副本/蔡题015/整理版/revision-history/before-four-model-revisions-20261009/preview/working-q03-teacher/page-008.png",
+            "old_actual_record_sha256": "50a08666762b68e626dfec478ddeaab707c0c3f690efea1b7dea0ed52949662a",
+            "question": 3,
+            "version": "teacher",
+            "page": 8
+          }
+        ]
+      },
+      {
+        "page": 9,
+        "method": "historical actual-read exact full-page PNG",
+        "sha256": "73fab1d1918818c0a2eadb3c467fa83b86f73ea730c05d982d76f8883ea48237",
+        "historical_evidence": [
+          {
+            "path": "/Users/dongxingxi/Downloads/2026.6.22/竞赛/蔡题集萃/蔡题集萃_整理版_副本/蔡题015/整理版/revision-history/before-four-model-revisions-20261009/preview/working-q03-student/page-009.png",
+            "old_actual_record_sha256": "50a08666762b68e626dfec478ddeaab707c0c3f690efea1b7dea0ed52949662a",
+            "question": 3,
+            "version": "student",
+            "page": 9
+          },
+          {
+            "path": "/Users/dongxingxi/Downloads/2026.6.22/竞赛/蔡题集萃/蔡题集萃_整理版_副本/蔡题015/整理版/revision-history/before-four-model-revisions-20261009/preview/working-q03-teacher/page-009.png",
+            "old_actual_record_sha256": "50a08666762b68e626dfec478ddeaab707c0c3f690efea1b7dea0ed52949662a",
+            "question": 3,
+            "version": "teacher",
+            "page": 9
+          }
+        ]
+      },
+      {
+        "page": 10,
+        "method": "historical actual-read exact full-page PNG",
+        "sha256": "b8970b44be5ecc9516feea00b2a7cc395bc409460a9e5a459a86f36e6065bcd3",
+        "historical_evidence": [
+          {
+            "path": "/Users/dongxingxi/Downloads/2026.6.22/竞赛/蔡题集萃/蔡题集萃_整理版_副本/蔡题015/整理版/revision-history/before-four-model-revisions-20261009/preview/working-q03-student/page-010.png",
+            "old_actual_record_sha256": "50a08666762b68e626dfec478ddeaab707c0c3f690efea1b7dea0ed52949662a",
+            "question": 3,
+            "version": "student",
+            "page": 10
+          },
+          {
+            "path": "/Users/dongxingxi/Downloads/2026.6.22/竞赛/蔡题集萃/蔡题集萃_整理版_副本/蔡题015/整理版/revision-history/before-four-model-revisions-20261009/preview/working-q03-teacher/page-010.png",
+            "old_actual_record_sha256": "50a08666762b68e626dfec478ddeaab707c0c3f690efea1b7dea0ed52949662a",
+            "question": 3,
+            "version": "teacher",
+            "page": 10
+          }
+        ]
+      },
+      {
+        "page": 11,
+        "method": "historical actual-read exact full-page PNG",
+        "sha256": "f5e6e5d90aeb5900d8d22137af193bfa9fc538bea829226da7f7a732eecf9860",
+        "historical_evidence": [
+          {
+            "path": "/Users/dongxingxi/Downloads/2026.6.22/竞赛/蔡题集萃/蔡题集萃_整理版_副本/蔡题015/整理版/revision-history/before-four-model-revisions-20261009/preview/working-q03-student/page-011.png",
+            "old_actual_record_sha256": "50a08666762b68e626dfec478ddeaab707c0c3f690efea1b7dea0ed52949662a",
+            "question": 3,
+            "version": "student",
+            "page": 11
+          },
+          {
+            "path": "/Users/dongxingxi/Downloads/2026.6.22/竞赛/蔡题集萃/蔡题集萃_整理版_副本/蔡题015/整理版/revision-history/before-four-model-revisions-20261009/preview/working-q03-teacher/page-011.png",
+            "old_actual_record_sha256": "50a08666762b68e626dfec478ddeaab707c0c3f690efea1b7dea0ed52949662a",
+            "question": 3,
+            "version": "teacher",
+            "page": 11
+          }
+        ]
+      },
+      {
+        "page": 12,
+        "method": "historical actual-read exact full-page PNG",
+        "sha256": "5d9ed78a25466f00ee3db3635e40468ec0b7e5d9a0052d588515f663002f7154",
+        "historical_evidence": [
+          {
+            "path": "/Users/dongxingxi/Downloads/2026.6.22/竞赛/蔡题集萃/蔡题集萃_整理版_副本/蔡题015/整理版/revision-history/before-four-model-revisions-20261009/preview/working-q03-student/page-012.png",
+            "old_actual_record_sha256": "50a08666762b68e626dfec478ddeaab707c0c3f690efea1b7dea0ed52949662a",
+            "question": 3,
+            "version": "student",
+            "page": 12
+          },
+          {
+            "path": "/Users/dongxingxi/Downloads/2026.6.22/竞赛/蔡题集萃/蔡题集萃_整理版_副本/蔡题015/整理版/revision-history/before-four-model-revisions-20261009/preview/working-q03-teacher/page-012.png",
+            "old_actual_record_sha256": "50a08666762b68e626dfec478ddeaab707c0c3f690efea1b7dea0ed52949662a",
+            "question": 3,
+            "version": "teacher",
+            "page": 12
+          }
+        ]
+      },
+      {
+        "page": 13,
+        "method": "current direct read or exact full-page duplicate",
+        "sha256": "923916445b6dcfb343914152140a3e263658518df6e7dad1441916d6ac8c6b1a",
+        "actually_read_path": "preview/working-q03-student/page-013.png"
+      },
+      {
+        "page": 14,
+        "method": "historical actual-read exact full-page PNG",
+        "sha256": "dd7b6a4af4432461a902965336961006baec73f1a7fe2f64dc618dc973806471",
+        "historical_evidence": [
+          {
+            "path": "/Users/dongxingxi/Downloads/2026.6.22/竞赛/蔡题集萃/蔡题集萃_整理版_副本/蔡题015/整理版/revision-history/before-four-model-revisions-20261009/preview/working-q03-student/page-014.png",
+            "old_actual_record_sha256": "50a08666762b68e626dfec478ddeaab707c0c3f690efea1b7dea0ed52949662a",
+            "question": 3,
+            "version": "student",
+            "page": 14
+          },
+          {
+            "path": "/Users/dongxingxi/Downloads/2026.6.22/竞赛/蔡题集萃/蔡题集萃_整理版_副本/蔡题015/整理版/revision-history/before-four-model-revisions-20261009/preview/working-q03-teacher/page-014.png",
+            "old_actual_record_sha256": "50a08666762b68e626dfec478ddeaab707c0c3f690efea1b7dea0ed52949662a",
+            "question": 3,
+            "version": "teacher",
+            "page": 14
+          }
+        ]
+      },
+      {
+        "page": 15,
+        "method": "current direct read or exact full-page duplicate",
+        "sha256": "f575c2055429ee5941e372b06001f0790b5cfbce6074c937eca22e6720d91825",
+        "actually_read_path": "preview/working-q03-teacher/page-015.png"
+      },
+      {
+        "page": 16,
+        "method": "historical actual-read exact full-page PNG",
+        "sha256": "7df7e488a193ab0bddebf7c152b6c1cc1a8abb958dbb20498ad8402e3415c5ac",
+        "historical_evidence": [
+          {
+            "path": "/Users/dongxingxi/Downloads/2026.6.22/竞赛/蔡题集萃/蔡题集萃_整理版_副本/蔡题015/整理版/revision-history/before-four-model-revisions-20261009/preview/working-q03-teacher/page-016.png",
+            "old_actual_record_sha256": "50a08666762b68e626dfec478ddeaab707c0c3f690efea1b7dea0ed52949662a",
+            "question": 3,
+            "version": "teacher",
+            "page": 16
+          }
+        ]
+      },
+      {
+        "page": 17,
+        "method": "historical actual-read exact full-page PNG",
+        "sha256": "c51af82abaee98aa8ea64fe9902e63a756c43b553c86f51e82397c9419e5f732",
+        "historical_evidence": [
+          {
+            "path": "/Users/dongxingxi/Downloads/2026.6.22/竞赛/蔡题集萃/蔡题集萃_整理版_副本/蔡题015/整理版/revision-history/before-four-model-revisions-20261009/preview/working-q03-teacher/page-017.png",
+            "old_actual_record_sha256": "50a08666762b68e626dfec478ddeaab707c0c3f690efea1b7dea0ed52949662a",
+            "question": 3,
+            "version": "teacher",
+            "page": 17
+          }
+        ]
+      },
+      {
+        "page": 18,
+        "method": "current direct read or exact full-page duplicate",
+        "sha256": "f398f8b8e235c035852191386260559651388eee8fb9070bacede935abe13138",
+        "actually_read_path": "preview/working-q03-teacher/page-018.png"
+      },
+      {
+        "page": 19,
+        "method": "historical actual-read exact full-page PNG",
+        "sha256": "bd611728cb34d38be9395b506b3b7ae4def56e42c2d114bdfb4dbc5aaf7c672b",
+        "historical_evidence": [
+          {
+            "path": "/Users/dongxingxi/Downloads/2026.6.22/竞赛/蔡题集萃/蔡题集萃_整理版_副本/蔡题015/整理版/revision-history/before-four-model-revisions-20261009/preview/working-q03-teacher/page-019.png",
+            "old_actual_record_sha256": "50a08666762b68e626dfec478ddeaab707c0c3f690efea1b7dea0ed52949662a",
+            "question": 3,
+            "version": "teacher",
+            "page": 19
+          }
+        ]
+      },
+      {
+        "page": 20,
+        "method": "historical actual-read exact full-page PNG",
+        "sha256": "66ab8ed38bcef235571f5eaf4feca1eba13c84725c3c161a8ebdb3a9f359d032",
+        "historical_evidence": [
+          {
+            "path": "/Users/dongxingxi/Downloads/2026.6.22/竞赛/蔡题集萃/蔡题集萃_整理版_副本/蔡题015/整理版/revision-history/before-four-model-revisions-20261009/preview/working-q03-teacher/page-020.png",
+            "old_actual_record_sha256": "50a08666762b68e626dfec478ddeaab707c0c3f690efea1b7dea0ed52949662a",
+            "question": 3,
+            "version": "teacher",
+            "page": 20
+          }
+        ]
+      },
+      {
+        "page": 21,
+        "method": "historical actual-read exact full-page PNG",
+        "sha256": "14e7bbc839a11dd9d3fb6f3156992cf01d23b1fc861e24aab8e8254eaa1b119d",
+        "historical_evidence": [
+          {
+            "path": "/Users/dongxingxi/Downloads/2026.6.22/竞赛/蔡题集萃/蔡题集萃_整理版_副本/蔡题015/整理版/revision-history/before-four-model-revisions-20261009/preview/working-q03-teacher/page-021.png",
+            "old_actual_record_sha256": "50a08666762b68e626dfec478ddeaab707c0c3f690efea1b7dea0ed52949662a",
+            "question": 3,
+            "version": "teacher",
+            "page": 21
+          }
+        ]
+      },
+      {
+        "page": 22,
+        "method": "historical actual-read exact full-page PNG",
+        "sha256": "7bd2e56dbdac4c0346b8c60ece70a5aa12319baa33b8741b89fbf3cab5d6b08f",
+        "historical_evidence": [
+          {
+            "path": "/Users/dongxingxi/Downloads/2026.6.22/竞赛/蔡题集萃/蔡题集萃_整理版_副本/蔡题015/整理版/revision-history/before-four-model-revisions-20261009/preview/working-q03-teacher/page-022.png",
+            "old_actual_record_sha256": "50a08666762b68e626dfec478ddeaab707c0c3f690efea1b7dea0ed52949662a",
+            "question": 3,
+            "version": "teacher",
+            "page": 22
+          }
+        ]
+      },
+      {
+        "page": 23,
+        "method": "historical actual-read exact full-page PNG",
+        "sha256": "114d6047ffc31c1dfdb85319775f4e5ac33bfad9bd68b23d9f1be0aedf7bd695",
+        "historical_evidence": [
+          {
+            "path": "/Users/dongxingxi/Downloads/2026.6.22/竞赛/蔡题集萃/蔡题集萃_整理版_副本/蔡题015/整理版/revision-history/before-four-model-revisions-20261009/preview/working-q03-teacher/page-023.png",
+            "old_actual_record_sha256": "50a08666762b68e626dfec478ddeaab707c0c3f690efea1b7dea0ed52949662a",
+            "question": 3,
+            "version": "teacher",
+            "page": 23
+          }
+        ]
+      }
+    ]
+  },
+  "figures_reviewed": {
+    "question-03": {
+      "pdf_sha256": "b7939e433fcfe09a56a1f4c5fd0664ed1e1b474fa282ffaeae3434c72b589cb8",
+      "png_sha256": "6d1930ac117a0d329528a457d8719bb5382113675fe446d5e3122f0b704b5bbf"
+    },
+    "material-03": {
+      "pdf_sha256": "aa201a42d5664293499ade0b19f2fcfc600ba9f34d7a384423130ebd2c07d4f4",
+      "png_sha256": "42d3bfe2d34b63fc0e8083117ffbeb193d4b0f332c9a9a597d7d053820feed1d"
+    },
+    "domain-03": {
+      "pdf_sha256": "b50c91f3875b832ed30aded28885b156cbbe14fb59770a1eac6412f2926473db",
+      "png_sha256": "567fa9249fd4288655f4f8a3af4bd3ea288761123e3967b3936809a732681405"
+    },
+    "particle-03": {
+      "pdf_sha256": "6039a594b388a56310cec91d61d0f943554a8f18b640c6f7a0029b1807b749f2",
+      "png_sha256": "3a63e08537b9cfb5638c1e37d442ef75b23fe8bafcfb12132f94e89236eb6273"
+    },
+    "supports-03": {
+      "pdf_sha256": "7d2931becedc82f98a6cef6ad23d16dd6cd80696191e132255d684c1e128960d",
+      "png_sha256": "c12e7c0707c5a2c3f069bba99607415e887f5f6dd006d5ce2d7b3e2f660299fd"
+    },
+    "pressure-03": {
+      "pdf_sha256": "39d7cb90c448bcd1b60ac7c4d51c410455dce5ac5751bc5377351469a0c7388f",
+      "png_sha256": "3d27ef8553b181b885e6807c3cd521be4deb17c8d3fba2ef452ad9f7f505ac30"
+    }
+  },
+  "figure_actual_read_proofs": {
+    "question-03": {
+      "method": "direct actual standalone image read",
+      "png_sha256": "6d1930ac117a0d329528a457d8719bb5382113675fe446d5e3122f0b704b5bbf"
+    },
+    "material-03": {
+      "method": "historical actual-read identical PNG",
+      "historical_actual_review_sha256": "50a08666762b68e626dfec478ddeaab707c0c3f690efea1b7dea0ed52949662a",
+      "png_sha256": "42d3bfe2d34b63fc0e8083117ffbeb193d4b0f332c9a9a597d7d053820feed1d"
+    },
+    "domain-03": {
+      "method": "historical actual-read identical PNG",
+      "historical_actual_review_sha256": "50a08666762b68e626dfec478ddeaab707c0c3f690efea1b7dea0ed52949662a",
+      "png_sha256": "567fa9249fd4288655f4f8a3af4bd3ea288761123e3967b3936809a732681405"
+    },
+    "particle-03": {
+      "method": "historical actual-read identical PNG",
+      "historical_actual_review_sha256": "50a08666762b68e626dfec478ddeaab707c0c3f690efea1b7dea0ed52949662a",
+      "png_sha256": "3a63e08537b9cfb5638c1e37d442ef75b23fe8bafcfb12132f94e89236eb6273"
+    },
+    "supports-03": {
+      "method": "historical actual-read identical PNG",
+      "historical_actual_review_sha256": "50a08666762b68e626dfec478ddeaab707c0c3f690efea1b7dea0ed52949662a",
+      "png_sha256": "c12e7c0707c5a2c3f069bba99607415e887f5f6dd006d5ce2d7b3e2f660299fd"
+    },
+    "pressure-03": {
+      "method": "historical actual-read identical PNG",
+      "historical_actual_review_sha256": "50a08666762b68e626dfec478ddeaab707c0c3f690efea1b7dea0ed52949662a",
+      "png_sha256": "3d27ef8553b181b885e6807c3cd521be4deb17c8d3fba2ef452ad9f7f505ac30"
+    }
+  },
+  "original_images_actually_reviewed": {
+    "preview/originals/paper-01.png": "1af6ccc2174134a19d87b7f655953c9c5dc419443163236557f05f92e7e64481",
+    "preview/originals/answer-03.png": "be4759751613c316b5ce63c3bc689129996dd2c751292c5ba90438262c2f5d58",
+    "preview/originals/q03-paper-detail.png": "522db14c3356bc5d3000345489158182ca60ece74d3852bd25734c3286b91a3b",
+    "preview/originals/q03-answer-left-detail.png": "0947cd910d8ff99ccbd7608bca6ed11a89e34f82e7de2af4f039452eb1688b55",
+    "preview/originals/q03-answer-right-detail.png": "36fec55aa630ad77173ec96fe81b034b611d3e7d0f48e5d82afb3faf68bca75c"
+  },
+  "original_reading": {},
+  "qpdf_checks": [
+    {
+      "path": "preview/working-q03-student/working-q03-student.pdf",
+      "sha256": "5fc7ce256fc6d9ab99be41165efc1e81f034d091d6db2ff70cfedbef99dbb43b",
+      "passed": true
+    },
+    {
+      "path": "preview/working-q03-teacher/working-q03-teacher.pdf",
+      "sha256": "eac7241c1f1a75a3b395abf042333d875873f324fb287e9acbefc6a4c827395f",
+      "passed": true
+    },
+    {
+      "path": "figures/question-03.pdf",
+      "sha256": "b7939e433fcfe09a56a1f4c5fd0664ed1e1b474fa282ffaeae3434c72b589cb8",
+      "passed": true
+    },
+    {
+      "path": "figures/material-03.pdf",
+      "sha256": "aa201a42d5664293499ade0b19f2fcfc600ba9f34d7a384423130ebd2c07d4f4",
+      "passed": true
+    },
+    {
+      "path": "figures/domain-03.pdf",
+      "sha256": "b50c91f3875b832ed30aded28885b156cbbe14fb59770a1eac6412f2926473db",
+      "passed": true
+    },
+    {
+      "path": "figures/particle-03.pdf",
+      "sha256": "6039a594b388a56310cec91d61d0f943554a8f18b640c6f7a0029b1807b749f2",
+      "passed": true
+    },
+    {
+      "path": "figures/supports-03.pdf",
+      "sha256": "7d2931becedc82f98a6cef6ad23d16dd6cd80696191e132255d684c1e128960d",
+      "passed": true
+    },
+    {
+      "path": "figures/pressure-03.pdf",
+      "sha256": "39d7cb90c448bcd1b60ac7c4d51c410455dce5ac5751bc5377351469a0c7388f",
+      "passed": true
+    },
+    {
+      "path": "figures/题03_图稿源文件.pdf",
+      "sha256": "bdd15d5f44ffc6701c21bb008e98cb98ed387864f67fbd055a7d8d378b22e536",
+      "passed": true
+    }
+  ],
+  "source_metrics": {
+    "student": {
+      "raw_with_whitespace": 13143,
+      "raw_nonspace": 12160,
+      "body_net_characters": 7900
+    },
+    "teacher": {
+      "raw_with_whitespace": 23484,
+      "raw_nonspace": 21783,
+      "body_net_characters": 14018
+    }
+  },
+  "independent_verification": {
+    "symbolic_count": 33,
+    "numeric_count": 138,
+    "max_normalized_error": 3.0531133177191805e-15
+  },
+  "layout": {
+    "paper": "A4",
+    "font_pt": 12,
+    "margin_mm": 22,
+    "line_spacing": 1.24,
+    "paragraph_spacing_em": 0.35,
+    "local_spacing_expansion": false
+  },
+  "corrections_actually_reviewed": [
+    "逐张读取60个新高清页；学生和教师重复页仅在PNG校验和完全相同时复用。",
+    "四题当前17张总览已逐张查看；旧q06教师第3总览不属于当前24页，保留历史但不计覆盖。",
+    "第3题水平拉力重绘图再次独立查看；其余图的PNG与历史已读图完全相同后才复用。",
+    "第5题原椭圆、曲率中心、小椭圆、移动环和离面空间投影的坐标、连接与正文方程相符。",
+    "第6题等温图由73%调至58%，标签仍清晰，图与状态方程进入同页，未改字号、行距或删算式。",
+    "第6题尾页包含完整数值代入、停滞温度及A趋零检验，不是空白或仅一两句话；无人工分页扩页。",
+    "2026-10-10再次实际审读Q6教师第22、23页及overview-02：变式4按等式连续性整合同类公式，全部积分、中间数字、根筛选及极限检查保留，消除224字符稀疏收尾页；工作稿从24页自然减少至23页，排版参数不变。未删除任何旧预览。"
+  ],
+  "formal_delivery": false,
+  "next": "Whole-paper rebuild and current actual PDF review before set acceptance"
+}

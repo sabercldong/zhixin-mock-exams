@@ -1,0 +1,159 @@
+{
+  "question": "08",
+  "geometry_passed": true,
+  "check_count": 31,
+  "checks": [
+    {
+      "test": "three independently used figures with standalone wrapper",
+      "passed": true
+    },
+    {
+      "test": "orthographic projection row normalization",
+      "passed": true
+    },
+    {
+      "test": "latitude front/back transition lies on silhouette (-0.5, -0.3118823464360625)",
+      "passed": true
+    },
+    {
+      "test": "latitude front/back transition lies on silhouette (-0.5, 2.4062774488292575)",
+      "passed": true
+    },
+    {
+      "test": "latitude front/back transition lies on silhouette (0, -0.5235987755982989)",
+      "passed": true
+    },
+    {
+      "test": "latitude front/back transition lies on silhouette (0, 2.617993877991494)",
+      "passed": true
+    },
+    {
+      "test": "latitude front/back transition lies on silhouette (0.5, -0.7353152047605354)",
+      "passed": true
+    },
+    {
+      "test": "latitude front/back transition lies on silhouette (0.5, 2.8297103071537304)",
+      "passed": true
+    },
+    {
+      "test": "parallel illumination terminates on sphere -0.65",
+      "passed": true
+    },
+    {
+      "test": "ray does not enter sphere before endpoint -0.65",
+      "passed": true
+    },
+    {
+      "test": "parallel illumination terminates on sphere 0",
+      "passed": true
+    },
+    {
+      "test": "ray does not enter sphere before endpoint 0",
+      "passed": true
+    },
+    {
+      "test": "parallel illumination terminates on sphere 0.65",
+      "passed": true
+    },
+    {
+      "test": "ray does not enter sphere before endpoint 0.65",
+      "passed": true
+    },
+    {
+      "test": "local microelement normal perpendicular to strip",
+      "passed": true
+    },
+    {
+      "test": "projected local strip has area cosine ratio",
+      "passed": true
+    },
+    {
+      "test": "incidence angle is against sunward direction not propagation",
+      "passed": true
+    },
+    {
+      "test": "local graph equilibrium satisfies exact nonlinear balance",
+      "passed": true
+    },
+    {
+      "test": "local graph uses stable expanded exact polynomial",
+      "passed": true
+    },
+    {
+      "test": "sphere-08 single vector page",
+      "passed": true
+    },
+    {
+      "test": "sphere-08 searchable clean labels",
+      "passed": true
+    },
+    {
+      "test": "sphere-08 labels legible at declared width",
+      "passed": true,
+      "min_printed_font_pt": 10.316695671049624
+    },
+    {
+      "test": "sphere-08 all labels within bounds",
+      "passed": true
+    },
+    {
+      "test": "element-08 single vector page",
+      "passed": true
+    },
+    {
+      "test": "element-08 searchable clean labels",
+      "passed": true
+    },
+    {
+      "test": "element-08 labels legible at declared width",
+      "passed": true,
+      "min_printed_font_pt": 11.831815157769665
+    },
+    {
+      "test": "element-08 all labels within bounds",
+      "passed": true
+    },
+    {
+      "test": "balance-08 single vector page",
+      "passed": true
+    },
+    {
+      "test": "balance-08 searchable clean labels",
+      "passed": true
+    },
+    {
+      "test": "balance-08 labels legible at declared width",
+      "passed": true,
+      "min_printed_font_pt": 13.518485240164967
+    },
+    {
+      "test": "balance-08 all labels within bounds",
+      "passed": true
+    }
+  ],
+  "figures": [
+    {
+      "name": "sphere-08",
+      "pdf_sha256": "a95bffb708cad13d2d643a4a7c14c9376b37f70591c9b460ad0fd5f2e0ea7d9d",
+      "png_sha256": "6ec822072e66cf30f57c5c94389f2b0caa0bb11b0f1e8e53ded14ced5e412245",
+      "width_fraction": 0.88
+    },
+    {
+      "name": "element-08",
+      "pdf_sha256": "62ad9896ef4b226d494f6ae90f600f95de3b68ea28176ab94fe23d8d5ec1d0af",
+      "png_sha256": "fe014226ececd59f16673c26eb797ec80f9e87caeb6096947c36b70bb782c775",
+      "width_fraction": 0.8
+    },
+    {
+      "name": "balance-08",
+      "pdf_sha256": "780471c2abfe6197ff5fa51c70a552eadf5cb46e62ee481a81fd8f77c5d4c5e0",
+      "png_sha256": "59110f964f75ac5aa1b44487ca25ef058b6c8a8692625176923b32150b9d4884",
+      "width_fraction": 0.82
+    }
+  ],
+  "figure_source_sha256": "eeb1a2c2bae19b4d2e946aec50f0dfc52aad12c968fa89889a02f7e61c93a324",
+  "script_sha256": "4c2fb2d75eddadfd2a9fc40252351f9a29aa43d6f868760e8221b57ab7073cc9",
+  "actual_visual_reviewed": false,
+  "question_accepted": false,
+  "set_accepted": false
+}

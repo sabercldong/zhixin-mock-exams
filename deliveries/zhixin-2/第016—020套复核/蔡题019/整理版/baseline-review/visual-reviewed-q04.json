@@ -1,0 +1,81 @@
+{
+  "question": 4,
+  "actual_reviewed": true,
+  "scope": "分题工作预览；整套合并后重新验收",
+  "reviewed_at": "2026-10-08 11:15 Asia/Shanghai",
+  "student": {
+    "pdf_sha256": "af970e2a8e59c8d634e1eae33ce62f9a045ec6e3e2dec4ea3d5d603ec927b071",
+    "total_pages": 12,
+    "body_pages": 11,
+    "extracted_body_nonspace": 7271,
+    "overview_pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "high_resolution_pages_reviewed": [
+      4,
+      6,
+      7,
+      9,
+      11
+    ]
+  },
+  "teacher": {
+    "pdf_sha256": "d97da7ca06ba2510f19a40e82b5def9594e492119e72265360b3366d78d60a7f",
+    "total_pages": 18,
+    "body_pages": 17,
+    "extracted_body_nonspace": 11859,
+    "overview_pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "high_resolution_pages_reviewed": [
+      14,
+      18
+    ]
+  },
+  "figures_reviewed": [
+    "sphere-04",
+    "wedge-04",
+    "moment-04",
+    "deformation-04"
+  ],
+  "repairs": [
+    "自然半径增强文字对比度",
+    "微元受力标注与尺寸线、轮廓分开",
+    "矩形微元转矩标注移入不遮挡位置",
+    "适当收敛过大的图幅，保持文字可读",
+    "变式补全特征方程、根号绝对值、非负条件充分必要性及边界载荷积分",
+    "完整边界检验保持同页，消除孤立稀疏尾页"
+  ],
+  "layout_issues": [],
+  "qpdf_check_passed": true,
+  "physics_checks_passed": true,
+  "physics_note": "半球力积分、虚功、应力矩阵及本构逆、剪切二倍因子、刚体运动、平衡PDE、Airy相容性、非均匀场边界总力/总力矩均独立核验通过"
+}

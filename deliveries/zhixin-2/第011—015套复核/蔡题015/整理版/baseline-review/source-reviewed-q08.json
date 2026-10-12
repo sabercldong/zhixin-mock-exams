@@ -1,0 +1,77 @@
+{
+  "paper": "015",
+  "question": 8,
+  "actual_reviewed": true,
+  "reviewed_utc": "2026-10-09T12:14:00Z",
+  "whole_pages_actual_read": [
+    "paper-03.png",
+    "answer-06.png"
+  ],
+  "details_actual_read": [
+    "q08-paper-model-fields",
+    "q08-paper-questions",
+    "q08-answer-rest",
+    "q08-answer-contraction",
+    "q08-answer-angle"
+  ],
+  "bound_sha256": {
+    "../试卷.pdf": "e74012ea35ebe38b9367a88ac99f9aa1f45483b4d2d44ebe5e36ed4315b6ec70",
+    "../答案.pdf": "1fb790700698c4b474fa8d5e50a0a10e178e42ec98378c3572cab1d4e0cca35d",
+    "preview/originals/paper-03.png": "2a11d1d846b316eb2bb0dae0669fd397dbfed59afa02d66f4e8671c1bfd3de93",
+    "preview/originals/answer-06.png": "9a98df4406260d159c06ef55f1d4ad75638ba5bc1fd4e26ed89ecaa15471533b",
+    "preview/originals/question-08-detail-manifest.json": "2b4c33e91578b667c676497a69a7453602753ac5a2346f6696f9b5756f0040e8",
+    "preview/originals/q08-paper-model-fields.png": "64536c2503dfb214da92b0aff2f23463fd23d2ddeea27e8f1f514b36abffc02a",
+    "preview/originals/q08-paper-questions.png": "68fa6375b4ff4fb58fb67858b36029db04043a3f0ee3c8d71d21f27bdc196309",
+    "preview/originals/q08-answer-rest.png": "8d570364203647828ef43a6c52198b8edb408d8315cec576079313479221c667",
+    "preview/originals/q08-answer-contraction.png": "0d73c10589611aa2cc083f9e13131fe6937daae9a7e268f92430884d0fd26750",
+    "preview/originals/q08-answer-angle.png": "737844c2c17fd36e0b274d0c6f79cfa8cd36ef0a8cade4000852dfd8029ac1c4"
+  },
+  "question_count": 2,
+  "original_figure_count": 0,
+  "handwritten_figures": [
+    "rest separation component triangle",
+    "lab x/y/z angle sketch"
+  ],
+  "typos_confirmed": [
+    "gamma missing square root and mixed velocity name",
+    "E'_z uses B_x instead of B_y",
+    "B'_z uses E_x instead of E_y",
+    "ground dipole incorrectly primed",
+    "theta omitted definition"
+  ],
+  "model_choice_required": false,
+  "model_note": "Retain the explicitly given neutral +/-q separation and scalar rest-frame electric response. Correct field/subscript typesetting, define theta, and use simultaneous lab positions; no new external physical constraint is imposed.",
+  "hand_route_retained": [
+    "rest E=(Ex,gamma Ey,gamma Ez)",
+    "p'=alpha E'",
+    "lab longitudinal separation contracted by 1/gamma; transverse unchanged",
+    "tan psi=gamma^2 tan theta",
+    "maximize denominator 1/tan theta+gamma^2 tan theta"
+  ],
+  "missing_calculation_to_complete": [
+    "lab dipole magnitude",
+    "relativity of simultaneity before contraction",
+    "maximum angle value",
+    "obtuse field and pure transverse/parallel endpoints",
+    "U=0 degeneracy",
+    "units and nonrelativistic/high-speed limits"
+  ],
+  "actual_source_reviewed": true,
+  "original_images_actually_reviewed": {
+    "preview/originals/paper-03.png": "2a11d1d846b316eb2bb0dae0669fd397dbfed59afa02d66f4e8671c1bfd3de93",
+    "preview/originals/answer-06.png": "9a98df4406260d159c06ef55f1d4ad75638ba5bc1fd4e26ed89ecaa15471533b",
+    "preview/originals/q08-paper-model-fields.png": "64536c2503dfb214da92b0aff2f23463fd23d2ddeea27e8f1f514b36abffc02a",
+    "preview/originals/q08-paper-questions.png": "68fa6375b4ff4fb58fb67858b36029db04043a3f0ee3c8d71d21f27bdc196309",
+    "preview/originals/q08-answer-rest.png": "8d570364203647828ef43a6c52198b8edb408d8315cec576079313479221c667",
+    "preview/originals/q08-answer-contraction.png": "0d73c10589611aa2cc083f9e13131fe6937daae9a7e268f92430884d0fd26750",
+    "preview/originals/q08-answer-angle.png": "737844c2c17fd36e0b274d0c6f79cfa8cd36ef0a8cade4000852dfd8029ac1c4"
+  },
+  "original_pdf_sha256": {
+    "paper": "e74012ea35ebe38b9367a88ac99f9aa1f45483b4d2d44ebe5e36ed4315b6ec70",
+    "answers": "1fb790700698c4b474fa8d5e50a0a10e178e42ec98378c3572cab1d4e0cca35d"
+  },
+  "source_complete": true,
+  "document_complete": false,
+  "question_accepted": false,
+  "set_accepted": false
+}

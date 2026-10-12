@@ -1,0 +1,242 @@
+{
+  "paper": "014",
+  "question": "02",
+  "scope": "initial independent math only; no finished question draft or PDF",
+  "model_authorized": true,
+  "authorization": "用户2026-10-10：四项均按建议修订并注明",
+  "symbolic_checks": [
+    {
+      "name": "weighted unit cell is neutral",
+      "passed": true
+    },
+    {
+      "name": "dipole x cancels",
+      "passed": true
+    },
+    {
+      "name": "dipole y cancels",
+      "passed": true
+    },
+    {
+      "name": "dipole z comes only from Ti displacement",
+      "passed": true
+    },
+    {
+      "name": "dipole is origin invariant for a neutral cell",
+      "passed": true
+    },
+    {
+      "name": "polarization density and cancellation of b",
+      "passed": true
+    },
+    {
+      "name": "finite cell stretch exact polarization",
+      "passed": true
+    },
+    {
+      "name": "increment polarization",
+      "passed": true
+    },
+    {
+      "name": "constant lambda stretch gives no polarization density change",
+      "passed": true
+    },
+    {
+      "name": "fixed D increment derived without assuming D=0",
+      "passed": true
+    },
+    {
+      "name": "stress form of alpha",
+      "passed": true
+    },
+    {
+      "name": "P0 form of alpha",
+      "passed": true
+    },
+    {
+      "name": "Poisson first-order correction",
+      "passed": true
+    },
+    {
+      "name": "open bare slab voltage includes change of length",
+      "passed": true
+    }
+  ],
+  "numerical_checks": [
+    {
+      "test": "finite disk depolarization, Coulomb ring integration",
+      "radius_over_half_thickness": 0.3,
+      "factor": 0.042173714778848605,
+      "formula": 0.04217371477884868,
+      "absolute_error": 7.632783294297951e-17,
+      "passed": true
+    },
+    {
+      "test": "finite disk depolarization, Coulomb ring integration",
+      "radius_over_half_thickness": 1,
+      "factor": 0.2928932188134525,
+      "formula": 0.29289321881345254,
+      "absolute_error": 5.551115123125783e-17,
+      "passed": true
+    },
+    {
+      "test": "finite disk depolarization, Coulomb ring integration",
+      "radius_over_half_thickness": 3,
+      "factor": 0.6837722339831622,
+      "formula": 0.683772233983162,
+      "absolute_error": 2.220446049250313e-16,
+      "passed": true
+    },
+    {
+      "test": "finite disk depolarization, Coulomb ring integration",
+      "radius_over_half_thickness": 10,
+      "factor": 0.9004962809790011,
+      "formula": 0.9004962809790011,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "test": "finite disk depolarization, Coulomb ring integration",
+      "radius_over_half_thickness": 100,
+      "factor": 0.9900004999625032,
+      "formula": 0.9900004999625032,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "test": "finite disk depolarization, Coulomb ring integration",
+      "radius_over_half_thickness": 1000,
+      "factor": 0.9990000004999996,
+      "formula": 0.9990000004999996,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "test": "independent finite cell volumes and fixed-charge fields",
+      "stress": -1000000.0,
+      "fixed_D": 0.0,
+      "measured_alpha": -0.45197740112876894,
+      "expected_alpha": -0.4519774011299434,
+      "scaled_error": 8.088620564519486e-13,
+      "passed": true
+    },
+    {
+      "test": "independent finite cell volumes and fixed-charge fields",
+      "stress": -1000000.0,
+      "fixed_D": 0.015,
+      "measured_alpha": -0.4519774011297226,
+      "expected_alpha": -0.4519774011299434,
+      "scaled_error": 1.520463392025996e-13,
+      "passed": true
+    },
+    {
+      "test": "independent finite cell volumes and fixed-charge fields",
+      "stress": -1000000.0,
+      "fixed_D": 0.08,
+      "measured_alpha": -0.4519774011303955,
+      "expected_alpha": -0.4519774011299434,
+      "scaled_error": 3.1135664733869025e-13,
+      "passed": true
+    },
+    {
+      "test": "independent finite cell volumes and fixed-charge fields",
+      "stress": -10000.0,
+      "fixed_D": 0.0,
+      "measured_alpha": -0.45197740116119384,
+      "expected_alpha": -0.4519774011299434,
+      "scaled_error": 2.152268117294872e-11,
+      "passed": true
+    },
+    {
+      "test": "independent finite cell volumes and fixed-charge fields",
+      "stress": -10000.0,
+      "fixed_D": 0.015,
+      "measured_alpha": -0.45197740116119384,
+      "expected_alpha": -0.4519774011299434,
+      "scaled_error": 2.152268117294872e-11,
+      "passed": true
+    },
+    {
+      "test": "independent finite cell volumes and fixed-charge fields",
+      "stress": -10000.0,
+      "fixed_D": 0.08,
+      "measured_alpha": -0.4519774012056649,
+      "expected_alpha": -0.4519774011299434,
+      "scaled_error": 5.215059447836672e-11,
+      "passed": true
+    },
+    {
+      "test": "independent finite cell volumes and fixed-charge fields",
+      "stress": 10000.0,
+      "fixed_D": 0.0,
+      "measured_alpha": -0.4519774013519287,
+      "expected_alpha": -0.4519774011299434,
+      "scaled_error": 1.528848306060171e-10,
+      "passed": true
+    },
+    {
+      "test": "independent finite cell volumes and fixed-charge fields",
+      "stress": 10000.0,
+      "fixed_D": 0.015,
+      "measured_alpha": -0.4519774013519287,
+      "expected_alpha": -0.4519774011299434,
+      "scaled_error": 1.528848306060171e-10,
+      "passed": true
+    },
+    {
+      "test": "independent finite cell volumes and fixed-charge fields",
+      "stress": 10000.0,
+      "fixed_D": 0.08,
+      "measured_alpha": -0.45197740136247605,
+      "expected_alpha": -0.4519774011299434,
+      "scaled_error": 1.601489524651699e-10,
+      "passed": true
+    },
+    {
+      "test": "independent finite cell volumes and fixed-charge fields",
+      "stress": 1000000.0,
+      "fixed_D": 0.0,
+      "measured_alpha": -0.45197740113067625,
+      "expected_alpha": -0.4519774011299434,
+      "scaled_error": 5.0473114663131e-13,
+      "passed": true
+    },
+    {
+      "test": "independent finite cell volumes and fixed-charge fields",
+      "stress": 1000000.0,
+      "fixed_D": 0.015,
+      "measured_alpha": -0.45197740113067625,
+      "expected_alpha": -0.4519774011299434,
+      "scaled_error": 5.0473114663131e-13,
+      "passed": true
+    },
+    {
+      "test": "independent finite cell volumes and fixed-charge fields",
+      "stress": 1000000.0,
+      "fixed_D": 0.08,
+      "measured_alpha": -0.4519774011303955,
+      "expected_alpha": -0.4519774011299434,
+      "scaled_error": 3.1135664733869025e-13,
+      "passed": true
+    }
+  ],
+  "symbolic_count": 14,
+  "numeric_count": 18,
+  "math_passed": true,
+  "question_accepted": false,
+  "set_accepted": false,
+  "source_sha256": {
+    "试卷.pdf": "3c8164d75b7f117095d26f554fb788867b2b781c9a642af12bee499d3b232cf0",
+    "答案.pdf": "111c13cd664b08f098076baed25c937368238953127045c5cfa8c8460471472a"
+  },
+  "script_sha256": "b18ab0656a38401d0e4f65653285ac1a69a11f3542bf0de51cdfc97e2c11a524",
+  "result": {
+    "P0": "4*e*lam/a**2",
+    "alpha": "-4*e*tau/(Y*a**2*eps0)"
+  },
+  "pending": [
+    "完整九模块主稿",
+    "晶胞与宏观薄板图稿",
+    "三版本构建及实际PDF审读"
+  ]
+}

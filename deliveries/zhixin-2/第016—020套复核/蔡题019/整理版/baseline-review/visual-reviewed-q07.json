@@ -1,0 +1,29 @@
+{
+  "question": 7,
+  "actual_reviewed": true,
+  "scope": "分题工作预览；热学模型待确认，不能计整套完成",
+  "reviewed_at": "2026-10-08 12:15 Asia/Shanghai",
+  "student": {
+    "pdf_sha256": "97587a95dd3a17a4c9100ac4b92ae7f06bc9bd327ead1a57ad08437fd80388ef",
+    "total_pages": 13,
+    "body_pages": 12,
+    "extracted_body_nonspace": 7809,
+    "overview_pages_reviewed": [1,2,3,4,5,6,7,8,9,10,11,12,13],
+    "high_resolution_pages_reviewed": [2,5,11]
+  },
+  "teacher": {
+    "pdf_sha256": "701b5aa82eb299b83690296a99d692def57553006d293bcc3b3e8b6dd10e4209",
+    "total_pages": 17,
+    "body_pages": 16,
+    "extracted_body_nonspace": 10828,
+    "overview_pages_reviewed": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17],
+    "high_resolution_pages_reviewed": [17]
+  },
+  "figures_reviewed": ["apparatus-07","states-07","pv-07","transfer-07","heat-07"],
+  "repairs": ["热活塞与通道引线不再穿过温度及摩尔数文字","返程箭头从状态4沿外侧回到状态1，避免误认3到1","气流箭头移离摩尔数文字","完整末变式同页，消除170字符残尾"],
+  "layout_issues": [],
+  "qpdf_check_passed": true,
+  "conditional_physics_checks_passed": true,
+  "physics_note": "四组参数逐腔焓流及活塞功独立积分；净热、外部热源供热、周期守恒、熵增、回热及四个带解变式分别核验",
+  "unresolved": ["资料冷热标记和返程表述矛盾，已明确解释","回热储能功能未明确，集中参数、无储热两腔及完全回热结果分别保留"]
+}

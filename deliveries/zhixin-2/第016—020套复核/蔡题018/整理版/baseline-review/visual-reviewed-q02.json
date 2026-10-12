@@ -1,0 +1,72 @@
+{
+  "question": 2,
+  "scope": "第018套第2题分题工作预览，不代表整套交付",
+  "review_time": "2026-10-08 13:44 Asia/Shanghai",
+  "actual_visual_reviewed": true,
+  "pdfs": {
+    "student": {
+      "total_pages": 10,
+      "body_pages": 9,
+      "pdf_sha256": "02d2eadf3bff3dd01398a9cf80f198736cd8b2af2be879095e61a3890f2e903f",
+      "overview_pages_reviewed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "high_resolution_pages_reviewed": [
+        2,
+        5,
+        6,
+        9,
+        10
+      ]
+    },
+    "teacher": {
+      "total_pages": 13,
+      "body_pages": 12,
+      "pdf_sha256": "6e615422f83ee5c699164d39525e690d3be9cadad397014f0195d5f38c285dee",
+      "overview_pages_reviewed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "high_resolution_pages_reviewed": [
+        13
+      ]
+    }
+  },
+  "figures_reviewed": {
+    "arc-02": "e768ce2a0565797c65e28cb8083cf3b7aeae0e2210cc96eeeb698c84061e0eb1",
+    "element-02": "fa7fcbf99afa9506c07bdf5872b2289ec3b053494cf32178dbf06d304e2a87ed",
+    "helix-02": "651d8deb284c6c2b013f01bb2b77d14d3f52296f2cb31d35e7b50fc6bb173207",
+    "question-02": "5ee549e5aa7d95bc40e20c93ecbefecad07d0c0e923ee04fcdab23e0790f7628",
+    "unrolled-02": "c5e06e9678adfee3cbb6fd28baf704d41edf43e6d38bfc0489561a5d7ec57d07"
+  },
+  "checks": [
+    "三维螺旋真实环绕偏置轴线，AB是母线，不误画为轴",
+    "修正初稿题图端点坐标与I标注重叠、磁场标记压住圆弧的问题",
+    "数值根、优弧筛选、整匝数及张力、曲率半径全部核验",
+    "教师变式长行公式溢出改为两行对齐验算",
+    "只收紧图幅，不删推导、不改变101版式，消除学生137字符孤立尾页",
+    "23页总览及6页高清均实际查看；当前零编译溢出/缺字/致命错误，qpdf通过"
+  ],
+  "remaining_visual_issues": [],
+  "set_accepted": false
+}

@@ -1,0 +1,120 @@
+{
+  "question": 8,
+  "actual_visual_reviewed": true,
+  "source_sha256": "64bdff5f47131e92e35a5e0317be6f3088e3e0ea6c0c6c1aba787cce358c39e0",
+  "verification_sha256": "1899938606cbb03531d7dd975e14bd11b1cdd66be449bac907bc8749a5f8b077",
+  "pdfs": {
+    "student": {
+      "total_pages": 12,
+      "body_pages": 11,
+      "pdf_sha256": "0fe26c012d981fecc67e3ad9ec40acc4f2a6db7063c826f1fd07c1aff5d047b5",
+      "overview_pages_reviewed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "high_resolution_pages_reviewed": [
+        5,
+        7,
+        8,
+        9,
+        10,
+        12
+      ],
+      "page_png_sha256": {
+        "page-001.png": "5c6a22497df7d7fdca785377ebb895fc1362838c82271310518565223258027a",
+        "page-002.png": "6f1fe2499a11e9f825448652ff32110542063493e0d9b1a5fd250fbde79e6091",
+        "page-003.png": "1141699f79a2ea4d1807b6abca4a64f228af13fb6d0c694ddea730cd4704176a",
+        "page-004.png": "b6999dccf9ba15940825acb128025d511dc1b77f762df16c66010c60a39b06c1",
+        "page-005.png": "65f15a3efb90cb460c723446098008a7bcf380a53f3bd5bd0267824811b7bb36",
+        "page-006.png": "2e15429562b8e7966dc085f6d848d29a6ce81cd1a91306cb77bd05e914ba9ce0",
+        "page-007.png": "3ef015364faef9d43e901e9fce7498ee620e4288c8839b1f923f38e188e61c06",
+        "page-008.png": "a84b38f60d54662fa8863238dbe5b7cf9ebdcca1be7bc87c7beb595ad566ba5e",
+        "page-009.png": "94efb3ecf348b93130552553c5d86c9b0777e54d4c520163c3b299673c9039e3",
+        "page-010.png": "96e28a8c9e04a7a79b3281f5593349a8074f48de2bf561b539f446069f7f62fd",
+        "page-011.png": "6be66eec5eb5522236f39869c545b18fd38e735f10b85a1de1f7abaf14928462",
+        "page-012.png": "a506235c6d9a7b31d517ef99aa1424f020ef43f059e4c80b291982f4d36b2344"
+      }
+    },
+    "teacher": {
+      "total_pages": 17,
+      "body_pages": 16,
+      "pdf_sha256": "72a11bfa1f90cde26e9c7ce90e1d697c93f9e61e5314e370ef2df9497d772b8c",
+      "overview_pages_reviewed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "high_resolution_pages_reviewed": [
+        13,
+        14,
+        16,
+        17
+      ],
+      "page_png_sha256": {
+        "page-001.png": "5c6a22497df7d7fdca785377ebb895fc1362838c82271310518565223258027a",
+        "page-002.png": "6f1fe2499a11e9f825448652ff32110542063493e0d9b1a5fd250fbde79e6091",
+        "page-003.png": "1141699f79a2ea4d1807b6abca4a64f228af13fb6d0c694ddea730cd4704176a",
+        "page-004.png": "b6999dccf9ba15940825acb128025d511dc1b77f762df16c66010c60a39b06c1",
+        "page-005.png": "65f15a3efb90cb460c723446098008a7bcf380a53f3bd5bd0267824811b7bb36",
+        "page-006.png": "2e15429562b8e7966dc085f6d848d29a6ce81cd1a91306cb77bd05e914ba9ce0",
+        "page-007.png": "3ef015364faef9d43e901e9fce7498ee620e4288c8839b1f923f38e188e61c06",
+        "page-008.png": "a84b38f60d54662fa8863238dbe5b7cf9ebdcca1be7bc87c7beb595ad566ba5e",
+        "page-009.png": "94efb3ecf348b93130552553c5d86c9b0777e54d4c520163c3b299673c9039e3",
+        "page-010.png": "96e28a8c9e04a7a79b3281f5593349a8074f48de2bf561b539f446069f7f62fd",
+        "page-011.png": "6be66eec5eb5522236f39869c545b18fd38e735f10b85a1de1f7abaf14928462",
+        "page-012.png": "736b7a1afcf4f251a29bb3cbc16e487cab94f766185cc6d4378e53423826745a",
+        "page-013.png": "06bd3fcde2c882e6414bd6984cce31b56e291718ea3d021d60dd806dd433fb90",
+        "page-014.png": "6d49d792bddd08e0f85c8237d0a60b33c758636e1bb680fed5683bce4655a6f1",
+        "page-015.png": "b3313978a51631a532cb2e3941a6c90e912ef5ccebb45f04901a33201fdfea92",
+        "page-016.png": "402f19207a89e85c143105782152b0519ff711f2c86fdd8943549eca8a5a2a38",
+        "page-017.png": "48fedecc2c7dddc7e8cc2bc5ba4f6925bf2a6f649b8129465fa1a13968963d3b"
+      }
+    }
+  },
+  "figures_reviewed": {
+    "angular-08": "4f30308949b4c5a36d7ebbbc59eee50026910d75a65ec5c5eb3dcf0485ac4dc6",
+    "energy-08": "88ac9cd55c14b0b3d2260d60a86d6c114de74f95ef5c5e5081339c33126dbeb3",
+    "momentum-08": "f870b9a83fcb8f77f8b5a660933ee8c87646834364bcf2d1b2e28ad2a6b8a1a1",
+    "question-08": "9fe81ccbb50b57481f109726a44b7bac56319194bc3df4be3ece44f296e2ffcd",
+    "threshold-08": "1ec9d4502aa4d559a2ff89239909444e94795b58ef443057c837c8946b83a928"
+  },
+  "remaining_visual_issues": [],
+  "unresolved_model_condition": false,
+  "set_accepted": false,
+  "scope": "第018套第8题两粒子相对论静电圆轨道分题工作预览，不代表整套验收",
+  "review_time": "2026-10-08 23:19 Asia/Shanghai",
+  "checks": [
+    "实际审读当前学生全部12页与教师全部17页总览，高清审读学生5/7/8/9/10/12、教师13/14/16/17页。",
+    "实际检查5幅图的两粒子位置、切向动量、中心吸引力、角动量同向、严格定义域空心端点及能量曲线；图中符号进入相邻方程。",
+    "两粒子角动量rp而非rp/2，瞬时库仑模型的F=2pv/r与v=A/(2L)独立核验。严格v<c与Z正整数上限16；临界零半径不是轨道。",
+    "16组两粒子ODE及独立能量驻点求根、正二阶导数、径向频率、数值常量和4个带解变式通过。",
+    "小角动量增量标签与圆弧已分开，空心端点明确，能量图移除曲线重叠标注。角动量图缩为65%自然宽度而不改正文或间距。",
+    "学生11正文/12总页，教师16正文/17总页；末页分别566/546非空白字符，完整计算。",
+    "原始题设为忽略辐射、瞬时静电和角动量量子条件，不把半经典计算称为严格量子真基态。",
+    "固定101模板、原始资料未改；当前qpdf与日志通过。"
+  ]
+}

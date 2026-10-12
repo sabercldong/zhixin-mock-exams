@@ -1,0 +1,17 @@
+{
+  "all_passed": true,
+  "identical_drafts": 8,
+  "identical_tikz_sources": 8,
+  "identical_physics_report": true,
+  "identical_scripts": true,
+  "script_sha256": {
+    "build_documents.py": "8ef1ce3dc288cfa355df0ea4f230431a99358e6e75dd1b4e6c1b948b15e89957",
+    "make_figures.py": "56d5d940f457c91e0b08045fd13ad99f50c71efc405bca23e6cc7b77e919cb7e",
+    "preview_drafts.py": "1fb9c27cc87f4f6e262f0fbf02b8b27cfba2482c3056aa2721d1269344fc0af8",
+    "render_figures.py": "98a909c1eaa0f7e5b677ffa42e027f6adcb968649cbfb52fb7e2a73755b69ce8",
+    "render_full_review.py": "e15077671c41da45d085cf04408baae7cfdac5d4f64bdd77a1d2806f593b9186",
+    "verify_physics.py": "580984899aa006e1e5b85fdaae352769825bd89e8b3fce04b6d904c25d95c3fd",
+    "write_drafts.py": "d8eac3f20a35465ad7999fe69066faf6bb68b607bcd1db61aa8de94f4e129c19"
+  },
+  "method": "七份脚本复制到独立临时根目录，实际重新生成八稿、八图源与核验报告，逐字节比较；临时目录已清理。"
+}

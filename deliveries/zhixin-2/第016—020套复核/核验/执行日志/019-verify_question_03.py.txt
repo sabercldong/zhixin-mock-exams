@@ -1,0 +1,279 @@
+{
+  "question": 3,
+  "verified_math": true,
+  "document_complete": true,
+  "circuit_solutions": {
+    "aiding": "{I: (N2*U + N3*U)/(2*N1*r), a2: (N2*U + N3*U)/N1, a3: N3*U/N1, b2: N3*U/N1, b3: 0}",
+    "opposing": "{I: (N2*U - N3*U)/(2*N1*r), a2: N2*U/N1, a3: N3*U/N1, b2: 0, b3: 0}"
+  },
+  "numerical_integrals": [
+    {
+      "N1": 200,
+      "N2": 100,
+      "N3": 60,
+      "r": 10,
+      "U0": 16.970562748477143,
+      "case": "independent",
+      "numerical_average_heat": 4.896000000000002,
+      "formula_heat": 4.896000000000002,
+      "primary_average_power": 4.896000000000002,
+      "secondary_delivered_power": [
+        3.6000000000000005,
+        1.2960000000000005
+      ]
+    },
+    {
+      "N1": 200,
+      "N2": 100,
+      "N3": 60,
+      "r": 10,
+      "U0": 16.970562748477143,
+      "case": "aiding",
+      "numerical_average_heat": 4.608000000000001,
+      "formula_heat": 4.608000000000001,
+      "primary_average_power": 4.608000000000001,
+      "secondary_delivered_power": [
+        2.8800000000000012,
+        1.7280000000000006
+      ]
+    },
+    {
+      "N1": 200,
+      "N2": 100,
+      "N3": 60,
+      "r": 10,
+      "U0": 16.970562748477143,
+      "case": "opposing",
+      "numerical_average_heat": 0.2880000000000001,
+      "formula_heat": 0.2880000000000001,
+      "primary_average_power": 0.28800000000000003,
+      "secondary_delivered_power": [
+        0.7200000000000002,
+        -0.43200000000000016
+      ]
+    },
+    {
+      "N1": 150,
+      "N2": 70,
+      "N3": 70,
+      "r": 8,
+      "U0": 20,
+      "case": "independent",
+      "numerical_average_heat": 10.88888888888889,
+      "formula_heat": 10.88888888888889,
+      "primary_average_power": 10.888888888888891,
+      "secondary_delivered_power": [
+        5.4444444444444455,
+        5.4444444444444455
+      ]
+    },
+    {
+      "N1": 150,
+      "N2": 70,
+      "N3": 70,
+      "r": 8,
+      "U0": 20,
+      "case": "aiding",
+      "numerical_average_heat": 10.88888888888889,
+      "formula_heat": 10.88888888888889,
+      "primary_average_power": 10.888888888888891,
+      "secondary_delivered_power": [
+        5.4444444444444455,
+        5.4444444444444455
+      ]
+    },
+    {
+      "N1": 150,
+      "N2": 70,
+      "N3": 70,
+      "r": 8,
+      "U0": 20,
+      "case": "opposing",
+      "numerical_average_heat": 0.0,
+      "formula_heat": 0.0,
+      "primary_average_power": 0.0,
+      "secondary_delivered_power": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "N1": 150,
+      "N2": 50,
+      "N3": 90,
+      "r": 8,
+      "U0": 20,
+      "case": "independent",
+      "numerical_average_heat": 11.777777777777779,
+      "formula_heat": 11.777777777777779,
+      "primary_average_power": 11.777777777777779,
+      "secondary_delivered_power": [
+        2.7777777777777777,
+        9.0
+      ]
+    },
+    {
+      "N1": 150,
+      "N2": 50,
+      "N3": 90,
+      "r": 8,
+      "U0": 20,
+      "case": "aiding",
+      "numerical_average_heat": 10.88888888888889,
+      "formula_heat": 10.88888888888889,
+      "primary_average_power": 10.888888888888891,
+      "secondary_delivered_power": [
+        3.888888888888889,
+        7.000000000000001
+      ]
+    },
+    {
+      "N1": 150,
+      "N2": 50,
+      "N3": 90,
+      "r": 8,
+      "U0": 20,
+      "case": "opposing",
+      "numerical_average_heat": 0.8888888888888888,
+      "formula_heat": 0.8888888888888888,
+      "primary_average_power": 0.8888888888888888,
+      "secondary_delivered_power": [
+        -1.1111111111111112,
+        2.0
+      ]
+    }
+  ],
+  "unequal_resistors": {
+    "independent": 4.248,
+    "aiding": 3.072,
+    "opposing": 0.192
+  },
+  "recovered_secondary_voltages": [
+    6.0,
+    3.5999999999999996
+  ],
+  "integer_extrema": [
+    {
+      "total_turns": 2,
+      "min_difference_squared": 0,
+      "max_difference_squared": 0
+    },
+    {
+      "total_turns": 3,
+      "min_difference_squared": 1,
+      "max_difference_squared": 1
+    },
+    {
+      "total_turns": 4,
+      "min_difference_squared": 0,
+      "max_difference_squared": 4
+    },
+    {
+      "total_turns": 5,
+      "min_difference_squared": 1,
+      "max_difference_squared": 9
+    },
+    {
+      "total_turns": 6,
+      "min_difference_squared": 0,
+      "max_difference_squared": 16
+    },
+    {
+      "total_turns": 7,
+      "min_difference_squared": 1,
+      "max_difference_squared": 25
+    },
+    {
+      "total_turns": 8,
+      "min_difference_squared": 0,
+      "max_difference_squared": 36
+    },
+    {
+      "total_turns": 9,
+      "min_difference_squared": 1,
+      "max_difference_squared": 49
+    },
+    {
+      "total_turns": 10,
+      "min_difference_squared": 0,
+      "max_difference_squared": 64
+    },
+    {
+      "total_turns": 11,
+      "min_difference_squared": 1,
+      "max_difference_squared": 81
+    },
+    {
+      "total_turns": 12,
+      "min_difference_squared": 0,
+      "max_difference_squared": 100
+    },
+    {
+      "total_turns": 13,
+      "min_difference_squared": 1,
+      "max_difference_squared": 121
+    },
+    {
+      "total_turns": 14,
+      "min_difference_squared": 0,
+      "max_difference_squared": 144
+    },
+    {
+      "total_turns": 15,
+      "min_difference_squared": 1,
+      "max_difference_squared": 169
+    },
+    {
+      "total_turns": 16,
+      "min_difference_squared": 0,
+      "max_difference_squared": 196
+    },
+    {
+      "total_turns": 17,
+      "min_difference_squared": 1,
+      "max_difference_squared": 225
+    },
+    {
+      "total_turns": 18,
+      "min_difference_squared": 0,
+      "max_difference_squared": 256
+    },
+    {
+      "total_turns": 19,
+      "min_difference_squared": 1,
+      "max_difference_squared": 289
+    },
+    {
+      "total_turns": 20,
+      "min_difference_squared": 0,
+      "max_difference_squared": 324
+    },
+    {
+      "total_turns": 21,
+      "min_difference_squared": 1,
+      "max_difference_squared": 361
+    },
+    {
+      "total_turns": 22,
+      "min_difference_squared": 0,
+      "max_difference_squared": 400
+    },
+    {
+      "total_turns": 23,
+      "min_difference_squared": 1,
+      "max_difference_squared": 441
+    },
+    {
+      "total_turns": 24,
+      "min_difference_squared": 0,
+      "max_difference_squared": 484
+    }
+  ],
+  "source_sha256": {
+    "scripts/verify_question_03.py": "44fa5820fa1ddedf839f14e6af3aec443122208e6fd50b502fccdd991a1c0bed",
+    "drafts/question-03.md": "459679dc315625450ee1672e48b759242f77fc18e25700b4b0008b82d8b1d2be",
+    "figures/题03_图稿源文件.tex": "c648778de179f1a93b69cbbb6d8ff26e4dc3e55095515f37d053ad144704a670",
+    "scripts/generate_question_03_windings.py": "38fe558d659e7c0d8d670d2f78b569a964b14e6a64fb7fc0b16837ffd4e052c9",
+    "figures/core-03-coordinates.tex": "317da31bf6c7adb76811c1249d8e4b7be703081d49b3fe06c77eb721c7015ffb"
+  }
+}

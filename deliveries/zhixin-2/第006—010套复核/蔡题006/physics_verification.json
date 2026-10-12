@@ -1,0 +1,518 @@
+{
+  "all_passed": true,
+  "check_count": 65,
+  "checks": [
+    {
+      "name": "01-c四木条接触反力可行",
+      "value": 0.0,
+      "expected": 0.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "01-d四木条接触反力可行",
+      "value": 2.220446049250313e-16,
+      "expected": 0.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "01-d顶部竖直平衡",
+      "value": 1.0,
+      "expected": 1.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "01-d全体系质心",
+      "value": 2.7755575615628914e-17,
+      "expected": 0.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "01-d最优偏移独立极大化",
+      "value": 0.353553390488196,
+      "expected": 0.3535533905932738,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "01-d最大伸出",
+      "value": 1.1678932188134525,
+      "expected": 1.1678932188134525,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "01-c最大伸出",
+      "value": 1.125,
+      "expected": 1.125,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "01-d对称布局伸出",
+      "value": 1.1666666666666667,
+      "expected": 1.1666666666666667,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "02-排水阶段加速度恒定",
+      "value": 5.329070518200751e-15,
+      "expected": 0.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "02-最高点位置时域积分",
+      "value": 0.36180339887477797,
+      "expected": 0.36180339887498947,
+      "tolerance": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "02-最高点速度为零",
+      "value": -1.084982798049694e-13,
+      "expected": 0.0,
+      "tolerance": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "02-总上升位移",
+      "value": 0.2618033988749895,
+      "expected": 0.2618033988749895,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "02-干活塞能量守恒",
+      "value": 1.2499999999999996,
+      "expected": 1.2499999999999998,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "02-含水压力加速度项",
+      "value": 20.0,
+      "expected": 20.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "02-释放到最高点时间事件定位",
+      "value": 0.28527826653180854,
+      "expected": 0.28527826653180033,
+      "tolerance": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "03-径向线性解与非线性积分",
+      "value": 6.665847873699709e-09,
+      "expected": 0.0,
+      "tolerance": 2e-08,
+      "passed": true
+    },
+    {
+      "name": "03-极角线性解与非线性积分",
+      "value": 2.2213356487554847e-08,
+      "expected": 0.0,
+      "tolerance": 6e-08,
+      "passed": true
+    },
+    {
+      "name": "03-非线性总动能守恒",
+      "value": 5.551115123125783e-16,
+      "expected": 0.0,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "03-正则角动量守恒",
+      "value": 1.1102230246251565e-16,
+      "expected": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "03-均匀磁场指数极限",
+      "value": 1.0,
+      "expected": 1.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "03-径向振荡与公转频率比",
+      "value": 1.4142135623730951,
+      "expected": 1.4142135623730951,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "03-纯径向冲量初始位移",
+      "value": 0.0,
+      "expected": 0.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "03-纯径向冲量初始径向速度",
+      "value": 0.0001,
+      "expected": 0.0001,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "04-逐元积分净力theta=0",
+      "value": 0.0,
+      "expected": 0.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "04-逐元积分力矩theta=0",
+      "value": 0.0,
+      "expected": -0.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "04-逐元积分净力theta=0.2",
+      "value": 5.551115123125783e-17,
+      "expected": 0.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "04-逐元积分力矩theta=0.2",
+      "value": -0.1291350650167898,
+      "expected": -0.12913506501678979,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "04-逐元积分净力theta=0.7",
+      "value": 1.2412670766236366e-16,
+      "expected": 0.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "04-逐元积分力矩theta=0.7",
+      "value": -0.4187414967044992,
+      "expected": -0.41874149670449917,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "04-电场旋度满足法拉第",
+      "value": 1.0,
+      "expected": 1.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "04-正负电荷二阶矩相消",
+      "value": 0.0,
+      "expected": 0.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "05-接近平台反代",
+      "value": 20005520.0,
+      "expected": 20005520.0,
+      "tolerance": 1e-07,
+      "passed": true
+    },
+    {
+      "name": "05-远离平台反代",
+      "value": 20004570.0,
+      "expected": 20004570.0,
+      "tolerance": 1e-07,
+      "passed": true
+    },
+    {
+      "name": "05-接收时刻中心斜率差分",
+      "value": -8.33333320915699,
+      "expected": -8.333333333333334,
+      "tolerance": 1e-05,
+      "passed": true
+    },
+    {
+      "name": "05-中心频率",
+      "value": 20005044.988721594,
+      "expected": 20005044.988721594,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "05-传播延迟",
+      "value": 0.001353408601916952,
+      "expected": 0.001353408601916952,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "05-低速频率对称近似误差",
+      "value": 0.011278405785560608,
+      "expected": 0.011278405022333116,
+      "tolerance": 1e-07,
+      "passed": true
+    },
+    {
+      "name": "06-边界法向电场x=0",
+      "value": 0.0,
+      "expected": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "06-边界法向电场x=0.3",
+      "value": 3.3306690738754696e-16,
+      "expected": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "06-边界法向电场x=1.0",
+      "value": 0.0,
+      "expected": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "06-边界法向电场x=3.0",
+      "value": 4.440892098500626e-16,
+      "expected": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "06-轴上边界零法向场",
+      "value": 0.0,
+      "expected": 0.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "06-远处240度扇区电流",
+      "value": 1.5000005000005,
+      "expected": 1.5,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "name": "06-轴上有符号电场z=-2.0",
+      "value": -0.9642857142857142,
+      "expected": -0.9642857142857142,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "06-轴上有符号电场z=-0.4",
+      "value": 3.068181818181819,
+      "expected": 3.0681818181818192,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "06-轴上有符号电场z=-0.1",
+      "value": 0.6108597285067876,
+      "expected": 0.6108597285067874,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "06-围绕实际线源的电流通量",
+      "value": 6.283185307179585,
+      "expected": 6.283185307179586,
+      "tolerance": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "07-出射质子质量壳chi=0",
+      "value": 0.9623609999999996,
+      "expected": 0.962361,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "07-反冲介子质量壳chi=0",
+      "value": 0.01822500000000048,
+      "expected": 0.018225,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "07-出射质子质量壳chi=0.6",
+      "value": 0.9623609999999996,
+      "expected": 0.962361,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "07-反冲介子质量壳chi=0.6",
+      "value": 0.018225000000000484,
+      "expected": 0.018225,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "07-出射质子质量壳chi=1.8",
+      "value": 0.9623609999999996,
+      "expected": 0.962361,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "07-反冲介子质量壳chi=1.8",
+      "value": 0.018225000000000626,
+      "expected": 0.018225,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "07-出射质子质量壳chi=3.141592653589793",
+      "value": 0.9623609999999999,
+      "expected": 0.962361,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "07-反冲介子质量壳chi=3.141592653589793",
+      "value": 0.018225000000000546,
+      "expected": 0.018225,
+      "tolerance": 1e-11,
+      "passed": true
+    },
+    {
+      "name": "07-零散射回到初始动量",
+      "value": 1.3079999999999983,
+      "expected": 1.3080000000000003,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "07-最大偏角质量比公式",
+      "value": 0.13761467889908133,
+      "expected": 0.13761467889908258,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "07-最大偏角独立优化",
+      "value": 0.13805277594018037,
+      "expected": 0.13805277594020887,
+      "tolerance": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "08-恒压潜热热循环",
+      "value": 2.5934809855243657e-13,
+      "expected": 0.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "08-绝热恒压焓守恒",
+      "value": 15.672300000000048,
+      "expected": 15.672300000000048,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "08-低温参考态焓路径",
+      "value": 15.781141493394873,
+      "expected": 15.781141493394873,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "08-最终气体体积比",
+      "value": 1.0133215998150107,
+      "expected": 1.01332160181192,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "name": "08-熵增加为正",
+      "value": 1.0,
+      "expected": 1.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "08-内能与活塞功独立收支",
+      "value": -2.2482138047211517,
+      "expected": -2.2482138047211686,
+      "tolerance": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "08-两相共存条件",
+      "value": 1.0,
+      "expected": 1.0,
+      "tolerance": 1e-08,
+      "passed": true
+    }
+  ],
+  "numbers": {
+    "q1": {
+      "delta1": 0.31530096874093533,
+      "delta2": 0.3535533905932738,
+      "bottom_overhang": 0.5214466094067263,
+      "overhang_c": 1.125,
+      "overhang_d": 1.1678932188134525,
+      "top_center": -0.02608740636784035,
+      "reactions": [
+        0.5857864376269051,
+        0.4142135623730949,
+        1.585786437626905,
+        1.414213562373095
+      ]
+    },
+    "q2": {
+      "t_water": 0.1414213562373095,
+      "t_dry": 0.14385691029449904,
+      "time": 0.28527826653180854,
+      "y_equilibrium": 0.25,
+      "amplitude": 0.11180339887498947,
+      "y_max": 0.36180339887498947,
+      "displacement": 0.2618033988749895,
+      "v_lip": 1.414213562373095
+    },
+    "q5": {
+      "f_hi": 20005520.0,
+      "f_lo": 20004570.0,
+      "f0": 20005044.988721594,
+      "beta": 2.3744010573332877e-05,
+      "speed": 7118.454369885197,
+      "slope_hz_per_min": 500,
+      "distance": 405751.8988547022,
+      "delay": 0.001353408601916952
+    },
+    "q7": {
+      "s": 1.422036,
+      "beta_cm": 0.7389830508474576,
+      "gamma_cm": 1.4842872976806583,
+      "energy_cm": 0.9921127242168467,
+      "momentum_cm": 0.14807652600251317,
+      "center": 1.0882118933697882,
+      "a": 0.21978810663021,
+      "b": 0.14807652600251317,
+      "theta_max_deg": 7.909841411439164,
+      "px_min": 0.8684237867395782,
+      "px_max": 1.3079999999999983
+    },
+    "q8": {
+      "T1": 365.68699999999995,
+      "L1": 2272.3575,
+      "condensed_fraction": 0.00694483218128964,
+      "volume_ratio": 1.0133215998150107,
+      "entropy_increase_j_per_kg": 0.4256853667907595,
+      "work_kj_per_kg": 2.2482138047211686
+    }
+  }
+}

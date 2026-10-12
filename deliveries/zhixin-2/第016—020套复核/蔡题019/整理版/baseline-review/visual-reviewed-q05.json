@@ -1,0 +1,34 @@
+{
+  "question": 5,
+  "actual_reviewed": true,
+  "scope": "分题工作预览；整套合并后重新验收",
+  "reviewed_at": "2026-10-08 13:06 Asia/Shanghai",
+  "student": {
+    "pdf_sha256": "5dac0d37d8e03bd9f69a40e8a89aba087fe36cd6f2edf50dd587a63c7ad805ba",
+    "total_pages": 8,
+    "body_pages": 7,
+    "extracted_body_nonspace": 5198,
+    "overview_pages_reviewed": [1,2,3,4,5,6,7,8],
+    "high_resolution_pages_reviewed": [4,5,7,8]
+  },
+  "teacher": {
+    "pdf_sha256": "c021054c6d9f65ebc3f003f135c8c03272d7e04ed7467939d3f7487c9c4f1345",
+    "total_pages": 12,
+    "body_pages": 11,
+    "extracted_body_nonspace": 8475,
+    "overview_pages_reviewed": [1,2,3,4,5,6,7,8,9,10,11,12],
+    "high_resolution_pages_reviewed": [12]
+  },
+  "figures_reviewed": ["geometry-05","simultaneity-05","angular-05"],
+  "repairs": [
+    "同一测量事件的纵向场箭头等长；横向箭头增强gamma倍",
+    "方向曲线刻度修正为0.64，完整公式与曲线同页",
+    "拆分长行数值公式，消除溢出",
+    "三图70/52/47%宽度后标签可读，学生末段与完整数值检验同页，移除稀疏尾页；全部20页及5页高清重新审读，源稿净正文不变",
+    "教师末个带解变式保持完整，不以重复内容或扩间距凑页"
+  ],
+  "layout_issues": [],
+  "qpdf_check_passed": true,
+  "physics_checks_passed": true,
+  "physics_note": "20组独立迟滞光锥求根、场变换、正负电荷、反向速度、非零时刻、不变量、球面通量及三道完整变式通过"
+}

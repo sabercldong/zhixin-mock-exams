@@ -1,0 +1,1301 @@
+{
+  "check_count": 96,
+  "supplementary_check_count": 8,
+  "all_passed": true,
+  "checks": [
+    {
+      "name": "01-01 beat reconstruction",
+      "passed": true,
+      "value": 20.000000000000426,
+      "expected": 20,
+      "rtol": 1e-07,
+      "atol": 1e-09
+    },
+    {
+      "name": "01-02 compression fractional displacement",
+      "passed": true,
+      "value": 0.4975124378109453,
+      "expected": 0.4975124378109453,
+      "rtol": 1e-07,
+      "atol": 1e-09
+    },
+    {
+      "name": "01-03 finite Young modulus",
+      "passed": true,
+      "value": 201.0,
+      "expected": 201,
+      "rtol": 1e-07,
+      "atol": 1e-09
+    },
+    {
+      "name": "01-04 approximation relative error",
+      "passed": true,
+      "value": 0.004975124378109453,
+      "expected": 0.004975124378109453,
+      "rtol": 1e-07,
+      "atol": 1e-09
+    },
+    {
+      "name": "01-05 shear phase one beat",
+      "passed": true,
+      "value": 1.0,
+      "expected": 1,
+      "rtol": 1e-07,
+      "atol": 1e-09
+    },
+    {
+      "name": "01-06 shear geometry",
+      "passed": true,
+      "value": 0.005,
+      "expected": 0.005,
+      "rtol": 1e-07,
+      "atol": 1e-09
+    },
+    {
+      "name": "01-07 hyperbola focus distance",
+      "passed": true,
+      "value": [
+        1.4,
+        1.4,
+        1.4,
+        1.4,
+        1.4000000000000004,
+        1.3999999999999995,
+        1.4,
+        1.4,
+        1.4,
+        1.4000000000000001,
+        1.4,
+        1.4000000000000004,
+        1.3999999999999995,
+        1.3999999999999995,
+        1.3999999999999997,
+        1.4,
+        1.4000000000000001,
+        1.4,
+        1.4
+      ],
+      "expected": [
+        1.4,
+        1.4,
+        1.4,
+        1.4,
+        1.4,
+        1.4,
+        1.4,
+        1.4,
+        1.4,
+        1.4,
+        1.4,
+        1.4,
+        1.4,
+        1.4,
+        1.4,
+        1.4,
+        1.4,
+        1.4,
+        1.4
+      ],
+      "rtol": 1e-07,
+      "atol": 1e-09
+    },
+    {
+      "name": "01-08 zero distance difference",
+      "passed": true,
+      "value": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "expected": 0,
+      "rtol": 1e-07,
+      "atol": 1e-09
+    },
+    {
+      "name": "01-09 circle angular branch",
+      "passed": true,
+      "value": 1.0471975511965974,
+      "expected": 1.0471975511965976,
+      "rtol": 1e-07,
+      "atol": 1e-09
+    },
+    {
+      "name": "01-10 angular streamfunction orthogonal",
+      "passed": true,
+      "value": 0.0,
+      "expected": 0,
+      "rtol": 1e-07,
+      "atol": 1e-09
+    },
+    {
+      "name": "01-11 half-cycle grid shift",
+      "passed": true,
+      "value": 0.49999999999998934,
+      "expected": 0.5,
+      "rtol": 1e-07,
+      "atol": 1e-09
+    },
+    {
+      "name": "01-12 right angle circle field tangent",
+      "passed": true,
+      "value": 0.0,
+      "expected": 0,
+      "rtol": 1e-07,
+      "atol": 1e-09
+    },
+    {
+      "name": "02-01 central speed parameter",
+      "passed": true,
+      "value": 0.16403421651235062,
+      "expected": 0.16403421651235062,
+      "rtol": 1e-07,
+      "atol": 1e-09
+    },
+    {
+      "name": "02-02 optimum by bounded search",
+      "passed": true,
+      "value": 0.7406660556415339,
+      "expected": 0.7406660556641594,
+      "rtol": 1e-07,
+      "atol": 2e-08
+    },
+    {
+      "name": "02-03 angle at numerical landing",
+      "passed": true,
+      "value": 0.1789284309331572,
+      "expected": 0.17892843093315572,
+      "rtol": 1e-07,
+      "atol": 2e-09
+    },
+    {
+      "name": "02-04 time by force integration",
+      "passed": true,
+      "value": 510.3039022643065,
+      "expected": 510.3039022643021,
+      "rtol": 1e-07,
+      "atol": 2e-05
+    },
+    {
+      "name": "02-05 numerical flight time",
+      "passed": true,
+      "value": 510.3039022643065,
+      "expected": 510.3039022643,
+      "rtol": 1e-07,
+      "atol": 2e-05
+    },
+    {
+      "name": "02-06 launch optimal angle degrees",
+      "passed": true,
+      "value": 42.43703901815804,
+      "expected": 42.4370390182,
+      "rtol": 1e-07,
+      "atol": 1e-09
+    },
+    {
+      "name": "02-07 energy initial final",
+      "passed": true,
+      "value": -57305999.99999995,
+      "expected": -57306000.00000001,
+      "rtol": 1e-09,
+      "atol": 1e-09
+    },
+    {
+      "name": "02-08 angular momentum initial final",
+      "passed": true,
+      "value": 15043785037.694372,
+      "expected": 15043785037.694359,
+      "rtol": 1e-09,
+      "atol": 1e-09
+    },
+    {
+      "name": "02-09 maximum angle alternate form",
+      "passed": true,
+      "value": 0.17892843093315572,
+      "expected": 0.17892843093315572,
+      "rtol": 1e-07,
+      "atol": 1e-09
+    },
+    {
+      "name": "02-10 finite derivative at optimum",
+      "passed": true,
+      "value": 6.9388939039072276e-12,
+      "expected": 0,
+      "rtol": 1e-07,
+      "atol": 1e-09
+    },
+    {
+      "name": "02-11 surface eccentric anomaly",
+      "passed": true,
+      "value": 6370000.0,
+      "expected": 6370000.0,
+      "rtol": 1e-07,
+      "atol": 1e-09
+    },
+    {
+      "name": "02-12 surface above arc apogee",
+      "passed": true,
+      "value": 1,
+      "expected": 1,
+      "rtol": 1e-07,
+      "atol": 1e-09
+    },
+    {
+      "name": "03-01 first fall time",
+      "passed": true,
+      "value": 0.2,
+      "expected": 0.2,
+      "rtol": 1e-07,
+      "atol": 1e-09
+    },
+    {
+      "name": "03-02 upward rebound normal impulse",
+      "passed": true,
+      "value": 4.0,
+      "expected": 4,
+      "rtol": 1e-07,
+      "atol": 1e-09
+    },
+    {
+      "name": "03-03 relative velocity iteration",
+      "passed": true,
+      "value": [
+        6.0,
+        2.0,
+        0.0
+      ],
+      "expected": [
+        6,
+        2,
+        0
+      ],
+      "rtol": 1e-07,
+      "atol": 1e-09
+    },
+    {
+      "name": "03-04 distance by event loop",
+      "passed": true,
+      "value": 5.2,
+      "expected": 5.2,
+      "rtol": 1e-07,
+      "atol": 1e-09
+    },
+    {
+      "name": "03-05 number to stick",
+      "passed": true,
+      "value": 3,
+      "expected": 3,
+      "rtol": 1e-07,
+      "atol": 1e-09
+    },
+    {
+      "name": "03-06 integer boundary count",
+      "passed": true,
+      "value": 2,
+      "expected": 2,
+      "rtol": 1e-07,
+      "atol": 1e-09
+    },
+    {
+      "name": "03-07 integer boundary length",
+      "passed": true,
+      "value": 3.2,
+      "expected": 3.2,
+      "rtol": 1e-07,
+      "atol": 1e-09
+    },
+    {
+      "name": "03-08 first impact sticking limit",
+      "passed": true,
+      "value": 0.6,
+      "expected": 0.6,
+      "rtol": 1e-07,
+      "atol": 1e-09
+    },
+    {
+      "name": "03-09 equal mass momentum",
+      "passed": true,
+      "value": [
+        10.0,
+        10.0,
+        10.0
+      ],
+      "expected": 10.0,
+      "rtol": 1e-07,
+      "atol": 1e-09
+    },
+    {
+      "name": "03-10 total horizontal loss",
+      "passed": true,
+      "value": 25.0,
+      "expected": 25.0,
+      "rtol": 1e-07,
+      "atol": 1e-09
+    },
+    {
+      "name": "03-11 finite closed sum",
+      "passed": true,
+      "value": 5.2,
+      "expected": 5.2,
+      "rtol": 1e-07,
+      "atol": 1e-09
+    },
+    {
+      "name": "03-12 arbitrary board mass impulse",
+      "passed": true,
+      "value": [
+        7.0,
+        4.0,
+        1.0,
+        0.0
+      ],
+      "expected": [
+        7,
+        4,
+        1,
+        0
+      ],
+      "rtol": 1e-07,
+      "atol": 1e-09
+    },
+    {
+      "name": "04-01 direction sum",
+      "passed": true,
+      "value": [
+        0.0,
+        0.0
+      ],
+      "expected": 0,
+      "rtol": 1e-07,
+      "atol": 1e-09
+    },
+    {
+      "name": "04-02 directional metric",
+      "passed": true,
+      "value": [
+        [
+          1.5,
+          0.0
+        ],
+        [
+          0.0,
+          1.4999999999999998
+        ]
+      ],
+      "expected": [
+        [
+          1.5,
+          0.0
+        ],
+        [
+          0.0,
+          1.5
+        ]
+      ],
+      "rtol": 1e-07,
+      "atol": 1e-09
+    },
+    {
+      "name": "04-03 potential Hessian difference",
+      "passed": true,
+      "value": [
+        [
+          25.461146435645787,
+          8.881784197001252e-08
+        ],
+        [
+          8.881784197001252e-08,
+          25.461146790917155
+        ]
+      ],
+      "expected": [
+        [
+          25.4611468712625,
+          0.0
+        ],
+        [
+          0.0,
+          25.4611468712625
+        ]
+      ],
+      "rtol": 2e-07,
+      "atol": 1e-06
+    },
+    {
+      "name": "04-04 potential gradient at centre",
+      "passed": true,
+      "value": [
+        -1.1024070545317954e-07,
+        1.7763568394002505e-11
+      ],
+      "expected": 0,
+      "rtol": 1e-07,
+      "atol": 1e-06
+    },
+    {
+      "name": "04-05 full hanging kinetic mass",
+      "passed": true,
+      "value": 0.05825,
+      "expected": 0.05825,
+      "rtol": 1e-07,
+      "atol": 1e-09
+    },
+    {
+      "name": "04-06 frequency",
+      "passed": true,
+      "value": 10.184458748505,
+      "expected": 10.184458748505,
+      "rtol": 1e-07,
+      "atol": 1e-09
+    },
+    {
+      "name": "04-07 equal mass period",
+      "passed": true,
+      "value": 1.9688421193676136,
+      "expected": 1.969,
+      "rtol": 0.0001,
+      "atol": 1e-09
+    },
+    {
+      "name": "04-08 elliptic geometry",
+      "passed": true,
+      "value": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.9999999999999999,
+        0.9999999999999999,
+        1.0,
+        1.0,
+        0.9999999999999999,
+        1.0,
+        1.0,
+        0.9999999999999998,
+        0.9999999999999998,
+        1.0,
+        0.9999999999999999,
+        0.9999999999999998,
+        0.9999999999999999,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0000000000000002,
+        1.0000000000000002,
+        1.0,
+        0.9999999999999999,
+        1.0,
+        1.0,
+        0.9999999999999999,
+        1.0,
+        0.9999999999999996,
+        1.0,
+        0.9999999999999999,
+        0.9999999999999999,
+        0.9999999999999999,
+        0.9999999999999998,
+        0.9999999999999999,
+        1.0000000000000002,
+        0.9999999999999998,
+        1.0000000000000002,
+        0.9999999999999999,
+        1.0000000000000002,
+        0.9999999999999999,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0000000000000002,
+        0.9999999999999998,
+        1.0,
+        1.0,
+        1.0,
+        0.9999999999999999,
+        0.9999999999999999,
+        1.0,
+        1.0,
+        1.0,
+        0.9999999999999998,
+        1.0,
+        1.0,
+        1.0,
+        0.9999999999999999,
+        1.0000000000000002,
+        1.0,
+        0.9999999999999999,
+        1.0,
+        1.0,
+        0.9999999999999999,
+        1.0,
+        0.9999999999999998,
+        0.9999999999999998,
+        1.0,
+        1.0,
+        0.9999999999999998,
+        0.9999999999999999,
+        1.0,
+        1.0000000000000002,
+        1.0000000000000002,
+        1.0,
+        0.9999999999999998,
+        1.0,
+        1.0,
+        1.0,
+        0.9999999999999999,
+        1.0,
+        0.9999999999999999,
+        0.9999999999999999,
+        0.9999999999999998,
+        0.9999999999999998,
+        0.9999999999999999,
+        1.0000000000000002,
+        0.9999999999999998,
+        1.0,
+        1.0,
+        1.0000000000000002,
+        1.0000000000000002,
+        0.9999999999999998,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected": 1,
+      "rtol": 1e-07,
+      "atol": 1e-09
+    },
+    {
+      "name": "04-09 quadratic energy invariant",
+      "passed": true,
+      "value": [
+        0.0041374363665801555,
+        0.004137436366580156,
+        0.004137436366580156,
+        0.004137436366580156,
+        0.0041374363665801555,
+        0.0041374363665801555,
+        0.004137436366580156,
+        0.004137436366580156,
+        0.0041374363665801555,
+        0.004137436366580156,
+        0.004137436366580156,
+        0.0041374363665801555,
+        0.0041374363665801555,
+        0.004137436366580156,
+        0.0041374363665801555,
+        0.004137436366580155,
+        0.0041374363665801555,
+        0.004137436366580156,
+        0.004137436366580156,
+        0.004137436366580156,
+        0.0041374363665801555,
+        0.0041374363665801555,
+        0.004137436366580156,
+        0.004137436366580156,
+        0.0041374363665801555,
+        0.004137436366580156,
+        0.0041374363665801555,
+        0.0041374363665801555,
+        0.004137436366580155,
+        0.0041374363665801555,
+        0.004137436366580155,
+        0.004137436366580156,
+        0.004137436366580156,
+        0.0041374363665801555,
+        0.0041374363665801555,
+        0.004137436366580156,
+        0.0041374363665801555,
+        0.004137436366580156,
+        0.0041374363665801555,
+        0.004137436366580156,
+        0.0041374363665801555,
+        0.004137436366580156,
+        0.0041374363665801555,
+        0.0041374363665801555,
+        0.0041374363665801555,
+        0.0041374363665801555,
+        0.004137436366580156,
+        0.004137436366580156,
+        0.004137436366580155,
+        0.004137436366580156,
+        0.0041374363665801555,
+        0.004137436366580156,
+        0.0041374363665801555,
+        0.0041374363665801555,
+        0.004137436366580156,
+        0.004137436366580156,
+        0.004137436366580156,
+        0.0041374363665801555,
+        0.0041374363665801555,
+        0.004137436366580156,
+        0.004137436366580156,
+        0.0041374363665801555,
+        0.004137436366580156,
+        0.0041374363665801555,
+        0.0041374363665801555,
+        0.004137436366580156,
+        0.004137436366580156,
+        0.004137436366580156,
+        0.004137436366580156,
+        0.0041374363665801555,
+        0.0041374363665801555,
+        0.0041374363665801555,
+        0.0041374363665801555,
+        0.004137436366580155,
+        0.004137436366580155,
+        0.0041374363665801555,
+        0.004137436366580156,
+        0.004137436366580156,
+        0.004137436366580156,
+        0.004137436366580155,
+        0.004137436366580156,
+        0.004137436366580156,
+        0.004137436366580156,
+        0.0041374363665801555,
+        0.004137436366580156,
+        0.0041374363665801555,
+        0.004137436366580156,
+        0.0041374363665801555,
+        0.0041374363665801555,
+        0.0041374363665801555,
+        0.004137436366580156,
+        0.004137436366580155,
+        0.0041374363665801555,
+        0.004137436366580156,
+        0.004137436366580156,
+        0.004137436366580156,
+        0.0041374363665801555,
+        0.0041374363665801555,
+        0.004137436366580156,
+        0.0041374363665801555
+      ],
+      "expected": 0.004137436366580156,
+      "rtol": 1e-07,
+      "atol": 1e-09
+    },
+    {
+      "name": "04-10 linear angular momentum",
+      "passed": true,
+      "value": [
+        0.0011967412049012584,
+        0.0011967412049012584,
+        0.0011967412049012584,
+        0.0011967412049012584,
+        0.0011967412049012582,
+        0.0011967412049012584,
+        0.0011967412049012584,
+        0.0011967412049012584,
+        0.0011967412049012582,
+        0.0011967412049012584,
+        0.0011967412049012584,
+        0.0011967412049012582,
+        0.0011967412049012582,
+        0.0011967412049012584,
+        0.0011967412049012582,
+        0.0011967412049012582,
+        0.0011967412049012584,
+        0.0011967412049012584,
+        0.0011967412049012584,
+        0.0011967412049012584,
+        0.0011967412049012584,
+        0.0011967412049012584,
+        0.0011967412049012584,
+        0.0011967412049012586,
+        0.0011967412049012584,
+        0.0011967412049012584,
+        0.0011967412049012584,
+        0.0011967412049012582,
+        0.0011967412049012582,
+        0.0011967412049012582,
+        0.0011967412049012582,
+        0.0011967412049012584,
+        0.0011967412049012582,
+        0.0011967412049012582,
+        0.0011967412049012582,
+        0.0011967412049012584,
+        0.0011967412049012582,
+        0.0011967412049012584,
+        0.0011967412049012582,
+        0.0011967412049012584,
+        0.0011967412049012582,
+        0.0011967412049012584,
+        0.0011967412049012582,
+        0.0011967412049012584,
+        0.0011967412049012584,
+        0.0011967412049012584,
+        0.0011967412049012584,
+        0.0011967412049012584,
+        0.0011967412049012582,
+        0.0011967412049012584,
+        0.0011967412049012582,
+        0.0011967412049012582,
+        0.0011967412049012582,
+        0.0011967412049012582,
+        0.0011967412049012584,
+        0.0011967412049012584,
+        0.0011967412049012582,
+        0.0011967412049012582,
+        0.0011967412049012584,
+        0.0011967412049012584,
+        0.0011967412049012584,
+        0.0011967412049012584,
+        0.0011967412049012584,
+        0.0011967412049012582,
+        0.0011967412049012582,
+        0.0011967412049012584,
+        0.0011967412049012584,
+        0.0011967412049012584,
+        0.0011967412049012584,
+        0.0011967412049012582,
+        0.0011967412049012582,
+        0.0011967412049012582,
+        0.0011967412049012582,
+        0.0011967412049012582,
+        0.0011967412049012584,
+        0.0011967412049012584,
+        0.0011967412049012586,
+        0.0011967412049012584,
+        0.0011967412049012584,
+        0.0011967412049012582,
+        0.0011967412049012584,
+        0.0011967412049012584,
+        0.0011967412049012584,
+        0.0011967412049012584,
+        0.0011967412049012584,
+        0.0011967412049012584,
+        0.0011967412049012584,
+        0.0011967412049012582,
+        0.0011967412049012582,
+        0.0011967412049012582,
+        0.0011967412049012584,
+        0.0011967412049012582,
+        0.0011967412049012582,
+        0.0011967412049012584,
+        0.0011967412049012584,
+        0.0011967412049012584,
+        0.0011967412049012582,
+        0.0011967412049012584,
+        0.0011967412049012584,
+        0.0011967412049012584
+      ],
+      "expected": 0.0011967412049012584,
+      "rtol": 1e-07,
+      "atol": 1e-09
+    },
+    {
+      "name": "04-11 massless tabletop frequency",
+      "passed": true,
+      "value": 16.974097914175,
+      "expected": 16.974097914174997,
+      "rtol": 1e-07,
+      "atol": 1e-09
+    },
+    {
+      "name": "04-12 positive tension sufficient",
+      "passed": true,
+      "value": 1,
+      "expected": 1,
+      "rtol": 1e-07,
+      "atol": 1e-09
+    },
+    {
+      "name": "05-01 impedance polynomial real",
+      "passed": true,
+      "value": -1.1102230246251565e-16,
+      "expected": 0,
+      "rtol": 1e-07,
+      "atol": 1e-09
+    },
+    {
+      "name": "05-02 impedance polynomial imag",
+      "passed": true,
+      "value": 0.0,
+      "expected": 0,
+      "rtol": 1e-07,
+      "atol": 1e-09
+    },
+    {
+      "name": "05-03 propagation root",
+      "passed": true,
+      "value": -1.0471975511965979,
+      "expected": -1.0471975511965976,
+      "rtol": 1e-07,
+      "atol": 1e-09
+    },
+    {
+      "name": "05-04 node difference equation",
+      "passed": true,
+      "value": 2.220446049250313e-16,
+      "expected": 0,
+      "rtol": 1e-07,
+      "atol": 1e-09
+    },
+    {
+      "name": "05-05 terminated chain self similarity",
+      "passed": true,
+      "value": 1.1102230246251565e-16,
+      "expected": 0,
+      "rtol": 1e-07,
+      "atol": 1e-09
+    },
+    {
+      "name": "05-06 cycle mean power numeric",
+      "passed": true,
+      "value": 1.7320508075688774,
+      "expected": 1.7320508075688772,
+      "rtol": 1e-08,
+      "atol": 1e-09
+    },
+    {
+      "name": "05-07 energy velocity product",
+      "passed": true,
+      "value": 1.7320508075688774,
+      "expected": 1.7320508075688772,
+      "rtol": 1e-07,
+      "atol": 1e-09
+    },
+    {
+      "name": "05-08 stop-band ratio",
+      "passed": true,
+      "value": -0.14589803375031551,
+      "expected": -0.1458980337503153,
+      "rtol": 1e-07,
+      "atol": 1e-09
+    },
+    {
+      "name": "05-09 stop-band attenuation",
+      "passed": true,
+      "value": -1.9248473002384134,
+      "expected": -1.9248473002384139,
+      "rtol": 1e-07,
+      "atol": 1e-09
+    },
+    {
+      "name": "05-10 stop-band polynomial",
+      "passed": true,
+      "value": 3.552713678800501e-15,
+      "expected": 0,
+      "rtol": 1e-07,
+      "atol": 1e-09
+    },
+    {
+      "name": "05-11 stop-band mean power numeric",
+      "passed": true,
+      "value": 6.626155586382327e-18,
+      "expected": 0,
+      "rtol": 1e-07,
+      "atol": 1e-09
+    },
+    {
+      "name": "05-12 power negative interval",
+      "passed": true,
+      "value": 1,
+      "expected": 1,
+      "rtol": 1e-07,
+      "atol": 1e-09
+    },
+    {
+      "name": "06-01 geometric interception",
+      "passed": true,
+      "value": 4.222222222222223e-07,
+      "expected": 4.222222222222223e-07,
+      "rtol": 1e-07,
+      "atol": 0
+    },
+    {
+      "name": "06-02 aberration transverse momentum",
+      "passed": true,
+      "value": 1.3979236484190085e-19,
+      "expected": 1.3979236484190082e-19,
+      "rtol": 1e-07,
+      "atol": 0
+    },
+    {
+      "name": "06-03 emitted tangential momentum",
+      "passed": true,
+      "value": 1.3979236484190082e-19,
+      "expected": 1.3979236484190082e-19,
+      "rtol": 1e-07,
+      "atol": 0
+    },
+    {
+      "name": "06-04 orbital energy dissipation",
+      "passed": true,
+      "value": -4.159749922598175e-15,
+      "expected": -4.159749922598174e-15,
+      "rtol": 1e-07,
+      "atol": 0
+    },
+    {
+      "name": "06-05 torque balance",
+      "passed": true,
+      "value": -2.0968854726285125e-08,
+      "expected": -2.0968854726285122e-08,
+      "rtol": 1e-07,
+      "atol": 0
+    },
+    {
+      "name": "06-06 density substitution",
+      "passed": true,
+      "value": 16822956853.47874,
+      "expected": 16822956853.47874,
+      "rtol": 1e-07,
+      "atol": 1e-09
+    },
+    {
+      "name": "06-07 half-radius time fraction",
+      "passed": true,
+      "value": 0.75,
+      "expected": 0.75,
+      "rtol": 1e-07,
+      "atol": 1e-09
+    },
+    {
+      "name": "06-08 radius squared derivative",
+      "passed": true,
+      "value": -33645913706.95748,
+      "expected": -33645913706.95748,
+      "rtol": 1e-07,
+      "atol": 1e-09
+    },
+    {
+      "name": "06-09 pressure gravity ratio",
+      "passed": true,
+      "value": 0.01898603330066096,
+      "expected": 0.01898603330066096,
+      "rtol": 1e-07,
+      "atol": 0
+    },
+    {
+      "name": "06-10 effective circular speed ratio",
+      "passed": true,
+      "value": 0.8164965809277261,
+      "expected": 0.816496580927726,
+      "rtol": 1e-07,
+      "atol": 1e-09
+    },
+    {
+      "name": "06-11 free emitter velocity derivative",
+      "passed": true,
+      "value": 0.0,
+      "expected": 0,
+      "rtol": 1e-07,
+      "atol": 1e-09
+    },
+    {
+      "name": "06-12 near-circular bound",
+      "passed": true,
+      "value": 1,
+      "expected": 1,
+      "rtol": 1e-07,
+      "atol": 1e-09
+    },
+    {
+      "name": "07-01 right temperature by open ODE",
+      "passed": true,
+      "value": 1.0,
+      "expected": 1,
+      "rtol": 1e-07,
+      "atol": 1e-09
+    },
+    {
+      "name": "07-02 left temperature by open ODE",
+      "passed": true,
+      "value": 1.1666666666666665,
+      "expected": 1.1666666666666667,
+      "rtol": 1e-07,
+      "atol": 1e-09
+    },
+    {
+      "name": "07-03 volume by open ODE",
+      "passed": true,
+      "value": 0.6428571428571429,
+      "expected": 0.6428571428571428,
+      "rtol": 1e-07,
+      "atol": 1e-09
+    },
+    {
+      "name": "07-04 mole conservation",
+      "passed": true,
+      "value": 3.0,
+      "expected": 3,
+      "rtol": 1e-07,
+      "atol": 1e-09
+    },
+    {
+      "name": "07-05 terminal pressures",
+      "passed": true,
+      "value": [
+        2.0,
+        1.9999999999999996
+      ],
+      "expected": [
+        2,
+        2
+      ],
+      "rtol": 1e-07,
+      "atol": 1e-09
+    },
+    {
+      "name": "07-06 total energy work",
+      "passed": true,
+      "value": 0.7142857142857135,
+      "expected": 0.7142857142857142,
+      "rtol": 1e-07,
+      "atol": 1e-09
+    },
+    {
+      "name": "07-07 monatomic terminal ratio",
+      "passed": true,
+      "value": 0.7,
+      "expected": 0.7,
+      "rtol": 1e-07,
+      "atol": 1e-09
+    },
+    {
+      "name": "07-08 monatomic left temperature",
+      "passed": true,
+      "value": 1.25,
+      "expected": 1.25,
+      "rtol": 1e-07,
+      "atol": 1e-09
+    },
+    {
+      "name": "07-09 diatomic ratio",
+      "passed": true,
+      "value": 0.6428571428571429,
+      "expected": 0.6428571428571429,
+      "rtol": 1e-07,
+      "atol": 1e-09
+    },
+    {
+      "name": "07-10 diatomic left temperature",
+      "passed": true,
+      "value": 1.1666666666666665,
+      "expected": 1.1666666666666667,
+      "rtol": 1e-07,
+      "atol": 1e-09
+    },
+    {
+      "name": "07-11 later equilibrium temperature",
+      "passed": true,
+      "value": 1.0952380952380951,
+      "expected": 1.0952380952380953,
+      "rtol": 1e-07,
+      "atol": 1e-09
+    },
+    {
+      "name": "07-12 incorrect inlet internal-energy contradiction",
+      "passed": true,
+      "value": 1.0,
+      "expected": 1,
+      "rtol": 1e-07,
+      "atol": 1e-09
+    },
+    {
+      "name": "08-01 number vertices",
+      "passed": true,
+      "value": 12,
+      "expected": 12,
+      "rtol": 1e-07,
+      "atol": 1e-09
+    },
+    {
+      "name": "08-02 number edges",
+      "passed": true,
+      "value": 24,
+      "expected": 24,
+      "rtol": 1e-07,
+      "atol": 1e-09
+    },
+    {
+      "name": "08-03 degree four",
+      "passed": true,
+      "value": [
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0,
+        4.0
+      ],
+      "expected": 4,
+      "rtol": 1e-07,
+      "atol": 1e-09
+    },
+    {
+      "name": "08-04 adjacent resistance grounded",
+      "passed": true,
+      "value": 0.4583333333333333,
+      "expected": 0.4583333333333333,
+      "rtol": 1e-07,
+      "atol": 1e-09
+    },
+    {
+      "name": "08-05 diagonal resistance grounded",
+      "passed": true,
+      "value": 0.5833333333333331,
+      "expected": 0.5833333333333334,
+      "rtol": 1e-07,
+      "atol": 1e-09
+    },
+    {
+      "name": "08-06 both Kirchhoff residuals",
+      "passed": true,
+      "value": [
+        0.0,
+        -1.1102230246251565e-16,
+        -1.1102230246251565e-16,
+        -1.1102230246251565e-16,
+        -2.220446049250313e-16,
+        0.0,
+        0.0,
+        2.220446049250313e-16,
+        2.220446049250313e-16,
+        -1.1102230246251565e-16,
+        0.0,
+        1.1102230246251565e-16,
+        0.0,
+        -1.1102230246251565e-16,
+        -2.220446049250313e-16,
+        -3.3306690738754696e-16,
+        -8.326672684688674e-17,
+        -2.220446049250313e-16,
+        -1.1102230246251565e-16,
+        1.1102230246251565e-16,
+        5.551115123125783e-17,
+        6.661338147750939e-16,
+        0.0,
+        -2.220446049250313e-16
+      ],
+      "expected": 0,
+      "rtol": 1e-07,
+      "atol": 1e-09
+    },
+    {
+      "name": "08-07 pseudoinverse adjacent",
+      "passed": true,
+      "value": 0.45833333333333315,
+      "expected": 0.4583333333333333,
+      "rtol": 1e-07,
+      "atol": 1e-09
+    },
+    {
+      "name": "08-08 pseudoinverse diagonal",
+      "passed": true,
+      "value": 0.5833333333333321,
+      "expected": 0.5833333333333334,
+      "rtol": 1e-07,
+      "atol": 1e-09
+    },
+    {
+      "name": "08-09 Foster sum",
+      "passed": true,
+      "value": 10.999999999999998,
+      "expected": 11,
+      "rtol": 1e-07,
+      "atol": 1e-09
+    },
+    {
+      "name": "08-10 induced source divergence",
+      "passed": true,
+      "value": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "expected": 0,
+      "rtol": 1e-07,
+      "atol": 1e-09
+    },
+    {
+      "name": "08-11 direct AB field integral",
+      "passed": true,
+      "value": -0.0,
+      "expected": 0,
+      "rtol": 1e-07,
+      "atol": 1e-09
+    },
+    {
+      "name": "08-12 direct AC field integral",
+      "passed": true,
+      "value": -1.0,
+      "expected": -1,
+      "rtol": 1e-07,
+      "atol": 1e-09
+    }
+  ],
+  "supplementary_checks": [
+    {
+      "name": "01 spatial phase and strain sweep",
+      "passed": true,
+      "detail": "Beat geometry checked across four positive compression strains."
+    },
+    {
+      "name": "02 central-force independent landing event",
+      "passed": true,
+      "detail": "ODE integrates Cartesian gravitational force, no Kepler time formula in the evolution."
+    },
+    {
+      "name": "03 impulse sweep, continuous bound and inverse threshold",
+      "passed": true,
+      "detail": "Saturated impulse is capped at sticking; independent event loop verifies ceiling expression, bounded bounce correction and 4m board threshold."
+    },
+    {
+      "name": "04 finite mass metric and cubic anisotropy",
+      "passed": true,
+      "detail": "Explicit distances give positive Hessian and mass metric; third-order triangular anisotropy compared at 34 small positions."
+    },
+    {
+      "name": "05 physical branches and energy velocity",
+      "passed": true,
+      "detail": "Outgoing flux in pass band and bounded evanescent field in stop band; numerical dispersion derivative agrees with mean power divided by unit cell energy."
+    },
+    {
+      "name": "06 effective gravity and numerical example",
+      "passed": true,
+      "detail": "Same effective gravity cancels from drift; 10 micron numerical example independently evaluated in SI units."
+    },
+    {
+      "name": "07 pressure-ratio, entropy and energy checks",
+      "passed": true,
+      "detail": "Whole-system energy for four pressure ratios; entropy and individual terminal energies reconstructed from open-system ODE state."
+    },
+    {
+      "name": "08 face flux and both graph heat sources",
+      "passed": true,
+      "detail": "All eight triangular faces obey Faraday; static and induced Joule heat verified, with zero conservative-solenoidal cross term."
+    }
+  ]
+}

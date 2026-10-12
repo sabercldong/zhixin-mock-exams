@@ -1,0 +1,79 @@
+[
+  {
+    "set": 19,
+    "question": 1,
+    "added_count": 1,
+    "content": "（4）固定出口量$r_0,v_0$和下落高度$y>0$，仍采用破裂前的当地圆柱模型。证明增大表面张力会使该高度的水柱半径增大，并求弱表面张力下的灵敏度。取$2gy/v_0^2=15$，给出$r/r_0$的一阶式。\n\n令$w=r_0/r$、$z=2gy/v_0^2$、$\\eta=2\\sigma/(\\rho r_0v_0^2)$。连续性和伯努利方程仍给出\n\n$$\nw^4+\\eta(w-1)=1+z.\n$$\n\n在$z>0,\\eta\\geq0$时，左端关于$w$的导数$4w^3+\\eta>0$；代入$w=1$又小于右端，故唯一物理解满足$w>1$。固定$z$隐式求导，得到\n\n$$\n\\frac{\\partial w}{\\partial\\eta}\n=-\\frac{w-1}{4w^3+\\eta},\\qquad\n\\boxed{\\frac{\\partial(r/r_0)}{\\partial\\eta}\n=\\frac{w-1}{w^2(4w^3+\\eta)}>0.}\n$$\n\n表面张力引起的压强梯度减缓向下加速，因而同一流量需要较大的截面。取$z=15$，在$\\eta=0$时有$w=2$，灵敏度为$1/128$，所以\n\n$$\n\\boxed{\\frac r{r_0}=\\frac12+\\frac\\eta{128}+O(\\eta^2).}\n$$\n\n小的表面张力误差$\\Delta\\sigma$导致$\\Delta r/r_0\\simeq\\Delta\\sigma/(64\\rho r_0v_0^2)$。这里固定了出口速度；若实际供水压强固定、出口速度也随$\\sigma$改变，需要联立新的出口边界条件。单调性是该方程的性质，不能据此把当地圆柱近似外推到强表面张力或已经颈缩破裂的射流。\n\n<!-- question-complete -->",
+    "draft_sha256": "01dfe71222705d79949212daf031e7eb1bcc94953b54bf637ed3773d4326972e"
+  },
+  {
+    "set": 19,
+    "question": 2,
+    "added_count": 1,
+    "content": "变式四：在小球上另加理想的水平回复力$F_s=-k_s x$，其平衡位置仍在两板中面，$k_s\\geq0$。求小振动周期及稳定条件。若原来的电反回复强度为重力回复强度的$1.2$倍，取$k_s=0.3mg/h$，能否稳定？\n\n新增力只在水平位移时出现，不改变$x=0$处的竖直平衡。设$S_3=\\sum_{j\\geq0}(2j+1)^{-3}$，电力的一次项为$KS_3q^2x/l^3$。将三项相加，得到\n\n$$\nm\\ddot x=-\\left(\\frac{mg}{h}+k_s-\\frac{KS_3q^2}{l^3}\\right)x,\n\\qquad\n\\boxed{T=\\frac{2\\pi}{\\sqrt{g/h+k_s/m-KS_3q^2/(ml^3)}}.}\n$$\n\n上式只在括号内严格为正时成立，亦即\n\n$$\n|q|<\\sqrt{\\frac{(mg/h+k_s)l^3}{KS_3}}.\n$$\n\n从能量看，新增势能$k_sx^2/2$直接补足负的电二次项，给出相同条件。定义$\\chi=KS_3q^2h/(mgl^3)$，则$\\omega_s^2=(g/h)(1-\\chi+k_sh/(mg))$。代入$\\chi=1.2$及$k_sh/(mg)=0.3$，得$\\omega_s^2=0.1g/h>0$，稳定，且$T=\\sqrt{10}\\,T_0$，其中$T_0=2\\pi\\sqrt{h/g}$。\n\n仅取$k_s=(\\chi-1)mg/h$时二次项为零，不能声称已经得到稳定简谐振动；需继续检查高阶项。小量条件仍是$|x|\\ll h,l$，新增装置需确实提供所规定的水平力。\n\n<!-- question-complete -->",
+    "draft_sha256": "0f1b04091fe1b8e7a526664c9a2ca9c14528417fad0d28abddb4e11da59bec2d"
+  },
+  {
+    "set": 19,
+    "question": 3,
+    "added_count": 1,
+    "content": "变式四：把原边电压改为$u_1(t)=U_a\\sin\\omega t+U_b\\sin3\\omega t$，其余理想条件和三个接线保持。求总平均功率。取$N_1=200,N_2=100,N_3=60$、$r=10\\,\\Omega$、$U_a=12\\,\\mathrm V,U_b=4\\,\\mathrm V$计算。\n\n理想共磁通给出的瞬时电压比不依赖正弦波形，仍有$u_i=(N_i/N_1)u_1$。在共同周期$2\\pi/\\omega$内，两谐波的乘积平均为零，每个正弦平方的平均为$1/2$，故\n\n$$\nU_{1,\\mathrm{rms}}^2=\\langle u_1^2\\rangle\n=\\frac{U_a^2+U_b^2}{2}.\n$$\n\n独立接线分别计算两电阻；串联相助、相消时总电阻为$2r$，瞬时负载电压分别为$(N_2\\pm N_3)u_1/N_1$。因此\n\n$$\n\\begin{aligned}\n\\overline P_{\\mathrm{ind}}&=\\frac{N_2^2+N_3^2}{N_1^2r}\\,U_{1,\\mathrm{rms}}^2,\\\\\n\\overline P_+&=\\frac{(N_2+N_3)^2}{2N_1^2r}\\,U_{1,\\mathrm{rms}}^2,\\\\\n\\overline P_-&=\\frac{(N_2-N_3)^2}{2N_1^2r}\\,U_{1,\\mathrm{rms}}^2.\n\\end{aligned}\n$$\n\n数值下$U_{1,\\mathrm{rms}}^2=80\\,\\mathrm{V^2}$，三种功率依次为$2.72\\,\\mathrm W$、$2.56\\,\\mathrm W$、$0.16\\,\\mathrm W$。逐时刻按安匝平衡求原边电流，输入功率与副边电阻发热相等，再平均也得到这些值。\n\n所给电压的周期平均为零，可对应周期磁通。若另加直流电压，理想法拉第关系会使磁通持续漂移，真实磁芯还可能饱和；这里不将该情形混入谐波平均。实际磁芯损耗和漏磁的频率依赖也不在本变式的理想模型内。\n\n<!-- question-complete -->",
+    "draft_sha256": "459679dc315625450ee1672e48b759242f77fc18e25700b4b0008b82d8b1d2be"
+  },
+  {
+    "set": 19,
+    "question": 4,
+    "added_count": 1,
+    "content": "变式四：给无初始应力的薄膜施加均匀微小剪切位移$u=s y,v=0$，其中$|s|\\ll1$。求应力、主方向及单位初始面积的弹性能；再比较微小刚体转动$u=-\\varphi y,v=\\varphi x$。薄膜若仅能承受拉力，怎样用均匀预张力避免剪切状态出现负主张力？\n\n线性应变是位移梯度的对称部分。简单剪切有$\\epsilon_{xx}=\\epsilon_{yy}=0$、$\\epsilon_{xy}=s/2$，迹为零。由主问推得的二维剪切模量$G=\\alpha(1-\\delta)/(1+\\delta)$，得到\n\n$$\n\\boldsymbol\\Sigma=\n\\begin{pmatrix}0&Gs\\\\Gs&0\\end{pmatrix},\\qquad\n\\sigma_1=Gs,\\quad\\sigma_2=-Gs.\n$$\n\n相应特征向量为$(1,1)$及$(1,-1)$，主轴与$x$轴成$\\pm45^\\circ$；$s$变号时拉伸与压缩主轴互换。弹性能密度按加载过程积分，或用$\\mathcal U=\\boldsymbol\\Sigma:\\boldsymbol\\epsilon/2$，均得\n\n$$\n\\boxed{\\mathcal U=\\frac12Gs^2.}\n$$\n\n例如$\\alpha=400\\,\\mathrm{N/m},\\delta=0.30,s=0.010$，有$G=215.384615\\,\\mathrm{N/m}$、$|Gs|=2.153846\\,\\mathrm{N/m}$，$\\mathcal U=0.01076923\\,\\mathrm{J/m^2}$。在矩形的上下边以剪切牵引加载，边界功除面积同样为$\\int_0^s Gs'\\,ds'$。\n\n刚体转动的两个交叉导数为$-\\varphi,\\varphi$，对称部分为零，故一次理论中不产生应力或弹性能。若薄膜不能维持压缩主张力，在同一小应变叠加近似下加入均匀各向同性预张力$p\\boldsymbol I$，两主张力变为$p\\pm Gs$，需$p\\geq|Gs|$；严格取$p>|Gs|$可使两者均为正。此处的剪切增量能不包含建立预张力所需的先期能量。\n\n<!-- question-complete -->",
+    "draft_sha256": "c367492e50258eed86eec9b6edd031f3bd3b5efe58de06558637351cbe1c169d"
+  },
+  {
+    "set": 19,
+    "question": 5,
+    "added_count": 1,
+    "content": "变式四：在$S'$的$t'=0$同时面，取以电荷当前位置为球心、半径为$r$的球面。电场沿运动轴方向减弱、横向增强，球面的总电通量是否仍为$q/\\varepsilon_0$？用积分证明。\n\n令$\\theta$为场点位置矢量与$x$轴的夹角。主问的一般场给出径向分量\n\n$$\nE'_r=\\frac{kq(1-\\beta^2)}{r^2(1-\\beta^2\\sin^2\\theta)^{3/2}},\n\\qquad \\beta=u/c,\\quad k=\\frac1{4\\pi\\varepsilon_0}.\n$$\n\n球面面积元为$r^2\\sin\\theta\\,d\\theta\\,d\\phi$，故\n\n$$\n\\mathcal F=2\\pi kq(1-\\beta^2)\n\\int_0^\\pi\\frac{\\sin\\theta\\,d\\theta}\n{(1-\\beta^2\\sin^2\\theta)^{3/2}}.\n$$\n\n作$t=\\cos\\theta$，积分变为$\\int_{-1}^1(1-\\beta^2+\\beta^2t^2)^{-3/2}dt$。利用\n\n$$\n\\frac{d}{dt}\\frac{t}{\\sqrt{1-\\beta^2+\\beta^2t^2}}\n=\\frac{1-\\beta^2}{(1-\\beta^2+\\beta^2t^2)^{3/2}},\n$$\n\n积分值为$2/(1-\\beta^2)$，从而$\\boxed{\\mathcal F=4\\pi kq=q/\\varepsilon_0}$。沿轴和横向的变化在角度积分中正好补偿。$\\beta\\to0$时恢复均匀库仑场的通量；任意$|\\beta|<1$都满足同一高斯定律。\n\n球面必须取在一个明确的同时面上，半径也在该系中定义。电荷在此系运动不会改变总电荷；磁场的存在并不在电通量积分中另加一项。该积分验证场的整体约束，不能把总通量不变误解成各方向场强都不变。\n\n<!-- question-complete -->",
+    "draft_sha256": "8b79e40e08c31f8ee7376b3d894aef4f1b287086f354dbb370bd0189ffcd1786"
+  },
+  {
+    "set": 20,
+    "question": 1,
+    "added_count": 2,
+    "content": "变式三：令人的跑速远小于声速，$\\beta=v/c\\ll1$。分别求最早的两弦路径及逆向三弦路径的到达时间展开，解释为什么两弦路径的一阶时间修正为零。仍用$\\tau=ct/r$。\n\n对绕行一周、沿逆于人跑动方向推进的$k$弦路径，主问给出\n\n$$\n\\tau=2k\\sin\\frac{2\\pi-\\beta\\tau}{2k}.\n$$\n\n在$\\beta=0$时$\\tau_0=2k\\sin(\\pi/k)$。对隐式方程求导，因右端对$\\tau$的导数在$\\beta=0$时为零，得到$\\tau'(0)=-\\tau_0\\cos(\\pi/k)$。三弦路径因此为\n\n$$\n\\boxed{\\tau_3=3\\sqrt3-\\frac{3\\sqrt3}{2}\\beta+O(\\beta^2).}\n$$\n\n两弦路径的半中心角在静止极限为$\\pi/2$，弦长在直径处的一阶导数为零。其方程可直接写为$\\tau_2=4\\cos(\\beta\\tau_2/4)$；展开余弦，再在二阶项代入$\\tau_2=4+O(\\beta^2)$，得\n\n$$\n\\boxed{\\tau_2=4-2\\beta^2+O(\\beta^4),\\qquad\nt_2=\\frac r c(4-2\\beta^2+O(\\beta^4)).}\n$$\n\n跑动确实改变了接收位置，但直径附近弦长对小角度偏移只出现二阶变化，因此不能仅凭“人朝某方向跑”断言所有路径都有一次时间修正。这里只展开允许的逆向两弦支；正向两弦形式会违反所选弦段中心角不超过$\\pi$的路径约定，不能额外计作同一编号下的另一物理解。\n\n变式四：另一个固定在圆周发声点的人发出短声脉冲，跑步者仍以$v=0.2c$运动，并在$t=0$与发声者同位置。求最早回声的频率比。与原题中跑步者自己发声有什么区别？\n\n接收者位置和反射墙面保持，所以最早路径仍满足$\\tau=4\\cos(0.2\\tau/4)$，数值根为$\\tau=3.923285624$。静止圆壁反射保持声波在空气系中的频率，并保持声线绕圆心的角动量。将入射和出射处声线的单位传播方向在正切向的投影记为$j$，最早逆向两弦路径有\n\n$$\nj=-\\cos\\frac{2\\pi-0.2\\tau}{4}\n=-\\sin\\frac{0.2\\tau}{4}.\n$$\n\n静止声源在空气系中的频率为$f_0$；移动接收者每秒遇到的波面数给出$f/f_0=1-\\beta j$，故\n\n$$\n\\boxed{\\frac f{f_0}=1+0.2\\sin(0.2\\tau/4)\\simeq1.038982.}\n$$\n\n若发声者也以相同切向速度跑动，发射时空气系频率为$f_0/(1-\\beta j)$，接收时再乘$1-\\beta j$，两者抵消，回到原题的频率比$1$。本变式只改变声源运动，不能同时套用原题的发射多普勒因子。",
+    "draft_sha256": "bd08bfe1985e1c158ec4d99a31acc288dc83f7632d1347f2aa47de53f7662168"
+  },
+  {
+    "set": 20,
+    "question": 2,
+    "added_count": 2,
+    "content": "变式三：设$C=q\\mu_0m_0/(2\\pi m)$。粒子以稍大于临界值的速率从原点出发，$v_0^2=v_c^2+\\Delta$，$\\Delta>0$很小。求它穿过径向势垒顶附近区间$[r_b-d,r_b+d]$所需时间的首阶近似，其中$r_b=h/\\sqrt2$、$d\\ll h$。\n\n径向方程为$\\dot r^2=v_0^2-W(r)$，$W=C^2r^2/(r^2+h^2)^3$，势垒顶$W(r_b)=v_c^2=4C^2/(27h^4)$。在$r_b$附近展开，得到\n\n$$\nW(r)=v_c^2-\\kappa^2(r-r_b)^2+O((r-r_b)^3),\n\\qquad \\kappa=\\frac{4\\sqrt2|C|}{9h^3}.\n$$\n\n因此向外通过该区间的时间近似为\n\n$$\n\\boxed{\\Delta t\\simeq\n\\int_{-d}^d\\frac{ds}{\\sqrt{\\Delta+\\kappa^2s^2}}\n=\\frac2\\kappa\\operatorname{arsinh}\\frac{\\kappa d}{\\sqrt\\Delta}.}\n$$\n\n在$\\Delta\\ll\\kappa^2d^2$时，进一步有$\\Delta t\\simeq(2/\\kappa)\\ln(2\\kappa d/\\sqrt\\Delta)$。速率虽超过严格逃逸阈值，穿过势垒附近仍可能耗时很长。$\\Delta\\to0^+$时此时间对数发散，对应临界轨迹渐近接近$r_b$、永远不能在有限时间跨过去。\n\n区间必须足够窄以保证二次展开；不能用该局部公式代替从原点到任意远处的总飞行时间。$\\sqrt\\Delta$是速度、$\\kappa d$也是速度，对数的自变量无量纲。\n\n变式四：保持粒子质量、电荷和初始速度方向，将两个磁偶极子的距离参数改为$h'=2h$，每个磁矩改为$m_0'=4m_0$，初始速率不变。比较逃逸阈值、轨迹尺度及飞行时间。\n\n此时$C'=4C$，由$v_c=2|C|/(3\\sqrt3h^2)$得$v_c'=v_c$，因此同一初始速率处于阈值的同一侧。对应位置$\\boldsymbol r'=2\\boldsymbol r$处，磁偶极子场随$m_0/h^3$缩放，有$\\boldsymbol B'(2\\boldsymbol r)=\\boldsymbol B(\\boldsymbol r)/2$。\n\n取候选轨迹$\\boldsymbol r'(t')=2\\boldsymbol r(t'/2)$，则$\\boldsymbol v'(t')=\\boldsymbol v(t'/2)$、$\\boldsymbol a'(t')=\\boldsymbol a(t'/2)/2$。代入$m\\boldsymbol a'=q\\boldsymbol v'\\times\\boldsymbol B'$，两边确实都缩小一半，且满足相同初始速率。因此轨迹的全部长度放大两倍，对应路段所需时间也放大两倍。\n\n这是完整洛伦兹运动方程的相似变换，不仅是临界速度公式的量纲猜测。若原轨迹不能逃逸，最大半径也放大两倍；若原轨迹恰在临界值，跨越势垒的时间两者均为无穷，不能说无穷时间变成了一个有限的两倍值。",
+    "draft_sha256": "dfe5012250d22d17e5ee8c0e5dbd8d16451b1c2ec025f9ac8e116794a3ac43c0"
+  },
+  {
+    "set": 20,
+    "question": 3,
+    "added_count": 2,
+    "content": "（3）用远场受迫波动反求三星边长。\n\n假设观测已分离自由偏心分量，得到平均距离$R$和首阶受迫峰峰值$\\Delta R$。用主问的结果反求边长$l$，并给出小测量误差的一次传播式。此反求是否需要知道每颗恒星的质量？\n\n首阶公式为$\\Delta R=5l^6/(27\\sqrt3R^5)$，其中$\\Delta R$是最大距离与最小距离之差。反解得\n\n$$\n\\boxed{l=\\left(\\frac{27\\sqrt3}{5}\\Delta R\\,R^5\\right)^{1/6},\n\\qquad \\frac l R=\\left(\\frac{27\\sqrt3}{5}\\frac{\\Delta R}{R}\\right)^{1/6}.}\n$$\n\n取对数微分，保留一次误差，得到$\\delta l/l=(\\delta(\\Delta R)/\\Delta R)/6+5(\\delta R/R)/6$。这里$\\delta$表示带符号的小变化；若两测量的标准差独立，方差相加给出\n\n$$\n\\left(\\frac{s_l}{l}\\right)^2\n=\\frac1{36}\\left(\\frac{s_{\\Delta R}}{\\Delta R}\\right)^2\n+\\frac{25}{36}\\left(\\frac{s_R}{R}\\right)^2.\n$$\n\n在这一首阶关系中$Gm$已消去，不需另给质量。例如$l/R=0.01$时，$\\Delta R/R=5\\times10^{-12}/(27\\sqrt3)$，极小的受迫信号说明实际反求还需足够的分离和测量精度。把总径向起伏全部当作受迫峰峰值，会将自由偏心或其他扰动误算成边长；模型截断误差也需另计，不能只用上述测量误差式。\n\n（4）在同一三星方位反复测距，为什么可能漏看快速受迫振动？\n\n取只有受迫项的径向位移$x(t)=A\\cos[\\nu t+\\phi]$，其中$\\nu=3(\\omega_0-\\Omega)$，$\\Omega\\ll\\omega_0$为行星平均角速度。若每隔一个三星转动周期$T_0=2\\pi/\\omega_0$采样，写出采样序列及其表观周期。\n\n在$t_n=nT_0$处，激励相位增加量为$\\nu T_0=6\\pi-6\\pi\\Omega/\\omega_0$。余弦中的$6\\pi n$可去掉，所以\n\n$$\n\\boxed{x_n=A\\cos\\left(\\phi-6\\pi n\\frac\\Omega{\\omega_0}\\right).}\n$$\n\n真实振动的周期约为$T_0/3$，但这一离散序列在$\\Omega/\\omega_0\\ll1$时每次相位只改变很小，表现为缓慢变化；按连续包络读出的表观周期为$2\\pi/(3\\Omega)$。只有当相位步长与$2\\pi$之比为有理数，离散序列才有严格的整数采样周期。形式极限$\\Omega\\to0$时，各次样本相同，也仍不能推出$A=0$。\n\n在一个$T_0$内增加$t=0,T_0/12,T_0/6$三个时刻，忽略$\\Omega/\\omega_0$修正时，采到的相位依次为$\\phi,\\phi+\\pi/2,\\phi+\\pi$，可用这些样本恢复余弦与正弦系数。该方法分辨快速受迫项；若存在自由偏心，还需按不同频率另行拟合，不能改变主问已限定的统计对象。",
+    "draft_sha256": "6713fb967abc95c6cdf1e9fc67b19c0e9609024e15d0242c3b5677edc5c53a95"
+  },
+  {
+    "set": 20,
+    "question": 4,
+    "added_count": 2,
+    "content": "（3）有限小振幅使径向周期怎样改变？\n\n保持两球质量相等、各自角动量均为$ml^2\\omega$，取径向振幅$A\\ll l$。从精确运动方程求周期的首个振幅修正。\n\n精确方程为$\\ddot x=\\omega^2l^4[(l+x)^{-3}-(l-x)^{-3}]/2$。展开两项，偶次项抵消，得到\n\n$$\n\\ddot x+3\\omega^2x+\\frac{10\\omega^2}{l^2}x^3+O(x^5)=0.\n$$\n\n令$x=A\\cos\\kappa_A t$加高次谐波，利用$\\cos^3\\psi=(3\\cos\\psi+\\cos3\\psi)/4$，消去基频项的失配，有$\\kappa_A^2=3\\omega^2+(15/2)\\omega^2A^2/l^2+O(A^4/l^4)$，因此\n\n$$\n\\boxed{\\kappa_A=\\sqrt3\\omega\\left(1+\\frac54\\frac{A^2}{l^2}+O(A^4/l^4)\\right),\n\\quad T_A=\\frac{2\\pi}{\\sqrt3\\omega}\\left(1-\\frac54\\frac{A^2}{l^2}+O(A^4/l^4)\\right).}\n$$\n\n径向等效动能为$m\\dot x^2$，转动能给出的有效势为$U(x)=m\\omega^2l^4[(l+x)^{-2}+(l-x)^{-2}]/2$。它展开为常量$+3m\\omega^2x^2+5m\\omega^2x^4/l^2+\\cdots$，代入$2m\\ddot x=-U'(x)$独立得到同一三次系数。正的四次势能使振动变硬，周期随小振幅增大而缩短。此式只适合$A/l\\ll1$，不能延伸到某一侧绳长趋零。\n\n（4）一次切向冲量后，不等角动量的等长状态还是平衡吗？\n\n设冲量后两球的角动量大小为$|J_1|=2J,|J_2|=J>0$，此后均只受径向张力。求新的恒定转动半径及其附近的径向小振动频率。两球仍等质量，绳总长$2l$。\n\n平衡时同一绳张力要求$J_1^2/(mr_1^3)=J_2^2/(mr_2^3)$，连同$r_1+r_2=2l$，得\n\n$$\n\\boxed{r_1=\\frac{2l\\,2^{2/3}}{1+2^{2/3}},\\qquad\nr_2=\\frac{2l}{1+2^{2/3}}.}\n$$\n\n角动量较大的一球必须有较大的转动半径，所以原来的等长状态已非平衡。令$r_1=r_{1e}+x,r_2=r_{2e}-x$，消去张力后的方程为$\\ddot x=[J_1^2/r_1^3-J_2^2/r_2^3]/(2m^2)$。在新平衡处展开得\n\n$$\n\\boxed{\\kappa^2=\\frac3{2m^2}\n\\left(\\frac{J_1^2}{r_{1e}^4}+\\frac{J_2^2}{r_{2e}^4}\\right)>0.}\n$$\n\n两球转向只改变$J_i$的符号，半径平衡和径向频率仅依赖平方。切向冲量结束后各自角动量才守恒；若还要使系统正好停留在新圆周状态，需另给初始径向位置和速度，单次切向冲量本身通常同时激发径向振动。",
+    "draft_sha256": "4c5d9a0727c61a76942123db2ec66ae79bd2e6bad9732a4b275655fc71c61c66"
+  },
+  {
+    "set": 20,
+    "question": 7,
+    "added_count": 1,
+    "content": "（4）最终像位对物体位置的灵敏度。\n\n保持主问的$a,b$，设物体到左焦点的距离在$x=1\\,\\mathrm{cm}$附近增加$\\delta x$。求最终像的轴向坐标$X_2$对$x$的导数，并比较轴向与横向放大率。若最终像位向左移动$10^{-5}\\,\\mathrm{cm}$，估算$\\delta x$。\n\n令$D=2a$、$f=b^2/(2a)$。第一次物距$u_1=a+c+x$，第一次像距$v_1=fu_1/(u_1-f)$；第二次物距$u_2=D-v_1$，最终全局像坐标为$X_2=v_2=fu_2/(u_2-f)$。两次链式求导给出\n\n$$\n\\frac{dv_1}{dx}=-\\frac{f^2}{(u_1-f)^2},\\qquad\n\\boxed{\\frac{dX_2}{dx}=-\\frac{f^4}{(u_1-f)^2(u_2-f)^2}=-M^2,}\n$$\n\n其中$M=f^2/[(u_1-f)(u_2-f)]$是两次横向放大率的乘积。物体全局坐标为$X_o=a-c-x$，故$dX_2/dX_o=M^2>0$，负号仅来自本题$x$与$X_o$的方向相反。\n\n主问数值给出$M=32/597$、$X_2=1192/597\\,\\mathrm{cm}$，于是$dX_2/dx=-(32/597)^2\\simeq-0.002873104$。由$\\delta X_2\\simeq-M^2\\delta x$得\n\n$$\n\\boxed{\\delta x\\simeq\\frac{10^{-5}}{(32/597)^2}\\,\\mathrm{cm}\n\\simeq0.00348056\\,\\mathrm{cm}.}\n$$\n\n轴向灵敏度是横向放大率的平方，因此不能把像高的放大率直接用于轴向位移。该线性误差估算要求$|\\delta x|\\ll1\\,\\mathrm{cm}$，且各次物距远离焦距；以上数值满足这一局部条件。",
+    "draft_sha256": "f3bea5ad004b9333495a07fafa1c44384c1e2687005db91e5ba0abb3e8f6a5d2"
+  },
+  {
+    "set": 20,
+    "question": 8,
+    "added_count": 1,
+    "content": "（4）检验动量空间曲面的两个端点。\n\n分别取$p_0=0$和$p_0=p_{\\pi\\max}$，求两个$\\mu$粒子的动量范围和出射夹角。再用演算质量比$m_K:m_\\pi:m_\\mu=5:1:1$核对能量与动量。\n\n当$p_0=0$时，$\\pi$粒子静止，双粒子总能量为$E_0=(m_K-m_\\pi)c^2$、总动量为零。两$\\mu$粒子必须等大反向，故每个动量大小为\n\n$$\n\\boxed{p_* =\\frac c2\\sqrt{(m_K-m_\\pi)^2-4m_\\mu^2},\\qquad\np_x^2+p_y^2+p_z^2=p_*^2.}\n$$\n\n由于严格质量条件$m_K>m_\\pi+2m_\\mu$，有$p_*>0$，两出射方向的夹角均为$\\pi$。此球面表示方向在运动学上均允许，不能仅凭守恒律断言各方向的实际衰变概率相同，后者还需动力学。\n\n当$p_0=p_{\\pi\\max}>0$时，双粒子的质心总能量恰为$Q=2m_\\mu c^2$，质心系内相对动量为零。实验室系中两者共速，故动量椭球收缩成一点：\n\n$$\n\\boxed{\\boldsymbol p_+=\\boldsymbol p_-=(p_0/2,0,0),\\qquad\\theta=0.}\n$$\n\n给定质量比，以$m_\\mu c$为动量单位、$m_\\mu c^2$为能量单位：$p_0=0$时$p_* =\\sqrt3$，两$\\mu$能量各为$2$，$\\pi$能量为$1$，总和为$5$。另一端$p_0=p_{\\pi\\max}=\\sqrt{96}/5\\simeq1.95959179$，两$\\mu$动量各为$\\sqrt{96}/10$、能量各为$1.4$，$\\pi$能量为$2.2$，总和仍为$5$。两端都满足总动量为零，说明允许域包括端点$0\\leq p_0\\leq p_{\\pi\\max}$；求一般椭球时含半轴分母的表达式，在收缩端应由这一极限单独解释。\n\n<!-- question-complete -->",
+    "draft_sha256": "69fe4d721b4c1bd0b8cf3cd2a45c661481061edf56359d5ec700a74322831870"
+  }
+]
