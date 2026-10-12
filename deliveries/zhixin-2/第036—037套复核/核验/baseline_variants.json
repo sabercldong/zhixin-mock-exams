@@ -1,0 +1,114 @@
+[
+  {
+    "set": 36,
+    "question": 1,
+    "count": 1,
+    "source_sha256": "67101220f6f4245bbaa667465c13ba1d7f02b0f5e413db33be3590639ab94a3c",
+    "content": "把无穷多个圆环改为前 $N$ 个正电圆环，其余条件不变。求平面内的小振动周期，并判断圆锥稳定范围是否改变。\n\n有限环数只改变二阶系数的大小：\n\n$$\nA_N=\\frac{\\pi K_e\\lambda}{2r^2}\\sum_{n=1}^N\\frac1{n^2}.\n$$\n\n因此\n\n$$\n\\begin{aligned}\n\\omega_N^2&=\\frac{2qA_N}{m}\n=\\frac{\\pi K_eq\\lambda}{mr^2}\\sum_{n=1}^N\\frac1{n^2},\\\\\nT_N&=2\\pi\\sqrt{\\frac{mr^2}\n{\\pi K_eq\\lambda\\sum_{n=1}^N n^{-2}}}.\n\\end{aligned}\n$$\n\n由于 $A_N>0$，约束势能的二阶符号仍由 $k-2$ 决定。临界处每个圆环的四阶项仍为负，故稳定条件仍为 $k>2$。增加圆环会增大回复力系数、缩短周期，却不改变稳定性分界。这是“强度参数”与“几何参数”作用不同的一例。"
+  },
+  {
+    "set": 36,
+    "question": 2,
+    "count": 1,
+    "source_sha256": "f9aff8822e64187afa75d3e75ffc876910cf8a258577795dff698af0a3f8ec03",
+    "content": "绳质量不变，只把绳长从 $l$ 改为 $2l$，其余参数不变。求最大角、跨度、拱高及端点张力的变化。\n\n端点及整绳总受力不变，所以 $H,V$ 均不变，最大角也不变。单位弧长净载荷减半：\n\n$$\nw'=\\frac{mg}{4l}(\\sqrt3\\mu'-1)=\\frac w2.\n$$\n\n代入跨度与拱高公式，\n\n$$\nD'=\\frac{2H}{w'}\\operatorname{arsinh}\\frac VH=2D,\\qquad\nh'=\\frac{\\sqrt{H^2+V^2}-H}{w'}=2h.\n$$\n\n相同比例弧长位置处的 $ws$ 仍相等，因此张力分布按相对位置看也不改变。几何尺寸放大两倍，并不意味着质量或受力也放大两倍。"
+  },
+  {
+    "set": 36,
+    "question": 3,
+    "count": 1,
+    "source_sha256": "1d16e3c3061d7fe38a812db788c85b60f548b70a13c6ca40687767f4aab43e56",
+    "content": "如果三个小环质量都改成 $m$，初始位置与仅顶端小环获得 $v_0$ 的条件不变，求该瞬间圆心及三个小环的加速度。\n\n轻环平衡与三个等夹角方向要求三个径向力相等，因此三个小环径向加速度都为 $a$。左右对称给 $a_x=0$。对任一下方小环，二阶约束变为\n\n$$\n\\frac12a_y=a,\\qquad a_y=2a.\n$$\n\n对顶端小环，\n\n$$\na+a_y=\\frac{v_0^2}{R},\n\\qquad 3a=\\frac{v_0^2}{R}.\n$$\n\n故\n\n$$\n\\boxed{a=\\frac{v_0^2}{3R}},\\qquad\n\\boxed{\\mathbf a_O=\\left(0,\\frac{2v_0^2}{3R}\\right)}.\n$$\n\n虽然三个质量相同，圆心仍可以加速。初始三个位置的算术平均等于圆心，并不表示整个后续运动中这一等式持续成立，因为小环不再始终相隔 $120^\\circ$。不能对只在某一瞬间成立的位置关系直接求两次导数。"
+  },
+  {
+    "set": 36,
+    "question": 4,
+    "count": 1,
+    "source_sha256": "b9028b305ae2da102f2c57f170b3d008090840669b2471da0e1b58e1754b9599",
+    "content": "断开后在电感支路中另有一电阻 $r_L$ 串联，闭合阶段参数不变。已知断开瞬间电流仍为 $I_0$，求断开后流过 $R$ 的电荷及 $R$ 中放热。\n\n续流回路的总电阻变为 $R+r_L$，故\n\n$$\ni(\\tau)=I_0e^{-(R+r_L)\\tau/L}.\n$$\n\n电荷量对电流积分，焦耳热对 $Ri^2$ 积分。两项分别得到\n\n$$\n\\begin{aligned}\nq_R&=\\int_0^\\infty i\\,d\\tau=\\frac{LI_0}{R+r_L},\\\\\nQ_R&=R I_0^2\\frac{L}{2(R+r_L)}\n=\\frac{R}{R+r_L}\\frac12LI_0^2.\n\\end{aligned}\n$$\n\n剩余的 $r_L/(R+r_L)$ 比例磁能在 $r_L$ 中释放。总热仍为 $LI_0^2/2$，但不能再把全部断开热都归入 $R$，原题电荷相等的结论也随回路结构改变。"
+  },
+  {
+    "set": 36,
+    "question": 5,
+    "count": 1,
+    "source_sha256": "929541d65f6e6229470109b46a425bb800d8517be5dc6a251a0a5d4447cdf527",
+    "content": "若无摩擦 $k=0$，负载取最大功率时的 $M_0^*$，求电流、转速、输出功率和效率，并求每转一周的输入电能、负载做功和电阻放热。\n\n此时\n\n$$\n\\omega_*=\\frac{E}{2K},\\qquad\ni_*=\\frac{E-K\\omega_*}{R}=\\frac{E}{2R}.\n$$\n\n电源功率和负载功率分别代入电流和转速，效率取两者之比：\n\n$$\n\\begin{aligned}\nP_{\\rm in}&=Ei_*=\\frac{E^2}{2R},\\\\\nP_{\\rm out}&=M_0^*\\omega_*=\\frac{E^2}{4R},\\\\\n\\eta&=\\frac{P_{\\rm out}}{P_{\\rm in}}=\\boxed{\\frac12}.\n\\end{aligned}\n$$\n\n输入功率的另一半为焦耳热 $Ri_*^2=E^2/(4R)$，所以无机械摩擦并不等于无损耗。\n\n每转一周的时间由角速度确定，输入电能和焦耳热分别由功率乘时间求得，负载做功还可直接用恒定力矩乘转角求出：\n\n$$\n\\begin{aligned}\nT_*&=\\frac{2\\pi}{\\omega_*}=\\frac{4\\pi K}{E},\\\\\nW_{\\rm in}&=P_{\\rm in}T_*=\\frac{2\\pi KE}{R},\\\\\nQ_R&=Ri_*^2T_*=\\frac{\\pi KE}{R},\\\\\nW_{\\rm load}&=2\\pi M_0^*=\\frac{\\pi KE}{R}.\n\\end{aligned}\n$$\n\n每周都满足 $W_{\\rm in}=Q_R+W_{\\rm load}$。匀速时动能不增加，电能全部成为焦耳热和负载功；转动惯量仅影响到达此工作点的加速过程，不影响稳态能量比例。"
+  },
+  {
+    "set": 36,
+    "question": 6,
+    "count": 1,
+    "source_sha256": "c02656182b1fae8c6624ed9ffebee353a16c5cb91561369c08df70bbb1495650",
+    "content": "若另加条件“透镜为会聚透镜且所用光从 $S_0$ 向右传播”，问还剩几个位置，各是什么？\n\n向右传播要求 $a>0$，先排除 $a=-\\sqrt{ld}$。其余三个正坐标中，$a=l+\\sqrt{l(l-d)}$ 对应 $f<0$，不符合会聚条件。故只剩两个：\n\n$$\n\\boxed{a=l-\\sqrt{l(l-d)},\\qquad a=\\sqrt{ld}.}\n$$\n\n它们分别对应已知焦点在透镜右侧和左侧。增加的两个条件各排除一个外侧根，说明删根必须依据明示的物理条件，而不能只凭代数根的正负或示意图习惯。"
+  },
+  {
+    "set": 36,
+    "question": 7,
+    "count": 1,
+    "source_sha256": "535bb1d38b6782d4d6a3189969fa9dae9bc6ea1b0c712d90e71ad3eb1a3a173d",
+    "content": "把两侧初压改为 $aP_0,bP_0$，其中 $a>b>0$，仍同温、同体积、同种理想气体，绝热指数为 $\\gamma$。求压差刚消失时的摩尔数比。\n\n整体内能守恒给\n\n$$\nP_f=\\frac{a+b}{2}P_0.\n$$\n\n初始左室摩尔数为 $aA_0$，左室绝热放气关系给\n\n$$\nn_{Lf}=aA_0\n\\left(\\frac{a+b}{2a}\\right)^{1/\\gamma}.\n$$\n\n总摩尔数为 $(a+b)A_0$，故\n\n$$\n\\boxed{\\frac{n_{Lf}}{n_{Rf}}=\n\\frac{a[(a+b)/(2a)]^{1/\\gamma}}\n{a+b-a[(a+b)/(2a)]^{1/\\gamma}}.}\n$$\n\n取 $a=2,b=1,\\gamma=5/3$ 恢复本题；令 $a\\to b$，括号趋于一，比例趋于 $1:1$，与没有初始压差的极限一致。"
+  },
+  {
+    "set": 36,
+    "question": 8,
+    "count": 1,
+    "source_sha256": "1fdc72044b81975755f4bfcfd354230a616c8c17db85b6146bdb7326276ab006",
+    "content": "球拍静止，即 $u=0$，投球速率仍为 $c/2$，其余条件不变。求回收间隔、维持球拍静止的平均外力和功率。\n\n球拍系就是实验室系，所以反弹速度直接为 $-c/2$。两次碰撞和两次回收都保持原间隔：\n\n$$\n\\Delta t_c=\\Delta t_r=\\Delta t.\n$$\n\n入射动量为 $mc/\\sqrt3$，反弹动量为 $-mc/\\sqrt3$，故\n\n$$\n\\Delta p_{\\rm ball}=-\\frac{2mc}{\\sqrt3}.\n$$\n\n维持静止所需外力为\n\n$$\n\\boxed{\\overline{\\mathbf F}_{\\rm ext}\n=-\\frac{2mc}{\\sqrt3\\,\\Delta t}\\mathbf e_x},\n\\qquad\n\\boxed{\\overline P_{\\rm ext}=0}.\n$$\n\n球拍受力并不为零，但其作用点没有位移，外力不做功；球在实验室系也没有能量增量。这是检查原题动量和能量概念是否真正分开的最简单极限。"
+  },
+  {
+    "set": 37,
+    "question": 1,
+    "count": 1,
+    "source_sha256": "36f833decf148cb6dcd1e6ce567d3fa7791d4f7ed1dc23baa6a8324d4c420611",
+    "content": "若不忽略 $l^2$ 项，求周期的第一项修正。\n\n由式（2）依次计算转动惯量、角加速度和周期：\n\n$$\n\\begin{aligned}\nI_P\n&=\\frac{mL^2}{12}\\left(1+3\\frac{l^2}{L^2}\\right), \\tag{27}\\\\\na_\\varphi\n&=\\frac{mgl/2}{I_P}\n=\\frac{6gl}{L^2}\n\\left(1+3\\frac{l^2}{L^2}\\right)^{-1}, \\tag{28}\\\\\nT\n&=4\\sqrt{\\frac{2\\varphi_0}{a_\\varphi}}\n=4L\\sqrt{\\frac{\\varphi_0}{3gl}}\n\\sqrt{1+3\\frac{l^2}{L^2}}. \\tag{29}\n\\end{aligned}\n$$\n\n最后将根号展开到 $l^2/L^2$：\n\n$$\n\\boxed{\nT\\simeq4L\\sqrt{\\frac{\\varphi_0}{3gl}}\n\\left(1+\\frac32\\frac{l^2}{L^2}\\right)\n}. \\tag{30}\n$$"
+  },
+  {
+    "set": 37,
+    "question": 2,
+    "count": 1,
+    "source_sha256": "d98e3c1387e62b37379ca92ce0945e51d0ab426b186ae094ef783360f07f4a57",
+    "content": "若第（2）问两电流同向，判断 $\\theta=0$ 的稳定性。\n\n同向电流相互吸引。棒略微转动后，靠近长直导线的一端受到更强吸力，该力使靠近端继续靠近，力矩方向与 $\\theta$ 相同。式（11）的符号反转：\n\n$$\nM=+\\frac{\\mu_0II'L^3}{24\\pi d^2}\\theta. \\tag{31}\n$$\n\n运动方程为\n\n$$\n\\ddot\\theta-\\frac{\\mu_0II'L}{2\\pi md^2}\\theta=0. \\tag{32}\n$$\n\n其解含指数增长项\n\n$$\n\\theta\\propto e^{t/\\tau},\n\\qquad\n\\tau=\\sqrt{\\frac{2\\pi md^2}{\\mu_0II'L}}. \\tag{33}\n$$\n\n因此\n\n$$\n\\boxed{\\theta=0\\text{ 为不稳定平衡，不存在小幅振动周期}}. \\tag{34}\n$$"
+  },
+  {
+    "set": 37,
+    "question": 3,
+    "count": 1,
+    "source_sha256": "f514ab30531a79d5ccd2fc5bc8d6398a2d674b894da1ebb2a227ae840771f09e",
+    "content": "若保持其余条件不变，但小虫到左泡左边缘的距离改为 $a=R/4$，写出决定 $n$ 的方程。\n\n令 $\\lambda=1/4$，直接在式（16）中替换：\n\n$$\n\\frac{1}{2+\\dfrac{1}{2(n-1)+4}}\n+\\frac{n}{-\\dfrac{1/4}{1/2-1}-2}\n=1-n. \\tag{25}\n$$\n\n第二个分母为\n\n$$\n-\\frac{1/4}{-1/2}-2=-\\frac32. \\tag{26}\n$$\n\n因而变式的完整代数方程为\n\n$$\n\\boxed{\\frac{2n+2}{4n+5}-\\frac{2n}{3}=1-n}. \\tag{27}\n$$\n\n下面把方程求到底。两边同乘 $3(4n+5)$：\n\n$$\n3(2n+2)-2n(4n+5)\n=3(1-n)(4n+5). \\tag{28}\n$$\n\n左边展开为\n\n$$\n6n+6-8n^2-10n\n=-8n^2-4n+6. \\tag{29}\n$$\n\n右边展开为\n\n$$\n\\begin{aligned}\n3(1-n)(4n+5)\n&=3(4n+5-4n^2-5n)\\\\\n&=-12n^2-3n+15.\n\\end{aligned} \\tag{30}\n$$\n\n两边移项：\n\n$$\n4n^2-n-9=0. \\tag{31}\n$$\n\n由求根公式，\n\n$$\nn=\\frac{1\\pm\\sqrt{1+144}}8\n=\\frac{1\\pm\\sqrt{145}}8. \\tag{32}\n$$\n\n两个数值根为\n\n$$\nn_1\\approx1.63020,\n\\qquad\nn_2\\approx-1.38020. \\tag{33}\n$$\n\n普通透明液体要求 $n>1$，所以\n\n$$\n\\boxed{n=\\frac{1+\\sqrt{145}}8\\approx1.63}. \\tag{34}\n$$\n\n与原题 $a=0.195R$ 时的 $n\\approx1.33$ 相比，物距增大到 $R/4$ 后，为继续满足同一像重合要求，需要更强的气泡发散作用，故物理根增大；这一趋势也可作为选根后的定性检查。"
+  },
+  {
+    "set": 37,
+    "question": 4,
+    "count": 1,
+    "source_sha256": "609eda4c65ff632e5f90d57b22b7ab9429f4cc1631d0349e0aba118ea3951a78",
+    "content": "在等长情形 $l_1=l_2=l_0$ 下，求两个正则模的振幅比 $B/A$。\n\n由式（14）第二行，\n\n$$\n\\begin{aligned}\n-l_0^2\\omega^2A+(gl_0-l_0^2\\omega^2)B&=0, \\tag{36}\\\\\n\\frac BA&=\\frac{l_0\\omega^2}{g-l_0\\omega^2}. \\tag{37}\n\\end{aligned}\n$$\n\n代入低、高频支并分别化简：\n\n$$\n\\begin{aligned}\n\\frac{B}{A}\\biggr|_-\n&=\\frac{2-\\sqrt2}{1-(2-\\sqrt2)}\n=\\sqrt2, \\tag{38}\\\\\n\\frac{B}{A}\\biggr|_+\n&=\\frac{2+\\sqrt2}{1-(2+\\sqrt2)}\n=-\\sqrt2. \\tag{39}\n\\end{aligned}\n$$\n\n所以\n\n$$\n\\boxed{(B/A)_-=\\sqrt2,\\qquad(B/A)_+=-\\sqrt2}. \\tag{40}\n$$\n\n正负号分别对应图4-2中的同相模和反相模。"
+  },
+  {
+    "set": 37,
+    "question": 5,
+    "count": 1,
+    "source_sha256": "e4382f9ade7c85ff73217928b57135ba9fb289bc8056cb3febd8f1502a21b405",
+    "content": "求转移椭圆远日点处的速度与木星圆轨道速度之比。木星圆轨道速度为\n\n$$\nv_J=v_E\\sqrt{\\frac{R_E}{R_J}}. \\tag{30}\n$$\n\n由式（14）和式（24），\n\n$$\nv_3=v_E\\sqrt{\\frac{2R_J}{R_E+R_J}}\\frac{R_E}{R_J}. \\tag{31}\n$$\n\n两式相除：\n\n$$\n\\frac{v_3}{v_J}\n=\\sqrt{\\frac{2R_E}{R_E+R_J}}. \\tag{32}\n$$\n\n数值为\n\n$$\n\\boxed{\\frac{v_3}{v_J}\n=\\sqrt{\\frac{2}{1+5.20064}}\n\\approx0.568}. \\tag{33}\n$$\n\n进一步设想不使用地球引力弹弓，而是在地球圆轨道处沿公转方向瞬时点火，直接进入同一条日心霍曼转移椭圆。求近日点点火速度增量、到达木星轨道处若要变为日心圆轨道所需的第二次速度增量，以及两次速度增量之和。\n\n近日点点火前后的速度分别为 $v_E$、$v_1$，所以第一次速度增量为\n\n$$\n\\Delta v_E=v_1-v_E. \\tag{34}\n$$\n\n代入正文数值：\n\n$$\n\\boxed{\\Delta v_E\n=38.707-29.886\n\\approx8.82\\ \\mathrm{km/s}}. \\tag{35}\n$$\n\n这次点火造成的单位质量机械能增加为\n\n$$\n\\Delta\\varepsilon_E\n=\\frac12v_1^2-\\frac12v_E^2. \\tag{36}\n$$\n\n将 $v_1=v_E+\\Delta v_E$ 代入：\n\n$$\n\\Delta\\varepsilon_E\n=v_E\\Delta v_E+\\frac12(\\Delta v_E)^2. \\tag{37}\n$$\n\n数值为\n\n$$\n\\Delta\\varepsilon_E\n\\approx(29.886)(8.821)+\\frac12(8.821)^2\n\\approx302.5\\ \\mathrm{km^2/s^2}. \\tag{38}\n$$\n\n在木星轨道半径处，木星的日心圆轨道速度为\n\n$$\nv_J=v_E\\sqrt{\\frac{R_E}{R_J}}. \\tag{39}\n$$\n\n代入 $R_J/R_E=5.20064$：\n\n$$\nv_J\\approx13.10\\ \\mathrm{km/s}. \\tag{40}\n$$\n\n转移椭圆远日点速度为\n\n$$\nv_3\\approx7.44\\ \\mathrm{km/s}. \\tag{41}\n$$\n\n若理想化地要求探测器在该处变为绕太阳的同向圆轨道，第二次点火必须加速：\n\n$$\n\\Delta v_J=v_J-v_3. \\tag{42}\n$$\n\n所以\n\n$$\n\\boxed{\\Delta v_J\n\\approx13.10-7.44\n\\approx5.66\\ \\mathrm{km/s}}. \\tag{43}\n$$\n\n两次理想脉冲的总速度增量为\n\n$$\n\\boxed{\\Delta v_{\\rm total}\n=\\Delta v_E+\\Delta v_J\n\\approx14.48\\ \\mathrm{km/s}}. \\tag{44}\n$$\n\n这里的第二次点火只是在日心两体模型中“圆化”到木星轨道，并不等同于被木星捕获。真实任务到达木星附近时必须转入木星中心参考系，处理木星相对速度、近木点制动和卫星系统摄动。这个变式的价值在于明确区分“霍曼转移到某一轨道半径”和“进入目标行星的绕行轨道”。"
+  },
+  {
+    "set": 37,
+    "question": 6,
+    "count": 1,
+    "source_sha256": "9cc077b1b5a4c185acb0c0dfa4a1ad13dbb763ed43ea96e9cfe8aca3e4d36fae",
+    "content": "若 $A$、$B$ 在加速度方向上有小高度差 $h$，求一阶频率比。由等效原理，加速参考系中的一阶重力红移为\n\n$$\n\\frac{\\Delta f}{f}\\simeq\\frac{gh}{c^2}. \\tag{26}\n$$\n\n若接收端位于等效势更高处，则\n\n$$\n\\boxed{\\frac{f_{\\rm high}}{f_{\\rm low}}\n\\simeq1-\\frac{gh}{c^2}}. \\tag{27}\n$$\n\n与原题横向等高布置相比，这一变式立即恢复一阶效应。"
+  },
+  {
+    "set": 37,
+    "question": 7,
+    "count": 1,
+    "source_sha256": "ba3c966ce7fe01e42fb7ea13014a5a44edff35dfa04fdd031ac0ab82a2c16f3c",
+    "content": "求第（3）问中 $B$ 球可能获得的最大速率及最大横向速度。圆盘上离原点最远的点位于 $+x$ 轴，其坐标为\n\n$$\n\\frac{v_{2x}}{v_0}=\\frac13+\\frac23=1. \\tag{67}\n$$\n\n所以\n\n$$\n\\boxed{|\\boldsymbol v_2|_{\\max}=v_0}. \\tag{68}\n$$\n\n圆盘的最高点坐标为\n\n$$\n\\frac{v_{2x}}{v_0}=\\frac13,\n\\qquad\n\\frac{v_{2y}}{v_0}=\\frac23. \\tag{69}\n$$\n\n因而\n\n$$\n\\boxed{|v_{2y}|_{\\max}=\\frac23v_0}. \\tag{70}\n$$\n\n这两个最值对应圆盘上不同的边界点，不能在同一次碰撞中同时取到。"
+  },
+  {
+    "set": 37,
+    "question": 8,
+    "count": 1,
+    "source_sha256": "0269e3e60530fc8d038122d224c8cf2cac04d16f457d599ad0dcdc98f7b4669f",
+    "content": "若三个绳端沿绳方向的加速度分别为 $a_1$、$a_2$、$a_3$，求圆盘角加速度和圆心加速度。\n\n将式（46）至（48）的右端改为 $a_i$：\n\n$$\n\\boldsymbol a_C\\cdot\\boldsymbol n_i+\\beta R=a_i. \\tag{78}\n$$\n\n定义平均加速度\n\n$$\n\\bar a=\\frac{a_1+a_2+a_3}{3}. \\tag{79}\n$$\n\n三式相加得\n\n$$\n3\\beta R=a_1+a_2+a_3. \\tag{80}\n$$\n\n因而\n\n$$\n\\boxed{\\beta=\\frac{a_1+a_2+a_3}{3R}=\\frac{\\bar a}{R}}. \\tag{81}\n$$\n\n令\n\n$$\nc_i=a_i-\\bar a. \\tag{82}\n$$\n\n则\n\n$$\nc_1+c_2+c_3=0. \\tag{83}\n$$\n\n减去 $\\beta R=\\bar a$ 后，\n\n$$\n\\boldsymbol a_C\\cdot\\boldsymbol n_i=c_i. \\tag{84}\n$$\n\n完全模仿式（21）至（23）的向量重建：\n\n$$\n\\boxed{\n\\boldsymbol a_C\n=\\frac23\\sum_{i=1}^3(a_i-\\bar a)\\boldsymbol n_i\n}. \\tag{85}\n$$\n\n其大小为\n\n$$\n\\boxed{\na_C=\\frac23\\sqrt{\na_1^2+a_2^2+a_3^2-a_1a_2-a_2a_3-a_3a_1\n}\n}. \\tag{86}\n$$\n\n当 $a_1=a_2=a_3=0$ 时，式（69）和式（74）立即回到原题的 $\\beta=0$、$a_C=0$。"
+  }
+]

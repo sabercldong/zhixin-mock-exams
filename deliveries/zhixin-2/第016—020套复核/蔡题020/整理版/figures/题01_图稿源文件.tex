@@ -1,0 +1,89 @@
+\documentclass[tikz,border=5pt,multi=tikzpicture]{standalone}
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath}
+\usetikzlibrary{arrows.meta,calc,angles,quotes,decorations.markings}
+\definecolor{ink}{HTML}{17365D}
+\definecolor{ray}{HTML}{287DA8}
+\definecolor{run}{HTML}{C56B2A}
+\tikzset{every node/.style={font=\small},wall/.style={thick,ink},beam/.style={thick,ray,postaction={decorate},decoration={markings,mark=at position .57 with {\arrow{Stealth}}}},vec/.style={-{Stealth[length=2mm]},thick},helper/.style={gray,dashed}}
+\begin{document}
+\begin{tikzpicture}
+  \draw[wall] (0,0) circle (2.8);
+  \draw[helper] (-3.2,0)--(3.8,0);
+  \draw[vec,gray] (0,-3.1)--(0,3.3) node[above] {$y$};
+  \draw[vec,gray] (0,0)--(3.8,0) node[right] {$x$};
+  \fill (0,0) circle (1.2pt) node[below left] {$O$};
+  \coordinate (S) at (2.8,0);
+  \coordinate (A) at (44.958:2.8);
+  \draw[ink] (0,0)--(S) node[midway,below] {$r$};
+  \draw[helper] (0,0)--(A);
+  \draw[vec,run] (S)--++(0,1.1) node[right,xshift=4pt] {$\boldsymbol v_0$};
+  \draw[vec,run] (A)--++(134.958:1) node[above left] {$\boldsymbol v(t)$};
+  \draw[vec,run] (0:3.15) arc (0:44.958:3.15);
+  \draw[run] (0:1.0) arc (0:44.958:1.0) node[midway,right] {$\omega t$};
+  \fill (S) circle (1.6pt) node[below right] {$S=A(0)$};
+  \fill (A) circle (1.6pt) node[left,xshift=-4pt] {$A(t)$};
+  \node[align=left,anchor=west] at (4.6,1.5) {水平截面\\[3pt]空气静止，声速 $c$\\[3pt]跑动速度 $v=\omega r$\\[3pt]壁面固定，镜面反射};
+\end{tikzpicture}
+\begin{tikzpicture}
+  \coordinate (O) at (0,0);
+  \coordinate (P) at (20:2.7);
+  \coordinate (Q) at (170:2.7);
+  \coordinate (R) at (320:2.7);
+  \draw[wall] (O) circle (2.7);
+  \draw[helper] (P)--(O)--(Q);
+  \draw[helper] (O)--($(Q)!-.4!(O)$) node[above left] {法线};
+  \draw[beam] (P)--(Q);
+  \draw[beam] (Q)--(R);
+  \draw[vec,run] (P)--++(110:1.2) node[above] {$\boldsymbol t_P$};
+  \draw[vec,run] (Q)--++(260:1.2) node[below left] {$\boldsymbol t_Q$};
+  \draw[ink] (20:.6) arc (20:170:.6);
+  \node at (.05,.32) {$\delta$};
+  \draw[ray] ($(P)+(110:.55)$) arc (110:185:.55) node[midway,left] {$\delta/2$};
+  \fill (O) circle (1pt) node[below] {$O$};
+  \fill (P) circle (1.5pt) node[right] {$P$};
+  \fill (Q) circle (1.5pt) node[above left] {$Q$};
+  \fill (R) circle (1.5pt) node[below right] {$R$};
+  \node[anchor=west] at (3.65,-.5) {$d=2r\sin(\delta/2)$};
+  \node[anchor=west,align=left] at (3.65,1.5) {相邻反射点间的圆心角相同\\[4pt]$\angle POQ=\angle QOR=\delta$\\[4pt]图示为逆时针推进的声线\\[4pt]顺时针声线取相反切向投影};
+\end{tikzpicture}
+\begin{tikzpicture}
+  \foreach \k/\tau/\delta/\ox in {2/3.923286/157.521229/0,3/4.668407/102.168000/5.0,4/4.920066/75.905048/10.0}{
+    \begin{scope}[xshift=\ox cm]
+      \draw[wall] (0,0) circle (1.9);
+      \coordinate (s) at (0:1.9);
+      \foreach \j in {0,...,\k} {\coordinate (p\j) at ({-\j*\delta}:1.9);}
+      \foreach \j in {1,...,\k} {\pgfmathtruncatemacro{\previous}{\j-1}\draw[beam] (p\previous)--(p\j);}
+      \pgfmathsetmacro{\endangle}{.2*\tau*180/pi}
+      \draw[vec,run] (0:2.2) arc (0:\endangle:2.2);
+      \fill (s) circle (1.5pt) node[below right] {$S$};
+      \fill (p\k) circle (1.5pt) node[above right,xshift=6pt] {$A$};
+      \node at (0,-2.3) {$k=\k$，反射 $\number\numexpr\k-1\relax$ 次};
+      \node at (0,-2.85) {$ct/r=\tau$};
+    \end{scope}
+  }
+\end{tikzpicture}
+\begin{tikzpicture}
+  \begin{scope}
+    \coordinate (S) at (0,0);
+    \draw[gray] (-1.3,0)--(2.6,0);
+    \draw[vec,run] (S)--(2.0,0) node[above] {$\boldsymbol v_S=v\boldsymbol t_S$};
+    \draw[vec,ray] (S)--(75:2.25) node[above] {$\boldsymbol n_S$};
+    \draw[ink] (.65,0) arc (0:75:.65) node[midway,right] {$\delta/2$};
+    \draw[helper] (75:2.25)--({2.25*cos(75)},0);
+    \fill (S) circle (1.5pt) node[below] {$S$};
+    \node at (.65,-2.7) {发射端（沿声线方向投影）};
+  \end{scope}
+  \begin{scope}[xshift=7.0cm]
+    \coordinate (A) at (0,0);
+    \draw[gray] (-1.3,0)--(2.6,0);
+    \draw[vec,run] (A)--(2.0,0) node[above] {$\boldsymbol v_A=v\boldsymbol t_A$};
+    \draw[vec,ray] (A)--(-75:2.25) node[below right] {$\boldsymbol n_A$};
+    \draw[ink] (.65,0) arc (0:-75:.65) node[midway,right] {$\delta/2$};
+    \draw[helper] (-75:2.25)--({2.25*cos(75)},0);
+    \fill (A) circle (1.5pt) node[below] {$A$};
+    \node at (.65,-2.7) {接收端（已转至同向局部坐标）};
+  \end{scope}
+  \node[align=center] at (4,-3.65) {$\boldsymbol v_S\!\cdot\!\boldsymbol n_S=\boldsymbol v_A\!\cdot\!\boldsymbol n_A=+v\cos(\delta/2)$\\[3pt]图示逆时针声线；顺时针声线两端均取负号};
+\end{tikzpicture}
+\end{document}

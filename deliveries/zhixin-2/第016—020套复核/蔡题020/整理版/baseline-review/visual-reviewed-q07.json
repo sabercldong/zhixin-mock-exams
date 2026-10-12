@@ -1,0 +1,21 @@
+{
+  "question": 7,
+  "actual_reviewed": true,
+  "scope": "分题工作预览；整套合并后须重新验收",
+  "student": {
+    "pdf_sha256": "21aff521cb929a866b45c6fa63abcc21a1b621cb64ec6d153cb7ab79c05daf1b",
+    "total_pages": 11, "body_pages": 10, "extracted_body_nonspace": 5484,
+    "overview_pages_reviewed": [1,2,3,4,5,6,7,8,9,10,11],
+    "high_resolution_pages_reviewed": [2,5,6,8,9,10,11]
+  },
+  "teacher": {
+    "pdf_sha256": "05a62be0f4a511005389429ac19ee9910b8fce303d71fbd1deef4b14d9667e05",
+    "total_pages": 16, "body_pages": 15, "extracted_body_nonspace": 9528,
+    "overview_pages_reviewed": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16],
+    "high_resolution_pages_reviewed": [12,13,15,16]
+  },
+  "figures_reviewed": ["question-07","curvature-07","imaging-07","focalrayA-07","focalrayB-07","intersection-07"],
+  "layout_warnings": [], "qpdf_check_passed": true, "physics_checks_passed": true,
+  "repairs": ["局部曲率图横向放大以显示轴向小量", "曲率图标题与点Q分离", "第二族光线右顶点与反射高度标签分离", "交点图横轴改为与正文一致的无量纲xi"],
+  "physics_note": "物距x以左焦点为参照；两次实物成像符号一致；真实曲线法向反射、非焦点光线束、矩阵与球面带解变式均通过"
+}

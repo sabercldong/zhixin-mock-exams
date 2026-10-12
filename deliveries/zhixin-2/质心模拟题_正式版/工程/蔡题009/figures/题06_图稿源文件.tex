@@ -1,0 +1,60 @@
+\documentclass[multi=tikzpicture,border=9pt]{standalone}
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath,amssymb}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc,patterns,decorations.pathmorphing}
+\definecolor{main}{HTML}{17365D}
+\definecolor{accent}{HTML}{AC3931}
+\tikzset{every picture/.style={font=\small,line width=.75pt},
+>={Stealth[length=2mm]},arr/.style={->},
+box/.style={draw=main,rounded corners=2pt,fill=main!4,text width=3cm,minimum height=1cm,align=center},
+note/.style={align=center,text width=9cm}}
+\begin{document}
+\begin{tikzpicture}
+\draw[main] (0,0) circle (2);
+\draw[arr,accent] (2.00000,0.00000) -- (1.53209,1.28558);
+\draw[arr,accent] (1.53209,1.28558) -- (0.34730,1.96962);
+\draw[arr,accent] (0.34730,1.96962) -- (-1.00000,1.73205);
+\draw[arr,accent] (-1.00000,1.73205) -- (-1.87939,0.68404);
+\draw[arr,accent] (-1.87939,0.68404) -- (-1.87939,-0.68404);
+\draw[arr,accent] (-1.87939,-0.68404) -- (-1.00000,-1.73205);
+\draw[arr,accent] (-1.00000,-1.73205) -- (0.34730,-1.96962);
+\draw[arr,accent] (0.34730,-1.96962) -- (1.53209,-1.28558);
+\draw[arr,accent] (1.53209,-1.28558) -- (2.00000,0.00000);
+\draw[dashed] (0,0)--(2,0);\draw[dashed] (0,0)--(40:2);\draw[arr] (.7,0) arc (0:40:.7);\node at (1.2,.45){$2\pi/n$};\node at (0,-3){一圈闭合：正 $n$ 边形，图示 $n=9$};
+\end{tikzpicture}
+\begin{tikzpicture}
+\draw[main] (0,0) circle (2);\coordinate (A) at (2,0);\coordinate (B) at (72:2);\draw[accent,thick] (A)--(B);\draw[dashed] (0,0)--(A) (0,0)--(B);\draw (2,-1)--(2,2);\node[right] at (2,1.8){切线};\draw[arr] (2,0)--(3.1,0) node[right]{法线};
+\draw[arr] (2,.7) arc (90:126:.7);\node[above] at (1.65,1){$\pi/n$};\node[above] at (.4,0){$r$};\node[note] at (0,-3){弦长 $2r\sin(\pi/n)$\\法线入射角 $\chi=\pi/2-\pi/n$};
+\end{tikzpicture}
+\begin{tikzpicture}
+\draw[arr] (0,0)--(6.4,0) node[right]{$n$};
+\draw[arr] (0,0)--(0,3.5) node[above]{$\sin\chi$};
+\draw[main,thick] (0.00000,0.30000) -- (0.40000,1.54264) -- (0.80000,2.15410) -- (1.20000,2.49615) -- (1.60000,2.70581) -- (2.00000,2.84328) -- (2.40000,2.93816) -- (2.80000,3.00634) -- (3.20000,3.05696) -- (3.60000,3.09555) -- (4.00000,3.12565) -- (4.40000,3.14957) -- (4.80000,3.16889) -- (5.20000,3.18471) -- (5.60000,3.19784);
+\draw[accent,dashed] (0,2.691891891891892)--(6,2.691891891891892);
+\node[below] at (1.2,0){6};\node[below] at (1.6,0){7};\node[below] at (4.5,2.65){$n_1/n_2$};\node[left] at (0,0){.45};\node[note] at (3,-1.1){$\cos(\pi/6)<n_1/n_2<\cos(\pi/7)$\\最小全反射次数 $n=7$};
+\end{tikzpicture}
+\begin{tikzpicture}
+\draw[arr] (0,0)--(6.8,0) node[right]{$n$};
+\draw[arr] (0,0)--(0,3.7) node[above]{$\lambda/\mathrm{nm}$};
+\fill[main!8] (0,.8) rectangle (6.3,2.8);\draw[dashed] (0,.8)--(6.3,.8) (0,2.8)--(6.3,2.8);\node[left] at (0,.8){545};\node[left] at (0,2.8){555};\draw[main,thick] (0.00000,-0.31915) -- (0.36000,0.54332) -- (0.72000,1.13700) -- (1.08000,1.56284) -- (1.44000,1.87854) -- (1.80000,2.11903) -- (2.16000,2.30640) -- (2.52000,2.45521) -- (2.88000,2.57535) -- (3.24000,2.67373) -- (3.60000,2.75531) -- (3.96000,2.82370) -- (4.32000,2.88160) -- (4.68000,2.93104) -- (5.04000,2.97361) -- (5.40000,3.01051) -- (5.76000,3.04271);
+\fill[accent] (0.72,1.1369994183497738) circle (2pt);
+\fill[accent] (1.08,1.5628364019813263) circle (2pt);
+\fill[accent] (1.44,1.8785446090834057) circle (2pt);
+\fill[accent] (1.7999999999999998,2.1190297844984345) circle (2pt);
+\fill[accent] (2.16,2.3064011414226573) circle (2pt);
+\fill[accent] (2.52,2.4552100377959962) circle (2pt);
+\fill[accent] (2.88,2.5753488677021554) circle (2pt);
+\fill[accent] (3.2399999999999998,2.673731808206003) circle (2pt);
+\fill[accent] (3.5999999999999996,2.7553088383578372) circle (2pt);
+\node[below] at (.72,0){9};\node[below] at (3.6,0){17};\node[below] at (3.96,-.45){18};\draw (3.96,0)--(3.96,-.4);\node[left] at (0,0){541};\node[note] at (3,-1.1){$\ell=2$，允许 $n=9,10,\ldots,17$};
+\end{tikzpicture}
+\begin{tikzpicture}
+\node[box] (n0) at (0,0) {几何长度\\$L_n=2nr\sin(\pi/n)$};
+\node[box] (n1) at (5,0) {光程量子化\\$n_2L_n=\ell\lambda_{\rm vac}$};
+\node[box] (n2) at (5,-2.3) {球内波长\\$\lambda_{\rm in}=\lambda_{\rm vac}/n_2$};
+\node[box] (n3) at (0,-2.3) {外介质波长\\$\lambda_{\rm out}=\lambda_{\rm vac}/n_1$};
+\draw[arr] (n0)--(n1);\draw[arr] (n1)--(n2);\draw[arr] (n2)--(n3);
+\node[note] at (2.5,-4.1) {表中用真空波长；忽略每次全反射的相移};
+\end{tikzpicture}
+\end{document}

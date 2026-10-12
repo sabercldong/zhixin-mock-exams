@@ -1,0 +1,53 @@
+\documentclass[tikz,border=5pt]{standalone}
+\usepackage[UTF8]{ctex}\usepackage{amsmath}
+\usetikzlibrary{arrows.meta,calc}
+\definecolor{blue}{RGB}{45,98,142}\definecolor{green}{RGB}{60,117,87}\definecolor{red}{RGB}{175,67,51}
+\tikzset{vec/.style={thick,-{Stealth}},aux/.style={gray!65,dashed}}
+\begin{document}
+\begin{tikzpicture}[scale=.95]
+\draw[gray!65](0,0)circle(3.6);\draw[gray!65](0,0)circle(1.3896);
+\draw[blue,thick](1.1052,0)ellipse(2.4948 and 2.23664);
+\draw[blue,vec](2.3526,1.937)--(1.965,2.10);
+\fill[orange](0,0)circle(4pt)node[above left]{太阳};
+\fill[blue](3.6,0)circle(3pt)node[right]{地球};
+\fill[green](-1.3896,0)circle(3pt)node[left]{水星};
+\draw[green,vec](0,0)--(3.6,0)node[midway,above]{$R_E$};
+\draw[green,vec](0,0)--(-1.3896,0)node[midway,below]{$R_M$};
+\draw[aux](1.1052,-.25)--(1.1052,.25);\node[below]at(1.1052,-.35){椭圆中心};
+\node[blue]at(1.1,2.65){$a=(R_E+R_M)/2$};
+\node at(0,-4){太阳在左焦点，所用转移段为上半椭圆};
+\end{tikzpicture}
+\begin{tikzpicture}[scale=1.15]
+\draw[blue,thick](.75,0)ellipse(2.0 and 1.854);
+\fill[orange](0,0)circle(3pt)node[above]{太阳};
+\fill[blue](2.75,0)circle(3pt)node[below right]{地球端};
+\fill[green](-1.25,0)circle(3pt)node[above left]{水星端};
+\draw[green,vec](3.0,0)--(3.0,1.5)node[above]{$v_E$};
+\draw[blue,vec](2.65,0)--(2.65,1.1)node[above]{$v_{\rm a}$};
+\draw[red,vec](3.75,1.5)--(3.75,1.1)node[right]{$v_{\infty E}$};
+\draw[green,vec](-1.5,0)--(-1.5,-1.5)node[below]{$v_M$};
+\draw[blue,vec](-1.15,0)--(-1.15,-1.8)node[right]{$v_{\rm p}$};
+\draw[red,vec](-2.35,-1.5)--(-2.35,-1.8)node[left]{$v_{\infty M}$};
+\node[align=center]at(.75,-2.45){两端均顺行；红箭头为速度差\\地球端逆公转，水星端顺公转};
+\end{tikzpicture}
+\begin{tikzpicture}[scale=1.2]
+\draw[fill=blue!8](0,0)circle(.85);\fill(0,0)circle(1pt);
+\node at(0,.25){地球};\draw[gray,vec](0,0)--(.6,-.6)node[right]{$r_E$};
+\fill[red](-.85,0)circle(2pt);
+\draw[blue,vec](-.85,0)--(-2.3,0)node[midway,above]{$\Delta v_E$};
+\draw[aux](-2.5,0)--(-3.5,0);
+\draw[green,vec](-3.6,0)--(-4.35,0)node[above]{$v_{\infty E}$};
+\node at(-.85,-.4){表面};
+\node[align=center]at(-1.6,-1.45){地球参考系：$\tfrac12\Delta v_E^2-\mu_E/r_E=\tfrac12v_{\infty E}^2$\\可选径向逃离方向与所需远处速度方向匹配};
+\end{tikzpicture}
+\begin{tikzpicture}[scale=1.2]
+\draw[fill=green!8](0,0)circle(.85);\fill(0,0)circle(1pt);
+\node at(0,.25){水星};\draw[gray,vec](0,0)--(.6,-.6)node[right]{$r_M$};
+\draw[green,vec](-4.2,0)--(-3.5,0)node[above]{$v_{\infty M}$};
+\draw[aux](-3.3,0)--(-2.35,0);
+\fill[red](-.85,0)circle(2pt);
+\draw[blue,vec](-2.2,0)--(-.85,0)node[midway,above]{$v_{{\rm surf},M}$};
+\draw[red,vec](-.85,-.3)--(-2.2,-.3)node[midway,below]{$\Delta\boldsymbol v_M$};
+\node[align=center]at(-1.6,-1.45){水星参考系：$v_{{\rm surf},M}^2=v_{\infty M}^2+2\mu_M/r_M$\\最后反向制动，着陆相对速度取零};
+\end{tikzpicture}
+\end{document}

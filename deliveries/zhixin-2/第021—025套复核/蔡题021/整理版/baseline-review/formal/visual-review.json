@@ -1,0 +1,287 @@
+{
+  "status": "pass",
+  "review_date": "2026-10-07",
+  "method": "全部正式PDF页总览审读，全部图稿审读，并对选定公式密集、三维图和题间页面高清审读",
+  "documents": {
+    "paper": {
+      "sha256": "a31679dfce09d08e4eef5a51edbe45d702e8780d791f6eb0f4e5e658b84ea015",
+      "overview_pages_reviewed": 9,
+      "hd_pages_reviewed": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    "student": {
+      "sha256": "293908249ce384b6e10a806edb5ce389c24744716b0ab1b1ddee10556cb91aba",
+      "overview_pages_reviewed": 65,
+      "hd_pages_reviewed": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        17,
+        18,
+        20,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        38,
+        39,
+        40,
+        42,
+        43,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        61,
+        62,
+        64,
+        65
+      ]
+    },
+    "teacher": {
+      "sha256": "75cfd54776ddbffc9a7b11c5d963ffb4826dd2831ef3c9f8edd1dfb9b070e9c7",
+      "overview_pages_reviewed": 79,
+      "hd_pages_reviewed": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        21,
+        22,
+        24,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        33,
+        34,
+        35,
+        36,
+        38,
+        39,
+        40,
+        42,
+        43,
+        45,
+        46,
+        47,
+        50,
+        51,
+        53,
+        54,
+        55,
+        56,
+        57,
+        60,
+        61,
+        64,
+        65,
+        66,
+        67,
+        68,
+        70,
+        71,
+        73,
+        75,
+        76,
+        79
+      ]
+    }
+  },
+  "figures": [
+    {
+      "path": "figures/question-01.pdf",
+      "sha256": "c297121721f420c6b5b254aabb67d02e6e54452f53413550d0a064627a68aab1"
+    },
+    {
+      "path": "figures/geometry-01.pdf",
+      "sha256": "9f62c60502a5b6de255db6d21388a3c4f506f31a30e6e46977ed1d0d969bfd26"
+    },
+    {
+      "path": "figures/forces-01.pdf",
+      "sha256": "b604660c8c9ecff14d94cec9c01e615f6a26a2c6194f49eb53722a6ee3f2a2b7"
+    },
+    {
+      "path": "figures/trajectory-01.pdf",
+      "sha256": "328ba3c5a08cbe8f8f2f7d54c59ba6a1f73a56e39e08a3b0443e89fd3d9e993c"
+    },
+    {
+      "path": "figures/question-02.pdf",
+      "sha256": "4ca110d5e5a6f24b1356c22950565661f0875907d295cd588ff5b6615559ad7b"
+    },
+    {
+      "path": "figures/collision-02.pdf",
+      "sha256": "70f9b7c308eb35979c9d89363e0b45aeb1efd35e6ddf5cfe534f15f73537fc3a"
+    },
+    {
+      "path": "figures/second-02.pdf",
+      "sha256": "accdd201153a5d46e461f8d33b7071cf4bbf4fea3a3da0c9a20ded9d73573498"
+    },
+    {
+      "path": "figures/range-02.pdf",
+      "sha256": "7c0b12e72bf3f62fc46eb8054b47fa68f6afcd56b2ef3cbd52e515a163e94279"
+    },
+    {
+      "path": "figures/question-03.pdf",
+      "sha256": "6d207d1871e4475afae01474941b9c0e1f5e6e0fe52d295eb1761ad7d1877a2c"
+    },
+    {
+      "path": "figures/moments-03.pdf",
+      "sha256": "55f24b279156adc0bba36a4345aff8f533de2eff84db148dd0d931ae820fad5a"
+    },
+    {
+      "path": "figures/cube-03.pdf",
+      "sha256": "0d44c47247fdf0e58e84294ca260f16ed118681c954e93291f65d7dd95f1551c"
+    },
+    {
+      "path": "figures/star-03.pdf",
+      "sha256": "3b24835cbe33448d9308c3fb777772b0c49eb2a96fed0fbd2ae78c5e6b755be9"
+    },
+    {
+      "path": "figures/tetra-03.pdf",
+      "sha256": "551262e9761912d5580bd35d3a4a468716c5fdb64ef1defbdf40069b37c02546"
+    },
+    {
+      "path": "figures/reduction-03.pdf",
+      "sha256": "75c87eebc99e38e5f1de5d064ca1c6b718606fc1528f4f3760574090ab96a8d5"
+    },
+    {
+      "path": "figures/question-04.pdf",
+      "sha256": "47029e35f6cd4bf6098465a5d0ebcae2ab0cc3c46472e5b3c8f0e59f7a796dab"
+    },
+    {
+      "path": "figures/field-04.pdf",
+      "sha256": "77020041217f59b9c859b6f7de8b4271d7a6deff9ccf921172f69d76ca58563d"
+    },
+    {
+      "path": "figures/axial-04.pdf",
+      "sha256": "ddbd8ebb9b4e9dcc61fb6f56d379ac80a4988b37fff009572bd3d82a6e04f1c1"
+    },
+    {
+      "path": "figures/radial-04.pdf",
+      "sha256": "2fd6576e521da3f4fca94cfa613e70b66dcb90acf45678af7614a9089601d89f"
+    },
+    {
+      "path": "figures/question-05.pdf",
+      "sha256": "975743019163186aefe7bf432b8197758b7faa26c7dda4c157fadb229cfcfb6b"
+    },
+    {
+      "path": "figures/forces-05.pdf",
+      "sha256": "2855cc6b9409d21f32d349134d632dec32dfb1ef8f4c2db82dd68e801848d94a"
+    },
+    {
+      "path": "figures/normal-05.pdf",
+      "sha256": "cc5c6ec62f67d6765ebd3e9e25563a6eb63ffb406bbcdcca145b1f9cf30282c7"
+    },
+    {
+      "path": "figures/velocity-05.pdf",
+      "sha256": "f30d85be93a5137f9bf88dc4b8fdc4868463955aea81e79c407a2d343a362ae6"
+    },
+    {
+      "path": "figures/question-06.pdf",
+      "sha256": "d793eef50e4491e7718318025e32d189ba28213ff056be13a75bc9767963e97e"
+    },
+    {
+      "path": "figures/atmosphere-06.pdf",
+      "sha256": "d6d8b9765d9d03a54d91675c912ce001054f8e9d58616b1e48ee54c2f98ab6f8"
+    },
+    {
+      "path": "figures/exhaust-06.pdf",
+      "sha256": "4c790800d951895504b370e9bb86d5637b4dd0c0ebeb5c662499effb717f0317"
+    },
+    {
+      "path": "figures/balance-06.pdf",
+      "sha256": "3a35b42d0d354c25759716d677486c338269c55d76f2e5f5264601f8a12afe1b"
+    },
+    {
+      "path": "figures/engine-06.pdf",
+      "sha256": "ef4d2bd6b6cff772081f08c0462e0216e771f19e61b2b43debc665738ff49725"
+    },
+    {
+      "path": "figures/question-07.pdf",
+      "sha256": "7eb06ced61c2f2b9797f51c9ee86d0ec4c93d86b2fd6d04faadc9d59b78d0d0a"
+    },
+    {
+      "path": "figures/train-07.pdf",
+      "sha256": "b75b6cc9d119bba20a82b6e93738abf170d997f9b8934db501f0ce578f55e3e0"
+    },
+    {
+      "path": "figures/ray-07.pdf",
+      "sha256": "1f32652a5013a638e0bf9d578007a919ee3244d18026256e42f54d6be4a732ea"
+    },
+    {
+      "path": "figures/pupil-07.pdf",
+      "sha256": "396a7c0c5b66fb3fec710015c96269ea5aa59fbafe84c1ae4be930bd528106cc"
+    },
+    {
+      "path": "figures/question-08.pdf",
+      "sha256": "abc037986240e5408f1be592ff230ce7dbdeba4a475019d2ebcafbffe8fdcbc8"
+    },
+    {
+      "path": "figures/barrier-08.pdf",
+      "sha256": "d1f567b089c247f20aef4a0d0f6840d0af2422fa7753c6a779805cdfa81dc751"
+    },
+    {
+      "path": "figures/cm-08.pdf",
+      "sha256": "0e25d3e56ced5ed2d56adafb53d0ff294fc7d78127313c113ae9691f97b55564"
+    },
+    {
+      "path": "figures/relativity-08.pdf",
+      "sha256": "ede6942cf7b9951c8e3e64b082b37dc1a0992ff2908bb0b90aa2a6e29caec99c"
+    }
+  ],
+  "reviewed_overview_pages_total": 153,
+  "reviewed_hd_pages_total": 112,
+  "notes": [
+    "逐套图稿核对受力方向、空间投影、连接关系及标注遮挡；本套35幅图均已审读。",
+    "学生第4、5题及教师第7题的稀疏尾页已用有限步骤组合修复，不增大行距，不新增题间分页。",
+    "学生和教师各有同一段的一条Underfull hbox警告；对应第3题实际页面高清复核未见遮挡、断裂或溢出。",
+    "视觉验收只针对当前SHA对应文件，不等同于第2、6、8题题干修订口径获批。"
+  ]
+}

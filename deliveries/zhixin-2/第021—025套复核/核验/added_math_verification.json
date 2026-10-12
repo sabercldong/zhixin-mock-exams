@@ -1,0 +1,566 @@
+{
+  "all_passed": true,
+  "checks": 70,
+  "records": [
+    {
+      "set": 21,
+      "question": 1,
+      "variant": 3,
+      "method": "支持力反演和接触上界",
+      "passed": true,
+      "draft_sha256": "69d02cf597420dfaceb228ae2eac32a51797cf8a3c268d9c98f3ff28dd40c63c"
+    },
+    {
+      "set": 21,
+      "question": 1,
+      "variant": 4,
+      "method": "线性不稳定平衡初值方程积分",
+      "passed": true,
+      "draft_sha256": "69d02cf597420dfaceb228ae2eac32a51797cf8a3c268d9c98f3ff28dd40c63c"
+    },
+    {
+      "set": 21,
+      "question": 2,
+      "variant": 4,
+      "method": "均匀碰撞高度分布独立采样",
+      "passed": true,
+      "draft_sha256": "a6fc33b146063991635344c24449900e80824b106a716cb73780544562b6290c"
+    },
+    {
+      "set": 21,
+      "question": 3,
+      "variant": 4,
+      "method": "有限网络迭代达到误差门槛",
+      "passed": true,
+      "draft_sha256": "859d8a378ff76af4eeaafe3309125b528d5265723997a9ef53cab455451b9cc0"
+    },
+    {
+      "set": 21,
+      "question": 4,
+      "variant": 4,
+      "method": "完整有效势的耦合Hessian求导",
+      "passed": true,
+      "draft_sha256": "8b2b2283a01512352b1dbe49390826e4d67a9639a6b95907d3137e37a923a634"
+    },
+    {
+      "set": 21,
+      "question": 5,
+      "variant": 4,
+      "method": "逐段速度积分检查出轨位移",
+      "passed": true,
+      "draft_sha256": "0586ba944fd3be522aabfb0cecab219f05aea3bb82bbc072c5a7be9663512fc0"
+    },
+    {
+      "set": 21,
+      "question": 6,
+      "variant": 4,
+      "method": "封闭定容温度扰动方程积分",
+      "passed": true,
+      "draft_sha256": "db3ede3723e2a20c21104c41157eb2d031cdf56f7f3963fcfc4938e4ecc35a26"
+    },
+    {
+      "set": 21,
+      "question": 7,
+      "variant": 4,
+      "method": "镜末端坐标变动计入全局像位移",
+      "passed": true,
+      "draft_sha256": "606e08eb0d81472bc428157576e33f90334363ea07dfc9c6ab0b2ddbaa18fdc5"
+    },
+    {
+      "set": 22,
+      "question": 1,
+      "variant": 3,
+      "method": "周期单调反演与物理解筛选",
+      "passed": true,
+      "draft_sha256": "5006231051dff5537967b4a81749bc65e7d5e0837473034af563bb6c20938f87"
+    },
+    {
+      "set": 22,
+      "question": 1,
+      "variant": 4,
+      "method": "新增惯量的能量比",
+      "passed": true,
+      "draft_sha256": "5006231051dff5537967b4a81749bc65e7d5e0837473034af563bb6c20938f87"
+    },
+    {
+      "set": 22,
+      "question": 2,
+      "variant": 3,
+      "method": "递推固定增量正负阈值",
+      "passed": true,
+      "draft_sha256": "adaebec680f4b0dfad9c355c8c1b4546cb0f3e82c95b19f9a018e245535a6ec3"
+    },
+    {
+      "set": 22,
+      "question": 2,
+      "variant": 4,
+      "method": "逐级偏差衰减整数边界",
+      "passed": true,
+      "draft_sha256": "adaebec680f4b0dfad9c355c8c1b4546cb0f3e82c95b19f9a018e245535a6ec3"
+    },
+    {
+      "set": 22,
+      "question": 3,
+      "variant": 3,
+      "method": "质心系散射构造检查异质量夹角",
+      "passed": true,
+      "draft_sha256": "e548448818384f7a4e3275ce2cf3522a0ec000428534522df646476d0786a1a6"
+    },
+    {
+      "set": 22,
+      "question": 3,
+      "variant": 4,
+      "method": "出射矢量构造和能量动量守恒",
+      "passed": true,
+      "draft_sha256": "e548448818384f7a4e3275ce2cf3522a0ec000428534522df646476d0786a1a6"
+    },
+    {
+      "set": 22,
+      "question": 4,
+      "variant": 3,
+      "method": "正弦驱动磁场方程初值积分",
+      "passed": true,
+      "draft_sha256": "89c10f0c8a333f1bb0840c88b9a31b0b7e4924faad133517509f32b14cec2f05"
+    },
+    {
+      "set": 22,
+      "question": 4,
+      "variant": 4,
+      "method": "时空焦耳热双积分揭示近似能量缺口",
+      "passed": true,
+      "draft_sha256": "89c10f0c8a333f1bb0840c88b9a31b0b7e4924faad133517509f32b14cec2f05"
+    },
+    {
+      "set": 22,
+      "question": 5,
+      "variant": 3,
+      "method": "磁能半衰期及热功率积分",
+      "passed": true,
+      "draft_sha256": "674f9147f3fd0a80ad4f0cbfa43d270172edc1c7a4be9f9a2f1bcd6b2a2d0bf3"
+    },
+    {
+      "set": 22,
+      "question": 5,
+      "variant": 4,
+      "method": "时变电阻率的一阶方程残差",
+      "passed": true,
+      "draft_sha256": "674f9147f3fd0a80ad4f0cbfa43d270172edc1c7a4be9f9a2f1bcd6b2a2d0bf3"
+    },
+    {
+      "set": 22,
+      "question": 6,
+      "variant": 3,
+      "method": "条件冲击参数的弦长分布积分",
+      "passed": true,
+      "draft_sha256": "0fab1765ba84014405abe2d9fde09ed05f89ee1a1df98750e51b8a9a7c521407"
+    },
+    {
+      "set": 22,
+      "question": 6,
+      "variant": 4,
+      "method": "三个独立输入对数偏导传播",
+      "passed": true,
+      "draft_sha256": "0fab1765ba84014405abe2d9fde09ed05f89ee1a1df98750e51b8a9a7c521407"
+    },
+    {
+      "set": 22,
+      "question": 7,
+      "variant": 3,
+      "method": "由直接像高反演折射率",
+      "passed": true,
+      "draft_sha256": "44baf295177e7e66f04bdae1db3038a3eed6eb5445ddff6c44df50c5f72a67dc"
+    },
+    {
+      "set": 22,
+      "question": 7,
+      "variant": 4,
+      "method": "折射率匹配后的独立球面镜成像",
+      "passed": true,
+      "draft_sha256": "44baf295177e7e66f04bdae1db3038a3eed6eb5445ddff6c44df50c5f72a67dc"
+    },
+    {
+      "set": 22,
+      "question": 8,
+      "variant": 3,
+      "method": "Airy波函数平均高度直接积分",
+      "passed": true,
+      "draft_sha256": "2df582fcd98c67303f0c6523dad55fca5cb05fa75d6e725775ce7bbf4875cfe2"
+    },
+    {
+      "set": 22,
+      "question": 8,
+      "variant": 4,
+      "method": "精确Airy零点与经典时间标度比较",
+      "passed": true,
+      "draft_sha256": "2df582fcd98c67303f0c6523dad55fca5cb05fa75d6e725775ce7bbf4875cfe2"
+    },
+    {
+      "set": 23,
+      "question": 1,
+      "variant": 3,
+      "method": "三腿刚度矩阵独立求解不等容量",
+      "passed": true,
+      "draft_sha256": "faf12495e308b2e1fda34a0f05bed8551a16f0e377abca16d451eaeac5d6352e"
+    },
+    {
+      "set": 23,
+      "question": 1,
+      "variant": 4,
+      "method": "力偶抵消后转动自由度求解",
+      "passed": true,
+      "draft_sha256": "faf12495e308b2e1fda34a0f05bed8551a16f0e377abca16d451eaeac5d6352e"
+    },
+    {
+      "set": 23,
+      "question": 2,
+      "variant": 4,
+      "method": "球面方向余弦均匀统计",
+      "passed": true,
+      "draft_sha256": "143da154b2e3b49cfb11052db92539c620521a056279d03daba6c489a01413e6"
+    },
+    {
+      "set": 23,
+      "question": 3,
+      "variant": 3,
+      "method": "临界双根展开误差阶",
+      "passed": true,
+      "draft_sha256": "5a87e25b9e37b3bf61d6b211ef144750c5a026efff99a70b9fcabcd633d6afa6"
+    },
+    {
+      "set": 23,
+      "question": 3,
+      "variant": 4,
+      "method": "强场转向点原方程求根",
+      "passed": true,
+      "draft_sha256": "5a87e25b9e37b3bf61d6b211ef144750c5a026efff99a70b9fcabcd633d6afa6"
+    },
+    {
+      "set": 23,
+      "question": 4,
+      "variant": 3,
+      "method": "霍曼端点时间及行星相位会合",
+      "passed": true,
+      "draft_sha256": "bd3194548f0059b6890058f5fb4ddd72c9c7f20e3e2c433a32983d81be779916"
+    },
+    {
+      "set": 23,
+      "question": 4,
+      "variant": 4,
+      "method": "火箭质量比反演上限",
+      "passed": true,
+      "draft_sha256": "bd3194548f0059b6890058f5fb4ddd72c9c7f20e3e2c433a32983d81be779916"
+    },
+    {
+      "set": 23,
+      "question": 5,
+      "variant": 3,
+      "method": "固定线长电阻和质量约束",
+      "passed": true,
+      "draft_sha256": "f86c82c920244c76d955b3265ad7e078ccc15127822c00107ee2bf7105287417"
+    },
+    {
+      "set": 23,
+      "question": 5,
+      "variant": 4,
+      "method": "磁吸力对气隙的独立求导",
+      "passed": true,
+      "draft_sha256": "f86c82c920244c76d955b3265ad7e078ccc15127822c00107ee2bf7105287417"
+    },
+    {
+      "set": 23,
+      "question": 6,
+      "variant": 3,
+      "method": "弱超压停点数值求根与峰值功展开",
+      "passed": true,
+      "draft_sha256": "04c9bb592e9a330d9d9822d4f38dd8df26606093d20f8da5e9e3719a09d05446"
+    },
+    {
+      "set": 23,
+      "question": 6,
+      "variant": 4,
+      "method": "有限缸出口判据的功积分符号",
+      "passed": true,
+      "draft_sha256": "04c9bb592e9a330d9d9822d4f38dd8df26606093d20f8da5e9e3719a09d05446"
+    },
+    {
+      "set": 23,
+      "question": 7,
+      "variant": 3,
+      "method": "指定端修正有效长度",
+      "passed": true,
+      "draft_sha256": "02aeafe2d884ebec3bb1da55092729e42d0a5dafe9bef40b1356b580d31f0761"
+    },
+    {
+      "set": 23,
+      "question": 7,
+      "variant": 4,
+      "method": "理想气体温标平方根",
+      "passed": true,
+      "draft_sha256": "02aeafe2d884ebec3bb1da55092729e42d0a5dafe9bef40b1356b580d31f0761"
+    },
+    {
+      "set": 23,
+      "question": 8,
+      "variant": 4,
+      "method": "双曲世界线的实验室功与时间",
+      "passed": true,
+      "draft_sha256": "f71c05b6aa6fbf8f518e532b9812f93f08686be2c7f5976b795f9f2b1a15dcd2"
+    },
+    {
+      "set": 24,
+      "question": 1,
+      "variant": 3,
+      "method": "圆周轨迹微分得到受力与功率",
+      "passed": true,
+      "draft_sha256": "8efcfe9a3e998e456b22a2d142655f6c843b97d4f42e90eb96fbb94e0f379dc0"
+    },
+    {
+      "set": 24,
+      "question": 1,
+      "variant": 4,
+      "method": "奇点原函数数值极限",
+      "passed": true,
+      "draft_sha256": "8efcfe9a3e998e456b22a2d142655f6c843b97d4f42e90eb96fbb94e0f379dc0"
+    },
+    {
+      "set": 24,
+      "question": 2,
+      "variant": 3,
+      "method": "自重轴力及变截面柔度双积分",
+      "passed": true,
+      "draft_sha256": "87e3c427979cbae68bbcd7d2b6b2c81d54c987327b85ae59248b67e75d10436e"
+    },
+    {
+      "set": 24,
+      "question": 2,
+      "variant": 4,
+      "method": "端力柔度积分和固定体积比较",
+      "passed": true,
+      "draft_sha256": "87e3c427979cbae68bbcd7d2b6b2c81d54c987327b85ae59248b67e75d10436e"
+    },
+    {
+      "set": 24,
+      "question": 3,
+      "variant": 3,
+      "method": "不同灯数功率比反演",
+      "passed": true,
+      "draft_sha256": "a3f0af420a9b1e3d509e8f8ecb6dd45a5a0d7efc001354e8319c066e59071ed7"
+    },
+    {
+      "set": 24,
+      "question": 3,
+      "variant": 4,
+      "method": "效率限制整数可行集枚举",
+      "passed": true,
+      "draft_sha256": "a3f0af420a9b1e3d509e8f8ecb6dd45a5a0d7efc001354e8319c066e59071ed7"
+    },
+    {
+      "set": 24,
+      "question": 4,
+      "variant": 3,
+      "method": "恢复力最大值求导",
+      "passed": true,
+      "draft_sha256": "112207f1916bf6dd3b3ede8e54df4e9ba6aa0eff0d84b8b14d0875bc82815d45"
+    },
+    {
+      "set": 24,
+      "question": 4,
+      "variant": 4,
+      "method": "局部势能曲率反演",
+      "passed": true,
+      "draft_sha256": "112207f1916bf6dd3b3ede8e54df4e9ba6aa0eff0d84b8b14d0875bc82815d45"
+    },
+    {
+      "set": 24,
+      "question": 5,
+      "variant": 3,
+      "method": "固定电势平衡消元后的力导数",
+      "passed": true,
+      "draft_sha256": "0f9abfa7eadfe7b688e023ae9311686e85ca6c740b60992c4b06c2d479ad7a87"
+    },
+    {
+      "set": 24,
+      "question": 5,
+      "variant": 4,
+      "method": "计入电源后的有效势求导",
+      "passed": true,
+      "draft_sha256": "0f9abfa7eadfe7b688e023ae9311686e85ca6c740b60992c4b06c2d479ad7a87"
+    },
+    {
+      "set": 24,
+      "question": 6,
+      "variant": 3,
+      "method": "麦克斯韦三维动量分布积分",
+      "passed": true,
+      "draft_sha256": "251fb5f1b866478cbbed6909d01007a990380cc70caea344a7178abbab65ad53"
+    },
+    {
+      "set": 24,
+      "question": 6,
+      "variant": 4,
+      "method": "衍射角对动量的差分敏感度",
+      "passed": true,
+      "draft_sha256": "251fb5f1b866478cbbed6909d01007a990380cc70caea344a7178abbab65ad53"
+    },
+    {
+      "set": 24,
+      "question": 7,
+      "variant": 3,
+      "method": "相关矩阵交叉项与背景强度",
+      "passed": true,
+      "draft_sha256": "d6b77a50b73e10bd9c1b2765c90495878285cb01a92c2bc5834b457426686625"
+    },
+    {
+      "set": 24,
+      "question": 7,
+      "variant": 4,
+      "method": "可调检偏投影强度匹配",
+      "passed": true,
+      "draft_sha256": "d6b77a50b73e10bd9c1b2765c90495878285cb01a92c2bc5834b457426686625"
+    },
+    {
+      "set": 24,
+      "question": 8,
+      "variant": 3,
+      "method": "八种波数符号直接比较空间模态",
+      "passed": true,
+      "draft_sha256": "326ef296ec8a782aeaa882aef66295f589d4833c4d7e8842c0e08a31b03f1b51"
+    },
+    {
+      "set": 24,
+      "question": 8,
+      "variant": 4,
+      "method": "玻色能量积分独立数值计算",
+      "passed": true,
+      "draft_sha256": "326ef296ec8a782aeaa882aef66295f589d4833c4d7e8842c0e08a31b03f1b51"
+    },
+    {
+      "set": 25,
+      "question": 1,
+      "variant": 3,
+      "method": "有阻尼弹簧受迫振动方程积分",
+      "passed": true,
+      "draft_sha256": "bcc6c22814198e65f0223400f3e3305f055cbdc5cf8ac0ea8aff2c704ef40aac"
+    },
+    {
+      "set": 25,
+      "question": 1,
+      "variant": 4,
+      "method": "耦合电流速度相量直接消元",
+      "passed": true,
+      "draft_sha256": "bcc6c22814198e65f0223400f3e3305f055cbdc5cf8ac0ea8aff2c704ef40aac"
+    },
+    {
+      "set": 25,
+      "question": 2,
+      "variant": 3,
+      "method": "静止系光子四矢量boost到实验室横向",
+      "passed": true,
+      "draft_sha256": "47dbb6a21f6590ed1cadcb4a6df01b19116f8581c1ff6e20b00b4190687bb791"
+    },
+    {
+      "set": 25,
+      "question": 2,
+      "variant": 4,
+      "method": "精确质量反演的误差偏导",
+      "passed": true,
+      "draft_sha256": "47dbb6a21f6590ed1cadcb4a6df01b19116f8581c1ff6e20b00b4190687bb791"
+    },
+    {
+      "set": 25,
+      "question": 3,
+      "variant": 3,
+      "method": "有理频率共同相位恢复及坐标有界",
+      "passed": true,
+      "draft_sha256": "bd918d563dae4586152f748d2f81c2c126c836ad1d45dd3386ab7318123974c6"
+    },
+    {
+      "set": 25,
+      "question": 3,
+      "variant": 4,
+      "method": "平面轨迹面积线积分",
+      "passed": true,
+      "draft_sha256": "bd918d563dae4586152f748d2f81c2c126c836ad1d45dd3386ab7318123974c6"
+    },
+    {
+      "set": 25,
+      "question": 4,
+      "variant": 3,
+      "method": "冷室热收支函数差分稳定性",
+      "passed": true,
+      "draft_sha256": "af27c3285028b46fbe426e76f49133571aabf97cf1815819160030bd6fd998e6"
+    },
+    {
+      "set": 25,
+      "question": 4,
+      "variant": 4,
+      "method": "增加热源后冷端稳态收支",
+      "passed": true,
+      "draft_sha256": "af27c3285028b46fbe426e76f49133571aabf97cf1815819160030bd6fd998e6"
+    },
+    {
+      "set": 25,
+      "question": 5,
+      "variant": 3,
+      "method": "二维孔径映射Jacobian及功率守恒",
+      "passed": true,
+      "draft_sha256": "221899790ad3e62f6b095f45bb840b436f2e7a4a05cce93accfb676e9f8aef59"
+    },
+    {
+      "set": 25,
+      "question": 5,
+      "variant": 4,
+      "method": "正常点像与鬼像圆边缘距离",
+      "passed": true,
+      "draft_sha256": "221899790ad3e62f6b095f45bb840b436f2e7a4a05cce93accfb676e9f8aef59"
+    },
+    {
+      "set": 25,
+      "question": 6,
+      "variant": 3,
+      "method": "短弧级数与长弧分支范围",
+      "passed": true,
+      "draft_sha256": "4e1dcc9f9969f846a2e71bd6eb71449cacf83ed6f0e600f4f5b9d737aee69391"
+    },
+    {
+      "set": 25,
+      "question": 6,
+      "variant": 4,
+      "method": "单调载荷容量分支反演",
+      "passed": true,
+      "draft_sha256": "4e1dcc9f9969f846a2e71bd6eb71449cacf83ed6f0e600f4f5b9d737aee69391"
+    },
+    {
+      "set": 25,
+      "question": 7,
+      "variant": 3,
+      "method": "极坐标速度独立投到固定轴",
+      "passed": true,
+      "draft_sha256": "836dca586441753e1a60013208f7e234ecc846f6c20a8a7dffc13c17377f3cce"
+    },
+    {
+      "set": 25,
+      "question": 7,
+      "variant": 4,
+      "method": "面积速度与半通径消去短轴",
+      "passed": true,
+      "draft_sha256": "836dca586441753e1a60013208f7e234ecc846f6c20a8a7dffc13c17377f3cce"
+    },
+    {
+      "set": 25,
+      "question": 8,
+      "variant": 3,
+      "method": "整圈精确运动积分与二阶位移展开",
+      "passed": true,
+      "draft_sha256": "2d649f784beffebccb4645d94858f9a109bef440a6bf69d343f6257db28d10c1"
+    },
+    {
+      "set": 25,
+      "question": 8,
+      "variant": 4,
+      "method": "转向点径向Newton方程检验反力换向",
+      "passed": true,
+      "draft_sha256": "2d649f784beffebccb4645d94858f9a109bef440a6bf69d343f6257db28d10c1"
+    }
+  ]
+}

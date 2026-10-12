@@ -1,0 +1,122 @@
+\documentclass[tikz,border=5pt]{standalone}
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath,amssymb}
+\usetikzlibrary{arrows.meta,decorations.pathmorphing,calc}
+\tikzset{>=Stealth,line cap=round,line join=round,
+spring/.style={thick,decorate,decoration={coil,aspect=.35,segment length=4pt,amplitude=2.4pt,pre length=4pt,post length=4pt}},
+force/.style={blue!75!black,thick},
+aux/.style={gray!65,dashed,thin},
+motion/.style={green!45!black,thick}}
+\newcommand{\anchors}[1]{
+\draw[thick](-#1,-.22)--(-#1,.22);
+\draw[thick](#1,-.22)--(#1,.22);
+\node[above left]at(-#1,.22){$A$};
+\node[above right]at(#1,.22){$B$};
+}
+\begin{document}
+% 1. Both modes lie in the table plane; these are plan views, not gravity.
+\begin{tikzpicture}[font=\small]
+\begin{scope}
+\anchors{2.15}
+\draw[spring](-2.15,0)--(-.12,0);
+\draw[spring](.12,0)--(2.15,0);
+\draw[motion,<->](0,-.75)--(0,.75)node[above]{$y$};
+\filldraw[fill=white,thick](0,0)circle(.12);
+\node[below right]at(.12,0){$O$};
+\node at(0,-1.18){横向：垂直于 $AB$};
+\end{scope}
+\begin{scope}[xshift=6.1cm]
+\anchors{2.15}
+\draw[spring](-2.15,0)--(-.12,0);
+\draw[spring](.12,0)--(2.15,0);
+\draw[motion,<->](-.75,.6)--(.75,.6)node[right]{$x$};
+\filldraw[fill=white,thick](0,0)circle(.12);
+\node[below]at(0,-.12){$O$};
+\node at(0,-1.18){纵向：平行于 $AB$};
+\end{scope}
+\node at(3.05,1.45){桌面俯视；端点固定};
+\end{tikzpicture}
+% 2. Actual lengths are a; b is the natural length, not the drawn stretched span.
+\begin{tikzpicture}[font=\small]
+\anchors{2.65}
+\draw[spring](-2.65,0)--(-.13,0);
+\draw[spring](.13,0)--(2.65,0);
+\filldraw[fill=white,thick](0,0)circle(.13);
+\node[above]at(0,.18){$O$};
+\node at(-1.35,.75){$k_h=2k$};
+\node at(1.35,.75){$k_h=2k$};
+\node at(0,1.35){每半根原长 $b=l_0/2$};
+\foreach \xx in {-2.65,0,2.65}{\draw[thin](\xx,-.27)--(\xx,-.77);}
+\draw[<->](-2.65,-.65)--(0,-.65)node[midway,below]{$a=L/2$};
+\draw[<->](0,-.65)--(2.65,-.65)node[midway,below]{$a=L/2$};
+\begin{scope}[yshift=-2.2cm]
+\draw[force,->](0,0)--(-1.45,0)node[left]{$T_0$};
+\draw[force,->](0,0)--(1.45,0)node[right]{$T_0$};
+\filldraw[fill=white,thick](0,0)circle(.12);
+\node at(0,-.52){$T_0=2k(a-b)=k\Delta l$};
+\end{scope}
+\end{tikzpicture}
+% 3. Positive x lengthens the left half; free-body view is separate from coils.
+\begin{tikzpicture}[font=\small]
+\begin{scope}
+\anchors{2.25}
+\draw[aux](0,-.45)--(0,1.30);
+\draw[spring](-2.25,0)--(.46,0);
+\draw[spring](.70,0)--(2.25,0);
+\filldraw[fill=white,thick](.58,0)circle(.12);
+\node[right]at(.77,.48){$P$};
+\node[below left]at(0,-.16){$O$};
+\draw[<->](0,1.10)--(.58,1.10)node[midway,above]{$x$};
+\draw[thin](.58,.20)--(.58,1.28);
+\foreach \xx in {-2.25,.58,2.25}{\draw[thin](\xx,-.32)--(\xx,-.98);}
+\draw[<->](-2.25,-.83)--(.58,-.83)node[midway,below]{$a+x$};
+\draw[<->](.58,-.83)--(2.25,-.83)node[midway,below]{$a-x$};
+\node at(0,1.82){纵向位置：$x>0$};
+\end{scope}
+\begin{scope}[xshift=6.7cm]
+\draw[force,->](0,0)--(-1.48,0)node[left]{$T_L$};
+\draw[force,->](0,0)--(.92,0)node[right]{$T_R$};
+\filldraw[fill=white,thick](0,0)circle(.12);
+\draw[->](0,.8)--(.90,.8)node[right]{$+x$};
+\draw[red!75!black,->,thick](0,-.72)--(-1.05,-.72)
+node[midway,below]{$F_x$};
+\node at(0,1.82){小球自由体；$T_L>T_R$};
+\end{scope}
+\end{tikzpicture}
+% 4. True planar triangle geometry and a separate force decomposition.
+\begin{tikzpicture}[font=\small]
+\begin{scope}
+\anchors{2.2}
+\draw[aux](-2.2,0)--(2.2,0);
+\draw[spring](-2.2,0)--(-.11,1.045);
+\draw[spring](.11,1.045)--(2.2,0);
+\draw[aux](0,0)--(0,1.1);
+\filldraw[fill=white,thick](0,1.1)circle(.12);
+\node[above]at(0,1.26){$P$};
+\node[below left]at(0,0){$O$};
+\node at(.19,.50){$y$};
+\node at(-1.27,.94){$\ell$};
+\node at(1.27,.94){$\ell$};
+\draw[thin](0,.14)--(.14,.14)--(.14,0);
+\draw[thin](-1.66,0)arc(0:26.565:.54);
+\node at(-1.48,.14){$\alpha$};
+\foreach \xx in {-2.2,0,2.2}{\draw[thin](\xx,-.28)--(\xx,-.72);}
+\draw[<->](-2.2,-.61)--(0,-.61)node[midway,below]{$a$};
+\draw[<->](0,-.61)--(2.2,-.61)node[midway,below]{$a$};
+\node at(0,1.90){桌面内几何；$\ell^2=a^2+y^2$};
+\end{scope}
+\begin{scope}[xshift=6.5cm,yshift=.25cm]
+\draw[aux](-1.65,0)--(1.65,0)node[right,text=black]{$x$};
+\draw[->](1.55,.1)--(1.55,.95)node[above]{$y$};
+\draw[force,->](0,0)--(-1.30,-.65)node[below left]{$T$};
+\draw[force,->](0,0)--(1.30,-.65)node[below right]{$T$};
+\draw[thin](-.49,0)arc(180:206.565:.49);
+\node at(-.65,-.16){$\alpha$};
+\draw[aux](-1.30,-.65)--(1.30,-.65);
+\draw[red!75!black,->,thick](0,-.10)--(0,-1.3);
+\filldraw[fill=white,thick](0,0)circle(.12);
+\node at(0,-1.67){$F_y=-2T\sin\alpha$};
+\node at(0,1.65){小球自由体：$y>0$};
+\end{scope}
+\end{tikzpicture}
+\end{document}

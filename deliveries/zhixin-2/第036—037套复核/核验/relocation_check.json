@@ -1,0 +1,144 @@
+{
+  "passed": true,
+  "sets": [
+    {
+      "set": 36,
+      "generated_files_removed_before_rebuild": true,
+      "steps": [
+        {
+          "script": "rebuild_sources.py",
+          "exit_code": 0,
+          "seconds": 0.06
+        },
+        {
+          "script": "render_figures.py",
+          "exit_code": 0,
+          "seconds": 10.59
+        },
+        {
+          "script": "build_all.py",
+          "exit_code": 0,
+          "seconds": 30.05
+        }
+      ],
+      "figure_png_count": 16,
+      "figure_png_sha256_equal": true,
+      "documents": [
+        {
+          "name": "第036套_学生详解版.pdf",
+          "pages": 57,
+          "all_text_equal": true,
+          "all_72dpi_pixels_equal": true
+        },
+        {
+          "name": "第036套_教师备课版.pdf",
+          "pages": 73,
+          "all_text_equal": true,
+          "all_72dpi_pixels_equal": true
+        },
+        {
+          "name": "第036套_试卷版.pdf",
+          "pages": 9,
+          "all_text_equal": true,
+          "all_72dpi_pixels_equal": true
+        }
+      ],
+      "passed": true,
+      "current_source_sha256": {
+        "drafts/question-08.md": "79071de3b581cc270d58174d9de86dec9806030e44c0b3b6d06f03866118dc52",
+        "drafts/question-03.md": "d0230fac358c4a9af19f80907b48192d4c210b2b85f483a536d16b480bafaacc",
+        "drafts/question-07.md": "5df7b2a0c0a001036fb77030f5f9d6d33497f25d7cd54cef68a3c0024e6bf8bc",
+        "drafts/question-06.md": "6bae4edc693e9375c0efdd88c96f4f224bb78ef68ec01cd41dc972a6575e4c52",
+        "drafts/question-02.md": "c79415c54ad4a0d8692881df574bb3b9ebaceb1f5c20135d5684ccf7e7de7b1c",
+        "drafts/question-05.md": "0682073501c91b215ea0d83b79ad14a15e75199a863419cc4cd2e4a168e171d5",
+        "drafts/question-01.md": "1685229624a20d1d2edb0b8621e649d7fd2e5414f182d0f7b9568678d3965617",
+        "drafts/question-04.md": "3e25d3f005b8130a077e60e8a54547186dd83aeb08dc14ddd95c0123f8f9ee73",
+        "scripts/rebuild_sources.py": "0d85f03c531f82b8f4c37fd60b8a8ea2bfe9222b9687947cae375a6c9b4dc79b",
+        "scripts/verify_results.py": "83459443f40bfc8ec08ff969bf9f5eaec73f402f826779d8dce9e61b93386b19",
+        "scripts/build_documents.py": "fd92c3fb4392e0dd570ad255bac1e96b1a622b06903e73be65e6301875718f47",
+        "scripts/visual_audit.py": "3a2631ba162ecc8d4d5417e587eae4df31bf7255d894b3777d2d0656ede6d578",
+        "scripts/render_figures.py": "48a522d5163b150ee28723c551461d9c32cd8b365a8e6fb73e4bde283acdd8ff",
+        "scripts/build_all.py": "c97429f152d8a9407d75d360c24f4bbf848098151c497a1ed34e6dec8ed185fc",
+        "scripts/document_pipeline.py": "03182d0d714d3dd462b317118271dd85a3cb360adc69b95b3cbd572770ef1488",
+        "scripts/prepare_documents.py": "396913d9829561a8e7a4fd52961e0e150481f0ed5c097a10b4286c861dfdcda0",
+        "scripts/quality_check_current.py": "bab673655b9129322737a4904cf1642d3ecdbdcefac0254d97a4d6454e6cda8c"
+      },
+      "current_pdf_sha256": {
+        "第036套_教师备课版.pdf": "3981045df48c700ad9dca6713b4552cd94472ecb61f40eb74d7cd395dc1b9f15",
+        "第036套_试卷版.pdf": "fa5fe067d155000ada7ae87ae0da838ce8db8b4f08c958d4dd644231120797d3",
+        "第036套_学生详解版.pdf": "d49b15c5e74a9472cc7acb5f7c752740971e829e9ac39e5fc4e3520f70daa995"
+      },
+      "historical_entry_point_archived_after_rebuild": "历史记录/scripts/quality_check.py"
+    },
+    {
+      "set": 37,
+      "generated_files_removed_before_rebuild": true,
+      "steps": [
+        {
+          "script": "rebuild_sources.py",
+          "exit_code": 0,
+          "seconds": 0.04
+        },
+        {
+          "script": "render_figures.py",
+          "exit_code": 0,
+          "seconds": 3.69
+        },
+        {
+          "script": "build_all.py",
+          "exit_code": 0,
+          "seconds": 25.92
+        }
+      ],
+      "figure_png_count": 16,
+      "figure_png_sha256_equal": true,
+      "documents": [
+        {
+          "name": "第037套_学生详解版.pdf",
+          "pages": 60,
+          "all_text_equal": true,
+          "all_72dpi_pixels_equal": true
+        },
+        {
+          "name": "第037套_教师备课版.pdf",
+          "pages": 80,
+          "all_text_equal": true,
+          "all_72dpi_pixels_equal": true
+        },
+        {
+          "name": "第037套_试卷版.pdf",
+          "pages": 9,
+          "all_text_equal": true,
+          "all_72dpi_pixels_equal": true
+        }
+      ],
+      "passed": true,
+      "current_source_sha256": {
+        "drafts/question-08.md": "e6fb88e50052df7de68a2862daa5b7f2280e2cabdfc5943d7494dbc43d986627",
+        "drafts/question-03.md": "2bdfd493c5bce1aa273f3287dfa92340df56f952940b1d15c7965ccd6491734f",
+        "drafts/question-07.md": "38f7841facd3193d5990b573c0ea8d0a7e303657f9f24d70a2741867a2453758",
+        "drafts/question-06.md": "32ebe7dc8e57f4b581584d24155c787e7308af385d375143ee6324335835aa55",
+        "drafts/question-02.md": "7793659ec27ee4e311e990bf0edb91184903292497e446fce23d300bf0b2b865",
+        "drafts/question-05.md": "fcef47c309ca52169211bf7e066103002aba245c2d7b5e0f43ca8d4ba4403b1f",
+        "drafts/question-01.md": "9190d5b592b5c5e8ebd38fa01ec54b665b9447eff33d9b7413d578c36919e793",
+        "drafts/question-04.md": "0f59e5dcea04e5748cf4972634b30ae36be207faec5f02ad908a9dd026002fab",
+        "scripts/rebuild_sources.py": "47c086824d1fc07caf5a7ecebc4a0a6febc0f682a6e740ce3ff4e8246f38a705",
+        "scripts/verify_results.py": "b0d9a773b5fc2e7861e9cdb6b9a5820eefac84be352d496e26ab47aae20ca17a",
+        "scripts/build_documents.py": "0abb93668b28373793c0e93241eee0e440dff7a9f4a38ede7e9b11c3559cd969",
+        "scripts/render_figures.py": "7ae1e6ffee4a52373a25b96fc2b2b9b9c7bc5d648a7c547ce318a9537e7564b6",
+        "scripts/build_all.py": "297f6cf99378963519f6099eb8705196d8dea603320b50923c513b600941b8a8",
+        "scripts/document_pipeline.py": "03182d0d714d3dd462b317118271dd85a3cb360adc69b95b3cbd572770ef1488",
+        "scripts/prepare_documents.py": "f08d45b96f258f861703dbe2913b6ae4f24a4ff24e60ce2230eac40c6e397394",
+        "scripts/quality_check_current.py": "0cb040346d46a29d1c221733d8f087bd624859cf33aa81b0880348d0b03a6b3c"
+      },
+      "current_pdf_sha256": {
+        "第037套_学生详解版.pdf": "981e610b42a862a1cc9388b2ff07f23e19c80ff684f97d48d3228d49b88a0c38",
+        "第037套_试卷版.pdf": "642d894669e28ef35b65eece2abdf86bba00bd5ec24cda5260ca83a77d13cd80",
+        "第037套_教师备课版.pdf": "577ab4ceb9f6c3c4fd1e4f8a980c78c472527ed545f3f4ac1cb72c3944e084b5"
+      },
+      "historical_entry_point_archived_after_rebuild": "历史记录/scripts/quality_check.py"
+    }
+  ],
+  "total_figures": 32,
+  "total_pages": 288
+}

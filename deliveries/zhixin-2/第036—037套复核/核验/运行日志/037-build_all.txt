@@ -1,0 +1,16 @@
+passed:prepare_documents
+passed:build_documents
+passed:蔡题037_试卷-compile
+passed:蔡题037_学生详解-compile
+passed:蔡题037_教师备课-compile
+Traceback (most recent call last):
+  File "/Users/dongxingxi/Documents/Codex/2026-10-08/w/work/batch036_040/current/蔡题037/整理版/scripts/build_all.py", line 24, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "/Users/dongxingxi/Documents/Codex/2026-10-08/w/work/batch036_040/current/蔡题037/整理版/scripts/build_all.py", line 23, in main
+    run([sys.executable,str(ROOT/'scripts/quality_check_current.py')])
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dongxingxi/Documents/Codex/2026-10-08/w/work/batch036_040/current/蔡题037/整理版/scripts/build_all.py", line 13, in run
+    assert result.returncode==0,(name,(result.stdout+result.stderr)[-4000:])
+           ^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('quality_check_current', 'Traceback (most recent call last):\n  File "/Users/dongxingxi/Documents/Codex/2026-10-08/w/work/batch036_040/current/蔡题037/整理版/scripts/quality_check_current.py", line 30, in <module>\n    if __name__==\'__main__\':main()\n                            ~~~~^^\n  File "/Users/dongxingxi/Documents/Codex/2026-10-08/w/work/batch036_040/current/蔡题037/整理版/scripts/quality_check_current.py", line 8, in main\n    quality_check(\'037\')\n    ~~~~~~~~~~~~~^^^^^^^\n  File "/Users/dongxingxi/Documents/Codex/2026-10-08/w/work/batch036_040/current/蔡题037/整理版/scripts/document_pipeline.py", line 329, in quality_check\n    kind: check_pdf(root, set_number, kind)\n          ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/Users/dongxingxi/Documents/Codex/2026-10-08/w/work/batch036_040/current/蔡题037/整理版/scripts/document_pipeline.py", line 307, in check_pdf\n    raise AssertionError(f"{log.name} 含编译问题：{bad.group(0)}")\nAssertionError: 蔡题037_教师备课.log 含编译问题：Overfull\n')

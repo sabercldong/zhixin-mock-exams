@@ -1,0 +1,60 @@
+\documentclass[tikz,border=5pt]{standalone}
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath}
+\usetikzlibrary{arrows.meta,calc,angles,quotes}
+\definecolor{ink}{HTML}{243447}
+\definecolor{blue}{HTML}{2765A2}
+\definecolor{red}{HTML}{B74739}
+\tikzset{line cap=round,line join=round,
+body/.style={draw=ink,thick},
+vec/.style={draw=blue,thick,-{Latex[length=2mm]}},
+force/.style={draw=red,thick,-{Latex[length=2mm]}},
+guide/.style={draw=gray,dashed}}
+\begin{document}
+\begin{tikzpicture}
+ \fill[gray!12] (-.6,-.2) rectangle (7.2,0);
+ \draw[vec] (-.6,0)--(7.5,0) node[right] {$x$};
+ \draw[vec] (0,0)--(0,3.1) node[above] {$y$};
+ \draw[body,samples=80,domain=0:6] plot(\x,{1.2*\x-.2*\x*\x});
+ \draw[vec] (0,0)--(1.35,1.62) node[above right] {$v_0$};
+ \draw (0.65,0) arc[start angle=0,end angle=50.1944,radius=.65];
+ \node at (.88,.32) {$\alpha$};
+ \fill[ink] (0,0) circle(2pt) node[below left] {$O$};
+ \fill[ink] (6,0) circle(2.2pt) node[below] {首次碰撞};
+ \node at (3.3,-.6) {水平地面：$e,\mu$};
+ \draw[force] (6.7,2.65)--(6.7,1.7) node[midway,right] {$\boldsymbol g$};
+\end{tikzpicture}
+\begin{tikzpicture}
+ \begin{scope}
+  \fill[gray!12] (-2.1,-.17) rectangle (2.3,0);
+  \draw[body] (-2.1,0)--(2.3,0);
+  \fill[ink] (0,0) circle(3pt);
+  \draw[vec] (-1.4,1.35)--(-.1,.1);
+  \node[above,align=center] at (-1.4,1.4) {碰前\\$(U_{j-1},-e^{j-1}w)$};
+  \draw[vec] (.1,.1)--(1.05,1.1);
+  \node[above,align=center] at (1.6,1.1) {碰后\\$(U_j,e^jw)$};
+  \draw[force] (0,.15)--(0,2.65) node[above] {$J_{N,j}$};
+  \draw[force] (-.15,-.45)--(-1.7,-.45) node[midway,below] {$J_{t,j}\leq\mu J_{N,j}$};
+  \node[align=center] at (0,-1.8) {水平速度只减至零\\$U_j=\max\{U_{j-1}-\mu(1+e)e^{j-1}w,0\}$};
+ \end{scope}
+ \begin{scope}[xshift=7.4cm,y=.03cm,x=.85cm]
+  \draw[vec] (0,0)--(5,0) node[right] {$i$};
+  \draw[vec] (0,0)--(0,108) node[above] {$U_i/v_0$};
+  \foreach \i in {0,...,4}{
+   \pgfmathsetmacro{\uu}{100*(sqrt(3)/2-.45*(1-pow(.5,\i)))}
+   \fill[red] (\i,\uu) circle(2.1pt);
+   \pgfmathsetmacro{\vv}{100*max(.5-.9*sqrt(3)/2*(1-pow(.5,\i)),0)}
+   \fill[blue] (\i,\vv) circle(2.1pt);
+   \node[below=3pt] at (\i,0) {$\i$};
+  }
+  \draw[red,thick] (0,86.60254)--(1,64.10254)--(2,52.85254)--(3,47.22754)--(4,44.41504);
+  \draw[blue,thick] (0,50)--(1,11.02886)--(2,0)--(4.5,0);
+  \draw[guide] (0,41.60254)--(4.7,41.60254);
+  \node[red,above right] at (3,65) {$\alpha=30^\circ$};
+  \node[blue,right] at (2,15) {$\alpha=60^\circ$};
+  \node[right] at (4.7,41.60254) {$U_\infty/v_0$};
+  \node[left] at (0,100) {$1$};
+  \node[align=center] at (2.5,-35) {$e=1/2,\ \mu=3/10$\\点表示碰后状态，连线辅助读图};
+ \end{scope}
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,82 @@
+\documentclass[multi=tikzpicture,border=8pt]{standalone}
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath,amssymb}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc,patterns}
+\definecolor{blue}{HTML}{17365D}
+\definecolor{red}{HTML}{AC3931}
+\tikzset{every node/.style={font=\small},vec/.style={-{Stealth[length=3mm]},thick,blue},force/.style={-{Stealth[length=3mm]},very thick,red},dim/.style={|<->|,thin}}
+\begin{document}
+
+\begin{tikzpicture}[x={(1cm,0cm)},y={(.65cm,.4cm)},z={(0cm,1cm)}]
+\coordinate(A)at(0,0,0);\coordinate(B)at(4,0,0);\coordinate(C)at(4,1.2,0);\coordinate(D)at(0,1.2,0);
+\coordinate(E)at(0,0,1.8);\coordinate(F)at(4,0,1.8);\coordinate(G)at(4,1.2,1.8);\coordinate(H)at(0,1.2,1.8);
+\fill[blue!15](E)--(F)--(G)--(H)--cycle;
+\draw[thick](A)--(B)--(C)--(G)--(H)--(E)--cycle;
+\draw[thick](E)--(F)--(B) (F)--(G);
+\draw[dashed](A)--(D)--(C) (D)--(H);
+\draw[thick](B)--(6,0,.5)--(6,0,1.3)--(F);
+\draw[thick](G)--(6,1.2,1.3)--(6,0,1.3);
+\draw[thick](C)--(6,1.2,.5)--(6,0,.5);
+\draw[vec](-1.5,.6,.9)--(-.1,.6,.9)node[midway,above]{$v_1,p_1$};
+\draw[vec](6.2,.6,.9)--(7.5,.6,.9)node[midway,above]{$v_2,p_2$};
+\draw[force](2,.6,.2)--(2,.6,2.7)node[above]{$I$};
+\draw[vec](2,.4,.9)--(2,-1.4,.9)node[below left]{$B$};
+\draw[dim](0,0,-.5)--node[below]{$a$}(4,0,-.5);
+\draw[dim](-.5,0,0)--node[left]{$c$}(-.5,0,1.8);
+\draw[dim](0,0,2.2)--node[above]{$b$}(0,1.2,2.2);
+\node[above]at(-.4,1.2,2.5){上电极：$ab$};
+\node[below]at(6,.6,-1){出口面积$S_2$};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\fill[blue!8](-.8,-.8)rectangle(3.3,2.7);
+\draw[vec](0,0)--(3,0)node[right]{$\boldsymbol v=v_1\boldsymbol e_x$};
+\draw[force](0,0)--(0,2.3)node[above]{$\boldsymbol j=j\boldsymbol e_z$};
+\draw[vec](0,0)--(-1.6,-1)node[below left]{$\boldsymbol B=-B\boldsymbol e_y$};
+\draw[force](.2,1)--(2.7,1)node[above,midway]{$\boldsymbol j\times\boldsymbol B$};
+\draw[red,dashed,->](3.3,2.1)--(3.3,.45);\node[right]at(3.45,1.5){$\boldsymbol v\times\boldsymbol B$};
+\node[below]at(.7,-1.8){体力向右，运动项向下，与电流方向相反};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\draw[thick](0,0)--(0,2)--(2,2) (3,2)--(5,2)--(5,0)--(0,0);
+\draw[thick](2,1.7)rectangle(3,2.3);
+\node[above]at(2.5,2.4){$R_w=\rho_m c/(ab)$};
+\draw[white,line width=9pt](0,.7)--(0,1.3);
+\draw[very thick](-.3,1.2)--(.3,1.2);
+\draw[very thick](-.15,.8)--(.15,.8);
+\node[left]at(-.4,1){$\mathcal E$};
+\draw[white,line width=9pt](5,.6)--(5,1.4);
+\draw[thick](5,1)circle(.4);
+\draw[vec](5,1.3)--(5,.7);
+\node[right]at(5.5,1){反电动势$Bcv_1$};
+\draw[force](.6,3.35)--(1.6,3.35)node[midway,above]{$I$};
+\node[below]at(2.5,-.6){$\mathcal E=IR_w+Bcv_1$};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\draw[vec](0,0)--(7.4,0)node[right]{$x$};
+\draw[vec](0,0)--(0,3.7)node[above]{$p+\rho v^2/2$};
+\fill[blue!8](1,0)rectangle(4,3.2);
+\draw[blue,very thick](.2,1.3)--(1,1.3)--(4,2.9)--(6.8,2.9);
+\draw[dashed](1,0)--(1,3.3) (4,0)--(4,3.3);
+\draw[dim](4.4,1.3)--node[right]{$IB/b$}(4.4,2.9);
+\node[below]at(1,-.15){入口};
+\node[below]at(4,-.15){工作区末端};
+\node[below]at(6.6,-.15){出口};
+\node[above]at(2.5,3.4){磁体力做功};
+\node[above]at(5.7,3.1){无黏收缩段};
+\node[below]at(3.5,-1){工作区速度$v_1$恒定，机械总压沿流线增加};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\node[draw,rounded corners,align=center,minimum width=2.8cm,minimum height=1.2cm](p)at(0,0){输入电功率\\$\mathcal EI$};
+\node[draw,rounded corners,align=center,minimum width=3cm,minimum height=1.2cm](j)at(5,1.4){焦耳热\\$I^2R_w$};
+\node[draw,rounded corners,align=center,minimum width=3cm,minimum height=1.2cm](m)at(5,-1.4){流体机械功率\\$IBcv_1$};
+\draw[force](p.east)--(j.west);
+\draw[vec](p.east)--(m.west);
+\node[below,align=center]at(2.5,-2.6){$IBcv_1=\mathcal Q\,\Delta p_B$\\
+$P_{\text{源}}=P_J+P_{\text{机}}$};
+\end{tikzpicture}
+\end{document}

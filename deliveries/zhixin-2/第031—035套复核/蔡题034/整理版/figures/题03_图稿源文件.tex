@@ -1,0 +1,66 @@
+\documentclass[tikz,border=5pt]{standalone}
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath}
+\usetikzlibrary{arrows.meta,calc}
+\definecolor{ink}{HTML}{243447}
+\definecolor{blue}{HTML}{2765A2}
+\definecolor{red}{HTML}{B74739}
+\tikzset{line cap=round,line join=round,
+vec/.style={thick,-{Latex[length=2mm]}},
+dim/.style={thin,{Latex[length=1.5mm]}-{Latex[length=1.5mm]}},
+guide/.style={gray,dashed}}
+\begin{document}
+\begin{tikzpicture}
+ \fill[blue!5](-.5,-2.6)rectangle(8.1,0);
+ \fill[gray!12](-.5,0)rectangle(8.1,.55);
+ \draw[ink,thick](-.5,0)--(8.1,0);
+ \node[above]at(.2,.1){岸};
+ \node[blue]at(.2,-.65){水};
+ \coordinate(A)at(.7,-2);
+ \coordinate(B)at(7,-2);
+ \draw[guide](A)--(B);
+ \foreach \p in {A,B}{\fill[ink](\p)circle(2.2pt)node[below]{$\p$};}
+ \draw[dim](.7,-2.7)--(7,-2.7)node[midway,fill=white]{$h$};
+ \draw[dim](7.55,-2)--(7.55,0)node[midway,right]{$d=\dfrac{\sqrt3}{2}l$};
+ \draw[red,vec](3.1,-.6)--(4.65,-.6)node[midway,above]{$u=v/3$};
+ \node[red]at(3.9,-1.15){仅第二问有水流};
+\end{tikzpicture}
+\begin{tikzpicture}
+ \begin{scope}
+  \coordinate(A)at(0,-2.4);
+  \coordinate(B)at(6.4,-2.4);
+  \coordinate(P)at(1.3,0);
+  \coordinate(Q)at(5.1,0);
+  \fill[blue!5](-.4,-2.9)rectangle(6.8,0);
+  \fill[gray!12](-.4,0)rectangle(6.8,.4);
+  \draw[ink,thick](-.4,0)--(6.8,0);
+  \draw[blue,vec](A)--(P);
+  \draw[red,vec](P)--(Q)node[midway,above=4pt]{$2v$};
+  \draw[blue,vec](Q)--(B);
+  \draw[guide](A)--(B);
+  \draw[guide](A)--(0,0);
+  \draw[guide](B)--(6.4,0);
+  \draw[dim](0,.75)--(1.3,.75)node[midway,above]{$x_1$};
+  \draw[dim](5.1,.75)--(6.4,.75)node[midway,above]{$x_2$};
+  \draw[dim](-.65,-2.4)--(-.65,0)node[midway,left]{$d$};
+  \foreach \p in {A,B}{\fill[ink](\p)circle(2pt)node[below]{$\p$};}
+  \fill[ink](P)circle(2pt)node[above left]{$P$};
+  \fill[ink](Q)circle(2pt)node[above right]{$Q$};
+  \node at(3.2,-3.35){$PQ=h-x_1-x_2$};
+ \end{scope}
+ \begin{scope}[xshift=8.1cm,yshift=-2.4cm]
+  \coordinate(O)at(0,0);
+  \coordinate(V)at(1.8,2.4);
+  \coordinate(W)at(2.8,2.4);
+  \draw[guide](O)--(1.8,0)--(V);
+  \draw[blue,vec](O)--(V)node[midway,above left]{$\boldsymbol v_{\text{水}}$};
+  \draw[red,vec](V)--(W)node[midway,above=4pt]{$\boldsymbol u$};
+  \draw[ink,vec](O)--(W);
+  \node[right]at(2.3,1.65){$\boldsymbol v_{\text{地}}$};
+  \node[below=3pt]at(.9,0){$3v/5$};
+  \node[right,fill=white,inner sep=1pt]at(1.8,.55){$4v/5$};
+  \fill[ink](O)circle(1.7pt);
+  \node[align=center]at(1.4,-1.45){水流：$v/3$ 向右\\地速分量：$(14v/15,\,4v/5)$};
+ \end{scope}
+\end{tikzpicture}
+\end{document}

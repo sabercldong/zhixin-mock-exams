@@ -1,0 +1,60 @@
+{
+  "set": 37,
+  "status": "complete",
+  "date": "2026-10-11",
+  "main_questions": 8,
+  "solved_variants": 32,
+  "new_solved_variants": 24,
+  "figures": 16,
+  "documents": [
+    {
+      "set": 37,
+      "version": "试卷",
+      "path": "蔡题037/整理版/output/第037套_试卷版.pdf",
+      "pages": 9,
+      "sha256": "642d894669e28ef35b65eece2abdf86bba00bd5ec24cda5260ca83a77d13cd80",
+      "qpdf_passed": true,
+      "bounds_passed": true,
+      "logs_passed": true,
+      "footer_sequence_passed": true
+    },
+    {
+      "set": 37,
+      "version": "学生详解",
+      "path": "蔡题037/整理版/output/第037套_学生详解版.pdf",
+      "pages": 60,
+      "sha256": "981e610b42a862a1cc9388b2ff07f23e19c80ff684f97d48d3228d49b88a0c38",
+      "qpdf_passed": true,
+      "bounds_passed": true,
+      "logs_passed": true,
+      "footer_sequence_passed": true
+    },
+    {
+      "set": 37,
+      "version": "教师备课",
+      "path": "蔡题037/整理版/output/第037套_教师备课版.pdf",
+      "pages": 80,
+      "sha256": "577ab4ceb9f6c3c4fd1e4f8a980c78c472527ed545f3f4ac1cb72c3944e084b5",
+      "qpdf_passed": true,
+      "bounds_passed": true,
+      "logs_passed": true,
+      "footer_sequence_passed": true
+    }
+  ],
+  "current_draft_sha256": {
+    "drafts/question-01.md": "9190d5b592b5c5e8ebd38fa01ec54b665b9447eff33d9b7413d578c36919e793",
+    "drafts/question-02.md": "7793659ec27ee4e311e990bf0edb91184903292497e446fce23d300bf0b2b865",
+    "drafts/question-03.md": "2bdfd493c5bce1aa273f3287dfa92340df56f952940b1d15c7965ccd6491734f",
+    "drafts/question-04.md": "0f59e5dcea04e5748cf4972634b30ae36be207faec5f02ad908a9dd026002fab",
+    "drafts/question-05.md": "fcef47c309ca52169211bf7e066103002aba245c2d7b5e0f43ca8d4ba4403b1f",
+    "drafts/question-06.md": "32ebe7dc8e57f4b581584d24155c787e7308af385d375143ee6324335835aa55",
+    "drafts/question-07.md": "38f7841facd3193d5990b573c0ea8d0a7e303657f9f24d70a2741867a2453758",
+    "drafts/question-08.md": "e6fb88e50052df7de68a2862daa5b7f2280e2cabdfc5943d7494dbc43d986627"
+  },
+  "technical_passed": true,
+  "visual_passed": true,
+  "physics_passed": true,
+  "relocation_passed": true,
+  "snapshot_exactly_matches_current_sources": true,
+  "scope": "本轮只完成036、037；038—040已交接"
+}

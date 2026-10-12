@@ -1,0 +1,275 @@
+[
+  {
+    "set": 21,
+    "question": 1,
+    "added_count": 2,
+    "content": "（3）测得最低位置支持力$N_{\\rm b}=2mg$，反求$r/R$及最小静摩擦因数，并检查接触条件。\n\n解：记$k=r/R,n=N_{\\rm b}/(mg)$。由竖直动力学$n-1=4k^2/(1-k)^2$，取符合$0<k<1$的根，得\n$$k=\\frac{\\sqrt{n-1}}{2+\\sqrt{n-1}}.$$\n$n=2$给$k=1/3$、$\\mu_{\\min}=1/(2\\sqrt2)$，且$k<7/9$，允许持续接触。主模型的$k\\le7/9$还意味着$N_{\\rm b}\\le50mg$；超过此界不能再按全过程接触解释。反演沿用轻盘及主问释放能量，增加圆盘惯量后需重新求支持力。\n\n\n（4）在$\\theta(0)=\\epsilon>0$处静止释放，求初始小角度运动，以及到固定小角度$\\eta$的等待时间。\n\n解：在$\\epsilon\\le\\theta\\le\\eta\\ll1$时，有效惯量$m(R+r)^2$、重力力矩$mgr\\theta$给\n$$\n\\ddot\\theta=\\sigma^2\\theta,\\quad \\sigma=\\frac{\\sqrt{gr}}{R+r},\\quad\n\\theta\\simeq\\epsilon\\cosh(\\sigma t).\n$$\n因此$t_\\eta\\simeq\\sigma^{-1}\\operatorname{arcosh}(\\eta/\\epsilon)$；$\\epsilon\\ll\\eta$时为$\\sigma^{-1}\\ln(2\\eta/\\epsilon)$。精确最高点静止初态不会自行启动，非零扰动可启动，但极限等待时间发散。线性近似误差随$\\eta^2$减小，大角度阶段仍需完整方程。\n",
+    "source_sha256": "69d02cf597420dfaceb228ae2eac32a51797cf8a3c268d9c98f3ff28dd40c63c"
+  },
+  {
+    "set": 21,
+    "question": 2,
+    "added_count": 1,
+    "content": "变式四：取$\\lambda=5/4$，碰撞高度$z=y/h$在$(0,1)$均匀分布。求落距不超过$dh$的概率，其中$0\\le d\\le5(\\sqrt5-1)/8$。\n\n解：落距函数为$F(z)=-z+2\\sqrt{z(5/4-z)}$。方程$F(z)=d$的两根满足\n$$\n5z^2+(2d-5)z+d^2=0,\\qquad\nz_\\pm=\\frac{5-2d\\pm\\sqrt{25-20d-16d^2}}{10}.\n$$\n两根都满足未平方式。$F$先增后减，所求两端区间长度为\n$$\\mathbb P(\\Delta\\le dh)=1-\\frac{\\sqrt{25-20d-16d^2}}5.$$\n$d=0$时为零，最大落距处为一；近坡脚有$\\mathbb P=2d/5+O(d^2)$。均匀高度分布是本变式新增条件，不能由原问自动推得。\n",
+    "source_sha256": "a6fc33b146063991635344c24449900e80824b106a716cb73780544562b6290c"
+  },
+  {
+    "set": 21,
+    "question": 3,
+    "added_count": 1,
+    "content": "变式四：初始每棱电阻为$r_0$，要求有限级网络端口电阻与无限级极限的相对偏差不超过$1\\%$，至少需几次递归？\n\n解：四端等效给$R_{n+1}-r_0/3=(R_n-r_0/3)/2$，初值$R_0=r_0/2$。所以\n$$R_n-\\frac{r_0}3=\\frac{r_0}{6\\,2^n},\\qquad\n\\frac{R_n-R_\\infty}{R_\\infty}=\\frac1{2^{n+1}}.$$\n要求$2^{n+1}\\ge100$，最小整数$n=6$。第五次为$1.5625\\%$，第六次为$0.78125\\%$。该界仅控制端口电阻；并不保证每条内部支路电流都有相同相对误差。\n",
+    "source_sha256": "859d8a378ff76af4eeaafe3309125b528d5265723997a9ef53cab455451b9cc0"
+  },
+  {
+    "set": 21,
+    "question": 4,
+    "added_count": 1,
+    "content": "变式四：取消杆和平面约束，保留绕轴角动量，对同一圆轨道同时考察径向及轴向小扰动，求耦合模态。\n\n解：圆轨道的$\\mathcal L=ma^2\\Omega=mav$。有效势为\n$$U_{\\rm eff}=\\frac{\\mathcal L^2}{2ms^2}-\\frac{Cz}{(s^2+z^2)^{3/2}}.$$\n在$s=a,z=a/\\sqrt2$处求二阶导数，利用圆轨道条件，得到\n$$\n\\frac1m\\operatorname{Hess}U_{\\rm eff}\n=\\Omega^2\\begin{pmatrix}2/3&-2\\sqrt2/3\\\\-2\\sqrt2/3&4/3\\end{pmatrix}.\n$$\n特征值为$0,2\\Omega^2$，故一模频率$\\sqrt2\\Omega$，另一模为零。零模满足$\\delta z=\\delta s/\\sqrt2$，沿同角动量的相似圆轨道族移动。两个受约束周期为实数，不代表自由系统所有方向都有正刚度；零模没有有限简谐周期。\n",
+    "source_sha256": "8b2b2283a01512352b1dbe49390826e4d67a9639a6b95907d3137e37a923a634"
+  },
+  {
+    "set": 21,
+    "question": 5,
+    "added_count": 1,
+    "content": "变式四：导轨有限长，求换侧前位移$s_c$及换侧后经过$t'$的总位移，供判断出轨时速度。\n\n解：沿用$a=g(\\sin\\theta-\\mu_0\\cos\\theta)>0$、$b=\\mu_0qB/m$。逐段积分速度：\n$$\ns_c=\\frac a{b^2}(e^{bt_c}-1-bt_c),\\qquad\ns(t_c+t')=s_c+v_\\infty t'\n+\\frac{v_c-v_\\infty}{b}(1-e^{-bt'}).\n$$\n轨长小于$s_c$时在换侧前出轨；否则由第二式求出轨时间，再代入速度。两式在换侧处位移和速度连续。能量式$\\frac d{dt}(mv^2/2)=mg\\sin\\theta\\,v-\\mu_0|N|v$说明磁力不做功。这里只处理在轨段，离轨后不能继续套约束方程。\n",
+    "source_sha256": "0586ba944fd3be522aabfb0cecab219f05aea3bb82bbc072c5a7be9663512fc0"
+  },
+  {
+    "set": 21,
+    "question": 6,
+    "added_count": 1,
+    "content": "变式四：在固定高度将气囊短时封闭并固定体积，气体摩尔数$n$。日照及主动输热保持原稳态值，求微小温度扰动的衰减时间。\n\n解：外温固定，热容量$nC_V$，散热为$4\\pi r^2\\kappa(T-T_h)$。扣除稳态平衡，\n$$\nnC_V\\frac{d\\,\\delta T}{dt}=-4\\pi r^2\\kappa\\,\\delta T,\\qquad\n\\delta T=\\delta T(0)e^{-t/\\tau_T},\\quad\n\\tau_T=\\frac{nC_V}{4\\pi r^2\\kappa}.\n$$\n正$\\kappa$使温度平衡稳定。同密度时$n\\propto r^3$，故$\\tau_T\\propto r$。若要求内压实时等于外压、气体持续进出，应另计质量变化和出口焓，不能再用封闭定容方程。\n",
+    "source_sha256": "db3ede3723e2a20c21104c41157eb2d031cdf56f7f3963fcfc4938e4ecc35a26"
+  },
+  {
+    "set": 21,
+    "question": 7,
+    "added_count": 1,
+    "content": "变式四：安装间距为$D_0+\\delta D$，求像相对原光源的轴向偏移及横向倍率。\n\n解：令$k=f_1/f_2$，四镜矩阵的$b=k^2D-2k(f_1+f_2)$。像到末镜的有向距离$v=-u_0-b$，全局坐标$x_{\\rm im}=2(f_1+f_2)+D+v$。因此\n$$\\delta x_{\\rm im}=(1-k^2)\\delta D,\\qquad M=1.$$\n$k=2$时偏移为$-3\\delta D$。末镜本身也随间距误差移动，单用$\\delta v=-k^2\\delta D$会漏掉这一项。结果采用固定焦距、薄透镜及近轴模型，孔径截光仍须另查。\n",
+    "source_sha256": "606e08eb0d81472bc428157576e33f90334363ea07dfc9c6ab0b2ddbaa18fdc5"
+  },
+  {
+    "set": 22,
+    "question": 1,
+    "added_count": 2,
+    "content": "（3）测得线性周期$T=2\\pi\\sqrt{p/g}$，反求稳定区内的$h$。\n\n解：令$\\zeta=h/p$，周期式给$\\zeta^2+\\zeta-1=0$。稳定区$0<\\zeta<1$只接受\n$$h=\\frac{\\sqrt5-1}{2}p.$$\n一般测量可记$\\Lambda=gT^2/(4\\pi^2p)$，得$\\zeta=(\\sqrt{\\Lambda^2+4\\Lambda}-\\Lambda)/2$。$\\zeta^2/(1-\\zeta)$严格递增，反演唯一；周期很大意味着接近临界高度，不能按普通有限刚度处理。\n\n\n（4）内部质量重新分布，质心位置不变，但绕质心惯量为$I_C>0$，求新周期。取$h=p/2,I_C=mp^2/4$核算。\n\n解：小角度质心速率为$h|\\dot\\alpha|$，动能为$(mh^2+I_C)\\dot\\alpha^2/2$，势能增量$mg(p-h)\\alpha^2/2$，所以\n$$T=2\\pi\\sqrt{\\frac{mh^2+I_C}{mg(p-h)}}.$$\n给定参数得$T=2\\pi\\sqrt{p/g}$，为原周期的$\\sqrt2$倍。惯量改变时间尺度，不改变势能的稳定符号；$h=p$仍需高阶分析。这是新的质量分布，不能同时声称质心惯量为零。\n",
+    "source_sha256": "5006231051dff5537967b4a81749bc65e7d5e0837473034af563bb6c20938f87"
+  },
+  {
+    "set": 22,
+    "question": 2,
+    "added_count": 2,
+    "content": "（3）在规定逐个碰撞和远段摩擦近似下，求低速持续加速对恢复系数的门槛。\n\n解：令$A=K/(4mr^2)$、$J=2\\mu gl$、$q_e=[(1+e)/2]^8$，递推增量$D=q_eA-A/9-J$。正增益要求\n$$q_e>\\frac19+\\frac JA,\\qquad\ne>2\\left(\\frac19+\\frac JA\\right)^{1/8}-1.$$\n右端不小于一时，没有允许的$e\\le1$。无摩擦时门槛为$2\\,9^{-1/8}-1$。还需各级球能脱离磁场并通过远段，且忽略尾部再碰撞的理想化有效；这并非真实装置全部启动条件。\n\n\n（4）$e=0.98$，要求速度平方距固定点的偏差缩至初始偏差的$5\\%$以内，至少几级？\n\n解：$D>0$时$y_*=D/(1-q_e)$，相减给$y_N-y_*=q_e^N(y_0-y_*)$。于是\n$$N\\ge\\frac{\\ln0.05}{8\\ln0.99},\\qquad N_{\\min}=38.$$\n第37级比例仍大于$0.05$，第38级小于它。速度误差需再开平方，不能直接也称为$5\\%$。初态若恰在固定点，无需此收敛级数。\n",
+    "source_sha256": "adaebec680f4b0dfad9c355c8c1b4546cb0f3e82c95b19f9a018e245535a6ec3"
+  },
+  {
+    "set": 22,
+    "question": 3,
+    "added_count": 2,
+    "content": "（3）入射粒子质量$m_1$，静止靶质量$m_2$，仍为弹性碰撞，判断两个非零出射速度夹角。\n\n解：记出射动量$\\boldsymbol p_1,\\boldsymbol p_2$。动量与能量分别给$p_0^2=|\\boldsymbol p_1+\\boldsymbol p_2|^2$、$p_0^2=p_1^2+(m_1/m_2)p_2^2$，相减得\n$$\\boldsymbol v_1\\cdot\\boldsymbol v_2\n=\\frac{m_1-m_2}{2m_1}v_2^2.$$\n$m_1>m_2$为锐角，$m_1<m_2$为钝角，等质量为直角。任一速度为零时方向未定义。该判定要求靶初始静止，不能直接用于原问的任意双运动初态。\n\n\n（4）同向初速度$3u,u$，出射速率$\\sqrt7u,\\sqrt3u$，求质心系散射方向及实验室夹角。\n\n解：$V=2u,w=u$，由$s_1^2-s_2^2=4Vw\\cos\\chi$得$\\cos\\chi=1/2$。镜面对称两支$\\chi=\\pm\\pi/3$速率相同。两实验室速度内积$V^2-w^2=3u^2$，所以\n$$\\cos\\beta=3/\\sqrt{21}=\\sqrt{3/7}.$$\n速率确定夹角大小，但不能确定散射位于入射轴哪一侧，还需横向方向测量。\n",
+    "source_sha256": "e548448818384f7a4e3275ce2cf3522a0ec000428534522df646476d0786a1a6"
+  },
+  {
+    "set": 22,
+    "question": 4,
+    "added_count": 2,
+    "content": "（3）电流改为$i_a\\cos\\Omega t$，仍用题设集总方程，求稳态磁场及相位。\n\n解：设$B=b_c\\cos\\Omega t+b_s\\sin\\Omega t$，代入$\\dot B+B/\\tau=(Ni_a/D_m\\tau)\\cos\\Omega t$比较系数，得\n$$B=\\frac{Ni_a}{D_m\\sqrt{1+\\Omega^2\\tau^2}}\\cos(\\Omega t-\\varphi),\n\\quad\\varphi=\\arctan(\\Omega\\tau).$$\n低频趋于静态幅度，高频按$1/\\Omega$下降；$E_\\phi=-s\\dot B/2$。若高频已使位移电流或空间扩散重要，不能再把此集总响应当成完整场解。\n\n\n（4）计算零初场恒流建立过程的总焦耳热，并检查均匀场近似的能量收支。\n\n解：积分圆盘$E_\\phi^2$得$P_J=\\pi\\sigma Ta^4\\dot B^2/8$。再积分指数建立过程，\n$$Q_J=\\frac{\\pi\\sigma Ta^4B_\\infty^2}{16\\tau}\n=\\frac{\\pi a^2D_mB_\\infty^2}{4}.$$\n均匀场储能$U_\\infty=\\pi a^2D_mB_\\infty^2/2$，故$Q_J=U_\\infty/2$。若各匝磁通也取$\\pi a^2B$，恒流电源供能$W_s=Ni\\pi a^2B_\\infty=2U_\\infty$，剩余$W_s-U_\\infty-Q_J=U_\\infty/2\\ne0$。缺口说明这组均匀集总近似不能同时精确描述空间涡流和能量收支，应回到自洽场模型，不能凭空补热量。\n",
+    "source_sha256": "89c10f0c8a333f1bb0840c88b9a31b0b7e4924faad133517509f32b14cec2f05"
+  },
+  {
+    "set": 22,
+    "question": 5,
+    "added_count": 2,
+    "content": "（3）撤源后磁能降至一半需多久？此时电流和已释放热量是多少？\n\n解：$U=\\mathcal LI_0^2e^{-2t/\\tau_c}/2$，因此\n$$t_{1/2}=\\frac{\\tau_c}2\\ln2,\\quad I=I_0/\\sqrt2,\\quad Q=U_0/2.$$\n直接积分$\\mathcal RI^2$也给同一热量，使用$\\tau_c=\\mathcal L/\\mathcal R$。电流减半需$\\tau_c\\ln2$，与能量减半时间相差一倍。\n\n\n（4）外部控制电阻率为$\\rho(t)=\\rho_0(1+t/t_\\rho)$，几何和磁导率不变，求电流及累计热量。\n\n解：令$\\tau_0=\\mu_0rd/(2\\rho_0)$，分离变量积分$\\dot I=-(1+t/t_\\rho)I/\\tau_0$，得\n$$I=I_0e^{-t/\\tau_0-t^2/(2\\tau_0t_\\rho)},\\quad\nQ(0,t)=\\frac{\\mathcal L}{2}[I_0^2-I(t)^2].$$\n第二式来自$\\dot U=-\\mathcal R(t)I^2$，适用于随时间变化的正电阻。这里规定$\\rho(t)$，未假设焦耳热自动产生该电阻率变化。\n",
+    "source_sha256": "674f9147f3fd0a80ad4f0cbfa43d270172edc1c7a4be9f9a2f1bcd6b2a2d0bf3"
+  },
+  {
+    "set": 22,
+    "question": 6,
+    "added_count": 2,
+    "content": "（3）相同圆轨道方向各向同性。已知发生凌日，采用直线弦近似，求持续时间超过中央凌日时间$q$倍的概率。\n\n解：各向同性使倾角余弦均匀，条件冲击参数$b$在$[0,R_\\Sigma]$均匀，其中$R_\\Sigma=r_C+r_P$。$T=2\\sqrt{R_\\Sigma^2-b^2}/v_P$，$T_{\\max}=2R_\\Sigma/v_P$，所以\n$$\\mathbb P(T\\ge qT_{\\max}\\mid\\text{凌日})=\\sqrt{1-q^2},\\quad\n\\langle T\\rangle=\\frac\\pi4T_{\\max}.$$\n平均值来自四分之一单位圆面积。结果未计探测选择效应，亦不把原估值当成精确自洽数据。\n\n\n（4）距离、辐照度、温度的独立相对标准差为$1\\%,4\\%,1\\%$，密度与凌日深度视为已知，求半径和行星质量误差。\n\n解：$r_C=l\\sqrt{S_C/(\\sigma T_C^4)}$给对数微分$\\delta r_C/r_C=\\delta l/l+\\delta S_C/(2S_C)-2\\delta T_C/T_C$。独立平方相加：\n$$\\sigma_{r_C}/r_C=\\sqrt{0.01^2+0.02^2+0.02^2}=3\\%.$$\n$r_P/r_C$固定，行星半径同为$3\\%$；$M_P\\propto r_P^3$，质量一阶误差$9\\%$。相关误差须加协方差，不能用随机误差传播掩盖输入估值的系统性差异。\n",
+    "source_sha256": "0fab1765ba84014405abe2d9fde09ed05f89ee1a1df98750e51b8a9a7c521407"
+  },
+  {
+    "set": 22,
+    "question": 7,
+    "added_count": 2,
+    "content": "（3）最终反射像高与直接像高之比为$-3/4$，反求折射率及物像位置。\n\n解：$y_2/h_1=-n/2$给$n=3/2$，代入成像关系，\n$$x_0=2R/5,\\quad y_0=4h_1/5,\\quad x_2=-3R/8,\\quad y_2=-3h_1/4.$$\n总倍率$-15/16$与$y_2/y_0$一致。负号须保留以核对倒像；结果限于薄壁、近轴及同一物点两路径。\n\n\n（4）令液体与外界折射率匹配$n=1$，保留左镜，检验一般成像式。\n\n解：直接界面不偏折，物点$x_0=R/2,y_0=h_1$，距左镜顶点$3R/2$。镜焦距$R/2$，像距$3R/4$，倍率$-1/2$，故\n$$x_2=-R/4,\\qquad y_2=-h_1/2.$$\n一般式$x_2=-nR/4,y_2=-nh_1/2$在$n=1$完全一致。这是折射率匹配极限，不能把实际水的折射率改为一，也不能将球心当作镜焦点。\n",
+    "source_sha256": "44baf295177e7e66f04bdae1db3038a3eed6eb5445ddff6c44df50c5f72a67dc"
+  },
+  {
+    "set": 22,
+    "question": 8,
+    "added_count": 2,
+    "content": "（3）采用硬壁精确Airy定态，求平均高度、势能与动能。\n\n解：固定量子数的$E_n=mg\\ell_g a_{n+1}\\propto g^{2/3}$。参数微分定理$dE_n/dg=m\\langle y\\rangle$给\n$$\\langle y\\rangle=\\frac{2E_n}{3mg},\\quad\n\\langle V\\rangle=\\frac{2E_n}3,\\quad \\langle K\\rangle=\\frac{E_n}3.$$\n平均高度是经典转向高度的$2/3$，不能互换。壁面定义域随$g$不变且$\\psi(0)=0$允许上述微分；定态概率分布不代表实际经典跳跃轨道。\n\n\n（4）求精确基态到第一激发态能隙频率，并与基态转向高度对应的经典弹跳频率比较。\n\n解：正Airy零点$a_1=2.3381074105,a_2=4.0879494441$，$\\nu_{10}=mg\\ell_g(a_2-a_1)/h$，经典频率$f_{\\rm cl}=g\\sqrt{m/(2E_0)}/2$。利用$\\ell_g^3=\\hbar^2/(2m^2g)$，\n$$\\frac{\\nu_{10}}{f_{\\rm cl}(E_0)}=\\frac{(a_2-a_1)\\sqrt{a_1}}{\\pi}<1.$$\n只有高能级才渐近出现能隙与经典频率的一致。该频率只是能隙标度，观测跃迁还需激励机制及相应选择规则。\n",
+    "source_sha256": "2df582fcd98c67303f0c6523dad55fca5cb05fa75d6e725775ce7bbf4875cfe2"
+  },
+  {
+    "set": 23,
+    "question": 1,
+    "added_count": 2,
+    "content": "（3）仍采用相同各向同性切向刚度，但A腿静摩擦上限为$2f_s$，B、C腿为$f_s$。若力作用于质心投影处，求临界外力。\n\n解：$\\rho=0$时无外力矩，三腿位移相同，因此$\\mathbf f_i=-\\mathbf F/3$。B、C两腿先达到上限，$F_{\\rm cr}=3f_s$。不能把三个上限相加成$4f_s$，因为给定刚度决定了载荷分配。一般作用点的结果为\n$$F_{\\rm cr}=\\min_i\\frac{3f_{s,i}}{\\sqrt{1+s^2+2s\\cos(\\theta-\\phi_i)}},\\qquad s=\\rho/l.$$\n上限只限制可用反力，不替代决定反力的刚度条件。\n\n\n（4）在主问外力之外另施加逆时针力偶$M_C=\\rho F$，抵消原外力的顺时针力矩。求此模型的临界力。\n\n解：合外力矩为零，等切向刚度模型的转动位移为零，三腿只作相同平移，故$\\mathbf f_i=-\\mathbf F/3$，各腿上限相同时$F_{\\rm cr}=3f_s$，与$\\rho,\\theta$无关。三条反力的合力为$-\\mathbf F$，关于质心的力矩因$\\sum_i\\mathbf r_i=0$而为零。额外力偶必须由独立装置施加；若仍只有原单一外力，不能删去其力矩。\n",
+    "source_sha256": "faf12495e308b2e1fda34a0f05bed8551a16f0e377abca16d451eaeac5d6352e"
+  },
+  {
+    "set": 23,
+    "question": 2,
+    "added_count": 1,
+    "content": "变式四：粒子在弱场端的速度方向各向同性，强弱场之比为$M>1$，求两端损失锥中的总比例。\n\n解：绝热磁矩守恒给临界俯仰角$\\sin^2\\alpha_c=1/M$。速度方向均匀分布在球面上，每个锥占$(1-\\cos\\alpha_c)/2$，两个锥合计\n$$P_{\\rm esc}=1-\\sqrt{1-\\frac1M},\\qquad P_{\\rm trapped}=\\sqrt{1-\\frac1M}.$$\n$M=4$时逃逸比例为$1-\\sqrt3/2$。临界方向在连续角分布中测度为零，仍应按原问的端点运动单独解释。各向同性是本变式的初始统计条件；单个粒子的逃逸由其俯仰角决定。\n",
+    "source_sha256": "143da154b2e3b49cfb11052db92539c620521a056279d03daba6c489a01413e6"
+  },
+  {
+    "set": 23,
+    "question": 3,
+    "added_count": 2,
+    "content": "（3）异号电荷取$B=B_0(1+\\epsilon)$，$0<\\epsilon\\ll1$，求最近间距对磁场变化的敏感性。\n\n解：由$d_{\\min}/L=[1+\\sqrt{1-(B_0/B)^2}]/2$展开，\n$$\\frac{d_{\\min}}L=\\frac12+\\sqrt{\\frac{\\epsilon}2}+O(\\epsilon^{3/2}),\\qquad\n\\frac{d d_{\\min}}{dB}=\\frac{LB_0^2}{2B^3\\sqrt{1-B_0^2/B^2}}.$$\n导数在临界点右侧发散，故线性误差传播不能跨过$B=B_0$。阈值处双根对应无限时间逼近，不能把$d=L/2$当成有限时刻反弹点；质心运动也没有因此停止。\n\n\n（4）求强磁场下同号电荷最大间距的增量，以及异号电荷最近间距的减量。\n\n解：同号方程$B^2L(r-L)(r+L)^2=16Km r$，令$r=L+\\Delta$，保留最低阶得\n$$\\Delta=\\frac{4Km}{B^2L^2}+O(B^{-4}).$$\n异号公式展开得$L-d_{\\min}=LB_0^2/(4B^2)+O(B^{-4})$；代入$B_0^2=16Km/L^3$，两者首项相同。这里$K$沿用原问的相互作用常数，不能将其再乘一次电荷平方。展开要求上述增减量远小于$L$。\n",
+    "source_sha256": "5a87e25b9e37b3bf61d6b211ef144750c5a026efff99a70b9fcabcd633d6afa6"
+  },
+  {
+    "set": 23,
+    "question": 4,
+    "added_count": 2,
+    "content": "（3）求日心霍曼转移的飞行时间，并确定出发时水星应在何处，才能在转移终点会合。\n\n解：转移半长轴$a_T=(R_E+R_M)/2$，从地球轨道远日点到水星轨道近日点需半个周期，\n$$t_f=\\pi\\sqrt{\\frac{a_T^3}{GM_S}}.$$\n令地球出发方位为零，转移到达方位为$\\pi$，水星角速度$\\omega_M=\\sqrt{GM_S/R_M^3}$，则其初始相位应满足\n$$\\phi_M(0)=\\pi-\\omega_Mt_f\\pmod{2\\pi}.$$\n按主问数值$t_f$约$9.14\\times10^6\\ {\\rm s}$，约106天。公式采用共面圆轨道及瞬时脉冲；行星近旁的拼接段另占时间时，应相应修正会合相位。\n\n\n（4）总速度增量仍为$24019.94241\\ {\\rm m/s}$，初末质量比限制为100。求所需排气速度下限，并估计排气速度误差的影响。\n\n解：理想火箭方程$\\mathcal R=\\exp(\\Delta v_{\\rm tot}/u)$给\n$$u\\ge\\frac{\\Delta v_{\\rm tot}}{\\ln100}\\simeq5.216\\times10^3\\ {\\rm m/s}.$$\n在固定速度需求下，$\\delta\\ln\\mathcal R=-(\\Delta v_{\\rm tot}/u^2)\\delta u$。若$u=3000\\ {\\rm m/s}$且增加$1\\%$，一阶预测质量比降低约$8.0\\%$，精确值由指数式计算。此下限未加入结构质量、分级及非瞬时燃烧损失。\n",
+    "source_sha256": "bd3194548f0059b6890058f5fb4ddd72c9c7f20e3e2c433a32983d81be779916"
+  },
+  {
+    "set": 23,
+    "question": 5,
+    "added_count": 2,
+    "content": "（3）线长固定为140 m，电流10 A，铜的电阻率$2\\times10^{-8}\\ \\Omega{\\cdot}{\\rm m}$、密度$8000\\ {\\rm kg/m^3}$。要求焦耳功率不超过10 W，求最少铜质量。\n\n解：截面积$A_w$下，$P=I^2\\rho_e\\ell/A_w$，故\n$$A_w\\ge2.8\\times10^{-5}\\ {\\rm m^2},\\qquad\nm_{\\rm Cu,min}=\\rho_m\\ell A_w=31.36\\ {\\rm kg}.$$\n圆线半径至少约2.99 mm。这里线长按给定值固定；若实际增加线径后绕组层数及平均匝长改变，还须重新计算$\\ell$。不计绝缘与引线，功率和质量的等号在相同最小截面积同时取得。\n\n\n（4）两气隙随衔铁向上位移$y$同时减为$d=d_0-y$，电流固定。若另装线性弹簧，求平衡点稳定所需刚度。\n\n解：磁路长度组合$\\Lambda=(L_t-2d)/\\mu_r+2d$，吸力\n$$F(y)=\\frac{A\\mu_0(NI)^2}{\\Lambda(y)^2},\\qquad\n\\frac{dF}{dy}=\\frac{4(1-1/\\mu_r)F}{\\Lambda}>0.$$\n在重力、弹簧与磁力平衡处，净力导数为$F'-k_s$，故稳定要求$k_s>F'$。主问参数给$F'\\approx3.02\\times10^7\\ {\\rm N/m}$，等号需高阶分析。气隙闭合会增强吸力；控制系统或弹簧的响应条件不能省略。\n",
+    "source_sha256": "f86c82c920244c76d955b3265ad7e078ccc15127822c00107ee2bf7105287417"
+  },
+  {
+    "set": 23,
+    "question": 6,
+    "added_count": 2,
+    "content": "（3）初始超压参数$\\alpha=1+\\epsilon$，$0<\\epsilon\\ll1$，求最大速度位置、首次停点及最大速度的最低阶近似。\n\n解：令无量纲高度$h=Sy/V_0$，速度峰值处$h_v=\\alpha^{1/\\gamma}-1\\simeq\\epsilon/\\gamma$。无量纲功\n$$\\mathcal W(h)=\\frac{\\alpha}{\\gamma-1}[1-(1+h)^{1-\\gamma}]-h\n=\\epsilon h-\\frac\\gamma2h^2+O(\\epsilon h^2+h^3).$$\n非零停点$h_H\\simeq2\\epsilon/\\gamma$，峰值功$\\epsilon^2/(2\\gamma)$，所以$v_{\\max}^2\\simeq gV_0\\epsilon^2/(S\\gamma)$。近阈值启动时位移是一阶小量，最大动能是二阶小量；负超压不能沿用向上启动解。\n\n\n（4）气缸有限长$L$，求活塞是否带正速度出缸，并写出出缸速度。\n\n解：记$h_L=SL/V_0$、$h_v=\\alpha^{1/\\gamma}-1$、$h_H$为$\\mathcal W$的正根。$h_L<h_v$时在持续加速段出缸；$h_v<h_L<h_H$时先达速度峰值再减速出缸。正速度出口要求\n$$0<h_L<h_H,\\qquad v_{\\rm exit}^2=\\frac{2gV_0}{S}\\mathcal W(h_L).$$\n$h_L=h_H$为零速度边界，$h_L>h_H$则到达出口前已停下。活塞脱离气缸后，气体边界与受力模型改变，不能继续使用该缸内公式。\n",
+    "source_sha256": "04c9bb592e9a330d9d9822d4f38dd8df26606093d20f8da5e9e3719a09d05446"
+  },
+  {
+    "set": 23,
+    "question": 7,
+    "added_count": 2,
+    "content": "（3）指定开口端修正模型$\\Delta L=\\chi a$，取$\\chi=0.6$、管半径$a=1$ cm。求修正后的基频。\n\n解：仍按一端闭一端开的理想声柱，等效长度$L_{\\rm eff}=L+\\Delta L=5.6$ cm，因此\n$$f_1=\\frac{330}{4(0.056)}\\simeq1473.2\\ {\\rm Hz}.$$\n相对未经修正的1650 Hz降低约$10.7\\%$。$\\chi=0.6$是本变式明确给定的模型参数，实际数值受管口形状及外部环境影响，原题未给这些条件时不能唯一补入。奇次谐波关系沿用同一等效长度近似。\n\n\n（4）温度从293.15 K变为313.15 K，管长固定，气体组成与比热比不变。求理想基频的变化。\n\n解：理想气体$c=\\sqrt{\\gamma R T/M}$，故\n$$f_1'=1650\\sqrt{\\frac{313.15}{293.15}}\\ {\\rm Hz}\\simeq1705.4\\ {\\rm Hz}.$$\n一阶相对变化为$\\delta f/f=\\delta T/(2T)$，应使用绝对温度。若管材热膨胀显著，还需加入$-\\delta L/L$；本问已固定几何长度，因而不包含这一项。\n",
+    "source_sha256": "02aeafe2d884ebec3bb1da55092729e42d0a5dafe9bef40b1356b580d31f0761"
+  },
+  {
+    "set": 23,
+    "question": 8,
+    "added_count": 1,
+    "content": "变式四：从静止开始沿恒定固有加速度$A>0$运动，求实验室系功率、功以及动能达到$mc^2$时的运动状态。\n\n解：$v=c\\tanh(A\\tau/c)$，实验室三维力为$mA$，所以\n$$P=mAc\\tanh(A\\tau/c),\\quad W=mc^2(\\gamma-1),\\quad P<mAc.$$\n$W=mc^2$对应$\\gamma=2$，得$v=\\sqrt3c/2$、$t=\\sqrt3c/A$、$\\tau=(c/A)\\operatorname{arcosh}2$，以及$x=c^2/A$。功率随速度增加但有有限上界；总功仍可无限增长，因为运动时间也持续增长。本问质量固定，不含燃料耗尽或辐射反作用。\n",
+    "source_sha256": "f71c05b6aa6fbf8f518e532b9812f93f08686be2c7f5976b795f9f2b1a15dcd2"
+  },
+  {
+    "set": 24,
+    "question": 1,
+    "added_count": 2,
+    "content": "（3）假设真实质点质量$m$被装置约束，跟随同向转动时的光点轨迹，求装置提供的合力、功率和关于B的角动量。\n\n解：光点关于B作半径$l$、角速度$2\\omega$的圆周运动，故\n$$\\mathbf F=-4m\\omega^2\\mathbf r,\\quad\nP=\\mathbf F\\cdot\\mathbf v=0,\\quad\nL_B=2ml^2\\omega,\\quad K=2ml^2\\omega^2.$$\n径向力只改变速度方向。光线交点本身没有质量，不能从其运动学直接推断真实受力；这里的力属于新增的跟随质点及约束装置。\n\n\n（4）反向转动时求第一次交点发散附近的速率，说明有限速度跟随的范围。\n\n解：$r=l/(1+2\\cos2\\omega t)$在$t_*=\\pi/(3\\omega)$首次发散。由分母一阶展开，\n$$r\\simeq\\frac{l}{2\\sqrt3\\omega(t_*-t)},\\qquad\n|\\mathbf v|\\simeq\\frac{l}{2\\sqrt3\\omega(t_*-t)^2}.$$\n角向速度项为$r\\omega$，阶数低于径向项，故不改变上述主项。真实人员或装置只有有限速度，无法跟随到奇点；发散的是理想延长直线的交点，原光源与转台的速度保持有限。\n",
+    "source_sha256": "8efcfe9a3e998e456b22a2d142655f6c843b97d4f42e90eb96fbb94e0f379dc0"
+  },
+  {
+    "set": 24,
+    "question": 2,
+    "added_count": 2,
+    "content": "（3）均匀密度的线性变截面杆上下翻转，端面面积$a<b$、长度$L$。只计自重伸长，比较小端向上与大端向上的结果。\n\n解：从上端向下取坐标$s$，截面受力为$\\rho g\\int_s^L A(u)\\,du$，伸长为$\\int_0^L F(s)/(EA(s))\\,ds$。积分得\n$$\n\\Delta_d=\\frac{\\rho gL^2}{2E(b-a)^2}\\left[b^2\\ln\\frac ba-\\frac{b^2-a^2}2\\right],\\quad\n\\Delta_u=\\frac{\\rho gL^2}{2E(b-a)^2}\\left[-a^2\\ln\\frac ba+\\frac{b^2-a^2}2\\right].\n$$\n$b=2a$时$\\Delta_d/\\Delta_u=(4\\ln2-3/2)/(3/2-\\ln2)>1$。小端置顶须承受下方更多重量，伸长较大。只适用于小应变、同一弹性模量且不加端部载荷的杆。\n\n\n（4）杆长、材料和总体积固定，证明均匀截面在端部轴向拉力下刚度最大，并求$b=2a$的线性变截面杆相对刚度。\n\n解：柔度$C=E^{-1}\\int_0^L ds/A(s)$。柯西不等式给$(\\int A\\,ds)(\\int ds/A)\\ge L^2$，从而$k\\le E\\bar A/L$，仅截面恒定取等号。线性变截面杆$k=E(b-a)/[L\\ln(b/a)]$；$b=2a$时\n$$\\frac{k}{k_{\\rm uniform}}=\\frac{2}{3\\ln2}<1.$$\n此比较只针对给定端部力，不含自重产生的非均匀内力，也不含强度或屈曲约束。\n",
+    "source_sha256": "87e3c427979cbae68bbcd7d2b6b2c81d54c987327b85ae59248b67e75d10436e"
+  },
+  {
+    "set": 24,
+    "question": 3,
+    "added_count": 2,
+    "content": "（3）测得$P_5/P_4=81/80$，灯泡电阻$R$已知，反求电源内阻。\n\n解：$P_n=nV_0^2R/(R+nr)^2$。令$q=\\sqrt{4P_5/(5P_4)}=9/10$，则$q=(R+4r)/(R+5r)$，因此\n$$\\frac rR=\\frac{1-q}{5q-4}=\\frac15.$$\n正内阻要求$4/5<q<1$，测量值超出该区间应先检查模型或误差。比值消去未知电动势，但仍要求各灯电阻相同且在测量期间保持恒定。\n\n\n（4）取$r=R/5$，增加供电效率$\\eta\\ge75\\%$的限制，求最大允许整数灯泡数及最优灯泡数。\n\n解：负载功率占总电源功率比例$\\eta=R/(R+Nr)$。条件给$N\\le5/3$，正整数只能取$N=1$，所以受限最优数为1。原无效率限制的最优数为5，二者优化条件不同。一般效率下限$\\eta_0$给$N\\le(R/r)(\\eta_0^{-1}-1)$；$\\eta_0\\ge1/2$时允许区间位于连续功率峰值左侧，功率随$N$增加，最优取最大允许整数。\n",
+    "source_sha256": "a3f0af420a9b1e3d509e8f8ecb6dd45a5a0d7efc001354e8319c066e59071ed7"
+  },
+  {
+    "set": 24,
+    "question": 4,
+    "added_count": 2,
+    "content": "（3）求恒定切向驱动力达到何值后，系统不再有稳定平衡点。\n\n解：恢复力$Kx/(a^2+x^2)^{3/2}$在$x=a/\\sqrt2$取最大值$2K/(3\\sqrt3a^2)$。主问$F_E=qba/2$，故\n$$b_{\\rm cr}=\\frac{4K}{3\\sqrt3qa^3}.$$\n$b>b_{\\rm cr}$没有正向静力平衡；$b=b_{\\rm cr}$的线性刚度为零，不能称为普通简谐稳定平衡。稳定支路趋向此点时周期发散。磁力在静止时为零，运动时只影响法向约束反力，不改变此静力阈值。\n\n\n（4）测得稳定位置$x_0$和小振动周期$T$，质量$m$及$a,q$已知。反求$K$和电场参数$b$。\n\n解：线性刚度$K(a^2-2x_0^2)/(a^2+x_0^2)^{5/2}$，所以\n$$K=\\frac{4\\pi^2m}{T^2}\\frac{(a^2+x_0^2)^{5/2}}{a^2-2x_0^2},\\quad\nF_E=\\frac{Kx_0}{(a^2+x_0^2)^{3/2}},\\quad b=\\frac{2F_E}{qa}.$$\n必须有$0\\le x_0<a/\\sqrt2$。近临界位置的分母很小，位置误差会显著影响反演；有限振幅测得的周期不能直接当成此线性周期。\n",
+    "source_sha256": "112207f1916bf6dd3b3ede8e54df4e9ba6aa0eff0d84b8b14d0875bc82815d45"
+  },
+  {
+    "set": 24,
+    "question": 5,
+    "added_count": 2,
+    "content": "（3）固定球电势$V$，若外点电荷存在径向零合力位置，判断其稳定性。\n\n解：$F=QRV/d^2-kQ^2Rd/(d^2-R^2)^2$，在$F(d_*)=0$处消去$V$后，\n$$F'(d_*)=\\frac{kQ^2R(d_*^2+3R^2)}{(d_*^2-R^2)^3}>0.$$\n向外微移产生向外力，向内微移产生向内力，故该径向平衡不稳定。质量为$m$的点电荷小扰动增长率为$\\sqrt{F'/m}$。此结论只针对固定电势、$d_*>R$及径向运动；改变为固定球总电荷时受力式需重求。\n\n\n（4）写出固定电势条件下的有效径向势能，并解释像电荷项的系数。\n\n解：取无穷远势能为零，由$F=-dU/dd$积分得\n$$U(d)=\\frac{QRV}{d}-\\frac{kQ^2R}{2(d^2-R^2)}.$$\n第二项含$1/2$，因为像电荷的位置和电量随真实电荷改变，且电源维持球电势时交换能量。直接把$Q$乘全部诱导电势会多算该项。对式求导恢复主问的力，适用于将电源能量交换计入后的有效机械势能。\n",
+    "source_sha256": "0f9abfa7eadfe7b688e023ae9311686e85ca6c740b60992c4b06c2d479ad7a87"
+  },
+  {
+    "set": 24,
+    "question": 6,
+    "added_count": 2,
+    "content": "（3）若原子速度服从三维麦克斯韦分布，求德布罗意波长$\\lambda\\ge d$的比例，并在主问温度处估计。\n\n解：条件对应$p\\le h/d$。速度分布积分得\n$$P(\\lambda\\ge d)=\\operatorname{erf}x-\\frac{2x}{\\sqrt\\pi}e^{-x^2},\\qquad\nx=\\frac{h}{d\\sqrt{2mk_BT}}.$$\n主问按均方根动量取$\\lambda=d$，即$T=h^2/(3mk_Bd^2)$，所以$x=\\sqrt{3/2}$，比例约$60.8\\%$。均方根标度并不表示全部原子波长相同；实际定向束的动量筛选须另给条件。\n\n\n（4）筛选后的定向原子束取$\\lambda_0=d/2$，相对动量标准差为$1\\%$。估计一级衍射角和角宽。\n\n解：$d\\sin\\beta=\\lambda$给$\\beta_0=\\pi/6$。由于$\\delta\\lambda/\\lambda=-\\delta p/p$，\n$$\\sigma_\\beta\\simeq\\tan\\beta_0\\frac{\\sigma_p}{p}\n=\\frac{0.01}{\\sqrt3}\\ {\\rm rad}\\simeq5.77\\times10^{-3}\\ {\\rm rad}.$$\n该角宽只计窄动量分布的一阶贡献，未计束发散、有限光栅宽度及探测分辨率。它描述已筛选的定向束，不能直接用于各向同性热气体。\n",
+    "source_sha256": "251fb5f1b866478cbbed6909d01007a990380cc70caea344a7178abbab65ad53"
+  },
+  {
+    "set": 24,
+    "question": 7,
+    "added_count": 2,
+    "content": "（3）两路另有复空间相干度$g$，求条纹对比度。取$\\theta=\\pi/6,|g|=1/2$核算。\n\n解：不相干背景强度不变，交叉项乘$g$，因此\n$$\\mathcal V=|g|\\frac{2\\cos2\\theta\\,\\cos^2\\theta}{\\cos^22\\theta+\\cos^2\\theta}.$$\n给定角度时原对比度为$3/4$，故新值为$3/8$；$\\arg g$只平移条纹相位。这里相干度表示相同两路对应光场的相关程度，不能同时把相关交叉项按两独立自然光束相加。\n\n\n（4）第二路进入检偏器前的振幅另乘$t>0$，检偏器角$\\alpha$可调。求最大对比度及其实现条件。\n\n解：两路强度正比于$\\cos^2\\alpha$和$t^2\\cos^2(\\alpha-\\theta)$，原自然光相关系数为$\\cos\\theta$。因此最大对比度为$|\\cos\\theta|$，在\n$$|\\cos\\alpha|=t|\\cos(\\alpha-\\theta)|$$\n时取得。选择同号投影支路可写$\\tan\\alpha=(1-t\\cos\\theta)/(t\\sin\\theta)$。$\\theta=\\pi/3,t=1/2$时可取$\\alpha=\\pi/3$，最大值$1/2$。必须保证共同投影非零；完全遮断两路时对比度没有意义。\n",
+    "source_sha256": "d6b77a50b73e10bd9c1b2765c90495878285cb01a92c2bc5834b457426686625"
+  },
+  {
+    "set": 24,
+    "question": 8,
+    "added_count": 2,
+    "content": "（3）在已补充可分离端面零值条件的模型中，说明正负整数标签为何重复，并修正能量计数。\n\n解：三个非零整数的任一符号改变，都只使$\\sin(k_xx)\\sin(k_yy)\\sin(k_zz)$整体变号；同一空间模态有8个标签。主问全整数标签的标量能量除以8才得到正八分体独立标量模态；若再按两种电磁偏振计数，则为原标签能量的$1/4$：\n$$U_{\\rm two\\,pol}=\\frac{2\\pi V(k_BT)^4}{h^3c^3}.$$\n这仍沿用“一光子且硬能量截止”的人为统计模型，不是黑体能量公式。偏振计数也不能补救原题仅给棱边条件的不足。\n\n\n（4）明确保留全整数标签密度，将硬截止一光子模型换为玻色平均占据，求能量并比较。\n\n解：全标签密度$g(E)=32\\pi VE^2/(h^3c^3)$，故\n$$U_{\\rm labels}=\\frac{32\\pi V(k_BT)^4}{h^3c^3}\n\\int_0^\\infty\\frac{x^3\\,dx}{e^x-1}\n=\\frac{32\\pi^5}{15}\\frac{V(k_BT)^4}{h^3c^3}.$$\n积分可由$1/(e^x-1)=\\sum_{n\\ge1}e^{-nx}$及$\\sum n^{-4}=\\pi^4/90$得到。与主问硬截止标签能量的比值为$4\\pi^4/15$。结果仍多计标签；改为独立空间模态及两偏振后须再除以4。\n",
+    "source_sha256": "326ef296ec8a782aeaa882aef66295f589d4833c4d7e8842c0e08a31b03f1b51"
+  },
+  {
+    "set": 25,
+    "question": 1,
+    "added_count": 2,
+    "content": "（3）在线圈运动方向增加弹簧$k>0$和阻尼$b>0$，仍给定正弦电流$I_0\\cos\\omega t$。求长期振幅并说明稳定后解为何成立。\n\n解：$m\\ddot x+b\\dot x+kx=GI_0\\cos\\omega t$，$G=2\\pi nRB$。长期振幅及相位为\n$$A=\\frac{GI_0}{\\sqrt{(k-m\\omega^2)^2+b^2\\omega^2}},\\qquad\n\\varphi=\\operatorname{atan2}(b\\omega,k-m\\omega^2).$$\n平均输入机械功率为$b\\omega^2A^2/2$。正阻尼使齐次解衰减，因而初态差异逐渐消失。原无弹簧、无阻尼条件没有这种吸引机制，不能用新增模型替原题自动补出“稳定后”。\n\n\n（4）改给正弦电压，线圈保留$R_e>0,L>0$，无弹簧，求交流稳态阻抗及电流共振频率。\n\n解：相量方程$im\\omega\\tilde v=G\\tilde I$、$\\tilde U=(R_e+i\\omega L)\\tilde I+G\\tilde v$给\n$$Z=R_e+i\\left(\\omega L-\\frac{G^2}{m\\omega}\\right),\\qquad\nA_x=\\frac{G|\\tilde I|}{m\\omega^2}.$$\n电流共振在$\\omega=G/\\sqrt{mL}$，此时$|\\tilde I|=U_0/R_e$，平均电功率$R_e|\\tilde I|^2/2$。任意固定位置偏置仍保留，交流周期运动唯一不等于空间原点唯一。电阻记$R_e$以区别线圈半径$R$。\n",
+    "source_sha256": "bcc6c22814198e65f0223400f3e3305f055cbdc5cf8ac0ea8aff2c704ef40aac"
+  },
+  {
+    "set": 25,
+    "question": 2,
+    "added_count": 2,
+    "content": "（3）母粒子以$\\beta=0.6$运动，探测器在实验室与母粒子速度垂直方向收集端点光子。如何反求静止系端点频率？\n\n解：光子能量变换$E_*=\\gamma E_{\\rm lab}(1-\\beta\\cos\\theta_{\\rm lab})$。横向探测$\\theta_{\\rm lab}=\\pi/2$，故\n$$\\nu_\\perp=\\nu_*/\\gamma,\\qquad \\gamma=1.25,\\qquad \\nu_*=1.25\\nu_\\perp.$$\n再把$\\nu_*$代入静止系质量反演。若直接使用横向测得的频率，会低估端点能量；这与沿前向收集全方向最大频率的偏差不同。探测角必须明确属于实验室系。\n\n\n（4）静止系端点频率有小测量误差，求反演母粒子质量的误差传播。\n\n解：$\\epsilon=h\\nu/c^2$，$m=\\epsilon+\\sqrt{\\epsilon^2+M_0^2}$，所以\n$$\\frac{dm}{d\\nu}=\\frac h{c^2}\\left(1+\\frac{\\epsilon}{\\sqrt{\\epsilon^2+M_0^2}}\\right),\\qquad\n\\frac{\\sigma_m}{m}=\\frac{\\epsilon}{\\sqrt{\\epsilon^2+M_0^2}}\\frac{\\sigma_\\nu}{\\nu}.$$\n导数介于$h/c^2$与$2h/c^2$之间。总静质量的相对误差较小，不代表释放能量$m-M_0$同样精确；后者是两个接近量之差，须按绝对误差另算。这里$M_0$视为已知且误差可忽略。\n",
+    "source_sha256": "47dbb6a21f6590ed1cadcb4a6df01b19116f8581c1ff6e20b00b4190687bb791"
+  },
+  {
+    "set": 25,
+    "question": 3,
+    "added_count": 2,
+    "content": "（3）两投影的非零频率比$\\omega_u/\\omega_x=p/q$，$p,q$互素。求轨迹重复周期，并讨论无理频率比。\n\n解：共同相位恢复需要$\\omega_xT=2\\pi q$、$\\omega_uT=2\\pi p$，故完整参数化运动的周期$T=2\\pi q/\\omega_x$。例如比值$3/2$时为$4\\pi/\\omega_x$。无理比时相位对稠密覆盖二维环面，而线性关系$y=\\sqrt2u-x$把两个有界投影区间映成一个有界平行四边形，轨迹在其中稠密。非周期不意味着无限远运动；特殊零振幅退化情形需单独排除。\n\n\n（4）两投影同频，$x=A\\cos\\omega t$、$u=B\\cos(\\omega t+\\delta)$。求椭圆面积及质点绕原点角动量。\n\n解：$y=C_1\\cos\\omega t+C_2\\sin\\omega t$，其中$C_1=\\sqrt2B\\cos\\delta-A$、$C_2=-\\sqrt2B\\sin\\delta$。线性映射的行列式为$AC_2$，故\n$$S_{\\rm ellipse}=\\pi\\sqrt2AB|\\sin\\delta|,\\qquad\nL_z=m(x\\dot y-y\\dot x)=m\\omega AC_2.$$\n相位符号决定绕行方向，面积与其绝对值有关。$\\delta=0$或$\\pi$时面积为零、轨迹退化成线段，不能继续称为非退化椭圆。\n",
+    "source_sha256": "bd918d563dae4586152f748d2f81c2c126c836ad1d45dd3386ab7318123974c6"
+  },
+  {
+    "set": 25,
+    "question": 4,
+    "added_count": 2,
+    "content": "（3）冷室总热容量为$C$，外界温度$T_H$固定，制冷输入功率$P$固定。求稳态附近温度扰动的衰减时间。\n\n解：热漏为$k(T_H-T)$，卡诺制冷移热率为$PT/(T_H-T)$，所以\n$$C\\dot T=k(T_H-T)-\\frac{PT}{T_H-T}.$$\n在稳态$T_*$附近线性化，得\n$$\\tau=\\frac C{k+PT_H/(T_H-T_*)^2}\n=\\frac C{k(1+T_H/T_*)}.$$\n正分母保证局部稳定。取$C=10^6\\ {\\rm J/K}$及主问25℃、40℃参数，约为47分钟。应使用开尔文温度；该结果还假设制冷机能随温度即时保持卡诺性能。\n\n\n（4）冷室另有恒定热源$q_0=1000$ W，仍要求保持25℃，外界40℃。求必要制冷功率。\n\n解：稳态移热率必须等于$k\\Delta+q_0$，$\\Delta=T_H-T_*=15$ K。因此\n$$P=\\frac{(k\\Delta+q_0)\\Delta}{T_*}\n=P_{\\rm original}+\\frac{1000\\times15}{298.15}\n\\simeq180.87\\ {\\rm W}.$$\n若给定$P$反求温差，则$k\\Delta^2+(q_0+P)\\Delta-PT_H=0$，取$0<\\Delta<T_H$的根。热源功率加入冷端热负荷，不能直接当成压缩机电功率相加。\n",
+    "source_sha256": "af27c3285028b46fbe426e76f49133571aabf97cf1815819160030bd6fd998e6"
+  },
+  {
+    "set": 25,
+    "question": 5,
+    "added_count": 2,
+    "content": "（3）入瞳均匀辐照度$E_{\\rm in}$，杂散路径总透过功率比例$\\eta$，且无新增截光。求鬼像面内均匀辐照度。\n\n解：杂散矩阵使入瞳直径放大56倍，面积放大3136倍。总功率为$\\eta E_{\\rm in}S_{\\rm pupil}$，因此\n$$E_{\\rm ghost}=\\frac{\\eta}{3136}E_{\\rm in}.$$\n矩阵中的平移项移动斑心，不改变均匀圆斑面积。这个结果只计几何光学、均匀入瞳与固定路径效率；正常像在理想模型中是点像，不能拿其零面积去定义有限峰值辐照度作比较。\n\n\n（4）视场角为$\\alpha$，求正常点像是否落在鬼像圆斑内部。\n\n解：正常点像坐标$-f\\alpha$，鬼像斑心$33f\\alpha$、半径$28D$，两中心距离$34f|\\alpha|$。正常点位于鬼像范围内的条件为\n$$|\\alpha|\\le\\frac{14D}{17f}.$$\n等号对应边缘接触。该判据只说明几何重叠，不代表正常图像对比度一定可接受；强度还由路径反射率决定。全程采用近轴且无额外孔径截光的主问模型。\n",
+    "source_sha256": "221899790ad3e62f6b095f45bb840b436f2e7a4a05cce93accfb676e9f8aef59"
+  },
+  {
+    "set": 25,
+    "question": 6,
+    "added_count": 2,
+    "content": "（3）求小圆弧角下最大静态支持力的修正，并比较半圆弧情形。\n\n解：短弧分支$F_{\\max}=\\mu mg\\sin\\theta/\\theta$，故\n$$F_{\\max}=\\mu mg\\left(1-\\frac{\\theta^2}6+O(\\theta^4)\\right).$$\n固定弧长$l$时半径$a=l/\\theta$，$\\theta\\to0$恢复直绳极限。半圆弧$\\theta=\\pi$已属于长弧分支，$F_{\\max}=\\mu mg/\\pi$，不能继续套短弧正弦式得到零。沿弧摩擦方向变化，标量摩擦上限相加不能给出正确的端部力。\n\n\n（4）测得最大可静态支持端力为$\\mu mg/2$，反求圆弧角及半径。\n\n解：短弧$\\sin\\theta/\\theta$在$0<\\theta\\le\\pi/2$从1降至$2/\\pi>1/2$，所以该测量必在长弧分支。由$F_{\\max}=\\mu mg/\\theta$得\n$$\\theta=2\\ {\\rm rad}\\simeq114.59^\\circ,\\qquad a=l/2.$$\n这里测量的是全部允许静态反力分布中可支持的最大载荷；若只记录某次加载的首个局部滑动，缺少载荷历史与摩擦分布，不能据此唯一反求几何参数。\n",
+    "source_sha256": "4e1dcc9f9969f846a2e71bd6eb71449cacf83ed6f0e600f4f5b9d737aee69391"
+  },
+  {
+    "set": 25,
+    "question": 7,
+    "added_count": 2,
+    "content": "（3）根据椭圆轨道$r=l/(1+e\\cos\\theta)$和角动量守恒，求速度空间轨迹。\n\n解：$L=mr^2\\dot\\theta$，由$r'(\\theta)$得到径向及切向速度，再投到固定直角坐标，\n$$\\mathbf v=\\frac{L}{ml}(-\\sin\\theta,\\ e+\\cos\\theta).$$\n所以速度端点沿圆运动，圆心$(0,eL/(ml))$、半径$L/(ml)$。偏心率改变圆心位置，速度圆半径由角动量及半通径决定。这里$L$是实际角动量，若改用单位质量角动量，式中须同时约去$m$，不可混用。\n\n\n（4）测得椭圆半长轴$a$、半短轴$b$及周期$T$，求反平方引力参数，检验其是否依赖偏心率。\n\n解：单位质量角动量$\\mathcal H=2\\pi ab/T$，半通径$l=b^2/a$。比耐公式给$\\mu=\\mathcal H^2/l$，于是\n$$\\mu=\\frac{4\\pi^2a^3}{T^2},\\qquad F=\\frac{m\\mu}{r^2},\\qquad\n\\mathcal E=-\\frac{\\mu}{2a}.$$\n$b$消去，说明同一引力参数下周期只依赖半长轴。这里$\\mathcal E$为单位质量机械能；若轨道不服从焦点中心力或面积速度不恒定，该反演不成立。\n",
+    "source_sha256": "836dca586441753e1a60013208f7e234ecc846f6c20a8a7dffc13c17377f3cce"
+  },
+  {
+    "set": 25,
+    "question": 8,
+    "added_count": 2,
+    "content": "（3）取初始角速度$p=\\omega_\\phi>0$、轴向参数$z=\\omega_z$，磁场较弱。求完整绕行一圈的轴向位移至二阶。\n\n解：用$c=\\omega_c$，主问积分给\n$$\\Delta Z=R\\int_0^{2\\pi}\\frac{z-c\\sin\\phi}{\\sqrt{p^2+2cz\\sin\\phi-c^2\\sin^2\\phi}}\\,d\\phi.$$\n展开并利用$\\int\\sin\\phi\\,d\\phi=0$、$\\int\\sin^2\\phi\\,d\\phi=\\pi$，得\n$$\\Delta Z=\\frac{2\\pi Rz}{p}\\left[1+\\frac{3c^2}{4p^2}\\left(1+\\frac{z^2}{p^2}\\right)+O(c^4)\\right].$$\n整圈积分对$c$为偶函数，一阶修正消失；局部螺距仍随角度改变。展开要求远离转向阈值，且$|cz|/p^2,c^2/p^2$足够小。\n\n\n（4）求圆柱的有向径向反力，并用纯初始绕行说明双侧约束为何必要。\n\n解：向外为正，磁力径向分量$qB\\dot Z\\sin\\phi$，径向加速度$-R\\dot\\phi^2$，故\n$$N_r=-mR[p^2+3cz\\sin\\phi-2c^2\\sin^2\\phi].$$\n$z=0,|c|>|p|$时在转向点$\\sin\\phi=p/|c|$或其符号对应根，$\\dot\\phi=0$，反力为$+mRp^2$；初始则为$-mRp^2$。反力会换向，单侧表面接触不能保证全过程按此轨迹运动。双侧径向约束的反力始终垂直速度，不做功。\n",
+    "source_sha256": "2d649f784beffebccb4645d94858f9a109bef440a6bf69d343f6257db28d10c1"
+  }
+]

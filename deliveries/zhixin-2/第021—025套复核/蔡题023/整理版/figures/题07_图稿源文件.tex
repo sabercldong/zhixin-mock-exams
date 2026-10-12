@@ -1,0 +1,46 @@
+\documentclass[tikz,border=5pt]{standalone}
+\usepackage[UTF8]{ctex}\usepackage{amsmath}
+\usetikzlibrary{arrows.meta,calc}
+\definecolor{blue}{RGB}{45,98,142}\definecolor{green}{RGB}{60,117,87}\definecolor{red}{RGB}{175,67,51}
+\tikzset{vec/.style={thick,-{Stealth}},aux/.style={gray!60,dashed}}
+\begin{document}
+\begin{tikzpicture}[scale=1.3]
+\fill[blue!5](0,-.65)--(4,-.65)arc(-90:90:.22 and .65)--(0,.65)--cycle;
+\draw[thick](0,.65)--(4,.65);\draw[thick](0,-.65)--(4,-.65);
+\draw[fill=gray!25](0,0)ellipse(.18 and .65);
+\draw[blue,thick](4,0)ellipse(.22 and .65);
+\draw[aux](.2,0)--(3.7,0);
+\node[above]at(0,.85){封闭端};\node[above]at(4,.85){开口端};
+\draw[<->](0,-1.05)--(4,-1.05)node[midway,fill=white]{$L=5.0\,\mathrm{cm}$};
+\draw[gray,vec](.0,0)--(4.65,0)node[right]{$x$};
+\node at(2,1.5){透明侧壁示意；声波沿管轴传播};
+\end{tikzpicture}
+\begin{tikzpicture}[xscale=4,yscale=.9]
+\draw[gray,-{Stealth}](0,0)--(1.2,0)node[right]{$x/L$};
+\draw[gray,-{Stealth}](0,-.1)--(0,1.5)node[above]{位移振型};
+\draw[blue,thick,domain=0:1,samples=61]plot(\x,{sin(90*\x)});
+\draw[aux](1,0)--(1,1.15);
+\node[blue,above]at(.75,1.02){$\sin(\pi x/2L)$};
+\node[below]at(0,0){$0$};\node[below]at(1,0){$1$};
+\begin{scope}[yshift=-2.7cm]
+\draw[gray,-{Stealth}](0,0)--(1.2,0)node[right]{$x/L$};
+\draw[gray,-{Stealth}](0,-.1)--(0,1.5)node[above]{声压振型};
+\draw[red,thick,domain=0:1,samples=61]plot(\x,{cos(90*\x)});
+\draw[aux](1,0)--(1,1.15);
+\node[red,above]at(.73,.9){$\cos(\pi x/2L)$};
+\node[below]at(0,0){闭端：位移节点};\node[below]at(1,0){开端：声压节点};
+\end{scope}
+\node at(.5,-3.85){表示空间振型；实际两物理量须带各自时间相位};
+\end{tikzpicture}
+\begin{tikzpicture}[xscale=5,yscale=.65]
+\foreach \n/\k in{0/1,1/3,2/5}{
+\begin{scope}[yshift={-\n*2.5cm}]
+\draw[gray,-{Stealth}](0,0)--(1.18,0)node[right]{$x/L$};
+\draw[blue,thick,domain=0:1,samples=101]plot(\x,{sin(\k*90*\x)});
+\draw[aux](1,-1.15)--(1,1.15);
+\node[left]at(0,.8){$n=\n$};
+\node[right]at(1.02,.8){$f=\k f_0$};
+\end{scope}}
+\node at(.55,-6.6){闭端均为节点，开端均满足 $\partial_x\xi=0$};
+\end{tikzpicture}
+\end{document}

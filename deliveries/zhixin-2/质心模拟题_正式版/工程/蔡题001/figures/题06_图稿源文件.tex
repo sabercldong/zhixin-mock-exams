@@ -1,0 +1,71 @@
+\documentclass[multi=tikzpicture,border=8pt]{standalone}
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath,amssymb}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc,patterns}
+\definecolor{blue}{HTML}{17365D}
+\definecolor{red}{HTML}{AC3931}
+\tikzset{every node/.style={font=\small},vec/.style={-{Stealth[length=3mm]},thick,blue},force/.style={-{Stealth[length=3mm]},very thick,red},dim/.style={|<->|,thin}}
+\begin{document}
+
+\begin{tikzpicture}
+\fill[red!9](0,-1.2)rectangle(3,1.2);
+\foreach \y in{-.8,0,.8}{\draw[force](.3,\y)--(2.8,\y);}
+\draw[line width=4pt,blue](4,-1.5)--(4,1.5);
+\draw[vec](4.2,1.1)--(6,1.1)node[midway,above]{$v$};
+\draw[vec](3.8,-1.25)--(1.5,-1.25)node[midway,below]{反射光};
+\draw[dim](0,-1.8)--node[below]{$ct_0$}(3,-1.8);
+\node[above]at(1.5,1.4){入射脉冲：$J$};
+\node[right]at(4.2,0){镜面$S,m_0$};
+\node[below]at(3,-2.5){源系厚度$ct_0$，镜面向前运动};
+\end{tikzpicture}
+
+\begin{tikzpicture}[x=1cm,y=1cm]
+\draw[vec](-1.5,0)--(3.8,0)node[right]{$x/(ct_0)$};
+\draw[vec](0,-.2)--(0,4.3)node[above]{$t/t_0$};
+\draw[red,thick](-1,0)--(2.5,3.5);\node[above,align=center]at(2.05,3.65){尾沿\\$x/c=t-t_0$};
+\draw[red,thick](0,0)--(3.5,3.5);\node[right,align=left]at(3.6,3.4){前沿\\$x/c=t$};
+\draw[blue,very thick](0,0)--(1.2,4);\node[left,align=right]at(-.3,3.5){镜面\\$x=vt$};\draw[thin](-.2,3.25)--(.975,3.25);
+\fill(.4286,1.4286)circle(2pt);
+\draw[dashed](.4286,1.4286)--(0,1.4286);
+\node[left,align=right]at(-.1,1.65){$t_{\text{照}}/t_0$\\$=1/(1-\beta)$};
+\draw[dim](-1,-.55)--node[below]{脉冲厚度1}(0,-.55);
+\node[below]at(1.1,-1.3){示意取$\beta=0.3$，尾沿与镜面相交};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\draw[blue!30,thick](-.5,-1.5)rectangle(3.8,1.9);
+\draw[blue!30,thick](4.5,-1.5)rectangle(8.8,1.9);
+\node[above]at(1.65,2.05){核弹系};
+\node[above]at(6.65,2.05){镜面瞬时静止系};
+\draw[line width=3pt,blue](2.5,-.8)--(2.5,.8);
+\draw[line width=3pt,blue](7.5,-.8)--(7.5,.8);
+\draw[force](0,.5)--(2.3,.5)node[midway,above]{$\epsilon$};
+\draw[vec](2.3,-.5)--(0,-.5)node[midway,below]{$D^2\epsilon$};
+\draw[force](5,.5)--(7.3,.5)node[midway,above]{$D\epsilon$};
+\draw[vec](7.3,-.5)--(5,-.5)node[midway,below]{$D\epsilon$};
+\node[below]at(1.65,-1.7){镜面速度$v$};
+\node[below]at(6.65,-1.7){镜面速度0};
+\node[below]at(4.2,-2.5){入射和反射分别作洛伦兹变换};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\node[draw,align=center,minimum width=3cm,minimum height=1.5cm](in)at(0,0){入射光子\\$+\epsilon/c$\\能量$\epsilon$};
+\node[draw,align=center,minimum width=3cm,minimum height=1.5cm](mir)at(4.5,0){镜面获得\\$\delta p=(\epsilon+D^2\epsilon)/c$\\$\delta E=\epsilon-D^2\epsilon$};
+\node[draw,align=center,minimum width=3cm,minimum height=1.5cm](out)at(9,0){反射光子\\$-D^2\epsilon/c$\\能量$D^2\epsilon$};
+\draw[force](in)--(mir);
+\draw[vec](mir)--(out);
+\node[below]at(4.5,-1.5){$\delta E=v\,\delta p$，反射光能降低转为镜面能量};
+\end{tikzpicture}
+
+\begin{tikzpicture}[x=1.2cm,y=3cm]
+\draw[vec](0,0)--(6,0)node[right]{脉冲次数$N$};
+\draw[vec](0,0)--(0,1.6)node[above]{$A-1$};
+\draw[blue,very thick](0,0)--(5.5,1.375);
+\foreach \n in{1,2,3,4,5}{\fill(\n,.25*\n)circle(1.5pt);}
+\draw[dim](3.4,.75)--node[right]{$2E_\gamma/(m_0c^2)$}(3.4,1);
+\node[above left]at(5.5,1.375){相同脉冲，等间隔增量};
+\node[below]at(2.8,-.23){$A=\sqrt{(1+\beta)/(1-\beta)}$};
+\node[below]at(2.8,-.45){示意图只显示线性规律，纵轴非实际数值};
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,87 @@
+\documentclass[tikz,border=5pt]{standalone}
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath,amssymb}
+\usetikzlibrary{arrows.meta,calc}
+\definecolor{ink}{HTML}{243447}
+\definecolor{blue}{HTML}{2765A2}
+\definecolor{green}{HTML}{3F7D5B}
+\definecolor{red}{HTML}{B74739}
+\tikzset{body/.style={draw=ink,thick},vec/.style={blue,thick,-{Latex}},guide/.style={gray!65,dashed},line cap=round}
+\begin{document}
+\begin{tikzpicture}
+\draw[guide](-2.7,0)--(3.5,0);
+\draw[vec](2.5,0)--(3.8,0)node[right]{$+x$};
+\draw[body,fill=blue!4](0,0)ellipse(.65 and 1.5);
+\draw[body](0,0)ellipse(.56 and 1.3);
+\foreach \t in {45,135,225,315}{
+ \draw[green,thick,-{Latex}]({.65*cos(\t)},{1.5*sin(\t)})--({1.05*cos(\t)},{2.05*sin(\t)});
+}
+\node[green]at(-1.9,1.8){径向 $B_r$};
+\draw[red,thick,-{Latex}]plot[domain=75:20,samples=30]({.60*cos(\x)},{1.4*sin(\x)});
+\node[red,right]at(.75,1.35){正电流 $I$};
+\node[align=center]at(0,-2.4){$n$匝线圈，半径 $R$\\线圈平面垂直于 $x$轴};
+\node at(0,.12){$O$};
+\draw[vec](.85,-.8)--(2.2,-.8)node[right]{$v$};
+\node[below]at(2.9,-1.2){只允许轴向运动};
+\end{tikzpicture}
+\begin{tikzpicture}
+\draw[body,fill=blue!3](0,0)circle(1.4);
+\draw[vec](0,0)--(1.9,0)node[right]{$\boldsymbol e_r,\ B_r$};
+\draw[red,thick,-{Latex}](1.4,.4)--(1.4,-.6)node[below]{$I\,d\boldsymbol\ell$};
+\draw[ink,thick](1.4,0)circle(.13);
+\fill[ink](1.4,0)circle(.045);
+\node[align=left]at(2.3,1.3){$d\boldsymbol F$沿 $+x$\\（出纸面）};
+\draw[guide](1.5,.12)--(2,1.1);
+\node[align=center]at(0,-2.1){横截面观察\\正电流沿顺时针};
+\begin{scope}[shift={(6,0)}]
+\draw[body](-.55,0)ellipse(.55 and 1.35);
+\draw[vec](.1,0)--(2.2,0)node[right]{$F_x=GI$};
+\draw[guide](-1.5,0)--(2,0);
+\node at(.7,-2.1){整体轴向受力};
+\end{scope}
+\end{tikzpicture}
+\begin{tikzpicture}
+\fill[blue!6]plot[domain=90:270,samples=40]({.55*cos(\x)},{1.3*sin(\x)})
+--plot[domain=270:90,samples=40]({2+.55*cos(\x)},{1.3*sin(\x)})--cycle;
+\draw[guide](0,0)ellipse(.55 and 1.3);
+\draw[body](2,0)ellipse(.55 and 1.3);
+\draw[body](0,1.3)--(2,1.3);
+\draw[body](0,-1.3)--(2,-1.3);
+\draw[vec](-1.2,0)--(3.6,0)node[right]{$x$};
+\draw[green,thick,-{Latex}](.7,1.3)--(.7,2)node[above]{$B_r$};
+\draw[green,thick,-{Latex}](1.3,-1.3)--(1.3,-2)node[below]{$B_r$};
+\draw[ink,<->](0,-2.6)--(2,-2.6)node[midway,below]{$\Delta x$};
+\node[above left]at(0,1.4){$x=0$};
+\node[above right]at(2,1.4){$x=\Delta x$};
+\node[align=left]at(5.1,1){侧面积 $2\pi R\Delta x$\\$\Delta\Psi_{\rm ext}=G\Delta x$};
+\node at(4.9,-1){圆面正法向取 $-x$};
+\end{tikzpicture}
+\begin{tikzpicture}[x=1cm,y=1cm]
+\foreach \k/\lab in {0/{x/A_u},1/{u/u_0},2/{I/I_{\rm amp}}}{
+\begin{scope}[shift={(0,-2.4*\k)}]
+\draw[vec](0,0)--(6.9,0)node[right]{$\omega t$};
+\draw[guide](0,-1.15)--(0,1.15);
+\node[left]at(0,.85){$\lab$};
+\ifnum\k=0
+\draw[blue,thick,domain=0:6.283,samples=100]plot(\x,{sin(\x r)});
+\else\ifnum\k=1
+\draw[green,thick,domain=0:6.283,samples=100]plot(\x,{cos(\x r)});
+\else
+\draw[red,thick,domain=0:6.283,samples=100]plot(\x,{-sin(\x r)});
+\fi\fi
+\draw[guide](1.571,-1.1)--(1.571,1.1);
+\end{scope}}
+\node[below]at(1.571,-6){$\pi/2$};
+\node[below]at(6.283,-6){$2\pi$};
+\node at(3.2,1.8){电压驱动，$L_c=0$，向右过零取 $t=0$};
+\end{tikzpicture}
+\begin{tikzpicture}
+\draw[body,rounded corners](0,-.65)rectangle(3.5,.65);
+\node[align=center]at(1.75,0){电路\\$u=L_c\dot I+Gv$};
+\draw[body,rounded corners](7,-.65)rectangle(9.5,.65);
+\node[align=center]at(8.25,0){机械运动\\$m\dot v=GI$};
+\draw[vec](3.6,.35)--(6.9,.35)node[midway,above]{$I\longmapsto F=GI$};
+\draw[green,thick,-{Latex}](6.9,-.35)--(3.6,-.35)node[midway,below]{$v\longmapsto Gv$};
+\node at(4.75,-1.9){$uI=\dfrac{d}{dt}\left(\dfrac12mv^2+\dfrac12L_cI^2\right)$};
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,71 @@
+\documentclass[tikz,border=5pt]{standalone}
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath,amssymb}
+\usetikzlibrary{arrows.meta,calc,angles,quotes,patterns,decorations.pathmorphing}
+\definecolor{field}{HTML}{176B9B}
+\definecolor{force}{HTML}{B64B32}
+\tikzset{>=Latex,line width=.8pt,every node/.style={font=\small},field/.style={color=field},force/.style={color=force},body/.style={draw=black,fill=blue!5},ghost/.style={dashed,gray},labelbox/.style={fill=white,inner sep=1.2pt}}
+\begin{document}
+\begin{tikzpicture}[x=.65cm,y=1cm]
+\draw[->](-2.8,0)--(13.3,0)node[right]{光轴};
+\foreach\x/\n/\f in{0/1/f_1,3/2/f_2,9/3/f_2,12/4/f_1}{
+\draw[<->,thick](\x,-1)--(\x,1);
+\node[above]at(\x,1.1){$L_{\n}$};
+\node[above]at(\x,1.6){$\f$};}
+\fill(-2,0)circle(2pt)node[below]{$S$};
+\draw[->,field](-2,0)--(-.1,.5);
+\draw[->,field](-2,0)--(-.1,-.5);
+\foreach\a/\b/\txt in{-2/0/u_0,0/3/{f_1+f_2},3/9/D,9/12/{f_1+f_2}}{
+\draw[<->](\a,-1.4)--(\b,-1.4)node[midway,below]{$\txt$};}
+\end{tikzpicture}
+\begin{tikzpicture}[x=.65cm,y=1.6cm]
+\draw[->](-2.8,0)--(15.7,0);
+\foreach\x/\n in{0/1,3/2,9/3,12/4}{
+\draw[<->,gray](\x,-1)--(\x,1);\node[above]at(\x,1.1){$L_{\n}$};}
+\draw[field,dashed](-2,.3)--(12,.51);
+\draw[force,dashed](-2,.3)--(12,-.26);
+\draw[field,thick](-2,.3)--(0,.33)--(3,-.12)--(9,-.3)--(12,.51)--(15,.555);
+\draw[force,thick](-2,.3)--(0,.22)--(3,-.23)--(9,.25)--(12,-.26)--(15,-.38);
+\draw[->,field](13,.525)--(14,.54);\draw[->,force](13,-.30)--(14,-.34);
+\fill(-2,.3)circle(2.3pt)node[above left]{$S=S'$};
+\draw[<->](-2,-1.4)--(12,-1.4)node[midway,below]{$u_0+\mathcal L=14f_0$};
+\node[above]at(6,1.7){实线实际向右传播；虚线仅反向延长};
+\end{tikzpicture}
+\begin{tikzpicture}[x=.65cm,y=1.5cm]
+\draw[->](-2.5,0)--(14,0);
+\foreach\x/\n in{0/1,3/2,9/3,12/4}{
+\draw[<->,gray](\x,-1)--(\x,1);\node[above]at(\x,1.1){$L_{\n}$};}
+\draw[field,thick](-2,.5)--(0,.55)--(3,-.2)--(9,-.5)--(12,.85)--(13.5,.8875);
+\fill(-2,.5)circle(2pt)node[above left]{$y$};
+\foreach\x/\y/\n/\p in{0/.55/1/left,3/-.2/2/below,9/-.5/3/below,12/.85/4/right}{
+\fill[field](\x,\y)circle(2pt);\node[\p,labelbox]at(\x,\y){$y_{\n}$};}
+\node[above]at(6,1.7){$u_0=2f_0,\quad D=6f_0$};
+\node[below]at(6,-1.5){纵向放大显示；四片高度按同一递推计算};
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{scope}[scale=5]
+\draw[gray](0,0)circle(.5);
+\draw[force](0,0)circle(.1);
+\filldraw[fill=blue!15,draw=field](0,0)circle(.0714286);
+\draw[->,gray](-.55,0)--(.58,0);
+\node[above]at(0,.6){中心 $\boldsymbol e=0$};
+\node[below]at(0,-.63){$\mathcal D_1=\mathcal D_2$};
+\draw[field] (.045,-.045)--(.25,-.25)node[right]{$\mathcal D_4$};
+\node[force,right]at(.1,.13){$\mathcal D_3$};
+\end{scope}
+\begin{scope}[xshift=7cm,scale=5]
+\draw[gray](-.25,0)circle(.5);
+\draw[orange!80!black](.125,0)circle(.5);
+\draw[force](-.025,0)circle(.1);
+\filldraw[fill=blue!15,draw=field](-.0357143,0)circle(.0714286);
+\draw[->,gray](-.78,0)--(.7,0);
+\node[above]at(-.05,.6){边缘 $|\boldsymbol e|=1/2$};
+\node[gray,below]at(-.5,-.52){$\mathcal D_1$};
+\node[orange!80!black,below]at(.4,-.52){$\mathcal D_2$};
+\draw[field](-.025,-.05)--(.22,-.24)node[right]{$\mathcal D_4$};
+\node[force,right]at(.07,.14){$\mathcal D_3$};
+\end{scope}
+\node[below]at(3,-3.9){$\mathcal D_4$ 在其他三孔内；通光角度面积不变};
+\end{tikzpicture}
+\end{document}
+

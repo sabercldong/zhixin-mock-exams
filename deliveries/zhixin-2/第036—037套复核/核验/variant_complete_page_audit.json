@@ -1,0 +1,648 @@
+{
+  "all_passed": true,
+  "variant_count": 64,
+  "single_page_count": 45,
+  "method": "每道变式中文段落逐段按顺序匹配到教师版PDF；排除非渲染注释、图像替代文字及不足四字的片段。长变式允许连续跨页，公式和图示由计算记录及页面审查补充核验。",
+  "locations": [
+    {
+      "set": 36,
+      "question": 1,
+      "variant": 1,
+      "first_page": 10,
+      "last_page": 10,
+      "complete_prose_present_in_order": true,
+      "paragraphs_matched": 3,
+      "single_page": true
+    },
+    {
+      "set": 36,
+      "question": 1,
+      "variant": 2,
+      "first_page": 10,
+      "last_page": 10,
+      "complete_prose_present_in_order": true,
+      "paragraphs_matched": 3,
+      "single_page": true
+    },
+    {
+      "set": 36,
+      "question": 1,
+      "variant": 3,
+      "first_page": 10,
+      "last_page": 11,
+      "complete_prose_present_in_order": true,
+      "paragraphs_matched": 3,
+      "single_page": false
+    },
+    {
+      "set": 36,
+      "question": 1,
+      "variant": 4,
+      "first_page": 11,
+      "last_page": 11,
+      "complete_prose_present_in_order": true,
+      "paragraphs_matched": 4,
+      "single_page": true
+    },
+    {
+      "set": 36,
+      "question": 2,
+      "variant": 1,
+      "first_page": 19,
+      "last_page": 19,
+      "complete_prose_present_in_order": true,
+      "paragraphs_matched": 4,
+      "single_page": true
+    },
+    {
+      "set": 36,
+      "question": 2,
+      "variant": 2,
+      "first_page": 19,
+      "last_page": 19,
+      "complete_prose_present_in_order": true,
+      "paragraphs_matched": 3,
+      "single_page": true
+    },
+    {
+      "set": 36,
+      "question": 2,
+      "variant": 3,
+      "first_page": 19,
+      "last_page": 19,
+      "complete_prose_present_in_order": true,
+      "paragraphs_matched": 3,
+      "single_page": true
+    },
+    {
+      "set": 36,
+      "question": 2,
+      "variant": 4,
+      "first_page": 19,
+      "last_page": 20,
+      "complete_prose_present_in_order": true,
+      "paragraphs_matched": 4,
+      "single_page": false
+    },
+    {
+      "set": 36,
+      "question": 3,
+      "variant": 1,
+      "first_page": 27,
+      "last_page": 28,
+      "complete_prose_present_in_order": true,
+      "paragraphs_matched": 4,
+      "single_page": false
+    },
+    {
+      "set": 36,
+      "question": 3,
+      "variant": 2,
+      "first_page": 28,
+      "last_page": 28,
+      "complete_prose_present_in_order": true,
+      "paragraphs_matched": 3,
+      "single_page": true
+    },
+    {
+      "set": 36,
+      "question": 3,
+      "variant": 3,
+      "first_page": 28,
+      "last_page": 28,
+      "complete_prose_present_in_order": true,
+      "paragraphs_matched": 3,
+      "single_page": true
+    },
+    {
+      "set": 36,
+      "question": 3,
+      "variant": 4,
+      "first_page": 28,
+      "last_page": 28,
+      "complete_prose_present_in_order": true,
+      "paragraphs_matched": 3,
+      "single_page": true
+    },
+    {
+      "set": 36,
+      "question": 4,
+      "variant": 1,
+      "first_page": 36,
+      "last_page": 36,
+      "complete_prose_present_in_order": true,
+      "paragraphs_matched": 4,
+      "single_page": true
+    },
+    {
+      "set": 36,
+      "question": 4,
+      "variant": 2,
+      "first_page": 36,
+      "last_page": 37,
+      "complete_prose_present_in_order": true,
+      "paragraphs_matched": 3,
+      "single_page": false
+    },
+    {
+      "set": 36,
+      "question": 4,
+      "variant": 3,
+      "first_page": 37,
+      "last_page": 37,
+      "complete_prose_present_in_order": true,
+      "paragraphs_matched": 3,
+      "single_page": true
+    },
+    {
+      "set": 36,
+      "question": 4,
+      "variant": 4,
+      "first_page": 37,
+      "last_page": 37,
+      "complete_prose_present_in_order": true,
+      "paragraphs_matched": 3,
+      "single_page": true
+    },
+    {
+      "set": 36,
+      "question": 5,
+      "variant": 1,
+      "first_page": 46,
+      "last_page": 46,
+      "complete_prose_present_in_order": true,
+      "paragraphs_matched": 5,
+      "single_page": true
+    },
+    {
+      "set": 36,
+      "question": 5,
+      "variant": 2,
+      "first_page": 46,
+      "last_page": 47,
+      "complete_prose_present_in_order": true,
+      "paragraphs_matched": 3,
+      "single_page": false
+    },
+    {
+      "set": 36,
+      "question": 5,
+      "variant": 3,
+      "first_page": 47,
+      "last_page": 47,
+      "complete_prose_present_in_order": true,
+      "paragraphs_matched": 3,
+      "single_page": true
+    },
+    {
+      "set": 36,
+      "question": 5,
+      "variant": 4,
+      "first_page": 47,
+      "last_page": 47,
+      "complete_prose_present_in_order": true,
+      "paragraphs_matched": 3,
+      "single_page": true
+    },
+    {
+      "set": 36,
+      "question": 6,
+      "variant": 1,
+      "first_page": 54,
+      "last_page": 55,
+      "complete_prose_present_in_order": true,
+      "paragraphs_matched": 3,
+      "single_page": false
+    },
+    {
+      "set": 36,
+      "question": 6,
+      "variant": 2,
+      "first_page": 55,
+      "last_page": 55,
+      "complete_prose_present_in_order": true,
+      "paragraphs_matched": 3,
+      "single_page": true
+    },
+    {
+      "set": 36,
+      "question": 6,
+      "variant": 3,
+      "first_page": 55,
+      "last_page": 55,
+      "complete_prose_present_in_order": true,
+      "paragraphs_matched": 3,
+      "single_page": true
+    },
+    {
+      "set": 36,
+      "question": 6,
+      "variant": 4,
+      "first_page": 55,
+      "last_page": 55,
+      "complete_prose_present_in_order": true,
+      "paragraphs_matched": 3,
+      "single_page": true
+    },
+    {
+      "set": 36,
+      "question": 7,
+      "variant": 1,
+      "first_page": 63,
+      "last_page": 63,
+      "complete_prose_present_in_order": true,
+      "paragraphs_matched": 5,
+      "single_page": true
+    },
+    {
+      "set": 36,
+      "question": 7,
+      "variant": 2,
+      "first_page": 63,
+      "last_page": 64,
+      "complete_prose_present_in_order": true,
+      "paragraphs_matched": 4,
+      "single_page": false
+    },
+    {
+      "set": 36,
+      "question": 7,
+      "variant": 3,
+      "first_page": 64,
+      "last_page": 64,
+      "complete_prose_present_in_order": true,
+      "paragraphs_matched": 3,
+      "single_page": true
+    },
+    {
+      "set": 36,
+      "question": 7,
+      "variant": 4,
+      "first_page": 64,
+      "last_page": 64,
+      "complete_prose_present_in_order": true,
+      "paragraphs_matched": 3,
+      "single_page": true
+    },
+    {
+      "set": 36,
+      "question": 8,
+      "variant": 1,
+      "first_page": 72,
+      "last_page": 72,
+      "complete_prose_present_in_order": true,
+      "paragraphs_matched": 5,
+      "single_page": true
+    },
+    {
+      "set": 36,
+      "question": 8,
+      "variant": 2,
+      "first_page": 72,
+      "last_page": 73,
+      "complete_prose_present_in_order": true,
+      "paragraphs_matched": 4,
+      "single_page": false
+    },
+    {
+      "set": 36,
+      "question": 8,
+      "variant": 3,
+      "first_page": 73,
+      "last_page": 73,
+      "complete_prose_present_in_order": true,
+      "paragraphs_matched": 3,
+      "single_page": true
+    },
+    {
+      "set": 36,
+      "question": 8,
+      "variant": 4,
+      "first_page": 73,
+      "last_page": 73,
+      "complete_prose_present_in_order": true,
+      "paragraphs_matched": 3,
+      "single_page": true
+    },
+    {
+      "set": 37,
+      "question": 1,
+      "variant": 1,
+      "first_page": 8,
+      "last_page": 8,
+      "complete_prose_present_in_order": true,
+      "paragraphs_matched": 3,
+      "single_page": true
+    },
+    {
+      "set": 37,
+      "question": 1,
+      "variant": 2,
+      "first_page": 8,
+      "last_page": 8,
+      "complete_prose_present_in_order": true,
+      "paragraphs_matched": 3,
+      "single_page": true
+    },
+    {
+      "set": 37,
+      "question": 1,
+      "variant": 3,
+      "first_page": 8,
+      "last_page": 9,
+      "complete_prose_present_in_order": true,
+      "paragraphs_matched": 3,
+      "single_page": false
+    },
+    {
+      "set": 37,
+      "question": 1,
+      "variant": 4,
+      "first_page": 9,
+      "last_page": 9,
+      "complete_prose_present_in_order": true,
+      "paragraphs_matched": 3,
+      "single_page": true
+    },
+    {
+      "set": 37,
+      "question": 2,
+      "variant": 1,
+      "first_page": 18,
+      "last_page": 19,
+      "complete_prose_present_in_order": true,
+      "paragraphs_matched": 5,
+      "single_page": false
+    },
+    {
+      "set": 37,
+      "question": 2,
+      "variant": 2,
+      "first_page": 19,
+      "last_page": 19,
+      "complete_prose_present_in_order": true,
+      "paragraphs_matched": 3,
+      "single_page": true
+    },
+    {
+      "set": 37,
+      "question": 2,
+      "variant": 3,
+      "first_page": 19,
+      "last_page": 19,
+      "complete_prose_present_in_order": true,
+      "paragraphs_matched": 3,
+      "single_page": true
+    },
+    {
+      "set": 37,
+      "question": 2,
+      "variant": 4,
+      "first_page": 19,
+      "last_page": 19,
+      "complete_prose_present_in_order": true,
+      "paragraphs_matched": 3,
+      "single_page": true
+    },
+    {
+      "set": 37,
+      "question": 3,
+      "variant": 1,
+      "first_page": 26,
+      "last_page": 27,
+      "complete_prose_present_in_order": true,
+      "paragraphs_matched": 12,
+      "single_page": false
+    },
+    {
+      "set": 37,
+      "question": 3,
+      "variant": 2,
+      "first_page": 27,
+      "last_page": 28,
+      "complete_prose_present_in_order": true,
+      "paragraphs_matched": 3,
+      "single_page": false
+    },
+    {
+      "set": 37,
+      "question": 3,
+      "variant": 3,
+      "first_page": 28,
+      "last_page": 28,
+      "complete_prose_present_in_order": true,
+      "paragraphs_matched": 3,
+      "single_page": true
+    },
+    {
+      "set": 37,
+      "question": 3,
+      "variant": 4,
+      "first_page": 28,
+      "last_page": 28,
+      "complete_prose_present_in_order": true,
+      "paragraphs_matched": 3,
+      "single_page": true
+    },
+    {
+      "set": 37,
+      "question": 4,
+      "variant": 1,
+      "first_page": 37,
+      "last_page": 37,
+      "complete_prose_present_in_order": true,
+      "paragraphs_matched": 4,
+      "single_page": true
+    },
+    {
+      "set": 37,
+      "question": 4,
+      "variant": 2,
+      "first_page": 37,
+      "last_page": 37,
+      "complete_prose_present_in_order": true,
+      "paragraphs_matched": 3,
+      "single_page": true
+    },
+    {
+      "set": 37,
+      "question": 4,
+      "variant": 3,
+      "first_page": 37,
+      "last_page": 38,
+      "complete_prose_present_in_order": true,
+      "paragraphs_matched": 3,
+      "single_page": false
+    },
+    {
+      "set": 37,
+      "question": 4,
+      "variant": 4,
+      "first_page": 38,
+      "last_page": 38,
+      "complete_prose_present_in_order": true,
+      "paragraphs_matched": 3,
+      "single_page": true
+    },
+    {
+      "set": 37,
+      "question": 5,
+      "variant": 1,
+      "first_page": 46,
+      "last_page": 47,
+      "complete_prose_present_in_order": true,
+      "paragraphs_matched": 12,
+      "single_page": false
+    },
+    {
+      "set": 37,
+      "question": 5,
+      "variant": 2,
+      "first_page": 47,
+      "last_page": 48,
+      "complete_prose_present_in_order": true,
+      "paragraphs_matched": 3,
+      "single_page": false
+    },
+    {
+      "set": 37,
+      "question": 5,
+      "variant": 3,
+      "first_page": 48,
+      "last_page": 48,
+      "complete_prose_present_in_order": true,
+      "paragraphs_matched": 3,
+      "single_page": true
+    },
+    {
+      "set": 37,
+      "question": 5,
+      "variant": 4,
+      "first_page": 48,
+      "last_page": 48,
+      "complete_prose_present_in_order": true,
+      "paragraphs_matched": 3,
+      "single_page": true
+    },
+    {
+      "set": 37,
+      "question": 6,
+      "variant": 1,
+      "first_page": 54,
+      "last_page": 54,
+      "complete_prose_present_in_order": true,
+      "paragraphs_matched": 3,
+      "single_page": true
+    },
+    {
+      "set": 37,
+      "question": 6,
+      "variant": 2,
+      "first_page": 54,
+      "last_page": 55,
+      "complete_prose_present_in_order": true,
+      "paragraphs_matched": 3,
+      "single_page": false
+    },
+    {
+      "set": 37,
+      "question": 6,
+      "variant": 3,
+      "first_page": 55,
+      "last_page": 55,
+      "complete_prose_present_in_order": true,
+      "paragraphs_matched": 3,
+      "single_page": true
+    },
+    {
+      "set": 37,
+      "question": 6,
+      "variant": 4,
+      "first_page": 55,
+      "last_page": 55,
+      "complete_prose_present_in_order": true,
+      "paragraphs_matched": 3,
+      "single_page": true
+    },
+    {
+      "set": 37,
+      "question": 7,
+      "variant": 1,
+      "first_page": 66,
+      "last_page": 67,
+      "complete_prose_present_in_order": true,
+      "paragraphs_matched": 3,
+      "single_page": false
+    },
+    {
+      "set": 37,
+      "question": 7,
+      "variant": 2,
+      "first_page": 67,
+      "last_page": 67,
+      "complete_prose_present_in_order": true,
+      "paragraphs_matched": 3,
+      "single_page": true
+    },
+    {
+      "set": 37,
+      "question": 7,
+      "variant": 3,
+      "first_page": 67,
+      "last_page": 67,
+      "complete_prose_present_in_order": true,
+      "paragraphs_matched": 3,
+      "single_page": true
+    },
+    {
+      "set": 37,
+      "question": 7,
+      "variant": 4,
+      "first_page": 67,
+      "last_page": 67,
+      "complete_prose_present_in_order": true,
+      "paragraphs_matched": 3,
+      "single_page": true
+    },
+    {
+      "set": 37,
+      "question": 8,
+      "variant": 1,
+      "first_page": 78,
+      "last_page": 79,
+      "complete_prose_present_in_order": true,
+      "paragraphs_matched": 7,
+      "single_page": false
+    },
+    {
+      "set": 37,
+      "question": 8,
+      "variant": 2,
+      "first_page": 79,
+      "last_page": 79,
+      "complete_prose_present_in_order": true,
+      "paragraphs_matched": 3,
+      "single_page": true
+    },
+    {
+      "set": 37,
+      "question": 8,
+      "variant": 3,
+      "first_page": 79,
+      "last_page": 79,
+      "complete_prose_present_in_order": true,
+      "paragraphs_matched": 3,
+      "single_page": true
+    },
+    {
+      "set": 37,
+      "question": 8,
+      "variant": 4,
+      "first_page": 79,
+      "last_page": 80,
+      "complete_prose_present_in_order": true,
+      "paragraphs_matched": 3,
+      "single_page": false
+    }
+  ]
+}

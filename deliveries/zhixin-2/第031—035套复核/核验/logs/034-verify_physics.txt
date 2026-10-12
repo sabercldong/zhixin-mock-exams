@@ -1,0 +1,362 @@
+{
+  "question": 1,
+  "event_checks": 300,
+  "status": "PASS",
+  "sample30": 1.7205127018922195,
+  "sample60": 0.9615381056766584,
+  "optimal_example": 1.8166666666666669
+}
+
+{
+  "status": "pass",
+  "static_optimization_cases": 10,
+  "static_max_residual": 3.219646771412954e-15,
+  "rolling_cases": 300,
+  "spin_cases": 300,
+  "max_rolling_residual": 1.3782604569921664e-16,
+  "max_spin_residual": 1.4387112365750808e-16,
+  "max_no_slip_velocity_residual": 4.440892098500626e-16,
+  "two_mode_counterexample": {
+    "mu": 0.46,
+    "lam": 0.6,
+    "G": 1.0,
+    "mass": 1.0,
+    "radius": 1.0,
+    "inertia": 0.4,
+    "force": 2.1503368828677645,
+    "geometric_unload_force": 2.129046418680955,
+    "rolling_acceleration": 0.0032075014954979775,
+    "rolling_friction_ratio": 0.44784418343962595,
+    "rolling_reactions": [
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.9110276744286042,
+        2.275164974040936,
+        -0.45631712667922586
+      ],
+      [
+        0.9110276744286042,
+        -0.45631712667922586,
+        2.275164974040936
+      ]
+    ],
+    "spin_angular_acceleration": 0.07939234861891266,
+    "spin_reactions": [
+      [
+        0.111993917811726,
+        -0.03642816301870735,
+        -0.03642816301870735
+      ],
+      [
+        0.8534269647749922,
+        1.8552760103804178,
+        0.0
+      ],
+      [
+        0.8534269647749922,
+        0.0,
+        1.8552760103804178
+      ]
+    ],
+    "max_force_residual": 4.440892098500626e-16,
+    "max_torque_residual": 6.938893903907228e-18
+  },
+  "variation_root_checks": [
+    {
+      "beta": 0.4,
+      "q_max_numerical": 0.4347987851430861,
+      "force_upper_over_G": 2.631934550358358
+    },
+    {
+      "beta": 0.6666666666666666,
+      "q_max_numerical": 0.44266559838137876,
+      "force_upper_over_G": 2.8135334283369295
+    }
+  ],
+  "self_locking_residual": 1.148506577198438e-16,
+  "diagram_geometry": "pass",
+  "answer_scope": "静力承载与两种瞬时模式的可行条件；证明原题不足以选择唯一分支。"
+}
+
+PASS 23 cases
+
+{
+  "status": "passed",
+  "method": "边界配点线电荷求场 + 表面压力数值积分",
+  "rows": [
+    {
+      "sources": 16,
+      "force_per_length": 2.666660603600676,
+      "error": 6.0630659906024675e-06,
+      "maximum_tangential_residual": 0.0003116918603789931
+    },
+    {
+      "sources": 24,
+      "force_per_length": 2.666666631599292,
+      "error": 3.506737433767171e-08,
+      "maximum_tangential_residual": 2.5832255701185858e-06
+    },
+    {
+      "sources": 32,
+      "force_per_length": 2.6666666664431515,
+      "error": 2.2351498429884487e-10,
+      "maximum_tangential_residual": 2.15091775501719e-08
+    }
+  ]
+}
+
+{
+  "method": "四种状态的节点矩阵求解，逐一检验元件不等式；另查能量和状态连续性",
+  "random_and_named_cases": 1810,
+  "positive_total_cases": 892,
+  "impossible_negative_total_cases": 918,
+  "state_counts": {
+    "both_on": 675,
+    "ac_off": 109,
+    "bc_off": 108
+  },
+  "max_closed_form_error": 1.0658141036401503e-14,
+  "max_power_error_mW": 1.1368683772161603e-13,
+  "boundary_continuity_error": 2.0000000766629e-08,
+  "part1": {
+    "va": 5.0,
+    "vb": -13.0,
+    "diode_voltage": -13.0,
+    "current_mA": 0.0
+  },
+  "part2": {
+    "va": 10.0,
+    "vb": -2.0,
+    "diode_voltage": 2.0,
+    "current_mA": 1.0
+  },
+  "zero_total_families": [
+    {
+      "ia": -5.0,
+      "ib": 5.0,
+      "distinct_potentials": [
+        [
+          -3.0,
+          2.0
+        ],
+        [
+          -4.0,
+          1.0
+        ],
+        [
+          -13.0,
+          -8.0
+        ]
+      ]
+    },
+    {
+      "ia": -1.0,
+      "ib": 1.0,
+      "distinct_potentials": [
+        [
+          1.0,
+          2.0
+        ],
+        [
+          0.0,
+          1.0
+        ],
+        [
+          -9.0,
+          -8.0
+        ]
+      ]
+    },
+    {
+      "ia": 0.0,
+      "ib": -0.0,
+      "distinct_potentials": [
+        [
+          2.0,
+          2.0
+        ],
+        [
+          1.0,
+          1.0
+        ],
+        [
+          -8.0,
+          -8.0
+        ]
+      ]
+    },
+    {
+      "ia": 1.0,
+      "ib": -1.0,
+      "distinct_potentials": [
+        [
+          2.0,
+          1.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          -8.0,
+          -9.0
+        ]
+      ]
+    },
+    {
+      "ia": 5.0,
+      "ib": -5.0,
+      "distinct_potentials": [
+        [
+          2.0,
+          -3.0
+        ],
+        [
+          1.0,
+          -4.0
+        ],
+        [
+          -8.0,
+          -13.0
+        ]
+      ]
+    }
+  ],
+  "status": "pass"
+}
+
+{
+  "status": "passed",
+  "method": "RK4积分静力与绝热微分方程 + 浮力零点二分",
+  "ground_capacity_kg": 103.07413184680064,
+  "delta_K": 29.473137609610248,
+  "D_analytical_per_m": 5.4068400713739064e-05,
+  "D_finite_difference_per_m": 5.406840056613799e-05,
+  "rows": [
+    {
+      "ground_capacity_margin": 0.001,
+      "self_mass_kg": 102.97105771495384,
+      "linear_height_m": 18.495091158594132,
+      "ode_root_height_m": 18.4982274479837,
+      "relative_first_order_error": 0.00016954540095199893
+    },
+    {
+      "ground_capacity_margin": 0.005,
+      "self_mass_kg": 102.55876118756663,
+      "linear_height_m": 92.47545579297066,
+      "ode_root_height_m": 92.5540053546728,
+      "relative_first_order_error": 0.0008486889508576715
+    },
+    {
+      "ground_capacity_margin": 0.01,
+      "self_mass_kg": 102.04339052833264,
+      "linear_height_m": 184.95091158594133,
+      "ode_root_height_m": 185.26582515028815,
+      "relative_first_order_error": 0.0016997930627052529
+    },
+    {
+      "ground_capacity_margin": 0.02,
+      "self_mass_kg": 101.01264920986462,
+      "linear_height_m": 369.90182317188265,
+      "ode_root_height_m": 371.16725167531024,
+      "relative_first_order_error": 0.0034093215328559147
+    },
+    {
+      "variant": true,
+      "load_ratio": 0.1,
+      "required_power_W": 43281.95702004936
+    },
+    {
+      "variant": true,
+      "load_ratio": 0.2,
+      "required_power_W": 97384.40329511107
+    },
+    {
+      "variant": true,
+      "load_ratio": 0.5,
+      "required_power_W": 389537.6131804443
+    }
+  ]
+}
+
+{
+  "status": "passed",
+  "method": "精确球面求交、矢量 Snell 折射和镜面反射",
+  "convergence": [
+    {
+      "height": 0.01,
+      "thickness": 0.001,
+      "left_images": [
+        319.99456414892484,
+        320.0605446266151
+      ],
+      "right_images": [
+        320.0541178352639,
+        320.0009887500009
+      ],
+      "handwritten_left_images": [
+        -106.66583140017558,
+        64.00456590885861
+      ]
+    },
+    {
+      "height": 0.003,
+      "thickness": 0.0001,
+      "left_images": [
+        319.99946076647683,
+        320.0060481960478
+      ],
+      "right_images": [
+        320.0054099532962,
+        320.0000989874997
+      ],
+      "handwritten_left_images": [
+        -106.66658223344659,
+        64.00045624908549
+      ]
+    },
+    {
+      "height": 0.001,
+      "thickness": 1e-05,
+      "left_images": [
+        319.99994564063206,
+        320.00060534477524
+      ],
+      "right_images": [
+        320.00054109768996,
+        320.0000098875005
+      ],
+      "handwritten_left_images": [
+        -106.66665831400465,
+        64.00004565710341
+      ]
+    }
+  ],
+  "right_longitudinal_signed": [
+    49.00014822547405,
+    -49.00000145460126
+  ],
+  "correction": {
+    "left_object_cm": 64,
+    "common_image_x_cm": 320,
+    "right_object_cm": 45.714285714285715,
+    "right_signed_image_cm": -320
+  }
+}
+
+{
+  "status": "passed",
+  "cases": 520,
+  "c_normalization": 1,
+  "method": "事件洛伦兹变换：光线速度、同时波面切向量、一般相位",
+  "worst_absolute_residuals": {
+    "speed": 7.549516567451064e-15,
+    "normal": 6.800116025829084e-16,
+    "phase": 3.965716643961059e-13,
+    "simultaneity": 0.0
+  }
+}

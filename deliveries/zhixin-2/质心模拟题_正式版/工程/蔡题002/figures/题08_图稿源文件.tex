@@ -1,0 +1,56 @@
+\documentclass[multi=tikzpicture,border=8pt]{standalone}
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath,amssymb,tikz}
+\usetikzlibrary{arrows.meta,calc,decorations.pathmorphing}
+\definecolor{blue}{HTML}{17365D}
+\definecolor{red}{HTML}{AC3931}
+\tikzset{every node/.style={font=\small},arrow/.style={-{Stealth[length=2.8mm]},thick},dim/.style={|<->|,thin}}
+\begin{document}
+\begin{tikzpicture}
+\draw[very thick,blue](0,2)--(5,2);\draw[very thick,blue](0,.6)--(5,.6);
+\node[above]at(2.5,2.15){上板$+\sigma_0$};\node[below]at(2.5,.4){下板$-\sigma_0$};
+\draw[dim](5.5,.6)--node[right]{$h$}(5.5,2);
+\fill[red](2.5,1.35)circle(2pt)node[right]{$q$};\draw[arrow,red](2.5,1.35)--(2.5,.8)node[right]{$\boldsymbol E$};
+\draw[dim](0,2.9)--node[above]{$l$}(5,2.9);
+\node[below]at(2.5,-.5){法向截面示意，$h\ll l$};
+\end{tikzpicture}
+\begin{tikzpicture}
+
+\draw[thick,fill=blue!7](0,0)rectangle(2.8,1.8);\node[above]at(1.4,2){$S$：电容静止};\node[align=center]at(1.4,.9){$A=l^2$\\$Q=\sigma_0l^2$};
+\draw[thick,fill=blue!7](5,0)rectangle(7.1,1.8);\node[above]at(6.05,2){$S'$：电容向右};\node[align=center]at(6.05,.9){$A'=l^2/\gamma$\\$\sigma'=\gamma\sigma_0$};
+\draw[arrow,red](5,-.6)--(7.1,-.6)node[below,midway]{$v_0$};
+\node[below]at(3.6,-1.6){总电荷不变，沿$x$方向长度收缩};
+
+\end{tikzpicture}
+\begin{tikzpicture}
+
+\draw[very thick,blue](-2,2)--(3,2);\draw[very thick,blue](-2,0)--(3,0);
+\node[left]at(-2,2){$+\sigma'$};\node[left]at(-2,0){$-\sigma'$};
+\draw[arrow,red](-1,2.5)--(1,2.5)node[right]{$K_+'$};\draw[arrow,red](1,-.5)--(-1,-.5)node[left]{$K_-'$};
+\fill(0,1)circle(2pt);\draw[arrow,blue](0,1)--(0,.2)node[right]{$\boldsymbol E'$};
+\draw[arrow,blue](0,1)--(2,1)node[above]{$\boldsymbol v_q'$};
+\node[left]at(-.6,1){$\otimes\ B_y'>0$};
+\draw[arrow,red](0,1)--(0,1.85)node[left]{$\boldsymbol F_B'$};
+\node[above]at(2.5,3.2){$+x$向右、$+z$向上、$+y$入纸面};
+
+\end{tikzpicture}
+\begin{tikzpicture}
+
+\fill(0,0)circle(2pt);\draw[arrow,blue](0,0)--(0,-2.5)node[left]{$q\gamma E_0$向下};
+\draw[arrow,red](1,0)--(1,.9)node[right]{$q\gamma\beta^2E_0$向上};
+\fill(5,0)circle(2pt);\draw[arrow](5,0)--(5,-1.6)node[right]{$qE_0/\gamma$向下};
+\node[above]at(.5,1.7){电力与磁力};\node[above]at(5,1.7){合力};
+\draw[arrow](2,-1)--(3.8,-1);
+\node[below,align=center]at(2.7,-3.3){示例$\beta=0.6$，$\gamma=1.25$\\四力核对：$K'^z=K^z=\gamma F_z'$};
+
+\end{tikzpicture}
+\begin{tikzpicture}
+
+\draw[thick,fill=blue!8](0,0)rectangle(3,1.5);\draw[thick,fill=blue!8](5,0)rectangle(7.4,1.5);
+\node[above]at(1.5,1.8){原系面积$l^2$};\node[above]at(6.2,1.8){运动系面积$l^2/\gamma$};
+\foreach \x in{.5,1.5,2.5,5.4,6.2,7}{\draw[arrow,red](\x,-.2)--(\x,-1.1);}
+\node[below]at(1.5,-1.3){$p=\sigma_0^2/(2\varepsilon_0)$};\node[below]at(6.2,-1.3){$p'=p$};
+\node[draw,align=center]at(3.7,-2.9){$F'=p'A'=F/\gamma$\\$T'_{zz}=\varepsilon_0(E'^2-c^2B'^2)/2$};
+
+\end{tikzpicture}
+\end{document}

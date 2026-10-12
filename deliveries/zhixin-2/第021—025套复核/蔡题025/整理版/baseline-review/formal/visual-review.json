@@ -1,0 +1,443 @@
+{
+  "status": "pass",
+  "date": "2026-10-05",
+  "reviewer": "本任务主智能体人工视觉审读",
+  "documents": {
+    "paper": {
+      "sha256": "0524c665696f355163d7b05706c1a7e84a1bfffd3decca112ffb9694de700e0d",
+      "overview_pages_reviewed": 9,
+      "overview_page_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "hd_pages_reviewed": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    },
+    "student": {
+      "sha256": "7feea7c8ac7c3dfb11703ccb95347bb3970dab5fc9f9c505a7a6f351f64bf0ee",
+      "overview_pages_reviewed": 76,
+      "overview_page_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76
+      ],
+      "hd_pages_reviewed": [
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        10,
+        11,
+        12,
+        13,
+        17,
+        19,
+        20,
+        21,
+        22,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        35,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        44,
+        46,
+        48,
+        49,
+        50,
+        51,
+        53,
+        55,
+        56,
+        57,
+        58,
+        60,
+        61,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76
+      ]
+    },
+    "teacher": {
+      "sha256": "7aa1d0d85e168795dfd3ea621c8519e9a9a1276e3e988c3870219ee9566fb110",
+      "overview_pages_reviewed": 88,
+      "overview_page_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88
+      ],
+      "hd_pages_reviewed": [
+        12,
+        23,
+        33,
+        44,
+        56,
+        65,
+        66,
+        76,
+        87,
+        88
+      ]
+    }
+  },
+  "figures": [
+    {
+      "sha256": "43bde3f932b40e5e2458947183a69fff2406f804034c7b454c68d4742e1525f7",
+      "path": "figures/aperture-05.pdf"
+    },
+    {
+      "sha256": "cb098e81e43c58417ec42909e10a17d39ed1bcda31892ad8a48d5b51d42ddcbc",
+      "path": "figures/balance-04.pdf"
+    },
+    {
+      "sha256": "5bc5cac2c95915836ba13faa349f90757d80aef81472f76c85e55bce77d123ee",
+      "path": "figures/basis-08.pdf"
+    },
+    {
+      "sha256": "4a008a24a4e5e34d9c20ad562dc4708443bb15ef1a4fd8b4c4e1d7d71dccd458",
+      "path": "figures/closed-08.pdf"
+    },
+    {
+      "sha256": "b936781a667e3a279c491eb0ccb06a85300129975585efa820f40595b53a3c2d",
+      "path": "figures/coordinates-03.pdf"
+    },
+    {
+      "sha256": "5391e6def97e23a6e5e835aff6142f94a4e22d95996c0fbf279f3374b6e478f7",
+      "path": "figures/coupling-01.pdf"
+    },
+    {
+      "sha256": "a53be1315cce97d9b0df0ed5cd08784e8b215246a03a1398aea622d9c445ffec",
+      "path": "figures/curvature-07.pdf"
+    },
+    {
+      "sha256": "1e0a55ff72c3e274a857101bc7c302635298291101773780e25e9ae64ce5797a",
+      "path": "figures/direct-05.pdf"
+    },
+    {
+      "sha256": "93fcbeda962edbdf276c4f437f4c73616fb9f9b0b2a448f84610e96cffb8bc4f",
+      "path": "figures/doppler-02.pdf"
+    },
+    {
+      "sha256": "39d4b2b804528556268d7913476883973ba657cec74dec683f9ebd37c93bc0b8",
+      "path": "figures/eight-03.pdf"
+    },
+    {
+      "sha256": "ffb64b67e9cc6991d6779cbf7a856ad8251468a9652516a2eb5e97c419de286a",
+      "path": "figures/element-06.pdf"
+    },
+    {
+      "sha256": "61e53bd39888d929f6123b76291b5ba800cc877f33b3886878d0dfd60ccc71ef",
+      "path": "figures/flux-01.pdf"
+    },
+    {
+      "sha256": "93eb8d56d59077a8161e3bb599bfaa4ec41fb0bc7f8ef0f5377881de4a2c6506",
+      "path": "figures/force-01.pdf"
+    },
+    {
+      "sha256": "f80733d76f459990b5337be137060eff15f8529117b49ad3bbc810d39fb8dade",
+      "path": "figures/geometry-07.pdf"
+    },
+    {
+      "sha256": "7144aa4743b201c7dfaaa0f8c48edcea5da9d2cffd0760f73f0e05d94466bc23",
+      "path": "figures/ghost-05.pdf"
+    },
+    {
+      "sha256": "110152e15bc632c71f5debcd4fda45cb097cd191b90caa6c831724092fb6a3dc",
+      "path": "figures/parabola-03.pdf"
+    },
+    {
+      "sha256": "ba268d8fe46992feb1cf0ce3dac86a3de306bddcd7d85539e7ad318f78b3ddf3",
+      "path": "figures/phases-01.pdf"
+    },
+    {
+      "sha256": "64aaf186159ade3d82fe5daa92fc0c9b33194edc178519fd4205255891e0180f",
+      "path": "figures/potential-08.pdf"
+    },
+    {
+      "sha256": "a9aecb27e814a0b96b9a8e2b54a0b6018c6525384e53c5156fe8d306a1a141f5",
+      "path": "figures/profiles-06.pdf"
+    },
+    {
+      "sha256": "a4d4aa330a25b41608fc0a9c007a1cdd4013bb0823ed711c631243cebf2c95cb",
+      "path": "figures/question-01.pdf"
+    },
+    {
+      "sha256": "6f115b8b0194b7ceb8b983ce74fe4b0e7ba0b89f1023f6510c5960cad7ccbbcc",
+      "path": "figures/question-02.pdf"
+    },
+    {
+      "sha256": "affc19c5a4fc5a68b20a77e3bd47846161f78a861c5e0426d44cceec2b945b14",
+      "path": "figures/question-03.pdf"
+    },
+    {
+      "sha256": "c57575bd99c1b7adb7c173718315468affb377db25870c3133c5df9ac6d96e73",
+      "path": "figures/question-04.pdf"
+    },
+    {
+      "sha256": "257db221c82de75570dcc1cc1a8c41ecf50210b2aa72d4dafb38f0051c491fd1",
+      "path": "figures/question-05.pdf"
+    },
+    {
+      "sha256": "16fdcfaf95ef130364649bd52182fcd9eb932a785ed78c0fad4baa2afdb03aa5",
+      "path": "figures/question-06.pdf"
+    },
+    {
+      "sha256": "0f8d180fca3bf14e1c8796e5e9e54a01b765d65ecc2f7ab8c268db8c9cc45aec",
+      "path": "figures/question-07.pdf"
+    },
+    {
+      "sha256": "e5178e13135e214e15dae8b71a197b9912c9aa925fb146e5f2a08a9e4001b644",
+      "path": "figures/question-08.pdf"
+    },
+    {
+      "sha256": "c63aeab3930c019d0435949fd64d2f97cbd300246aead5e9d41aa0d73a00f939",
+      "path": "figures/recoil-02.pdf"
+    },
+    {
+      "sha256": "6d76e362e8007257df96cf4c4a7aeb6735b33d54b2b1b072081d58557866ec7d",
+      "path": "figures/reflection-05.pdf"
+    },
+    {
+      "sha256": "2e96353267c7093b20d108ee18bca73bfadbfb2fa227c0ba59c4820579962ef2",
+      "path": "figures/samefreq-03.pdf"
+    },
+    {
+      "sha256": "c719901cff383c51dde69de014f660eca8c91d8f30209433587ddc87dc6ca2b7",
+      "path": "figures/separatrix-08.pdf"
+    },
+    {
+      "sha256": "75b30270e50d33789130bfa386621909741fed337ad983b5f667f4c4ac99d75d",
+      "path": "figures/steady-04.pdf"
+    },
+    {
+      "sha256": "6c4da42708c71be51c9ae52b8c6c3be8d7821dab9b072057b5fadb5ef229dbbf",
+      "path": "figures/tension-06.pdf"
+    },
+    {
+      "sha256": "abb486396a2dbdb81e2bc9ec52673f0668c339990bc409b6c4082d07ac262220",
+      "path": "figures/unwrapped-08.pdf"
+    },
+    {
+      "sha256": "0ac2fc440288b0f844306f1f364011feeb28c2571ef5fe88be43151a773294b5",
+      "path": "figures/vertices-07.pdf"
+    }
+  ],
+  "overview_page_count": 173,
+  "hd_page_count": 74,
+  "individual_figure_count": 35,
+  "checks": [
+    "三版本173页总览均已逐页审看；74页高清核查覆盖题干、解答图、计算密集页和题间分页。",
+    "35幅单图核对连接、方向、作用点、空间前后关系、必要标注、公式框及文字遮挡。",
+    "解答图置于解析建立相应关系的位置；图中符号在邻近正文及后续方程中实际使用。",
+    "三维线圈、柱面与运动轨迹采用空间投影；第8题轨迹由独立二阶运动方程生成，前后侧分实虚线。",
+    "第6题两条可行张力曲线作为非唯一性证据；平台角不标成实际滑动角。"
+  ],
+  "repairs": [
+    "第1题耦合关系图公式框扩大，消除公式伸出。",
+    "第2题反冲与频移图分开文字和箭头，消除遮挡。",
+    "第5题近轴光线方向与推导一致；光圈内入射示例不碰光圈挡板。",
+    "第7题焦点、力、速度和几何角标注调整，减少相互重合。",
+    "第8题重绘真实柱面投影及轨迹，并按可见前后侧区分实虚线。",
+    "自然分页调整完整步骤和带解变式的连贯性；没有加大行距、增加分页或删去推导。"
+  ],
+  "final_recheck": "最后一次修正仅改变第5题题图中的一条示例入射高度，不改变正文或分页。已重编译三版本，并重新检查最新试卷第6页、学生第38页及教师第45页所属总览；高清记录绑定最终PDF校验和。",
+  "remaining_limitations": [
+    "题干改写的两个非阻塞询问尚未收到答复，未把未确认的选择视为批准。当前采用保留原问并明示成立条件的正式版本。",
+    "第6题实际滑动分界缺少加载/接触模型，现有条件不能唯一确定；30度只对应解析明确指定的张力平台分界。"
+  ]
+}

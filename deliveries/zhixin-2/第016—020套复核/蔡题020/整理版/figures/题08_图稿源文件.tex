@@ -1,0 +1,66 @@
+\documentclass[tikz,border=5pt,multi=tikzpicture]{standalone}
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath}
+\usetikzlibrary{arrows.meta,calc}
+\definecolor{ink}{HTML}{17365D}
+\definecolor{field}{HTML}{287DA8}
+\definecolor{force}{HTML}{C56B2A}
+\tikzset{every node/.style={font=\small},vec/.style={-{Stealth[length=2mm]},thick},helper/.style={gray,dashed}}
+\begin{document}
+\begin{tikzpicture}
+  \fill[ink] (0,0) circle (1.5pt);
+  \draw[vec,force] (0,0)--(-2.8,0) node[left] {$\boldsymbol p_\pi=(-p_0,0,0)$};
+  \draw[vec,ink] (0,0)--(1.8,1.25) node[above right] {$\boldsymbol p_+$};
+  \draw[vec,field] (0,0)--(1.2,-1.25) node[below right] {$\boldsymbol p_-$};
+  \draw[helper] (1.8,1.25)--(3,0)--(1.2,-1.25);
+  \draw[vec,gray] (0,0)--(3,0) node[right] {$(p_0,0,0)$};
+  \node[below left] at (0,-.12) {$K^+$};
+  \node at (.2,1.85) {实验室系：初态静止，总动量为零};
+\end{tikzpicture}
+\begin{tikzpicture}
+  \node at (0,1.8) {双粒子质心系};
+  \draw[vec,ink] (0,0)--(.6,.8) node[right] {$\boldsymbol p_* $};
+  \draw[vec,field] (0,0)--(-.6,-.8) node[left] {$-\boldsymbol p_* $};
+  \fill (0,0) circle (1.2pt);
+  \draw[vec,force] (2,0)--(3.2,0) node[midway,above] {$\beta c$};
+  \node at (5.2,1.8) {实验室系};
+  \draw[helper] (4,0)--(7,0);
+  \fill (4,0) circle (1.2pt) node[below] {$O_p$};
+  \draw[vec,ink] (4,0)--(6.5,.8) node[right] {$\boldsymbol p_+$};
+  \draw[vec,field] (4,0)--(4.9,-.8) node[below] {$\boldsymbol p_-$};
+  \draw[<->,gray] (4,-1.3)--(5.7,-1.3) node[midway,below] {$A=p_0/2$};
+  \fill (5.7,0) circle (1.2pt);
+  \node at (2.6,-2.15) {$p_{+x}=A+au,\quad p_{-x}=A-au,\quad p_{\perp}=bv$};
+\end{tikzpicture}
+\begin{tikzpicture}
+  \input{momentum-08-space.tex}
+\end{tikzpicture}
+\begin{tikzpicture}[x=2.3cm,y=2.3cm]
+  \draw[vec,gray] (-.15,0)--(2.03,0) node[right] {$p_x$};
+  \draw[vec,gray] (0,-.8)--(0,.9) node[above] {$p_\perp$};
+  \draw[field,thick] (.9,0) ellipse (.65 and .46);
+  \draw[vec,force] (0,0)--(1.1275,.43091) node[above right] {$P_+$};
+  \draw[vec,ink] (0,0)--(.6725,-.43091) node[below right] {$P_-$};
+  \draw[helper] (1.1275,.43091)--(.6725,-.43091);
+  \fill (.9,0) circle (1.2pt) node[below] {$A$};
+  \draw[<->,gray] (.9,.61)--(1.55,.61) node[midway,above] {$a$};
+  \draw[<->,gray] (1.68,0)--(1.68,.46) node[midway,right] {$b$};
+  \draw[force] (.35,0) arc (0:20.92:.35);
+  \draw[ink] (.28,0) arc (0:-32.65:.28);
+  \node[left] at (0,0) {$O_p$};
+\end{tikzpicture}
+\begin{tikzpicture}
+  \foreach \shift/\A/\aa/\bb/\uu/\label in {0/.55/1.2/.9/1/{$A<a$},4/1/0.95/0.65/0.89267855/{$0<D<C$},8/1.2/.6/.42/0/{$D\ge C$}}{
+    \begin{scope}[xshift=\shift cm]
+      \draw[helper] (-.8,0)--(2,0);
+      \draw[field,thick] (\A,0) ellipse [x radius=\aa,y radius=\bb];
+      \pgfmathsetmacro{\vv}{sqrt(1-\uu*\uu)}
+      \draw[vec,force] (0,0)--({\A+\aa*\uu},{\bb*\vv});
+      \draw[vec,ink] (0,0)--({\A-\aa*\uu},{-\bb*\vv});
+      \fill (0,0) circle (1.2pt) node[below] {$O_p$};
+      \fill (\A,0) circle (1pt) node[below] {$A$};
+      \node at (.55,1.25) {\label};
+    \end{scope}
+  }
+\end{tikzpicture}
+\end{document}

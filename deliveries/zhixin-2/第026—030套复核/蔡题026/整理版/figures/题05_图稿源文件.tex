@@ -1,0 +1,115 @@
+\documentclass[tikz,border=5pt]{standalone}
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath,amssymb}
+\usetikzlibrary{arrows.meta,calc}
+\definecolor{ink}{HTML}{243447}\definecolor{blue}{HTML}{2765A2}
+\definecolor{green}{HTML}{3F7D5B}\definecolor{red}{HTML}{B74739}
+\tikzset{body/.style={draw=ink,thick},vec/.style={draw=blue,thick,-{Latex}},
+guide/.style={gray!70,dashed},dim/.style={ink,{Latex}-{Latex}},
+line cap=round,line join=round}
+\begin{document}
+\begin{tikzpicture}
+\begin{scope}[x={(.85cm,.35cm)},y={(.7cm,-.4cm)},z={(0cm,1cm)}]
+% 下圆柱的凸面朝上，玻璃位于此面下侧；两曲率方向相差60度。
+\filldraw[fill=green!13,draw=green,thick]
+plot[domain=-1.4:1.4,samples=40]({.5*\x-1.7*.866},{-.866*\x-1.7*.5},{-.32*\x*\x-.45})
+--({.5*1.4+1.7*.866},{-.866*1.4+1.7*.5},{-.32*1.4*1.4-.45})
+-- plot[domain=1.4:-1.4,samples=40]({.5*\x+1.7*.866},{-.866*\x+1.7*.5},{-.32*\x*\x-.45})--cycle;
+\filldraw[fill=green!5,draw=green,thick]
+plot[domain=-1.4:1.4,samples=40]({.5*\x-1.7*.866},{-.866*\x-1.7*.5},{-.32*\x*\x})
+--({.5*1.4+1.7*.866},{-.866*1.4+1.7*.5},{-.32*1.4*1.4})
+-- plot[domain=1.4:-1.4,samples=40]({.5*\x+1.7*.866},{-.866*\x+1.7*.5},{-.32*\x*\x})--cycle;
+\foreach\v in{-1.2,-.6,0,.6,1.2}
+\draw[green!55]plot[domain=-1.4:1.4,samples=30]({.5*\x+\v*.866},{-.866*\x+\v*.5},{-.32*\x*\x});
+\foreach\u in{-1.4,1.4}
+\draw[green]({.5*\u-1.7*.866},{-.866*\u-1.7*.5},{-.32*\u*\u})
+--({.5*\u-1.7*.866},{-.866*\u-1.7*.5},{-.32*\u*\u-.45});
+% 上圆柱的凸面朝下，玻璃位于此面上侧；曲面用真实弯曲边界而非平板替代。
+\filldraw[fill=blue!5,draw=blue,thick,fill opacity=.75]
+plot[domain=-1.4:1.4,samples=40](\x,-1.7,{.32*\x*\x})
+--(1.4,1.7,.6272)
+-- plot[domain=1.4:-1.4,samples=40](\x,1.7,{.32*\x*\x})--cycle;
+\foreach\v in{-1.2,-.6,0,.6,1.2}
+\draw[blue!65]plot[domain=-1.4:1.4,samples=30](\x,\v,{.32*\x*\x});
+\draw[blue]plot[domain=-1.4:1.4,samples=40](\x,-1.7,{.32*\x*\x+.45});
+\foreach\u in{-1.4,1.4}
+\draw[blue](\u,-1.7,{.32*\u*\u})--(\u,-1.7,{.32*\u*\u+.45});
+\fill[red](0,0,0)circle(.04);
+\draw[red,-{Latex}](0,0,-1.7)--(0,0,0);
+\node[below,text=red]at(0,0,-1.7){接触点$O$};
+\node[text=blue]at(0,-1.7,1.8){上方玻璃};
+\end{scope}
+\draw[green](2.1,-1.18)--(2.5,-1.6)node[right]{下方玻璃};
+\begin{scope}[shift={(7.2,0)}]
+\draw[vec](-1.6,0)--(1.8,0)node[right]{$x$};
+\draw[vec](0,-1.5)--(0,1.8)node[above]{$y,\boldsymbol a_1$};
+\draw[green,thick,-{Latex}](210:1.35)--(30:1.6)node[above right]{$\boldsymbol a_2$};
+\draw[blue,thick,-{Latex}](0,0)--(0:1.25)node[below]{$\boldsymbol n_1$};
+\draw[green,thick,-{Latex}](0,0)--(-60:1.3)node[below right]{$\boldsymbol n_2$};
+\draw[red](30:.6)arc(30:90:.6)node[midway,above right]{$\phi$};
+\fill[ink](0,0)circle(.035)node[below left]{$O$};
+\node[align=center]at(0,-2.1){切平面内的轴线投影\\空间图取$\phi=60^\circ$};
+\end{scope}
+\node at(1,-2.6){接触附近截取的两圆柱曲面};
+\end{tikzpicture}
+\begin{tikzpicture}[x=1.2cm,y=1cm]
+\fill[blue!9]plot[domain=-2.1:2.1,samples=60](\x,{.25*\x*\x})
+--(2.1,1.5025)-- plot[domain=2.1:-2.1,samples=60](\x,{.25*\x*\x+.4})--cycle;
+\fill[green!9]plot[domain=-2.1:2.1,samples=60](\x,{-.2*\x*\x})
+--(2.1,-1.282)-- plot[domain=2.1:-2.1,samples=60](\x,{-.2*\x*\x-.4})--cycle;
+\draw[blue,thick]plot[domain=-2.1:2.1,samples=60](\x,{.25*\x*\x});
+\draw[green,thick]plot[domain=-2.1:2.1,samples=60](\x,{-.2*\x*\x});
+\draw[guide](-2.35,0)--(3.3,0)node[right,text=ink]{$z=0$};
+\draw[guide](1.8,.81)--(2.85,.81);
+\draw[guide](1.8,-.648)--(2.85,-.648);
+\draw[dim](2.65,0)--(2.65,.81)node[midway,right]{$g_1$};
+\draw[dim](2.65,-.648)--(2.65,0)node[midway,right]{$g_2$};
+\draw[dim](1.8,-.648)--(1.8,.81)node[midway,left]{$h$};
+\fill[red](0,0)circle(.045)node[below left]{$O$};
+\node[text=blue]at(-1.15,1.35){玻璃};
+\node[text=green]at(-1.15,-1.1){玻璃};
+\node at(.8,-1.8){$h=g_1+g_2$};
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{scope}
+\draw[vec](-1.6,0)--(1.85,0)node[right]{$x,\boldsymbol n_1$};
+\draw[vec](0,-1.6)--(0,1.85)node[above]{$y,\boldsymbol a_1$};
+\draw[green,thick,-{Latex}](210:1.5)--(30:1.65)node[above right]{$\boldsymbol a_2$};
+\draw[green,thick,-{Latex}](0,0)--(-60:1.5)node[below right]{$\boldsymbol n_2$};
+\draw[red](30:.65)arc(30:90:.65)node[pos=.55,above right]{$\phi$};
+\fill[ink](0,0)circle(.03)node[below left]{$O$};
+\end{scope}
+\begin{scope}[shift={(5.5,0)}]
+\draw[guide](-1.7,0)--(1.7,0);
+\draw[guide](0,-1.7)--(0,1.7);
+\draw[blue,thick,rotate=-30](0,0)ellipse(.67 and 1.16);
+\draw[vec](150:1.0)--(-30:1.3)node[right]{$u$};
+\draw[vec](240:1.4)--(60:1.7)node[above right]{$v$};
+\node[text=blue]at(.6,-1.55){短轴沿$u$，长轴沿$v$};
+\fill[ink](0,0)circle(.03);
+\end{scope}
+\node at(2.8,-2.35){右图：$R_1=R_2$，$\phi=60^\circ$};
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{scope}
+\foreach\m in{1,...,6}{
+\pgfmathsetmacro{\xm}{.38*sqrt(\m)}
+\draw[body](\xm,-1.4)--(\xm,1.4);
+\draw[body](-\xm,-1.4)--(-\xm,1.4);}
+\draw[red,thick](0,-1.4)--(0,1.4);
+\node[align=center]at(0,-2.0){平行\\直条纹};
+\end{scope}
+\begin{scope}[shift={(4,0)}]
+\foreach\m in{1,...,6}\draw[body](0,0)circle({.48*sqrt(\m)});
+\fill[red](0,0)circle(.035);
+\node[align=center]at(0,-2.0){正交且等半径\\圆条纹};
+\end{scope}
+\begin{scope}[shift={(8,0)}]
+\foreach\m in{1,...,6}
+\draw[body,rotate=-30](0,0)ellipse({.32*sqrt(\m)} and {.32*sqrt(3*\m)});
+\fill[red](0,0)circle(.035);
+\node[align=center]at(0,-2.0){锐角$\phi=60^\circ$\\椭圆条纹};
+\end{scope}
+\node at(4,-3.0){反射暗纹：$2h=m\lambda$；各组向外渐密};
+\end{tikzpicture}
+\end{document}

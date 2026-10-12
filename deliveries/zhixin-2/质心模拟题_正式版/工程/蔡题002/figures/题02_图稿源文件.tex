@@ -1,0 +1,66 @@
+\documentclass[multi=tikzpicture,border=8pt]{standalone}
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath,amssymb,tikz}
+\usetikzlibrary{arrows.meta,calc,decorations.pathmorphing}
+\definecolor{blue}{HTML}{17365D}
+\definecolor{red}{HTML}{AC3931}
+\tikzset{every node/.style={font=\small},arrow/.style={-{Stealth[length=2.8mm]},thick},dim/.style={|<->|,thin}}
+\begin{document}
+\begin{tikzpicture}
+
+\draw[thick,fill=gray!8](-3,1)--(-2,2)--(3,2)--(2,1)--cycle;
+\draw[very thick,blue](0,1.48)ellipse(1.35 and .3);
+\draw[thick,fill=gray!15](-.65,-1)rectangle(.65,.65);
+\foreach \y in{-.8,-.5,-.2,.1,.4}{\draw[thick](-.65,\y)arc(180:360:.65 and .12);}
+\draw[arrow,red](.65,.05)--(1.9,.05)node[right]{$I$};
+\draw[arrow,blue](-1.2,1.4)--(-1.2,2.5)node[above]{$B_n$};
+\draw[arrow,blue](-1.2,1.4)--(-2.45,1.4)node[left]{$B_\tau$};
+\node[right]at(1.7,1.65){$R,r,m$};\node[right]at(.9,-.75){电磁铁};
+
+\end{tikzpicture}
+\begin{tikzpicture}
+
+\draw[very thick,blue](-2,0)--(2,0);\node[below]at(0,-.2){小环局部径向截面};
+\fill(1.1,0)circle(2.5pt);\draw[arrow,blue](1.1,0)--(2.65,0)node[right]{$B_\rho=kI$};
+\draw[arrow,red](1.1,0)--(1.1,1.65)node[above]{$dF_z$};
+\node[left]at(.95,.5){$i<0$：$\odot$};
+\draw[arrow,blue](-1.2,0)--(-1.2,1.2)node[above]{$B_z$};
+\node[below]at(1.1,-.8){$F_z=-2\pi RkIi$};
+\node[left]at(-1.5,-.45){轴线};\draw[dashed](-1.5,-.5)--(-1.5,1.7);
+
+\end{tikzpicture}
+\begin{tikzpicture}
+
+\draw[arrow](0,0)--(5.4,0)node[right]{$t$};\draw[arrow](0,0)--(0,2.6)node[above]{$I$};
+\draw[blue,very thick](0,0)--(3,2)--(5,2);\node[left]at(0,2){$I_0$};
+\draw[dashed](3,0)--(3,2.3);\node[below]at(3,0){$\tau$};
+\draw[arrow](0,-3.2)--(5.4,-3.2)node[right]{$t$};\draw[arrow](0,-3.2)--(0,-.5)node[above]{$F_z$};
+\fill[red!12](0,-3.2)--(3,-1.2)--(3,-3.2)--cycle;
+\draw[red,very thick](0,-3.2)--(3,-1.2)--(3,-3.2)--(5,-3.2);
+\node[right]at(3.2,-1.2){线性上升时为三角脉冲};
+\node[below]at(1.9,-2.35){面积$J$};
+
+\end{tikzpicture}
+\begin{tikzpicture}
+
+\draw[arrow](0,0)--(7,0)node[right]{$t$};\draw[arrow](0,-.5)--(0,3)node[above]{$v_z$};
+\draw[very thick,blue](0,0)--(.25,2.2)--(5.5,0);
+\draw[dashed](.25,2.2)--(0,2.2)node[left]{$v_+$};
+\node[below]at(5.5,0){$v_+/g$};\node[right]at(2.8,1.6){斜率$-g$};
+\fill[blue!10](.25,0)--(.25,2.2)--(5.5,0)--cycle;
+\draw[very thick,blue](.25,2.2)--(5.5,0);
+\node[below]at(3.1,.6){面积$h=v_+^2/(2g)$};
+\node[below left]at(.1,-.55){短脉冲};
+
+\end{tikzpicture}
+\begin{tikzpicture}
+
+\node[draw,rounded corners,align=center]at(0,1.5){$\mathcal L/r\ll\tau$\\连续上升、忽略自感};
+\node[draw,rounded corners,align=center]at(5,1.5){$\tau\ll\mathcal L/r$\\先取严格阶跃};
+\node[align=center]at(0,-.2){$J=KMI_0^2/(2r)$\\$h=J^2/(2m^2g)$};
+\node[align=center]at(5,-.2){$J_{\rm step}=KMI_0^2/r$\\$h_{\rm step}=4h$};
+\draw[arrow](0,.8)--(0,.3);\draw[arrow](5,.8)--(5,.3);
+\node[below]at(2.5,-1){两种情况下电磁脉冲均须远短于机械时间};
+
+\end{tikzpicture}
+\end{document}

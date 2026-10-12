@@ -1,0 +1,20 @@
+{
+  "question": 8, "actual_reviewed": true,
+  "scope": "分题工作预览；整套合并后须重新验收",
+  "student": {
+    "pdf_sha256": "aea0cd22423305babfac5585e1726c249a36965cff42eb63b5d90fbd09b2b20a",
+    "total_pages": 12, "body_pages": 11, "extracted_body_nonspace": 7035,
+    "overview_pages_reviewed": [1,2,3,4,5,6,7,8,9,10,11,12],
+    "high_resolution_pages_reviewed": [3,5,7,8,9,10,11,12]
+  },
+  "teacher": {
+    "pdf_sha256": "3ed3c78591176b37377768bda59effb0974d992e175930fb3fd7e1d0d9419b9c",
+    "total_pages": 17, "body_pages": 16, "extracted_body_nonspace": 10744,
+    "overview_pages_reviewed": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17],
+    "high_resolution_pages_reviewed": [13,15,16,17]
+  },
+  "figures_reviewed": ["decay-08","boost-08","momentum-08","section-08","anglecases-08"],
+  "layout_warnings": [], "qpdf_check_passed": true, "physics_checks_passed": true,
+  "repairs": ["质心系与实验室系纵向拉伸比例保持gamma大于一", "非对称夹角图使用真实内点极值", "末尾完整短变式同页排布，消除拆开的211字符尾页，不改变版式参数"],
+  "physics_note": "允许范围为三维曲面；最大角分段并区分零动量上确界；独立实验室能量求根、三维四动量和全区间向量搜索均通过"
+}

@@ -1,0 +1,140 @@
+\documentclass[tikz,border=5pt]{standalone}
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath,amssymb}
+\usetikzlibrary{arrows.meta,calc,decorations.pathmorphing}
+\definecolor{ink}{HTML}{243447}\definecolor{blue}{HTML}{2765A2}
+\definecolor{green}{HTML}{3F7D5B}\definecolor{red}{HTML}{B74739}
+\tikzset{body/.style={draw=ink,thick},vec/.style={draw=blue,thick,-{Latex}},
+guide/.style={gray!60,dashed},dim/.style={ink,{Latex}-{Latex}},
+coil/.style={body,decorate,decoration={coil,aspect=.35,segment length=3.5pt,amplitude=3pt}},
+line cap=round,line join=round}
+\newcommand{\capacitor}[2]{
+\draw[body](#1,{#2+.12})--++(-.35,0)--++(.7,0);
+\draw[body](#1,{#2-.12})--++(-.35,0)--++(.7,0);}
+\newcommand{\resistor}[3]{
+\draw[body](#1,{#2+.45})--++(-.18,-.075)--++(.36,-.15)
+--++(-.36,-.15)--++(.36,-.15)--++(-.36,-.15)--++(.36,-.15)--++(-.18,-.075);
+\node[right]at({#1+.22},#2){$#3$};}
+\newcommand{\groundmark}[1]{
+\draw[body](#1,0)--(#1,-.2);
+\foreach\y/\w in{-.2/.4,-.32/.28,-.44/.13}
+\draw[body]({#1-\w},\y)--({#1+\w},\y);}
+\begin{document}
+\begin{tikzpicture}
+\begin{scope}[shift={(0,1)}]
+\draw[vec](-.15,0)--(5.1,0)node[right]{$V$};
+\draw[vec](0,-.15)--(0,2.8)node[above]{$I$};
+\draw[body](0,0)..controls(.45,1.2)and(1.3,1.85)..(1.8,1.85)
+..controls(2.3,1.85)and(2.7,1.05)..(3.2,1.05)
+..controls(3.9,1.05)and(4.4,1.8)..(4.7,2.2);
+\draw[guide](1.8,0)--(1.8,1.85);
+\draw[guide](3.2,0)--(3.2,1.05);
+\node[below]at(1.8,0){$V_1$};\node[below]at(3.2,0){$V_2$};
+\fill[red](2.5,1.45)circle(.045);
+\draw[red,dashed](1.6,2.25)--(3.4,.65)node[right]{$-1/r$};
+\node at(2.4,-.75){负微分区：$\mathrm dV/\mathrm dI=-r$};
+\end{scope}
+\begin{scope}[shift={(8,0)}]
+\draw[body](0,0)--(4.4,0);
+\draw[body](0,4.6)--(4.4,4.6);
+\draw[body](0,4.6)--(0,4.0);\draw[coil](0,4.0)--(0,2.6);
+\node[left]at(-.1,3.3){$L$};
+\draw[body](0,2.6)--(0,1.62);\capacitor{0}{1.5}
+\draw[body](0,1.38)--(0,0);\node[left]at(-.42,1.5){$C$};
+\draw[body](2.2,4.6)--(2.2,4.05);\resistor{2.2}{3.6}{R}
+\draw[body](2.2,3.15)--(2.2,1.9);
+\draw[body,fill=blue!5](1.8,.75)rectangle(2.6,1.75);
+\node at(2.2,1.25){Gunn};
+\node[right]at(2.65,1.1){$-r$};
+\draw[body](2.2,1.9)--(2.2,1.75);\draw[body](2.2,.75)--(2.2,0);
+\draw[body](2.2,2.1)--(3.15,2.1);
+\draw[body,fill=white](3.15,2.1)circle(.045)node[right]{$+v_{\rm out}$};
+\draw[body](4.4,4.6)--(4.4,4.0);\draw[coil](4.4,4.0)--(4.4,2.6);
+\node[right]at(4.7,3.3){RFC};
+\draw[body](4.4,2.6)--(4.4,1.35);
+\draw[body](3.95,1.35)--(4.85,1.35);
+\draw[body,line width=1.3pt](4.15,1.1)--(4.65,1.1);
+\draw[body](4.4,1.1)--(4.4,0);
+\node[right]at(4.85,1.25){$V_b$};
+\node[left]at(3.9,1.35){$+$};\node[left]at(4.05,1.1){$-$};
+\groundmark{2.2}
+\draw[vec](-.7,2.75)--(-.7,3.7)node[left,midway]{$i$};
+\draw[vec](3.65,2.65)--(3.65,3.65)node[left,midway]{$I$};
+\draw[red,thick,-{Latex}](1.45,3.05)--(1.45,2.2)node[left,midway]{$I+i$};
+\end{scope}
+\end{tikzpicture}
+\begin{tikzpicture}
+\draw[body](0,0)--(3,0);\draw[body](0,4.2)--(3,4.2);
+\draw[body](0,4.2)--(0,3.7);\draw[coil](0,3.7)--(0,2.3);
+\node[left]at(-.1,3){$L$};
+\draw[body](0,2.3)--(0,1.42);\capacitor{0}{1.3}
+\draw[body](0,1.18)--(0,0);\node[left]at(-.42,1.3){$C$};
+\node[right]at(.45,1.55){$-$};\node[right]at(.45,1.02){$+,q$};
+\draw[body](3,4.2)--(3,3.85);\resistor{3}{3.4}{R}
+\draw[body](3,2.95)--(3,1.85);
+\draw[body,fill=red!5](2.6,.8)rectangle(3.4,1.8);
+\node at(3,1.3){$-r$};\draw[body](3,1.85)--(3,1.8);
+\draw[body](3,.8)--(3,0);
+\fill[ink](3,4.2)circle(.045)node[above]{$T$};
+\fill[ink](3,2.1)circle(.045)node[above right]{$D$};
+\fill[ink](3,0)circle(.045)node[below]{$O$};
+\draw[vec](-.6,2.35)--(-.6,3.3)node[left,midway]{$i$};
+\draw[vec](4,3.7)--(4,2.65)node[right,midway]{$i$};
+\draw[red,thick,-{Latex}](-1.35,.15)--(-1.35,4.05)
+node[left,midway]{$v_{\rm in}=V_T-V_O$};
+\draw[green,thick,-{Latex}](4.6,.15)--(4.6,1.95)
+node[right,midway]{$v_{\rm out}=V_D-V_O$};
+\node at(1.5,-.8){RFC交流开路；$v_{\rm out}=-ri$};
+\end{tikzpicture}
+\begin{tikzpicture}[x=1cm,y=1cm]
+\foreach\xx/\yy/\bb/\ys/\name in{0/0/-.12/.95/衰减,5.1/0/0/.95/中性,0/-4.4/.12/.16/振荡增长}{
+\begin{scope}[shift={(\xx,\yy)}]
+\draw[vec](0,0)--(3.35,0)node[right]{$\tau$};
+\draw[vec](0,-1.45)--(0,1.65)node[above]{$j$};
+\pgfmathsetmacro{\ww}{sqrt(1-\bb*\bb)}
+\draw[blue,thick,domain=0:18,samples=220]
+plot({.16*\x},{\ys*exp(\bb*\x)*sin(\ww*\x r)/\ww});
+\foreach\tt in{6,12,18}\draw({.16*\tt},.05)--({.16*\tt},-.05)node[below]{$\tt$};
+\ifdim\bb pt>.1pt
+\foreach\vv in{-8,8}\draw(-.05,{\ys*\vv})--(.05,{\ys*\vv})node[left]{$\vv$};
+\else
+\foreach\vv in{-1,1}\draw(-.05,{\ys*\vv})--(.05,{\ys*\vv})node[left]{$\vv$};
+\fi
+\node[align=center]at(1.5,-2.1){\name\\$\beta/\omega_0=\bb$};
+\end{scope}}
+\begin{scope}[shift={(5.1,-4.4)}]
+\draw[vec](0,0)--(3.35,0)node[right]{$\tau$};
+\draw[vec](0,-.2)--(0,2.45)node[above]{$j$};
+\draw[red,thick,domain=0:2.1,samples=100]
+plot({1.45*\x},{.055*exp(1.2*\x)*sinh(sqrt(.44)*\x)/sqrt(.44)});
+\foreach\tt in{1,2}\draw({1.45*\tt},.05)--({1.45*\tt},-.05)node[below]{$\tt$};
+\foreach\vv in{20,40}\draw(-.05,{.055*\vv})--(.05,{.055*\vv})node[left]{$\vv$};
+\node[align=center]at(1.5,-2.1){实根非振荡增长\\$\beta/\omega_0=1.2$};
+\end{scope}
+\node at(4,-7.7){$\tau=\omega_0t,\quad j=i/(\alpha/\omega_0),\quad\alpha>0$};
+\node at(4,-8.25){增长解仅用于小信号条件仍成立的阶段};
+\end{tikzpicture}
+\begin{tikzpicture}
+\draw[guide](-2.4,0)--(2.4,0);
+\draw[guide](0,-2.45)--(0,2.45);
+\draw[blue,very thick,-{Latex}](0,0)--(0,2.0)node[above]{$V_L=jZ_0\hat i$};
+\draw[green,very thick,-{Latex}](0,0)--(0,-2.0)node[below]{$V_C=-jZ_0\hat i$};
+\draw[red,very thick,-{Latex}](0,0)--(-1.3,0)node[above left]{$V_D=-R\hat i$};
+\draw[ink,very thick,-{Latex}](0,0)--(1.3,0)node[above right]{$V_R=R\hat i$};
+\node[align=left,anchor=west]at(3.7,.3){$r=R,\quad\omega=\omega_0$\\$V_L+V_C=0$\\$V_R+V_D=0$\\整个$LC$端电压为零};
+\node at(2,-3.2){按各元件电流的被动电压约定；$\hat i$取相位参考};
+\end{tikzpicture}
+\begin{tikzpicture}[every node/.style={align=center}]
+\node[draw=ink,rounded corners,fill=blue!5](S)at(0,3){直流电源\\$V_bI$};
+\node[draw=ink,rounded corners](R)at(-2.6,1){电阻直流损耗\\$RI^2$};
+\node[draw=ink,rounded corners,fill=blue!5](D)at(2.6,1){器件直流输入\\$VI$};
+\node[draw=ink,rounded corners,fill=green!5](AC)at(.3,-1.2){器件交流供能\\$r\hat i^2/2$};
+\node[draw=ink,rounded corners](Heat)at(5.2,-1.2){器件平均消耗\\$VI-r\hat i^2/2$};
+\node[draw=ink,rounded corners](Loss)at(.3,-3.3){电阻交流损耗\\$R\hat i^2/2$};
+\draw[vec](S)--(R);\draw[vec](S)--(D);
+\draw[green,thick,-{Latex}](D)--(AC);
+\draw[vec](D)--(Heat);
+\draw[green,thick,-{Latex}](AC)--(Loss);
+\node at(1.2,-4.45){非零线性稳态：$r=R$，交流供能与损耗平衡};
+\end{tikzpicture}
+\end{document}

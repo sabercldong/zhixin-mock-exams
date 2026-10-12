@@ -1,0 +1,89 @@
+\documentclass[tikz,border=5pt,multi=tikzpicture]{standalone}
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath}
+\usetikzlibrary{arrows.meta,calc}
+\definecolor{ink}{HTML}{17365D}
+\definecolor{field}{HTML}{287DA8}
+\definecolor{force}{HTML}{C56B2A}
+\tikzset{every node/.style={font=\small},vec/.style={-{Stealth[length=2mm]},thick},helper/.style={gray,dashed}}
+\newcommand{\axisray}{
+  \draw[helper] (-.2,0)--(10.3,0);
+  \draw[field,thick] (0,-.9)--(0,1.1);\draw[field,thick] (10,-.9)--(10,1.1);
+  \fill (2,0) circle (1.1pt) node[below] {$F$};\fill (8,0) circle (1.1pt) node[above] {$F'$};
+  \node[below left] at (0,0) {$O$};\node[above right,yshift=4pt] at (10,0) {$O'$};
+}
+\begin{document}
+\begin{tikzpicture}
+  \filldraw[ink!40,fill=field!3,thin] (0,0) ellipse (2.71889 and 2.2);
+  \input{question-07-space.tex}
+  \draw[helper] (-2.85,0)--(2.85,0);
+  \fill (-2.66282,0) circle (1.3pt) node[below left,fill=white,inner sep=1pt] {$O$};
+  \fill (2.66282,0) circle (1.3pt) node[below right,fill=white,inner sep=1pt] {$O'$};
+  \fill (-1.59769,0) circle (1.3pt) node[below,fill=white,inner sep=1pt] {$F$};
+  \fill (1.59769,0) circle (1.3pt) node[below,fill=white,inner sep=1pt] {$F'$};
+  \draw[vec,force] (-2.13025,0)--(-2.13025,.38) node[above left,fill=white,inner sep=1pt] {$h$};
+  \draw[<->,force] (-2.13025,-.52)--(-1.59769,-.52) node[midway,below,fill=white,inner sep=1pt] {$x$};
+  \draw[gray] (2.45,.3)--(3.15,.87) node[right] {镀银区};
+\end{tikzpicture}
+\begin{tikzpicture}[x=8cm,y=1.15cm]
+  \draw[vec,gray] (-.29,0)--(.075,0) node[right] {$X-2a$};
+  \draw[vec,gray] (0,-1.2)--(0,1.2) node[above] {$y$};
+  \draw[field,thick,domain=-1:1,samples=81] plot ({5*sqrt(1-\x*\x/16)-5},\x);
+  \draw[force,thick,dashed,domain=-1:1,samples=81] plot ({-3.2+sqrt(3.2*3.2-\x*\x)},\x);
+  \draw[helper] (-.1,.792)--(0,.792);
+  \draw[<->,ink] (-.1,.85)--(0,.85) node[above right] {$s$};
+  \fill[field] (-.1,.79599) circle (1.3pt) node[above left] {$Q$};
+  \node[below right] at (0,0) {$O'$};
+  \node[field] at (-.20,1.45) {椭圆截面};
+  \node[force] at (-.19,-1.15) {局部曲率圆};
+\end{tikzpicture}
+\begin{tikzpicture}[x=.64cm]
+  \foreach \shift in {0,-2.6}{\draw[helper] (0,\shift)--(10,\shift);\draw[field,thick] (0,{\shift-.5})--(0,{\shift+.5});\draw[field,thick] (10,{\shift-.5})--(10,{\shift+.5});}
+  \draw[vec,force] (1,0)--(1,.45) node[above] {$h$};
+  \draw[vec,ink] (8.05405,0)--(8.05405,-.23) node[below] {$h_1<0$};
+  \draw[<->,gray] (1,.92)--(10,.92) node[midway,above] {$u_1$};
+  \draw[<->,gray] (8.05405,-.82)--(10,-.82) node[midway,below] {$v_1$};
+  \node[left] at (0,0) {$O$};\node[right] at (10,0) {$O'$};
+  \draw[vec,ink] (8.05405,-2.6)--(8.05405,-2.83) node[below] {$h_1$};
+  \draw[vec,force] (1.99665,-2.6)--(1.99665,-2.3) node[above] {$h_2>0$};
+  \draw[<->,gray] (0,-1.75)--(8.05405,-1.75) node[midway,above] {$u_2$};
+  \draw[<->,gray] (0,-3.45)--(1.99665,-3.45) node[midway,below] {$v_2$};
+  \node[left] at (0,-2.6) {$O$};\node[right] at (10,-2.6) {$O'$};
+  \node at (5,-4.08) {两次成像的轴向距离；高度仅示意正负};
+\end{tikzpicture}
+\begin{tikzpicture}[x=.64cm,y=.0625cm]
+  \draw[helper] (-.2,0)--(10.3,0);
+  \draw[field,thick] (0,-10)--(0,34);\draw[field,thick] (10,-10)--(10,34);
+  \fill (2,0) circle (1.1pt) node[below] {$F$};\fill (8,0) circle (1.1pt) node[above] {$F'$};
+  \node[below left] at (0,0) {$O$};\node[below right] at (10,0) {$O'$};
+  \draw[vec,force] (1,1)--(10,-8);
+  \draw[vec,force] (10,-8)--(0,32);
+  \draw[vec,force] (0,32)--(2.28,-4.48);
+  \fill (1,1) circle (1pt) node[above left] {$A$};
+  \fill (10,-8) circle (1pt) node[right] {$-8h$};
+  \fill (0,32) circle (1pt) node[left] {$32h$};
+  \node at (5,37) {$A\to F\to O'\to F'\to O\to F$};
+\end{tikzpicture}
+\begin{tikzpicture}[x=.64cm,y=1.6cm]
+  \axisray
+  \draw[vec,ink] (1,1)--(10,{-2/7});
+  \draw[vec,ink] (10,{-2/7})--(0,{1/14});
+  \draw[vec,ink] (0,{1/14})--(9,{-1/112});
+  \fill (1,1) circle (1pt) node[above left] {$A$};
+  \fill (10,{-2/7}) circle (1pt) node[below right,yshift=-4pt] {$-2h/7$};
+  \fill (0,{1/14}) circle (1pt) node[above left] {$h/14$};
+  \node at (5,1.35) {$A\to F'\to O'\to F\to O\to F'$};
+\end{tikzpicture}
+\begin{tikzpicture}[x=180cm,y=24cm]
+  \draw[vec,gray] (1.989,.035)--(2.011,.035) node[right] {$\xi$};
+  \draw[vec,gray] (1.989,.035)--(1.989,.09) node[above] {$y/h$};
+  \draw[force,thick,domain=1.9945:1.9975,samples=2] plot (\x,{-16*(\x-2)});
+  \draw[ink,thick,domain=1.99:2.01,samples=2] plot (\x,{(8-\x)/112});
+  \fill[field] ({1192/597},{32/597}) circle (1.4pt);
+  \draw[helper] ({1192/597},.035)--({1192/597},{32/597});
+  \node[below] at ({1192/597},.035) {$1192/597$};
+  \node[field,above right] at ({1192/597},{32/597}) {$I_2$};
+  \node[force] at (2.004,.086) {$-16(\xi-2)$};
+  \node[ink] at (2.004,.066) {$(8-\xi)/112$};
+\end{tikzpicture}
+\end{document}

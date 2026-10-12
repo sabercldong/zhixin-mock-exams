@@ -1,0 +1,27 @@
+{
+  "question": 4,
+  "actual_reviewed": true,
+  "scope": "分题工作预览；整套合并后须重新验收",
+  "student": {
+    "pdf_sha256": "a9538e936993cfe09fd73781310b7ee88adfc3f34210434f8ef84a5a24c471de",
+    "total_pages": 8,
+    "body_pages": 7,
+    "extracted_body_nonspace": 4248,
+    "overview_pages_reviewed": [1,2,3,4,5,6,7,8],
+    "high_resolution_pages_reviewed": [2,5,6,8]
+  },
+  "teacher": {
+    "pdf_sha256": "daa0996eb97dffbafad316bafa95ee69e0b34738122521070b6ee289f78b0a01",
+    "total_pages": 11,
+    "body_pages": 10,
+    "extracted_body_nonspace": 6960,
+    "overview_pages_reviewed": [1,2,3,4,5,6,7,8,9,10,11],
+    "high_resolution_pages_reviewed": [9,11]
+  },
+  "figures_reviewed": ["question-04", "kinematics-04", "forces-04", "effective-04"],
+  "layout_warnings": [],
+  "qpdf_check_passed": true,
+  "physics_checks_passed": true,
+  "repairs": ["钢板前后遮挡投影重绘", "两段绳连接同孔并区分径向正向", "移开板前/转速、侧别标题与曲线图例碰撞", "角频率与周期量纲明确区分"],
+  "density_note": "学生末页含有效势单图、完整能量核验、量纲和极限检查，非只有一两句话的稀疏尾页"
+}

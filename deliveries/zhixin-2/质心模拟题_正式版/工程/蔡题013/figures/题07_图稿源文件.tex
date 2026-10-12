@@ -1,0 +1,35 @@
+\documentclass[multi=tikzpicture,border=9pt]{standalone}
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath,amssymb}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc,patterns}
+\definecolor{main}{HTML}{17365D}
+\definecolor{accent}{HTML}{AC3931}
+\tikzset{every picture/.style={font=\small,line width=.75pt},>={Stealth[length=2mm]},arr/.style={->},box/.style={draw=main,rounded corners=2pt,fill=main!4,text width=3.6cm,minimum height=1cm,align=center},note/.style={align=center,text width=9cm}}
+\begin{document}
+
+\begin{tikzpicture}
+\draw[dashed] (-2,0)--(8,0);\foreach \x/\lab in {0/L_1,5/L_2}{\draw[main,<->,thick] (\x,-1.5)--(\x,1.5);\node[above] at (\x,1.5){$\lab$};}\fill[accent] (-2,0) circle (3pt);\node[below] at (-2,0){点源};\draw[<->] (0,2.2)--(5,2.2) node[midway,above]{$L=25\,\mathrm{cm}$};\draw[<->] (-2,-2)--(0,-2) node[midway,below]{$l_1=10\,\mathrm{cm}$};\draw[<->] (5,-2)--(6,-2) node[midway,below]{$l_2=5\,\mathrm{cm}$};\node[note] at (3,-3.4){第一束右侧平行；第二束由左侧平行入射并聚焦};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\draw[dashed] (-3,0)--(7,0);\draw[main,<->,thick] (0,-1.2)--(0,1.2);\draw[main,<->,thick] (5,-1.2)--(5,1.2);\fill (-2,0) circle (2pt);\foreach \h in {1,-1}{\draw[accent,thick] (-2,0)--(0,\h)--(4.2,0)--(5,-.1905*\h)--(7,-.1905*\h);}\node[above] at (2.5,1.5){短焦距组};\node[note] at (2,-2.5){第一束在两镜间形成实际交叉点；$L-f_2>0$};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\node[box] (n0) at (0,0) {第一项观测\\$D+l_1C=0$};
+\node[box] (n1) at (5,0) {第二项观测\\$A+l_2C=0$};
+\node[box] (n2) at (5,-2.3) {矩阵行列式\\$AD-LC=1$};
+\node[box] (n3) at (0,-2.3) {二次反演\\$l_1l_2C^2-LC-1=0$};
+\draw[arr] (n0)--(n1);\draw[arr] (n1)--(n2);\draw[arr] (n2)--(n3);
+\node[note] at (2.5,-4.1) {两个 $C$ 根都需回代；本题两个焦距组合均为正};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\draw[dashed] (-3.5,0)--(7,0);\draw[main,<->,thick] (0,-1.2)--(0,1.2);\draw[main,<->,thick] (5,-1.2)--(5,1.2);\foreach \h in {1,-1}{\draw[accent,thick] (-3,\h)--(0,\h)--(5,.1861*\h)--(6,0);\draw[accent,dashed] (5,.1861*\h)--(6.1436,0);}\node[above] at (2,1.6){长焦距组};\node[note] at (2,-2.5){第二镜收到会聚光；虚物在右侧，物距 $L-f_1<0$};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\node[box] at (0,0){短焦距组\\$(6.782161,3.923242)$ cm\\$f_{\rm sys}=-1.861407$ cm};\node[box] at (5,0){长焦距组\\$(30.717839,39.826758)$ cm\\$f_{\rm sys}=26.861407$ cm};\node[note] at (2.5,-2.4){两组均满足外部观测；可增加“镜间是否实际交叉”选解};
+\end{tikzpicture}
+\end{document}

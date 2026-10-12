@@ -1,0 +1,81 @@
+\documentclass[tikz,border=5pt]{standalone}
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath}
+\usetikzlibrary{arrows.meta,calc}
+\definecolor{ink}{HTML}{243447}
+\definecolor{blue}{HTML}{2765A2}
+\definecolor{green}{HTML}{3F7D5B}
+\definecolor{red}{HTML}{B74739}
+\tikzset{body/.style={draw=ink,thick},vec/.style={blue,thick,-{Latex}},guide/.style={gray!65,dashed},line cap=round}
+\begin{document}
+\begin{tikzpicture}
+\draw[body](0,0)ellipse(3 and 2.4);
+\draw[guide](-3.4,0)--(3.8,0)node[right]{$X$};
+\coordinate(F)at(1.8,0);\coordinate(G)at(-1.8,0);\coordinate(A)at(1.5,2.07846);
+\fill[ink](F)circle(2pt)node[below]{$F$};
+\fill[ink](G)circle(2pt)node[below]{$F'$};
+\fill[ink](A)circle(2pt)node[above right]{$A$};
+\draw[blue](F)--(A)node[pos=.55,right]{$r$};
+\draw[green](G)--(A)node[pos=.52,above left]{$r'$};
+\draw[blue,-{Latex}](2.35,0)arc(0:98.21:.55);
+\node[blue]at(2.53,.57){$\theta$};
+\draw[green,-{Latex}](-.90,0)arc(0:32.2:.9);
+\node[green]at(-.6,.29){$\theta'$};
+\draw[vec](A)--(.3,2.6327)node[above]{$\boldsymbol v$};
+\node at(0,-3.15){焦点间距 $2ae$；逆时针运动，$r+r'=2a$};
+\end{tikzpicture}
+\begin{tikzpicture}[scale=.7]
+\draw[body](0,0)ellipse(3 and 2.4);
+\fill[ink](1.8,0)circle(2pt)node[below left,yshift=-5pt]{$F$};
+\draw[vec](3,0)--(3,1.8)node[above]{$v_p$};
+\draw[red,thick,-{Latex}](3,0)--(2.1,0)node[above]{$F_p$};
+\draw[vec](-3,0)--(-3,-1.5)node[below]{$v_a$};
+\draw[red,thick,-{Latex}](-3,0)--(-1.8,0)node[above]{$F_a$};
+\node at(0,-3.5){长轴两顶点：$\rho=l$，中心力即法向力};
+\begin{scope}[shift={(10,0)}]
+\draw[body](0,0)ellipse(3 and 2.4);
+\fill[ink](1.8,0)circle(2pt)node[below]{$F$};
+\coordinate(A)at(0,2.4);
+\draw[vec](A)--(-1.8,2.4)node[left]{$v$};
+\draw[red,thick,-{Latex}](A)--(.9,1.2)node[right]{$F$};
+\draw[green,thick,-{Latex}](A)--(0,.9)node[left]{$F\,b/a$};
+\draw[guide](A)--(1.8,0)node[pos=.65,right]{$r=a$};
+\node at(0,-3.5){短轴顶点：$\rho=a^2/b$，需投影};
+\end{scope}
+\end{tikzpicture}
+\begin{tikzpicture}
+\coordinate(A)at(0,0);
+\draw[body](-2.5,-.3)--(2.5,.3)node[right]{切线};
+\draw[blue,-{Latex}](A)--(1.4,-1.9)node[right]{$\boldsymbol e_r$的反向};
+\draw[green,-{Latex}](A)--(-.9,-2.2)node[left]{指向 $F'$};
+\draw[red,thick,-{Latex}](A)--(.16,-1.32)node[right]{$F\cos\beta$};
+\draw[guide](A)--(-.23,1.88)node[above]{$\alpha_n$};
+\draw[vec](A)--(-1.8,-.216)node[below]{$\boldsymbol v$};
+\draw[ink](.12,-.98)arc(-83:-53.62:1);
+\node at(.27,-.7){$\beta$};
+\draw[ink](.12,-.98)arc(-83:-112.38:1);
+\node at(-.20,-.72){$\beta$};
+\fill[ink](A)circle(2pt)node[above right]{$A$};
+\node at(.2,-3.1){法线平分两焦点方向；中心力与内法线夹角为 $\beta$};
+\end{tikzpicture}
+\begin{tikzpicture}
+\draw[body,domain=38:78,samples=60]plot({3*cos(\x)},{2.4*sin(\x)});
+\coordinate(A)at(1.5,2.07846);
+\coordinate(B)at(.92705,2.28254);
+\fill[ink](A)circle(2pt)node[right]{$A$};
+\fill[ink](B)circle(2pt)node[above right]{$A'$};
+\draw[vec](A)--(.42,2.5773);
+\draw[vec](B)--(-.19,2.5729);
+\node[blue,fill=white,inner sep=1pt]at(1.6,3.3){$\boldsymbol v(t)$};
+\node[blue,fill=white,inner sep=1pt]at(-1,2.9){$\boldsymbol v(t+\Delta t)$};
+\draw[green,thick,-{Latex}](A)--(1.081,1.17)node[below]{$a_n$};
+\begin{scope}[shift={(5.5,1.3)}]
+\draw[vec](0,0)--(-1.08,.50);
+\draw[green,thick,-{Latex}](0,0)--(-1.08,.28);
+\draw[ink](-.62,.287)arc(155.17:165.47:.684);
+\node at(-1.2,1.1){$\Delta\gamma$};
+\node at(-.3,-.75){$\Delta\gamma=\dfrac{v\Delta t}{l}\cos^3\beta$};
+\end{scope}
+\node at(2,-.5){相邻切线转角的示意；计算取 $\Delta t\to0$};
+\end{tikzpicture}
+\end{document}

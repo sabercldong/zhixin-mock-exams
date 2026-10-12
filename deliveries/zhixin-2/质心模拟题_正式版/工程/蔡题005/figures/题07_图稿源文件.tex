@@ -1,0 +1,40 @@
+\documentclass[multi=tikzpicture,border=8pt]{standalone}
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath,amssymb,tikz}
+\usetikzlibrary{arrows.meta,calc}
+\definecolor{blue}{HTML}{17365D}
+\definecolor{red}{HTML}{AC3931}
+\tikzset{every node/.style={font=\small},arrow/.style={-{Stealth[length=2.8mm]},thick},dim/.style={|<->|,thin},box/.style={draw,rounded corners,align=center,minimum width=2.5cm,minimum height=.8cm}}
+\begin{document}
+\begin{tikzpicture}
+\draw[arrow](0,0)--(6.8,0)node[right]{$V/V_2$};
+\draw[arrow](0,0)--(0,5.3)node[above]{$P/(15P_1)$};
+\draw[very thick,blue,domain=1:6,samples=100]plot(\x,{pow(6/\x,1.39782767984)/15});
+\draw[very thick,red,domain=1:6,samples=100]plot(\x,{62.91765*pow(1/\x,1.38936933136)/15});
+\draw[arrow,red](1,.81589)--(1,4.19451);
+\fill[blue](6,.066667)circle(2pt)node[left]{1};
+\node[left]at(1,.81589){2};\node[above]at(1,4.19451){3};
+\node[right]at(6,.34797){4};
+\node[below]at(1,0){1};\node[below]at(6,0){6};
+\node[blue]at(3,.6){绝热压缩};\node[red]at(3,2.8){绝热膨胀};
+\node[above]at(4.5,4.8){$2\to3$定容燃烧};
+\end{tikzpicture}
+\begin{tikzpicture}
+
+\node[box,fill=blue!8](a)at(0,0){燃油1 mol\\氧气21.5 mol};\node[box](b)at(5,0){二氧化碳14 mol\\水蒸气15 mol};\draw[arrow](a)--(b);\node[below]at(2.5,-1.1){氮气80.88095 mol全程保留};\node[box,fill=red!8]at(2.5,-2.4){气体摩尔数增加7.5 mol\\液滴燃油不计入初始气体};
+
+\end{tikzpicture}
+\begin{tikzpicture}
+
+\node[box,fill=blue!8](a)at(0,0){新鲜空气$0.8n_1$\\氧气$0.168n_1$};\node[box,fill=red!8](b)at(5,0){残气$0.2n_1$\\水分数$x_w=0.13651$};\node[box](c)at(2.5,-2){燃烧后全部气体\\水分数仍为$x_w$};\draw[arrow](a)--(c);\draw[arrow](b)--(c);\node[below]at(2.5,-3.2){残气假设：同空燃比的稳定完全燃烧产物};
+
+\end{tikzpicture}
+\begin{tikzpicture}
+
+\node[box](a)at(0,0){同温反应焓\\$\Delta H=-Q_H$};\node[box,fill=red!8](b)at(5,0){同温反应内能\\$\Delta U=-Q_H-\Delta n_g\mathcal R_gT_2$};\draw[arrow](a)--(b);\node[box,fill=blue!8](c)at(2.5,-2){定容产物升温\\$C_3(T_3-T_2)=Q_H+\Delta n_g\mathcal R_gT_2$};\draw[arrow](b)--(c);\node[below]at(2.5,-3.2){摩尔数增加使内能释放量比焓释放量更大};
+
+\end{tikzpicture}
+\begin{tikzpicture}
+\draw[arrow](0,0)--(5.3,0)node[right]{$\text{状态}$};\draw[arrow](0,0)--(0,5.3)node[above]{$T/(\mathrm K)$};\draw[blue,very thick](1,.4375)--(2,.89238);\draw[red,very thick](2,.89238)--(3,4.33377)--(4,2.15714);\foreach \x/\y/\s in {1/.4375/350,2/.89238/713.90,3/4.33377/3467.01,4/2.15714/1725.71}{\fill(\x,\y)circle(3pt);\node[above]at(\x,\y){\s};\node[below]at(\x,0){\x};}\node[blue]at(1.3,2.2){$\gamma_1=1.39783$};\node[red]at(5,3.8){$\gamma_3=1.38937$};
+\end{tikzpicture}
+\end{document}

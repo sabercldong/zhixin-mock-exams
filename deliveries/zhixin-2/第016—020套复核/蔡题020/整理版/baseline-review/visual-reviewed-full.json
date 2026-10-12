@@ -1,0 +1,214 @@
+{
+  "actual_reviewed": true,
+  "reviewed_at": "2026-10-09 Asia/Shanghai",
+  "method": "当前三份PDF全部页面总览逐页审看；所有新增正文页面作高清检查。与修订前已审读版本逐像素一致的正文复用旧审读证据，页眉和页码在当前总览复查。",
+  "paper": {
+    "pdf_sha256": "3b27042aed5a48ced085d4f97af2e2f310faf4548632542f6cf4070d6cd5b054",
+    "overview_page_range": [
+      1,
+      9
+    ],
+    "high_resolution_pages": [
+      4
+    ]
+  },
+  "student": {
+    "pdf_sha256": "e244fffbb96699b098b95ab15c1f978400367dbf31dd01273f7c202ecb0d433e",
+    "overview_page_range": [
+      1,
+      83
+    ],
+    "high_resolution_pages": [
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35
+    ]
+  },
+  "teacher": {
+    "pdf_sha256": "08e43ef5431cb941b734b0a006910fc77490df470ca6801a36a0d13a7e3a2244",
+    "overview_page_range": [
+      1,
+      115
+    ],
+    "high_resolution_pages": [
+      40,
+      41,
+      42,
+      43,
+      44
+    ],
+    "current_student_identical_body_reuse": [
+      {
+        "teacher_page": 26,
+        "student_page": 21,
+        "body_pixels_sha256": "bf738781d72a9f3f4ad5b231a55857cdd3f0caa496fba3a0ac8db1de1b4e511f"
+      },
+      {
+        "teacher_page": 27,
+        "student_page": 22,
+        "body_pixels_sha256": "2516e04fb09c5991eb372ee9662ae76b2fec547674c96b44aea9ceeeff786c48"
+      },
+      {
+        "teacher_page": 28,
+        "student_page": 23,
+        "body_pixels_sha256": "974a471bd4d3bcd02e76ad09af6c6eb17ed611d08ce849975e6578071c836647"
+      },
+      {
+        "teacher_page": 29,
+        "student_page": 24,
+        "body_pixels_sha256": "e47ac2751fad0997baeb6d0234d292dce2e81e81373ea755f622816068efb51d"
+      },
+      {
+        "teacher_page": 30,
+        "student_page": 25,
+        "body_pixels_sha256": "2ba0df2b36edfc75c396f1ef6781783f2250bd7dfc040099f48474b8f1350bc8"
+      },
+      {
+        "teacher_page": 31,
+        "student_page": 26,
+        "body_pixels_sha256": "b95310ef604e8a6338439a9a96a364772d37f4217b32c8eff09d32fcfb4b9774"
+      },
+      {
+        "teacher_page": 32,
+        "student_page": 27,
+        "body_pixels_sha256": "5f3fb4f92362318b94c390efd345f47c22b8c4832c5a03cc9845d09abd6862ca"
+      },
+      {
+        "teacher_page": 33,
+        "student_page": 28,
+        "body_pixels_sha256": "f91a915bdb45a59d778e5b6e6cb9e812f67b8fa99ebccf59ca0d4e9fccd97924"
+      },
+      {
+        "teacher_page": 34,
+        "student_page": 29,
+        "body_pixels_sha256": "54d704de6306e2e2d292da70345f4dac19430ca6a21f46b58942496b84b6e193"
+      },
+      {
+        "teacher_page": 35,
+        "student_page": 30,
+        "body_pixels_sha256": "d32b824ce7c0c01d620630829904dd3f15a6d8597c28a393ab7e2d6733448763"
+      },
+      {
+        "teacher_page": 36,
+        "student_page": 31,
+        "body_pixels_sha256": "75c46031b037e3c20cd0ccf6bfdeb697781850aadec213871cff0a1960dcc126"
+      },
+      {
+        "teacher_page": 37,
+        "student_page": 32,
+        "body_pixels_sha256": "9bf435ffc97dac766d7e2373b95cf1b0d359152ddbdc5fd5abcb57916aea4156"
+      },
+      {
+        "teacher_page": 38,
+        "student_page": 33,
+        "body_pixels_sha256": "cf5c931fb1d10174bad97814a4c8fb6b85423d25fd8956ab66ebddb74fcdae5b"
+      },
+      {
+        "teacher_page": 39,
+        "student_page": 34,
+        "body_pixels_sha256": "42155a5534967b04676b1bbaf727130e81fdab34f0762cf9dc534c981db06bda"
+      }
+    ]
+  },
+  "layout_issues": [],
+  "findings": [
+    "第3题三版本题干都明确只统计受迫距离峰峰值，解析保留完整自由解并清楚写明C=D=0是题设条件。",
+    "本次新增/重排页面高清查看：题图方向、六张图的引用、方程与中间代数均完整；无遮挡、缺图或公式出界。",
+    "教师题3末尾为完整初值推导，两页逻辑衔接；没有一两句孤页，未改变字号或间距。",
+    "其余正文与已审读备份逐像素一致；全部207页当前总览核对页眉、页码、分页和图像。"
+  ],
+  "set_accepted": true,
+  "unresolved": [],
+  "model_revision_current_evidence": {
+    "actual_reviewed": true,
+    "approval_sha256": "f83c203ec48d73384cb649d58948dac4f927395f900e9fcb7cb6539eec888ad2",
+    "page_comparison_sha256": "d70ea7dacf85f0035ebe229d55ea754944a5091c61b88810947396cc97c79408",
+    "template_sha256": "220fa808e8fd1a99e0b5b9dcbecf6ffcbf2f19ad4471c1ba89c67ef6be662720",
+    "student_md_sha256": "2c74f5a410a503aae5d1f88f9dfc97bb42088e1878dde82d3e97eb3fc683435a",
+    "teacher_md_sha256": "8eaa56312cbec8a7d9706ccdcffded1800597fe3bdaee56276b31d6e1736a9ca",
+    "previous_review_sha256": "1c63aae947a49a13500d2fbf0d2de77db5599723e2b1cf7cc17a97db59040c62",
+    "new_body_pages": {
+      "paper": [
+        4
+      ],
+      "student": [
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35
+      ],
+      "teacher": [
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44
+      ]
+    },
+    "current_overviews": {
+      "paper": {
+        "1": "63b7e881db121da5f19fb72d8d02feecaf22eaa7814b6b97e91b3efe71ab6550"
+      },
+      "student": {
+        "1": "5228966d0d14690510822231655a6e75b9a95bc1d82b9e93b1f893b2c78e463b",
+        "2": "3d7db13d8c7e4d0170259f624af5393e8496d2f7ffe53962e49e3765830c0742",
+        "3": "4dc2fcc51ffca4f6654eb9017afd209ef203f81ccff8b3790831fc3e823b16be",
+        "4": "23447919476750ad2478631a0408dc8840c22a51f71fbb79315668858f22d900",
+        "5": "d1ee73dc2443a3a07c0c90760c81d652ba7d34b92e278b05b6e793109f7b582c",
+        "6": "4daf9e272a3530cbdcfe14b460dcc36cdf41986c8d16a327ca469e4dfd4c4ec5",
+        "7": "7d55acd6e9959043160c5d8b38c8010bf742cbef5d3c4292bcf22441680bb0d2"
+      },
+      "teacher": {
+        "1": "a508c4ade008b4189c5295e72fa433fea6f67885ea3435ae3c503e1cf7a19c4b",
+        "2": "463bdf5171fefcd1fea994549e6fb48f76d96afebd121d9d16491a84b21094d8",
+        "3": "ff324fbef576535433d0199471de46f4e116fe24e6b47188eff7081a768b2ee7",
+        "4": "b960bbcdc9365baf9715960b0e7315ccb1dd32dfab7f500efcd55801a838ff7c",
+        "5": "22a71d1981d7c43b5dba488a188d99c34c297e831c44a303ff07e427c5a2c4da",
+        "6": "62d938e18ea80ea3d26bf5c4924862c139a22909884d7b682cba9b0fa981ef1a",
+        "7": "7969a674152c37df4dff76f067563dfe935a8de22c298ede7089137c9cb26e20",
+        "8": "6dc4d1a89122a2a61c986ea53390c4254de5bc4e345c3715acf9d8c09f5d5212",
+        "9": "ac5e890c52154b4f4206bb5c118dc668b18f51c91047972cf311cafb673c2148",
+        "10": "f995cd60916c25f044db350f33283198d824e63972b5adcedb6b0bec03cd76af"
+      }
+    },
+    "unchanged_body_evidence": "build/model-revision-page-comparison.json",
+    "supersedes_older_question03_working_pdf_review": true
+  }
+}

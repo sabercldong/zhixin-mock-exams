@@ -1,0 +1,1567 @@
+{
+  "all_passed": true,
+  "checks": 100,
+  "scope": "Numerical and symbolic checks for each added variant; conditional assumptions remain stated in prose. Not a general proof outside the stated model.",
+  "records": [
+    {
+      "set": 26,
+      "question": 1,
+      "variant": 3,
+      "method": "solve three independent force equations",
+      "actual": [
+        0.75,
+        0.3535533905932738,
+        1.25
+      ],
+      "expected": [
+        0.75,
+        0.35355339059327373,
+        1.25
+      ],
+      "absolute_error": 5.551115123125783e-17,
+      "tolerance": 1e-08,
+      "draft_sha256": "73c1b3fa10d5ec2c58d2a4414b8895d863278f1576698af79ff38ba21106d9b7",
+      "passed": true
+    },
+    {
+      "set": 26,
+      "question": 1,
+      "variant": 4,
+      "method": "solve three independent force equations",
+      "actual": [
+        -5.551115123125783e-17,
+        1.0101525445522106,
+        1.9999999999999998
+      ],
+      "expected": [
+        0.0,
+        1.0101525445522108,
+        2.0
+      ],
+      "absolute_error": 2.220446049250313e-16,
+      "tolerance": 1e-08,
+      "draft_sha256": "73c1b3fa10d5ec2c58d2a4414b8895d863278f1576698af79ff38ba21106d9b7",
+      "passed": true
+    },
+    {
+      "set": 26,
+      "question": 2,
+      "variant": 3,
+      "method": "centripetal balance and quadrupole scaling",
+      "actual": [
+        0.3535533905932738,
+        0.25,
+        2.82842712474619
+      ],
+      "expected": [
+        0.35355339059327373,
+        0.25,
+        2.8284271247461903
+      ],
+      "absolute_error": 4.440892098500626e-16,
+      "tolerance": 1e-08,
+      "draft_sha256": "dbd72cafdb51cd7d0297262299505667d4486090173c8d33329b766c7f88c6e3",
+      "passed": true
+    },
+    {
+      "set": 26,
+      "question": 2,
+      "variant": 4,
+      "method": "integrate radial field and cosine coefficient",
+      "actual": [
+        -3.5,
+        4.5
+      ],
+      "expected": [
+        -3.5,
+        4.5
+      ],
+      "absolute_error": 0.0,
+      "tolerance": 1e-08,
+      "draft_sha256": "dbd72cafdb51cd7d0297262299505667d4486090173c8d33329b766c7f88c6e3",
+      "passed": true
+    },
+    {
+      "set": 26,
+      "question": 3,
+      "variant": 3,
+      "method": "area and squared-radius change under dilation",
+      "actual": [
+        9.0,
+        81.0,
+        3.0
+      ],
+      "expected": [
+        9.0,
+        81.0,
+        3.0
+      ],
+      "absolute_error": 0.0,
+      "tolerance": 1e-08,
+      "draft_sha256": "06a32596e24574a8ec24751885806de26d8bbaf2f78dc37f9d47a28ffa6327ac",
+      "passed": true
+    },
+    {
+      "set": 26,
+      "question": 3,
+      "variant": 4,
+      "method": "finite layer sums without closed sum",
+      "actual": 0.3556241426611797,
+      "expected": 0.35562414266117975,
+      "absolute_error": 5.551115123125783e-17,
+      "tolerance": 1e-08,
+      "draft_sha256": "06a32596e24574a8ec24751885806de26d8bbaf2f78dc37f9d47a28ffa6327ac",
+      "passed": true
+    },
+    {
+      "set": 26,
+      "question": 4,
+      "variant": 3,
+      "method": "integrate two pressure paths",
+      "actual": [
+        2.420558458320169,
+        -4.5
+      ],
+      "expected": [
+        2.4205584583201643,
+        -4.5
+      ],
+      "absolute_error": 4.884981308350689e-15,
+      "tolerance": 1e-08,
+      "draft_sha256": "53a087e11833a679f5f5d948e08d374d9e89af2e5901b0943142120b3b048cda",
+      "passed": true
+    },
+    {
+      "set": 26,
+      "question": 4,
+      "variant": 4,
+      "method": "ideal gas entropy recovered from endpoint",
+      "actual": 0.7000000000000006,
+      "expected": 0.7,
+      "absolute_error": 6.661338147750939e-16,
+      "tolerance": 1e-08,
+      "draft_sha256": "53a087e11833a679f5f5d948e08d374d9e89af2e5901b0943142120b3b048cda",
+      "passed": true
+    },
+    {
+      "set": 26,
+      "question": 5,
+      "variant": 3,
+      "method": "eigenvalues of curvature matrix",
+      "actual": [
+        0.4999999999999999,
+        1.5
+      ],
+      "expected": [
+        0.5,
+        1.5
+      ],
+      "absolute_error": 1.1102230246251565e-16,
+      "tolerance": 1e-08,
+      "draft_sha256": "faa78b805c3b9840245aed153eb954d046faf183b89f3a954bf50db45c5762da",
+      "passed": true
+    },
+    {
+      "set": 26,
+      "question": 5,
+      "variant": 4,
+      "method": "reflection phase at center and first dark ring",
+      "actual": [
+        1.0,
+        -1.0
+      ],
+      "expected": [
+        1.0,
+        -1.0
+      ],
+      "absolute_error": 0.0,
+      "tolerance": 1e-08,
+      "draft_sha256": "faa78b805c3b9840245aed153eb954d046faf183b89f3a954bf50db45c5762da",
+      "passed": true
+    },
+    {
+      "set": 26,
+      "question": 6,
+      "variant": 3,
+      "method": "box eigenenergy and photon wavelength ratios",
+      "actual": [
+        0.9802960494069208,
+        1.0201
+      ],
+      "expected": [
+        0.9802960494069208,
+        1.0201
+      ],
+      "absolute_error": 0.0,
+      "tolerance": 1e-08,
+      "draft_sha256": "37adcc2dcadb2476889778559c649e8154808aab2ac76b9f6f59c4cdcb783fda",
+      "passed": true
+    },
+    {
+      "set": 26,
+      "question": 6,
+      "variant": 4,
+      "method": "quadrature of wavefunctions",
+      "actual": [
+        -0.20225930042780554,
+        1.0694570229397016e-15
+      ],
+      "expected": [
+        -0.2022593004278047,
+        0.0
+      ],
+      "absolute_error": 1.0694570229397016e-15,
+      "tolerance": 1e-08,
+      "draft_sha256": "37adcc2dcadb2476889778559c649e8154808aab2ac76b9f6f59c4cdcb783fda",
+      "passed": true
+    },
+    {
+      "set": 26,
+      "question": 7,
+      "variant": 3,
+      "method": "integrate magnetic flux for moving radius",
+      "actual": [
+        0.0,
+        4.0
+      ],
+      "expected": [
+        0.0,
+        4.0
+      ],
+      "absolute_error": 0.0,
+      "tolerance": 1e-08,
+      "draft_sha256": "0085d79e5c222397948145419ab9feabf8161a3f4ebbc3be8a091dfafc912795",
+      "passed": true
+    },
+    {
+      "set": 26,
+      "question": 7,
+      "variant": 4,
+      "method": "finite derivative of integrated moving flux",
+      "actual": 0.8885765876165408,
+      "expected": 0.8885765876316734,
+      "absolute_error": 1.513256187024581e-11,
+      "tolerance": 1e-07,
+      "draft_sha256": "0085d79e5c222397948145419ab9feabf8161a3f4ebbc3be8a091dfafc912795",
+      "passed": true
+    },
+    {
+      "set": 26,
+      "question": 8,
+      "variant": 3,
+      "method": "integrate repeated-root circuit ODE",
+      "actual": 0.8154845485390394,
+      "expected": 0.8154845485377135,
+      "absolute_error": 1.3259393583098245e-12,
+      "tolerance": 1e-08,
+      "draft_sha256": "cba72328b5a9f02e22b9fa4aeb91ca34f8028a1d621c66527f960c4797679647",
+      "passed": true
+    },
+    {
+      "set": 26,
+      "question": 8,
+      "variant": 4,
+      "method": "one-cycle growth from characteristic roots",
+      "actual": 2.0,
+      "expected": 2.0,
+      "absolute_error": 0.0,
+      "tolerance": 1e-08,
+      "draft_sha256": "cba72328b5a9f02e22b9fa4aeb91ca34f8028a1d621c66527f960c4797679647",
+      "passed": true
+    },
+    {
+      "set": 27,
+      "question": 1,
+      "variant": 2,
+      "method": "differentiate tangency geometry and rotation",
+      "actual": [
+        2.000000000085267,
+        0.9999999717180685,
+        2.000000000085267
+      ],
+      "expected": [
+        2.0,
+        1.0,
+        2.0
+      ],
+      "absolute_error": 2.828193146342528e-08,
+      "tolerance": 2e-07,
+      "draft_sha256": "fa7e3364ff200bf2d6c73c936e6c0db91eabd7b35579d772776ae5d59ca598ed",
+      "passed": true
+    },
+    {
+      "set": 27,
+      "question": 1,
+      "variant": 3,
+      "method": "chain-rule terms for changed angular rates",
+      "actual": [
+        2.0,
+        4.0,
+        4.0
+      ],
+      "expected": [
+        2.0,
+        4.0,
+        4.0
+      ],
+      "absolute_error": 0.0,
+      "tolerance": 1e-08,
+      "draft_sha256": "fa7e3364ff200bf2d6c73c936e6c0db91eabd7b35579d772776ae5d59ca598ed",
+      "passed": true
+    },
+    {
+      "set": 27,
+      "question": 1,
+      "variant": 4,
+      "method": "simultaneous ground/rod no-slip constraints",
+      "actual": 1.0000000000000002,
+      "expected": 1.0,
+      "absolute_error": 2.220446049250313e-16,
+      "tolerance": 1e-08,
+      "draft_sha256": "fa7e3364ff200bf2d6c73c936e6c0db91eabd7b35579d772776ae5d59ca598ed",
+      "passed": true
+    },
+    {
+      "set": 27,
+      "question": 2,
+      "variant": 3,
+      "method": "vertical force from angular acceleration",
+      "actual": 0.8163265306122449,
+      "expected": 0.8163265306122449,
+      "absolute_error": 0.0,
+      "tolerance": 1e-08,
+      "draft_sha256": "551da87eb58911729a74798c1335ad29a75c1959e189697e412493d74a766a2c",
+      "passed": true
+    },
+    {
+      "set": 27,
+      "question": 2,
+      "variant": 4,
+      "method": "energy numerator at horizontal limiting field",
+      "actual": 0.0,
+      "expected": 0.0,
+      "absolute_error": 0.0,
+      "tolerance": 1e-08,
+      "draft_sha256": "551da87eb58911729a74798c1335ad29a75c1959e189697e412493d74a766a2c",
+      "passed": true
+    },
+    {
+      "set": 27,
+      "question": 3,
+      "variant": 3,
+      "method": "turning-point energy and period integral",
+      "actual": [
+        0.3333333333333333,
+        9.0,
+        81.0
+      ],
+      "expected": [
+        0.3333333333333333,
+        9.0,
+        81.0
+      ],
+      "absolute_error": 0.0,
+      "tolerance": 1e-08,
+      "draft_sha256": "704e98d85ef2d331cde6973f2ba9575a2192203a2055dac137d271b462f4fcd1",
+      "passed": true
+    },
+    {
+      "set": 27,
+      "question": 3,
+      "variant": 4,
+      "method": "linearized tension stiffness and period",
+      "actual": 0.5,
+      "expected": 0.5,
+      "absolute_error": 0.0,
+      "tolerance": 1e-08,
+      "draft_sha256": "704e98d85ef2d331cde6973f2ba9575a2192203a2055dac137d271b462f4fcd1",
+      "passed": true
+    },
+    {
+      "set": 27,
+      "question": 4,
+      "variant": 3,
+      "method": "conductance matrix scaling with fixed endpoint voltages",
+      "actual": [
+        1.4,
+        0.5
+      ],
+      "expected": [
+        1.4,
+        0.5
+      ],
+      "absolute_error": 0.0,
+      "tolerance": 1e-08,
+      "draft_sha256": "f3c68d4c74df32af3a0476eff938b8a69d11a50d6a5dc798430acf42e386ea07",
+      "passed": true
+    },
+    {
+      "set": 27,
+      "question": 4,
+      "variant": 4,
+      "method": "parallel port conductances",
+      "actual": [
+        0.4117647058823529,
+        1.4285714285714286
+      ],
+      "expected": [
+        0.4117647058823529,
+        1.4285714285714286
+      ],
+      "absolute_error": 0.0,
+      "tolerance": 1e-08,
+      "draft_sha256": "f3c68d4c74df32af3a0476eff938b8a69d11a50d6a5dc798430acf42e386ea07",
+      "passed": true
+    },
+    {
+      "set": 27,
+      "question": 5,
+      "variant": 3,
+      "method": "orthogonal reflection in plane x+y=1",
+      "actual": 2.014213562373095,
+      "expected": 2.014213562373095,
+      "absolute_error": 0.0,
+      "tolerance": 1e-08,
+      "draft_sha256": "c0676c28df9af092b4a86fa10cb382de2e3c9563b261b32b6a8cf07c4cb87461",
+      "passed": true
+    },
+    {
+      "set": 27,
+      "question": 5,
+      "variant": 4,
+      "method": "Snell invariance at n=1",
+      "actual": 0.6,
+      "expected": 0.6,
+      "absolute_error": 0.0,
+      "tolerance": 1e-08,
+      "draft_sha256": "c0676c28df9af092b4a86fa10cb382de2e3c9563b261b32b6a8cf07c4cb87461",
+      "passed": true
+    },
+    {
+      "set": 27,
+      "question": 6,
+      "variant": 3,
+      "method": "escape conductance controls equilibrium and decay",
+      "actual": [
+        0.5,
+        0.5
+      ],
+      "expected": [
+        0.5,
+        0.5
+      ],
+      "absolute_error": 0.0,
+      "tolerance": 1e-08,
+      "draft_sha256": "e165f470f342bf7b0301c6f1a0d71871250daa73e05817b6e1619561cd550bf8",
+      "passed": true
+    },
+    {
+      "set": 27,
+      "question": 6,
+      "variant": 4,
+      "method": "isotropic hemisphere angular integral",
+      "actual": [
+        0.25,
+        0.7236012545582675
+      ],
+      "expected": [
+        0.25,
+        0.7236012545582676
+      ],
+      "absolute_error": 1.1102230246251565e-16,
+      "tolerance": 1e-08,
+      "draft_sha256": "e165f470f342bf7b0301c6f1a0d71871250daa73e05817b6e1619561cd550bf8",
+      "passed": true
+    },
+    {
+      "set": 27,
+      "question": 7,
+      "variant": 3,
+      "method": "mass-shell energy and integer threshold",
+      "actual": [
+        1.0,
+        1.0
+      ],
+      "expected": [
+        1.0,
+        1.0
+      ],
+      "absolute_error": 0.0,
+      "tolerance": 1e-08,
+      "draft_sha256": "0ad059aeb34ed679da6abad15ebbef6f67798c72850c4396a7eef86a6fc0005a",
+      "passed": true
+    },
+    {
+      "set": 27,
+      "question": 7,
+      "variant": 4,
+      "method": "low-momentum mass-shell expansion",
+      "actual": 4.000000710542845,
+      "expected": 4.0,
+      "absolute_error": 7.105428450060458e-07,
+      "tolerance": 1e-05,
+      "draft_sha256": "0ad059aeb34ed679da6abad15ebbef6f67798c72850c4396a7eef86a6fc0005a",
+      "passed": true
+    },
+    {
+      "set": 27,
+      "question": 8,
+      "variant": 3,
+      "method": "wire rho L/area similarity",
+      "actual": 1.5,
+      "expected": 1.5,
+      "absolute_error": 0.0,
+      "tolerance": 1e-08,
+      "draft_sha256": "8768fd0fa90108511d45849becc5a79623b6b709c042d597ea61b709b0b330d4",
+      "passed": true
+    },
+    {
+      "set": 27,
+      "question": 8,
+      "variant": 4,
+      "method": "seven local linear iterations",
+      "actual": 1.0,
+      "expected": 1.0,
+      "absolute_error": 0.0,
+      "tolerance": 1e-08,
+      "draft_sha256": "8768fd0fa90108511d45849becc5a79623b6b709c042d597ea61b709b0b330d4",
+      "passed": true
+    },
+    {
+      "set": 28,
+      "question": 1,
+      "variant": 2,
+      "method": "mirror position substitution and boundary times",
+      "actual": [
+        1.0427350427350428,
+        0.5
+      ],
+      "expected": [
+        1.0427350427350428,
+        0.5
+      ],
+      "absolute_error": 0.0,
+      "tolerance": 1e-08,
+      "draft_sha256": "8335a908f8e91f40edee81aac7a4c90e97eeea988ff2846232e06f9a42674fef",
+      "passed": true
+    },
+    {
+      "set": 28,
+      "question": 1,
+      "variant": 3,
+      "method": "zero image transfer upper-right element",
+      "actual": -2.220446049250313e-16,
+      "expected": 0.0,
+      "absolute_error": 2.220446049250313e-16,
+      "tolerance": 1e-08,
+      "draft_sha256": "8335a908f8e91f40edee81aac7a4c90e97eeea988ff2846232e06f9a42674fef",
+      "passed": true
+    },
+    {
+      "set": 28,
+      "question": 1,
+      "variant": 4,
+      "method": "large-distance rational asymptotic",
+      "actual": 0.9999995000953277,
+      "expected": 1.0,
+      "absolute_error": 4.999046723241918e-07,
+      "tolerance": 1e-05,
+      "draft_sha256": "8335a908f8e91f40edee81aac7a4c90e97eeea988ff2846232e06f9a42674fef",
+      "passed": true
+    },
+    {
+      "set": 28,
+      "question": 2,
+      "variant": 2,
+      "method": "collision impulse kinetic energies",
+      "actual": 0.5555555555555555,
+      "expected": 0.5555555555555556,
+      "absolute_error": 1.1102230246251565e-16,
+      "tolerance": 1e-08,
+      "draft_sha256": "2ea40042daf895e8fb99bd6cd1a9593a26e74471b91d37e58293356ee57e769f",
+      "passed": true
+    },
+    {
+      "set": 28,
+      "question": 2,
+      "variant": 3,
+      "method": "separate impulse and sustained-friction cones",
+      "actual": [
+        1.0,
+        1.0
+      ],
+      "expected": [
+        1.0,
+        1.0
+      ],
+      "absolute_error": 0.0,
+      "tolerance": 1e-08,
+      "draft_sha256": "2ea40042daf895e8fb99bd6cd1a9593a26e74471b91d37e58293356ee57e769f",
+      "passed": true
+    },
+    {
+      "set": 28,
+      "question": 2,
+      "variant": 4,
+      "method": "geometric height vs radius scaling",
+      "actual": [
+        0.5773502691896257,
+        1.0
+      ],
+      "expected": [
+        0.5773502691896258,
+        1.0
+      ],
+      "absolute_error": 1.1102230246251565e-16,
+      "tolerance": 1e-08,
+      "draft_sha256": "2ea40042daf895e8fb99bd6cd1a9593a26e74471b91d37e58293356ee57e769f",
+      "passed": true
+    },
+    {
+      "set": 28,
+      "question": 3,
+      "variant": 2,
+      "method": "evaluate full upper-point velocity at two candidate times",
+      "actual": [
+        1.4997597826618576e-32,
+        1.3497838043956716e-31
+      ],
+      "expected": [
+        0.0,
+        0.0
+      ],
+      "absolute_error": 1.3497838043956716e-31,
+      "tolerance": 1e-08,
+      "draft_sha256": "55741ec44538b47cb726ca8dfef9b6f3811cf81e3df8398703bfecede894979b",
+      "passed": true
+    },
+    {
+      "set": 28,
+      "question": 3,
+      "variant": 3,
+      "method": "rigid-body damping energy at t=log 2",
+      "actual": [
+        0.25,
+        0.5
+      ],
+      "expected": [
+        0.25,
+        0.5
+      ],
+      "absolute_error": 0.0,
+      "tolerance": 1e-08,
+      "draft_sha256": "55741ec44538b47cb726ca8dfef9b6f3811cf81e3df8398703bfecede894979b",
+      "passed": true
+    },
+    {
+      "set": 28,
+      "question": 3,
+      "variant": 4,
+      "method": "two distinct damping constants yield same final direction",
+      "actual": [
+        1.0,
+        1.0
+      ],
+      "expected": [
+        1.0,
+        1.0
+      ],
+      "absolute_error": 0.0,
+      "tolerance": 1e-08,
+      "draft_sha256": "55741ec44538b47cb726ca8dfef9b6f3811cf81e3df8398703bfecede894979b",
+      "passed": true
+    },
+    {
+      "set": 28,
+      "question": 4,
+      "variant": 2,
+      "method": "integrate upper and lower pressure branches",
+      "actual": 0.1666666666666667,
+      "expected": 0.16666666666666666,
+      "absolute_error": 5.551115123125783e-17,
+      "tolerance": 1e-08,
+      "draft_sha256": "9c1d4819b1b1d7913fb5e8c8d1879ccc355c63aab103b7eb02e886760dc3a108",
+      "passed": true
+    },
+    {
+      "set": 28,
+      "question": 4,
+      "variant": 3,
+      "method": "two-way reversible pressure integral",
+      "actual": 0.0,
+      "expected": 0.0,
+      "absolute_error": 0.0,
+      "tolerance": 1e-08,
+      "draft_sha256": "9c1d4819b1b1d7913fb5e8c8d1879ccc355c63aab103b7eb02e886760dc3a108",
+      "passed": true
+    },
+    {
+      "set": 28,
+      "question": 4,
+      "variant": 4,
+      "method": "friction work over round trip vs loop area",
+      "actual": 0.16000000000000003,
+      "expected": 0.16000000000000006,
+      "absolute_error": 2.7755575615628914e-17,
+      "tolerance": 1e-08,
+      "draft_sha256": "9c1d4819b1b1d7913fb5e8c8d1879ccc355c63aab103b7eb02e886760dc3a108",
+      "passed": true
+    },
+    {
+      "set": 28,
+      "question": 5,
+      "variant": 2,
+      "method": "integrate undamped electromechanical exchange",
+      "actual": [
+        -7.070038998691075e-14,
+        0.9999999999981252
+      ],
+      "expected": [
+        0.0,
+        1.0
+      ],
+      "absolute_error": 1.874833621684502e-12,
+      "tolerance": 1e-08,
+      "draft_sha256": "0ca83eaa7d545b1c413447580abd0e52bb51e8064d330239949e62a3ca924ebf",
+      "passed": true
+    },
+    {
+      "set": 28,
+      "question": 5,
+      "variant": 3,
+      "method": "integrate critical coupling ODE",
+      "actual": 0.4060058497092286,
+      "expected": 0.4060058497098381,
+      "absolute_error": 6.095124405192109e-13,
+      "tolerance": 1e-08,
+      "draft_sha256": "0ca83eaa7d545b1c413447580abd0e52bb51e8064d330239949e62a3ca924ebf",
+      "passed": true
+    },
+    {
+      "set": 28,
+      "question": 5,
+      "variant": 4,
+      "method": "integrate signed current and Joule power",
+      "actual": [
+        0.9999999999995507,
+        0.49999999999786826
+      ],
+      "expected": [
+        1.0,
+        0.5
+      ],
+      "absolute_error": 2.131739229582763e-12,
+      "tolerance": 1e-08,
+      "draft_sha256": "0ca83eaa7d545b1c413447580abd0e52bb51e8064d330239949e62a3ca924ebf",
+      "passed": true
+    },
+    {
+      "set": 28,
+      "question": 6,
+      "variant": 3,
+      "method": "fixed-volume-flow momentum flux",
+      "actual": 4.0,
+      "expected": 4.0,
+      "absolute_error": 0.0,
+      "tolerance": 1e-08,
+      "draft_sha256": "2a34e315a608d6a806d35b46e502312c0e910cdfe1e96b45592af7bf28750057",
+      "passed": true
+    },
+    {
+      "set": 28,
+      "question": 6,
+      "variant": 4,
+      "method": "telescoping cubic branch law",
+      "actual": [
+        8.0,
+        2.0,
+        0.5
+      ],
+      "expected": [
+        8.0,
+        2.0,
+        0.5
+      ],
+      "absolute_error": 0.0,
+      "tolerance": 1e-08,
+      "draft_sha256": "2a34e315a608d6a806d35b46e502312c0e910cdfe1e96b45592af7bf28750057",
+      "passed": true
+    },
+    {
+      "set": 28,
+      "question": 7,
+      "variant": 2,
+      "method": "simultaneous rod endpoints with Lorentz contraction",
+      "actual": 0.8884851795488525,
+      "expected": 0.8884851795488524,
+      "absolute_error": 1.1102230246251565e-16,
+      "tolerance": 1e-08,
+      "draft_sha256": "b5c90b67748d29eb6cb818f126d1397246c595983b48743ef18d0a996e4e067f",
+      "passed": true
+    },
+    {
+      "set": 28,
+      "question": 7,
+      "variant": 3,
+      "method": "inverse transform on two stationary clock worldlines",
+      "actual": 0.6,
+      "expected": 0.6,
+      "absolute_error": 0.0,
+      "tolerance": 1e-08,
+      "draft_sha256": "b5c90b67748d29eb6cb818f126d1397246c595983b48743ef18d0a996e4e067f",
+      "passed": true
+    },
+    {
+      "set": 28,
+      "question": 7,
+      "variant": 4,
+      "method": "relative transverse velocity mass-shell clock rate",
+      "actual": 0.64,
+      "expected": 0.64,
+      "absolute_error": 0.0,
+      "tolerance": 1e-08,
+      "draft_sha256": "b5c90b67748d29eb6cb818f126d1397246c595983b48743ef18d0a996e4e067f",
+      "passed": true
+    },
+    {
+      "set": 28,
+      "question": 8,
+      "variant": 2,
+      "method": "exterior negative sphere and returned point source",
+      "actual": 0.0,
+      "expected": 0.0,
+      "absolute_error": 0.0,
+      "tolerance": 1e-08,
+      "draft_sha256": "d2db96cd5de05890b48388eedc9116391eabe1a86b409cc20e51b729c1eb3985",
+      "passed": true
+    },
+    {
+      "set": 28,
+      "question": 8,
+      "variant": 3,
+      "method": "inversion of dipole and cavity vectors",
+      "actual": [
+        0.0,
+        0.0
+      ],
+      "expected": [
+        0.0,
+        0.0
+      ],
+      "absolute_error": 0.0,
+      "tolerance": 1e-08,
+      "draft_sha256": "d2db96cd5de05890b48388eedc9116391eabe1a86b409cc20e51b729c1eb3985",
+      "passed": true
+    },
+    {
+      "set": 28,
+      "question": 8,
+      "variant": 4,
+      "method": "exact axial potentials vs leading odd multipole",
+      "actual": -1.2500312507813388e-05,
+      "expected": -1.25e-05,
+      "absolute_error": 3.125078133874975e-10,
+      "tolerance": 1e-09,
+      "draft_sha256": "d2db96cd5de05890b48388eedc9116391eabe1a86b409cc20e51b729c1eb3985",
+      "passed": true
+    },
+    {
+      "set": 29,
+      "question": 1,
+      "variant": 3,
+      "method": "harmonic turning-point speed/support bounds",
+      "actual": [
+        1.0,
+        1.0
+      ],
+      "expected": [
+        1.0,
+        1.0
+      ],
+      "absolute_error": 0.0,
+      "tolerance": 1e-08,
+      "draft_sha256": "72939c029a29a394277620bdade6f2b163fccef1e61ce818b5c6940c7071fa58",
+      "passed": true
+    },
+    {
+      "set": 29,
+      "question": 1,
+      "variant": 4,
+      "method": "support and velocity constraints scale differently",
+      "actual": [
+        2.0,
+        4.0,
+        2.0
+      ],
+      "expected": [
+        2.0,
+        4.0,
+        2.0
+      ],
+      "absolute_error": 0.0,
+      "tolerance": 1e-08,
+      "draft_sha256": "72939c029a29a394277620bdade6f2b163fccef1e61ce818b5c6940c7071fa58",
+      "passed": true
+    },
+    {
+      "set": 29,
+      "question": 2,
+      "variant": 2,
+      "method": "rescale original radial force and energy",
+      "actual": [
+        0.5773502691896257,
+        1.7320508075688772
+      ],
+      "expected": [
+        0.5773502691896258,
+        1.7320508075688772
+      ],
+      "absolute_error": 1.1102230246251565e-16,
+      "tolerance": 1e-08,
+      "draft_sha256": "03f1751caf56f2fecf6d6dc1742b7053f96544c12dbeab98e4cab64ade436c03",
+      "passed": true
+    },
+    {
+      "set": 29,
+      "question": 2,
+      "variant": 3,
+      "method": "quadrature of infall dt/ds",
+      "actual": 0.8183098861821703,
+      "expected": 0.8183098861837907,
+      "absolute_error": 1.6204815267428785e-12,
+      "tolerance": 1e-08,
+      "draft_sha256": "03f1751caf56f2fecf6d6dc1742b7053f96544c12dbeab98e4cab64ade436c03",
+      "passed": true
+    },
+    {
+      "set": 29,
+      "question": 2,
+      "variant": 4,
+      "method": "relative acceleration from three direct attractions",
+      "actual": [
+        8.789473684210526,
+        0.7792397660818713,
+        0.16041275797373358
+      ],
+      "expected": [
+        8.789473684210526,
+        0.7792397660818714,
+        0.16041275797373358
+      ],
+      "absolute_error": 1.1102230246251565e-16,
+      "tolerance": 1e-08,
+      "draft_sha256": "03f1751caf56f2fecf6d6dc1742b7053f96544c12dbeab98e4cab64ade436c03",
+      "passed": true
+    },
+    {
+      "set": 29,
+      "question": 3,
+      "variant": 3,
+      "method": "vector sum of two 60 degree unit tensions",
+      "actual": 1.7320508075688772,
+      "expected": 1.7320508075688772,
+      "absolute_error": 0.0,
+      "tolerance": 1e-08,
+      "draft_sha256": "a03a20c641c4deb7e13fe3dd4a95f8027ebb0174172a9596970b38a74400b362",
+      "passed": true
+    },
+    {
+      "set": 29,
+      "question": 3,
+      "variant": 4,
+      "method": "homogeneous friction and tension constraints",
+      "actual": 9.0,
+      "expected": 9.0,
+      "absolute_error": 0.0,
+      "tolerance": 1e-08,
+      "draft_sha256": "a03a20c641c4deb7e13fe3dd4a95f8027ebb0174172a9596970b38a74400b362",
+      "passed": true
+    },
+    {
+      "set": 29,
+      "question": 4,
+      "variant": 3,
+      "method": "differentiate exact saturation log pressure",
+      "actual": 0.0555555555443836,
+      "expected": 0.05555555555555555,
+      "absolute_error": 1.1171952252198025e-11,
+      "tolerance": 1e-08,
+      "draft_sha256": "6fd1cf322c3298a7706c957fb9b0cd66b6029d20039441708ff5592bc424da09",
+      "passed": true
+    },
+    {
+      "set": 29,
+      "question": 4,
+      "variant": 4,
+      "method": "Clapeyron temperature derivative with equal volumes",
+      "actual": 0.0,
+      "expected": 0.0,
+      "absolute_error": 0.0,
+      "tolerance": 1e-08,
+      "draft_sha256": "6fd1cf322c3298a7706c957fb9b0cd66b6029d20039441708ff5592bc424da09",
+      "passed": true
+    },
+    {
+      "set": 29,
+      "question": 5,
+      "variant": 2,
+      "method": "long RC intervals endpoints and discharge energy",
+      "actual": [
+        3.0,
+        1.1160227928062509e-43,
+        0.009000000000000001
+      ],
+      "expected": [
+        3.0,
+        0.0,
+        0.009
+      ],
+      "absolute_error": 1.734723475976807e-18,
+      "tolerance": 1e-08,
+      "draft_sha256": "4445310ca9638e3ba6beb4606019afc47b1a6db8d204768a14ba5d356291d922",
+      "passed": true
+    },
+    {
+      "set": 29,
+      "question": 5,
+      "variant": 3,
+      "method": "averaged current balance and resistor heat",
+      "actual": [
+        0.0,
+        5.333333333333333e-05,
+        2.6666666666666667e-05
+      ],
+      "expected": [
+        0.0,
+        5.3333333333333e-05,
+        2.6666666666667e-05
+      ],
+      "absolute_error": 3.3203691532368573e-19,
+      "tolerance": 1e-08,
+      "draft_sha256": "4445310ca9638e3ba6beb4606019afc47b1a6db8d204768a14ba5d356291d922",
+      "passed": true
+    },
+    {
+      "set": 29,
+      "question": 5,
+      "variant": 4,
+      "method": "iterate affine maps for voltage perturbation",
+      "actual": 0.9801986733067555,
+      "expected": 0.9801986733067553,
+      "absolute_error": 2.220446049250313e-16,
+      "tolerance": 1e-08,
+      "draft_sha256": "4445310ca9638e3ba6beb4606019afc47b1a6db8d204768a14ba5d356291d922",
+      "passed": true
+    },
+    {
+      "set": 29,
+      "question": 6,
+      "variant": 2,
+      "method": "Newton mapping removes constant object height",
+      "actual": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "expected": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "absolute_error": 0.0,
+      "tolerance": 1e-08,
+      "draft_sha256": "61fd4759145f5b3220e79bc767dfc802053e388546126309e26b6609a7aa6ad6",
+      "passed": true
+    },
+    {
+      "set": 29,
+      "question": 6,
+      "variant": 3,
+      "method": "endpoint lateral magnifications product",
+      "actual": 0.9999999999999996,
+      "expected": 1.0,
+      "absolute_error": 4.440892098500626e-16,
+      "tolerance": 1e-08,
+      "draft_sha256": "61fd4759145f5b3220e79bc767dfc802053e388546126309e26b6609a7aa6ad6",
+      "passed": true
+    },
+    {
+      "set": 29,
+      "question": 6,
+      "variant": 4,
+      "method": "differentiate focal-coordinate inverse position",
+      "actual": [
+        -0.1000000000001,
+        0.0400000016442803
+      ],
+      "expected": [
+        -0.1,
+        0.04000000000000001
+      ],
+      "absolute_error": 1.644280295254319e-09,
+      "tolerance": 1e-07,
+      "draft_sha256": "61fd4759145f5b3220e79bc767dfc802053e388546126309e26b6609a7aa6ad6",
+      "passed": true
+    },
+    {
+      "set": 29,
+      "question": 7,
+      "variant": 2,
+      "method": "Lorentz boost of inverse emitted child",
+      "actual": [
+        0.0,
+        0.8823529411764707
+      ],
+      "expected": [
+        0.0,
+        0.8823529411764706
+      ],
+      "absolute_error": 1.1102230246251565e-16,
+      "tolerance": 1e-08,
+      "draft_sha256": "fa897030a83080ca351eec13817ba470d0257f407f0526e56205e88e2712fcac",
+      "passed": true
+    },
+    {
+      "set": 29,
+      "question": 7,
+      "variant": 3,
+      "method": "perpendicular child velocity and gamma product",
+      "actual": 0.5376,
+      "expected": 0.5376,
+      "absolute_error": 0.0,
+      "tolerance": 1e-08,
+      "draft_sha256": "fa897030a83080ca351eec13817ba470d0257f407f0526e56205e88e2712fcac",
+      "passed": true
+    },
+    {
+      "set": 29,
+      "question": 7,
+      "variant": 4,
+      "method": "threshold mass-shell momentum",
+      "actual": 0.0,
+      "expected": 0.0,
+      "absolute_error": 0.0,
+      "tolerance": 1e-08,
+      "draft_sha256": "fa897030a83080ca351eec13817ba470d0257f407f0526e56205e88e2712fcac",
+      "passed": true
+    },
+    {
+      "set": 29,
+      "question": 8,
+      "variant": 3,
+      "method": "differentiate integrated induced charge",
+      "actual": 0.4002054702023638,
+      "expected": 0.40020547020916347,
+      "absolute_error": 6.799671936619234e-12,
+      "tolerance": 1e-08,
+      "draft_sha256": "f279870ef3b2d2af2bc90d9c4089ec3ac0dbd7e0826a2e2b86df13767e25bf53",
+      "passed": true
+    },
+    {
+      "set": 29,
+      "question": 8,
+      "variant": 4,
+      "method": "integrate torque over chosen height history",
+      "actual": -0.6931471805599453,
+      "expected": -0.6931471805599453,
+      "absolute_error": 0.0,
+      "tolerance": 1e-08,
+      "draft_sha256": "f279870ef3b2d2af2bc90d9c4089ec3ac0dbd7e0826a2e2b86df13767e25bf53",
+      "passed": true
+    },
+    {
+      "set": 30,
+      "question": 1,
+      "variant": 2,
+      "method": "target orbital phase at transfer endpoint",
+      "actual": 3.141592653589793,
+      "expected": 3.141592653589793,
+      "absolute_error": 0.0,
+      "tolerance": 1e-08,
+      "draft_sha256": "aac76952a95f0bd29b8e29c2ec213459eba1851411326bd9fed0de9b1cd5e43c",
+      "passed": true
+    },
+    {
+      "set": 30,
+      "question": 1,
+      "variant": 3,
+      "method": "waterfall velocity-circle geometry",
+      "actual": 1.5,
+      "expected": 1.5,
+      "absolute_error": 0.0,
+      "tolerance": 1e-08,
+      "draft_sha256": "aac76952a95f0bd29b8e29c2ec213459eba1851411326bd9fed0de9b1cd5e43c",
+      "passed": true
+    },
+    {
+      "set": 30,
+      "question": 1,
+      "variant": 4,
+      "method": "Kepler endpoint and half-orbit scaling",
+      "actual": [
+        0.5,
+        8.0
+      ],
+      "expected": [
+        0.5,
+        8.0
+      ],
+      "absolute_error": 0.0,
+      "tolerance": 1e-08,
+      "draft_sha256": "aac76952a95f0bd29b8e29c2ec213459eba1851411326bd9fed0de9b1cd5e43c",
+      "passed": true
+    },
+    {
+      "set": 30,
+      "question": 2,
+      "variant": 2,
+      "method": "spherical diffusion integral geometry scaling",
+      "actual": [
+        4.0,
+        2.0
+      ],
+      "expected": [
+        4.0,
+        2.0
+      ],
+      "absolute_error": 0.0,
+      "tolerance": 1e-08,
+      "draft_sha256": "59f3f4591a3ba82f27358632e423125c8122268d931c6c16cad60ebf229900b3",
+      "passed": true
+    },
+    {
+      "set": 30,
+      "question": 2,
+      "variant": 3,
+      "method": "integrate diffusion moving boundary dt/dr",
+      "actual": [
+        0.5000000000000001,
+        0.11011842515769027
+      ],
+      "expected": [
+        0.5,
+        0.11011842515769033
+      ],
+      "absolute_error": 1.1102230246251565e-16,
+      "tolerance": 1e-08,
+      "draft_sha256": "59f3f4591a3ba82f27358632e423125c8122268d931c6c16cad60ebf229900b3",
+      "passed": true
+    },
+    {
+      "set": 30,
+      "question": 2,
+      "variant": 4,
+      "method": "reaction molar masses and matched solid volume",
+      "actual": [
+        0.7857142857142857,
+        1.0000000000000002
+      ],
+      "expected": [
+        0.7857142857142857,
+        1.0
+      ],
+      "absolute_error": 2.220446049250313e-16,
+      "tolerance": 1e-08,
+      "draft_sha256": "59f3f4591a3ba82f27358632e423125c8122268d931c6c16cad60ebf229900b3",
+      "passed": true
+    },
+    {
+      "set": 30,
+      "question": 3,
+      "variant": 2,
+      "method": "sum all pair forces without center-force shortcut",
+      "actual": [
+        [
+          -1.0,
+          -31.0,
+          11.0
+        ],
+        [
+          19.0,
+          -11.0,
+          -9.0
+        ],
+        [
+          -11.0,
+          19.0,
+          1.0
+        ]
+      ],
+      "expected": [
+        [
+          -0.9999999999999998,
+          -31.0,
+          11.0
+        ],
+        [
+          19.0,
+          -11.0,
+          -9.0
+        ],
+        [
+          -11.0,
+          19.0,
+          1.0000000000000009
+        ]
+      ],
+      "absolute_error": 8.881784197001252e-16,
+      "tolerance": 1e-08,
+      "draft_sha256": "03656a9343eca56a9ecd18ad413722aee70c19508ea65a72696feacb87ab75d5",
+      "passed": true
+    },
+    {
+      "set": 30,
+      "question": 3,
+      "variant": 3,
+      "method": "relative velocity unaffected by common inertial boost",
+      "actual": [
+        1.0,
+        -1.0,
+        0.0
+      ],
+      "expected": [
+        1.0,
+        -1.0,
+        0.0
+      ],
+      "absolute_error": 0.0,
+      "tolerance": 1e-08,
+      "draft_sha256": "03656a9343eca56a9ecd18ad413722aee70c19508ea65a72696feacb87ab75d5",
+      "passed": true
+    },
+    {
+      "set": 30,
+      "question": 3,
+      "variant": 4,
+      "method": "ellipse trajectory and conserved angular momentum",
+      "actual": 3.0,
+      "expected": 3.0,
+      "absolute_error": 0.0,
+      "tolerance": 1e-08,
+      "draft_sha256": "03656a9343eca56a9ecd18ad413722aee70c19508ea65a72696feacb87ab75d5",
+      "passed": true
+    },
+    {
+      "set": 30,
+      "question": 4,
+      "variant": 2,
+      "method": "potential curvature at anti-aligned equilibrium",
+      "actual": -0.9999999999898845,
+      "expected": -1.0,
+      "absolute_error": 1.0115464021964726e-11,
+      "tolerance": 1e-08,
+      "draft_sha256": "6671399a65bb68f83a0b205e48d738f3ae08fcfe158b3895196c836d89ddfdf7",
+      "passed": true
+    },
+    {
+      "set": 30,
+      "question": 4,
+      "variant": 3,
+      "method": "trace and determinant of critical torque matrix",
+      "actual": [
+        -2.0,
+        1.0
+      ],
+      "expected": [
+        -2.0,
+        1.0
+      ],
+      "absolute_error": 0.0,
+      "tolerance": 1e-08,
+      "draft_sha256": "6671399a65bb68f83a0b205e48d738f3ae08fcfe158b3895196c836d89ddfdf7",
+      "passed": true
+    },
+    {
+      "set": 30,
+      "question": 4,
+      "variant": 4,
+      "method": "squared period ratio under doubled field",
+      "actual": 2.0000000000000004,
+      "expected": 2.0,
+      "absolute_error": 4.440892098500626e-16,
+      "tolerance": 1e-08,
+      "draft_sha256": "6671399a65bb68f83a0b205e48d738f3ae08fcfe158b3895196c836d89ddfdf7",
+      "passed": true
+    },
+    {
+      "set": 30,
+      "question": 5,
+      "variant": 2,
+      "method": "flux conserved energy endpoints",
+      "actual": [
+        0.3333333333333333,
+        0.33333333333333337,
+        0.816496580927726
+      ],
+      "expected": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.816496580927726
+      ],
+      "absolute_error": 5.551115123125783e-17,
+      "tolerance": 1e-08,
+      "draft_sha256": "884c67c608715a739efdc176a022aab2abc9b8c06126b9b83d33730a5e9dcbd2",
+      "passed": true
+    },
+    {
+      "set": 30,
+      "question": 5,
+      "variant": 3,
+      "method": "differentiate fixed-flux energy at endpoint",
+      "actual": 0.11111111111600235,
+      "expected": 0.1111111111111111,
+      "absolute_error": 4.891240190652013e-12,
+      "tolerance": 1e-08,
+      "draft_sha256": "884c67c608715a739efdc176a022aab2abc9b8c06126b9b83d33730a5e9dcbd2",
+      "passed": true
+    },
+    {
+      "set": 30,
+      "question": 5,
+      "variant": 4,
+      "method": "quadratic energy at doubled initial flux",
+      "actual": [
+        4.0,
+        2.0
+      ],
+      "expected": [
+        4.0,
+        2.0
+      ],
+      "absolute_error": 0.0,
+      "tolerance": 1e-08,
+      "draft_sha256": "884c67c608715a739efdc176a022aab2abc9b8c06126b9b83d33730a5e9dcbd2",
+      "passed": true
+    },
+    {
+      "set": 30,
+      "question": 6,
+      "variant": 2,
+      "method": "aperture collection and diffraction-area flux ratio",
+      "actual": [
+        0.25,
+        4.0,
+        2.0
+      ],
+      "expected": [
+        0.25,
+        4.0,
+        2.0
+      ],
+      "absolute_error": 0.0,
+      "tolerance": 1e-08,
+      "draft_sha256": "284429f19d52088d5d3ab40799228015af1d7c36b944de7baa40c723c6447fd5",
+      "passed": true
+    },
+    {
+      "set": 30,
+      "question": 6,
+      "variant": 3,
+      "method": "radiation power under area doubling",
+      "actual": 0.9999999999999998,
+      "expected": 1.0,
+      "absolute_error": 2.220446049250313e-16,
+      "tolerance": 1e-08,
+      "draft_sha256": "284429f19d52088d5d3ab40799228015af1d7c36b944de7baa40c723c6447fd5",
+      "passed": true
+    },
+    {
+      "set": 30,
+      "question": 6,
+      "variant": 4,
+      "method": "specified quadrature blur budget",
+      "actual": 5.0,
+      "expected": 5.0,
+      "absolute_error": 0.0,
+      "tolerance": 1e-08,
+      "draft_sha256": "284429f19d52088d5d3ab40799228015af1d7c36b944de7baa40c723c6447fd5",
+      "passed": true
+    },
+    {
+      "set": 30,
+      "question": 7,
+      "variant": 2,
+      "method": "spherical resistance integral under dilation",
+      "actual": 0.5,
+      "expected": 0.5,
+      "absolute_error": 0.0,
+      "tolerance": 1e-08,
+      "draft_sha256": "2ccc6443ba906aff613bc5d48fe31dc9a952aadb3d4e99abe0a178deeaaa8a49",
+      "passed": true
+    },
+    {
+      "set": 30,
+      "question": 7,
+      "variant": 3,
+      "method": "piecewise resistivity integral",
+      "actual": 2.375,
+      "expected": 2.375,
+      "absolute_error": 0.0,
+      "tolerance": 1e-08,
+      "draft_sha256": "2ccc6443ba906aff613bc5d48fe31dc9a952aadb3d4e99abe0a178deeaaa8a49",
+      "passed": true
+    },
+    {
+      "set": 30,
+      "question": 7,
+      "variant": 4,
+      "method": "integrate resistance to infinity",
+      "actual": 0.5,
+      "expected": 0.5,
+      "absolute_error": 0.0,
+      "tolerance": 1e-08,
+      "draft_sha256": "2ccc6443ba906aff613bc5d48fe31dc9a952aadb3d4e99abe0a178deeaaa8a49",
+      "passed": true
+    },
+    {
+      "set": 30,
+      "question": 8,
+      "variant": 2,
+      "method": "rapidity and mass ratio with rest endpoints",
+      "actual": [
+        0.6,
+        0.75,
+        0.375
+      ],
+      "expected": [
+        0.6,
+        0.75,
+        0.375
+      ],
+      "absolute_error": 0.0,
+      "tolerance": 1e-08,
+      "draft_sha256": "6281e2407edbf25b84d83baf6f7b2fd7f91f8d67a02d56e97375e4e79c5c2dcf",
+      "passed": true
+    },
+    {
+      "set": 30,
+      "question": 8,
+      "variant": 3,
+      "method": "Taylor expansion against exact photon fuel fraction",
+      "actual": 0.00019998000099996638,
+      "expected": 0.00019998000000000002,
+      "absolute_error": 9.999663586317958e-13,
+      "tolerance": 2e-12,
+      "draft_sha256": "6281e2407edbf25b84d83baf6f7b2fd7f91f8d67a02d56e97375e4e79c5c2dcf",
+      "passed": true
+    },
+    {
+      "set": 30,
+      "question": 8,
+      "variant": 4,
+      "method": "linear incoming four-momentum flux under doubled area",
+      "actual": [
+        2.0,
+        2.0
+      ],
+      "expected": [
+        2.0,
+        2.0
+      ],
+      "absolute_error": 0.0,
+      "tolerance": 1e-08,
+      "draft_sha256": "6281e2407edbf25b84d83baf6f7b2fd7f91f8d67a02d56e97375e4e79c5c2dcf",
+      "passed": true
+    }
+  ]
+}

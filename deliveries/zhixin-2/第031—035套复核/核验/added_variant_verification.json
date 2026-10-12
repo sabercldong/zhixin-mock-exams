@@ -1,0 +1,2187 @@
+{
+  "status": "pass",
+  "count": 119,
+  "checks": [
+    {
+      "set": 31,
+      "question": 1,
+      "variant": 2,
+      "method": "球壳数值积分",
+      "checks": [
+        {
+          "computed": 0.26562500000000006,
+          "expected": 0.265625
+        },
+        {
+          "computed": 0.75,
+          "expected": 0.75
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "7d17c687d6a12f9d51f4832a938187d75fb6f77a864406a340f68f1c5e6c934e",
+      "draft_sha256": "140b7c59006e8827fe1d9db254173bdf8a4129f37af336e2d2523f23d179b2c6"
+    },
+    {
+      "set": 31,
+      "question": 1,
+      "variant": 3,
+      "method": "中心支撑方程缩放",
+      "checks": [
+        {
+          "computed": 0.7071067811865476,
+          "expected": 0.7071067811865475
+        },
+        {
+          "computed": 2.8284271247461894,
+          "expected": 2.8284271247461903
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "36bdd0d13d50092d8364d13eaf25b10628fc579adaccec52f0c912992d9688af",
+      "draft_sha256": "140b7c59006e8827fe1d9db254173bdf8a4129f37af336e2d2523f23d179b2c6"
+    },
+    {
+      "set": 31,
+      "question": 1,
+      "variant": 4,
+      "method": "球壳引力势与压力积分",
+      "checks": [
+        {
+          "computed": 0.6000000000000001,
+          "expected": 0.6
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "c2251cf9634ae7f5bf1bcffa55694f2812ee884bc45203862ee05367a7dda35b",
+      "draft_sha256": "140b7c59006e8827fe1d9db254173bdf8a4129f37af336e2d2523f23d179b2c6"
+    },
+    {
+      "set": 31,
+      "question": 2,
+      "variant": 2,
+      "method": "轨道与盘角动量相消",
+      "checks": [
+        {
+          "computed": -8.881784197001252e-16,
+          "expected": 0
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "9db3c6ecce282d319f34e72c47e1b5aad3af54a8f1e1fddbf81612e4731aac8c",
+      "draft_sha256": "9b648ff840cc297cfbba0a1003dee44f56da66430497bdd782ae050f339676aa"
+    },
+    {
+      "set": 31,
+      "question": 2,
+      "variant": 3,
+      "method": "闭合椭圆路径积分",
+      "checks": [
+        {
+          "computed": 12.566370614359172,
+          "expected": 12.566370614359172
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "cf00a097e1ab060c41c1184c3a316c36368a674b7e5b5c8c2132a220440d0eba",
+      "draft_sha256": "9b648ff840cc297cfbba0a1003dee44f56da66430497bdd782ae050f339676aa"
+    },
+    {
+      "set": 31,
+      "question": 2,
+      "variant": 4,
+      "method": "固定质心轨道角动量",
+      "checks": [
+        {
+          "computed": 0.0,
+          "expected": 0
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "b2f67a2b189ab2b3078b38c2ea43686a1d3f2079c59ff6ce5ca527b6622a72d0",
+      "draft_sha256": "9b648ff840cc297cfbba0a1003dee44f56da66430497bdd782ae050f339676aa"
+    },
+    {
+      "set": 31,
+      "question": 3,
+      "variant": 2,
+      "method": "两定容两等压段逐段能量",
+      "checks": [
+        {
+          "computed": [
+            5.26,
+            0.44999999999999984
+          ],
+          "expected": [
+            5.26,
+            0.45
+          ]
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "568c101f2038c1d7ed5145c7da4d87c85351be13ecca09f35ef20eae7b0658e8",
+      "draft_sha256": "5bdbaa9454b7f9a6faf27e6bfd4abbe5ac43eab10703a08f0e13df580d284f52"
+    },
+    {
+      "set": 31,
+      "question": 3,
+      "variant": 3,
+      "method": "单原子循环逐段积分",
+      "checks": [
+        {
+          "computed": [
+            3.416666666666666,
+            0.4666666666666667
+          ],
+          "expected": [
+            3.4166666666666665,
+            0.4666666666666667
+          ]
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "4f7ac054223306137786c0560744f81601c9b73feaa0e3847fcccc0bd54250f0",
+      "draft_sha256": "5bdbaa9454b7f9a6faf27e6bfd4abbe5ac43eab10703a08f0e13df580d284f52"
+    },
+    {
+      "set": 31,
+      "question": 3,
+      "variant": 4,
+      "method": "小摩擦热循环极限",
+      "checks": [
+        {
+          "computed": 0.5714284870616474,
+          "expected": 0.5714285714285714
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "9b71bacaf265b1ba20d90610eccee1d0355e8b412f3cf0c448993415bc7ee82a",
+      "draft_sha256": "5bdbaa9454b7f9a6faf27e6bfd4abbe5ac43eab10703a08f0e13df580d284f52"
+    },
+    {
+      "set": 31,
+      "question": 4,
+      "variant": 2,
+      "method": "拉力磁阻尼二状态积分",
+      "checks": [
+        {
+          "computed": [
+            7.5512204431273044,
+            29.487795568726938
+          ],
+          "expected": [
+            7.551220443128857,
+            29.487795568711427
+          ]
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "f3a05425664c00985296e3b3880c770012e1a4412de9c87ed74f29a6d6ea83e1",
+      "draft_sha256": "7d87f8a1762b28134901fb361eca7fca6084b78c8d6c81ea8e1e6d0650aee2a2"
+    },
+    {
+      "set": 31,
+      "question": 4,
+      "variant": 3,
+      "method": "外力功直接时间积分",
+      "checks": [
+        {
+          "computed": -0.05226666666666669,
+          "expected": -0.05226666666666671
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "deeb7ce3dd6138cd801c214e6f08ccbfc8ecc982bb8de0e3c4221f2edb98ac94",
+      "draft_sha256": "7d87f8a1762b28134901fb361eca7fca6084b78c8d6c81ea8e1e6d0650aee2a2"
+    },
+    {
+      "set": 31,
+      "question": 4,
+      "variant": 4,
+      "method": "停车能量收支",
+      "checks": [
+        {
+          "computed": -0.0666666666666667,
+          "expected": -0.06666666666666667
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "73f5383bd17d65f5cd778960b7d983020480d13f73af6d00482de446693a0cdb",
+      "draft_sha256": "7d87f8a1762b28134901fb361eca7fca6084b78c8d6c81ea8e1e6d0650aee2a2"
+    },
+    {
+      "set": 31,
+      "question": 5,
+      "variant": 2,
+      "method": "切向电场动量与动能",
+      "checks": [
+        {
+          "computed": -4.440892098500626e-16,
+          "expected": 0
+        },
+        {
+          "computed": -6.0,
+          "expected": -6
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "a81a0163511228f3478fae43db487c73b1c892dae2dd994e30a8ba1cf86719bb",
+      "draft_sha256": "05646730af0fd191bff26d4d94410b6926922893bdd0be5eecd4916301d7e5cc"
+    },
+    {
+      "set": 31,
+      "question": 5,
+      "variant": 3,
+      "method": "磁场循环的规范角动量",
+      "checks": [
+        {
+          "computed": 2.0,
+          "expected": 2
+        },
+        {
+          "computed": 0.0,
+          "expected": 0
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "f2a5363813e93d5d410758f42d9c93b7ddf0dcf77364ff45f8f22e51bd6c7f57",
+      "draft_sha256": "05646730af0fd191bff26d4d94410b6926922893bdd0be5eecd4916301d7e5cc"
+    },
+    {
+      "set": 31,
+      "question": 5,
+      "variant": 4,
+      "method": "有向末速选择",
+      "checks": [
+        {
+          "computed": -4.0,
+          "expected": -4
+        },
+        {
+          "computed": 18.0,
+          "expected": 18
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "45ecf72cf83d0456501dc82894b19914cee6f102ada809bbae2d006257209aef",
+      "draft_sha256": "05646730af0fd191bff26d4d94410b6926922893bdd0be5eecd4916301d7e5cc"
+    },
+    {
+      "set": 31,
+      "question": 6,
+      "variant": 2,
+      "method": "波前到达间隔",
+      "checks": [
+        {
+          "computed": [
+            1200.0,
+            1000.0
+          ],
+          "expected": [
+            1200,
+            1000
+          ]
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "231731546eb29f8a23ad59aa118e6f0a053c9fc74e9acf9c03a99743501db72f",
+      "draft_sha256": "6b10e5b9b2995a1e163e028b8ccb9c12e4a996ee798d0ae9a701bda5e06751a9"
+    },
+    {
+      "set": 31,
+      "question": 6,
+      "variant": 3,
+      "method": "中心接收器等距到达时刻",
+      "checks": [
+        {
+          "computed": 1.0,
+          "expected": 1
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "abe65143a94503c24af461538bb3729ff66b1b104e4122600a1b00744eea9e9a",
+      "draft_sha256": "6b10e5b9b2995a1e163e028b8ccb9c12e4a996ee798d0ae9a701bda5e06751a9"
+    },
+    {
+      "set": 31,
+      "question": 6,
+      "variant": 4,
+      "method": "同源位置隔周的传播时差",
+      "checks": [
+        {
+          "computed": 24.0,
+          "expected": 24
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "36193cb3716f760fb5b08fa01d93f9aa84213feb37a8484f783ebc4d1115abd4",
+      "draft_sha256": "6b10e5b9b2995a1e163e028b8ccb9c12e4a996ee798d0ae9a701bda5e06751a9"
+    },
+    {
+      "set": 31,
+      "question": 7,
+      "variant": 2,
+      "method": "两次薄透镜光线追迹",
+      "checks": [
+        {
+          "computed": 0.0,
+          "expected": 0
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "2dce3acd1cc13286e0de0e9fa24375fa2c35855f5fa1b71cb0e72b3c4563dfda",
+      "draft_sha256": "bd155ebc44165d4c7b44db61208eae80be91bc637929a510eca538099b28e05f"
+    },
+    {
+      "set": 31,
+      "question": 7,
+      "variant": 3,
+      "method": "两次折射及横移",
+      "checks": [
+        {
+          "computed": [
+            -10.0,
+            0.0
+          ],
+          "expected": [
+            -10,
+            0
+          ]
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "15a1fb07cb690104d1cee28a8780e7c133391f5d00e4036c850d8a4abc5aebdf",
+      "draft_sha256": "bd155ebc44165d4c7b44db61208eae80be91bc637929a510eca538099b28e05f"
+    },
+    {
+      "set": 31,
+      "question": 7,
+      "variant": 4,
+      "method": "二倍焦距轴位置退化",
+      "checks": [
+        {
+          "computed": [
+            2.0,
+            2.0,
+            2.0
+          ],
+          "expected": [
+            2,
+            2,
+            2
+          ]
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "20a0d5d200fee74b20d0f91341610d52374d29d1f2cbddde79f960e6f727f734",
+      "draft_sha256": "bd155ebc44165d4c7b44db61208eae80be91bc637929a510eca538099b28e05f"
+    },
+    {
+      "set": 31,
+      "question": 8,
+      "variant": 2,
+      "method": "双曲世界线交点",
+      "checks": [
+        {
+          "computed": [
+            1.875,
+            1.125
+          ],
+          "expected": [
+            1.875,
+            1.125
+          ]
+        },
+        {
+          "computed": 1.125,
+          "expected": 1.125
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "b7f683635760389868c9343735f5ad0acf50e70534761afca732b272a46fcfca",
+      "draft_sha256": "fd8205115d75e32fddd3bac5d6c73315b434bd20d3294c825a730fc5b3b58453"
+    },
+    {
+      "set": 31,
+      "question": 8,
+      "variant": 3,
+      "method": "瞬时同时面距离极值",
+      "checks": [
+        {
+          "computed": 0.6931469487788818,
+          "expected": 0.6931471805599453
+        },
+        {
+          "computed": 0.24999999999996625,
+          "expected": 0.25
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "216a9d10297e713dea6e32c89d6676092d092a80077b5c853be9caec45a0306f",
+      "draft_sha256": "fd8205115d75e32fddd3bac5d6c73315b434bd20d3294c825a730fc5b3b58453"
+    },
+    {
+      "set": 31,
+      "question": 8,
+      "variant": 4,
+      "method": "反演后的世界线交点",
+      "checks": [
+        {
+          "computed": 1.828315457889967,
+          "expected": 1.8283154578899672
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "20f6c6e6f93414c27ee8e82e8bf64527b03b56cdac3b89b24f7f24887334c2ab",
+      "draft_sha256": "fd8205115d75e32fddd3bac5d6c73315b434bd20d3294c825a730fc5b3b58453"
+    },
+    {
+      "set": 32,
+      "question": 1,
+      "variant": 2,
+      "method": "体积独立极值搜索",
+      "checks": [
+        {
+          "computed": 1.1547006912995186,
+          "expected": 1.1547005383792517
+        },
+        {
+          "computed": 7.99999999999979,
+          "expected": 8
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "e47c2460ae0b5712f6d512bb6e3792b04b984436719afa5a290ccc56e0fceb51",
+      "draft_sha256": "0938f27dd048534a5bda57d640befc9dc2651998bb3d744912f3ccbeb44acdef"
+    },
+    {
+      "set": 32,
+      "question": 1,
+      "variant": 3,
+      "method": "三次方程直接求根",
+      "checks": [
+        {
+          "computed": [
+            0.20051164424058035,
+            0.8845519308919183
+          ],
+          "expected": [
+            0.2005116442405805,
+            0.884551930891918
+          ]
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "b691d6e3abbdc6f3362975ef5a83e4ed11c85d5cff6545c77e0431a8c4687a6d",
+      "draft_sha256": "0938f27dd048534a5bda57d640befc9dc2651998bb3d744912f3ccbeb44acdef"
+    },
+    {
+      "set": 32,
+      "question": 1,
+      "variant": 4,
+      "method": "最大点邻域实际根",
+      "checks": [
+        {
+          "computed": [
+            0.5773031280966185,
+            0.577397408999632
+          ],
+          "expected": [
+            0.5773031287375467,
+            0.5773974096417049
+          ]
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "d8ef55e94fc4a62008f166bb69efd1c1527fb538afc3b9e2142424af1521f688",
+      "draft_sha256": "0938f27dd048534a5bda57d640befc9dc2651998bb3d744912f3ccbeb44acdef"
+    },
+    {
+      "set": 32,
+      "question": 2,
+      "variant": 2,
+      "method": "两冲量圆与摩擦域数值搜索",
+      "checks": [
+        {
+          "computed": [
+            0.4472135954999579,
+            1.118033988749895
+          ],
+          "expected": [
+            0.4472135954999579,
+            1.118033988749895
+          ]
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "41bbdcd22a55c05fe92b3d5c9f6a90aa53ed02611bc593d5fa3e7b042f609007",
+      "draft_sha256": "df731d668717ea91714dcc6317c137de76adf27d3316aa495c15cd3cb7512bdc"
+    },
+    {
+      "set": 32,
+      "question": 2,
+      "variant": 3,
+      "method": "同高飞行和单次冲量可行性",
+      "checks": [
+        {
+          "computed": 0.25,
+          "expected": 0.25
+        },
+        {
+          "computed": 0.15659955257270697,
+          "expected": 0.15659955257270694
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "a5272897922f43d801504522f6f2586164cab8f29572893778f76fb56adf9aae",
+      "draft_sha256": "df731d668717ea91714dcc6317c137de76adf27d3316aa495c15cd3cb7512bdc"
+    },
+    {
+      "set": 32,
+      "question": 2,
+      "variant": 4,
+      "method": "大摩擦周期可行域搜索",
+      "checks": [
+        {
+          "computed": 0.12500000000000003,
+          "expected": 0.125
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "5ad07a0ba1db5265a1f8f5934073fa2d0330742ab2b1af82279b881ce51d622b",
+      "draft_sha256": "df731d668717ea91714dcc6317c137de76adf27d3316aa495c15cd3cb7512bdc"
+    },
+    {
+      "set": 32,
+      "question": 3,
+      "variant": 2,
+      "method": "四节点完整导纳求解",
+      "checks": [
+        {
+          "computed": 1.4999999999999998,
+          "expected": 1.5
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "8a21c3927c8d725999fd56db458a120f1dd9110d880c0b4bc0cdcaf3091d24e1",
+      "draft_sha256": "7c9061eb390584cc365abaa99369fa562670659daa51bee4f57b6bae7a34ebea"
+    },
+    {
+      "set": 32,
+      "question": 3,
+      "variant": 3,
+      "method": "删臂后节点方程",
+      "checks": [
+        {
+          "computed": 1.4285714285714295,
+          "expected": 1.4285714285714286
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "13f0fd43f37f87599c28300dd55a2489634c919d75010a514262743cf8730d20",
+      "draft_sha256": "7c9061eb390584cc365abaa99369fa562670659daa51bee4f57b6bae7a34ebea"
+    },
+    {
+      "set": 32,
+      "question": 3,
+      "variant": 4,
+      "method": "导纳整体缩放",
+      "checks": [
+        {
+          "computed": 2.0000000000000004,
+          "expected": 2
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "eb1cf63cc16a6cdc304509bd0f1f357b98e0f162bcf0a70393edcedc90f5aad8",
+      "draft_sha256": "7c9061eb390584cc365abaa99369fa562670659daa51bee4f57b6bae7a34ebea"
+    },
+    {
+      "set": 32,
+      "question": 4,
+      "variant": 2,
+      "method": "分子携能方程与状态方程",
+      "checks": [
+        {
+          "computed": [
+            0.5946035575013605,
+            0.8408964152537145
+          ],
+          "expected": [
+            0.5946035575013605,
+            0.8408964152537145
+          ]
+        },
+        {
+          "computed": 0.5,
+          "expected": 0.5
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "62921e1566bc49095caf63b1319dccccd03f7c85ab967e3eb0aea86f4f41a6b0",
+      "draft_sha256": "ccaa38272995b8129e4daef4a6d612ca0bbeac7da02d29badb2b12cb80a85530"
+    },
+    {
+      "set": 32,
+      "question": 4,
+      "variant": 3,
+      "method": "定容状态和内能比例",
+      "checks": [
+        {
+          "computed": [
+            0.757858283255199,
+            0.3789291416275995
+          ],
+          "expected": [
+            0.757858283255199,
+            0.37892914162759955
+          ]
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "b3602464d8e25eea5d0579ff05859b6b98dafbee6ab3840384c923519958342b",
+      "draft_sha256": "ccaa38272995b8129e4daef4a6d612ca0bbeac7da02d29badb2b12cb80a85530"
+    },
+    {
+      "set": 32,
+      "question": 4,
+      "variant": 4,
+      "method": "测量对微分能量关系",
+      "checks": [
+        {
+          "computed": -0.22314355131420976,
+          "expected": -0.2231435513142097
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "6abd7b521b38d6836f04310ffc7435fd56d4e77b80d3678f89b0b7fed1afca56",
+      "draft_sha256": "ccaa38272995b8129e4daef4a6d612ca0bbeac7da02d29badb2b12cb80a85530"
+    },
+    {
+      "set": 32,
+      "question": 5,
+      "variant": 2,
+      "method": "连续电荷一阶ODE阶跃",
+      "checks": [
+        {
+          "computed": -0.0,
+          "expected": 0
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "8d969d99b85cf653fb3dce338865e59cdb29e579d58df693826cbb321564c552",
+      "draft_sha256": "11fab0fc3ec8c8908a12432b5955115d8c66bbd69a7cc562162b49e19c91d57b"
+    },
+    {
+      "set": 32,
+      "question": 5,
+      "variant": 3,
+      "method": "交流复响应回代ODE",
+      "checks": [
+        {
+          "computed": 0.0,
+          "expected": 0
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "094f24de96589b7c1e7b74081dfc967c87d7c90bb5093cb4234a5b890a344b2d",
+      "draft_sha256": "11fab0fc3ec8c8908a12432b5955115d8c66bbd69a7cc562162b49e19c91d57b"
+    },
+    {
+      "set": 32,
+      "question": 5,
+      "variant": 4,
+      "method": "法拉第面积与电阻功率缩放",
+      "checks": [
+        {
+          "computed": [
+            4,
+            16,
+            1
+          ],
+          "expected": [
+            4,
+            16,
+            1
+          ]
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "9cd10405c44dc5c34cc6cd389f82dc5c0a13ea660df8c51dae0e72cd8f544376",
+      "draft_sha256": "11fab0fc3ec8c8908a12432b5955115d8c66bbd69a7cc562162b49e19c91d57b"
+    },
+    {
+      "set": 32,
+      "question": 6,
+      "variant": 2,
+      "method": "发射与运动平面交点事件",
+      "checks": [
+        {
+          "computed": [
+            0.5,
+            -0.41666666666666696
+          ],
+          "expected": [
+            0.5,
+            -0.4166666666666667
+          ]
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "c36a0cdb3b5ced64b59b481698d0e94381367768fbe72773c5344ec94bfeb4de",
+      "draft_sha256": "7cc46949ca8f2ef0f7b0d418a040b5cc1a14a1bd467743f935d156c72d9e73f0"
+    },
+    {
+      "set": 32,
+      "question": 6,
+      "variant": 3,
+      "method": "同时返回条件的事件回代",
+      "checks": [
+        {
+          "computed": 0.0,
+          "expected": 0
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "7e98c7de81abc29c34593d86d2a803f173f90b258d883a9b5be301222799bd68",
+      "draft_sha256": "7cc46949ca8f2ef0f7b0d418a040b5cc1a14a1bd467743f935d156c72d9e73f0"
+    },
+    {
+      "set": 32,
+      "question": 6,
+      "variant": 4,
+      "method": "静止发射者事件",
+      "checks": [
+        {
+          "computed": [
+            0.7337993857053429,
+            0.5384615384615383
+          ],
+          "expected": [
+            0.7337993857053428,
+            0.5384615384615384
+          ]
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "c92fd36543dcc68751de9d02b8bbaa3b8d84ad1875399d69df8ce1e4f8befe79",
+      "draft_sha256": "7cc46949ca8f2ef0f7b0d418a040b5cc1a14a1bd467743f935d156c72d9e73f0"
+    },
+    {
+      "set": 32,
+      "question": 7,
+      "variant": 2,
+      "method": "多界面复振幅相加",
+      "checks": [
+        {
+          "computed": 0.07006920415224911,
+          "expected": 0.07006920415224911
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "acf299c5d6d8d1d4bd0748e8b1a65373978f5fe373639c916c2c6bb3a151793c",
+      "draft_sha256": "e50d827f29241a40d091b50778fe47520ae02a4bcb64ceb63c3ec30d64e923cd"
+    },
+    {
+      "set": 32,
+      "question": 7,
+      "variant": 3,
+      "method": "第二界面反射系数为零",
+      "checks": [
+        {
+          "computed": [
+            0.07006920415224914,
+            0.07006920415224914,
+            0.07006920415224914
+          ],
+          "expected": [
+            0.07006920415224911,
+            0.07006920415224911,
+            0.07006920415224911
+          ]
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "8e2d57cea41190b917415bc483b0be9accade849d1488b669cd6c62db7c3e228",
+      "draft_sha256": "e50d827f29241a40d091b50778fe47520ae02a4bcb64ceb63c3ec30d64e923cd"
+    },
+    {
+      "set": 32,
+      "question": 7,
+      "variant": 4,
+      "method": "光频率相位复振幅周期",
+      "checks": [
+        {
+          "computed": 0.06460561440289006,
+          "expected": 0.06460561440289009
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "4dbf34dd0a711090f703574ba3eaecaa44adb067d6e1f7081d5f98fa7a4a9d76",
+      "draft_sha256": "e50d827f29241a40d091b50778fe47520ae02a4bcb64ceb63c3ec30d64e923cd"
+    },
+    {
+      "set": 32,
+      "question": 8,
+      "variant": 2,
+      "method": "水深面积平均积分",
+      "checks": [
+        {
+          "computed": 0.9999999999999999,
+          "expected": 1
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "a5281dd5f7b7a11ad7bf178658a6093a661242ab29f45796e72fecb364e7340f",
+      "draft_sha256": "11543315eed6cf8be2fd344dbc720070a9860995e3e5c0f894ec0ceeb0783d0b"
+    },
+    {
+      "set": 32,
+      "question": 8,
+      "variant": 3,
+      "method": "自由面径向梯度积分",
+      "checks": [
+        {
+          "computed": 0.00854897486982225,
+          "expected": 0.00854897486982225
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "cec6d8d2ee222ec55e7c1c013bc769791ff62e15cd3543389ee9bc5e7185c949",
+      "draft_sha256": "11543315eed6cf8be2fd344dbc720070a9860995e3e5c0f894ec0ceeb0783d0b"
+    },
+    {
+      "set": 32,
+      "question": 8,
+      "variant": 4,
+      "method": "有限外边界与露底回代",
+      "checks": [
+        {
+          "computed": -4.440892098500626e-16,
+          "expected": 0
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "260c48df0a86e6abc02e48c8f47c022fe6451ca1a2eadece86fcbaa9c7c04565",
+      "draft_sha256": "11543315eed6cf8be2fd344dbc720070a9860995e3e5c0f894ec0ceeb0783d0b"
+    },
+    {
+      "set": 33,
+      "question": 1,
+      "variant": 2,
+      "method": "能量与二维接触力平衡",
+      "checks": [
+        {
+          "computed": [
+            3.5999999999999996,
+            4.6,
+            0.48,
+            0.64
+          ],
+          "expected": [
+            3.6,
+            4.6,
+            0.48,
+            0.64
+          ]
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "2ec56ada46945629d68ac60b55d9560fc633d2bdc023ab14bb25f9a0e34baa42",
+      "draft_sha256": "b81a68f7b7329e49bebf1b621fd4a2eaf41242141a7e31509c508730f43b1691"
+    },
+    {
+      "set": 33,
+      "question": 1,
+      "variant": 3,
+      "method": "初始动能与最低点法向平衡",
+      "checks": [
+        {
+          "computed": 10.0,
+          "expected": 10.0
+        },
+        {
+          "computed": 5.8,
+          "expected": 5.8
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "f12c0fc037923110a6a23298a2975925003b7695f67e1d41a28449de75c2a9e6",
+      "draft_sha256": "b81a68f7b7329e49bebf1b621fd4a2eaf41242141a7e31509c508730f43b1691"
+    },
+    {
+      "set": 33,
+      "question": 1,
+      "variant": 4,
+      "method": "相似缩放下重力与曲率",
+      "checks": [
+        {
+          "computed": 3.6,
+          "expected": 3.5999999999999996
+        },
+        {
+          "computed": 0.75,
+          "expected": 0.75
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "672c033a3b6da59b4392c506fba301360c394081d6b4eadd0b124f38190a9778",
+      "draft_sha256": "b81a68f7b7329e49bebf1b621fd4a2eaf41242141a7e31509c508730f43b1691"
+    },
+    {
+      "set": 33,
+      "question": 2,
+      "variant": 2,
+      "method": "三质量共同运动ODE",
+      "checks": [
+        {
+          "computed": 1.000000000000099,
+          "expected": 1
+        },
+        {
+          "computed": 1.000000000000066,
+          "expected": 1
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "b5bd7b92084837e76235ac8f8a7db4357d20637c37425ba561d0ba8b4cb31a87",
+      "draft_sha256": "ddba336ece9cae16f8249dc5edc10e4f5e8ffa0a160f3f53fc78c7a9e56b2602"
+    },
+    {
+      "set": 33,
+      "question": 2,
+      "variant": 3,
+      "method": "静摩擦需求回代轨迹",
+      "checks": [
+        {
+          "computed": [
+            1.0,
+            1.6666666666666667
+          ],
+          "expected": [
+            1.0,
+            1.6666666666666667
+          ]
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "719a7fb9fde42b9e6b093bcd3229f5644c0f257de1f2195761e5e305674e58c0",
+      "draft_sha256": "ddba336ece9cae16f8249dc5edc10e4f5e8ffa0a160f3f53fc78c7a9e56b2602"
+    },
+    {
+      "set": 33,
+      "question": 2,
+      "variant": 4,
+      "method": "改变劲度后的无量纲首次滑动",
+      "checks": [
+        {
+          "computed": [
+            0.25,
+            0.5
+          ],
+          "expected": [
+            0.25,
+            0.5
+          ]
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "63fe8de604e2eb942e137a2f42ca66481cadf998a964c7525a029e83028ddcd2",
+      "draft_sha256": "ddba336ece9cae16f8249dc5edc10e4f5e8ffa0a160f3f53fc78c7a9e56b2602"
+    },
+    {
+      "set": 33,
+      "question": 3,
+      "variant": 2,
+      "method": "全摆角载荷比极值",
+      "checks": [
+        {
+          "computed": 1.4142129645603032,
+          "expected": 1.4142135623730951
+        },
+        {
+          "computed": [
+            0.17157287525379544,
+            0.2425356250363126
+          ],
+          "expected": [
+            0.1715728752538097,
+            0.24253562503633297
+          ]
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "70e46ea7398969a576185c4dd41cc7d1ab38847cee2cbd909572334b597e1a46",
+      "draft_sha256": "b4dc2516d75ad2c80d82389750831d9bd15e852e2ff3967e2033da319764cedd"
+    },
+    {
+      "set": 33,
+      "question": 3,
+      "variant": 3,
+      "method": "质量反演回代与摩擦锥",
+      "checks": [
+        {
+          "computed": 1.4999999999999996,
+          "expected": 1.5
+        },
+        {
+          "computed": 0.37796447300922725,
+          "expected": 0.3779644730092272
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "4abf9aa75e4004669470403f6775e49a3c35bbc1f6fdd509a9e48b7ded96e62d",
+      "draft_sha256": "b4dc2516d75ad2c80d82389750831d9bd15e852e2ff3967e2033da319764cedd"
+    },
+    {
+      "set": 33,
+      "question": 3,
+      "variant": 4,
+      "method": "重棍极限真实函数",
+      "checks": [
+        {
+          "computed": [
+            0.7499988750021094,
+            1.0606585807925468,
+            1.4142135623730951
+          ],
+          "expected": [
+            0.75,
+            1.0606601717798212,
+            1.4142135623730951
+          ]
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "620b03b86d45c4708707307a7f24432668612fefff32de779de4a01759ab5005",
+      "draft_sha256": "b4dc2516d75ad2c80d82389750831d9bd15e852e2ff3967e2033da319764cedd"
+    },
+    {
+      "set": 33,
+      "question": 4,
+      "variant": 2,
+      "method": "电热摩擦回流边界功守恒",
+      "checks": [
+        {
+          "computed": 0.64,
+          "expected": 0.6399999999999999
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "06d1fef8f723c023fb8db1ecec10ba9833aa4f2e863d49049e92a5b0efb3a35d",
+      "draft_sha256": "946f4f70a0c5aadc356838af3de3f932628df78905483e10f8f9f23ce3ca461e"
+    },
+    {
+      "set": 33,
+      "question": 4,
+      "variant": 3,
+      "method": "反推热回流与守恒",
+      "checks": [
+        {
+          "computed": 0.7000000000000005,
+          "expected": 0.7
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "9ea4b775d5a179a0848c54874ba72f72d95fbacc50e120f148532b0584c3dd31",
+      "draft_sha256": "946f4f70a0c5aadc356838af3de3f932628df78905483e10f8f9f23ce3ca461e"
+    },
+    {
+      "set": 33,
+      "question": 4,
+      "variant": 4,
+      "method": "起滑压强与全回流守恒",
+      "checks": [
+        {
+          "computed": 2,
+          "expected": 2
+        },
+        {
+          "computed": 2.5,
+          "expected": 2.5
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "545ae9bb0855cbd6f25f3e623fe9e93d9241a09464118c03e76e37ff986e4dcb",
+      "draft_sha256": "946f4f70a0c5aadc356838af3de3f932628df78905483e10f8f9f23ce3ca461e"
+    },
+    {
+      "set": 33,
+      "question": 5,
+      "variant": 2,
+      "method": "平面约化光程回代",
+      "checks": [
+        {
+          "computed": 1.3333333333333333,
+          "expected": 1.3333333333333333
+        },
+        {
+          "computed": -0.5925925925925926,
+          "expected": -0.5925925925925926
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "c957b0a586b9d6400e276c0be0a047f8c34c1112170dd0a5fb1d03e6c3de36de",
+      "draft_sha256": "c70985364cc27af8c85d9a0a6d38e8dde06343fe181a207bc6595452f62c0069"
+    },
+    {
+      "set": 33,
+      "question": 5,
+      "variant": 3,
+      "method": "球面同位倒数像深",
+      "checks": [
+        {
+          "computed": 0.07777777777777778,
+          "expected": 0.07777777777777777
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "ecf23c9b0f065d506e95417278487c4b1868b13682d0cffcd4985eefdff6c5da",
+      "draft_sha256": "c70985364cc27af8c85d9a0a6d38e8dde06343fe181a207bc6595452f62c0069"
+    },
+    {
+      "set": 33,
+      "question": 5,
+      "variant": 4,
+      "method": "像同位高度有限差分",
+      "checks": [
+        {
+          "computed": -5.249999998824251,
+          "expected": -5.25
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "3831e1a2f031fe54ae62a793113a4d70c3ceff43e8e42527cd49e24487370a47",
+      "draft_sha256": "c70985364cc27af8c85d9a0a6d38e8dde06343fe181a207bc6595452f62c0069"
+    },
+    {
+      "set": 33,
+      "question": 6,
+      "variant": 2,
+      "method": "直流机械电气联立方程",
+      "checks": [
+        {
+          "computed": [
+            0.417391304347826,
+            0.417391304347826
+          ],
+          "expected": [
+            0.417391304347826,
+            0.417391304347826
+          ]
+        },
+        {
+          "computed": 1.1999999999999997,
+          "expected": 1.2
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "25a8a162100a564c05028f9b53b17298820548b90d88f9d699363ac52fb7a1d4",
+      "draft_sha256": "504d768417a045d773c230dac703100716f365adfb36e4672bbd0402f2ba96a2"
+    },
+    {
+      "set": 33,
+      "question": 6,
+      "variant": 3,
+      "method": "速度幅值分母数值极值",
+      "checks": [
+        {
+          "computed": 0.0977777777777776,
+          "expected": 0.0977777777777778
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "1d953c5503b41560ba6373dec6fca7b27df17db1b74c500792f48e041000a4b7",
+      "draft_sha256": "504d768417a045d773c230dac703100716f365adfb36e4672bbd0402f2ba96a2"
+    },
+    {
+      "set": 33,
+      "question": 6,
+      "variant": 4,
+      "method": "二阶电机响应直接积分",
+      "checks": [
+        {
+          "computed": 1.7775634642593554,
+          "expected": 1.7775634642633165
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "b4d9418382a9fbc32f82ba9f3e5269a0622951bc4d453503249d7fec627a5343",
+      "draft_sha256": "504d768417a045d773c230dac703100716f365adfb36e4672bbd0402f2ba96a2"
+    },
+    {
+      "set": 33,
+      "question": 7,
+      "variant": 2,
+      "method": "三维等棱坐标完整节点解",
+      "checks": [
+        {
+          "computed": 0.5375626043405679,
+          "expected": 0.5375626043405676
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "3d3d9b77dab5ceecfc571428e5eb242f8b784959c42fddd32ba97a76af8c96ec",
+      "draft_sha256": "1dd71fca452bf82b4ebf4984386e3b11788bf34d0f1eb91b67aa194474764bc0"
+    },
+    {
+      "set": 33,
+      "question": 7,
+      "variant": 3,
+      "method": "完整三维网络加外接支路",
+      "checks": [
+        {
+          "computed": 0.3181818181818184,
+          "expected": 0.3181818181818182
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "aabac3d73bcf0cc4d58fc7825acdf96569031bd508aeaede364e1f4da274721a",
+      "draft_sha256": "1dd71fca452bf82b4ebf4984386e3b11788bf34d0f1eb91b67aa194474764bc0"
+    },
+    {
+      "set": 33,
+      "question": 7,
+      "variant": 4,
+      "method": "电阻率整体变化的节点功率",
+      "checks": [
+        {
+          "computed": 1.7857142857142863,
+          "expected": 1.7857142857142856
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "e3f10358d6db65fb49e71a72286aa47cf281a4ed386d2d70fc576c894e075201",
+      "draft_sha256": "1dd71fca452bf82b4ebf4984386e3b11788bf34d0f1eb91b67aa194474764bc0"
+    },
+    {
+      "set": 33,
+      "question": 8,
+      "variant": 2,
+      "method": "玻尔能级差比值",
+      "checks": [
+        {
+          "computed": 0.1851851851851852,
+          "expected": 0.18518518518518517
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "1ab936a54cee0aefb810f469e48774379240d6869dd0dd787888f0050ace6839",
+      "draft_sha256": "22b027496ec9a3990b4d5d83f4ef537218513d2249b27e9c6b512d9d4c5e3e5e"
+    },
+    {
+      "set": 33,
+      "question": 8,
+      "variant": 3,
+      "method": "角动量与向心力联合条件",
+      "checks": [
+        {
+          "computed": 1.0,
+          "expected": 1
+        },
+        {
+          "computed": 9.0,
+          "expected": 9
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "2192edd3df4bef16cb3b775bfbe96669d1cbcf4498825ff7aa11e5661fcd063b",
+      "draft_sha256": "22b027496ec9a3990b4d5d83f4ef537218513d2249b27e9c6b512d9d4c5e3e5e"
+    },
+    {
+      "set": 33,
+      "question": 8,
+      "variant": 4,
+      "method": "等质量约化质量与轨道分配",
+      "checks": [
+        {
+          "computed": [
+            2.0,
+            0.5,
+            1.0
+          ],
+          "expected": [
+            2.0,
+            0.5,
+            1.0
+          ]
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "64b12a66531765af10c3bb1756883848ea1534a81a0a7cbf7843dd6f25e36ea3",
+      "draft_sha256": "22b027496ec9a3990b4d5d83f4ef537218513d2249b27e9c6b512d9d4c5e3e5e"
+    },
+    {
+      "set": 34,
+      "question": 1,
+      "variant": 2,
+      "method": "逐次碰撞与各飞行段求和",
+      "checks": [
+        {
+          "computed": 2.25,
+          "expected": 2.25
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "a89fae0bcd204a928a2caddddcda694b8187b37ab012b098eadc2072c9722275",
+      "draft_sha256": "05b98a227eab049769425944c3c1b12a94db327c216288ec3657b39c1c7c49e3"
+    },
+    {
+      "set": 34,
+      "question": 1,
+      "variant": 3,
+      "method": "含Zeno末态滑行的独立迭代",
+      "checks": [
+        {
+          "computed": [
+            10.125000000000002,
+            1.2500000000000002,
+            7.0
+          ],
+          "expected": [
+            10.125,
+            1.25,
+            7.0
+          ]
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "f1abd10fcfa528c54873e399134b6b342f828ecf16f669f259e81e4169f5d564",
+      "draft_sha256": "05b98a227eab049769425944c3c1b12a94db327c216288ec3657b39c1c7c49e3"
+    },
+    {
+      "set": 34,
+      "question": 1,
+      "variant": 4,
+      "method": "速度预算边界迭代",
+      "checks": [
+        {
+          "computed": 4.0,
+          "expected": 4
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "435c8d40d0c94e17f6a0f93b9637110645faf2b6e55e4ec153edf235261bff6f",
+      "draft_sha256": "05b98a227eab049769425944c3c1b12a94db327c216288ec3657b39c1c7c49e3"
+    },
+    {
+      "set": 34,
+      "question": 2,
+      "variant": 2,
+      "method": "归一化静力承载条件",
+      "checks": [
+        {
+          "computed": 0.4082482904638631,
+          "expected": 0.4082482904638631
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "6e8d299ce7d31cb15ed6b7c72241e987b462507ddde6e831d6f70243bd458baf",
+      "draft_sha256": "2634713fb9b2b4c3d8fceac90b56c4e0640f2af89c2f409f7df249740bb81313"
+    },
+    {
+      "set": 34,
+      "question": 2,
+      "variant": 3,
+      "method": "指定滚动分支平动转动摩擦锥",
+      "checks": [
+        {
+          "computed": [
+            0.13121296417392658,
+            -2.220446049250313e-16
+          ],
+          "expected": [
+            0.13121296417392667,
+            0.0
+          ]
+        },
+        {
+          "computed": 0.46719468431235917,
+          "expected": 0.46719468431235905
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "9f90ad37fe4fa95c34be3ceb6ac3c53404f4e124ef64bf3ab8ebeb61860cc114",
+      "draft_sha256": "2634713fb9b2b4c3d8fceac90b56c4e0640f2af89c2f409f7df249740bb81313"
+    },
+    {
+      "set": 34,
+      "question": 2,
+      "variant": 4,
+      "method": "静力承载边界严格不等式",
+      "checks": [
+        {
+          "computed": 0.4,
+          "expected": 0.4
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "681aa7a5e3772ab1c736acf0c09c6f8ac1c5dabf75afed8875094282f86bb96d",
+      "draft_sha256": "2634713fb9b2b4c3d8fceac90b56c4e0640f2af89c2f409f7df249740bb81313"
+    },
+    {
+      "set": 34,
+      "question": 3,
+      "variant": 2,
+      "method": "上下岸点时间直接最小化",
+      "checks": [
+        {
+          "computed": 3.73205080756888,
+          "expected": 3.732050807568877
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "8988af99815643d0afd8f7857bad7bb4b70ac54fb41bc200da1a8ad52d8ee13e",
+      "draft_sha256": "bbd91e64a5763904f0562003ddf2b8f8c7480ecbda7915150ac49bb0db3c323a"
+    },
+    {
+      "set": 34,
+      "question": 3,
+      "variant": 3,
+      "method": "不等离岸距离几何时间",
+      "checks": [
+        {
+          "computed": 7.598076211353316,
+          "expected": 7.598076211353316
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "2efa48140bacaffc9bc710c76f923800b0e0b48800de9321bf8e7b53752c84e9",
+      "draft_sha256": "bbd91e64a5763904f0562003ddf2b8f8c7480ecbda7915150ac49bb0db3c323a"
+    },
+    {
+      "set": 34,
+      "question": 3,
+      "variant": 4,
+      "method": "等速折线三角不等式样例",
+      "checks": [
+        {
+          "computed": 10.246211251235321,
+          "expected": 10.246211251235321
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "15952d2cb9ca2e3f1edf7978a3a91232ae2bc269fc26a5a8b265767ad91e966f",
+      "draft_sha256": "bbd91e64a5763904f0562003ddf2b8f8c7480ecbda7915150ac49bb0db3c323a"
+    },
+    {
+      "set": 34,
+      "question": 4,
+      "variant": 2,
+      "method": "面电荷与Maxwell压力积分",
+      "checks": [
+        {
+          "computed": 4.0,
+          "expected": 4
+        },
+        {
+          "computed": 2.0,
+          "expected": 2
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "5caf3fef2a5bd1d5593bb9eaad4ccd37cd26be8ee3842c68c59d2ba00b8d1425",
+      "draft_sha256": "f6848465d52553be05f88387be68558d7484dfe4bc574b61ac7634c53988c16d"
+    },
+    {
+      "set": 34,
+      "question": 4,
+      "variant": 3,
+      "method": "竖直电力曲面积分",
+      "checks": [
+        {
+          "computed": 0.6875000000000001,
+          "expected": 0.6875
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "4644f06cfef16f164c9ca26d9292880deb4e502993e65a96569e3f12528c5d18",
+      "draft_sha256": "f6848465d52553be05f88387be68558d7484dfe4bc574b61ac7634c53988c16d"
+    },
+    {
+      "set": 34,
+      "question": 4,
+      "variant": 4,
+      "method": "曲面电力与体积重力缩放",
+      "checks": [
+        {
+          "computed": [
+            4.0,
+            16.0,
+            2.0
+          ],
+          "expected": [
+            4,
+            16,
+            2
+          ]
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "614676362874ab65aa045a4618b39139e8b07a924aa27d2191b7fcd9de669037",
+      "draft_sha256": "f6848465d52553be05f88387be68558d7484dfe4bc574b61ac7634c53988c16d"
+    },
+    {
+      "set": 34,
+      "question": 5,
+      "variant": 2,
+      "method": "截止互补条件与节点守恒",
+      "checks": [
+        {
+          "computed": 1,
+          "expected": 1
+        },
+        {
+          "computed": 0,
+          "expected": 0
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "014277503a3ce2ebca061f0fad919b43ff4f49889158444554fbd56ed3e3b24a",
+      "draft_sha256": "b97e5986e55740c3f065532013873a7d7071af85b7f1358f1f682464a6c334b6"
+    },
+    {
+      "set": 34,
+      "question": 5,
+      "variant": 3,
+      "method": "二极管非负性不可行证据",
+      "checks": [
+        {
+          "sum_injected": -1,
+          "sum_nonnegative_outgoing_lower_bound": 0
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "0e3a84128d2724efa5de639687e5ca96f861c20be64618a331ebb242e0ea46cf",
+      "draft_sha256": "b97e5986e55740c3f065532013873a7d7071af85b7f1358f1f682464a6c334b6"
+    },
+    {
+      "set": 34,
+      "question": 5,
+      "variant": 4,
+      "method": "不等压降回路与节点方程",
+      "checks": [
+        {
+          "computed": 2.0,
+          "expected": 2
+        },
+        {
+          "computed": 0.5,
+          "expected": 0.5
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "2055c13798847d93c68e0e26844c7cf2914ff09a7fc6d1ed9e6fd3ee00b2333c",
+      "draft_sha256": "b97e5986e55740c3f065532013873a7d7071af85b7f1358f1f682464a6c334b6"
+    },
+    {
+      "set": 34,
+      "question": 6,
+      "variant": 2,
+      "method": "地面净浮力反推温升",
+      "checks": [
+        {
+          "computed": 1.0,
+          "expected": 1
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "1e590901a419e8b1947c231421995e90933aef7ed07112c80aeff14cee2497fa",
+      "draft_sha256": "aaea0c69934d4d10567fa04ad90a8f5d4ad891c40eb8e686c5c6965259c299c9"
+    },
+    {
+      "set": 34,
+      "question": 6,
+      "variant": 3,
+      "method": "等温静力与浮力回代",
+      "checks": [
+        {
+          "computed": 1.0,
+          "expected": 1
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "e2688343935813a826a7066cf842813810b135e6801fdef5b303cd2d51e9f182",
+      "draft_sha256": "aaea0c69934d4d10567fa04ad90a8f5d4ad891c40eb8e686c5c6965259c299c9"
+    },
+    {
+      "set": 34,
+      "question": 6,
+      "variant": 4,
+      "method": "绝热大气对数导数",
+      "checks": [
+        {
+          "computed": 0.5714285714285714,
+          "expected": 0.5714285714285714
+        },
+        {
+          "computed": 0.5,
+          "expected": 0.5
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "be6102440e540ed004dedf637e222b1f9f702cb7bb8f059639e096aeb9095ccc",
+      "draft_sha256": "aaea0c69934d4d10567fa04ad90a8f5d4ad891c40eb8e686c5c6965259c299c9"
+    },
+    {
+      "set": 34,
+      "question": 7,
+      "variant": 2,
+      "method": "薄透镜与返回焦度回代",
+      "checks": [
+        {
+          "computed": [
+            0.006249999999999999,
+            0.0
+          ],
+          "expected": [
+            0.00625,
+            0.0
+          ]
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "ff7983355f07fcade3fa551ba2da1b8b49d5141e4d6967e027dcd9bd1752d46e",
+      "draft_sha256": "cbf72d5d39d8f137d0ad7990659dae708642cfb8ac7338216967bc1a0eaf9440"
+    },
+    {
+      "set": 34,
+      "question": 7,
+      "variant": 3,
+      "method": "同位像坐标数值求导",
+      "checks": [
+        {
+          "computed": [
+            -25.00000000310365,
+            25.000000001682565
+          ],
+          "expected": [
+            -25,
+            25
+          ]
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "7a242d9cbe2e7b6b657ead5dbab92d9c9d714b85f5380c228f266f2835856e57",
+      "draft_sha256": "cbf72d5d39d8f137d0ad7990659dae708642cfb8ac7338216967bc1a0eaf9440"
+    },
+    {
+      "set": 34,
+      "question": 7,
+      "variant": 4,
+      "method": "镀银系统逐界面焦度与像距",
+      "checks": [
+        {
+          "computed": [
+            0.0,
+            0.01666666666666667
+          ],
+          "expected": [
+            0.0,
+            0.016666666666666666
+          ]
+        },
+        {
+          "computed": [
+            120.0,
+            120.0
+          ],
+          "expected": [
+            120,
+            120
+          ]
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "6bb5f2358c81efabfe0cd12785b8e610f8f1d56d94fc8eb54bcf690c3f623fe8",
+      "draft_sha256": "cbf72d5d39d8f137d0ad7990659dae708642cfb8ac7338216967bc1a0eaf9440"
+    },
+    {
+      "set": 34,
+      "question": 8,
+      "variant": 2,
+      "method": "光四波矢洛伦兹变换",
+      "checks": [
+        {
+          "computed": [
+            0.5,
+            2.0
+          ],
+          "expected": [
+            0.5,
+            2.0
+          ]
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "053faf551bb97edea919b30a2780c2d0f1cc005fc52888eeff4cf939fefd2fc8",
+      "draft_sha256": "535ab3449dd5ab6eaf30e457c1477d19b4e3e0ac36cba768effae006173ed2e1"
+    },
+    {
+      "set": 34,
+      "question": 8,
+      "variant": 3,
+      "method": "横向光四波矢与零范数",
+      "checks": [
+        {
+          "computed": [
+            -0.6,
+            0.8,
+            1.25
+          ],
+          "expected": [
+            -0.6,
+            0.8,
+            1.25
+          ]
+        },
+        {
+          "computed": 1.0,
+          "expected": 1
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "f3b32b2ee9efd7cb2639c038e25e925841f841cde993cd20f14b4fc7e85f0ab5",
+      "draft_sha256": "535ab3449dd5ab6eaf30e457c1477d19b4e3e0ac36cba768effae006173ed2e1"
+    },
+    {
+      "set": 34,
+      "question": 8,
+      "variant": 4,
+      "method": "零频移条件与光行差",
+      "checks": [
+        {
+          "computed": [
+            1.0,
+            -0.3333333333333333
+          ],
+          "expected": [
+            1.0,
+            -0.3333333333333333
+          ]
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "6367a90e27197e7ee578ff3423cc9d04afbaf228e5520bdb1c25cab78f66eaec",
+      "draft_sha256": "535ab3449dd5ab6eaf30e457c1477d19b4e3e0ac36cba768effae006173ed2e1"
+    },
+    {
+      "set": 35,
+      "question": 1,
+      "variant": 2,
+      "method": "受限发声时刻的时间优化",
+      "checks": [
+        {
+          "computed": 2.6000023843443945,
+          "expected": 2.6
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "7dcb56882401e489f3859d2a71e5e54c271b0c99e243e853e5d6752e8cb37457",
+      "draft_sha256": "75b40506dc40599eabb215d35d5537b261dc6a023159ea71c685b75ec4561ec7"
+    },
+    {
+      "set": 35,
+      "question": 1,
+      "variant": 3,
+      "method": "临界速度区间等到达时刻",
+      "checks": [
+        {
+          "computed": [
+            3.0,
+            3.0,
+            3.0
+          ],
+          "expected": [
+            3,
+            3,
+            3
+          ]
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "5bad0b1a6d9f0544ed3cc4d34ee9b8d8f6e3f4ad60047d8d9af0e3fb001455f7",
+      "draft_sha256": "75b40506dc40599eabb215d35d5537b261dc6a023159ea71c685b75ec4561ec7"
+    },
+    {
+      "set": 35,
+      "question": 1,
+      "variant": 4,
+      "method": "观测到达位置时间反演",
+      "checks": [
+        {
+          "computed": [
+            2.9999999999999996,
+            2.0
+          ],
+          "expected": [
+            3,
+            2
+          ]
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "807534ddc0436c33a3ff11c16dadc862ab00caf9b809cca5bbda1a6b218ab5ed",
+      "draft_sha256": "75b40506dc40599eabb215d35d5537b261dc6a023159ea71c685b75ec4561ec7"
+    },
+    {
+      "set": 35,
+      "question": 2,
+      "variant": 2,
+      "method": "不等气量总热容量守恒",
+      "checks": [
+        {
+          "computed": 4.0,
+          "expected": 4
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "09180c125c099ea9089b1e9b650e614e21393c8cbb5fd035314ccbf7edc20083",
+      "draft_sha256": "6028da23ba87c0b302295eac7059753594e12471b37b0fcf7ff69a72ea10fd3d"
+    },
+    {
+      "set": 35,
+      "question": 2,
+      "variant": 3,
+      "method": "左右热容量传热ODE",
+      "checks": [
+        {
+          "computed": 0.19047619047655123,
+          "expected": 0.19047619047619047
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "511d13d3154aeea16b94dc8276f197f9d142114cf8ae6077842da5f6fdf2fe21",
+      "draft_sha256": "6028da23ba87c0b302295eac7059753594e12471b37b0fcf7ff69a72ea10fd3d"
+    },
+    {
+      "set": 35,
+      "question": 2,
+      "variant": 4,
+      "method": "等压右室总能量含边界功",
+      "checks": [
+        {
+          "computed": 0.9999999999999999,
+          "expected": 1
+        },
+        {
+          "computed": 0.07142857142857142,
+          "expected": 0.07142857142857142
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "e866ff61af8562a7972f028f25957fb538236a87345a0cb2824e2821a46eb874",
+      "draft_sha256": "6028da23ba87c0b302295eac7059753594e12471b37b0fcf7ff69a72ea10fd3d"
+    },
+    {
+      "set": 35,
+      "question": 3,
+      "variant": 2,
+      "method": "相对速度位移路程五状态ODE",
+      "checks": [
+        {
+          "computed": [
+            0.770642201834339,
+            1.4311926605505625,
+            3.428571428495569
+          ],
+          "expected": [
+            0.7706422018348623,
+            1.4311926605504586,
+            3.428571428571429
+          ]
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "e447e7e23592249509ffc25053bd1e66571e4fd850930468dbbd99533b3c307e",
+      "draft_sha256": "b76b0c0fd6a7842a2ca0c763d72ede8f93c367a8f68b471bef2d2baae68aea75"
+    },
+    {
+      "set": 35,
+      "question": 3,
+      "variant": 3,
+      "method": "相对速度半衰与转角积分",
+      "checks": [
+        {
+          "computed": [
+            0.5000000000000286,
+            0.6931471805619305
+          ],
+          "expected": [
+            0.5,
+            0.6931471805599453
+          ]
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "4a84c81375d783b769e43f0922d078bd0f5f5f949a8d8926886f9258cd924f70",
+      "draft_sha256": "b76b0c0fd6a7842a2ca0c763d72ede8f93c367a8f68b471bef2d2baae68aea75"
+    },
+    {
+      "set": 35,
+      "question": 3,
+      "variant": 4,
+      "method": "无磁场相对直线积分",
+      "checks": [
+        {
+          "computed": [
+            0.9999999999998398,
+            0.9999999999878023
+          ],
+          "expected": [
+            1,
+            1
+          ]
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "0ef6197f7616e7aaa8dbd96dca4d6f9e5b37bd8627f238bd2fe91a0c211570af",
+      "draft_sha256": "b76b0c0fd6a7842a2ca0c763d72ede8f93c367a8f68b471bef2d2baae68aea75"
+    },
+    {
+      "set": 35,
+      "question": 4,
+      "variant": 2,
+      "method": "沿线体力积分求比应力",
+      "checks": [
+        {
+          "computed": 60954927.00999653,
+          "expected": 60954927.01
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "98e89ce06af54b88bcb4ae75f85bb635aa93c15453be41b7fbf1dc8cbc744a88",
+      "draft_sha256": "57abaf5b65d0f097d6cdc750eaef021884f638d90bd4978e7fdbffcfeb48da2a"
+    },
+    {
+      "set": 35,
+      "question": 4,
+      "variant": 3,
+      "method": "额外边界张力不改变微元导数",
+      "checks": [
+        {
+          "computed": -1.734723475976807e-18,
+          "expected": 0
+        },
+        {
+          "computed": 100.0,
+          "expected": 100
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "a7f792a304f129d5d2e0e0f86b82c431c851e065cae01f6f6c8215d59f40b9cc",
+      "draft_sha256": "57abaf5b65d0f097d6cdc750eaef021884f638d90bd4978e7fdbffcfeb48da2a"
+    },
+    {
+      "set": 35,
+      "question": 4,
+      "variant": 4,
+      "method": "密度与允许应力比例约束",
+      "checks": [
+        {
+          "computed": 8.20278235946375,
+          "expected": 8.202782
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "163b5e42015146be949f2faee7ec6b2f55e47a9dcb4f15365114c7ffdf893f48",
+      "draft_sha256": "57abaf5b65d0f097d6cdc750eaef021884f638d90bd4978e7fdbffcfeb48da2a"
+    },
+    {
+      "set": 35,
+      "question": 5,
+      "variant": 2,
+      "method": "最低点力条件及总能量",
+      "checks": [
+        {
+          "computed": [
+            63000.0,
+            2100.0
+          ],
+          "expected": [
+            63000,
+            2100
+          ]
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "5e039964529030d300160205a941facedd5c694c407906471288ad545a4bcbc1",
+      "draft_sha256": "c01f3a63825ef2d8024add131f6714b09b84625bc7f8e0dfab1c698791fea4af"
+    },
+    {
+      "set": 35,
+      "question": 5,
+      "variant": 3,
+      "method": "变质量伸长正根与最大速率能量",
+      "checks": [
+        {
+          "computed": 186543.77448471464,
+          "expected": 186543.77448471464
+        },
+        {
+          "computed": 1000.0,
+          "expected": 1000
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "9f0c8d7044bb297858ce31fb80925336745982d2c12f1f423d03ac86d7929eb1",
+      "draft_sha256": "c01f3a63825ef2d8024add131f6714b09b84625bc7f8e0dfab1c698791fea4af"
+    },
+    {
+      "set": 35,
+      "question": 5,
+      "variant": 4,
+      "method": "变劲度伸长能量及最低点牛顿方程",
+      "checks": [
+        {
+          "computed": 37119.42946412396,
+          "expected": 37119.42946412396
+        },
+        {
+          "computed": 36.05551275463989,
+          "expected": 36.05551275463989
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "943448180090e5c6549189cb29845b8c5e7cad9299cfa2b2f3278823e73bcfd0",
+      "draft_sha256": "c01f3a63825ef2d8024add131f6714b09b84625bc7f8e0dfab1c698791fea4af"
+    },
+    {
+      "set": 35,
+      "question": 6,
+      "variant": 3,
+      "method": "约化质量相对动能",
+      "checks": [
+        {
+          "computed": 1.0203045685279188,
+          "expected": 1.0203045685279188
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "e3d0cbf430e20889d71db606a06b07bc127d920f9da96360ec31c529568bb02c",
+      "draft_sha256": "cd04be06df74ea74d9573652f064e7497daef2d02522b639d8df0eb7d36ec346"
+    },
+    {
+      "set": 35,
+      "question": 6,
+      "variant": 4,
+      "method": "不变质量能量反演回代",
+      "checks": [
+        {
+          "computed": 0.30000000000001137,
+          "expected": 0.3
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "71d7895a3e1547328674c70b31f18f0773f5418e25b8578d1fd13c51da0be624",
+      "draft_sha256": "cd04be06df74ea74d9573652f064e7497daef2d02522b639d8df0eb7d36ec346"
+    },
+    {
+      "set": 35,
+      "question": 7,
+      "variant": 2,
+      "method": "散射角求根与照片计数范围",
+      "checks": [
+        {
+          "computed": 0.05882352941176472,
+          "expected": 0.058823529411764705
+        },
+        {
+          "computed": [
+            5.6176317671662954e-05,
+            6.319835738062082e-05
+          ],
+          "expected": [
+            5.618e-05,
+            6.32e-05
+          ]
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "a66428a34721d0d79c0ec3a39efd0b867108c8d619f4799d040fd5f98188850e",
+      "draft_sha256": "cbad3b6544013141ce1aef52742c77c1069b9206b49d2ab4899bec84655d558d"
+    },
+    {
+      "set": 35,
+      "question": 7,
+      "variant": 3,
+      "method": "波长改变后条纹数与尺寸回代",
+      "checks": [
+        {
+          "computed": 5.9687337526141876e-05,
+          "expected": 5.9687337526141876e-05
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "231305152214b20eef7c6b7f6270e10ca34337d151e462ad53f1b5ee579bbcc6",
+      "draft_sha256": "cbad3b6544013141ce1aef52742c77c1069b9206b49d2ab4899bec84655d558d"
+    },
+    {
+      "set": 35,
+      "question": 7,
+      "variant": 4,
+      "method": "视位置改变后条纹数与尺寸回代",
+      "checks": [
+        {
+          "computed": 5.9687337526141876e-05,
+          "expected": 5.9687337526141876e-05
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "2127e26bd5967c76dfad6a5e1497cc2b78ac8ff5dec0be6552a1bb5e79146d77",
+      "draft_sha256": "cbad3b6544013141ce1aef52742c77c1069b9206b49d2ab4899bec84655d558d"
+    },
+    {
+      "set": 35,
+      "question": 8,
+      "variant": 2,
+      "method": "七节点完整网络新支路导纳",
+      "checks": [
+        {
+          "computed": 0.30534351145038163,
+          "expected": 0.3053435114503817
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "15b7af6cfb6457d573c602ef884ebd48312479f639989bd1a925884f95c43255",
+      "draft_sha256": "5863e804ac4cd35d7e398347c4d45dc67f6b2472f4736d42006a77bf34901038"
+    },
+    {
+      "set": 35,
+      "question": 8,
+      "variant": 3,
+      "method": "删隔点边的环网络节点求解",
+      "checks": [
+        {
+          "computed": [
+            0.8571428571428574,
+            1.4285714285714284,
+            1.7142857142857142
+          ],
+          "expected": [
+            0.8571428571428571,
+            1.4285714285714286,
+            1.7142857142857142
+          ]
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "66d55f33f27e9b37c6d813209895aeda5d382fad4d9e721407c66b5f7163c36f",
+      "draft_sha256": "5863e804ac4cd35d7e398347c4d45dc67f6b2472f4736d42006a77bf34901038"
+    },
+    {
+      "set": 35,
+      "question": 8,
+      "variant": 4,
+      "method": "单位电压网络功率",
+      "checks": [
+        {
+          "computed": 0.9479166666666669,
+          "expected": 0.9479166666666666
+        }
+      ],
+      "status": "pass",
+      "variant_sha256": "c142bf5254775a777c033ba22e0ec161a342416da810fe50fb8cd48957d94eae",
+      "draft_sha256": "5863e804ac4cd35d7e398347c4d45dc67f6b2472f4736d42006a77bf34901038"
+    }
+  ]
+}

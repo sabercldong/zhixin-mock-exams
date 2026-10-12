@@ -1,0 +1,36 @@
+\documentclass[multi=tikzpicture,border=9pt]{standalone}
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath,amssymb}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc,patterns,decorations.pathmorphing}
+\definecolor{main}{HTML}{17365D}
+\definecolor{accent}{HTML}{AC3931}
+\tikzset{every picture/.style={font=\small,line width=.75pt},
+ >={Stealth[length=2mm]},arr/.style={->},box/.style={draw=main,rounded corners=2pt,
+ fill=main!4,text width=2.7cm,minimum height=.9cm,align=center},
+ note/.style={align=center,text width=8cm}}
+\begin{document}
+\begin{tikzpicture}
+\draw[arr,main,very thick] (-3,0)--(-.4,0) node[midway,above]{$p,\ v=0.8c$};\fill[accent] (0,0) circle(3pt) node[below]{$\pi^0$ 静止};\draw[arr,accent] (.3,.1)--(3,1) node[right]{$p^{\prime}$};\draw[arr,main] (.3,-.1)--(2.8,-1.4) node[right]{$\pi^{\prime}$};\node[note] at (0,-2.5){散射示意。计算采用两体弹性通道 $p+\pi^0\to p+\pi^0$。};
+\end{tikzpicture}
+\begin{tikzpicture}
+\draw[main] (0,0) circle(1.2);\draw[arr] (-1.7,0)--(1.7,0) node[right]{$p_x^*$};\draw[arr] (0,-1.6)--(0,1.8) node[above]{$p_y^*$};\node at (0,-2){质心系：圆};\draw[arr,accent] (2.2,0)--(3.8,0) node[midway,above=5mm]{洛伦兹变换};\draw[main] (6,0) ellipse(1.78114 and 1.2);\draw[arr] (4,-1.6)--(4,1.8) node[above]{$p_y$};\draw[arr] (4,0)--(8.3,0) node[right]{$p_x$};\node at (6,-2){实验室系：平移、伸长};\node[note] at (3,-3.2){$p_x=\gamma_{\rm cm}(p^*\cos\chi+\beta_{\rm cm}E^*)$，$p_y=p^*\sin\chi$（取 $c=1$）。};
+\end{tikzpicture}
+\begin{tikzpicture}
+\draw[arr] (0,0)--(8.6,0) node[right]{$p_x$};
+\draw[arr] (0,-1.5)--(0,1.6) node[above]{$p_y$};
+\draw[fill=main!10,draw=main] (6.529271360218729,0) ellipse(1.31872863978126 and 0.888459156015079);\draw[dashed] (6.529271360218729,-0.888459156015079)--(6.529271360218729,0.888459156015079);\draw (5.210542720437469,0)--++(0,-.12);\node[below] at (5.210542720437469,-1.1) {.8684};\draw (6.529271360218729,0)--++(0,-.12);\node[below] at (6.529271360218729,-1.1) {1.0882};\draw (7.84799999999999,0)--++(0,-.12);\node[below] at (7.84799999999999,-1.1) {1.308};\node[note] at (4.3,-2.5){单位 GeV/$c$。固定散射平面 $p_z=0$ 为边界椭圆；允许任意 $p_z$ 时，$p_xp_y$ 投影填满内部。};
+\end{tikzpicture}
+\begin{tikzpicture}
+\draw[arr] (0,0)--(9,0) node[right]{$p_x$};
+\draw[arr] (0,-1.4)--(0,2.4) node[above]{$p_y$};
+\draw[main] (6.529271360218729,0) ellipse(1.31872863978126 and 0.888459156015079);\draw[accent] (0,0)--(8.8,1.2226415813775333);\fill[accent] (6.262925373134335,0.8701492025293682) circle(2pt);\fill[main] (6.529271360218729,0.888459156015079) circle(2pt);\draw[accent] (4.8,1.8)--(6.262925373134335,0.8701492025293682);\node[above,accent] at (4.8,1.8) {最大偏角切点};\draw[main] (8,1.8)--(6.529271360218729,0.888459156015079);\node[above,main] at (8,1.8) {最大横向动量};\draw[accent] (1.6,0) arc(0:7.90984:1.6);\node[above] at (2.2,.35){$7.91^\circ$};\node[note] at (4,-2.3){最大偏角对应从原点引出的切线；$\sin\theta_{\max}=m_\pi/m_p$。它与椭圆最高点不同。};
+\end{tikzpicture}
+\begin{tikzpicture}
+\node[box] (b0) at (0,0) {总四动量求 $s$};
+\node[box] (b1) at (5,0) {质心系末态动量定长};
+\node[box] (b2) at (5,-2) {变换为实验室系椭圆};
+\node[box] (b3) at (0,-2) {原点切线给最大偏角};
+\draw[arr] (b0)--(b1);\draw[arr] (b1)--(b2);\draw[arr] (b2)--(b3);\node[note] at (2.5,-3.25) {本题取 $m_p=0.981\rm\,GeV/c^2$。两粒子的在壳条件和能量守恒均须检验。};
+\end{tikzpicture}
+\end{document}

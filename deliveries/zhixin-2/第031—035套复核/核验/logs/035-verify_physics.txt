@@ -1,0 +1,9 @@
+Q 1 PASS {"critical_case": "all first-arrival positions checked"}
+Q 2 PASS {"dU1": 0.7142857142857143, "dU2": 0.4166666666666667, "temperature_factor": 0.14285714285714285}
+Q 3 PASS {"relative_displacement": [-2.2722336000000323, 0.8545151999998031], "method": "RK4, independent ODE integration"}
+Q 4 PASS {"M0_kg": 359822245.5084406, "rL_m": 326193663.1469929, "pmax_Pa": 609549270.0999315, "pend_Pa": 582625115.5367516}
+Q 5 PASS {"L": 30.0, "k": 35.0, "vmax": 28.284271247461902, "omega": 0.7071067811865476, "A": 40.0, "time": 5.411411701555421}
+Q 6 PASS {"checks": "individual Lorentz boosts, invariants, positive available energy"}
+Q 7 PASS {"beta_deg": 26.81756590215348, "geometric_factor": 1.1582579521670622, "diameter_um": [56.17631767166296, 59.687337526141874, 63.19835738062083], "ray_exit": [0.4511511709805155, 0.8924475451940618]}
+Q 8 PASS [{"R": "38/91", "V": ["38/91", "0", "18/91", "15/91", "19/91", "23/91", "20/91"]}, {"R": "40/91", "V": ["40/91", "20/91", "0", "15/91", "16/91", "24/91", "25/91"]}, {"R": "48/91", "V": ["48/91", "25/91", "23/91", "0", "19/91", "24/91", "29/91"]}]
+All eight question checks passed.

@@ -1,0 +1,121 @@
+{
+  "status": "pass",
+  "date": "2026-10-11",
+  "scope": [
+    36,
+    37
+  ],
+  "main_questions": 16,
+  "solved_variants": 64,
+  "new_solved_variants": 48,
+  "humanizer_edits": 16,
+  "figures": 32,
+  "final_pdf_count": 6,
+  "final_pdf_pages": 288,
+  "documents": [
+    {
+      "set": 36,
+      "version": "试卷",
+      "path": "蔡题036/整理版/output/第036套_试卷版.pdf",
+      "pages": 9,
+      "sha256": "fa5fe067d155000ada7ae87ae0da838ce8db8b4f08c958d4dd644231120797d3",
+      "qpdf_passed": true,
+      "bounds_passed": true,
+      "logs_passed": true,
+      "footer_sequence_passed": true
+    },
+    {
+      "set": 36,
+      "version": "学生详解",
+      "path": "蔡题036/整理版/output/第036套_学生详解版.pdf",
+      "pages": 57,
+      "sha256": "d49b15c5e74a9472cc7acb5f7c752740971e829e9ac39e5fc4e3520f70daa995",
+      "qpdf_passed": true,
+      "bounds_passed": true,
+      "logs_passed": true,
+      "footer_sequence_passed": true
+    },
+    {
+      "set": 36,
+      "version": "教师备课",
+      "path": "蔡题036/整理版/output/第036套_教师备课版.pdf",
+      "pages": 73,
+      "sha256": "3981045df48c700ad9dca6713b4552cd94472ecb61f40eb74d7cd395dc1b9f15",
+      "qpdf_passed": true,
+      "bounds_passed": true,
+      "logs_passed": true,
+      "footer_sequence_passed": true
+    },
+    {
+      "set": 37,
+      "version": "试卷",
+      "path": "蔡题037/整理版/output/第037套_试卷版.pdf",
+      "pages": 9,
+      "sha256": "642d894669e28ef35b65eece2abdf86bba00bd5ec24cda5260ca83a77d13cd80",
+      "qpdf_passed": true,
+      "bounds_passed": true,
+      "logs_passed": true,
+      "footer_sequence_passed": true
+    },
+    {
+      "set": 37,
+      "version": "学生详解",
+      "path": "蔡题037/整理版/output/第037套_学生详解版.pdf",
+      "pages": 60,
+      "sha256": "981e610b42a862a1cc9388b2ff07f23e19c80ff684f97d48d3228d49b88a0c38",
+      "qpdf_passed": true,
+      "bounds_passed": true,
+      "logs_passed": true,
+      "footer_sequence_passed": true
+    },
+    {
+      "set": 37,
+      "version": "教师备课",
+      "path": "蔡题037/整理版/output/第037套_教师备课版.pdf",
+      "pages": 80,
+      "sha256": "577ab4ceb9f6c3c4fd1e4f8a980c78c472527ed545f3f4ac1cb72c3944e084b5",
+      "qpdf_passed": true,
+      "bounds_passed": true,
+      "logs_passed": true,
+      "footer_sequence_passed": true
+    }
+  ],
+  "all_pdf_and_page_image_sha256_verified": true,
+  "all_main_physics_source_bindings_verified": true,
+  "all_added_variant_source_bindings_verified": true,
+  "all_relocation_source_bindings_verified": true,
+  "original_scans": 6,
+  "original_scan_pages": 22,
+  "original_and_figure_review_image_bindings_verified": true,
+  "visual_coverage": {
+    "direct_final_pages": 5,
+    "reused_reviewed_bodies_from_this_turn": 174,
+    "current_duplicate_bodies": 109,
+    "prior_external_baseline_inherited": 0
+  },
+  "checkpoint_sha256": {
+    "蔡题036": "f96d69b9afec5500b1d0a822ffb78102dea45d305e8986fce60f2be293a08482",
+    "蔡题037": "654cb70da25d044422d838250c4d10510c853e95283f2157034ebfb871b46ffa"
+  },
+  "evidence_sha256": {
+    "核验/original_scan_index.json": "5034831ad46cab97bfc7d5e620691a720a04e37dd458cb0f1aaa90a9175fd669",
+    "核验/humanizer_edits.json": "6e86feb318f938b5f42cc3b34091ac7e0cd8b69951bfc47a50836bcff63b1035",
+    "核验/variant_complete_page_audit.json": "392fb2847115c8a96dd5c3eb2f1f227975e22f42cd405a3f8dcca50aa74acc7d",
+    "核验/source_baseline.json": "f63fb48c3ae12855d0a7db8b87458157fa48472bcfa58076f27821b39d269d49",
+    "核验/added_variant_verification.json": "d283f36a079a5e27b769e3b12c50bb2042146b014731a8284d1e1e29d5ec0835",
+    "核验/document_audit.json": "ae62b9c1e5479d1d496fd519e111cadd262005180a68ed10f80a0efd4d7ea51b",
+    "核验/final_ampere_consistency_fix.json": "ebfb89c4d550d690b22a2c6f95e78ec1021e0e5dfb1d6491f1ff081de9d94763",
+    "核验/本轮修订前实际审读.json": "2c115b7fb96ed3e74127e354a9dd652ec31a702cadeb4d1d7616250abc7f8846",
+    "核验/原稿与图组审读.json": "8fee6882c62cac30c34f0248d731dd165da491f2f86d245b12bfd0dbcbfa408b",
+    "核验/baseline_variants.json": "c7164b2ed37998eaad6e3bddb3f033e0d5004e18ea85d8672de2b6ae088bf3b0",
+    "核验/relocation_check.json": "de495d305182c25e26bfbd498d24b11950a732711014d26f215f9933ef716288",
+    "核验/baseline_binding_audit.json": "d1fb72f249ef5ba0ce493ca6cba2e1ae666775a237adc61f327e2231f4750656",
+    "核验/交付包内变式执行.json": "bfd6a1881b98092cd8928b0885699c21023bbb9296ec177ca96d9e4e3e0b901b",
+    "核验/最终题稿与图稿绑定.json": "f305fe623647e3f10edf068a412c573906aa2eadd26d019e088ed8010b4759f6",
+    "核验/最终PDF版面审读.json": "9ee71d2e3ea25418128a4c2968491ccca193251bda71800ec4f3a52ee61f3454",
+    "核验/原项目保留核对.json": "da54a4b880afff2abc2a8c92dfc38f5f209ea8eb4b5564ec82e1e626aa3a46f2",
+    "核验/added_variants.json": "3b396b8e51dc4f7e6d471c801886319e62b6c84a6345d2613738bfbf218a1b0e",
+    "核验/physics_execution.json": "78e2c8644ed8cc2220c9017974d42fa91aada52320b4e9ac02fe9ddd3c8cc96d",
+    "核验/physics_corrections_tail37.json": "031b7309ea330d04ae3ff63da0f0e0584350e73d9c18aea3899497eae4ee2d78"
+  }
+}

@@ -1,0 +1,113 @@
+\documentclass[tikz,border=5pt]{standalone}
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath}
+\usetikzlibrary{arrows.meta,calc,decorations.markings}
+\definecolor{ink}{HTML}{243447}
+\definecolor{blue}{HTML}{2765A2}
+\definecolor{red}{HTML}{B74739}
+\tikzset{line cap=round,line join=round,
+vec/.style={thick,-{Latex[length=1.8mm]}},
+ray/.style={thick,postaction={decorate},decoration={markings,mark=at position .58 with {\arrow{Latex}}}},
+guide/.style={gray,dashed}}
+\begin{document}
+\begin{tikzpicture}
+ \begin{scope}
+  \fill[blue!8](.338,1.3)--(2.4,1.3)--(2.4,-1.3)--(.338,-1.3)
+  --plot[domain=-1.3:1.3,samples=60]({.2*\x*\x},\x)--cycle;
+  \draw[ink,thick]plot[domain=-1.3:1.3,samples=60]({.2*\x*\x},\x);
+  \draw[vec](-1.4,0)--(2.6,0);
+  \node[below left]at(0,0){$O$};
+  \node at(-.7,.55){$n_1$};
+  \node at(1.6,.55){$n_2$};
+  \draw[blue,ray](-1.25,.9)--(.162,.9);
+  \node[above]at(.45,1.4){球面折射，$R>0$};
+ \end{scope}
+ \begin{scope}[xshift=5.4cm]
+  \path[fill=blue!10,draw=ink,thick]
+  (.405,1.5)--plot[domain=1.5:-1.5,samples=60]({.18*\x*\x},\x)
+  --(.48125,-1.5)--plot[domain=-1.5:1.5,samples=60]({.38+.045*\x*\x},\x)--cycle;
+  \draw[vec](-1.2,0)--(1.8,0);
+  \node[below]at(.2,-1.7){$n=1.5$};
+  \node[above left]at(.25,1.5){$R_1$};
+  \node[above right]at(.5,1.5){$R_2$};
+  \node at(-.75,.6){$1$};
+  \node at(1.25,.6){$1$};
+ \end{scope}
+ \begin{scope}[xshift=10cm]
+  \draw[ink,thick]plot[domain=-1.3:1.3,samples=60]({.23*\x*\x},\x);
+  \foreach \y in {-1.2,-.9,...,1.2}{
+   \draw[gray]({.23*\y*\y},\y)--({.23*\y*\y+.16},{\y-.12});
+  }
+  \draw[vec](-1.4,0)--(2.1,0);
+  \node[below]at(1.1,-.15){$R_3$};
+  \node[above]at(.4,1.6){凸面镜};
+ \end{scope}
+\end{tikzpicture}
+\begin{tikzpicture}
+ \foreach \offset in {0,-4.2}{
+  \begin{scope}[yshift=\offset cm]
+   \fill[blue!5](0,-.2)rectangle(1.65,1.65);
+   \draw[ink,thick]plot[domain=-.2:1.65,samples=50]({.035*\x*\x},\x);
+   \draw[red!65!ink,very thick]plot[domain=-.2:1.65,samples=50]({1.6+.015*\x*\x},\x);
+   \draw[guide](-2,0)--(3.8,0);
+   \node[below left]at(.1,-.25){前表面 $R_1$};
+   \node[below right]at(1.55,-.25){镀银面 $R_2$};
+  \end{scope}
+ }
+ \coordinate(A)at(.02835,.9);
+ \coordinate(B)at(1.60735,.7);
+ \coordinate(C)at(.0504,1.2);
+ \draw[ink,ray](-1.8,.48)--(A);
+ \draw[blue,ray](A)--(B);
+ \draw[blue,ray](B)--(3.5,.52);
+ \draw[red,ray](B)--(C);
+ \draw[red,ray](C)--(-1.8,1.38);
+ \node[blue,below]at(.8,.8){$\theta_g$};
+ \node[red,above]at(.9,1.1){$\eta_g$};
+ \node[red,above]at(-1,1.3){$\eta$};
+ \node[blue,right]at(3.5,.5){透射};
+ \node[above]at(.8,2.15){左入射：折射—反射—折射};
+ \begin{scope}[yshift=-4.2cm]
+  \coordinate(D)at(1.61354,.95);
+  \coordinate(E)at(.03859,1.05);
+  \draw[ink,ray](3.5,.8)--(D);
+  \draw[red,ray](D)--(3.5,.5)node[right]{直接反射};
+  \draw[blue,ray](D)--(E);
+  \draw[blue,ray](E)--(-1.8,1.24)node[left]{透射};
+  \node[above]at(.8,2.1){右入射：首先遇到镀银面};
+ \end{scope}
+\end{tikzpicture}
+\begin{tikzpicture}
+ \begin{scope}
+  \draw[ink,-{Latex} ](-2.1,0)--(8.8,0)node[right]{$X$};
+  \draw[ink,thick,{Latex}-{Latex}](0,-.35)--(0,1.55);
+  \fill[ink](-1.6,0)circle(2pt)node[below=4pt]{$S\,(-64)$};
+  \fill[ink](8,0)circle(2pt)node[below=4pt]{$I\,(320)$};
+  \node[below left]at(0,-.4){$O$};
+  \draw[blue,ray](-1.6,0)--(0,.65);
+  \draw[blue,ray](0,.65)--(8,0);
+  \draw[red,ray](-1.6,0)--(0,1.15);
+  \draw[red,ray](0,1.15)--(-2,1.4375);
+  \draw[red,dashed,thick](0,1.15)--(8,0);
+  \node[blue]at(4.1,-.65){透射实像};
+  \node[red]at(4.1,1.3){反射虚像};
+  \node[above]at(3.4,2){左侧物点：$u=64\,\mathrm{cm}$};
+ \end{scope}
+ \begin{scope}[yshift=-4cm]
+  \draw[ink,-{Latex}](-2.1,0)--(8.8,0)node[right]{$X$};
+  \draw[ink,thick,{Latex}-{Latex}](0,-.35)--(0,1.55);
+  \fill[ink](1.142857,0)circle(2pt)node[below=4pt]{$S\,(320/7)$};
+  \fill[ink](8,0)circle(2pt)node[below=4pt]{$I\,(320)$};
+  \node[below left]at(0,-.4){$O$};
+  \draw[blue,ray](1.142857,0)--(0,.65);
+  \draw[blue,ray](0,.65)--(-2,.8125);
+  \draw[blue,dashed,thick](0,.65)--(8,0);
+  \draw[red,ray](1.142857,0)--(0,1.15);
+  \draw[red,ray](0,1.15)--(8,0);
+  \node[red]at(4.1,1.3){反射实像};
+  \node[blue]at(4.1,-.7){透射虚像，$v_2=-320\,\mathrm{cm}$};
+  \node[above]at(3.4,2){右侧物点：$u_2=320/7\,\mathrm{cm}$};
+ \end{scope}
+ \node at(3.3,-5.35){实线为实际光线，虚线为延长线；轴上坐标单位为 $\mathrm{cm}$};
+\end{tikzpicture}
+\end{document}

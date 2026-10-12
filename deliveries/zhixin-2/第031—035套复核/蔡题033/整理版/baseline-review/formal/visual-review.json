@@ -1,0 +1,27 @@
+{
+  "status": "pass",
+  "method": "Reviewed all 150 pages in rendered overview sheets, with high-resolution inspection of selected formula, three-dimensional diagram and ending pages; rechecked pages affected by the final pulley and force-direction corrections.",
+  "documents": {
+    "paper": {
+      "sha256": "e70634285ddd9c64c955e697866e05f96be1281bc367489e995d261aea5f152f",
+      "overview_pages_reviewed": 9,
+      "high_resolution_pages_reviewed": [3]
+    },
+    "student": {
+      "sha256": "a4acfa122d0688277a9750d8a93960d5d057a6fc3000661c6476ae94d7479f06",
+      "overview_pages_reviewed": 61,
+      "high_resolution_pages_reviewed": [4, 10, 13, 22, 34, 41, 47, 49, 52, 56]
+    },
+    "teacher": {
+      "sha256": "73a2fd15119cf12924e637fdb1f12eb0a8bfd7728884c8ef53d3cd958d27339e",
+      "overview_pages_reviewed": 80,
+      "high_resolution_pages_reviewed": [13, 16, 28, 50, 61, 80]
+    }
+  },
+  "corrections": [
+    "Question 2: pulley rim and rope wrap use the same radius; horizontal and vertical rope segments are tangent and continuous.",
+    "Question 2: the two critical-displacement plots use the same normalized displacement.",
+    "Question 3: the uphill basis direction, signed slope friction and force arrow agree with the vertical balance equation."
+  ],
+  "findings": "No remaining missing figures, visible label collisions, formula overflow, blank answer pages or one-sentence ending pages found in this review."
+}

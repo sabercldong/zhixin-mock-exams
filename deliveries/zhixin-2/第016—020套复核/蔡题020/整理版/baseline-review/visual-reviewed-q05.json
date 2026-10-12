@@ -1,0 +1,28 @@
+{
+  "question": 5,
+  "actual_reviewed": true,
+  "scope": "分题工作预览；整套合并后须重新验收，模型条件已在正文明确",
+  "student": {
+    "pdf_sha256": "0757d8a4d5fbea97669ed222e310b6894049d317a3ecbd481eee1bea56499c78",
+    "total_pages": 12,
+    "body_pages": 11,
+    "extracted_body_nonspace": 6874,
+    "overview_pages_reviewed": [1,2,3,4,5,6,7,8,9,10,11,12],
+    "high_resolution_pages_reviewed": [5,6,8,10,11,12]
+  },
+  "teacher": {
+    "pdf_sha256": "dd2bf73d77bcc0b81ab6ed22b9a22d6bbbce458230a8e5635c7d176004c1e43f",
+    "total_pages": 17,
+    "body_pages": 16,
+    "extracted_body_nonspace": 11027,
+    "overview_pages_reviewed": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17],
+    "high_resolution_pages_reviewed": [15,16,17]
+  },
+  "figures_reviewed": ["question-05", "section-05", "decomposition-05", "fluxlink-05", "circuit-05"],
+  "layout_warnings": [],
+  "qpdf_check_passed": true,
+  "physics_checks_passed": true,
+  "repairs": ["三维套环全局深度排序并修正绕组标记", "截面中心标签移开半径线", "删除等效电路中错误的绕组旁路直线", "变式数值按独立程序校准", "公式引导语与公式保持同页"],
+  "density_note": "末页有完整带解变式和一致性检验；无新增分页、间距或重复文字",
+  "conditional_model": "薄环与密绕主导近似、实际螺旋绕向及引线闭合、理想交流条件；不能将条件式当作题面唯一实物结果"
+}

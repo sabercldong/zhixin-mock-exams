@@ -1,0 +1,40 @@
+\documentclass[tikz,border=5pt]{standalone}
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath}
+\usetikzlibrary{arrows.meta,calc}
+\definecolor{ink}{HTML}{243447}
+\definecolor{blue}{HTML}{2765A2}
+\definecolor{red}{HTML}{B74739}
+\tikzset{vec/.style={draw=blue,thick,-{Latex[length=2mm]}},
+ force/.style={draw=red,thick,-{Latex[length=2mm]}},
+ dim/.style={draw=ink,thin,{Latex[length=1.5mm]}-{Latex[length=1.5mm]}}}
+\begin{document}
+\begin{tikzpicture}
+ \draw[blue!35,dashed](0,0)circle(2.6);
+ \draw[red!35,dashed](0,0)circle(.6);
+ \draw[gray!50,dashed](-2.8,0)--(3,0);
+ \fill[ink](0,0)circle(1.5pt);\node[above=5pt]at(0,0){$O$};
+ \fill[red](-.6,0)circle(3pt);\node[above left=3pt]at(-.6,0){核 $M$};
+ \fill[blue](2.6,0)circle(3pt);\node[below right=3pt]at(2.6,0){电子 $m$};
+ \draw[force](-.6,0)--(.55,0)node[pos=.45,above=16pt]{$F_N$};
+ \draw[force](2.6,0)--(1.45,0)node[midway,above=4pt]{$F_e$};
+ \draw[vec](-.6,0)--(-.6,-1.15)node[below left]{$v_N$};
+ \draw[vec](2.6,0)--(2.6,1.25)node[above right]{$v_e$};
+ \draw[dim](-.6,-1.6)--(0,-1.6)node[midway,below]{$r_N$};
+ \draw[dim](0,-1.6)--(2.6,-1.6)node[midway,below]{$r_e$};
+ \draw[dim](-.6,-3.05)--(2.6,-3.05)node[midway,below]{$r=r_N+r_e$};
+ \node[align=left,anchor=west]at(3.6,.8){$Mr_N=mr_e$\\[7pt]$\mu=\dfrac{mM}{m+M}$\\[7pt]$\Omega_e=\Omega_N=\Omega$};
+ \node[anchor=west,align=left]at(3.6,-1.6){核轨道放大示意\\力的方向均指向另一粒子};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+ \draw[gray!75,dashed](-2,1)--(3.7,1)node[right,text=ink]{$E=0$：分离态};
+ \draw[ink,very thick](-2,-3)--(2.5,-3)node[right]{$E_1=-\dfrac{\mu\kappa^2}{2\hbar^2}$};
+ \draw[ink,very thick](-2,0)--(2.5,0)node[right]{$E_2=-\dfrac{\mu\kappa^2}{8\hbar^2}$};
+ \node[left]at(-2,-3){$n=1$};\node[left]at(-2,0){$n=2$};
+ \draw[red,very thick,-{Latex[length=3mm]}](.2,-.1)--(.2,-2.9);
+ \node[left,align=right]at(.05,-1.5){$2\to1$\\发光};
+ \node[right]at(.45,-1.5){$h\nu=E_2-E_1>0$};
+ \node[below]at(.5,-3.7){同一跃迁的频率与约化质量 $\mu$ 成正比};
+\end{tikzpicture}
+\end{document}

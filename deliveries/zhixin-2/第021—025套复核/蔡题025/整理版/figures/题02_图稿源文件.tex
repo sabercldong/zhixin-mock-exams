@@ -1,0 +1,55 @@
+\documentclass[tikz,border=5pt]{standalone}
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath,amssymb}
+\usetikzlibrary{arrows.meta,calc,angles,quotes,decorations.pathmorphing}
+\definecolor{ink}{HTML}{243447}
+\definecolor{blue}{HTML}{2765A2}
+\definecolor{green}{HTML}{3F7D5B}
+\definecolor{red}{HTML}{B74739}
+\tikzset{body/.style={draw=ink,thick},vec/.style={draw=blue,thick,-{Latex}},guide/.style={gray!65,dashed},line cap=round,line join=round}
+\begin{document}
+\begin{tikzpicture}
+\filldraw[fill=blue!10,draw=blue](0,0)circle(.35)node{$m_n$};
+\draw[vec](.55,0)--(1.6,0);
+\node[above,align=center]at(.1,.6){母粒子静止\\$\boldsymbol p_n=0$};
+\coordinate(O)at(3.8,0);\fill[ink](O)circle(.04);
+\draw[red,thick,-{Latex},decorate,decoration={snake,amplitude=1.6pt,segment length=7pt}](O)--(6.9,0);
+\node[above]at(5.8,.35){$\gamma:\ E_\gamma=h\nu$};
+\draw[green,thick,-{Latex}](O)--(2.1,0);
+\draw[green,rounded corners,fill=green!7](1.4,-1.45)rectangle(3.7,-.4);
+\node[align=center]at(2.55,-.925){$C=p+e+\bar\nu_e$\\$\boldsymbol p_C=-\boldsymbol p_\gamma$};
+\draw[guide](2.6,-.5)--(2.6,0);
+\node[below]at(4.6,-1.9){$m_nc^2=E_\gamma+E_C$};
+\end{tikzpicture}
+\begin{tikzpicture}
+\node[align=center]at(1.6,2.15){母粒子静止系\\整体反冲不为零};
+\draw[green,rounded corners,fill=green!7](0,-.8)rectangle(3.1,1.1);
+\filldraw[fill=blue!12,draw=blue](.6,.15)circle(.2)node{$p$};
+\filldraw[fill=red!10,draw=red](1.2,.65)circle(.13)node[above]{$e$};
+\node at(2.1,.35){$\bar\nu_e$};
+\draw[green,thick,-{Latex}](1.9,-.4)--(.8,-.4)node[midway,below]{$p_C$};
+\draw[vec](3.45,.15)--(5.3,.15);
+\node[above,align=center]at(4.4,.85){变换到\\$C$的质心系};
+\node[align=center]at(7.1,2.15){端点极限\\内部能量最小};
+\draw[body,rounded corners,fill=blue!4](5.6,-1.0)rectangle(8.8,1.1);
+\filldraw[fill=blue!12,draw=blue](6.3,.4)circle(.2)node{$p$};
+\filldraw[fill=red!10,draw=red](7.2,.4)circle(.13)node[above]{$e$};
+\node[align=center]at(7.2,-.45){$\boldsymbol p_p^*=\boldsymbol p_e^*=0$\\$E_\nu^*\to0$};
+\node[align=center]at(4.4,-1.65){$E_C^2-p_C^2c^2=M_C^2c^4$\\$M_C\geq m_p+m_e$};
+\end{tikzpicture}
+\begin{tikzpicture}
+\filldraw[fill=blue!10,draw=blue](0,0)circle(.25)node{$n$};
+\draw[vec](.35,.7)--(1.5,.7)node[midway,above]{$v$};
+\draw[red,thick,-{Latex}](.3,0)--(2.7,0)node[right,align=left]{向前\\$\nu_+=\gamma(1+\beta)\nu_*$};
+\draw[green,thick,-{Latex}](-.3,0)--(-2.7,0)node[left,align=right]{向后\\$\nu_-=\gamma(1-\beta)\nu_*$};
+\begin{scope}[shift={(-2.3,-5.6)},x=4.5cm,y=1cm]
+\draw[vec](0,0)--(.96,0)node[right]{$\beta$};
+\draw[vec](0,0)--(0,4)node[above]{$D$};
+\draw[guide](0,1)--(.87,1);\node[left]at(0,1){$1$};
+\draw[red,thick,domain=0:.85,samples=90]plot(\x,{sqrt((1+\x)/(1-\x))});
+\node[red,right]at(.84,3.6){$D_+=\sqrt{(1+\beta)/(1-\beta)}$};
+\draw[green,thick,domain=0:.85,samples=90]plot(\x,{sqrt((1-\x)/(1+\x))});
+\node[green,right]at(.86,.30){$D_-=1/D_+$};
+\end{scope}
+\end{tikzpicture}
+\end{document}

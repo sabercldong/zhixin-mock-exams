@@ -1,0 +1,44 @@
+{
+  "set": 25,
+  "generated_files_removed_before_rebuild": true,
+  "steps": [
+    {
+      "script": "rebuild_sources.py",
+      "exit_code": 0,
+      "seconds": 0.05
+    },
+    {
+      "script": "render_figures.py",
+      "exit_code": 0,
+      "seconds": 36.35
+    },
+    {
+      "script": "build_all.py",
+      "exit_code": 0,
+      "seconds": 17.11
+    }
+  ],
+  "figure_png_count": 35,
+  "figure_png_sha256_equal": true,
+  "documents": [
+    {
+      "name": "第025套_学生详解版.pdf",
+      "pages": 77,
+      "all_text_equal": true,
+      "all_72dpi_pixels_equal": true
+    },
+    {
+      "name": "第025套_教师备课版.pdf",
+      "pages": 93,
+      "all_text_equal": true,
+      "all_72dpi_pixels_equal": true
+    },
+    {
+      "name": "第025套_试卷版.pdf",
+      "pages": 9,
+      "all_text_equal": true,
+      "all_72dpi_pixels_equal": true
+    }
+  ],
+  "passed": true
+}

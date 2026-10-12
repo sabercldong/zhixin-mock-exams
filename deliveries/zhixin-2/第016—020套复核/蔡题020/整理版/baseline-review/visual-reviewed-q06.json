@@ -1,0 +1,28 @@
+{
+  "question": 6,
+  "actual_reviewed": true,
+  "scope": "分题工作预览；整套合并后须重新验收",
+  "student": {
+    "pdf_sha256": "a9ea81c6e54f1b71bad47fc5afe8b94fa94a58acb979e0ee35d8d65d5aab7194",
+    "total_pages": 10,
+    "body_pages": 9,
+    "extracted_body_nonspace": 5341,
+    "overview_pages_reviewed": [1,2,3,4,5,6,7,8,9,10],
+    "high_resolution_pages_reviewed": [3,5,6,8,10]
+  },
+  "teacher": {
+    "pdf_sha256": "6c4503f993a10cc542926e05bd01dc857ce826298ce81c28d23421b385aef4df",
+    "total_pages": 15,
+    "body_pages": 14,
+    "extracted_body_nonspace": 9415,
+    "overview_pages_reviewed": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15],
+    "high_resolution_pages_reviewed": [11,12,14,15]
+  },
+  "figures_reviewed": ["geometry-06", "energyflow-06", "compression-06", "energycurve-06"],
+  "layout_warnings": [],
+  "qpdf_check_passed": true,
+  "physics_checks_passed": true,
+  "repairs": ["用半球剖视表达球体与壳层", "移动内向速度箭头以避开半径标签", "能量关系图扩大横向距离消除公式与箭头碰撞", "移动能量曲线标签以避开曲线"],
+  "density_note": "末页含完整检验或已解变式；无扩大行距段距和新增分页",
+  "model_note": "PV^gamma为题设；热容与gamma一致；核反应和真实损失未凭空加入"
+}

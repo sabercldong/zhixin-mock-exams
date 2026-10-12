@@ -1,0 +1,374 @@
+[
+  {
+    "set": 31,
+    "scripts": [
+      "verify_physics.py"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 10.22,
+    "log": "logs/031-verify_physics.txt",
+    "source_sha256": {
+      "drafts/question-08.md": "fd8205115d75e32fddd3bac5d6c73315b434bd20d3294c825a730fc5b3b58453",
+      "drafts/question-03.md": "5bdbaa9454b7f9a6faf27e6bfd4abbe5ac43eab10703a08f0e13df580d284f52",
+      "drafts/question-07.md": "bd155ebc44165d4c7b44db61208eae80be91bc637929a510eca538099b28e05f",
+      "drafts/question-06.md": "6b10e5b9b2995a1e163e028b8ccb9c12e4a996ee798d0ae9a701bda5e06751a9",
+      "drafts/question-02.md": "9b648ff840cc297cfbba0a1003dee44f56da66430497bdd782ae050f339676aa",
+      "drafts/question-05.md": "05646730af0fd191bff26d4d94410b6926922893bdd0be5eecd4916301d7e5cc",
+      "drafts/question-01.md": "140b7c59006e8827fe1d9db254173bdf8a4129f37af336e2d2523f23d179b2c6",
+      "drafts/question-04.md": "7d87f8a1762b28134901fb361eca7fca6084b78c8d6c81ea8e1e6d0650aee2a2",
+      "scripts/verify_physics.py": "237d224674707a4b4c90b10157775084983746142b628dba5f2ad3f5b8f9d3bc",
+      "figures/题06_图稿源文件.tex": "25d6177aa10dc322740aa2d2acd0a911a698ffb7752a18bee167f4d53027699b",
+      "figures/题01_图稿源文件.tex": "7ce8da0ad510d29d85b091394a3a81a90060fddc3814f6cfda6a0f3671635eff",
+      "figures/题07_图稿源文件.tex": "6af83350f3b887a3bbf0aebc0a713a7c5a61418b75cd492da88b0550b902c596",
+      "figures/题02_图稿源文件.tex": "9434d4d5c62211b407acd7001ac6bf59dabe3660283e6bbbb8baa95a11132d95",
+      "figures/题04_图稿源文件.tex": "9c7a22c360d397b7b4d93df4357f86fc7896aa5c51fa1a63550dfa8c3b72f4aa",
+      "figures/题03_图稿源文件.tex": "9ea3efb27dbd2b44aeb34edbe29ac40331ce8b2c0440d8295adf2e58035eb725",
+      "figures/题05_图稿源文件.tex": "ac967c15abe90d09bc9d64ccd280a71add5baafecde236240eb97f002cf7c183",
+      "figures/题08_图稿源文件.tex": "8373756f973c661d9d1ecb38b28313d28905d3278abfb2e90f97ca51ad614aec"
+    },
+    "records": [
+      {
+        "question": 1,
+        "path": "build/question01-verification.json",
+        "sha256": "5b01e8558936e533133b1b4023d1cc8dea141d1f7d35acc8ff60de9cee70cb04"
+      },
+      {
+        "question": 2,
+        "path": "build/question02-verification.json",
+        "sha256": "e67912708ae9c419996abe8e93899e837be91ab0b3af37ad47ac0cd49e8683f0"
+      },
+      {
+        "question": 3,
+        "path": "build/question03-verification.json",
+        "sha256": "8e3e268b683358f7a5ae0a13958d10e62e8947f29568d6b509f23592bd2522f1"
+      },
+      {
+        "question": 4,
+        "path": "build/question04-verification.json",
+        "sha256": "1457b9035d54a3e224eddc22e1af27f387819e33a9c41f3674aea359a4c427e1"
+      },
+      {
+        "question": 5,
+        "path": "build/question05-verification.json",
+        "sha256": "945c9181feed86283982febddaa70940b4938d767cfa1854002bda8225fda9b9"
+      },
+      {
+        "question": 6,
+        "path": "build/question06-verification.json",
+        "sha256": "2117a9d6c0fce5cba7971def3da4fb746f2ad540c5ed7679dbc24610947e5788"
+      },
+      {
+        "question": 7,
+        "path": "build/question07-verification.json",
+        "sha256": "bcd71d6d654f2300620a093673277a180c7726377e6ba1b8b2f335f6ba793777"
+      },
+      {
+        "question": 8,
+        "path": "build/question08-verification.json",
+        "sha256": "3b74b555a7eac85f929c476333f21d9176214ca5379b2bd3ec63dc9e6193e504"
+      }
+    ]
+  },
+  {
+    "set": 32,
+    "scripts": [
+      "verify_physics.py"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 1.69,
+    "log": "logs/032-verify_physics.txt",
+    "source_sha256": {
+      "drafts/question-08.md": "11543315eed6cf8be2fd344dbc720070a9860995e3e5c0f894ec0ceeb0783d0b",
+      "drafts/question-03.md": "7c9061eb390584cc365abaa99369fa562670659daa51bee4f57b6bae7a34ebea",
+      "drafts/question-07.md": "e50d827f29241a40d091b50778fe47520ae02a4bcb64ceb63c3ec30d64e923cd",
+      "drafts/question-06.md": "7cc46949ca8f2ef0f7b0d418a040b5cc1a14a1bd467743f935d156c72d9e73f0",
+      "drafts/question-02.md": "df731d668717ea91714dcc6317c137de76adf27d3316aa495c15cd3cb7512bdc",
+      "drafts/question-05.md": "11fab0fc3ec8c8908a12432b5955115d8c66bbd69a7cc562162b49e19c91d57b",
+      "drafts/question-01.md": "0938f27dd048534a5bda57d640befc9dc2651998bb3d744912f3ccbeb44acdef",
+      "drafts/question-04.md": "ccaa38272995b8129e4daef4a6d612ca0bbeac7da02d29badb2b12cb80a85530",
+      "scripts/verify_physics.py": "0d719ecb5ff601c21496f5aaa3495008e099d4eb115617e536a06776e03e7acb",
+      "figures/题06_图稿源文件.tex": "d06073e602417e59023f5330173b84b73f614bfed1f962aa56afe806134d845e",
+      "figures/题01_图稿源文件.tex": "6ebf67f5b7428f73780f2d8ddbffef7434f0ed64e1d0a76858f01f54d4a7b1dc",
+      "figures/题07_图稿源文件.tex": "ef0452050287fe22e84bf96600c5696bc9a5c42c5293d69621af4033bdad1f82",
+      "figures/题02_图稿源文件.tex": "a9eac7feca073369709c56281492011bc916b4c38a4d95b5a883436b59ea528f",
+      "figures/题04_图稿源文件.tex": "918dc4c10e23c248a9ab399ef5b4df1d89cf1e2e3009c3b105269c63eeff3de1",
+      "figures/题03_图稿源文件.tex": "2cfceeb31ca60d621a6e1c67c8b3f788857be4140fa02b75a11693f6a70de757",
+      "figures/题05_图稿源文件.tex": "475b576ac24eab4830fa19b7b965bf0baaf4a30cb58261e419ed43d63b6cd29c",
+      "figures/题08_图稿源文件.tex": "2416df58d5604f470ed4351ee9466845aafde3d31d4274ca795dc3dab8c8a9e2"
+    },
+    "records": [
+      {
+        "question": 1,
+        "path": "build/question01-verification.json",
+        "sha256": "f3554995c26a119813a4974500d3a441a4b3de47770fce6620cd77fbe4c3421f"
+      },
+      {
+        "question": 2,
+        "path": "build/question02-verification.json",
+        "sha256": "c9f6a46b11710d50ff79f33d9975262295fa40ddf39db311499679e55e57eaed"
+      },
+      {
+        "question": 3,
+        "path": "build/question03-verification.json",
+        "sha256": "c84f52306ed47a66a55b5d2cc3f18b3593915c545f782daab138db3ff5cab171"
+      },
+      {
+        "question": 4,
+        "path": "build/question04-verification.json",
+        "sha256": "18602aa466532d482924ece1d45afef0f3fcefea37f6ccc3cc54da6f0495f85d"
+      },
+      {
+        "question": 5,
+        "path": "build/question05-verification.json",
+        "sha256": "bfc69ff45a6d16acc0d8f53024b1cb82b94198c2626c66eae6096f02e86a435b"
+      },
+      {
+        "question": 6,
+        "path": "build/question06-verification.json",
+        "sha256": "45eb0bfb153c2622a5d128f4b571be94ece8ffb1eccf8a75793c490d9473d36d"
+      },
+      {
+        "question": 7,
+        "path": "build/question07-verification.json",
+        "sha256": "6ee27bf96a009bf0c890eb52b4951cc31c7880fc8c536797feed939df991fcab"
+      },
+      {
+        "question": 8,
+        "path": "build/question08-verification.json",
+        "sha256": "b08a2291bb32167d64ffaa171d31fe5a786ad7d6acf4ec2cc565eff2afade4f6"
+      }
+    ]
+  },
+  {
+    "set": 33,
+    "scripts": [
+      "verify_question01.py",
+      "verify_question02.py",
+      "verify_question03.py",
+      "verify_question04.py",
+      "verify_question05.py",
+      "verify_question06.py",
+      "verify_question07.py",
+      "verify_question08.py"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 3.15,
+    "log": "logs/033-verify_physics.txt",
+    "source_sha256": {
+      "drafts/question-08.md": "22b027496ec9a3990b4d5d83f4ef537218513d2249b27e9c6b512d9d4c5e3e5e",
+      "drafts/question-03.md": "b4dc2516d75ad2c80d82389750831d9bd15e852e2ff3967e2033da319764cedd",
+      "drafts/question-07.md": "1dd71fca452bf82b4ebf4984386e3b11788bf34d0f1eb91b67aa194474764bc0",
+      "drafts/question-06.md": "504d768417a045d773c230dac703100716f365adfb36e4672bbd0402f2ba96a2",
+      "drafts/question-02.md": "ddba336ece9cae16f8249dc5edc10e4f5e8ffa0a160f3f53fc78c7a9e56b2602",
+      "drafts/question-05.md": "c70985364cc27af8c85d9a0a6d38e8dde06343fe181a207bc6595452f62c0069",
+      "drafts/question-01.md": "b81a68f7b7329e49bebf1b621fd4a2eaf41242141a7e31509c508730f43b1691",
+      "drafts/question-04.md": "946f4f70a0c5aadc356838af3de3f932628df78905483e10f8f9f23ce3ca461e",
+      "scripts/verify_question04.py": "acd26510016e978ff142008765df3324cefaa576cdc2ed6e1ac131b02ca95bda",
+      "scripts/verify_question01.py": "ee5f7be46f5d18a7a5db29ddd6e70eead4d14056561531deb1da260770374ba5",
+      "scripts/verify_question05.py": "1e17c13542b714bcde1b2033c7d87be6cfc88acd0af130892023e3b2dedb8864",
+      "scripts/verify_question02.py": "a919720982bf4b3fe3ae5f400c5e41f68a60e17ccf4d9b4db1decff2217a33ef",
+      "scripts/verify_question06.py": "086c41a9a0071b3d5cfd7165ff3bb73135912e3da066837acf5a92b3dba5de8c",
+      "scripts/verify_question07.py": "08c54d0364052f61fd344684c145ac6e22a4ea824688c9577eeb504833360138",
+      "scripts/verify_question03.py": "43b6bf83fdcb9c58b702798d9663e81dfcf29119af7ad23c6ce856d946873ddc",
+      "scripts/verify_question08.py": "6739db104c99582ebe8f4772034d548d700b475ca7f13ca155ebe99bebfbfe0a",
+      "figures/题06_图稿源文件.tex": "47ef38081ea75749e11e47789195926d3a19d90d43ad4b5ba32fa40246756d83",
+      "figures/题01_图稿源文件.tex": "a91e2b4cab9573116fab95038cc10b130a95670d123acb8a817ad564d234069c",
+      "figures/题07_图稿源文件.tex": "47a4a0cd25539a3b8666b0d481d0a9793ea641dd417a823c5e5e32952e714808",
+      "figures/题02_图稿源文件.tex": "362754a1b3cecd01527a6b937f3754c73aae9452723da20dd4fab9a9b3da3531",
+      "figures/题04_图稿源文件.tex": "b9749f59b751f9eacf3131d2827cfa68626436c3e6bb96868ba6abde175e2c29",
+      "figures/题03_图稿源文件.tex": "f594f3e5a27ee413afe419c7bcb1119a8c7c51669b334f7d48bfa15f2ef36a33",
+      "figures/题05_图稿源文件.tex": "c25c3292af984bbe72a850face4993abd09e62d419a12ee4d80f970ccc5168b8",
+      "figures/题08_图稿源文件.tex": "a02d2ac60553f03272ddf903f36a138778422c9b601020e7ef820e1b35ff4a85"
+    },
+    "records": [
+      {
+        "question": 1,
+        "path": "build/question01-verification.json",
+        "sha256": "1113b9264dca151ff991e8cd229337ecf3e25ea6c4f05b8db72808e80f5f1fa7"
+      },
+      {
+        "question": 2,
+        "path": "build/question02-verification.json",
+        "sha256": "e9cef67d72fb84ac24de275b5c75ebd2799211f7dc1ea342f3d1de34a0b9f680"
+      },
+      {
+        "question": 3,
+        "path": "build/question03-verification.json",
+        "sha256": "1b04fc9f3d46b84475f7a3317ae5a0cddc2ed9fece0fdb68be956f9f298f9032"
+      },
+      {
+        "question": 4,
+        "path": "build/question04-verification.json",
+        "sha256": "24ed5b88d05f3c945f244927d382c4a92da4a370fc31d11fd237a6ec4cade9e0"
+      },
+      {
+        "question": 5,
+        "path": "build/question05-verification.json",
+        "sha256": "59be3f710f0e3e3c8d9728e3764c68a6b3c45dabfc59c7148943f0e3dea184cc"
+      },
+      {
+        "question": 6,
+        "path": "build/question06-verification.json",
+        "sha256": "bbca7ffce81685e3f604f7ef87f064fa45020f78c37eeace3c639a30ad838208"
+      },
+      {
+        "question": 7,
+        "path": "build/question07-verification.json",
+        "sha256": "82f9641040a8a8365894e3f426d627e1db241c79493e4738883cde1a3468228d"
+      },
+      {
+        "question": 8,
+        "path": "build/question08-verification.json",
+        "sha256": "823d23d1baf7d5962202e0f00166a5f564e5bd283039b316c0326adb1cc0f581"
+      }
+    ]
+  },
+  {
+    "set": 34,
+    "scripts": [
+      "verify_question01.py",
+      "verify_question02.py",
+      "verify_question03.py",
+      "verify_question04.py",
+      "verify_question05.py",
+      "verify_question06.py",
+      "verify_question07.py",
+      "verify_question08.py"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 22.23,
+    "log": "logs/034-verify_physics.txt",
+    "source_sha256": {
+      "drafts/question-08.md": "535ab3449dd5ab6eaf30e457c1477d19b4e3e0ac36cba768effae006173ed2e1",
+      "drafts/question-03.md": "bbd91e64a5763904f0562003ddf2b8f8c7480ecbda7915150ac49bb0db3c323a",
+      "drafts/question-07.md": "cbf72d5d39d8f137d0ad7990659dae708642cfb8ac7338216967bc1a0eaf9440",
+      "drafts/question-06.md": "aaea0c69934d4d10567fa04ad90a8f5d4ad891c40eb8e686c5c6965259c299c9",
+      "drafts/question-02.md": "2634713fb9b2b4c3d8fceac90b56c4e0640f2af89c2f409f7df249740bb81313",
+      "drafts/question-05.md": "b97e5986e55740c3f065532013873a7d7071af85b7f1358f1f682464a6c334b6",
+      "drafts/question-01.md": "05b98a227eab049769425944c3c1b12a94db327c216288ec3657b39c1c7c49e3",
+      "drafts/question-04.md": "f6848465d52553be05f88387be68558d7484dfe4bc574b61ac7634c53988c16d",
+      "scripts/verify_question04.py": "c9cdc585f3378cb8f1587885782799dea4863b47942892e556fe0132bc18cead",
+      "scripts/verify_question01.py": "96361927fb673574fd5f9e12757fa35023dc1cfbbc3c073b8ceb5e3bcb66d690",
+      "scripts/verify_question05.py": "d70d7f7c2655e6f633a619c1179ccb0cc612c514714328aaebefd8c23554c77d",
+      "scripts/verify_question02.py": "f2ed25a92da3d9a7e71f317fcd5830d45752771fa1a13363ae0f9573e8397295",
+      "scripts/verify_question06.py": "381e56f0bf21d399650c2cb17a7273271417ea6b91464e38cc5f0aaee80567d7",
+      "scripts/verify_question07.py": "7c546c6fdb85db9ed49cab8c607a7594337f4d9d529f89e38170ba44d9749248",
+      "scripts/verify_question03.py": "0823b1db1683a8356b4b251bac00c793482f6ee2c77844c6f3da7ed1e11b7d31",
+      "scripts/verify_question08.py": "c71df2da3a28396ad532bf6260fe947eec5225537b8fd467d20686da6f956cf6",
+      "scripts/verify_question02_static.py": "263fe328059da65125b529bdaa88805addcf68bcbb0735e7637ab5cd3448be78",
+      "figures/题06_图稿源文件.tex": "84d6aaedc7e6cbf05efb7703299e67badc688e30916c0b49401b56a70ddfcc0c",
+      "figures/题01_图稿源文件.tex": "00878a559dd3f5a3c1c69d8168eb9a51e5d4fdc2d154a353b34653f406d1c7e4",
+      "figures/题07_图稿源文件.tex": "dd86a0f06ff526dc24c4c6fbc7d3e7b056fb6d3d67b70f0e2de224599ffaf370",
+      "figures/题02_图稿源文件.tex": "10e95c94b789f341cd3e501f07f31e4cd0ec80f687b55b979303064a178bb223",
+      "figures/题04_图稿源文件.tex": "693410711c0d67f3d425b624c2806d7f483f86c3557dbb1f64ffb593dbe7c399",
+      "figures/题03_图稿源文件.tex": "e4396f18ac16113103f02ff1e892283626c6902ab2983facf02b4b6318cfcfcf",
+      "figures/题05_图稿源文件.tex": "cab40d49d8da340ec5f50b6d88ab41542720bc0fe623ff3c813a1d194a930c20",
+      "figures/题08_图稿源文件.tex": "75b7ff5437e84975d4a3073a1ca2e631059302a7e9b3d8397bc640fe88431e6b"
+    },
+    "records": [
+      {
+        "question": 1,
+        "path": "build/question01-verification.json",
+        "sha256": "c19aa67d9674cf045757ca06744126e102ba6d3c66929b1740ca2fae1342b0eb"
+      },
+      {
+        "question": 2,
+        "path": "build/question02-verification.json",
+        "sha256": "dc5f63f91897e87b3c8f47e0d473884b92f49b64577332172b1ed883c06ad4f3"
+      },
+      {
+        "question": 3,
+        "path": "build/question03-verification.json",
+        "sha256": "22def885ca0b06ddba5199352f6a55706daeea3581d130464a32fc734e2901f5"
+      },
+      {
+        "question": 4,
+        "path": "build/question04-verification.json",
+        "sha256": "bc54138e4e557e15877f315fa4bcafc13d44edb4be2282a3cee9a3b6ea672253"
+      },
+      {
+        "question": 5,
+        "path": "build/question05-verification.json",
+        "sha256": "015b17d0c69c440f715b91a9076f5c4fa1e5db0b599fe3a96e07cd3d1d7b5440"
+      },
+      {
+        "question": 6,
+        "path": "build/question06-verification.json",
+        "sha256": "d09921d4a60a9e0c6c69d4c3854fdc2fbec6f0a714e54a70a8692d13fc711390"
+      },
+      {
+        "question": 7,
+        "path": "build/question07-verification.json",
+        "sha256": "83fdf00d34809824043395144c11cd3f1020c6ef3c0d83fbac7edda0ab22f2d5"
+      },
+      {
+        "question": 8,
+        "path": "build/question08-verification.json",
+        "sha256": "0cdcff07a1f59721d273b54966087de9bb61df56ab53d85d965f1244030053be"
+      }
+    ]
+  },
+  {
+    "set": 35,
+    "scripts": [
+      "verify_results.py"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 0.17,
+    "log": "logs/035-verify_physics.txt",
+    "source_sha256": {
+      "drafts/question-08.md": "5863e804ac4cd35d7e398347c4d45dc67f6b2472f4736d42006a77bf34901038",
+      "drafts/question-03.md": "b76b0c0fd6a7842a2ca0c763d72ede8f93c367a8f68b471bef2d2baae68aea75",
+      "drafts/question-07.md": "cbad3b6544013141ce1aef52742c77c1069b9206b49d2ab4899bec84655d558d",
+      "drafts/question-06.md": "cd04be06df74ea74d9573652f064e7497daef2d02522b639d8df0eb7d36ec346",
+      "drafts/question-02.md": "6028da23ba87c0b302295eac7059753594e12471b37b0fcf7ff69a72ea10fd3d",
+      "drafts/question-05.md": "c01f3a63825ef2d8024add131f6714b09b84625bc7f8e0dfab1c698791fea4af",
+      "drafts/question-01.md": "75b40506dc40599eabb215d35d5537b261dc6a023159ea71c685b75ec4561ec7",
+      "drafts/question-04.md": "57abaf5b65d0f097d6cdc750eaef021884f638d90bd4978e7fdbffcfeb48da2a",
+      "scripts/verify_results.py": "13610e1f8d5c10034838e166fff8e876db96f3b6d8b268e2dc90d88944958fda",
+      "figures/蔡题035_图稿源文件.tex": "5d54095bd0d2a257c1f4ab1757c91e91041e3478c34777aafcd617d240ce2f2f"
+    },
+    "records": [
+      {
+        "question": 1,
+        "path": "build/question01-verification.json",
+        "sha256": "897ab66d9dce4d23d8278fe99ef84a365de1b1a183d5bd2e33c8dc91344941b4"
+      },
+      {
+        "question": 2,
+        "path": "build/question02-verification.json",
+        "sha256": "a2b0f4c057ee44e539b5464b5fbe8b7c9e474d794160a1629509e04a299d048d"
+      },
+      {
+        "question": 3,
+        "path": "build/question03-verification.json",
+        "sha256": "d7442ccf986023c4e24e776e326bdcabc8b2baa2b5f447ff983015f0795ae3a3"
+      },
+      {
+        "question": 4,
+        "path": "build/question04-verification.json",
+        "sha256": "81c72f808f539760e655451a2144651e5ea178291de78ec97e9b9f109bf3d409"
+      },
+      {
+        "question": 5,
+        "path": "build/question05-verification.json",
+        "sha256": "40ebf2be88b98ff145086a7baa691976c9d03b79aff73721f3a2b4324c94acdd"
+      },
+      {
+        "question": 6,
+        "path": "build/question06-verification.json",
+        "sha256": "0a2185bd73c199189ab68b379018a411f6ebcace7b3359c5c2d9027f7655b351"
+      },
+      {
+        "question": 7,
+        "path": "build/question07-verification.json",
+        "sha256": "5b0421a74aae9161769ee461988f7a0b59e65247f96076f97e5cd0cf79a38a1a"
+      },
+      {
+        "question": 8,
+        "path": "build/question08-verification.json",
+        "sha256": "79bb902fbebafb2607ed10f9daa957f9bd8feff06bd50a75daceec1d4666c726"
+      }
+    ]
+  }
+]

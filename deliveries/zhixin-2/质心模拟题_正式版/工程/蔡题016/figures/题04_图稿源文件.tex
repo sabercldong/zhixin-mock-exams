@@ -1,0 +1,169 @@
+\documentclass[tikz,border=5pt]{standalone}
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath,amssymb}
+\usetikzlibrary{arrows.meta,calc,angles,quotes}
+\tikzset{>=Stealth,line cap=round,line join=round,
+force/.style={red!70!black,very thick,->},
+motion/.style={blue!70!black,very thick,->},
+rope/.style={blue!65!black,thick},
+aux/.style={black!45,dashed,thin},
+dimension/.style={black!65,<->,thin}}
+\newcommand{\bodysection}{
+\draw[thick] (0,1.4) circle(1.4);
+\draw[thick] (0,1.4) circle(.56);
+\fill (0,1.4)circle(1.3pt);
+}
+\newcommand{\slotfloor}[1]{
+\draw[thick](-1.8,0)--(.48,0);
+\draw[thick](.64,0)--(#1,0);
+}
+\newcommand{\pendant}{
+\draw[rope](.56,1.4)--(.56,-.93);
+\draw[thick,fill=white](.38,-1.31)rectangle(.74,-.93);
+\node[right]at(.82,-1.12){$A\ (nm)$};
+}
+\begin{document}
+% 1: axial view, exact right-hand hub tangency; broken floor is a slot.
+\begin{tikzpicture}[font=\small]
+\begin{scope}
+\bodysection\slotfloor{2.1}\pendant
+\draw[dimension](0,1.4)--(-1.4,1.4)node[midway,above]{$R$};
+\draw[dimension](0,1.4)--(-.396,1.796)node[midway,above right]{$r$};
+\node[below left]at(0,1.4){$O$};
+\fill(0,0)circle(1.3pt);\node[below left]at(0,0){$B$};
+\node at(0,-1.9){无侧面障碍};
+\end{scope}
+\begin{scope}[xshift=5.7cm]
+\bodysection\slotfloor{3.0}\pendant
+\draw[thick,fill=black!3](1.4,0)rectangle(2.65,3.15);
+\draw[dimension](0,1.4)--(-1.4,1.4)node[midway,above]{$R$};
+\draw[dimension](0,1.4)--(-.396,1.796)node[midway,above right]{$r$};
+\node[below left]at(0,1.4){$O$};
+\fill(0,0)circle(1.3pt);\node[below left]at(0,0){$B$};
+\fill(1.4,1.4)circle(1.3pt);
+\node[right,xshift=2pt,fill=white,inner sep=1pt]at(1.4,1.4){$C$};
+\node at(2.05,2.45){$km$};
+\node[below]at(2.025,0){$D$};
+\draw[dimension](1.4,-.45)--(2.65,-.45)node[midway,below]{$l$};
+\node at(.45,-1.9){右侧长方体接触};
+\end{scope}
+\node[black!75]at(2.8,-2.38){沿圆柱轴线观察；绳与内轴相切，细缝不固定绳端};
+\end{tikzpicture}
+% 2: mass shell and parallel-axis separation.
+\begin{tikzpicture}[font=\small]
+\begin{scope}
+\fill[blue!16,even odd rule](0,0)circle(.86)(0,0)circle(.74);
+\draw[thick](0,0)circle(1.35);
+\draw[blue!65!black](0,0)circle(.86);
+\draw[blue!65!black](0,0)circle(.74);
+\fill(0,0)circle(1.3pt);\node[below]at(0,0){$O$};
+\draw[dimension](0,0)--(-1.35,0)node[midway,above]{$R$};
+\draw[dimension](0,0)--(.641,.37)node[midway,above]{$s$};
+\draw[black!70,->](1.30,1.23)--(.72,.36);
+\node[above,align=center]at(1.30,1.23){$\mathrm dm$\\厚度 $\mathrm ds$};
+\node at(0,-1.87){同轴薄圆筒的截面};
+\end{scope}
+\begin{scope}[xshift=4.35cm]
+\draw[thick](0,0)circle(1.35);
+\draw[aux](0,0)--(0,-1.35);
+\draw[thick](-1.65,-1.35)--(2.05,-1.35);
+\fill(0,0)circle(1.6pt);\node[left]at(0,0){$O$};
+\fill(0,-1.35)circle(1.6pt);\node[below left]at(0,-1.35){$B$};
+\draw[aux](0,0)--(1.85,0);
+\draw[dimension](1.65,-1.35)--(1.65,0)node[midway,right]{$R$};
+\node at(.2,.55){$I_1$};
+\node at(.45,-.78){$I_2$};
+\node at(.2,-1.87){两条平行轴均垂直图面};
+\end{scope}
+\end{tikzpicture}
+% 3: positions and initial accelerations, no fictitious outer-rim string.
+\begin{tikzpicture}[font=\small]
+\bodysection\slotfloor{2.8}\pendant
+\coordinate(O)at(0,1.4);
+\coordinate(P)at(.56,1.4);
+\fill(P)circle(1.5pt);
+\node[right,fill=white,inner sep=1pt]at(.62,1.52){$P$};
+\node[above left]at(O){$O$};
+\fill(0,0)circle(1.5pt);\node[below left]at(0,0){$B$};
+\node[below right,fill=white,inner sep=1pt]at(.67,-.02){$G$};
+\draw[dimension](0,1.16)--(.56,1.16)node[midway,below]{$r$};
+\draw[aux](-1.65,0)--(0,0);
+\draw[aux](-1.65,1.4)--(-.05,1.4);
+\draw[dimension](-1.65,0)--(-1.65,1.4)node[midway,left]{$R$};
+\draw[motion](O)--(.39,1.4);
+\node[above,blue!70!black]at(.2,1.84){$a_{O2}=R\beta$};
+\draw[motion](.56,-1.12)--(.56,-2.0);
+\node[right,blue!70!black]at(.56,-1.7){$a_2=r\beta$};
+\draw[motion](-1.05,2.49)arc[start angle=134,end angle=54,radius=1.51];
+\node[above left,blue!70!black]at(-1.05,2.49){$\beta$（顺时针）};
+\node[black!75]at(.2,-2.52){释放瞬间；$v_O=\omega=0$，绳初始竖直};
+\end{tikzpicture}
+% 4: actual application points on spool; separate hanging mass.
+\begin{tikzpicture}[font=\small]
+\begin{scope}
+\bodysection\slotfloor{1.9}
+\draw[black!45](.56,1.4)--(.56,-.7);
+\fill(.56,1.4)circle(1.5pt);
+\node[above right,fill=white,inner sep=1pt]at(.56,1.4){$P$};
+\node[above left]at(0,1.4){$O$};
+\node[below left]at(0,0){$B$};
+\draw[force](0,1.4)--(0,.57);
+\node[left,red!70!black]at(0,1.13){$mg$};
+\draw[force](0,0)--(0,.45)node[midway,left]{$N_1$};
+\draw[force](.56,1.4)--(.56,.55)node[midway,right]{$T$};
+\draw[force](0,0)--(.39,0);
+\node[above right,red!70!black]at(.12,.04){$f_1$};
+\node at(0,-1.08){悠悠球};
+\end{scope}
+\begin{scope}[xshift=4.25cm]
+\draw[thick,fill=black!3](-.28,.88)rectangle(.28,1.44);
+\fill(0,1.16)circle(1.3pt);
+\draw[force](0,1.16)--(0,2.35)node[above]{$T$};
+\draw[force](0,1.16)--(0,-.08)node[below]{$nmg$};
+\node[right]at(.34,1.16){$A$};
+\node at(.05,-1.08){悬挂重物};
+\end{scope}
+\end{tikzpicture}
+% 5: assumed C-force directions in smooth-B impossibility proof.
+\begin{tikzpicture}[font=\small]
+\bodysection\slotfloor{2.15}
+\draw[black!45](.56,1.4)--(.56,-.8);
+\draw[black!60,thick](1.4,0)--(1.4,3.1);
+\node[above]at(1.4,3.1){长方体左侧面};
+\fill(1.4,1.4)circle(1.5pt);
+\node[below right,fill=white,inner sep=1pt]at(1.4,1.4){$C$};
+\draw[force](1.4,1.4)--(.82,1.4)node[midway,above]{$P_C$};
+\draw[force](1.4,1.4)--(1.4,2.40)node[midway,right]{$q_C$};
+\draw[force](.56,1.4)--(.56,.62)node[midway,right]{$T$};
+\draw[force](0,1.4)--(0,.59);
+\node[left,red!70!black]at(0,1.13){$mg$};
+\draw[force](0,0)--(0,.45)node[midway,left]{$N_B$};
+\node[above left]at(0,1.4){$O$};
+\fill(0,0)circle(1.4pt);\node[below left]at(0,0){$B$};
+\node[black!75]at(.2,-1.22){$B$ 光滑：$P_C=0\ \Rightarrow\ q_C=0$};
+\end{tikzpicture}
+% 6: block bottom resultant deliberately displaced right, not fixed at centre.
+\begin{tikzpicture}[font=\small]
+\draw[thick,fill=black!3](0,0)rectangle(2.7,3.2);
+\draw[thick](-.8,0)--(3.3,0);
+\coordinate(E)at(0,0);\coordinate(F)at(2.7,0);
+\coordinate(C)at(0,1.4);\coordinate(DR)at(2.0,0);
+\fill(C)circle(1.4pt);\node[left]at(C){$C$};
+\node[below left]at(E){$E$};
+\node[below right]at(F){$F$};
+\fill(DR)circle(1.4pt);
+\node[below,fill=white,inner sep=1pt]at(DR){$D_R$};
+\draw[force](C)--(.92,1.4)node[midway,above]{$P_C$};
+\fill(1.35,1.6)circle(1.4pt);
+\draw[force](1.35,1.6)--(1.35,.65)node[midway,left]{$kmg$};
+\draw[force](DR)--(2.0,.97)node[above]{$N_D$};
+\draw[force](DR)--(1.13,0)node[midway,above]{$f_D$};
+\draw[aux](C)--(-.68,1.4);
+\draw[dimension](-.62,0)--(-.62,1.4)node[midway,left]{$R$};
+\draw[dimension](0,-.55)--(2.7,-.55)node[midway,below]{$l$};
+\draw[dimension](0,-1.12)--(2.0,-1.12)node[midway,below]{$x_D$};
+\draw[aux](1.35,3.2)--(1.35,1.7);
+\node[above]at(1.35,3.2){均匀长方体};
+\node[black!75]at(1.35,-1.9){$x_D=l/2+nr/k$，需 $x_D\le l$};
+\end{tikzpicture}
+\end{document}

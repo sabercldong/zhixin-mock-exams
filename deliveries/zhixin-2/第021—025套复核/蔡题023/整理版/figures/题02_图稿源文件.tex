@@ -1,0 +1,61 @@
+\documentclass[tikz,border=5pt]{standalone}
+\usepackage[UTF8]{ctex}\usepackage{amsmath}
+\usetikzlibrary{arrows.meta,calc}
+\definecolor{blue}{RGB}{45,98,142}\definecolor{green}{RGB}{60,117,87}\definecolor{red}{RGB}{175,67,51}
+\tikzset{vec/.style={thick,-{Stealth}},aux/.style={gray!65,dashed}}
+\begin{document}
+\begin{tikzpicture}[scale=1.2]
+\foreach \z/\name in{-2.1/{-L},2.1/L}{
+\draw[fill=gray!10](-1.7,\z)--(-1.3,{\z+.28})--(1.7,{\z+.28})--(1.3,\z)--cycle;
+\node[right]at(1.8,\z){$z=\name$};}
+\draw[gray,-{Stealth}](0,-2.5)--(0,2.85)node[above]{$z$};
+\foreach \w in{-.9,-.45,.45,.9}{
+\draw[blue,domain=-2:2,samples=51]plot({\w*(1-.12*\x*\x)},\x);
+}
+\draw[green,thick,domain=0:1080,samples=241]plot({.2*cos(\x)},{.2*sin(\x)*.28+(\x/1080-0.5)*2.8});
+\fill(0,0)circle(1.2pt)node[left]{$O$};
+\node[blue]at(-1.35,.1){$B_0$};\node[blue]at(-1.1,1.6){$B_{\max}$};\node[blue]at(-1.1,-1.6){$B_{\max}$};
+\node[align=center]at(0,-3.0){吸收板位于 $z=\pm L$\\回旋半径小，纵向变化慢};
+\end{tikzpicture}
+\begin{tikzpicture}[scale=1.3]
+\draw[gray,-{Stealth}](0,-1.9)--(0,2.0)node[above]{$+z$};
+\draw[blue](-.8,-1.6)..controls(-1.2,0)and(-.9,.6)..(-.45,1.7);
+\draw[blue](.8,-1.6)..controls(1.2,0)and(.9,.6)..(.45,1.7);
+\draw[aux](-1.1,0)--(1.3,0);
+\draw[green](0,0)ellipse(.65 and .2);
+\draw[green,vec](.6,.08)--++(-.45,.09);\node[green]at(-.45,.42){$V_\perp$};
+\draw[blue,vec](.65,0)--++(-.25,.72)node[above left]{$\boldsymbol B$};
+\draw[red,vec](.65,0)--++(-.4,0)node[below]{$B_r$};
+\draw[red,vec](0,-.45)--(0,-1.25)node[left]{$F_z=-\mu_{\rm ad}B'$};
+\node[align=center]at(2.6,.5){$B'(z)>0$\\$B_r=-rB'/2$\\$F_z<0$};
+\node at(.6,-2.2){向强场方向运动时，镜力与 $V_z$ 相反};
+\end{tikzpicture}
+\begin{tikzpicture}[xscale=1.35,yscale=.85]
+\draw[gray,-{Stealth}](-2.4,0)--(2.5,0)node[right]{$z$};
+\draw[gray,-{Stealth}](-2.2,0)--(-2.2,4.4)node[above]{$U,E$};
+\draw[blue,thick,domain=-2:2,samples=81]plot(\x,{1+.65*\x*\x});
+\foreach \x/\name in{-2/{-L},0/0,2/L}{\draw[gray](\x,-.07)--(\x,.07);\node[below]at(\x,-.1){$\name$};}
+\draw[red,dashed](-2,4.0)--(2,4.0)node[right]{$E>U_{\max}$};
+\draw[green,dashed](-2,2.1)--(2,2.1)node[right]{$E<U_{\max}$};
+\draw[aux](-1.30089,0)--(-1.30089,2.1);\draw[aux](1.30089,0)--(1.30089,2.1);
+\fill[green](-1.30089,2.1)circle(1.5pt);\fill[green](1.30089,2.1)circle(1.5pt);
+\node[blue]at(.0,3.2){$U(z)=\mu_{\rm ad}B(z)$};
+\node[green]at(0,.45){板内转折};
+\end{tikzpicture}
+\begin{tikzpicture}[scale=1.3]
+\draw[gray,-{Stealth}](0,-2.7)--(0,2.8)node[above]{$+z$};
+\fill[red!8](0,0)--(-1,2)..controls(-.3,1.82)and(.3,1.82)..(1,2)--cycle;
+\fill[red!8](0,0)--(-1,-2)..controls(-.3,-2.18)and(.3,-2.18)..(1,-2)--cycle;
+\draw[red](-1,2)--(0,0)--(1,2);
+\draw[red](-1,-2)--(0,0)--(1,-2);
+\draw[red](-1,2)arc(180:360:1 and .18);
+\draw[red,dashed](-1,2)arc(180:0:1 and .18);
+\draw[red](-1,-2)arc(180:360:1 and .18);
+\draw[red,dashed](-1,-2)arc(180:0:1 and .18);
+\draw[gray](0,.7)arc(90:63.435:.7);\node at(.28,.98){$\alpha_{\rm c}$};
+\draw[green,vec](0,0)--(1.9,.65)node[right]{$\boldsymbol V(0)$};
+\draw[gray](0,.45)arc(90:18.9:.45);\node at(.62,.3){$\alpha$};
+\node[red]at(1.6,1.7){损失锥};\node[red]at(1.6,-1.7){损失锥};
+\node[align=center]at(.6,-3.15){$\sin^2\alpha_{\rm c}=1/M$\\虚线为锥底背侧；临界等号另作时间检验};
+\end{tikzpicture}
+\end{document}

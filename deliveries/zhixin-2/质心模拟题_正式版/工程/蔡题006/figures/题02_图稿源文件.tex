@@ -1,0 +1,36 @@
+\documentclass[multi=tikzpicture,border=9pt]{standalone}
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath,amssymb}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc,patterns,decorations.pathmorphing}
+\definecolor{main}{HTML}{17365D}
+\definecolor{accent}{HTML}{AC3931}
+\tikzset{every picture/.style={font=\small,line width=.75pt},
+ >={Stealth[length=2mm]},arr/.style={->},box/.style={draw=main,rounded corners=2pt,
+ fill=main!4,text width=2.7cm,minimum height=.9cm,align=center},
+ note/.style={align=center,text width=8cm}}
+\begin{document}
+\begin{tikzpicture}
+\draw (-1,2.4)--(-1,0)--(1,0)--(1,2.4);\fill[main!12] (-0.95,1.3499999999999999) rectangle (0.95,2.4);\draw[very thick] (-1,1.2)--(1,1.2);\draw[decorate,decoration={zigzag,segment length=3mm,amplitude=1.5mm}] (0,0)--(0,1.2);\node[align=center] at (0,3.5) {排水阶段 $h<y<H$};\draw (4,2.4)--(4,0)--(6,0)--(6,2.4);\draw[very thick] (4,2.5)--(6,2.5);\draw[decorate,decoration={zigzag,segment length=3mm,amplitude=1.5mm}] (5,0)--(5,2.5);\node[align=center] at (5,3.5) {干燥阶段 $y>H$};\node[right] at (1,2.4){$H$};\node[right] at (1,1.2){$y$};\node[note] at (2.5,-.8){活塞向上；水从上口溢出。弹簧力为 $k(l_0-y)$，可在越过自然长度后改为向下。};
+\end{tikzpicture}
+\begin{tikzpicture}
+\draw (-1,0)--(-1,2.6);\draw (1,0)--(1,2.6);\fill[main!10] (-.95,1) rectangle (.95,2.4);\draw[very thick] (-1,1)--(1,1);\draw[arr,accent] (0,1.05)--(0,-.6) node[below]{$m_w(g+a)=20\rm\,N$};\draw[arr,main] (-.75,-1.2)--(-.75,1) node[pos=.6,left]{$F_s=40\rm\,N$};\draw[arr] (.65,1)--(.65,.15) node[right]{$mg=10\rm\,N$};\draw[arr] (2,1.2)--(2,2.2) node[above]{$a=10\rm\,m/s^2$};\node[note] at (0,-1.5){初始水质量 $m_w=1\rm\,kg$；加速水柱的压力不能只用静水重力。};
+\end{tikzpicture}
+\begin{tikzpicture}
+\draw[arr] (0,0)--(5,0) node[right]{$y\;(\rm m)$};
+\draw[arr] (0,0)--(0,3.1) node[above]{$M\;(\rm kg)$};
+\draw[main,very thick] (0,2)--(4,1);\draw[accent,dashed] (0,2)--(4,1);\node[left] at (0,2){2};\node[left] at (0,1){1};\node[below] at (0,0){0.10};\node[below] at (4,0){0.20};\node[align=center] at (2,2.6){$M=3-10y$\\$F_{\rm net}/(10\,\rm N)=3-10y$};\node[note] at (2,-1){两条归一化曲线重合，所以排水阶段 $a=F_{\rm net}/M=10\rm\,m/s^2$。};
+\end{tikzpicture}
+\begin{tikzpicture}
+\draw[arr] (-2.7,0)--(2.9,0) node[right]{$X=y-y_e$};
+\draw[arr] (0,-2.7)--(0,2.9) node[above]{$v/\omega$};
+\draw[main] (0,0) circle(2.23607);\fill[accent] (-1,2) circle(2pt) node[above left]{进入干燥阶段};\fill[accent] (2.23607,0) circle(2pt) node[below right]{首次最高点};\draw[accent,arr] (116.565:2.55) arc(116.565:0:2.55);\node[note] at (0,-3.5){$y_e=0.25\rm\,m$，$A=\sqrt5/20\rm\,m$；相位转角 $\pi/2+\arctan(1/2)$。};
+\end{tikzpicture}
+\begin{tikzpicture}
+\node[box] (b0) at (0,0) {排水：$a=10\rm\,m/s^2$};
+\node[box] (b1) at (5,0) {水尽：$v_H=\sqrt2\rm\,m/s$};
+\node[box] (b2) at (5,-2) {干燥：围绕 $y_e$ 振动};
+\node[box] (b3) at (0,-2) {首次顶点：$y_e+A$};
+\draw[arr] (b0)--(b1);\draw[arr] (b1)--(b2);\draw[arr] (b2)--(b3);\node[note] at (2.5,-3.25) {总位移 $(3+\sqrt5)/20\rm\,m$；总时间约 $0.2853\rm\,s$。};
+\end{tikzpicture}
+\end{document}

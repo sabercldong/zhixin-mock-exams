@@ -1,0 +1,416 @@
+{
+  "status": "pass",
+  "method": "ellipse support function plus five-point finite differences",
+  "case_count": 160,
+  "max_errors": {
+    "rho_relative": 2.913955606809182e-07,
+    "aIII_relative": 2.913956456129796e-07,
+    "aII_absolute": 5.281997061956645e-12,
+    "detII_absolute": 2.849365525747771e-07
+  },
+  "generic_offset_case_count": 80,
+  "generic_offset_max_errors": {
+    "rho_relative": 4.3973542074304817e-07,
+    "det_absolute": 2.644127672368768e-07,
+    "acceleration_absolute": 1.2131760929179336e-07
+  },
+  "representative_cases": [
+    {
+      "a": 2.0816712004641915,
+      "b": 0.8815692700158306,
+      "c": 1.8857864696210396,
+      "state_III": {
+        "rho_numeric": 0.21623211858721497,
+        "rho_formula": 0.21623211820414245,
+        "a_numeric": 314.2711181377037,
+        "a_formula": 314.2711186944602
+      },
+      "state_II": {
+        "path_curvature_determinant": 2.2879573791101393e-09,
+        "shape_speed": 2.0816712004638958,
+        "ax_numeric": 3.4561840219113336,
+        "ax_formula": 3.4561840219109494,
+        "ay_numeric": -7.393208096877799,
+        "ay_formula": -7.39320809687826,
+        "normal_per_mass": 1.6157002260439208,
+        "normal_formula_per_mass": 1.6157002260434605,
+        "newton_residual": 4.600764214046649e-13
+      },
+      "errors": {
+        "rho_relative": 1.7715799938144983e-09,
+        "aIII_relative": 1.7715802158591032e-09,
+        "aII_absolute": 4.60964599824365e-13,
+        "detII_absolute": 2.2879573791101393e-09
+      }
+    },
+    {
+      "a": 3.1518899800235807,
+      "b": 1.8776737652650373,
+      "c": 2.531551239340904,
+      "state_III": {
+        "rho_numeric": 0.7723483868442728,
+        "rho_formula": 0.7723483651420096,
+        "a_numeric": 137.58014271452882,
+        "a_formula": 137.58014658040153
+      },
+      "state_II": {
+        "path_curvature_determinant": -1.646659786302962e-08,
+        "shape_speed": 3.1518899800235785,
+        "ax_numeric": 5.020963303776946,
+        "ax_formula": 5.020963303776944,
+        "ay_numeric": -6.76945383670925,
+        "ay_formula": -6.769453836709256,
+        "normal_per_mass": 3.7240925347870846,
+        "normal_formula_per_mass": 3.7240925347870784,
+        "newton_residual": 6.217248937900877e-15
+      },
+      "errors": {
+        "rho_relative": 2.8099060189745728e-08,
+        "aIII_relative": 2.809905941258961e-08,
+        "aII_absolute": 6.217248937900877e-15,
+        "detII_absolute": 1.646659786302962e-08
+      }
+    },
+    {
+      "a": 5.370634777141065,
+      "b": 4.332142520301925,
+      "c": 3.174312381166848,
+      "state_III": {
+        "rho_numeric": 3.715968682542676,
+        "rho_formula": 3.7159686965959384,
+        "a_numeric": 28.49203203894711,
+        "a_formula": 28.49203193119432
+      },
+      "state_II": {
+        "path_curvature_determinant": 3.07191143633645e-08,
+        "shape_speed": 5.370634777140772,
+        "ax_numeric": 3.9754562108720024,
+        "ax_formula": 3.97545621087219,
+        "ay_numeric": -2.912955843861797,
+        "ay_formula": -2.9129558438623904,
+        "normal_per_mass": 5.425503485699457,
+        "normal_formula_per_mass": 5.425503485698862,
+        "newton_residual": 5.937472735695337e-13
+      },
+      "errors": {
+        "rho_relative": 3.7818570497449855e-09,
+        "aIII_relative": 3.7818570497449855e-09,
+        "aII_absolute": 5.933031843596837e-13,
+        "detII_absolute": 3.07191143633645e-08
+      }
+    },
+    {
+      "a": 4.069217327763791,
+      "b": 3.1119047498117958,
+      "c": 2.621941740136854,
+      "state_III": {
+        "rho_numeric": 2.2461516735159477,
+        "rho_formula": 2.246151700881676,
+        "a_numeric": 45.5905827337262,
+        "a_formula": 45.59058217827863
+      },
+      "state_II": {
+        "path_curvature_determinant": 1.6149236081730578e-07,
+        "shape_speed": 4.069217327763197,
+        "ax_numeric": 4.811259218650715,
+        "ax_formula": 4.811259218651002,
+        "ay_numeric": -4.053736339056338,
+        "ay_formula": -4.053736339058006,
+        "normal_per_mass": 5.7103406173772315,
+        "normal_formula_per_mass": 5.7103406173755635,
+        "newton_residual": 1.6679990721968352e-12
+      },
+      "errors": {
+        "rho_relative": 1.2183383857333752e-08,
+        "aIII_relative": 1.2183384079378357e-08,
+        "aII_absolute": 1.6679990721968352e-12,
+        "detII_absolute": 1.6149236081730578e-07
+      }
+    }
+  ]
+}
+
+{
+  "status": "pass",
+  "method": "RK4 integration of the common-motion ODE plus direct force balance",
+  "intermediate_case_count": 60,
+  "endpoint_case_count": 60,
+  "max_errors": {
+    "time_absolute_error": 5.514876777468203e-09,
+    "friction_relative_error": 4.440892098500626e-16,
+    "threshold_residual": 8.881784197001252e-16,
+    "energy_absolute_error": 4.092726157978177e-12
+  },
+  "max_endpoint_error": 1.0658141036401503e-14,
+  "pulley_geometry": {
+    "status": "pass",
+    "rim_radius": 0.56,
+    "rope_radius": 0.56,
+    "max_tangency_residual": 4.440892098500626e-16
+  },
+  "representative_cases": [
+    {
+      "mu0": 0.7304954761573511,
+      "mu1": 8.88167270616535,
+      "mu": 1.0776650205954166,
+      "L": 0.28000107210052805,
+      "turning_displacement": 6.574131861070602,
+      "time_formula": 0.2621242267582292,
+      "time_numeric": 0.26212422298327603,
+      "time_absolute_error": 3.774953183377505e-09,
+      "friction_relative_error": 0.0,
+      "threshold_residual": 2.220446049250313e-16,
+      "max_energy_absolute_error": 2.3092638912203256e-14
+    },
+    {
+      "mu0": 0.39248822975897185,
+      "mu1": 7.222152396834797,
+      "mu": 1.4027519549840013,
+      "L": 3.7510492593897142,
+      "turning_displacement": 25.358137757627507,
+      "time_formula": 1.4279103951415035,
+      "time_numeric": 1.4279103896266268,
+      "time_absolute_error": 5.514876777468203e-09,
+      "friction_relative_error": 2.220446049250313e-16,
+      "threshold_residual": 2.220446049250313e-16,
+      "max_energy_absolute_error": 1.7337242752546445e-12
+    },
+    {
+      "mu0": 0.4976001898951102,
+      "mu1": 2.3283452120395176,
+      "mu": 1.8632269996239565,
+      "L": 3.901850434100485,
+      "turning_displacement": 5.230779894252224,
+      "time_formula": 1.4805534645674443,
+      "time_numeric": 1.480553465330718,
+      "time_absolute_error": 7.632736664930917e-10,
+      "friction_relative_error": 2.220446049250313e-16,
+      "threshold_residual": 0.0,
+      "max_energy_absolute_error": 3.126388037344441e-13
+    },
+    {
+      "mu0": 0.46181718482392264,
+      "mu1": 1.4306453504732652,
+      "mu": 1.0007462968754015,
+      "L": 6.9607149335738265,
+      "turning_displacement": 12.513216543511104,
+      "time_formula": 1.8466987570088407,
+      "time_numeric": 1.8466987570667193,
+      "time_absolute_error": 5.787859080896851e-11,
+      "friction_relative_error": 2.220446049250313e-16,
+      "threshold_residual": 2.220446049250313e-16,
+      "max_energy_absolute_error": 1.1368683772161603e-12
+    }
+  ]
+}
+
+{
+  "status": "pass",
+  "method": "dense angle scan, golden-section maximization, and explicit friction-cone force construction",
+  "sample_count": 200001,
+  "planar": {
+    "theta_max_numeric": 1.0471975513994547,
+    "theta_max_degrees": 60.00000001162285,
+    "mu_numeric": 0.26794919243112275,
+    "mu_exact": 0.2679491924311228,
+    "dense_scan_mu": 0.2679491924268815
+  },
+  "spatial": {
+    "theta_max_numeric": 1.0471975419900676,
+    "theta_max_degrees": 59.99999947250468,
+    "mu_numeric": 0.37796447300922725,
+    "mu_exact": 0.3779644730092272,
+    "dense_scan_mu": 0.37796447300330605
+  },
+  "max_force_balance_residual": 8.881784197001252e-16,
+  "max_planar_construction_residual": 1.5543122344752192e-15
+}
+
+{
+  "status": "pass",
+  "method": "random parameter first-law balance and piecewise-continuity checks",
+  "case_count": 500,
+  "max_errors": {
+    "continuity_error": 1.1368683772161603e-13,
+    "first_law_error": 1.8189894035458565e-12,
+    "pressure_threshold_error": 2.9103830456733704e-11
+  },
+  "representative_cases": [
+    {
+      "p1": 300289.77829230705,
+      "T1": 1098.90886215559,
+      "Q1": 3305.4015008619317,
+      "Ceff": 9.326482131518187,
+      "slope_fixed": 0.15174860211207564,
+      "slope_moving": 0.10722156391857234,
+      "continuity_error": 0.0,
+      "first_law_error": 1.1368683772161603e-13,
+      "pressure_threshold_error": 3.637978807091713e-12,
+      "slope_order_ok": true
+    },
+    {
+      "p1": 75087.2540033804,
+      "T1": 219.7074896790183,
+      "Q1": 1038.5108676874747,
+      "Ceff": 58.664359243143124,
+      "slope_fixed": 0.02196036681110864,
+      "slope_moving": 0.017046124988007658,
+      "continuity_error": 0.0,
+      "first_law_error": 2.2737367544323206e-13,
+      "pressure_threshold_error": 9.094947017729282e-13,
+      "slope_order_ok": true
+    },
+    {
+      "p1": 364630.93786344153,
+      "T1": 333.7702803003821,
+      "Q1": 2417.720532756577,
+      "Ceff": 30.948891506667117,
+      "slope_fixed": 0.03704880462377397,
+      "slope_moving": 0.03231133495636109,
+      "continuity_error": 0.0,
+      "first_law_error": 2.2737367544323206e-13,
+      "pressure_threshold_error": 3.637978807091713e-12,
+      "slope_order_ok": true
+    },
+    {
+      "p1": 351650.81598803966,
+      "T1": 719.8032525071632,
+      "Q1": 970.8788071086672,
+      "Ceff": 7.933788222148498,
+      "slope_fixed": 0.17850831997052963,
+      "slope_moving": 0.12604319298671632,
+      "continuity_error": 0.0,
+      "first_law_error": 0.0,
+      "pressure_threshold_error": 3.637978807091713e-12,
+      "slope_order_ok": true
+    }
+  ]
+}
+
+{
+  "status": "pass",
+  "given_data": {
+    "D1_cm": 8.417982460728073,
+    "D2_cm": 4.417982460728072,
+    "n": 1.3328656595414732,
+    "R_cm": 30.001133083251737
+  },
+  "synthetic_inverse_cases": 500,
+  "flat_limit_cases": 200,
+  "max_relative_error_n": 1.482746628949331e-15,
+  "max_relative_error_R": 1.0860789705547633e-14,
+  "max_coincidence_error": 3.552713678800501e-15,
+  "max_paraxial_ray_error": 4.336808689942018e-19
+}
+
+{
+  "status": "pass",
+  "random_parameter_cases": 1000,
+  "max_relative_error_velocity": 1.1436028490182283e-15,
+  "max_relative_error_source_port": 7.822769918531483e-15,
+  "max_relative_error_average_power": 7.870894748733426e-16,
+  "equivalent_topology": "L0 series (R0 parallel C0)",
+  "max_relative_error_initial_conditions": 3.76066428496119e-16,
+  "max_relative_error_spring_variation": 1.4466403618576705e-15,
+  "phase_and_time_domain_ODE": "pass"
+}
+
+{
+  "status": "pass",
+  "vertices": 12,
+  "edges": 30,
+  "faces": 20,
+  "independent_geometry": "equal_edge_3d_coordinates",
+  "adjacent_resistance": "11/30",
+  "cases": [
+    {
+      "removed": [],
+      "resistance": "7/15",
+      "potentials": [
+        "7/15",
+        "7/30",
+        "7/30",
+        "17/60",
+        "3/10",
+        "17/60",
+        "0",
+        "11/60",
+        "7/30",
+        "7/30",
+        "11/60",
+        "1/6"
+      ],
+      "kcl": "exact_pass",
+      "power": "exact_pass"
+    },
+    {
+      "removed": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          6
+        ]
+      ],
+      "resistance": "14/23",
+      "potentials": [
+        "14/23",
+        "7/23",
+        "7/23",
+        "17/46",
+        "9/23",
+        "17/46",
+        "0",
+        "11/46",
+        "7/23",
+        "7/23",
+        "11/46",
+        "5/23"
+      ],
+      "kcl": "exact_pass",
+      "power": "exact_pass"
+    },
+    {
+      "removed": [
+        [
+          0,
+          1
+        ]
+      ],
+      "resistance": "21/38",
+      "potentials": [
+        "21/38",
+        "7/38",
+        "287/1140",
+        "73/228",
+        "32/95",
+        "86/285",
+        "0",
+        "23/114",
+        "49/190",
+        "287/1140",
+        "11/60",
+        "17/95"
+      ],
+      "kcl": "exact_pass",
+      "power": "exact_pass"
+    }
+  ],
+  "parameter_cases": 100
+}
+
+{
+  "status": "pass",
+  "two_body_cases": 1000,
+  "max_relative_error": 6.661338147750939e-16,
+  "relative_shift_H": "0.000271781125600183319033738162866171776329462672727563402275073",
+  "leading_order": "0.000271855010660980810234541577825159914712153518123667377398721",
+  "leading_absolute_error": "7.3885060797491200803414958988138382690845396103975125352E-8",
+  "isotope_ratio_exact_cases": 100
+}

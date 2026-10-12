@@ -1,0 +1,48 @@
+{
+  "date": "2026-10-11",
+  "status": "复核完成",
+  "scope": "原题条件下的通解、条件解及非唯一性说明；不代表确认历史待定题干改写",
+  "statistics": {
+    "set": 21,
+    "questions": 8,
+    "student_modules": 5,
+    "teacher_modules": 9,
+    "variants": 32,
+    "question_page_breaks": 7,
+    "template_sha256": "220fa808e8fd1a99e0b5b9dcbecf6ffcbf2f19ad4471c1ba89c67ef6be662720",
+    "documents": {
+      "试卷": {
+        "total_pages": 9,
+        "body_pages": 8,
+        "body_net_chars": 2620,
+        "sha256": "8c5e77a1846a67ed609790cbde7224f4a5cc62e6107133c06468937b47e4f68f"
+      },
+      "学生详解": {
+        "total_pages": 65,
+        "body_pages": 64,
+        "body_net_chars": 33549,
+        "sha256": "d27daec8f1e62542a7e712be3ff18b06b8386de42b2897590338c72d6f547e25"
+      },
+      "教师备课": {
+        "total_pages": 81,
+        "body_pages": 80,
+        "body_net_chars": 46108,
+        "sha256": "c96f73569cbecdc2a935b9a595df9807696546fb2f81b1bc9264c386ff482b91"
+      }
+    },
+    "source_sha256": {
+      "drafts/question-01.md": "69d02cf597420dfaceb228ae2eac32a51797cf8a3c268d9c98f3ff28dd40c63c",
+      "drafts/question-02.md": "a6fc33b146063991635344c24449900e80824b106a716cb73780544562b6290c",
+      "drafts/question-03.md": "859d8a378ff76af4eeaafe3309125b528d5265723997a9ef53cab455451b9cc0",
+      "drafts/question-04.md": "8b2b2283a01512352b1dbe49390826e4d67a9639a6b95907d3137e37a923a634",
+      "drafts/question-05.md": "0586ba944fd3be522aabfb0cecab219f05aea3bb82bbc072c5a7be9663512fc0",
+      "drafts/question-06.md": "db3ede3723e2a20c21104c41157eb2d031cdf56f7f3963fcfc4938e4ecc35a26",
+      "drafts/question-07.md": "606e08eb0d81472bc428157576e33f90334363ea07dfc9c6ab0b2ddbaa18fdc5",
+      "drafts/question-08.md": "494fb291539b6b4fbe47578984005efe48aef234ef1dc1da355372d05a1fb885"
+    },
+    "embedded_source_snapshot_matches": true
+  },
+  "physics_passed": true,
+  "visual_review_passed": true,
+  "visual_record_sha256": "8ff24dac3b76a522e2767cdfcda3d9f760a3b029577785f7bfdd2c49ccedeff5"
+}

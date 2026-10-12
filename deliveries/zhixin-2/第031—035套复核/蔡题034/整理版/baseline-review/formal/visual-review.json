@@ -1,0 +1,61 @@
+{
+  "status": "pass",
+  "review_date": "2026-10-03",
+  "documents": {
+    "paper": {
+      "sha256": "215d60e21114fe66003acb80e516dfeedf63b2fbd433f9554f374c6afac87ef3",
+      "overview_pages_reviewed": 10,
+      "high_resolution_pages_reviewed": [
+        3,
+        6,
+        7
+      ]
+    },
+    "student": {
+      "sha256": "d1cfe7bb8c2b7d0800a3983875437cba8b124df1b0a000701f97eb055493b4ac",
+      "overview_pages_reviewed": 77,
+      "high_resolution_pages_reviewed": [
+        11,
+        13,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        32,
+        36,
+        41,
+        48,
+        53,
+        65,
+        66,
+        69,
+        70,
+        75,
+        77
+      ]
+    },
+    "teacher": {
+      "sha256": "d602d2f7cb4eaca6826771ce22187ab0e321c344d59852cccea9c343c19beeba",
+      "overview_pages_reviewed": 100,
+      "high_resolution_pages_reviewed": [
+        25,
+        26,
+        27,
+        88,
+        89,
+        100
+      ]
+    }
+  },
+  "checks": [
+    "逐页查看三版本共187页总览；未发现空白正文页、明显公式出界、图文遮挡或一两句话的孤立尾页。",
+    "实际查看30个重点页高清图，核查三维投影、接触点、速度和力方向、光路实虚像、图中量进入后续方程及题末结论。",
+    "第5题第（3）问与图5-3固定为同页；此项调整不增大字号、行距或页边距，不增加强制分页。",
+    "图稿全部居中、图注为中性物理描述，正式PDF不展示TikZ代码或参考文件链接。"
+  ],
+  "physics_scope": "第2题以原题条件不足以唯一选择运动模式为正式结论之一，给出完整静力承载、两壁滚动、固定球心滑动条件及经独立验证的双模式反例；未宣称实际加载过程的唯一分支已确定。"
+}

@@ -1,0 +1,55 @@
+\documentclass[tikz,border=5pt]{standalone}
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath}
+\usetikzlibrary{arrows.meta,calc}
+\definecolor{blue}{RGB}{45,98,142}
+\definecolor{red}{RGB}{175,67,51}
+\definecolor{green}{RGB}{60,117,87}
+\begin{document}
+\begin{tikzpicture}
+\draw[thick](0,-1)--(0,-.12); \draw[thick](0,.12)--(0,1);\node[below]at(0,-1){$S_0$};
+\draw[thick](2,-1.3)--(2,-.6); \draw[thick](2,-.4)--(2,.4);\draw[thick](2,.6)--(2,1.3);
+\node[left]at(2,.5){$S_1$};\node[left]at(2,-.5){$S_2$};
+\draw[blue,thick](2.25,.3)--(2.25,.7)node[above]{$p_1$};
+\draw[blue,thick](2.25,-.7)--(2.25,-.3)node[below]{$p_2$};
+\draw[blue,thick](5.2,-1.3)--(5.2,1.3)node[above]{$p_3$};
+\draw[thick](5.5,-1.3)--(5.5,1.3);\draw[-{Stealth}](5.5,1.3)--(5.5,1.8)node[above]{$z$};
+\draw[gray,dashed](0,0)--(5.5,0);\draw[gray](0,0)--(2,.5)--(5.5,.7); \draw[gray](0,0)--(2,-.5)--(5.5,.7);
+\draw[gray,<->](2,-1.8)--node[below]{$D$}(5.5,-1.8);
+\begin{scope}[xshift=8cm]
+\draw[-{Stealth}](-.6,0)--(1.9,0)node[right]{$x$};\draw[-{Stealth}](0,-.6)--(0,1.9)node[above]{$y$};
+\draw[red,thick](-1,0)--(1.6,0)node[above]{$p_1$};
+\draw[blue,thick](-.866,-.5)--(1.386,.8)node[right]{$p_2$};
+\draw[green,thick](-.5,-.866)--(.8,1.386)node[above]{$p_3$};
+\draw[gray](.6,0)arc(0:30:.6);\node at(.8,.2){$\theta$};
+\draw[gray](30:.85)arc(30:60:.85);\node at(.8,.75){$\theta$};
+\node[align=center]at(.4,-1.75){偏振平面垂直传播方向\\轴角为 $0,\theta,2\theta$};
+\end{scope}
+\end{tikzpicture}
+\begin{tikzpicture}
+\node[draw,rounded corners,align=center](A)at(0,1){共同输入\\$(E_x,E_y)$};
+\node[draw,align=center](B)at(3,2){$p_1$\\$E_x$};
+\node[draw,align=center](C)at(3,0){$p_2$\\$E_x\cos\theta$\\$+E_y\sin\theta$};
+\node[draw,align=center](D)at(7,2){$p_3$\\$a=E_x\cos2\theta$};
+\node[draw,align=center](E)at(7,0){$p_3$\\$b=\cos\theta$\\$(E_x\cos\theta+E_y\sin\theta)$};
+\draw[blue,-{Stealth}](A)--(B);\draw[blue,-{Stealth}](A)--(C);
+\draw[blue,-{Stealth}](B)--node[above]{$\cos2\theta$}(D);
+\draw[blue,-{Stealth}](C)--node[above]{$\cos\theta$}(E);
+\end{tikzpicture}
+\begin{tikzpicture}
+\node[draw,blue](X)at(0,1){$E_x$};\node[draw,green](Y)at(0,-1){$E_y$};
+\node[draw](A)at(4,1){第一路 $a$};\node[draw](B)at(4,-1){第二路 $b$};
+\draw[blue,-{Stealth}](X)--node[above]{$\cos2\theta$}(A);
+\draw[blue,-{Stealth}](X)--node[above,sloped]{$\cos^2\theta$}(B);
+\draw[green,-{Stealth}](Y)--node[below]{$\sin\theta\cos\theta$}(B);
+\node[align=center]at(2,-2.2){$\langle E_xE_y^*\rangle=0$\\$\Gamma=\langle ab^*\rangle=(I_s/2)\cos2\theta\cos^2\theta$};
+\end{tikzpicture}
+\begin{tikzpicture}[x=.8cm,y=4cm]
+\draw[-{Stealth}](-3.5,0)--(3.7,0)node[right]{$z/\Delta z$};\draw[-{Stealth}](0,0)--(0,.7)node[above]{$I/I_0$};
+\draw[blue,thick,domain=-3:3,samples=150]plot(\x,{.25*(1+cos(360*\x))});
+\draw[green,thick,domain=-3:3,samples=150]plot(\x,{.125*(1+.75*cos(360*\x))});
+\draw[red,thick](-3,.0625)--(3,.0625);
+\node[blue]at(-2,.64){$\theta=0$};\node[green]at(1,.64){$\theta=\pi/6$};\node[red]at(2.8,.32){$\theta=\pi/4$};
+\node at(0,-.18){$\Delta z=\lambda D/d$；偏振片不改变条纹间距};
+\end{tikzpicture}
+\end{document}

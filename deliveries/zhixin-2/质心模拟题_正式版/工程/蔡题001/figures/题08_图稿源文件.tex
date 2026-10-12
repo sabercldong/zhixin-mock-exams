@@ -1,0 +1,80 @@
+\documentclass[multi=tikzpicture,border=8pt]{standalone}
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath,amssymb}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc,patterns}
+\definecolor{blue}{HTML}{17365D}
+\definecolor{red}{HTML}{AC3931}
+\tikzset{every node/.style={font=\small},vec/.style={-{Stealth[length=3mm]},thick,blue},force/.style={-{Stealth[length=3mm]},very thick,red},dim/.style={|<->|,thin}}
+\begin{document}
+
+\begin{tikzpicture}
+\fill[pattern=north east lines,pattern color=gray](-.3,0)rectangle(0,2);
+\draw[very thick,blue](0,0)--(2,0)--(2,2)--(0,2) (0,0)--(2,2);
+\foreach \x in{0,2}{\foreach \y in{0,2}{\fill[white] (\x,\y)circle(2.5pt);\draw(\x,\y)circle(2.5pt);}}
+\node[left]at(0,0){$A_1$};\node[left]at(0,2){$B_1$};
+\node[right]at(2,0){$A_0$};\node[right]at(2,2){$B_0$};
+\draw[force](2,-.1)--(2,-1)node[below]{$P$};
+\draw[dim](.3,-.5)--node[below]{$l$}(1.7,-.5);
+\begin{scope}[xshift=4.2cm]
+\fill[pattern=north east lines,pattern color=gray](-.3,0)rectangle(0,2);
+\foreach \j in{0,1,2}{\draw[very thick,blue](2*\j,0)--(2*\j+2,0)--(2*\j+2,2)--(2*\j,2) (2*\j,0)--(2*\j+2,2);}
+\foreach \j in{0,1,2,3}{\foreach \y in{0,2}{\fill[white](2*\j,\y)circle(2.5pt);\draw(2*\j,\y)circle(2.5pt);}}
+\foreach \j/\w in{1/P,2/{P/2},3/{P/4}}{\draw[force](2*\j,-.1)--(2*\j,-1)node[below]{$\w$};}
+\node[left]at(0,0){$A_3$};\node[left]at(0,2){$B_3$};
+\node[above]at(3,2.2){三格示例；荷载从墙向外递减};
+\end{scope}
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\fill(0,0)circle(3pt)node[above left]{$A_0$};
+\draw[force](0,0)--(0,-1.7)node[below]{$P$};
+\draw[vec](0,0)--(0,1.7)node[above]{$P$（竖杆拉力）};
+\draw[dashed](-1.5,0)--(-.2,0);\node[above left]at(-.7,.2){下杆0};
+\begin{scope}[xshift=5cm]
+\fill(0,0)circle(3pt)node[below right]{$B_0$};
+\draw[force](0,0)--(0,-1.7)node[below]{$P$};
+\draw[vec](0,0)--(1.5,1.5)node[above right]{$\sqrt2P$（斜杆压力）};
+\draw[vec](0,0)--(-1.7,0)node[above,midway]{$P$（上杆拉力）};
+\draw[dashed](1.5,0)--(1.5,1.5) (0,0)--(1.5,0);
+\end{scope}
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\draw[blue!40,thick](0,0)rectangle(6,2);
+\foreach \j in{1,2,3}{\draw[force](2*\j,0)--(2*\j,-1)node[below]{$W_{\j}$};}
+\draw[vec](0,0)--(1.4,0)node[above,midway]{$H_n$};
+\draw[vec](0,0)--(0,1.4)node[right,midway]{$V_n$};
+\draw[vec](0,2)--(-1.5,2)node[above,midway]{$H_n$};
+\draw[dim](-.65,0)--node[left]{$l$}(-.65,2);
+\draw[dim](0,-1.7)--node[below]{$x_j=jl$}(4,-1.7);
+\node[above]at(3,2.3){$H_nl=\sum_jW_jjl$};
+\node[below]at(3,-2.5){上支座竖直反力为0；下支座承担全部竖直载荷};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\draw[very thick,blue](0,0)--(3,0)--(3,3)--(0,3) (0,0)--(3,3);
+\draw[dashed](-.3,-.3)rectangle(3.3,3.3);
+\draw[vec](1.6,3)--(.4,3)node[above,midway]{$T_j$};
+\draw[force](.4,0)--(1.6,0)node[below,midway]{$C_j$};
+\draw[force](.6,.6)--(1.8,1.8)node[above left,midway]{$D_j=\sqrt2L_j$};
+\draw[vec](3,.5)--(3,1.8)node[right,midway]{$L_j$};
+\draw[force](3,0)--(3,-1.2)node[below]{$W_j$};
+\draw[force](5.8,0)--(5.8,-1.2)node[below]{$W_{j+1}$};
+\draw[thick](3,0)--(6.5,0) (3,3)--(6.5,3);
+\node[right,align=left]at(4,2){尾段总荷载\\$L_j=\sum_{k=j}^nW_k$};
+\node[below]at(3,-2){$T_j=\sum_{k=j}^n(k-j+1)W_k,\qquad C_j=T_j-L_j$};
+\end{tikzpicture}
+
+\begin{tikzpicture}[x=.65cm,y=1cm]
+\draw[vec](0,0)--(11.5,0)node[right]{$n$};
+\draw[vec](0,0)--(0,4.7)node[above]{反力分量$/P$};
+\draw[dashed](0,2)--(11,2) (0,4)--(11,4);
+\draw[blue,very thick]plot coordinates{(1,1)(2,1.5)(3,1.75)(4,1.875)(5,1.9375)(6,1.96875)(8,1.99219)(10,1.99805)};
+\draw[red,very thick]plot coordinates{(1,1)(2,2)(3,2.75)(4,3.25)(5,3.5625)(6,3.75)(8,3.921875)(10,3.9765625)};
+\node[right]at(8,2.3){$V_n/P\to2$};
+\node[right]at(7,3.45){$H_n/P\to4$};
+\node[left]at(0,2){$2$};\node[left]at(0,4){$4$};
+\foreach \n in{2,4,6,8,10}{\node[below]at(\n,0){$\n$};}
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,71 @@
+\documentclass[tikz,border=5pt]{standalone}
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath,amssymb}
+\usetikzlibrary{arrows.meta,calc,angles,quotes,patterns,decorations.pathmorphing}
+\definecolor{field}{HTML}{176B9B}
+\definecolor{force}{HTML}{B64B32}
+\tikzset{>=Latex,line width=.8pt,every node/.style={font=\small},field/.style={color=field},force/.style={color=force},body/.style={draw=black,fill=blue!5},ghost/.style={dashed,gray},labelbox/.style={fill=white,inner sep=1.2pt}}
+\begin{document}
+\begin{tikzpicture}
+\begin{scope}
+\draw[ghost](-2.4,0)--(2.4,0);
+\draw[body](-1.7,0)circle(.15);\draw[body](1.7,0)circle(.15);
+\draw[->,field,thick](-1.5,0)--(-.5,0)node[midway,above]{$v_0$};
+\draw[->,force,thick](1.5,0)--(.5,0)node[midway,above]{$v_0$};
+\node[below]at(0,-.7){等速正碰};
+\end{scope}
+\begin{scope}[xshift=5cm]
+\draw[->,field,thick](0,0)--(1.8,1.04)node[right]{$\boldsymbol v_a$};
+\draw[->,force,thick](0,0)--(1.8,-1.04)node[right]{$\boldsymbol v_b$};
+\draw[ghost](0,0)--(2.2,0);
+\draw(.65,-.375)arc(-30:30:.75);
+\node[right]at(.8,0){$\theta$};
+\node[below]at(1,-1.7){夹角速度图，不表示初始位置};
+\end{scope}
+\end{tikzpicture}
+\begin{tikzpicture}[x=1.8cm,y=1.5cm]
+\draw[->](0,0)--(3.4,0)node[right]{$r/r_0$};
+\draw[->](0,0)--(0,2.1)node[above]{$U/U_0$};
+\draw[field,thick,domain=.52:3.2,samples=80]plot(\x,{1/\x});
+\draw[force,thick](.2,1)--(3.2,1)node[right]{$K_{\rm cm}=U_0$};
+\draw[ghost](1,0)--(1,1);
+\fill(1,1)circle(2pt); \node[below]at(1,0){$1$};
+\node[left]at(0,1){$1$};
+\node[field,right]at(1.8,.6){$U=C_{\rm e}/r$};
+\node[below]at(1.7,-.55){临界最近距离 $r_{\min}=r_0$};
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{scope}
+\draw[->,field,thick](0,0)--(2.078,1.2)node[right]{$\boldsymbol v_a$};
+\draw[->,force,thick](0,0)--(2.078,-1.2)node[right]{$\boldsymbol v_b$};
+\draw[->,thick](0,0)--(2.078,0)node[above right]{$\boldsymbol V_{\rm cm}$};
+\draw[->,field](2.078,0)--(2.078,1.2);
+\draw[->,force](2.078,0)--(2.078,-1.2);
+\draw(.7,0)arc(0:30:.7);\node[above right]at(.73,.13){$\theta/2$};
+\node[below]at(1,-1.9){非相对论分量分解};
+\end{scope}
+\begin{scope}[xshift=5.4cm]
+\draw[ghost](0,-1.6)--(0,1.6);
+\draw[body](0,-1.2)circle(.12);\draw[body](0,1.2)circle(.12);
+\draw[->,field,thick](0,-1)--(0,-.2)node[right]{$v_1\sin(\theta/2)$};
+\draw[->,force,thick](0,1)--(0,.2);
+\node[below]at(0,-1.9){质心系反向运动};
+\end{scope}
+\end{tikzpicture}
+\begin{tikzpicture}[x=2.1cm,y=3cm]
+\draw[->](0,0)--(3.3,0)node[right]{$\theta$};
+\draw[->](0,0)--(0,1.2)node[above]{$v_{\rm crit}/c$};
+\draw[ghost](0,1)--(3,1);
+\begin{scope}\clip(0,0)rectangle(3,1.17);
+\draw[field,thick,domain=.1:180,samples=160]plot({\x/60},{sqrt(.0201/(sin(\x/2)^2+.0201))});
+\draw[force,dashed,thick,domain=1:180,samples=160]plot({\x/60},{sqrt(.02)/sin(\x/2)});
+\end{scope}
+\draw[fill=white](0,1)circle(1.5pt);
+\foreach\x/\t in{.5/30,1.5/90,3/180}{\draw(\x,0)--(\x,-.02);\node[below]at(\x,0){$\t^\circ$};}
+\node[left]at(0,1){$1$};
+\node[field,right]at(.6,.4){相对论};
+\node[force,right]at(.62,.8){低速近似};
+\node[below]at(1.7,-.35){示例 $\delta=U_0/(m_0c^2)=0.02$};
+\end{tikzpicture}
+\end{document}
+

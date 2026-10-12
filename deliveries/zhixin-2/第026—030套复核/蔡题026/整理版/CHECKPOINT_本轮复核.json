@@ -1,0 +1,48 @@
+{
+  "date": "2026-10-11",
+  "status": "复核完成",
+  "statistics": {
+    "set": 26,
+    "questions": 8,
+    "student_modules": 5,
+    "teacher_modules": 9,
+    "variants": 32,
+    "question_page_breaks": 7,
+    "template_sha256": "220fa808e8fd1a99e0b5b9dcbecf6ffcbf2f19ad4471c1ba89c67ef6be662720",
+    "documents": {
+      "试卷": {
+        "total_pages": 9,
+        "body_pages": 8,
+        "body_net_chars": 3527,
+        "sha256": "10518df00635bc5c36b45808b33978c8f46afa2154f791e5529a5c7892349609"
+      },
+      "学生详解": {
+        "total_pages": 76,
+        "body_pages": 75,
+        "body_net_chars": 39322,
+        "sha256": "c7dc25038046dc1d1e36c7cfb4e8cd10fd9bc0dedaff7fe9d3094350ef99fcbf"
+      },
+      "教师备课": {
+        "total_pages": 96,
+        "body_pages": 95,
+        "body_net_chars": 56850,
+        "sha256": "b2d38d6a53d08c1c5de0ed490fd1078dc015f27107948af94a403ddada62e705"
+      }
+    },
+    "source_sha256": {
+      "drafts/question-01.md": "73c1b3fa10d5ec2c58d2a4414b8895d863278f1576698af79ff38ba21106d9b7",
+      "drafts/question-02.md": "dbd72cafdb51cd7d0297262299505667d4486090173c8d33329b766c7f88c6e3",
+      "drafts/question-03.md": "06a32596e24574a8ec24751885806de26d8bbaf2f78dc37f9d47a28ffa6327ac",
+      "drafts/question-04.md": "53a087e11833a679f5f5d948e08d374d9e89af2e5901b0943142120b3b048cda",
+      "drafts/question-05.md": "faa78b805c3b9840245aed153eb954d046faf183b89f3a954bf50db45c5762da",
+      "drafts/question-06.md": "37adcc2dcadb2476889778559c649e8154808aab2ac76b9f6f59c4cdcb783fda",
+      "drafts/question-07.md": "0085d79e5c222397948145419ab9feabf8161a3f4ebbc3be8a091dfafc912795",
+      "drafts/question-08.md": "cba72328b5a9f02e22b9fa4aeb91ca34f8028a1d621c66527f960c4797679647"
+    },
+    "embedded_source_snapshot_matches": true
+  },
+  "scope": "沿用此前已确认的题干与模型；保留正文中的近似、补充条件与非唯一性说明",
+  "physics_passed": true,
+  "visual_review_passed": true,
+  "visual_record_sha256": "64f8282a3a511c7866e52458b396a8f133436cc68113610e8fb379fb8c85866b"
+}

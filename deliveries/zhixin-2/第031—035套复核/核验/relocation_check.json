@@ -1,0 +1,227 @@
+{
+  "passed": true,
+  "sets": [
+    {
+      "set": 31,
+      "generated_files_removed_before_rebuild": true,
+      "steps": [
+        {
+          "script": "rebuild_sources.py",
+          "exit_code": 0,
+          "seconds": 0.05
+        },
+        {
+          "script": "render_figures.py",
+          "exit_code": 0,
+          "seconds": 96.94
+        },
+        {
+          "script": "build_all.py",
+          "exit_code": 0,
+          "seconds": 44.24
+        }
+      ],
+      "figure_png_count": 31,
+      "figure_png_sha256_equal": true,
+      "documents": [
+        {
+          "name": "第031套_学生详解版.pdf",
+          "pages": 78,
+          "all_text_equal": true,
+          "all_72dpi_pixels_equal": true
+        },
+        {
+          "name": "第031套_教师备课版.pdf",
+          "pages": 103,
+          "all_text_equal": true,
+          "all_72dpi_pixels_equal": true
+        },
+        {
+          "name": "第031套_试卷版.pdf",
+          "pages": 9,
+          "all_text_equal": true,
+          "all_72dpi_pixels_equal": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "set": 32,
+      "generated_files_removed_before_rebuild": true,
+      "steps": [
+        {
+          "script": "rebuild_sources.py",
+          "exit_code": 0,
+          "seconds": 0.05
+        },
+        {
+          "script": "render_figures.py",
+          "exit_code": 0,
+          "seconds": 97.07
+        },
+        {
+          "script": "build_all.py",
+          "exit_code": 0,
+          "seconds": 42.73
+        }
+      ],
+      "figure_png_count": 31,
+      "figure_png_sha256_equal": true,
+      "documents": [
+        {
+          "name": "第032套_学生详解版.pdf",
+          "pages": 65,
+          "all_text_equal": true,
+          "all_72dpi_pixels_equal": true
+        },
+        {
+          "name": "第032套_教师备课版.pdf",
+          "pages": 88,
+          "all_text_equal": true,
+          "all_72dpi_pixels_equal": true
+        },
+        {
+          "name": "第032套_试卷版.pdf",
+          "pages": 9,
+          "all_text_equal": true,
+          "all_72dpi_pixels_equal": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "set": 33,
+      "generated_files_removed_before_rebuild": true,
+      "steps": [
+        {
+          "script": "rebuild_sources.py",
+          "exit_code": 0,
+          "seconds": 0.04
+        },
+        {
+          "script": "render_figures.py",
+          "exit_code": 0,
+          "seconds": 91.08
+        },
+        {
+          "script": "build_all.py",
+          "exit_code": 0,
+          "seconds": 43.31
+        }
+      ],
+      "figure_png_count": 18,
+      "figure_png_sha256_equal": true,
+      "documents": [
+        {
+          "name": "第033套_学生详解版.pdf",
+          "pages": 61,
+          "all_text_equal": true,
+          "all_72dpi_pixels_equal": true
+        },
+        {
+          "name": "第033套_教师备课版.pdf",
+          "pages": 88,
+          "all_text_equal": true,
+          "all_72dpi_pixels_equal": true
+        },
+        {
+          "name": "第033套_试卷版.pdf",
+          "pages": 9,
+          "all_text_equal": true,
+          "all_72dpi_pixels_equal": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "set": 34,
+      "generated_files_removed_before_rebuild": true,
+      "steps": [
+        {
+          "script": "rebuild_sources.py",
+          "exit_code": 0,
+          "seconds": 0.09
+        },
+        {
+          "script": "render_figures.py",
+          "exit_code": 0,
+          "seconds": 60.96
+        },
+        {
+          "script": "build_all.py",
+          "exit_code": 0,
+          "seconds": 22.61
+        }
+      ],
+      "figure_png_count": 23,
+      "figure_png_sha256_equal": true,
+      "documents": [
+        {
+          "name": "第034套_学生详解版.pdf",
+          "pages": 77,
+          "all_text_equal": true,
+          "all_72dpi_pixels_equal": true
+        },
+        {
+          "name": "第034套_教师备课版.pdf",
+          "pages": 108,
+          "all_text_equal": true,
+          "all_72dpi_pixels_equal": true
+        },
+        {
+          "name": "第034套_试卷版.pdf",
+          "pages": 10,
+          "all_text_equal": true,
+          "all_72dpi_pixels_equal": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "set": 35,
+      "generated_files_removed_before_rebuild": true,
+      "steps": [
+        {
+          "script": "rebuild_sources.py",
+          "exit_code": 0,
+          "seconds": 0.07
+        },
+        {
+          "script": "render_figures.py",
+          "exit_code": 0,
+          "seconds": 14.27
+        },
+        {
+          "script": "build_all.py",
+          "exit_code": 0,
+          "seconds": 37.87
+        }
+      ],
+      "figure_png_count": 17,
+      "figure_png_sha256_equal": true,
+      "documents": [
+        {
+          "name": "第035套_学生详解版.pdf",
+          "pages": 60,
+          "all_text_equal": true,
+          "all_72dpi_pixels_equal": true
+        },
+        {
+          "name": "第035套_教师备课版.pdf",
+          "pages": 84,
+          "all_text_equal": true,
+          "all_72dpi_pixels_equal": true
+        },
+        {
+          "name": "第035套_试卷版.pdf",
+          "pages": 9,
+          "all_text_equal": true,
+          "all_72dpi_pixels_equal": true
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "total_figures": 120,
+  "total_pages": 858
+}

@@ -1,0 +1,28 @@
+{
+  "question": 3,
+  "actual_reviewed": true,
+  "reviewed_local_time": "2026-10-08 07:54:42",
+  "scope": "分题工作预览；整套合并后须重新验收，不代表整套完成",
+  "student": {
+    "pdf_sha256": "edccb7081b96763a9b0d78fa8f9be32bfe4782bb5510660b722ff00eb632a680",
+    "total_pages": 15,
+    "body_pages": 14,
+    "extracted_body_nonspace": 9003,
+    "overview_pages_reviewed": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15],
+    "high_resolution_pages_reviewed": [6,7,9,11,12,14,15]
+  },
+  "teacher": {
+    "pdf_sha256": "8aaedd55a6d8b771f31e89f26dcbe49b57d7a323ffb040b02236519ee768d807",
+    "total_pages": 19,
+    "body_pages": 18,
+    "extracted_body_nonspace": 12448,
+    "overview_pages_reviewed": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19],
+    "high_resolution_pages_reviewed": [18,19]
+  },
+  "figures_reviewed": ["question-03", "forces-03", "equilibria-03", "farfield-03", "perturbation-03", "nearstar-03"],
+  "layout_warnings": [],
+  "qpdf_check_passed": true,
+  "physics_checks_passed": true,
+  "condition_pending": "第三问的总波动初值未给；受迫分量单独求出且已明示条件，仍等待用户确认，不据此计整套完成",
+  "repairs": ["统一瞬时半径与平均半径符号", "移开远场角度标注", "二阶差商系数计算补全并拆分长公式", "长行内数学拆开避免越界", "近星图尺寸收紧并将量纲检查放回对应推导，消除稀疏尾页"]
+}

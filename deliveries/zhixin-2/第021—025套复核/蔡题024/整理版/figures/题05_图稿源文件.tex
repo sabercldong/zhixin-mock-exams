@@ -1,0 +1,60 @@
+\documentclass[tikz,border=5pt]{standalone}
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath}
+\usetikzlibrary{arrows.meta,calc}
+\definecolor{blue}{RGB}{45,98,142}
+\definecolor{red}{RGB}{175,67,51}
+\definecolor{green}{RGB}{60,117,87}
+\begin{document}
+\begin{tikzpicture}[x={(-.96cm,-.39936cm)},y={(1.28cm,-.29952cm)},z={(0cm,1.52cm)}]
+\draw[fill=blue!4] (0,0,0)circle(1.6cm);
+\draw[gray,dashed](0,0,0)ellipse(1.6cm and .50cm);
+\draw[-{Stealth}](0,0,0)--(3.1,0,0)node[left]{$x$};
+\draw[-{Stealth}](0,0,0)--(0,2.6,0)node[right]{$y$};
+\draw[-{Stealth}](0,0,0)--(0,0,2.8)node[above]{$z$};
+\fill(0,0,0)circle(1.5pt);\node[below right]at(0,0,0){$O$};
+\fill[red](2.5,0,0)circle(2.5pt);\node[left]at(2.5,0,0){$A(5R/2,0,0)$};
+\fill[red](0,0,1.5)circle(2.5pt);\node[right]at(0,0,1.5){$B(0,0,3R/2)$};
+\draw[green,dashed](.5,0,0)--(.5,.5,0)--(.5,.5,.5)--(0,0,.5);
+\draw[green,dashed](0,0,0)--(.5,.5,.5);
+\fill[green](.5,.5,.5)circle(2.5pt);
+\draw[green](.5,.5,.5)--(0,2,-.4)node[right,black]{$P(R/2,R/2,R/2)$};
+\node at(0,0,-1.6){$OP=\sqrt3R/2<R$；虚线表示空间坐标投影};
+\end{tikzpicture}
+\begin{tikzpicture}
+\draw[fill=blue!4](0,0)circle(1.6);\draw[gray,dashed](0,0)ellipse(1.6 and .45);
+\coordinate(P)at(.3,.2);\fill[green](P)circle(3pt);\node[below]at(P){$P$};
+\draw[red,thick,-{Stealth}](P)--(.8,-1)node[right]{$\boldsymbol E_{\rm ext}$};
+\draw[blue,thick,-{Stealth}](P)--(-.2,1.4);\node[blue]at(-.5,1.95){$\boldsymbol E_{\rm ind}$};
+\node at(0,-2.2){$\boldsymbol E_{\rm ext}+\boldsymbol E_{\rm ind}=0$};
+\node at(0,-2.8){内部电场关系；箭头为矢量示意};
+\end{tikzpicture}
+\begin{tikzpicture}[x={(-.96cm,-.39936cm)},y={(1.28cm,-.29952cm)},z={(0cm,1.52cm)}]
+\draw[fill=blue!4](0,0,0)circle(1.6cm);\draw[gray,dashed](0,0,0)ellipse(1.6cm and .50cm);
+\draw[gray,dashed](2.5,0,0)--(0,0,0)--(0,0,1.5);
+\fill[red](2.5,0,0)circle(2.5pt);\node[left]at(2.5,0,0){$Q$};
+\fill[red](0,0,1.5)circle(2.5pt);\node[right]at(0,0,1.5){$Q$};
+\fill[blue](.4,0,0)circle(2.5pt);\draw[blue](.4,0,0)--(1.7,0,0)node[left,black]{$-2Q/5$};
+\fill[blue](0,0,.66667)circle(2.5pt);\node[right]at(0,0,.66667){$-2Q/3$};
+\fill[green](0,0,0)circle(2.5pt);\draw[green](0,0,0)--(.5,0,-1.1)node[below,black]{$q_c=16Q/15$};
+\node at(0,0,-1.9){球外等效构造：镜像总量为零；球面等势};
+\end{tikzpicture}
+\begin{tikzpicture}
+\draw[fill=blue!4](0,0)circle(1.3);\draw[gray,dashed](0,0)ellipse(1.3 and .35);
+\draw[gray,-{Stealth}](-1.6,0)--(4,0)node[right]{$z$};
+\fill[green](0,0)circle(2.5pt);\node at(0,-.8){$q_0=RV/k_e$};
+\fill[blue](.52,0)circle(2.5pt);\draw[blue](.52,0)--(.8,1.5)node[above,black]{$q'=-QR/d$};
+\fill[red](3.25,0)circle(3pt);\node at(3.25,1.35){$Q$};
+\draw[red,thick,-{Stealth}](3.25,.45)--(2.2,.45)node[midway,above]{$F'<0$};
+\draw[green,thick,-{Stealth}](3.25,-.45)--(4.3,-.45)node[midway,below]{$F_0$};
+\draw[gray,<->](.52,-1.8)--node[below]{$d-R^2/d$}(3.25,-1.8);
+\node at(1.3,-2.6){$F_0$ 按 $QV>0$ 示意；球外观察点};
+\end{tikzpicture}
+\begin{tikzpicture}[x=2cm,y=1.8cm]
+\draw[-{Stealth}](.8,0)--(3.4,0)node[right]{$d/R$};
+\draw[-{Stealth}](1,0)--(1,2.4)node[above]{$RH(d)$};
+\draw[blue,thick,domain=1.39:3.2,samples=100]plot(\x,{\x^3/(\x^2-1)^2});
+\draw[red,dashed](1,.8)--(3.3,.8)node[right]{$RV/(k_eQ)$};
+\node[below]at(1,0){$1$};\node[align=center]at(2,-.6){$H'(d)<0$\\异号或零 $V/Q$ 时无有限零力点};
+\end{tikzpicture}
+\end{document}
