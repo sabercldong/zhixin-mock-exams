@@ -1,0 +1,156 @@
+\documentclass[tikz,border=5pt]{standalone}
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath,amssymb}
+\usetikzlibrary{arrows.meta,calc,patterns}
+\definecolor{ink}{HTML}{243447}\definecolor{blue}{HTML}{2765A2}
+\definecolor{green}{HTML}{3F7D5B}\definecolor{red}{HTML}{B74739}
+\tikzset{body/.style={draw=ink,thick},vec/.style={draw=blue,thick,-{Latex}},
+guide/.style={gray!60,dashed},dim/.style={ink,{Latex}-{Latex}},
+line cap=round,line join=round}
+\newcommand{\floorline}[1]{\draw[body](-.3,0)--(#1,0);}
+\begin{document}
+\begin{tikzpicture}
+\floorline{4.6}
+\foreach\x in{0,.4,...,4.4}\draw[gray](\x,0)--++(-.17,-.17);
+\filldraw[fill=blue!7,draw=ink,thick](0,0)--(4,0)--(4,2)--cycle;
+\filldraw[fill=green!6,draw=ink,thick](1.5,.75)--(2.4,1.2)--(2.4,3.1)--(1.5,3.1)--cycle;
+\draw[body](.05,2.85)--(1.42,2.85)--(1.42,2.4)--(.05,2.4);
+\draw[body](3.8,2.85)--(2.48,2.85)--(2.48,2.4)--(3.8,2.4);
+\node at(1.95,2.45){$B,m$};\node at(3.15,.6){$A,m$};
+\draw[blue](.65,0)arc(0:26.565:.65)node[pos=.7,right]{$\theta$};
+\draw[vec](2.9,1.1)--(4.3,1.1)node[right]{$F$};
+\draw[vec](5.15,0)--(6.1,0)node[right]{$x$};
+\draw[vec](5.15,0)--(5.15,1.05)node[above]{$y$};
+\node[align=center]at(1.9,3.65){光滑竖直导向};
+\end{tikzpicture}
+\begin{tikzpicture}
+\floorline{5.4}
+\draw[gray,dashed,thick](0,0)--(4,0)--(4,2)--cycle;
+\draw[gray,dashed,thick](1.5,.75)--(2.4,1.2)--(2.4,3.1)--(1.5,3.1)--cycle;
+\filldraw[fill=blue!5,draw=blue,thick](.8,0)--(4.8,0)--(4.8,2)--cycle;
+\filldraw[fill=green!8,draw=green,thick](1.5,.35)--(2.4,.8)--(2.4,2.7)--(1.5,2.7)--cycle;
+\draw[guide](1.5,.15)--(1.5,3.45);
+\draw[guide](2.4,.6)--(2.4,3.45);
+\draw[dim](0,-.45)--(.8,-.45)node[midway,below]{$\Delta X$};
+\draw[dim](2.85,2.7)--(2.85,3.1)node[right,midway]{$\xi\Delta X$};
+\node[gray,left]at(-.05,.55){初位置};
+\node[blue,right]at(4.8,.55){末位置};
+\draw[vec](4.2,.9)--(5.3,.9)node[right]{$v$};
+\draw[vec](1.12,2.7)--(1.12,1.65)node[left,midway]{$v_B=-\xi v$};
+\node at(2.6,-1.25){$\xi=\tan\theta,\qquad\Delta y_B=-\xi\Delta X$};
+\end{tikzpicture}
+\begin{tikzpicture}
+\filldraw[fill=blue!5,draw=ink](0,0)--(3,0)--(3,1.5)--cycle;
+\node at(2.25,.45){$A$};
+\draw[vec](1.05,0)--(1.05,1.1)node[above]{$Q$};
+\draw[red,thick,-{Latex}](1.85,0)--(.6,0)node[midway,below]{$\mu Q$};
+\draw[vec](2,.58)--(2,-.7)node[below]{$mg$};
+\draw[vec](3,.85)--(4.1,.85)node[right]{$F$};
+\draw[green,thick,-{Latex}](1.65,.825)--(2.2,-.275)node[right]{$-N\boldsymbol n$};
+\draw[red,thick,-{Latex}](1.65,.825)--(.55,.275)node[above left]{$-\mu N\boldsymbol\tau$};
+\begin{scope}[shift={(6,0)}]
+\filldraw[fill=green!5,draw=ink](0,.2)--(.9,.65)--(.9,2.3)--(0,2.3)--cycle;
+\node at(.45,1.75){$B$};
+\draw[green,thick,-{Latex}](.42,.41)--(-.24,1.73)node[above left]{$N\boldsymbol n$};
+\draw[red,thick,-{Latex}](.42,.41)--(1.52,.96)node[right]{$\mu N\boldsymbol\tau$};
+\draw[vec](.5,1.4)--(.5,-.65)node[below]{$mg$};
+\draw[vec](.9,2.08)--(1.95,2.08)node[right]{$H$};
+\end{scope}
+\node at(4,-1.3){$v>0$：接触摩擦沿相对滑动反方向};
+\end{tikzpicture}
+\begin{tikzpicture}
+\draw[vec](-3.2,0)--(3.2,0)node[right]{$F$};
+\draw[green,line width=3pt](-2.2,0)--(1.6,0);
+\fill[green](-2.2,0)circle(.07)node[above=7pt]{$F_-$};
+\fill[green](1.6,0)circle(.07)node[above=7pt]{$F_+$};
+\draw(0,-.07)--(0,.07)node[above=7pt]{$0$};
+\node[left]at(-3.3,0){$\mu\xi<1$};
+\node at(0,-.55){静止允许区间};
+\draw[vec](-3.2,-1.6)--(3.2,-1.6)node[right]{$F$};
+\draw[green,line width=3pt,-{Latex}] (1.6,-1.6)--(-3.0,-1.6);
+\fill[green](1.6,-1.6)circle(.07)node[above=7pt]{$F_+$};
+\draw(0,-1.67)--(0,-1.53)node[above=7pt]{$0$};
+\node[left]at(-3.3,-1.6){$\mu\xi\ge1$};
+\node at(0,-2.2){理想自锁：负方向无有限下限};
+\end{tikzpicture}
+\begin{tikzpicture}[x=.9cm,y=.9cm]
+\begin{scope}
+\draw[vec](-.2,0)--(3.4,0)node[right]{$F$};
+\draw[vec](0,-.35)--(0,2.5)node[above]{$a$};
+\draw[green,line width=1.8pt](0,0)--(1.05,0);
+\draw[blue,thick](1.05,0)--(2.6,1.8);
+\draw[guide](0,1.8)--(2.6,1.8)--(2.6,0);
+\filldraw[fill=white,draw=blue](2.6,1.8)circle(.055);
+\node[below]at(1.05,0){$F_+$};\node[below]at(2.6,0){$F_{\rm d}$};
+\node[left]at(0,1.8){$g/\xi$};
+\node[align=center]at(1.5,-1.05){$D_+>0$\\正常分支};
+\end{scope}
+\begin{scope}[shift={(5.2,0)}]
+\draw[vec](-.2,0)--(3.25,0)node[right]{$F$};
+\draw[vec](0,-1.1)--(0,2.5)node[above]{$a$};
+\draw[green,line width=1.8pt](0,0)--(1.5,0);
+\draw[blue,line width=1.8pt](1.5,-1.05)--(1.5,1.8);
+\draw[blue,-{Latex}](1.5,-.6)--(1.5,-1.05);
+\draw[guide](0,1.8)--(1.5,1.8);
+\node[left]at(0,1.8){$g/\xi$};
+\node[below right]at(1.55,0){$F_+=F_{\rm d}$};
+\node[align=center]at(1.5,-1.85){$D_+=0$\\既有右滑动的允许集合};
+\end{scope}
+\begin{scope}[shift={(10.4,0)}]
+\draw[vec](-.2,0)--(3.3,0)node[right]{$F$};
+\draw[vec](0,-.35)--(0,2.5)node[above]{$a$};
+\draw[green,line width=1.8pt](0,0)--(2.6,0);
+\draw[blue,thick](1,1.8)--(2.6,0);
+\draw[guide](0,1.8)--(1,1.8)--(1,0);
+\filldraw[fill=white,draw=blue](1,1.8)circle(.055);
+\node[below]at(1,0){$F_{\rm d}$};\node[below]at(2.6,0){$F_+$};
+\node[left]at(0,1.8){$g/\xi$};
+\node[align=center]at(1.5,-1.05){$D_+<0$\\静止与右滑动分支并存};
+\end{scope}
+\end{tikzpicture}
+\begin{tikzpicture}[x=2.1cm,y=1.5cm]
+\draw[vec](-.08,0)--(3.35,0)node[right]{$t/t_0$};
+\draw[vec](0,-.15)--(0,1.4)node[above]{$F/F_0$};
+\draw[guide](0,.6)--(3.15,.6)node[right,text=ink]{$F_+/F_0$};
+\foreach\n in{0,1,2}{
+\draw[blue,thick](\n,0)--({\n+1},1);
+\draw[blue,dashed]({\n+1},1)--({\n+1},0);
+\fill[blue](\n,0)circle(.035);
+\draw[guide]({\n+.6},0)--({\n+.6},.6);
+}
+\node[below=8pt]at(.6,0){$t_1/t_0$};
+\foreach\x in{1,2,3}\draw(\x,.045)--(\x,-.045)node[below=8pt]{$\x$};
+\node[left]at(0,1){$1$};
+\node at(1.6,-.7){$t_1/t_0=F_+/F_0$；力重置不造成速度跃变};
+\end{tikzpicture}
+\begin{tikzpicture}[x=1.25cm,y=1cm]
+\foreach\xx/\yy/\ratio/\ys/\name in{0/0/.8/1/{全程静止},5.2/0/1.5/18/{脉冲},0/-3.6/2/6/{相切临界},5.2/-3.6/3/.85/{逐周期上升}}{
+\begin{scope}[shift={(\xx,\yy)}]
+\draw[vec](0,0)--(3.35,0)node[right]{$t/t_0$};
+\draw[vec](0,-.12)--(0,1.8)node[above]{$v/(\kappa F_+t_0)$};
+\foreach\n in{1,2,3}\draw[guide](\n,0)--(\n,1.55);
+\pgfmathsetmacro{\AA}{\ratio}
+\ifdim\AA pt<1pt
+\draw[blue,line width=1.4pt](0,0)--(3,0);
+\else
+\pgfmathsetmacro{\tstart}{1/\AA}
+\pgfmathsetmacro{\vp}{(\AA-1)^2/(2*\AA)}
+\draw[blue,line width=1.3pt](0,0)--(\tstart,0);
+\draw[blue,thick,domain=\tstart:1,samples=65]plot(\x,{\ys*.5*\AA*(\x-\tstart)^2});
+\foreach\n in{1,2}{
+\ifdim\AA pt<2pt
+\pgfmathsetmacro{\ustop}{(1-sqrt(\AA*(2-\AA)))/\AA}
+\draw[blue,thick,domain=0:\ustop,samples=30]plot({\n+\x},{\ys*(\vp+.5*\AA*\x^2-\x)});
+\draw[blue,line width=1.3pt]({\n+\ustop},0)--({\n+\tstart},0);
+\draw[blue,thick,domain=\tstart:1,samples=65]plot({\n+\x},{\ys*.5*\AA*(\x-\tstart)^2});
+\else
+\draw[blue,thick,domain=0:1,samples=100]plot({\n+\x},{\ys*(\vp+(\n-1)*(\AA/2-1)+.5*\AA*\x^2-\x)});
+\fi
+}
+\pgfmathsetmacro{\topval}{1.5/\ys}
+\node[left]at(0,1.5){\pgfmathprintnumber[precision=3]{\topval}};
+\fi
+\node[align=center]at(1.5,-.6){\name\\$F_0/F_+=\ratio$};
+\end{scope}}
+\end{tikzpicture}
+\end{document}

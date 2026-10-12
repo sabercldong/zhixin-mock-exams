@@ -1,0 +1,894 @@
+{
+  "check_count": 96,
+  "supplementary_check_count": 8,
+  "all_passed": true,
+  "checks": [
+    {
+      "name": "01 interior force integral",
+      "actual": -0.32000000000000006,
+      "expected": -0.32,
+      "max_abs_error": 5.551115123125783e-17,
+      "passed": true
+    },
+    {
+      "name": "01 exterior force integral",
+      "actual": 0.6931471805599453,
+      "expected": 0.6931471805599453,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "01 critical-speed number",
+      "actual": 0.6797779934458726,
+      "expected": 0.6797779934458726,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "01 boundary critical effective energy",
+      "actual": 0.9241962407465938,
+      "expected": 0.9241962407465938,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "01 constant exterior circular speed",
+      "actual": 1.0,
+      "expected": 1,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "01 specified perpendicular exit position",
+      "actual": [
+        -1.1102230246251565e-16,
+        0.9999999999999998
+      ],
+      "expected": [
+        0,
+        1
+      ],
+      "max_abs_error": 2.220446049250313e-16,
+      "passed": true
+    },
+    {
+      "name": "01 exit speed conservation",
+      "actual": 2.9999999999999996,
+      "expected": 2.9999999999999996,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "01 angular momentum at exit",
+      "actual": -1.414213562373095,
+      "expected": -1.414213562373095,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "01 entry angle",
+      "actual": 54.735610317245346,
+      "expected": 54.735610317245346,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "01 first-exit root",
+      "actual": 0.785398163397905,
+      "expected": 0.7853981633974483,
+      "max_abs_error": 4.567457523307894e-13,
+      "passed": true
+    },
+    {
+      "name": "01 repulsive center time",
+      "actual": 0.5493061443337796,
+      "expected": 0.5493061443340549,
+      "max_abs_error": 2.753353101070388e-13,
+      "passed": true
+    },
+    {
+      "name": "01 center launch boundary threshold",
+      "actual": 1.0,
+      "expected": 1,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "02 transverse boost",
+      "actual": 0.5144957554275266,
+      "expected": 0.5144957554275266,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "02 first transformed vector",
+      "actual": [
+        -0.5144957554275266,
+        0.5144957554275266
+      ],
+      "expected": [
+        -0.5144957554275266,
+        0.5144957554275266
+      ],
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "02 second transformed vector",
+      "actual": [
+        -0.5144957554275266,
+        -0.5144957554275266
+      ],
+      "expected": [
+        -0.5144957554275266,
+        -0.5144957554275266
+      ],
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "02 transformed orthogonality",
+      "actual": 0.0,
+      "expected": 0,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "02 transformed speed",
+      "actual": 0.727606875108999,
+      "expected": 0.7276068751089989,
+      "max_abs_error": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "name": "02 spatial crossing x",
+      "actual": 0.58309518948453,
+      "expected": 0.58309518948453,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "02 spatial crossing y",
+      "actual": -0.58309518948453,
+      "expected": -0.58309518948453,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "02 crossing event time difference",
+      "actual": 1.666666666666666,
+      "expected": 1.6666666666666667,
+      "max_abs_error": 6.661338147750939e-16,
+      "passed": true
+    },
+    {
+      "name": "02 orthogonal transverse event difference",
+      "actual": 1.666666666666666,
+      "expected": 1.6666666666666667,
+      "max_abs_error": 6.661338147750939e-16,
+      "passed": true
+    },
+    {
+      "name": "02 variant 0.8c boost",
+      "actual": 0.6246950475544243,
+      "expected": 0.6246950475544243,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "02 variant 45-degree boost",
+      "actual": 0.552344770738994,
+      "expected": 0.552344770738994,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "02 classical dot condition",
+      "actual": 0.0,
+      "expected": 0,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "03 rope length",
+      "actual": 2.0,
+      "expected": 2,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "03 left geometric distance",
+      "actual": 1.1732050807568877,
+      "expected": 1.1732050807568877,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "03 right geometric distance",
+      "actual": 0.8267949192431123,
+      "expected": 0.8267949192431123,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "03 horizontal force balance",
+      "actual": 0.0,
+      "expected": 0,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "03 vertical force balance",
+      "actual": 1.0,
+      "expected": 1,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "03 left tension",
+      "actual": 0.3617912772790658,
+      "expected": 0.361791277986033,
+      "max_abs_error": 7.069672069981436e-10,
+      "passed": true
+    },
+    {
+      "name": "03 right tension",
+      "actual": 0.8065408672757264,
+      "expected": 0.806540867982694,
+      "max_abs_error": 7.069675955762023e-10,
+      "passed": true
+    },
+    {
+      "name": "03 wrap angle",
+      "actual": 1.9547297770898968,
+      "expected": 1.954729777162244,
+      "max_abs_error": 7.234723931048848e-11,
+      "passed": true
+    },
+    {
+      "name": "03 capstan coefficient",
+      "actual": 0.4101268188691381,
+      "expected": 0.410126819050202,
+      "max_abs_error": 1.8106388610661384e-10,
+      "passed": true
+    },
+    {
+      "name": "03 minimum tension",
+      "actual": 0.6123724356957946,
+      "expected": 0.6123724356957945,
+      "max_abs_error": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "name": "03 small-displacement coefficient",
+      "actual": 1.2087097789708514,
+      "expected": 1.2087097790114607,
+      "max_abs_error": 4.0609293705529126e-11,
+      "passed": true
+    },
+    {
+      "name": "03 lean at five wheel radii",
+      "actual": 0.08894991799933212,
+      "expected": 0.08894991799933212,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "04 initial node voltages",
+      "actual": [
+        0.0,
+        0.0
+      ],
+      "expected": [
+        0,
+        0
+      ],
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "04 initial right current",
+      "actual": 0.0,
+      "expected": 0,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "04 right heat integral",
+      "actual": 0.16666666666666627,
+      "expected": 0.16666666666666666,
+      "max_abs_error": 3.885780586188048e-16,
+      "passed": true
+    },
+    {
+      "name": "04 left heat integral",
+      "actual": 0.8333333333333325,
+      "expected": 0.8333333333333334,
+      "max_abs_error": 8.881784197001252e-16,
+      "passed": true
+    },
+    {
+      "name": "04 heat ratio",
+      "actual": 5.000000000000007,
+      "expected": 5,
+      "max_abs_error": 7.105427357601002e-15,
+      "passed": true
+    },
+    {
+      "name": "04 energy balance",
+      "actual": 0.9999999999999988,
+      "expected": 1,
+      "max_abs_error": 1.2212453270876722e-15,
+      "passed": true
+    },
+    {
+      "name": "04 node two differential equation",
+      "actual": 0.272608937662529,
+      "expected": 0.272608937662529,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "04 two decay sum",
+      "actual": 3.0,
+      "expected": 3,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "04 two decay product",
+      "actual": 0.9999999999999999,
+      "expected": 1,
+      "max_abs_error": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "name": "04 R2 twice heat ratio",
+      "actual": 3.0,
+      "expected": 3,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "04 R1 twice heat ratio",
+      "actual": 9,
+      "expected": 9,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "04 C1 twice right heat",
+      "actual": 0.125,
+      "expected": 0.125,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "05 opposite side 23",
+      "actual": 0.9999999999999999,
+      "expected": 1,
+      "max_abs_error": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "name": "05 opposite side 31",
+      "actual": 0.7937005259840998,
+      "expected": 0.7937005259840998,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "05 opposite side 12",
+      "actual": 0.6933612743506348,
+      "expected": 0.6933612743506348,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "05 mass center",
+      "actual": [
+        -2.220446049250313e-16,
+        0.0
+      ],
+      "expected": [
+        0,
+        0
+      ],
+      "max_abs_error": 2.220446049250313e-16,
+      "passed": true
+    },
+    {
+      "name": "05 central force first",
+      "actual": [
+        -10.23639929771917,
+        -18.952202011811355
+      ],
+      "expected": [
+        -10.236399297719174,
+        -18.95220201181136
+      ],
+      "max_abs_error": 3.552713678800501e-15,
+      "passed": true
+    },
+    {
+      "name": "05 central force second",
+      "actual": [
+        18.88477422500749,
+        -18.952202011811366
+      ],
+      "expected": [
+        18.884774225007483,
+        -18.95220201181136
+      ],
+      "max_abs_error": 7.105427357601002e-15,
+      "passed": true
+    },
+    {
+      "name": "05 central force third",
+      "actual": [
+        -6.883287288073953,
+        14.21415150885852
+      ],
+      "expected": [
+        -6.883287288073951,
+        14.214151508858517
+      ],
+      "max_abs_error": 3.552713678800501e-15,
+      "passed": true
+    },
+    {
+      "name": "05 energy-scale coefficient",
+      "actual": 42.00000000000001,
+      "expected": 42.0,
+      "max_abs_error": 7.105427357601002e-15,
+      "passed": true
+    },
+    {
+      "name": "05 force scale at two",
+      "actual": [
+        [
+          -2.5590998244297927,
+          -4.738050502952839
+        ],
+        [
+          4.7211935562518725,
+          -4.7380505029528415
+        ],
+        [
+          -1.7208218220184883,
+          3.55353787721463
+        ]
+      ],
+      "expected": [
+        [
+          -2.5590998244297927,
+          -4.738050502952839
+        ],
+        [
+          4.7211935562518725,
+          -4.7380505029528415
+        ],
+        [
+          -1.7208218220184883,
+          3.55353787721463
+        ]
+      ],
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "05 kinetic at double scale",
+      "actual": 34.44402543998405,
+      "expected": 34.44402543998406,
+      "max_abs_error": 7.105427357601002e-15,
+      "passed": true
+    },
+    {
+      "name": "05 scale four terminal speed",
+      "actual": 4.58257569495584,
+      "expected": 4.58257569495584,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "05 variant impossible triangle margin",
+      "actual": -0.16666666666666674,
+      "expected": -0.16666666666666666,
+      "max_abs_error": 8.326672684688674e-17,
+      "passed": true
+    },
+    {
+      "name": "06 initial mass equilibrium",
+      "actual": 1,
+      "expected": 1,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "06 loaded inward turning energy",
+      "actual": 0.5,
+      "expected": 0.5,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "06 loaded circular equilibrium",
+      "actual": 0.6933612743506348,
+      "expected": 0.6933612743506348,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "06 loaded nearest radius",
+      "actual": 0.5000000000000063,
+      "expected": 0.5,
+      "max_abs_error": 6.328271240363392e-15,
+      "passed": true
+    },
+    {
+      "name": "06 loaded turn tangential speed",
+      "actual": 2.0,
+      "expected": 2,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "06 new-axis angular momentum",
+      "actual": 0.5,
+      "expected": 0.5,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "06 nail initial radial acceleration numerator",
+      "actual": 1.0,
+      "expected": 1,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "06 nail energy root",
+      "actual": 0.5,
+      "expected": 0.5,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "06 nail exact rise",
+      "actual": 0.30901699437494745,
+      "expected": 0.30901699437494745,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "06 mass factor two descent",
+      "actual": 0.3596117967977924,
+      "expected": 0.3596117967977924,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "06 nail at three quarters rise",
+      "actual": 0.16143782776614768,
+      "expected": 0.16143782776614768,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "06 small radial frequency lambda eleven",
+      "actual": 0.5,
+      "expected": 0.5,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "07 short first signed lens equation",
+      "actual": 0.1474456264653803,
+      "expected": 0.14744562646538031,
+      "max_abs_error": 2.7755575615628914e-17,
+      "passed": true
+    },
+    {
+      "name": "07 short second signed lens equation",
+      "actual": 0.2548912529307606,
+      "expected": 0.2548912529307607,
+      "max_abs_error": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "name": "07 short point-source output slope",
+      "actual": 1.7763568394002505e-15,
+      "expected": 0,
+      "max_abs_error": 1.7763568394002505e-15,
+      "passed": true
+    },
+    {
+      "name": "07 short parallel output focus",
+      "actual": 1.7763568394002505e-15,
+      "expected": 0,
+      "max_abs_error": 1.7763568394002505e-15,
+      "passed": true
+    },
+    {
+      "name": "07 short determinant",
+      "actual": 1.0000000000000018,
+      "expected": 1,
+      "max_abs_error": 1.7763568394002505e-15,
+      "passed": true
+    },
+    {
+      "name": "07 short inversion quadratic",
+      "actual": 1.4210854715202004e-14,
+      "expected": 0,
+      "max_abs_error": 1.4210854715202004e-14,
+      "passed": true
+    },
+    {
+      "name": "07 long first signed lens equation",
+      "actual": 0.03255437353461972,
+      "expected": 0.03255437353461971,
+      "max_abs_error": 1.3877787807814457e-17,
+      "passed": true
+    },
+    {
+      "name": "07 long second signed lens equation",
+      "actual": 0.025108747069239545,
+      "expected": 0.025108747069239427,
+      "max_abs_error": 1.1796119636642288e-16,
+      "passed": true
+    },
+    {
+      "name": "07 long point-source output slope",
+      "actual": 0.0,
+      "expected": 0,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "07 long parallel output focus",
+      "actual": 1.6653345369377348e-16,
+      "expected": 0,
+      "max_abs_error": 1.6653345369377348e-16,
+      "passed": true
+    },
+    {
+      "name": "07 long determinant",
+      "actual": 1.0000000000000002,
+      "expected": 1,
+      "max_abs_error": 2.220446049250313e-16,
+      "passed": true
+    },
+    {
+      "name": "07 long inversion quadratic",
+      "actual": 0.0,
+      "expected": 0,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "08 Bohr radius normalized to stated constants",
+      "actual": 5.3132984785140005,
+      "expected": 5.313298478502108,
+      "max_abs_error": 1.1892709039784677e-11,
+      "passed": true
+    },
+    {
+      "name": "08 speed normalized",
+      "actual": 2.181710017102502,
+      "expected": 2.181710017068101,
+      "max_abs_error": 3.440092655182525e-11,
+      "passed": true
+    },
+    {
+      "name": "08 nuclear self field",
+      "actual": 12.364842291587037,
+      "expected": 12.364842287764153,
+      "max_abs_error": 3.822883343218564e-09,
+      "passed": true
+    },
+    {
+      "name": "08 self field closed form",
+      "actual": 12.364842291587035,
+      "expected": 12.364842291587037,
+      "max_abs_error": 1.7763568394002505e-15,
+      "passed": true
+    },
+    {
+      "name": "08 binding energy normalized",
+      "actual": -2.1657356624200568,
+      "expected": -2.16573566239593,
+      "max_abs_error": 2.4126922681944052e-11,
+      "passed": true
+    },
+    {
+      "name": "08 zero-field transition frequency normalized",
+      "actual": 2.4506664858404386,
+      "expected": 2.4506664858424,
+      "max_abs_error": 1.9615420399077266e-12,
+      "passed": true
+    },
+    {
+      "name": "08 linear frequency slope normalized",
+      "actual": 1.3991643348738054,
+      "expected": 1.3991643349077276,
+      "max_abs_error": 3.392219838360688e-11,
+      "passed": true
+    },
+    {
+      "name": "08 second orbit self field",
+      "actual": 0.3864013216120949,
+      "expected": 0.38640132149263,
+      "max_abs_error": 1.194648824309752e-10,
+      "passed": true
+    },
+    {
+      "name": "08 literal h radius ratio",
+      "actual": 39.47841760435742,
+      "expected": 39.47841760435743,
+      "max_abs_error": 1.4210854715202004e-14,
+      "passed": true
+    },
+    {
+      "name": "08 literal h self-field ratio",
+      "actual": 0.00010211761384541833,
+      "expected": 0.00010211761384541831,
+      "max_abs_error": 1.3552527156068805e-20,
+      "passed": true
+    },
+    {
+      "name": "08 radius second-order limit",
+      "actual": -0.9999955604689248,
+      "expected": -1,
+      "max_abs_error": 4.43953107520656e-06,
+      "passed": true
+    },
+    {
+      "name": "08 energy keeps first-order constant",
+      "actual": 1.0004999995000263,
+      "expected": 1.0005,
+      "max_abs_error": 4.999736180621994e-10,
+      "passed": true
+    }
+  ],
+  "supplementary_checks": [
+    {
+      "name": "01 19 direct harmonic trajectories and first-exit interiors",
+      "passed": true,
+      "details": {
+        "max_exit_error": 4.284989599108819e-12,
+        "largest_interior_radius_squared": 0.9959450802034058
+      }
+    },
+    {
+      "name": "02 165 nondegenerate full transformations",
+      "passed": true,
+      "details": {
+        "max_dot": 2.1649348980190553e-15,
+        "max_transformed_speed": 0.9999472595217332,
+        "same_velocity_remains_identical": true
+      }
+    },
+    {
+      "name": "03 151 positive-tension force balances and capstan divergence",
+      "passed": true,
+      "details": {
+        "max_residual": 2.220446049250313e-16,
+        "min_tension": 0.00017318258465322375,
+        "edge_friction_coefficients": [
+          1.9454307310842913,
+          3.0372282462798883,
+          4.135507970081322,
+          5.234763439957007
+        ]
+      }
+    },
+    {
+      "name": "04 six independent two-node ODE heat accumulations",
+      "passed": true,
+      "details": {
+        "max_heat_error": 7.257194845067261e-11,
+        "ratios": [
+          5.000000000130661,
+          3.000000000100543,
+          9.00000000015813,
+          11.000000000300538,
+          0.6000000000206424,
+          146.00000000157212
+        ]
+      }
+    },
+    {
+      "name": "05 full 12-component Coulomb ODE versus independent scale ODE",
+      "passed": true,
+      "details": {
+        "max_position_error": 5.607092568027383e-11,
+        "max_energy_error": 1.1681663636409212e-08,
+        "unequal_masses": [
+          1.0,
+          2.0,
+          4.0
+        ],
+        "charge_mass_ratios": [
+          1.0,
+          2.0,
+          3.0
+        ]
+      }
+    },
+    {
+      "name": "06 six exact finite-mass radial turning events",
+      "passed": true,
+      "details": {
+        "max_turning_error": 1.2143730465652425e-11,
+        "turns": [
+          {
+            "lam": 1.0,
+            "added": true,
+            "radius": 0.5000000000037327,
+            "time": 1.8309003957949483
+          },
+          {
+            "lam": 1.0,
+            "added": false,
+            "radius": 0.8090169943628037,
+            "time": 2.0849334940778412
+          },
+          {
+            "lam": 11.0,
+            "added": true,
+            "radius": 0.5000000000035631,
+            "time": 1.6094512956623173
+          },
+          {
+            "lam": 11.0,
+            "added": false,
+            "radius": 0.8090169943636757,
+            "time": 1.5398254342709508
+          },
+          {
+            "lam": 100.0,
+            "added": true,
+            "radius": 0.5000000000035512,
+            "time": 1.588246733079473
+          },
+          {
+            "lam": 100.0,
+            "added": false,
+            "radius": 0.8090169943637443,
+            "time": 1.481623628230617
+          }
+        ]
+      }
+    },
+    {
+      "name": "07 164 rays for both pairs and three dimensional scalings",
+      "passed": true,
+      "details": {
+        "max_ray_error": 3.552713678800501e-15,
+        "focal_pairs": [
+          [
+            6.782161153045772,
+            3.923241729568659
+          ],
+          [
+            30.71783884695423,
+            39.82675827043134
+          ]
+        ]
+      }
+    },
+    {
+      "name": "08 301 polar ODE points and signed-field stationary roots",
+      "passed": true,
+      "details": {
+        "max_canonical_error": 1.4413803484103482e-11,
+        "max_energy_error": 1.1274869926580777e-11,
+        "signed_radius_errors": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    }
+  ]
+}

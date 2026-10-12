@@ -1,0 +1,91 @@
+\documentclass[tikz,border=5pt]{standalone}
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath,amssymb}
+\usetikzlibrary{arrows.meta,calc,angles,quotes,patterns,decorations.pathmorphing}
+\definecolor{field}{HTML}{176B9B}
+\definecolor{force}{HTML}{B64B32}
+\tikzset{>=Latex,line width=.8pt,every node/.style={font=\small},field/.style={color=field},force/.style={color=force},body/.style={draw=black,fill=blue!6},ghost/.style={dashed,gray},labelbox/.style={fill=white,inner sep=1.5pt}}
+\begin{document}
+\begin{tikzpicture}
+\fill[blue!3](0,0)ellipse(3.4 and 1.15);
+\draw[ghost](3.4,0)arc(0:180:3.4 and 1.15);
+\draw(-3.4,0)arc(180:360:3.4 and 1.15);
+\shade[ball color=orange!65](0,0)circle(.42);
+\shade[ball color=blue!45](2.6,-.74)circle(.13);
+\draw[->](0,0)--(2.6,-.74)node[midway,below]{$R_P$};
+\node[above]at(0,.55){CZ星};
+\node[below right]at(2.6,-.74){行星};
+\draw[->,field](3.9,0)--(5.8,.28)node[right]{观察者};
+\draw[ghost](0,0)--(5.7,0);
+\node[above]at(4.7,.5){视线与轨道面夹角 $\theta$};
+\node[below]at(0,-1.65){空间轨道投影，星体尺寸不按比例};
+\end{tikzpicture}
+\begin{tikzpicture}
+\shade[ball color=orange!65](0,0)circle(.65);
+\node[below]at(0,-.8){$r_C,T_C$};
+\draw[->,field](.8,.35)--(4.5,.35);
+\draw[->,field](.8,-.35)--(4.5,-.35);
+\draw[fill=blue!8](4.55,-.7)rectangle(4.65,.7);
+\draw[<->](0,-1.4)--(4.6,-1.4)node[midway,below]{$l_C$};
+\node[above]at(4.6,.85){单位接收面积};
+\node[above]at(2.5,1.45){$S_C=\sigma T_C^4(r_C/l_C)^2$};
+\end{tikzpicture}
+\begin{tikzpicture}
+\foreach\j in{0,1}{
+\begin{scope}[yshift=-2.7*\j cm]
+\draw[ghost](-1,-1)--(-1,.8);
+\draw[body](-1,.35)circle(.22)node[above=10pt]{恒星};
+\draw[body](-1,-.6)circle(.13)node[below=8pt]{行星};
+\ifnum\j=0
+\draw[->,field](-.73,.35)--(.1,.35);
+\node[field]at(.8,.75){$+v_C\cos\theta$};
+\draw[->,force](-1.2,-.6)--(-2,-.6);
+\else
+\draw[->,field](-1.27,.35)--(-2.1,.35);
+\node[field]at(.8,.75){$-v_C\cos\theta$};
+\draw[->,force](-.8,-.6)--(0,-.6);
+\fi
+\draw[->](2.2,0)--(3.7,0)node[right]{视线};
+\end{scope}}
+\node[below]at(1,-4.1){$\Delta\nu/\nu=2v_C\cos\theta/c$};
+\node[above]at(1,1.1){两个径向速度极值时刻};
+\end{tikzpicture}
+\begin{tikzpicture}
+\shade[ball color=blue!45](0,0)circle(1);
+\foreach\y in{-.7,0,.7}\draw[->,field](-3,\y)--(-1.2,\y);
+\node[below,align=center]at(-2,-1.1){入射功率\\$\pi r_P^2F$};
+\foreach\a in{-70,-35,0,35,70}
+\draw[->,force]({1.1*cos(\a)},{1.1*sin(\a)})--({1.65*cos(\a)},{1.65*sin(\a)});
+\node[right,align=left]at(2,0){全表面辐射\\$4\pi r_P^2\sigma T_P^4$};
+\draw[->](-.8,.6)--(-1.4,1.7)node[above]{$A_B$ 反射};
+\end{tikzpicture}
+\begin{tikzpicture}
+\draw[body](0,0)circle(1.6);
+\draw[ghost](0,0)circle(1.73);
+\draw[->](-2.1,0)--(2.3,0)node[right]{$X$};
+\draw[->](0,-1.9)--(0,2)node[above]{$Y$};
+\draw[field,thick](-1.374,1.05)--(1.374,1.05);
+\draw[body](-1.374,1.05)circle(.13);
+\draw[body](1.374,1.05)circle(.13);
+\draw[<->](-1.374,1.5)--(1.374,1.5)node[midway,above]{$v_PT_L$};
+\draw[<->](.35,0)--(.35,1.05)node[midway,right,labelbox]{$b$};
+\draw[ghost](0,0)--(1.374,1.05)node[pos=.73,below right,labelbox]{$r_C+r_P$};
+\node[below]at(0,-2.4){接触判据作用于行星中心；尺寸为示意比例};
+\end{tikzpicture}
+\begin{tikzpicture}
+\path[fill=blue!12](-1.766,.35)arc(180:360:1.766 and .22)
+--(1.766,-.35)arc(0:-180:1.766 and .22)--cycle;
+\draw(0,0)circle(1.8);
+\draw[ghost](-1.766,.35)arc(180:0:1.766 and .22);
+\draw[field](-1.766,.35)arc(180:360:1.766 and .22);
+\draw[ghost](-1.766,-.35)arc(180:0:1.766 and .22);
+\draw[field](-1.766,-.35)arc(180:360:1.766 and .22);
+\draw[dash dot](0,-2.1)--(0,2.2)node[above]{轨道法线};
+\draw[->](0,0)--(2.15,0);
+\draw[->,field](0,0)--(1.766,.35);
+\draw(1.3,0)arc(0:11.21:1.3);
+\node[right]at(2,.4){$\theta_{\max}$};
+\node[right,align=left]at(2.4,-.6){可凌日的视线带\\$|\theta|\le\theta_{\max}$\\$\eta=\sin\theta_{\max}$};
+\fill(0,0)circle(1.5pt)node[below left]{$C$};
+\end{tikzpicture}
+\end{document}

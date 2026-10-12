@@ -1,0 +1,70 @@
+\documentclass[tikz,border=5pt]{standalone}
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath}
+\usetikzlibrary{arrows.meta,calc}
+\definecolor{blue}{RGB}{45,98,142}
+\definecolor{green}{RGB}{60,117,87}
+\definecolor{red}{RGB}{175,67,51}
+\tikzset{axis/.style={gray!60,dashed},ray/.style={blue,thick,-{Stealth}},vel/.style={green,thick,-{Stealth}}}
+\begin{document}
+\begin{tikzpicture}[scale=.95]
+\begin{scope}
+\node at (1.8,3.0){同向初态};
+\coordinate(A) at(0,0);\coordinate(B) at(2,0);\coordinate(C) at(3.2856,1.5321);
+\draw[axis](-.4,0)--(4.3,0);
+\draw[ray](A)--($(A)!1.16!(C)$);
+\draw[ray](B)--($(B)!1.2!(C)$);
+\draw[gray,<->](0,-.5)--node[below]{$l$}(2,-.5);
+\draw[gray] (.65,0) arc(0:25:.65);\node at(.92,.18){$\theta$};
+\draw[gray] (2.53,0) arc(0:50:.53);\node at(2.68,.4){$2\theta$};
+\fill(A)circle(1.5pt)node[below]{$A$};\fill(B)circle(1.5pt)node[below]{$B$};
+\fill(C)circle(1.5pt)node[above left]{$C$};
+\node at(2.95,.65){$r$};
+\end{scope}
+\begin{scope}[xshift=6cm]
+\node at(1.2,3){反向初态};
+\coordinate(A)at(0,0);\coordinate(B)at(3,0);\coordinate(C)at(2.25,1.299038);
+\draw[axis](-.4,0)--(3.7,0);
+\draw[ray](A)--($(A)!1.3!(C)$);\draw[ray](B)--($(B)!1.55!(C)$);
+\draw[gray,<->](0,-.5)--node[below]{$l$}(3,-.5);
+\draw[gray](.65,0)arc(0:30:.65);\node at(.92,.18){$\theta$};
+\draw[gray](2.45,0)arc(180:120:.55);\node at(2.22,.4){$2\theta$};
+\fill(A)circle(1.5pt)node[below]{$A$};\fill(B)circle(1.5pt)node[below]{$B$};\fill(C)circle(1.5pt)node[above left]{$C$};
+\node at(2.92,.95){$r$};
+\end{scope}
+\node[align=center]at(4.3,-1.55){同向：$\alpha_B=2\theta$；反向：$\alpha_B=\pi-2\theta$\\转角均以各自初始光束方向为基准};
+\end{tikzpicture}
+\begin{tikzpicture}[scale=1.7]
+\draw[axis](-.1,0)--(2.5,0)node[right]{$x/l$};\draw[axis](0,-.05)--(0,1.5)node[above]{$y/l$};
+\draw[blue,thick,domain=0:90,samples=61]plot({1+cos(\x)},{sin(\x)});
+\draw[green,thick,domain=0:45,samples=61]plot({1-cos(2*\x)/(1+2*cos(2*\x))},{sin(2*\x)/(1+2*cos(2*\x))});
+\fill(1,0)circle(1pt)node[below]{$B$};\fill(0,0)circle(1pt)node[below]{$A$};
+\fill(2,0)circle(1pt)node[below]{$C_0$};\fill(.66667,0)circle(1pt)node[below]{$C'_0$};
+\fill(1,1)circle(1pt)node[above]{$C_1=C'_1$};
+\node[blue]at(2.15,1.08){$r=l$};\node[green]at(.33,.65){$r=l/(1+2\cos2\theta)$};
+\node[align=center]at(1.2,-.6){两条轨迹在末位置相交\\不代表速度、加速度相同};
+\end{tikzpicture}
+\begin{tikzpicture}[scale=1.7]
+\coordinate(B)at(0,0);\coordinate(C)at(-.8,1.5);
+\draw[axis](-1.2,0)--(1.5,0)node[right]{$+x$};
+\draw[gray,dashed](B)--(C)node[midway,left]{$r$};
+\draw[gray](.42,0)arc(0:118:.42); \node at(.2,.67){$\alpha$};
+\fill(B)circle(1pt)node[below]{$B$};\fill(C)circle(1pt)node[above right]{$C$};
+\draw[blue,-{Stealth}](C)--++(-.45,.84)node[left]{$\boldsymbol e_r$};
+\draw[red,-{Stealth}](C)--++(-.84,-.45)node[left]{$\boldsymbol e_\alpha$};
+\draw[vel](C)--++(-.29,.54)node[above right]{$\dot r\boldsymbol e_r$};
+\draw[vel](C)--++(.8,.43)node[right]{$-2\omega r\boldsymbol e_\alpha$};
+\node[align=center]at(.2,-.7){$\dot\alpha=-2\omega$\\基底按顺时针转动};
+\end{tikzpicture}
+\begin{tikzpicture}[scale=1.65]
+\draw[axis](-.2,0)--(2.6,0);
+\fill(0,0)circle(1pt)node[below]{$A$};\fill(1,0)circle(1pt)node[below]{$B$};
+\fill(.6667,0)circle(1pt)node[below]{$C'_0$};\fill(2,0)circle(1pt)node[below]{$C_0$};
+\fill(1,1)circle(1pt)node[above left]{$C_1=C'_1$};
+\draw[blue,-{Stealth}](2,0)--(2,.65)node[right]{$\boldsymbol v_0$};
+\draw[green,-{Stealth}](.6667,0)--(.6667,.3)node[left]{$\boldsymbol v'_0$};
+\draw[blue,-{Stealth}](1,1)--(.4,1)node[left]{$\boldsymbol v_1$};
+\draw[green,-{Stealth}](1,1)--(1.45,1.9)node[right]{$\boldsymbol v'_1$};
+\node at(1.15,-.7){箭头表示方向；长度不按速度大小同比例};
+\end{tikzpicture}
+\end{document}

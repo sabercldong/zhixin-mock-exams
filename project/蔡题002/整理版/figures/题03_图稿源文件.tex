@@ -1,0 +1,60 @@
+\documentclass[multi=tikzpicture,border=8pt]{standalone}
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath,amssymb,tikz}
+\usetikzlibrary{arrows.meta,calc,decorations.pathmorphing}
+\definecolor{blue}{HTML}{17365D}
+\definecolor{red}{HTML}{AC3931}
+\tikzset{every node/.style={font=\small},arrow/.style={-{Stealth[length=2.8mm]},thick},dim/.style={|<->|,thin}}
+\begin{document}
+\begin{tikzpicture}
+
+\draw[very thick](0,0)--(0,3.2);\draw[very thick](6,0)--(6,3.2);
+\draw[very thick,blue](3.65,.18)--(3.65,3.2);\draw[thick](0,0)--(6,0);
+\node[above]at(3.65,3.2){$Q$};\node[above]at(0,3.2){接地};\node[above]at(6,3.2){接地};
+\draw[thick](0,0)--(0,-.6)--(6,-.6)--(6,0);\draw[thick](3,-.6)--(3,-.8);
+\draw[thick](2.7,-.8)--(3.3,-.8);\draw(2.8,-.95)--(3.2,-.95);\draw(2.9,-1.1)--(3.1,-1.1);
+\draw[dim](0,3.8)--node[above]{$d$}(6,3.8);
+\draw[dim](0,-1.5)--node[below]{$x$}(3.65,-1.5);\draw[dim](3.65,-1.5)--node[below]{$y=d-x$}(6,-1.5);
+\node[align=center]at(1.8,1.6){$N,T$\\$Sx$};\node[align=center]at(4.9,1.6){$N,T$\\$Sy$};
+
+\end{tikzpicture}
+\begin{tikzpicture}
+
+\draw[thick](0,0)rectangle(7,2.4);\draw[very thick,blue](4.6,0)--(4.6,2.4);
+\foreach \x in{.5,1.6,2.7,3.8}{\foreach \y in{.4,1,1.6,2.1}{\fill[blue](\x,\y)circle(2pt);}}
+\foreach \x in{4.9,5.4,5.9,6.4}{\foreach \y in{.4,1,1.6,2.1}{\fill[red](\x,\y)circle(2pt);}}
+\node[above]at(2.3,2.6){膨胀：$p_L\downarrow,\chi_L\downarrow$};
+\node[above]at(5.8,2.6){压缩：$p_R\uparrow,\chi_R\uparrow$};
+\draw[arrow](4.6,-1.15)--(5.7,-1.15)node[right]{$x$增加};
+\node[below]at(2.3,-.2){$p_L=p_0d/(2x)$};\node[below]at(5.8,-.2){$p_R=p_0d/(2y)$};
+
+\end{tikzpicture}
+\begin{tikzpicture}
+
+\draw[thick](0,0)--(0,2)--(2,2);\draw[thick](0,0)--(2,0);
+\draw[very thick](2,1.7)--(2,2.3);\draw[very thick](2.2,1.7)--(2.2,2.3);
+\draw[very thick](2,-.3)--(2,.3);\draw[very thick](2.2,-.3)--(2.2,.3);
+\draw[thick](2.2,2)--(4,2)--(4,0)--(2.2,0);
+\node[above]at(2.1,2.5){$C_L$};\node[below]at(2.1,-.5){$C_R$};
+\fill(0,1)circle(2pt)node[left]{中板$V,Q$};\fill(4,1)circle(2pt)node[right]{外板$0$};
+\node[below]at(2,-1.5){$Q=C_LV+C_RV$};
+
+\end{tikzpicture}
+\begin{tikzpicture}
+
+\draw[thick](0,0)--(0,2.6);\draw[very thick,blue](4,0)--(4,2.6);\draw[thick](6,0)--(6,2.6);
+\draw[arrow,red](4,1.7)--(1.4,1.7)node[above,midway]{$F_{\rm gas}<0$};
+\draw[arrow,blue](4,.8)--(5.8,.8)node[below,midway]{$F_{\rm em}>0$};
+\node[above]at(3,3){$x>d/2$时};
+\node[below,align=center]at(3,-.5){热压力趋向中点\\电作用趋向较近的外板};
+
+\end{tikzpicture}
+\begin{tikzpicture}
+
+\draw[arrow](-3,0)--(3.5,0)node[right]{$\xi=x-d/2$};\draw[arrow](0,-2.3)--(0,2.5)node[above]{$F$};
+\draw[blue,very thick](-2,-1.1)--(2,1.1)node[above right]{$F_{\rm em}=k_e\xi$};
+\draw[red,very thick](-2,1.8)--(2,-1.8)node[below right]{$F_{\rm gas}=-k_g\xi$};
+\node[align=center]at(0,-3.2){$k_g=4p_0S/d$\\稳定要求$k_e<k_g$};
+
+\end{tikzpicture}
+\end{document}

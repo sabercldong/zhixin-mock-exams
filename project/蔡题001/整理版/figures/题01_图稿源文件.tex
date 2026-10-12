@@ -1,0 +1,78 @@
+\documentclass[multi=tikzpicture,border=8pt]{standalone}
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath,amssymb}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc,angles,quotes}
+\definecolor{blue}{HTML}{17365D}
+\definecolor{red}{HTML}{AC3931}
+\tikzset{every node/.style={font=\small},force/.style={-{Stealth[length=3mm]},very thick,red},dim/.style={|<->|,thin}}
+\begin{document}
+\begin{tikzpicture}[scale=1.1]
+\draw[very thick](-.7,0)--(5,0)--(5,-.8);
+\fill[gray!15](-.7,-.15)rectangle(5,0);
+\draw[thick,fill=blue!5](.2,0)rectangle(1.8,1.6);
+\draw[thick,fill=blue!10](.2,1.6)--(.75,1.95)--(2.35,1.95)--(1.8,1.6)--cycle;
+\draw[thick,fill=blue!15](1.8,0)--(2.35,.35)--(2.35,1.95)--(1.8,1.6)--cycle;
+\fill(1,.8)circle(1.8pt)node[above left]{$G$};
+\draw[-{Stealth},very thick,blue](1,.8)--(3.2,.8)node[above]{$v_0$};
+\draw[dim](-.2,0)--node[left]{$l$}(-.2,1.6);
+\draw[dashed](1,.8)--(1,-.55);
+\draw[dim](1,-.5)--node[below]{$x(0)=2l$}(5,-.5);
+\node[above right]at(5,0){桌角};
+\node[above]at(3.5,1.5){向右滑动};
+\end{tikzpicture}
+\begin{tikzpicture}[scale=1.1]
+\draw[very thick](-1.2,0)--(3.2,0);
+\draw[thick,fill=blue!5](-.8,0)rectangle(.8,1.6);
+\fill(0,.8)circle(1.8pt)node[above left]{$G$};
+\draw[force](0,.8)--(0,-.65)node[below left]{$mg$};
+\draw[force](.4,0)--(.4,1.6)node[above]{$N$};
+\draw[force](0,0)--(-1.7,0)node[left]{$f=\mu N$};
+\draw[-{Stealth},blue](.8,.85)--(2,.85)node[right]{$v$};
+\draw[dim](0,-.3)--(.4,-.3);
+\node[right]at(.55,-.3){$d=l/4$};
+\draw[dim](1.2,0)--node[right]{$l/2$}(1.2,.8);
+\node[below right]at(1.8,-.75){绕$G$合力矩为零};
+\end{tikzpicture}
+\begin{tikzpicture}[scale=1.05]
+\draw[very thick](-1.8,0)--(4.2,0)--(4.2,-.6);
+\draw[thick,fill=blue!5](-1,0)rectangle(1,2);
+\fill(0,1)circle(1.8pt)node[above]{$G$};
+\fill(-1,0)circle(2pt)node[below left]{$B$};
+\fill(1,0)circle(2pt)node[below right]{$A$};
+\draw[force](-1,0)--(-1,1.3)node[left]{$N_B$};
+\draw[force](1,0)--(1,1.65)node[right]{$N_A$};
+\draw[force](1,0)--(.2,0)node[below,midway]{$f_A$};
+\draw[force](-1,0)--(-1.8,0)node[above,midway]{$f_B$};
+\draw[force](0,1)--(0,-.45)node[below]{$mg$};
+\draw[dashed](0,1)--(0,-1.35);
+\draw[dim](1,-.55)--node[below]{$h_A=x-l/2$}(4.2,-.55);
+\draw[dim](-1,-1)--node[below]{$h_B=x+l/2$}(4.2,-1);
+\node[above right]at(4.2,0){桌角};
+\draw[-{Stealth},blue](1.3,1)--(3,1)node[above]{$v=-\dot x$};
+\end{tikzpicture}
+\begin{tikzpicture}
+\draw[-{Stealth},thick](0,0)--(8,0)node[right]{$x/l$};
+\foreach \x/\t in{1/{1/4},2/{1/2},6/{2}}
+{\draw(\x,-.1)--(\x,.1);\node[below]at(\x,-.12){$\t$};}
+\node[below left]at(0,-.1){桌角};
+\draw[very thick,blue,-{Stealth}](1,.9)--(6.8,.9);
+\node[above]at(3.8,.9){恒定摩擦：$x\ge l/4$};
+\draw[very thick,red,-{Stealth}](2,1.9)--(6.8,1.9);
+\node[above]at(4.3,1.9){两点变摩擦：$x\ge l/2$};
+\draw[dashed](6,0)--(6,2.6)node[above]{初始$x=2l$};
+\draw[-{Stealth},blue](5.9,-.8)--(2.5,-.8)node[below,midway]{向右前进时$x$减小};
+\end{tikzpicture}
+\begin{tikzpicture}[scale=.8]
+\draw[gray,dashed](0,0)circle(3.5);
+\draw[-{Stealth}]( -4.3,0)--(1.5,0)node[right]{$x-4l$};
+\draw[-{Stealth}](0,-4.1)--(0,2)node[above]{$\dot x/\omega$};
+\draw[very thick,blue,-{Stealth}](-2,-2.87228)arc(235.15:180:3.5);
+\fill(-2,-2.87228)circle(2pt)node[below left]{初始$(-2l,-v_0/\omega)$};
+\fill(-3.5,0)circle(2pt)node[above left]{首次停止$(-A,0)$};
+\draw[dashed](-2,-2.87228)--(-2,0)node[above]{$-2l$};
+\node[below right]at(.2,0){数学圆心};
+\node[above]at(-1.8,3.7){图示临界$A=7l/2$};
+\node[below left]at(-.1,-4){实际只取下半圆的一段};
+\end{tikzpicture}
+\end{document}

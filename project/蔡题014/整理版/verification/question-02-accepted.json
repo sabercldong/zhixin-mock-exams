@@ -1,0 +1,97 @@
+{
+  "paper": "014",
+  "question": "02",
+  "question_accepted": true,
+  "set_accepted": false,
+  "model_authorization": "用户2026-10-10：四项均按建议修订并注明",
+  "draft_sha256": "62da4fbcfd41dfecc88100e09d41e83461608bbc5c04d0328e123b3456b95264",
+  "math_record_sha256": "76a060fcf18f566c4962127d26e86601691636c64bae44d5052592614723446d",
+  "geometry_record_sha256": "c1f210586c6dc0d8879d89bb893f457db1026e5a39e39c7f99359f363760f6b9",
+  "visual_record_sha256": "472109fe80e5201d86926aaf40deeba8afc6ab21b679cd6aadba902e9ffaad82",
+  "baseline_visual_record_sha256": "8f428b10be90de13804101699697b09e1aee09c7edb022d5520ae3a511c66711",
+  "versions": [
+    {
+      "question": "02",
+      "version": "student",
+      "total_pages": 12,
+      "body_pages": 11,
+      "body_nonspace": 6813,
+      "per_page_nonspace": [
+        637,
+        764,
+        888,
+        674,
+        369,
+        571,
+        623,
+        649,
+        658,
+        489,
+        491
+      ],
+      "layout_warnings": [],
+      "pdf_sha256": "d970740615043ea2acb20d2e3f0e418e89e50c8c1db1c9410352fa3b56898a2f",
+      "draft_sha256": "62da4fbcfd41dfecc88100e09d41e83461608bbc5c04d0328e123b3456b95264",
+      "actual_reviewed": false,
+      "accepted": false
+    },
+    {
+      "question": "02",
+      "version": "teacher",
+      "total_pages": 17,
+      "body_pages": 16,
+      "body_nonspace": 11160,
+      "per_page_nonspace": [
+        637,
+        764,
+        888,
+        674,
+        369,
+        571,
+        623,
+        649,
+        658,
+        858,
+        699,
+        896,
+        959,
+        869,
+        607,
+        439
+      ],
+      "layout_warnings": [],
+      "pdf_sha256": "3913fab69911f205fc5dcc3bf1fb0ca280d058710abb70dcd21b4ef1095806c6",
+      "draft_sha256": "62da4fbcfd41dfecc88100e09d41e83461608bbc5c04d0328e123b3456b95264",
+      "actual_reviewed": false,
+      "accepted": false
+    }
+  ],
+  "source_metrics": {
+    "question": 2,
+    "issues": [],
+    "student": {
+      "raw_with_whitespace": 12452,
+      "raw_nonspace": 11600,
+      "body_net_characters": 6576
+    },
+    "teacher": {
+      "raw_with_whitespace": 20536,
+      "raw_nonspace": 19169,
+      "body_net_characters": 10905
+    },
+    "figures": 4,
+    "sha256": "62da4fbcfd41dfecc88100e09d41e83461608bbc5c04d0328e123b3456b95264"
+  },
+  "symbolic_checks": 30,
+  "numeric_checks": 33,
+  "geometrical_checks": 26,
+  "figures": 4,
+  "qpdf_files": 7,
+  "original_hashes_unchanged": true,
+  "baseline_direct_hd_pages": 19,
+  "current_repaired_direct_hd_pages": 1,
+  "actual_current_page_coverage": 29,
+  "pending": [
+    "第3—8题尚未编写验收；本套无正式完整PDF"
+  ]
+}

@@ -1,0 +1,74 @@
+\documentclass[tikz,border=5pt]{standalone}
+\usepackage{ctex,amsmath}
+\usetikzlibrary{arrows.meta,calc}
+\tikzset{>=Latex,axis/.style={gray,->},water/.style={blue!65!black},force/.style={orange!85!black,thick,->}}
+\begin{document}
+\begin{tikzpicture}[font=\small]
+\fill[blue!8](-.85,0)--plot[domain=0:4,samples=80] ({-.85*(1+\x)^(-.25)},-\x)
+--plot[domain=4:0,samples=80] ({.85*(1+\x)^(-.25)},-\x)--cycle;
+\draw[water,thick]plot[domain=0:4,samples=80] ({-.85*(1+\x)^(-.25)},-\x);
+\draw[water,thick]plot[domain=0:4,samples=80] ({.85*(1+\x)^(-.25)},-\x);
+\draw[water] (0,0)ellipse[x radius=.85,y radius=.14];
+\draw[water] (0,-3)ellipse[x radius=.601,y radius=.11];
+\draw[gray,dashed](0,.4)--(0,-4.3);
+\draw[<->](0,.48)--(.85,.48)node[midway,above]{$r_0$};
+\draw[gray,dashed](.85,.12)--(.85,.60);
+\draw[<->](0,-3.35)--(.601,-3.35)node[midway,below]{$r(y)$};
+\draw[water,thick,->](-1.28,0)--(-1.28,-.7)node[midway,left]{$v_0$};
+\draw[water,thick,->](-1.28,-2.7)--(-1.28,-3.7)node[midway,left]{$v(y)$};
+\draw[axis](1.60,.12)--(1.60,-4.3)node[below]{$y$};
+\draw[gray,dashed](.90,0)--(1.67,0)node[right]{$0$};
+\draw[gray,dashed](.64,-3)--(1.67,-3)node[right]{$y$};
+\node[above]at(-.6,.78){出口};
+\end{tikzpicture}
+\begin{tikzpicture}[font=\small]
+\begin{scope}[xshift=-2.6cm]
+\fill[blue!7](-.85,1.2)--(-.85,-1.2)arc[start angle=180,end angle=360,x radius=.85,y radius=.16]--(.85,1.2)--cycle;
+\draw[water](-.85,1.2)--(-.85,-1.2)(.85,1.2)--(.85,-1.2);
+\draw[water](0,1.2)ellipse[x radius=.85,y radius=.16];
+\draw[water](-.85,-1.2)arc[start angle=180,end angle=360,x radius=.85,y radius=.16];
+\draw[water,dashed](-.85,-1.2)arc[start angle=180,end angle=0,x radius=.85,y radius=.16];
+\draw[gray,dashed](0,1.2)--(0,-1.2);
+\draw[->](0,1.2)--(.85,1.2)node[midway,above]{$r$};
+\draw[<->](-1.15,-1.2)--(-1.15,1.2)node[midway,left]{$\mathrm ds$};
+\node[above]at(0,1.7){局部圆柱};
+\end{scope}
+\begin{scope}[xshift=1.5cm]
+\fill[blue!7](1,0)arc[start angle=0,end angle=180,radius=1]--cycle;
+\draw[water,thick](1,0)arc[start angle=0,end angle=180,radius=1];
+\draw[gray,thick](-1,0)--(1,0);
+\draw[force](0,.08)--(0,.75);
+\node[above]at(0,1.10){$\Delta p\,2r\,\mathrm ds$};
+\draw[force](-1,0)--(-1,-.75)node[left]{$\sigma\,\mathrm ds$};
+\draw[force](1,0)--(1,-.75)node[right]{$\sigma\,\mathrm ds$};
+\draw[<->](-1,-1.12)--(1,-1.12)node[midway,below]{$2r$};
+\node[above]at(0,1.7){上半圆柱横截面};
+\end{scope}
+\end{tikzpicture}
+\begin{tikzpicture}[font=\small,x=.70cm,y=4.5cm]
+\draw[axis](0,.50)--(8.7,.50)node[right]{$z$};
+\draw[axis](0,.50)--(0,1.12)node[above]{$r/r_0$};
+\foreach \t in {0,2,4,6,8}\draw[gray](\t,.50)--(\t,.49)node[below]{$\t$};
+\foreach \t in {.6,.8,1.0}\draw[gray](0,\t)--(-.08,\t)node[left]{$\t$};
+\draw[water,very thick]plot[domain=0:8,samples=101] (\x,{(1+\x)^(-.25)});
+\input{radius-01-coordinates.tex}
+\draw[water,very thick](3,1.055)--(3.8,1.055)node[right,black]{无表面张力};
+\draw[orange!85!black,very thick](3,.96)--(3.8,.96)node[right,black]{$\eta=0.4$};
+\end{tikzpicture}
+\begin{tikzpicture}[font=\small]
+\fill[blue!7](0,.7)--(3.15,.7)--(3.15,-.7)--(0,-.7)--cycle;
+\draw[water,thick](0,.7)--(3.15,.7)(0,-.7)--(3.15,-.7);
+\draw[water,dashed](0,0)ellipse[x radius=.16,y radius=.7];
+\draw[water](3.15,0)ellipse[x radius=.16,y radius=.7];
+\draw[gray,dashed](0,0)--(3.15,0);
+\draw[->](3.15,0)--(3.15,.7)node[midway,left]{$r$};
+\draw[<->](0,-1.10)--(3.15,-1.10)node[midway,below]{$L$};
+\draw[gray,dashed](0,-.75)--(0,-1.18)(3.15,-.75)--(3.15,-1.18);
+\draw[gray,thick,->](3.65,0)--(4.45,0);
+\shade[ball color=blue!15](5.95,0)circle[radius=1.05];
+\draw[water](5.95,0)circle[radius=1.05];
+\fill(5.95,0)circle[radius=.025];
+\draw[->](5.95,0)--(6.70,.735)node[midway,above left]{$a$};
+\node[below]at(5.95,-1.40){$\frac43\pi a^3=\pi r^2L$};
+\end{tikzpicture}
+\end{document}

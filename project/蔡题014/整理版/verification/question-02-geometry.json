@@ -1,0 +1,139 @@
+{
+  "paper": "014",
+  "question": "02",
+  "geometry_passed": true,
+  "check_count": 26,
+  "checks": [
+    {
+      "name": "TikZ renders both phases using declared projections",
+      "passed": true
+    },
+    {
+      "name": "exactly 8 distinct corners and 6 distinct face centers",
+      "passed": true
+    },
+    {
+      "name": "actual face-center node exists (.5,.5,0)",
+      "passed": true
+    },
+    {
+      "name": "actual face-center node exists (.5,1,.5)",
+      "passed": true
+    },
+    {
+      "name": "actual face-center node exists (0,.5,.5)",
+      "passed": true
+    },
+    {
+      "name": "actual face-center node exists (.5,.5,1)",
+      "passed": true
+    },
+    {
+      "name": "actual face-center node exists (.5,0,.5)",
+      "passed": true
+    },
+    {
+      "name": "actual face-center node exists (1,.5,.5)",
+      "passed": true
+    },
+    {
+      "name": "sixth lower oxygen remains present",
+      "passed": true
+    },
+    {
+      "name": "actual a dimension measures full projected front edge",
+      "passed": true
+    },
+    {
+      "name": "actual b dimension matches full axial height",
+      "passed": true
+    },
+    {
+      "name": "projected ion nodes do not coincide high",
+      "passed": true,
+      "minimum_cm": 0.42047592083257274
+    },
+    {
+      "name": "long-axis Ti inside the octahedron high",
+      "passed": true
+    },
+    {
+      "name": "background pairs remain inversion symmetric high",
+      "passed": true
+    },
+    {
+      "name": "projected ion nodes do not coincide low",
+      "passed": true,
+      "minimum_cm": 0.36835309147609996
+    },
+    {
+      "name": "long-axis Ti inside the octahedron low",
+      "passed": true
+    },
+    {
+      "name": "background pairs remain inversion symmetric low",
+      "passed": true
+    },
+    {
+      "name": "low-phase Ti moves above center into upper pyramid",
+      "passed": true
+    },
+    {
+      "name": "dipole diagram offset is actual center-to-Ti separation",
+      "passed": true
+    },
+    {
+      "name": "slab actual corner projection retains equal axial thickness",
+      "passed": true
+    },
+    {
+      "name": "slab thickness dimension follows back vertical edge",
+      "passed": true
+    },
+    {
+      "name": "polarization is upward and field arrow is downward",
+      "passed": true
+    },
+    {
+      "name": "upper/lower bound-charge signs follow outer normals",
+      "passed": true
+    },
+    {
+      "name": "finite disk h dimension is center-to-upper-disk distance",
+      "passed": true
+    },
+    {
+      "name": "finite disk R dimension matches actual radius",
+      "passed": true
+    },
+    {
+      "name": "finite disk ring s dimension matches selected radius",
+      "passed": true
+    }
+  ],
+  "figure_source_sha256": "198d72d84a376c8b788e8034d0329ed15521a5bf52fdbc13eda1ea429f71cc21",
+  "figures": [
+    {
+      "name": "cell-02",
+      "pdf_sha256": "dccda9da60cd5332c00e1e770735fa19763ab8a8b4728791d50da993909bfd04",
+      "png_sha256": "983eab6e8bc8ce6d9492d503bac142c3cf496b0cca6b03522c1c9ee4f2982d1b"
+    },
+    {
+      "name": "dipole-02",
+      "pdf_sha256": "b3bc943eafa075b4815a7e1d4611b82dc717db9a9aab15236054c428f56295a4",
+      "png_sha256": "1d3d10395a9b46baa08f9363409deaad05cb5eb340a2a3fdcdd3cf2427b11574"
+    },
+    {
+      "name": "slab-02",
+      "pdf_sha256": "307090af33ee3b43e58765fbb1935a04b77c72b13e9680814da284ca1282a8ee",
+      "png_sha256": "1401b3b4accc442b9e9ff190eb32c400955492b92feef035cb510268fb821133"
+    },
+    {
+      "name": "disks-02",
+      "pdf_sha256": "c7bab67aa65e9fbeeee5013c0526ad1434408bfaca1fb16ca9346c73bdadda0e",
+      "png_sha256": "386063268377f747fa069b23d167379c300e84b878afb3200b4b5f1381cc550a"
+    }
+  ],
+  "actual_reviewed": false,
+  "accepted": false
+}

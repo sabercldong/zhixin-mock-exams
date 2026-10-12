@@ -1,0 +1,266 @@
+{
+  "paper": "014",
+  "question": "05",
+  "check_count": 54,
+  "checks": [
+    {
+      "test": "five separate vector figures",
+      "passed": true
+    },
+    {
+      "test": "standalone independent source",
+      "passed": true
+    },
+    {
+      "test": "genuine spatial top and finite thickness faces",
+      "passed": true
+    },
+    {
+      "test": "world plate is square even though perspective image is not",
+      "passed": true
+    },
+    {
+      "test": "plate top two directions are noncollinear in projection",
+      "passed": true
+    },
+    {
+      "test": "front full-width narrow face is contacted",
+      "passed": true
+    },
+    {
+      "test": "rear full-width edge is contacted",
+      "passed": true
+    },
+    {
+      "test": "front terminal reaches contacted face not top sheet interior",
+      "passed": true
+    },
+    {
+      "test": "rear terminal attaches directly to rear electrode",
+      "passed": true
+    },
+    {
+      "test": "width dimension measures both original x endpoints",
+      "passed": true
+    },
+    {
+      "test": "depth dimension measures both original y endpoints",
+      "passed": true
+    },
+    {
+      "test": "thickness dimension connects actual top and bottom heights",
+      "passed": true
+    },
+    {
+      "test": "short really connects whole middle row",
+      "passed": true
+    },
+    {
+      "test": "cut has separate left and right interior edges",
+      "passed": true
+    },
+    {
+      "test": "cut does not sever shared terminal electrodes",
+      "passed": true
+    },
+    {
+      "test": "original current arrow points from high top to low bottom",
+      "passed": true
+    },
+    {
+      "test": "dual current arrow points from high left to low right",
+      "passed": true
+    },
+    {
+      "test": "quarter-turn swaps conductivity at (0.25, 0.25)",
+      "passed": true
+    },
+    {
+      "test": "quarter-turn swaps conductivity at (0.75, 0.25)",
+      "passed": true
+    },
+    {
+      "test": "quarter-turn swaps conductivity at (0.25, 0.75)",
+      "passed": true
+    },
+    {
+      "test": "quarter-turn swaps conductivity at (0.75, 0.75)",
+      "passed": true
+    },
+    {
+      "test": "quarter-turn swaps conductivity at (0.15, 0.7)",
+      "passed": true
+    },
+    {
+      "test": "quarter-turn swaps conductivity at (0.7, 0.85)",
+      "passed": true
+    },
+    {
+      "test": "quarter-turn swaps conductivity at (0.85, 0.35)",
+      "passed": true
+    },
+    {
+      "test": "quarter-turn swaps conductivity at (0.4, 0.2)",
+      "passed": true
+    },
+    {
+      "test": "rotation maps high original top to dual left",
+      "passed": true
+    },
+    {
+      "test": "rotation maps low original bottom to dual right",
+      "passed": true
+    },
+    {
+      "test": "local current refraction uses kappa1/kappa2=4",
+      "passed": true
+    },
+    {
+      "test": "incoming interface angle matches actual line",
+      "passed": true
+    },
+    {
+      "test": "outgoing interface angle matches actual line",
+      "passed": true
+    },
+    {
+      "test": "interface normal points material1 to material2",
+      "passed": true
+    },
+    {
+      "test": "interface tangent is CCW normal",
+      "passed": true
+    },
+    {
+      "test": "dual high voltage includes scale I/kappa0",
+      "passed": true
+    },
+    {
+      "test": "n and t labels are separated from the conducting rays",
+      "passed": true
+    },
+    {
+      "test": "statement-05 is a single standalone vector page",
+      "passed": true
+    },
+    {
+      "test": "statement-05 contains searchable clear labels",
+      "passed": true
+    },
+    {
+      "test": "statement-05 labels remain legible at actual document width",
+      "passed": true,
+      "min_printed_font_pt": 10.136869615798386
+    },
+    {
+      "test": "statement-05 all text inside the page bounds",
+      "passed": true
+    },
+    {
+      "test": "layout-05 is a single standalone vector page",
+      "passed": true
+    },
+    {
+      "test": "layout-05 contains searchable clear labels",
+      "passed": true
+    },
+    {
+      "test": "layout-05 labels remain legible at actual document width",
+      "passed": true,
+      "min_printed_font_pt": 10.388048847762638
+    },
+    {
+      "test": "layout-05 all text inside the page bounds",
+      "passed": true
+    },
+    {
+      "test": "bounds-05 is a single standalone vector page",
+      "passed": true
+    },
+    {
+      "test": "bounds-05 contains searchable clear labels",
+      "passed": true
+    },
+    {
+      "test": "bounds-05 labels remain legible at actual document width",
+      "passed": true,
+      "min_printed_font_pt": 9.750179075263835
+    },
+    {
+      "test": "bounds-05 all text inside the page bounds",
+      "passed": true
+    },
+    {
+      "test": "interface-05 is a single standalone vector page",
+      "passed": true
+    },
+    {
+      "test": "interface-05 contains searchable clear labels",
+      "passed": true
+    },
+    {
+      "test": "interface-05 labels remain legible at actual document width",
+      "passed": true,
+      "min_printed_font_pt": 13.632762748213674
+    },
+    {
+      "test": "interface-05 all text inside the page bounds",
+      "passed": true
+    },
+    {
+      "test": "duality-05 is a single standalone vector page",
+      "passed": true
+    },
+    {
+      "test": "duality-05 contains searchable clear labels",
+      "passed": true
+    },
+    {
+      "test": "duality-05 labels remain legible at actual document width",
+      "passed": true,
+      "min_printed_font_pt": 8.122841094112513
+    },
+    {
+      "test": "duality-05 all text inside the page bounds",
+      "passed": true
+    }
+  ],
+  "figures": [
+    {
+      "name": "statement-05",
+      "pdf_sha256": "c4e613f1db9ccc82613c2eead949b280bd2d9ab817919d7b8482a480d55a93e8",
+      "png_sha256": "23bf864878773607b1827dae9365e6dc1a8226128417f1b254c36d0458f083d6",
+      "width_fraction": 0.54
+    },
+    {
+      "name": "layout-05",
+      "pdf_sha256": "d3c40c2e64ee06e954c0c1864ded3dce42c5fa491139dae581a8b2796922a530",
+      "png_sha256": "f5c457c796245653b40434052f30f62df69e35ccc8edc2a13e7788d9d6ac79da",
+      "width_fraction": 0.57
+    },
+    {
+      "name": "bounds-05",
+      "pdf_sha256": "b0d9b2ec5b3f5df8a46cba7f1f57558d12048526bc4acb38766cd25953a382ed",
+      "png_sha256": "a08925312365834ac5f1e8c0f42f75e28d261c802092a639504f78b16510d513",
+      "width_fraction": 0.82
+    },
+    {
+      "name": "interface-05",
+      "pdf_sha256": "ce9e8812c3d1f1980b16cfd82e9a32fbd3341e4908e3376d9e63f449f4c0c19c",
+      "png_sha256": "0b5255bad341de0d7950e6ab80b9af105d51ee1408362b00f72d06262974ef3b",
+      "width_fraction": 0.55
+    },
+    {
+      "name": "duality-05",
+      "pdf_sha256": "89beff0aa155d5c5f3d5e5c78ebe88fdfb6f28b1b462c8d8e2c3088e60578225",
+      "png_sha256": "606ebab53952a12b8078859dee46c229a271ac5b0ea0de2cf537b01c4c252e7c",
+      "width_fraction": 0.83
+    }
+  ],
+  "geometry_passed": true,
+  "actual_visual_reviewed": false,
+  "question_accepted": false,
+  "set_accepted": false,
+  "figure_source_sha256": "df1c350945859829edcda8835f6e9c58df618a049d66780e43c57e7ddc82c2ef",
+  "script_sha256": "d90c28f394e30097466f6ac30872e47f14e261e5cd1631c574bebd9df7bf3102"
+}

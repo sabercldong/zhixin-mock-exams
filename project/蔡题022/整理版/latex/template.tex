@@ -1,0 +1,42 @@
+\documentclass[12pt,a4paper,UTF8]{ctexart}
+\usepackage[a4paper,top=22mm,bottom=22mm,left=22mm,right=22mm,headheight=15pt]{geometry}
+\usepackage{amsmath,amssymb,mathtools,bm}
+\usepackage{graphicx,xcolor,booktabs,longtable,array,enumitem,fancyhdr,caption,float,microtype,setspace}
+\usepackage[hidelinks,unicode]{hyperref}
+\newcounter{none}
+\definecolor{ContestBlue}{HTML}{17365D}
+\hypersetup{pdftitle={$title$},pdfauthor={$author$}}
+\setstretch{1.24}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.35em}
+\setlength{\emergencystretch}{2em}
+% 避免段首或段尾仅有一行跨页；不改变字号、行距或段距。
+\clubpenalty=10000
+\widowpenalty=10000
+\displaywidowpenalty=10000
+\setlist{itemsep=0.35em,topsep=0.4em}
+\captionsetup{font=small,labelfont=bf,justification=centering}
+\setcounter{secnumdepth}{0}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small $shorttitle$}\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\ctexset{section={format=\Large\bfseries\color{ContestBlue},beforeskip=1.2em,afterskip=0.7em},subsection={format=\large\bfseries\color{ContestBlue},beforeskip=1em,afterskip=.5em}}
+\makeatletter
+\newcommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\newcommand{\maxwidth}{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\newcommand{\maxheight}{\ifdim\Gin@nat@height>0.72\textheight 0.72\textheight\else\Gin@nat@height\fi}
+\newcommand{\pandocbounded}[1]{\begingroup\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}#1\endgroup}
+\makeatother
+\newenvironment{logicalblock}{\par\begingroup
+\edef\savedParIndent{\the\parindent}\edef\savedParSkip{\the\parskip}
+\noindent\begin{minipage}{\linewidth}
+\parindent=\savedParIndent\parskip=\savedParSkip}
+{\end{minipage}\par\endgroup}
+% minipage 顶部会吞掉 subsection 的前距；恢复既定的 1em 标题前距。
+% 只应用于含模块标题的有限逻辑块，不改变正文行距或段距。
+\newenvironment{headedlogicalblock}{\par\addvspace{1em}\begin{logicalblock}}
+{\end{logicalblock}}
+\begin{document}
+\begin{titlepage}\centering\vspace*{58mm}{\Huge\bfseries\color{ContestBlue} $title$\par}\vfill\vspace*{28mm}\end{titlepage}
+$body$
+\end{document}

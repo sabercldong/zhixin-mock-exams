@@ -1,0 +1,1258 @@
+{
+  "question": "01",
+  "figure_source_sha256": "0de5d08558ec3b059e37ef4114291cb7e9e92d46155149e8558baa7c93a278d2",
+  "figures": [
+    {
+      "name": "geometry-01",
+      "pdf_sha256": "91f62847b73b5a9d4febf5774804e0a2d4f1b92286f24b641246be708137c006",
+      "png_sha256": "441ff0bf4b0e16a0af6814a1645923043c28686c1bd4b86574b0969f62e8201f"
+    },
+    {
+      "name": "projection-01",
+      "pdf_sha256": "c98a1e6ccf5435c619cb9ef370668052e548f60fc7c52ab930495f089a966ba5",
+      "png_sha256": "bff4ac1ecd6178d00a073ff0f29dc08062ca8be99683eb64b7246484d056a617"
+    },
+    {
+      "name": "cardioid-01",
+      "pdf_sha256": "4518255db42dbe6a3399d4f6024082df36a86762147ae77a4a97c93f5a91ba66",
+      "png_sha256": "a829287cf513849eb0fce9c35b4b24cf7826601f9710415db986774d9d9a2486"
+    },
+    {
+      "name": "ellipse-01",
+      "pdf_sha256": "9b40639367c3623e4818e7953d091f053e2376f99ff65da20b5d8b3a911d661c",
+      "png_sha256": "5f94288562f290297b34cf80c896727d7fb9ada1fe842cd5ab049e2b199f6a69"
+    },
+    {
+      "name": "polar-01",
+      "pdf_sha256": "898bf6785737a0e9faea30265d54837ccb6ec214e73142f7000b792595963612",
+      "png_sha256": "76a8ef676fe960e872a55852509a27d46db8b680de361458b3d3e9d734197149"
+    },
+    {
+      "name": "rates-01",
+      "pdf_sha256": "bdb4edf44250a72dcf79b599b82fb6da5c96dfec7e90956e2a9d4d954a0d487a",
+      "png_sha256": "927a20061d942dd7db665a5fb909a919bcadfddb2e07b02bc220d80e89fbfbde"
+    }
+  ],
+  "checks": [
+    {
+      "name": "figure 1 OT radius",
+      "error": 1.6145618420004837e-07,
+      "tolerance": 1e-05,
+      "passed": true
+    },
+    {
+      "name": "figure 1 OH distance",
+      "error": 0.0,
+      "tolerance": 1e-05,
+      "passed": true
+    },
+    {
+      "name": "figure 1 tangent perpendicular to radius",
+      "error": 5.489510002121278e-07,
+      "tolerance": 1e-05,
+      "passed": true
+    },
+    {
+      "name": "figure 1 velocity arrow along tangent",
+      "error": 7.01939510002747e-05,
+      "tolerance": 0.002,
+      "passed": true
+    },
+    {
+      "name": "figure 2 perpendicular foot",
+      "error": 2.683799999347869e-06,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "figure 2 same radial line",
+      "error": 7.499999999938112e-07,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "figure 2 radial projection X",
+      "error": 4.196250976140625e-07,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "figure 2 tangential projection Y",
+      "error": 2.4227066308668554e-07,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "cardioid implicit equation 0",
+      "error": 0.0,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "ellipse level 0",
+      "error": 0.0,
+      "tolerance": 5e-15,
+      "passed": true
+    },
+    {
+      "name": "rate graph bounds 0",
+      "passed": true
+    },
+    {
+      "name": "cardioid implicit equation 1",
+      "error": 0.0,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "ellipse level 1",
+      "error": 0.0,
+      "tolerance": 5e-15,
+      "passed": true
+    },
+    {
+      "name": "rate graph bounds 1",
+      "passed": true
+    },
+    {
+      "name": "cardioid implicit equation 2",
+      "error": 8.881784197001252e-16,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "ellipse level 2",
+      "error": 2.220446049250313e-16,
+      "tolerance": 5e-15,
+      "passed": true
+    },
+    {
+      "name": "rate graph bounds 2",
+      "passed": true
+    },
+    {
+      "name": "cardioid implicit equation 3",
+      "error": 4.440892098500626e-16,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "ellipse level 3",
+      "error": 2.220446049250313e-16,
+      "tolerance": 5e-15,
+      "passed": true
+    },
+    {
+      "name": "rate graph bounds 3",
+      "passed": true
+    },
+    {
+      "name": "cardioid implicit equation 4",
+      "error": 4.440892098500626e-16,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "ellipse level 4",
+      "error": 0.0,
+      "tolerance": 5e-15,
+      "passed": true
+    },
+    {
+      "name": "rate graph bounds 4",
+      "passed": true
+    },
+    {
+      "name": "cardioid implicit equation 5",
+      "error": 0.0,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "ellipse level 5",
+      "error": 1.1102230246251565e-16,
+      "tolerance": 5e-15,
+      "passed": true
+    },
+    {
+      "name": "rate graph bounds 5",
+      "passed": true
+    },
+    {
+      "name": "cardioid implicit equation 6",
+      "error": 0.0,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "ellipse level 6",
+      "error": 0.0,
+      "tolerance": 5e-15,
+      "passed": true
+    },
+    {
+      "name": "rate graph bounds 6",
+      "passed": true
+    },
+    {
+      "name": "cardioid implicit equation 7",
+      "error": 4.440892098500626e-16,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "ellipse level 7",
+      "error": 1.1102230246251565e-16,
+      "tolerance": 5e-15,
+      "passed": true
+    },
+    {
+      "name": "rate graph bounds 7",
+      "passed": true
+    },
+    {
+      "name": "cardioid implicit equation 8",
+      "error": 4.440892098500626e-16,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "ellipse level 8",
+      "error": 0.0,
+      "tolerance": 5e-15,
+      "passed": true
+    },
+    {
+      "name": "rate graph bounds 8",
+      "passed": true
+    },
+    {
+      "name": "cardioid implicit equation 9",
+      "error": 0.0,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "ellipse level 9",
+      "error": 0.0,
+      "tolerance": 5e-15,
+      "passed": true
+    },
+    {
+      "name": "rate graph bounds 9",
+      "passed": true
+    },
+    {
+      "name": "cardioid implicit equation 10",
+      "error": 4.440892098500626e-16,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "ellipse level 10",
+      "error": 0.0,
+      "tolerance": 5e-15,
+      "passed": true
+    },
+    {
+      "name": "rate graph bounds 10",
+      "passed": true
+    },
+    {
+      "name": "cardioid implicit equation 11",
+      "error": 8.881784197001252e-16,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "ellipse level 11",
+      "error": 0.0,
+      "tolerance": 5e-15,
+      "passed": true
+    },
+    {
+      "name": "rate graph bounds 11",
+      "passed": true
+    },
+    {
+      "name": "cardioid implicit equation 12",
+      "error": 0.0,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "ellipse level 12",
+      "error": 0.0,
+      "tolerance": 5e-15,
+      "passed": true
+    },
+    {
+      "name": "rate graph bounds 12",
+      "passed": true
+    },
+    {
+      "name": "cardioid implicit equation 13",
+      "error": 4.440892098500626e-16,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "ellipse level 13",
+      "error": 0.0,
+      "tolerance": 5e-15,
+      "passed": true
+    },
+    {
+      "name": "rate graph bounds 13",
+      "passed": true
+    },
+    {
+      "name": "cardioid implicit equation 14",
+      "error": 4.440892098500626e-16,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "ellipse level 14",
+      "error": 1.1102230246251565e-16,
+      "tolerance": 5e-15,
+      "passed": true
+    },
+    {
+      "name": "rate graph bounds 14",
+      "passed": true
+    },
+    {
+      "name": "cardioid implicit equation 15",
+      "error": 0.0,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "ellipse level 15",
+      "error": 0.0,
+      "tolerance": 5e-15,
+      "passed": true
+    },
+    {
+      "name": "rate graph bounds 15",
+      "passed": true
+    },
+    {
+      "name": "cardioid implicit equation 16",
+      "error": 4.440892098500626e-16,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "ellipse level 16",
+      "error": 1.1102230246251565e-16,
+      "tolerance": 5e-15,
+      "passed": true
+    },
+    {
+      "name": "rate graph bounds 16",
+      "passed": true
+    },
+    {
+      "name": "cardioid implicit equation 17",
+      "error": 0.0,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "ellipse level 17",
+      "error": 0.0,
+      "tolerance": 5e-15,
+      "passed": true
+    },
+    {
+      "name": "rate graph bounds 17",
+      "passed": true
+    },
+    {
+      "name": "cardioid implicit equation 18",
+      "error": 2.220446049250313e-16,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "ellipse level 18",
+      "error": 0.0,
+      "tolerance": 5e-15,
+      "passed": true
+    },
+    {
+      "name": "rate graph bounds 18",
+      "passed": true
+    },
+    {
+      "name": "cardioid implicit equation 19",
+      "error": 0.0,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "ellipse level 19",
+      "error": 0.0,
+      "tolerance": 5e-15,
+      "passed": true
+    },
+    {
+      "name": "rate graph bounds 19",
+      "passed": true
+    },
+    {
+      "name": "cardioid implicit equation 20",
+      "error": 0.0,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "ellipse level 20",
+      "error": 1.1102230246251565e-16,
+      "tolerance": 5e-15,
+      "passed": true
+    },
+    {
+      "name": "rate graph bounds 20",
+      "passed": true
+    },
+    {
+      "name": "cardioid implicit equation 21",
+      "error": 4.440892098500626e-16,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "ellipse level 21",
+      "error": 2.220446049250313e-16,
+      "tolerance": 5e-15,
+      "passed": true
+    },
+    {
+      "name": "rate graph bounds 21",
+      "passed": true
+    },
+    {
+      "name": "cardioid implicit equation 22",
+      "error": 0.0,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "ellipse level 22",
+      "error": 2.220446049250313e-16,
+      "tolerance": 5e-15,
+      "passed": true
+    },
+    {
+      "name": "rate graph bounds 22",
+      "passed": true
+    },
+    {
+      "name": "cardioid implicit equation 23",
+      "error": 0.0,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "ellipse level 23",
+      "error": 0.0,
+      "tolerance": 5e-15,
+      "passed": true
+    },
+    {
+      "name": "rate graph bounds 23",
+      "passed": true
+    },
+    {
+      "name": "cardioid implicit equation 24",
+      "error": 0.0,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "ellipse level 24",
+      "error": 0.0,
+      "tolerance": 5e-15,
+      "passed": true
+    },
+    {
+      "name": "rate graph bounds 24",
+      "passed": true
+    },
+    {
+      "name": "cardioid implicit equation 25",
+      "error": 1.1102230246251565e-16,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "ellipse level 25",
+      "error": 0.0,
+      "tolerance": 5e-15,
+      "passed": true
+    },
+    {
+      "name": "rate graph bounds 25",
+      "passed": true
+    },
+    {
+      "name": "cardioid implicit equation 26",
+      "error": 0.0,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "ellipse level 26",
+      "error": 0.0,
+      "tolerance": 5e-15,
+      "passed": true
+    },
+    {
+      "name": "rate graph bounds 26",
+      "passed": true
+    },
+    {
+      "name": "cardioid implicit equation 27",
+      "error": 0.0,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "ellipse level 27",
+      "error": 0.0,
+      "tolerance": 5e-15,
+      "passed": true
+    },
+    {
+      "name": "rate graph bounds 27",
+      "passed": true
+    },
+    {
+      "name": "cardioid implicit equation 28",
+      "error": 0.0,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "ellipse level 28",
+      "error": 0.0,
+      "tolerance": 5e-15,
+      "passed": true
+    },
+    {
+      "name": "rate graph bounds 28",
+      "passed": true
+    },
+    {
+      "name": "cardioid implicit equation 29",
+      "error": 0.0,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "ellipse level 29",
+      "error": 0.0,
+      "tolerance": 5e-15,
+      "passed": true
+    },
+    {
+      "name": "rate graph bounds 29",
+      "passed": true
+    },
+    {
+      "name": "cardioid implicit equation 30",
+      "error": 0.0,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "ellipse level 30",
+      "error": 0.0,
+      "tolerance": 5e-15,
+      "passed": true
+    },
+    {
+      "name": "rate graph bounds 30",
+      "passed": true
+    },
+    {
+      "name": "cardioid implicit equation 31",
+      "error": 0.0,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "ellipse level 31",
+      "error": 1.1102230246251565e-16,
+      "tolerance": 5e-15,
+      "passed": true
+    },
+    {
+      "name": "rate graph bounds 31",
+      "passed": true
+    },
+    {
+      "name": "cardioid implicit equation 32",
+      "error": 1.3877787807814457e-17,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "ellipse level 32",
+      "error": 1.1102230246251565e-16,
+      "tolerance": 5e-15,
+      "passed": true
+    },
+    {
+      "name": "rate graph bounds 32",
+      "passed": true
+    },
+    {
+      "name": "cardioid implicit equation 33",
+      "error": 1.3877787807814457e-17,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "ellipse level 33",
+      "error": 0.0,
+      "tolerance": 5e-15,
+      "passed": true
+    },
+    {
+      "name": "rate graph bounds 33",
+      "passed": true
+    },
+    {
+      "name": "cardioid implicit equation 34",
+      "error": 3.469446951953614e-18,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "ellipse level 34",
+      "error": 2.220446049250313e-16,
+      "tolerance": 5e-15,
+      "passed": true
+    },
+    {
+      "name": "rate graph bounds 34",
+      "passed": true
+    },
+    {
+      "name": "cardioid implicit equation 35",
+      "error": 0.0,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "ellipse level 35",
+      "error": 0.0,
+      "tolerance": 5e-15,
+      "passed": true
+    },
+    {
+      "name": "rate graph bounds 35",
+      "passed": true
+    },
+    {
+      "name": "cardioid implicit equation 36",
+      "error": 0.0,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "ellipse level 36",
+      "error": 0.0,
+      "tolerance": 5e-15,
+      "passed": true
+    },
+    {
+      "name": "rate graph bounds 36",
+      "passed": true
+    },
+    {
+      "name": "cardioid implicit equation 37",
+      "error": 0.0,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "ellipse level 37",
+      "error": 0.0,
+      "tolerance": 5e-15,
+      "passed": true
+    },
+    {
+      "name": "rate graph bounds 37",
+      "passed": true
+    },
+    {
+      "name": "cardioid implicit equation 38",
+      "error": 0.0,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "ellipse level 38",
+      "error": 1.1102230246251565e-16,
+      "tolerance": 5e-15,
+      "passed": true
+    },
+    {
+      "name": "rate graph bounds 38",
+      "passed": true
+    },
+    {
+      "name": "cardioid implicit equation 39",
+      "error": 0.0,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "ellipse level 39",
+      "error": 0.0,
+      "tolerance": 5e-15,
+      "passed": true
+    },
+    {
+      "name": "rate graph bounds 39",
+      "passed": true
+    },
+    {
+      "name": "cardioid implicit equation 40",
+      "error": 0.0,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "ellipse level 40",
+      "error": 0.0,
+      "tolerance": 5e-15,
+      "passed": true
+    },
+    {
+      "name": "rate graph bounds 40",
+      "passed": true
+    },
+    {
+      "name": "cardioid implicit equation 41",
+      "error": 0.0,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "ellipse level 41",
+      "error": 2.220446049250313e-16,
+      "tolerance": 5e-15,
+      "passed": true
+    },
+    {
+      "name": "rate graph bounds 41",
+      "passed": true
+    },
+    {
+      "name": "cardioid implicit equation 42",
+      "error": 0.0,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "ellipse level 42",
+      "error": 0.0,
+      "tolerance": 5e-15,
+      "passed": true
+    },
+    {
+      "name": "rate graph bounds 42",
+      "passed": true
+    },
+    {
+      "name": "cardioid implicit equation 43",
+      "error": 5.551115123125783e-17,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "ellipse level 43",
+      "error": 0.0,
+      "tolerance": 5e-15,
+      "passed": true
+    },
+    {
+      "name": "rate graph bounds 43",
+      "passed": true
+    },
+    {
+      "name": "cardioid implicit equation 44",
+      "error": 5.551115123125783e-17,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "ellipse level 44",
+      "error": 1.1102230246251565e-16,
+      "tolerance": 5e-15,
+      "passed": true
+    },
+    {
+      "name": "rate graph bounds 44",
+      "passed": true
+    },
+    {
+      "name": "cardioid implicit equation 45",
+      "error": 1.1102230246251565e-16,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "ellipse level 45",
+      "error": 0.0,
+      "tolerance": 5e-15,
+      "passed": true
+    },
+    {
+      "name": "rate graph bounds 45",
+      "passed": true
+    },
+    {
+      "name": "cardioid implicit equation 46",
+      "error": 0.0,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "ellipse level 46",
+      "error": 2.220446049250313e-16,
+      "tolerance": 5e-15,
+      "passed": true
+    },
+    {
+      "name": "rate graph bounds 46",
+      "passed": true
+    },
+    {
+      "name": "cardioid implicit equation 47",
+      "error": 0.0,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "ellipse level 47",
+      "error": 0.0,
+      "tolerance": 5e-15,
+      "passed": true
+    },
+    {
+      "name": "rate graph bounds 47",
+      "passed": true
+    },
+    {
+      "name": "cardioid implicit equation 48",
+      "error": 0.0,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "ellipse level 48",
+      "error": 0.0,
+      "tolerance": 5e-15,
+      "passed": true
+    },
+    {
+      "name": "rate graph bounds 48",
+      "passed": true
+    },
+    {
+      "name": "cardioid implicit equation 49",
+      "error": 2.220446049250313e-16,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "ellipse level 49",
+      "error": 1.1102230246251565e-16,
+      "tolerance": 5e-15,
+      "passed": true
+    },
+    {
+      "name": "rate graph bounds 49",
+      "passed": true
+    },
+    {
+      "name": "cardioid implicit equation 50",
+      "error": 0.0,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "ellipse level 50",
+      "error": 0.0,
+      "tolerance": 5e-15,
+      "passed": true
+    },
+    {
+      "name": "rate graph bounds 50",
+      "passed": true
+    },
+    {
+      "name": "cardioid implicit equation 51",
+      "error": 2.220446049250313e-16,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "ellipse level 51",
+      "error": 0.0,
+      "tolerance": 5e-15,
+      "passed": true
+    },
+    {
+      "name": "rate graph bounds 51",
+      "passed": true
+    },
+    {
+      "name": "cardioid implicit equation 52",
+      "error": 0.0,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "ellipse level 52",
+      "error": 1.1102230246251565e-16,
+      "tolerance": 5e-15,
+      "passed": true
+    },
+    {
+      "name": "rate graph bounds 52",
+      "passed": true
+    },
+    {
+      "name": "cardioid implicit equation 53",
+      "error": 2.220446049250313e-16,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "ellipse level 53",
+      "error": 0.0,
+      "tolerance": 5e-15,
+      "passed": true
+    },
+    {
+      "name": "rate graph bounds 53",
+      "passed": true
+    },
+    {
+      "name": "cardioid implicit equation 54",
+      "error": 0.0,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "ellipse level 54",
+      "error": 0.0,
+      "tolerance": 5e-15,
+      "passed": true
+    },
+    {
+      "name": "rate graph bounds 54",
+      "passed": true
+    },
+    {
+      "name": "cardioid implicit equation 55",
+      "error": 0.0,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "ellipse level 55",
+      "error": 0.0,
+      "tolerance": 5e-15,
+      "passed": true
+    },
+    {
+      "name": "rate graph bounds 55",
+      "passed": true
+    },
+    {
+      "name": "cardioid implicit equation 56",
+      "error": 8.881784197001252e-16,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "ellipse level 56",
+      "error": 0.0,
+      "tolerance": 5e-15,
+      "passed": true
+    },
+    {
+      "name": "rate graph bounds 56",
+      "passed": true
+    },
+    {
+      "name": "cardioid implicit equation 57",
+      "error": 0.0,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "ellipse level 57",
+      "error": 0.0,
+      "tolerance": 5e-15,
+      "passed": true
+    },
+    {
+      "name": "rate graph bounds 57",
+      "passed": true
+    },
+    {
+      "name": "cardioid implicit equation 58",
+      "error": 4.440892098500626e-16,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "ellipse level 58",
+      "error": 0.0,
+      "tolerance": 5e-15,
+      "passed": true
+    },
+    {
+      "name": "rate graph bounds 58",
+      "passed": true
+    },
+    {
+      "name": "cardioid implicit equation 59",
+      "error": 0.0,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "ellipse level 59",
+      "error": 0.0,
+      "tolerance": 5e-15,
+      "passed": true
+    },
+    {
+      "name": "rate graph bounds 59",
+      "passed": true
+    },
+    {
+      "name": "cardioid implicit equation 60",
+      "error": 4.440892098500626e-16,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "ellipse level 60",
+      "error": 0.0,
+      "tolerance": 5e-15,
+      "passed": true
+    },
+    {
+      "name": "rate graph bounds 60",
+      "passed": true
+    },
+    {
+      "name": "cardioid implicit equation 61",
+      "error": 4.440892098500626e-16,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "ellipse level 61",
+      "error": 1.1102230246251565e-16,
+      "tolerance": 5e-15,
+      "passed": true
+    },
+    {
+      "name": "rate graph bounds 61",
+      "passed": true
+    },
+    {
+      "name": "cardioid implicit equation 62",
+      "error": 0.0,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "ellipse level 62",
+      "error": 0.0,
+      "tolerance": 5e-15,
+      "passed": true
+    },
+    {
+      "name": "rate graph bounds 62",
+      "passed": true
+    },
+    {
+      "name": "cardioid implicit equation 63",
+      "error": 0.0,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "ellipse level 63",
+      "error": 0.0,
+      "tolerance": 5e-15,
+      "passed": true
+    },
+    {
+      "name": "rate graph bounds 63",
+      "passed": true
+    },
+    {
+      "name": "cardioid implicit equation 64",
+      "error": 4.440892098500626e-16,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "ellipse level 64",
+      "error": 1.1102230246251565e-16,
+      "tolerance": 5e-15,
+      "passed": true
+    },
+    {
+      "name": "rate graph bounds 64",
+      "passed": true
+    },
+    {
+      "name": "cardioid implicit equation 65",
+      "error": 8.881784197001252e-16,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "ellipse level 65",
+      "error": 2.220446049250313e-16,
+      "tolerance": 5e-15,
+      "passed": true
+    },
+    {
+      "name": "rate graph bounds 65",
+      "passed": true
+    },
+    {
+      "name": "cardioid implicit equation 66",
+      "error": 0.0,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "ellipse level 66",
+      "error": 0.0,
+      "tolerance": 5e-15,
+      "passed": true
+    },
+    {
+      "name": "rate graph bounds 66",
+      "passed": true
+    },
+    {
+      "name": "cardioid implicit equation 67",
+      "error": 0.0,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "ellipse level 67",
+      "error": 0.0,
+      "tolerance": 5e-15,
+      "passed": true
+    },
+    {
+      "name": "rate graph bounds 67",
+      "passed": true
+    },
+    {
+      "name": "cardioid implicit equation 68",
+      "error": 4.440892098500626e-16,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "ellipse level 68",
+      "error": 0.0,
+      "tolerance": 5e-15,
+      "passed": true
+    },
+    {
+      "name": "rate graph bounds 68",
+      "passed": true
+    },
+    {
+      "name": "cardioid implicit equation 69",
+      "error": 4.440892098500626e-16,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "ellipse level 69",
+      "error": 2.220446049250313e-16,
+      "tolerance": 5e-15,
+      "passed": true
+    },
+    {
+      "name": "rate graph bounds 69",
+      "passed": true
+    },
+    {
+      "name": "cardioid implicit equation 70",
+      "error": 8.881784197001252e-16,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "ellipse level 70",
+      "error": 2.220446049250313e-16,
+      "tolerance": 5e-15,
+      "passed": true
+    },
+    {
+      "name": "rate graph bounds 70",
+      "passed": true
+    },
+    {
+      "name": "cardioid implicit equation 71",
+      "error": 0.0,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "ellipse level 71",
+      "error": 0.0,
+      "tolerance": 5e-15,
+      "passed": true
+    },
+    {
+      "name": "rate graph bounds 71",
+      "passed": true
+    },
+    {
+      "name": "cardioid implicit equation 72",
+      "error": 0.0,
+      "tolerance": 2e-13,
+      "passed": true
+    },
+    {
+      "name": "ellipse level 72",
+      "error": 0.0,
+      "tolerance": 5e-15,
+      "passed": true
+    },
+    {
+      "name": "rate graph bounds 72",
+      "passed": true
+    }
+  ],
+  "check_count": 227,
+  "geometry_passed": true,
+  "actual_visual_reviewed": false,
+  "accepted": false
+}

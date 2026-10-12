@@ -1,0 +1,1020 @@
+{
+  "paper": "014",
+  "question": "03",
+  "scope": "initial math and actual source reading only; no finished question or PDF",
+  "symbolic_checks": [
+    {
+      "name": "Euler-Lagrange residual exactly reduces to hand-written ODE",
+      "passed": true
+    },
+    {
+      "name": "Beltrami first integral derived directly from F",
+      "passed": true
+    },
+    {
+      "name": "parabola satisfies the actual second-order variational equation",
+      "passed": true
+    },
+    {
+      "name": "first integral on the parabola after squaring",
+      "passed": true
+    },
+    {
+      "name": "both inbound and outbound radius derivative magnitude",
+      "passed": true
+    },
+    {
+      "name": "Cartesian focus-directrix relation r+x=2c",
+      "passed": true
+    },
+    {
+      "name": "Cartesian parabola equivalent to polar result",
+      "passed": true
+    },
+    {
+      "name": "square-root metric radial coefficient",
+      "passed": true
+    },
+    {
+      "name": "square-root metric angular coefficient",
+      "passed": true
+    },
+    {
+      "name": "square-root metric cross coefficient",
+      "passed": true
+    },
+    {
+      "name": "actual radius from Cartesian coordinates",
+      "passed": true
+    },
+    {
+      "name": "real trajectory speed equals sqrt(2gr)",
+      "passed": true
+    },
+    {
+      "name": "constraint reaction equals positive normal scalar",
+      "passed": true
+    },
+    {
+      "name": "normal reaction does no mechanical work",
+      "passed": true
+    },
+    {
+      "name": "trajectory curvature and speed give centripetal acceleration",
+      "passed": true
+    },
+    {
+      "name": "radial potential gives outward constant force",
+      "passed": true
+    },
+    {
+      "name": "parabola passes through both prescribed endpoints",
+      "passed": true
+    },
+    {
+      "name": "time from linear y motion matches square-root chord on allowed angular domain",
+      "passed": true
+    }
+  ],
+  "symbolic_count": 18,
+  "numeric_count": 108,
+  "numerical_checks": [
+    {
+      "name": "independent polar arc-length time integral",
+      "measured": 0.029678022204686808,
+      "expected": 0.029678022204686797,
+      "error": 1.0408340855860843e-17,
+      "passed": true,
+      "theta": 0.03
+    },
+    {
+      "name": "endpoint-preserving inward/outward path is not faster",
+      "theta": 0.03,
+      "strength": -0.2,
+      "time": 0.21241669468289037,
+      "optimal": 0.029678022204686797,
+      "passed": true
+    },
+    {
+      "name": "endpoint-preserving inward/outward path is not faster",
+      "theta": 0.03,
+      "strength": -0.05,
+      "time": 0.06015562952074044,
+      "optimal": 0.029678022204686797,
+      "passed": true
+    },
+    {
+      "name": "endpoint-preserving inward/outward path is not faster",
+      "theta": 0.03,
+      "strength": 0.05,
+      "time": 0.0591528251665054,
+      "optimal": 0.029678022204686797,
+      "passed": true
+    },
+    {
+      "name": "endpoint-preserving inward/outward path is not faster",
+      "theta": 0.03,
+      "strength": 0.25,
+      "time": 0.23704342234769263,
+      "optimal": 0.029678022204686797,
+      "passed": true
+    },
+    {
+      "name": "endpoint-preserving inward/outward path is not faster",
+      "theta": 0.03,
+      "strength": 1.0,
+      "time": 0.8210822973076946,
+      "optimal": 0.029678022204686797,
+      "passed": true
+    },
+    {
+      "name": "elapsed time from actual real-particle trajectory",
+      "measured": 0.029678022204686808,
+      "expected": 0.029678022204686797,
+      "error": 1.0408340855860843e-17,
+      "passed": true,
+      "theta": 0.03
+    },
+    {
+      "name": "actual kinetic energy plus outward potential is zero",
+      "measured": 0.0,
+      "expected": 0,
+      "error": 0.0,
+      "passed": true,
+      "theta": 0.03,
+      "fraction": 0.0
+    },
+    {
+      "name": "constraint force does no work along actual motion",
+      "measured": 2.220446049250313e-16,
+      "expected": 0,
+      "error": 1.0160486958155794e-17,
+      "passed": true,
+      "theta": 0.03,
+      "fraction": 0.0
+    },
+    {
+      "name": "actual kinetic energy plus outward potential is zero",
+      "measured": -1.7763568394002505e-15,
+      "expected": 0,
+      "error": 1.6432533204442652e-16,
+      "passed": true,
+      "theta": 0.03,
+      "fraction": 0.1
+    },
+    {
+      "name": "constraint force does no work along actual motion",
+      "measured": 1.1102230246251565e-16,
+      "expected": 0,
+      "error": 5.080243479077897e-18,
+      "passed": true,
+      "theta": 0.03,
+      "fraction": 0.1
+    },
+    {
+      "name": "actual kinetic energy plus outward potential is zero",
+      "measured": -1.7763568394002505e-15,
+      "expected": 0,
+      "error": 1.6432533204442652e-16,
+      "passed": true,
+      "theta": 0.03,
+      "fraction": 0.5
+    },
+    {
+      "name": "constraint force does no work along actual motion",
+      "measured": 0.0,
+      "expected": 0,
+      "error": 0.0,
+      "passed": true,
+      "theta": 0.03,
+      "fraction": 0.5
+    },
+    {
+      "name": "actual kinetic energy plus outward potential is zero",
+      "measured": -1.7763568394002505e-15,
+      "expected": 0,
+      "error": 1.6432533204442652e-16,
+      "passed": true,
+      "theta": 0.03,
+      "fraction": 0.9
+    },
+    {
+      "name": "constraint force does no work along actual motion",
+      "measured": -1.1102230246251565e-16,
+      "expected": 0,
+      "error": 5.080243479077897e-18,
+      "passed": true,
+      "theta": 0.03,
+      "fraction": 0.9
+    },
+    {
+      "name": "actual kinetic energy plus outward potential is zero",
+      "measured": 0.0,
+      "expected": 0,
+      "error": 0.0,
+      "passed": true,
+      "theta": 0.03,
+      "fraction": 1.0
+    },
+    {
+      "name": "constraint force does no work along actual motion",
+      "measured": -2.220446049250313e-16,
+      "expected": 0,
+      "error": 1.0160486958155794e-17,
+      "passed": true,
+      "theta": 0.03,
+      "fraction": 1.0
+    },
+    {
+      "name": "circular arc is no faster",
+      "theta": 0.03,
+      "time": 0.029679135159734478,
+      "optimal": 0.029678022204686797,
+      "passed": true
+    },
+    {
+      "name": "independent polar arc-length time integral",
+      "measured": 0.19753129774128658,
+      "expected": 0.19753129774128655,
+      "error": 2.7755575615628914e-17,
+      "passed": true,
+      "theta": 0.2
+    },
+    {
+      "name": "endpoint-preserving inward/outward path is not faster",
+      "theta": 0.2,
+      "strength": -0.2,
+      "time": 0.2963148037020015,
+      "optimal": 0.19753129774128655,
+      "passed": true
+    },
+    {
+      "name": "endpoint-preserving inward/outward path is not faster",
+      "theta": 0.2,
+      "strength": -0.05,
+      "time": 0.2050528818987426,
+      "optimal": 0.19753129774128655,
+      "passed": true
+    },
+    {
+      "name": "endpoint-preserving inward/outward path is not faster",
+      "theta": 0.2,
+      "strength": 0.05,
+      "time": 0.20474973259095314,
+      "optimal": 0.19753129774128655,
+      "passed": true
+    },
+    {
+      "name": "endpoint-preserving inward/outward path is not faster",
+      "theta": 0.2,
+      "strength": 0.25,
+      "time": 0.3172550574694526,
+      "optimal": 0.19753129774128655,
+      "passed": true
+    },
+    {
+      "name": "endpoint-preserving inward/outward path is not faster",
+      "theta": 0.2,
+      "strength": 1.0,
+      "time": 0.8584641714919883,
+      "optimal": 0.19753129774128655,
+      "passed": true
+    },
+    {
+      "name": "elapsed time from actual real-particle trajectory",
+      "measured": 0.19753129774128655,
+      "expected": 0.19753129774128655,
+      "error": 0.0,
+      "passed": true,
+      "theta": 0.2
+    },
+    {
+      "name": "actual kinetic energy plus outward potential is zero",
+      "measured": 3.552713678800501e-15,
+      "expected": 0,
+      "error": 3.2865066408885304e-16,
+      "passed": true,
+      "theta": 0.2,
+      "fraction": 0.0
+    },
+    {
+      "name": "constraint force does no work along actual motion",
+      "measured": 0.0,
+      "expected": 0,
+      "error": 0.0,
+      "passed": true,
+      "theta": 0.2,
+      "fraction": 0.0
+    },
+    {
+      "name": "actual kinetic energy plus outward potential is zero",
+      "measured": 0.0,
+      "expected": 0,
+      "error": 0.0,
+      "passed": true,
+      "theta": 0.2,
+      "fraction": 0.1
+    },
+    {
+      "name": "constraint force does no work along actual motion",
+      "measured": 4.440892098500626e-16,
+      "expected": 0,
+      "error": 2.0320973916311588e-17,
+      "passed": true,
+      "theta": 0.2,
+      "fraction": 0.1
+    },
+    {
+      "name": "actual kinetic energy plus outward potential is zero",
+      "measured": 1.7763568394002505e-15,
+      "expected": 0,
+      "error": 1.6432533204442652e-16,
+      "passed": true,
+      "theta": 0.2,
+      "fraction": 0.5
+    },
+    {
+      "name": "constraint force does no work along actual motion",
+      "measured": 0.0,
+      "expected": 0,
+      "error": 0.0,
+      "passed": true,
+      "theta": 0.2,
+      "fraction": 0.5
+    },
+    {
+      "name": "actual kinetic energy plus outward potential is zero",
+      "measured": 0.0,
+      "expected": 0,
+      "error": 0.0,
+      "passed": true,
+      "theta": 0.2,
+      "fraction": 0.9
+    },
+    {
+      "name": "constraint force does no work along actual motion",
+      "measured": -4.440892098500626e-16,
+      "expected": 0,
+      "error": 2.0320973916311588e-17,
+      "passed": true,
+      "theta": 0.2,
+      "fraction": 0.9
+    },
+    {
+      "name": "actual kinetic energy plus outward potential is zero",
+      "measured": 3.552713678800501e-15,
+      "expected": 0,
+      "error": 3.2865066408885304e-16,
+      "passed": true,
+      "theta": 0.2,
+      "fraction": 1.0
+    },
+    {
+      "name": "constraint force does no work along actual motion",
+      "measured": 0.0,
+      "expected": 0,
+      "error": 0.0,
+      "passed": true,
+      "theta": 0.2,
+      "fraction": 1.0
+    },
+    {
+      "name": "circular arc is no faster",
+      "theta": 0.2,
+      "time": 0.19786090106489654,
+      "optimal": 0.19753129774128655,
+      "passed": true
+    },
+    {
+      "name": "independent polar arc-length time integral",
+      "measured": 0.48951570305122843,
+      "expected": 0.48951570305122843,
+      "error": 0.0,
+      "passed": true,
+      "theta": 0.5
+    },
+    {
+      "name": "endpoint-preserving inward/outward path is not faster",
+      "theta": 0.5,
+      "strength": -0.2,
+      "time": 0.537324111304237,
+      "optimal": 0.48951570305122843,
+      "passed": true
+    },
+    {
+      "name": "endpoint-preserving inward/outward path is not faster",
+      "theta": 0.5,
+      "strength": -0.05,
+      "time": 0.49247153866447974,
+      "optimal": 0.48951570305122843,
+      "passed": true
+    },
+    {
+      "name": "endpoint-preserving inward/outward path is not faster",
+      "theta": 0.5,
+      "strength": 0.05,
+      "time": 0.4923484658206212,
+      "optimal": 0.48951570305122843,
+      "passed": true
+    },
+    {
+      "name": "endpoint-preserving inward/outward path is not faster",
+      "theta": 0.5,
+      "strength": 0.25,
+      "time": 0.5499939957271649,
+      "optimal": 0.48951570305122843,
+      "passed": true
+    },
+    {
+      "name": "endpoint-preserving inward/outward path is not faster",
+      "theta": 0.5,
+      "strength": 1.0,
+      "time": 0.9817314392559577,
+      "optimal": 0.48951570305122843,
+      "passed": true
+    },
+    {
+      "name": "elapsed time from actual real-particle trajectory",
+      "measured": 0.48951570305122843,
+      "expected": 0.48951570305122843,
+      "error": 0.0,
+      "passed": true,
+      "theta": 0.5
+    },
+    {
+      "name": "actual kinetic energy plus outward potential is zero",
+      "measured": 5.329070518200751e-15,
+      "expected": 0,
+      "error": 4.929759961332796e-16,
+      "passed": true,
+      "theta": 0.5,
+      "fraction": 0.0
+    },
+    {
+      "name": "constraint force does no work along actual motion",
+      "measured": -1.7763568394002505e-15,
+      "expected": 0,
+      "error": 8.128389566524635e-17,
+      "passed": true,
+      "theta": 0.5,
+      "fraction": 0.0
+    },
+    {
+      "name": "actual kinetic energy plus outward potential is zero",
+      "measured": 1.7763568394002505e-15,
+      "expected": 0,
+      "error": 1.6432533204442652e-16,
+      "passed": true,
+      "theta": 0.5,
+      "fraction": 0.1
+    },
+    {
+      "name": "constraint force does no work along actual motion",
+      "measured": 1.7763568394002505e-15,
+      "expected": 0,
+      "error": 8.128389566524635e-17,
+      "passed": true,
+      "theta": 0.5,
+      "fraction": 0.1
+    },
+    {
+      "name": "actual kinetic energy plus outward potential is zero",
+      "measured": 1.7763568394002505e-15,
+      "expected": 0,
+      "error": 1.6432533204442652e-16,
+      "passed": true,
+      "theta": 0.5,
+      "fraction": 0.5
+    },
+    {
+      "name": "constraint force does no work along actual motion",
+      "measured": 0.0,
+      "expected": 0,
+      "error": 0.0,
+      "passed": true,
+      "theta": 0.5,
+      "fraction": 0.5
+    },
+    {
+      "name": "actual kinetic energy plus outward potential is zero",
+      "measured": 1.7763568394002505e-15,
+      "expected": 0,
+      "error": 1.6432533204442652e-16,
+      "passed": true,
+      "theta": 0.5,
+      "fraction": 0.9
+    },
+    {
+      "name": "constraint force does no work along actual motion",
+      "measured": -1.7763568394002505e-15,
+      "expected": 0,
+      "error": 8.128389566524635e-17,
+      "passed": true,
+      "theta": 0.5,
+      "fraction": 0.9
+    },
+    {
+      "name": "actual kinetic energy plus outward potential is zero",
+      "measured": 5.329070518200751e-15,
+      "expected": 0,
+      "error": 4.929759961332796e-16,
+      "passed": true,
+      "theta": 0.5,
+      "fraction": 1.0
+    },
+    {
+      "name": "constraint force does no work along actual motion",
+      "measured": 1.7763568394002505e-15,
+      "expected": 0,
+      "error": 8.128389566524635e-17,
+      "passed": true,
+      "theta": 0.5,
+      "fraction": 1.0
+    },
+    {
+      "name": "circular arc is no faster",
+      "theta": 0.5,
+      "time": 0.49465225266224133,
+      "optimal": 0.48951570305122843,
+      "passed": true
+    },
+    {
+      "name": "independent polar arc-length time integral",
+      "measured": 0.9485956906175094,
+      "expected": 0.9485956906175093,
+      "error": 1.1102230246251565e-16,
+      "passed": true,
+      "theta": 1.0
+    },
+    {
+      "name": "endpoint-preserving inward/outward path is not faster",
+      "theta": 1.0,
+      "strength": -0.2,
+      "time": 0.9703360866628378,
+      "optimal": 0.9485956906175093,
+      "passed": true
+    },
+    {
+      "name": "endpoint-preserving inward/outward path is not faster",
+      "theta": 1.0,
+      "strength": -0.05,
+      "time": 0.9498712979720483,
+      "optimal": 0.9485956906175093,
+      "passed": true
+    },
+    {
+      "name": "endpoint-preserving inward/outward path is not faster",
+      "theta": 1.0,
+      "strength": 0.05,
+      "time": 0.9498146153875849,
+      "optimal": 0.9485956906175093,
+      "passed": true
+    },
+    {
+      "name": "endpoint-preserving inward/outward path is not faster",
+      "theta": 1.0,
+      "strength": 0.25,
+      "time": 0.9762048267870126,
+      "optimal": 0.9485956906175093,
+      "passed": true
+    },
+    {
+      "name": "endpoint-preserving inward/outward path is not faster",
+      "theta": 1.0,
+      "strength": 1.0,
+      "time": 1.245396174951126,
+      "optimal": 0.9485956906175093,
+      "passed": true
+    },
+    {
+      "name": "elapsed time from actual real-particle trajectory",
+      "measured": 0.9485956906175093,
+      "expected": 0.9485956906175093,
+      "error": 0.0,
+      "passed": true,
+      "theta": 1.0
+    },
+    {
+      "name": "actual kinetic energy plus outward potential is zero",
+      "measured": 0.0,
+      "expected": 0,
+      "error": 0.0,
+      "passed": true,
+      "theta": 1.0,
+      "fraction": 0.0
+    },
+    {
+      "name": "constraint force does no work along actual motion",
+      "measured": -3.552713678800501e-15,
+      "expected": 0,
+      "error": 1.625677913304927e-16,
+      "passed": true,
+      "theta": 1.0,
+      "fraction": 0.0
+    },
+    {
+      "name": "actual kinetic energy plus outward potential is zero",
+      "measured": 0.0,
+      "expected": 0,
+      "error": 0.0,
+      "passed": true,
+      "theta": 1.0,
+      "fraction": 0.1
+    },
+    {
+      "name": "constraint force does no work along actual motion",
+      "measured": 3.552713678800501e-15,
+      "expected": 0,
+      "error": 1.625677913304927e-16,
+      "passed": true,
+      "theta": 1.0,
+      "fraction": 0.1
+    },
+    {
+      "name": "actual kinetic energy plus outward potential is zero",
+      "measured": 0.0,
+      "expected": 0,
+      "error": 0.0,
+      "passed": true,
+      "theta": 1.0,
+      "fraction": 0.5
+    },
+    {
+      "name": "constraint force does no work along actual motion",
+      "measured": 0.0,
+      "expected": 0,
+      "error": 0.0,
+      "passed": true,
+      "theta": 1.0,
+      "fraction": 0.5
+    },
+    {
+      "name": "actual kinetic energy plus outward potential is zero",
+      "measured": 0.0,
+      "expected": 0,
+      "error": 0.0,
+      "passed": true,
+      "theta": 1.0,
+      "fraction": 0.9
+    },
+    {
+      "name": "constraint force does no work along actual motion",
+      "measured": -1.7763568394002505e-15,
+      "expected": 0,
+      "error": 8.128389566524635e-17,
+      "passed": true,
+      "theta": 1.0,
+      "fraction": 0.9
+    },
+    {
+      "name": "actual kinetic energy plus outward potential is zero",
+      "measured": 0.0,
+      "expected": 0,
+      "error": 0.0,
+      "passed": true,
+      "theta": 1.0,
+      "fraction": 1.0
+    },
+    {
+      "name": "constraint force does no work along actual motion",
+      "measured": 3.552713678800501e-15,
+      "expected": 0,
+      "error": 1.625677913304927e-16,
+      "passed": true,
+      "theta": 1.0,
+      "fraction": 1.0
+    },
+    {
+      "name": "circular arc is no faster",
+      "theta": 1.0,
+      "time": 0.9893045053244827,
+      "optimal": 0.9485956906175093,
+      "passed": true
+    },
+    {
+      "name": "independent polar arc-length time integral",
+      "measured": 1.2746549207879323,
+      "expected": 1.274654920787932,
+      "error": 1.7419977854694485e-16,
+      "passed": true,
+      "theta": 1.4
+    },
+    {
+      "name": "endpoint-preserving inward/outward path is not faster",
+      "theta": 1.4,
+      "strength": -0.2,
+      "time": 1.2875063124269446,
+      "optimal": 1.274654920787932,
+      "passed": true
+    },
+    {
+      "name": "endpoint-preserving inward/outward path is not faster",
+      "theta": 1.4,
+      "strength": -0.05,
+      "time": 1.2753984718091709,
+      "optimal": 1.274654920787932,
+      "passed": true
+    },
+    {
+      "name": "endpoint-preserving inward/outward path is not faster",
+      "theta": 1.4,
+      "strength": 0.05,
+      "time": 1.275362907017978,
+      "optimal": 1.274654920787932,
+      "passed": true
+    },
+    {
+      "name": "endpoint-preserving inward/outward path is not faster",
+      "theta": 1.4,
+      "strength": 0.25,
+      "time": 1.290769079566625,
+      "optimal": 1.274654920787932,
+      "passed": true
+    },
+    {
+      "name": "endpoint-preserving inward/outward path is not faster",
+      "theta": 1.4,
+      "strength": 1.0,
+      "time": 1.4622337533973218,
+      "optimal": 1.274654920787932,
+      "passed": true
+    },
+    {
+      "name": "elapsed time from actual real-particle trajectory",
+      "measured": 1.274654920787932,
+      "expected": 1.274654920787932,
+      "error": 0.0,
+      "passed": true,
+      "theta": 1.4
+    },
+    {
+      "name": "actual kinetic energy plus outward potential is zero",
+      "measured": 0.0,
+      "expected": 0,
+      "error": 0.0,
+      "passed": true,
+      "theta": 1.4,
+      "fraction": 0.0
+    },
+    {
+      "name": "constraint force does no work along actual motion",
+      "measured": 3.552713678800501e-15,
+      "expected": 0,
+      "error": 1.625677913304927e-16,
+      "passed": true,
+      "theta": 1.4,
+      "fraction": 0.0
+    },
+    {
+      "name": "actual kinetic energy plus outward potential is zero",
+      "measured": 1.7763568394002505e-15,
+      "expected": 0,
+      "error": 1.6432533204442652e-16,
+      "passed": true,
+      "theta": 1.4,
+      "fraction": 0.1
+    },
+    {
+      "name": "constraint force does no work along actual motion",
+      "measured": 0.0,
+      "expected": 0,
+      "error": 0.0,
+      "passed": true,
+      "theta": 1.4,
+      "fraction": 0.1
+    },
+    {
+      "name": "actual kinetic energy plus outward potential is zero",
+      "measured": 0.0,
+      "expected": 0,
+      "error": 0.0,
+      "passed": true,
+      "theta": 1.4,
+      "fraction": 0.5
+    },
+    {
+      "name": "constraint force does no work along actual motion",
+      "measured": 0.0,
+      "expected": 0,
+      "error": 0.0,
+      "passed": true,
+      "theta": 1.4,
+      "fraction": 0.5
+    },
+    {
+      "name": "actual kinetic energy plus outward potential is zero",
+      "measured": 0.0,
+      "expected": 0,
+      "error": 0.0,
+      "passed": true,
+      "theta": 1.4,
+      "fraction": 0.9
+    },
+    {
+      "name": "constraint force does no work along actual motion",
+      "measured": -1.7763568394002505e-15,
+      "expected": 0,
+      "error": 8.128389566524635e-17,
+      "passed": true,
+      "theta": 1.4,
+      "fraction": 0.9
+    },
+    {
+      "name": "actual kinetic energy plus outward potential is zero",
+      "measured": 0.0,
+      "expected": 0,
+      "error": 0.0,
+      "passed": true,
+      "theta": 1.4,
+      "fraction": 1.0
+    },
+    {
+      "name": "constraint force does no work along actual motion",
+      "measured": -3.552713678800501e-15,
+      "expected": 0,
+      "error": 1.625677913304927e-16,
+      "passed": true,
+      "theta": 1.4,
+      "fraction": 1.0
+    },
+    {
+      "name": "circular arc is no faster",
+      "theta": 1.4,
+      "time": 1.3850263074542757,
+      "optimal": 1.274654920787932,
+      "passed": true
+    },
+    {
+      "name": "independent polar arc-length time integral",
+      "measured": 1.3990878487466891,
+      "expected": 1.3990878487466887,
+      "error": 3.174133849049439e-16,
+      "passed": true,
+      "theta": 1.5707963267948966
+    },
+    {
+      "name": "endpoint-preserving inward/outward path is not faster",
+      "theta": 1.5707963267948966,
+      "strength": -0.2,
+      "time": 1.4093608628524954,
+      "optimal": 1.3990878487466887,
+      "passed": true
+    },
+    {
+      "name": "endpoint-preserving inward/outward path is not faster",
+      "theta": 1.5707963267948966,
+      "strength": -0.05,
+      "time": 1.3996794575067928,
+      "optimal": 1.3990878487466887,
+      "passed": true
+    },
+    {
+      "name": "endpoint-preserving inward/outward path is not faster",
+      "theta": 1.5707963267948966,
+      "strength": 0.05,
+      "time": 1.3996501242484607,
+      "optimal": 1.3990878487466887,
+      "passed": true
+    },
+    {
+      "name": "endpoint-preserving inward/outward path is not faster",
+      "theta": 1.5707963267948966,
+      "strength": 0.25,
+      "time": 1.4118713950845407,
+      "optimal": 1.3990878487466887,
+      "passed": true
+    },
+    {
+      "name": "endpoint-preserving inward/outward path is not faster",
+      "theta": 1.5707963267948966,
+      "strength": 1.0,
+      "time": 1.549973935960275,
+      "optimal": 1.3990878487466887,
+      "passed": true
+    },
+    {
+      "name": "elapsed time from actual real-particle trajectory",
+      "measured": 1.3990878487466887,
+      "expected": 1.3990878487466887,
+      "error": 0.0,
+      "passed": true,
+      "theta": 1.5707963267948966
+    },
+    {
+      "name": "actual kinetic energy plus outward potential is zero",
+      "measured": 1.7763568394002505e-15,
+      "expected": 0,
+      "error": 1.6432533204442652e-16,
+      "passed": true,
+      "theta": 1.5707963267948966,
+      "fraction": 0.0
+    },
+    {
+      "name": "constraint force does no work along actual motion",
+      "measured": 0.0,
+      "expected": 0,
+      "error": 0.0,
+      "passed": true,
+      "theta": 1.5707963267948966,
+      "fraction": 0.0
+    },
+    {
+      "name": "actual kinetic energy plus outward potential is zero",
+      "measured": 1.7763568394002505e-15,
+      "expected": 0,
+      "error": 1.6432533204442652e-16,
+      "passed": true,
+      "theta": 1.5707963267948966,
+      "fraction": 0.1
+    },
+    {
+      "name": "constraint force does no work along actual motion",
+      "measured": 1.7763568394002505e-15,
+      "expected": 0,
+      "error": 8.128389566524635e-17,
+      "passed": true,
+      "theta": 1.5707963267948966,
+      "fraction": 0.1
+    },
+    {
+      "name": "actual kinetic energy plus outward potential is zero",
+      "measured": 8.881784197001252e-16,
+      "expected": 0,
+      "error": 8.216266602221326e-17,
+      "passed": true,
+      "theta": 1.5707963267948966,
+      "fraction": 0.5
+    },
+    {
+      "name": "constraint force does no work along actual motion",
+      "measured": 0.0,
+      "expected": 0,
+      "error": 0.0,
+      "passed": true,
+      "theta": 1.5707963267948966,
+      "fraction": 0.5
+    },
+    {
+      "name": "actual kinetic energy plus outward potential is zero",
+      "measured": 1.7763568394002505e-15,
+      "expected": 0,
+      "error": 1.6432533204442652e-16,
+      "passed": true,
+      "theta": 1.5707963267948966,
+      "fraction": 0.9
+    },
+    {
+      "name": "constraint force does no work along actual motion",
+      "measured": -1.7763568394002505e-15,
+      "expected": 0,
+      "error": 8.128389566524635e-17,
+      "passed": true,
+      "theta": 1.5707963267948966,
+      "fraction": 0.9
+    },
+    {
+      "name": "actual kinetic energy plus outward potential is zero",
+      "measured": 1.7763568394002505e-15,
+      "expected": 0,
+      "error": 1.6432533204442652e-16,
+      "passed": true,
+      "theta": 1.5707963267948966,
+      "fraction": 1.0
+    },
+    {
+      "name": "constraint force does no work along actual motion",
+      "measured": 0.0,
+      "expected": 0,
+      "error": 0.0,
+      "passed": true,
+      "theta": 1.5707963267948966,
+      "fraction": 1.0
+    },
+    {
+      "name": "circular arc is no faster",
+      "theta": 1.5707963267948966,
+      "time": 1.5539958830453395,
+      "optimal": 1.3990878487466887,
+      "passed": true
+    }
+  ],
+  "math_passed": true,
+  "question_accepted": false,
+  "set_accepted": false,
+  "source_sha256": {
+    "试卷.pdf": "3c8164d75b7f117095d26f554fb788867b2b781c9a642af12bee499d3b232cf0",
+    "答案.pdf": "111c13cd664b08f098076baed25c937368238953127045c5cfa8c8460471472a"
+  },
+  "script_sha256": "1eacc6f63885e7bdd2a283d17a50d94d28dd14526268258649865ce39f868e64",
+  "result": {
+    "closest_radius": "l*cos(theta0/2)^2",
+    "polar": "r=l*cos(theta0/2)^2/cos(phi/2)^2",
+    "time": "2*sqrt(2*l/g)*sin(theta0/2)",
+    "normal_reaction": "2*m*g/sqrt(1+q^2)"
+  },
+  "pending": [
+    "完整九模块与手写Snell/Euler-Lagrange代数补全",
+    "平面轨道/微元/最短路/受力图",
+    "分题工作PDF与实际审读"
+  ]
+}

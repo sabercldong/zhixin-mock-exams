@@ -1,0 +1,759 @@
+{
+  "paper": "014",
+  "question": "05",
+  "scope": "math and independent PDE checks only; not actual visual or whole-set acceptance",
+  "symbolic_count": 40,
+  "numeric_count": 40,
+  "symbolic_checks": [
+    {
+      "test": "quarter turn is norm preserving",
+      "passed": true
+    },
+    {
+      "test": "quarter turn squared reverses vectors",
+      "passed": true
+    },
+    {
+      "test": "dual Ohm law including dimensions",
+      "passed": true
+    },
+    {
+      "test": "inverse transform recovers original E",
+      "passed": true
+    },
+    {
+      "test": "inverse transform recovers original J",
+      "passed": true
+    },
+    {
+      "test": "dual curl equals original divergence",
+      "passed": true
+    },
+    {
+      "test": "dual divergence is minus original curl",
+      "passed": true
+    },
+    {
+      "test": "interface dual normal current uses continuous tangential E",
+      "passed": true
+    },
+    {
+      "test": "interface dual tangential E uses continuous normal J",
+      "passed": true
+    },
+    {
+      "test": "phase one is changed to phase two",
+      "passed": true
+    },
+    {
+      "test": "phase two is changed to phase one",
+      "passed": true
+    },
+    {
+      "test": "finite plate dual terminal resistance product",
+      "passed": true
+    },
+    {
+      "test": "self-dual positive resistance root",
+      "passed": true
+    },
+    {
+      "test": "three-dimensional conductivities converted to sheet values",
+      "passed": true
+    },
+    {
+      "test": "lower difference is nonnegative square",
+      "passed": true
+    },
+    {
+      "test": "upper difference is nonnegative square",
+      "passed": true
+    },
+    {
+      "test": "two modified-circuit bounds have geometric-mean exact R",
+      "passed": true
+    },
+    {
+      "test": "uniform potential trial energy equals arithmetic conductance",
+      "passed": true
+    },
+    {
+      "test": "uniform current trial energy equals harmonic resistance",
+      "passed": true
+    },
+    {
+      "test": "stream gives divergence-free current",
+      "passed": true
+    },
+    {
+      "test": "rotated stream current is gradient",
+      "passed": true
+    },
+    {
+      "test": "actual normal current is continuous",
+      "passed": true
+    },
+    {
+      "test": "actual tangential E is continuous",
+      "passed": true
+    },
+    {
+      "test": "refraction tan ratio is conductivity ratio",
+      "passed": true
+    },
+    {
+      "test": "complete fourth-order weak contrast expansion",
+      "passed": true
+    },
+    {
+      "test": "logarithmic sensitivity of phase one",
+      "passed": true
+    },
+    {
+      "test": "logarithmic sensitivity of phase two",
+      "passed": true
+    },
+    {
+      "test": "equal phases reproduce a homogeneous square",
+      "passed": true
+    },
+    {
+      "test": "added middle short has potential U/2",
+      "passed": true
+    },
+    {
+      "test": "alternative fixed terminal voltage normalization",
+      "passed": true
+    },
+    {
+      "test": "alternative fixed terminal current normalization",
+      "passed": true
+    },
+    {
+      "test": "rotated inverse kappa has same uniform factor in phase one",
+      "passed": true
+    },
+    {
+      "test": "rotated inverse kappa has same uniform factor in phase two",
+      "passed": true
+    },
+    {
+      "test": "uniform factor equals one at positive self-dual root",
+      "passed": true
+    },
+    {
+      "test": "zero conductivity limit is infinite R, not point-contact conduction",
+      "passed": true
+    },
+    {
+      "test": "consistent SI units including stream potential and dual constants",
+      "passed": true,
+      "units": {
+        "sheet_conductance": "S",
+        "sheet_current": "A/m",
+        "field": "V/m",
+        "stream": "A",
+        "resistance": "ohm"
+      }
+    },
+    {
+      "test": "SI module: sheet conductance from thickness times bulk conductivity",
+      "passed": true
+    },
+    {
+      "test": "SI module: scaled current is an electric field",
+      "passed": true
+    },
+    {
+      "test": "SI module: scaled field is a sheet current",
+      "passed": true
+    },
+    {
+      "test": "SI module: stream divided by sheet conductance is voltage",
+      "passed": true
+    }
+  ],
+  "numerical_checks": [
+    {
+      "test": "independent homogeneous rectangle FEM",
+      "mesh": 8,
+      "conductance": 3.7777777777777755,
+      "resistance": 0.26470588235294135,
+      "energy": 3.7777777777777795,
+      "relative_balance": 4.647445219361123e-16,
+      "scaled_interior_residual": 7.401486830834377e-16,
+      "expected_conductance": 3.7777777777777777,
+      "passed": true
+    },
+    {
+      "test": "independent homogeneous rectangle FEM",
+      "mesh": 32,
+      "conductance": 3.777777777777808,
+      "resistance": 0.26470588235293907,
+      "energy": 3.7777777777777968,
+      "relative_balance": 8.17950358607552e-15,
+      "scaled_interior_residual": 1.5378644859622548e-15,
+      "expected_conductance": 3.7777777777777777,
+      "passed": true
+    },
+    {
+      "test": "independent homogeneous rectangle FEM",
+      "mesh": 128,
+      "conductance": 3.777777777777862,
+      "resistance": 0.2647058823529353,
+      "energy": 3.7777777777777506,
+      "relative_balance": 2.0913503487124673e-14,
+      "scaled_interior_residual": 4.292862361883938e-15,
+      "expected_conductance": 3.7777777777777777,
+      "passed": true
+    },
+    {
+      "test": "nested continuous FEM square energy convergence",
+      "k1": 1.0,
+      "k2": 1.0,
+      "mesh": 16,
+      "conductance": 1.0,
+      "resistance": 1.0,
+      "energy": 1.0000000000000007,
+      "relative_balance": 3.885780586188048e-16,
+      "scaled_interior_residual": 7.216449660063518e-16,
+      "exact_conductance": 1.0,
+      "relative_discretization_error": 0.0,
+      "finite_mesh_not_exact": true,
+      "passed": true
+    },
+    {
+      "test": "nested continuous FEM square energy convergence",
+      "k1": 1.0,
+      "k2": 1.0,
+      "mesh": 32,
+      "conductance": 1.000000000000004,
+      "resistance": 0.999999999999996,
+      "energy": 1.000000000000001,
+      "relative_balance": 2.6090241078691127e-15,
+      "scaled_interior_residual": 9.992007221626409e-16,
+      "exact_conductance": 1.0,
+      "relative_discretization_error": 3.9968028886505635e-15,
+      "finite_mesh_not_exact": true,
+      "passed": true
+    },
+    {
+      "test": "nested continuous FEM square energy convergence",
+      "k1": 1.0,
+      "k2": 1.0,
+      "mesh": 64,
+      "conductance": 1.0000000000000528,
+      "resistance": 0.9999999999999472,
+      "energy": 0.999999999999998,
+      "relative_balance": 3.885780586187945e-14,
+      "scaled_interior_residual": 1.5543122344752192e-15,
+      "exact_conductance": 1.0,
+      "relative_discretization_error": 5.284661597215745e-14,
+      "finite_mesh_not_exact": true,
+      "passed": true
+    },
+    {
+      "test": "nested continuous FEM square energy convergence",
+      "k1": 1.0,
+      "k2": 1.0,
+      "mesh": 128,
+      "conductance": 1.000000000000205,
+      "resistance": 0.999999999999795,
+      "energy": 1.0000000000000013,
+      "relative_balance": 1.4688250615789314e-13,
+      "scaled_interior_residual": 1.6653345369377348e-15,
+      "exact_conductance": 1.0,
+      "relative_discretization_error": 2.049471703458039e-13,
+      "finite_mesh_not_exact": true,
+      "passed": true
+    },
+    {
+      "test": "nested continuous FEM square energy convergence",
+      "k1": 1.0,
+      "k2": 1.0,
+      "mesh": 256,
+      "conductance": 1.0000000000007234,
+      "resistance": 0.9999999999992766,
+      "energy": 0.9999999999999865,
+      "relative_balance": 5.298539385021643e-13,
+      "scaled_interior_residual": 3.1086244689504383e-15,
+      "exact_conductance": 1.0,
+      "relative_discretization_error": 7.23421322845752e-13,
+      "finite_mesh_not_exact": true,
+      "passed": true
+    },
+    {
+      "test": "nested continuous FEM square energy convergence",
+      "k1": 2.0,
+      "k2": 1.0,
+      "mesh": 16,
+      "conductance": 1.4164435497898333,
+      "resistance": 0.7059935428760125,
+      "energy": 1.4164435497898367,
+      "relative_balance": 6.432230683023417e-16,
+      "scaled_interior_residual": 8.141635513917814e-16,
+      "exact_conductance": 1.4142135623730951,
+      "relative_discretization_error": 0.0015768392243362683,
+      "finite_mesh_not_exact": true,
+      "passed": true
+    },
+    {
+      "test": "nested continuous FEM square energy convergence",
+      "k1": 2.0,
+      "k2": 1.0,
+      "mesh": 32,
+      "conductance": 1.4149792293450136,
+      "resistance": 0.7067241548576615,
+      "energy": 1.4149792293450005,
+      "relative_balance": 5.424738867890792e-15,
+      "scaled_interior_residual": 8.881784197001252e-16,
+      "exact_conductance": 1.4142135623730951,
+      "relative_discretization_error": 0.0005414083079742227,
+      "finite_mesh_not_exact": true,
+      "passed": true
+    },
+    {
+      "test": "nested continuous FEM square energy convergence",
+      "k1": 2.0,
+      "k2": 1.0,
+      "mesh": 64,
+      "conductance": 1.4144743622212717,
+      "resistance": 0.7069764053055111,
+      "energy": 1.4144743622211946,
+      "relative_balance": 4.699357959316059e-14,
+      "scaled_interior_residual": 1.4802973661668755e-15,
+      "exact_conductance": 1.4142135623730951,
+      "relative_discretization_error": 0.00018441334117813568,
+      "finite_mesh_not_exact": true,
+      "passed": true
+    },
+    {
+      "test": "nested continuous FEM square energy convergence",
+      "k1": 2.0,
+      "k2": 1.0,
+      "mesh": 128,
+      "conductance": 1.4143020176201766,
+      "resistance": 0.7070625563291524,
+      "energy": 1.414302017619813,
+      "relative_balance": 1.8761985482394866e-13,
+      "scaled_interior_residual": 1.7763568394002505e-15,
+      "exact_conductance": 1.4142135623730951,
+      "relative_discretization_error": 6.254730504284822e-05,
+      "finite_mesh_not_exact": true,
+      "passed": true
+    },
+    {
+      "test": "nested continuous FEM square energy convergence",
+      "k1": 2.0,
+      "k2": 1.0,
+      "mesh": 256,
+      "conductance": 1.4142434943098574,
+      "resistance": 0.7070918155349155,
+      "energy": 1.414243494308602,
+      "relative_balance": 7.131566764689046e-13,
+      "scaled_interior_residual": 2.6645352591003757e-15,
+      "exact_conductance": 1.4142135623730951,
+      "relative_discretization_error": 2.1165075458684512e-05,
+      "finite_mesh_not_exact": true,
+      "passed": true
+    },
+    {
+      "test": "nested continuous FEM square energy convergence",
+      "k1": 4.0,
+      "k2": 1.0,
+      "mesh": 16,
+      "conductance": 2.0248792329154246,
+      "resistance": 0.49385661314734225,
+      "energy": 2.024879232915438,
+      "relative_balance": 4.110741923345216e-15,
+      "scaled_interior_residual": 8.881784197001252e-16,
+      "exact_conductance": 2.0,
+      "relative_discretization_error": 0.0124396164577123,
+      "finite_mesh_not_exact": true,
+      "passed": true
+    },
+    {
+      "test": "nested continuous FEM square energy convergence",
+      "k1": 4.0,
+      "k2": 1.0,
+      "mesh": 32,
+      "conductance": 2.010956285650735,
+      "resistance": 0.4972758518599052,
+      "energy": 2.010956285650737,
+      "relative_balance": 3.982259298513959e-15,
+      "scaled_interior_residual": 1.2434497875801752e-15,
+      "exact_conductance": 2.0,
+      "relative_discretization_error": 0.005478142825367405,
+      "finite_mesh_not_exact": true,
+      "passed": true
+    },
+    {
+      "test": "nested continuous FEM square energy convergence",
+      "k1": 4.0,
+      "k2": 1.0,
+      "mesh": 64,
+      "conductance": 2.0048284466665898,
+      "resistance": 0.4987957955518294,
+      "energy": 2.0048284466664734,
+      "relative_balance": 5.822999608347996e-14,
+      "scaled_interior_residual": 1.865174681370263e-15,
+      "exact_conductance": 2.0,
+      "relative_discretization_error": 0.002414223333294885,
+      "finite_mesh_not_exact": true,
+      "passed": true
+    },
+    {
+      "test": "nested continuous FEM square energy convergence",
+      "k1": 4.0,
+      "k2": 1.0,
+      "mesh": 128,
+      "conductance": 2.0021289543438217,
+      "resistance": 0.4994683273674249,
+      "energy": 2.0021289543431218,
+      "relative_balance": 2.8401554226323533e-13,
+      "scaled_interior_residual": 2.220446049250313e-15,
+      "exact_conductance": 2.0,
+      "relative_discretization_error": 0.001064477171910827,
+      "finite_mesh_not_exact": true,
+      "passed": true
+    },
+    {
+      "test": "nested continuous FEM square energy convergence",
+      "k1": 4.0,
+      "k2": 1.0,
+      "mesh": 256,
+      "conductance": 2.000938947948496,
+      "resistance": 0.49976537316406916,
+      "energy": 2.0009389479465964,
+      "relative_balance": 8.253035354241088e-13,
+      "scaled_interior_residual": 3.0198066269804257e-15,
+      "exact_conductance": 2.0,
+      "relative_discretization_error": 0.0004694739742479026,
+      "finite_mesh_not_exact": true,
+      "passed": true
+    },
+    {
+      "test": "nested continuous FEM square energy convergence",
+      "k1": 1.0,
+      "k2": 4.0,
+      "mesh": 16,
+      "conductance": 2.0248792329154384,
+      "resistance": 0.4938566131473389,
+      "energy": 2.024879232915439,
+      "relative_balance": 4.4043663464412826e-16,
+      "scaled_interior_residual": 1.0658141036401502e-15,
+      "exact_conductance": 2.0,
+      "relative_discretization_error": 0.012439616457719183,
+      "finite_mesh_not_exact": true,
+      "passed": true
+    },
+    {
+      "test": "nested continuous FEM square energy convergence",
+      "k1": 1.0,
+      "k2": 4.0,
+      "mesh": 32,
+      "conductance": 2.010956285650736,
+      "resistance": 0.49727585185990486,
+      "energy": 2.0109562856507277,
+      "relative_balance": 1.032437595911026e-15,
+      "scaled_interior_residual": 1.2434497875801752e-15,
+      "exact_conductance": 2.0,
+      "relative_discretization_error": 0.005478142825368071,
+      "finite_mesh_not_exact": true,
+      "passed": true
+    },
+    {
+      "test": "nested continuous FEM square energy convergence",
+      "k1": 1.0,
+      "k2": 4.0,
+      "mesh": 64,
+      "conductance": 2.004828446666692,
+      "resistance": 0.498795795551804,
+      "energy": 2.0048284466664734,
+      "relative_balance": 9.576913061445108e-14,
+      "scaled_interior_residual": 1.7763568394002505e-15,
+      "exact_conductance": 2.0,
+      "relative_discretization_error": 0.002414223333345955,
+      "finite_mesh_not_exact": true,
+      "passed": true
+    },
+    {
+      "test": "nested continuous FEM square energy convergence",
+      "k1": 1.0,
+      "k2": 4.0,
+      "mesh": 128,
+      "conductance": 2.002128954343649,
+      "resistance": 0.499468327367468,
+      "energy": 2.002128954343162,
+      "relative_balance": 2.3608791950632795e-13,
+      "scaled_interior_residual": 2.4868995751603505e-15,
+      "exact_conductance": 2.0,
+      "relative_discretization_error": 0.0010644771718244517,
+      "finite_mesh_not_exact": true,
+      "passed": true
+    },
+    {
+      "test": "nested continuous FEM square energy convergence",
+      "k1": 1.0,
+      "k2": 4.0,
+      "mesh": 256,
+      "conductance": 2.00093894794801,
+      "resistance": 0.4997653731641905,
+      "energy": 2.0009389479465516,
+      "relative_balance": 6.743604466430469e-13,
+      "scaled_interior_residual": 3.4638958368304883e-15,
+      "exact_conductance": 2.0,
+      "relative_discretization_error": 0.0004694739740049858,
+      "finite_mesh_not_exact": true,
+      "passed": true
+    },
+    {
+      "test": "nested continuous FEM square energy convergence",
+      "k1": 0.3,
+      "k2": 1.0,
+      "mesh": 16,
+      "conductance": 0.5519921808224293,
+      "resistance": 1.811619864814155,
+      "energy": 0.5519921808224227,
+      "relative_balance": 1.8599190767158086e-15,
+      "scaled_interior_residual": 8.326672684688674e-16,
+      "exact_conductance": 0.5477225575051661,
+      "relative_discretization_error": 0.007795230009717047,
+      "finite_mesh_not_exact": true,
+      "passed": true
+    },
+    {
+      "test": "nested continuous FEM square energy convergence",
+      "k1": 0.3,
+      "k2": 1.0,
+      "mesh": 32,
+      "conductance": 0.5494868187048373,
+      "resistance": 1.8198798696519063,
+      "energy": 0.5494868187048241,
+      "relative_balance": 3.5108997088535764e-15,
+      "scaled_interior_residual": 1.4432899320127035e-15,
+      "exact_conductance": 0.5477225575051661,
+      "relative_discretization_error": 0.0032210855213035128,
+      "finite_mesh_not_exact": true,
+      "passed": true
+    },
+    {
+      "test": "nested continuous FEM square energy convergence",
+      "k1": 0.3,
+      "k2": 1.0,
+      "mesh": 64,
+      "conductance": 0.5484511374143014,
+      "resistance": 1.8233164848824033,
+      "energy": 0.5484511374142511,
+      "relative_balance": 3.097394131783586e-14,
+      "scaled_interior_residual": 1.1657341758564144e-15,
+      "exact_conductance": 0.5477225575051661,
+      "relative_discretization_error": 0.001330198837261598,
+      "finite_mesh_not_exact": true,
+      "passed": true
+    },
+    {
+      "test": "nested continuous FEM square energy convergence",
+      "k1": 0.3,
+      "k2": 1.0,
+      "mesh": 128,
+      "conductance": 0.548023403200606,
+      "resistance": 1.824739589878329,
+      "energy": 0.5480234032004713,
+      "relative_balance": 1.0026281160975676e-13,
+      "scaled_interior_residual": 1.7763568394002505e-15,
+      "exact_conductance": 0.5477225575051661,
+      "relative_discretization_error": 0.0005492665790693962,
+      "finite_mesh_not_exact": true,
+      "passed": true
+    },
+    {
+      "test": "nested continuous FEM square energy convergence",
+      "k1": 0.3,
+      "k2": 1.0,
+      "mesh": 256,
+      "conductance": 0.5478467824440081,
+      "resistance": 1.8253278691149448,
+      "energy": 0.5478467824434483,
+      "relative_balance": 4.806421780498351e-13,
+      "scaled_interior_residual": 1.7763568394002505e-15,
+      "exact_conductance": 0.5477225575051661,
+      "relative_discretization_error": 0.00022680267069485893,
+      "finite_mesh_not_exact": true,
+      "passed": true
+    },
+    {
+      "test": "same phase fractions, independently solved stripe arrangement",
+      "pattern": "series",
+      "mesh": 32,
+      "conductance": 1.6000000000000014,
+      "resistance": 0.6249999999999994,
+      "energy": 1.5999999999999996,
+      "relative_balance": 7.686159401251079e-16,
+      "scaled_interior_residual": 3.552713678800501e-16,
+      "expected_conductance": 1.6,
+      "passed": true
+    },
+    {
+      "test": "same phase fractions, independently solved stripe arrangement",
+      "pattern": "series",
+      "mesh": 32,
+      "conductance": 3.111111111111129,
+      "resistance": 0.32142857142856956,
+      "energy": 3.11111111111111,
+      "relative_balance": 7.0214104800617715e-15,
+      "scaled_interior_residual": 3.608224830031759e-16,
+      "expected_conductance": 3.111111111111111,
+      "passed": true
+    },
+    {
+      "test": "same phase fractions, independently solved stripe arrangement",
+      "pattern": "series",
+      "mesh": 32,
+      "conductance": 0.47999999999999804,
+      "resistance": 2.083333333333342,
+      "energy": 0.4799999999999983,
+      "relative_balance": 1.9503918000171694e-15,
+      "scaled_interior_residual": 3.7848512203130333e-16,
+      "expected_conductance": 0.48,
+      "passed": true
+    },
+    {
+      "test": "same phase fractions, independently solved stripe arrangement",
+      "pattern": "parallel",
+      "mesh": 32,
+      "conductance": 2.500000000000042,
+      "resistance": 0.39999999999999325,
+      "energy": 2.4999999999999925,
+      "relative_balance": 1.5225915766287678e-14,
+      "scaled_interior_residual": 2.3980817331903383e-15,
+      "expected_conductance": 2.5,
+      "passed": true
+    },
+    {
+      "test": "same phase fractions, independently solved stripe arrangement",
+      "pattern": "parallel",
+      "mesh": 32,
+      "conductance": 4.499999999999986,
+      "resistance": 0.22222222222222293,
+      "energy": 4.500000000000007,
+      "relative_balance": 1.1304088978001623e-15,
+      "scaled_interior_residual": 1.5543122344752192e-15,
+      "expected_conductance": 4.5,
+      "passed": true
+    },
+    {
+      "test": "same phase fractions, independently solved stripe arrangement",
+      "pattern": "parallel",
+      "mesh": 32,
+      "conductance": 0.7499999999999968,
+      "resistance": 1.333333333333339,
+      "energy": 0.7499999999999973,
+      "relative_balance": 4.187126835729169e-15,
+      "scaled_interior_residual": 1.0061396160665481e-15,
+      "expected_conductance": 0.75,
+      "passed": true
+    },
+    {
+      "test": "independent finite-rectangle dual product, measured mesh error",
+      "aspect": 0.5,
+      "first": {
+        "mesh": 256,
+        "conductance": 0.7262686166208863,
+        "resistance": 1.3769010213503443,
+        "energy": 0.7262686166192935,
+        "relative_balance": 1.0645163404271815e-12,
+        "scaled_interior_residual": 3.552713678800501e-15
+      },
+      "rotated_aspect": {
+        "mesh": 256,
+        "conductance": 2.7539315081050937,
+        "resistance": 0.36311723695992465,
+        "energy": 2.753931508105108,
+        "relative_balance": 2.3659952713107946e-16,
+        "scaled_interior_residual": 7.84557604068444e-15
+      },
+      "product": 0.4999764944400352,
+      "exact_product": 0.5,
+      "relative_discretization_error": 4.701111992955198e-05,
+      "finite_mesh_not_exact": true,
+      "passed": true
+    },
+    {
+      "test": "independent finite-rectangle dual product, measured mesh error",
+      "aspect": 2.0,
+      "first": {
+        "mesh": 256,
+        "conductance": 2.7539315081050937,
+        "resistance": 0.36311723695992465,
+        "energy": 2.753931508105108,
+        "relative_balance": 2.3659952713107946e-16,
+        "scaled_interior_residual": 7.84557604068444e-15
+      },
+      "rotated_aspect": {
+        "mesh": 256,
+        "conductance": 0.7262686166208863,
+        "resistance": 1.3769010213503443,
+        "energy": 0.7262686166192935,
+        "relative_balance": 1.0645163404271815e-12,
+        "scaled_interior_residual": 3.552713678800501e-15
+      },
+      "product": 0.4999764944400352,
+      "exact_product": 0.5,
+      "relative_discretization_error": 4.701111992955198e-05,
+      "finite_mesh_not_exact": true,
+      "passed": true
+    },
+    {
+      "test": "fully solved numerical variation with SI conversion",
+      "resistance_ohm": 0.0005,
+      "current_ampere": 2.0,
+      "power_watt": 0.002,
+      "passed": true
+    },
+    {
+      "test": "weak-contrast fourth-order expansion remainder",
+      "epsilon": 0.01,
+      "exact_normalized": 1.0000500037503126,
+      "series_normalized": 1.0000500037500002,
+      "remainder": 3.1241675912951905e-13,
+      "passed": true
+    },
+    {
+      "test": "weak-contrast fourth-order expansion remainder",
+      "epsilon": 0.08,
+      "exact_normalized": 1.00321544238141,
+      "series_normalized": 1.00321536,
+      "remainder": 8.238140991601028e-08,
+      "passed": true
+    },
+    {
+      "test": "weak-contrast fourth-order expansion remainder",
+      "epsilon": 0.2,
+      "exact_normalized": 1.0206207261596576,
+      "series_normalized": 1.0206,
+      "remainder": 2.0726159657646903e-05,
+      "passed": true
+    }
+  ],
+  "math_passed": true,
+  "question_accepted": false,
+  "set_accepted": false,
+  "draft_text_complete": true,
+  "source_sha256": {
+    "试卷.pdf": "3c8164d75b7f117095d26f554fb788867b2b781c9a642af12bee499d3b232cf0",
+    "答案.pdf": "111c13cd664b08f098076baed25c937368238953127045c5cfa8c8460471472a"
+  },
+  "script_sha256": "d3c3125503843a4b6079156605e65ef487710d9e39192a3cc040c8df14590500",
+  "actual_source_images": {
+    "paper-02.png": "601d2977836ad34395795f97b4fd6018dd377a69dc7a7b6342bd2f81a1503d5f",
+    "answer-06.png": "fa5768af87dd61c9d802d94d51591c6b6bb8b3eea58bd334113fdd928a7c21fd",
+    "details/q05-paper.png": "762b7d44b7b3b46614e1830c73fc923a2749488dfac625f7e17773694457e14c",
+    "details/q05-answer-left.png": "f28c391feb20a5c1869124f3e246144cbbac6463ab0722a5cf3cc866fff671b5",
+    "details/q05-answer-right.png": "c9fd69762eb5c1dc9c9aec38bf5fefa166afcabe7faaeb4e47c8740960dc11ee"
+  },
+  "figure_source_sha256": "df1c350945859829edcda8835f6e9c58df618a049d66780e43c57e7ddc82c2ef",
+  "draft_sha256": "61df2aa12451fd9fb48f557ee8c46c49705f4f5e1f9f6a936ab07d20290ff359",
+  "independent_route": "Finite boundary duality proved directly, separately solved continuous FEM mixed-boundary PDE; strict bounds via energy principles.",
+  "background_source": "A. M. Dykhne, JETP 32 (1971), 63–65, primary journal search result: https://jetp.ras.ru/cgi-bin/e/index/e/32/1/p63?a=list ; full PDF access timed out; not used as a finite-boundary proof."
+}

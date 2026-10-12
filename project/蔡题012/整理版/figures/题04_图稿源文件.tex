@@ -1,0 +1,41 @@
+\documentclass[multi=tikzpicture,border=9pt]{standalone}
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath,amssymb}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc,patterns,decorations.pathmorphing}
+\definecolor{main}{HTML}{17365D}
+\definecolor{accent}{HTML}{AC3931}
+\tikzset{every picture/.style={font=\small,line width=.75pt},
+>={Stealth[length=2mm]},arr/.style={->},
+box/.style={draw=main,rounded corners=2pt,fill=main!4,text width=3.6cm,minimum height=1cm,align=center},
+note/.style={align=center,text width=9cm}}
+\begin{document}
+
+\begin{tikzpicture}
+\draw[main,thick] (0,0) rectangle (3,3);\draw[arr] (0,1.5)--(-1,1.5);\draw[arr,accent] (3,1.5)--(4.7,1.5);\draw[arr] (1.5,0)--(1.5,-1);\draw[arr,accent] (1.5,3)--(1.5,4.7);\node at (1.5,1.5){叶片};\node[note] at (1.5,-2.1){对边张力相减；常量背景消去，净力为 $S\nabla\sigma$};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\node[box] (n0) at (0,0) {边界张力\\$\oint\sigma\mathbf n\,dl$};
+\node[box] (n1) at (5,0) {面积梯度\\$\int\nabla\sigma\,dA$};
+\node[box] (n2) at (5,-2.3) {线性或二次场\\精确取中心梯度};
+\node[box] (n3) at (0,-2.3) {一般非线性场\\小片近似};
+\draw[arr] (n0)--(n1);\draw[arr] (n1)--(n2);\draw[arr] (n2)--(n3);
+\node[note] at (2.5,-4.1) {张力较大的一侧拉力较强；$a>0$ 时糖源吸引叶片};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\draw[main,thick] (-3,0)--(3,0) node[right]{水面};\fill[accent] (0,0) circle (3pt);\draw[main] (3,0) arc (0:-180:3);\foreach \a in {210,240,270,300,330}{\draw[arr,accent] (0,0)--(\a:2.6);}\node[note] at (0,-4.2){深水半空间：流过半球面积 $2\pi r^2$，总摩尔率 $J$};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\fill[accent] (0,0) circle (3pt);\node[above] at (0,0){糖源};\draw[main] (4,0) circle (.45);\draw[arr,accent,thick] (3.7,0)--(2.2,0) node[midway,above]{$\mathbf F$};\draw[arr] (4.4,0)--(5.6,0) node[midway,above]{$-k\mathbf v$};\node[note] at (2.5,-1.6){终端漂移：$\dot r=-C/r^2$；张力力与阻力平衡};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\draw[arr] (0,0)--(6,0) node[right]{$t/t_*$};
+\draw[arr] (0,0)--(0,3.7) node[above]{$r^3/r_1^3$};
+\draw[main,thick] (0.00000,3.00000) -- (5.00000,0.00000);
+\draw[accent,dashed] (4.375,0)--(4.375,.375)--(0,.375);\node[below] at (4.375,0){$7/8$};\node[left] at (0,.375){$1/8$};\node[note] at (2.5,-1.4){半径减半所需时间占形式原点时间的 $7/8$};
+\end{tikzpicture}
+\end{document}

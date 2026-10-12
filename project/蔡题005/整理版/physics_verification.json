@@ -1,0 +1,380 @@
+{
+  "all_passed": true,
+  "check_count": 55,
+  "checks": [
+    {
+      "name": "01 质心力矩闭合",
+      "residual": -7.958078640513122e-13,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "01 匀速二次式与稳定根",
+      "residual": 3.552713678800501e-15,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "01 变式无滚阻加速度",
+      "residual": 0.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "01 变式级数修正",
+      "residual": 3.4751594902959597e-11,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "01 变式前轴摩擦约束更严",
+      "residual": 0.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "02 势垒最小值交叉核对",
+      "residual": 0.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "02 临界能量",
+      "residual": 0.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "02 临界力矩",
+      "residual": 2.220446049250313e-16,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "02 变式转折点",
+      "residual": -1.0658141036401503e-14,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "02 薄壁筒临界惯量无关",
+      "residual": 0.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "02 稳定平衡线性曲率",
+      "residual": 1.1102230246251565e-16,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "02 纯滚动摩擦上界",
+      "residual": -7.132738844006781e-12,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "03 双曲面切向守恒 x=-1.1",
+      "residual": 0.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "03 双曲面切向守恒 x=-2",
+      "residual": 5.551115123125783e-17,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "03 双曲面切向守恒 x=-5",
+      "residual": 0.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "03 双曲面切向守恒 x=-20",
+      "residual": 0.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "03 变式平面折射角",
+      "residual": -8.180123245438153e-13,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "03 原极性负电荷动能减小",
+      "residual": 0.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "04 周期积分力平衡",
+      "residual": 0.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "04 时域电路周期闭合",
+      "residual": 1.0694236607378116e-09,
+      "tolerance": 1e-05,
+      "passed": true
+    },
+    {
+      "name": "04 无自感平均力",
+      "residual": -6.845005548807377e-17,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "04 高频系数饱和",
+      "residual": 0.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "04 倾角最大值",
+      "residual": 0.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "05 原始斯涅尔方程",
+      "residual": -1.1102230246251565e-16,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "05 逆映射宽度导数",
+      "residual": -8.286438202276258e-11,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "05 轴上放大",
+      "residual": -7.745803998204792e-12,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "05 小偏轴级数",
+      "residual": -9.020562075079397e-17,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "05 有限宽度趋近微分",
+      "residual": -1.9069582932296214e-05,
+      "tolerance": 0.0001,
+      "passed": true
+    },
+    {
+      "name": "06 优化器全局相切解",
+      "residual": 1.920637078001164e-05,
+      "tolerance": 0.001,
+      "passed": true
+    },
+    {
+      "name": "06 两端角动量",
+      "residual": 0.0,
+      "tolerance": 0.01,
+      "passed": true
+    },
+    {
+      "name": "06 两端机械能",
+      "residual": 3.725290298461914e-09,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "name": "06 质量比反代",
+      "residual": 0.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "06 变式喷气速率加倍",
+      "residual": 0.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "06 目标半径2R系数",
+      "residual": 0.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "06 径向弹道成本更高",
+      "residual": 0.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "06 已有低轨速度基准",
+      "residual": -4.547473508864641e-13,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "07 初始摩尔数组分和",
+      "residual": 1.3877787807814457e-17,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "07 氧原子守恒",
+      "residual": 0.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "07 氢原子守恒",
+      "residual": 0.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "07 碳原子守恒",
+      "residual": 0.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "07 燃烧后水分数稳态",
+      "residual": 0.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "07 定容燃烧第一定律",
+      "residual": -2.1316282072803006e-14,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "07 膨胀功独立pV积分",
+      "residual": -1.8189894035458565e-12,
+      "tolerance": 1e-07,
+      "passed": true
+    },
+    {
+      "name": "07 压缩功独立pV积分",
+      "residual": -4.547473508864641e-13,
+      "tolerance": 1e-07,
+      "passed": true
+    },
+    {
+      "name": "07 去残气燃油质量比例",
+      "residual": -2.220446049250313e-16,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "07 产物比热比快捷式",
+      "residual": 1.1102230246251565e-16,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "08 端点未经平方方程",
+      "residual": 0.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "08 充分性正电子壳条件 E=0.511001",
+      "residual": -1.3614109839465982e-12,
+      "tolerance": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "08 充分性正电子壳条件 E=1",
+      "residual": 4.575784195992583e-13,
+      "tolerance": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "08 充分性正电子壳条件 E=20",
+      "residual": -9.066636330601341e-13,
+      "tolerance": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "08 充分性正电子壳条件 E=60",
+      "residual": -4.5191628217366997e-13,
+      "tolerance": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "08 充分性正电子壳条件 E=79.9",
+      "residual": 1.6653345369377348e-16,
+      "tolerance": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "08 母粒子静止能量界",
+      "residual": 0.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "08 横向能量界",
+      "residual": 0.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "08 无质量近似前向多普勒",
+      "residual": -1.4210854715202004e-14,
+      "tolerance": 1e-08,
+      "passed": true
+    }
+  ],
+  "values": {
+    "car_torque": 24.01010008418508,
+    "car_speed": 24.989483504702534,
+    "car_acceleration": 3.2527212962962966,
+    "car_slope_degrees": 19.439719228811875,
+    "critical_phi": 2.3311223704144224,
+    "critical_lambda": 1.380050139689301,
+    "lambda2_turn": 1.1091441816596046,
+    "ring_resistance": 0.005405405405405406,
+    "ring_mass": 0.005329586376588253,
+    "ring_I0": 1.3678050738009149,
+    "ring_I1k": 2.3668580635926615,
+    "ring_I45": 1.2728860479836372,
+    "ring_peak": 122.7904183275051,
+    "ring_Joule": 40.749964413631616,
+    "image_x": 0.6520227537984965,
+    "image_magnification": 1.2306399786162077,
+    "finite_width_magnification": 1.2306209090332754,
+    "earth_mu": 397778481800000.0,
+    "orbit_rf": 42212040.359194234,
+    "orbit_v1": 10416.160559461561,
+    "orbit_va": 1572.0955054444648,
+    "orbit_vc": 3069.746201052793,
+    "orbit_dv": 11913.81125506989,
+    "orbit_mass_ratio": 7.421854440123539e+25,
+    "orbit_u400_ratio": 8615018537486.463,
+    "orbit_radial_cost": 13366.586324228634,
+    "orbit_parking_dv": 4012.1785124020807,
+    "fuel_mass": 0.0001616112724846375,
+    "gamma1": 1.3978276798413862,
+    "gamma3": 1.389369331364691,
+    "T2": 713.9012639267127,
+    "T3": 3467.014453257387,
+    "T4": 1725.7084278753975,
+    "enthalpy_correction": 36.336246145471726,
+    "temperature_correction": 15.388566995711592,
+    "temperature_correction4": 7.659668027190997,
+    "T4_dryresidual": 1727.945434194423,
+    "T2_fresh100": 716.6853788777267,
+    "ideal_net_ratio": 0.5131484480869919,
+    "electron_Emax": 79.99074354293401,
+    "electron_vmax": 0.9999795949920622,
+    "electron_rest_vmax": 0.9999713443356542
+  }
+}

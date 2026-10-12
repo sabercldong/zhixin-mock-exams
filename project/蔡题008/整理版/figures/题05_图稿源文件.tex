@@ -1,0 +1,47 @@
+\documentclass[multi=tikzpicture,border=9pt]{standalone}
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath,amssymb}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc,patterns,decorations.pathmorphing}
+\definecolor{main}{HTML}{17365D}
+\definecolor{accent}{HTML}{AC3931}
+\tikzset{every picture/.style={font=\small,line width=.75pt},
+>={Stealth[length=2mm]},arr/.style={->},
+box/.style={draw=main,rounded corners=2pt,fill=main!4,text width=3cm,minimum height=1cm,align=center},
+note/.style={align=center,text width=9cm}}
+\begin{document}
+\begin{tikzpicture}
+\draw[arr] (-4.5,0)--(6.4,0) node[right]{$x$};
+\draw[main,<->,very thick] (0,-1.4)--(0,1.4);\node[above] at (0,1.5){透镜};
+\draw[accent,very thick,domain=-40:40,samples=61] plot ({4+2*cos(\x)},{2*sin(\x)});\node[above] at (6,1.4){凹面镜};
+\fill (4,0) circle (2pt);\node[below] at (4,-.08){球心 $d$};\node[below] at (6,-.08){顶点 $D=d+R$};
+\fill (-2.4,0) circle (2pt);\node[below] at (-2.4,-.1){物点 $-s$};
+\draw[<->] (0,-1)--(4,-1) node[midway,below]{$d$};
+\draw[<->] (4,-1)--(6,-1) node[midway,below]{$R$};
+\node[note] at (1,-2.1){物点在透镜左侧；此图取球心在右侧 $d\ge0$\\镜口面向透镜，返回光第二次经过透镜};
+\end{tikzpicture}
+\begin{tikzpicture}
+\node[box] (a) at (0,0){球心支\\首次像在 $d$};\node[box] (b) at (5,0){镜顶点支\\首次像在 $D=d+R$};
+\node[box] (c) at (0,-2.4){$s_C=fd/(d-f)$\\存在：$d>f$\\总放大率 $-1$};\node[box] (e) at (5,-2.4){$s_P=fD/(D-f)$\\存在：$D>f$\\总放大率 $+1$};\draw[arr] (a)--(c);\draw[arr] (b)--(e);
+\node[note] at (2.5,-4.3){仅要求轴上物点自共轭时两支均可\\完整图案同位正立还须选择顶点支};
+\end{tikzpicture}
+\begin{tikzpicture}
+\node[box] (a) at (0,0){去程\\$P(D)L P(s)$};\node[box] (b) at (5,0){反射后返回\\$P(s)L P(D)M$};\draw[arr] (a)--(b);
+\node[note] at (2.5,-2.3){$T=P(s)L P(D)M P(D)L P(s)$\\$P(a)=\begin{pmatrix}1&a\\0&1\end{pmatrix}$，$L=\begin{pmatrix}1&0\\-1/f&1\end{pmatrix}$};
+\node[note] at (2.5,-4.2){$M=\begin{pmatrix}1&0\\-2/R&1\end{pmatrix}$\\自共轭条件：$T_{12}=0$，总放大率为 $T_{11}$};
+\end{tikzpicture}
+\begin{tikzpicture}
+\draw[arr] (0,0)--(8,0) node[right]{位置条件};\draw[main,thick] (0,0)--(2.4,0);\draw[accent,thick] (2.4,0)--(5,0);\draw[main!70,thick] (5,0)--(7.5,0);
+\draw (2.4,-.2)--(2.4,.2);\draw (5,-.2)--(5,.2);
+\node[align=center] at (1.2,1){$D\le f$\\无有限左侧物点};\node[align=center] at (3.7,1){$d\le f<D$\\仅顶点支};\node[align=center] at (6.2,1){$f<d<D$\\两支均存在};
+\node[note] at (3.8,-1.4){$d=f$ 时球心支移到无穷远；$D=f$ 时顶点支也移到无穷远};
+\end{tikzpicture}
+\begin{tikzpicture}
+\node[box] (n0) at (0,0) {坐标先明确\\$D=d+R>0$};
+\node[box] (n1) at (5,0) {两支薄透镜条件\\首次像在 $d$ 或 $D$};
+\node[box] (n2) at (5,-2.3) {往返矩阵\\$T_{12}=0$};
+\node[box] (n3) at (0,-2.3) {存在域与正倒\\$T_{11}=\pm1$};
+\draw[arr] (n0)--(n1);\draw[arr] (n1)--(n2);\draw[arr] (n2)--(n3);
+\node[note] at (2.5,-4.1) {$s_C>s_P$ 在两支都存在时成立};
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,43 @@
+\documentclass[multi=tikzpicture,border=9pt]{standalone}
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath,amssymb}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc,patterns,decorations.pathmorphing}
+\definecolor{main}{HTML}{17365D}
+\definecolor{accent}{HTML}{AC3931}
+\tikzset{every picture/.style={font=\small,line width=.75pt},
+>={Stealth[length=2mm]},arr/.style={->},
+box/.style={draw=main,rounded corners=2pt,fill=main!4,text width=3.6cm,minimum height=1cm,align=center},
+note/.style={align=center,text width=9cm}}
+\begin{document}
+
+\begin{tikzpicture}
+\draw[main,thick] (0,0)--(3,5.196) node[above]{$C$};\draw[main,thick] (0,0)--(5,0);\draw[main,thick] (-1,4)--(2.3094,4);\draw[main,thick] (1.1547,2)--(4.6188,0);\fill (0,0) circle (3pt);\node[below] at (0,0){$O$};\fill[accent] (2.3094,4) circle (3pt);\node[right] at (2.3094,4){$B$};\fill[accent] (1.1547,2) circle (3pt);\node[left] at (1.1547,2){$D$};\node[below] at (4.6188,0){$E$};\draw[arr,accent] (-1,4.5)--(.2,4.5) node[midway,above]{$v$};\node[note] at (2,-1.3){$B$ 沿杆滑动；$D$ 是杆上固定点；$OD=BD$ 仅在图示瞬间};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\node[box] (n0) at (0,0) {水平约束\\$x_B=b\cot\alpha$};
+\node[box] (n1) at (5,0) {一次微分\\$\dot\alpha=-v\sin^2\alpha/b$};
+\node[box] (n2) at (5,-2.3) {二次微分\\$\ddot\alpha=2v^2\sin^3\alpha\cos\alpha/b^2$};
+\node[box] (n3) at (0,-2.3) {图示方向\\顺时针、逆时针};
+\draw[arr] (n0)--(n1);\draw[arr] (n1)--(n2);\draw[arr] (n2)--(n3);
+\node[note] at (2.5,-4.1) {角速度与角加速度可以方向相反};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\draw[arr,main,thick] (0,0)--(3,-1.732) node[midway,below]{$\mathbf v_D$};\draw[arr,accent,thick] (3,-1.732)--(4,0) node[midway,right]{$\mathbf v_E-\mathbf v_D$};\draw[arr,thick] (0,0)--(4,0) node[midway,above]{$\mathbf v_E$};\node[note] at (2,-3.2){速度分量按 $v/8$ 归一；相对速度垂直于 $DE$};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\draw[arr,main,thick] (0,0)--(-3,-.577);\node[left] at (-3,-.577){$\mathbf a_D$};\draw[arr,accent,thick] (0,0)--(-3.111,0);\node[above] at (-1.7,0){$\mathbf a_E$ 向左};\node[note] at (-1.5,-2){二阶约束：$(\mathbf a_E-\mathbf a_D)\cdot\mathbf r_{ED}=-|\mathbf v_E-\mathbf v_D|^2$};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\node[box] (n0) at (0,0) {位置定尺寸\\$OD=b/\sqrt3$，$DE=b$};
+\node[box] (n1) at (5,0) {求导保常量\\$OD,DE$ 不变};
+\node[box] (n2) at (5,-2.3) {输出坐标\\$x_E=d\cos\alpha+\sqrt{\ell^2-d^2\sin^2\alpha}$};
+\node[box] (n3) at (0,-2.3) {独立检查\\$V_E=v/2$，$A_E<0$};
+\draw[arr] (n0)--(n1);\draw[arr] (n1)--(n2);\draw[arr] (n2)--(n3);
+\node[note] at (2.5,-4.1) {瞬时中点不能作为任意时刻的中点约束};
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,165 @@
+\documentclass[tikz,border=5pt]{standalone}
+\usepackage[UTF8,fontset=fandol]{ctex}
+\usepackage{amsmath,amssymb}
+\usetikzlibrary{arrows.meta,calc}
+\tikzset{every picture/.style={>=Latex,line cap=round,line join=round,font=\small},
+ wall/.style={thick,black!80},
+ flow/.style={->,thick,blue!75!black},
+ energy/.style={->,thick,red!70!black},
+ guide/.style={dashed,thin,gray!65},
+ dim/.style={<->,thin,black!65},
+ state/.style={draw=black!65,fill=blue!4,rounded corners=2pt,
+  minimum width=3.75cm,minimum height=.72cm,align=center,inner sep=5pt}}
+\begin{document}
+
+% 1. Open ports, actual material-flow directions, and a control boundary.
+\begin{tikzpicture}
+ \fill[blue!4](3.0,.35)--(6.1,.35)--(6.1,.80)
+  --(7.10,1.01)--(7.85,1.01)--(10.1,.15)
+  --(10.1,2.25)--(7.85,1.39)--(7.10,1.39)
+  --(6.1,1.60)--(6.1,2.05)--(3.0,2.05)--cycle;
+ \draw[wall](3.0,.75)--(3.0,.35)--(6.1,.35)--(6.1,.80)
+  --(7.10,1.01)--(7.85,1.01)--(10.1,.15);
+ \draw[wall](3.0,1.65)--(3.0,2.05)--(6.1,2.05)--(6.1,1.60)
+  --(7.10,1.39)--(7.85,1.39)--(10.1,2.25);
+ \draw[wall](3.0,.95)--(3.0,1.45);
+ \draw[guide,rounded corners=3pt](2.65,-.10)rectangle(10.35,2.65);
+ \draw[flow](.35,1.55)--(3.50,1.55);
+ \draw[flow](.35,.85)--(3.50,.85);
+ \node[above]at(1.35,1.64){$\mathrm{N_2H_4},\ \dot\xi$};
+ \node[below]at(1.35,.73){$\mathrm{O_2},\ \dot\xi$};
+ \node at(4.55,1.20){反应室};
+ \node[above]at(8.30,2.20){喷管};
+ \draw[flow](10.05,1.20)--(12.10,1.20);
+ \node[above]at(11.23,1.30){$u,\ T_1,\ p_0$};
+ \node[below,align=center]at(11.24,1.03){$3\dot\xi$\\[-1pt]
+  $\mathrm{N_2}:\mathrm{H_2O}=1:2$};
+ \draw[energy](4.00,3.45)--(4.00,2.17);
+ \node[left]at(3.90,3.17){$\dot Q$};
+ \draw[energy](5.10,2.18)--(5.10,3.45);
+ \node[right]at(5.20,3.17){$\dot W_s$};
+ \node[below]at(6.48,-.12){控制体};
+\end{tikzpicture}
+
+% 2. State-function reference path, not an actual heater/reactor sequence.
+\begin{tikzpicture}
+ \node[state](actual)at(0,0){实际入口总焓};
+ \node[state](react)at(6.2,0){$T_0$ 气态反应物基准};
+ \node[state](product)at(6.2,-3.0){$T_0$ 气态产物基准};
+ \node[state](exit)at(0,-3.0){出口产物静焓};
+ \draw[energy](actual.east)--(react.west)
+  node[midway,above]{$D_1+D_2$};
+ \draw[energy](react.south)--(product.north)
+  node[midway,right]{$-H_0$};
+ \draw[energy](product.west)--(exit.east)
+  node[midway,below]{$H_{\rm sens}$};
+ \draw[flow,dashed](actual.south)--(exit.north)
+  node[midway,left]{$\Delta H_{\rm total}$};
+ \node[gray!80]at(3.05,-1.50){虚拟参考路径};
+\end{tikzpicture}
+
+% 3. Symbolic scales: E>0 and T_a>T_0; negative kinetic energy is not drawn.
+\begin{tikzpicture}
+ \def\TrefX{1.2}
+ \def\TaX{7.0}
+ \def\EnergyY{3.6}
+ \def\SampleX{4.8}
+ \pgfmathsetmacro{\SampleY}{\EnergyY*(\TaX-\SampleX)/(\TaX-\TrefX)}
+ \draw[->,wall](0,0)--(8.15,0)node[right]{$T_1$};
+ \draw[->,wall](0,0)--(0,4.35)node[above]{$K_{\rm E}/\xi$};
+ \draw[guide](0,\EnergyY)--(\TrefX,\EnergyY)--(\TrefX,0);
+ \draw[blue!75!black,very thick](\TrefX,\EnergyY)--(\TaX,0);
+ \draw[guide](0,\SampleY)--(\SampleX,\SampleY)--(\SampleX,0);
+ \filldraw[blue!75!black](\TrefX,\EnergyY)circle(1.7pt);
+ \filldraw[blue!75!black](\SampleX,\SampleY)circle(1.7pt);
+ \filldraw[blue!75!black](\TaX,0)circle(1.7pt);
+ \node[left]at(0,\EnergyY){$E$};
+ \node[left]at(0,\SampleY){$K_1/\xi$};
+ \node[below]at(\TrefX,0){$T_0$};
+ \node[below]at(\SampleX,0){$T_1$};
+ \node[below]at(\TaX,0){$T_a$};
+ \node[above,rotate=-31.8]at(4.25,2.03){斜率 $-C_{p,\Sigma}$};
+ \draw[white,line width=2.4pt](.46,-.08)--(.60,.08);
+ \draw[wall](.46,-.08)--(.60,.08);
+ \draw[white,line width=2.4pt](.63,-.08)--(.77,.08);
+ \draw[wall](.63,-.08)--(.77,.08);
+\end{tikzpicture}
+
+% 4. Pressure-work faces and swept volumes. Arrows label actor/recipient.
+\begin{tikzpicture}
+ \begin{scope}
+  \draw[wall](0,0)--(6.0,0);
+  \draw[wall](0,1.40)--(6.0,1.40);
+  \fill[blue!9](2.40,0)rectangle(3.00,1.40);
+  \draw[wall](2.40,0)--(2.40,1.40);
+  \draw[guide](3.00,-.12)--(3.00,1.90);
+  \node[above]at(3.00,1.93){控制面};
+  \draw[energy](2.40,.47)--(3.70,.47);
+  \node[below]at(4.15,-.10){$p_iS_i$};
+  \node[above]at(1.13,.76){上游对流体};
+  \draw[thin](2.40,1.08)--(1.58,1.78);
+  \node[above]at(1.55,1.80){$S_i$};
+  \draw[dim](2.40,-.35)--(3.00,-.35);
+  \node[below]at(2.70,-.39){$d\ell_i$};
+  \node at(2.72,1.05){\scriptsize$dV_i$};
+  \node at(3.00,-1.06){入口：压力功进入};
+ \end{scope}
+ \begin{scope}[xshift=7.2cm]
+  \draw[wall](0,0)--(6.0,0);
+  \draw[wall](0,1.40)--(6.0,1.40);
+  \fill[blue!9](3.00,0)rectangle(3.60,1.40);
+  \draw[guide](3.00,-.12)--(3.00,1.90);
+  \node[above]at(3.00,1.93){控制面};
+  \draw[wall](3.60,0)--(3.60,1.40);
+  \draw[energy](3.60,.47)--(4.90,.47);
+  \node[below]at(4.90,-.10){$p_0S_e$};
+  \node[above]at(4.65,.92){流体对下游};
+  \draw[thin](3.60,1.08)--(4.40,1.78);
+  \node[above]at(4.45,1.80){$S_e$};
+  \draw[dim](3.00,-.35)--(3.60,-.35);
+  \node[below]at(3.30,-.39){$d\ell_e$};
+  \node at(3.30,1.05){\scriptsize$dV_e$};
+  \node at(3.00,-1.06){出口：压力功流出};
+ \end{scope}
+\end{tikzpicture}
+
+% 5. Dimensionless drawing coordinates p=4/V, Vi=1, Vf=4 (expansion example).
+\begin{tikzpicture}
+ \fill[blue!9](1,0)--plot[domain=1:4,samples=75](\x,{4/\x})--(4,0)--cycle;
+ \draw[->,wall](0,0)--(5.35,0)node[right]{$V$};
+ \draw[->,wall](0,0)--(0,5.1)node[above]{$p$};
+ \draw[blue!75!black,very thick]plot[domain=.83:4.85,samples=100](\x,{4/\x});
+ \draw[guide](0,4)--(1,4)--(1,0);
+ \draw[guide](0,1)--(4,1)--(4,0);
+ \draw[flow]plot[domain=1.70:2.40,samples=15](\x,{4/\x});
+ \filldraw[blue!75!black](1,4)circle(1.8pt);
+ \filldraw[blue!75!black](4,1)circle(1.8pt);
+ \node[above right]at(1.03,4.00){初态};
+ \node[above right]at(4.02,1.07){末态};
+ \node[left]at(0,4){$p_{xi}$};
+ \node[left]at(0,1){$p_0$};
+ \node[below]at(1,0){$V_i$};
+ \node[below]at(4,0){$V_f$};
+ \node at(2.50,.65){$W_i$};
+ \node[align=center,fill=white,inner sep=4pt]at(4.75,3.62)
+  {$pV=RT_0$\\[3pt]$Q_i=W_i$};
+\end{tikzpicture}
+
+% 6. Axial schematic: stagnation state and exit static state kept distinct.
+\begin{tikzpicture}
+ \fill[blue!5](0,-1.18)--(2.7,-.38)--(3.3,-.38)--(6.25,-1.08)
+  --(6.25,1.08)--(3.3,.38)--(2.7,.38)--(0,1.18)--cycle;
+ \draw[wall](0,1.18)--(2.7,.38)--(3.3,.38)--(6.25,1.08);
+ \draw[wall](0,-1.18)--(2.7,-.38)--(3.3,-.38)--(6.25,-1.08);
+ \draw[guide](-.45,0)--(8.70,0);
+ \draw[flow](.23,0)--(1.42,0);
+ \node[below]at(.88,-.14){$\dot m$};
+ \node[above]at(.93,1.47){入口总态};
+ \node at(.93,.65){$T_a,\ p_c$};
+ \draw[energy](6.25,0)--(8.65,0);
+ \node[above]at(7.48,.13){$u$};
+ \draw[thin](6.25,1.08)--(6.77,1.62);
+ \node[above right,align=center]at(6.77,1.62){出口静态\\$T_1,\ p_0$};
+ \node at(3.14,-1.68){冻结组分的喷管模型};
+\end{tikzpicture}
+\end{document}

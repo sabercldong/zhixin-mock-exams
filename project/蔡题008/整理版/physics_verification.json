@@ -1,0 +1,653 @@
+{
+  "all_passed": true,
+  "check_count": 96,
+  "checks": [
+    {
+      "name": "01-zero-length-global-potential",
+      "passed": true,
+      "values": {
+        "potential_range": 0.0
+      }
+    },
+    {
+      "name": "01-spring-length-cosine",
+      "passed": true,
+      "values": {
+        "min_squared_length": 0.0024979173609870897
+      }
+    },
+    {
+      "name": "01-AB-isolated-torque",
+      "passed": true,
+      "values": {
+        "max_residual": 0.0
+      }
+    },
+    {
+      "name": "01-CD-independent-torque",
+      "passed": true,
+      "values": {
+        "max_residual": 0.0
+      }
+    },
+    {
+      "name": "01-AD-compression-and-wall-balance",
+      "passed": true,
+      "values": {
+        "compression_newton": 400.0,
+        "RB": [
+          299.99999999999994,
+          -319.6152422706632
+        ],
+        "RC": [
+          -299.99999999999994,
+          619.6152422706632
+        ]
+      }
+    },
+    {
+      "name": "01-neutral-k",
+      "passed": true,
+      "values": {
+        "stiffness_N_per_m": 1200.0
+      }
+    },
+    {
+      "name": "01-variant-1-load",
+      "passed": true,
+      "values": {
+        "N": 400.0
+      }
+    },
+    {
+      "name": "01-variant-2-extra-mass",
+      "passed": true,
+      "values": {
+        "delta_k": 300.0
+      }
+    },
+    {
+      "name": "01-variant-3-new-point",
+      "passed": true,
+      "values": {
+        "k": 800.0,
+        "N": 200.0
+      }
+    },
+    {
+      "name": "01-variant-4-perturbation",
+      "passed": true,
+      "values": {
+        "balancing_torque_Nm": 12.499999999999998
+      }
+    },
+    {
+      "name": "01-finite-rest-length-not-neutral",
+      "passed": true,
+      "values": {
+        "factor_range": 3.6711904632375143
+      }
+    },
+    {
+      "name": "01-geometry-not-presumed",
+      "passed": true,
+      "values": {
+        "a": 0.5,
+        "L": 1.5,
+        "b": 0.5
+      }
+    },
+    {
+      "name": "02-spatial-rod-length",
+      "passed": true,
+      "values": {
+        "length_squared": 6.0
+      }
+    },
+    {
+      "name": "02-bead-radius-squared",
+      "passed": true,
+      "values": {
+        "max_residual": 5.551115123125783e-16
+      }
+    },
+    {
+      "name": "02-total-inertia",
+      "passed": true,
+      "values": {
+        "min_dimensionless_inertia": 2.25
+      }
+    },
+    {
+      "name": "02-angular-cross-term",
+      "passed": true,
+      "values": {
+        "cross_coefficient": 0.8660254037844387
+      }
+    },
+    {
+      "name": "02-Schur-effective-mass",
+      "passed": true,
+      "values": {
+        "min_coefficient": 5.666666666666667
+      }
+    },
+    {
+      "name": "02-zero-angular-momentum",
+      "passed": true,
+      "values": {
+        "max_residual": 1.1102230246251565e-16
+      }
+    },
+    {
+      "name": "02-energy-conservation",
+      "passed": true,
+      "values": {
+        "max_residual": 4.440892098500626e-16
+      }
+    },
+    {
+      "name": "02-half-height-speed",
+      "passed": true,
+      "values": {
+        "omega2_r_over_g": 0.04528237405408829
+      }
+    },
+    {
+      "name": "02-bottom-speed",
+      "passed": true,
+      "values": {
+        "omega2_r_over_g": 0.050204371233880496
+      }
+    },
+    {
+      "name": "02-total-angle-and-mass-scaling",
+      "passed": true,
+      "values": {
+        "radians": 0.34906585039886595,
+        "degrees": 20.000000000000004
+      }
+    },
+    {
+      "name": "02-half-angle-and-length-scaling",
+      "passed": true,
+      "values": {
+        "half_degrees": 10.0
+      }
+    },
+    {
+      "name": "02-mirror-handedness-and-time-process",
+      "passed": true,
+      "values": {
+        "mirror_angle": -0.34906585039886595,
+        "upper_time_integral": 3.3805622793930827,
+        "lower_time_integral": 1.397960470136726,
+        "initial_ground_N_over_mg": 2.4782608695652173
+      }
+    },
+    {
+      "name": "03-A-source-differential",
+      "passed": true,
+      "values": {}
+    },
+    {
+      "name": "03-B-source-differential",
+      "passed": true,
+      "values": {}
+    },
+    {
+      "name": "03-cross-derivatives-reciprocal",
+      "passed": true,
+      "values": {}
+    },
+    {
+      "name": "03-variant-1-simultaneous",
+      "passed": true,
+      "values": {}
+    },
+    {
+      "name": "03-independent-dipole-force",
+      "passed": true,
+      "values": {}
+    },
+    {
+      "name": "03-force-attraction-sign",
+      "passed": true,
+      "values": {
+        "formula": "-3*pi*IA*IB*mu0*r1**2*r2**2/(2*z**4)"
+      }
+    },
+    {
+      "name": "03-mutual-coupling-symmetry-and-finite-radius",
+      "passed": true,
+      "values": {
+        "exact_neumann_integral": 0.00038546699365766505,
+        "leading": 0.00039269908169872416,
+        "next_order": 0.0003853359739168731
+      }
+    },
+    {
+      "name": "03-variant-2-turn-scaling",
+      "passed": true,
+      "values": {
+        "turn_multiplier": 12
+      }
+    },
+    {
+      "name": "03-variant-3-distance-M",
+      "passed": true,
+      "values": {}
+    },
+    {
+      "name": "03-variant-3-distance-F",
+      "passed": true,
+      "values": {}
+    },
+    {
+      "name": "03-variant-4-source-field-mechanical",
+      "passed": true,
+      "values": {
+        "source_work": 1.4,
+        "field_energy": 0.7,
+        "mechanical_work": 0.7
+      }
+    },
+    {
+      "name": "03-positive-energy-bound-and-fixed-flux-force",
+      "passed": true,
+      "values": {
+        "eigenvalues": [
+          1.5566018867943396,
+          3.44339811320566
+        ],
+        "symbolic_force_residual": "0"
+      }
+    },
+    {
+      "name": "04-capacitance-rank",
+      "passed": true,
+      "values": {
+        "rank": 4
+      }
+    },
+    {
+      "name": "04-dynamic-capacitance",
+      "passed": true,
+      "values": {}
+    },
+    {
+      "name": "04-two-null-modes",
+      "passed": true,
+      "values": {}
+    },
+    {
+      "name": "04-unequal-resistor-DAE",
+      "passed": true,
+      "values": {
+        "max_residual": 1.1102230246251565e-16
+      }
+    },
+    {
+      "name": "04-general-initial-values",
+      "passed": true,
+      "values": {
+        "currents": [
+          0.4375,
+          0.12500000000000003
+        ]
+      }
+    },
+    {
+      "name": "04-general-steady-series",
+      "passed": true,
+      "values": {
+        "currents": [
+          0.08130081300813002,
+          0.08130081300813008
+        ]
+      }
+    },
+    {
+      "name": "04-equal-network-decay-spectrum",
+      "passed": true,
+      "values": {
+        "decay_rates": [
+          0.33333333333333326,
+          0.3333333333333333,
+          0.9999999999999999,
+          1.0
+        ]
+      }
+    },
+    {
+      "name": "04-equal-current-explicit",
+      "passed": true,
+      "values": {
+        "max_error": 3.2751579226442118e-15
+      }
+    },
+    {
+      "name": "04-initial-slopes-and-steady-energy",
+      "passed": true,
+      "values": {
+        "steady_capacitor_energy_over_Ceps2": 0.6666666666666667
+      }
+    },
+    {
+      "name": "04-peak-and-variant-1-2",
+      "passed": true,
+      "values": {
+        "peak_t": 1.6479184330021646,
+        "peak_I": 0.23081669657662512
+      }
+    },
+    {
+      "name": "04-variant-3-unequal-R1",
+      "passed": true,
+      "values": {}
+    },
+    {
+      "name": "04-dissipation-positive",
+      "passed": true,
+      "values": {
+        "min_reduced_eigenvalue": 0.35995319991832236
+      }
+    },
+    {
+      "name": "05-roundtrip-B-factorization",
+      "passed": true,
+      "values": {}
+    },
+    {
+      "name": "05-center-branch-self-conjugate",
+      "passed": true,
+      "values": {}
+    },
+    {
+      "name": "05-vertex-branch-self-conjugate",
+      "passed": true,
+      "values": {}
+    },
+    {
+      "name": "05-center-branch-inverted",
+      "passed": true,
+      "values": {}
+    },
+    {
+      "name": "05-vertex-branch-upright",
+      "passed": true,
+      "values": {}
+    },
+    {
+      "name": "05-unimodular-ray-matrix",
+      "passed": true,
+      "values": {}
+    },
+    {
+      "name": "05-branch-order",
+      "passed": true,
+      "values": {}
+    },
+    {
+      "name": "05-variant-1-two-positions",
+      "passed": true,
+      "values": {}
+    },
+    {
+      "name": "05-variant-2-single-position",
+      "passed": true,
+      "values": {}
+    },
+    {
+      "name": "05-variant-3-center-at-f",
+      "passed": true,
+      "values": {}
+    },
+    {
+      "name": "05-variant-4-upright-choice",
+      "passed": true,
+      "values": {}
+    },
+    {
+      "name": "05-no-finite-positive-object-domain",
+      "passed": true,
+      "values": {}
+    },
+    {
+      "name": "06-relative-equation-and-initial-H",
+      "passed": true,
+      "values": {
+        "initial_energy": 1.4166666666666667
+      }
+    },
+    {
+      "name": "06-numerical-energy",
+      "passed": true,
+      "values": {
+        "max_energy_error": 1.1427969681676586e-11
+      }
+    },
+    {
+      "name": "06-xi-separation-constant",
+      "passed": true,
+      "values": {
+        "max_error": 9.981482307352962e-11
+      }
+    },
+    {
+      "name": "06-eta-separation-constant",
+      "passed": true,
+      "values": {
+        "max_error": 2.298529921951342e-09
+      }
+    },
+    {
+      "name": "06-xi-bounded-coordinate",
+      "passed": true,
+      "values": {
+        "min_xi2": 2.0000000000000004,
+        "max_xi2": 31.999998065020108
+      }
+    },
+    {
+      "name": "06-eta-monotonic-escape",
+      "passed": true,
+      "values": {
+        "eta_final": -25.229647449250802,
+        "min_escape_polynomial": 0.6666666666666666
+      }
+    },
+    {
+      "name": "06-trajectory-exceeds-false-upper-bound",
+      "passed": true,
+      "values": {
+        "r_at_t80": 331.9278677004129,
+        "false_bound": 16.246211251235323
+      }
+    },
+    {
+      "name": "06-noncentral-torque",
+      "passed": true,
+      "values": {
+        "max_torque_error": 3.552713678800501e-15
+      }
+    },
+    {
+      "name": "06-1D-root-and-variant-2",
+      "passed": true,
+      "values": {
+        "second_turning_distance": 12
+      }
+    },
+    {
+      "name": "06-variant-1-equal-mass",
+      "passed": true,
+      "values": {
+        "electric_relative_force": 0
+      }
+    },
+    {
+      "name": "06-variant-3-relative-equilibrium",
+      "passed": true,
+      "values": {
+        "dimensionless_critical_E": 3
+      }
+    },
+    {
+      "name": "06-variant-4-reflected-trajectory",
+      "passed": true,
+      "values": {}
+    },
+    {
+      "name": "07-relative-start-and-end",
+      "passed": true,
+      "values": {}
+    },
+    {
+      "name": "07-interface-point",
+      "passed": true,
+      "values": {}
+    },
+    {
+      "name": "07-two-segment-lengths",
+      "passed": true,
+      "values": {}
+    },
+    {
+      "name": "07-tangent-exterior-segment",
+      "passed": true,
+      "values": {}
+    },
+    {
+      "name": "07-critical-refraction",
+      "passed": true,
+      "values": {}
+    },
+    {
+      "name": "07-global-entire-circle-minimum",
+      "passed": true,
+      "values": {
+        "min_weighted_length": 3.0000000003289813,
+        "min_angle": 1.0472184951476216
+      }
+    },
+    {
+      "name": "07-reentry-eliminated-by-arc",
+      "passed": true,
+      "values": {
+        "min_arc_advantage": 0.0
+      }
+    },
+    {
+      "name": "07-optimal-time-and-variant-1",
+      "passed": true,
+      "values": {}
+    },
+    {
+      "name": "07-variant-2-force-doubling",
+      "passed": true,
+      "values": {}
+    },
+    {
+      "name": "07-direct-intersection-and-variant-3",
+      "passed": true,
+      "values": {
+        "direct_time": 1.5731321849709858,
+        "relative_slowdown_percent": 4.87547899806573
+      }
+    },
+    {
+      "name": "07-variant-4-speed-scale-and-real-space-integral",
+      "passed": true,
+      "values": {
+        "final_displacement_units_mu2_over_F": [
+          -1.0825317547305484,
+          1.875
+        ]
+      }
+    },
+    {
+      "name": "07-terminal-velocity-continuity",
+      "passed": true,
+      "values": {}
+    },
+    {
+      "name": "08-propagation-time-conversion",
+      "passed": true,
+      "values": {
+        "T0_s": "236682000000000000.0"
+      }
+    },
+    {
+      "name": "08-MeV-conversion",
+      "passed": true,
+      "values": {
+        "E1_eV": "100000.0",
+        "E2_eV": "100000000.0"
+      }
+    },
+    {
+      "name": "08-relativistic-square-and-group-velocity",
+      "passed": true,
+      "values": {}
+    },
+    {
+      "name": "08-bound-static-energy",
+      "passed": true,
+      "values": {
+        "epsilon0_eV": "0.00020555005717066731864616245144223211059084021775069701209967098093"
+      }
+    },
+    {
+      "name": "08-rest-mass-SI",
+      "passed": true,
+      "values": {
+        "mass_kg": "3.6640782393533350466056089146033300429455542221347341411920613824e-40"
+      }
+    },
+    {
+      "name": "08-exact-delay-versus-quadratic",
+      "passed": true,
+      "values": {
+        "exact_delay_s": "0.50000000000000000158440755951339773227512739993241624118641997307",
+        "relative_error": "0.0000000000000000031688151190267954645502547998648324823728399461465524322352065073"
+      }
+    },
+    {
+      "name": "08-expansion-validity",
+      "passed": true,
+      "values": {
+        "epsilon_over_E1": "0.0000000020555005717066731864616245144223211059084021775069701209967098093"
+      }
+    },
+    {
+      "name": "08-high-energy-term-retained",
+      "passed": true,
+      "values": {
+        "relative_high_energy_term": "0.000001"
+      }
+    },
+    {
+      "name": "08-variant-1-time-quarter",
+      "passed": true,
+      "values": {}
+    },
+    {
+      "name": "08-variant-2-distance-four",
+      "passed": true,
+      "values": {}
+    },
+    {
+      "name": "08-variant-3-energies-tenfold",
+      "passed": true,
+      "values": {}
+    },
+    {
+      "name": "08-variant-4-finite-energy-ratio",
+      "passed": true,
+      "values": {
+        "correction_factor": "1.0050378152592120754893735565668747527051783471482889688056612564"
+      }
+    }
+  ]
+}

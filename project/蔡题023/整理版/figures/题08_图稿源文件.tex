@@ -1,0 +1,47 @@
+\documentclass[tikz,border=5pt]{standalone}
+\usepackage[UTF8]{ctex}\usepackage{amsmath}
+\usetikzlibrary{arrows.meta,calc}
+\definecolor{blue}{RGB}{45,98,142}\definecolor{green}{RGB}{60,117,87}\definecolor{red}{RGB}{175,67,51}
+\tikzset{vec/.style={thick,-{Stealth}},aux/.style={gray!60,dashed}}
+\begin{document}
+\begin{tikzpicture}[scale=1.25]
+\draw[gray,-{Stealth}](-.4,0)--(4.9,0)node[right]{$x$};
+\fill(0,0)circle(1pt)node[below]{$O$};
+\fill[blue](2.5,0)circle(3pt)node[above]{$m_0$};
+\node[below]at(2.5,-.1){$x_0=c^2/a'$};
+\draw[green,vec](2.5,.75)--(3.8,.75)node[midway,above]{$A=+a'$};
+\draw[red,vec](2.5,-.75)--(1.2,-.75)node[midway,below]{$A=-a'$};
+\node at(2.4,1.5){初速度 $v_0$ 须单独指定};
+\node at(2.4,-1.5){两箭头表示两种模型分支，非同时作用};
+\end{tikzpicture}
+\begin{tikzpicture}[scale=1.3]
+\draw[gray,-{Stealth}](-1.2,0)--(2.4,0)node[right]{$x$};
+\draw[gray,-{Stealth}](0,-1.0)--(0,2.5)node[above]{$ct$};
+\draw[blue,-{Stealth}](-.8,-.4)--(2,1)node[right]{$x'$};
+\draw[blue,-{Stealth}](-.4,-.8)--(1.1,2.2)node[above]{$ct'$};
+\draw[red,thick,domain=-.8:1.8,samples=61]plot({.5*\x+.13*\x*\x},\x);
+\fill(0,0)circle(2pt)node[below right]{$C$};
+\node[red]at(2.5,1.7){物体世界线};
+\node[align=center]at(1,-1.65){在事件 $C$：$u=v,\ v'=0$\\蓝色惯性系只在此事件瞬时共动};
+\end{tikzpicture}
+\begin{tikzpicture}[scale=1.1]
+\draw[gray,-{Stealth}](-2.5,0)--(3.8,0)node[right]{$a'x/c^2$};
+\draw[gray,-{Stealth}](0,-.2)--(0,3.5)node[above]{$a't/c$};
+\draw[aux](1,0)--(4,3);\draw[aux](1,0)--(-2,3);
+\draw[blue,thick,domain=0:3,samples=81]plot({sqrt(1+\x*\x)},\x);
+\draw[red,thick,domain=0:3,samples=81]plot({2-sqrt(1+\x*\x)},\x);
+\fill(1,0)circle(2pt)node[below]{$1$};
+\fill[red](0,1.73205)circle(2pt)node[left]{$\sqrt3$};
+\node[blue,align=center]at(3.5,1.3){$A=+a'$\\离开原点};
+\node[red,align=center]at(-1.45,1.3){$A=-a'$\\朝原点};
+\node at(.7,-.7){虚线为由同一初始事件发出的光线};
+\end{tikzpicture}
+\begin{tikzpicture}[scale=1.25]
+\draw[gray,-{Stealth}](0,0)--(4.5,0)node[right]{$s=a't/c$};
+\draw[gray,-{Stealth}](0,0)--(0,4.4)node[above]{$\sigma=a'\tau/c$};
+\draw[aux](0,0)--(4,4)node[above]{$\sigma=s$};
+\draw[blue,thick,domain=0:4,samples=101]plot(\x,{ln(\x+sqrt(1+\x*\x))});
+\node[blue]at(2.9,1.5){$\sigma=\operatorname{arsinh}s$};
+\node at(2.25,-.6){初始静止；两种运动方向的固有时相同};
+\end{tikzpicture}
+\end{document}

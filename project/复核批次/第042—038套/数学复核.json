@@ -1,0 +1,3566 @@
+{
+  "status": "pass",
+  "groups": 40,
+  "checks": 319,
+  "method": "独立矩阵、守恒、数值积分、节点方程、穷举及旋转微分方程检验；逐项列出残差",
+  "checks_detail": [
+    {
+      "set": 38,
+      "question": 1,
+      "test": "vertical acceleration and constraint x, R=1",
+      "relative_error": 1.7246182906798548e-16,
+      "actual": [
+        19.600000000000005,
+        0.0
+      ],
+      "expected": [
+        19.6,
+        0.0
+      ]
+    },
+    {
+      "set": 38,
+      "question": 1,
+      "test": "released at rest tension",
+      "relative_error": 1.9765741211405706e-16,
+      "actual": 16.974097914175,
+      "expected": 16.974097914174997
+    },
+    {
+      "set": 38,
+      "question": 1,
+      "test": "vertical acceleration and constraint x, R=2",
+      "relative_error": 0.0,
+      "actual": [
+        20.092376043070338,
+        0.0
+      ],
+      "expected": [
+        20.092376043070338,
+        0.0
+      ]
+    },
+    {
+      "set": 38,
+      "question": 1,
+      "test": "vertical acceleration and constraint x, R=0.7",
+      "relative_error": 0.0,
+      "actual": [
+        8.016495721976845,
+        0.0
+      ],
+      "expected": [
+        8.016495721976845,
+        0.0
+      ]
+    },
+    {
+      "set": 38,
+      "question": 2,
+      "test": "3-simplex unequal mass acceleration 0",
+      "relative_error": 1.9112400065896816e-16,
+      "actual": [
+        [
+          -1.3235658960617545,
+          0.27265389994617323,
+          1.0509119961155813
+        ],
+        [
+          1.3244464404373135,
+          -2.3753584365528946,
+          1.0509119961155813
+        ],
+        [
+          1.3244464404373135,
+          0.27265389994617323,
+          -1.5971003403834867
+        ]
+      ],
+      "expected": [
+        [
+          -1.323565896061754,
+          0.2726538999461731,
+          1.050911996115581
+        ],
+        [
+          1.324446440437313,
+          -2.375358436552894,
+          1.050911996115581
+        ],
+        [
+          1.324446440437313,
+          0.2726538999461731,
+          -1.5971003403834862
+        ]
+      ]
+    },
+    {
+      "set": 38,
+      "question": 2,
+      "test": "collapse quadrature 3,0",
+      "relative_error": 1.9044878462834562e-14,
+      "actual": 0.57396760096826,
+      "expected": 0.5739676009682301
+    },
+    {
+      "set": 38,
+      "question": 2,
+      "test": "3-simplex unequal mass acceleration 1",
+      "relative_error": 3.64684062699501e-16,
+      "actual": [
+        [
+          -1.9098546787305744,
+          1.3676280074743916,
+          0.5422266712561827
+        ],
+        [
+          2.1109837807946774,
+          -2.6532104520508604,
+          0.5422266712561827
+        ],
+        [
+          2.1109837807946774,
+          1.3676280074743916,
+          -3.478611788269069
+        ]
+      ],
+      "expected": [
+        [
+          -1.9098546787305737,
+          1.3676280074743914,
+          0.5422266712561825
+        ],
+        [
+          2.1109837807946765,
+          -2.653210452050859,
+          0.5422266712561825
+        ],
+        [
+          2.1109837807946765,
+          1.3676280074743914,
+          -3.4786117882690677
+        ]
+      ]
+    },
+    {
+      "set": 38,
+      "question": 2,
+      "test": "collapse quadrature 3,1",
+      "relative_error": 1.6549705268839435e-14,
+      "actual": 0.46578882789742965,
+      "expected": 0.4657888278974054
+    },
+    {
+      "set": 38,
+      "question": 2,
+      "test": "3-simplex unequal mass acceleration 2",
+      "relative_error": 2.423690637584944e-16,
+      "actual": [
+        [
+          -4.348621065281637,
+          2.351826068600834,
+          1.9967949966808025
+        ],
+        [
+          2.664570081374493,
+          -4.6613650780552955,
+          1.9967949966808025
+        ],
+        [
+          2.664570081374493,
+          2.351826068600834,
+          -5.016396149975327
+        ]
+      ],
+      "expected": [
+        [
+          -4.348621065281636,
+          2.3518260686008334,
+          1.9967949966808018
+        ],
+        [
+          2.664570081374492,
+          -4.661365078055295,
+          1.9967949966808018
+        ],
+        [
+          2.664570081374492,
+          2.3518260686008334,
+          -5.016396149975326
+        ]
+      ]
+    },
+    {
+      "set": 38,
+      "question": 2,
+      "test": "collapse quadrature 3,2",
+      "relative_error": 1.3583475009480278e-14,
+      "actual": 0.35268707342728894,
+      "expected": 0.35268707342727057
+    },
+    {
+      "set": 38,
+      "question": 2,
+      "test": "3-simplex unequal mass acceleration 3",
+      "relative_error": 2.669585315602715e-16,
+      "actual": [
+        [
+          -2.3270276642183303,
+          0.36080063511949867,
+          1.9662270290988315
+        ],
+        [
+          1.898411273786254,
+          -3.8646383028850853,
+          1.9662270290988315
+        ],
+        [
+          1.898411273786254,
+          0.36080063511949867,
+          -2.2592119089057525
+        ]
+      ],
+      "expected": [
+        [
+          -2.3270276642183294,
+          0.36080063511949867,
+          1.9662270290988308
+        ],
+        [
+          1.8984112737862535,
+          -3.8646383028850844,
+          1.9662270290988308
+        ],
+        [
+          1.8984112737862535,
+          0.36080063511949867,
+          -2.259211908905752
+        ]
+      ]
+    },
+    {
+      "set": 38,
+      "question": 2,
+      "test": "collapse quadrature 3,3",
+      "relative_error": 1.6297936982218318e-14,
+      "actual": 0.4543719000514393,
+      "expected": 0.4543719000514156
+    },
+    {
+      "set": 38,
+      "question": 2,
+      "test": "4-simplex unequal mass acceleration 0",
+      "relative_error": 5.011647789574712e-16,
+      "actual": [
+        [
+          -5.676867119693669,
+          2.2310947252870705,
+          1.3480767050824667,
+          2.097695689324132
+        ],
+        [
+          2.5097418930904616,
+          -5.95551428749706,
+          1.3480767050824667,
+          2.097695689324132
+        ],
+        [
+          2.5097418930904616,
+          2.2310947252870705,
+          -6.838532307701664,
+          2.097695689324132
+        ],
+        [
+          2.5097418930904616,
+          2.2310947252870705,
+          1.3480767050824667,
+          -6.088913323459999
+        ]
+      ],
+      "expected": [
+        [
+          -5.676867119693666,
+          2.2310947252870696,
+          1.348076705082466,
+          2.097695689324131
+        ],
+        [
+          2.5097418930904607,
+          -5.955514287497057,
+          1.348076705082466,
+          2.097695689324131
+        ],
+        [
+          2.5097418930904607,
+          2.2310947252870696,
+          -6.83853230770166,
+          2.097695689324131
+        ],
+        [
+          2.5097418930904607,
+          2.2310947252870696,
+          1.348076705082466,
+          -6.0889133234599955
+        ]
+      ]
+    },
+    {
+      "set": 38,
+      "question": 2,
+      "test": "collapse quadrature 4,0",
+      "relative_error": 1.284792438081915e-14,
+      "actual": 0.32643397663816437,
+      "expected": 0.3264339766381473
+    },
+    {
+      "set": 38,
+      "question": 2,
+      "test": "4-simplex unequal mass acceleration 1",
+      "relative_error": 2.986369942656972e-16,
+      "actual": [
+        [
+          -3.9242432359463457,
+          2.2693665531890876,
+          0.9052018012984118,
+          0.7496748814588461
+        ],
+        [
+          1.9291728640126904,
+          -3.5840495467699482,
+          0.9052018012984118,
+          0.7496748814588461
+        ],
+        [
+          1.9291728640126904,
+          2.2693665531890876,
+          -4.948214298660624,
+          0.7496748814588461
+        ],
+        [
+          1.9291728640126904,
+          2.2693665531890876,
+          0.9052018012984118,
+          -5.10374121850019
+        ]
+      ],
+      "expected": [
+        [
+          -3.9242432359463444,
+          2.2693665531890868,
+          0.9052018012984117,
+          0.7496748814588461
+        ],
+        [
+          1.92917286401269,
+          -3.5840495467699474,
+          0.9052018012984117,
+          0.7496748814588461
+        ],
+        [
+          1.92917286401269,
+          2.2693665531890868,
+          -4.948214298660623,
+          0.7496748814588461
+        ],
+        [
+          1.92917286401269,
+          2.2693665531890868,
+          0.9052018012984117,
+          -5.103741218500188
+        ]
+      ]
+    },
+    {
+      "set": 38,
+      "question": 2,
+      "test": "collapse quadrature 4,1",
+      "relative_error": 1.4538118545314886e-14,
+      "actual": 0.3860492218534485,
+      "expected": 0.3860492218534283
+    },
+    {
+      "set": 38,
+      "question": 2,
+      "test": "4-simplex unequal mass acceleration 2",
+      "relative_error": 3.1480327338271347e-16,
+      "actual": [
+        [
+          -5.191686058750985,
+          1.9793184537660369,
+          0.5803479893596395,
+          2.632019615625308
+        ],
+        [
+          2.083085680486119,
+          -5.295453285471067,
+          0.5803479893596395,
+          2.632019615625308
+        ],
+        [
+          2.083085680486119,
+          1.9793184537660369,
+          -6.694423749877464,
+          2.632019615625308
+        ],
+        [
+          2.083085680486119,
+          1.9793184537660369,
+          0.5803479893596395,
+          -4.642752123611795
+        ]
+      ],
+      "expected": [
+        [
+          -5.191686058750983,
+          1.9793184537660362,
+          0.5803479893596393,
+          2.6320196156253077
+        ],
+        [
+          2.083085680486118,
+          -5.295453285471066,
+          0.5803479893596393,
+          2.6320196156253077
+        ],
+        [
+          2.083085680486118,
+          1.9793184537660362,
+          -6.694423749877463,
+          2.6320196156253077
+        ],
+        [
+          2.083085680486118,
+          1.9793184537660362,
+          0.5803479893596393,
+          -4.6427521236117935
+        ]
+      ]
+    },
+    {
+      "set": 38,
+      "question": 2,
+      "test": "collapse quadrature 4,2",
+      "relative_error": 1.3400640464911874e-14,
+      "actual": 0.3462882014779641,
+      "expected": 0.34628820147794603
+    },
+    {
+      "set": 38,
+      "question": 2,
+      "test": "4-simplex unequal mass acceleration 3",
+      "relative_error": 3.5823993541586725e-16,
+      "actual": [
+        [
+          -5.5696018527694235,
+          1.4747263163833093,
+          1.3759500402556821,
+          2.7189254961304328
+        ],
+        [
+          0.5195228198843633,
+          -4.6143983562704785,
+          1.3759500402556821,
+          2.7189254961304328
+        ],
+        [
+          0.5195228198843633,
+          1.4747263163833093,
+          -4.713174632398106,
+          2.7189254961304328
+        ],
+        [
+          0.5195228198843633,
+          1.4747263163833093,
+          1.3759500402556821,
+          -3.3701991765233545
+        ]
+      ],
+      "expected": [
+        [
+          -5.569601852769423,
+          1.474726316383309,
+          1.375950040255682,
+          2.7189254961304314
+        ],
+        [
+          0.519522819884363,
+          -4.614398356270477,
+          1.375950040255682,
+          2.7189254961304314
+        ],
+        [
+          0.519522819884363,
+          1.474726316383309,
+          -4.713174632398104,
+          2.7189254961304314
+        ],
+        [
+          0.519522819884363,
+          1.474726316383309,
+          1.375950040255682,
+          -3.370199176523354
+        ]
+      ]
+    },
+    {
+      "set": 38,
+      "question": 2,
+      "test": "collapse quadrature 4,3",
+      "relative_error": 1.433581361637623e-14,
+      "actual": 0.37850354135138736,
+      "expected": 0.3785035413513676
+    },
+    {
+      "set": 38,
+      "question": 3,
+      "test": "maximum finite-difference derivative",
+      "relative_error": 7.105427357601002e-12,
+      "actual": 7.105427357601002e-12,
+      "expected": 0.0
+    },
+    {
+      "set": 38,
+      "question": 3,
+      "test": "maximum heat flux",
+      "relative_error": 1.1724730744868228e-16,
+      "actual": 120.20410288672876,
+      "expected": 120.20410288672875
+    },
+    {
+      "set": 38,
+      "question": 3,
+      "test": "Carnot energy balance",
+      "relative_error": 0.0,
+      "actual": 310.1020514433644,
+      "expected": 310.1020514433644
+    },
+    {
+      "set": 38,
+      "question": 3,
+      "test": "maximum finite-difference derivative",
+      "relative_error": 1.4210854715202004e-11,
+      "actual": 1.4210854715202004e-11,
+      "expected": 0.0
+    },
+    {
+      "set": 38,
+      "question": 3,
+      "test": "maximum heat flux",
+      "relative_error": 0.0,
+      "actual": 201.3167019494862,
+      "expected": 201.3167019494862
+    },
+    {
+      "set": 38,
+      "question": 3,
+      "test": "Carnot energy balance",
+      "relative_error": 0.0,
+      "actual": 425.65835097474314,
+      "expected": 425.65835097474314
+    },
+    {
+      "set": 38,
+      "question": 3,
+      "test": "maximum finite-difference derivative",
+      "relative_error": 4.440892098500626e-12,
+      "actual": 4.440892098500626e-12,
+      "expected": 0.0
+    },
+    {
+      "set": 38,
+      "question": 3,
+      "test": "maximum heat flux",
+      "relative_error": 2.8753539699952744e-16,
+      "actual": 1.3167019494862005,
+      "expected": 1.3167019494862011
+    },
+    {
+      "set": 38,
+      "question": 3,
+      "test": "Carnot energy balance",
+      "relative_error": 1.3326832114133557e-16,
+      "actual": 25.658350974743115,
+      "expected": 25.65835097474311
+    },
+    {
+      "set": 38,
+      "question": 4,
+      "test": "afocal contact C at n=2",
+      "symbolic_residual": "0"
+    },
+    {
+      "set": 38,
+      "question": 4,
+      "test": "finite object outgoing parallel",
+      "symbolic_residual": "0"
+    },
+    {
+      "set": 38,
+      "question": 4,
+      "test": "angular magnification at contact",
+      "symbolic_residual": "0"
+    },
+    {
+      "set": 38,
+      "question": 5,
+      "test": "work equals lost field energy",
+      "relative_error": 1.511262150635597e-16,
+      "actual": 4.877063878868276,
+      "expected": 4.877063878868275
+    },
+    {
+      "set": 38,
+      "question": 5,
+      "test": "rolling angular kinetic energy",
+      "relative_error": 0.0,
+      "actual": 4.877063878868276,
+      "expected": 4.877063878868276
+    },
+    {
+      "set": 38,
+      "question": 5,
+      "test": "work equals lost field energy",
+      "relative_error": 3.81506609017218e-17,
+      "actual": 0.09128813077952201,
+      "expected": 0.09128813077952197
+    },
+    {
+      "set": 38,
+      "question": 5,
+      "test": "rolling angular kinetic energy",
+      "relative_error": 0.0,
+      "actual": 0.09128813077952201,
+      "expected": 0.09128813077952201
+    },
+    {
+      "set": 38,
+      "question": 5,
+      "test": "work equals lost field energy",
+      "relative_error": 3.7273100660317343e-16,
+      "actual": 2.5743407603558475,
+      "expected": 2.574340760355849
+    },
+    {
+      "set": 38,
+      "question": 5,
+      "test": "rolling angular kinetic energy",
+      "relative_error": 0.0,
+      "actual": 2.5743407603558475,
+      "expected": 2.5743407603558475
+    },
+    {
+      "set": 38,
+      "question": 6,
+      "test": "critical angle",
+      "relative_error": 5.578500715297669e-10,
+      "actual": 0.016670526932850274,
+      "expected": 0.0166705275
+    },
+    {
+      "set": 38,
+      "question": 6,
+      "test": "voltage numerical",
+      "relative_error": 2.6721691268858307e-05,
+      "actual": 64638.27268315469,
+      "expected": 64640.0
+    },
+    {
+      "set": 38,
+      "question": 6,
+      "test": "charging time numerical",
+      "relative_error": 7.301670555690439e-05,
+      "actual": 18.578570332905194,
+      "expected": 18.58
+    },
+    {
+      "set": 38,
+      "question": 6,
+      "test": "fold derivative",
+      "relative_error": 4.004771774618332e-12,
+      "actual": 4.004771774618332e-12,
+      "expected": 0.0
+    },
+    {
+      "set": 38,
+      "question": 7,
+      "test": "Fermat stationary branch",
+      "relative_error": 0.0,
+      "actual": 0.0,
+      "expected": 0.0
+    },
+    {
+      "set": 38,
+      "question": 7,
+      "test": "branch path length",
+      "relative_error": 1.47298835982064e-16,
+      "actual": 0.5074430388035711,
+      "expected": 0.5074430388035709
+    },
+    {
+      "set": 38,
+      "question": 7,
+      "test": "Fermat stationary branch",
+      "relative_error": 0.0,
+      "actual": 0.0,
+      "expected": 0.0
+    },
+    {
+      "set": 38,
+      "question": 7,
+      "test": "branch path length",
+      "relative_error": 0.0,
+      "actual": 3.4989286306482157,
+      "expected": 3.4989286306482157
+    },
+    {
+      "set": 38,
+      "question": 7,
+      "test": "Fermat stationary branch",
+      "relative_error": 5.551115123125782e-12,
+      "actual": 5.551115123125782e-12,
+      "expected": 0.0
+    },
+    {
+      "set": 38,
+      "question": 7,
+      "test": "branch path length",
+      "relative_error": 5.888819794110206e-17,
+      "actual": 0.8853065018827084,
+      "expected": 0.8853065018827085
+    },
+    {
+      "set": 38,
+      "question": 7,
+      "test": "Fermat stationary branch",
+      "relative_error": 0.0,
+      "actual": 0.0,
+      "expected": 0.0
+    },
+    {
+      "set": 38,
+      "question": 7,
+      "test": "branch path length",
+      "relative_error": 1.0040683398522551e-16,
+      "actual": 3.4228982453067758,
+      "expected": 3.4228982453067753
+    },
+    {
+      "set": 38,
+      "question": 7,
+      "test": "Fermat stationary branch",
+      "relative_error": 0.0,
+      "actual": 0.0,
+      "expected": 0.0
+    },
+    {
+      "set": 38,
+      "question": 7,
+      "test": "branch path length",
+      "relative_error": 9.105166865178212e-17,
+      "actual": 1.4386659598103404,
+      "expected": 1.4386659598103402
+    },
+    {
+      "set": 38,
+      "question": 7,
+      "test": "Fermat stationary branch",
+      "relative_error": 0.0,
+      "actual": 0.0,
+      "expected": 0.0
+    },
+    {
+      "set": 38,
+      "question": 7,
+      "test": "branch path length",
+      "relative_error": 1.0499584917929124e-16,
+      "actual": 3.229588248690999,
+      "expected": 3.2295882486909986
+    },
+    {
+      "set": 38,
+      "question": 7,
+      "test": "Fermat stationary branch",
+      "relative_error": 0.0,
+      "actual": 0.0,
+      "expected": 0.0
+    },
+    {
+      "set": 38,
+      "question": 7,
+      "test": "branch path length",
+      "relative_error": 0.0,
+      "actual": 1.9841223647508195,
+      "expected": 1.9841223647508195
+    },
+    {
+      "set": 38,
+      "question": 7,
+      "test": "Fermat stationary branch",
+      "relative_error": 0.0,
+      "actual": 0.0,
+      "expected": 0.0
+    },
+    {
+      "set": 38,
+      "question": 7,
+      "test": "branch path length",
+      "relative_error": 0.0,
+      "actual": 2.926304570904337,
+      "expected": 2.926304570904337
+    },
+    {
+      "set": 38,
+      "question": 7,
+      "test": "Fermat stationary branch",
+      "relative_error": 0.0,
+      "actual": 0.0,
+      "expected": 0.0
+    },
+    {
+      "set": 38,
+      "question": 7,
+      "test": "branch path length",
+      "relative_error": 1.2779838313435293e-16,
+      "actual": 2.4749204094639987,
+      "expected": 2.4749204094639983
+    },
+    {
+      "set": 38,
+      "question": 7,
+      "test": "Fermat stationary branch",
+      "relative_error": 0.0,
+      "actual": 0.0,
+      "expected": 0.0
+    },
+    {
+      "set": 38,
+      "question": 7,
+      "test": "branch path length",
+      "relative_error": 0.0,
+      "actual": 2.524830482788608,
+      "expected": 2.524830482788608
+    },
+    {
+      "set": 38,
+      "question": 7,
+      "test": "Fermat stationary branch",
+      "relative_error": 0.0,
+      "actual": 0.0,
+      "expected": 0.0
+    },
+    {
+      "set": 38,
+      "question": 7,
+      "test": "branch path length",
+      "relative_error": 0.0,
+      "actual": 2.8863578247490445,
+      "expected": 2.8863578247490445
+    },
+    {
+      "set": 38,
+      "question": 7,
+      "test": "Fermat stationary branch",
+      "relative_error": 2.2204460492503128e-11,
+      "actual": -2.2204460492503128e-11,
+      "expected": 0.0
+    },
+    {
+      "set": 38,
+      "question": 7,
+      "test": "branch path length",
+      "relative_error": 1.4599563483844257e-16,
+      "actual": 2.0417978615695445,
+      "expected": 2.041797861569544
+    },
+    {
+      "set": 38,
+      "question": 7,
+      "test": "Fermat stationary branch",
+      "relative_error": 2.2204460492503128e-11,
+      "actual": -2.2204460492503128e-11,
+      "expected": 0.0
+    },
+    {
+      "set": 38,
+      "question": 7,
+      "test": "branch path length",
+      "relative_error": 0.0,
+      "actual": 3.2011960464299816,
+      "expected": 3.2011960464299816
+    },
+    {
+      "set": 38,
+      "question": 7,
+      "test": "Fermat stationary branch",
+      "relative_error": 0.0,
+      "actual": 0.0,
+      "expected": 0.0
+    },
+    {
+      "set": 38,
+      "question": 7,
+      "test": "branch path length",
+      "relative_error": 8.879010083813035e-17,
+      "actual": 1.500781087407839,
+      "expected": 1.5007810874078389
+    },
+    {
+      "set": 38,
+      "question": 7,
+      "test": "Fermat stationary branch",
+      "relative_error": 2.2204460492503128e-11,
+      "actual": 2.2204460492503128e-11,
+      "expected": 0.0
+    },
+    {
+      "set": 38,
+      "question": 7,
+      "test": "branch path length",
+      "relative_error": 0.0,
+      "actual": 3.4071450659884466,
+      "expected": 3.4071450659884466
+    },
+    {
+      "set": 38,
+      "question": 7,
+      "test": "Fermat stationary branch",
+      "relative_error": 5.551115123125782e-12,
+      "actual": -5.551115123125782e-12,
+      "expected": 0.0
+    },
+    {
+      "set": 38,
+      "question": 7,
+      "test": "branch path length",
+      "relative_error": 0.0,
+      "actual": 0.9441199602331178,
+      "expected": 0.9441199602331178
+    },
+    {
+      "set": 38,
+      "question": 7,
+      "test": "Fermat stationary branch",
+      "relative_error": 0.0,
+      "actual": 0.0,
+      "expected": 0.0
+    },
+    {
+      "set": 38,
+      "question": 7,
+      "test": "branch path length",
+      "relative_error": 0.0,
+      "actual": 3.496405289327078,
+      "expected": 3.496405289327078
+    },
+    {
+      "set": 38,
+      "question": 7,
+      "test": "Fermat stationary branch",
+      "relative_error": 0.0,
+      "actual": 0.0,
+      "expected": 0.0
+    },
+    {
+      "set": 38,
+      "question": 7,
+      "test": "branch path length",
+      "relative_error": 0.0,
+      "actual": 0.524547474272475,
+      "expected": 0.524547474272475
+    },
+    {
+      "set": 38,
+      "question": 7,
+      "test": "echo distances",
+      "relative_error": 0.0,
+      "actual": [
+        250.0,
+        1750.0
+      ],
+      "expected": [
+        250.0,
+        1750.0
+      ]
+    },
+    {
+      "set": 38,
+      "question": 8,
+      "test": "tensor boost",
+      "relative_error": 1.302831028961873e-16,
+      "actual": [
+        [
+          7.208647783004706,
+          0.28825943349014116
+        ],
+        [
+          0.2882594334901412,
+          2.408647783004705
+        ]
+      ],
+      "expected": [
+        [
+          7.2086477830047055,
+          0.28825943349014116
+        ],
+        [
+          0.28825943349014116,
+          2.4086477830047044
+        ]
+      ]
+    },
+    {
+      "set": 38,
+      "question": 8,
+      "test": "tensor boost",
+      "relative_error": 1.941490179983459e-16,
+      "actual": [
+        [
+          8.149450549450547,
+          3.1648351648351642
+        ],
+        [
+          3.1648351648351642,
+          3.3494505494505487
+        ]
+      ],
+      "expected": [
+        [
+          8.149450549450549,
+          3.1648351648351642
+        ],
+        [
+          3.1648351648351642,
+          3.349450549450549
+        ]
+      ]
+    },
+    {
+      "set": 38,
+      "question": 8,
+      "test": "tensor boost",
+      "relative_error": 1.5907673188658956e-16,
+      "actual": [
+        [
+          24.266666666666676,
+          21.333333333333343
+        ],
+        [
+          21.333333333333343,
+          19.466666666666676
+        ]
+      ],
+      "expected": [
+        [
+          24.266666666666676,
+          21.33333333333334
+        ],
+        [
+          21.33333333333334,
+          19.466666666666676
+        ]
+      ]
+    },
+    {
+      "set": 39,
+      "question": 1,
+      "test": "return height",
+      "relative_error": 1.2039014713517885e-15,
+      "actual": -1.2039014713517885e-15,
+      "expected": 0.0
+    },
+    {
+      "set": 39,
+      "question": 1,
+      "test": "maximum average horizontal speed",
+      "relative_error": 3.191060190539372e-16,
+      "actual": 7.349999999999997,
+      "expected": 7.35
+    },
+    {
+      "set": 39,
+      "question": 1,
+      "test": "vertical impulse",
+      "relative_error": 2.250452076942885e-16,
+      "actual": 1.9600000000000009,
+      "expected": 1.9600000000000002
+    },
+    {
+      "set": 39,
+      "question": 1,
+      "test": "return height",
+      "relative_error": 2.375090282989742e-16,
+      "actual": 2.375090282989742e-16,
+      "expected": 0.0
+    },
+    {
+      "set": 39,
+      "question": 1,
+      "test": "maximum average horizontal speed",
+      "relative_error": 1.5053871520341105e-16,
+      "actual": 4.900000000000001,
+      "expected": 4.9
+    },
+    {
+      "set": 39,
+      "question": 1,
+      "test": "vertical impulse",
+      "relative_error": 0.0,
+      "actual": 9.8,
+      "expected": 9.8
+    },
+    {
+      "set": 39,
+      "question": 1,
+      "test": "return height",
+      "relative_error": 9.500127154724232e-15,
+      "actual": -9.500127154724232e-15,
+      "expected": 0.0
+    },
+    {
+      "set": 39,
+      "question": 1,
+      "test": "maximum average horizontal speed",
+      "relative_error": 0.0,
+      "actual": 3.266666666666667,
+      "expected": 3.266666666666667
+    },
+    {
+      "set": 39,
+      "question": 1,
+      "test": "vertical impulse",
+      "relative_error": 0.0,
+      "actual": 19.6,
+      "expected": 19.6
+    },
+    {
+      "set": 39,
+      "question": 2,
+      "test": "kinetic energy first collision",
+      "symbolic_residual": "0"
+    },
+    {
+      "set": 39,
+      "question": 2,
+      "test": "contact restitution",
+      "symbolic_residual": "0"
+    },
+    {
+      "set": 39,
+      "question": 2,
+      "test": "second-hit chord at mass ratio 1/3",
+      "symbolic_residual": "0"
+    },
+    {
+      "set": 39,
+      "question": 3,
+      "test": "dimension 2 volume recursion",
+      "relative_error": 0.0,
+      "actual": 3.141592653589793,
+      "expected": 3.141592653589793
+    },
+    {
+      "set": 39,
+      "question": 3,
+      "test": "dimension 2 pressure derivative",
+      "relative_error": 1.6828020458585038e-12,
+      "actual": 0.7142857142885991,
+      "expected": 0.7142857142857143
+    },
+    {
+      "set": 39,
+      "question": 3,
+      "test": "dimension 3 volume recursion",
+      "relative_error": 0.0,
+      "actual": 4.188790204786391,
+      "expected": 4.188790204786391
+    },
+    {
+      "set": 39,
+      "question": 3,
+      "test": "dimension 3 pressure derivative",
+      "relative_error": 1.018184229738996e-11,
+      "actual": 1.4285714285467013,
+      "expected": 1.4285714285714286
+    },
+    {
+      "set": 39,
+      "question": 3,
+      "test": "dimension 4 volume recursion",
+      "relative_error": 0.0,
+      "actual": 4.934802200544679,
+      "expected": 4.934802200544679
+    },
+    {
+      "set": 39,
+      "question": 3,
+      "test": "dimension 4 pressure derivative",
+      "relative_error": 2.027360097982141e-11,
+      "actual": 2.1428571427934258,
+      "expected": 2.142857142857143
+    },
+    {
+      "set": 39,
+      "question": 3,
+      "test": "dimension 5 volume recursion",
+      "relative_error": 0.0,
+      "actual": 5.263789013914325,
+      "expected": 5.263789013914325
+    },
+    {
+      "set": 39,
+      "question": 3,
+      "test": "dimension 5 pressure derivative",
+      "relative_error": 3.852195928499424e-11,
+      "actual": 2.8571428569942725,
+      "expected": 2.857142857142857
+    },
+    {
+      "set": 39,
+      "question": 3,
+      "test": "dimension 6 volume recursion",
+      "relative_error": 0.0,
+      "actual": 5.167712780049969,
+      "expected": 5.167712780049969
+    },
+    {
+      "set": 39,
+      "question": 3,
+      "test": "dimension 6 pressure derivative",
+      "relative_error": 5.4725876608152646e-11,
+      "actual": 3.571428571178396,
+      "expected": 3.5714285714285716
+    },
+    {
+      "set": 39,
+      "question": 3,
+      "test": "dimension 7 volume recursion",
+      "relative_error": 3.102933549783903e-16,
+      "actual": 4.7247659703314,
+      "expected": 4.7247659703314016
+    },
+    {
+      "set": 39,
+      "question": 3,
+      "test": "dimension 7 pressure derivative",
+      "relative_error": 6.778448073111724e-11,
+      "actual": 4.285714285355996,
+      "expected": 4.285714285714286
+    },
+    {
+      "set": 39,
+      "question": 3,
+      "test": "dimension 8 volume recursion",
+      "relative_error": 0.0,
+      "actual": 4.058712126416768,
+      "expected": 4.058712126416768
+    },
+    {
+      "set": 39,
+      "question": 3,
+      "test": "dimension 8 pressure derivative",
+      "relative_error": 8.632472514591427e-11,
+      "actual": 4.999999999482052,
+      "expected": 5.0
+    },
+    {
+      "set": 39,
+      "question": 3,
+      "test": "dimension 9 volume recursion",
+      "relative_error": 2.066247714723217e-16,
+      "actual": 3.2985089027387064,
+      "expected": 3.2985089027387056
+    },
+    {
+      "set": 39,
+      "question": 3,
+      "test": "dimension 9 pressure derivative",
+      "relative_error": 1.0172675940382644e-10,
+      "actual": 5.714285713602692,
+      "expected": 5.714285714285714
+    },
+    {
+      "set": 39,
+      "question": 4,
+      "test": "Snell minimum derivative",
+      "relative_error": 1.6653345369377348e-11,
+      "actual": -1.6653345369377348e-11,
+      "expected": 0.0
+    },
+    {
+      "set": 39,
+      "question": 4,
+      "test": "minimum angle degrees",
+      "relative_error": 4.204543320110862e-13,
+      "actual": 21.76349634670957,
+      "expected": 21.7634963467
+    },
+    {
+      "set": 39,
+      "question": 4,
+      "test": "exact flat-sensor circle ratio 15",
+      "relative_error": 5.551115123125783e-16,
+      "actual": 14.999999999999991,
+      "expected": 15.0
+    },
+    {
+      "set": 39,
+      "question": 4,
+      "test": "exact flat-sensor circle ratio 20",
+      "relative_error": 6.767073673905716e-16,
+      "actual": 19.999999999999986,
+      "expected": 20.0
+    },
+    {
+      "set": 39,
+      "question": 5,
+      "test": "node KCL omega=0.3",
+      "relative_error": 2.220446049250313e-16,
+      "actual": [
+        -2.220446049250313e-16,
+        0.0
+      ],
+      "expected": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "set": 39,
+      "question": 5,
+      "test": "node KCL imaginary",
+      "relative_error": 3.3306690738754696e-16,
+      "actual": [
+        2.220446049250313e-16,
+        3.3306690738754696e-16
+      ],
+      "expected": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "set": 39,
+      "question": 5,
+      "test": "port current arbitrary frequency",
+      "relative_error": 2.706168622523819e-16,
+      "actual": [
+        2.0,
+        -2.706168622523819e-16
+      ],
+      "expected": [
+        2.0,
+        0.0
+      ]
+    },
+    {
+      "set": 39,
+      "question": 5,
+      "test": "node KCL omega=0.7",
+      "relative_error": 2.220446049250313e-16,
+      "actual": [
+        -2.220446049250313e-16,
+        0.0
+      ],
+      "expected": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "set": 39,
+      "question": 5,
+      "test": "node KCL imaginary",
+      "relative_error": 2.220446049250313e-16,
+      "actual": [
+        2.220446049250313e-16,
+        1.1102230246251565e-16
+      ],
+      "expected": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "set": 39,
+      "question": 5,
+      "test": "port current arbitrary frequency",
+      "relative_error": 2.498001805406602e-16,
+      "actual": [
+        2.0,
+        -2.498001805406602e-16
+      ],
+      "expected": [
+        2.0,
+        0.0
+      ]
+    },
+    {
+      "set": 39,
+      "question": 5,
+      "test": "node KCL omega=1",
+      "relative_error": 0.0,
+      "actual": [
+        0.0,
+        0.0
+      ],
+      "expected": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "set": 39,
+      "question": 5,
+      "test": "node KCL imaginary",
+      "relative_error": 1.1102230246251565e-16,
+      "actual": [
+        1.1102230246251565e-16,
+        -1.1102230246251565e-16
+      ],
+      "expected": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "set": 39,
+      "question": 5,
+      "test": "port current arbitrary frequency",
+      "relative_error": 0.0,
+      "actual": [
+        2.0,
+        0.0
+      ],
+      "expected": [
+        2.0,
+        0.0
+      ]
+    },
+    {
+      "set": 39,
+      "question": 5,
+      "test": "resonant internal null vector",
+      "relative_error": 0.0,
+      "actual": [
+        0.0,
+        0.0
+      ],
+      "expected": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "set": 39,
+      "question": 5,
+      "test": "node KCL omega=1.8",
+      "relative_error": 5.551115123125783e-16,
+      "actual": [
+        5.551115123125783e-16,
+        -3.3306690738754696e-16
+      ],
+      "expected": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "set": 39,
+      "question": 5,
+      "test": "node KCL imaginary",
+      "relative_error": 4.440892098500626e-16,
+      "actual": [
+        0.0,
+        -4.440892098500626e-16
+      ],
+      "expected": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "set": 39,
+      "question": 5,
+      "test": "port current arbitrary frequency",
+      "relative_error": 6.661338147750939e-16,
+      "actual": [
+        2.0,
+        6.661338147750939e-16
+      ],
+      "expected": [
+        2.0,
+        0.0
+      ]
+    },
+    {
+      "set": 39,
+      "question": 5,
+      "test": "node KCL omega=3",
+      "relative_error": 1.1102230246251565e-16,
+      "actual": [
+        -1.1102230246251565e-16,
+        0.0
+      ],
+      "expected": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "set": 39,
+      "question": 5,
+      "test": "node KCL imaginary",
+      "relative_error": 2.220446049250313e-16,
+      "actual": [
+        2.220446049250313e-16,
+        -2.220446049250313e-16
+      ],
+      "expected": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "set": 39,
+      "question": 5,
+      "test": "port current arbitrary frequency",
+      "relative_error": 4.440892098500626e-16,
+      "actual": [
+        2.0,
+        -4.440892098500626e-16
+      ],
+      "expected": [
+        2.0,
+        0.0
+      ]
+    },
+    {
+      "set": 39,
+      "question": 6,
+      "test": "charged uniform ball energy",
+      "relative_error": 0.0,
+      "actual": 0.6,
+      "expected": 0.6
+    },
+    {
+      "set": 39,
+      "question": 6,
+      "test": "threshold derivative factorization 1.01",
+      "relative_error": 2.244032832293839e-16,
+      "actual": 0.01268026065674431,
+      "expected": 0.012680260656744538
+    },
+    {
+      "set": 39,
+      "question": 6,
+      "test": "threshold derivative factorization 1.1",
+      "relative_error": 2.2471680843840977e-16,
+      "actual": 0.11162214467426107,
+      "expected": 0.11162214467426132
+    },
+    {
+      "set": 39,
+      "question": 6,
+      "test": "threshold derivative factorization 1.3",
+      "relative_error": 1.1880153660371405e-15,
+      "actual": 0.26160075542078737,
+      "expected": 0.26160075542078887
+    },
+    {
+      "set": 39,
+      "question": 6,
+      "test": "threshold derivative factorization 2",
+      "relative_error": 5.1313035398146884e-15,
+      "actual": 0.4712668055734759,
+      "expected": 0.47126680557348344
+    },
+    {
+      "set": 39,
+      "question": 6,
+      "test": "threshold derivative factorization 3",
+      "relative_error": 2.6965262579117494e-14,
+      "actual": 0.5480800753719548,
+      "expected": 0.5480800753719965
+    },
+    {
+      "set": 39,
+      "question": 6,
+      "test": "threshold derivative factorization 7",
+      "relative_error": 5.885545217581792e-13,
+      "actual": 0.5917067213750227,
+      "expected": 0.5917067213759595
+    },
+    {
+      "set": 39,
+      "question": 6,
+      "test": "threshold derivative factorization 20",
+      "relative_error": 2.3952496798997198e-11,
+      "actual": 0.5990597316321087,
+      "expected": 0.5990597316704102
+    },
+    {
+      "set": 39,
+      "question": 6,
+      "test": "fitted surface coefficient",
+      "relative_error": 0.0013712548932944062,
+      "actual": 12.718786192038133,
+      "expected": 12.7
+    },
+    {
+      "set": 39,
+      "question": 7,
+      "test": "discrete impulse solve 20",
+      "relative_error": 5.457978986323268e-16,
+      "actual": 0.04249082223691077,
+      "expected": 0.04249082223691134
+    },
+    {
+      "set": 39,
+      "question": 7,
+      "test": "continuum speed convergence 20",
+      "relative_error": 0.004464517233767147,
+      "actual": 0.8923072669751262,
+      "expected": 0.9007933918307854
+    },
+    {
+      "set": 39,
+      "question": 7,
+      "test": "discrete impulse solve 80",
+      "relative_error": 8.184943959558473e-16,
+      "actual": 0.006718745003396958,
+      "expected": 0.006718745003396134
+    },
+    {
+      "set": 39,
+      "question": 7,
+      "test": "continuum speed convergence 80",
+      "relative_error": 0.0046555322859964925,
+      "actual": 0.5442183452751536,
+      "expected": 0.5514411295435665
+    },
+    {
+      "set": 39,
+      "question": 7,
+      "test": "discrete impulse solve 200",
+      "relative_error": 8.129305011831624e-16,
+      "actual": 0.0013389704499579625,
+      "expected": 0.0013389704499587765
+    },
+    {
+      "set": 39,
+      "question": 7,
+      "test": "continuum speed convergence 200",
+      "relative_error": 0.002276673264057978,
+      "actual": 0.26913306044155044,
+      "expected": 0.2720290549821332
+    },
+    {
+      "set": 39,
+      "question": 7,
+      "test": "discrete impulse solve 1000",
+      "relative_error": 6.047311188089208e-15,
+      "actual": 0.0008498024054112327,
+      "expected": 0.0008498024054051802
+    },
+    {
+      "set": 39,
+      "question": 7,
+      "test": "continuum speed convergence 1000",
+      "relative_error": 0.00014366946793624902,
+      "actual": 0.8506522078166439,
+      "expected": 0.8509181282393216
+    },
+    {
+      "set": 39,
+      "question": 8,
+      "test": "Maxwell-Juttner exact pressure 0.01",
+      "relative_error": 3.8009337151848255e-15,
+      "actual": 0.009999999999996161,
+      "expected": 0.01
+    },
+    {
+      "set": 39,
+      "question": 8,
+      "test": "Maxwell-Juttner exact pressure 0.1",
+      "relative_error": 3.7848512203130334e-17,
+      "actual": 0.09999999999999996,
+      "expected": 0.1
+    },
+    {
+      "set": 39,
+      "question": 8,
+      "test": "Maxwell-Juttner exact pressure 0.7",
+      "relative_error": 2.612289469706251e-16,
+      "actual": 0.7000000000000004,
+      "expected": 0.7
+    },
+    {
+      "set": 39,
+      "question": 8,
+      "test": "Maxwell-Juttner exact pressure 3",
+      "relative_error": 3.3306690738754696e-16,
+      "actual": 3.0000000000000013,
+      "expected": 3.0
+    },
+    {
+      "set": 40,
+      "question": 1,
+      "test": "70 configurations possible squared vector lengths",
+      "relative_error": 0.0,
+      "actual": [
+        0.0,
+        4.0,
+        8.0,
+        12.0,
+        16.0
+      ],
+      "expected": [
+        0.0,
+        4.0,
+        8.0,
+        12.0,
+        16.0
+      ]
+    },
+    {
+      "set": 40,
+      "question": 1,
+      "test": "all configurations counted",
+      "relative_error": 0.0,
+      "actual": 70.0,
+      "expected": 70.0
+    },
+    {
+      "set": 40,
+      "question": 2,
+      "test": "lowest 3D second derivative chi=0",
+      "relative_error": 1.948320675707194e-08,
+      "actual": [
+        0.0,
+        -0.576000014351763,
+        0.30800002548403427
+      ],
+      "expected": [
+        0.0,
+        -0.576,
+        0.30799999999999983
+      ]
+    },
+    {
+      "set": 40,
+      "question": 2,
+      "test": "lowest 3D second derivative chi=1.5707963267948966",
+      "relative_error": 1.8523556930751604e-08,
+      "actual": [
+        0.7720000083644152,
+        6.776263578034403e-13,
+        0.9800000366766426
+      ],
+      "expected": [
+        0.772,
+        -3.526982781544377e-17,
+        0.9799999999999999
+      ]
+    },
+    {
+      "set": 40,
+      "question": 2,
+      "test": "lowest 3D second derivative chi=-1.5707963267948966",
+      "relative_error": 1.8523556930751604e-08,
+      "actual": [
+        -0.7720000083644152,
+        6.776263578034403e-13,
+        0.9800000366766426
+      ],
+      "expected": [
+        -0.772,
+        -3.526982781544377e-17,
+        0.9799999999999999
+      ]
+    },
+    {
+      "set": 40,
+      "question": 2,
+      "test": "lowest 3D second derivative chi=0.8",
+      "relative_error": 2.242072091005783e-08,
+      "actual": [
+        0.5537989067327942,
+        -0.40130307965569045,
+        0.5118131252146441
+      ],
+      "expected": [
+        0.5537989021744316,
+        -0.40130306458396725,
+        0.5118130913187047
+      ]
+    },
+    {
+      "set": 40,
+      "question": 3,
+      "test": "signed loop Lorentz integral z=-3",
+      "relative_error": 0.0,
+      "actual": 0.006981317007977318,
+      "expected": 0.006981317007977318
+    },
+    {
+      "set": 40,
+      "question": 3,
+      "test": "signed loop Lorentz integral z=-1",
+      "relative_error": 1.305736911036763e-17,
+      "actual": 0.06283185307179588,
+      "expected": 0.06283185307179587
+    },
+    {
+      "set": 40,
+      "question": 3,
+      "test": "signed loop Lorentz integral z=1",
+      "relative_error": 1.305736911036763e-17,
+      "actual": 0.06283185307179588,
+      "expected": 0.06283185307179587
+    },
+    {
+      "set": 40,
+      "question": 3,
+      "test": "signed loop Lorentz integral z=3",
+      "relative_error": 0.0,
+      "actual": 0.006981317007977318,
+      "expected": 0.006981317007977318
+    },
+    {
+      "set": 40,
+      "question": 4,
+      "test": "massless-arm moment balance",
+      "relative_error": 1.9745737529839182e-17,
+      "actual": 0.0542367273070517,
+      "expected": 0.05423672730705172
+    },
+    {
+      "set": 40,
+      "question": 4,
+      "test": "joint work equals kinetic energy derivative",
+      "relative_error": 0.0,
+      "actual": 0.01668822378678514,
+      "expected": 0.01668822378678514
+    },
+    {
+      "set": 40,
+      "question": 4,
+      "test": "massless-arm moment balance",
+      "relative_error": 4.809710740616998e-17,
+      "actual": 0.15414739523684465,
+      "expected": 0.1541473952368447
+    },
+    {
+      "set": 40,
+      "question": 4,
+      "test": "joint work equals kinetic energy derivative",
+      "relative_error": 6.6246852939602136e-18,
+      "actual": 0.04742996776518296,
+      "expected": 0.04742996776518297
+    },
+    {
+      "set": 40,
+      "question": 4,
+      "test": "massless-arm moment balance",
+      "relative_error": 8.929649911601876e-17,
+      "actual": 0.24329960929677183,
+      "expected": 0.24329960929677194
+    },
+    {
+      "set": 40,
+      "question": 4,
+      "test": "joint work equals kinetic energy derivative",
+      "relative_error": 2.5822468966225618e-17,
+      "actual": 0.07486141824516054,
+      "expected": 0.07486141824516057
+    },
+    {
+      "set": 40,
+      "question": 5,
+      "test": "unfolded image matrix B",
+      "symbolic_residual": "0"
+    },
+    {
+      "set": 40,
+      "question": 5,
+      "test": "nondegenerate image distance",
+      "symbolic_residual": "0"
+    },
+    {
+      "set": 40,
+      "question": 5,
+      "test": "degenerate B for every h",
+      "symbolic_residual": "0"
+    },
+    {
+      "set": 40,
+      "question": 5,
+      "test": "degenerate magnification minus one",
+      "symbolic_residual": "0"
+    },
+    {
+      "set": 40,
+      "question": 5,
+      "test": "determinant",
+      "symbolic_residual": "0"
+    },
+    {
+      "set": 40,
+      "question": 6,
+      "test": "survival per orbit beta=0",
+      "relative_error": 7.401486830834377e-17,
+      "actual": 0.5000000000000001,
+      "expected": 0.5
+    },
+    {
+      "set": 40,
+      "question": 6,
+      "test": "survival per orbit beta=0.5",
+      "relative_error": 7.401486830834377e-17,
+      "actual": 0.5000000000000001,
+      "expected": 0.5
+    },
+    {
+      "set": 40,
+      "question": 6,
+      "test": "survival per orbit beta=0.9",
+      "relative_error": 7.401486830834377e-17,
+      "actual": 0.5000000000000001,
+      "expected": 0.5
+    },
+    {
+      "set": 40,
+      "question": 6,
+      "test": "survival per orbit beta=0.99",
+      "relative_error": 7.401486830834377e-17,
+      "actual": 0.5000000000000001,
+      "expected": 0.5
+    },
+    {
+      "set": 40,
+      "question": 7,
+      "test": "roof energy balance",
+      "relative_error": 1.7683991837591483e-16,
+      "actual": 1284.759898169009,
+      "expected": 1284.7598981690087
+    },
+    {
+      "set": 40,
+      "question": 7,
+      "test": "room energy balance",
+      "relative_error": 2.884902645436889e-15,
+      "actual": 15762.005091549583,
+      "expected": 15762.005091549538
+    },
+    {
+      "set": 40,
+      "question": 7,
+      "test": "roof energy balance",
+      "relative_error": 3.405978420593872e-16,
+      "actual": 666.5722725324453,
+      "expected": 666.5722725324455
+    },
+    {
+      "set": 40,
+      "question": 7,
+      "test": "room energy balance",
+      "relative_error": 2.5456097321108005e-15,
+      "actual": 10002.831824026629,
+      "expected": 10002.831824026654
+    },
+    {
+      "set": 40,
+      "question": 7,
+      "test": "roof energy balance",
+      "relative_error": 2.0243145433548226e-16,
+      "actual": 1122.2131695621472,
+      "expected": 1122.213169562147
+    },
+    {
+      "set": 40,
+      "question": 7,
+      "test": "room energy balance",
+      "relative_error": 8.86640145925093e-16,
+      "actual": 12308.319030312872,
+      "expected": 12308.319030312883
+    },
+    {
+      "set": 40,
+      "question": 8,
+      "test": "ellipse equal angular momentum",
+      "relative_error": 3.0043706636255107e-16,
+      "actual": 3328484105197772.0,
+      "expected": 3328484105197773.0
+    },
+    {
+      "set": 40,
+      "question": 8,
+      "test": "ellipse equal specific energy",
+      "relative_error": 3.728097595042668e-16,
+      "actual": -639518072.2891567,
+      "expected": -639518072.2891564
+    },
+    {
+      "set": 40,
+      "question": 8,
+      "test": "escape hyperbola energy",
+      "relative_error": 1.3126688345605204e-16,
+      "actual": 28379512.5557487,
+      "expected": 28379512.555748705
+    },
+    {
+      "set": 41,
+      "question": 1,
+      "test": "moving supports moment (0.1, 0.1)",
+      "relative_error": 1.1800683182091611e-16,
+      "actual": 29.106,
+      "expected": 29.106000000000005
+    },
+    {
+      "set": 41,
+      "question": 1,
+      "test": "force and acceleration",
+      "relative_error": 1.1600627579287625e-16,
+      "actual": 0.4355555555555555,
+      "expected": 0.43555555555555564
+    },
+    {
+      "set": 41,
+      "question": 1,
+      "test": "moving supports moment (0.1, 0.4)",
+      "relative_error": 1.3825940530823866e-16,
+      "actual": 24.696000000000005,
+      "expected": 24.696
+    },
+    {
+      "set": 41,
+      "question": 1,
+      "test": "force and acceleration",
+      "relative_error": 1.1600627579287625e-16,
+      "actual": 0.4355555555555555,
+      "expected": 0.43555555555555564
+    },
+    {
+      "set": 41,
+      "question": 1,
+      "test": "moving supports moment (0.1, 0.8)",
+      "relative_error": 3.06691443266618e-16,
+      "actual": 10.583999999999998,
+      "expected": 10.583999999999994
+    },
+    {
+      "set": 41,
+      "question": 1,
+      "test": "force and acceleration",
+      "relative_error": 1.1600627579287625e-16,
+      "actual": 0.4355555555555555,
+      "expected": 0.43555555555555564
+    },
+    {
+      "set": 41,
+      "question": 1,
+      "test": "endpoint support coincidence",
+      "relative_error": 0.0,
+      "actual": [
+        0.0,
+        0.0
+      ],
+      "expected": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "set": 41,
+      "question": 1,
+      "test": "moving supports moment (0.2, 0.1)",
+      "relative_error": 2.3601366364183223e-16,
+      "actual": 29.105999999999998,
+      "expected": 29.106000000000005
+    },
+    {
+      "set": 41,
+      "question": 1,
+      "test": "force and acceleration",
+      "relative_error": 1.6821560979169038e-16,
+      "actual": 0.9799999999999998,
+      "expected": 0.9800000000000001
+    },
+    {
+      "set": 41,
+      "question": 1,
+      "test": "moving supports moment (0.2, 0.4)",
+      "relative_error": 0.0,
+      "actual": 24.696,
+      "expected": 24.696
+    },
+    {
+      "set": 41,
+      "question": 1,
+      "test": "force and acceleration",
+      "relative_error": 1.6821560979169038e-16,
+      "actual": 0.9799999999999998,
+      "expected": 0.9800000000000001
+    },
+    {
+      "set": 41,
+      "question": 1,
+      "test": "moving supports moment (0.2, 0.8)",
+      "relative_error": 3.0669144326661783e-16,
+      "actual": 10.583999999999996,
+      "expected": 10.584
+    },
+    {
+      "set": 41,
+      "question": 1,
+      "test": "force and acceleration",
+      "relative_error": 1.6821560979169038e-16,
+      "actual": 0.9799999999999998,
+      "expected": 0.9800000000000001
+    },
+    {
+      "set": 41,
+      "question": 1,
+      "test": "endpoint support coincidence",
+      "relative_error": 4.440892098500626e-16,
+      "actual": [
+        -4.440892098500626e-16,
+        0.0
+      ],
+      "expected": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "set": 41,
+      "question": 1,
+      "test": "moving supports moment (0.3, 0.1)",
+      "relative_error": 0.0,
+      "actual": 29.106000000000005,
+      "expected": 29.106000000000005
+    },
+    {
+      "set": 41,
+      "question": 1,
+      "test": "force and acceleration",
+      "relative_error": 8.285246452426539e-17,
+      "actual": 1.6800000000000006,
+      "expected": 1.6800000000000004
+    },
+    {
+      "set": 41,
+      "question": 1,
+      "test": "moving supports moment (0.3, 0.4)",
+      "relative_error": 1.3825940530823866e-16,
+      "actual": 24.696000000000005,
+      "expected": 24.696
+    },
+    {
+      "set": 41,
+      "question": 1,
+      "test": "force and acceleration",
+      "relative_error": 8.285246452426539e-17,
+      "actual": 1.6800000000000006,
+      "expected": 1.6800000000000004
+    },
+    {
+      "set": 41,
+      "question": 1,
+      "test": "moving supports moment (0.3, 0.8)",
+      "relative_error": 1.5334572163330892e-16,
+      "actual": 10.584000000000001,
+      "expected": 10.584
+    },
+    {
+      "set": 41,
+      "question": 1,
+      "test": "force and acceleration",
+      "relative_error": 8.285246452426539e-17,
+      "actual": 1.6800000000000006,
+      "expected": 1.6800000000000004
+    },
+    {
+      "set": 41,
+      "question": 1,
+      "test": "endpoint support coincidence",
+      "relative_error": 4.440892098500626e-16,
+      "actual": [
+        4.440892098500626e-16,
+        0.0
+      ],
+      "expected": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "set": 41,
+      "question": 1,
+      "test": "moving supports moment (0.4, 0.1)",
+      "relative_error": 1.1800683182091611e-16,
+      "actual": 29.106,
+      "expected": 29.106000000000005
+    },
+    {
+      "set": 41,
+      "question": 1,
+      "test": "force and acceleration",
+      "relative_error": 1.2290291785518337e-16,
+      "actual": 2.613333333333334,
+      "expected": 2.6133333333333337
+    },
+    {
+      "set": 41,
+      "question": 1,
+      "test": "moving supports moment (0.4, 0.4)",
+      "relative_error": 0.0,
+      "actual": 24.696,
+      "expected": 24.696
+    },
+    {
+      "set": 41,
+      "question": 1,
+      "test": "force and acceleration",
+      "relative_error": 1.2290291785518337e-16,
+      "actual": 2.613333333333334,
+      "expected": 2.6133333333333337
+    },
+    {
+      "set": 41,
+      "question": 1,
+      "test": "moving supports moment (0.4, 0.8)",
+      "relative_error": 1.533457216333089e-16,
+      "actual": 10.584,
+      "expected": 10.584000000000001
+    },
+    {
+      "set": 41,
+      "question": 1,
+      "test": "force and acceleration",
+      "relative_error": 1.2290291785518337e-16,
+      "actual": 2.613333333333334,
+      "expected": 2.6133333333333337
+    },
+    {
+      "set": 41,
+      "question": 1,
+      "test": "endpoint support coincidence",
+      "relative_error": 2.220446049250313e-16,
+      "actual": [
+        0.0,
+        2.220446049250313e-16
+      ],
+      "expected": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "set": 41,
+      "question": 2,
+      "test": "Kepler parametric trajectory E=0.2",
+      "relative_error": 2.286298658308817e-13,
+      "actual": [
+        0.9880399467042904,
+        -0.0888476257404365
+      ],
+      "expected": [
+        0.9880399467047449,
+        -0.08884762574042984
+      ]
+    },
+    {
+      "set": 41,
+      "question": 2,
+      "test": "Kepler parametric trajectory E=1",
+      "relative_error": 3.961933073576412e-12,
+      "actual": [
+        0.7241813835140527,
+        -0.37631726462320564
+      ],
+      "expected": [
+        0.7241813835208838,
+        -0.3763172646248299
+      ]
+    },
+    {
+      "set": 41,
+      "question": 2,
+      "test": "Kepler parametric trajectory E=2",
+      "relative_error": 1.0971385903887165e-11,
+      "actual": [
+        0.150311898059094,
+        -0.40665017162325456
+      ],
+      "expected": [
+        0.15031189807171452,
+        -0.406650171629573
+      ]
+    },
+    {
+      "set": 41,
+      "question": 2,
+      "test": "Kepler parametric trajectory E=3",
+      "relative_error": 2.2151353684702938e-11,
+      "actual": [
+        -0.19399549796379284,
+        -0.06311078617788692
+      ],
+      "expected": [
+        -0.19399549796026727,
+        -0.06311078620143626
+      ]
+    },
+    {
+      "set": 41,
+      "question": 2,
+      "test": "Kepler parametric trajectory E=5",
+      "relative_error": 1.3376577047236872e-11,
+      "actual": [
+        0.5701973112989396,
+        0.42884397269290087
+      ],
+      "expected": [
+        0.5701973112779357,
+        0.42884397268429136
+      ]
+    },
+    {
+      "set": 41,
+      "question": 2,
+      "test": "Kepler parametric trajectory E=6.283185307179586",
+      "relative_error": 3.670591608440077e-11,
+      "actual": [
+        1.0000000000734117,
+        3.39975018623373e-11
+      ],
+      "expected": [
+        0.9999999999999999,
+        1.0953573965284052e-16
+      ]
+    },
+    {
+      "set": 41,
+      "question": 3,
+      "test": "inertia, braking torque, recovery power, free acceleration",
+      "relative_error": 2.7453087096143714e-08,
+      "actual": [
+        0.040569839999999996,
+        1.282791738183051,
+        17.398784494896553,
+        0.13350898789201093
+      ],
+      "expected": [
+        0.04056984,
+        1.282791738,
+        17.398785,
+        0.1335089879
+      ]
+    },
+    {
+      "set": 41,
+      "question": 4,
+      "test": "chain density",
+      "relative_error": 4.818205692475092e-12,
+      "actual": 0.7185371258082802,
+      "expected": 0.7185371258
+    },
+    {
+      "set": 41,
+      "question": 4,
+      "test": "endpoint angle",
+      "relative_error": 2.27386500488915e-10,
+      "actual": 19.67470884470115,
+      "expected": 19.67470884
+    },
+    {
+      "set": 41,
+      "question": 4,
+      "test": "differential tangential balance",
+      "relative_error": 0.0,
+      "actual": 1.038129420476695,
+      "expected": 1.038129420476695
+    },
+    {
+      "set": 41,
+      "question": 4,
+      "test": "differential tangential balance",
+      "relative_error": 0.0,
+      "actual": 2.154855419778485,
+      "expected": 2.154855419778485
+    },
+    {
+      "set": 41,
+      "question": 4,
+      "test": "differential tangential balance",
+      "relative_error": 0.0,
+      "actual": 2.171739326243851,
+      "expected": 2.171739326243851
+    },
+    {
+      "set": 41,
+      "question": 4,
+      "test": "differential tangential balance",
+      "relative_error": 0.0,
+      "actual": 2.0219571349266485,
+      "expected": 2.0219571349266485
+    },
+    {
+      "set": 41,
+      "question": 4,
+      "test": "differential tangential balance",
+      "relative_error": 0.0,
+      "actual": 1.8421103234139948,
+      "expected": 1.8421103234139948
+    },
+    {
+      "set": 41,
+      "question": 4,
+      "test": "differential tangential balance",
+      "relative_error": 0.0,
+      "actual": 1.668099837563088,
+      "expected": 1.668099837563088
+    },
+    {
+      "set": 41,
+      "question": 5,
+      "test": "minimum toy strain",
+      "relative_error": 3.521149619344418e-25,
+      "actual": 1.0544014979838066e-20,
+      "expected": 1.05443670948e-20
+    },
+    {
+      "set": 41,
+      "question": 5,
+      "test": "moon phase",
+      "relative_error": 3.6501364752163664e-06,
+      "actual": 0.13453414118933524,
+      "expected": 0.13453
+    },
+    {
+      "set": 41,
+      "question": 6,
+      "test": "uniform source visibility integral",
+      "relative_error": 0.0,
+      "actual": 0.9962417696229606,
+      "expected": 0.9962417696229606
+    },
+    {
+      "set": 41,
+      "question": 6,
+      "test": "uniform source visibility integral",
+      "relative_error": 0.0,
+      "actual": 0.9437279311587113,
+      "expected": 0.9437279311587113
+    },
+    {
+      "set": 41,
+      "question": 6,
+      "test": "uniform source visibility integral",
+      "relative_error": 0.0,
+      "actual": 0.8167487838847293,
+      "expected": 0.8167487838847293
+    },
+    {
+      "set": 41,
+      "question": 7,
+      "test": "separatrix pendulum equation",
+      "relative_error": 4.163336342344337e-16,
+      "actual": 4.163336342344337e-16,
+      "expected": 0.0
+    },
+    {
+      "set": 41,
+      "question": 7,
+      "test": "critical kinetic-potential energy",
+      "relative_error": 1.4802973661668753e-16,
+      "actual": 2.0000000000000004,
+      "expected": 2.0
+    },
+    {
+      "set": 41,
+      "question": 7,
+      "test": "separatrix pendulum equation",
+      "relative_error": 2.220446049250313e-16,
+      "actual": 2.220446049250313e-16,
+      "expected": 0.0
+    },
+    {
+      "set": 41,
+      "question": 7,
+      "test": "critical kinetic-potential energy",
+      "relative_error": 2.9605947323337506e-16,
+      "actual": 2.000000000000001,
+      "expected": 2.0
+    },
+    {
+      "set": 41,
+      "question": 7,
+      "test": "separatrix pendulum equation",
+      "relative_error": 1.1102230246251565e-16,
+      "actual": -1.1102230246251565e-16,
+      "expected": 0.0
+    },
+    {
+      "set": 41,
+      "question": 7,
+      "test": "critical kinetic-potential energy",
+      "relative_error": 1.4802973661668753e-16,
+      "actual": 2.0000000000000004,
+      "expected": 2.0
+    },
+    {
+      "set": 41,
+      "question": 7,
+      "test": "separatrix pendulum equation",
+      "relative_error": 3.3306690738754696e-16,
+      "actual": -3.3306690738754696e-16,
+      "expected": 0.0
+    },
+    {
+      "set": 41,
+      "question": 7,
+      "test": "critical kinetic-potential energy",
+      "relative_error": 1.4802973661668753e-16,
+      "actual": 2.0000000000000004,
+      "expected": 2.0
+    },
+    {
+      "set": 41,
+      "question": 7,
+      "test": "waiting solution ODE",
+      "relative_error": 0.0,
+      "actual": 1.5625000000000004e-05,
+      "expected": 1.5625000000000004e-05
+    },
+    {
+      "set": 41,
+      "question": 7,
+      "test": "waiting solution ODE",
+      "relative_error": 0.0,
+      "actual": 0.001953125,
+      "expected": 0.001953125
+    },
+    {
+      "set": 41,
+      "question": 7,
+      "test": "waiting solution ODE",
+      "relative_error": 0.0,
+      "actual": 0.015625,
+      "expected": 0.015625
+    },
+    {
+      "set": 41,
+      "question": 7,
+      "test": "waiting solution ODE",
+      "relative_error": 0.0,
+      "actual": 1.562500000000004e-05,
+      "expected": 1.562500000000004e-05
+    },
+    {
+      "set": 41,
+      "question": 7,
+      "test": "waiting solution ODE",
+      "relative_error": 0.0,
+      "actual": 0.001953125,
+      "expected": 0.001953125
+    },
+    {
+      "set": 41,
+      "question": 7,
+      "test": "waiting solution ODE",
+      "relative_error": 0.0,
+      "actual": 0.015625,
+      "expected": 0.015625
+    },
+    {
+      "set": 41,
+      "question": 7,
+      "test": "waiting solution ODE",
+      "relative_error": 0.0,
+      "actual": 1.562500000000004e-05,
+      "expected": 1.562500000000004e-05
+    },
+    {
+      "set": 41,
+      "question": 7,
+      "test": "waiting solution ODE",
+      "relative_error": 0.0,
+      "actual": 0.001953125,
+      "expected": 0.001953125
+    },
+    {
+      "set": 41,
+      "question": 7,
+      "test": "waiting solution ODE",
+      "relative_error": 0.0,
+      "actual": 0.015625,
+      "expected": 0.015625
+    },
+    {
+      "set": 41,
+      "question": 8,
+      "test": "matrix inverse covariance",
+      "relative_error": 0.0,
+      "actual": [
+        [
+          0.6666666666666666,
+          0.3333333333333333
+        ],
+        [
+          0.3333333333333333,
+          0.6666666666666666
+        ]
+      ],
+      "expected": [
+        [
+          0.6666666666666666,
+          0.3333333333333333
+        ],
+        [
+          0.3333333333333333,
+          0.6666666666666666
+        ]
+      ]
+    },
+    {
+      "set": 41,
+      "question": 8,
+      "test": "relative variance",
+      "relative_error": 0.0,
+      "actual": 0.6666666666666666,
+      "expected": 0.6666666666666666
+    },
+    {
+      "set": 41,
+      "question": 8,
+      "test": "conditional variance",
+      "relative_error": 0.0,
+      "actual": 0.5,
+      "expected": 0.5
+    },
+    {
+      "set": 42,
+      "question": 1,
+      "test": "reaction solve [0.2, 0.3, 0.5]",
+      "relative_error": 4.625929269271486e-17,
+      "actual": [
+        0.19999999999999996,
+        0.30000000000000004,
+        0.5
+      ],
+      "expected": [
+        0.2,
+        0.3,
+        0.5
+      ]
+    },
+    {
+      "set": 42,
+      "question": 1,
+      "test": "moments relative centre",
+      "relative_error": 3.469446951953614e-18,
+      "actual": [
+        -3.469446951953614e-18,
+        0.0
+      ],
+      "expected": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "set": 42,
+      "question": 1,
+      "test": "reaction solve [0.1, 0.45, 0.45]",
+      "relative_error": 1.2616170734376778e-16,
+      "actual": [
+        0.09999999999999987,
+        0.45,
+        0.45000000000000007
+      ],
+      "expected": [
+        0.1,
+        0.45,
+        0.45
+      ]
+    },
+    {
+      "set": 42,
+      "question": 1,
+      "test": "moments relative centre",
+      "relative_error": 6.50355750640835e-17,
+      "actual": [
+        2.442490654175344e-17,
+        6.50355750640835e-17
+      ],
+      "expected": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "set": 42,
+      "question": 1,
+      "test": "reaction solve [0.6, 0.2, 0.2]",
+      "relative_error": 2.312964634635743e-17,
+      "actual": [
+        0.6,
+        0.2,
+        0.20000000000000004
+      ],
+      "expected": [
+        0.6,
+        0.2,
+        0.2
+      ]
+    },
+    {
+      "set": 42,
+      "question": 1,
+      "test": "moments relative centre",
+      "relative_error": 2.6921477609369895e-17,
+      "actual": [
+        -2.275957200481571e-17,
+        2.6921477609369895e-17
+      ],
+      "expected": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "set": 42,
+      "question": 2,
+      "test": "Newton separation",
+      "relative_error": 2.0065896792651103e-11,
+      "actual": 623873.6938125186,
+      "expected": 623873.6938
+    },
+    {
+      "set": 42,
+      "question": 2,
+      "test": "toy contact and Schwarzschild factor",
+      "relative_error": 4.1011423425955017e-17,
+      "actual": 0.35355339059327373,
+      "expected": 0.3535533905932738
+    },
+    {
+      "set": 42,
+      "question": 3,
+      "test": "isothermal buoyancy work integration",
+      "relative_error": 0.0,
+      "actual": 106596.42865198741,
+      "expected": 106596.42865198741
+    },
+    {
+      "set": 42,
+      "question": 3,
+      "test": "polytropic work gamma=1.01",
+      "relative_error": 8.407689033419008e-16,
+      "actual": 103846.19394729534,
+      "expected": 103846.19394729525
+    },
+    {
+      "set": 42,
+      "question": 3,
+      "test": "polytropic work gamma=1.4",
+      "relative_error": 1.3255271334543395e-16,
+      "actual": 54890.04998720165,
+      "expected": 54890.049987201644
+    },
+    {
+      "set": 42,
+      "question": 3,
+      "test": "polytropic work gamma=1.6666666666666667",
+      "relative_error": 8.39013857997433e-15,
+      "actual": 44226.378938536334,
+      "expected": 44226.37893853596
+    },
+    {
+      "set": 42,
+      "question": 3,
+      "test": "bottle speed added mass",
+      "relative_error": 4.623175682321705e-06,
+      "actual": 201.81893766324555,
+      "expected": 201.818
+    },
+    {
+      "set": 42,
+      "question": 4,
+      "test": "quarter wave thickness",
+      "relative_error": 5.4203392966191637e-14,
+      "actual": 613.5416666666667,
+      "expected": 613.5416666667
+    },
+    {
+      "set": 42,
+      "question": 4,
+      "test": "normalized Stokes norm",
+      "relative_error": 0.0,
+      "actual": 1.0,
+      "expected": 1.0
+    },
+    {
+      "set": 42,
+      "question": 4,
+      "test": "normalized Stokes norm",
+      "relative_error": 1.1102230246251565e-16,
+      "actual": 1.0000000000000002,
+      "expected": 1.0
+    },
+    {
+      "set": 42,
+      "question": 4,
+      "test": "normalized Stokes norm",
+      "relative_error": 0.0,
+      "actual": 1.0,
+      "expected": 1.0
+    },
+    {
+      "set": 42,
+      "question": 5,
+      "test": "rolling centre height versus arc",
+      "relative_error": 2.0361963326493266e-17,
+      "actual": 0.02233175543719701,
+      "expected": 0.02233175543719699
+    },
+    {
+      "set": 42,
+      "question": 5,
+      "test": "quarter period quadrature",
+      "relative_error": 1.0919739632974593e-11,
+      "actual": 2.8384537901855422,
+      "expected": 2.838453790227457
+    },
+    {
+      "set": 42,
+      "question": 5,
+      "test": "rolling centre height versus arc",
+      "relative_error": 0.0,
+      "actual": 0.1516466453264173,
+      "expected": 0.1516466453264173
+    },
+    {
+      "set": 42,
+      "question": 5,
+      "test": "quarter period quadrature",
+      "relative_error": 6.313466178286824e-13,
+      "actual": 2.8384537902298805,
+      "expected": 2.838453790227457
+    },
+    {
+      "set": 42,
+      "question": 5,
+      "test": "rolling centre height versus arc",
+      "relative_error": 0.0,
+      "actual": 0.41501642854987947,
+      "expected": 0.41501642854987947
+    },
+    {
+      "set": 42,
+      "question": 5,
+      "test": "quarter period quadrature",
+      "relative_error": 1.482744778100127e-12,
+      "actual": 2.8384537902331486,
+      "expected": 2.838453790227457
+    },
+    {
+      "set": 42,
+      "question": 5,
+      "test": "rolling centre height versus arc",
+      "relative_error": 1.3674208422291869e-17,
+      "actual": 0.01488783695813134,
+      "expected": 0.014887836958131326
+    },
+    {
+      "set": 42,
+      "question": 5,
+      "test": "quarter period quadrature",
+      "relative_error": 3.129544807085552e-13,
+      "actual": 2.838453790226256,
+      "expected": 2.838453790227457
+    },
+    {
+      "set": 42,
+      "question": 5,
+      "test": "rolling centre height versus arc",
+      "relative_error": 1.2603592766422297e-17,
+      "actual": 0.10109776355094487,
+      "expected": 0.10109776355094488
+    },
+    {
+      "set": 42,
+      "question": 5,
+      "test": "quarter period quadrature",
+      "relative_error": 4.545649370439606e-13,
+      "actual": 2.838453790229202,
+      "expected": 2.838453790227457
+    },
+    {
+      "set": 42,
+      "question": 5,
+      "test": "rolling centre height versus arc",
+      "relative_error": 0.0,
+      "actual": 0.27667761903325294,
+      "expected": 0.27667761903325294
+    },
+    {
+      "set": 42,
+      "question": 5,
+      "test": "quarter period quadrature",
+      "relative_error": 4.781666797665282e-13,
+      "actual": 2.8384537902256217,
+      "expected": 2.838453790227457
+    },
+    {
+      "set": 42,
+      "question": 5,
+      "test": "rolling centre height versus arc",
+      "relative_error": 1.0293405943784648e-17,
+      "actual": 0.011165877718598505,
+      "expected": 0.011165877718598494
+    },
+    {
+      "set": 42,
+      "question": 5,
+      "test": "quarter period quadrature",
+      "relative_error": 1.0919739632974593e-11,
+      "actual": 2.8384537901855422,
+      "expected": 2.838453790227457
+    },
+    {
+      "set": 42,
+      "question": 5,
+      "test": "rolling centre height versus arc",
+      "relative_error": 0.0,
+      "actual": 0.07582332266320865,
+      "expected": 0.07582332266320865
+    },
+    {
+      "set": 42,
+      "question": 5,
+      "test": "quarter period quadrature",
+      "relative_error": 6.313466178286824e-13,
+      "actual": 2.8384537902298805,
+      "expected": 2.838453790227457
+    },
+    {
+      "set": 42,
+      "question": 5,
+      "test": "rolling centre height versus arc",
+      "relative_error": 0.0,
+      "actual": 0.20750821427493973,
+      "expected": 0.20750821427493973
+    },
+    {
+      "set": 42,
+      "question": 5,
+      "test": "quarter period quadrature",
+      "relative_error": 1.482744778100127e-12,
+      "actual": 2.8384537902331486,
+      "expected": 2.838453790227457
+    },
+    {
+      "set": 42,
+      "question": 6,
+      "test": "mass ratio differential integration",
+      "relative_error": 7.221162471831104e-17,
+      "actual": 0.15309310892394867,
+      "expected": 0.1530931089239486
+    },
+    {
+      "set": 42,
+      "question": 6,
+      "test": "two-stage fuel ratio",
+      "relative_error": 1.0254048731827609e-16,
+      "actual": 1.1654334861489941,
+      "expected": 1.165433486148994
+    },
+    {
+      "set": 42,
+      "question": 6,
+      "test": "mass ratio differential integration",
+      "relative_error": 0.0,
+      "actual": 3.49065850398866,
+      "expected": 3.49065850398866
+    },
+    {
+      "set": 42,
+      "question": 6,
+      "test": "two-stage fuel ratio",
+      "relative_error": 4.2034566331498666e-16,
+      "actual": 32.80754449357331,
+      "expected": 32.807544493573324
+    },
+    {
+      "set": 42,
+      "question": 6,
+      "test": "mass ratio differential integration",
+      "relative_error": 0.0,
+      "actual": 2.5809270060438205,
+      "expected": 2.5809270060438205
+    },
+    {
+      "set": 42,
+      "question": 6,
+      "test": "two-stage fuel ratio",
+      "relative_error": 1.2501299367727167e-16,
+      "actual": 13.209377658661777,
+      "expected": 13.20937765866178
+    },
+    {
+      "set": 42,
+      "question": 6,
+      "test": "ninety-degree ratio",
+      "relative_error": 2.1017283165749345e-16,
+      "actual": 32.807544493573296,
+      "expected": 32.8075444935733
+    },
+    {
+      "set": 42,
+      "question": 7,
+      "test": "phase-space action numerical quadrature",
+      "relative_error": 0.0,
+      "actual": 9.237604307034012,
+      "expected": 9.237604307034012
+    },
+    {
+      "set": 42,
+      "question": 7,
+      "test": "height mean",
+      "relative_error": 3.121312732089012e-14,
+      "actual": 1.3333333333332604,
+      "expected": 1.3333333333333333
+    },
+    {
+      "set": 42,
+      "question": 7,
+      "test": "height second moment",
+      "relative_error": 5.71174313519921e-14,
+      "actual": 2.1333333333335123,
+      "expected": 2.1333333333333333
+    },
+    {
+      "set": 42,
+      "question": 7,
+      "test": "phase-space action numerical quadrature",
+      "relative_error": 1.3744239311924687e-16,
+      "actual": 2.2310934040908683,
+      "expected": 2.231093404090868
+    },
+    {
+      "set": 42,
+      "question": 7,
+      "test": "height mean",
+      "relative_error": 2.131628207280301e-14,
+      "actual": 0.6666666666666311,
+      "expected": 0.6666666666666666
+    },
+    {
+      "set": 42,
+      "question": 7,
+      "test": "height second moment",
+      "relative_error": 2.9251963170558476e-14,
+      "actual": 0.5333333333333782,
+      "expected": 0.5333333333333333
+    },
+    {
+      "set": 42,
+      "question": 7,
+      "test": "phase-space action numerical quadrature",
+      "relative_error": 0.0,
+      "actual": 6.928203230275509,
+      "expected": 6.928203230275509
+    },
+    {
+      "set": 42,
+      "question": 7,
+      "test": "height mean",
+      "relative_error": 1.0154839931904765e-13,
+      "actual": 1.9999999999996954,
+      "expected": 2.0
+    },
+    {
+      "set": 42,
+      "question": 7,
+      "test": "height second moment",
+      "relative_error": 1.6841700448037892e-12,
+      "actual": 4.800000000009768,
+      "expected": 4.8
+    },
+    {
+      "set": 42,
+      "question": 8,
+      "test": "lab-specified circle SO3 kappa,theta=(2.5, 0.2)",
+      "relative_error": 3.846748153815799e-12,
+      "actual": [
+        [
+          0.4139988312534135,
+          0.8724659507512675,
+          -0.25963076182437306
+        ],
+        [
+          -0.8724659507518884,
+          0.2989681178702755,
+          -0.3865504226623292
+        ],
+        [
+          -0.25963076182434897,
+          0.38655042266198997,
+          0.8849692866146416
+        ]
+      ],
+      "expected": [
+        [
+          0.4139988312574244,
+          0.8724659507584704,
+          -0.2596307618226407
+        ],
+        [
+          -0.8724659507584704,
+          0.298968117872932,
+          -0.38655042266518713
+        ],
+        [
+          -0.2596307618226407,
+          0.38655042266518713,
+          0.8849692866155076
+        ]
+      ]
+    },
+    {
+      "set": 42,
+      "question": 8,
+      "test": "lab-specified circle SO3 kappa,theta=(2.5, 0.6)",
+      "relative_error": 9.699025681426221e-12,
+      "actual": [
+        [
+          0.7390132218242447,
+          0.652097099529317,
+          -0.16920056358756042
+        ],
+        [
+          -0.652097099530821,
+          0.6293186582979513,
+          -0.4227616338496428
+        ],
+        [
+          -0.16920056358756813,
+          0.4227616338486606,
+          0.8903054364722309
+        ]
+      ],
+      "expected": [
+        [
+          0.7390132218363779,
+          0.6520970995451384,
+          -0.1692005635801322
+        ],
+        [
+          -0.6520970995451384,
+          0.6293186583137541,
+          -0.42276163385883797
+        ],
+        [
+          -0.1692005635801322,
+          0.42276163385883797,
+          0.8903054364773761
+        ]
+      ]
+    },
+    {
+      "set": 42,
+      "question": 8,
+      "test": "lab-specified circle SO3 kappa,theta=(2.5, 1)",
+      "relative_error": 2.2097694999588575e-11,
+      "actual": [
+        [
+          0.9994509320592143,
+          -0.033132817217444946,
+          -0.0002252856432286886
+        ],
+        [
+          0.03313281721745704,
+          0.9993584961011509,
+          0.013594579990137324
+        ],
+        [
+          -0.0002252856432293041,
+          -0.013594579990120969,
+          0.9999075640418872
+        ]
+      ],
+      "expected": [
+        [
+          0.999450932096915,
+          -0.03313281722090309,
+          -0.00022528562782675403
+        ],
+        [
+          0.03313281722090309,
+          0.9993584961453321,
+          0.013594579991546483
+        ],
+        [
+          -0.00022528562782675403,
+          -0.013594579991546483,
+          0.9999075640484171
+        ]
+      ]
+    },
+    {
+      "set": 42,
+      "question": 8,
+      "test": "lab-specified circle SO3 kappa,theta=(2.5, 1.4)",
+      "relative_error": 3.037797867323447e-11,
+      "actual": [
+        [
+          -0.9284077188616056,
+          0.28734027960572317,
+          -0.23557306966224367
+        ],
+        [
+          -0.28734027960572384,
+          -0.9571851763501346,
+          -0.03510130717818921
+        ],
+        [
+          -0.23557306966228653,
+          0.035101307178201924,
+          0.9712225425114421
+        ]
+      ],
+      "expected": [
+        [
+          -0.9284077189201755,
+          0.28734027962670516,
+          -0.23557306966944205
+        ],
+        [
+          -0.28734027962670516,
+          -0.9571851764095899,
+          -0.03510130718064229
+        ],
+        [
+          -0.23557306966944205,
+          0.03510130718064229,
+          0.9712225425105859
+        ]
+      ]
+    },
+    {
+      "set": 42,
+      "question": 8,
+      "test": "lab-specified circle SO3 kappa,theta=(1.25, 0.2)",
+      "relative_error": 1.7252443542210899e-12,
+      "actual": [
+        [
+          0.8905543743658532,
+          0.454167920466415,
+          -0.025385159291146077
+        ],
+        [
+          -0.45416792046512683,
+          0.8846664614544251,
+          -0.10534112203313108
+        ],
+        [
+          -0.02538515929108456,
+          0.10534112203346903,
+          0.9941120870889382
+        ]
+      ],
+      "expected": [
+        [
+          0.8905543743686531,
+          0.45416792046626564,
+          -0.025385159290512965
+        ],
+        [
+          -0.45416792046626564,
+          0.8846664614576766,
+          -0.10534112203361609
+        ],
+        [
+          -0.025385159290512965,
+          0.10534112203361609,
+          0.9941120870890235
+        ]
+      ]
+    },
+    {
+      "set": 42,
+      "question": 8,
+      "test": "lab-specified circle SO3 kappa,theta=(1.25, 0.6)",
+      "relative_error": 6.39385379045713e-12,
+      "actual": [
+        [
+          -0.7005311018325961,
+          -0.08684646979438693,
+          -0.7083176307477295
+        ],
+        [
+          0.08684646979383812,
+          -0.9955647330830286,
+          0.0361739256955414
+        ],
+        [
+          -0.7083176307474717,
+          -0.03617392569571521,
+          0.704966368748238
+        ]
+      ],
+      "expected": [
+        [
+          -0.7005311018431675,
+          -0.08684646979347288,
+          -0.7083176307524821
+        ],
+        [
+          0.08684646979347288,
+          -0.995564733095788,
+          0.036173925696892636
+        ],
+        [
+          -0.7083176307524821,
+          -0.036173925696892636,
+          0.7049663687473797
+        ]
+      ]
+    },
+    {
+      "set": 42,
+      "question": 8,
+      "test": "lab-specified circle SO3 kappa,theta=(1.25, 1)",
+      "relative_error": 9.028899780564446e-12,
+      "actual": [
+        [
+          0.9825489360136336,
+          -0.18592985043112048,
+          -0.00526108589438428
+        ],
+        [
+          0.18592985043165905,
+          0.9809628421898995,
+          0.05605348271485433
+        ],
+        [
+          -0.0052610858943491,
+          -0.056053482714548394,
+          0.9984139061765802
+        ]
+      ],
+      "expected": [
+        [
+          0.9825489360292569,
+          -0.18592985043567734,
+          -0.005261085890013546
+        ],
+        [
+          0.18592985043567734,
+          0.9809628422077854,
+          0.05605348271597744
+        ],
+        [
+          -0.005261085890013546,
+          -0.05605348271597744,
+          0.9984139061785285
+        ]
+      ]
+    },
+    {
+      "set": 42,
+      "question": 8,
+      "test": "lab-specified circle SO3 kappa,theta=(1.25, 1.4)",
+      "relative_error": 1.5990553061184534e-11,
+      "actual": [
+        [
+          0.17149199165821705,
+          0.9820648928347292,
+          -0.07835204524474276
+        ],
+        [
+          -0.9820648928348144,
+          0.16408223468297412,
+          -0.09287392776202162
+        ],
+        [
+          -0.07835204524474146,
+          0.09287392776207361,
+          0.9925902430244312
+        ]
+      ],
+      "expected": [
+        [
+          0.17149199166519635,
+          0.9820648928664235,
+          -0.07835204524429665
+        ],
+        [
+          -0.9820648928664235,
+          0.16408223468975924,
+          -0.09287392776487301
+        ],
+        [
+          -0.07835204524429665,
+          0.09287392776487301,
+          0.9925902430245629
+        ]
+      ]
+    },
+    {
+      "set": 42,
+      "question": 8,
+      "test": "body-specified circle SO3 theta=0.2",
+      "relative_error": 7.978207404816327e-13,
+      "actual": [
+        [
+          0.9935356764675894,
+          0.11351653503092829,
+          0.000925126691305682
+        ],
+        [
+          -0.11351653503044767,
+          0.9934032791031485,
+          0.016245656012075976
+        ],
+        [
+          0.0009251266911142817,
+          -0.016245656012295658,
+          0.9998676026359616
+        ]
+      ],
+      "expected": [
+        [
+          0.9935356764681803,
+          0.11351653503133606,
+          0.0009251266911899835
+        ],
+        [
+          -0.11351653503133606,
+          0.9934032791043201,
+          0.016245656012104034
+        ],
+        [
+          0.0009251266911899835,
+          -0.016245656012104034,
+          0.9998676026361398
+        ]
+      ]
+    },
+    {
+      "set": 42,
+      "question": 8,
+      "test": "body-specified circle SO3 theta=0.7",
+      "relative_error": 3.41057501895401e-12,
+      "actual": [
+        [
+          0.3828535996671187,
+          0.8706983138970809,
+          0.30871923714653615
+        ],
+        [
+          -0.8706983138964598,
+          0.2284209280436008,
+          0.43555519259610037
+        ],
+        [
+          0.30871923714754324,
+          -0.435555192596651,
+          0.8455673283698226
+        ]
+      ],
+      "expected": [
+        [
+          0.38285359966984966,
+          0.8706983139025499,
+          0.30871923715099964
+        ],
+        [
+          -0.8706983139025499,
+          0.22842092804426906,
+          0.43555519259750713
+        ],
+        [
+          0.30871923715099964,
+          -0.43555519259750713,
+          0.8455673283744194
+        ]
+      ]
+    },
+    {
+      "set": 42,
+      "question": 8,
+      "test": "body-specified circle SO3 theta=1.2",
+      "relative_error": 5.770391099945503e-12,
+      "actual": [
+        [
+          -0.38913424030786264,
+          -0.26237289217478277,
+          0.8830260519682033
+        ],
+        [
+          0.2623728921759037,
+          -0.9504442892863197,
+          -0.166781648888263
+        ],
+        [
+          0.8830260519678214,
+          0.16678164888790842,
+          0.438689951010005
+        ]
+      ],
+      "expected": [
+        [
+          -0.38913424030864935,
+          -0.26237289217755555,
+          0.8830260519768344
+        ],
+        [
+          0.26237289217755555,
+          -0.9504442892903425,
+          -0.16678164888788105
+        ],
+        [
+          0.8830260519768344,
+          0.16678164888788105,
+          0.4386899510183068
+        ]
+      ]
+    },
+    {
+      "set": 42,
+      "question": 6,
+      "test": "30-degree remaining mass fraction",
+      "relative_error": 8.459651689218492e-17,
+      "actual": 0.3123743924824871,
+      "expected": 0.3123743924824872
+    },
+    {
+      "set": 42,
+      "question": 6,
+      "test": "three consecutive equal turns multiply",
+      "relative_error": 3.3668234989958538e-18,
+      "actual": 0.030480793836792332,
+      "expected": 0.03048079383679233
+    },
+    {
+      "set": 42,
+      "question": 6,
+      "test": "90-degree remaining mass fraction",
+      "relative_error": 2.693458799196683e-17,
+      "actual": 0.03048079383679233,
+      "expected": 0.030480793836792357
+    },
+    {
+      "set": 42,
+      "question": 2,
+      "test": "weak compactness frequency boundary",
+      "relative_error": 1.854014383594888e-08,
+      "actual": 0.49807142777445923,
+      "expected": 0.4980714
+    }
+  ]
+}

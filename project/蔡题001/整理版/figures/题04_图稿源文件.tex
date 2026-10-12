@@ -1,0 +1,75 @@
+\documentclass[multi=tikzpicture,border=8pt]{standalone}
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath,amssymb}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc,patterns}
+\definecolor{blue}{HTML}{17365D}
+\definecolor{red}{HTML}{AC3931}
+\tikzset{every node/.style={font=\small},vec/.style={-{Stealth[length=3mm]},thick,blue},force/.style={-{Stealth[length=3mm]},very thick,red},dim/.style={|<->|,thin}}
+\begin{document}
+
+\begin{tikzpicture}
+\draw[thick,blue](2.4,0)circle(1.7);
+\draw[thick,blue,dashed](2.4,0)ellipse(1.7 and .4);
+\draw[white,line width=7pt](.69,-.22)--(.69,.22);
+\draw[thick](.61,-.25)--(.85,-.25) (.61,.25)--(.85,.25);
+\filldraw[fill=red!12,thick](-1.5,0)circle(.35);
+\draw[force](-2.8,0)--(-1.9,0)node[above,midway]{$v_0$};
+\draw[dashed](-2.8,0)--(4.5,0);
+\fill(2.4,0)circle(1.5pt)node[below]{球心};
+\node[above]at(-1.5,.5){$m,q,r$};
+\node[above]at(2.4,2.05){自由球壳：$M,Q,R$};
+\node[below]at(.7,-.45){小孔};
+\draw[dim](2.4,0)--node[right]{$R$}(2.4,1.7);
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\fill[blue!9](0,0)circle(2);
+\fill[white](0,0)circle(.65);
+\draw[very thick,blue](0,0)circle(2);
+\filldraw[red!12,draw=red,thick](0,0)circle(.65);
+\draw[dashed](0,0)ellipse(2 and .45);
+\draw[dim](0,0)--node[below]{$r$}(.65,0);
+\draw[dim](0,0)--node[above]{$R$}(-2,0);
+\node[above]at(0,.15){$q$};
+\node[above]at(0,2.1){内壁$-q$，外表面$Q+q$};
+\node[right,align=left]at(2.7,.8){$r<s<R:$\\$E=kq/s^2$};
+\node[right,align=left]at(2.7,-.8){$s>R:$\\$E=k(Q+q)/s^2$};
+\foreach \a in{20,80,140,200,260,320}{\draw[vec](\a:1)--(\a:1.65);}
+\node[below]at(.8,-2.6){金属中$E=0$，两区域场能分别积分};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\draw[thick](-2,0)--(6,0);
+\draw[vec](0,.8)--(2.5,.8)node[above,midway]{$V_{\mathrm c}=mv_0/(m+M)$};
+\draw[force](0,-.4)--(4,-.4)node[below,midway]{$u=V_{\mathrm c}+Mw/(m+M)$};
+\draw[vec](0,-1.6)--(1.2,-1.6)node[below,midway]{$V=V_{\mathrm c}-mw/(m+M)$};
+\node[left]at(-.4,.8){质心};
+\node[left]at(-.4,-.4){小球};
+\node[left]at(-.4,-1.6){球壳};
+\node[below]at(2,-2.6){动量不变，相对动能变化：$\mu_r=mM/(m+M)$};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\node[draw,rounded corners,align=center,minimum width=3.1cm,minimum height=1.8cm](i)at(0,0){初态\\$\frac12\mu_r v_0^2$\\$U_i$};
+\node[draw,rounded corners,align=center,minimum width=3.1cm,minimum height=1.8cm](c)at(4.5,0){居中未碰撞\\$\frac12\mu_r w_c^2$\\$U_c=U_i+kQq/R$};
+\node[draw,rounded corners,align=center,minimum width=3.1cm,minimum height=1.8cm](f)at(9,0){连接后的终态\\相对动能为0\\$U_f=k(Q+q)^2/(2R)$};
+\draw[vec](i)--(c)node[midway,above]{可逆交换};
+\draw[force](c)--(f)node[midway,above]{热量};
+\node[below,align=center]at(4.5,-1.7){全过程质心动能保持：$\frac12(m+M)V_{\mathrm c}^2$\\
+$Q_{\text{热}}=\frac12\mu_r w_c^2+\frac{kq^2}{2}(1/r-1/R)$};
+\end{tikzpicture}
+
+\begin{tikzpicture}[x=1.6cm,y=1.4cm]
+\draw[vec](1,0)--(5.3,0)node[right]{$z=d/R$};
+\draw[vec](1,-.4)--(1,2.4)node[above]{$WR/(kq^2)$};
+\draw[blue,densely dotted](1.08,2)--(5,2)node[right]{到心增量$2$};
+\draw[red,very thick,domain=1.10:5,samples=180]plot(\x,{2/\x-1/(2*\x^2*(\x^2-1))});
+\draw[blue,dashed,domain=1.2:5,samples=100]plot(\x,{2/\x});
+\draw[dashed](1.42756,0)--(1.42756,1.16461);
+\fill(1.42756,1.16461)circle(2pt)node[above right]{外侧势垒$z_*=1.42756$};
+\node[right]at(3.5,.7){原球壳互能$2/z$};
+\node[right]at(3.5,.28){计入感应后的$F(z)$};
+\node[below]at(3,-.85){示例$Q/q=2$；进入门槛低于居中能量条件};
+\end{tikzpicture}
+\end{document}

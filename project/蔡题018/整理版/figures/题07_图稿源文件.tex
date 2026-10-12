@@ -1,0 +1,157 @@
+\documentclass[tikz,border=5pt]{standalone}
+\usepackage{ctex,amsmath}
+\usetikzlibrary{arrows.meta,calc,angles,quotes}
+\tikzset{>=Latex,ray/.style={blue!70!black,thick,->},
+ edge/.style={orange!85!black,thick,->},
+ guide/.style={gray!60,dashed},
+ block/.style={draw,thick,rounded corners=2pt,fill=blue!4,
+ minimum width=1.9cm,minimum height=1.0cm,align=center},
+ flow/.style={very thick,->}}
+\newcommand{\sphere}[3]{
+ \shade[ball color=#3](#1,#2)circle(.19);
+ \draw[thin](#1,#2)circle(.19);}
+\begin{document}
+\begin{tikzpicture}[font=\large]
+ \shade[ball color=orange!40](0,0)circle(.7);
+ \draw[thick](0,0)circle(.7);
+ \draw[gray!70](-.7,0)arc[start angle=180,end angle=360,x radius=.7,y radius=.20];
+ \draw[guide](-.7,0)arc[start angle=180,end angle=0,x radius=.7,y radius=.20];
+ \node[above]at(0,1.02){太阳 $T_S$};
+ \draw[->](0,0)--(-.49,.49);
+ \node[left]at(-.78,.10){$R_S$};
+ \draw[gray!65,->](.85,0)--(10,0)node[right]{光轴};
+ \draw[fill=blue!10,thick](6,0)ellipse(.12 and 1.4);
+ \draw[<->](5.4,0)--(5.4,1.4)node[midway,left]{$r$};
+ \node[above]at(6,1.65){透镜};
+ \foreach \yy in {-.85,.85}{
+  \draw[ray](3.35,\yy)--(5.87,\yy);
+  \draw[ray](6.12,\yy)--(9.15,0);}
+ \sphere{9.2}{0}{black!60}
+ \node[above right]at(9.4,.22){小黑体 $T_B$};
+ \draw[guide](6,-1.55)--(6,-2.08);
+ \draw[guide](9.2,-.3)--(9.2,-2.08);
+ \draw[<->](6,-1.9)--(9.2,-1.9)node[midway,below]{$f$};
+ \draw[<->](0,-1.0)--(2.15,-1.0);
+ \draw[<->](2.5,-1.0)--(5.78,-1.0);
+ \draw[thick](2.20,-1.14)--(2.31,-.86);
+ \draw[thick](2.34,-1.14)--(2.45,-.86);
+ \node[below]at(2.7,-1.02){$r_E$（距离分段示意）};
+\end{tikzpicture}
+\begin{tikzpicture}[font=\large]
+ \draw[gray!65,->](-.1,0)--(8,0)node[right]{光轴};
+ \draw[fill=blue!10,thick](3,0)ellipse(.09 and 1.35);
+ \draw[ray](.1,1.0)--(2.91,1.0);
+ \draw[ray](3.09,1.0)--(7,0);
+ \draw[ray](.1,-1.0)--(2.91,-1.0);
+ \draw[ray](3.09,-1.0)--(7,0);
+ \draw[edge](.1,.96)--(2.91,.65);
+ \draw[edge](3.09,.65)--(7,-.44);
+ \draw[edge](.1,-.54)--(2.91,-.85);
+ \draw[edge](3.09,-.85)--(7,-.44);
+ \draw[guide](7,-1.2)--(7,1.05);
+ \fill(7,0)circle(.035)node[above right]{$F$};
+ \fill[orange!85!black](7,-.44)circle(.035);
+ \draw[<->](7.45,-.44)--(7.45,0)node[midway,right]{$a$};
+ \node[orange!85!black,below right]at(7,-.47){太阳边缘的像};
+ \node[blue!70!black,above]at(1.2,1.18){中心方向};
+ \node[orange!85!black,below]at(1.2,-.93){边缘方向 $\theta_S$};
+ \draw[<->](3,-1.65)--(7,-1.65)node[midway,below]{$f\simeq q$};
+ \begin{scope}[shift={(4,-3.55)}]
+  \path[fill=blue!8](0,0)ellipse(.42 and 1.12);
+  \draw[thick](0,0)ellipse(.42 and 1.12);
+  \draw[guide](0,-1.3)--(0,1.3);
+  \draw[->](0,0)--(0,1.12)node[midway,right]{$a$};
+  \sphere{0}{0}{black!60}
+  \draw[->](.85,-.62)--(.12,-.10);
+  \node[right]at(.85,-.62){小球半径 $b\ll a$};
+  \node[left]at(-.65,.2){平面圆像};
+  \node[left]at(-.65,-.43){$A_{\mathrm{im}}=\pi a^2$};
+ \end{scope}
+\end{tikzpicture}
+\begin{tikzpicture}[font=\large]
+ \def\rr{1.15}
+ \draw[fill=blue!5,thick](-1.55,0)ellipse(.25 and 1.15);
+ \node[below]at(-1.55,-1.42){投影 $\pi b^2$};
+ \foreach \yy in {-.65,0,.65}{
+  \draw[ray](-3.2,\yy)--(-1.8,\yy);
+  \draw[ray](-1.28,\yy)--({1.2-sqrt(1.15*1.15-\yy*\yy)},\yy);}
+ \shade[ball color=gray!22](1.2,0)circle(1.15);
+ \draw[thick](1.2,0)circle(1.15);
+ \draw[gray!65](.05,0)arc[start angle=180,end angle=360,x radius=1.15,y radius=.28];
+ \draw[guide](.05,0)arc[start angle=180,end angle=0,x radius=1.15,y radius=.28];
+ \fill[orange!70](.387,.813)circle(.05);
+ \draw[->,orange!85!black,thick](.387,.813)--(-.23,1.43);
+ \node[above left]at(-.23,1.43){$\boldsymbol n$};
+ \draw[guide](.387,.813)--(-.48,.813);
+ \draw[thin](.387-.32,.813)
+  arc[start angle=180,end angle=135,radius=.32];
+ \node at(.00,.98){$\vartheta$};
+ \draw[->](1.2,0)--(2.35,0)node[midway,below]{$b$};
+ \draw[->](1.25,1.58)--(.43,.86);
+ \node[above]at(1.25,1.58){$\mathrm dS$};
+ \foreach \aa in {-50,25,75}{
+  \draw[edge]({1.2+1.2*cos(\aa)},{1.2*sin(\aa)})
+   --({1.2+1.8*cos(\aa)},{1.8*sin(\aa)});}
+ \node[right,align=left]at(3.45,.10){等温球面\\散热 $4\pi b^2$};
+ \node[above]at(-2.65,.92){近轴来光};
+\end{tikzpicture}
+\begin{tikzpicture}[font=\large]
+ % 圆孔位于垂直光轴的平面；椭圆宽度表示深度投影。
+ \path[fill=blue!7]
+  plot[domain=0:360,samples=121]({.50*sin(\x)},{1.45*cos(\x)+.35*sin(\x)})--cycle;
+ \path[fill=blue!5,opacity=.7](.16,1.487)--(5.4,0)--(-.073,-1.486)--cycle;
+ \draw[thick]
+  plot[domain=0:360,samples=121]({.50*sin(\x)},{1.45*cos(\x)+.35*sin(\x)});
+ \draw[thick,blue!70!black](0,1.45)--(5.4,0)--(0,-1.45);
+ \draw[guide](-.50,-.35)--(5.4,0);
+ \draw[blue!70!black,thin](.50,.35)--(5.4,0);
+ \draw[guide](0,0)--(5.4,0);
+ \draw[->](0,0)--(0,1.45)node[midway,left]{$r$};
+ \draw[<->](0,-1.95)--(5.4,-1.95)node[midway,below]{$f$};
+ \draw[guide](5.4,-.25)--(5.4,-2.1);
+ \draw[thin](4.5,0)arc[start angle=180,end angle=165,radius=.9];
+ \node at(4.55,.65){$\alpha$};
+ \draw[gray!70,thin](4.55,.45)--(4.53,.13);
+ \draw[ray](1.3,1.10)--(3.5,.51);
+ \draw[ray](1.3,-1.10)--(3.5,-.51);
+ \sphere{5.4}{0}{black!60}
+ \node[right]at(5.68,0){小球};
+ \node[above]at(2.5,1.32){$\Omega=2\pi(1-\cos\alpha)$};
+ \node[left,align=center]at(-.65,-.30){圆孔平面};
+\end{tikzpicture}
+\begin{tikzpicture}[font=\large]
+ \node[block,fill=orange!8](S)at(0,0){太阳 $S$\\$T_S$};
+ \node[block](B)at(4.25,0){小球 $B$\\$T_B$};
+ \node[block,fill=gray!8](C)at(8.5,0){冷背景 $C$\\$T_C$};
+ \draw[flow,orange!85!black]([yshift=.28cm]S.east)
+  --([yshift=.28cm]B.west)node[midway,above]{$C_{SB}T_S^4$};
+ \draw[flow,blue!70!black]([yshift=-.28cm]B.west)
+  --([yshift=-.28cm]S.east)node[midway,below]{$C_{BS}T_B^4$};
+ \draw[flow,blue!70!black]([yshift=.28cm]B.east)
+  --([yshift=.28cm]C.west)node[midway,above]{$C_{BC}T_B^4$};
+ \draw[flow,gray!75!black]([yshift=-.28cm]C.west)
+  --([yshift=-.28cm]B.east)node[midway,below]{$C_{CB}T_C^4$};
+ \node at(2.1,-1.15){$C_{SB}=C_{BS}$};
+ \node at(6.4,-1.15){$C_{BC}=C_{CB}$};
+\end{tikzpicture}
+\begin{tikzpicture}[font=\large]
+ \node[block,fill=orange!8](H)at(0,0){热端\\$T_H\le T_S$};
+ \node[block](E)at(4,0){稳态热机\\$\eta$};
+ \node[block](F)at(8,0){电炉与小球\\$T_B>T_S$};
+ \node[block,fill=gray!8](C)at(4,-2.5){冷环境 $T_C$};
+ \node[above,orange!85!black](S)at(0,2.0){太阳 $T_S$};
+ \draw[flow,orange!85!black](0,1.7)--(H.north);
+ \node[left]at(-.15,1.12){集热};
+ \draw[flow,orange!85!black](H.east)--(E.west)
+  node[midway,above]{$\dot Q_H$};
+ \node at(2,-.95){入熵 $\dot Q_H/T_H$};
+ \draw[flow,blue!70!black](E.east)--(F.west)
+  node[midway,above]{$\dot W$};
+ \node at(6,-.67){电功};
+ \draw[flow,orange!85!black](E.south)--(C.north)
+  node[midway,right]{$\dot Q_C$};
+ \node[left]at(3.8,-1.48){排熵 $\dot Q_C/T_C$};
+ \draw[flow,orange!85!black](F.east)--(10.1,0);
+ \node[right,align=left]at(10.12,0){辐射\\$4\pi b^2\sigma T_B^4$};
+\end{tikzpicture}
+\end{document}

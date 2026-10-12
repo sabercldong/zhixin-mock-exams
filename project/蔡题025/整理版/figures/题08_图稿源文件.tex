@@ -1,0 +1,107 @@
+\documentclass[tikz,border=5pt]{standalone}
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath}
+\usetikzlibrary{arrows.meta,calc}
+\definecolor{ink}{HTML}{243447}
+\definecolor{blue}{HTML}{2765A2}
+\definecolor{green}{HTML}{3F7D5B}
+\definecolor{red}{HTML}{B74739}
+\tikzset{body/.style={draw=ink,thick},vec/.style={blue,thick,-{Latex}},guide/.style={gray!65,dashed},line cap=round}
+\newcommand{\cylinder}[2]{
+\draw[guide,domain=205.35:385.35,samples=60]plot({.95*cos(\x)+.45*sin(\x)},{.18*cos(\x)-.32*sin(\x)+.60*#1});
+\draw[body,domain=25.35:205.35,samples=60]plot({.95*cos(\x)+.45*sin(\x)},{.18*cos(\x)-.32*sin(\x)+.60*#1});
+\draw[body,domain=0:360,samples=90]plot({.95*cos(\x)+.45*sin(\x)},{.18*cos(\x)-.32*sin(\x)+.60*#2});
+\draw[body](-1.051,-.025+.60*#1)--(-1.051,-.025+.60*#2);
+\draw[body](1.051,.025+.60*#1)--(1.051,.025+.60*#2);
+}
+\begin{document}
+\begin{tikzpicture}[scale=1.5]
+\cylinder{-1.7}{2.6}
+\draw[guide](0,-1.45)--(0,2.1);
+\draw[vec](0,1.6)--(0,2.35)node[above]{$z$};
+\draw[vec](0,0)--(1.9,.36)node[right]{$x$};
+\draw[vec](0,0)--(.9,-.64)node[below]{$y$};
+\draw[red,very thick,-{Latex}](-2.5,1)--(-1.4,1.208)node[midway,above]{$\boldsymbol B=B\boldsymbol e_x$};
+\fill[blue](.95,.18)circle(1.5pt);
+\node[blue,above left]at(.7,.45){$\phi(0)=0$};
+\draw[guide](.7,.4)--(.95,.18);
+\draw[green,thick,-{Latex}](.95,.18)--(1.7,-.353)node[right]{$R_0\omega_\phi\boldsymbol e_\phi$};
+\draw[green,thick,-{Latex}](.95,.18)--(.95,.92)node[left]{$R_0\omega_z\boldsymbol e_z$};
+\draw[ink,<->](0,-1.3)--(.95,-1.12)node[midway,below]{$R_0$};
+\node at(0,-2.1){光滑圆柱面，径向约束维持半径};
+\end{tikzpicture}
+\begin{tikzpicture}
+\draw[body](0,0)circle(1.8);
+\draw[vec](-2.2,0)--(3.8,0)node[right]{$x$};
+\draw[vec](0,-2.2)--(0,2.6)node[above]{$y$};
+\coordinate(A)at(1.273,1.273);
+\draw[vec](0,0)--(A)node[midway,above left]{$R_0$};
+\draw[green,thick,-{Latex}](A)--(2.15,2.15)node[right]{$\boldsymbol e_s$};
+\draw[green,thick,-{Latex}](A)--(.39,2.16)node[left]{$\boldsymbol e_\phi$};
+\draw[red,thick,-{Latex}](A)--(3.273,1.273)node[right]{$\boldsymbol B$};
+\draw[guide](2.273,2.273)--(3.273,1.273);
+\draw[blue,thick,-{Latex}](A)--(2.273,2.273);
+\draw[blue,thick,-{Latex}](2.273,2.273)--(3.273,1.273);
+\draw[ink](.6,0)arc(0:45:.6)node[midway,right]{$\phi$};
+\node at(1,-3){$\boldsymbol B=B\cos\phi\,\boldsymbol e_s-B\sin\phi\,\boldsymbol e_\phi$};
+\end{tikzpicture}
+\begin{tikzpicture}
+\begin{scope}[scale=1.05]
+\cylinder{-.8}{8.2}
+\input{data/winding-path.tex}
+\fill[red](.95,.18)circle(2pt);
+\node[below]at(.95,-.25){初态};
+\node at(0,5.8){三维绕轴轨迹};
+\end{scope}
+\begin{scope}[shift={(3.5,.2)},x=.44cm,y=.60cm]
+\draw[vec](0,0)--(14.5,0)node[right]{$R_0\phi$};
+\draw[vec](0,0)--(0,8.8)node[above]{$z$};
+\draw[blue,thick]plot file{data/winding-unwrapped.dat};
+\draw[guide](0,0)--(13.8,7.2);
+\node[align=center]at(7.2,9.6){同一轨迹展开\\虚线仅为平均斜率参照};
+\end{scope}
+\node at(4,-1.5){示例 $\omega_\phi=1,\ \omega_z=0.6,\ \omega_c=0.3$；长度以 $R_0$为单位};
+\end{tikzpicture}
+\begin{tikzpicture}[x=1.3cm,y=2.4cm]
+\draw[vec](-3.5,0)--(3.8,0)node[right]{$\phi$};
+\draw[vec](0,0)--(0,1.35)node[above]{$V_{\rm eff}/(\omega_c^2/2)$};
+\draw[body,domain=-3.142:3.142,samples=160]plot(\x,{sin(\x r)^2});
+\draw[blue,thick](-3.3,1.2)--(3.3,1.2)node[right]{旋转};
+\draw[red,thick](-3.3,1)--(3.3,1)node[right]{分离};
+\draw[green,thick](-3.3,.44444)--(3.3,.44444)node[right]{振荡};
+\draw[guide](-.72973,0)--(-.72973,.44444);
+\draw[guide](.72973,0)--(.72973,.44444);
+\node[below]at(-.72973,0){$-\phi_m$};
+\node[below]at(.72973,0){$\phi_m$};
+\node[below]at(-3.142,0){$-\pi$};
+\node[below]at(3.142,0){$\pi$};
+\node at(.2,-.70){$\omega_z=0$：$V_{\rm eff}=\tfrac12\omega_c^2\sin^2\phi$};
+\end{tikzpicture}
+\begin{tikzpicture}[scale=1.8]
+\begin{scope}
+\cylinder{-1.4}{.7}
+\input{data/weak-path.tex}
+\fill[red](.95,.18)circle(1.5pt);
+\node[align=center]at(0,1.35){弱场：完整绕轴\\$|\omega_c/\omega_\phi|=0.5$};
+\node at(0,-1.5){一周后回到初始高度};
+\end{scope}
+\begin{scope}[shift={(3.4,0)}]
+\cylinder{-2}{.7}
+\input{data/strong-path.tex}
+\fill[red](.95,.18)circle(1.5pt);
+\node[align=center]at(0,1.35){强场：有限角区往返\\$|\omega_c/\omega_\phi|=1.5$};
+\node at(0,-1.70){$\phi_m=\arcsin(2/3)$};
+\end{scope}
+\node at(1.7,-2.20){实线为前侧，虚线为背侧轨迹};
+\end{tikzpicture}
+\begin{tikzpicture}[scale=1.3]
+\cylinder{-4.5}{.8}
+\input{data/critical-path.tex}
+\fill[blue](.95,.18)circle(1.6pt)node[right]{初态};
+\draw[guide](.45,-2.7)--(.45,.6);
+\node[align=left]at(3.1,-.8){$\sin\phi=\tanh\omega t$\\$z-z_0=-R_0\ln\cosh\omega t$};
+\node[align=left]at(3.1,-2.1){$\phi\to\pi/2$\\$z\to-\infty$，不闭合};
+\draw[red,thick,-{Latex}](.49,-1.65)--(.47,-2.15);
+\node at(1.8,1.2){临界示例 $\omega_c=\omega_\phi=\omega>0,\ \omega_z=0$};
+\end{tikzpicture}
+\end{document}

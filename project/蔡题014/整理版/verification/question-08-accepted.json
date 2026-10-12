@@ -1,0 +1,88 @@
+{
+  "paper": "014",
+  "question": "08",
+  "question_accepted": true,
+  "set_accepted": false,
+  "draft_sha256": "959536b398e2cd5d2246798bfe3fef1f54cb2c1d040b486ebaba63046cedfb5e",
+  "math_record_sha256": "2a9cd1b629ce0c88135769f167cb258b9f8088fa87aaa4b96f0a66d6279982fc",
+  "geometry_record_sha256": "813358d9f6fe279d7f91ff634170a769474cbda8111724d1130dc66c1599d5bc",
+  "visual_record_sha256": "e38f6e63d7271c61d1ac6dcc520c25999d8a2df0ba8f56fab0af318ef43dc8a9",
+  "versions": [
+    {
+      "question": "08",
+      "version": "student",
+      "total_pages": 9,
+      "body_pages": 8,
+      "body_nonspace": 5193,
+      "per_page_nonspace": [
+        806,
+        868,
+        417,
+        748,
+        639,
+        729,
+        423,
+        563
+      ],
+      "layout_warnings": [],
+      "pdf_sha256": "821e377936d0f09164f4058bbc1f7a294671744f179cbe208e6f042b1246a36f",
+      "draft_sha256": "959536b398e2cd5d2246798bfe3fef1f54cb2c1d040b486ebaba63046cedfb5e",
+      "actual_reviewed": false,
+      "accepted": false
+    },
+    {
+      "question": "08",
+      "version": "teacher",
+      "total_pages": 14,
+      "body_pages": 13,
+      "body_nonspace": 9109,
+      "per_page_nonspace": [
+        806,
+        868,
+        417,
+        748,
+        639,
+        729,
+        423,
+        1029,
+        814,
+        850,
+        710,
+        569,
+        507
+      ],
+      "layout_warnings": [],
+      "pdf_sha256": "b698f876650e737506071c113ad6e0d364a176e570961d04dd1008b351ac0801",
+      "draft_sha256": "959536b398e2cd5d2246798bfe3fef1f54cb2c1d040b486ebaba63046cedfb5e",
+      "actual_reviewed": false,
+      "accepted": false
+    }
+  ],
+  "source_metrics": {
+    "question": 8,
+    "issues": [],
+    "student": {
+      "raw_with_whitespace": 8672,
+      "raw_nonspace": 8067,
+      "body_net_characters": 4972
+    },
+    "teacher": {
+      "raw_with_whitespace": 15237,
+      "raw_nonspace": 14214,
+      "body_net_characters": 8923
+    },
+    "figures": 3,
+    "sha256": "959536b398e2cd5d2246798bfe3fef1f54cb2c1d040b486ebaba63046cedfb5e"
+  },
+  "symbolic_checks": 15,
+  "numeric_checks": 52,
+  "geometrical_checks": 31,
+  "figures": 3,
+  "qpdf_files": 6,
+  "original_hashes_unchanged": true,
+  "actual_direct_hd_pages": 15,
+  "actual_current_page_coverage": 23,
+  "pending": [
+    "本套须整合三版本并逐页核验正式PDF，不以分题验收代替整套验收"
+  ]
+}

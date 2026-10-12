@@ -1,0 +1,230 @@
+{
+  "paper": "014",
+  "question": "06",
+  "geometry_passed": true,
+  "check_count": 45,
+  "checks": [
+    {
+      "test": "five standalone vector pages",
+      "passed": true
+    },
+    {
+      "test": "standalone wrapper retained",
+      "passed": true
+    },
+    {
+      "test": "fixed equally spaced three x guides",
+      "passed": true
+    },
+    {
+      "test": "different signed positions on respective guide",
+      "passed": true
+    },
+    {
+      "test": "signed first displacement from initial y0",
+      "passed": true
+    },
+    {
+      "test": "signed middle displacement from initial y0",
+      "passed": true
+    },
+    {
+      "test": "signed third displacement from initial y0",
+      "passed": true
+    },
+    {
+      "test": "origin label above axis away from negative charge",
+      "passed": true
+    },
+    {
+      "test": "horizontal dimensions are guide distances not oblique separations",
+      "passed": true
+    },
+    {
+      "test": "generic distance triangle has true right projection",
+      "passed": true
+    },
+    {
+      "test": "generic height dimension connects true projected endpoints",
+      "passed": true
+    },
+    {
+      "test": "pair-distance equation includes fixed h and displacement difference",
+      "passed": true
+    },
+    {
+      "test": "translation arrows attached to all three particles",
+      "passed": true
+    },
+    {
+      "test": "antisymmetric arrows attached to outer particles only",
+      "passed": true
+    },
+    {
+      "test": "symmetric middle displacement is twice and opposite",
+      "passed": true
+    },
+    {
+      "test": "normal mode ratios explicitly stated",
+      "passed": true
+    },
+    {
+      "test": "threshold axis scale maps quarter to x1",
+      "passed": true
+    },
+    {
+      "test": "antisymmetric line equals lambda-quarter",
+      "passed": true
+    },
+    {
+      "test": "symmetric line equals three lambda",
+      "passed": true
+    },
+    {
+      "test": "zero branch is identified as translation",
+      "passed": true
+    },
+    {
+      "test": "stable shading starts at critical parameter, not zero",
+      "passed": true
+    },
+    {
+      "test": "full-chain alternating sites are equally spaced",
+      "passed": true
+    },
+    {
+      "test": "primitive cell contains one charge of each sign",
+      "passed": true
+    },
+    {
+      "test": "phase translation connects adjacent cell centers",
+      "passed": true
+    },
+    {
+      "test": "nearest distance and cell period are distinguished",
+      "passed": true
+    },
+    {
+      "test": "statement-06 single vector page",
+      "passed": true
+    },
+    {
+      "test": "statement-06 searchable math labels",
+      "passed": true
+    },
+    {
+      "test": "statement-06 readable at declared final width",
+      "passed": true,
+      "min_printed_font_pt": 10.902092994590735
+    },
+    {
+      "test": "statement-06 text not cropped",
+      "passed": true
+    },
+    {
+      "test": "geometry-06 single vector page",
+      "passed": true
+    },
+    {
+      "test": "geometry-06 searchable math labels",
+      "passed": true
+    },
+    {
+      "test": "geometry-06 readable at declared final width",
+      "passed": true,
+      "min_printed_font_pt": 10.712953646577358
+    },
+    {
+      "test": "geometry-06 text not cropped",
+      "passed": true
+    },
+    {
+      "test": "modes-06 single vector page",
+      "passed": true
+    },
+    {
+      "test": "modes-06 searchable math labels",
+      "passed": true
+    },
+    {
+      "test": "modes-06 readable at declared final width",
+      "passed": true,
+      "min_printed_font_pt": 13.461119365196955
+    },
+    {
+      "test": "modes-06 text not cropped",
+      "passed": true
+    },
+    {
+      "test": "stability-06 single vector page",
+      "passed": true
+    },
+    {
+      "test": "stability-06 searchable math labels",
+      "passed": true
+    },
+    {
+      "test": "stability-06 readable at declared final width",
+      "passed": true,
+      "min_printed_font_pt": 13.065871332900183
+    },
+    {
+      "test": "stability-06 text not cropped",
+      "passed": true
+    },
+    {
+      "test": "chain-06 single vector page",
+      "passed": true
+    },
+    {
+      "test": "chain-06 searchable math labels",
+      "passed": true
+    },
+    {
+      "test": "chain-06 readable at declared final width",
+      "passed": true,
+      "min_printed_font_pt": 10.687403434466406
+    },
+    {
+      "test": "chain-06 text not cropped",
+      "passed": true
+    }
+  ],
+  "figures": [
+    {
+      "name": "statement-06",
+      "pdf_sha256": "94f0d5e00507129502199f6ef42580df5e8ecd9e522c5bcc922723f36f1c7bc6",
+      "png_sha256": "10c5712ab7263607e88f57bc22a8bbc5836db2528e601d9aef0a86d5266533c3",
+      "width_fraction": 0.76
+    },
+    {
+      "name": "geometry-06",
+      "pdf_sha256": "02924919e325f519df604b3346d8d6f8f4b0e0d90b86b7464b01f1badce3e2ce",
+      "png_sha256": "dd6d2784ba42d359b9bf341f67f855b4d6b16e14dc771ce02e9466e49ffa5422",
+      "width_fraction": 0.69
+    },
+    {
+      "name": "modes-06",
+      "pdf_sha256": "723d013d263c15d394bce8eac8309cb9c44d12163a3e233932909773211e3e91",
+      "png_sha256": "f592fbf71ff5d5a83ea25e37586eab1434d1be019900ce35cf441a9877a94bfd",
+      "width_fraction": 0.86
+    },
+    {
+      "name": "stability-06",
+      "pdf_sha256": "312638de9c3c31454d72a7721b0c53ca6dee752e33ec60df476e33f0783b9d74",
+      "png_sha256": "ed87e8ca397f51e9f76f7a2d9cfed397dd7cee6335a3b32227c5ae0e4ba8ec4f",
+      "width_fraction": 0.72
+    },
+    {
+      "name": "chain-06",
+      "pdf_sha256": "b4afac6e4361cb26b5fc7d8fa8bf0a3371803d69a566c6cf34802dd8ce88c194",
+      "png_sha256": "9533240997ec634affbec151a5924ffa73a318688adfa1421f8fb3bced2942a0",
+      "width_fraction": 0.86
+    }
+  ],
+  "figure_source_sha256": "b56cfdea79da18e308a3da2d68f04c4e8557cbf3ed1e1e3394a4b777f7e031b8",
+  "script_sha256": "0f97c3a4e60974b4d566416b33e8b13108a7a00dec48c79de413076b67755def",
+  "actual_visual_reviewed": false,
+  "question_accepted": false,
+  "set_accepted": false
+}

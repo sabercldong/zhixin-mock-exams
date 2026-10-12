@@ -1,0 +1,258 @@
+{
+  "paper": "014",
+  "question": "04",
+  "geometry_passed": true,
+  "check_count": 55,
+  "checks": [
+    {
+      "name": "all five figures are actual independent TikZ pictures",
+      "passed": true
+    },
+    {
+      "name": "statement uses world coordinates with a nonzero depth projection",
+      "passed": true
+    },
+    {
+      "name": "coil is a connected five-turn helix, not five isolated ellipses",
+      "passed": true
+    },
+    {
+      "name": "upper helix endpoint equals upper supply lead height",
+      "passed": true
+    },
+    {
+      "name": "both circuit leads terminate on actual coil endpoints",
+      "passed": true
+    },
+    {
+      "name": "open switch has two separate contacts and a blade",
+      "passed": true
+    },
+    {
+      "name": "battery plates are separated from conducting leads",
+      "passed": true
+    },
+    {
+      "name": "positive long battery plate feeds lower helix endpoint for positive vertical coil field",
+      "passed": true
+    },
+    {
+      "name": "entire ring fits on the tabletop plane",
+      "passed": true
+    },
+    {
+      "name": "entire ring fits on the tabletop plane",
+      "passed": true
+    },
+    {
+      "name": "entire ring fits on the tabletop plane",
+      "passed": true
+    },
+    {
+      "name": "entire ring fits on the tabletop plane",
+      "passed": true
+    },
+    {
+      "name": "entire ring fits on the tabletop plane",
+      "passed": true
+    },
+    {
+      "name": "entire ring fits on the tabletop plane",
+      "passed": true
+    },
+    {
+      "name": "entire ring fits on the tabletop plane",
+      "passed": true
+    },
+    {
+      "name": "entire ring fits on the tabletop plane",
+      "passed": true
+    },
+    {
+      "name": "entire ring fits on the tabletop plane",
+      "passed": true
+    },
+    {
+      "name": "entire ring fits on the tabletop plane",
+      "passed": true
+    },
+    {
+      "name": "entire ring fits on the tabletop plane",
+      "passed": true
+    },
+    {
+      "name": "entire ring fits on the tabletop plane",
+      "passed": true
+    },
+    {
+      "name": "entire ring fits on the tabletop plane",
+      "passed": true
+    },
+    {
+      "name": "entire ring fits on the tabletop plane",
+      "passed": true
+    },
+    {
+      "name": "entire ring fits on the tabletop plane",
+      "passed": true
+    },
+    {
+      "name": "entire ring fits on the tabletop plane",
+      "passed": true
+    },
+    {
+      "name": "entire ring fits on the tabletop plane",
+      "passed": true
+    },
+    {
+      "name": "table height equals initial horizontal ring height",
+      "passed": true
+    },
+    {
+      "name": "coil and isolated ring are separated vertically",
+      "passed": true
+    },
+    {
+      "name": "positive circular current gives downward radial-field force",
+      "passed": true
+    },
+    {
+      "name": "upward velocity gives positive azimuthal motion EMF",
+      "passed": true
+    },
+    {
+      "name": "element arrow actually follows the positive tangent world direction",
+      "passed": true
+    },
+    {
+      "name": "closed cylinder has upward top and downward bottom outward normals",
+      "passed": true
+    },
+    {
+      "name": "bottom closed-surface flux has the correct minus sign",
+      "passed": true
+    },
+    {
+      "name": "Br label is offset above the side arrow, clear of height dimension",
+      "passed": true
+    },
+    {
+      "name": "height dimension endpoints match the two cylinder faces",
+      "passed": true
+    },
+    {
+      "name": "upward motion current is counterclockwise with positive tangent at front",
+      "passed": true
+    },
+    {
+      "name": "downward motion current reverses the tangent at the front",
+      "passed": true
+    },
+    {
+      "name": "apex panel explicitly has zero current and zero force",
+      "passed": true
+    },
+    {
+      "name": "upward and downward force arrows oppose their velocity arrows",
+      "passed": true
+    },
+    {
+      "name": "graph velocity zero uses log2",
+      "passed": true
+    },
+    {
+      "name": "graph height at apex is 1-log2",
+      "passed": true
+    },
+    {
+      "name": "positive graph return time root",
+      "passed": true
+    },
+    {
+      "name": "return root is after the unique apex",
+      "passed": true
+    },
+    {
+      "name": "graphs explicitly indicate eta=1, not arbitrary numeric parameters",
+      "passed": true
+    },
+    {
+      "name": "negative graph asymptote is -1",
+      "passed": true
+    },
+    {
+      "name": "graph height after return is negative",
+      "passed": true
+    },
+    {
+      "name": "current vector and raster file exist statement-04.pdf",
+      "passed": true
+    },
+    {
+      "name": "current vector and raster file exist statement-04.png",
+      "passed": true
+    },
+    {
+      "name": "current vector and raster file exist element-04.pdf",
+      "passed": true
+    },
+    {
+      "name": "current vector and raster file exist element-04.png",
+      "passed": true
+    },
+    {
+      "name": "current vector and raster file exist flux-04.pdf",
+      "passed": true
+    },
+    {
+      "name": "current vector and raster file exist flux-04.png",
+      "passed": true
+    },
+    {
+      "name": "current vector and raster file exist motion-04.pdf",
+      "passed": true
+    },
+    {
+      "name": "current vector and raster file exist motion-04.png",
+      "passed": true
+    },
+    {
+      "name": "current vector and raster file exist graphs-04.pdf",
+      "passed": true
+    },
+    {
+      "name": "current vector and raster file exist graphs-04.png",
+      "passed": true
+    }
+  ],
+  "figure_source_sha256": "22bc79321392a82f832456a693c551ad028011ab2fb56c3110495386b3368535",
+  "figures": [
+    {
+      "name": "statement-04",
+      "pdf_sha256": "bf320ab73c149b56c20cc8fac8b36bb9533e5d8e7e75f16ff8b2281ad1f86449",
+      "png_sha256": "a031959920131987b46157d9bf6527f3314e264ea9ab9ccc760a987b22d0c5ce"
+    },
+    {
+      "name": "element-04",
+      "pdf_sha256": "32890f5171da164cf42605a19c3792ea0e1549f0b40f24bad8eb692db9984d88",
+      "png_sha256": "1eaaf2c23337f3382fd6be1d2a077f2fe84d41bf883ce80338786d5f7f051817"
+    },
+    {
+      "name": "flux-04",
+      "pdf_sha256": "daa3e38f4066677fff5225d261ddeda6ca78bc4beee7b699eb01b181704d9c7e",
+      "png_sha256": "fc8a868499535c0fe2142a822a7913fea40e2ada671baead186efc8a756074d7"
+    },
+    {
+      "name": "motion-04",
+      "pdf_sha256": "0aa6591cd0e40e5f35f9b403ff1e03de4805260042b76ac1ec7cd4a2c39be37b",
+      "png_sha256": "bdebe4c234653988ab02854ebe96a780c738ae9ff929d4fb28b8076650a97b6c"
+    },
+    {
+      "name": "graphs-04",
+      "pdf_sha256": "9bcc94f5e9d2bd838c0138de53ab54ec5777af8f0e5ac75211b0bd67d005478d",
+      "png_sha256": "9154ada2d177470491109cfe075b46e2818341af6adf49a6ada763fccac62e3a"
+    }
+  ],
+  "actual_visual_review": false,
+  "question_accepted": false
+}

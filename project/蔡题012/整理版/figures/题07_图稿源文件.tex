@@ -1,0 +1,38 @@
+\documentclass[multi=tikzpicture,border=9pt]{standalone}
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath,amssymb}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc,patterns,decorations.pathmorphing}
+\definecolor{main}{HTML}{17365D}
+\definecolor{accent}{HTML}{AC3931}
+\tikzset{every picture/.style={font=\small,line width=.75pt},
+>={Stealth[length=2mm]},arr/.style={->},
+box/.style={draw=main,rounded corners=2pt,fill=main!4,text width=3.6cm,minimum height=1cm,align=center},
+note/.style={align=center,text width=9cm}}
+\begin{document}
+
+\begin{tikzpicture}
+\draw[main,very thick] (0,0)--(6,0);\draw[main,very thick] (0,0)--(3,5.196);\draw[dashed] (0,0)--(5.2,3);\fill[accent] (2.598,1.5) circle (3pt);\draw[arr,accent] (2.598,1.5)--(4.33,2.5) node[midway,above]{$v=u/3$};\node[left] at (0,0){$O$};\node[right] at (.8,.3){$60^\circ$};\node[note] at (2.5,-1.4){沿角平分线远离墙角；两墙一次回声互为镜像};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\draw[main,thick] (0,0)--(6,0);\fill[accent] (2.598,1.5) circle (3pt);\node[above] at (2.598,1.5){发射 $S$};\fill[main] (2.598,-1.5) circle (3pt);\node[below] at (2.598,-1.5){像点 $S'$};\fill[accent] (4.2,2.425) circle (3pt);\node[above] at (4.2,2.425){未来接收 $A$};\draw[dashed] (2.598,-1.5)--(4.2,2.425);\draw[accent,thick] (2.598,1.5)--(3.21,0)--(4.2,2.425);\node[note] at (2.5,-2.8){像点对应过去发射位置；实际回声路径在墙面折转};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\node[box] (n0) at (0,0) {发射半径\\$r$};
+\node[box] (n1) at (5,0) {接收半径\\$r+vT$};
+\node[box] (n2) at (5,-2.3) {镜像夹角\\$60^\circ$};
+\node[box] (n3) at (0,-2.3) {余弦定理\\$(u^2-v^2)T^2$\\$-rvT-r^2=0$};
+\draw[arr] (n0)--(n1);\draw[arr] (n1)--(n2);\draw[arr] (n2)--(n3);
+\node[note] at (2.5,-4.1) {取正时间根；传播期间接收者仍继续向外运动};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\draw[arr] (0,0)--(7,0);\draw[arr,main] (1,.4)--(1,2);\draw[arr,main] (2,.4)--(2,2);\draw[arr,accent] (4,.4)--(4,2);\draw[arr,accent] (5.4215,.4)--(5.4215,2);\draw[<->] (1,2.4)--(2,2.4) node[midway,above]{$\Delta t_e$};\draw[<->] (4,2.4)--(5.4215,2.4) node[midway,above]{$\Delta t_a$};\node[note] at (3,-1.2){$\Delta t_a=(1+\beta K_1)\Delta t_e$；$f_1/f_0=0.703465$};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\draw[main,thick] (0,0)--(4,0);\draw[main,thick] (0,0)--(2,3.464);\fill[accent] (2.598,1.5) circle (3pt);\fill[main] (-2.598,1.5) circle (3pt);\draw[dashed] (0,0)--(-2.598,1.5);\draw[dashed] (0,0)--(2.598,1.5);\draw[accent,thick] (-2.598,1.5)--(4,2.309);\node[note] at (1,-1.4){两次反射镜像方向差 $120^\circ$；$f_2/f_0=0.547066$\\$180^\circ$ 形式路径穿过顶点，须另行指定角点模型};
+\end{tikzpicture}
+\end{document}

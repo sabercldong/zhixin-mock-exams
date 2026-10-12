@@ -1,0 +1,607 @@
+{
+  "paper": "014",
+  "question": "08",
+  "math_passed": true,
+  "question_accepted": false,
+  "set_accepted": false,
+  "symbolic_count": 15,
+  "numeric_count": 52,
+  "symbolic": [
+    {
+      "test": "sphere illuminated hemisphere projected integral",
+      "passed": true
+    },
+    {
+      "test": "entire sphere emitting area",
+      "passed": true
+    },
+    {
+      "test": "temperature ratio cancels fixed geometry and optical coefficients",
+      "passed": true
+    },
+    {
+      "test": "linear fractional cooling derivative",
+      "passed": true
+    },
+    {
+      "test": "quadratic Taylor cooling coefficient",
+      "passed": true
+    },
+    {
+      "test": "third Taylor remainder coefficient",
+      "passed": true
+    },
+    {
+      "test": "logarithmic temperature sensitivity to incoming flux",
+      "passed": true
+    },
+    {
+      "test": "net radiative restoring slope is negative",
+      "passed": true
+    },
+    {
+      "test": "exact cooling primitive derivative",
+      "passed": true
+    },
+    {
+      "test": "cooling partial fractions",
+      "passed": true
+    },
+    {
+      "test": "uniform solid heat capacity relaxation scale",
+      "passed": true
+    },
+    {
+      "test": "variable albedo logarithmic differential",
+      "passed": true
+    },
+    {
+      "test": "variable emissivity logarithmic differential",
+      "passed": true
+    },
+    {
+      "test": "linear cooling initial value and differential equation",
+      "passed": true
+    },
+    {
+      "test": "ninety percent cooling uses ten percent remaining deviation",
+      "passed": true
+    }
+  ],
+  "numerical": [
+    {
+      "test": "independent surface and projected disk area",
+      "radius": 0.5,
+      "relative_difference": 1.6962958301138756e-15,
+      "passed": true
+    },
+    {
+      "test": "independent surface and projected disk area",
+      "radius": 1.0,
+      "relative_difference": 1.6962958301138756e-15,
+      "passed": true
+    },
+    {
+      "test": "independent surface and projected disk area",
+      "radius": 2.0,
+      "relative_difference": 1.6962958301138756e-15,
+      "passed": true
+    },
+    {
+      "test": "independent surface and projected disk area",
+      "radius": 6371.0,
+      "relative_difference": 1.986570359209125e-15,
+      "passed": true
+    },
+    {
+      "test": "actual net energy root with independent albedo and emissivity",
+      "reflectivity": 0.0,
+      "emissivity": 0.5,
+      "fractional_drop": 0.001,
+      "temperature_K": 299.92497185858247,
+      "root_energy_relative_residual": 1.5005818811981257e-16,
+      "ratio_formula_difference_K": 0.0,
+      "passed": true
+    },
+    {
+      "test": "actual net energy root with independent albedo and emissivity",
+      "reflectivity": 0.0,
+      "emissivity": 0.5,
+      "fractional_drop": 0.01,
+      "temperature_K": 299.24717098010433,
+      "root_energy_relative_residual": 1.5142235346635633e-16,
+      "ratio_formula_difference_K": 0.0,
+      "passed": true
+    },
+    {
+      "test": "actual net energy root with independent albedo and emissivity",
+      "reflectivity": 0.0,
+      "emissivity": 0.5,
+      "fractional_drop": 0.1,
+      "temperature_K": 292.20112392758904,
+      "root_energy_relative_residual": 3.33129177625984e-16,
+      "ratio_formula_difference_K": 0.0,
+      "passed": true
+    },
+    {
+      "test": "actual net energy root with independent albedo and emissivity",
+      "reflectivity": 0.0,
+      "emissivity": 0.9,
+      "fractional_drop": 0.001,
+      "temperature_K": 299.92497185858247,
+      "root_energy_relative_residual": 3.334626402662502e-16,
+      "ratio_formula_difference_K": 0.0,
+      "passed": true
+    },
+    {
+      "test": "actual net energy root with independent albedo and emissivity",
+      "reflectivity": 0.0,
+      "emissivity": 0.9,
+      "fractional_drop": 0.01,
+      "temperature_K": 299.24717098010433,
+      "root_energy_relative_residual": 1.6824705940706255e-16,
+      "ratio_formula_difference_K": 0.0,
+      "passed": true
+    },
+    {
+      "test": "actual net energy root with independent albedo and emissivity",
+      "reflectivity": 0.0,
+      "emissivity": 0.9,
+      "fractional_drop": 0.1,
+      "temperature_K": 292.20112392758904,
+      "root_energy_relative_residual": 3.701435306955377e-16,
+      "ratio_formula_difference_K": 0.0,
+      "passed": true
+    },
+    {
+      "test": "actual net energy root with independent albedo and emissivity",
+      "reflectivity": 0.0,
+      "emissivity": 1.0,
+      "fractional_drop": 0.001,
+      "temperature_K": 299.92497185858247,
+      "root_energy_relative_residual": 1.5005818811981257e-16,
+      "ratio_formula_difference_K": 0.0,
+      "passed": true
+    },
+    {
+      "test": "actual net energy root with independent albedo and emissivity",
+      "reflectivity": 0.0,
+      "emissivity": 1.0,
+      "fractional_drop": 0.01,
+      "temperature_K": 299.24717098010433,
+      "root_energy_relative_residual": 1.5142235346635633e-16,
+      "ratio_formula_difference_K": 0.0,
+      "passed": true
+    },
+    {
+      "test": "actual net energy root with independent albedo and emissivity",
+      "reflectivity": 0.0,
+      "emissivity": 1.0,
+      "fractional_drop": 0.1,
+      "temperature_K": 292.20112392758904,
+      "root_energy_relative_residual": 3.33129177625984e-16,
+      "ratio_formula_difference_K": 0.0,
+      "passed": true
+    },
+    {
+      "test": "actual net energy root with independent albedo and emissivity",
+      "reflectivity": 0.3,
+      "emissivity": 0.5,
+      "fractional_drop": 0.001,
+      "temperature_K": 299.92497185858247,
+      "root_energy_relative_residual": 1.5005818811981257e-16,
+      "ratio_formula_difference_K": 0.0,
+      "passed": true
+    },
+    {
+      "test": "actual net energy root with independent albedo and emissivity",
+      "reflectivity": 0.3,
+      "emissivity": 0.5,
+      "fractional_drop": 0.01,
+      "temperature_K": 299.24717098010433,
+      "root_energy_relative_residual": 1.5142235346635633e-16,
+      "ratio_formula_difference_K": 0.0,
+      "passed": true
+    },
+    {
+      "test": "actual net energy root with independent albedo and emissivity",
+      "reflectivity": 0.3,
+      "emissivity": 0.5,
+      "fractional_drop": 0.1,
+      "temperature_K": 292.20112392758904,
+      "root_energy_relative_residual": 3.33129177625984e-16,
+      "ratio_formula_difference_K": 0.0,
+      "passed": true
+    },
+    {
+      "test": "actual net energy root with independent albedo and emissivity",
+      "reflectivity": 0.3,
+      "emissivity": 0.9,
+      "fractional_drop": 0.001,
+      "temperature_K": 299.92497185858247,
+      "root_energy_relative_residual": 3.334626402662502e-16,
+      "ratio_formula_difference_K": 0.0,
+      "passed": true
+    },
+    {
+      "test": "actual net energy root with independent albedo and emissivity",
+      "reflectivity": 0.3,
+      "emissivity": 0.9,
+      "fractional_drop": 0.01,
+      "temperature_K": 299.24717098010433,
+      "root_energy_relative_residual": 1.6824705940706255e-16,
+      "ratio_formula_difference_K": 0.0,
+      "passed": true
+    },
+    {
+      "test": "actual net energy root with independent albedo and emissivity",
+      "reflectivity": 0.3,
+      "emissivity": 0.9,
+      "fractional_drop": 0.1,
+      "temperature_K": 292.20112392758904,
+      "root_energy_relative_residual": 3.701435306955377e-16,
+      "ratio_formula_difference_K": 0.0,
+      "passed": true
+    },
+    {
+      "test": "actual net energy root with independent albedo and emissivity",
+      "reflectivity": 0.3,
+      "emissivity": 1.0,
+      "fractional_drop": 0.001,
+      "temperature_K": 299.92497185858247,
+      "root_energy_relative_residual": 1.5005818811981257e-16,
+      "ratio_formula_difference_K": 0.0,
+      "passed": true
+    },
+    {
+      "test": "actual net energy root with independent albedo and emissivity",
+      "reflectivity": 0.3,
+      "emissivity": 1.0,
+      "fractional_drop": 0.01,
+      "temperature_K": 299.24717098010433,
+      "root_energy_relative_residual": 1.5142235346635633e-16,
+      "ratio_formula_difference_K": 0.0,
+      "passed": true
+    },
+    {
+      "test": "actual net energy root with independent albedo and emissivity",
+      "reflectivity": 0.3,
+      "emissivity": 1.0,
+      "fractional_drop": 0.1,
+      "temperature_K": 292.20112392758904,
+      "root_energy_relative_residual": 3.33129177625984e-16,
+      "ratio_formula_difference_K": 0.0,
+      "passed": true
+    },
+    {
+      "test": "actual net energy root with independent albedo and emissivity",
+      "reflectivity": 0.7,
+      "emissivity": 0.5,
+      "fractional_drop": 0.001,
+      "temperature_K": 299.92497185858247,
+      "root_energy_relative_residual": 1.5005818811981257e-16,
+      "ratio_formula_difference_K": 0.0,
+      "passed": true
+    },
+    {
+      "test": "actual net energy root with independent albedo and emissivity",
+      "reflectivity": 0.7,
+      "emissivity": 0.5,
+      "fractional_drop": 0.01,
+      "temperature_K": 299.24717098010433,
+      "root_energy_relative_residual": 1.5142235346635633e-16,
+      "ratio_formula_difference_K": 0.0,
+      "passed": true
+    },
+    {
+      "test": "actual net energy root with independent albedo and emissivity",
+      "reflectivity": 0.7,
+      "emissivity": 0.5,
+      "fractional_drop": 0.1,
+      "temperature_K": 292.20112392758904,
+      "root_energy_relative_residual": 3.33129177625984e-16,
+      "ratio_formula_difference_K": 0.0,
+      "passed": true
+    },
+    {
+      "test": "actual net energy root with independent albedo and emissivity",
+      "reflectivity": 0.7,
+      "emissivity": 0.9,
+      "fractional_drop": 0.001,
+      "temperature_K": 299.92497185858247,
+      "root_energy_relative_residual": 3.334626402662502e-16,
+      "ratio_formula_difference_K": 0.0,
+      "passed": true
+    },
+    {
+      "test": "actual net energy root with independent albedo and emissivity",
+      "reflectivity": 0.7,
+      "emissivity": 0.9,
+      "fractional_drop": 0.01,
+      "temperature_K": 299.24717098010433,
+      "root_energy_relative_residual": 1.6824705940706255e-16,
+      "ratio_formula_difference_K": 0.0,
+      "passed": true
+    },
+    {
+      "test": "actual net energy root with independent albedo and emissivity",
+      "reflectivity": 0.7,
+      "emissivity": 0.9,
+      "fractional_drop": 0.1,
+      "temperature_K": 292.20112392758904,
+      "root_energy_relative_residual": 3.701435306955377e-16,
+      "ratio_formula_difference_K": 0.0,
+      "passed": true
+    },
+    {
+      "test": "actual net energy root with independent albedo and emissivity",
+      "reflectivity": 0.7,
+      "emissivity": 1.0,
+      "fractional_drop": 0.001,
+      "temperature_K": 299.92497185858247,
+      "root_energy_relative_residual": 1.5005818811981257e-16,
+      "ratio_formula_difference_K": 0.0,
+      "passed": true
+    },
+    {
+      "test": "actual net energy root with independent albedo and emissivity",
+      "reflectivity": 0.7,
+      "emissivity": 1.0,
+      "fractional_drop": 0.01,
+      "temperature_K": 299.24717098010433,
+      "root_energy_relative_residual": 1.5142235346635633e-16,
+      "ratio_formula_difference_K": 0.0,
+      "passed": true
+    },
+    {
+      "test": "actual net energy root with independent albedo and emissivity",
+      "reflectivity": 0.7,
+      "emissivity": 1.0,
+      "fractional_drop": 0.1,
+      "temperature_K": 292.20112392758904,
+      "root_energy_relative_residual": 3.33129177625984e-16,
+      "ratio_formula_difference_K": 0.0,
+      "passed": true
+    },
+    {
+      "test": "one significant digit sign and Taylor remainder",
+      "signed_change_K": -0.07502814141752134,
+      "positive_cooling_magnitude_K": 0.07502814141752134,
+      "linear_K": -0.075,
+      "quadratic_K": -0.075028125,
+      "quadratic_error_K": 1.6417521342404484e-08,
+      "third_order_bound_K": 1.6451451916361017e-08,
+      "one_significant_digit_K": -0.08,
+      "passed": true
+    },
+    {
+      "test": "nonlinear heat capacity relaxation remains above equilibrium",
+      "fractional_drop": 0.001,
+      "final_equilibrium_error": 1.536053062523024e-09,
+      "normalized_linear_tau": 0.2501876642130317,
+      "passed": true
+    },
+    {
+      "test": "nonlinear heat capacity relaxation remains above equilibrium",
+      "fractional_drop": 0.01,
+      "final_equilibrium_error": 1.5360458793800547e-08,
+      "normalized_linear_tau": 0.2518915580640609,
+      "passed": true
+    },
+    {
+      "test": "nonlinear heat capacity relaxation remains above equilibrium",
+      "fractional_drop": 0.1,
+      "final_equilibrium_error": 1.5352591342665534e-07,
+      "normalized_linear_tau": 0.2705565962292491,
+      "passed": true
+    },
+    {
+      "test": "variant independent power root",
+      "flux_ratio": 0.98,
+      "r0": 0.3,
+      "r1": 0.3,
+      "signed_change_K": -1.5113830821935608,
+      "formula_difference_K": 0.0,
+      "passed": true
+    },
+    {
+      "test": "variant independent power root",
+      "flux_ratio": 0.999,
+      "r0": 0.3,
+      "r1": 0.3007,
+      "signed_change_K": -0.1500375187617351,
+      "formula_difference_K": 0.0,
+      "passed": true
+    },
+    {
+      "test": "variant quadratic remainder",
+      "error_K": 0.0001330821935736637,
+      "bound_K": 0.00013874827867378848,
+      "passed": true
+    },
+    {
+      "test": "variant exact implicit cooling vs independent ODE",
+      "u0": 1.001,
+      "dimensionless_time": 0.05,
+      "time_residual": 1.03292374653563e-13,
+      "passed": true
+    },
+    {
+      "test": "variant exact implicit cooling vs independent ODE",
+      "u0": 1.001,
+      "dimensionless_time": 0.2,
+      "time_residual": -5.800915303666443e-14,
+      "passed": true
+    },
+    {
+      "test": "variant exact implicit cooling vs independent ODE",
+      "u0": 1.001,
+      "dimensionless_time": 0.5,
+      "time_residual": -1.0453859999870474e-12,
+      "passed": true
+    },
+    {
+      "test": "variant exact implicit cooling vs independent ODE",
+      "u0": 1.001,
+      "dimensionless_time": 1.0,
+      "time_residual": 4.156675004196586e-13,
+      "passed": true
+    },
+    {
+      "test": "variant exact implicit cooling vs independent ODE",
+      "u0": 1.05,
+      "dimensionless_time": 0.05,
+      "time_residual": 9.707512571566213e-14,
+      "passed": true
+    },
+    {
+      "test": "variant exact implicit cooling vs independent ODE",
+      "u0": 1.05,
+      "dimensionless_time": 0.2,
+      "time_residual": -1.1352030426792226e-13,
+      "passed": true
+    },
+    {
+      "test": "variant exact implicit cooling vs independent ODE",
+      "u0": 1.05,
+      "dimensionless_time": 0.5,
+      "time_residual": -4.594102875898898e-13,
+      "passed": true
+    },
+    {
+      "test": "variant exact implicit cooling vs independent ODE",
+      "u0": 1.05,
+      "dimensionless_time": 1.0,
+      "time_residual": -1.1173284519827575e-12,
+      "passed": true
+    },
+    {
+      "test": "variant exact implicit cooling vs independent ODE",
+      "u0": 1.4,
+      "dimensionless_time": 0.05,
+      "time_residual": 4.886507865009548e-13,
+      "passed": true
+    },
+    {
+      "test": "variant exact implicit cooling vs independent ODE",
+      "u0": 1.4,
+      "dimensionless_time": 0.2,
+      "time_residual": 5.389577673042822e-13,
+      "passed": true
+    },
+    {
+      "test": "variant exact implicit cooling vs independent ODE",
+      "u0": 1.4,
+      "dimensionless_time": 0.5,
+      "time_residual": -9.571232695293475e-13,
+      "passed": true
+    },
+    {
+      "test": "variant exact implicit cooling vs independent ODE",
+      "u0": 1.4,
+      "dimensionless_time": 1.0,
+      "time_residual": -1.8945955915228296e-12,
+      "passed": true
+    },
+    {
+      "test": "variant radius response time scaling",
+      "radius": 1.0,
+      "tau": 2.3148148148148148e-08,
+      "passed": true
+    },
+    {
+      "test": "variant radius response time scaling",
+      "radius": 2.0,
+      "tau": 4.6296296296296295e-08,
+      "passed": true
+    }
+  ],
+  "exact_signed_temperature_change_K": -0.07502814141752134,
+  "rounding": "-0.08 K change, or positive cooling magnitude 0.08 K",
+  "actual_original_readings": [
+    {
+      "path": "preview/originals/paper-03.png",
+      "sha256": "6ca7b36db7e05c600ae3e5a5de869aed1becd4e0fc698cad263048a2c97aa1ca",
+      "actual_displayed_and_read": true
+    },
+    {
+      "path": "preview/originals/answer-08.png",
+      "sha256": "8208d40cd3db30c03ccdec2dac204c9005f37b33502f11bcdf9fa562eef3f1a6",
+      "actual_displayed_and_read": true
+    },
+    {
+      "path": "preview/originals/details/q08-paper.png",
+      "sha256": "db07a05a09676df042f39da1e888c12c0084cd363d56d92170b90dd3185112f6",
+      "actual_displayed_and_read": true
+    },
+    {
+      "path": "preview/originals/details/q08-answer.png",
+      "sha256": "b27caac26015100c9c3ebf332477a87ea62d704cc8815f1551ecd9efbe36feab",
+      "actual_displayed_and_read": true
+    }
+  ],
+  "source_sha256": {
+    "试卷.pdf": "3c8164d75b7f117095d26f554fb788867b2b781c9a642af12bee499d3b232cf0",
+    "答案.pdf": "111c13cd664b08f098076baed25c937368238953127045c5cfa8c8460471472a"
+  },
+  "script_sha256": "412119cf6c6dbfb773a3aebb9dccd4a669e2a123fd09c59aa26aeb8e9454ace1",
+  "caveats": [
+    "题设0.1%变化仅作假想；不宣称2030太阳活动或现实气候预测。",
+    "均匀温度/有效单温度球体，固定反照率与发射率；忽略大气、水循环、地热及反馈。",
+    "太阳波段吸收率不自动等于热红外发射率；两者常量分别保留，比值仍消去。",
+    "无热容量数据不能给降温历时；热容量计算只作为明确新增参数的带解变式。"
+  ],
+  "draft_sha256": "959536b398e2cd5d2246798bfe3fef1f54cb2c1d040b486ebaba63046cedfb5e",
+  "figure_source_sha256": "eeb1a2c2bae19b4d2e946aec50f0dfc52aad12c968fa89889a02f7e61c93a324",
+  "working_pdf_checks": [
+    {
+      "question": "08",
+      "version": "student",
+      "total_pages": 9,
+      "body_pages": 8,
+      "body_nonspace": 5193,
+      "per_page_nonspace": [
+        806,
+        868,
+        417,
+        748,
+        639,
+        729,
+        423,
+        563
+      ],
+      "layout_warnings": [],
+      "pdf_sha256": "821e377936d0f09164f4058bbc1f7a294671744f179cbe208e6f042b1246a36f",
+      "draft_sha256": "959536b398e2cd5d2246798bfe3fef1f54cb2c1d040b486ebaba63046cedfb5e",
+      "actual_reviewed": false,
+      "accepted": false
+    },
+    {
+      "question": "08",
+      "version": "teacher",
+      "total_pages": 14,
+      "body_pages": 13,
+      "body_nonspace": 9109,
+      "per_page_nonspace": [
+        806,
+        868,
+        417,
+        748,
+        639,
+        729,
+        423,
+        1029,
+        814,
+        850,
+        710,
+        569,
+        507
+      ],
+      "layout_warnings": [],
+      "pdf_sha256": "b698f876650e737506071c113ad6e0d364a176e570961d04dd1008b351ac0801",
+      "draft_sha256": "959536b398e2cd5d2246798bfe3fef1f54cb2c1d040b486ebaba63046cedfb5e",
+      "actual_reviewed": false,
+      "accepted": false
+    }
+  ]
+}

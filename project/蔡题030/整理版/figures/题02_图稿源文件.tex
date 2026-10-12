@@ -1,0 +1,51 @@
+\documentclass[tikz,border=5pt]{standalone}
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath,amssymb}
+\usetikzlibrary{arrows.meta,calc,angles,quotes,decorations.pathmorphing}
+\definecolor{ink}{HTML}{243447}\definecolor{blue}{HTML}{2765A2}
+\definecolor{green}{HTML}{3F7D5B}\definecolor{red}{HTML}{B74739}
+\tikzset{body/.style={draw=ink,thick},vec/.style={draw=blue,thick,-{Latex}},guide/.style={gray!65,dashed},dim/.style={ink,{Latex}-{Latex}},line cap=round,line join=round}
+\begin{document}
+\begin{tikzpicture}
+\fill[green!7](0,0)circle(2.2);\draw[body](0,0)circle(2.2);
+\draw[guide](-2.2,0)arc[start angle=180,end angle=0,x radius=2.2,y radius=.65];
+\draw[body](2.2,0)arc[start angle=0,end angle=-180,x radius=2.2,y radius=.65];
+\fill[blue!15](0,0)circle(.9);\draw[body](0,0)circle(.9);
+\draw[guide](-.9,0)arc[start angle=180,end angle=0,x radius=.9,y radius=.26];
+\draw[body](.9,0)arc[start angle=0,end angle=-180,x radius=.9,y radius=.26];
+\node at(0,.35){$\mathrm{CaO}$};\node at(0,1.45){$\mathrm{CaCO_3}$};
+\draw[dim](0,0)--(1.555,-1.555)node[midway,below]{$R$};
+\draw[dim](0,0)--(-.779,-.45)node[midway,above left]{$r$};
+\foreach \a in {25,145,265}{\draw[vec]({2.7*cos(\a)},{2.7*sin(\a)})--({2.23*cos(\a)},{2.23*sin(\a)});}
+\node[above]at(0,2.5){外表面 $\rho_{\mathrm g}=\rho_0$};
+\end{tikzpicture}
+\begin{tikzpicture}
+\draw[body](0,0)circle(2.1);\draw[body](0,0)circle(.7);
+\fill[blue!15,even odd rule](0,0)circle(1.55)(0,0)circle(1.3);
+\draw[blue](0,0)circle(1.3)(0,0)circle(1.55);
+\draw[vec](2.3,.35)--(1.65,.35)node[midway,above]{$\dot m_{\mathrm g}$};
+\draw[vec](1.2,.35)--(.78,.35);
+\draw[dim](0,0)--(1.3,0)node[midway,below]{$x$};
+\draw[dim](1.3,-.35)--(1.55,-.35);
+\draw[ink](1.425,-.37)--(1.85,-.95)node[right]{$\mathrm dx$};
+\node at(-1.2,2.35){面积 $4\pi x^2$};
+\node[below]at(0,-2.3){$x^2\rho_{\mathrm g}'(x)=\text{常数}$};
+\end{tikzpicture}
+\begin{tikzpicture}[x=5cm,y=3cm]
+\draw[vec](.28,0)--(1.12,0)node[right]{$x/R$};
+\draw[vec](.35,0)--(.35,1.18)node[above]{$\rho_{\mathrm g}/\rho_0$};
+\draw[blue,thick,domain=.35:1,samples=101]plot(\x,{(1/.35-1/\x)/(1/.35-1)});
+\draw[guide](1,0)--(1,1)--(.35,1);
+\node[below]at(.35,0){$r/R$};\node[below]at(1,0){$1$};
+\node[left]at(.35,1){$1$};
+\node at(.7,.3){外高内低};
+\end{tikzpicture}
+\begin{tikzpicture}[x=5cm,y=3.3cm]
+\draw[vec](0,0)--(1.15,0)node[right]{$t/T$};
+\draw[vec](0,0)--(0,1.17)node[above]{归一化量};
+\draw[green,thick,domain=0:1,samples=121]plot({1-3*(1-\x)^2+2*(1-\x)^3},{1-(1-\x)^3});
+\draw[blue,thick,domain=0:1,samples=121]plot({1-3*(1-\x)^2+2*(1-\x)^3},{1-\x});
+\node[green,right]at(.65,.78){$\alpha$};\node[blue,right]at(.72,.13){$r/R$};
+\node[below]at(1,0){$1$};\node[left]at(0,1){$1$};
+\end{tikzpicture}
+\end{document}

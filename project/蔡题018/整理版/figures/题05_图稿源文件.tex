@@ -1,0 +1,112 @@
+\documentclass[tikz,border=5pt]{standalone}
+\usepackage{ctex,amsmath}
+\usetikzlibrary{arrows.meta,calc}
+\tikzset{>=Latex,membrane/.style={blue!65!black,thick},
+ guide/.style={gray!65,dashed},outforce/.style={green!45!black,very thick,->},
+ inforce/.style={orange!85!black,very thick,->}}
+% 空间球面以轮廓圆和赤道的前实后虚椭圆表示；中央截面图另作说明。
+\newcommand{\sphere}[1]{
+ \fill[blue!4](0,0)circle(#1);
+ \draw[membrane](0,0)circle(#1);
+ \draw[blue!45!black,dashed](#1,0)arc[start angle=0,end angle=180,x radius=#1,y radius=.23*#1];
+ \draw[blue!45!black](-#1,0)arc[start angle=180,end angle=360,x radius=#1,y radius=.23*#1];}
+\begin{document}
+\begin{tikzpicture}[font=\large]
+ \foreach \s in {0,7}{
+  \begin{scope}[xshift=\s cm]
+   \fill[blue!4](0,0)circle(1.4);
+   \draw[blue!45!black,dashed](1.4,0)arc[start angle=0,end angle=180,x radius=1.4,y radius=.322];
+   \draw[blue!45!black](-1.4,0)arc[start angle=180,end angle=360,x radius=1.4,y radius=.322];
+   \fill(0,0)circle(.025);
+   \draw[->](0,0)--(115:1.4)node[pos=.6,left]{$r_0$};
+   \node at(.32,-.7){$p_0,\ T_0$};
+  \end{scope}}
+ % 两膜轮廓只在真实管口处留小缺口，管壁接至缺口端点。
+ \draw[membrane](4:1.4)arc[start angle=4,end angle=356,radius=1.4];
+ \begin{scope}[xshift=7cm]
+  \draw[membrane](-176:1.4)arc[start angle=-176,end angle=176,radius=1.4];
+ \end{scope}
+ \draw[thick](1.39659,.09766)--(5.60341,.09766)
+             (1.39659,-.09766)--(5.60341,-.09766);
+ \node[above]at(3.5,.35){绝缘、绝热细管};
+ \node at(0,-1.85){泡$A$};\node at(7,-1.85){泡$B$};
+\end{tikzpicture}
+\begin{tikzpicture}[font=\large]
+ \fill[blue!10,even odd rule](0,0)circle(1.9)(0,0)circle(1.78);
+ \draw[membrane](0,0)circle(1.9)(0,0)circle(1.78);
+ \draw[gray!65,dashed](0,0)circle(2.22);
+ \fill(0,0)circle(.028)node[below left]{$O$};
+ \draw[->](0,0)--(55:1.84)node[midway,left]{$r$};
+ \draw[<->](1.9,0)--(2.22,0)node[midway,above]{$\mathrm dr$};
+ \draw(145:1.78)--(-2.6,1.7)node[left]{内界面};
+ \draw(210:1.9)--(-2.6,-1.5)node[left]{外界面};
+ \draw(30:2.22)--(3.15,1.5)node[right]{位移后轮廓};
+ \node at(0,-2.65){中央截面；膜厚放大显示};
+\end{tikzpicture}
+\begin{tikzpicture}[font=\large]
+ \sphere{1.7}
+ \coordinate(O)at(0,0);\coordinate(P)at(1,.85);
+ % 有限小球面片位于可见前半球；不是用平面扇形冒充立体角。
+ \fill[orange!10](O)--(.8,.86)--(1.05,1.04)--(1.2,.8)--(.95,.65)--cycle;
+ \draw[gray!65](O)--(.8,.86)(O)--(1.2,.8);
+ \draw[membrane,fill=orange!25](.8,.86)
+  ..controls(.9,.98)and(.99,1.03)..(1.05,1.04)
+  ..controls(1.16,.97)and(1.19,.88)..(1.2,.8)
+  ..controls(1.11,.71)and(1.03,.67)..(.95,.65)
+  ..controls(.87,.71)and(.82,.8)..cycle;
+ \fill(O)circle(.03)node[below left]{$O$};
+ \draw[guide](O)--(P);
+ \draw[outforce](P)--(2.35,2)node[above right]{$(p_g+p_e)\,\mathrm dS$};
+ \draw[inforce](P)--(.4,.34)node[pos=.5,below right]{$p_s\,\mathrm dS$};
+ \node at(.24,.22){$r$};
+ \node[left]at(-.45,.8){$\mathrm d\Omega$};
+ \draw[gray!70](-.4,.72)--(.35,.32);
+ \node[above left]at(.2,2.05){$\mathrm dS=r^2\mathrm d\Omega$};
+ \draw[gray!70](.15,1.95)--(.93,1.01);
+ \draw[->,gray!70!black](2.4,-.7)--(3.15,-.07)node[right]{径向向外};
+\end{tikzpicture}
+\begin{tikzpicture}[font=\large]
+ \foreach \yy/\ra/\rb/\tx/\ty/\mode in {
+  0/1.2/1.2/{x>0}/{y=x}/{同相},
+  -4.2/1.2/.8/{x>0}/{y=-x}/{反相}}{
+  \begin{scope}[yshift=\yy cm]
+   \foreach \xx/\rr/\tag/\lab in {0/\ra/A/\tx,5/\rb/B/\ty}{
+    \begin{scope}[xshift=\xx cm]
+     \fill[blue!4](0,0)circle(\rr);
+     \draw[blue!45!black,dashed](\rr,0)arc[start angle=0,end angle=180,x radius=\rr,y radius=.23*\rr];
+     \draw[blue!45!black](-\rr,0)arc[start angle=180,end angle=360,x radius=\rr,y radius=.23*\rr];
+     \pgfmathsetmacro{\portangle}{asin(.075/\rr)}
+     \ifnum\xx=0
+      \draw[membrane](\portangle:\rr)arc[start angle=\portangle,end angle=360-\portangle,radius=\rr];
+     \else
+      \draw[membrane](-180+\portangle:\rr)arc[start angle=-180+\portangle,end angle=180-\portangle,radius=\rr];
+     \fi
+     \draw[guide](0,0)circle(1);
+     \draw[->](0,0)--(115:\rr)node[pos=.62,left]{$r_{\tag}$};
+     \node at(.20*\rr,-.46*\rr){$Q$};
+     \node at(0,-1.6){$\lab$};
+    \end{scope}}
+   % 管口是运动学示意；管线不穿过泡膜内部。
+   \pgfmathsetmacro{\porta}{sqrt(\ra^2-.075^2)}
+   \pgfmathsetmacro{\portb}{5-sqrt(\rb^2-.075^2)}
+   \draw[thick](\porta,.075)--(\portb,.075)
+               (\porta,-.075)--(\portb,-.075);
+   \node at(2.5,.45){共同$p_g$};
+   \node[left]at(-1.65,0){\mode};
+  \end{scope}}
+ \node at(2.5,-6.35){虚线：平衡半径$r_1$};
+\end{tikzpicture}
+\begin{tikzpicture}[font=\large,x=3cm,y=3.2cm]
+ \draw[->](.9,0)--(3.12,0)node[right]{$z=r_1/r_0$};
+ \draw[->](1,-.03)--(1,1.13)node[above]{$q=P_e/P_s$};
+ \draw[gray!65,dashed](1,1)--(3.02,1);
+ \node[left]at(1,1){$1$};\node[left]at(1,.25){$\frac14$};
+ \draw[membrane,domain=1:3,samples=150,smooth]plot(\x,{1-1/(\x^4)});
+ \draw[guide](1,.25)--(1.074569932,.25)--(1.074569932,0);
+ \fill[orange!85!black](1.074569932,.25)circle(.02);
+ \node[below left]at(1,0){$1$};
+ \node[below right]at(1.074569932,0){$z_c=(4/3)^{1/4}$};
+ \node[below right]at(1.7,.8){$q=1-z^{-4}$};
+ \node at(2.65,.48){$q>\frac14$：反相恢复};
+\end{tikzpicture}
+\end{document}

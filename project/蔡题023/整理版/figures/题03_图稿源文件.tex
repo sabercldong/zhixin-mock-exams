@@ -1,0 +1,75 @@
+\documentclass[tikz,border=5pt]{standalone}
+\usepackage[UTF8]{ctex}\usepackage{amsmath}
+\usetikzlibrary{arrows.meta,calc}
+\definecolor{blue}{RGB}{45,98,142}\definecolor{green}{RGB}{60,117,87}\definecolor{red}{RGB}{175,67,51}
+\tikzset{vec/.style={thick,-{Stealth}},aux/.style={gray!60,dashed}}
+\begin{document}
+\begin{tikzpicture}[scale=1.2]
+\foreach \x in{-2,0,2}{\foreach \y in{-1.1,1.1}{\node[gray]at(\x,\y){$\otimes$};}}
+\draw[gray,-{Stealth}](-2.6,0)--(2.7,0)node[right]{$x$};
+\fill[blue](-1.5,0)circle(3pt)node[above]{$A$};
+\fill[blue](1.5,0)circle(3pt)node[above]{$B$};
+\node[below]at(-1.5,-.05){$+q$};\node[below]at(1.5,-.05){$+q\ \text{或}\ -q$};
+\draw[<->](-1.5,-.75)--(1.5,-.75)node[midway,fill=white]{$L$};
+\fill(0,0)circle(1pt)node[above]{$O$};
+\node at(0,1.6){$\boldsymbol B=-B\boldsymbol e_z,\quad \boldsymbol v_A(0)=\boldsymbol v_B(0)=0$};
+\end{tikzpicture}
+\begin{tikzpicture}[scale=1.2]
+\draw[gray,-{Stealth}](-2.4,0)--(2.5,0)node[right]{$x$};
+\draw[gray,-{Stealth}](0,-1.8)--(0,2.0)node[above]{$y$};
+\coordinate(A)at(-1.6,-.8);\coordinate(B)at(1.6,.8);
+\draw[blue,thick](A)--(B);
+\fill[blue](A)circle(3pt)node[below left]{$A,+q$};
+\fill[blue](B)circle(3pt)node[above left]{$B,+q$};
+\draw[green,vec](0,0)--(B)node[midway,above left]{$r/2$};
+\draw[green,vec](B)--++(.85,.425)node[right]{$\dot r\,\boldsymbol e_r/2$};
+\draw[red,vec](B)--++(-.4,.8)node[above]{$r\dot\varphi\,\boldsymbol e_\varphi/2$};
+\draw[gray](.6,0)arc(0:26.565:.6);\node at(.85,.17){$\varphi$};
+\node at(-1.8,1.6){$\otimes\, B$};
+\node[align=center]at(0,-2.25){质心固定：$\boldsymbol R=0$\\最大间距处 $\dot r=0$，但 $\dot\varphi\ne0$};
+\end{tikzpicture}
+\begin{tikzpicture}[scale=1.2]
+\draw[gray,-{Stealth}](-2.5,0)--(2.6,0)node[right]{$x$};
+\draw[gray,-{Stealth}](0,-.7)--(0,2.6)node[above]{$y$};
+\draw[aux](-1.3,0)--(-1.3,1.1);\draw[aux](1.3,0)--(1.3,1.1);
+\fill[blue](-1.3,1.1)circle(3pt);\node[blue]at(-1.3,.77){$A,+q$};
+\fill[red](1.3,1.1)circle(3pt);\node[red]at(1.3,.77){$B,-q$};
+\draw[blue,vec](-1.3,1.1)--(-.5,1.1)node[above]{$F_{\rm C}$};
+\draw[blue,vec](1.3,1.1)--(.5,1.1)node[above]{$F_{\rm C}$};
+\draw[red,vec](-1.3,1.1)--(-2.15,1.1)node[below]{$F_{{\rm B}x}$};
+\draw[red,vec](1.3,1.1)--(2.15,1.1)node[below]{$F_{{\rm B}x}$};
+\draw[green,vec](-1.3,1.1)--(-1.3,2.0)node[above]{$\dot Y$};
+\draw[green,vec](1.3,1.1)--(1.3,2.0)node[above]{$\dot Y$};
+\fill(0,1.1)circle(1.5pt);\node at(.15,1.62){$(0,Y)$};
+\draw[<->](-1.3,.4)--(1.3,.4)node[midway,fill=white]{$r$};
+\draw[<->](-2.6,0)--(-2.6,1.1)node[midway,left]{$Y$};
+\node at(-1.9,.15){$\otimes\,B$};
+\node at(0,-1.05){共同的 $+y$ 速度使磁力的 $x$ 分量向外};
+\end{tikzpicture}
+\begin{tikzpicture}[xscale=5,yscale=8]
+\draw[gray,-{Stealth}](0,0)--(1.16,0)node[right]{$r/L$};
+\draw[gray,-{Stealth}](0,0)--(0,.36)node[above]{$r(L-r)/L^2$};
+\draw[blue,thick,domain=0:1,samples=81]plot(\x,{\x*(1-\x)});
+\draw[red,dashed](0,.30)--(1,.30)node[right]{$B<B_0$};
+\draw[green,dashed](0,.25)--(1,.25)node[right]{$B=B_0$};
+\draw[red,dashed](0,.16)--(1,.16)node[right]{$B>B_0$};
+\fill[red](.2,.16)circle(.4pt);\fill[red](.8,.16)circle(.4pt);
+\draw[aux](.2,0)--(.2,.16);\draw[aux](.8,0)--(.8,.16);
+\node[below]at(.2,0){$r_-/L$};\node[below]at(.8,0){$r_+/L$};
+\node[below]at(1,0){$1$};
+\draw[vec](1,.075)--(.84,.075);
+\node at(.8,.045){从初态向内};
+\draw[aux](.5,0)--(.5,.25);\node[below]at(.5,0){$1/2$};
+\end{tikzpicture}
+\begin{tikzpicture}[xscale=1.3,yscale=4.4]
+\draw[gray,-{Stealth}](.7,0)--(4.3,0)node[right]{$B_1/B_0$};
+\draw[gray,-{Stealth}](.7,0)--(.7,1.15)node[above]{$r_\pm/L$};
+\draw[aux](.7,1)--(4.1,1);\node[left]at(.7,1){$1$};
+\draw[aux](1,0)--(1,.5);\fill(1,.5)circle(1pt);
+\draw[blue,thick,domain=1:4,samples=201]plot(\x,{.5*(1+sqrt(1-1/(\x*\x)))});
+\draw[red,thick,domain=1:4,samples=201]plot(\x,{.5*(1-sqrt(1-1/(\x*\x)))});
+\node[blue]at(2.8,.84){可达：$l_0=r_+$};
+\node[red]at(2.8,.15){不可由初态越过禁区到达};
+\node[below]at(1,0){$1$};\node[left]at(.7,.5){$1/2$};
+\end{tikzpicture}
+\end{document}

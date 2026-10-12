@@ -1,0 +1,686 @@
+{
+  "all_passed": true,
+  "check_count": 96,
+  "checks": [
+    {
+      "name": "01-水区约化矩阵行列式",
+      "value": 1.0,
+      "expected": 1.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "01-水区不同初斜率同像高",
+      "value": 1.354472090042691e-14,
+      "expected": 0.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "01-水区横向放大率",
+      "value": -0.9999999999999998,
+      "expected": -1.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "01-水区从表面换算球心位置",
+      "value": 40.0,
+      "expected": 40.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "01-中心约化矩阵行列式",
+      "value": 0.9999999999999996,
+      "expected": 1.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "01-中心不同初斜率同像高",
+      "value": 0.0,
+      "expected": 0.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "01-中心横向放大率",
+      "value": 0.24999999999999978,
+      "expected": 0.25,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "01-中心从表面换算球心位置",
+      "value": -10.0,
+      "expected": -10.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "01-变参数四界面与等效焦距a4u40n1.33",
+      "value": -10.056710775047257,
+      "expected": -10.056710775047257,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "01-变参数矩阵与放大率a4u40n1.33",
+      "value": 0.2514177693761815,
+      "expected": 0.25141776937618143,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "01-变参数四界面与等效焦距a5u40n1.3333333333333333",
+      "value": -13.333333333333336,
+      "expected": -13.333333333333336,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "01-变参数矩阵与放大率a5u40n1.3333333333333333",
+      "value": 0.3333333333333335,
+      "expected": 0.33333333333333337,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "01-变参数四界面与等效焦距a4u20n1.3333333333333333",
+      "value": -8.0,
+      "expected": -8.000000000000002,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "01-变参数矩阵与放大率a4u20n1.3333333333333333",
+      "value": 0.3999999999999998,
+      "expected": 0.4000000000000001,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "01-折射率为1退化为空气传播",
+      "value": 0.0,
+      "expected": 0.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "02-指定直径压缩几何",
+      "value": 2.7944,
+      "expected": 2.7944,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "02-单根水平合力",
+      "value": 0.0,
+      "expected": 0.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "02-单根竖直合力",
+      "value": 0.0,
+      "expected": 0.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "02-单根总力矩",
+      "value": 3.637978807091713e-12,
+      "expected": 0.0,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "02-十根总拉力",
+      "value": 62073.79165007428,
+      "expected": 62073.791650074294,
+      "tolerance": 1e-07,
+      "passed": true
+    },
+    {
+      "name": "02-摩擦阈值",
+      "value": 0.0633406037245656,
+      "expected": 0.06334060372456557,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "02-小角拉力相对误差",
+      "value": 0.0015006254378524472,
+      "expected": 0.0,
+      "tolerance": 0.00151,
+      "passed": true
+    },
+    {
+      "name": "02-二十根总拉力不变",
+      "value": 62073.79165007429,
+      "expected": 62073.79165007428,
+      "tolerance": 1e-07,
+      "passed": true
+    },
+    {
+      "name": "02-不滑动上下速度",
+      "value": 2.0,
+      "expected": 2.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "03-初始几何下交点",
+      "value": -1.0,
+      "expected": -1.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "03-速度约束有限差分",
+      "value": 1.0000003599996976,
+      "expected": 1.0,
+      "tolerance": 8e-07,
+      "passed": true
+    },
+    {
+      "name": "03-二阶几何有限差分",
+      "value": 6.000002883421729,
+      "expected": 6.0,
+      "tolerance": 2e-05,
+      "passed": true
+    },
+    {
+      "name": "03-静止圆环受力",
+      "value": 2.5,
+      "expected": 2.5,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "03-静止C受力",
+      "value": 5.0,
+      "expected": 5.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "03-圆环冲量",
+      "value": 1.0,
+      "expected": 1.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "03-C冲量",
+      "value": 2.0,
+      "expected": 2.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "03-非零速度加速度约束",
+      "value": 6.0,
+      "expected": 6.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "03-冲量后圆环受力",
+      "value": 5.5,
+      "expected": 5.5,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "03-冲量后C受力",
+      "value": -1.0,
+      "expected": -1.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "03-细线相对速度平方",
+      "value": 3.0,
+      "expected": 3.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "03-总动能等效质量",
+      "value": 2.0,
+      "expected": 2.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "03-C加速度为零阈值",
+      "value": 0.0,
+      "expected": 0.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "04-沿x同壁周期u0",
+      "value": 3.3333333333333335,
+      "expected": 3.3333333333333335,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "04-沿x每粒子压强u0",
+      "value": 0.4499999999999999,
+      "expected": 0.4499999999999999,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "04-沿x同壁周期u0.3",
+      "value": 3.4942827890730612,
+      "expected": 3.494282789073061,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "04-沿x每粒子压强u0.3",
+      "value": 0.4499999999999999,
+      "expected": 0.4499999999999999,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "04-沿x同壁周期u0.8",
+      "value": 5.555555555555556,
+      "expected": 5.555555555555557,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "04-沿x每粒子压强u0.8",
+      "value": 0.44999999999999996,
+      "expected": 0.4499999999999999,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "04-沿x同壁周期u0.95",
+      "value": 10.675210253672464,
+      "expected": 10.675210253672473,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "04-沿x每粒子压强u0.95",
+      "value": 0.4500000000000004,
+      "expected": 0.4499999999999999,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "04-斜壁有向面积u0.8th0",
+      "value": 0.0,
+      "expected": 0.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "04-斜壁法向力面积比u0.8th0",
+      "value": 0.44999999999999984,
+      "expected": 0.4499999999999999,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "04-斜壁有向面积u0.8th0.7853981633974483",
+      "value": 0.0,
+      "expected": 0.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "04-斜壁法向力面积比u0.8th0.7853981633974483",
+      "value": 0.4499999999999998,
+      "expected": 0.4499999999999999,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "04-斜壁有向面积u0.8th1.5707963267948966",
+      "value": 0.0,
+      "expected": 0.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "04-斜壁法向力面积比u0.8th1.5707963267948966",
+      "value": 0.44999999999999996,
+      "expected": 0.4499999999999999,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "04-斜壁有向面积u0.3th0.4",
+      "value": 1.1295700899707568e-16,
+      "expected": 0.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "04-斜壁法向力面积比u0.3th0.4",
+      "value": 0.4499999999999999,
+      "expected": 0.4499999999999999,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "04-各向同性六束的三分之一",
+      "value": 0.14999999999999997,
+      "expected": 0.14999999999999997,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "05-势差积分",
+      "value": 0.030338172485671295,
+      "expected": 0.030338172485671295,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "05-内膜两侧平均场",
+      "value": 0.050660591821168895,
+      "expected": 0.05066059182116889,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "05-外膜两侧平均场",
+      "value": -0.04186825770344535,
+      "expected": -0.041868257703445357,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "05-电场能积分",
+      "value": 0.030338172485671295,
+      "expected": 0.030338172485671295,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "05-固定电荷内膜能量导数",
+      "value": 0.050660591822846116,
+      "expected": 0.05066059182116889,
+      "tolerance": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "05-固定电荷外膜能量导数",
+      "value": -0.041868257704888535,
+      "expected": -0.041868257703445357,
+      "tolerance": 1e-10,
+      "passed": true
+    },
+    {
+      "name": "05-外膜机械平衡",
+      "value": -9.020562075079397e-17,
+      "expected": 0.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "05-内膜机械平衡",
+      "value": 2.220446049250313e-16,
+      "expected": 0.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "05-内外压强差",
+      "value": -0.0087923341177234,
+      "expected": -0.008792334117723531,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "05-电荷加倍静电压力四倍",
+      "value": 0.20264236728467555,
+      "expected": 0.20264236728467555,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "06-净电荷密度",
+      "value": 0.0,
+      "expected": 0.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "06-正离子稳态力平衡",
+      "value": 0.0,
+      "expected": 0.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "06-负离子稳态力平衡",
+      "value": 0.0,
+      "expected": 0.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "06-逐载流子电流相加",
+      "value": 21.333333333333332,
+      "expected": 21.333333333333332,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "06-阻力耗散等于电源功",
+      "value": 85.33333333333333,
+      "expected": 85.33333333333333,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "06-交流相量与两离子时域积分",
+      "value": 1.224711443370552e-10,
+      "expected": 0.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "06-零频复电导率",
+      "value": 2.6666666666666665,
+      "expected": 2.6666666666666665,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "06-单通道一驰豫时间",
+      "value": 0.6321205588285577,
+      "expected": 0.6321205588285577,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "06-相似几何电流加倍",
+      "value": 42.666666666666664,
+      "expected": 42.666666666666664,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "07-半量温度",
+      "value": 0.6299605249474366,
+      "expected": 0.6299605249474366,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "07-半量压强",
+      "value": 0.3149802624737183,
+      "expected": 0.3149802624737183,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "07-开口系统能量微分",
+      "value": 1.8372448625070257,
+      "expected": 1.8372448625349045,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "07-喷流冲量积分",
+      "value": 1.0606601717798212,
+      "expected": 1.0606601717798214,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "07-前半质量动量占比",
+      "value": 0.6031497370079502,
+      "expected": 0.6031497370079502,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "07-喷流定向能量积分",
+      "value": 0.6000000000000001,
+      "expected": 0.6,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "07-流出内能积分",
+      "value": 0.8999999999999998,
+      "expected": 0.9,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "07-全程能量平衡",
+      "value": 1.5,
+      "expected": 1.5,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "07-流动功转换瞬时关系",
+      "value": 0.7348979450139617,
+      "expected": 0.7348979450139618,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "07-五自由度变式冲量系数",
+      "value": 0.8333333333333334,
+      "expected": 0.8333333333333334,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "07-全部焓模型动量倍数",
+      "value": 1.5811388300841895,
+      "expected": 1.5811388300841898,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "08-平衡弹簧长度",
+      "value": 1.4142135623730951,
+      "expected": 1.4142135623730951,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "08-平衡伸长",
+      "value": 0.7071067811865477,
+      "expected": 0.7071067811865475,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "08-平衡力矩广义条件",
+      "value": -2.51214793389404e-15,
+      "expected": 0.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "08-角坐标等效惯性",
+      "value": 10.000000000000002,
+      "expected": 10.0,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "08-势能曲率有限差分",
+      "value": 28.28427128065414,
+      "expected": 28.284271247461902,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "name": "08-非线性方程极小振幅周期",
+      "value": 3.7360043893585115,
+      "expected": 3.7360043360892603,
+      "tolerance": 1e-06,
+      "passed": true
+    },
+    {
+      "name": "08-非线性连杆能量守恒",
+      "value": 7.105427357601002e-15,
+      "expected": 0.0,
+      "tolerance": 2e-10,
+      "passed": true
+    },
+    {
+      "name": "08-质点位移一阶比",
+      "value": -2.999970000204979,
+      "expected": -3.0,
+      "tolerance": 4e-05,
+      "passed": true
+    },
+    {
+      "name": "08-竖直势能精确二次项",
+      "value": 0.00011313708498761343,
+      "expected": 0.00011313708498984761,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "08-两种坐标频率一致",
+      "value": 2.8284271247461903,
+      "expected": 2.8284271247461903,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "08-原参考系数导致周期倍数",
+      "value": 1.414213562373095,
+      "expected": 1.4142135623730951,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "08-原长为零变式频率减半",
+      "value": 1.414213562373095,
+      "expected": 1.4142135623730954,
+      "tolerance": 1e-08,
+      "passed": true
+    }
+  ],
+  "model_notes": [
+    "01同心及一级近轴模型；环形水区存在口径球差。",
+    "02指定压力合力偏移几何，非仅由压缩率确定真实材料滚阻。",
+    "04压强定义为同一移动箱壁上的法向力除以同时面积。",
+    "06稳态导电假设；交流惯性另需质量，位移电流另需介电参数。",
+    "07流动功RT转动能，流出内能CVT保留；重箱、单侧、均匀缓慢排气。",
+    "08弹簧增量为2y；参考解少一倍二次势能项，正确omega平方为sqrt(2)g/(5l)。"
+  ]
+}

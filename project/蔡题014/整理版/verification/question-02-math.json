@@ -1,0 +1,445 @@
+{
+  "paper": "014",
+  "question": "02",
+  "scope": "current question and solved variations; math only, not visual or set acceptance",
+  "model_authorized": true,
+  "authorization": "用户2026-10-10：四项均按建议修订并注明",
+  "symbolic_checks": [
+    {
+      "name": "weighted unit cell is neutral",
+      "passed": true
+    },
+    {
+      "name": "dipole x cancels",
+      "passed": true
+    },
+    {
+      "name": "dipole y cancels",
+      "passed": true
+    },
+    {
+      "name": "dipole z comes only from Ti displacement",
+      "passed": true
+    },
+    {
+      "name": "dipole is origin invariant for a neutral cell",
+      "passed": true
+    },
+    {
+      "name": "polarization density and cancellation of b",
+      "passed": true
+    },
+    {
+      "name": "finite cell stretch exact polarization",
+      "passed": true
+    },
+    {
+      "name": "increment polarization",
+      "passed": true
+    },
+    {
+      "name": "constant lambda stretch gives no polarization density change",
+      "passed": true
+    },
+    {
+      "name": "fixed D increment derived without assuming D=0",
+      "passed": true
+    },
+    {
+      "name": "stress form of alpha",
+      "passed": true
+    },
+    {
+      "name": "P0 form of alpha",
+      "passed": true
+    },
+    {
+      "name": "Poisson first-order correction",
+      "passed": true
+    },
+    {
+      "name": "open bare slab voltage includes change of length",
+      "passed": true
+    },
+    {
+      "name": "macro thickness is number of cells times cell height",
+      "passed": true
+    },
+    {
+      "name": "macro voltage derivative includes two first-order terms",
+      "passed": true
+    },
+    {
+      "name": "arbitrary fixed initial compensation: complete voltage derivative",
+      "passed": true
+    },
+    {
+      "name": "exact initial compensation removes length-change term",
+      "passed": true
+    },
+    {
+      "name": "fixed D Gauss boundary at top surface",
+      "passed": true
+    },
+    {
+      "name": "background dielectric open circuit coefficient",
+      "passed": true
+    },
+    {
+      "name": "short-circuit field is zero when D equals total polarization",
+      "passed": true
+    },
+    {
+      "name": "short-circuit electrode total charge conservation",
+      "passed": true
+    },
+    {
+      "name": "Poisson coefficient recovers the original for zero nu",
+      "passed": true
+    },
+    {
+      "name": "zero tau: field response vanishes",
+      "passed": true
+    },
+    {
+      "name": "zero tau: voltage still changes with thickness",
+      "passed": true
+    },
+    {
+      "name": "finite-disk Coulomb integral exact antiderivative",
+      "passed": true
+    },
+    {
+      "name": "wide-plate limit of independent Coulomb integral",
+      "passed": true
+    },
+    {
+      "name": "infinitely stiff limit suppresses field response",
+      "passed": true
+    },
+    {
+      "name": "microparameter form resolves apparent lambda singularity",
+      "passed": true
+    },
+    {
+      "name": "SI alpha dimensions m^2/C = V*m/N",
+      "passed": true,
+      "exponents": [
+        0,
+        2,
+        -1
+      ]
+    }
+  ],
+  "numerical_checks": [
+    {
+      "test": "finite disk depolarization, Coulomb ring integration",
+      "radius_over_half_thickness": 0.3,
+      "factor": 0.042173714778848605,
+      "formula": 0.04217371477884868,
+      "absolute_error": 7.632783294297951e-17,
+      "passed": true
+    },
+    {
+      "test": "finite disk depolarization, Coulomb ring integration",
+      "radius_over_half_thickness": 1,
+      "factor": 0.2928932188134525,
+      "formula": 0.29289321881345254,
+      "absolute_error": 5.551115123125783e-17,
+      "passed": true
+    },
+    {
+      "test": "finite disk depolarization, Coulomb ring integration",
+      "radius_over_half_thickness": 3,
+      "factor": 0.6837722339831622,
+      "formula": 0.683772233983162,
+      "absolute_error": 2.220446049250313e-16,
+      "passed": true
+    },
+    {
+      "test": "finite disk depolarization, Coulomb ring integration",
+      "radius_over_half_thickness": 10,
+      "factor": 0.9004962809790011,
+      "formula": 0.9004962809790011,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "test": "finite disk depolarization, Coulomb ring integration",
+      "radius_over_half_thickness": 100,
+      "factor": 0.9900004999625032,
+      "formula": 0.9900004999625032,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "test": "finite disk depolarization, Coulomb ring integration",
+      "radius_over_half_thickness": 1000,
+      "factor": 0.9990000004999996,
+      "formula": 0.9990000004999996,
+      "absolute_error": 0.0,
+      "passed": true
+    },
+    {
+      "test": "independent finite cell volumes and fixed-charge fields",
+      "stress": -1000000.0,
+      "fixed_D": 0.0,
+      "measured_alpha": -0.45197740112876894,
+      "expected_alpha": -0.4519774011299434,
+      "scaled_error": 8.088620564519486e-13,
+      "passed": true
+    },
+    {
+      "test": "independent finite cell volumes and fixed-charge fields",
+      "stress": -1000000.0,
+      "fixed_D": 0.015,
+      "measured_alpha": -0.4519774011297226,
+      "expected_alpha": -0.4519774011299434,
+      "scaled_error": 1.520463392025996e-13,
+      "passed": true
+    },
+    {
+      "test": "independent finite cell volumes and fixed-charge fields",
+      "stress": -1000000.0,
+      "fixed_D": 0.08,
+      "measured_alpha": -0.4519774011303955,
+      "expected_alpha": -0.4519774011299434,
+      "scaled_error": 3.1135664733869025e-13,
+      "passed": true
+    },
+    {
+      "test": "independent finite cell volumes and fixed-charge fields",
+      "stress": -10000.0,
+      "fixed_D": 0.0,
+      "measured_alpha": -0.45197740116119384,
+      "expected_alpha": -0.4519774011299434,
+      "scaled_error": 2.152268117294872e-11,
+      "passed": true
+    },
+    {
+      "test": "independent finite cell volumes and fixed-charge fields",
+      "stress": -10000.0,
+      "fixed_D": 0.015,
+      "measured_alpha": -0.45197740116119384,
+      "expected_alpha": -0.4519774011299434,
+      "scaled_error": 2.152268117294872e-11,
+      "passed": true
+    },
+    {
+      "test": "independent finite cell volumes and fixed-charge fields",
+      "stress": -10000.0,
+      "fixed_D": 0.08,
+      "measured_alpha": -0.4519774012056649,
+      "expected_alpha": -0.4519774011299434,
+      "scaled_error": 5.215059447836672e-11,
+      "passed": true
+    },
+    {
+      "test": "independent finite cell volumes and fixed-charge fields",
+      "stress": 10000.0,
+      "fixed_D": 0.0,
+      "measured_alpha": -0.4519774013519287,
+      "expected_alpha": -0.4519774011299434,
+      "scaled_error": 1.528848306060171e-10,
+      "passed": true
+    },
+    {
+      "test": "independent finite cell volumes and fixed-charge fields",
+      "stress": 10000.0,
+      "fixed_D": 0.015,
+      "measured_alpha": -0.4519774013519287,
+      "expected_alpha": -0.4519774011299434,
+      "scaled_error": 1.528848306060171e-10,
+      "passed": true
+    },
+    {
+      "test": "independent finite cell volumes and fixed-charge fields",
+      "stress": 10000.0,
+      "fixed_D": 0.08,
+      "measured_alpha": -0.45197740136247605,
+      "expected_alpha": -0.4519774011299434,
+      "scaled_error": 1.601489524651699e-10,
+      "passed": true
+    },
+    {
+      "test": "independent finite cell volumes and fixed-charge fields",
+      "stress": 1000000.0,
+      "fixed_D": 0.0,
+      "measured_alpha": -0.45197740113067625,
+      "expected_alpha": -0.4519774011299434,
+      "scaled_error": 5.0473114663131e-13,
+      "passed": true
+    },
+    {
+      "test": "independent finite cell volumes and fixed-charge fields",
+      "stress": 1000000.0,
+      "fixed_D": 0.015,
+      "measured_alpha": -0.45197740113067625,
+      "expected_alpha": -0.4519774011299434,
+      "scaled_error": 5.0473114663131e-13,
+      "passed": true
+    },
+    {
+      "test": "independent finite cell volumes and fixed-charge fields",
+      "stress": 1000000.0,
+      "fixed_D": 0.08,
+      "measured_alpha": -0.4519774011303955,
+      "expected_alpha": -0.4519774011299434,
+      "scaled_error": 3.1135664733869025e-13,
+      "passed": true
+    },
+    {
+      "test": "finite-difference deformed transverse area with background response",
+      "nu": 0.0,
+      "epsilon_r": 1.0,
+      "measured": -0.45197740112972257,
+      "expected": -0.4519774011299434,
+      "scaled_error": 1.5208457061803901e-13,
+      "passed": true
+    },
+    {
+      "test": "finite-difference deformed transverse area with background response",
+      "nu": 0.0,
+      "epsilon_r": 2.0,
+      "measured": -0.22598870056486128,
+      "expected": -0.2259887005649717,
+      "scaled_error": 9.005929642588947e-14,
+      "passed": true
+    },
+    {
+      "test": "finite-difference deformed transverse area with background response",
+      "nu": 0.0,
+      "epsilon_r": 5.0,
+      "measured": -0.09039548022592067,
+      "expected": -0.09039548022598867,
+      "scaled_error": 6.236375837159315e-14,
+      "passed": true
+    },
+    {
+      "test": "finite-difference deformed transverse area with background response",
+      "nu": 0.1,
+      "epsilon_r": 1.0,
+      "measured": -0.47005649717712394,
+      "expected": -0.47005649717514114,
+      "scaled_error": 1.3487936107486004e-12,
+      "passed": true
+    },
+    {
+      "test": "finite-difference deformed transverse area with background response",
+      "nu": 0.1,
+      "epsilon_r": 2.0,
+      "measured": -0.23502824858856197,
+      "expected": -0.23502824858757057,
+      "scaled_error": 8.027358131673967e-13,
+      "passed": true
+    },
+    {
+      "test": "finite-difference deformed transverse area with background response",
+      "nu": 0.1,
+      "epsilon_r": 5.0,
+      "measured": -0.09401129943549633,
+      "expected": -0.09401129943502823,
+      "scaled_error": 4.2787289582778327e-13,
+      "passed": true
+    },
+    {
+      "test": "finite-difference deformed transverse area with background response",
+      "nu": 0.3,
+      "epsilon_r": 1.0,
+      "measured": -0.5062146892776489,
+      "expected": -0.5062146892655366,
+      "scaled_error": 8.041556917733794e-12,
+      "passed": true
+    },
+    {
+      "test": "finite-difference deformed transverse area with background response",
+      "nu": 0.3,
+      "epsilon_r": 2.0,
+      "measured": -0.25310734463882445,
+      "expected": -0.2531073446327683,
+      "scaled_error": 4.832910446951825e-12,
+      "passed": true
+    },
+    {
+      "test": "finite-difference deformed transverse area with background response",
+      "nu": 0.3,
+      "epsilon_r": 5.0,
+      "measured": -0.10124293785548209,
+      "expected": -0.10124293785310733,
+      "scaled_error": 2.1564424778994367e-12,
+      "passed": true
+    },
+    {
+      "test": "finite-difference deformed transverse area with background response",
+      "nu": 0.45,
+      "epsilon_r": 1.0,
+      "measured": -0.5333333333644866,
+      "expected": -0.5333333333333332,
+      "scaled_error": 2.0317443379887528e-11,
+      "passed": true
+    },
+    {
+      "test": "finite-difference deformed transverse area with background response",
+      "nu": 0.45,
+      "epsilon_r": 2.0,
+      "measured": -0.2666666666822433,
+      "expected": -0.2666666666666666,
+      "scaled_error": 1.229739994045824e-11,
+      "passed": true
+    },
+    {
+      "test": "finite-difference deformed transverse area with background response",
+      "nu": 0.45,
+      "epsilon_r": 5.0,
+      "measured": -0.10666666667294501,
+      "expected": -0.10666666666666665,
+      "scaled_error": 5.6732229356082755e-12,
+      "passed": true
+    },
+    {
+      "test": "potential integral with independently updated macro thickness",
+      "layers": 1,
+      "measured": 2.2779661016958384e-10,
+      "expected": 2.2779661016949145e-10,
+      "relative_error": 4.0556237687548083e-13,
+      "passed": true
+    },
+    {
+      "test": "potential integral with independently updated macro thickness",
+      "layers": 100,
+      "measured": 2.277966101692641e-08,
+      "expected": 2.277966101694915e-08,
+      "relative_error": 9.982962162337519e-13,
+      "passed": true
+    },
+    {
+      "test": "potential integral with independently updated macro thickness",
+      "layers": 1000000,
+      "measured": 0.00022779661016957833,
+      "expected": 0.00022779661016949146,
+      "relative_error": 3.8135641705012375e-13,
+      "passed": true
+    }
+  ],
+  "symbolic_count": 30,
+  "numeric_count": 33,
+  "math_passed": true,
+  "question_accepted": false,
+  "set_accepted": false,
+  "source_sha256": {
+    "试卷.pdf": "3c8164d75b7f117095d26f554fb788867b2b781c9a642af12bee499d3b232cf0",
+    "答案.pdf": "111c13cd664b08f098076baed25c937368238953127045c5cfa8c8460471472a"
+  },
+  "script_sha256": "2b6ab7b9e1231f625020ce975c3ea45e7935c225dfa265e0cfc670980d17af59",
+  "draft_sha256": "62da4fbcfd41dfecc88100e09d41e83461608bbc5c04d0328e123b3456b95264",
+  "figure_source_sha256": "198d72d84a376c8b788e8034d0329ed15521a5bf52fdbc13eda1ea429f71cc21",
+  "result": {
+    "P0": "4*e*lam/a**2",
+    "alpha": "-4*e*tau/(Y*a**2*eps0)"
+  },
+  "pending": [
+    "当前图稿几何核验",
+    "分题工作PDF构建与实际审读",
+    "整套其余题与三版本正式成品"
+  ]
+}

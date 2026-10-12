@@ -1,0 +1,98 @@
+\documentclass[tikz,border=5pt]{standalone}
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath,amssymb}
+\usetikzlibrary{arrows.meta,calc,angles,quotes}
+\definecolor{ink}{HTML}{243447}
+\definecolor{blue}{HTML}{2765A2}
+\definecolor{green}{HTML}{3F7D5B}
+\definecolor{red}{HTML}{B74739}
+\tikzset{body/.style={draw=ink,thick},ray/.style={blue,thick},vec/.style={blue,thick,-{Latex}},guide/.style={gray!65,dashed},line cap=round}
+\newcommand{\lens}[1]{\draw[body,fill=blue!4] (#1,-1.4)to[bend left=17](#1,1.4)to[bend left=17]cycle;}
+\begin{document}
+\begin{tikzpicture}
+\draw[guide](-3.5,0)--(7.7,0)node[right]{$x$};
+\draw[body](-2,-1.7)--(-2,-.65);
+\draw[body](-2,.65)--(-2,1.7);
+\draw[ink,<->](-2.35,-.65)--(-2.35,.65)node[midway,left]{$D$};
+\lens{0}\lens{3}
+\draw[body](5,-1.7)--(5,1.7);
+\foreach \y in {-.4,.1,.4}\draw[vec](-3.5,\y)--(-2,{\y+.15});
+\node[above]at(-2,1.8){光圈};
+\node[above]at(0,1.8){$L_1$};
+\node[above]at(3,1.8){$L_2$};
+\node[above]at(5,1.8){底片};
+\draw[ink,<->](-2,-2.1)--(0,-2.1)node[midway,below]{$2f$};
+\draw[ink,<->](0,-2.1)--(3,-2.1)node[midway,below]{$3f$};
+\draw[ink,<->](3,-2.1)--(5,-2.1)node[midway,below]{$b$};
+\node[blue]at(-3.1,.9){$\alpha$};
+\node at(2.3,-3){两个薄双凸透镜：焦距 $f$，球面半径大小 $f$};
+\end{tikzpicture}
+\begin{tikzpicture}
+\draw[guide](-2.8,0)--(6.1,0);
+\lens{0}\lens{3}
+\draw[body](5,-1.6)--(5,1.6);
+\draw[ray](-2,.55)--(0,.75)--(3,-1.2)--(5,-.1);
+\draw[green,thick](-2,-.35)--(0,-.15)--(3,.6)--(5,-.1);
+\draw[vec](1.4,-.16)--(1.7,-.355);
+\draw[vec](4,-.65)--(4.3,-.485);
+\fill[red](5,-.1)circle(2pt);
+\node[right,red]at(5.1,-.5){$y_{\rm dir}=-f\alpha$};
+\node[above]at(0,1.7){$h$可不同};
+\node[above]at(3,1.7){$y_2=-2h+3f\alpha$};
+\draw[ink,<->](3,-2.2)--(5,-2.2)node[midway,below]{$2f$};
+\node at(1.8,-3){纵向放大示意；两条光线的交点相同};
+\end{tikzpicture}
+\begin{tikzpicture}
+\draw[body,domain=145:215,samples=60]plot({2.8+2*cos(\x)},{2*sin(\x)});
+\draw[guide](-2,0)--(2.5,0);
+\coordinate(P)at(.83086,.35);
+\draw[ray,-{Latex}](-1.8,.1)--(P);
+\draw[red,thick,-{Latex}](P)--(-1.8,1.60);
+\draw[guide](P)--(2.8,0);
+\fill[ink](2.8,0)circle(1.5pt)node[below]{$C$};
+\node[above]at(.4,1.6){入射侧看到凸面};
+\node[left]at(-1.8,.1){入射};
+\node[left]at(-1.8,1.60){反射};
+\node at(.3,-1.8){$\eta_{\rm out}=\eta_{\rm in}+2y/f$};
+\begin{scope}[shift={(6.6,0)}]
+\draw[guide](-1.2,0)--(2.1,0);
+\draw[body](0,-1.1)--(0,1.2);
+\draw[ray,-{Latex}](-1.1,.5)--(0,.7);
+\draw[red,thick,-{Latex}](0,.7)--(1.7,1.4);
+\node[above]at(.4,1.9){沿传播方向展开};
+\node at(.5,-1.8){镜面焦距 $f_M=-f/2$};
+\end{scope}
+\end{tikzpicture}
+\begin{tikzpicture}[x=.7cm,y=1cm]
+\draw[guide](-1,0)--(12,0);
+\foreach \s/\lab in {0/{L_1\text{透射}},3/{L_2\text{反射}},6/{L_1\text{反射}},9/{L_2\text{透射}},11/{\text{底片}}}{
+\draw[body](\s,-1.7)--(\s,1.2);
+\node[above,align=center]at(\s,1.4){$\lab$};
+}
+\draw[ray](-.8,.0126)--(0,.015)--(3,-.021)--(6,-.183)--(9,-1.443)--(11,.603);
+\foreach \s/\yy/\name in {0/.015/h,3/-.021/y_2,6/-.183/y_3,9/-1.443/y_4,11/.603/y_{\rm g}}{
+\fill[blue](\s,\yy)circle(1.6pt);
+\node[below right,fill=white,inner sep=1pt]at(\s,\yy){$\name$};
+}
+\foreach \a/\b/\d in {0/3/{3f},3/6/{3f},6/9/{3f},9/11/{2f}}{
+\draw[ink,<->](\a,-2.2)--(\b,-2.2)node[midway,below]{$\d$};}
+\node[align=center]at(5.5,-3.3){反向传播段已展开；重复标出的 $L_1,L_2$是同一对透镜\\纵向放大示意；各站高度按同一追迹公式绘制};
+\end{tikzpicture}
+\begin{tikzpicture}
+\draw[vec](-2,0)--(7.5,0)node[right]{$y$};
+\draw[body](-3,0)circle(.55);
+\node[above]at(-3,.9){光圈轮廓};
+\node[below]at(-3,-.9){最大直径 $D$};
+\draw[vec](-2.3,1)--(1.2,1)node[midway,above]{$p\mapsto56p+33f\alpha$};
+\draw[blue,thick,fill=blue!5](4,0)circle(1.15);
+\draw[ink,<->](2.85,-1.55)--(5.15,-1.55)node[midway,below]{$D'=56D$};
+\fill[red](-.5,0)circle(2pt)node[below]{$-f\alpha$};
+\fill[ink](0,0)circle(1.5pt)node[below]{$O$};
+\fill[blue](4,0)circle(2pt);
+\node[blue,above]at(4,.25){$33f\alpha$};
+\draw[guide](0,0)--(0,1.65);
+\draw[ink,<->](0,1.65)--(4,1.65)node[midway,above]{$l=33f|\alpha|$};
+\node[red]at(-.9,-1){正常像点};
+\node at(2.5,-2.55){中心间距为 $34f|\alpha|$；图示不按横向比例};
+\end{tikzpicture}
+\end{document}

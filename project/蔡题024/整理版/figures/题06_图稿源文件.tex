@@ -1,0 +1,42 @@
+\documentclass[tikz,border=5pt]{standalone}
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath}
+\usetikzlibrary{arrows.meta,calc}
+\definecolor{blue}{RGB}{45,98,142}
+\definecolor{red}{RGB}{175,67,51}
+\begin{document}
+\begin{tikzpicture}
+\draw[thick](0,0)rectangle(2.4,2.1);\draw[thick](0,2.1)--(.7,2.6)--(3.1,2.6)--(2.4,2.1);
+\draw[thick](3.1,2.6)--(3.1,.5)--(2.4,0);
+\draw[gray,dashed](0,0)--(.7,.5)--(3.1,.5);\draw[gray,dashed](.7,.5)--(.7,2.6);
+\foreach \x/\y in{.5/.7,1.2/1.3,1.8/.6,1.9/1.8}{\fill[blue](\x,\y)circle(2pt);}
+\node at(1.5,-.5){气体：$PV=Nk_BT$};
+\begin{scope}[xshift=5cm]
+\draw[blue,thick,-{Stealth}](0,1)--(2,1)node[midway,above]{氖原子束};
+\foreach \y in{0,.4,.8,1.2,1.6,2}{\draw[thick](2,\y)--(2,\y+.2);}
+\draw[gray,<->](2.4,.1)--node[right]{$d$}(2.4,.5);
+\draw[blue,-{Stealth}](2.05,1)--(4,1.75); \draw[blue,-{Stealth}](2.05,1)--(4,.25);
+\node at(2,-.6){$\lambda=h/p$，$d=0.5\,\mathrm{nm}$};
+\end{scope}
+\end{tikzpicture}
+\begin{tikzpicture}
+\draw[thick](0,-.5)--(0,2); \draw[thick](4,-.5)--(4,2);
+\draw[blue,thick,-{Stealth}](.2,1.5)--(3.8,1.5)node[midway,above]{$v_x$};
+\draw[red,thick,-{Stealth}](3.8,.4)--(.2,.4)node[midway,below]{$-v_x$};
+\draw[gray,<->](0,-1)--node[below]{$L$}(4,-1);
+\node[align=center]at(2,2.8){碰同一面墙：$\Delta t=2L/|v_x|$\\传给墙的动量：$2m|v_x|$};
+\node at(2,-2){各向同性：$\langle v^2\rangle=3\langle v_x^2\rangle$};
+\end{tikzpicture}
+\begin{tikzpicture}
+\coordinate(A)at(0,1.5);\coordinate(B)at(0,0);
+\coordinate(H)at(.75,.75);
+\draw[thick](0,-.6)--(0,2.2);\fill[blue](A)circle(2pt);\fill[blue](B)circle(2pt);
+\draw[blue,thick,-{Stealth}](A)--(3,4.5);\draw[blue,thick,-{Stealth}](B)--(3,3);
+\draw[gray,dashed](A)--(H);\draw[red,thick](B)--(H);
+\draw[red](.45,.45)--(1.2,-.2);\node[red]at(1.6,-.5){$d\sin\beta$};
+\draw[gray,dashed](B)--(2.2,0);
+\draw[gray](.7,0)arc(0:45:.7); \node at(1,.35){$\beta$};
+\draw[gray,<->](-.5,0)--node[left]{$d$}(-.5,1.5);
+\node at(1.6,-1.2){相长条件：$d\sin\beta=j\lambda$};
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,1726 @@
+{
+  "paper": "014",
+  "question": "01",
+  "model": "authorized co-rotating observer",
+  "model_authorized": true,
+  "authorization": "用户2026-10-10明确回复：四项均按建议修订并注明",
+  "symbolic_checks": [
+    {
+      "name": "rotating coordinates derived from rotation matrix",
+      "passed": true
+    },
+    {
+      "name": "ground velocity from original position",
+      "passed": true
+    },
+    {
+      "name": "ground acceleration from original position",
+      "passed": true
+    },
+    {
+      "name": "ellipse equation",
+      "passed": true
+    },
+    {
+      "name": "rotating velocity from transport theorem",
+      "passed": true
+    },
+    {
+      "name": "rotating acceleration from transport theorem",
+      "passed": true
+    },
+    {
+      "name": "polar ground velocity",
+      "passed": true
+    },
+    {
+      "name": "polar ground acceleration",
+      "passed": true
+    },
+    {
+      "name": "ground speed squared",
+      "passed": true
+    },
+    {
+      "name": "ground acceleration squared",
+      "passed": true
+    },
+    {
+      "name": "observer velocity",
+      "passed": true
+    },
+    {
+      "name": "observer acceleration",
+      "passed": true
+    },
+    {
+      "name": "fixed rider ground speed",
+      "passed": true
+    },
+    {
+      "name": "fixed rider observer speed",
+      "passed": true
+    },
+    {
+      "name": "fixed rider ground acceleration",
+      "passed": true
+    },
+    {
+      "name": "fixed rider observer acceleration",
+      "passed": true
+    },
+    {
+      "name": "tangent condition",
+      "passed": true
+    },
+    {
+      "name": "initial ground velocity",
+      "passed": true
+    },
+    {
+      "name": "initial ground acceleration",
+      "passed": true
+    },
+    {
+      "name": "cusp ground velocity",
+      "passed": true
+    },
+    {
+      "name": "cusp ground acceleration",
+      "passed": true
+    },
+    {
+      "name": "variant 1 translating observer is negative ground separation",
+      "passed": true
+    },
+    {
+      "name": "variant 2 general rotating position",
+      "passed": true
+    },
+    {
+      "name": "variant 2 general ground velocity",
+      "passed": true
+    },
+    {
+      "name": "variant 2 general ground acceleration",
+      "passed": true
+    },
+    {
+      "name": "variant 3 speed extrema representation",
+      "passed": true
+    },
+    {
+      "name": "variant 3 acceleration extrema representation",
+      "passed": true
+    },
+    {
+      "name": "variant 4 pi/4 velocity exact value",
+      "passed": true
+    },
+    {
+      "name": "actual velocity facing x component",
+      "passed": true
+    },
+    {
+      "name": "actual velocity facing y component",
+      "passed": true
+    }
+  ],
+  "numeric_checks": [
+    {
+      "parameters": [
+        1.0,
+        2.0,
+        0.7
+      ],
+      "theta": 0.0,
+      "observer": false,
+      "quantity": "velocity",
+      "max_scaled_error": 1.2952601953960158e-13,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.0,
+        2.0,
+        0.7
+      ],
+      "theta": 0.0,
+      "observer": false,
+      "quantity": "acceleration",
+      "max_scaled_error": 2.3133141895815173e-09,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.0,
+        2.0,
+        0.7
+      ],
+      "theta": 0.0,
+      "observer": true,
+      "quantity": "velocity",
+      "max_scaled_error": 9.251858538542972e-17,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.0,
+        2.0,
+        0.7
+      ],
+      "theta": 0.0,
+      "observer": true,
+      "quantity": "acceleration",
+      "max_scaled_error": 2.128644426910546e-09,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.0,
+        2.0,
+        0.7
+      ],
+      "theta": 0.15,
+      "observer": false,
+      "quantity": "velocity",
+      "max_scaled_error": 1.2363184597243e-13,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.0,
+        2.0,
+        0.7
+      ],
+      "theta": 0.15,
+      "observer": false,
+      "quantity": "acceleration",
+      "max_scaled_error": 4.0372760887081457e-10,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.0,
+        2.0,
+        0.7
+      ],
+      "theta": 0.15,
+      "observer": true,
+      "quantity": "velocity",
+      "max_scaled_error": 1.3766108642876697e-13,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.0,
+        2.0,
+        0.7
+      ],
+      "theta": 0.15,
+      "observer": true,
+      "quantity": "acceleration",
+      "max_scaled_error": 1.1890837943702627e-09,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.0,
+        2.0,
+        0.7
+      ],
+      "theta": 0.4,
+      "observer": false,
+      "quantity": "velocity",
+      "max_scaled_error": 6.653954930773375e-14,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.0,
+        2.0,
+        0.7
+      ],
+      "theta": 0.4,
+      "observer": false,
+      "quantity": "acceleration",
+      "max_scaled_error": 5.007667594283049e-09,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.0,
+        2.0,
+        0.7
+      ],
+      "theta": 0.4,
+      "observer": true,
+      "quantity": "velocity",
+      "max_scaled_error": 2.2403420404332117e-13,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.0,
+        2.0,
+        0.7
+      ],
+      "theta": 0.4,
+      "observer": true,
+      "quantity": "acceleration",
+      "max_scaled_error": 4.7238650534458945e-09,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.0,
+        2.0,
+        0.7
+      ],
+      "theta": 0.83,
+      "observer": false,
+      "quantity": "velocity",
+      "max_scaled_error": 3.218423988392101e-13,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.0,
+        2.0,
+        0.7
+      ],
+      "theta": 0.83,
+      "observer": false,
+      "quantity": "acceleration",
+      "max_scaled_error": 5.066202407915709e-09,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.0,
+        2.0,
+        0.7
+      ],
+      "theta": 0.83,
+      "observer": true,
+      "quantity": "velocity",
+      "max_scaled_error": 6.336543817888187e-13,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.0,
+        2.0,
+        0.7
+      ],
+      "theta": 0.83,
+      "observer": true,
+      "quantity": "acceleration",
+      "max_scaled_error": 2.2411685510161475e-09,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.0,
+        2.0,
+        0.7
+      ],
+      "theta": 1.4,
+      "observer": false,
+      "quantity": "velocity",
+      "max_scaled_error": 3.1617538374211897e-13,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.0,
+        2.0,
+        0.7
+      ],
+      "theta": 1.4,
+      "observer": false,
+      "quantity": "acceleration",
+      "max_scaled_error": 2.039595614275574e-09,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.0,
+        2.0,
+        0.7
+      ],
+      "theta": 1.4,
+      "observer": true,
+      "quantity": "velocity",
+      "max_scaled_error": 2.010132680311958e-13,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.0,
+        2.0,
+        0.7
+      ],
+      "theta": 1.4,
+      "observer": true,
+      "quantity": "acceleration",
+      "max_scaled_error": 6.30082002266717e-09,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.0,
+        2.0,
+        0.7
+      ],
+      "theta": 2.1,
+      "observer": false,
+      "quantity": "velocity",
+      "max_scaled_error": 4.660911075064169e-14,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.0,
+        2.0,
+        0.7
+      ],
+      "theta": 2.1,
+      "observer": false,
+      "quantity": "acceleration",
+      "max_scaled_error": 2.3199220412464028e-09,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.0,
+        2.0,
+        0.7
+      ],
+      "theta": 2.1,
+      "observer": true,
+      "quantity": "velocity",
+      "max_scaled_error": 1.4238927848121253e-13,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.0,
+        2.0,
+        0.7
+      ],
+      "theta": 2.1,
+      "observer": true,
+      "quantity": "acceleration",
+      "max_scaled_error": 1.726013600025618e-09,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.0,
+        2.0,
+        0.7
+      ],
+      "theta": 2.85,
+      "observer": false,
+      "quantity": "velocity",
+      "max_scaled_error": 6.20541931576335e-13,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.0,
+        2.0,
+        0.7
+      ],
+      "theta": 2.85,
+      "observer": false,
+      "quantity": "acceleration",
+      "max_scaled_error": 1.8198439489318617e-09,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.0,
+        2.0,
+        0.7
+      ],
+      "theta": 2.85,
+      "observer": true,
+      "quantity": "velocity",
+      "max_scaled_error": 9.464560850758317e-13,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.0,
+        2.0,
+        0.7
+      ],
+      "theta": 2.85,
+      "observer": true,
+      "quantity": "acceleration",
+      "max_scaled_error": 1.2557489862449896e-08,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.0,
+        2.0,
+        0.7
+      ],
+      "theta": 3.141592653589793,
+      "observer": false,
+      "quantity": "velocity",
+      "max_scaled_error": 2.5141412827474165e-16,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.0,
+        2.0,
+        0.7
+      ],
+      "theta": 3.141592653589793,
+      "observer": false,
+      "quantity": "acceleration",
+      "max_scaled_error": 4.630101768297829e-09,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.0,
+        2.0,
+        0.7
+      ],
+      "theta": 3.141592653589793,
+      "observer": true,
+      "quantity": "velocity",
+      "max_scaled_error": 1.0356530448045003e-12,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.0,
+        2.0,
+        0.7
+      ],
+      "theta": 3.141592653589793,
+      "observer": true,
+      "quantity": "acceleration",
+      "max_scaled_error": 1.3600342850645324e-08,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.0,
+        2.0,
+        0.7
+      ],
+      "theta": 3.7,
+      "observer": false,
+      "quantity": "velocity",
+      "max_scaled_error": 6.317553964796453e-13,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.0,
+        2.0,
+        0.7
+      ],
+      "theta": 3.7,
+      "observer": false,
+      "quantity": "acceleration",
+      "max_scaled_error": 3.134107002905577e-09,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.0,
+        2.0,
+        0.7
+      ],
+      "theta": 3.7,
+      "observer": true,
+      "quantity": "velocity",
+      "max_scaled_error": 8.502773108453032e-13,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.0,
+        2.0,
+        0.7
+      ],
+      "theta": 3.7,
+      "observer": true,
+      "quantity": "acceleration",
+      "max_scaled_error": 5.936496223950311e-09,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.0,
+        2.0,
+        0.7
+      ],
+      "theta": 5.3,
+      "observer": false,
+      "quantity": "velocity",
+      "max_scaled_error": 2.0440155887646377e-13,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.0,
+        2.0,
+        0.7
+      ],
+      "theta": 5.3,
+      "observer": false,
+      "quantity": "acceleration",
+      "max_scaled_error": 1.5796695463027405e-08,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.0,
+        2.0,
+        0.7
+      ],
+      "theta": 5.3,
+      "observer": true,
+      "quantity": "velocity",
+      "max_scaled_error": 1.4740718108304587e-13,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.0,
+        2.0,
+        0.7
+      ],
+      "theta": 5.3,
+      "observer": true,
+      "quantity": "acceleration",
+      "max_scaled_error": 1.2443428482211668e-08,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.0,
+        2.0,
+        0.7
+      ],
+      "theta": 6.1,
+      "observer": false,
+      "quantity": "velocity",
+      "max_scaled_error": 1.2608410915729086e-12,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.0,
+        2.0,
+        0.7
+      ],
+      "theta": 6.1,
+      "observer": false,
+      "quantity": "acceleration",
+      "max_scaled_error": 1.7803265941395055e-09,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.0,
+        2.0,
+        0.7
+      ],
+      "theta": 6.1,
+      "observer": true,
+      "quantity": "velocity",
+      "max_scaled_error": 1.7868578164001884e-12,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.0,
+        2.0,
+        0.7
+      ],
+      "theta": 6.1,
+      "observer": true,
+      "quantity": "acceleration",
+      "max_scaled_error": 4.117173600948291e-09,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.3,
+        1.31,
+        1.5
+      ],
+      "theta": 0.0,
+      "observer": false,
+      "quantity": "velocity",
+      "max_scaled_error": 2.2580807280511657e-16,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.3,
+        1.31,
+        1.5
+      ],
+      "theta": 0.0,
+      "observer": false,
+      "quantity": "acceleration",
+      "max_scaled_error": 4.4857360826595695e-09,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.3,
+        1.31,
+        1.5
+      ],
+      "theta": 0.0,
+      "observer": true,
+      "quantity": "velocity",
+      "max_scaled_error": 2.168404344971009e-15,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.3,
+        1.31,
+        1.5
+      ],
+      "theta": 0.0,
+      "observer": true,
+      "quantity": "acceleration",
+      "max_scaled_error": 9.634375568740685e-09,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.3,
+        1.31,
+        1.5
+      ],
+      "theta": 0.15,
+      "observer": false,
+      "quantity": "velocity",
+      "max_scaled_error": 7.421699350073678e-13,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.3,
+        1.31,
+        1.5
+      ],
+      "theta": 0.15,
+      "observer": false,
+      "quantity": "acceleration",
+      "max_scaled_error": 1.3930034350961547e-09,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.3,
+        1.31,
+        1.5
+      ],
+      "theta": 0.15,
+      "observer": true,
+      "quantity": "velocity",
+      "max_scaled_error": 9.740798481700496e-13,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.3,
+        1.31,
+        1.5
+      ],
+      "theta": 0.15,
+      "observer": true,
+      "quantity": "acceleration",
+      "max_scaled_error": 7.267207084872658e-10,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.3,
+        1.31,
+        1.5
+      ],
+      "theta": 0.4,
+      "observer": false,
+      "quantity": "velocity",
+      "max_scaled_error": 3.9696877636028375e-13,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.3,
+        1.31,
+        1.5
+      ],
+      "theta": 0.4,
+      "observer": false,
+      "quantity": "acceleration",
+      "max_scaled_error": 1.1881393798901429e-09,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.3,
+        1.31,
+        1.5
+      ],
+      "theta": 0.4,
+      "observer": true,
+      "quantity": "velocity",
+      "max_scaled_error": 9.099984073389914e-13,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.3,
+        1.31,
+        1.5
+      ],
+      "theta": 0.4,
+      "observer": true,
+      "quantity": "acceleration",
+      "max_scaled_error": 8.891074858359955e-10,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.3,
+        1.31,
+        1.5
+      ],
+      "theta": 0.83,
+      "observer": false,
+      "quantity": "velocity",
+      "max_scaled_error": 1.8937759398250968e-14,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.3,
+        1.31,
+        1.5
+      ],
+      "theta": 0.83,
+      "observer": false,
+      "quantity": "acceleration",
+      "max_scaled_error": 9.41006652055644e-09,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.3,
+        1.31,
+        1.5
+      ],
+      "theta": 0.83,
+      "observer": true,
+      "quantity": "velocity",
+      "max_scaled_error": 3.7851018796475805e-13,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.3,
+        1.31,
+        1.5
+      ],
+      "theta": 0.83,
+      "observer": true,
+      "quantity": "acceleration",
+      "max_scaled_error": 8.86547288529224e-09,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.3,
+        1.31,
+        1.5
+      ],
+      "theta": 1.4,
+      "observer": false,
+      "quantity": "velocity",
+      "max_scaled_error": 4.319694227608305e-13,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.3,
+        1.31,
+        1.5
+      ],
+      "theta": 1.4,
+      "observer": false,
+      "quantity": "acceleration",
+      "max_scaled_error": 3.0236116183458495e-09,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.3,
+        1.31,
+        1.5
+      ],
+      "theta": 1.4,
+      "observer": true,
+      "quantity": "velocity",
+      "max_scaled_error": 1.3824674668207998e-12,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.3,
+        1.31,
+        1.5
+      ],
+      "theta": 1.4,
+      "observer": true,
+      "quantity": "acceleration",
+      "max_scaled_error": 4.970852852901374e-09,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.3,
+        1.31,
+        1.5
+      ],
+      "theta": 2.1,
+      "observer": false,
+      "quantity": "velocity",
+      "max_scaled_error": 4.595388235031825e-13,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.3,
+        1.31,
+        1.5
+      ],
+      "theta": 2.1,
+      "observer": false,
+      "quantity": "acceleration",
+      "max_scaled_error": 6.7414370087563025e-09,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.3,
+        1.31,
+        1.5
+      ],
+      "theta": 2.1,
+      "observer": true,
+      "quantity": "velocity",
+      "max_scaled_error": 4.82930390946461e-13,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.3,
+        1.31,
+        1.5
+      ],
+      "theta": 2.1,
+      "observer": true,
+      "quantity": "acceleration",
+      "max_scaled_error": 1.3380702755614159e-08,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.3,
+        1.31,
+        1.5
+      ],
+      "theta": 2.85,
+      "observer": false,
+      "quantity": "velocity",
+      "max_scaled_error": 4.463205284346876e-14,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.3,
+        1.31,
+        1.5
+      ],
+      "theta": 2.85,
+      "observer": false,
+      "quantity": "acceleration",
+      "max_scaled_error": 8.890180358174372e-10,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.3,
+        1.31,
+        1.5
+      ],
+      "theta": 2.85,
+      "observer": true,
+      "quantity": "velocity",
+      "max_scaled_error": 6.140401176923449e-14,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.3,
+        1.31,
+        1.5
+      ],
+      "theta": 2.85,
+      "observer": true,
+      "quantity": "acceleration",
+      "max_scaled_error": 2.13919921628228e-09,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.3,
+        1.31,
+        1.5
+      ],
+      "theta": 3.141592653589793,
+      "observer": false,
+      "quantity": "velocity",
+      "max_scaled_error": 4.162142311715167e-13,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.3,
+        1.31,
+        1.5
+      ],
+      "theta": 3.141592653589793,
+      "observer": false,
+      "quantity": "acceleration",
+      "max_scaled_error": 3.6939973471521737e-09,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.3,
+        1.31,
+        1.5
+      ],
+      "theta": 3.141592653589793,
+      "observer": true,
+      "quantity": "velocity",
+      "max_scaled_error": 5.549902722794625e-13,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.3,
+        1.31,
+        1.5
+      ],
+      "theta": 3.141592653589793,
+      "observer": true,
+      "quantity": "acceleration",
+      "max_scaled_error": 8.726336746617602e-08,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.3,
+        1.31,
+        1.5
+      ],
+      "theta": 3.7,
+      "observer": false,
+      "quantity": "velocity",
+      "max_scaled_error": 3.349081905594065e-13,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.3,
+        1.31,
+        1.5
+      ],
+      "theta": 3.7,
+      "observer": false,
+      "quantity": "acceleration",
+      "max_scaled_error": 9.288389874869165e-09,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.3,
+        1.31,
+        1.5
+      ],
+      "theta": 3.7,
+      "observer": true,
+      "quantity": "velocity",
+      "max_scaled_error": 3.228269403582352e-13,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.3,
+        1.31,
+        1.5
+      ],
+      "theta": 3.7,
+      "observer": true,
+      "quantity": "acceleration",
+      "max_scaled_error": 1.5564340800595804e-08,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.3,
+        1.31,
+        1.5
+      ],
+      "theta": 5.3,
+      "observer": false,
+      "quantity": "velocity",
+      "max_scaled_error": 1.4319398878814718e-12,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.3,
+        1.31,
+        1.5
+      ],
+      "theta": 5.3,
+      "observer": false,
+      "quantity": "acceleration",
+      "max_scaled_error": 6.324235728582312e-09,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.3,
+        1.31,
+        1.5
+      ],
+      "theta": 5.3,
+      "observer": true,
+      "quantity": "velocity",
+      "max_scaled_error": 2.210469848155334e-12,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.3,
+        1.31,
+        1.5
+      ],
+      "theta": 5.3,
+      "observer": true,
+      "quantity": "acceleration",
+      "max_scaled_error": 4.741970551852984e-09,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.3,
+        1.31,
+        1.5
+      ],
+      "theta": 6.1,
+      "observer": false,
+      "quantity": "velocity",
+      "max_scaled_error": 1.965213257329729e-12,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.3,
+        1.31,
+        1.5
+      ],
+      "theta": 6.1,
+      "observer": false,
+      "quantity": "acceleration",
+      "max_scaled_error": 3.716912921802188e-09,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.3,
+        1.31,
+        1.5
+      ],
+      "theta": 6.1,
+      "observer": true,
+      "quantity": "velocity",
+      "max_scaled_error": 1.982339298483322e-12,
+      "passed": true
+    },
+    {
+      "parameters": [
+        1.3,
+        1.31,
+        1.5
+      ],
+      "theta": 6.1,
+      "observer": true,
+      "quantity": "acceleration",
+      "max_scaled_error": 8.034846748781223e-09,
+      "passed": true
+    },
+    {
+      "parameters": [
+        0.2,
+        100.0,
+        0.03
+      ],
+      "theta": 0.0,
+      "observer": false,
+      "quantity": "velocity",
+      "max_scaled_error": 5.329070518200751e-13,
+      "passed": true
+    },
+    {
+      "parameters": [
+        0.2,
+        100.0,
+        0.03
+      ],
+      "theta": 0.0,
+      "observer": false,
+      "quantity": "acceleration",
+      "max_scaled_error": 4.219062742830921e-10,
+      "passed": true
+    },
+    {
+      "parameters": [
+        0.2,
+        100.0,
+        0.03
+      ],
+      "theta": 0.0,
+      "observer": true,
+      "quantity": "velocity",
+      "max_scaled_error": 1.7763568394002505e-13,
+      "passed": true
+    },
+    {
+      "parameters": [
+        0.2,
+        100.0,
+        0.03
+      ],
+      "theta": 0.0,
+      "observer": true,
+      "quantity": "acceleration",
+      "max_scaled_error": 1.4197389093528403e-10,
+      "passed": true
+    },
+    {
+      "parameters": [
+        0.2,
+        100.0,
+        0.03
+      ],
+      "theta": 0.15,
+      "observer": false,
+      "quantity": "velocity",
+      "max_scaled_error": 2.282869336392872e-13,
+      "passed": true
+    },
+    {
+      "parameters": [
+        0.2,
+        100.0,
+        0.03
+      ],
+      "theta": 0.15,
+      "observer": false,
+      "quantity": "acceleration",
+      "max_scaled_error": 4.96053119555078e-10,
+      "passed": true
+    },
+    {
+      "parameters": [
+        0.2,
+        100.0,
+        0.03
+      ],
+      "theta": 0.15,
+      "observer": true,
+      "quantity": "velocity",
+      "max_scaled_error": 7.305299074011869e-13,
+      "passed": true
+    },
+    {
+      "parameters": [
+        0.2,
+        100.0,
+        0.03
+      ],
+      "theta": 0.15,
+      "observer": true,
+      "quantity": "acceleration",
+      "max_scaled_error": 2.4022170239150147e-10,
+      "passed": true
+    },
+    {
+      "parameters": [
+        0.2,
+        100.0,
+        0.03
+      ],
+      "theta": 0.4,
+      "observer": false,
+      "quantity": "velocity",
+      "max_scaled_error": 5.785867688713407e-14,
+      "passed": true
+    },
+    {
+      "parameters": [
+        0.2,
+        100.0,
+        0.03
+      ],
+      "theta": 0.4,
+      "observer": false,
+      "quantity": "acceleration",
+      "max_scaled_error": 5.174265993644511e-10,
+      "passed": true
+    },
+    {
+      "parameters": [
+        0.2,
+        100.0,
+        0.03
+      ],
+      "theta": 0.4,
+      "observer": true,
+      "quantity": "velocity",
+      "max_scaled_error": 3.3945746227410643e-13,
+      "passed": true
+    },
+    {
+      "parameters": [
+        0.2,
+        100.0,
+        0.03
+      ],
+      "theta": 0.4,
+      "observer": true,
+      "quantity": "acceleration",
+      "max_scaled_error": 2.3203341353587174e-10,
+      "passed": true
+    },
+    {
+      "parameters": [
+        0.2,
+        100.0,
+        0.03
+      ],
+      "theta": 0.83,
+      "observer": false,
+      "quantity": "velocity",
+      "max_scaled_error": 4.833297870904167e-13,
+      "passed": true
+    },
+    {
+      "parameters": [
+        0.2,
+        100.0,
+        0.03
+      ],
+      "theta": 0.83,
+      "observer": false,
+      "quantity": "acceleration",
+      "max_scaled_error": 2.9052926446382213e-11,
+      "passed": true
+    },
+    {
+      "parameters": [
+        0.2,
+        100.0,
+        0.03
+      ],
+      "theta": 0.83,
+      "observer": true,
+      "quantity": "velocity",
+      "max_scaled_error": 4.138644757312114e-13,
+      "passed": true
+    },
+    {
+      "parameters": [
+        0.2,
+        100.0,
+        0.03
+      ],
+      "theta": 0.83,
+      "observer": true,
+      "quantity": "acceleration",
+      "max_scaled_error": 1.1425666073659423e-09,
+      "passed": true
+    },
+    {
+      "parameters": [
+        0.2,
+        100.0,
+        0.03
+      ],
+      "theta": 1.4,
+      "observer": false,
+      "quantity": "velocity",
+      "max_scaled_error": 5.856204604157398e-13,
+      "passed": true
+    },
+    {
+      "parameters": [
+        0.2,
+        100.0,
+        0.03
+      ],
+      "theta": 1.4,
+      "observer": false,
+      "quantity": "acceleration",
+      "max_scaled_error": 7.186660857236351e-11,
+      "passed": true
+    },
+    {
+      "parameters": [
+        0.2,
+        100.0,
+        0.03
+      ],
+      "theta": 1.4,
+      "observer": true,
+      "quantity": "velocity",
+      "max_scaled_error": 5.500006865575459e-13,
+      "passed": true
+    },
+    {
+      "parameters": [
+        0.2,
+        100.0,
+        0.03
+      ],
+      "theta": 1.4,
+      "observer": true,
+      "quantity": "acceleration",
+      "max_scaled_error": 2.83325999931658e-10,
+      "passed": true
+    },
+    {
+      "parameters": [
+        0.2,
+        100.0,
+        0.03
+      ],
+      "theta": 2.1,
+      "observer": false,
+      "quantity": "velocity",
+      "max_scaled_error": 8.999676040231817e-13,
+      "passed": true
+    },
+    {
+      "parameters": [
+        0.2,
+        100.0,
+        0.03
+      ],
+      "theta": 2.1,
+      "observer": false,
+      "quantity": "acceleration",
+      "max_scaled_error": 2.457671392157059e-10,
+      "passed": true
+    },
+    {
+      "parameters": [
+        0.2,
+        100.0,
+        0.03
+      ],
+      "theta": 2.1,
+      "observer": true,
+      "quantity": "velocity",
+      "max_scaled_error": 1.5240255202615354e-12,
+      "passed": true
+    },
+    {
+      "parameters": [
+        0.2,
+        100.0,
+        0.03
+      ],
+      "theta": 2.1,
+      "observer": true,
+      "quantity": "acceleration",
+      "max_scaled_error": 1.1630336395744484e-09,
+      "passed": true
+    },
+    {
+      "parameters": [
+        0.2,
+        100.0,
+        0.03
+      ],
+      "theta": 2.85,
+      "observer": false,
+      "quantity": "velocity",
+      "max_scaled_error": 1.227789574598622e-12,
+      "passed": true
+    },
+    {
+      "parameters": [
+        0.2,
+        100.0,
+        0.03
+      ],
+      "theta": 2.85,
+      "observer": false,
+      "quantity": "acceleration",
+      "max_scaled_error": 1.2244184319129242e-10,
+      "passed": true
+    },
+    {
+      "parameters": [
+        0.2,
+        100.0,
+        0.03
+      ],
+      "theta": 2.85,
+      "observer": true,
+      "quantity": "velocity",
+      "max_scaled_error": 1.3382197795855325e-12,
+      "passed": true
+    },
+    {
+      "parameters": [
+        0.2,
+        100.0,
+        0.03
+      ],
+      "theta": 2.85,
+      "observer": true,
+      "quantity": "acceleration",
+      "max_scaled_error": 1.1934055502810434e-09,
+      "passed": true
+    },
+    {
+      "parameters": [
+        0.2,
+        100.0,
+        0.03
+      ],
+      "theta": 3.141592653589793,
+      "observer": false,
+      "quantity": "velocity",
+      "max_scaled_error": 3.5527100048601034e-13,
+      "passed": true
+    },
+    {
+      "parameters": [
+        0.2,
+        100.0,
+        0.03
+      ],
+      "theta": 3.141592653589793,
+      "observer": false,
+      "quantity": "acceleration",
+      "max_scaled_error": 2.5898358403033e-10,
+      "passed": true
+    },
+    {
+      "parameters": [
+        0.2,
+        100.0,
+        0.03
+      ],
+      "theta": 3.141592653589793,
+      "observer": true,
+      "quantity": "velocity",
+      "max_scaled_error": 1.3317125180378753e-12,
+      "passed": true
+    },
+    {
+      "parameters": [
+        0.2,
+        100.0,
+        0.03
+      ],
+      "theta": 3.141592653589793,
+      "observer": true,
+      "quantity": "acceleration",
+      "max_scaled_error": 1.2489358395511303e-09,
+      "passed": true
+    },
+    {
+      "parameters": [
+        0.2,
+        100.0,
+        0.03
+      ],
+      "theta": 3.7,
+      "observer": false,
+      "quantity": "velocity",
+      "max_scaled_error": 8.988332920223664e-13,
+      "passed": true
+    },
+    {
+      "parameters": [
+        0.2,
+        100.0,
+        0.03
+      ],
+      "theta": 3.7,
+      "observer": false,
+      "quantity": "acceleration",
+      "max_scaled_error": 9.360883515358667e-10,
+      "passed": true
+    },
+    {
+      "parameters": [
+        0.2,
+        100.0,
+        0.03
+      ],
+      "theta": 3.7,
+      "observer": true,
+      "quantity": "velocity",
+      "max_scaled_error": 3.8164039732776416e-13,
+      "passed": true
+    },
+    {
+      "parameters": [
+        0.2,
+        100.0,
+        0.03
+      ],
+      "theta": 3.7,
+      "observer": true,
+      "quantity": "acceleration",
+      "max_scaled_error": 7.217353949266159e-10,
+      "passed": true
+    },
+    {
+      "parameters": [
+        0.2,
+        100.0,
+        0.03
+      ],
+      "theta": 5.3,
+      "observer": false,
+      "quantity": "velocity",
+      "max_scaled_error": 1.152397297172213e-12,
+      "passed": true
+    },
+    {
+      "parameters": [
+        0.2,
+        100.0,
+        0.03
+      ],
+      "theta": 5.3,
+      "observer": false,
+      "quantity": "acceleration",
+      "max_scaled_error": 1.2368059549124348e-10,
+      "passed": true
+    },
+    {
+      "parameters": [
+        0.2,
+        100.0,
+        0.03
+      ],
+      "theta": 5.3,
+      "observer": true,
+      "quantity": "velocity",
+      "max_scaled_error": 1.2539979743205572e-13,
+      "passed": true
+    },
+    {
+      "parameters": [
+        0.2,
+        100.0,
+        0.03
+      ],
+      "theta": 5.3,
+      "observer": true,
+      "quantity": "acceleration",
+      "max_scaled_error": 1.9710394205320766e-09,
+      "passed": true
+    },
+    {
+      "parameters": [
+        0.2,
+        100.0,
+        0.03
+      ],
+      "theta": 6.1,
+      "observer": false,
+      "quantity": "velocity",
+      "max_scaled_error": 5.919190062811198e-14,
+      "passed": true
+    },
+    {
+      "parameters": [
+        0.2,
+        100.0,
+        0.03
+      ],
+      "theta": 6.1,
+      "observer": false,
+      "quantity": "acceleration",
+      "max_scaled_error": 9.25077538807695e-10,
+      "passed": true
+    },
+    {
+      "parameters": [
+        0.2,
+        100.0,
+        0.03
+      ],
+      "theta": 6.1,
+      "observer": true,
+      "quantity": "velocity",
+      "max_scaled_error": 2.614078896601034e-13,
+      "passed": true
+    },
+    {
+      "parameters": [
+        0.2,
+        100.0,
+        0.03
+      ],
+      "theta": 6.1,
+      "observer": true,
+      "quantity": "acceleration",
+      "max_scaled_error": 2.3523085318130264e-09,
+      "passed": true
+    }
+  ],
+  "symbolic_count": 30,
+  "numeric_count": 132,
+  "math_passed": true,
+  "accepted": false,
+  "source_sha256": {
+    "试卷.pdf": "3c8164d75b7f117095d26f554fb788867b2b781c9a642af12bee499d3b232cf0",
+    "答案.pdf": "111c13cd664b08f098076baed25c937368238953127045c5cfa8c8460471472a"
+  },
+  "script_sha256": "2450c3f4880c34e3f6a4f5bb905974e8101d2c981ae5b4a91f7a402ce3804a23",
+  "draft_sha256": "6f5578a7e12111d0362201459b5a20482fa6f6f0f94a7d88584d5d5a440d1ec4",
+  "figure_source_sha256": "0de5d08558ec3b059e37ef4114291cb7e9e92d46155149e8558baa7c93a278d2"
+}

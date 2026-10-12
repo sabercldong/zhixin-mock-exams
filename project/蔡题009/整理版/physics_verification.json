@@ -1,0 +1,670 @@
+{
+  "all_passed": true,
+  "check_count": 96,
+  "checks": [
+    {
+      "name": "01-闭合矩方程",
+      "passed": true,
+      "details": {
+        "T_over_W": [
+          0.8,
+          0.4,
+          0.2,
+          0.1
+        ]
+      }
+    },
+    {
+      "name": "01-碗口反力",
+      "passed": true,
+      "details": {
+        "R_over_W": [
+          0.29999999999999993,
+          0.4,
+          0.2,
+          0.1
+        ]
+      }
+    },
+    {
+      "name": "01-整体竖直平衡",
+      "passed": true,
+      "details": "四个碗口反力之和为W"
+    },
+    {
+      "name": "01-单侧接触可行",
+      "passed": true,
+      "details": "内端和碗口均无需拉力"
+    },
+    {
+      "name": "01-测试截面扫描",
+      "passed": true,
+      "details": {
+        "max_abs_M": 5.000000000000001
+      }
+    },
+    {
+      "name": "01-第一杆截面扫描",
+      "passed": true,
+      "details": {
+        "max_M_over_W": 0.19999999999999996,
+        "position": 0.75
+      }
+    },
+    {
+      "name": "01-第2杆截面扫描",
+      "passed": true,
+      "details": {
+        "max_M_over_W": 0.2
+      }
+    },
+    {
+      "name": "01-第3杆截面扫描",
+      "passed": true,
+      "details": {
+        "max_M_over_W": 0.1
+      }
+    },
+    {
+      "name": "01-第4杆截面扫描",
+      "passed": true,
+      "details": {
+        "max_M_over_W": 0.05
+      }
+    },
+    {
+      "name": "01-两根同时临界",
+      "passed": true,
+      "details": "第1、2杆同为5Nm"
+    },
+    {
+      "name": "01-质量换算",
+      "passed": true,
+      "details": "g=9.8时2.551kg，g=10时2.5kg"
+    },
+    {
+      "name": "01-减半测试载荷",
+      "passed": true,
+      "details": "测试四力10N，临界载荷12.5N"
+    },
+    {
+      "name": "02-圆周磁力方向",
+      "passed": true,
+      "details": {
+        "v_cross_B": [
+          -6,
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "name": "02-同步半径一阶",
+      "passed": true,
+      "details": {
+        "quotient": 0.3333355555801276
+      }
+    },
+    {
+      "name": "02-负电荷半径方向",
+      "passed": true,
+      "details": "负电荷半径向内偏移"
+    },
+    {
+      "name": "02-均匀变场守恒量",
+      "passed": true,
+      "details": "磁力矩+感生电力矩等于d(q B rho²/2)/dt"
+    },
+    {
+      "name": "02-法拉第环路",
+      "passed": true,
+      "details": "半径2场强导数.7：电场环量等于负磁通导数"
+    },
+    {
+      "name": "02-固定点时间偏导",
+      "passed": true,
+      "details": "固定点导数包含图样转速om"
+    },
+    {
+      "name": "02-径向场旋度",
+      "passed": true,
+      "details": "径向场具有正确的z向旋度"
+    },
+    {
+      "name": "02-共振相位pi除2",
+      "passed": true,
+      "details": "功率积分的无系数平均为1/2"
+    },
+    {
+      "name": "02-共振零相位",
+      "passed": true,
+      "details": "相位0平均为0"
+    },
+    {
+      "name": "02-共振反相",
+      "passed": true,
+      "details": "相位改变使平均功反号"
+    },
+    {
+      "name": "02-非匹配整数频率",
+      "passed": true,
+      "details": "遇场频率2而振动频率1，积分相消"
+    },
+    {
+      "name": "02-径向有效势二阶",
+      "passed": true,
+      "details": "κ²=ω0²−ω0ωc+ωc²"
+    },
+    {
+      "name": "03-精确平衡微分核验",
+      "passed": true,
+      "details": {
+        "exact_delta": 3.0623439539745334e-07,
+        "linear_delta": 3.062355406716526e-07
+      }
+    },
+    {
+      "name": "03-展开方向",
+      "passed": true,
+      "details": "间距增大则角度增大"
+    },
+    {
+      "name": "03-角速度变化",
+      "passed": true,
+      "details": "有限平衡变化与角速度微分式一致"
+    },
+    {
+      "name": "03-张力两式核对",
+      "passed": true,
+      "details": "T∝ω²和T=W/cosθ一致"
+    },
+    {
+      "name": "03-角函数对数导数",
+      "passed": true,
+      "details": "轨道半径平方产生四倍cot项"
+    },
+    {
+      "name": "03-角函数单调",
+      "passed": true,
+      "details": "允许区间的平衡解唯一"
+    },
+    {
+      "name": "03-有效势驻点",
+      "passed": true,
+      "details": "固定J的有效势恢复圆锥平衡"
+    },
+    {
+      "name": "03-有效势稳定曲率",
+      "passed": true,
+      "details": "倾角频率平方为ω²(1+3cos²θ)"
+    },
+    {
+      "name": "03-电力消失极限",
+      "passed": true,
+      "details": "q或U为0时没有角度变化"
+    },
+    {
+      "name": "03-恒电荷场不变",
+      "passed": true,
+      "details": "固定Q和S，场不依赖间距"
+    },
+    {
+      "name": "03-固定角速度区别",
+      "passed": true,
+      "details": "另一约束产生不同响应"
+    },
+    {
+      "name": "03-变式数值",
+      "passed": true,
+      "details": "30度、η=.5、间距增2%得到.001332rad"
+    },
+    {
+      "name": "04-伯努利数值",
+      "passed": true,
+      "details": {
+        "relative_pressures": [
+          300.0,
+          179.99999999999994
+        ],
+        "D": 240.0000000000001
+      }
+    },
+    {
+      "name": "04-焦距数值",
+      "passed": true,
+      "details": {
+        "f_m": 0.002696944444444445
+      }
+    },
+    {
+      "name": "04-折射矩阵核对",
+      "passed": true,
+      "details": "两面折合角矩阵给出同一焦度"
+    },
+    {
+      "name": "04-曲率正负",
+      "passed": true,
+      "details": "双凸左正右负"
+    },
+    {
+      "name": "04-对称会聚阈值",
+      "passed": true,
+      "details": "vB²>0.2v0²+0.8vA²"
+    },
+    {
+      "name": "04-入口压强抵消",
+      "passed": true,
+      "details": "共同p0不影响焦度"
+    },
+    {
+      "name": "04-入口速度不能抵消",
+      "passed": true,
+      "details": "不同密度下v0²系数−200"
+    },
+    {
+      "name": "04-等速无焦度",
+      "passed": true,
+      "details": "局部速度均为入口速度时D=0"
+    },
+    {
+      "name": "04-等折射率无焦度",
+      "passed": true,
+      "details": "曲率存在但折射率相等时焦度0"
+    },
+    {
+      "name": "04-弯月形无焦度",
+      "passed": true,
+      "details": "左右压差相反，光学半径相同"
+    },
+    {
+      "name": "04-张力翻倍",
+      "passed": true,
+      "details": "固定D时焦距增两倍"
+    },
+    {
+      "name": "04-周围介质因子",
+      "passed": true,
+      "details": "空气透镜系数与浸没系数不同，不能替换"
+    },
+    {
+      "name": "05-独立节点解x=0",
+      "passed": true,
+      "details": {
+        "I_nodes": 1.5,
+        "I_measured": 1.5,
+        "u": 1.0,
+        "j": 1.0
+      }
+    },
+    {
+      "name": "05-独立节点解x=0.1",
+      "passed": true,
+      "details": {
+        "I_nodes": 1.2692307692307692,
+        "I_measured": 1.2692307692307694,
+        "u": 1.0,
+        "j": 0.5384615384615383
+      }
+    },
+    {
+      "name": "05-独立节点解x=0.2",
+      "passed": true,
+      "details": {
+        "I_nodes": 1.125,
+        "I_measured": 1.1249999999999998,
+        "u": 1.0,
+        "j": 0.25000000000000006
+      }
+    },
+    {
+      "name": "05-独立节点解x=0.333333",
+      "passed": true,
+      "details": {
+        "I_nodes": 1.0,
+        "I_measured": 1.0,
+        "u": 1.0,
+        "j": -0.0
+      }
+    },
+    {
+      "name": "05-独立节点解x=0.5",
+      "passed": true,
+      "details": {
+        "I_nodes": 1.0,
+        "I_measured": 1.0,
+        "u": 0.6666666666666665,
+        "j": 0.0
+      }
+    },
+    {
+      "name": "05-独立节点解x=1",
+      "passed": true,
+      "details": {
+        "I_nodes": 1.0,
+        "I_measured": 1.0,
+        "u": 0.0,
+        "j": 0.0
+      }
+    },
+    {
+      "name": "05-独立节点解x=2",
+      "passed": true,
+      "details": {
+        "I_nodes": 1.0,
+        "I_measured": 1.0,
+        "u": -0.6666666666666667,
+        "j": 0.0
+      }
+    },
+    {
+      "name": "05-独立节点解x=2.9",
+      "passed": true,
+      "details": {
+        "I_nodes": 1.0,
+        "I_measured": 1.0,
+        "u": -0.9743589743589742,
+        "j": 0.0
+      }
+    },
+    {
+      "name": "05-独立节点解x=3",
+      "passed": true,
+      "details": {
+        "I_nodes": 1.0,
+        "I_measured": 1.0,
+        "u": -1.0,
+        "j": -0.0
+      }
+    },
+    {
+      "name": "05-独立节点解x=4",
+      "passed": true,
+      "details": {
+        "I_nodes": 0.9615384615384616,
+        "I_measured": 0.9615384615384616,
+        "u": -1.0,
+        "j": -0.0769230769230769
+      }
+    },
+    {
+      "name": "05-独立节点解x=10",
+      "passed": true,
+      "details": {
+        "I_nodes": 0.8870967741935484,
+        "I_measured": 0.8870967741935484,
+        "u": -1.0,
+        "j": -0.22580645161290316
+      }
+    },
+    {
+      "name": "05-独立节点解x=1e+06",
+      "passed": true,
+      "details": {
+        "I_nodes": 0.8333338888887036,
+        "I_measured": 0.8333338888887037,
+        "u": -0.9999999999999998,
+        "j": -0.3333322222225926
+      }
+    },
+    {
+      "name": "06-闭合弦路n=9",
+      "passed": true,
+      "details": {
+        "lambda_nm": 546.6849970917489
+      }
+    },
+    {
+      "name": "06-闭合弦路n=10",
+      "passed": true,
+      "details": {
+        "lambda_nm": 548.8141820099066
+      }
+    },
+    {
+      "name": "06-闭合弦路n=11",
+      "passed": true,
+      "details": {
+        "lambda_nm": 550.392723045417
+      }
+    },
+    {
+      "name": "06-闭合弦路n=12",
+      "passed": true,
+      "details": {
+        "lambda_nm": 551.5951489224922
+      }
+    },
+    {
+      "name": "06-闭合弦路n=13",
+      "passed": true,
+      "details": {
+        "lambda_nm": 552.5320057071133
+      }
+    },
+    {
+      "name": "06-闭合弦路n=14",
+      "passed": true,
+      "details": {
+        "lambda_nm": 553.2760501889802
+      }
+    },
+    {
+      "name": "06-闭合弦路n=15",
+      "passed": true,
+      "details": {
+        "lambda_nm": 553.8767443385109
+      }
+    },
+    {
+      "name": "06-闭合弦路n=16",
+      "passed": true,
+      "details": {
+        "lambda_nm": 554.3686590410301
+      }
+    },
+    {
+      "name": "06-闭合弦路n=17",
+      "passed": true,
+      "details": {
+        "lambda_nm": 554.7765441917892
+      }
+    },
+    {
+      "name": "06-全反射最小次数",
+      "passed": true,
+      "details": "nmin=7"
+    },
+    {
+      "name": "06-排除其他相位整数",
+      "passed": true,
+      "details": "ell1最小值太大；ell≥3最大值太小"
+    },
+    {
+      "name": "06-波段边界完整",
+      "passed": true,
+      "details": "n8低于下限，n18超过上限，单调性保证完整"
+    },
+    {
+      "name": "07-势能求导",
+      "passed": true,
+      "details": "两个乘积导数项都保留"
+    },
+    {
+      "name": "07-非相对论K系数",
+      "passed": true,
+      "details": "KNR=648965.62 e^x/(1+x) MeVfm"
+    },
+    {
+      "name": "07-牛顿超光速",
+      "passed": true,
+      "details": "vNR/c=1644.39"
+    },
+    {
+      "name": "07-相对论速度",
+      "passed": true,
+      "details": {
+        "beta": 0.99999981509041,
+        "gamma": 1644.391807397148
+      }
+    },
+    {
+      "name": "07-圆轨道重新校准",
+      "passed": true,
+      "details": "同半径Krel=KNR/γ"
+    },
+    {
+      "name": "07-自由能量之和",
+      "passed": true,
+      "details": "仅忽略势能时2Eq=1644.39MeV"
+    },
+    {
+      "name": "07-径向驻点条件",
+      "passed": true,
+      "details": "H′与相对论力平衡一致"
+    },
+    {
+      "name": "07-稳定性二阶导数",
+      "passed": true,
+      "details": "二阶导数符号等价于1−β²>x²/(1+x)"
+    },
+    {
+      "name": "07-短范围无n2根",
+      "passed": true,
+      "details": "r0=1fm时f(x)>1，而K/(4ℏc)=.5126<1"
+    },
+    {
+      "name": "07-长范围稳定束缚根",
+      "passed": true,
+      "details": {
+        "d_fm": 1367.123461993547,
+        "H_MeV": 0.8664198414038167
+      }
+    },
+    {
+      "name": "07-外根不稳定",
+      "passed": true,
+      "details": {
+        "outer_d_fm": 11403025.898836076
+      }
+    },
+    {
+      "name": "07-库仑极限核对",
+      "passed": true,
+      "details": "解析极限与能量直接代入一致"
+    },
+    {
+      "name": "08-单极消失",
+      "passed": true,
+      "details": "三个电荷之和0"
+    },
+    {
+      "name": "08-偶极消失",
+      "passed": true,
+      "details": "偶极矩0"
+    },
+    {
+      "name": "08-精确电势展开",
+      "passed": true,
+      "details": "二阶系数1−3cos²θ，一阶消失"
+    },
+    {
+      "name": "08-径向梯度",
+      "passed": true,
+      "details": "Er主阶r−4"
+    },
+    {
+      "name": "08-角向梯度",
+      "passed": true,
+      "details": "Eθ带额外1/r"
+    },
+    {
+      "name": "08-源外拉普拉斯",
+      "passed": true,
+      "details": "四极主阶在源外调和"
+    },
+    {
+      "name": "08-零势角仍有场",
+      "passed": true,
+      "details": "魔角Er0而Eθ非0"
+    },
+    {
+      "name": "08-场强模平方",
+      "passed": true,
+      "details": "大小公式与两个分量一致"
+    },
+    {
+      "name": "08-九电荷对展开",
+      "passed": true,
+      "details": "作用能首项24l4/R5，下一项120l6/R7"
+    },
+    {
+      "name": "08-精确合力渐近",
+      "passed": true,
+      "details": {
+        "exact_over_leading": "1.00000700003780018700088660409501856748301136700180782198982"
+      }
+    },
+    {
+      "name": "08-距离翻倍幂次",
+      "passed": true,
+      "details": "主阶力幂次6"
+    },
+    {
+      "name": "08-电荷尺度幂次",
+      "passed": true,
+      "details": "两分子作用含q²，电荷翻倍力变4倍"
+    }
+  ],
+  "supplementary_check_count": 8,
+  "supplementary_checks": [
+    {
+      "question": 1,
+      "name": "21个载荷位置截面扫描",
+      "passed": true,
+      "details": "最大弯矩的两段式及a=.75最优位置"
+    },
+    {
+      "question": 2,
+      "name": "非匹配频率长期平均",
+      "passed": true,
+      "details": "200个周期的非共振项相消"
+    },
+    {
+      "question": 3,
+      "name": "响应系数极值",
+      "passed": true,
+      "details": "最大角度系数1/4"
+    },
+    {
+      "question": 4,
+      "name": "厚度矩阵修正",
+      "passed": true,
+      "details": "非零厚度时的两面折射与传播矩阵"
+    },
+    {
+      "question": 5,
+      "name": "改变源电压的阈值",
+      "passed": true,
+      "details": "固定器件阈值，源电压翻倍后转折点3/5和5/3"
+    },
+    {
+      "question": 6,
+      "name": "反射相移变式",
+      "passed": true,
+      "details": "δ=-.02，n10 ell2的修正波长"
+    },
+    {
+      "question": 7,
+      "name": "稳定且束缚示例",
+      "passed": true,
+      "details": "β=.8 x=.5时稳定且低于解离阈值"
+    },
+    {
+      "question": 8,
+      "name": "精确有理式通分",
+      "passed": true,
+      "details": "九电荷对与正的有理式一致"
+    }
+  ],
+  "scope": "题设简化模型及明确补充条件的独立数值/符号核验；不代表真实介子、纳米球吸收或天体逃逸的完整模型验证。"
+}

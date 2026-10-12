@@ -1,0 +1,94 @@
+\documentclass[tikz,border=5pt,multi=tikzpicture]{standalone}
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath}
+\usetikzlibrary{arrows.meta,calc}
+\definecolor{ink}{HTML}{17365D}
+\definecolor{field}{HTML}{287DA8}
+\definecolor{force}{HTML}{C56B2A}
+\tikzset{every node/.style={font=\small},vec/.style={-{Stealth[length=2mm]},thick},helper/.style={gray,dashed}}
+\begin{document}
+\begin{tikzpicture}[scale=1.3]
+  \input{question-05-mesh.tex}
+  \node[ink] at (1.75,1.68) {$N_1$};
+  \draw[gray] (1.68,1.5)--(1.2,.64);
+  \node[force!85!black] at (-2.8,2.27) {$N_2$};
+  \draw[gray] (-2.63,2.08)--(-2.25,1.59);
+\end{tikzpicture}
+\begin{tikzpicture}
+  \begin{scope}
+    \fill[field!12,even odd rule] (0,0) circle (1.7) (0,0) circle (1.05);
+    \draw[field,thick] (0,0) circle (1.7);\draw[field,thick] (0,0) circle (1.05);
+    \draw[helper] (0,0) circle (1.37);
+    \draw[vec,ink] (0,0)--(1.21,.89) node[midway,above left] {$\rho$};
+    \draw[vec,force] (35:1.37) arc (35:95:1.37) node[midway,above right] {$\boldsymbol B_\varphi$};
+    \fill (0,0) circle (1.2pt) node[below left] {$O$};
+    \node at (0,-2.15) {中心轴俯视};
+  \end{scope}
+  \begin{scope}[xshift=5.8cm]
+    \draw[vec,gray] (-2,0)--(1.5,0) node[right] {$u$};
+    \draw[vec,gray] (0,-1.1)--(0,1.35) node[above] {$z$};
+    \filldraw[field,fill=field!10,thick] (0,0) circle (.95);
+    \fill[field!28] (.31,-.895)--(.41,-.857)--(.41,.857)--(.31,.895)--cycle;
+    \draw[ink,thick] (.36,-.884)--(.36,.884);
+    \draw[helper] (-2,-1.3)--(-2,1.1);
+    \draw[<->,gray] (-2,-1.05)--(0,-1.05) node[midway,below] {$R$};
+    \draw[<->,ink] (0,0)--(-.67,.67) node[midway,above left] {$r$};
+    \node[ink,below left] at (-.09,-.07) {$C$};
+    \node[field] at (.36,.16) {$\odot$};
+    \node[below] at (.36,-.9) {$du$};
+    \node at (0,-2.15) {圆截面与积分条带};
+  \end{scope}
+\end{tikzpicture}
+\begin{tikzpicture}
+  \begin{scope}
+    \draw[ink,very thick] (0,0) ellipse (1.7 and .55);
+    \draw[vec,ink] (25:1.7 and .55) arc (25:80:1.7 and .55) node[midway,above] {$I$};
+    \node[force] at (0,-1.06) {绕大圆一周};
+  \end{scope}
+  \node at (2.5,0) {$+$};
+  \begin{scope}[xshift=5.1cm]
+    \draw[helper] (0,0) ellipse (1.7 and .55);
+    \foreach \t in {0,30,...,330}{
+      \begin{scope}[shift={({1.7*cos(\t)},{.55*sin(\t)})}]
+        \draw[field,thick,rotate=\t] (0,0) ellipse (.18 and .39);
+      \end{scope}
+    }
+    \node[field] at (0,-1.06) {绕小截面 $N$ 周};
+    \node[field] at (0,1.04) {$n=N/(2\pi R)$};
+  \end{scope}
+\end{tikzpicture}
+\begin{tikzpicture}
+  \begin{scope}
+    \filldraw[field,fill=field!12,thick] (0,0) ellipse (.56 and .79);
+    \node[field] at (0,0) {$\odot$};
+    \draw[force,thick] (-1.22,0)--(-1.22,-1.04)--(1.22,-1.04)--(1.22,1.04)--(-1.22,1.04)--(-1.22,0);
+    \draw[vec,force] (1.22,-.4)--(1.22,.4);
+    \node[field] at (0,-1.4) {$\Phi_{p,1}=\mathcal C N_1 I_1$};
+    \node[force] at (0,1.4) {绕组2的大圆回路};
+  \end{scope}
+  \begin{scope}[xshift=5.4cm]
+    \filldraw[force,fill=force!12,thick] (0,0) ellipse (.56 and .79);
+    \node[force] at (0,0) {$\odot$};
+    \draw[field,thick] (-1.22,0)--(-1.22,-1.04)--(1.22,-1.04)--(1.22,1.04)--(-1.22,1.04)--(-1.22,0);
+    \draw[vec,field] (1.22,-.4)--(1.22,.4);
+    \node[force] at (0,-1.4) {$\Phi_{p,2}=\mathcal C N_2 I_2$};
+    \node[field] at (0,1.4) {绕组1的大圆回路};
+  \end{scope}
+\end{tikzpicture}
+\begin{tikzpicture}
+  \draw[ink,thick] (0,.4)--(0,1.45)--(2,1.45)--(2,1);
+  \draw[ink,thick] (0,-.4)--(0,-1.45)--(2,-1.45)--(2,-1);
+  \draw[ink,thick] (0,0) circle (.4);\node at (0,0) {$\sim$};
+  \node[left] at (-.45,0) {$U_0$};
+  \foreach \y in {-1,-.6,-.2,.2,.6}{\draw[ink,thick] (2,\y) arc (-90:90:.2);}
+  \foreach \y in {1,.6,.2,-.2,-.6}{\draw[force,thick] (4.5,\y) arc (90:270:.2);}
+  \draw[force,thick] (4.5,1)--(4.5,1.45)--(6.5,1.45)--(6.5,.4);
+  \draw[force,thick] (4.5,-1)--(4.5,-1.45)--(6.5,-1.45)--(6.5,-.4);
+  \draw[force,thick] (6.5,0) circle (.4);\node at (6.5,0) {$V$};
+  \fill (2,1.15) circle (2pt);\fill (4.5,1.15) circle (2pt);
+  \draw[vec,ink] (.75,1.45)--(1.4,1.45) node[midway,above] {$i_1$};
+  \node[ink] at (2,-1.86) {$L_1$};\node[force] at (4.5,-1.86) {$L_2$};
+  \draw[<->,gray] (2.5,0)--(4,0) node[midway,above] {$M$};
+  \node[force,right] at (6.95,0) {$U_2,\quad i_2\simeq0$};
+\end{tikzpicture}
+\end{document}

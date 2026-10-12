@@ -1,0 +1,223 @@
+{
+  "paper": "014",
+  "question": "03",
+  "figure_source_sha256": "871ebaeedf273885f3871f1430c7b72ec2a37474544d6461f97a4ab351157305",
+  "check_count": 39,
+  "checks": [
+    {
+      "name": "exactly five TikZ pictures",
+      "passed": true
+    },
+    {
+      "name": "actual source has outward radial and real normal-force components",
+      "passed": true
+    },
+    {
+      "name": "actual source plots negative-x-opening parabola",
+      "passed": true
+    },
+    {
+      "name": "actual source has displaced sqrt(c) label and velocity label off the track",
+      "passed": true
+    },
+    {
+      "name": "statement endpoints have identical radius",
+      "passed": true,
+      "theta": 55.0
+    },
+    {
+      "name": "statement endpoints have the displayed smaller central angle",
+      "passed": true,
+      "theta": 55.0
+    },
+    {
+      "name": "statement endpoints have identical radius",
+      "passed": true,
+      "theta": 60.0
+    },
+    {
+      "name": "statement endpoints have the displayed smaller central angle",
+      "passed": true,
+      "theta": 60.0
+    },
+    {
+      "name": "rendered parabola parameters are consistent with l and theta",
+      "passed": true
+    },
+    {
+      "name": "plotted curve focus and directrix distances agree",
+      "passed": true,
+      "y": -3.117691454
+    },
+    {
+      "name": "plotted curve focus and directrix distances agree",
+      "passed": true,
+      "y": -1.8
+    },
+    {
+      "name": "plotted curve focus and directrix distances agree",
+      "passed": true,
+      "y": 0.0
+    },
+    {
+      "name": "plotted curve focus and directrix distances agree",
+      "passed": true,
+      "y": 1.8
+    },
+    {
+      "name": "plotted curve focus and directrix distances agree",
+      "passed": true,
+      "y": 3.117691454
+    },
+    {
+      "name": "drawn A/B numerical endpoint coordinates are on the curve",
+      "passed": true
+    },
+    {
+      "name": "drawn P lies on the curve",
+      "passed": true
+    },
+    {
+      "name": "directrix is on the opposite side from the opening",
+      "passed": true
+    },
+    {
+      "name": "F_r points exactly outward from focus",
+      "passed": true,
+      "q": -0.7
+    },
+    {
+      "name": "N is exactly normal to actual tangent",
+      "passed": true,
+      "q": -0.7
+    },
+    {
+      "name": "actual force arrow sum equals constant leftward acceleration",
+      "passed": true,
+      "q": -0.7
+    },
+    {
+      "name": "normal arrow points to concave side and gives positive support",
+      "passed": true,
+      "q": -0.7
+    },
+    {
+      "name": "F_r points exactly outward from focus",
+      "passed": true,
+      "q": -0.45
+    },
+    {
+      "name": "N is exactly normal to actual tangent",
+      "passed": true,
+      "q": -0.45
+    },
+    {
+      "name": "actual force arrow sum equals constant leftward acceleration",
+      "passed": true,
+      "q": -0.45
+    },
+    {
+      "name": "normal arrow points to concave side and gives positive support",
+      "passed": true,
+      "q": -0.45
+    },
+    {
+      "name": "F_r points exactly outward from focus",
+      "passed": true,
+      "q": 0.0
+    },
+    {
+      "name": "N is exactly normal to actual tangent",
+      "passed": true,
+      "q": 0.0
+    },
+    {
+      "name": "actual force arrow sum equals constant leftward acceleration",
+      "passed": true,
+      "q": 0.0
+    },
+    {
+      "name": "normal arrow points to concave side and gives positive support",
+      "passed": true,
+      "q": 0.0
+    },
+    {
+      "name": "F_r points exactly outward from focus",
+      "passed": true,
+      "q": 0.45
+    },
+    {
+      "name": "N is exactly normal to actual tangent",
+      "passed": true,
+      "q": 0.45
+    },
+    {
+      "name": "actual force arrow sum equals constant leftward acceleration",
+      "passed": true,
+      "q": 0.45
+    },
+    {
+      "name": "normal arrow points to concave side and gives positive support",
+      "passed": true,
+      "q": 0.45
+    },
+    {
+      "name": "F_r points exactly outward from focus",
+      "passed": true,
+      "q": 0.7
+    },
+    {
+      "name": "N is exactly normal to actual tangent",
+      "passed": true,
+      "q": 0.7
+    },
+    {
+      "name": "actual force arrow sum equals constant leftward acceleration",
+      "passed": true,
+      "q": 0.7
+    },
+    {
+      "name": "normal arrow points to concave side and gives positive support",
+      "passed": true,
+      "q": 0.7
+    },
+    {
+      "name": "microelement angle matches coordinate ratio",
+      "passed": true
+    },
+    {
+      "name": "mapped half-angle matches endpoint coordinates",
+      "passed": true
+    }
+  ],
+  "figures": [
+    {
+      "name": "statement-03",
+      "png_sha256": "3ecd17f108f5dc2983b00c6a950ac98ea7c8aa8e3b5cb74a32c8c0efffd93feb",
+      "pdf_sha256": "bf8ce7116447dd8b73d4f37b8b085af79d50ed1dd8aa10e5222a41a5e34d9a11"
+    },
+    {
+      "name": "element-03",
+      "png_sha256": "605504428d5fdfea5c4c5ecb00e2b1fd856ea481c304758d19dc37a54f276fc2",
+      "pdf_sha256": "263bd576ec6898956f5d1cdd46dd7db9fa3244f840a181aac0b2c73a100ef2f9"
+    },
+    {
+      "name": "parabola-03",
+      "png_sha256": "8c6eb85dcc0b72ebe2c03a86da7203766c68adf2c0c7ce625cb7d63ca43ebbd5",
+      "pdf_sha256": "c991b91951152e76fb9b62824e25e722a665b4673ac4263ecb563dee6907f4c0"
+    },
+    {
+      "name": "map-03",
+      "png_sha256": "7b96115959256044baab251c6206c4a2602c55d87fa7b4d6500452714d111d24",
+      "pdf_sha256": "7fc92440d050814b21b62d3256016d9a606ddc315a8127397ed7a60d74ce6d40"
+    },
+    {
+      "name": "forces-03",
+      "png_sha256": "f662b5002da7ff625896a75bf11f23d4963f63b996e9be42c8f74d75429f80b2",
+      "pdf_sha256": "ef4c43cc4c67762e18f534da9929bb4dec4703040865915b2f5c88da8264a8d6"
+    }
+  ],
+  "geometry_passed": true,
+  "actual_visual_reviewed": false,
+  "accepted": false
+}

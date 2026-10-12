@@ -1,0 +1,796 @@
+{
+  "all_passed": true,
+  "check_count": 96,
+  "supplementary_check_count": 8,
+  "checks": [
+    {
+      "name": "01 ground unsquared light equation",
+      "actual": 0.6380857945186592,
+      "expected": 0.6380857945186591,
+      "max_abs_error": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "name": "01 ground near length",
+      "actual": 0.1380857945186592,
+      "expected": 0.1380857945186592,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "01 person near retarded equation",
+      "actual": 0.6159116217889251,
+      "expected": 0.615911621788925,
+      "max_abs_error": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "name": "01 person far retarded equation",
+      "actual": 2.656815650938348,
+      "expected": 2.656815650938348,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "01 near-root exact length",
+      "actual": 0.11591162178892506,
+      "expected": 0.11591162178892506,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "01 near signed shadow speed",
+      "actual": 0.8230465247380176,
+      "expected": 0.8230465247380176,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "01 far signed shadow speed",
+      "actual": -3.5503192520107425,
+      "expected": -3.5503192520107425,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "01 finite-difference near speed",
+      "actual": 0.8230465248088015,
+      "expected": 0.8230465247380176,
+      "max_abs_error": 7.078382324721133e-11,
+      "passed": true
+    },
+    {
+      "name": "01 same-event current distances",
+      "actual": 0.625,
+      "expected": 0.625,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "01 Lorentz transformed shadow ray",
+      "actual": 0.6655690676261239,
+      "expected": 0.6655690676261238,
+      "max_abs_error": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "name": "01 classical limit",
+      "actual": 1.999999997763932,
+      "expected": 2,
+      "max_abs_error": 2.2360679974298137e-09,
+      "passed": true
+    },
+    {
+      "name": "01 shadow-at-foot distance",
+      "actual": 0.6,
+      "expected": 0.6,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "02 center speed from end rotation",
+      "actual": 0.5,
+      "expected": 0.5,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "02 kinetic decomposition",
+      "actual": 0.16666666666666666,
+      "expected": 0.16666666666666666,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "02 endpoint crossing equation",
+      "actual": 1.5707963267948966,
+      "expected": 1.5707963267948966,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "02 left full-coverage threshold",
+      "actual": 0.16319398540839258,
+      "expected": 0.16319398540839258,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "02 outer envelope x",
+      "actual": 0.8,
+      "expected": 0.8,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "02 outer envelope material-coordinate Jacobian",
+      "actual": 0.0,
+      "expected": 0,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "02 outer halfwidth",
+      "actual": 0.09741062722282365,
+      "expected": 0.09741062722282365,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "02 probability right",
+      "actual": 0.12402706265755463,
+      "expected": 0.12402706265755463,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "02 dense-angle left coverage",
+      "actual": 1,
+      "expected": 1,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "02 dense-angle right coverage",
+      "actual": 0.12402706264742708,
+      "expected": 0.12402706265755463,
+      "max_abs_error": 1.0127551575145333e-11,
+      "passed": true
+    },
+    {
+      "name": "02 0.9 probability",
+      "actual": 0.04051932634568381,
+      "expected": 0.04051932635383402,
+      "max_abs_error": 8.15020967381841e-12,
+      "passed": true
+    },
+    {
+      "name": "02 unmarked-line vertical period",
+      "actual": 1.5707963267948966,
+      "expected": 1.5707963267948966,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "03 half-period",
+      "actual": 0.8813735870195432,
+      "expected": 0.8813735870195429,
+      "max_abs_error": 2.220446049250313e-16,
+      "passed": true
+    },
+    {
+      "name": "03 period",
+      "actual": 1.7627471740390863,
+      "expected": 1.762747174039086,
+      "max_abs_error": 2.220446049250313e-16,
+      "passed": true
+    },
+    {
+      "name": "03 groove depth",
+      "actual": 0.41421356237309515,
+      "expected": 0.41421356237309515,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "03 half-groove arc quadrature",
+      "actual": 1.0000000000000002,
+      "expected": 1,
+      "max_abs_error": 2.220446049250313e-16,
+      "passed": true
+    },
+    {
+      "name": "03 axis height at arbitrary x",
+      "actual": 1.0,
+      "expected": 1,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "03 bottom tangent slope",
+      "actual": -1.0000000000000002,
+      "expected": -1,
+      "max_abs_error": 2.220446049250313e-16,
+      "passed": true
+    },
+    {
+      "name": "03 minimum periods",
+      "actual": 2,
+      "expected": 2,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "03 minimum wheelbase",
+      "actual": 3.5254943480781726,
+      "expected": 3.525494348078172,
+      "max_abs_error": 4.440892098500626e-16,
+      "passed": true
+    },
+    {
+      "name": "03 top kinetic energy",
+      "actual": 3.1666666666666665,
+      "expected": 3.1666666666666665,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "03 bottom kinetic energy",
+      "actual": 3.166666666666667,
+      "expected": 3.1666666666666665,
+      "max_abs_error": 4.440892098500626e-16,
+      "passed": true
+    },
+    {
+      "name": "03 horizontal velocity ratio",
+      "actual": 1.0134234194190637,
+      "expected": 1.0134234194190634,
+      "max_abs_error": 2.220446049250313e-16,
+      "passed": true
+    },
+    {
+      "name": "03 hexagon terminal slope",
+      "actual": 0.5773502691896261,
+      "expected": 0.5773502691896258,
+      "max_abs_error": 2.220446049250313e-16,
+      "passed": true
+    },
+    {
+      "name": "04 square boundary x force",
+      "actual": 2.3120000000000003,
+      "expected": 2.3120000000000003,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "04 square boundary y force",
+      "actual": -0.867,
+      "expected": -0.867,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "04 finite circle exact force",
+      "actual": 0.5277875658030855,
+      "expected": 0.5277875658030853,
+      "max_abs_error": 2.220446049250313e-16,
+      "passed": true
+    },
+    {
+      "name": "04 finite circle transverse force",
+      "actual": 2.507524703603329e-16,
+      "expected": 0,
+      "max_abs_error": 2.507524703603329e-16,
+      "passed": true
+    },
+    {
+      "name": "04 hemisphere flux",
+      "actual": 2.0,
+      "expected": 2,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "04 concentration from gradient integral",
+      "actual": 0.05305164769729844,
+      "expected": 0.05305164769729845,
+      "max_abs_error": 6.938893903907228e-18,
+      "passed": true
+    },
+    {
+      "name": "04 inward force",
+      "actual": -0.006366197723675813,
+      "expected": -0.006366197723675814,
+      "max_abs_error": 8.673617379884035e-19,
+      "passed": true
+    },
+    {
+      "name": "04 travel-time quadrature",
+      "actual": 73.30382858376184,
+      "expected": 73.30382858376184,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "04 cubic trajectory",
+      "actual": 1.0,
+      "expected": 1,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "04 half-radius time fraction",
+      "actual": 0.875,
+      "expected": 0.875,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "04 full-space concentration factor",
+      "actual": 0.026525823848649224,
+      "expected": 0.026525823848649224,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "04 uniform-background boundary force",
+      "actual": 1.5381386115683052e-15,
+      "expected": 0,
+      "max_abs_error": 1.5381386115683052e-15,
+      "passed": true
+    },
+    {
+      "name": "05 recursion real",
+      "actual": 1.8290663155227835,
+      "expected": 1.8290663155227835,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "05 recursion imaginary",
+      "actual": 0.6554431073478937,
+      "expected": 0.6554431073478937,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "05 polynomial residual real",
+      "actual": 8.881784197001252e-16,
+      "expected": 0,
+      "max_abs_error": 8.881784197001252e-16,
+      "passed": true
+    },
+    {
+      "name": "05 polynomial residual imaginary",
+      "actual": 0.0,
+      "expected": 0,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "05 finite 81-level real",
+      "actual": 1.8290663155227835,
+      "expected": 1.8290663155227835,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "05 finite 81-level imaginary",
+      "actual": 0.6554431073478937,
+      "expected": 0.6554431073478937,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "05 DC impedance",
+      "actual": 1.7807764064044151,
+      "expected": 1.7807764064044151,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "05 DC voltage ratio",
+      "actual": 0.4384471871911697,
+      "expected": 0.4384471871911697,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "05 low-frequency effective inductance",
+      "actual": 0.6744373438112329,
+      "expected": 0.6744373438135827,
+      "max_abs_error": 2.349787031619144e-12,
+      "passed": true
+    },
+    {
+      "name": "05 high-frequency real",
+      "actual": 2.4999999971999998,
+      "expected": 2.5,
+      "max_abs_error": 2.800000231673039e-09,
+      "passed": true
+    },
+    {
+      "name": "05 high-frequency scaled imaginary",
+      "actual": 0.5000000004,
+      "expected": 0.5,
+      "max_abs_error": 4.000000330961484e-10,
+      "passed": true
+    },
+    {
+      "name": "05 sum of all resistor losses",
+      "actual": 0.24225471143533855,
+      "expected": 0.24225471143533864,
+      "max_abs_error": 8.326672684688674e-17,
+      "passed": true
+    },
+    {
+      "name": "06 angular velocity",
+      "actual": -0.7499999999999999,
+      "expected": -0.75,
+      "max_abs_error": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "name": "06 angular acceleration",
+      "actual": 0.649519052838329,
+      "expected": 0.649519052838329,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "06 OD geometry",
+      "actual": 0.5773502691896258,
+      "expected": 0.5773502691896258,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "06 DE length",
+      "actual": 0.9999999999999999,
+      "expected": 1,
+      "max_abs_error": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "name": "06 D velocity",
+      "actual": [
+        0.375,
+        -0.21650635094610973
+      ],
+      "expected": [
+        0.375,
+        -0.21650635094610965
+      ],
+      "max_abs_error": 8.326672684688674e-17,
+      "passed": true
+    },
+    {
+      "name": "06 D acceleration",
+      "actual": [
+        -0.4871392896287468,
+        -0.09374999999999994
+      ],
+      "expected": [
+        -0.4871392896287467,
+        -0.09375
+      ],
+      "max_abs_error": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "name": "06 relative velocity perpendicular",
+      "actual": -4.163336342344337e-17,
+      "expected": 0,
+      "max_abs_error": 4.163336342344337e-17,
+      "passed": true
+    },
+    {
+      "name": "06 relative-speed magnitude",
+      "actual": 0.25000000000000006,
+      "expected": 0.25,
+      "max_abs_error": 5.551115123125783e-17,
+      "passed": true
+    },
+    {
+      "name": "06 second-order link constraint",
+      "actual": 9.71445146547012e-17,
+      "expected": 0,
+      "max_abs_error": 9.71445146547012e-17,
+      "passed": true
+    },
+    {
+      "name": "06 coordinate velocity finite difference",
+      "actual": 0.4999999994281801,
+      "expected": 0.5,
+      "max_abs_error": 5.71819924743977e-10,
+      "passed": true
+    },
+    {
+      "name": "06 coordinate acceleration finite difference",
+      "actual": -0.5051814522261111,
+      "expected": -0.5051814855409226,
+      "max_abs_error": 3.331481146506832e-08,
+      "passed": true
+    },
+    {
+      "name": "06 DE angular speed",
+      "actual": 0.25000000000000006,
+      "expected": 0.25,
+      "max_abs_error": 5.551115123125783e-17,
+      "passed": true
+    },
+    {
+      "name": "07 single-reflection flight equation",
+      "actual": 1.599227061084705,
+      "expected": 1.5992270610847052,
+      "max_abs_error": 2.220446049250313e-16,
+      "passed": true
+    },
+    {
+      "name": "07 single propagation coefficient",
+      "actual": 1.2646054962258804,
+      "expected": 1.2646054962258804,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "07 single-reflection frequency",
+      "actual": 0.7034648345913732,
+      "expected": 0.7034648345913732,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "07 double-reflection flight equation",
+      "actual": 6.169278677194603,
+      "expected": 6.169278677194602,
+      "max_abs_error": 8.881784197001252e-16,
+      "passed": true
+    },
+    {
+      "name": "07 double-reflection frequency",
+      "actual": 0.5470655771275251,
+      "expected": 0.5470655771275251,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "07 two emitted crests time ratio",
+      "actual": 0.7034648345065828,
+      "expected": 0.7034648345913732,
+      "max_abs_error": 8.47903969258823e-11,
+      "passed": true
+    },
+    {
+      "name": "07 image propagation unit vector",
+      "actual": 0.9999999999999999,
+      "expected": 1,
+      "max_abs_error": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "name": "07 source-receiver projection Doppler",
+      "actual": 0.7034648345913733,
+      "expected": 0.7034648345913732,
+      "max_abs_error": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "name": "07 static frequency",
+      "actual": 1.0,
+      "expected": 1,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "07 first-order low-speed derivative",
+      "actual": -0.9999994999843054,
+      "expected": -1,
+      "max_abs_error": 5.000156946266543e-07,
+      "passed": true
+    },
+    {
+      "name": "07 numeric time at r10 u300",
+      "actual": 0.042153516540862676,
+      "expected": 0.04215351671814043,
+      "max_abs_error": 1.772777549757798e-10,
+      "passed": true
+    },
+    {
+      "name": "07 formal vertex path ratio",
+      "actual": 0.5,
+      "expected": 0.5,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "08 horizontal quadrature",
+      "actual": 0.25,
+      "expected": 0.25,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "08 upward quadrature",
+      "actual": 0.18906978378367126,
+      "expected": 0.18906978378367123,
+      "max_abs_error": 2.7755575615628914e-17,
+      "passed": true
+    },
+    {
+      "name": "08 downward quadrature",
+      "actual": 0.3862943611198906,
+      "expected": 0.3862943611198906,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "08 upward voltage ratio",
+      "actual": 0.756279135134685,
+      "expected": 0.7562791351346849,
+      "max_abs_error": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "name": "08 downward voltage ratio",
+      "actual": 1.5451774444795623,
+      "expected": 1.5451774444795623,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "08 B constant distance",
+      "actual": 0.5,
+      "expected": 0.5,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "08 tip-to-center magnetic ratio upward",
+      "actual": 0.6666666666666666,
+      "expected": 0.6666666666666666,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "08 dimensionless log endpoint ratio",
+      "actual": 1.5,
+      "expected": 1.5,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "08 numeric horizontal volts",
+      "actual": 5e-06,
+      "expected": 5e-06,
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "08 numeric upward volts",
+      "actual": 3.7813956756734255e-06,
+      "expected": 3.781395675673425e-06,
+      "max_abs_error": 4.235164736271502e-22,
+      "passed": true
+    },
+    {
+      "name": "08 velocity-cross-field outward",
+      "actual": [
+        1,
+        0,
+        0
+      ],
+      "expected": [
+        1,
+        0,
+        0
+      ],
+      "max_abs_error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "08 horizontal analytic continuous limit",
+      "actual": 0.07142857142857142,
+      "expected": 0.07142857142857142,
+      "max_abs_error": 0.0,
+      "passed": true
+    }
+  ],
+  "supplementary_checks": [
+    {
+      "name": "01 48 Lorentz transformed near-branch events",
+      "passed": true,
+      "details": {
+        "max_residual": 8.881784197001252e-16,
+        "near_speed": 0.8230465247380176,
+        "far_speed": -3.5503192520107425,
+        "beta_half_max_residual": 2.220446049250313e-16,
+        "general_height_12_events_max_residual": 3.766986722553156e-13
+      }
+    },
+    {
+      "name": "02 51 horizontal-position envelope versus scan",
+      "passed": true,
+      "details": {
+        "max_error": 6.666345031547394e-09,
+        "P02": 1,
+        "P08": 0.12402706265755463
+      }
+    },
+    {
+      "name": "03 100-point fixed axle and arc matching",
+      "passed": true,
+      "details": {
+        "max_axis_error": 2.220446049250313e-16,
+        "hexagon_period": 1.902852301792692
+      }
+    },
+    {
+      "name": "04 finite disk nonlinear concentration gradient convergence",
+      "passed": true,
+      "details": {
+        "force_ratios": [
+          1.0037736097554621,
+          1.000938967519309,
+          1.0002344665944836
+        ],
+        "finite_disk_quadratic_coefficients": [
+          0.3773609755462148,
+          0.37558700772359893,
+          0.3751465511736995
+        ],
+        "expected_coefficient": 0.375,
+        "local_inertia_ode_error": 7.311928840181281e-13
+      }
+    },
+    {
+      "name": "05 80-frequency finite ladder and passive spatial branch",
+      "passed": true,
+      "details": {
+        "max_relative_error": 4.135627159982861e-16,
+        "max_voltage_ratio": 0.9999999200000408,
+        "general_multiplier_max_recursion_error": 8.881784197001252e-16
+      }
+    },
+    {
+      "name": "06 fixed material point finite-difference convergence",
+      "passed": true,
+      "details": {
+        "acceleration_errors": [
+          3.794823505431921e-07,
+          9.548730084407708e-08,
+          2.221258121881675e-08
+        ],
+        "instant_midpoint_not_differentiated": true
+      }
+    },
+    {
+      "name": "07 41 speeds image equation versus independent root",
+      "passed": true,
+      "details": {
+        "max_time_error": 4.976019596369952e-13,
+        "single_frequency": 0.7034648345913732,
+        "double_frequency": 0.5470655771275251,
+        "vertex_requires_extra_model": true,
+        "normal_approximation_cubic_difference": [
+          -0.3712987551862667,
+          -0.3731372464343962,
+          -0.3740655714068452
+        ],
+        "expected_cubic_difference": -0.375
+      }
+    },
+    {
+      "name": "08 51 direction analytic integrals versus quadrature",
+      "passed": true,
+      "details": {
+        "max_error": 3.247402347028583e-15,
+        "up_horizontal_down": [
+          0.18906978378367126,
+          0.25,
+          0.3862943611198906
+        ]
+      }
+    }
+  ]
+}

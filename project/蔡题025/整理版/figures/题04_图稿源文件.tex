@@ -1,0 +1,52 @@
+\documentclass[tikz,border=5pt]{standalone}
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath,amssymb}
+\usetikzlibrary{arrows.meta,calc}
+\definecolor{ink}{HTML}{243447}
+\definecolor{blue}{HTML}{2765A2}
+\definecolor{green}{HTML}{3F7D5B}
+\definecolor{red}{HTML}{B74739}
+\tikzset{body/.style={draw=ink,thick},vec/.style={draw=blue,thick,-{Latex}},guide/.style={gray!65,dashed},line cap=round,line join=round}
+\begin{document}
+\begin{tikzpicture}
+\draw[blue,rounded corners,fill=blue!6](-1.1,-.65)rectangle(1.1,.65);
+\node[align=center]at(0,0){室内\\$T_L$};
+\draw[body,rounded corners,fill=gray!5](3.3,-.65)rectangle(5.5,.65);
+\node[align=center]at(4.4,0){理想空调\\室外压缩机};
+\draw[red,rounded corners,fill=red!6](7.7,-.65)rectangle(9.9,.65);
+\node[align=center]at(8.8,0){室外\\$T_H>T_L$};
+\draw[vec](1.15,0)--(3.25,0)node[midway,above]{抽热 $\dot Q_L$};
+\draw[red,thick,-{Latex}](5.55,0)--(7.65,0)node[midway,above]{放热 $\dot Q_H$};
+\draw[green,thick,-{Latex}](4.4,-2)--(4.4,-.7)node[midway,right]{电功率 $P$};
+\draw[red,thick,-{Latex}](8.8,.7)--(8.8,1.8)--(0,1.8)--(0,.7);
+\node[fill=white,inner sep=3pt]at(4.4,1.8){漏热 $k(T_H-T_L)$};
+\end{tikzpicture}
+\begin{tikzpicture}
+\draw[body,rounded corners,fill=gray!4](2.5,-.75)rectangle(4.7,.75);
+\node[align=center]at(3.6,0){可逆循环\\$\Delta U=0$};
+\draw[vec](0,0)--(2.4,0)node[midway,above]{$Q_L$};
+\draw[red,thick,-{Latex}](4.8,0)--(7.2,0)node[midway,above]{$Q_H$};
+\draw[green,thick,-{Latex}](3.6,-2)--(3.6,-.85)node[midway,right]{$W$};
+\node[align=center]at(.7,-1.05){室内熵变\\$-Q_L/T_L$};
+\node[align=center]at(6.5,-1.05){室外熵变\\$+Q_H/T_H$};
+\node at(3.6,1.35){$Q_L+W=Q_H$};
+\node at(3.6,-2.65){$-Q_L/T_L+Q_H/T_H=0$};
+\end{tikzpicture}
+\begin{tikzpicture}[x=7cm,y=3.5cm]
+\draw[vec](0,0)--(.97,0)node[right]{$\delta/T_H$};
+\draw[vec](0,0)--(0,1.75)node[above]{$\dot Q/(kT_H)$};
+\draw[red,thick](0,0)--(.85,.85)node[right]{漏热};
+\draw[blue,thick,domain=.065:.85,samples=100]plot(\x,{.1*(1-\x)/\x});
+\node[blue,right]at(.10,1.25){抽热 $P(T_H-\delta)/\delta$};
+\draw[guide](.270156,0)--(.270156,.270156);
+\fill[ink](.270156,.270156)circle(.7pt);
+\node[above right]at(.270156,.270156){平衡};
+\node[below]at(.270156,0){$\delta_*/T_H$};
+\draw[green,thick,-{Latex}](.07,-.30)--(.23,-.30);
+\node[below]at(.15,-.30){降温};
+\draw[green,thick,-{Latex}](.55,-.30)--(.31,-.30);
+\node[below]at(.44,-.30){回暖};
+\node at(.44,-.66){温差增加 $\Longrightarrow$ 室温降低};
+\node at(.44,-.85){示意参数 $P/(kT_H)=0.1$};
+\end{tikzpicture}
+\end{document}

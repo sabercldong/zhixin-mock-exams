@@ -1,0 +1,133 @@
+\documentclass[tikz,border=5pt]{standalone}
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath,amssymb}
+\usetikzlibrary{arrows.meta,calc,patterns}
+\tikzset{>=Stealth,line cap=round,line join=round,
+cold/.style={blue!75!black,thick},
+hot/.style={red!75!black,thick},
+aux/.style={gray!65,dashed,thin},
+dim/.style={thin,<->}}
+\begin{document}
+% 1. Parallel-projection cylinder: outer annulus and inner separating wall have actual front faces.
+\begin{tikzpicture}[font=\small]
+\fill[red!8](0,.55)rectangle(8,1.15);
+\fill[red!8](0,-1.15)rectangle(8,-.55);
+\fill[blue!7](0,-.48)rectangle(8,.48);
+\fill[gray!35](0,.48)rectangle(8,.55);
+\fill[gray!35](0,-.55)rectangle(8,-.48);
+\draw[gray!60,dashed](0,0)ellipse(.35 and 1.15);
+\draw[gray!60,dashed](0,0)ellipse(.17 and .55);
+\draw[gray!60,dashed](0,0)ellipse(.145 and .48);
+\draw[thick](0,1.15)--(8,1.15) (0,-1.15)--(8,-1.15);
+\draw[thick](0,.55)--(8,.55) (0,-.55)--(8,-.55);
+\draw[thin](0,.48)--(8,.48) (0,-.48)--(8,-.48);
+\fill[red!12,even odd rule](8,0)ellipse(.35 and 1.15)
+(8,0)ellipse(.17 and .55);
+\fill[gray!40,even odd rule](8,0)ellipse(.17 and .55)
+(8,0)ellipse(.145 and .48);
+\fill[blue!10](8,0)ellipse(.145 and .48);
+\draw[thick](8,0)ellipse(.35 and 1.15);
+\draw[thick](8,0)ellipse(.17 and .55);
+\draw[thin](8,0)ellipse(.145 and .48);
+\draw[cold,->](-1.3,0)--(2,0);
+\node[cold,above]at(-.95,.12){$T_L$};
+\draw[cold,->](2.7,0)--(5.9,0);
+\node[cold,below]at(4.2,-.06){内管：$T_c(x)$};
+\draw[cold,->](6.7,0)--(9.4,0);
+\node[cold,below]at(9.0,-.16){$T_c(l)$};
+\draw[hot,->](9.0,.85)--(6.5,.85);
+\node[hot,above]at(9.0,1.14){$T_H$};
+\draw[hot,->](5.7,.85)--(2.5,.85);
+\draw[hot,->](5.7,-.85)--(2.5,-.85);
+\draw[hot,->](1.5,-.85)--(-1.1,-.85);
+\node[hot,below]at(-.95,-1.02){$T_h(0)$};
+\node[hot]at(4,1.58){环形流道：$T_h(x)$};
+\draw[thin](0,1.29)--(0,2.35) (8,1.29)--(8,2.35);
+\draw[dim](0,2.15)--(8,2.15)node[midway,above]{$l$};
+\draw[->](0,-1.8)--(9,-1.8)node[right]{$x$};
+\draw[thin](0,-1.74)--(0,-1.88) (8,-1.74)--(8,-1.88);
+\node[below]at(0,-1.9){$0$};
+\node[below]at(8,-1.9){$l$};
+\node at(4,-2.48){外管透明示意；冷热水由中间管壁分隔};
+\end{tikzpicture}
+% 2. Same physical cell; hot stream enters its right face, cold its left face.
+\begin{tikzpicture}[font=\small]
+\filldraw[fill=red!7,thick](0,.95)rectangle(4,1.55);
+\filldraw[fill=gray!25,thin](0,.40)rectangle(4,.55);
+\filldraw[fill=blue!7,thick](0,-.30)rectangle(4,.30);
+\draw[hot,->](5.6,1.25)--(3.5,1.25);
+\draw[hot,->](.5,1.25)--(-1.6,1.25);
+\node[hot,above]at(5.2,1.45){$T_h(x+dx)$};
+\node[hot,above]at(-1.25,1.45){$T_h(x)$};
+\node at(2,2.05){热水：右进左出};
+\draw[cold,->](-1.6,0)--(.5,0);
+\draw[cold,->](3.5,0)--(5.6,0);
+\node[cold,below]at(-1.25,-.12){$T_c(x)$};
+\node[cold,below]at(5.2,-.12){$T_c(x+dx)$};
+\node[cold]at(2,-.65){冷水：左进右出};
+\draw[orange!85!black,very thick,->](2,1.1)--(2,.05);
+\node[right,fill=white,inner sep=1pt]at(2.22,.61){$d\dot Q$};
+\draw[aux](0,-.85)--(0,-1.60) (4,-.85)--(4,-1.60);
+\draw[dim](0,-1.34)--(4,-1.34)node[midway,below]{$dx$};
+\node[below]at(0,-1.65){$x$};
+\node[below]at(4,-1.65){$x+dx$};
+\end{tikzpicture}
+% 3. Exact equal-capacity example N=2, TL=280, TH=360; ordinate is linearly mapped.
+\begin{tikzpicture}[font=\small]
+\draw[->](-.12,0)--(6.85,0)node[right]{$x$};
+\draw[->](0,0)--(0,5.10)node[above]{$T$};
+\draw[cold](0,.5)--(6,3.166667);
+\draw[hot](0,1.833333)--(6,4.5);
+\draw[aux](6,0)--(6,4.75);
+\foreach \xx/\yy in {0/.5,0/1.833333,6/3.166667,6/4.5}
+{\fill(\xx,\yy)circle(1.6pt);}
+\node[left,cold]at(-.1,.5){$T_L$};
+\node[left,hot]at(-.1,1.833333){$T_h(0)$};
+\node[right,cold]at(6.12,3.166667){$T_c(l)$};
+\node[right,hot]at(6.12,4.5){$T_H$};
+\node[below]at(0,0){$0$};
+\node[below]at(6,0){$l$};
+\draw[dim](3,1.833333)--(3,3.166667)
+node[midway,right,fill=white,inner sep=1pt]{$\delta$};
+\draw[cold,very thick,->](1.1,.988889)--(2.05,1.411111);
+\draw[hot,very thick,->](4.9,4.011111)--(3.95,3.588889);
+\node[cold,below,rotate=24]at(1.4,.83){冷水流向};
+\node[hot,above,rotate=24]at(4.5,4.25){热水流向};
+\node at(3.5,5.03){示例：$N=2$；同一位置温差为正};
+\end{tikzpicture}
+% 4. Local entropy transport; only the same heat amount is compared.
+\begin{tikzpicture}[font=\small]
+\filldraw[fill=red!8,thick](0,1)rectangle(2,2.3);
+\filldraw[fill=blue!8,thick](5.5,1)rectangle(7.5,2.3);
+\node at(1,1.9){局部热水};
+\node[hot]at(1,1.4){$T_h(x)$};
+\node at(6.5,1.9){局部冷水};
+\node[cold]at(6.5,1.4){$T_c(x)$};
+\draw[orange!85!black,very thick,->](2.15,1.65)--(5.35,1.65)
+node[midway,above]{$d\dot Q>0$};
+\node at(1,.43){$d\dot S_h=-d\dot Q/T_h$};
+\node at(6.5,.43){$d\dot S_c=d\dot Q/T_c$};
+\node at(3.75,-.45){$d\dot S_{\mathrm{gen}}
+=d\dot Q(1/T_c-1/T_h)>0$};
+\end{tikzpicture}
+% 5. Transverse section through the separating wall; thickness visually enlarged.
+\begin{tikzpicture}[font=\small]
+\fill[red!5](0,0)circle(2.1);
+\filldraw[fill=gray!25,thick](0,0)circle(1.75);
+\filldraw[fill=blue!6,thick](0,0)circle(1.4);
+\fill(0,0)circle(1.5pt);
+\draw[dim](0,0)--(-1.4,0)node[midway,above]{$r$};
+\draw[dim](0,0)--(-45:1.75);
+\node[below right]at(-45:1.90){$r+h$};
+\draw[->,thin](0,0)--(65:1.57)
+node[midway,left]{$s$};
+\draw[dim](15:1.4)--(15:1.75);
+\node[right]at(1.92,.38){$h$};
+\draw[thin](15:1.6)--(1.9,.38);
+\draw[hot,very thick,->](130:1.97)--(130:1.19);
+\node[hot,above left]at(130:2.04){$q'$};
+\node[cold]at(-.4,-.65){$T_c(x)$};
+\node[hot]at(2.05,1.4){$T_h(x)$};
+\node at(0,-2.5){径向截面；壁厚示意放大};
+\end{tikzpicture}
+\end{document}

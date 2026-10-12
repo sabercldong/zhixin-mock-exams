@@ -1,0 +1,77 @@
+\documentclass[multi=tikzpicture,border=8pt]{standalone}
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath,amssymb}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc}
+\definecolor{blue}{HTML}{17365D}
+\definecolor{red}{HTML}{AC3931}
+\tikzset{every node/.style={font=\small},vec/.style={-{Stealth[length=3mm]},thick,blue},force/.style={-{Stealth[length=3mm]},very thick,red},dim/.style={|<->|,thin}}
+\begin{document}
+\begin{tikzpicture}
+\foreach \u in{0,4}{
+\draw[very thick](\u-.4,4.4)--(\u+.4,4.4);
+\draw[thick](\u,4.4)--(\u,3);
+\draw[line width=4pt,blue!35](\u,3)--(\u,0);
+\fill(\u,1.5)circle(2pt)node[right]{$G$};
+\node[above right]at(\u,3){$O$};}
+\draw[dim](-.7,3)--node[left]{$l$}(-.7,4.4);
+\draw[dim](.7,0)--node[right]{$L$}(.7,3);
+\draw[force](-1.6,0)--(0,0)node[below,midway]{$J$};
+\draw[force](2.4,1)--(4,1)node[above,midway]{$J$};
+\draw[dim](4.8,0)--node[right]{$L/3$}(4.8,1);
+\node[below]at(0,-.65){底端打击};
+\node[below]at(4,-.65){距底端$L/3$打击};
+\end{tikzpicture}
+\begin{tikzpicture}
+\draw[line width=4pt,blue!35](0,3)--(0,0);
+\draw[thick](0,3)--(0,4);
+\fill(0,1.5)circle(2pt)node[left]{$G$};
+\draw[force](-1.8,0)--(0,0)node[above,midway]{$J$};
+\draw[vec](0,1.5)--(1.4,1.5)node[right]{$v_G=J/m$};
+\draw[vec](0,3)--(-2,3)node[above,midway]{$v_O=-2J/m$};
+\draw[vec](0,0)--(2.4,0)node[below,midway]{$v_L=4J/m$};
+\draw[force](.45,1.5)arc(0:250:.45);
+\node[right]at(.8,2.3){$\omega=6J/(mL)$};
+\node[above]at(0,4){竖直细绳};
+\end{tikzpicture}
+\begin{tikzpicture}
+\draw[line width=4pt,blue!35](0,3)--(0,1.2);
+\draw[line width=3pt,dashed,gray](0,1.2)--(0,0);
+\draw[thick](0,3)--(0,4);
+\draw[dashed](-.4,1.2)--(1.8,1.2)node[right]{截面};
+\draw[force](0,1.2)--(1.4,1.2)node[above]{$K_x$};
+\draw[force](-.5,.8)arc(220:-20:.45);
+\node[below]at(.1,.3){$\mathcal C(x)$顺时针};
+\draw[dim](-1.1,1.2)--node[left]{$x$}(-1.1,3);
+\draw[dim](.65,2.35)--node[right]{$x-s$}(.65,1.2);
+\fill(0,2.35)circle(2pt)node[left]{$s$};
+\draw[vec](0,2.35)--(1.25,2.35)node[right]{$v(s)$};
+\node[above right]at(0,3){$O$};
+\node[below right]at(1.8,0){$x<a$，上段未受$J$};
+\end{tikzpicture}
+\begin{tikzpicture}
+\draw[line width=4pt,blue!35](0,3)--(0,.5);
+\draw[line width=3pt,dashed,gray](0,.5)--(0,0);
+\draw[thick](0,3)--(0,4);
+\draw[dashed](-.5,.5)--(1.8,.5)node[right]{截面$x$};
+\fill(0,1)circle(2pt);
+\draw[force](-1.6,1)--(0,1)node[above,midway]{$J$};
+\node[right]at(.1,1){打击点$a=2L/3$};
+\draw[dim](-1.1,.5)--node[left]{$x-a$}(-1.1,1);
+\draw[dim](1.3,1.2)--node[right]{$a$}(1.3,3);
+\draw[force](0,.5)--(-1.1,.5)node[below,midway]{$K_x$};
+\node[above right]at(0,3){$O$};
+\node[below]at(.2,-.55){上段包含外冲量$J$};
+\end{tikzpicture}
+\begin{tikzpicture}[x=7cm,y=30cm]
+\draw[-{Stealth}](0,0)--(1.1,0)node[right]{$x/L$};
+\draw[-{Stealth}](0,0)--(0,.13)node[above]{$\mathcal M/(JL)$};
+\draw[very thick,blue,domain=0:.666666,samples=100]plot(\x,{\x^3/3});
+\draw[very thick,blue,domain=.666666:1,samples=100]plot(\x,{\x^3/3-\x+2/3});
+\draw[dashed](.666666,0)--(.666666,.098765)--(0,.098765);
+\fill(.666666,.098765)circle(1.5pt)node[above right]{峰值$8/81$};
+\node[below]at(.666666,0){$2/3$};
+\node[below]at(1,0){$1$};
+\node[below left]at(0,0){$0$};
+\end{tikzpicture}
+\end{document}
